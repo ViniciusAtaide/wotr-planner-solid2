@@ -12,11 +12,9 @@
 # It refuses a name whose branch or directory already exists.
 #
 # When the ticket is done, its session commits to ticket/<name>. The coordinating session, in the
-# main checkout, merges it and removes the worktree:
+# main checkout, merges it, then finishes the worktree, which closes its WebStorm project first:
 #   git merge refs/heads/ticket/<name>
-#   close-webstorm-project <main checkout>.worktrees/<name>    # before the directory goes
-#   git worktree remove ../wotr-planner-solid2.worktrees/<name>
-#   git branch -d ticket/<name>
+#   scripts/worktree-done.sh <name>
 set -eu
 
 die() {
