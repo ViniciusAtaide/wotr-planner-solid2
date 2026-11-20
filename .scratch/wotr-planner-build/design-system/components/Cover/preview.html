@@ -1,0 +1,32 @@
+<!-- @dsCard height=288 -->
+<style>
+  .cv { position: relative; width: 960px; height: 288px; background: var(--ground); overflow: hidden; }
+  .cv svg { position: absolute; inset: 0; }
+  .cv .gold { fill: var(--gold); }
+  .cv .myth { fill: var(--mythic); }
+  .cv .iron { fill: var(--line-strong); }
+  .cv .ember { fill: var(--closed); }
+  .cv .cut { fill: var(--ground); font-family: var(--font-display); font-weight: 600; font-size: 220px; }
+  .cv .tile { rx: var(--radius-md); }
+  .cv .text { position: absolute; left: 48px; bottom: 40px; max-width: 440px; }
+  .cv h1 { margin: 0; font: 600 80px/0.95 var(--font-display); color: var(--ink); letter-spacing: 0.01em; }
+  .cv p { margin: 16px 0 0; font: 400 14px/20px var(--font-body); color: var(--ink-muted); }
+</style>
+<div class="cv">
+  <svg viewBox="0 0 960 288" width="960" height="288" aria-hidden="true">
+    <!-- blocks: gold 240x176, mythic 160x144, line-strong (iron) 288x48, closed (ember) 48x48; corners radius-md -->
+    <!-- arrangement: a staggered stack of bands like Timeline rows; gold bleeds off the top, mythic off the right edge -->
+    <!-- pattern: one oversized Grenze numeral, "20", cut from the gold block in ground: the display face is the brand's most distinctive shape, and 20 is the last character level -->
+    <!-- steps and radii: sides are multiples of space-4 (16px) and space-6 (24px); rx is radius-md -->
+    <defs><clipPath id="g"><rect x="560" y="-8" width="240" height="184" rx="4"/></clipPath></defs>
+    <rect class="gold tile" x="560" y="-8" width="240" height="184"/>
+    <text class="cut" x="572" y="196" clip-path="url(#g)">20</text>
+    <rect class="myth tile" x="800" y="96" width="176" height="144"/>
+    <rect class="ember tile" x="816" y="32" width="48" height="48"/>
+    <rect class="iron tile" x="512" y="200" width="272" height="48"/>
+  </svg>
+  <div class="text">
+    <h1>Worldwound<br>Planner</h1>
+    <p>Every pick the game allows, and none it doesn't.</p>
+  </div>
+</div>

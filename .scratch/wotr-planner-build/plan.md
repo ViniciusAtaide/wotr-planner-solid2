@@ -31,7 +31,8 @@ The full-stack planner and its MCP server, as the design map specifies ([map](..
 | 03c | [Ticket 03 review fixes: the walk](issues/03c-walk-review-fixes.md) | 03, 02f | 6 |
 | 02g | [Ticket 02 and 03 review fixes: the importer and names](issues/02g-importer-review-fixes.md) | 03, 02f | 4 |
 | 04 | [Pickers, refusals, edits and the Build code](issues/04-pickers-refusals-edits-and-the-build-code.md) | 03, 02c, 02f, 03c, 02g | 7, 8 |
-| 05 | [MCP and UI](issues/05-mcp-and-ui.md) | 04 | 10 |
+| 05a | [Port the design system into the app](issues/05a-design-system-port.md) | 05's MCP checkpoint | 10 |
+| 05 | [MCP and UI](issues/05-mcp-and-ui.md) | 04; 05a for its UI (scope 4) | 10 |
 | 06 | [After first use: summaries, more links, the published site](issues/06-after-first-use.md) | 05 | none |
 
 Ticket 02 was split on 2026-11-19 when its remaining work outgrew one ticket ([review-before-03.md](review-before-03.md)): 02a, 02b and 02c carry it, and ticket 03's areas each allowlist what they read. 02b runs alongside 03.
