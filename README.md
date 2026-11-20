@@ -10,7 +10,6 @@ Bun is the package manager and runtime ([bun.sh](https://bun.sh), version in `pa
 
 ```bash
 bun install            # also enables the pre-commit hook
-cp .env.example .env   # then fill in SESSION_SECRET
 ```
 
 Put the game sources at the repo root. Both are git-ignored:

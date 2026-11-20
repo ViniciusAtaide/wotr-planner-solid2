@@ -8,7 +8,6 @@ declare module 'virtual:solid-env/client' {
     ? O
     : string;
   const env: {
-    readonly "VITE_APP_NAME": __Out<__Schema["client"]["VITE_APP_NAME"]>;
   };
   export { env };
   export default env;
@@ -20,8 +19,6 @@ declare module 'virtual:solid-env/server' {
     ? O
     : string;
   const env: {
-    readonly "SESSION_SECRET": __Out<__Schema["server"]["SESSION_SECRET"]>;
-    readonly "VITE_APP_NAME": __Out<__Schema["client"]["VITE_APP_NAME"]>;
   };
   export { env };
   export default env;

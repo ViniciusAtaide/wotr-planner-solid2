@@ -1,22 +1,26 @@
 import { Title } from '@solidjs/meta';
 import { Loading } from 'solid-js';
-// Typed client env, validated and baked in at build time (see env.ts).
-import { env } from 'virtual:solid-env/client';
+
+import ThemeToggle from './components/ThemeToggle';
 import { paths, Router } from './router';
-import './App.css';
+import './styles/tokens.css';
+import './styles/components.css';
+import './styles/app.css';
 
 export default function App() {
   return (
     <Router>
       {(props) => (
-        <>
-          <Title>{env.VITE_APP_NAME}</Title>
-          <nav class="site-nav">
-            <a href={paths()}>Home</a>
-            <a href={paths.users()}>Users</a>
-          </nav>
+        <div class="ww-root app-main">
+          <Title>Worldwound Planner</Title>
+          <header class="app-header">
+            <a class="app-header__name" href={paths()}>
+              Worldwound Planner
+            </a>
+            <ThemeToggle />
+          </header>
           <Loading fallback={<main>Loading…</main>}>{props.children}</Loading>
-        </>
+        </div>
       )}
     </Router>
   );
