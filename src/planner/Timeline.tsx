@@ -1,19 +1,12 @@
 import { For, Show } from 'solid-js';
-import { placeKey, slotKey, type Place, type SlotId } from '~engine/build';
+import { placeKey, slotKey, type Place } from '~engine/build';
 import { expectedLevel } from '~engine/mcp';
 import { nameOf } from '~engine/refusals';
 
 import { LevelRow, RankMarker, Timeline as TimelineFrame, type PickChip } from '../design';
 import type { Planner } from './state';
+import type { Selection } from './workspace-state';
 import { optionName, ordinal } from './words';
-
-export type Selection =
-  | { readonly kind: 'slot'; readonly slot: SlotId }
-  | { readonly kind: 'level'; readonly level: number }
-  | { readonly kind: 'rank'; readonly rank: number }
-  | { readonly kind: 'start' }
-  | { readonly kind: 'add' }
-  | { readonly kind: 'gear' };
 
 function placesInWalkOrder(levels: number, rankLevels: readonly number[]): Place[] {
   const out: Place[] = [];

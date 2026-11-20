@@ -53,12 +53,13 @@ export function toRankLevel(n: unknown): RankLevel | undefined {
 }
 
 export function toSkillRank(n: unknown): SkillRank | undefined {
-  return inRange(n, 0) ? (n as SkillRank) : undefined;
+  return inRange(n, 1) ? (n as SkillRank) : undefined;
 }
 
 export function toSkillRanks(ranks: Readonly<Record<string, unknown>>): SkillRanks | undefined {
   const out: Partial<Record<StatType, SkillRank>> = {};
   for (const [skill, n] of Object.entries(ranks)) {
+    if (n === 0) continue;
     const rank = toSkillRank(n);
     if (rank === undefined) return undefined;
     out[skill as StatType] = rank;
@@ -113,8 +114,16 @@ export interface Ascension {
   readonly level: RankLevel;
 }
 
+export type Archetypes = readonly [] | readonly [Guid];
+
 export interface ClassChoice {
-  readonly archetypes: readonly Guid[];
+  readonly archetypes: Archetypes;
+}
+
+export function toArchetypes(archetypes: readonly Guid[]): Archetypes | undefined {
+  const [first, ...rest] = archetypes;
+  if (rest.length > 0) return undefined;
+  return first === undefined ? [] : [first];
 }
 
 export type GearPlace =
@@ -160,4 +169,27 @@ export function slotKey(slot: SlotId): string {
 export function withPick(build: Build, pick: Pick): Build {
   const key = slotKey(pick.slot);
   return { ...build, picks: [...build.picks.filter((p) => slotKey(p.slot) !== key), pick] };
+}
+
+function canonical(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(canonical);
+  if (typeof value !== 'object' || value === null) return value;
+  return Object.fromEntries(
+    Object.entries(value)
+      .filter(([, v]) => v !== undefined)
+      .sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0))
+      .map(([k, v]) => [k, canonical(v)]),
+  );
+}
+
+function picksBySlot(build: Build): readonly [string, unknown][] {
+  return build.picks
+    .map((p): [string, unknown] => [slotKey(p.slot), canonical(p)])
+    .sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0));
+}
+
+export function sameBuild(a: Build, b: Build): boolean {
+  if (a === b) return true;
+  const rest = (build: Build) => canonical({ ...build, picks: picksBySlot(build) });
+  return JSON.stringify(rest(a)) === JSON.stringify(rest(b));
 }

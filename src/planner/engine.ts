@@ -13,6 +13,10 @@ export function loadEngine(): Promise<Engine> {
     .then((doc) => {
       const { files, overrides } = decodeDocument(doc);
       return engineOf(loadData(files, overrides));
+    })
+    .catch((e: unknown) => {
+      loading = undefined;
+      throw e;
     });
   return loading;
 }

@@ -1,8 +1,7 @@
-import { createEffect, createMemo, createSignal, onSettled, Show } from 'solid-js';
+import { createEffect, createMemo, createSignal, For, Match, onSettled, Show, Switch } from 'solid-js';
 import type { Build } from '~engine/build';
-import { encodeBuild } from '~engine/codec';
 import { divergence, type Engine } from '~engine/mcp';
-import { nameOf } from '~engine/refusals';
+import { linkDidNotOpen, nameOf } from '~engine/refusals';
 import { ATTRIBUTES } from '~engine/walk';
 
 import {
@@ -16,10 +15,26 @@ import {
   type Stat,
 } from '../design';
 import { loadEngine } from './engine';
-import { buildFromHash, EMPTY } from './link';
+import { EMPTY, openHash } from './link';
 import { AddPanel, GearPanel, LevelPanel, RankPanel, SlotPicker, StartPanel } from './panels';
-import { createPlanner, placeWords, type Planner as PlannerState } from './state';
-import Timeline, { type Selection } from './Timeline';
+import { createShareCode, shareLinkOf, type ShareCode } from './share-code';
+import { createPlanner, placeWords, type Planner as PlannerApi } from './state';
+import Timeline from './Timeline';
+import { unreachable } from './unreachable';
+import {
+  edited,
+  reducePage,
+  resolve,
+  sameSelection,
+  shown,
+  workspaceAt,
+  type Layout,
+  type LinkStatus,
+  type PageAction,
+  type Selection,
+  type Side,
+  type View,
+} from './workspace-state';
 
 const PHONE_WIDTH_QUERY = '(max-width: 767px)';
 const ATTRIBUTE_ABBREVIATIONS: Readonly<Record<string, string>> = {
@@ -31,122 +46,205 @@ const ATTRIBUTE_ABBREVIATIONS: Readonly<Record<string, string>> = {
   Charisma: 'CHA',
 };
 
+type Boot =
+  | { readonly kind: 'loading' }
+  | { readonly kind: 'failed'; readonly reason: string }
+  | {
+      readonly kind: 'ready';
+      readonly engine: Engine;
+      readonly build: Build;
+      readonly link: LinkStatus;
+      readonly hash: string;
+    };
+
 export default function Planner() {
-  const [ready, setReady] = createSignal<{ engine: Engine; build: Build; stale: boolean }>();
-  const [failed, setFailed] = createSignal<string>();
-  onSettled(() => {
+  const [boot, setBoot] = createSignal<Boot>({ kind: 'loading' });
+  const start = () => {
+    setBoot({ kind: 'loading' });
     loadEngine().then(
-      async (engine) => setReady({ engine, ...(await buildFromHash(engine, location.hash)) }),
-      (e: unknown) => setFailed(`The game data didn't load: ${String(e)}`),
+      async (engine) => {
+        const hash = location.hash;
+        const opened = await openHash(engine, hash);
+        setBoot(
+          opened.kind === 'opened'
+            ? { kind: 'ready', engine, build: opened.build, link: { kind: 'ok' }, hash }
+            : {
+                kind: 'ready',
+                engine,
+                build: EMPTY,
+                link: { kind: 'didNotOpen', on: 'load', reason: opened.reason },
+                hash,
+              },
+        );
+      },
+      (e: unknown) => setBoot({ kind: 'failed', reason: `The game data didn't load: ${String(e)}` }),
     );
-  });
+  };
+  onSettled(start);
+  const ready = () => {
+    const b = boot();
+    return b.kind === 'ready' ? b : undefined;
+  };
+  const failed = () => {
+    const b = boot();
+    return b.kind === 'failed' ? b : undefined;
+  };
   return (
-    <Show when={ready()} keyed fallback={<main class="app-page">{failed() ?? 'Loading the game data…'}</main>}>
-      {(r) => <Workspace staticEngine={r.engine} initialBuild={r.build} initialStale={r.stale} />}
-    </Show>
+    <Switch>
+      <Match when={ready()} keyed>
+        {(r) => <Workspace staticEngine={r.engine} initialBuild={r.build} initialLink={r.link} initialHash={r.hash} />}
+      </Match>
+      <Match when={failed()}>
+        {(f) => (
+          <main class="app-page">
+            <p>{f().reason}</p>
+            <Button onClick={start}>Retry</Button>
+          </main>
+        )}
+      </Match>
+      <Match when={boot().kind === 'loading'}>
+        <main class="app-page">Loading the game data…</main>
+      </Match>
+    </Switch>
   );
 }
 
-function liveBuildCode(engine: Engine, planner: PlannerState) {
-  const [code, setCode] = createSignal('');
-  let latest = 0;
-  createEffect(
-    () => planner.build(),
-    (build) => {
-      const n = ++latest;
-      void encodeBuild(engine.data, build).then((c) => {
-        if (n === latest) setCode(c);
-      });
-    },
-  );
-  return code;
-}
+type Forked = Extract<View, { readonly kind: 'forked' }>;
+type Segment = 'First' | 'Second' | 'Side by side';
 
-type Side = 'first' | 'second';
-interface Focus {
-  readonly side: Side;
-  readonly selected: Selection | undefined;
+const SEGMENT_SHOWS: Readonly<Record<Segment, { readonly layout: Layout; readonly side?: Side }>> = {
+  First: { layout: 'one', side: 'first' },
+  Second: { layout: 'one', side: 'second' },
+  'Side by side': { layout: 'both' },
+};
+const SIDE_SEGMENT: Readonly<Record<Side, Segment>> = { first: 'First', second: 'Second' };
+const PHONE_SEGMENTS: readonly Segment[] = ['First', 'Second'];
+const DESKTOP_SEGMENTS: readonly Segment[] = ['First', 'Second', 'Side by side'];
+const SIDE_TITLE: Readonly<Record<Side, string>> = { first: 'First Build', second: 'Second Build' };
+
+function pressedSegment(view: Forked, phone: boolean): Segment {
+  return view.layout === 'both' && !phone ? 'Side by side' : SIDE_SEGMENT[view.side];
 }
 
 interface WorkspaceProps {
   readonly staticEngine: Engine;
   readonly initialBuild: Build;
-  readonly initialStale: boolean;
+  readonly initialLink: LinkStatus;
+  readonly initialHash: string;
 }
 
 function Workspace(props: WorkspaceProps) {
-  const first = createPlanner(props.staticEngine, props.initialBuild);
-  const second = createPlanner(props.staticEngine, EMPTY);
-  const firstCode = liveBuildCode(props.staticEngine, first);
-  const secondCode = liveBuildCode(props.staticEngine, second);
-  const [forked, setForked] = createSignal(false);
-  const [shownBuilds, setShownBuilds] = createSignal('First');
-  const [focus, setFocus] = createSignal<Focus>({
-    side: 'first',
-    selected: props.initialBuild.levels.length === 0 ? { kind: 'start' } : undefined,
-  });
-  const side = () => focus().side;
-  const selected = () => focus().selected;
-  const setSide = (s: Side) => setFocus({ side: s, selected: selected() });
-  const setSelected = (sel: Selection | undefined) => setFocus({ side: side(), selected: sel });
-  const [stale, setStale] = createSignal(props.initialStale);
+  const engine = props.staticEngine;
+  const openedHash = props.initialHash;
+  const first = createPlanner(engine, props.initialBuild);
+  const second = createPlanner(engine, EMPTY);
+  const planners: Readonly<Record<Side, PlannerApi>> = { first, second };
+  const codes: Readonly<Record<Side, () => ShareCode>> = {
+    first: createShareCode(engine, first.build),
+    second: createShareCode(engine, second.build),
+  };
+  let latest = workspaceAt(props.initialBuild, props.initialLink);
+  const [workspace, setWorkspace] = createSignal(latest);
   const [phone, setPhone] = createSignal(false);
-  const active = () => (side() === 'first' ? first : second);
-  const code = () => (side() === 'first' ? firstCode() : secondCode());
-  const url = () => `${location.origin}/#b=${code()}`;
 
+  const send = (a: PageAction) => {
+    const page = { workspace: latest, first: first.latest(), second: second.latest() };
+    const next = reducePage(engine, page, a);
+    if (next.first !== page.first) first.restore(next.first);
+    if (next.second !== page.second) second.restore(next.second);
+    if (next.workspace !== page.workspace) {
+      latest = next.workspace;
+      setWorkspace(latest);
+    }
+  };
+
+  const view = () => workspace().view;
+  const editedSide = () => edited(view());
+  const active = () => planners[editedSide()];
+  const linkCode = () => codes[editedSide()]();
+  const forked = (): Forked | undefined => {
+    const v = view();
+    return v.kind === 'forked' ? v : undefined;
+  };
+  const confirming = () => active().session().kind === 'confirming';
+  const resolved = createMemo(() =>
+    resolve(
+      workspace().selection,
+      active().build(),
+      active()
+        .walked()
+        .slots.map((s) => s.id),
+    ),
+  );
+  const focus = createMemo(() => ({ side: editedSide(), selection: resolved() }), {
+    equals: (a, b) => a.side === b.side && sameSelection(a.selection, b.selection),
+  });
+
+  let ownHash = props.initialLink.kind === 'ok' ? openedHash : '';
   createEffect(
-    () => firstCode(),
+    () => linkCode(),
     (c) => {
-      if (c !== '') history.replaceState(null, '', `#b=${c}`);
+      if (c.kind !== 'current') return;
+      ownHash = `#b=${c.code}`;
+      if (location.hash !== ownHash) history.replaceState(null, '', ownHash);
     },
   );
 
-  const select = (s: Side) => (sel: Selection) => setFocus({ side: s, selected: sel });
-  const fork = () => {
-    second.reset(first.build());
-    setForked(true);
-    setShownBuilds(phone() ? 'Second' : 'Side by side');
-    setSide('second');
+  let latestHash = 0;
+  const onHash = () => {
+    const hash = location.hash;
+    const c = linkCode();
+    if (c.kind === 'current' && hash === `#b=${c.code}`) return;
+    const n = ++latestHash;
+    void openHash(engine, hash).then((opened) => {
+      if (n !== latestHash) return;
+      if (opened.kind === 'opened') {
+        send({ kind: 'linkOpened', build: opened.build });
+        return;
+      }
+      send({ kind: 'linkFailed', on: 'paste', reason: opened.reason });
+      history.replaceState(null, '', ownHash === '' ? `${location.pathname}${location.search}` : ownHash);
+    });
   };
-  const unfork = () => {
-    setForked(false);
-    setShownBuilds('First');
-    setSide('first');
+
+  const onKey = (e: KeyboardEvent) => {
+    const session = active().latest().session;
+    const undoKey = (e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'z';
+    switch (session.kind) {
+      case 'confirming':
+        if (undoKey) {
+          e.preventDefault();
+          if (!e.shiftKey) send({ kind: 'planner', action: { kind: 'undo' } });
+        } else if (e.key === 'Escape') send({ kind: 'planner', action: { kind: 'cancel' } });
+        return;
+      case 'idle':
+      case 'refused': {
+        const typing = e.target instanceof Element && e.target.closest('input, select, textarea') !== null;
+        if (undoKey && !typing) {
+          e.preventDefault();
+          send({ kind: 'planner', action: { kind: e.shiftKey ? 'redo' : 'undo' } });
+        } else if (e.key === '/' && !typing) {
+          const filter = document.querySelector<HTMLInputElement>('[data-picker-filter]');
+          if (filter !== null) {
+            e.preventDefault();
+            filter.focus();
+          }
+        } else if (e.key === 'Escape' && phone()) send({ kind: 'select', selection: undefined });
+        return;
+      }
+      default:
+        unreachable(session);
+    }
   };
-  const shows = (s: Side) =>
-    !forked() ? s === 'first' : shownBuilds() === 'Side by side' || shownBuilds().toLowerCase() === s;
 
   onSettled(() => {
     const media = matchMedia(PHONE_WIDTH_QUERY);
     const onMedia = () => setPhone(media.matches);
     onMedia();
     media.addEventListener('change', onMedia);
-    const onKey = (e: KeyboardEvent) => {
-      const typing = e.target instanceof Element && e.target.closest('input, select, textarea') !== null;
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'z' && !typing) {
-        e.preventDefault();
-        if (e.shiftKey) active().redo();
-        else active().undo();
-      } else if (e.key === '/' && !typing) {
-        const filter = document.querySelector<HTMLInputElement>('[data-picker-filter]');
-        if (filter !== null) {
-          e.preventDefault();
-          filter.focus();
-        }
-      } else if (e.key === 'Escape' && phone() && active().pending() === undefined) {
-        setSelected(undefined);
-      }
-    };
     window.addEventListener('keydown', onKey);
-    const onHash = () => {
-      if (location.hash === `#b=${firstCode()}`) return;
-      void buildFromHash(props.staticEngine, location.hash).then(({ build, stale: s }) => {
-        if (s) setStale(true);
-        else first.replace(build);
-      });
-    };
     window.addEventListener('hashchange', onHash);
+    if (location.hash !== openedHash) onHash();
     return () => {
       media.removeEventListener('change', onMedia);
       window.removeEventListener('keydown', onKey);
@@ -154,23 +252,26 @@ function Workspace(props: WorkspaceProps) {
     };
   });
 
-  const lastLevelScores = (p: PlannerState, other?: PlannerState): Stat[] =>
+  const lastLevelScores = (p: PlannerApi, other: PlannerApi): Stat[] =>
     ATTRIBUTES.map((a) => {
       const value = p.walked().unit.permanent(a);
       return {
         name: ATTRIBUTE_ABBREVIATIONS[a] ?? a,
         value,
-        ...(other && forked() && { diff: other.walked().unit.permanent(a) !== value }),
+        ...(forked() && { diff: other.walked().unit.permanent(a) !== value }),
       };
     });
   const diverge = createMemo(() => (forked() ? divergence([first.build(), second.build()]).divergeAt : undefined));
+  const linkNotice = () => {
+    const l = workspace().link;
+    return l.kind === 'didNotOpen' ? linkDidNotOpen(l.on, l.reason) : undefined;
+  };
 
-  const title = () => {
-    const s = selected();
+  const title = (s: Selection | undefined): string => {
     if (s === undefined) return '';
     switch (s.kind) {
       case 'slot':
-        return `${nameOf(props.staticEngine.data, s.slot.selection)} · ${placeWords(s.slot.place)}`;
+        return `${nameOf(engine.data, s.slot.selection)} · ${placeWords(s.slot.place)}`;
       case 'level':
         return `Level ${s.level}`;
       case 'rank':
@@ -183,17 +284,16 @@ function Workspace(props: WorkspaceProps) {
         return 'Gear';
     }
   };
-  const panelOf = (f: Focus) => {
-    const p = f.side === 'first' ? first : second;
-    const sel = f.selected;
+  const panelOf = (side: Side, sel: Selection | undefined) => {
+    const p = planners[side];
     switch (sel?.kind) {
       case 'slot':
         return (
           <SlotPicker
             planner={p}
             slot={sel.slot}
-            onPicked={() => {
-              if (phone()) setSelected(undefined);
+            onPicked={(outcome) => {
+              if (outcome === 'applied' && phone()) send({ kind: 'select', selection: undefined });
             }}
           />
         );
@@ -205,110 +305,136 @@ function Workspace(props: WorkspaceProps) {
         return <StartPanel planner={p} />;
       case 'gear':
         return <GearPanel planner={p} />;
-      default:
+      case 'add':
+      case undefined:
         return <AddPanel planner={p} />;
     }
   };
   const panel = () => (
     <Show when={focus()} keyed>
-      {(f) => panelOf(f)}
+      {(f) => panelOf(f.side, f.selection)}
     </Show>
   );
 
-  const column = (s: Side, p: PlannerState, other: PlannerState) => (
-    <section class="planner-build" aria-label={s === 'first' ? 'First Build' : 'Second Build'}>
+  const column = (s: Side) => (
+    <section class="planner-build" aria-label={SIDE_TITLE[s]}>
       <Show when={forked()}>
-        <h2 class="planner-build__title">{s === 'first' ? 'First Build' : 'Second Build'}</h2>
+        <h2 class="planner-build__title">{SIDE_TITLE[s]}</h2>
       </Show>
-      <StatBlock stats={lastLevelScores(p, other)} />
-      <Timeline planner={p} selected={side() === s ? selected() : undefined} onSelect={select(s)} />
+      <StatBlock stats={lastLevelScores(planners[s], planners[s === 'first' ? 'second' : 'first'])} />
+      <Timeline
+        planner={planners[s]}
+        selected={editedSide() === s ? resolved() : undefined}
+        onSelect={(selection) => send({ kind: 'select', selection, side: s })}
+      />
       <div class="planner-build__more">
-        <Button onClick={() => select(s)({ kind: 'add' })}>Add a level or rank</Button>
+        <Button onClick={() => send({ kind: 'select', selection: { kind: 'add' }, side: s })}>
+          Add a level or rank
+        </Button>
       </div>
     </section>
   );
 
   return (
     <main class="planner">
-      <div class="planner-bar" role="toolbar" aria-label="Build">
-        <Button variant="ghost" kbd="⌘Z" disabled={!active().canUndo()} onClick={() => active().undo()}>
-          Undo
-        </Button>
-        <Button variant="ghost" kbd="⇧⌘Z" disabled={!active().canRedo()} onClick={() => active().redo()}>
-          Redo
-        </Button>
-        <Button variant="ghost" onClick={() => setSelected({ kind: 'start' })}>
-          Start
-        </Button>
-        <Button variant="ghost" onClick={() => setSelected({ kind: 'gear' })}>
-          Gear
-        </Button>
-        <Show when={forked()} fallback={<Button onClick={fork}>Fork this Build</Button>}>
-          <CompareToggle
-            segments={phone() ? ['First', 'Second'] : ['First', 'Second', 'Side by side']}
-            value={shownBuilds()}
-            onChange={(v) => {
-              setShownBuilds(v);
-              if (v !== 'Side by side') setSide(v === 'First' ? 'first' : 'second');
-            }}
-          />
-          <Button variant="ghost" onClick={unfork}>
-            Close the fork
+      <div class="planner-behind" inert={confirming()}>
+        <div class="planner-bar" role="toolbar" aria-label="Build">
+          <Button
+            variant="ghost"
+            kbd="⌘Z"
+            disabled={!active().canUndo()}
+            onClick={() => send({ kind: 'planner', action: { kind: 'undo' } })}
+          >
+            Undo
           </Button>
-        </Show>
-      </div>
-      <div class="planner-share">
-        <ShareLink url={url()} />
-      </div>
-      <Show when={stale()}>
-        <div class="planner-notice" role="status">
-          <Refusal lines={["This link's Build doesn't open with this game data, so the planner starts empty."]} />
-          <Button variant="ghost" onClick={() => setStale(false)}>
-            Dismiss
+          <Button
+            variant="ghost"
+            kbd="⇧⌘Z"
+            disabled={!active().canRedo()}
+            onClick={() => send({ kind: 'planner', action: { kind: 'redo' } })}
+          >
+            Redo
           </Button>
-        </div>
-      </Show>
-      <Show when={active().notice()}>
-        {(lines) => (
-          <div class="planner-notice" role="alert">
-            <div>
-              <p>{lines()[0]}</p>
-              <Refusal lines={lines().slice(1)} />
-            </div>
-            <Button variant="ghost" onClick={() => active().dismissNotice()}>
-              Dismiss
-            </Button>
-          </div>
-        )}
-      </Show>
-      <Show when={diverge()}>
-        {(at) => (
-          <p class="planner-diverge">
-            The Builds first differ at {at().replace(/^L/, 'Level ').replace(/^M/, 'Rank ')}.
-          </p>
-        )}
-      </Show>
-      <div class={['planner-body', { 'planner-body--compare': forked() && shownBuilds() === 'Side by side' }]}>
-        <div class="planner-builds">
-          <Show when={shows('first')}>{column('first', first, second)}</Show>
-          <Show when={forked() && shows('second')}>{column('second', second, first)}</Show>
-        </div>
-        <Show
-          when={phone()}
-          fallback={
-            <aside class="planner-side" aria-label="Side panel">
-              {panel()}
-            </aside>
-          }
-        >
-          <Show when={selected()}>
-            <div class="planner-sheet">
-              <PickerSheet title={title()} onBack={() => setSelected(undefined)}>
-                {panel()}
-              </PickerSheet>
-            </div>
+          <Button variant="ghost" onClick={() => send({ kind: 'select', selection: { kind: 'start' } })}>
+            Start
+          </Button>
+          <Button variant="ghost" onClick={() => send({ kind: 'select', selection: { kind: 'gear' } })}>
+            Gear
+          </Button>
+          <Show when={forked()} fallback={<Button onClick={() => send({ kind: 'fork' })}>Fork this Build</Button>}>
+            {(v) => (
+              <>
+                <CompareToggle
+                  segments={phone() ? PHONE_SEGMENTS : DESKTOP_SEGMENTS}
+                  value={pressedSegment(v(), phone())}
+                  onChange={(segment) => {
+                    const to = SEGMENT_SHOWS[segment];
+                    send({ kind: 'show', layout: to.layout, side: to.side ?? v().side });
+                  }}
+                />
+                <Button variant="ghost" onClick={() => send({ kind: 'close' })}>
+                  Close the fork
+                </Button>
+              </>
+            )}
           </Show>
+        </div>
+        <div class="planner-share">
+          <ShareLink {...shareLinkOf(linkCode(), location.origin)} />
+        </div>
+        <Show when={linkNotice()}>
+          {(words) => (
+            <div class="planner-notice" role="status">
+              <Refusal lines={[words()]} />
+              <Button variant="ghost" onClick={() => send({ kind: 'dismissLink' })}>
+                Dismiss
+              </Button>
+            </div>
+          )}
         </Show>
+        <Show when={active().notice()}>
+          {(lines) => (
+            <div class="planner-notice" role="alert">
+              <div>
+                <p>{lines()[0]}</p>
+                <Refusal lines={lines().slice(1)} />
+              </div>
+              <Button variant="ghost" onClick={() => send({ kind: 'planner', action: { kind: 'dismiss' } })}>
+                Dismiss
+              </Button>
+            </div>
+          )}
+        </Show>
+        <Show when={diverge()}>
+          {(at) => (
+            <p class="planner-diverge">
+              The Builds first differ at {at().replace(/^L/, 'Level ').replace(/^M/, 'Rank ')}.
+            </p>
+          )}
+        </Show>
+        <div class={['planner-body', { 'planner-body--compare': shown(view(), phone()).length > 1 }]}>
+          <div class="planner-builds">
+            <For each={shown(view(), phone())}>{(s) => column(s)}</For>
+          </div>
+          <Show
+            when={phone()}
+            fallback={
+              <aside class="planner-side" aria-label="Side panel">
+                {panel()}
+              </aside>
+            }
+          >
+            <Show when={resolved()}>
+              {(s) => (
+                <div class="planner-sheet">
+                  <PickerSheet title={title(s())} onBack={() => send({ kind: 'select', selection: undefined })}>
+                    {panel()}
+                  </PickerSheet>
+                </div>
+              )}
+            </Show>
+          </Show>
+        </div>
       </div>
       <Show when={active().pending()}>
         {(p) => (
@@ -317,8 +443,8 @@ function Workspace(props: WorkspaceProps) {
               title={p().title}
               summary={p().summary}
               clears={p().clears}
-              onCancel={() => active().cancel()}
-              onConfirm={() => active().confirm()}
+              onCancel={() => send({ kind: 'planner', action: { kind: 'cancel' } })}
+              onConfirm={() => send({ kind: 'planner', action: { kind: 'confirm' } })}
             />
           </div>
         )}

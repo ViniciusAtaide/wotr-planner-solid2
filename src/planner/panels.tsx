@@ -33,6 +33,7 @@ import {
 import { pointBuyCost, POINT_BUY, ATTRIBUTES, PLACE_ITEM_TYPES, SKILL_ATTRIBUTE } from '~engine/walk';
 
 import { Button, ClosedCount, OptionList, PickerHead, PickerOption } from '../design';
+import type { EditOutcome } from './planner-state';
 import type { Planner } from './state';
 import { placeWords } from './state';
 import { optionName } from './words';
@@ -50,6 +51,15 @@ const ALIGNMENTS: readonly Alignment[] = [
 ];
 const words = (s: string) => s.replace(/([a-z])([A-Z])/g, '$1 $2');
 
+const ATTRIBUTE_OR_NONE: readonly ChoiceOption<Attribute | ''>[] = [
+  { value: '', text: 'None' },
+  ...ATTRIBUTES.map((a) => ({ value: a, text: a })),
+];
+const ALIGNMENT_OR_NONE: readonly ChoiceOption<Alignment | ''>[] = [
+  { value: '', text: 'Not chosen' },
+  ...ALIGNMENTS.map((a) => ({ value: a, text: words(a) })),
+];
+
 function shownSortedByName(data: CheckedData, keep: (bp: Blueprint) => boolean): Blueprint[] {
   return [...data.blueprints.values()]
     .filter((bp) => isShown(bp) && keep(bp))
@@ -60,14 +70,34 @@ function revertControl(el: HTMLInputElement | HTMLSelectElement, value: string |
   el.value = String(value);
 }
 
-interface ChoiceProps {
-  readonly label: string;
-  readonly value: string;
-  readonly options: readonly { readonly value: string; readonly text: string }[];
-  readonly onChange: (value: string) => void;
+export function typedNumber(raw: string): number | string {
+  const n = Number(raw);
+  return raw.trim() !== '' && Number.isFinite(n) ? n : raw;
 }
 
-function Choice(props: ChoiceProps) {
+export interface ChoiceOption<V extends string> {
+  readonly value: V;
+  readonly text: string;
+}
+
+export interface ChoiceProps<V extends string> {
+  readonly label: string;
+  readonly value: V;
+  readonly options: readonly ChoiceOption<V>[];
+  readonly nameOf?: (value: V) => string;
+  readonly onChange: (value: V) => void;
+}
+
+export function withValue<V extends string>(
+  options: readonly ChoiceOption<V>[],
+  value: V,
+  nameOf: (value: V) => string = (v) => v,
+): readonly ChoiceOption<V>[] {
+  return options.some((o) => o.value === value) ? options : [{ value, text: nameOf(value) }, ...options];
+}
+
+export function Choice<V extends string>(props: ChoiceProps<V>) {
+  const listed = () => withValue(props.options, props.value, props.nameOf);
   return (
     <label class="planner-field">
       <span class="planner-field__label">{props.label}</span>
@@ -76,11 +106,12 @@ function Choice(props: ChoiceProps) {
         value={props.value}
         onChange={(e) => {
           const el = e.currentTarget;
-          props.onChange(el.value);
+          const chosen = listed().find((o) => o.value === el.value);
+          if (chosen !== undefined) props.onChange(chosen.value);
           revertControl(el, props.value);
         }}
       >
-        <For each={props.options}>{(o) => <option value={o.value}>{o.text}</option>}</For>
+        <For each={listed()}>{(o) => <option value={o.value}>{o.text}</option>}</For>
       </select>
     </label>
   );
@@ -91,7 +122,7 @@ const CLOSED_SHOWN = 30;
 export interface SlotPickerProps {
   readonly planner: Planner;
   readonly slot: SlotId;
-  readonly onPicked?: () => void;
+  readonly onPicked?: (outcome: EditOutcome) => void;
 }
 
 export function SlotPicker(props: SlotPickerProps) {
@@ -139,11 +170,11 @@ export function SlotPicker(props: SlotPickerProps) {
     return c !== undefined && c.feature === o.feature && JSON.stringify(c.param) === JSON.stringify(o.param);
   };
   const pick = (o: OptionStatus) => {
-    props.planner.edit(
+    const outcome = props.planner.edit(
       { kind: 'pick', slot: props.slot, pick: { feature: o.feature, ...(o.param && { param: o.param }) } },
       `Pick ${name(o)}`,
     );
-    props.onPicked?.();
+    props.onPicked?.(outcome);
   };
   const move = (e: KeyboardEvent) => {
     if (e.key !== 'j' && e.key !== 'k') return;
@@ -240,6 +271,7 @@ export function LevelPanel(props: LevelPanelProps) {
             label="Class"
             value={level().class}
             options={classes().map((c) => ({ value: c.guid, text: c.name ?? c.assetName }))}
+            nameOf={(g) => nameOf(data(), g)}
             onChange={(cls) =>
               props.planner.edit(
                 { kind: 'class', level: props.level, class: cls },
@@ -255,6 +287,7 @@ export function LevelPanel(props: LevelPanelProps) {
                 { value: '', text: 'None' },
                 ...archetypes().map((a) => ({ value: a, text: nameOf(data(), a) })),
               ]}
+              nameOf={(a) => nameOf(data(), a)}
               onChange={(a) =>
                 props.planner.edit(
                   { kind: 'archetypes', class: level().class, archetypes: a === '' ? [] : [a] },
@@ -267,10 +300,10 @@ export function LevelPanel(props: LevelPanelProps) {
             <Choice
               label="Ability increase"
               value={level().increase ?? ''}
-              options={[{ value: '', text: 'None' }, ...ATTRIBUTES.map((a) => ({ value: a, text: a }))]}
+              options={ATTRIBUTE_OR_NONE}
               onChange={(a) =>
                 props.planner.edit(
-                  { kind: 'increase', level: props.level, ...(a !== '' && { increase: a as Attribute }) },
+                  { kind: 'increase', level: props.level, ...(a !== '' && { increase: a }) },
                   `Increase ${a}`,
                 )
               }
@@ -289,11 +322,11 @@ export function LevelPanel(props: LevelPanelProps) {
                     max={props.level}
                     value={level().skills?.[skill] ?? 0}
                     onChange={(e) => {
-                      const n = Number(e.currentTarget.value);
-                      const wanted: Record<string, number> = { ...level().skills, [skill]: n };
-                      if (n === 0) delete wanted[skill];
+                      const typed = typedNumber(e.currentTarget.value);
+                      const wanted: Record<string, unknown> = { ...level().skills, [skill]: typed };
+                      if (typed === 0) delete wanted[skill];
                       const skills = toSkillRanks(wanted);
-                      if (skills === undefined) props.planner.refuse([skillRankRange(e.currentTarget.value)]);
+                      if (skills === undefined) props.planner.refuse([skillRankRange(typed)]);
                       else
                         props.planner.edit({ kind: 'skills', level: props.level, skills }, `${statName(skill)} ranks`);
                       revertControl(e.currentTarget, level().skills?.[skill] ?? 0);
@@ -341,6 +374,7 @@ export function RankPanel(props: RankPanelProps) {
             label="Mythic class"
             value={rank().class}
             options={mythicClasses(data()).map((c) => ({ value: c.guid, text: c.name ?? c.assetName }))}
+            nameOf={(g) => nameOf(data(), g)}
             onChange={(cls) =>
               props.planner.edit(
                 { kind: 'rankClass', rank: props.rank, class: cls },
@@ -356,8 +390,9 @@ export function RankPanel(props: RankPanelProps) {
               min="1"
               value={rank().level}
               onChange={(e) => {
-                const level = e.currentTarget.value === '' ? undefined : toRankLevel(Number(e.currentTarget.value));
-                if (level === undefined) props.planner.refuse([rankLevelRange(e.currentTarget.value)]);
+                const typed = typedNumber(e.currentTarget.value);
+                const level = toRankLevel(typed);
+                if (level === undefined) props.planner.refuse([rankLevelRange(typed)]);
                 else props.planner.edit({ kind: 'rankLevel', rank: props.rank, level }, `Move rank ${props.rank}`);
                 revertControl(e.currentTarget, rank().level);
               }}
@@ -396,6 +431,7 @@ export function StartPanel(props: StartPanelProps) {
         label="Race"
         value={b().race ?? ''}
         options={[{ value: '', text: 'None' }, ...races().map((r) => ({ value: r.guid, text: r.name ?? r.assetName }))]}
+        nameOf={(g) => nameOf(data(), g)}
         onChange={(g) =>
           props.planner.edit(
             { kind: 'race', race: g === '' ? undefined : g, ...(b().raceStat && { raceStat: b().raceStat }) },
@@ -407,21 +443,16 @@ export function StartPanel(props: StartPanelProps) {
         <Choice
           label="Racial +2"
           value={b().raceStat ?? ''}
-          options={[{ value: '', text: 'None' }, ...ATTRIBUTES.map((a) => ({ value: a, text: a }))]}
-          onChange={(a) =>
-            props.planner.edit({ kind: 'raceStat', ...(a !== '' && { raceStat: a as Attribute }) }, 'Racial +2')
-          }
+          options={ATTRIBUTE_OR_NONE}
+          onChange={(a) => props.planner.edit({ kind: 'raceStat', ...(a !== '' && { raceStat: a }) }, 'Racial +2')}
         />
       </Show>
       <Choice
         label="Alignment"
         value={b().alignment ?? ''}
-        options={[{ value: '', text: 'Not chosen' }, ...ALIGNMENTS.map((a) => ({ value: a, text: words(a) }))]}
+        options={ALIGNMENT_OR_NONE}
         onChange={(a) =>
-          props.planner.edit(
-            { kind: 'alignment', alignment: a === '' ? undefined : (a as Alignment) },
-            'Change alignment',
-          )
+          props.planner.edit({ kind: 'alignment', alignment: a === '' ? undefined : a }, 'Change alignment')
         }
       />
       <fieldset class="planner-grid">
@@ -439,8 +470,9 @@ export function StartPanel(props: StartPanelProps) {
                 max="18"
                 value={scores()[a]}
                 onChange={(e) => {
-                  const next = toAbilityScores({ ...scores(), [a]: Number(e.currentTarget.value) });
-                  if (next === undefined) props.planner.refuse([abilityScoreRange(e.currentTarget.value)]);
+                  const typed = typedNumber(e.currentTarget.value);
+                  const next = toAbilityScores({ ...scores(), [a]: typed });
+                  if (next === undefined) props.planner.refuse([abilityScoreRange(typed)]);
                   else props.planner.edit({ kind: 'scores', scores: next }, `${a} score`);
                   revertControl(e.currentTarget, scores()[a]);
                 }}
@@ -555,7 +587,7 @@ export function GearPanel(props: GearPanelProps) {
           value: p,
           text: `${words(p)}${gear()[p] ? ` · ${nameOf(data(), gear()[p] as Guid)}` : ''}`,
         }))}
-        onChange={(p) => setPlace(p as GearPlace)}
+        onChange={(p) => setPlace(p)}
       />
       <Show when={gear()[place()]}>
         {(item) => (

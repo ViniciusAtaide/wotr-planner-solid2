@@ -164,7 +164,8 @@ export function Gallery() {
         </Card>
 
         <Card name="ShareLink" about="The Build's Share link.">
-          <ShareLink url="https://planner.example/#b=AQx3kLm9vQ2TzP8rY4cHf1W0aJd7sN" />
+          <ShareLink state="ready" url="https://planner.example/#b=AQx3kLm9vQ2TzP8rY4cHf1W0aJd7sN" />
+          <ShareLink state="making" />
         </Card>
 
         <Card name="CompareToggle" about="Switch between compared Builds.">

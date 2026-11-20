@@ -49,6 +49,23 @@ export function skillRankRange(found: unknown): string {
   return `Skill ranks are whole numbers from 0 to ${MAX_BYTE}, not ${JSON.stringify(found)}.`;
 }
 
+export function archetypeCount(found: readonly unknown[]): string {
+  return `A class takes at most one archetype, not ${found.length}.`;
+}
+
+export type LinkReason = 'otherData' | 'newerPlanner' | 'notACode';
+
+const LINK_REASON_WORDS: Readonly<Record<LinkReason, string>> = {
+  otherData: "This link's Build names game data this planner doesn't hold",
+  newerPlanner: "This link's Build code comes from a newer planner",
+  notACode: "This link doesn't hold a Build code",
+};
+
+export function linkDidNotOpen(on: 'load' | 'paste', reason: LinkReason): string {
+  const then = on === 'load' ? 'so the planner starts empty' : 'so the planner keeps the Build it had';
+  return `${LINK_REASON_WORDS[reason]}, ${then}.`;
+}
+
 export function gearNote(data: CheckedData, items: readonly Guid[]): string {
   return `Allowed only with the Gear counted: needs ${shortList(items.map((i) => nameOf(data, i)))}.`;
 }

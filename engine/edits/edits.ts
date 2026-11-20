@@ -4,6 +4,7 @@ import {
   withPick,
   type AbilityScores,
   type Alignment,
+  type Archetypes,
   type Build,
   type GearPlace,
   type Pick,
@@ -20,7 +21,7 @@ export type Edit =
   | { readonly kind: 'class'; readonly level: number; readonly class: Guid }
   | { readonly kind: 'scores'; readonly scores: AbilityScores }
   | { readonly kind: 'race'; readonly race: Guid | undefined; readonly raceStat?: Attribute }
-  | { readonly kind: 'archetypes'; readonly class: Guid; readonly archetypes: readonly Guid[] }
+  | { readonly kind: 'archetypes'; readonly class: Guid; readonly archetypes: Archetypes }
   | { readonly kind: 'alignment'; readonly alignment: Alignment | undefined }
   | {
       readonly kind: 'pick';

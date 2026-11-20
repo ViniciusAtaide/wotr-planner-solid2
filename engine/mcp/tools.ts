@@ -2,6 +2,7 @@ import {
   placeKey,
   slotKey,
   toAbilityScores,
+  toArchetypes,
   toRankLevel,
   toSkillRanks,
   type Alignment,
@@ -29,6 +30,7 @@ import { linkIndex } from '../links';
 import { picker, type OptionStatus } from '../pickers';
 import {
   abilityScoreRange,
+  archetypeCount,
   gearNote,
   nameOf,
   rankLevelRange,
@@ -202,13 +204,13 @@ export async function level_up(
   const placed = Math.max(expectedLevel(e.data, rank), build.levels.length, 1);
   const level = toRankLevel(placed);
   if (mythic && level === undefined) return refused(rankLevelRange(placed));
+  const archetypes = args.archetypes === undefined ? undefined : toArchetypes(args.archetypes);
+  if (args.archetypes !== undefined && archetypes === undefined) return refused(archetypeCount(args.archetypes));
   const edits: Edit[] = [
     mythic && level !== undefined
       ? { kind: 'addRank', class: args.class, level }
       : { kind: 'addLevel', class: args.class },
-    ...(args.archetypes !== undefined
-      ? [{ kind: 'archetypes', class: args.class, archetypes: args.archetypes } as const]
-      : []),
+    ...(archetypes !== undefined ? [{ kind: 'archetypes', class: args.class, archetypes } as const] : []),
     ...(!mythic && args.increase !== undefined
       ? [{ kind: 'increase', level: build.levels.length + 1, increase: args.increase } as const]
       : []),

@@ -41,7 +41,7 @@ The 14 tools, in map 08's order:
 Citations for these live in `cites.ts`.
 
 - **`expectedLevel`** reads the Mythic settings' level table: a Mythic rank's Expected level (ADR 0003), and 0 for a rank outside the table.
-- **`level_up`**: a Mythic class adds the next Mythic rank, placed at its Expected level, or after the last character level when that comes later (`place_rank` moves it). Archetypes apply at the class's first level. An ability increase goes with the level it comes at; the game grants the point at every fourth character level when a non-Mythic class is taken.
+- **`level_up`**: a Mythic class adds the next Mythic rank, placed at its Expected level, or after the last character level when that comes later (`place_rank` moves it). Archetypes apply at the class's first level, at most one per class (the game's level-up screen holds one; `ClassChoice.archetypes` in `engine/build`): more than one is refused with R's `archetypeCount`. An ability increase goes with the level it comes at; the game grants the point at every fourth character level when a non-Mythic class is taken.
 
 ## Design notes
 

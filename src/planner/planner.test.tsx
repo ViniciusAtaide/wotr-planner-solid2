@@ -1,8 +1,8 @@
 import { join } from 'node:path';
-import { render } from '@solidjs/testing-library';
+import { cleanup, fireEvent, render, screen, waitFor } from '@solidjs/testing-library';
 import { flush } from 'solid-js';
-import { describe, expect, test } from 'vitest';
-import { abilityScores, slotKey, type Build } from '~engine/build';
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
+import { abilityScores, slotKey, type Build, type SlotId } from '~engine/build';
 import { encodeBuild } from '~engine/codec';
 import { loadData } from '~engine/load';
 import { readDataDir } from '~engine/data-dir';
@@ -19,11 +19,44 @@ import {
   type OptionView,
   type ToolRefusal,
 } from '~engine/mcp';
+import { abilityScoreRange, linkDidNotOpen, nameOf } from '~engine/refusals';
 
-import { buildFromHash } from './link';
+import { EMPTY, openHash } from './link';
+import { LevelPanel, StartPanel } from './panels';
+import Planner from './Planner';
 import { createPlanner } from './state';
 import Timeline from './Timeline';
 import { optionName } from './words';
+
+const gate = vi.hoisted(() => ({
+  load: (): Promise<unknown> => Promise.reject(new Error('no engine yet')),
+  decodeHolds: new Map<string, Promise<void>>(),
+  decodeStarted: new Set<string>(),
+  decoded: 0,
+  encodeHold: undefined as Promise<void> | undefined,
+}));
+
+vi.mock('./engine', () => ({ loadEngine: () => gate.load() }));
+
+vi.mock('~engine/codec', async (importOriginal) => {
+  const codec = await importOriginal<typeof import('~engine/codec')>();
+  return {
+    ...codec,
+    decodeBuild: async (...args: Parameters<typeof codec.decodeBuild>) => {
+      gate.decodeStarted.add(args[1]);
+      await gate.decodeHolds.get(args[1]);
+      try {
+        return await codec.decodeBuild(...args);
+      } finally {
+        gate.decoded++;
+      }
+    },
+    encodeBuild: async (...args: Parameters<typeof codec.encodeBuild>) => {
+      await gate.encodeHold;
+      return codec.encodeBuild(...args);
+    },
+  };
+});
 
 const files = readDataDir(join(process.cwd(), 'data'));
 const e = engineOf(loadData(files.files, files.overrides));
@@ -70,6 +103,12 @@ async function fighterThroughMcp(): Promise<Changed[]> {
   return steps;
 }
 
+async function openedBuild(hash: string): Promise<Build> {
+  const opened = await openHash(e, hash);
+  expect(opened.kind).toBe('opened');
+  return opened.kind === 'opened' ? opened.build : EMPTY;
+}
+
 const ordered = (b: Build): Build => ({
   ...b,
   picks: [...b.picks].sort((x, y) => slotKey(x.slot).localeCompare(slotKey(y.slot))),
@@ -89,13 +128,12 @@ describe('a Build code from the MCP opens the same Build in the UI', () => {
     const steps = await fighterThroughMcp();
     expect(steps.length).toBeGreaterThan(4);
     for (const step of steps) {
-      const opened = await buildFromHash(e, `#b=${step.code}`);
-      expect(opened.stale).toBe(false);
-      expect(ordered(opened.build)).toEqual(ordered(step.build));
-      expect(await encodeBuild(e.data, opened.build)).toBe(step.code);
-      const shown = timelineOf(opened.build);
-      expect(shown.querySelectorAll('.ww-level').length).toBe(Math.max(1, opened.build.levels.length));
-      for (const p of opened.build.picks) {
+      const opened = await openedBuild(`#b=${step.code}`);
+      expect(ordered(opened)).toEqual(ordered(step.build));
+      expect(await encodeBuild(e.data, opened)).toBe(step.code);
+      const shown = timelineOf(opened);
+      expect(shown.querySelectorAll('.ww-level').length).toBe(Math.max(1, opened.levels.length));
+      for (const p of opened.picks) {
         expect(shown.textContent).toContain(optionName(e.data, p.feature, p.param));
       }
     }
@@ -103,17 +141,23 @@ describe('a Build code from the MCP opens the same Build in the UI', () => {
 
   test('Jack in the Green, every level and Mythic rank', { timeout: 120_000 }, async () => {
     const code = await encodeBuild(e.data, jackInTheGreen.build);
-    const opened = await buildFromHash(e, `#b=${code}`);
-    expect(opened.stale).toBe(false);
-    expect(opened.build).toEqual(await (await import('~engine/codec')).decodeBuild(e.data, code));
-    const shown = timelineOf(opened.build);
-    expect(shown.querySelectorAll('.ww-level').length).toBe(opened.build.levels.length);
-    expect(shown.querySelectorAll('.ww-rank').length).toBe(opened.build.ranks?.length ?? 0);
+    const opened = await openedBuild(`#b=${code}`);
+    expect(opened).toEqual(await (await import('~engine/codec')).decodeBuild(e.data, code));
+    const shown = timelineOf(opened);
+    expect(shown.querySelectorAll('.ww-level').length).toBe(opened.levels.length);
+    expect(shown.querySelectorAll('.ww-rank').length).toBe(opened.ranks?.length ?? 0);
   });
 
   test('a link that does not open says so and starts empty', async () => {
-    const opened = await buildFromHash(e, '#b=not-a-build-code');
-    expect(opened).toEqual({ build: { levels: [], picks: [] }, stale: true });
+    expect(await openHash(e, '#b=*')).toEqual({ kind: 'didNotOpen', reason: 'notACode' });
+    history.replaceState(null, '', '/#b=*');
+    gate.load = () => Promise.resolve(e);
+    const { container } = render(() => <Planner />);
+    await screen.findByText(linkDidNotOpen('load', 'notACode'));
+    expect(container.querySelectorAll('.ww-level').length).toBe(1);
+    expect(container.querySelector('.ww-level')?.textContent).toContain('No levels yet');
+    cleanup();
+    history.replaceState(null, '', '/');
   });
 });
 
@@ -157,4 +201,314 @@ describe('the planner routes every change through E', () => {
       expect(planner.build()).toBe(start);
     },
   );
+});
+
+const POWER_ATTACK = '9972f33f977fc724c838e59641b2fca5';
+const CLEAVE = 'd809b6c4ff2aaff4fa70d712a70f7d7b';
+const MYTHIC_HERO = '247aa787806d5da4f89cfc3dff0b217f';
+const FEAT: SlotId = { place: { level: 1 }, selection: '247a4068296e8be42890143f451b4b45', index: 0 };
+const BONUS_COMBAT_FEAT: SlotId = { place: { level: 1 }, selection: '41c8486641f7d6d4283ca9dae4147a9f', index: 0 };
+
+const cleaver: Build = {
+  scores: abilityScores(SCORES),
+  levels: [{ class: fighter }],
+  picks: [
+    { slot: FEAT, feature: POWER_ATTACK },
+    { slot: BONUS_COMBAT_FEAT, feature: CLEAVE },
+  ],
+};
+const withLevels = (n: number): Build => ({
+  ...cleaver,
+  levels: Array.from({ length: n }, () => ({ class: fighter })),
+});
+
+class FakeMediaQueryList extends EventTarget implements MediaQueryList {
+  matches = false;
+  readonly media = '(max-width: 767px)';
+  onchange = null;
+  addListener(): void {}
+  removeListener(): void {}
+}
+const media = new FakeMediaQueryList();
+Object.defineProperty(window, 'matchMedia', { configurable: true, value: () => media });
+
+function setPhone(on: boolean): void {
+  media.matches = on;
+  media.dispatchEvent(new Event('change'));
+  flush();
+}
+
+function pasteHash(hash: string): void {
+  history.replaceState(null, '', hash);
+  window.dispatchEvent(new HashChangeEvent('hashchange'));
+}
+
+function deferred(): { promise: Promise<void>; release: () => void } {
+  let release = () => {};
+  const promise = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  return { promise, release };
+}
+
+async function openPlanner(build: Build | undefined, phone = false): Promise<string | undefined> {
+  const code = build === undefined ? undefined : await encodeBuild(e.data, build);
+  history.replaceState(null, '', code === undefined ? '/' : `/#b=${code}`);
+  media.matches = phone;
+  gate.load = () => Promise.resolve(e);
+  render(() => <Planner />);
+  await screen.findByRole('toolbar', { name: 'Build' });
+  flush();
+  await waitFor(() => expect(screen.getByRole('button', { name: /Copy link/ })).toBeEnabled());
+  if (code !== undefined) expect(location.hash).toBe(`#b=${code}`);
+  return code;
+}
+
+const levelRows = () => document.querySelectorAll('.ww-level').length;
+const button = (name: string | RegExp) => screen.getByRole('button', { name });
+const dialog = () => document.querySelector('[role="dialog"]');
+
+function changeInput(label: string, value: string): void {
+  fireEvent.change(screen.getByLabelText(label), { target: { value } });
+  flush();
+}
+
+async function openPreview(): Promise<void> {
+  fireEvent.click(button('Start'));
+  flush();
+  changeInput('Strength', '10');
+  await waitFor(() => expect(dialog()).not.toBeNull());
+}
+
+async function storedBlockCode(code: string): Promise<string> {
+  const bytes = Uint8Array.from(atob(code.replace(/-/g, '+').replace(/_/g, '/')), (c) => c.charCodeAt(0));
+  const inflated = new Uint8Array(
+    await new Response(
+      new Response(bytes.subarray(1)).body?.pipeThrough(new DecompressionStream('deflate-raw')),
+    ).arrayBuffer(),
+  );
+  const n = inflated.length;
+  const stored = [bytes[0] ?? 1, 1, n & 0xff, n >> 8, ~n & 0xff, (~n >> 8) & 0xff, ...inflated];
+  return btoa(String.fromCharCode(...stored))
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=+$/, '');
+}
+
+describe('render regressions (ticket 05d), each failing before its fix', () => {
+  beforeEach(() => {
+    gate.decodeHolds.clear();
+    gate.decodeStarted.clear();
+    gate.encodeHold = undefined;
+    media.matches = false;
+  });
+  afterEach(() => {
+    cleanup();
+    history.replaceState(null, '', '/');
+  });
+
+  test('the notice survives undo', () => {
+    let planner!: ReturnType<typeof createPlanner>;
+    render(() => {
+      planner = createPlanner(e, cleaver);
+      return null;
+    });
+    planner.edit({ kind: 'addLevel', class: fighter }, 'Add level 2');
+    flush();
+    planner.refuse(['Refused.']);
+    flush();
+    planner.undo();
+    flush();
+    expect(planner.build()).toBe(cleaver);
+    expect(planner.notice()).toBeUndefined();
+  });
+
+  test('⌘Z in the Cascade preview cancels it, keeping the history', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(button('Start'));
+    flush();
+    changeInput('Dexterity', '11');
+    await openPreview();
+    fireEvent.keyDown(dialog() ?? window, { key: 'z', metaKey: true });
+    flush();
+    expect(dialog()).toBeNull();
+    expect(screen.getByLabelText('Dexterity')).toHaveValue(11);
+    expect(screen.getByLabelText('Strength')).toHaveValue(13);
+    expect(document.querySelector('[inert]')).toBeNull();
+    expect(button(/Undo/)).toBeEnabled();
+  });
+
+  test('the phone sheet stays open on a pick that waits on the Cascade preview', async () => {
+    await openPlanner(cleaver, true);
+    const chip = [...document.querySelectorAll('.ww-pick')].find((c) => c.textContent?.includes('Power Attack'));
+    fireEvent.click(chip ?? document.body);
+    flush();
+    expect(document.querySelector('.planner-sheet')).not.toBeNull();
+    const toughness = [...document.querySelectorAll('button.ww-option')].find((o) =>
+      o.textContent?.includes('Toughness'),
+    );
+    expect(toughness).toBeDefined();
+    fireEvent.click(toughness ?? document.body);
+    flush();
+    await waitFor(() => expect(dialog()).not.toBeNull());
+    expect(document.querySelector('.planner-sheet')).not.toBeNull();
+  });
+
+  test('Tab stays inside the Cascade preview, and the page behind it is inert', async () => {
+    await openPlanner(cleaver);
+    await openPreview();
+    const buttons = [...(dialog()?.querySelectorAll('button') ?? [])];
+    const last = buttons.at(-1);
+    last?.focus();
+    fireEvent.keyDown(last ?? window, { key: 'Tab' });
+    expect(document.activeElement).toBe(buttons[0]);
+    fireEvent.keyDown(buttons[0] ?? window, { key: 'Tab', shiftKey: true });
+    expect(document.activeElement).toBe(last);
+    expect(screen.getByRole('toolbar', { name: 'Build' }).closest('[inert]')).not.toBeNull();
+  });
+
+  test('side by side becomes one Build, its segment pressed, after narrowing to phone width', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(button('Fork this Build'));
+    flush();
+    expect(document.querySelectorAll('section.planner-build').length).toBe(2);
+    setPhone(true);
+    expect(document.querySelectorAll('section.planner-build').length).toBe(1);
+    expect(document.querySelectorAll('.ww-segment [aria-pressed="true"]').length).toBe(1);
+  });
+
+  test('two hash decodes resolving out of order leave the last pasted link', async () => {
+    await openPlanner(cleaver);
+    const first = await encodeBuild(e.data, withLevels(2));
+    const last = await encodeBuild(e.data, withLevels(3));
+    const held = deferred();
+    gate.decodeHolds.set(first, held.promise);
+    pasteHash(`#b=${first}`);
+    pasteHash(`#b=${last}`);
+    await waitFor(() => expect(levelRows()).toBe(3));
+    const before = gate.decoded;
+    held.release();
+    await waitFor(() => expect(gate.decoded).toBeGreaterThan(before));
+    await new Promise((r) => setTimeout(r, 20));
+    flush();
+    expect(levelRows()).toBe(3);
+  });
+
+  test('a failed paste puts back the page’s own link', async () => {
+    const code = await openPlanner(cleaver);
+    pasteHash('#b=not-a-build-code');
+    await waitFor(() => expect(document.querySelector('.planner-notice')).not.toBeNull());
+    expect(location.hash).toBe(`#b=${code}`);
+  });
+
+  test('the link notice clears when a later link opens', async () => {
+    await openPlanner(cleaver);
+    pasteHash('#b=not-a-build-code');
+    await waitFor(() => expect(document.querySelector('.planner-notice')).not.toBeNull());
+    pasteHash(`#b=${await encodeBuild(e.data, withLevels(2))}`);
+    await waitFor(() => expect(levelRows()).toBe(2));
+    expect(document.querySelector('.planner-notice')).toBeNull();
+  });
+
+  test('the page’s own Build, pasted as another code, adds no undo entry', async () => {
+    const code = await openPlanner(cleaver);
+    expect(button(/Undo/)).toBeDisabled();
+    const before = gate.decoded;
+    pasteHash(`#b=${await storedBlockCode(code ?? '')}`);
+    await waitFor(() => expect(gate.decoded).toBeGreaterThan(before));
+    await new Promise((r) => setTimeout(r, 20));
+    flush();
+    expect(button(/Undo/)).toBeDisabled();
+  });
+
+  test('a link pasted while the game data loads opens once the planner is ready', async () => {
+    const first = await encodeBuild(e.data, cleaver);
+    const later = await encodeBuild(e.data, withLevels(2));
+    const held = deferred();
+    gate.decodeHolds.set(first, held.promise);
+    history.replaceState(null, '', `/#b=${first}`);
+    gate.load = () => Promise.resolve(e);
+    render(() => <Planner />);
+    await waitFor(() => expect(gate.decodeStarted.has(first)).toBe(true));
+    pasteHash(`#b=${later}`);
+    held.release();
+    await screen.findByRole('toolbar', { name: 'Build' });
+    await waitFor(() => expect(levelRows()).toBe(2));
+  });
+
+  test('the Share link says it is being made, with Copy off, while the code encodes', async () => {
+    const held = deferred();
+    history.replaceState(null, '', '/');
+    gate.encodeHold = held.promise;
+    gate.load = () => Promise.resolve(e);
+    render(() => <Planner />);
+    await screen.findByRole('toolbar', { name: 'Build' });
+    flush();
+    expect(screen.queryByDisplayValue(/#b=$/)).toBeNull();
+    expect(screen.getByDisplayValue('Making the link…')).toBeInTheDocument();
+    expect(button(/Copy link/)).toBeDisabled();
+    held.release();
+    await waitFor(() => expect(button(/Copy link/)).toBeEnabled());
+  });
+
+  test('a select names a Build value its options don’t list', () => {
+    render(() => <LevelPanel planner={createPlanner(e, { levels: [{ class: MYTHIC_HERO }], picks: [] })} level={1} />);
+    flush();
+    const select = screen.getByLabelText('Class');
+    expect(select instanceof HTMLSelectElement && select.selectedOptions[0]?.textContent).toBe(
+      nameOf(e.data, MYTHIC_HERO),
+    );
+  });
+
+  test('an ability score of 6 or 12.5 is refused, worded with the number typed', () => {
+    let planner!: ReturnType<typeof createPlanner>;
+    render(() => {
+      planner = createPlanner(e, cleaver);
+      return <StartPanel planner={planner} />;
+    });
+    flush();
+    for (const typed of [6, 12.5]) {
+      changeInput('Strength', String(typed));
+      expect(planner.notice()).toEqual([abilityScoreRange(typed)]);
+      expect(planner.build()).toBe(cleaver);
+    }
+  });
+
+  test('Close keeps the Build being edited, the second one', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(button('Fork this Build'));
+    flush();
+    fireEvent.click(screen.getAllByRole('button', { name: 'Add a level or rank' }).at(-1) ?? document.body);
+    flush();
+    changeInput('Level 2', fighter);
+    fireEvent.click(button('Add level 2'));
+    flush();
+    expect(levelRows()).toBe(3);
+    fireEvent.click(button('Close the fork'));
+    flush();
+    expect(levelRows()).toBe(2);
+  });
+
+  test('Retry loads the game data again after it failed', async () => {
+    history.replaceState(null, '', '/');
+    gate.load = () => Promise.reject(new Error('offline'));
+    render(() => <Planner />);
+    await screen.findByText(/offline/);
+    gate.load = () => Promise.resolve(e);
+    fireEvent.click(button('Retry'));
+    await screen.findByRole('toolbar', { name: 'Build' });
+  });
+
+  test('loadEngine asks again after a failed load', async () => {
+    const actual = await vi.importActual<typeof import('./engine')>('./engine');
+    const fetch = vi.fn(() => Promise.reject(new Error('offline')));
+    vi.stubGlobal('fetch', fetch);
+    try {
+      await expect(actual.loadEngine()).rejects.toThrow('offline');
+      await expect(actual.loadEngine()).rejects.toThrow('offline');
+      expect(fetch).toHaveBeenCalledTimes(2);
+    } finally {
+      vi.unstubAllGlobals();
+    }
+  });
 });

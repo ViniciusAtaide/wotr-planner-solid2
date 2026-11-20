@@ -14,6 +14,8 @@ Why the game refuses a choice, worded true for this Build (guide §4, GLOSSARY.m
 - `nameOf(data, guid)`: a blueprint's display name.
 - `statName(stat)`: a stat's name.
 - `gearNote(data, items)`: the note an option allowed only with the Gear counted carries.
+- `rankLevelRange`, `abilityScoreRange`, `skillRankRange` and `archetypeCount`: why a value no Build code holds is refused where it comes in (a Rank level outside 1–255, a score outside 7–18, skill ranks outside 0–255, more than one archetype for a class), with the value given.
+- `LinkReason` and `linkDidNotOpen(on, reason)`: why a Share link didn't open, by its reason group (other game data, a newer planner, not a Build code) and by when (`load`: the planner starts empty; `paste`: it keeps the Build it had).
 - `breaks(data, build, pick, G?)`: the later picks taking a pick would break.
 - `opensAt(data, build, slot, option, G?)`: the first later place where a closed option opens.
 

@@ -13,14 +13,14 @@ props types and helper types:
 - `Badge`, `BadgeKind`: a status or link chip.
 - `Button`, `ButtonVariant`: an action.
 - `CascadePreview`: what a Cascade edit will clear, before it applies.
-- `CompareToggle`: the segmented control that switches between compared Builds.
+- `CompareToggle`: the segmented control that switches between compared Builds, generic over its segments.
 - `Kbd`: a keyboard hint.
 - `LevelRow`, `Timeline`, `PickChips`, `PickChip`: the Timeline and its rows and chips.
 - `PickerOption`, `OptionList`, `PickerHead`, `ClosedCount`, `OptionStatus`: the picker's parts.
 - `PickerSheet`: the picker as a full-screen sheet on a phone.
 - `RankMarker`: a Mythic rank in the Timeline.
 - `Refusal`: why an option is closed.
-- `ShareLink`: the Build's Share link.
+- `ShareLink`, `ShareLinkProps`: the Build's Share link, being made, ready or failed.
 - `StatBlock`, `Stat`: the six ability scores.
 - `Gallery`: the body of the `/design` page.
 
@@ -35,10 +35,13 @@ props types and helper types:
 - **CascadePreview.** The one place a pick doesn't apply at once. It lists exactly what the Cascade edit clears (E's
   preview), says they're cleared, not moved, and applies on confirm; Esc cancels. `title` names the edit ("Swap Spell
   Focus"), `summary` says how many picks break and that they're cleared, not moved, and `clears` lists each pick to
-  clear with its place ("Level 8"). It takes focus when it opens, so Esc and Tab reach it; `autofocus={false}` turns
-  that off (the gallery shows it without).
-- **CompareToggle.** A segmented control; `value` is the pressed segment. On a phone it switches which Build compare
-  shows; on desktop it adds "Side by side". Four segments at most.
+  clear with its place ("Level 8"). It is modal: it takes focus when it opens, so Esc and Tab reach it, keeps Tab
+  and Shift+Tab cycling through its own buttons (`keepFocusInside`), and stops Esc from reaching the page's own key
+  handler. The page makes everything behind it inert. `autofocus={false}` turns the focus off (the gallery shows it
+  without).
+- **CompareToggle.** A segmented control over its own segment type `S`: `value` is the pressed segment and
+  `onChange` hands back an `S`, so a consumer maps segments through a `Record` with no cast. On a phone it switches
+  which Build compare shows; on desktop it adds "Side by side". Four segments at most.
 - **Kbd.** A key, for the keyboard-first planner's hints. Hidden on touch screens (the `pointer: coarse` rule in
   `components.css`).
 - **Timeline, LevelRow, PickChips.** `Timeline` is the column of level rows and Mythic ranks. `LevelRow` is one
@@ -66,8 +69,11 @@ props types and helper types:
 - **Refusal.** Why an option is closed, one line per unmet need, as R words them. The lines are shown unchanged; a
   trailing "(yours: …)", what the character has, is only set apart in `ink-muted` (`YOURS_SUFFIX`), never reworded.
   With `gear`, it is the gear-dependent note instead.
-- **ShareLink.** The Build's Share link, `/#b=<Build code>`, read-only, with one copy action. Copying says "Link
-  copied."; when the clipboard refuses, the text is selected instead. The code is never shortened.
+- **ShareLink.** The Build's Share link, `/#b=<Build code>`, read-only, with one copy action. Its props are a union
+  of its own, so a consumer can't show a half-made link: `making` shows "Making the link…" with Copy off, `ready`
+  carries the `url`, and `failed` shows why there is no link, with Copy off. Copying says "Link copied." until the
+  link changes; when the clipboard refuses, the text is selected instead. The code is never shortened. Its props are a
+  union, so they are an exported type rather than an interface.
 - **StatBlock.** The six ability scores at a level, from the walk, without Gear unless the Build opts in (ADR 0002).
   Six columns, or three on a phone. No hit points: the walk doesn't compute them. A `Stat` is one score as the walk
   computes it at a level: `name` is the short name ("STR"), and `diff` marks, in compare, a score that differs from the

@@ -93,11 +93,11 @@ export const TOOLS: readonly ToolDef[] = [
   {
     name: 'level_up',
     description:
-      "Add a level of a class, or the next Mythic rank for a Mythic class. Archetypes apply at the class's first level; an ability increase comes at every fourth level. Returns the new code and the slots the level opened.",
-    inputSchema: object({ code, class: guid, archetypes: { type: 'array', items: guid }, increase: attribute }, [
-      'code',
-      'class',
-    ]),
+      "Add a level of a class, or the next Mythic rank for a Mythic class. An archetype, at most one per class, applies at the class's first level; an ability increase comes at every fourth level. Returns the new code and the slots the level opened.",
+    inputSchema: object(
+      { code, class: guid, archetypes: { type: 'array', items: guid, maxItems: 1 }, increase: attribute },
+      ['code', 'class'],
+    ),
     run: (e, a) => tools.level_up(e, a as Parameters<typeof tools.level_up>[1]),
   },
   {

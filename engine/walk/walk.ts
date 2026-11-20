@@ -388,6 +388,7 @@ class Walker {
         });
       }
     }
+    if (this.build.levels.length === 0) applyStats.scores(this);
     for (const [i, level] of this.build.levels.entries()) {
       this.levelUp({ level: i + 1 }, level, false);
       while (rank < ranks.length && (ranks[rank]?.level ?? 0) <= i + 1) {

@@ -284,6 +284,22 @@ describe('area 6: ability scores', () => {
     expect(checks(low)).toEqual([{ subject: 'Wisdom', rule: 'StatsDistribution.CanRemove', found: 6, needed: 7 }]);
   });
 
+  it('refuses an over-budget point buy before the first level too (ticket 05d)', () => {
+    const allEighteen = abilityScores({
+      Strength: 18,
+      Dexterity: 18,
+      Constitution: 18,
+      Intelligence: 18,
+      Wisdom: 18,
+      Charisma: 18,
+    });
+    expect(
+      walk(data, build({ scores: allEighteen, levels: [] }), G)
+        .failures.filter((f) => f.choice === 'scores')
+        .map(({ rule, found, needed }) => ({ rule, found, needed })),
+    ).toEqual([{ rule: 'StatsDistribution.CanAdd', found: 102, needed: 25 }]);
+  });
+
   it('takes an ability increase only at a level that is a multiple of 4', () => {
     const at = (n: number) =>
       walk(data, build({ scores, levels: [...levels(FIGHTER, n - 1), { class: FIGHTER, increase: 'Strength' }] }), G);

@@ -11,6 +11,7 @@ export const cites = {
     'UnitLogic/Class/LevelUp/Actions/SpendSkillPoint.cs SpendSkillPoint',
   ],
   'LevelUp.increase': ['UnitLogic/Class/LevelUp/Actions/SelectClass.cs Apply'],
+  'ClassChoice.archetypes': ['UI/MVVM/_VM/CharGen/Phases/Class/CharGenClassPhaseVM.cs OnSelectorArchetypeChanged'],
   GearPlace: [
     'Items/Slots/EquipmentSlot.cs EquipmentSlot',
     'Items/Slots/ArmorSlot.cs ArmorSlot',

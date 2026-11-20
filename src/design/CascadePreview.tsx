@@ -18,6 +18,20 @@ export default function CascadePreview(props: CascadePreviewProps) {
     if (props.autofocus !== false) dialog?.focus();
   });
   const count = () => props.clears.length;
+  const keepFocusInside = (e: KeyboardEvent) => {
+    const buttons = [...(dialog?.querySelectorAll<HTMLButtonElement>('button:not([disabled])') ?? [])];
+    const first = buttons[0];
+    const last = buttons.at(-1);
+    if (first === undefined || last === undefined) return;
+    const at = document.activeElement;
+    if (e.shiftKey && (at === first || at === dialog)) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && at === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  };
   return (
     <div
       ref={(el) => {
@@ -28,7 +42,10 @@ export default function CascadePreview(props: CascadePreviewProps) {
       aria-labelledby={id}
       tabindex="-1"
       onKeyDown={(e) => {
-        if (e.key === 'Escape') props.onCancel();
+        if (e.key === 'Escape') {
+          e.stopPropagation();
+          props.onCancel();
+        } else if (e.key === 'Tab') keepFocusInside(e);
       }}
     >
       <h3 id={id}>{props.title}</h3>

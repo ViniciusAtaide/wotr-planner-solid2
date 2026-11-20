@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { placeKey, slotKey, type Build } from '../build';
+import { abilityScores, placeKey, slotKey, type Build } from '../build';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { allows, apply, breaksOf, cascade, clearPicks, type Edit } from './edits';
@@ -75,6 +75,19 @@ describe('E: edits', () => {
     if (build === undefined) return;
     const before = refusedKeys(jackInTheGreen.build);
     expect([...refusedKeys(build)].filter((k) => !before.has(k))).toEqual([]);
+  });
+
+  it('refuses an over-budget point buy on a Build with no levels yet (ticket 05d)', () => {
+    const empty: Build = { levels: [], picks: [] };
+    const allEighteen = abilityScores({
+      Strength: 18,
+      Dexterity: 18,
+      Constitution: 18,
+      Intelligence: 18,
+      Wisdom: 18,
+      Charisma: 18,
+    });
+    expect(allows(data, empty, { kind: 'scores', scores: allEighteen }, G).ok).toBe(false);
   });
 
   describe('a failure the Build already had (ticket 05d)', () => {

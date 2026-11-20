@@ -1,104 +1,61 @@
 import { createMemo, createSignal } from 'solid-js';
-import { placeKey, type Build, type Pick } from '~engine/build';
-import { allows, cascade, type Breaks, type Edit } from '~engine/edits';
+import type { Build } from '~engine/build';
+import type { Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
-import { nameOf, refusal } from '~engine/refusals';
 import { walk } from '~engine/walk';
 
-export interface Pending {
-  readonly title: string;
-  readonly summary: string;
-  readonly clears: readonly { readonly name: string; readonly place: string }[];
-  readonly build: Build;
-}
+import {
+  outcomeOf,
+  plannerAt,
+  reducePlanner,
+  type EditOutcome,
+  type NonEmpty,
+  type PlannerAction,
+  type PlannerState,
+} from './planner-state';
 
-export function placeWords(p: Pick['slot']['place']): string {
-  return 'level' in p ? `Level ${p.level}` : `Rank ${p.rank}`;
-}
+export { placeWords, type Pending } from './planner-state';
 
 export function createPlanner(engine: Engine, initial: Build) {
-  const [build, setBuild] = createSignal<Build>(initial);
-  const [past, setPast] = createSignal<readonly Build[]>([]);
-  const [future, setFuture] = createSignal<readonly Build[]>([]);
-  const [pending, setPending] = createSignal<Pending | undefined>();
-  const [notice, setNotice] = createSignal<readonly string[] | undefined>();
+  let latest = plannerAt(initial);
+  const [state, setState] = createSignal<PlannerState>(latest);
+  const restore = (next: PlannerState): PlannerState => {
+    latest = next;
+    setState(next);
+    return next;
+  };
+  const send = (a: PlannerAction): PlannerState => restore(reducePlanner(engine, latest, a));
+  const build = () => state().present;
+  const session = () => state().session;
   const walked = createMemo(() => walk(engine.data, build(), engine.G));
-
-  const commit = (next: Build) => {
-    setPast((p) => [...p, build()]);
-    setFuture([]);
-    setBuild(next);
-    setPending(undefined);
-    setNotice(undefined);
-  };
-
-  const brokenWords = (b: Breaks): string[] => [
-    ...b.picks.map((p) => `${nameOf(engine.data, p.feature)} (${placeWords(p.slot.place)})`),
-    ...b.others.map(
-      (f) => `${placeKey(f.place)}: ${refusal({ data: engine.data, G: engine.G, unit: walked().unit }, f).text}`,
-    ),
-  ];
-
-  const edit = (e: Edit, title: string) => {
-    const now = build();
-    const verdict = allows(engine.data, now, e, engine.G);
-    if (verdict.ok) return commit(verdict.build);
-    const c = cascade(engine.data, now, e, engine.G);
-    if (!c.ok) {
-      setNotice(['That change breaks choices clearing picks can’t mend:', ...brokenWords(c)]);
-      return;
-    }
-    const n = c.cleared.length;
-    setPending({
-      title,
-      summary: `This breaks ${n} later ${n === 1 ? 'pick' : 'picks'}. They'll be cleared, not moved.`,
-      clears: c.cleared.map((p) => ({ name: nameOf(engine.data, p.feature), place: placeWords(p.slot.place) })),
-      build: c.build,
-    });
-  };
 
   return {
     engine,
+    state,
+    latest: () => latest,
+    restore,
     build,
+    session,
     walked,
-    pending,
-    notice,
-    edit,
-    confirm: () => {
-      const p = pending();
-      if (p !== undefined) commit(p.build);
+    pending: () => {
+      const s = session();
+      return s.kind === 'confirming' ? s.pending : undefined;
     },
-    cancel: () => setPending(undefined),
-    refuse: (lines: readonly string[]) => setNotice(lines),
-    dismissNotice: () => setNotice(undefined),
-    canUndo: () => past().length > 0,
-    canRedo: () => future().length > 0,
-    undo: () => {
-      const p = past();
-      const last = p.at(-1);
-      if (last === undefined) return;
-      setFuture((f) => [build(), ...f]);
-      setPast(p.slice(0, -1));
-      setBuild(last);
-      setPending(undefined);
+    notice: () => {
+      const s = session();
+      return s.kind === 'refused' ? s.lines : undefined;
     },
-    redo: () => {
-      const f = future();
-      const next = f[0];
-      if (next === undefined) return;
-      setPast((p) => [...p, build()]);
-      setFuture(f.slice(1));
-      setBuild(next);
-      setPending(undefined);
-    },
-    replace: (next: Build) => commit(next),
-    reset: (next: Build) => {
-      setPast([]);
-      setFuture([]);
-      setBuild(next);
-      setPending(undefined);
-      setNotice(undefined);
-    },
+    edit: (edit: Edit, title: string): EditOutcome => outcomeOf(send({ kind: 'edit', edit, title })),
+    confirm: () => send({ kind: 'confirm' }),
+    cancel: () => send({ kind: 'cancel' }),
+    refuse: (lines: NonEmpty<string>) => send({ kind: 'refuse', lines }),
+    dismissNotice: () => send({ kind: 'dismiss' }),
+    canUndo: () => state().past.length > 0,
+    canRedo: () => state().future.length > 0,
+    undo: () => send({ kind: 'undo' }),
+    redo: () => send({ kind: 'redo' }),
+    replace: (next: Build) => send({ kind: 'replace', build: next }),
+    reset: (next: Build) => send({ kind: 'reset', build: next }),
   };
 }
 

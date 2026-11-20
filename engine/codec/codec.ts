@@ -1,12 +1,14 @@
 import {
   slotKey,
   toAbilityScores,
+  toArchetypes,
   toRankLevel,
   toSkillRank,
   type AbilityScores,
   type Alignment,
   type Ascension,
   type Build,
+  type ClassChoice,
   type GearPlace,
   type LevelUp,
   type Pick,
@@ -14,15 +16,7 @@ import {
   type SkillRank,
 } from '../build';
 import type { CheckedData } from '../load';
-import {
-  kindOf,
-  type Attribute,
-  type Guid,
-  type Kind,
-  type SpellSchool,
-  type StatType,
-  type WeaponCategory,
-} from '../data';
+import { kindOf, type Guid, type Kind, type SpellSchool, type StatType, type WeaponCategory } from '../data';
 import type { GrantParam } from '../grants';
 import { pointBuyCost, POINT_BUY, ATTRIBUTES, SKILL_ATTRIBUTE, WEAPON_CATEGORIES } from '../walk';
 
@@ -488,14 +482,16 @@ class Reader {
       if (level === undefined) throw new DecodeError('format', 'rank level');
       ranks.push({ class: cls, level });
     }
-    const classChoices: Record<Guid, { archetypes: Guid[] }> = {};
+    const classChoices: Record<Guid, ClassChoice> = {};
     let lastClass = '';
     for (let i = this.count(); i > 0; i--) {
       const cls = this.key('classes');
       if (cls <= lastClass) throw new DecodeError('format', 'class choices');
       lastClass = cls;
-      const archetypes: Guid[] = [];
-      for (let j = this.count(); j > 0; j--) archetypes.push(this.key('archetypes'));
+      const read: Guid[] = [];
+      for (let j = this.count(); j > 0; j--) read.push(this.key('archetypes'));
+      const archetypes = toArchetypes(read);
+      if (archetypes === undefined) throw new DecodeError('format', 'archetypes');
       classChoices[cls] = { archetypes };
     }
     const picks: Pick[] = [];

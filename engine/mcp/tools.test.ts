@@ -5,7 +5,7 @@ import { decodeBuild, encodeBuild } from '../codec';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { jackInTheGreen } from '../gold';
-import { rankLevelRange, skillRankRange } from '../refusals';
+import { archetypeCount, rankLevelRange, skillRankRange } from '../refusals';
 import { walk } from '../walk';
 import {
   engineOf,
@@ -29,6 +29,9 @@ const files = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)))
 const e = engineOf(loadData(files.files, files.overrides));
 
 const SPELL_SPECIALIZATION_FIRST = 'f327a765a4353d04f872482ef3e48c35';
+const FIGHTER = '48ac8db94d5de7645906c7d0ad3bcfbd';
+const TWO_HANDED_FIGHTER_ARCHETYPE = '84643e02a764bff4a9c1aba333a53c89';
+const MUTATION_WARRIOR_ARCHETYPE = '758e0061a077e54409a3bf0eb51511e5';
 const jack: Build = {
   ...jackInTheGreen.build,
   picks: jackInTheGreen.build.picks.filter(
@@ -154,6 +157,17 @@ describe('the MCP, end to end', () => {
     expect(ok(await place_rank(e, { code: hero.code, rank: 1, level: 1 }), 'place_rank').build.ranks?.[0]?.level).toBe(
       1,
     );
+  });
+
+  it('refuses two archetypes for one class with R’s words, as the level-up screen holds one (ticket 05d)', async () => {
+    const code = (await start_build(e)).code;
+    const archetypes = [TWO_HANDED_FIGHTER_ARCHETYPE, MUTATION_WARRIOR_ARCHETYPE];
+    expect(await level_up(e, { code, class: FIGHTER, archetypes })).toEqual({
+      refused: true,
+      reason: archetypeCount(archetypes),
+    });
+    const one = ok(await level_up(e, { code, class: FIGHTER, archetypes: [TWO_HANDED_FIGHTER_ARCHETYPE] }), 'one');
+    expect(one.build.classChoices?.[FIGHTER]?.archetypes).toEqual([TWO_HANDED_FIGHTER_ARCHETYPE]);
   });
 
   it('searches, explains and gives the sheet', async () => {

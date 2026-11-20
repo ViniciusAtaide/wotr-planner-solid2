@@ -1,12 +1,12 @@
 import { For } from 'solid-js';
 
-export interface CompareToggleProps {
-  readonly segments: readonly string[];
-  readonly value: string;
-  readonly onChange?: (segment: string) => void;
+export interface CompareToggleProps<S extends string> {
+  readonly segments: readonly S[];
+  readonly value: S;
+  readonly onChange?: (segment: S) => void;
 }
 
-export default function CompareToggle(props: CompareToggleProps) {
+export default function CompareToggle<S extends string>(props: CompareToggleProps<S>) {
   return (
     <div class="ww-segment" role="group" aria-label="Compare">
       <For each={props.segments}>

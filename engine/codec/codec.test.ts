@@ -15,6 +15,8 @@ const FIGHTER = '48ac8db94d5de7645906c7d0ad3bcfbd';
 const BASIC = '247a4068296e8be42890143f451b4b45';
 const DODGE = '97e216dbb46ae3c4faef90cf6bbe6fd5';
 const TOUGHNESS = 'd09b20029e9abfe4480b356c92095623';
+const TWO_HANDED = '84643e02a764bff4a9c1aba333a53c89';
+const MUTATION_WARRIOR = '758e0061a077e54409a3bf0eb51511e5';
 
 const inSlotOrder = (b: Build): Build => ({
   ...b,
@@ -109,6 +111,12 @@ describe('C: the Build code', () => {
       picks: [...small.picks, { slot: { place: { level: 1 }, selection: BASIC, index: 0 }, feature: TOUGHNESS }],
     });
     await failsWith(twice, 'format');
+    const twoArchetypes: Build = JSON.parse(
+      JSON.stringify({ ...small, classChoices: { [FIGHTER]: { archetypes: [TWO_HANDED, MUTATION_WARRIOR] } } }),
+    );
+    await failsWith(await encodeBuild(data, twoArchetypes), 'format');
+    const oneArchetype: Build = { ...small, classChoices: { [FIGHTER]: { archetypes: [TWO_HANDED] } } };
+    expect(await decodeBuild(data, await encodeBuild(data, oneArchetype))).toEqual(oneArchetype);
     const blueprints = new Map(data.blueprints);
     blueprints.delete(DODGE);
     await failsWith(code, 'unknownKey', { ...data, blueprints });
