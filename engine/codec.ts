@@ -235,14 +235,19 @@ function fromBase64Url(code: string): Uint8Array<ArrayBuffer> {
   }
 }
 
+/** The bytes as a stream: a Response body, which browsers, Node, Bun and jsdom tests all have (jsdom's Blob has no stream). */
+function streamOf(bytes: Uint8Array<ArrayBuffer>): ReadableStream<Uint8Array<ArrayBuffer>> {
+  return new Response(bytes).body as ReadableStream<Uint8Array<ArrayBuffer>>;
+}
+
 async function deflate(bytes: Uint8Array<ArrayBuffer>): Promise<Uint8Array> {
-  const stream = new Blob([bytes]).stream().pipeThrough(new CompressionStream('deflate-raw'));
+  const stream = streamOf(bytes).pipeThrough(new CompressionStream('deflate-raw'));
   return new Uint8Array(await new Response(stream).arrayBuffer());
 }
 
 async function inflate(bytes: Uint8Array<ArrayBuffer>): Promise<Uint8Array> {
   try {
-    const reader = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate-raw')).getReader();
+    const reader = streamOf(bytes).pipeThrough(new DecompressionStream('deflate-raw')).getReader();
     const chunks: Uint8Array[] = [];
     let size = 0;
     for (let r = await reader.read(); !r.done; r = await reader.read()) {

@@ -46,7 +46,15 @@ export type Edit =
   /** A character level's ability increase (1-based), or none. */
   | { readonly kind: 'increase'; readonly level: number; readonly increase?: Attribute }
   /** The ability that takes the race's +2, or none. */
-  | { readonly kind: 'raceStat'; readonly raceStat?: Attribute };
+  | { readonly kind: 'raceStat'; readonly raceStat?: Attribute }
+  /** The last character level taken off; its picks' slots go with it. */
+  | { readonly kind: 'dropLevel' }
+  /** The last Mythic rank taken off. */
+  | { readonly kind: 'dropRank' }
+  /** A Mythic rank's class (1-based): a path, or a switch at its rank (map 31). */
+  | { readonly kind: 'rankClass'; readonly rank: number; readonly class: Guid }
+  /** ADR 0002's opt-in: the Gear's Enhancement counts toward stat prerequisites. The MCP never sets it. */
+  | { readonly kind: 'countGear'; readonly on: boolean };
 
 /** The Build with the edit made. Nothing is judged here. */
 export function apply(build: Build, edit: Edit): Build {
@@ -110,6 +118,19 @@ export function apply(build: Build, edit: Edit): Build {
     case 'raceStat': {
       const { raceStat: _stat, ...rest } = build;
       return edit.raceStat === undefined ? rest : { ...rest, raceStat: edit.raceStat };
+    }
+    case 'dropLevel':
+      return { ...build, levels: build.levels.slice(0, -1) };
+    case 'dropRank':
+      return { ...build, ranks: (build.ranks ?? []).slice(0, -1) };
+    case 'rankClass':
+      return {
+        ...build,
+        ranks: (build.ranks ?? []).map((r, i) => (i === edit.rank - 1 ? { ...r, class: edit.class } : r)),
+      };
+    case 'countGear': {
+      const { countGear: _count, ...rest } = build;
+      return edit.on ? { ...rest, countGear: true } : rest;
     }
   }
 }

@@ -7,6 +7,7 @@ import { isShown, refGuid, type BlueprintParametrizedFeature, type Guid, type Sp
 import { buildGrantIndex, type GrantIndex, type GrantParam } from './grants';
 import type { FailedRule } from './walk/failure';
 import { SKILL_ATTRIBUTE } from './walk/unit';
+import type { Unit } from './walk/unit';
 import { pauseAt, walk, type OpenedSlot, type PausedWalk } from './walk/walk';
 import { WEAPON_CATEGORIES } from './walk/weapons';
 
@@ -26,6 +27,8 @@ export interface OptionStatus {
 export interface Picker {
   readonly slot: OpenedSlot;
   readonly options: readonly OptionStatus[];
+  /** The character at the pause, which R words each closed option's Refusal against. */
+  readonly unit: Unit;
 }
 
 /** Kingmaker/Blueprints/Classes/Spells/SpellSchool.cs, less None (BlueprintParametrizedFeature.CanSelect refuses it). */
@@ -91,7 +94,11 @@ export function picker(
 ): Picker | undefined {
   const paused = pauseAt(data, build, slot, G);
   if (paused === undefined) return undefined;
-  return { slot: paused.slot, options: candidates(data, slot.selection).map((o) => status(data, paused, o)) };
+  return {
+    slot: paused.slot,
+    options: candidates(data, slot.selection).map((o) => status(data, paused, o)),
+    unit: paused.unit,
+  };
 }
 
 function status(data: CheckedData, paused: PausedWalk, o: { feature: Guid; param?: GrantParam }): OptionStatus {

@@ -15,11 +15,15 @@ const modifier = (value: number) => {
   return mod < 0 ? `−${-mod}` : `+${mod}`;
 };
 
+export interface StatBlockProps {
+  readonly stats: readonly Stat[];
+}
+
 /**
  * StatBlock (design system): the six ability scores at a level, from the walk, without Gear unless the Build opts in
  * (ADR 0002). Six columns, or three on a phone. No hit points: the walk doesn't compute them.
  */
-export default function StatBlock(props: { readonly stats: readonly Stat[] }) {
+export default function StatBlock(props: StatBlockProps) {
   return (
     <div class="ww-stats">
       <For each={props.stats}>

@@ -2,11 +2,7 @@ import { createUniqueId, For, onSettled } from 'solid-js';
 
 import Button from './Button';
 
-/**
- * CascadePreview (design system): the one place a pick doesn't apply at once. It lists exactly what the Cascade edit
- * clears (E's preview), says they're cleared, not moved, and applies on confirm. Esc cancels.
- */
-export default function CascadePreview(props: {
+export interface CascadePreviewProps {
   /** The edit ("Swap Spell Focus"). */
   readonly title: string;
   /** How many picks break, and that they're cleared, not moved. */
@@ -17,7 +13,13 @@ export default function CascadePreview(props: {
   readonly onConfirm: () => void;
   /** Take focus when it opens, so Esc and Tab reach it (on by default; the gallery shows it without). */
   readonly autofocus?: boolean;
-}) {
+}
+
+/**
+ * CascadePreview (design system): the one place a pick doesn't apply at once. It lists exactly what the Cascade edit
+ * clears (E's preview), says they're cleared, not moved, and applies on confirm. Esc cancels.
+ */
+export default function CascadePreview(props: CascadePreviewProps) {
   const id = createUniqueId();
   let dialog: HTMLDivElement | undefined;
   onSettled(() => {

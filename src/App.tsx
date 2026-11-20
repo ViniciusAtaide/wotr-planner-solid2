@@ -1,11 +1,11 @@
 import { Title } from '@solidjs/meta';
 import { Loading } from 'solid-js';
 
-import ThemeToggle from './components/ThemeToggle';
 import { paths, Router } from './router';
 import './styles/tokens.css';
 import './styles/components.css';
 import './styles/app.css';
+import './styles/planner.css';
 
 export default function App() {
   return (
@@ -17,7 +17,6 @@ export default function App() {
             <a class="app-header__name" href={paths()}>
               Worldwound Planner
             </a>
-            <ThemeToggle />
           </header>
           <Loading fallback={<main>Loading…</main>}>{props.children}</Loading>
         </div>

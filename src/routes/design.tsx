@@ -14,8 +14,16 @@ import RankMarker from '../components/design/RankMarker';
 import ShareLink from '../components/design/ShareLink';
 import StatBlock from '../components/design/StatBlock';
 
+interface CardProps {
+  readonly name: string;
+  /** Its line from the published system. */
+  readonly about: string;
+  /** Its preview states. */
+  readonly children: JSX.Element;
+}
+
 /** One component's card: its name, its line from the published system, and its preview states. */
-function Card(props: { readonly name: string; readonly about: string; readonly children: JSX.Element }) {
+function Card(props: CardProps) {
   return (
     <section class="gallery__card" aria-label={props.name}>
       <h2>{props.name}</h2>
@@ -36,7 +44,6 @@ export default function Design() {
     <main class="app-page">
       <Title>Design · Worldwound Planner</Title>
       <div class="gallery">
-        {/* The header's toggle switches the theme, here as on every page. */}
         <h1 class="title">Design</h1>
 
         <Card name="LevelRow" about="A level in the Timeline, with its class and picks.">

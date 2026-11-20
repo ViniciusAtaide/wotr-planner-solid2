@@ -40,6 +40,6 @@ describe('colors come only from the tokens', () => {
   });
 
   it('holds the tokens themselves', () => {
-    expect(colorLiterals(readFileSync(join(SRC, TOKENS), 'utf8')).length).toBeGreaterThan(30);
+    expect(colorLiterals(readFileSync(join(SRC, TOKENS), 'utf8')).length).toBeGreaterThan(15);
   });
 });

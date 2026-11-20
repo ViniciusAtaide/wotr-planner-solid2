@@ -19,3 +19,7 @@ These are judgement rules a reviewer applies to a diff. Anything a tool can chec
 - **Decisions stay on the map.** A diff that settles a design question no ticket or ADR settled is a finding; the question goes to the user and a new map ticket.
 - **Game text.** Nothing from the game's text enters the repo except display names (ADR 0006): no descriptions, no copied decompiled code, no dump JSON in tests or docs.
 - **Terms.** Code, tests and docs use `GLOSSARY.md`'s words (Build, Pick, Slot, Refusal, Gear…), not their listed `_Avoid_` alternatives.
+
+## Conventions
+
+- A component's props are an exported `interface <Component>Props`; no inline prop types.

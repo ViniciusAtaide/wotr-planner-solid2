@@ -3,13 +3,23 @@ import { Show, type ParentProps } from 'solid-js';
 import Badge from './Badge';
 import Refusal from './Refusal';
 
+/** An option's status at its slot, from S. */
+export type OptionStatus = 'open' | 'closed';
+
+export interface OptionListProps extends ParentProps {}
+
 /** The picker's list of options. */
-export function OptionList(props: ParentProps) {
+export function OptionList(props: OptionListProps) {
   return <div class="ww-options">{props.children}</div>;
 }
 
+export interface PickerHeadProps {
+  readonly title: string;
+  readonly counts?: string;
+}
+
 /** The picker panel's heading: the slot and its counts ("212 open · 1,034 closed"). */
-export function PickerHead(props: { readonly title: string; readonly counts?: string }) {
+export function PickerHead(props: PickerHeadProps) {
   return (
     <div class="ww-picker-head">
       <h2>{props.title}</h2>
@@ -18,20 +28,19 @@ export function PickerHead(props: { readonly title: string; readonly counts?: st
   );
 }
 
+export interface ClosedCountProps {
+  readonly text: string;
+}
+
 /** The closed options a list doesn't show, summed by reason. */
-export function ClosedCount(props: { readonly text: string }) {
+export function ClosedCount(props: ClosedCountProps) {
   return <div class="ww-count">{props.text}</div>;
 }
 
-/**
- * PickerOption (design system): one option at a slot, with its status from S and every line of its Refusal from R.
- * An open option is a button; a closed one stays focusable (`aria-disabled`) so its Refusal can be read. A
- * gear-dependent option shows ◈ Gear beside ✓ Open, with R's note naming the items it counts.
- */
-export default function PickerOption(props: {
+export interface PickerOptionProps {
   /** The game name, with its parameter when it takes one. */
   readonly name: string;
-  readonly status: 'open' | 'closed';
+  readonly status: OptionStatus;
   /** The Build's current pick at this slot. */
   readonly selected?: boolean;
   readonly mythic?: boolean;
@@ -42,7 +51,14 @@ export default function PickerOption(props: {
   /** R's lines, for a closed option. */
   readonly refusal?: readonly string[];
   readonly onPick?: () => void;
-}) {
+}
+
+/**
+ * PickerOption (design system): one option at a slot, with its status from S and every line of its Refusal from R.
+ * An open option is a button; a closed one stays focusable (`aria-disabled`) so its Refusal can be read. A
+ * gear-dependent option shows ◈ Gear beside ✓ Open, with R's note naming the items it counts.
+ */
+export default function PickerOption(props: PickerOptionProps) {
   const badges = () => (
     <span class="ww-option__badges">
       <Show when={props.mythic}>

@@ -547,7 +547,7 @@ export async function compare(
 }
 
 /** The first place where the Builds' choices differ: a level's class or picks, in Build order. */
-function divergence(builds: readonly Build[]): { divergeAt?: string } {
+export function divergence(builds: readonly Build[]): { divergeAt?: string } {
   const at = (b: Build, place: Place) =>
     JSON.stringify([
       'level' in place ? b.levels[place.level - 1] : b.ranks?.[place.rank - 1],

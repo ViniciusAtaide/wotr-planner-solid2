@@ -3,6 +3,8 @@ import { fileRoutes } from 'filesystem-routing/vite';
 import { defineConfig } from 'vitest/config';
 import solid from '@solidjs/vite-plugin';
 
+import { dataDocument } from './vite/data-document.ts';
+
 export default defineConfig({
   // Turnkey streaming SSR: no index.html and no entry files — the plugin
   // generates the entries around src/App.tsx, wrapped in src/Document.tsx.
@@ -34,6 +36,8 @@ export default defineConfig({
     // `httpMethods` also scans route modules for GET/POST/... exports (API
     // routes); handler modules never enter the client bundle.
     fileRoutes({ httpMethods: true, types: true }),
+    // The committed data as one content-hashed document the browser walks (ADR 0004).
+    dataDocument(),
   ],
   server: {
     port: 3000,

@@ -12,6 +12,8 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "noEmit": true,
+    // vite.config.ts imports its local plugin with the .ts extension, as Vite's native config loader requires.
+    "allowImportingTsExtensions": true,
     "paths": {
       // The rules engine at the repo root (ticket 16's amendment).
       "~engine/*": ["./engine/*"]

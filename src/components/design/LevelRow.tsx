@@ -12,13 +12,19 @@ export interface PickChip {
   readonly onSelect?: () => void;
 }
 
+export interface TimelineProps extends ParentProps {}
+
 /** The Timeline (design system): the column of level rows and Mythic ranks. */
-export function Timeline(props: ParentProps) {
+export function Timeline(props: TimelineProps) {
   return <div class="ww-timeline">{props.children}</div>;
 }
 
+export interface PickChipsProps {
+  readonly picks: readonly PickChip[];
+}
+
 /** A row's pick chips, which a RankMarker shows under its title too. */
-export function PickChips(props: { readonly picks: readonly PickChip[] }) {
+export function PickChips(props: PickChipsProps) {
   return (
     <div class="ww-level__picks">
       <For each={props.picks}>
@@ -40,11 +46,7 @@ export function PickChips(props: { readonly picks: readonly PickChip[] }) {
   );
 }
 
-/**
- * LevelRow (design system): one character level of the Timeline, with its class and a chip for every slot the walk
- * opens there. `active` is the level the picker is showing. Refusal text never goes here; it belongs to the picker.
- */
-export default function LevelRow(props: {
+export interface LevelRowProps {
   readonly level: number;
   /** The class's game name. */
   readonly characterClass: string;
@@ -52,7 +54,13 @@ export default function LevelRow(props: {
   readonly detail?: string;
   readonly active?: boolean;
   readonly picks?: readonly PickChip[];
-}) {
+}
+
+/**
+ * LevelRow (design system): one character level of the Timeline, with its class and a chip for every slot the walk
+ * opens there. `active` is the level the picker is showing. Refusal text never goes here; it belongs to the picker.
+ */
+export default function LevelRow(props: LevelRowProps) {
   return (
     <div class={['ww-level', { 'ww-level--active': props.active === true }]}>
       <div class="ww-level__num">{props.level}</div>
