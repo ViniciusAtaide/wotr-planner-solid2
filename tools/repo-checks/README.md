@@ -10,7 +10,7 @@ bun tools/repo-checks/main.ts comments
 
 ## Public entry
 
-`index.ts` exports `importProblems`, `commentProblems`, `codeComments`, `cssComments`, `FEATURES` and `APP_LAYER`. `main.ts` is the command line.
+`index.ts` exports `importProblems`, `commentProblems`, `codeComments`, `cssComments`, `configImportProblems`, `FEATURES` and `APP_LAYER`. `main.ts` is the command line.
 
 ## The declared DAG (`features.ts`)
 
@@ -34,6 +34,10 @@ The files are every file git tracks or would track (`git ls-files --cached --oth
 
 Code files (`.ts`, `.tsx`, `.mts`, `.cts`, `.js`, `.mjs`, `.cjs`) are tokenized by oxc-parser, which lists every comment, so a `//` inside a string, a template, a regular expression or JSX text is not one. CSS goes through a small scanner that skips single- and double-quoted strings and reports each `/* … */`. The allowed comments are the ones a tool reads: `/// <reference …>` directives and `// @vitest-environment …` pragmas. `GENERATED` lists the files a tool rewrites on every dev and build start (`file-routes.d.ts`, `solid-env.d.ts`), which are skipped. Everything a comment used to say goes to the owning feature's README, a `cite` value (engine citations, `engine/cite`), or a better name.
 
+## The config-import check (`config-imports.ts`)
+
+Vite loads `vite.config.ts` with Node's own module loader, so every runtime import the config reaches, through `vite/data-document` into `engine/data-dir`, `engine/compact` and on, must name its file with an extension (`./read-dir.ts`), and path aliases like `~engine/…` don't resolve there. The check starts at `vite.config.ts` and follows each relative runtime import that has an extension, reporting `[config-import]` for one without an extension and for an alias. Type-only imports are skipped (they're erased before loading), and packages are left to the loader.
+
 ## Tests
 
-`repo-checks.test.ts` runs both checks on small in-memory inputs: comments inside strings, templates, regular expressions and JSX text are ignored and real ones found; the allowed directives and the generated files pass; CSS strings are skipped; and each import rule fires with its message, including a cycle, an unknown name and a layer breach in a declared DAG.
+`repo-checks.test.ts` runs the checks on small in-memory inputs; the config-import check follows a planted chain and reports a missing extension and an alias, skipping a type-only import and a package; comments inside strings, templates, regular expressions and JSX text are ignored and real ones found; the allowed directives and the generated files pass; CSS strings are skipped; and each import rule fires with its message, including a cycle, an unknown name and a layer breach in a declared DAG.

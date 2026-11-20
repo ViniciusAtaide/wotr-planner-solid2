@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { codeComments, commentProblems, cssComments } from './comments';
 import type { Feature } from './features';
+import { configImportProblems } from './config-imports';
 import { declarationProblems, importProblems } from './imports';
 
 const file = (path: string, text: string) => ({ path, text });
@@ -91,6 +92,21 @@ describe('the import check', () => {
       'engine/a: [dag-unknown] declares a dependency on engine/nowhere, no feature',
       'engine/b: [layer] a engine feature may not depend on src/ui, a ui feature',
       '[dag-cycle] the declared dependencies form a cycle: engine/a → engine/b → engine/a',
+    ]);
+  });
+});
+
+describe('the config-import check', () => {
+  it('follows the runtime imports vite.config.ts reaches and wants each relative one to name its file', () => {
+    const files: Record<string, string> = {
+      'vite.config.ts':
+        "import { plugin } from './vite/plugin/index.ts';\nimport type { Options } from './vite/types';",
+      'vite/plugin/index.ts': "export { plugin } from './plugin';\nimport { read } from '../../engine/x/index.ts';",
+      'engine/x/index.ts': "import { y } from '~engine/y';\nimport type { Z } from './z';\nimport 'node:fs';",
+    };
+    expect(configImportProblems((path) => files[path])).toEqual([
+      "vite/plugin/index.ts: import './plugin': [config-import] needs its file extension, since vite.config.ts loads natively",
+      "engine/x/index.ts: import '~engine/y': [config-import] vite.config.ts loads natively, so path aliases don't resolve",
     ]);
   });
 });

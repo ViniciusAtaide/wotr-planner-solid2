@@ -1,5 +1,7 @@
 import { fileURLToPath } from 'node:url';
+import { existsSync, readFileSync } from 'node:fs';
 import { commentProblems } from './comments';
+import { configImportProblems } from './config-imports';
 import { CODE, ownedFiles, STYLE } from './files';
 import { importProblems } from './imports';
 
@@ -11,6 +13,8 @@ const checks: Readonly<Record<string, () => string[]>> = {
     return importProblems(ownedFiles(repo, CODE), present);
   },
   comments: () => commentProblems([...ownedFiles(repo, CODE), ...ownedFiles(repo, STYLE)]),
+  'config-imports': () =>
+    configImportProblems((path) => (existsSync(repo + path) ? readFileSync(repo + path, 'utf8') : undefined)),
 };
 
 const names = process.argv.slice(2);

@@ -5,7 +5,7 @@ Node only: `readDataDir(root)` reads a data root (`data/`, or a fixture) into th
 ## Design notes
 
 - The browser gets the same data as one document instead (ADR 0004). This feature is kept apart from `engine/load` so the browser bundle never imports `node:fs`: nothing the browser bundle imports may import it.
-- Its runtime imports carry the `.ts` extension (`./read-dir.ts`, `../data/index.ts`). `vite.config.ts` imports it through `vite/data-document`, and Vite's native config loader needs explicit extensions there. Keep them.
+- Its runtime imports carry the `.ts` extension (`./read-dir.ts`, `../data/index.ts`). `vite.config.ts` imports it through `vite/data-document`, and Vite's native config loader needs explicit extensions there; `bun run check:repo` fails on one without (`config-imports`).
 
 ## Tests
 
