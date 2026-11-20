@@ -6,12 +6,15 @@
 #   - adds a git worktree at <main checkout>.worktrees/<name> on a new branch ticket/<name>, cut from main;
 #   - symlinks the git-ignored game sources (blueprints/, decompiled/) and .env from the main checkout;
 #   - runs `bun install --frozen-lockfile` there, whose `prepare` script points core.hooksPath at .githooks.
-#     Bun clones the packages from its global cache (copy-on-write on APFS), so each install is fast and small.
+#     Bun clones the packages from its global cache (copy-on-write on APFS), so each install is fast and small;
+#   - opens the worktree as its own WebStorm project (`open-webstorm-project`, when it's installed), so the IDE's
+#     MCP tools serve it and its changes show in that window's Commit tab.
 # It refuses a name whose branch or directory already exists.
 #
 # When the ticket is done, its session commits to ticket/<name>. The coordinating session, in the
 # main checkout, merges it and removes the worktree:
 #   git merge refs/heads/ticket/<name>
+#   close-webstorm-project <main checkout>.worktrees/<name>    # before the directory goes
 #   git worktree remove ../wotr-planner-solid2.worktrees/<name>
 #   git branch -d ticket/<name>
 set -eu
@@ -52,11 +55,18 @@ done
 [ "$(git -C "$dest" config core.hooksPath)" = .githooks ] || die "core.hooksPath is not .githooks"
 [ -x "$dest/.githooks/pre-commit" ] || die "$dest/.githooks/pre-commit is not executable"
 
+ide="opened in WebStorm"
+if command -v open-webstorm-project >/dev/null 2>&1; then
+  open-webstorm-project "$dest" || ide="NOT opened in WebStorm (open-webstorm-project failed; use the built-in file tools)"
+else
+  ide="NOT opened in WebStorm (open-webstorm-project isn't installed; use the built-in file tools)"
+fi
+
 cat <<EOF
 
-Worktree ready: $dest (branch $branch)
+Worktree ready: $dest (branch $branch), $ide
 Next:
-  - start the ticket's session in $dest; use the built-in file tools there, not WebStorm;
+  - start the ticket's session in $dest; pass projectPath "$dest" on every mcp__webstorm__* call;
   - run \`bun run format\` before committing; the pre-commit hook runs \`bun run check\`;
   - commit to $branch and report the hash to the coordinating session, which merges it.
 EOF
