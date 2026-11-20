@@ -1,6 +1,7 @@
 # A compact data document
 
-Status: open
+Status: done
+Session: ticket-03c-walk-fixes
 Blocked by: 05b (both change how the document is served)
 Plan: [plan](../plan.md)
 
@@ -29,3 +30,55 @@ The rearchitecture (`baf59949`, ADR 0008) moved files into feature folders after
 - Both gold builds walk the same in the browser on the compact document (the walk's gains and failures are identical).
 - `bun run check` passes, and the work is one commit by path through the hook. Don't push.
 - `Status: done` and an `## Outcome`.
+
+## Outcome (2026-11-20)
+
+The coordinator chose the full encoding after the stop-rule report (gzip is what GitHub Pages serves), on three conditions: the decoder in its own feature, the round trip over all of `data/`, and defaults only from the allowlist's specs. All three hold.
+
+**The encoding.** `engine/compact` holds `encodeDocument` and `decodeDocument`, and its README describes the format:
+- shape tables carry `$type` and field names;
+- each GUID is listed once and referred to by a base-36 index;
+- fields holding their spec's default are dropped, leaving a `?name` marker in the shape so key order survives;
+- blueprints travel as `[folder, value]` with their paths rebuilt; overrides travel as they are.
+
+**The plugin and the planner.** `vite/data-document` emits the encoded document, and `src/planner/engine.ts` decodes it before `loadData`.
+
+**Defaults.** These come only from the allowlist's specs.
+- `tools/importer/spec.ts` gives each spec a `zero`: `false` for a boolean, `0` for an int or number, `[]` for a list, `null` for a nullable, `"None"` for an enum that has it, or the `orDefault` value.
+- `tools/importer/field-defaults.ts` generates `engine/compact/field-defaults.ts` from them. It covers 101 `$type`s, plus 9 structs keyed by their field names, and throws if two specs disagree.
+- `field-defaults.test.ts` fails while the committed table differs from the specs.
+- Nothing is inferred from the data. A defaulted field holding another value travels as it is.
+
+**Round trip.** `compact.test.ts` encodes and decodes the whole of `data/` (11,716 blueprints and 247 overrides):
+- the files' JSON text is identical, key order included;
+- `loadData` on the decoded files `toEqual`s `loadData` on the originals;
+- unit cases cover dropped and kept defaults, absent fields, tag-like strings and a misnamed file.
+
+**Sizes** (gzip at level 6 is the likely level for a host that compresses on the fly; the build's own `.gz` is level 9):
+
+| document | raw | gzip -6 | gzip -9 | brotli q11 |
+|---|---|---|---|---|
+| before, `{files, overrides}` | 7.30 MB | 1.020 MB | 0.998 MB | 0.550 MB |
+| after, compact | 2.08 MB | 0.4998 MB (499,843 B) | 0.4936 MB | 0.3933 MB |
+
+That's 51% less with gzip and 28% less with brotli. It meets the goal of under 0.5 MB gzipped, but only by 157 bytes at level 6, so data growth will push it over.
+
+**Decode plus load** (in the browser under dev, median of 7 runs, from the same text in memory):
+
+| | parse | decode | load | total |
+|---|---|---|---|---|
+| before | 14 ms | — | 39 ms | 53 ms |
+| after | 48 ms (parse and decode) | | 35 ms | 83 ms |
+
+So +30 ms of CPU, against about 520 KB less to download with gzip.
+
+**Gold builds.** Both walk the same in the browser on the compact document as in Bun on the files:
+- Enforcer: 153 facts, 0 failures;
+- Jack in the Green: 165 facts, its 1 known failure.
+
+The summaries' SHA-256 matched: `0b83d253608a6eec` and `aef18f9472e69c5b`.
+
+**Other changes.**
+- `tools/repo-checks/features.ts` declares `engine/compact` (needing data, data-dir and load), plus edges to it from `tools/importer`, `vite/data-document` and `src/planner`.
+- Tried and dropped: ordering GUIDs by use. Its shorter indexes compressed worse than first-appearance order (507,922 B at gzip -6).
+

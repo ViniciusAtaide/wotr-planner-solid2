@@ -14,6 +14,7 @@ export interface Spec<T> {
   readonly describe: string;
   readonly keep: (raw: unknown, at: string, ctx: KeepContext) => T;
   readonly absent?: { readonly value: T };
+  readonly zero?: { readonly value: T };
   readonly struct?: Readonly<Record<string, AnySpec>>;
   readonly variants?: Readonly<Record<string, Variant<Readonly<Record<string, AnySpec>>>>>;
   readonly _type?: (value: T) => T;
@@ -25,7 +26,7 @@ export function shortType(dollarType: unknown): string {
   return comma < 0 ? dollarType : dollarType.slice(comma + 2);
 }
 
-export type AnySpec = Pick<Spec<unknown>, 'describe' | 'keep' | 'absent' | 'struct' | 'variants'>;
+export type AnySpec = Pick<Spec<unknown>, 'describe' | 'keep' | 'absent' | 'zero' | 'struct' | 'variants'>;
 
 export type NotKept = string | { readonly reason: string; readonly holds: (raw: Record<string, unknown>) => boolean };
 
@@ -47,9 +48,10 @@ export interface Variant<F> {
   readonly notKept?: Readonly<Record<string, NotKept>>;
 }
 
-function primitive<T>(describe: string, test: (raw: unknown) => boolean): Spec<T> {
+function primitive<T>(describe: string, test: (raw: unknown) => boolean, zero?: { readonly value: T }): Spec<T> {
   return {
     describe,
+    ...(zero && { zero }),
     keep(raw, at, ctx) {
       if (!test(raw)) ctx.problems.push(`${at}: expected ${describe}, found ${JSON.stringify(raw)}`);
       return raw as T;
@@ -57,17 +59,28 @@ function primitive<T>(describe: string, test: (raw: unknown) => boolean): Spec<T
   };
 }
 
-export const int: Spec<number> = primitive('an integer', (raw) => Number.isInteger(raw));
-export const num: Spec<number> = primitive('a number', (raw) => typeof raw === 'number' && Number.isFinite(raw));
-export const bool: Spec<boolean> = primitive('a boolean', (raw) => typeof raw === 'boolean');
+export const int: Spec<number> = primitive('an integer', (raw) => Number.isInteger(raw), { value: 0 });
+export const num: Spec<number> = primitive('a number', (raw) => typeof raw === 'number' && Number.isFinite(raw), {
+  value: 0,
+});
+export const bool: Spec<boolean> = primitive('a boolean', (raw) => typeof raw === 'boolean', { value: false });
 export const str: Spec<string> = primitive('a string', (raw) => typeof raw === 'string');
 
 export function orDefault<T>(spec: Spec<T>, value: T): Spec<T> {
-  return { ...spec, describe: `${spec.describe} (default ${JSON.stringify(value)})`, absent: { value } };
+  return {
+    ...spec,
+    describe: `${spec.describe} (default ${JSON.stringify(value)})`,
+    absent: { value },
+    zero: { value },
+  };
 }
 
 export function enumOf<const V extends readonly string[]>(...members: V): Spec<V[number]> {
-  return primitive(`one of ${members.join(', ')}`, (raw) => typeof raw === 'string' && members.includes(raw));
+  return primitive(
+    `one of ${members.join(', ')}`,
+    (raw) => typeof raw === 'string' && members.includes(raw),
+    members.includes('None') ? { value: 'None' as V[number] } : undefined,
+  );
 }
 
 function checkRef(raw: unknown, at: string, ctx: KeepContext, kinds: readonly Kind[]): raw is Ref {
@@ -97,6 +110,7 @@ export function ref(...kinds: Kind[]): Spec<Ref> {
 export function orNull<T>(spec: Spec<T>): Spec<T | null> {
   return {
     describe: `${spec.describe}, or null`,
+    zero: { value: null },
     keep: (raw, at, ctx) => (raw === null ? null : spec.keep(raw, at, ctx)),
     struct: spec.struct,
     variants: spec.variants,
@@ -106,6 +120,7 @@ export function orNull<T>(spec: Spec<T>): Spec<T | null> {
 export function refOrNull(...kinds: Kind[]): Spec<Ref | null> {
   return {
     describe: `a reference to ${kinds.join(' or ')}, or null`,
+    zero: { value: null },
     keep(raw, at, ctx) {
       if (raw !== null && checkRef(raw, at, ctx, kinds)) ctx.names?.(refGuid(raw)!);
       return raw as Ref | null;
@@ -116,6 +131,7 @@ export function refOrNull(...kinds: Kind[]): Spec<Ref | null> {
 export function heldRefs(...kinds: Kind[]): Spec<readonly Ref[]> {
   return {
     describe: `a list of references to ${kinds.join(' or ')} (others dropped)`,
+    zero: { value: [] },
     keep(raw, at, ctx) {
       if (!Array.isArray(raw)) {
         ctx.problems.push(`${at}: expected a list, found ${JSON.stringify(raw)}`);
@@ -135,6 +151,7 @@ export function heldRefs(...kinds: Kind[]): Spec<readonly Ref[]> {
 export function list<T>(item: Spec<T>): Spec<readonly T[]> {
   return {
     describe: `a list of ${item.describe}`,
+    zero: { value: [] },
     struct: item.struct,
     variants: item.variants,
     keep(raw, at, ctx) {

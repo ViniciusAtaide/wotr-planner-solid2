@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import type { Plugin } from 'vite';
 
+import { encodeDocument, FIELD_DEFAULTS } from '../../engine/compact/index.ts';
 import { readDataDir } from '../../engine/data-dir/index.ts';
 
 const VIRTUAL = 'virtual:data-document';
@@ -12,7 +13,7 @@ export function dataDocument(): Plugin {
   const doc = () => {
     if (cached === undefined) {
       const { files, overrides } = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)));
-      const json = JSON.stringify({ files, overrides });
+      const json = JSON.stringify(encodeDocument(files, overrides, FIELD_DEFAULTS));
       const hash = createHash('sha256').update(json).digest('hex').slice(0, 12);
       cached = { path: `/assets/data-${hash}.json`, json };
     }

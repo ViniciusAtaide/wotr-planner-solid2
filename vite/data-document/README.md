@@ -1,7 +1,9 @@
 # Data document
 
 The Vite plugin that serves the data document (ADR 0004; map 13's amendment; build ticket 05): the committed `data/`
-as one content-hashed JSON file, `{ files, overrides }`, which the browser fetches once and walks itself.
+as one content-hashed JSON file, which the browser fetches once and walks itself. Since build ticket 05c the file is
+the compact document `engine/compact` encodes (shape tables, GUIDs once, the allowlist's defaults dropped, no file
+wrappers); its README describes the format.
 
 ## Public entry
 

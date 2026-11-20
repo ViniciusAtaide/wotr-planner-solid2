@@ -12,8 +12,9 @@ shows them.
 
 ## Modules
 
-- **`engine.ts`: the engine in the browser (ADR 0004).** `loadEngine` fetches the data document once, checks and
-  indexes it, and shares the engine after the first call. Every pick, picker and cascade then runs in the browser,
+- **`engine.ts`: the engine in the browser (ADR 0004).** `loadEngine` fetches the data document once, with the same
+  mode and credentials as the preload in `src/Document.tsx` (build ticket 05b) so the browser reuses that response,
+  decodes it with `engine/compact` (build ticket 05c), checks and indexes it, and shares the engine after the first call. Every pick, picker and cascade then runs in the browser,
   with no round trip.
 - **`link.ts`: the Share link's Build (map 13).** `#b=<Build code>` is opened with C, the same code the MCP returns.
   `EMPTY` is an empty Build, nothing chosen yet. `buildFromHash` returns the Build a Share link holds, or an empty one,
