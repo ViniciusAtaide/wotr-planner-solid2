@@ -76,7 +76,7 @@ describe('data/', () => {
       const belt = blueprints.get('c354de364a714ee4dbe2cfee628df267');
       expect(belt?.$type).toBe('BlueprintItemEquipmentBelt');
       const [enchantment] = (belt as { m_Enchantments: readonly string[] }).m_Enchantments;
-      expect(blueprints.get(enchantment.slice(4))?.Components).toEqual([
+      expect(blueprints.get(enchantment!.slice(4))?.Components).toEqual([
         { $type: 'AddStatBonusEquipment', Descriptor: 'Enhancement', Stat: 'Strength', Value: 2 },
       ]);
     });

@@ -30,8 +30,8 @@ function byPath(files: DataFile[], name: string): DataFile {
 describe('loadData', () => {
   it('refuses a patch without its ops', () => {
     const copy = structuredClone(fixture);
-    delete (copy.overrides[0].value as { ops?: unknown }).ops;
-    expect(problemsOf(copy.files, copy.overrides)).toEqual([`${copy.overrides[0].path}: a patch needs its ops`]);
+    delete (copy.overrides[0]!.value as { ops?: unknown }).ops;
+    expect(problemsOf(copy.files, copy.overrides)).toEqual([`${copy.overrides[0]!.path}: a patch needs its ops`]);
   });
 
   it('loads the hand-written fixture', () => {
@@ -95,7 +95,7 @@ describe('loadData', () => {
   it('refuses a prerequisite type P does not read', () => {
     const { files, overrides } = fixtureEdited((fs) => {
       const cleave = byPath(fs, 'TestCleaveFeature').value as { Components: { $type: string }[] };
-      cleave.Components[0].$type = 'PrerequisiteLoreMaster';
+      cleave.Components[0]!.$type = 'PrerequisiteLoreMaster';
       return fs;
     });
     expect(problemsOf(files, overrides)).toEqual([
@@ -105,7 +105,7 @@ describe('loadData', () => {
 
   it('refuses an override without its reason', () => {
     const copy = structuredClone(fixture);
-    (copy.overrides[0].value as { reason: string }).reason = ' ';
+    (copy.overrides[0]!.value as { reason: string }).reason = ' ';
     expect(problemsOf(copy.files, copy.overrides)).toEqual([
       `overrides/TestCleaveFeature.${g(5)}.json: an override needs its reason`,
     ]);
@@ -113,7 +113,7 @@ describe('loadData', () => {
 
   it('refuses an override that patches a blueprint the data does not hold', () => {
     const copy = structuredClone(fixture);
-    (copy.overrides[0].value as { target: string }).target = g(9);
+    (copy.overrides[0]!.value as { target: string }).target = g(9);
     expect(problemsOf(copy.files, copy.overrides)).toEqual([
       `overrides/TestCleaveFeature.${g(5)}.json: patches ${g(9)}, but the data doesn't hold it`,
     ]);
@@ -121,7 +121,7 @@ describe('loadData', () => {
 
   it('refuses an override without a target GUID', () => {
     const copy = structuredClone(fixture);
-    (copy.overrides[0].value as { target: string }).target = 'TestCleaveFeature';
+    (copy.overrides[0]!.value as { target: string }).target = 'TestCleaveFeature';
     expect(problemsOf(copy.files, copy.overrides)).toEqual([
       `overrides/TestCleaveFeature.${g(5)}.json: an override needs a target GUID`,
     ]);
@@ -129,7 +129,7 @@ describe('loadData', () => {
 
   it('refuses an override whose change is not add, remove, patch, name or alias', () => {
     const copy = structuredClone(fixture);
-    (copy.overrides[0].value as { change: string }).change = 'rename';
+    (copy.overrides[0]!.value as { change: string }).change = 'rename';
     expect(problemsOf(copy.files, copy.overrides)).toEqual([
       `overrides/TestCleaveFeature.${g(5)}.json: an override's change is add, remove, patch, name or alias`,
     ]);
@@ -194,7 +194,7 @@ describe('loadData', () => {
 
   it('refuses a removal the data does not reflect', () => {
     const copy = structuredClone(fixture);
-    (copy.overrides[0].value as { change: string }).change = 'remove';
+    (copy.overrides[0]!.value as { change: string }).change = 'remove';
     expect(problemsOf(copy.files, copy.overrides)).toEqual([
       `overrides/TestCleaveFeature.${g(5)}.json: removes ${g(5)}, but the data still holds it`,
     ]);
@@ -202,7 +202,7 @@ describe('loadData', () => {
 
   it('reports every problem at once', () => {
     const copy = structuredClone(fixture);
-    (copy.overrides[0].value as { reason: string }).reason = '';
+    (copy.overrides[0]!.value as { reason: string }).reason = '';
     const files = copy.files.filter((f) => !f.path.includes('TestForbiddenFlag'));
     expect(problemsOf(files, copy.overrides)).toHaveLength(2);
   });

@@ -3,10 +3,7 @@ import { WebStandardStreamableHTTPServerTransport } from '@modelcontextprotocol/
 import { createMcpServer } from './server';
 
 export async function handleMcpRequest(request: Request): Promise<Response> {
-  const transport = new WebStandardStreamableHTTPServerTransport({
-    sessionIdGenerator: undefined,
-    enableJsonResponse: true,
-  });
+  const transport = new WebStandardStreamableHTTPServerTransport({ enableJsonResponse: true });
   const server = createMcpServer();
   await server.connect(transport);
   try {

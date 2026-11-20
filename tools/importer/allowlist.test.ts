@@ -46,7 +46,7 @@ function fieldReadProblems(entry: Checked, src: Sources): string[] {
     for (const [field, declared] of fields) {
       const at = `${path}${field}`;
       if (Object.hasOwn(kept, field)) {
-        const struct = kept[field].struct;
+        const struct = kept[field]?.struct;
         if (struct === undefined) continue;
         const inner = src.fields(elementType(declared), entry.type);
         if (inner === undefined) problems.push(`${at}: no class ${declared} in the sources`);

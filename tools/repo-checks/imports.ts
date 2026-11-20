@@ -21,7 +21,8 @@ export function specifiersOf(file: SourceFile): string[] {
   }
   for (const d of module.dynamicImports) {
     const literal = /^(['"`])([^'"`]*)\1$/.exec(file.text.slice(d.moduleRequest.start, d.moduleRequest.end));
-    if (literal !== null) out.push(literal[2]);
+    const specifier = literal?.[2];
+    if (specifier !== undefined) out.push(specifier);
   }
   return out;
 }

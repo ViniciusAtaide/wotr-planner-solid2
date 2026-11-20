@@ -83,12 +83,19 @@ function declaredFields(source: string, name: string): { fields: Map<string, str
     }
     const f = SERIALIZABLE_FIELD_LINE.exec(member);
     const serialized = /\bSerializeField\b/.test(attributes) || /^public\b/.test(member);
-    if (f !== null && serialized && !/\bNonSerialized\b/.test(attributes) && !/\breadonly\b/.test(member))
-      fields.set(f[2], f[1]);
+    const [, type, name] = f ?? [];
+    if (
+      type !== undefined &&
+      name !== undefined &&
+      serialized &&
+      !/\bNonSerialized\b/.test(attributes) &&
+      !/\breadonly\b/.test(member)
+    )
+      fields.set(name, type);
     attributes = '';
   }
   const base = m[2]?.split('.').pop();
-  return { fields, base };
+  return base === undefined ? { fields } : { fields, base };
 }
 
 export function body(source: string, name: string): string | undefined {

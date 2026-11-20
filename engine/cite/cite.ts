@@ -12,6 +12,7 @@ const CITATION = /^([\w/]+\.cs) (\w+)(?: \(([\w, ]+)\))?$/;
 
 export function parseCite(cite: string): Citation {
   const m = CITATION.exec(cite);
-  if (m === null) throw new Error(`not a citation: ${cite}`);
-  return { file: m[1], method: m[2], fields: m[3]?.split(', ') ?? [] };
+  const [, file, method, fields] = m ?? [];
+  if (file === undefined || method === undefined) throw new Error(`not a citation: ${cite}`);
+  return { file, method, fields: fields?.split(', ') ?? [] };
 }

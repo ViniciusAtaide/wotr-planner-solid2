@@ -7,16 +7,16 @@ export interface KeepContext {
   readonly dropped: (at: string, guid: Guid) => void;
   readonly droppedPart: (label: string) => void;
   readonly seen: (owner: string, field: string, present: boolean) => void;
-  readonly names?: (guid: Guid) => void;
+  readonly names?: ((guid: Guid) => void) | undefined;
 }
 
 export interface Spec<T> {
   readonly describe: string;
   readonly keep: (raw: unknown, at: string, ctx: KeepContext) => T;
-  readonly absent?: { readonly value: T };
-  readonly zero?: { readonly value: T };
-  readonly struct?: Readonly<Record<string, AnySpec>>;
-  readonly variants?: Readonly<Record<string, Variant<Readonly<Record<string, AnySpec>>>>>;
+  readonly absent?: { readonly value: T } | undefined;
+  readonly zero?: { readonly value: T } | undefined;
+  readonly struct?: Readonly<Record<string, AnySpec>> | undefined;
+  readonly variants?: Readonly<Record<string, Variant<Readonly<Record<string, AnySpec>>>>> | undefined;
   readonly _type?: (value: T) => T;
 }
 
@@ -45,7 +45,7 @@ export function checkNotKept(
 export interface Variant<F> {
   readonly fields: F;
   readonly cite: readonly string[];
-  readonly notKept?: Readonly<Record<string, NotKept>>;
+  readonly notKept?: Readonly<Record<string, NotKept>> | undefined;
 }
 
 function primitive<T>(describe: string, test: (raw: unknown) => boolean, zero?: { readonly value: T }): Spec<T> {

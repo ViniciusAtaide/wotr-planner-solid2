@@ -580,7 +580,7 @@ describe('path switches (map ticket 31)', () => {
     const trickster = '8df873a8c6e48294abdb78c45834aa0a';
     const fromTrickster: Build = {
       ...jackTo(devil),
-      ranks: jackTo(devil).ranks?.map((r, i) => (i >= 2 && i < 7 ? { ...r, class: trickster } : r)),
+      ranks: (jackTo(devil).ranks ?? []).map((r, i) => (i >= 2 && i < 7 ? { ...r, class: trickster } : r)),
     };
     expect(walk(data, fromTrickster, G).failures).toContainEqual(
       expect.objectContaining({ subject: devil, rule: 'map31.devilFrom' }),

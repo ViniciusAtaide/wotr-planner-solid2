@@ -160,8 +160,8 @@ import {
 export type NameField = 'm_DisplayName' | 'm_DisplayNameText' | 'LocalizedName' | 'Name' | 'm_TypeNameText' | null;
 
 interface Unkept {
-  readonly notKept?: Readonly<Record<string, NotKept>>;
-  readonly awaiting?: Readonly<Record<string, string>>;
+  readonly notKept?: Readonly<Record<string, NotKept>> | undefined;
+  readonly awaiting?: Readonly<Record<string, string>> | undefined;
 }
 
 export interface BlueprintEntry extends Unkept {

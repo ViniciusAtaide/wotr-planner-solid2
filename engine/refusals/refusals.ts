@@ -26,7 +26,7 @@ export interface Refusal {
 export interface Wording {
   readonly data: CheckedData;
   readonly G: GrantIndex;
-  readonly unit?: Unit;
+  readonly unit?: Unit | undefined;
 }
 
 export function refusal(w: Wording, failed: FailedRule): Refusal {

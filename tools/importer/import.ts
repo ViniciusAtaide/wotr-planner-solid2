@@ -39,7 +39,7 @@ export async function indexDump(dumpPath: string): Promise<DumpIndex> {
     const type = r.type.slice(r.type.lastIndexOf('.') + 1);
     const text = td.decode(r.json);
     types.set(r.guid, type);
-    refs.set(r.guid, [...new Set(Array.from(text.matchAll(REF), (m) => m[1]))]);
+    refs.set(r.guid, [...new Set(Array.from(text.matchAll(REF), (m) => m[1]).filter((g) => g !== undefined))]);
     if (type === 'BlueprintRoot') root = { guid: r.guid, json: JSON.parse(text) as Record<string, unknown> };
   }
   if (root === undefined) throw new Error(`${dumpPath} has no BlueprintRoot`);

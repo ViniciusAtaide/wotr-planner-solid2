@@ -55,7 +55,7 @@ export function commentProblems(files: readonly SourceFile[]): string[] {
     const comments = STYLE.test(file.path) ? cssComments(file.text) : codeComments(file);
     for (const c of comments) {
       if (ALLOWED.some((a) => a.pattern.test(c.text))) continue;
-      const first = c.text.split('\n')[0].slice(0, 80);
+      const first = (c.text.split('\n')[0] ?? '').slice(0, 80);
       problems.push(
         `${file.path}:${c.line}: [no-comments] move this to the feature's README.md or a better name: ${first}`,
       );

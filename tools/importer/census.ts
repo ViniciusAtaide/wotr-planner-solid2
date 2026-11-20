@@ -93,7 +93,8 @@ export async function main(args: readonly string[]): Promise<number> {
     } else if (oneHop.length > 0) {
       groupOf.set(g, 'B');
       for (const x of oneHop) {
-        const via = unwrittenNamedByReach.get(x.from)![0];
+        const via = unwrittenNamedByReach.get(x.from)?.[0];
+        if (via === undefined) continue;
         tally(b, `${via.comp} -> ${types.get(x.from)} . ${x.comp} ${x.field}`);
       }
     } else if (rs.length > 0 && rs.every((x) => held.has(x.from))) {

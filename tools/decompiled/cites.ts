@@ -15,7 +15,7 @@ export function featureText(dir: string): string {
 export function citeFormatProblems(feature: string, cites: Cites, text: string): string[] {
   const problems: string[] = [];
   for (const [key, list] of Object.entries(cites)) {
-    const name = key.split('.')[0];
+    const name = key.split('.')[0] ?? key;
     if (!new RegExp(`\\b${name.replace(/[$]/g, '\\$')}\\b`).test(text)) {
       problems.push(`${feature}: cites key ${key} names nothing in the feature`);
     }

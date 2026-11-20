@@ -6,7 +6,7 @@ export interface RankMarkerProps {
   readonly rank: number;
   readonly path: string;
   readonly expected: number;
-  readonly placed?: number;
+  readonly placed?: number | undefined;
   readonly picks?: readonly PickChip[];
 }
 

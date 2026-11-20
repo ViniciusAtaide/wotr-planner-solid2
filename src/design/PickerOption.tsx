@@ -38,8 +38,8 @@ export interface PickerOptionProps {
   readonly status: OptionStatus;
   readonly selected?: boolean;
   readonly mythic?: boolean;
-  readonly links?: string;
-  readonly gear?: string;
+  readonly links?: string | undefined;
+  readonly gear?: string | undefined;
   readonly refusal?: readonly string[];
   readonly onPick?: () => void;
 }
