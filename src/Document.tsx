@@ -1,5 +1,6 @@
 import type { ParentProps } from 'solid-js';
 import { HydrationScript } from '@solidjs/web';
+import dataPath from 'virtual:data-document';
 
 export default function Document(props: ParentProps) {
   return (
@@ -9,6 +10,7 @@ export default function Document(props: ParentProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <title>Worldwound Planner</title>
+        <link rel="preload" href={dataPath} as="fetch" type="application/json" crossorigin="anonymous" />
         <HydrationScript />
       </head>
       <body>{props.children}</body>
