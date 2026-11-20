@@ -9,18 +9,10 @@ import {
   type SlotId,
 } from '~engine/build';
 import type { CheckedData } from '~engine/load';
-import {
-  isShown,
-  refGuid,
-  type Attribute,
-  type Blueprint,
-  type BlueprintCharacterClass,
-  type Guid,
-  type StatType,
-} from '~engine/data';
+import { isShown, refGuid, type Attribute, type Blueprint, type Guid, type StatType } from '~engine/data';
 import { expectedLevel } from '~engine/mcp';
 import { linkIndex } from '~engine/links';
-import { picker, type OptionStatus } from '~engine/pickers';
+import { offeredClasses, offeredMythicClasses, offeredRaces, picker, type OptionStatus } from '~engine/pickers';
 import {
   abilityScoreRange,
   gearNote,
@@ -103,7 +95,6 @@ export function Choice<V extends string>(props: ChoiceProps<V>) {
       <span class="planner-field__label">{props.label}</span>
       <select
         class="planner-field__control"
-        value={props.value}
         onChange={(e) => {
           const el = e.currentTarget;
           const chosen = listed().find((o) => o.value === el.value);
@@ -111,13 +102,21 @@ export function Choice<V extends string>(props: ChoiceProps<V>) {
           revertControl(el, props.value);
         }}
       >
-        <For each={listed()}>{(o) => <option value={o.value}>{o.text}</option>}</For>
+        <For each={listed()} keyed={(o) => o.value}>
+          {(o) => (
+            <option value={o().value} selected={o().value === props.value}>
+              {o().text}
+            </option>
+          )}
+        </For>
       </select>
     </label>
   );
 }
 
 const CLOSED_SHOWN = 30;
+
+const optionKey = (o: OptionStatus): string => `${o.feature} ${JSON.stringify(o.param ?? null)}`;
 
 export interface SlotPickerProps {
   readonly planner: Planner;
@@ -200,6 +199,27 @@ export function SlotPicker(props: SlotPickerProps) {
           value={text()}
           onInput={(e) => setText(e.currentTarget.value)}
         />
+        <OptionList>
+          <For each={open()} keyed={optionKey}>
+            {(o) => (
+              <PickerOption
+                name={name(o())}
+                status="open"
+                selected={isCurrent(o())}
+                links={links(o())}
+                gear={o().gearItems === undefined ? undefined : gearNote(data(), o().gearItems ?? [])}
+                onPick={() => pick(o())}
+              />
+            )}
+          </For>
+          <For each={allClosed() ? closed() : closed().slice(0, CLOSED_SHOWN)} keyed={optionKey}>
+            {(o) => <PickerOption name={name(o())} status="closed" links={links(o())} refusal={words(o())} />}
+          </For>
+          <Show when={!allClosed() && closed().length > CLOSED_SHOWN}>
+            <ClosedCount text={`${closed().length - CLOSED_SHOWN} more closed: ${byReason()}`} />
+            <Button onClick={() => setAllClosed(true)}>Show all closed</Button>
+          </Show>
+        </OptionList>
         <Show when={current()}>
           <Button
             variant="danger"
@@ -208,27 +228,6 @@ export function SlotPicker(props: SlotPickerProps) {
             Clear this pick
           </Button>
         </Show>
-        <OptionList>
-          <For each={open()}>
-            {(o) => (
-              <PickerOption
-                name={name(o)}
-                status="open"
-                selected={isCurrent(o)}
-                links={links(o)}
-                {...(o.gearItems && { gear: gearNote(data(), o.gearItems) })}
-                onPick={() => pick(o)}
-              />
-            )}
-          </For>
-          <For each={allClosed() ? closed() : closed().slice(0, CLOSED_SHOWN)}>
-            {(o) => <PickerOption name={name(o)} status="closed" links={links(o)} refusal={words(o)} />}
-          </For>
-          <Show when={!allClosed() && closed().length > CLOSED_SHOWN}>
-            <ClosedCount text={`${closed().length - CLOSED_SHOWN} more closed: ${byReason()}`} />
-            <Button onClick={() => setAllClosed(true)}>Show all closed</Button>
-          </Show>
-        </OptionList>
       </div>
     </Show>
   );
@@ -243,11 +242,7 @@ export function LevelPanel(props: LevelPanelProps) {
   const data = () => props.planner.engine.data;
   const b = () => props.planner.build();
   const l = () => b().levels[props.level - 1];
-  const classes = () =>
-    shownSortedByName(
-      data(),
-      (bp) => bp.$type === 'BlueprintCharacterClass' && !(bp as BlueprintCharacterClass).IsMythic,
-    );
+  const classes = () => offeredClasses(data());
   const firstOfClass = () => b().levels.findIndex((x) => x.class === l()?.class) + 1 === props.level;
   const archetypes = () => {
     const cls = data().blueprints.get(l()?.class ?? '');
@@ -350,13 +345,6 @@ export function LevelPanel(props: LevelPanelProps) {
   );
 }
 
-function mythicClasses(data: CheckedData): Blueprint[] {
-  return shownSortedByName(
-    data,
-    (bp) => bp.$type === 'BlueprintCharacterClass' && (bp as BlueprintCharacterClass).IsMythic,
-  );
-}
-
 export interface RankPanelProps {
   readonly planner: Planner;
   readonly rank: number;
@@ -373,7 +361,7 @@ export function RankPanel(props: RankPanelProps) {
           <Choice
             label="Mythic class"
             value={rank().class}
-            options={mythicClasses(data()).map((c) => ({ value: c.guid, text: c.name ?? c.assetName }))}
+            options={offeredMythicClasses(data()).map((c) => ({ value: c.guid, text: c.name ?? c.assetName }))}
             nameOf={(g) => nameOf(data(), g)}
             onChange={(cls) =>
               props.planner.edit(
@@ -420,7 +408,7 @@ export interface StartPanelProps {
 export function StartPanel(props: StartPanelProps) {
   const data = () => props.planner.engine.data;
   const b = () => props.planner.build();
-  const races = () => shownSortedByName(data(), (bp) => bp.$type === 'BlueprintRace');
+  const races = () => offeredRaces(data());
   const race = () => data().blueprints.get(b().race ?? '');
   const scores = () =>
     b().scores ?? { Strength: 10, Dexterity: 10, Constitution: 10, Intelligence: 10, Wisdom: 10, Charisma: 10 };
@@ -491,11 +479,7 @@ export interface AddPanelProps {
 
 export function AddPanel(props: AddPanelProps) {
   const data = () => props.planner.engine.data;
-  const classes = () =>
-    shownSortedByName(
-      data(),
-      (bp) => bp.$type === 'BlueprintCharacterClass' && !(bp as BlueprintCharacterClass).IsMythic,
-    );
+  const classes = () => offeredClasses(data());
   const [cls, setCls] = createSignal('');
   const [mythic, setMythic] = createSignal('');
   const nextLevel = () => props.planner.build().levels.length + 1;
@@ -524,7 +508,7 @@ export function AddPanel(props: AddPanelProps) {
         value={mythic()}
         options={[
           { value: '', text: 'Choose a Mythic class' },
-          ...mythicClasses(data()).map((c) => ({ value: c.guid, text: c.name ?? c.assetName })),
+          ...offeredMythicClasses(data()).map((c) => ({ value: c.guid, text: c.name ?? c.assetName })),
         ]}
         onChange={setMythic}
       />

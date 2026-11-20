@@ -6,6 +6,7 @@ import { readDataDir } from '../data-dir';
 import { enforcer, jackInTheGreen } from '../gold';
 import { buildGrantIndex } from '../grants';
 import { candidates, picker } from './pickers';
+import { offeredClasses, offeredMythicClasses, offeredRaces } from './offers';
 import { breaks, opensAt, refusal } from '../refusals';
 import { pauseAt, walk } from '../walk';
 
@@ -135,5 +136,24 @@ describe('R: the Refusal', () => {
     const slot = { place: { level: 1 }, selection: FIGHTER_FEAT, index: 0 };
     expect(picker(data, fighter, slot, G)?.options.find((o) => o.feature === DODGE)?.closed).toBeDefined();
     expect(opensAt(data, fighter, slot, { feature: DODGE }, G)).toEqual({ level: 4 });
+  });
+});
+
+describe('what character creation offers (comparison bug 5)', () => {
+  const names = (bps: readonly { readonly name?: string | undefined }[]) => bps.map((b) => b.name);
+
+  it('offers the root progression’s player classes and races, and no creature classes', () => {
+    const classes = names(offeredClasses(data));
+    expect(classes).toContain('Fighter');
+    expect(classes).toContain('Winter Witch');
+    for (const creature of ['Animal', 'Dragon', 'Monstrous Humanoid']) expect(classes).not.toContain(creature);
+    expect(names(offeredRaces(data))).toHaveLength(12);
+  });
+
+  it('offers the Mythic paths, without the companions’ class or Shard Powers', () => {
+    const mythics = names(offeredMythicClasses(data));
+    for (const path of ['Mythic Hero', 'Aeon', 'Azata', 'Legend']) expect(mythics).toContain(path);
+    expect(mythics).not.toContain('Mythic Companion');
+    expect(mythics).not.toContain('Shard Powers');
   });
 });

@@ -17,6 +17,13 @@ What each slot can take (guide §4, build ticket 04). S lists a slot's options a
 
 ## Rules
 
+- **What character creation offers** (`offers.ts`):
+  - `offeredClasses` is the root progression's `m_CharacterClasses` (`ProgressionRoot.AvailableCharacterClasses`);
+  - `offeredRaces` is `m_CharacterRaces` (`CharacterRaces`);
+  - `offeredMythicClasses` is `m_CharacterMythics` (`AvailableCharacterMythics`), minus `NOT_MAIN_CHARACTER_MYTHICS`: the companions' Mythic class and Shard Powers, a planner rule from map ticket 34.
+
+  Each list is kept to shown blueprints and sorted by name. The game's DLC filter is not ported, because every DLC's data is present.
+
 Citations for these live in `cites.ts`.
 
 - **`candidates`** lists a selection's items (`m_AllFeatures`), a parametrized feat once per parameter. A Mythic spellbook selection's items are itself, with no spellbook, and itself with each of its `m_AllowedSpellbooks`, as the game collects them.

@@ -15,7 +15,7 @@ export default function CascadePreview(props: CascadePreviewProps) {
   const id = createUniqueId();
   let dialog: HTMLDivElement | undefined;
   onSettled(() => {
-    if (props.autofocus !== false) dialog?.focus();
+    if (props.autofocus !== false) dialog?.querySelector<HTMLButtonElement>('button')?.focus();
   });
   const count = () => props.clears.length;
   const keepFocusInside = (e: KeyboardEvent) => {

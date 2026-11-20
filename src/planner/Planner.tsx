@@ -167,6 +167,15 @@ function Workspace(props: WorkspaceProps) {
     return v.kind === 'forked' ? v : undefined;
   };
   const confirming = () => active().session().kind === 'confirming';
+  let focusedOutsideDialog: HTMLElement | undefined;
+  createEffect(
+    () => confirming(),
+    (now) => {
+      if (now) return;
+      const back = focusedOutsideDialog;
+      if (back?.isConnected === true && document.activeElement !== back) back.focus();
+    },
+  );
   const resolved = createMemo(() =>
     resolve(
       workspace().selection,
@@ -243,11 +252,18 @@ function Workspace(props: WorkspaceProps) {
     onMedia();
     media.addEventListener('change', onMedia);
     window.addEventListener('keydown', onKey);
+    const onFocusIn = (e: FocusEvent) => {
+      if (e.target instanceof HTMLElement && e.target.closest('[role="dialog"]') === null) {
+        focusedOutsideDialog = e.target;
+      }
+    };
+    window.addEventListener('focusin', onFocusIn);
     window.addEventListener('hashchange', onHash);
     if (location.hash !== openedHash) onHash();
     return () => {
       media.removeEventListener('change', onMedia);
       window.removeEventListener('keydown', onKey);
+      window.removeEventListener('focusin', onFocusIn);
       window.removeEventListener('hashchange', onHash);
     };
   });
@@ -322,6 +338,9 @@ function Workspace(props: WorkspaceProps) {
         <h2 class="planner-build__title">{SIDE_TITLE[s]}</h2>
       </Show>
       <StatBlock stats={lastLevelScores(planners[s], planners[s === 'first' ? 'second' : 'first'])} />
+      <Show when={planners[s].build().levels.length === 0}>
+        <p class="planner-stats-note">Point buy only: the race and its +2 count from level 1.</p>
+      </Show>
       <Timeline
         planner={planners[s]}
         selected={editedSide() === s ? resolved() : undefined}

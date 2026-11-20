@@ -8,5 +8,8 @@ export const cites = {
   parameters: [
     'Blueprints/Classes/Selection/BlueprintParametrizedFeature.cs ExtractSelectionItems (ParameterType, BlueprintParameterVariants)',
   ],
+  offeredClasses: ['Blueprints/Root/ProgressionRoot.cs AvailableCharacterClasses'],
+  offeredMythicClasses: ['Blueprints/Root/ProgressionRoot.cs AvailableCharacterMythics'],
+  offeredRaces: ['Blueprints/Root/ProgressionRoot.cs CharacterRaces'],
   candidates: ['Blueprints/Classes/BlueprintFeatureSelectMythicSpellbook.cs CollectItems (m_AllowedSpellbooks)'],
 } satisfies Cites;

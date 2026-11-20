@@ -22,7 +22,7 @@ import {
 import { abilityScoreRange, linkDidNotOpen, nameOf } from '~engine/refusals';
 
 import { EMPTY, openHash } from './link';
-import { LevelPanel, StartPanel } from './panels';
+import { AddPanel, LevelPanel, StartPanel } from './panels';
 import Planner from './Planner';
 import { createPlanner } from './state';
 import Timeline from './Timeline';
@@ -367,6 +367,45 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     expect(screen.getByRole('toolbar', { name: 'Build' }).closest('[inert]')).not.toBeNull();
   });
 
+  test('the Cascade preview opens with focus on Cancel (comparison bug 3)', async () => {
+    await openPlanner(cleaver);
+    await openPreview();
+    await waitFor(() => expect(document.activeElement?.textContent).toMatch(/^Cancel/));
+  });
+
+  test('focus goes back to the control that opened the preview (comparison bug 3)', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(button('Start'));
+    flush();
+    const strength = screen.getByLabelText('Strength');
+    strength.focus();
+    fireEvent.change(strength, { target: { value: '10' } });
+    flush();
+    await waitFor(() => expect(dialog()).not.toBeNull());
+    fireEvent.click(button(/^Cancel/));
+    flush();
+    await waitFor(() => expect(document.activeElement).toBe(screen.getByLabelText('Strength')));
+  });
+
+  test('a picked option keeps focus, and Clear this pick comes after the options (comparison bug 3)', async () => {
+    await openPlanner(cleaver);
+    const empty = [...document.querySelectorAll<HTMLElement>('.ww-pick--empty')].find((c) =>
+      /deity/i.test(c.textContent ?? ''),
+    );
+    if (empty === undefined) throw new Error('no empty deity chip');
+    fireEvent.click(empty);
+    flush();
+    const option = document.querySelector<HTMLElement>('button.ww-option');
+    if (option === null) throw new Error('no open option');
+    option.focus();
+    fireEvent.click(option);
+    flush();
+    await waitFor(() => expect(document.activeElement).toBe(option));
+    expect(option.isConnected).toBe(true);
+    const clear = button('Clear this pick');
+    expect(option.compareDocumentPosition(clear) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
+
   test('side by side becomes one Build, its segment pressed, after narrowing to phone width', async () => {
     await openPlanner(cleaver);
     fireEvent.click(button('Fork this Build'));
@@ -458,6 +497,60 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     expect(select instanceof HTMLSelectElement && select.selectedOptions[0]?.textContent).toBe(
       nameOf(e.data, MYTHIC_HERO),
     );
+  });
+
+  test('the Race select shows the race the Build holds after a change (comparison bug 1)', () => {
+    let planner!: ReturnType<typeof createPlanner>;
+    render(() => {
+      planner = createPlanner(e, cleaver);
+      return <StartPanel planner={planner} />;
+    });
+    flush();
+    const select = screen.getByLabelText('Race');
+    if (!(select instanceof HTMLSelectElement)) throw new Error('no Race select');
+    const human = [...select.options].find((o) => o.text === 'Human');
+    if (human === undefined) throw new Error('no Human option');
+    fireEvent.change(select, { target: { value: human.value } });
+    flush();
+    expect(planner.build().race).toBe(human.value);
+    expect(select.selectedOptions[0]?.textContent).toBe('Human');
+  });
+
+  test('the Add panel keeps showing the class it will add (comparison bug 2)', () => {
+    let planner!: ReturnType<typeof createPlanner>;
+    render(() => {
+      planner = createPlanner(e, cleaver);
+      return <AddPanel planner={planner} />;
+    });
+    flush();
+    const select = screen.getByLabelText(/^Level /);
+    if (!(select instanceof HTMLSelectElement)) throw new Error('no class select');
+    const fighter = [...select.options].find((o) => o.text === 'Fighter');
+    if (fighter === undefined) throw new Error('no Fighter option');
+    fireEvent.change(select, { target: { value: fighter.value } });
+    flush();
+    fireEvent.click(screen.getByRole('button', { name: /^Add level/ }));
+    flush();
+    expect(select.selectedOptions[0]?.textContent).toBe('Fighter');
+  });
+
+  test('before level 1 the stats say they are the point buy only (comparison bug 4)', async () => {
+    await openPlanner({ levels: [], picks: [] });
+    expect(screen.getByText(/Point buy only/)).toBeTruthy();
+    cleanup();
+    await openPlanner(cleaver);
+    expect(screen.queryByText(/Point buy only/)).toBeNull();
+  });
+
+  test('the Add panel offers player classes only (comparison bug 5)', () => {
+    render(() => <AddPanel planner={createPlanner(e, cleaver)} />);
+    flush();
+    const texts = [...(screen.getByLabelText(/^Level /) as HTMLSelectElement).options].map((o) => o.text);
+    expect(texts).toContain('Fighter');
+    for (const creature of ['Animal', 'Dragon', 'Monstrous Humanoid']) expect(texts).not.toContain(creature);
+    const mythic = [...(screen.getByLabelText(/^Mythic rank /) as HTMLSelectElement).options].map((o) => o.text);
+    expect(mythic).not.toContain('Mythic Companion');
+    expect(mythic).not.toContain('Shard Powers');
   });
 
   test('an ability score of 6 or 12.5 is refused, worded with the number typed', () => {

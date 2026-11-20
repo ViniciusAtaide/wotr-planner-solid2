@@ -134,6 +134,14 @@ Everything else (which Builds show, which one is edited, the selection's target)
   side panel is a full-screen sheet over the Timeline (map 13), and the sheet's bar carries the title, so the panel's
   own title is hidden there. `planner-behind` wraps the page behind the overlay with `display: contents`, so making it
   inert changes no layout.
+- A select can't show a value the Build doesn't hold: `Choice` marks `selected` on each option (no `value` on the `<select>`), and its rows are keyed by value. The options are rebuilt on every change, and a `<select>` whose value was set before its options re-rendered fell back to the first one (comparison bug 1).
+- Focus:
+  - the Cascade preview opens on Cancel, the least destructive action;
+  - when it closes, focus goes back to the last element focused outside any dialog (`focusin` tracking in `Planner.tsx`);
+  - the picker's option rows are keyed by feature and parameter, so the option just picked keeps its element and its focus;
+  - "Clear this pick" sits after the options, so Tab from the filter reaches an option first.
+- Before level 1 the stat block shows the point buy only. The walk applies race and its +2 at level 1, as the game's character creation does, so the page says so under the stats rather than computing race early.
+- The class, Mythic class and race lists are S's `offeredClasses`, `offeredMythicClasses` and `offeredRaces` (map ticket 34).
 - The runtime checks that stay: `resolve`, `Choice`'s missing option, the constructors where values come in, the
   walk's rules across fields (point buy, an increase every 4th level, skill totals, the rank cap), the workspace's
   guard while confirming (backed by the inert background), the `latest` tokens, the `sameBuild` skip, `ShareCode`'s
