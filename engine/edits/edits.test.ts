@@ -76,4 +76,22 @@ describe('E: edits', () => {
     const before = refusedKeys(jackInTheGreen.build);
     expect([...refusedKeys(build)].filter((k) => !before.has(k))).toEqual([]);
   });
+
+  describe('a failure the Build already had (ticket 05d)', () => {
+    const FIGHTER = '48ac8db94d5de7645906c7d0ad3bcfbd';
+    const LOCKED_AMULET = '5043aad8b5815cc4a86f93c7ff2b50e3';
+    const fighter = (n: number): Build => ({
+      levels: Array.from({ length: n }, () => ({ class: FIGHTER })),
+      picks: [],
+      gear: { Neck: LOCKED_AMULET },
+    });
+
+    it('is not a fresh break when a level is added or removed', () => {
+      expect(walk(data, fighter(2), G).failures).toContainEqual(
+        expect.objectContaining({ choice: 'gear', subject: LOCKED_AMULET }),
+      );
+      expect(allows(data, fighter(2), { kind: 'addLevel', class: FIGHTER }, G).ok).toBe(true);
+      expect(allows(data, fighter(2), { kind: 'dropLevel' }, G).ok).toBe(true);
+    });
+  });
 });

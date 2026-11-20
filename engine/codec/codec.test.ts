@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { slotKey, type Build } from '../build';
+import { abilityScores, slotKey, type Build } from '../build';
 import { decodeBuild, DecodeError, encodeBuild, keyHash, linkKeys, openBuild } from './codec';
 import { loadData, type CheckedData } from '../load';
 import { readDataDir } from '../data-dir';
@@ -94,9 +94,21 @@ describe('C: the Build code', () => {
     await failsWith('AQ', 'decompress');
     const greedy = await encodeBuild(data, {
       ...small,
-      scores: { Strength: 18, Dexterity: 18, Constitution: 10, Intelligence: 10, Wisdom: 10, Charisma: 10 },
+      scores: abilityScores({
+        Strength: 18,
+        Dexterity: 18,
+        Constitution: 10,
+        Intelligence: 10,
+        Wisdom: 10,
+        Charisma: 10,
+      }),
     });
     await failsWith(greedy, 'format');
+    const twice = await encodeBuild(data, {
+      ...small,
+      picks: [...small.picks, { slot: { place: { level: 1 }, selection: BASIC, index: 0 }, feature: TOUGHNESS }],
+    });
+    await failsWith(twice, 'format');
     const blueprints = new Map(data.blueprints);
     blueprints.delete(DODGE);
     await failsWith(code, 'unknownKey', { ...data, blueprints });

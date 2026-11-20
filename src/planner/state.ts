@@ -69,6 +69,7 @@ export function createPlanner(engine: Engine, initial: Build) {
       if (p !== undefined) commit(p.build);
     },
     cancel: () => setPending(undefined),
+    refuse: (lines: readonly string[]) => setNotice(lines),
     dismissNotice: () => setNotice(undefined),
     canUndo: () => past().length > 0,
     canRedo: () => future().length > 0,

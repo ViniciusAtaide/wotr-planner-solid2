@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import type { Build } from '../build';
+import { rankLevel, type Build } from '../build';
 import { jackInTheGreen } from '../gold';
 import {
   addFacts,
@@ -30,7 +30,7 @@ describe('a fact goes with the fact that granted it', () => {
     expect(jack.unit.hasFact(SPELL_PENETRATION_MYTHIC_UPGRADE)).toBe(true);
     const legend: Build = {
       ...jackInTheGreen.build,
-      ranks: [...(jackInTheGreen.build.ranks ?? []).slice(0, 7), { class: LEGEND, level: 17 }],
+      ranks: [...(jackInTheGreen.build.ranks ?? []).slice(0, 7), { class: LEGEND, level: rankLevel(17) }],
       picks: jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place) || p.slot.place.rank <= 7),
     };
     const w = walk(data, legend, G);
@@ -63,6 +63,7 @@ describe('a fact goes with the fact that granted it', () => {
     expect(druid.failures).toContainEqual(
       expect.objectContaining({ place: { level: 2 }, choice: 'gear', subject: ADAMANTINE_BANDED }),
     );
+    expect(druid.failures.filter((f) => f.choice === 'gear' && f.subject === ADAMANTINE_BANDED)).toHaveLength(1);
   });
 
   it("drops what a worn item's fact gave with it, and a later pick that needs it fails (hand-built)", () => {

@@ -1,6 +1,9 @@
 import {
   placeKey,
   slotKey,
+  toAbilityScores,
+  toRankLevel,
+  toSkillRanks,
   type Alignment,
   type Build,
   type GearPlace,
@@ -24,7 +27,16 @@ import { allows, apply, breaksOf, cascade, type Breaks, type Edit } from '../edi
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
 import { linkIndex } from '../links';
 import { picker, type OptionStatus } from '../pickers';
-import { gearNote, nameOf, refusal, statName, type Refusal } from '../refusals';
+import {
+  abilityScoreRange,
+  gearNote,
+  nameOf,
+  rankLevelRange,
+  refusal,
+  skillRankRange,
+  statName,
+  type Refusal,
+} from '../refusals';
 import { maxSpellLevel, ATTRIBUTES, SKILL_ATTRIBUTE, bandOf, pauseAt, walk, type Band, type Failure } from '../walk';
 
 export interface Engine {
@@ -118,6 +130,8 @@ export async function set_start(
 ): Promise<Changed | ToolRefusal> {
   const build = await open(e, args.code);
   if (isRefusal(build)) return build;
+  const scores = args.scores === undefined ? undefined : toAbilityScores(args.scores);
+  if (args.scores !== undefined && scores === undefined) return refused(abilityScoreRange(args.scores));
   const edits: Edit[] = [
     ...(args.race !== undefined
       ? [{ kind: 'race', race: args.race, raceStat: args.raceStat ?? build.raceStat } as const]
@@ -125,7 +139,7 @@ export async function set_start(
     ...(args.race === undefined && args.raceStat !== undefined
       ? [{ kind: 'raceStat', raceStat: args.raceStat } as const]
       : []),
-    ...(args.scores !== undefined ? [{ kind: 'scores', scores: args.scores } as const] : []),
+    ...(scores !== undefined ? [{ kind: 'scores', scores } as const] : []),
     ...(args.alignment !== undefined ? [{ kind: 'alignment', alignment: args.alignment } as const] : []),
   ];
   return plainEdits(e, build, edits);
@@ -185,9 +199,12 @@ export async function level_up(
   if (cls?.$type !== 'BlueprintCharacterClass') return refused('Not a class.');
   const mythic = cls.IsMythic;
   const rank = (build.ranks?.length ?? 0) + 1;
+  const placed = Math.max(expectedLevel(e.data, rank), build.levels.length, 1);
+  const level = toRankLevel(placed);
+  if (mythic && level === undefined) return refused(rankLevelRange(placed));
   const edits: Edit[] = [
-    mythic
-      ? { kind: 'addRank', class: args.class, level: Math.max(expectedLevel(e.data, rank), build.levels.length, 1) }
+    mythic && level !== undefined
+      ? { kind: 'addRank', class: args.class, level }
       : { kind: 'addLevel', class: args.class },
     ...(args.archetypes !== undefined
       ? [{ kind: 'archetypes', class: args.class, archetypes: args.archetypes } as const]
@@ -324,12 +341,14 @@ export async function set_skills(
   const build = await open(e, args.code);
   if (isRefusal(build)) return build;
   if (args.level < 1 || args.level > build.levels.length) return refused('The Build has no such level.');
-  const after = apply(build, { kind: 'skills', level: args.level, skills: args.ranks });
+  const skills = toSkillRanks(args.ranks);
+  if (skills === undefined) return refused(skillRankRange(args.ranks));
+  const after = apply(build, { kind: 'skills', level: args.level, skills });
   const own = walk(e.data, after, e.G).failures.find(
     (f) => f.choice === 'skills' && 'level' in f.place && f.place.level === args.level,
   );
   if (own !== undefined) return refused(refusal({ data: e.data, G: e.G }, own).text);
-  return plainEdit(e, build, { kind: 'skills', level: args.level, skills: args.ranks });
+  return plainEdit(e, build, { kind: 'skills', level: args.level, skills });
 }
 
 export async function place_rank(
@@ -339,7 +358,9 @@ export async function place_rank(
   const build = await open(e, args.code);
   if (isRefusal(build)) return build;
   if (args.rank < 1 || args.rank > (build.ranks?.length ?? 0)) return refused('The Build has no such Mythic rank.');
-  const r = await plainEdit(e, build, { kind: 'rankLevel', rank: args.rank, level: args.level });
+  const level = toRankLevel(args.level);
+  if (level === undefined) return refused(rankLevelRange(args.level));
+  const r = await plainEdit(e, build, { kind: 'rankLevel', rank: args.rank, level });
   if (isRefusal(r)) return r;
   const expected = expectedLevel(e.data, args.rank);
   return args.level === expected

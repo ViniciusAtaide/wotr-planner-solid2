@@ -1,5 +1,5 @@
 import type { Attribute, StatType } from '../data';
-import type { Build, LevelUp } from '../build';
+import { abilityScores, rankLevel, skillRanks, type Build, type LevelUp } from '../build';
 import { facts, increase, pick, withParam, type Gold } from './gold';
 
 const SLAYER = 'c75e0971973957d4dbad24bc7957e4fb';
@@ -21,7 +21,7 @@ const level = (n: number): LevelUp => {
   const skills: Partial<Record<StatType, number>> = { SkillAthletics: 1, SkillPerception: 1, SkillPersuasion: 1 };
   if (cls === ROGUE) Object.assign(skills, { SkillMobility: 1, SkillStealth: 1 });
   const raise = INCREASES[n];
-  return { class: cls, skills, ...(raise && { increase: raise }) };
+  return { class: cls, skills: skillRanks(skills), ...(raise && { increase: raise }) };
 };
 
 const BATTLE_AXE = { WeaponCategory: 'Battleaxe' } as const;
@@ -105,14 +105,14 @@ const build: Build = {
   race: HALF_ELF_RACE,
   raceStat: 'Strength',
   alignment: 'ChaoticGood',
-  scores: { Strength: 16, Dexterity: 16, Constitution: 14, Intelligence: 10, Wisdom: 8, Charisma: 12 },
+  scores: abilityScores({ Strength: 16, Dexterity: 16, Constitution: 14, Intelligence: 10, Wisdom: 8, Charisma: 12 }),
   classChoices: {
     [SLAYER]: { archetypes: [ARCANE_ENFORCER_ARCHETYPE] },
     [ROGUE]: { archetypes: [SYLVAN_TRICKSTER_ARCHETYPE] },
     [FIGHTER]: { archetypes: [MUTATION_WARRIOR_ARCHETYPE] },
   },
   levels: Array.from({ length: 20 }, (_, i) => level(i + 1)),
-  ranks: RANK_LEVELS.map((at, i) => ({ class: i < 2 ? MYTHIC_HERO : AZATA, level: at })),
+  ranks: RANK_LEVELS.map((at, i) => ({ class: i < 2 ? MYTHIC_HERO : AZATA, level: rankLevel(at) })),
   gear: { Belt: BELT_OF_DEXTERITY_2 },
   countGear: true,
   picks: [

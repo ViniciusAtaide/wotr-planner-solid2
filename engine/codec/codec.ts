@@ -1,4 +1,18 @@
-import { slotKey, type Alignment, type Build, type GearPlace, type LevelUp, type Pick, type Place } from '../build';
+import {
+  slotKey,
+  toAbilityScores,
+  toRankLevel,
+  toSkillRank,
+  type AbilityScores,
+  type Alignment,
+  type Ascension,
+  type Build,
+  type GearPlace,
+  type LevelUp,
+  type Pick,
+  type Place,
+  type SkillRank,
+} from '../build';
 import type { CheckedData } from '../load';
 import {
   kindOf,
@@ -439,24 +453,27 @@ class Reader {
     const race = this.flag() ? this.key('races') : undefined;
     const raceStat = this.optIndex(ATTRIBUTES);
     const alignment = this.optIndex(ALIGNMENTS);
-    let scores: Record<Attribute, number> | undefined;
+    let scores: AbilityScores | undefined;
     if (this.flag()) {
-      scores = {} as Record<Attribute, number>;
-      for (const a of ATTRIBUTES) scores[a] = this.byte();
+      const read: Record<string, number> = {};
+      for (const a of ATTRIBUTES) read[a] = this.byte();
+      scores = toAbilityScores(read);
+      if (scores === undefined) throw new DecodeError('format', 'scores');
     }
     const levels: LevelUp[] = [];
     for (let i = this.count(); i > 0; i--) {
       const cls = this.key('classes');
       const increase = this.optIndex(ATTRIBUTES);
-      const skills: Partial<Record<StatType, number>> = {};
+      const skills: Partial<Record<StatType, SkillRank>> = {};
       let last = -1;
       for (let j = this.count(); j > 0; j--) {
         const index = this.byte();
         const skill = SKILLS[index];
         const n = this.byte();
-        if (skill === undefined || index <= last || n === 0) throw new DecodeError('format', 'skills');
+        const rank = n === 0 ? undefined : toSkillRank(n);
+        if (skill === undefined || index <= last || rank === undefined) throw new DecodeError('format', 'skills');
         last = index;
-        skills[skill] = n;
+        skills[skill] = rank;
       }
       levels.push({
         class: cls,
@@ -464,8 +481,13 @@ class Reader {
         ...(last >= 0 && { skills }),
       });
     }
-    const ranks: { class: Guid; level: number }[] = [];
-    for (let i = this.count(); i > 0; i--) ranks.push({ class: this.key('classes'), level: this.byte() });
+    const ranks: Ascension[] = [];
+    for (let i = this.count(); i > 0; i--) {
+      const cls = this.key('classes');
+      const level = toRankLevel(this.byte());
+      if (level === undefined) throw new DecodeError('format', 'rank level');
+      ranks.push({ class: cls, level });
+    }
     const classChoices: Record<Guid, { archetypes: Guid[] }> = {};
     let lastClass = '';
     for (let i = this.count(); i > 0; i--) {
@@ -550,7 +572,8 @@ function keepsFixedRules(b: Build): boolean {
       ranks.set(skill, total);
     }
   }
-  return (b.ranks ?? []).every((r) => r.level >= 1);
+  const slots = new Set(b.picks.map((p) => slotKey(p.slot)));
+  return slots.size === b.picks.length && (b.ranks ?? []).every((r) => toRankLevel(r.level) !== undefined);
 }
 
 export async function decodeBuild(data: CheckedData, code: string): Promise<Build> {

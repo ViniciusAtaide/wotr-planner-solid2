@@ -1,5 +1,13 @@
 import { createMemo, createSignal, For, Show } from 'solid-js';
-import { slotKey, type Alignment, type GearPlace, type SlotId } from '~engine/build';
+import {
+  slotKey,
+  toAbilityScores,
+  toRankLevel,
+  toSkillRanks,
+  type Alignment,
+  type GearPlace,
+  type SlotId,
+} from '~engine/build';
 import type { CheckedData } from '~engine/load';
 import {
   isShown,
@@ -13,7 +21,15 @@ import {
 import { expectedLevel } from '~engine/mcp';
 import { linkIndex } from '~engine/links';
 import { picker, type OptionStatus } from '~engine/pickers';
-import { gearNote, nameOf, refusal, statName } from '~engine/refusals';
+import {
+  abilityScoreRange,
+  gearNote,
+  nameOf,
+  rankLevelRange,
+  refusal,
+  skillRankRange,
+  statName,
+} from '~engine/refusals';
 import { pointBuyCost, POINT_BUY, ATTRIBUTES, PLACE_ITEM_TYPES, SKILL_ATTRIBUTE } from '~engine/walk';
 
 import { Button, ClosedCount, OptionList, PickerHead, PickerOption } from '../design';
@@ -274,12 +290,12 @@ export function LevelPanel(props: LevelPanelProps) {
                     value={level().skills?.[skill] ?? 0}
                     onChange={(e) => {
                       const n = Number(e.currentTarget.value);
-                      const next = { ...level().skills, [skill]: n };
-                      if (n === 0) delete next[skill];
-                      props.planner.edit(
-                        { kind: 'skills', level: props.level, skills: next },
-                        `${statName(skill)} ranks`,
-                      );
+                      const wanted: Record<string, number> = { ...level().skills, [skill]: n };
+                      if (n === 0) delete wanted[skill];
+                      const skills = toSkillRanks(wanted);
+                      if (skills === undefined) props.planner.refuse([skillRankRange(e.currentTarget.value)]);
+                      else
+                        props.planner.edit({ kind: 'skills', level: props.level, skills }, `${statName(skill)} ranks`);
                       revertControl(e.currentTarget, level().skills?.[skill] ?? 0);
                     }}
                   />
@@ -340,10 +356,9 @@ export function RankPanel(props: RankPanelProps) {
               min="1"
               value={rank().level}
               onChange={(e) => {
-                props.planner.edit(
-                  { kind: 'rankLevel', rank: props.rank, level: Number(e.currentTarget.value) },
-                  `Move rank ${props.rank}`,
-                );
+                const level = e.currentTarget.value === '' ? undefined : toRankLevel(Number(e.currentTarget.value));
+                if (level === undefined) props.planner.refuse([rankLevelRange(e.currentTarget.value)]);
+                else props.planner.edit({ kind: 'rankLevel', rank: props.rank, level }, `Move rank ${props.rank}`);
                 revertControl(e.currentTarget, rank().level);
               }}
             />
@@ -424,10 +439,9 @@ export function StartPanel(props: StartPanelProps) {
                 max="18"
                 value={scores()[a]}
                 onChange={(e) => {
-                  props.planner.edit(
-                    { kind: 'scores', scores: { ...scores(), [a]: Number(e.currentTarget.value) } },
-                    `${a} score`,
-                  );
+                  const next = toAbilityScores({ ...scores(), [a]: Number(e.currentTarget.value) });
+                  if (next === undefined) props.planner.refuse([abilityScoreRange(e.currentTarget.value)]);
+                  else props.planner.edit({ kind: 'scores', scores: next }, `${a} score`);
                   revertControl(e.currentTarget, scores()[a]);
                 }}
               />
@@ -484,16 +498,12 @@ export function AddPanel(props: AddPanelProps) {
       />
       <Button
         disabled={mythic() === ''}
-        onClick={() =>
-          props.planner.edit(
-            {
-              kind: 'addRank',
-              class: mythic(),
-              level: Math.max(expectedLevel(data(), nextRank()), props.planner.build().levels.length, 1),
-            },
-            `Add Mythic rank ${nextRank()}`,
-          )
-        }
+        onClick={() => {
+          const placed = Math.max(expectedLevel(data(), nextRank()), props.planner.build().levels.length, 1);
+          const level = toRankLevel(placed);
+          if (level === undefined) props.planner.refuse([rankLevelRange(placed)]);
+          else props.planner.edit({ kind: 'addRank', class: mythic(), level }, `Add Mythic rank ${nextRank()}`);
+        }}
       >
         Add Mythic rank {nextRank()}
       </Button>

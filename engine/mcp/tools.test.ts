@@ -5,6 +5,7 @@ import { decodeBuild, encodeBuild } from '../codec';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { jackInTheGreen } from '../gold';
+import { rankLevelRange, skillRankRange } from '../refusals';
 import { walk } from '../walk';
 import {
   engineOf,
@@ -134,6 +135,25 @@ describe('the MCP, end to end', () => {
       reason: "Its prerequisites aren't met.",
       unmet: ['Needs Strength 13 (yours: 10).'],
     });
+  });
+
+  it('refuses a Rank level or skill ranks no Build code holds, with R’s words (ticket 05d)', async () => {
+    const code = (await start_build(e)).code;
+    const fighter = ok(await level_up(e, { code, class: '48ac8db94d5de7645906c7d0ad3bcfbd' }), 'level_up');
+    const hero = ok(await level_up(e, { code: fighter.code, class: '247aa787806d5da4f89cfc3dff0b217f' }), 'rank');
+    for (const level of [0, -1, 2.5, 300]) {
+      expect(await place_rank(e, { code: hero.code, rank: 1, level })).toEqual({
+        refused: true,
+        reason: rankLevelRange(level),
+      });
+    }
+    expect(await set_skills(e, { code: hero.code, level: 1, ranks: { SkillAthletics: -1 } })).toEqual({
+      refused: true,
+      reason: skillRankRange({ SkillAthletics: -1 }),
+    });
+    expect(ok(await place_rank(e, { code: hero.code, rank: 1, level: 1 }), 'place_rank').build.ranks?.[0]?.level).toBe(
+      1,
+    );
   });
 
   it('searches, explains and gives the sheet', async () => {

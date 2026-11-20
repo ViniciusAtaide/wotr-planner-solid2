@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { slotKey, type Build, type SlotId } from '../build';
+import { abilityScores, slotKey, type Build, type SlotId } from '../build';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { enforcer, jackInTheGreen } from '../gold';
@@ -30,7 +30,14 @@ const AIR_DOMAIN_PROGRESSION = '750bfcd133cd52f42acbd4f7bc9cc365';
 const TOUGHNESS = 'd09b20029e9abfe4480b356c92095623';
 const SPELL_FOCUS_GREATER = '5b04b45b228461c43bad768eb0f7c7bf';
 const SPELL_FOCUS_MYTHIC_FEAT = '41fa2470ab50ff441b4cfbb2fc725109';
-const scores = { Strength: 10, Dexterity: 12, Constitution: 10, Intelligence: 10, Wisdom: 10, Charisma: 10 };
+const scores = abilityScores({
+  Strength: 10,
+  Dexterity: 12,
+  Constitution: 10,
+  Intelligence: 10,
+  Wisdom: 10,
+  Charisma: 10,
+});
 
 describe('S: the pickers', () => {
   it.each([jackInTheGreen, enforcer])(

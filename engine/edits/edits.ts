@@ -2,20 +2,23 @@ import {
   placeKey,
   slotKey,
   withPick,
+  type AbilityScores,
   type Alignment,
   type Build,
   type GearPlace,
   type Pick,
+  type RankLevel,
+  type SkillRanks,
   type SlotId,
 } from '../build';
 import type { CheckedData } from '../load';
-import type { Attribute, Guid, StatType } from '../data';
+import type { Attribute, Guid } from '../data';
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
 import { walk, type Failure } from '../walk';
 
 export type Edit =
   | { readonly kind: 'class'; readonly level: number; readonly class: Guid }
-  | { readonly kind: 'scores'; readonly scores: Readonly<Record<Attribute, number>> }
+  | { readonly kind: 'scores'; readonly scores: AbilityScores }
   | { readonly kind: 'race'; readonly race: Guid | undefined; readonly raceStat?: Attribute }
   | { readonly kind: 'archetypes'; readonly class: Guid; readonly archetypes: readonly Guid[] }
   | { readonly kind: 'alignment'; readonly alignment: Alignment | undefined }
@@ -25,10 +28,10 @@ export type Edit =
       readonly pick?: { readonly feature: Guid; readonly param?: GrantParam };
     }
   | { readonly kind: 'gear'; readonly place: GearPlace; readonly item?: Guid }
-  | { readonly kind: 'rankLevel'; readonly rank: number; readonly level: number }
+  | { readonly kind: 'rankLevel'; readonly rank: number; readonly level: RankLevel }
   | { readonly kind: 'addLevel'; readonly class: Guid }
-  | { readonly kind: 'addRank'; readonly class: Guid; readonly level: number }
-  | { readonly kind: 'skills'; readonly level: number; readonly skills: Readonly<Partial<Record<StatType, number>>> }
+  | { readonly kind: 'addRank'; readonly class: Guid; readonly level: RankLevel }
+  | { readonly kind: 'skills'; readonly level: number; readonly skills: SkillRanks }
   | { readonly kind: 'increase'; readonly level: number; readonly increase?: Attribute }
   | { readonly kind: 'raceStat'; readonly raceStat?: Attribute }
   | { readonly kind: 'dropLevel' }
@@ -119,11 +122,17 @@ export function clearPicks(build: Build, slots: readonly SlotId[]): Build {
   return { ...build, picks: build.picks.filter((p) => !cleared.has(slotKey(p.slot))) };
 }
 
+const PLACELESS: ReadonlySet<Failure['choice']> = new Set(['gear', 'aspect']);
+
 function keyedRefusals(data: CheckedData, build: Build, G: GrantIndex): Map<string, Failure> {
   const out = new Map<string, Failure>();
   for (const f of walk(data, build, G).failures) {
     const key =
-      f.slot === undefined ? `${placeKey(f.place)} ${f.choice} ${f.subject ?? ''}` : `pick ${slotKey(f.slot)}`;
+      f.slot !== undefined
+        ? `pick ${slotKey(f.slot)}`
+        : PLACELESS.has(f.choice)
+          ? `${f.choice} ${f.subject ?? ''}`
+          : `${placeKey(f.place)} ${f.choice} ${f.subject ?? ''}`;
     if (!out.has(key)) out.set(key, f);
   }
   return out;

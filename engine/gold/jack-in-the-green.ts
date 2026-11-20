@@ -1,4 +1,4 @@
-import type { Build, LevelUp } from '../build';
+import { abilityScores, rankLevel, skillRanks, type Build, type LevelUp } from '../build';
 import { facts, increase, pick, second, withParam, type Gold } from './gold';
 
 const SORCERER = 'b3a505fb61437dc4097f43c3f8f9a4cf';
@@ -64,19 +64,20 @@ const SORCEROUS_REFLEX_MYTHIC_FEAT = 'f6f9f99993f9a92438bd4ffbfbb71837';
 const level = (n: number): LevelUp => ({
   class: SORCERER,
   ...(n % 4 === 0 && { increase: 'Charisma' as const }),
-  skills:
+  skills: skillRanks(
     n % 2 === 1
       ? { SkillMobility: 1, SkillPersuasion: 1, SkillUseMagicDevice: 1 }
       : { SkillMobility: 1, SkillPersuasion: 1 },
+  ),
 });
 
 const build: Build = {
   race: HALFLING_RACE,
   alignment: 'ChaoticGood',
-  scores: { Strength: 12, Dexterity: 14, Constitution: 14, Intelligence: 12, Wisdom: 8, Charisma: 17 },
+  scores: abilityScores({ Strength: 12, Dexterity: 14, Constitution: 14, Intelligence: 12, Wisdom: 8, Charisma: 17 }),
   classChoices: { [SORCERER]: { archetypes: [SYLVAN_SORCERER_ARCHETYPE] } },
   levels: Array.from({ length: 20 }, (_, i) => level(i + 1)),
-  ranks: EXPECTED.map((at, i) => ({ class: i < 2 ? MYTHIC_HERO : AZATA, level: at })),
+  ranks: EXPECTED.map((at, i) => ({ class: i < 2 ? MYTHIC_HERO : AZATA, level: rankLevel(at) })),
   picks: [
     pick({ level: 1 }, HALFLING_HERITAGE_SELECTION, 0, HASTY_HALFLING),
     pick({ level: 1 }, BACKGROUNDS_BASE_SELECTION, 0, BACKGROUNDS_REGIONAL_SELECTION),

@@ -1,4 +1,15 @@
-import { placeKey, slotKey, withPick, type Build, type Pick, type Place, type SlotId } from '../build';
+import {
+  MAX_BYTE,
+  MAX_SCORE,
+  MIN_SCORE,
+  placeKey,
+  slotKey,
+  withPick,
+  type Build,
+  type Pick,
+  type Place,
+  type SlotId,
+} from '../build';
 import type { CheckedData } from '../load';
 import { isShown, type Guid, type StatType } from '../data';
 import { buildGrantIndex, grantorKind, type GrantIndex, type GrantParam } from '../grants';
@@ -24,6 +35,18 @@ export function refusal(w: Wording, failed: FailedRule): Refusal {
   const any = unmet.filter((u) => u.leaf.Group !== 'All').map((u) => unmetText(w, u).replace(/\.$/, ''));
   const either = any.length === 0 ? [] : any.length === 1 ? [`${any[0]}.`] : [`One of these: ${any.join('; ')}.`];
   return { rule: failed.rule, text: ruleText(w, failed), unmet: [...all, ...either] };
+}
+
+export function rankLevelRange(found: unknown): string {
+  return `A Rank level is a whole number from 1 to ${MAX_BYTE}, not ${JSON.stringify(found)}.`;
+}
+
+export function abilityScoreRange(found: unknown): string {
+  return `Each ability score is a whole number from ${MIN_SCORE} to ${MAX_SCORE}, not ${JSON.stringify(found)}.`;
+}
+
+export function skillRankRange(found: unknown): string {
+  return `Skill ranks are whole numbers from 0 to ${MAX_BYTE}, not ${JSON.stringify(found)}.`;
 }
 
 export function gearNote(data: CheckedData, items: readonly Guid[]): string {

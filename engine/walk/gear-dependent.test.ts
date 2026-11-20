@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { placeKey, type Build, type Pick } from '../build';
+import { rankLevel, placeKey, type Build, type Pick } from '../build';
 import type { BlueprintArchetype, BlueprintCharacterClass } from '../data';
 import {
   BASIC_FEAT_SELECTION,
@@ -62,8 +62,8 @@ describe('ADR 0002: what a choice needs of the Gear', () => {
         scores: scores({ Dexterity: 12 }),
         levels: levels(FIGHTER, 2),
         ranks: [
-          { class: MYTHIC_HERO, level: 2 },
-          { class: MYTHIC_HERO, level: 2 },
+          { class: MYTHIC_HERO, level: rankLevel(2) },
+          { class: MYTHIC_HERO, level: rankLevel(2) },
         ],
         gear: BOTH,
         countGear: true,

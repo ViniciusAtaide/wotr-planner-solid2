@@ -344,6 +344,7 @@ class Walker {
   readonly gearDependentFacts = new Map<Fact, readonly Guid[]>();
   readonly dropped: Dropped[] = [];
   legendTaken = false;
+  readonly takenOff = new Set<Guid>();
   readonly aspectsOn = new Map<Guid, Guid>();
   readonly refusedAspects = new Set<Guid>();
   place: Place = { level: 0 };
@@ -390,11 +391,11 @@ class Walker {
     for (const [i, level] of this.build.levels.entries()) {
       this.levelUp({ level: i + 1 }, level, false);
       while (rank < ranks.length && (ranks[rank]?.level ?? 0) <= i + 1) {
-        this.levelUp({ rank: rank + 1 }, ranks[rank] as Ascension, true);
+        this.ascend(rank + 1, ranks[rank] as Ascension);
         rank++;
       }
     }
-    for (; rank < ranks.length; rank++) this.levelUp({ rank: rank + 1 }, ranks[rank] as Ascension, true);
+    for (; rank < ranks.length; rank++) this.ascend(rank + 1, ranks[rank] as Ascension);
     this.refuseUnworn();
     for (const toggle of this.build.aspects ?? []) {
       if (!this.unit.hasFact(toggle) && !this.refusedAspects.has(toggle)) {
@@ -652,6 +653,7 @@ class Walker {
       if (refusal === undefined && !worn) this.wear(place, item);
       else if (refusal !== undefined && worn) {
         this.takeOff(place, item);
+        this.takenOff.add(item);
         this.fail({ choice: 'gear', subject: item, ...refusal });
       }
     }
@@ -682,7 +684,7 @@ class Walker {
   refuseUnworn(): void {
     const gear = this.build.gear ?? {};
     for (const [place, item] of gearOf(this.build)) {
-      if (this.unit.worn.get(place) === item) continue;
+      if (this.unit.worn.get(place) === item || this.takenOff.has(item)) continue;
       const refusal: FailedRule = misfit(this.unit, gear, place) ??
         cannotWear(this.unit, this.unit.bp(item)!) ?? { rule: 'ItemEntity.CanBeEquippedBy' };
       this.fail({ choice: 'gear', subject: item, ...refusal });
@@ -858,6 +860,21 @@ class Walker {
     if (!bp.IsMythic && this.unit.characterLevel % 4 === 0) state.attributePoints = 1;
     const progression = refGuid(bp.m_Progression);
     if (progression !== undefined) this.gain(progression, undefined, { kind: 'class', from: cls });
+  }
+
+  ascend(rank: number, ascension: Ascension): void {
+    const max = this.maxCharacterLevel();
+    if (ascension.level > max) {
+      this.failures.push({
+        place: { rank },
+        choice: 'rank',
+        subject: ascension.class,
+        rule: 'UnitProgressionData.MaxCharacterLevel',
+        found: ascension.level,
+        needed: max,
+      });
+    }
+    this.levelUp({ rank }, ascension, true);
   }
 
   maxCharacterLevel(): number {

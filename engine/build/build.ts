@@ -26,15 +26,91 @@ export interface Pick {
   readonly param?: GrantParam;
 }
 
+export const MAX_BYTE = 255;
+
+export type RankLevel = number & { readonly brand: 'RankLevel' };
+export type SkillRank = number & { readonly brand: 'SkillRank' };
+export type SkillRanks = Readonly<Partial<Record<StatType, SkillRank>>>;
+export type AbilityScore = number & { readonly brand: 'AbilityScore' };
+export type AbilityScores = Readonly<Record<Attribute, AbilityScore>>;
+
+export const MIN_SCORE = 7;
+export const MAX_SCORE = 18;
+const ATTRIBUTE_NAMES: readonly Attribute[] = [
+  'Strength',
+  'Dexterity',
+  'Constitution',
+  'Intelligence',
+  'Wisdom',
+  'Charisma',
+];
+
+const inRange = (n: unknown, min: number): n is number =>
+  Number.isInteger(n) && (n as number) >= min && (n as number) <= MAX_BYTE;
+
+export function toRankLevel(n: unknown): RankLevel | undefined {
+  return inRange(n, 1) ? (n as RankLevel) : undefined;
+}
+
+export function toSkillRank(n: unknown): SkillRank | undefined {
+  return inRange(n, 0) ? (n as SkillRank) : undefined;
+}
+
+export function toSkillRanks(ranks: Readonly<Record<string, unknown>>): SkillRanks | undefined {
+  const out: Partial<Record<StatType, SkillRank>> = {};
+  for (const [skill, n] of Object.entries(ranks)) {
+    const rank = toSkillRank(n);
+    if (rank === undefined) return undefined;
+    out[skill as StatType] = rank;
+  }
+  return out;
+}
+
+export function toAbilityScore(n: unknown): AbilityScore | undefined {
+  return Number.isInteger(n) && (n as number) >= MIN_SCORE && (n as number) <= MAX_SCORE
+    ? (n as AbilityScore)
+    : undefined;
+}
+
+export function toAbilityScores(scores: Readonly<Record<string, unknown>>): AbilityScores | undefined {
+  const out = {} as Record<Attribute, AbilityScore>;
+  for (const a of ATTRIBUTE_NAMES) {
+    const score = toAbilityScore(scores[a]);
+    if (score === undefined) return undefined;
+    out[a] = score;
+  }
+  return Object.keys(scores).length === ATTRIBUTE_NAMES.length ? out : undefined;
+}
+
+export class InvalidValue extends Error {}
+
+export function abilityScores(scores: Readonly<Record<Attribute, number>>): AbilityScores {
+  const out = toAbilityScores(scores);
+  if (out === undefined) throw new InvalidValue(`not ability scores: ${JSON.stringify(scores)}`);
+  return out;
+}
+
+export function rankLevel(n: number): RankLevel {
+  const level = toRankLevel(n);
+  if (level === undefined) throw new InvalidValue(`not a Rank level: ${n}`);
+  return level;
+}
+
+export function skillRanks(ranks: Readonly<Record<string, number>>): SkillRanks {
+  const out = toSkillRanks(ranks);
+  if (out === undefined) throw new InvalidValue(`not skill ranks: ${JSON.stringify(ranks)}`);
+  return out;
+}
+
 export interface LevelUp {
   readonly class: Guid;
   readonly increase?: Attribute;
-  readonly skills?: Readonly<Partial<Record<StatType, number>>>;
+  readonly skills?: SkillRanks;
 }
 
 export interface Ascension {
   readonly class: Guid;
-  readonly level: number;
+  readonly level: RankLevel;
 }
 
 export interface ClassChoice {
@@ -63,7 +139,7 @@ export interface Build {
   readonly race?: Guid;
   readonly raceStat?: Attribute;
   readonly alignment?: Alignment;
-  readonly scores?: Readonly<Record<Attribute, number>>;
+  readonly scores?: AbilityScores;
   readonly classChoices?: Readonly<Record<Guid, ClassChoice>>;
   readonly levels: readonly LevelUp[];
   readonly ranks?: readonly Ascension[];

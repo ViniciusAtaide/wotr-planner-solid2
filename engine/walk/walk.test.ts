@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { placeKey, type Build, type LevelUp } from '../build';
+import { type AbilityScores, abilityScores, skillRanks, rankLevel, placeKey, type Build, type LevelUp } from '../build';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { refGuid, type BlueprintProgression, type Component, type Condition, type ContextRankConfig } from '../data';
@@ -133,14 +133,25 @@ describe('areas 3 and 4: selections, nested selections and ranks', () => {
 });
 
 describe('area 5: skill ranks', () => {
-  const scores = { Strength: 10, Dexterity: 10, Constitution: 10, Intelligence: 12, Wisdom: 10, Charisma: 10 };
+  const scores = abilityScores({
+    Strength: 10,
+    Dexterity: 10,
+    Constitution: 10,
+    Intelligence: 12,
+    Wisdom: 10,
+    Charisma: 10,
+  });
 
   it("spends the class's points and the Intelligence points, and refuses one rank more", () => {
     const three = { SkillMobility: 1, SkillPersuasion: 1, SkillUseMagicDevice: 1 };
     const halfling = (l: LevelUp[]) => build({ race: HALFLING, scores, levels: l });
-    const ok = walk(data, halfling(levels(SORCERER, 2, { skills: { SkillMobility: 1, SkillPersuasion: 1 } })), G);
+    const ok = walk(
+      data,
+      halfling(levels(SORCERER, 2, { skills: skillRanks({ SkillMobility: 1, SkillPersuasion: 1 }) })),
+      G,
+    );
     expect(ok.failures.filter((f) => f.choice === 'skills')).toEqual([]);
-    const over = walk(data, halfling(levels(SORCERER, 2, { skills: three })), G);
+    const over = walk(data, halfling(levels(SORCERER, 2, { skills: skillRanks(three) })), G);
     expect(over.failures).toContainEqual(
       expect.objectContaining({
         place: { level: 2 },
@@ -152,12 +163,12 @@ describe('area 5: skill ranks', () => {
 
   it("adds the Human's extra point per level", () => {
     const three = { SkillMobility: 1, SkillPersuasion: 1, SkillUseMagicDevice: 1 };
-    const w = walk(data, build({ scores, levels: levels(SORCERER, 2, { skills: three }) }), G);
+    const w = walk(data, build({ scores, levels: levels(SORCERER, 2, { skills: skillRanks(three) }) }), G);
     expect(w.failures.filter((f) => f.choice === 'skills')).toEqual([]);
   });
 
   it('caps ranks at the character level', () => {
-    const w = walk(data, build({ scores, levels: [{ class: FIGHTER, skills: { SkillAthletics: 2 } }] }), G);
+    const w = walk(data, build({ scores, levels: [{ class: FIGHTER, skills: skillRanks({ SkillAthletics: 2 }) }] }), G);
     expect(w.failures).toContainEqual(
       expect.objectContaining({ choice: 'skills', rule: 'SpendSkillPoint.Check:ranks', found: 2, needed: 1 }),
     );
@@ -252,13 +263,20 @@ describe('spellbooks, as gates', () => {
 
 describe('area 6: ability scores', () => {
   const HALF_ELF = 'b3646842ffbd01643ab4dac7479b20b0';
-  const scores = { Strength: 10, Dexterity: 10, Constitution: 10, Intelligence: 10, Wisdom: 10, Charisma: 10 };
+  const scores = abilityScores({
+    Strength: 10,
+    Dexterity: 10,
+    Constitution: 10,
+    Intelligence: 10,
+    Wisdom: 10,
+    Charisma: 10,
+  });
 
   it('refuses a point buy past 25 points or outside 7–18', () => {
     const over = { ...scores, Strength: 18, Dexterity: 18 };
     const low = { ...scores, Wisdom: 6 };
-    const checks = (s: typeof scores) =>
-      walk(data, build({ scores: s, levels: levels(FIGHTER, 1) }), G)
+    const checks = (s: Readonly<Record<string, number>>) =>
+      walk(data, build({ scores: s as AbilityScores, levels: levels(FIGHTER, 1) }), G)
         .failures.filter((f) => f.choice === 'scores')
         .map(({ subject, rule, found, needed }) => ({ subject, rule, found, needed }));
     expect(checks(scores)).toEqual([]);
@@ -322,7 +340,7 @@ describe('area 6: ability scores', () => {
       walk(
         data,
         build({
-          scores: { ...scores, Wisdom: wis },
+          scores: abilityScores({ ...scores, Wisdom: wis }),
           levels: levels(FIGHTER, 1),
           picks: [
             {
@@ -448,7 +466,7 @@ describe('areas 7 and 8: race, and Mythic ranks at their Rank levels', () => {
 
   it('places each Mythic rank after its Rank level, at any level, in rank order', () => {
     const hero = '247aa787806d5da4f89cfc3dff0b217f';
-    const early = walk(data, build({ levels: levels(FIGHTER, 3), ranks: [{ class: hero, level: 2 }] }), G);
+    const early = walk(data, build({ levels: levels(FIGHTER, 3), ranks: [{ class: hero, level: rankLevel(2) }] }), G);
     const order = [...new Set(early.gains.map((g) => placeKey(g.place)))];
     expect(order.indexOf('M1')).toBe(order.indexOf('L2') + 1);
     expect(early.failures).toEqual([]);
@@ -457,8 +475,8 @@ describe('areas 7 and 8: race, and Mythic ranks at their Rank levels', () => {
       build({
         levels: levels(FIGHTER, 3),
         ranks: [
-          { class: hero, level: 3 },
-          { class: hero, level: 2 },
+          { class: hero, level: rankLevel(3) },
+          { class: hero, level: rankLevel(2) },
         ],
       }),
       G,
@@ -517,8 +535,8 @@ describe('path switches (map ticket 31)', () => {
     ...jackInTheGreen.build,
     ranks: [
       ...(jackInTheGreen.build.ranks ?? []).slice(0, 7),
-      { class: cls, level: 17 },
-      ...Array.from({ length: ranks - 8 }, () => ({ class: cls, level: 19 })),
+      { class: cls, level: rankLevel(17) },
+      ...Array.from({ length: ranks - 8 }, () => ({ class: cls, level: rankLevel(19) })),
     ],
     picks: jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place) || p.slot.place.rank <= 7),
   });
@@ -569,6 +587,28 @@ describe('path switches (map ticket 31)', () => {
       );
     expect(level21(jackTo(legend))).toEqual([]);
     expect(level21(jackInTheGreen.build)).toHaveLength(1);
+  });
+
+  it('refuses a Mythic rank placed above the level cap: 21 under the usual cap, 41 under Legend', () => {
+    const capOf = (b: Build) =>
+      walk(data, b, G).failures.filter(
+        (f) => f.choice === 'rank' && f.rule === 'UnitProgressionData.MaxCharacterLevel',
+      );
+    const ranks = jackInTheGreen.build.ranks ?? [];
+    const at = (b: Build, rank: number, level: number): Build => ({
+      ...b,
+      ranks: (b.ranks ?? []).map((r, i) => (i === rank - 1 ? { ...r, level: rankLevel(level) } : r)),
+    });
+    expect(capOf(jackInTheGreen.build)).toEqual([]);
+    expect(capOf(at(jackInTheGreen.build, ranks.length, 20))).toEqual([]);
+    expect(capOf(at(jackInTheGreen.build, ranks.length, 21))).toEqual([
+      expect.objectContaining({ place: { rank: ranks.length }, found: 21, needed: 20 }),
+    ]);
+    const legend = '3d420403f3e7340499931324640efe96';
+    expect(capOf(jackTo(legend))).toEqual([]);
+    expect(capOf(at(jackTo(legend), 8, 41))).toEqual([
+      expect.objectContaining({ place: { rank: 8 }, subject: legend, found: 41, needed: 20 }),
+    ]);
   });
 });
 
@@ -744,8 +784,8 @@ describe('grants through G (ticket 03c)', () => {
         ...jackInTheGreen.build,
         ranks: [
           ...(jackInTheGreen.build.ranks ?? []).slice(0, 2),
-          { class: TRICKSTER, level: 12 },
-          { class: TRICKSTER, level: 13 },
+          { class: TRICKSTER, level: rankLevel(12) },
+          { class: TRICKSTER, level: rankLevel(13) },
         ],
         picks: [
           ...jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place) || p.slot.place.rank <= 2),
@@ -802,7 +842,7 @@ describe('grants through G (ticket 03c)', () => {
 describe('the areas ticket 03 left untested (ticket 03c)', () => {
   const jackTo = (cls: string): Build => ({
     ...jackInTheGreen.build,
-    ranks: [...(jackInTheGreen.build.ranks ?? []).slice(0, 7), { class: cls, level: 17 }],
+    ranks: [...(jackInTheGreen.build.ranks ?? []).slice(0, 7), { class: cls, level: rankLevel(17) }],
     picks: jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place) || p.slot.place.rank <= 7),
   });
 
@@ -824,7 +864,7 @@ describe('the areas ticket 03 left untested (ticket 03c)', () => {
       ...jackInTheGreen.build,
       ranks: [
         ...ranks.slice(0, 7).map((r, i) => (i >= 2 ? { ...r, class: AEON } : r)),
-        ...(devil ? [{ class: '211f49705f478b3468db6daa802452a2', level: 17 }] : []),
+        ...(devil ? [{ class: '211f49705f478b3468db6daa802452a2', level: rankLevel(17) }] : []),
       ],
       picks: [
         ...jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place) || p.slot.place.rank <= 2),
@@ -852,9 +892,9 @@ describe('the areas ticket 03 left untested (ticket 03c)', () => {
         build({
           levels: levels(cls, 3),
           ranks: [
-            { class: '247aa787806d5da4f89cfc3dff0b217f', level: 1 },
-            { class: '247aa787806d5da4f89cfc3dff0b217f', level: 2 },
-            { class: ANGEL, level: 3 },
+            { class: '247aa787806d5da4f89cfc3dff0b217f', level: rankLevel(1) },
+            { class: '247aa787806d5da4f89cfc3dff0b217f', level: rankLevel(2) },
+            { class: ANGEL, level: rankLevel(3) },
           ],
           picks: [
             {
@@ -891,7 +931,7 @@ describe('the areas ticket 03 left untested (ticket 03c)', () => {
       ...jackInTheGreen.build,
       ranks: [
         ...(jackInTheGreen.build.ranks ?? []).slice(0, 2),
-        ...Array.from({ length: 5 }, (_, i) => ({ class: TRICKSTER, level: 12 + i })),
+        ...Array.from({ length: 5 }, (_, i) => ({ class: TRICKSTER, level: rankLevel(12 + i) })),
       ],
       picks: [
         ...jackInTheGreen.build.picks.filter((p) =>
@@ -920,7 +960,7 @@ describe('the areas ticket 03 left untested (ticket 03c)', () => {
       data,
       build({
         levels: levels(FIGHTER, 1),
-        ranks: [{ class: '530b6a79cb691c24ba99e1577b4beb6d', level: 1 }],
+        ranks: [{ class: '530b6a79cb691c24ba99e1577b4beb6d', level: rankLevel(1) }],
         gear: { Head: '8344b46a6e404227b72d129073383a6c' },
       }),
       G,

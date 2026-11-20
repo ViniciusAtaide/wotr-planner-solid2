@@ -2,7 +2,7 @@ import { join } from 'node:path';
 import { render } from '@solidjs/testing-library';
 import { flush } from 'solid-js';
 import { describe, expect, test } from 'vitest';
-import { slotKey, type Build } from '~engine/build';
+import { abilityScores, slotKey, type Build } from '~engine/build';
 import { encodeBuild } from '~engine/codec';
 import { loadData } from '~engine/load';
 import { readDataDir } from '~engine/data-dir';
@@ -132,7 +132,8 @@ describe('the planner routes every change through E', () => {
         planner = createPlanner(e, start);
         return null;
       });
-      const lower = () => planner.edit({ kind: 'scores', scores: { ...SCORES, Strength: 10 } }, 'Strength score');
+      const lower = () =>
+        planner.edit({ kind: 'scores', scores: abilityScores({ ...SCORES, Strength: 10 }) }, 'Strength score');
 
       lower();
       flush();

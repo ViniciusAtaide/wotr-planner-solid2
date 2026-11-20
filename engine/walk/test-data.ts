@@ -1,5 +1,5 @@
 import { fileURLToPath } from 'node:url';
-import type { Build, LevelUp } from '../build';
+import { abilityScores, type Build, type LevelUp } from '../build';
 import { loadData, type CheckedData } from '../load';
 import { readDataDir } from '../data-dir';
 import type { Blueprint, BlueprintFeature, BlueprintFeatureSelection, Component, Guid, StatType } from '../data';
@@ -17,15 +17,16 @@ export const DODGE = '97e216dbb46ae3c4faef90cf6bbe6fd5';
 export const DEX_BELT = 'b6af4c1834999e74497b41588d1071cd';
 export const CHA_HEADBAND = 'a3e8e907908ca7a40ac6da78e70bf33d';
 
-export const scores = (s: Partial<Record<'Strength' | 'Dexterity' | 'Charisma', number>> = {}) => ({
-  Strength: 10,
-  Dexterity: 10,
-  Constitution: 10,
-  Intelligence: 10,
-  Wisdom: 10,
-  Charisma: 10,
-  ...s,
-});
+export const scores = (s: Partial<Record<'Strength' | 'Dexterity' | 'Charisma', number>> = {}) =>
+  abilityScores({
+    Strength: 10,
+    Dexterity: 10,
+    Constitution: 10,
+    Intelligence: 10,
+    Wisdom: 10,
+    Charisma: 10,
+    ...s,
+  });
 
 export const levels = (cls: Guid, n: number, extra: Partial<LevelUp> = {}): LevelUp[] =>
   Array.from({ length: n }, () => ({ class: cls, ...extra }));
