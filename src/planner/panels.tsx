@@ -1,9 +1,6 @@
-// The side panel's contents (map 13): the picker for a slot, and the editors for a level, a Mythic rank, the start,
-// adding levels and ranks, and Gear. Every change goes through the planner's `edit` (E); statuses come from S and
-// every Refusal's words from R.
 import { createMemo, createSignal, For, Show } from 'solid-js';
 import { slotKey, type Alignment, type GearPlace, type SlotId } from '~engine/build';
-import type { CheckedData } from '~engine/data/load';
+import type { CheckedData } from '~engine/load';
 import {
   isShown,
   refGuid,
@@ -12,16 +9,14 @@ import {
   type BlueprintCharacterClass,
   type Guid,
   type StatType,
-} from '~engine/data/types';
-import { expectedLevel } from '~engine/mcp/tools';
+} from '~engine/data';
+import { expectedLevel } from '~engine/mcp';
 import { linkIndex } from '~engine/links';
 import { picker, type OptionStatus } from '~engine/pickers';
 import { gearNote, nameOf, refusal, statName } from '~engine/refusals';
-import { pointBuyCost, POINT_BUY } from '~engine/walk/stats';
-import { ATTRIBUTES, SKILL_ATTRIBUTE } from '~engine/walk/unit';
+import { pointBuyCost, POINT_BUY, ATTRIBUTES, PLACE_ITEM_TYPES, SKILL_ATTRIBUTE } from '~engine/walk';
 
-import Button from '../components/design/Button';
-import PickerOption, { ClosedCount, OptionList, PickerHead } from '../components/design/PickerOption';
+import { Button, ClosedCount, OptionList, PickerHead, PickerOption } from '../design';
 import type { Planner } from './state';
 import { placeWords } from './state';
 import { optionName } from './words';
@@ -39,19 +34,13 @@ const ALIGNMENTS: readonly Alignment[] = [
 ];
 const words = (s: string) => s.replace(/([a-z])([A-Z])/g, '$1 $2');
 
-/** The shown blueprints a test keeps, by name. */
-function shownBy(data: CheckedData, keep: (bp: Blueprint) => boolean): Blueprint[] {
+function shownSortedByName(data: CheckedData, keep: (bp: Blueprint) => boolean): Blueprint[] {
   return [...data.blueprints.values()]
     .filter((bp) => isShown(bp) && keep(bp))
     .sort((a, b) => (a.name ?? '').localeCompare(b.name ?? ''));
 }
 
-/**
- * Puts a control back to the value it shows before the edit. An edit that applies changes the Build, and the binding
- * then writes the new value (reads lag writes, so this runs first); one waiting on the Cascade preview or refused
- * leaves the control showing the Build as it still is.
- */
-function settle(el: HTMLInputElement | HTMLSelectElement, value: string | number): void {
+function revertControl(el: HTMLInputElement | HTMLSelectElement, value: string | number): void {
   el.value = String(value);
 }
 
@@ -62,7 +51,6 @@ interface ChoiceProps {
   readonly onChange: (value: string) => void;
 }
 
-/** A labelled select, in the design system's control style. */
 function Choice(props: ChoiceProps) {
   return (
     <label class="planner-field">
@@ -73,7 +61,7 @@ function Choice(props: ChoiceProps) {
         onChange={(e) => {
           const el = e.currentTarget;
           props.onChange(el.value);
-          settle(el, props.value);
+          revertControl(el, props.value);
         }}
       >
         <For each={props.options}>{(o) => <option value={o.value}>{o.text}</option>}</For>
@@ -82,9 +70,6 @@ function Choice(props: ChoiceProps) {
   );
 }
 
-// ---- the picker ----------------------------------------------------------------------------------------------
-
-/** How many closed options show before "Show all closed". */
 const CLOSED_SHOWN = 30;
 
 export interface SlotPickerProps {
@@ -93,10 +78,6 @@ export interface SlotPickerProps {
   readonly onPicked?: () => void;
 }
 
-/**
- * The picker at a slot: S's options the game shows, open ones first, then the closed ones with R's Refusals. J and K
- * move between options, ↵ picks, / focuses the filter.
- */
 export function SlotPicker(props: SlotPickerProps) {
   const data = () => props.planner.engine.data;
   const [text, setText] = createSignal('');
@@ -125,15 +106,10 @@ export function SlotPicker(props: SlotPickerProps) {
     }
     return [...counts].map(([k, n]) => `${n} ${k.includes('.') ? 'refused by the game' : k}`).join(', ');
   };
-  /** What the Build already holds, at this slot's point of the walk. */
-  const held = createMemo(() => new Set([...(p()?.unit.facts() ?? [])].map((f) => f.blueprint)));
-  /**
-   * The option's Synergy links, the prerequisite-chain kind (map 09): what it builds on that the Build holds, and
-   * what it enables.
-   */
+  const heldFeatures = createMemo(() => new Set([...(p()?.unit.facts() ?? [])].map((f) => f.blueprint)));
   const links = (o: OptionStatus): string | undefined => {
     const index = linkIndex(data(), props.planner.engine.G);
-    const on = index.needs(o.feature).filter((g) => held().has(g));
+    const on = index.needs(o.feature).filter((g) => heldFeatures().has(g));
     const enables = index.enables(o.feature);
     const words = [
       on.length > 0 && `Builds on ${on.map((g) => nameOf(data(), g)).join(', ')}`,
@@ -211,20 +187,20 @@ export function SlotPicker(props: SlotPickerProps) {
   );
 }
 
-// ---- a level -------------------------------------------------------------------------------------------------
-
 export interface LevelPanelProps {
   readonly planner: Planner;
   readonly level: number;
 }
 
-/** A character level: its class, its archetypes at the class's first level, its ability increase and skill ranks. */
 export function LevelPanel(props: LevelPanelProps) {
   const data = () => props.planner.engine.data;
   const b = () => props.planner.build();
   const l = () => b().levels[props.level - 1];
   const classes = () =>
-    shownBy(data(), (bp) => bp.$type === 'BlueprintCharacterClass' && !(bp as BlueprintCharacterClass).IsMythic);
+    shownSortedByName(
+      data(),
+      (bp) => bp.$type === 'BlueprintCharacterClass' && !(bp as BlueprintCharacterClass).IsMythic,
+    );
   const firstOfClass = () => b().levels.findIndex((x) => x.class === l()?.class) + 1 === props.level;
   const archetypes = () => {
     const cls = data().blueprints.get(l()?.class ?? '');
@@ -304,7 +280,7 @@ export function LevelPanel(props: LevelPanelProps) {
                         { kind: 'skills', level: props.level, skills: next },
                         `${statName(skill)} ranks`,
                       );
-                      settle(e.currentTarget, level().skills?.[skill] ?? 0);
+                      revertControl(e.currentTarget, level().skills?.[skill] ?? 0);
                     }}
                   />
                 </label>
@@ -325,11 +301,11 @@ export function LevelPanel(props: LevelPanelProps) {
   );
 }
 
-// ---- a Mythic rank -------------------------------------------------------------------------------------------
-
-/** Mythic classes: the paths, the starting class and the switches (map 31). */
 function mythicClasses(data: CheckedData): Blueprint[] {
-  return shownBy(data, (bp) => bp.$type === 'BlueprintCharacterClass' && (bp as BlueprintCharacterClass).IsMythic);
+  return shownSortedByName(
+    data,
+    (bp) => bp.$type === 'BlueprintCharacterClass' && (bp as BlueprintCharacterClass).IsMythic,
+  );
 }
 
 export interface RankPanelProps {
@@ -337,7 +313,6 @@ export interface RankPanelProps {
   readonly rank: number;
 }
 
-/** A Mythic rank: its class and its Rank level, with the Expected level as a hint (ADR 0003). */
 export function RankPanel(props: RankPanelProps) {
   const data = () => props.planner.engine.data;
   const r = () => props.planner.build().ranks?.[props.rank - 1];
@@ -369,7 +344,7 @@ export function RankPanel(props: RankPanelProps) {
                   { kind: 'rankLevel', rank: props.rank, level: Number(e.currentTarget.value) },
                   `Move rank ${props.rank}`,
                 );
-                settle(e.currentTarget, rank().level);
+                revertControl(e.currentTarget, rank().level);
               }}
             />
             <span class="planner-field__hint">Expected at level {expectedLevel(data(), props.rank)}.</span>
@@ -388,17 +363,14 @@ export function RankPanel(props: RankPanelProps) {
   );
 }
 
-// ---- the start ----------------------------------------------------------------------------------------------
-
 export interface StartPanelProps {
   readonly planner: Planner;
 }
 
-/** The start: race, its chosen +2, alignment and the point buy. */
 export function StartPanel(props: StartPanelProps) {
   const data = () => props.planner.engine.data;
   const b = () => props.planner.build();
-  const races = () => shownBy(data(), (bp) => bp.$type === 'BlueprintRace');
+  const races = () => shownSortedByName(data(), (bp) => bp.$type === 'BlueprintRace');
   const race = () => data().blueprints.get(b().race ?? '');
   const scores = () =>
     b().scores ?? { Strength: 10, Dexterity: 10, Constitution: 10, Intelligence: 10, Wisdom: 10, Charisma: 10 };
@@ -456,7 +428,7 @@ export function StartPanel(props: StartPanelProps) {
                     { kind: 'scores', scores: { ...scores(), [a]: Number(e.currentTarget.value) } },
                     `${a} score`,
                   );
-                  settle(e.currentTarget, scores()[a]);
+                  revertControl(e.currentTarget, scores()[a]);
                 }}
               />
             </label>
@@ -467,17 +439,17 @@ export function StartPanel(props: StartPanelProps) {
   );
 }
 
-// ---- adding levels and ranks --------------------------------------------------------------------------------
-
 export interface AddPanelProps {
   readonly planner: Planner;
 }
 
-/** Adds the next character level, or the next Mythic rank at its Expected level (ADR 0003). */
 export function AddPanel(props: AddPanelProps) {
   const data = () => props.planner.engine.data;
   const classes = () =>
-    shownBy(data(), (bp) => bp.$type === 'BlueprintCharacterClass' && !(bp as BlueprintCharacterClass).IsMythic);
+    shownSortedByName(
+      data(),
+      (bp) => bp.$type === 'BlueprintCharacterClass' && !(bp as BlueprintCharacterClass).IsMythic,
+    );
   const [cls, setCls] = createSignal('');
   const [mythic, setMythic] = createSignal('');
   const nextLevel = () => props.planner.build().levels.length + 1;
@@ -529,45 +501,24 @@ export function AddPanel(props: AddPanelProps) {
   );
 }
 
-// ---- Gear ---------------------------------------------------------------------------------------------------
-
-/** Items/Slots: the item types each place takes (EquipmentSlot.IsItemSupported, ArmorSlot, HandSlot). */
-const PLACE_TYPES: Readonly<Record<GearPlace, readonly Blueprint['$type'][]>> = {
-  Armor: ['BlueprintItemArmor'],
-  Head: ['BlueprintItemEquipmentHead'],
-  Glasses: ['BlueprintItemEquipmentGlasses'],
-  Neck: ['BlueprintItemEquipmentNeck'],
-  Shoulders: ['BlueprintItemEquipmentShoulders'],
-  Shirt: ['BlueprintItemEquipmentShirt'],
-  Belt: ['BlueprintItemEquipmentBelt'],
-  Wrist: ['BlueprintItemEquipmentWrist'],
-  Gloves: ['BlueprintItemEquipmentGloves'],
-  Feet: ['BlueprintItemEquipmentFeet'],
-  Ring1: ['BlueprintItemEquipmentRing'],
-  Ring2: ['BlueprintItemEquipmentRing'],
-  MainHand: ['BlueprintItemWeapon'],
-  OffHand: ['BlueprintItemWeapon', 'BlueprintItemShield'],
-};
-const PLACES = Object.keys(PLACE_TYPES) as GearPlace[];
+const PLACES = Object.keys(PLACE_ITEM_TYPES) as GearPlace[];
 
 export interface GearPanelProps {
   readonly planner: Planner;
 }
 
-/** The Build's Gear (GLOSSARY.md): an item per place, and ADR 0002's opt-in to count it toward stat prerequisites. */
 export function GearPanel(props: GearPanelProps) {
   const data = () => props.planner.engine.data;
   const [place, setPlace] = createSignal<GearPlace>('Armor');
   const [text, setText] = createSignal('');
   const gear = () => props.planner.build().gear ?? {};
-  /** The items for the place, a twin group by the one offered in its place (map 29), filtered by name. */
   const items = createMemo(() => {
     const t = text().toLowerCase();
     if (t.length < 2) return [];
-    return shownBy(
+    return shownSortedByName(
       data(),
       (bp) =>
-        PLACE_TYPES[place()].includes(bp.$type) &&
+        PLACE_ITEM_TYPES[place()].includes(bp.$type) &&
         !data().twins.has(bp.guid) &&
         (bp.name ?? '').toLowerCase().includes(t),
     ).slice(0, 40);

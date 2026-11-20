@@ -1,0 +1,41 @@
+html,
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-100);
+}
+
+.app-header__name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.app-main {
+  min-height: 100vh;
+  padding: 0;
+}
+
+.app-page {
+  padding: var(--space-4);
+}
+
+a {
+  color: var(--ink);
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 2px;
+}

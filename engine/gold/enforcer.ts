@@ -1,16 +1,4 @@
-// The Enforcer, a Half-Elf Arcane Enforcer 15 / Sylvan Trickster 4 / Mutation Warrior 1 on the Azata path, converted
-// once from the Rust planner's `enforcer.ron` (the write-up as written is its `source.txt`). Each line keeps the
-// write-up's words, label prefixes dropped. The Build is the write-up's: its slots are the ones the game opens (each
-// GUID's asset name is in the comment), with these choices the write-up leaves open, as the Rust planner settled them
-// (its tickets 88, 91, 163, 171):
-// - Chaotic Good and atheist;
-// - Athletics, Perception and Persuasion a rank every level, and the rogue levels' Mobility and Stealth;
-// - the Trickster's first ascension, then the Azata; the Mythic ranks at their Expected levels (MythicsSettings
-//   3b8a6729da1e13a4e8e606e9f0fa38d8) except rank 10, taken at level 20 after Shield Focus, which Shield Focus
-//   (Mythic) needs;
-// - a Belt of Incredible Dexterity +2 (BeltOfDexterity2 b6af4c1834999e74497b41588d1071cd) under the Gear opt-in
-//   (ADR 0002), so level 19's Greater Two-Weapon Fighting (Dexterity 19) is legal, and marked gear-dependent.
-import type { Attribute, StatType } from '../data/types';
+import type { Attribute, StatType } from '../data';
 import type { Build, LevelUp } from '../build';
 import { facts, increase, pick, withParam, type Gold } from './gold';
 
@@ -37,85 +25,158 @@ const level = (n: number): LevelUp => {
 };
 
 const BATTLE_AXE = { WeaponCategory: 'Battleaxe' } as const;
+const HALF_ELF_HERITAGE_SELECTION = '9df7b68d60544bcf8e5b56c0a4688e04';
+const BASE_RASE_HALF_ELF_SELECTION = 'a9d54aab4e9243ca867341257aaa253e';
+const ADAPTABILITY = '26a668c5a8c22354bac67bcd42e09a3f';
+const SKILL_FOCUS_DIPLOMACY = '1621be43793c5bb43be55493e9c45924';
+const BACKGROUNDS_BASE_SELECTION = 'f926dabeee7f8a54db8f2010b323383c';
+const BACKGROUNDS_REGIONAL_SELECTION = 'fa621a249cc836f4382ca413b976e65e';
+const BACKGROUND_ANDORAN_DIPLOMAT = 'f6b2d489b1d907f47a734b5f72f5200d';
+const DEITY_SELECTION = '59e7a76987fe3b547b9cce045f4db3e4';
+const ATHEISM_FEATURE = '92c0d2da0a836ce418a267093c09ca54';
+const ARCANIST_EXPLOIT_SELECTION = 'b8bf3d5023f2d8c428fdf6438cecaea7';
+const ARCANIST_EXPLOIT_WOODEN_FLESH_FEATURE = 'd84be1e69b0870543a959d43151f16e3';
+const BASIC_FEAT_SELECTION = '247a4068296e8be42890143f451b4b45';
+const TWO_WEAPON_FIGHTING = 'ac8aaf29054f5b74eb18f2af950e752d';
+const SLAYER_TALENT_SELECTION_2 = '04430ad24988baa4daa0bcd4f1c7d118';
+const RANGER_STYLE_SELECTION_2 = 'c6d0da9124735a44f93ac31df803b9a9';
+const RANGER_STYLE_MENACING_SELECTION_2 = '1c5988e90e0657645972e7b28ba4ce8b';
+const INTIMIDATING_PROWESS = 'd76497bfc48516e45a0831628f767a0f';
+const SHIELD_BASH_FEATURE = '121811173a614534e8720d7550aae253';
+const ARCANIST_EXPLOIT_ARMORED_MASK_FEATURE = '585f02be2202e1f4289e04e84cd787e5';
+const OUTFLANK = '422dab7309e1ad343935f33a4d6e9f11';
+const SLAYER_TALENT_SELECTION_6 = '43d1b15873e926848be2abf0ea3ad9a8';
+const RANGER_STYLE_SELECTION_6 = '61f82ba786fe05643beb3cd3910233a8';
+const RANGER_STYLE_MENACING_SELECTION_6 = 'a9998f05a0472bb4f8950304fe26ec0c';
+const SHATTER_DEFENSES = '61a17ccbbb3d79445b0926347ec07577';
+const FIRST_ASCENSION_SELECTION = '1421e0034a3afac458de08648d06faf0';
+const TRICKSTER_FIRST_LEVELS_PROGRESSION = '11ba180ac736c894e937602e54f7320c';
+const MYTHIC_ABILITY_SELECTION = 'ba0e5a900b775be4a99702f1ed08914d';
+const DEFENSIVE_STUDY = 'ec041312142ba1f48a0044521f68fc0a';
+const ARCANIST_EXPLOIT_DIMENSIONAL_SLIDE_FEATURE = '687f9c86f8afea34097d84569b5abd07';
+const COMBAT_REFLEXES = '0f8939ae6f220984e8fb568abbdfba95';
+const MYTHIC_FEAT_SELECTION = '9ee0f6745f555484299b0a1563b99d81';
+const TWO_WEAPON_FIGHTING_MYTHIC_FEAT = 'c6afbb8c1a36a704a8041f35498f41a4';
+const UNCANNY_DODGE_TALENT = 'ca5274d057152fa45b7527cad0927840';
+const IMPROVED_CRITICAL = 'f4201c85a991369408740c6888362e20';
+const INSPIRATIONAL_LEADER_FEATURE = 'ffa9a8b8ea27b2a48b3638e20673a687';
+const ARCANIST_EXPLOIT_SPELL_RESISTANCE_FEATURE = '72d6f0a1d508738419b90f90ad1258fb';
+const SHIELD_MASTER = 'dbec636d84482944f87435bd31522fcc';
+const IMPROVED_CRITICAL_MYTHIC_FEAT = '8bc0190a4ec04bd489eec290aeaa6d07';
+const AZATA_SUPERPOWERS_SELECTION = '8a30e92cd04ff5b459ba7cb03584fda0';
+const INCREDIBLE_MIGHT_FEATURE = 'eef8d23a7e4acfe4d834a5de844c8c7c';
+const SLAYER_TALENT_SELECTION_10 = '913b9cf25c9536949b43a2651b7ffb66';
+const RANGER_STYLE_SELECTION_10 = '78177315fc63b474ea3cbb8df38fafcd';
+const RANGER_STYLE_MENACING_SELECTION_10 = '7d5bd07830a5e2c478852bf8b860db2c';
+const DREADFUL_CARNAGE = 'fc37b70e3d064a147a3a99db4a86ee12';
+const ARCANIST_EXPLOIT_GREATER_SPELL_RESISTANCE_FEATURE = '1eba9b432ef464349befcc7f5c428849';
+const TWO_WEAPON_FIGHTING_IMPROVED = '9af88f3ed8a017b45a6837eab7437629';
+const CRIPPLING_STRIKE = 'b696bd7cb38da194fa3404032483d1db';
+const ARCHMAGE_ARMOR = 'c3ef5076c0feb3c4f90c229714e62cd0';
+const IMPROVED_INITIATIVE = '797f25d709f559546b29e7bcb181cc74';
+const IMPROVED_INITIATIVE_MYTHIC_FEAT = '25f4cb387ba4ab94d944fdef3da9ab97';
+const LIFE_BONDING_FRIENDSHIP_SELECTION = 'cfad18f581584ac4ba066df067956477';
+const SHIELD_WALL = '8976de442862f82488a4b138a0a89907';
+const ENDURING_SPELLS = '2f206e6d292bdfb4d981e99dcf08153f';
+const LIFE_BONDING_FRIENDSHIP_SELECTION_1 = '69a33d6ced23446e819667149d088898';
+const SHAKE_IT_OFF = '6337b37f2a7c11b4ab0831d6780bce2a';
+const EXTRA_MYTHIC_ABILITY_MYTHIC_FEAT = '8a6a511c55e67d04db328cc49aaad2b8';
+const ENDURING_SPELLS_GREATER = '13f9269b3b48ae94c896f0371ce5e23c';
+const MARVELOUS_ENDURANCE_FEATURE = '40c43d4d27ebde647b796f9faf4f0299';
+const SYLVAN_TRICKSTER_TALENT_SELECTION = '290bbcc3c3bb92144b853fd8fb8ff452';
+const WITCH_HEX_ICEPLANT_FEATURE = '9af6dc2697c8ef24eab8ce1c697b05c4';
+const BASHING_FINISH = '0b442a7b4aa598d4e912a4ecee0500ff';
+const FINESSE_TRAINING_SELECTION = 'b78d146cea711a84598f0acef69462ea';
+const FINESSE_TRAINING_LIGHT_SHIELD = 'bbe497b750f698c4eb99bcf97240a0d1';
+const EVER_READY = '8161528d5b98b3e4a8a6a0ed327c3b6a';
+const DOUBLE_DEBILITATION = 'dd699394df0ef8847abba26038333f02';
+const TWO_WEAPON_FIGHTING_GREATER = 'c126adbdf6ddd8245bda33694cd774e8';
+const FIGHTER_FEAT_SELECTION = '41c8486641f7d6d4283ca9dae4147a9f';
+const SHIELD_FOCUS = 'ac57069b6bf8c904086171683992a92a';
+const SHIELD_FOCUS_MYTHIC_FEAT = '502434c044c16304a92901a0b25d5216';
+const SUPERSONIC_SPEED_FEATURE = '505456aa17dd18a4e8bd8172811a4fdc';
+const HALF_ELF_RACE = 'b3646842ffbd01643ab4dac7479b20b0';
+const ARCANE_ENFORCER_ARCHETYPE = '23a5d0ca607f6094097d509b2b1f4a10';
+const SYLVAN_TRICKSTER_ARCHETYPE = '490394869f666c141bf8647b1a365220';
+const MUTATION_WARRIOR_ARCHETYPE = '758e0061a077e54409a3bf0eb51511e5';
+const BELT_OF_DEXTERITY_2 = 'b6af4c1834999e74497b41588d1071cd';
 
 const build: Build = {
-  race: 'b3646842ffbd01643ab4dac7479b20b0', // HalfElfRace
+  race: HALF_ELF_RACE,
   raceStat: 'Strength',
   alignment: 'ChaoticGood',
-  // 16/16/14/10/8/12 costs 10 + 10 + 5 + 0 - 2 + 2 = 25 (StatsDistribution); the Half-Elf's +2 Strength makes the
-  // write-up's 18.
   scores: { Strength: 16, Dexterity: 16, Constitution: 14, Intelligence: 10, Wisdom: 8, Charisma: 12 },
   classChoices: {
-    [SLAYER]: { archetypes: ['23a5d0ca607f6094097d509b2b1f4a10'] }, // ArcaneEnforcerArchetype
-    [ROGUE]: { archetypes: ['490394869f666c141bf8647b1a365220'] }, // SylvanTricksterArchetype
-    [FIGHTER]: { archetypes: ['758e0061a077e54409a3bf0eb51511e5'] }, // MutationWarriorArchetype
+    [SLAYER]: { archetypes: [ARCANE_ENFORCER_ARCHETYPE] },
+    [ROGUE]: { archetypes: [SYLVAN_TRICKSTER_ARCHETYPE] },
+    [FIGHTER]: { archetypes: [MUTATION_WARRIOR_ARCHETYPE] },
   },
   levels: Array.from({ length: 20 }, (_, i) => level(i + 1)),
   ranks: RANK_LEVELS.map((at, i) => ({ class: i < 2 ? MYTHIC_HERO : AZATA, level: at })),
-  gear: { Belt: 'b6af4c1834999e74497b41588d1071cd' }, // BeltOfDexterity2: Dexterity2, an Enhancement +2
+  gear: { Belt: BELT_OF_DEXTERITY_2 },
   countGear: true,
   picks: [
-    pick({ level: 1 }, '9df7b68d60544bcf8e5b56c0a4688e04', 0, 'a9d54aab4e9243ca867341257aaa253e'), // HalfElfHeritageSelection -> BaseRaseHalfElfSelection
-    pick({ level: 1 }, 'a9d54aab4e9243ca867341257aaa253e', 0, '26a668c5a8c22354bac67bcd42e09a3f'), // BaseRaseHalfElfSelection -> Adaptability
-    pick({ level: 1 }, '26a668c5a8c22354bac67bcd42e09a3f', 0, '1621be43793c5bb43be55493e9c45924'), // Adaptability -> SkillFocusDiplomacy
-    pick({ level: 1 }, 'f926dabeee7f8a54db8f2010b323383c', 0, 'fa621a249cc836f4382ca413b976e65e'), // BackgroundsBaseSelection -> BackgroundsRegionalSelection
-    pick({ level: 1 }, 'fa621a249cc836f4382ca413b976e65e', 0, 'f6b2d489b1d907f47a734b5f72f5200d'), // BackgroundsRegionalSelection -> BackgroundAndoranDiplomat
-    pick({ level: 1 }, '59e7a76987fe3b547b9cce045f4db3e4', 0, '92c0d2da0a836ce418a267093c09ca54'), // DeitySelection -> AtheismFeature
-    pick({ level: 1 }, 'b8bf3d5023f2d8c428fdf6438cecaea7', 0, 'd84be1e69b0870543a959d43151f16e3'), // ArcanistExploitSelection -> ArcanistExploitWoodenFleshFeature
-    pick({ level: 1 }, '247a4068296e8be42890143f451b4b45', 0, 'ac8aaf29054f5b74eb18f2af950e752d'), // BasicFeatSelection -> TwoWeaponFighting
-    pick({ level: 2 }, '04430ad24988baa4daa0bcd4f1c7d118', 0, 'c6d0da9124735a44f93ac31df803b9a9'), // SlayerTalentSelection2 -> RangerStyleSelection2
-    pick({ level: 2 }, 'c6d0da9124735a44f93ac31df803b9a9', 0, '1c5988e90e0657645972e7b28ba4ce8b'), // RangerStyleSelection2 -> RangerStyleMenacingSelection2
-    pick({ level: 2 }, '1c5988e90e0657645972e7b28ba4ce8b', 0, 'd76497bfc48516e45a0831628f767a0f'), // RangerStyleMenacingSelection2 -> IntimidatingProwess
-    pick({ level: 3 }, '247a4068296e8be42890143f451b4b45', 0, '121811173a614534e8720d7550aae253'), // BasicFeatSelection -> ShieldBashFeature
-    pick({ level: 4 }, 'b8bf3d5023f2d8c428fdf6438cecaea7', 0, '585f02be2202e1f4289e04e84cd787e5'), // ArcanistExploitSelection -> ArcanistExploitArmoredMaskFeature
-    pick({ level: 5 }, '247a4068296e8be42890143f451b4b45', 0, '422dab7309e1ad343935f33a4d6e9f11'), // BasicFeatSelection -> Outflank
-    pick({ level: 6 }, '43d1b15873e926848be2abf0ea3ad9a8', 0, '61f82ba786fe05643beb3cd3910233a8'), // SlayerTalentSelection6 -> RangerStyleSelection6
-    pick({ level: 6 }, '61f82ba786fe05643beb3cd3910233a8', 0, 'a9998f05a0472bb4f8950304fe26ec0c'), // RangerStyleSelection6 -> RangerStyleMenacingSelection6
-    pick({ level: 6 }, 'a9998f05a0472bb4f8950304fe26ec0c', 0, '61a17ccbbb3d79445b0926347ec07577'), // RangerStyleMenacingSelection6 -> ShatterDefenses
-    pick({ rank: 1 }, '1421e0034a3afac458de08648d06faf0', 0, '11ba180ac736c894e937602e54f7320c'), // FirstAscensionSelection -> TricksterFirstLevelsProgression
-    pick({ rank: 1 }, 'ba0e5a900b775be4a99702f1ed08914d', 0, 'ec041312142ba1f48a0044521f68fc0a'), // MythicAbilitySelection -> DefensiveStudy
-    pick({ level: 7 }, 'b8bf3d5023f2d8c428fdf6438cecaea7', 0, '687f9c86f8afea34097d84569b5abd07'), // ArcanistExploitSelection -> ArcanistExploitDimensionalSlideFeature
-    pick({ level: 7 }, '247a4068296e8be42890143f451b4b45', 0, '0f8939ae6f220984e8fb568abbdfba95'), // BasicFeatSelection -> CombatReflexes
-    pick({ rank: 2 }, '9ee0f6745f555484299b0a1563b99d81', 0, 'c6afbb8c1a36a704a8041f35498f41a4'), // MythicFeatSelection -> TwoWeaponFightingMythicFeat
-    pick({ level: 8 }, '43d1b15873e926848be2abf0ea3ad9a8', 0, 'ca5274d057152fa45b7527cad0927840'), // SlayerTalentSelection6 -> UncannyDodgeTalent
-    pick({ level: 9 }, '247a4068296e8be42890143f451b4b45', 0, 'f4201c85a991369408740c6888362e20', BATTLE_AXE), // BasicFeatSelection -> ImprovedCritical
-    pick({ rank: 3 }, 'ba0e5a900b775be4a99702f1ed08914d', 0, 'ffa9a8b8ea27b2a48b3638e20673a687'), // MythicAbilitySelection -> InspirationalLeaderFeature
-    pick({ level: 10 }, 'b8bf3d5023f2d8c428fdf6438cecaea7', 0, '72d6f0a1d508738419b90f90ad1258fb'), // ArcanistExploitSelection -> ArcanistExploitSpellResistanceFeature
-    pick({ level: 11 }, '247a4068296e8be42890143f451b4b45', 0, 'dbec636d84482944f87435bd31522fcc'), // BasicFeatSelection -> ShieldMaster
-    pick({ rank: 4 }, '9ee0f6745f555484299b0a1563b99d81', 0, '8bc0190a4ec04bd489eec290aeaa6d07', BATTLE_AXE), // MythicFeatSelection -> ImprovedCriticalMythicFeat
-    pick({ rank: 4 }, '8a30e92cd04ff5b459ba7cb03584fda0', 0, 'eef8d23a7e4acfe4d834a5de844c8c7c'), // AzataSuperpowersSelection -> IncredibleMightFeature
-    pick({ level: 12 }, '913b9cf25c9536949b43a2651b7ffb66', 0, '78177315fc63b474ea3cbb8df38fafcd'), // SlayerTalentSelection10 -> RangerStyleSelection10
-    pick({ level: 12 }, '78177315fc63b474ea3cbb8df38fafcd', 0, '7d5bd07830a5e2c478852bf8b860db2c'), // RangerStyleSelection10 -> RangerStyleMenacingSelection10
-    pick({ level: 12 }, '7d5bd07830a5e2c478852bf8b860db2c', 0, 'fc37b70e3d064a147a3a99db4a86ee12'), // RangerStyleMenacingSelection10 -> DreadfulCarnage
-    pick({ level: 13 }, 'b8bf3d5023f2d8c428fdf6438cecaea7', 0, '1eba9b432ef464349befcc7f5c428849'), // ArcanistExploitSelection -> ArcanistExploitGreaterSpellResistanceFeature
-    pick({ level: 13 }, '247a4068296e8be42890143f451b4b45', 0, '9af88f3ed8a017b45a6837eab7437629'), // BasicFeatSelection -> TwoWeaponFightingImproved
-    pick({ level: 14 }, '913b9cf25c9536949b43a2651b7ffb66', 0, 'b696bd7cb38da194fa3404032483d1db'), // SlayerTalentSelection10 -> CripplingStrike
-    pick({ rank: 5 }, 'ba0e5a900b775be4a99702f1ed08914d', 0, 'c3ef5076c0feb3c4f90c229714e62cd0'), // MythicAbilitySelection -> ArchmageArmor
-    pick({ level: 15 }, '247a4068296e8be42890143f451b4b45', 0, '797f25d709f559546b29e7bcb181cc74'), // BasicFeatSelection -> Improved Initiative
-    pick({ rank: 6 }, '9ee0f6745f555484299b0a1563b99d81', 0, '25f4cb387ba4ab94d944fdef3da9ab97'), // MythicFeatSelection -> ImprovedInitiativeMythicFeat
-    pick({ rank: 6 }, '8a30e92cd04ff5b459ba7cb03584fda0', 0, 'cfad18f581584ac4ba066df067956477'), // AzataSuperpowersSelection -> LifeBondingFriendshipSelection
-    pick({ rank: 6 }, 'cfad18f581584ac4ba066df067956477', 0, '8976de442862f82488a4b138a0a89907'), // LifeBondingFriendshipSelection -> ShieldWall
-    pick({ rank: 7 }, 'ba0e5a900b775be4a99702f1ed08914d', 0, '2f206e6d292bdfb4d981e99dcf08153f'), // MythicAbilitySelection -> EnduringSpells
-    pick({ rank: 7 }, '69a33d6ced23446e819667149d088898', 0, '6337b37f2a7c11b4ab0831d6780bce2a'), // LifeBondingFriendshipSelection1 -> ShakeItOff
-    pick({ rank: 8 }, '9ee0f6745f555484299b0a1563b99d81', 0, '8a6a511c55e67d04db328cc49aaad2b8'), // MythicFeatSelection -> ExtraMythicAbilityMythicFeat
-    pick({ rank: 8 }, '8a6a511c55e67d04db328cc49aaad2b8', 0, '13f9269b3b48ae94c896f0371ce5e23c'), // ExtraMythicAbilityMythicFeat -> EnduringSpellsGreater
-    pick({ rank: 8 }, '8a30e92cd04ff5b459ba7cb03584fda0', 0, '40c43d4d27ebde647b796f9faf4f0299'), // AzataSuperpowersSelection -> MarvelousEnduranceFeature
-    pick({ level: 17 }, '290bbcc3c3bb92144b853fd8fb8ff452', 0, '9af6dc2697c8ef24eab8ce1c697b05c4'), // SylvanTricksterTalentSelection -> WitchHexIceplantFeature
-    pick({ level: 17 }, '247a4068296e8be42890143f451b4b45', 0, '0b442a7b4aa598d4e912a4ecee0500ff'), // BasicFeatSelection -> BashingFinish
-    pick({ level: 18 }, 'b78d146cea711a84598f0acef69462ea', 0, 'bbe497b750f698c4eb99bcf97240a0d1'), // FinesseTrainingSelection -> FinesseTrainingLightShield
-    pick({ rank: 9 }, 'ba0e5a900b775be4a99702f1ed08914d', 0, '8161528d5b98b3e4a8a6a0ed327c3b6a'), // MythicAbilitySelection -> EverReady
-    pick({ level: 19 }, '290bbcc3c3bb92144b853fd8fb8ff452', 0, 'dd699394df0ef8847abba26038333f02'), // SylvanTricksterTalentSelection -> DoubleDebilitation
-    pick({ level: 19 }, '247a4068296e8be42890143f451b4b45', 0, 'c126adbdf6ddd8245bda33694cd774e8'), // BasicFeatSelection -> TwoWeaponFightingGreater
-    pick({ level: 20 }, '41c8486641f7d6d4283ca9dae4147a9f', 0, 'ac57069b6bf8c904086171683992a92a'), // FighterFeatSelection -> ShieldFocus
-    pick({ rank: 10 }, '9ee0f6745f555484299b0a1563b99d81', 0, '502434c044c16304a92901a0b25d5216'), // MythicFeatSelection -> ShieldFocusMythicFeat
-    pick({ rank: 10 }, '8a30e92cd04ff5b459ba7cb03584fda0', 0, '505456aa17dd18a4e8bd8172811a4fdc'), // AzataSuperpowersSelection -> SupersonicSpeedFeature
+    pick({ level: 1 }, HALF_ELF_HERITAGE_SELECTION, 0, BASE_RASE_HALF_ELF_SELECTION),
+    pick({ level: 1 }, BASE_RASE_HALF_ELF_SELECTION, 0, ADAPTABILITY),
+    pick({ level: 1 }, ADAPTABILITY, 0, SKILL_FOCUS_DIPLOMACY),
+    pick({ level: 1 }, BACKGROUNDS_BASE_SELECTION, 0, BACKGROUNDS_REGIONAL_SELECTION),
+    pick({ level: 1 }, BACKGROUNDS_REGIONAL_SELECTION, 0, BACKGROUND_ANDORAN_DIPLOMAT),
+    pick({ level: 1 }, DEITY_SELECTION, 0, ATHEISM_FEATURE),
+    pick({ level: 1 }, ARCANIST_EXPLOIT_SELECTION, 0, ARCANIST_EXPLOIT_WOODEN_FLESH_FEATURE),
+    pick({ level: 1 }, BASIC_FEAT_SELECTION, 0, TWO_WEAPON_FIGHTING),
+    pick({ level: 2 }, SLAYER_TALENT_SELECTION_2, 0, RANGER_STYLE_SELECTION_2),
+    pick({ level: 2 }, RANGER_STYLE_SELECTION_2, 0, RANGER_STYLE_MENACING_SELECTION_2),
+    pick({ level: 2 }, RANGER_STYLE_MENACING_SELECTION_2, 0, INTIMIDATING_PROWESS),
+    pick({ level: 3 }, BASIC_FEAT_SELECTION, 0, SHIELD_BASH_FEATURE),
+    pick({ level: 4 }, ARCANIST_EXPLOIT_SELECTION, 0, ARCANIST_EXPLOIT_ARMORED_MASK_FEATURE),
+    pick({ level: 5 }, BASIC_FEAT_SELECTION, 0, OUTFLANK),
+    pick({ level: 6 }, SLAYER_TALENT_SELECTION_6, 0, RANGER_STYLE_SELECTION_6),
+    pick({ level: 6 }, RANGER_STYLE_SELECTION_6, 0, RANGER_STYLE_MENACING_SELECTION_6),
+    pick({ level: 6 }, RANGER_STYLE_MENACING_SELECTION_6, 0, SHATTER_DEFENSES),
+    pick({ rank: 1 }, FIRST_ASCENSION_SELECTION, 0, TRICKSTER_FIRST_LEVELS_PROGRESSION),
+    pick({ rank: 1 }, MYTHIC_ABILITY_SELECTION, 0, DEFENSIVE_STUDY),
+    pick({ level: 7 }, ARCANIST_EXPLOIT_SELECTION, 0, ARCANIST_EXPLOIT_DIMENSIONAL_SLIDE_FEATURE),
+    pick({ level: 7 }, BASIC_FEAT_SELECTION, 0, COMBAT_REFLEXES),
+    pick({ rank: 2 }, MYTHIC_FEAT_SELECTION, 0, TWO_WEAPON_FIGHTING_MYTHIC_FEAT),
+    pick({ level: 8 }, SLAYER_TALENT_SELECTION_6, 0, UNCANNY_DODGE_TALENT),
+    pick({ level: 9 }, BASIC_FEAT_SELECTION, 0, IMPROVED_CRITICAL, BATTLE_AXE),
+    pick({ rank: 3 }, MYTHIC_ABILITY_SELECTION, 0, INSPIRATIONAL_LEADER_FEATURE),
+    pick({ level: 10 }, ARCANIST_EXPLOIT_SELECTION, 0, ARCANIST_EXPLOIT_SPELL_RESISTANCE_FEATURE),
+    pick({ level: 11 }, BASIC_FEAT_SELECTION, 0, SHIELD_MASTER),
+    pick({ rank: 4 }, MYTHIC_FEAT_SELECTION, 0, IMPROVED_CRITICAL_MYTHIC_FEAT, BATTLE_AXE),
+    pick({ rank: 4 }, AZATA_SUPERPOWERS_SELECTION, 0, INCREDIBLE_MIGHT_FEATURE),
+    pick({ level: 12 }, SLAYER_TALENT_SELECTION_10, 0, RANGER_STYLE_SELECTION_10),
+    pick({ level: 12 }, RANGER_STYLE_SELECTION_10, 0, RANGER_STYLE_MENACING_SELECTION_10),
+    pick({ level: 12 }, RANGER_STYLE_MENACING_SELECTION_10, 0, DREADFUL_CARNAGE),
+    pick({ level: 13 }, ARCANIST_EXPLOIT_SELECTION, 0, ARCANIST_EXPLOIT_GREATER_SPELL_RESISTANCE_FEATURE),
+    pick({ level: 13 }, BASIC_FEAT_SELECTION, 0, TWO_WEAPON_FIGHTING_IMPROVED),
+    pick({ level: 14 }, SLAYER_TALENT_SELECTION_10, 0, CRIPPLING_STRIKE),
+    pick({ rank: 5 }, MYTHIC_ABILITY_SELECTION, 0, ARCHMAGE_ARMOR),
+    pick({ level: 15 }, BASIC_FEAT_SELECTION, 0, IMPROVED_INITIATIVE),
+    pick({ rank: 6 }, MYTHIC_FEAT_SELECTION, 0, IMPROVED_INITIATIVE_MYTHIC_FEAT),
+    pick({ rank: 6 }, AZATA_SUPERPOWERS_SELECTION, 0, LIFE_BONDING_FRIENDSHIP_SELECTION),
+    pick({ rank: 6 }, LIFE_BONDING_FRIENDSHIP_SELECTION, 0, SHIELD_WALL),
+    pick({ rank: 7 }, MYTHIC_ABILITY_SELECTION, 0, ENDURING_SPELLS),
+    pick({ rank: 7 }, LIFE_BONDING_FRIENDSHIP_SELECTION_1, 0, SHAKE_IT_OFF),
+    pick({ rank: 8 }, MYTHIC_FEAT_SELECTION, 0, EXTRA_MYTHIC_ABILITY_MYTHIC_FEAT),
+    pick({ rank: 8 }, EXTRA_MYTHIC_ABILITY_MYTHIC_FEAT, 0, ENDURING_SPELLS_GREATER),
+    pick({ rank: 8 }, AZATA_SUPERPOWERS_SELECTION, 0, MARVELOUS_ENDURANCE_FEATURE),
+    pick({ level: 17 }, SYLVAN_TRICKSTER_TALENT_SELECTION, 0, WITCH_HEX_ICEPLANT_FEATURE),
+    pick({ level: 17 }, BASIC_FEAT_SELECTION, 0, BASHING_FINISH),
+    pick({ level: 18 }, FINESSE_TRAINING_SELECTION, 0, FINESSE_TRAINING_LIGHT_SHIELD),
+    pick({ rank: 9 }, MYTHIC_ABILITY_SELECTION, 0, EVER_READY),
+    pick({ level: 19 }, SYLVAN_TRICKSTER_TALENT_SELECTION, 0, DOUBLE_DEBILITATION),
+    pick({ level: 19 }, BASIC_FEAT_SELECTION, 0, TWO_WEAPON_FIGHTING_GREATER),
+    pick({ level: 20 }, FIGHTER_FEAT_SELECTION, 0, SHIELD_FOCUS),
+    pick({ rank: 10 }, MYTHIC_FEAT_SELECTION, 0, SHIELD_FOCUS_MYTHIC_FEAT),
+    pick({ rank: 10 }, AZATA_SUPERPOWERS_SELECTION, 0, SUPERSONIC_SPEED_FEATURE),
   ],
 };
 
 const AE = 'Arcane Enforcer';
 const ST = 'Sylvan Trickster';
-const STUDIED = '09bdd9445ac38044389476689ae8d5a1'; // SlayerStudyTargetFeature
-const SNEAK = '9b9eac6709e1c084cb18c3a366e0ec87'; // SneakAttack
+const SLAYER_STUDY_TARGET_FEATURE = '09bdd9445ac38044389476689ae8d5a1';
+const SNEAK_ATTACK = '9b9eac6709e1c084cb18c3a366e0ec87';
 
 export const enforcer: Gold = {
   name: 'Enforcer',
@@ -133,7 +194,7 @@ export const enforcer: Gold = {
       class: AE,
       lines: [
         facts('Arcane Reservoir', '9d1e2212594cf47438fff2fa3477b954'),
-        facts('Studied Target +1', STUDIED),
+        facts('Studied Target +1', SLAYER_STUDY_TARGET_FEATURE),
         facts('Wooden Flesh', 'd84be1e69b0870543a959d43151f16e3'),
         facts('Two-Weapon Fighting', 'ac8aaf29054f5b74eb18f2af950e752d'),
         facts('Skill Focus - Persuasion', '1621be43793c5bb43be55493e9c45924'),
@@ -154,7 +215,7 @@ export const enforcer: Gold = {
     {
       place: { level: 3 },
       class: AE,
-      lines: [facts('+1d6 sneak', SNEAK), facts('Shield Bash', '121811173a614534e8720d7550aae253')],
+      lines: [facts('+1d6 sneak', SNEAK_ATTACK), facts('Shield Bash', '121811173a614534e8720d7550aae253')],
     },
     {
       place: { level: 4 },
@@ -164,13 +225,16 @@ export const enforcer: Gold = {
     {
       place: { level: 5 },
       class: AE,
-      lines: [facts('Studied Target +2', STUDIED), facts('Outflank', '422dab7309e1ad343935f33a4d6e9f11')],
+      lines: [
+        facts('Studied Target +2', SLAYER_STUDY_TARGET_FEATURE),
+        facts('Outflank', '422dab7309e1ad343935f33a4d6e9f11'),
+      ],
     },
     {
       place: { level: 6 },
       class: AE,
       lines: [
-        facts('+1d6 sneak', SNEAK),
+        facts('+1d6 sneak', SNEAK_ATTACK),
         facts(
           'Menacing Style - Shatter Defenses',
           '61f82ba786fe05643beb3cd3910233a8',
@@ -197,21 +261,24 @@ export const enforcer: Gold = {
       place: { level: 9 },
       class: AE,
       lines: [
-        facts('+1d6 sneak', SNEAK),
+        facts('+1d6 sneak', SNEAK_ATTACK),
         withParam('Improved Critical - Battleaxe', 'f4201c85a991369408740c6888362e20', BATTLE_AXE),
       ],
     },
     {
       place: { level: 10 },
       class: AE,
-      lines: [facts('Studied Target +3', STUDIED), facts('Spell Resistance', '72d6f0a1d508738419b90f90ad1258fb')],
+      lines: [
+        facts('Studied Target +3', SLAYER_STUDY_TARGET_FEATURE),
+        facts('Spell Resistance', '72d6f0a1d508738419b90f90ad1258fb'),
+      ],
     },
     { place: { level: 11 }, class: AE, lines: [facts('Shield Master', 'dbec636d84482944f87435bd31522fcc')] },
     {
       place: { level: 12 },
       class: AE,
       lines: [
-        facts('+1d6 sneak', SNEAK),
+        facts('+1d6 sneak', SNEAK_ATTACK),
         facts(
           'Menacing Style - Dreadful Carnage',
           '78177315fc63b474ea3cbb8df38fafcd',
@@ -234,8 +301,8 @@ export const enforcer: Gold = {
       place: { level: 15 },
       class: AE,
       lines: [
-        facts('Studied Target +4', STUDIED),
-        facts('+1d6 sneak', SNEAK),
+        facts('Studied Target +4', SLAYER_STUDY_TARGET_FEATURE),
+        facts('+1d6 sneak', SNEAK_ATTACK),
         facts('Improved Initiative', '797f25d709f559546b29e7bcb181cc74'),
       ],
     },
@@ -245,7 +312,7 @@ export const enforcer: Gold = {
       lines: [
         facts('Weapon Finesse', '90e54424d682d104ab36436bd527af09'),
         facts('Trapfinding', 'dbb6b3bffe6db3547b31c3711653838e'),
-        facts('+1d6 sneak', SNEAK),
+        facts('+1d6 sneak', SNEAK_ATTACK),
         increase('+1 Strength', 'Strength'),
       ],
     },
@@ -263,7 +330,7 @@ export const enforcer: Gold = {
       class: ST,
       lines: [
         facts('Danger Sense', '0bcbe9e450b0e7b428f08f66c53c5136'),
-        facts('+1d6 sneak', SNEAK),
+        facts('+1d6 sneak', SNEAK_ATTACK),
         facts('Finesse Training - Light Shield', 'bbe497b750f698c4eb99bcf97240a0d1'),
       ],
     },

@@ -189,15 +189,12 @@ describe('the keep rule (tickets 02b and 02d)', () => {
       bp(9, 'BlueprintItemEquipmentRing', { m_Enchantments: [r(10)] }),
       bp(10, 'BlueprintEquipmentEnchantment', {}, [{ $type: 'AddUnitFeatureEquipment', m_Feature: r(11) }]),
       bp(11, 'BlueprintFeature'),
-      // Grant carriers: B12 → buff B13 → buff B14 → feature B16, and B12 → buff B17 → buff B18, which grants nothing.
       bp(12, 'BlueprintFeature', {}, [addFacts(13, 17)]),
       bp(13, 'BlueprintBuff', {}, [addFacts(14)]),
       bp(14, 'BlueprintBuff', {}, [addFacts(16)]),
       bp(16, 'BlueprintFeature'),
       bp(17, 'BlueprintBuff', {}, [addFacts(18)]),
       bp(18, 'BlueprintBuff'),
-      // A Shifter aspect: B15 gives toggle B19, whose buff B20 its BuffExtraEffects checks, adding buff B21 and so
-      // feature B22. It also gives toggle B23, whose buff B24 nothing checks, so the Build never keeps it on.
       bp(15, 'BlueprintFeature', {}, [
         addFacts(19, 23),
         { $type: 'BuffExtraEffects', m_CheckedBuff: r(20), m_ExtraEffectBuff: r(21), m_ExceptionFact: null },
@@ -211,7 +208,6 @@ describe('the keep rule (tickets 02b and 02d)', () => {
       bp(25, 'BlueprintFeature'),
     ].map(([guid, value]) => [guid, value as never]),
   );
-  // BuffExtraEffects.m_CheckedBuff is a strict reference: the filter records that B15 names B20.
   const kept = keptSet({ blueprints }, new Map([[id(15), new Set([id(20)])]]));
 
   it("keeps G's reach from the root, and what the kept fields name (a spellbook, its table, a prerequisite's target)", () => {
@@ -243,9 +239,6 @@ describe('the keep rule (tickets 02b and 02d)', () => {
   });
 
   it('keeps a carrier first reached through a kept toggle buff, whatever order the rule meets the blueprints in', () => {
-    // B32 gives toggle B33, whose buff B34 its BuffExtraEffects checks; B34 gives buff B35, which gives feature B31.
-    // The root's progression gives B31 directly too, so B31 is kept and looked at before the rule reaches B35
-    // through B34. B35 still lies on a grant path from the root to B31, so it stays.
     const root = blueprints.get(id(1)) as unknown as { Progression: object };
     for (const order of [
       [31, 32],
@@ -294,7 +287,6 @@ describe('displayName', () => {
 
 describe('neutralName', () => {
   it('writes a template name in a neutral form', () => {
-    // LichDeityFeature b4153b422d02d4f48b3f8f0ceb6a10eb's display name is this template (ADR 0006's example).
     expect(neutralName('{Name}, L{mf|ord|ady} of Death')).toBe('Lord/Lady of Death');
   });
 

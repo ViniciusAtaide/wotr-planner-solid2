@@ -1,34 +1,20 @@
-// The importer's grantor check (guide §3 point 8; ticket 02): every prerequisite leaf on a blueprint a Build can reach
-// names facts, classes and archetypes that G finds a grantor for, or the leaf is in the report with a reason from
-// `noGrantor`. It reads prerequisites through P and grants through G, so it gives the same answer the engine will.
-import type { CheckedData } from '~engine/data/load';
-import { isShown, type Guid } from '~engine/data/types';
+import type { CheckedData } from '~engine/load';
+import { isShown, type Guid } from '~engine/data';
 import { buildGrantIndex, reachableFromGear, reachableFromRoot, type GrantIndex } from '~engine/grants';
 import { namedBlueprints, prerequisites } from '~engine/prerequisites';
 import { noGrantor } from './no-grantor';
 import { unreachable as unreachableReasons } from './unreachable';
 
 export interface GrantorFinding {
-  /** The fact, class or archetype no grantor gives. */
   readonly fact: Guid;
-  /** The reachable blueprints whose requiring leaves name it. */
   readonly neededBy: readonly Guid[];
-  /** The cited reason, or `undefined` when none is kept (an import problem). */
   readonly reason: string | undefined;
 }
 
 export interface GrantorCheck {
   readonly G: GrantIndex;
   readonly findings: readonly GrantorFinding[];
-  /**
-   * Facts a leaf on a reachable blueprint names that no Build can reach, from the root or through its Gear (ticket
-   * 02b), with the reason from no-grantor.ts or unreachable.ts, or `undefined` when neither lists it.
-   */
   readonly unreachable: readonly GrantorFinding[];
-  /**
-   * Facts a leaf names that a player never sees (nameless or hidden, `isShown`) and whose climb through G finds no
-   * shown grantor (map ticket 19 words them by asset name).
-   */
   readonly namelessWithoutNamedGrantor: readonly { readonly fact: Guid; readonly neededBy: readonly Guid[] }[];
 }
 

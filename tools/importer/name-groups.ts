@@ -1,25 +1,16 @@
-// What qualify.ts (blueprints a Build reaches) and gear-names.ts (items a Build equips) share: a group of blueprints
-// with one display name, settled source by source (map tickets 27 and 29), name overrides last, then one left over
-// bare; and the written names blueprints still share afterwards.
-import type { CheckedData } from '~engine/data/load';
-import { isShown, kindOf, type Blueprint, type Guid, type Override } from '~engine/data/types';
-import { byName } from '~engine/util';
+import type { CheckedData } from '~engine/load';
+import { isShown, kindOf, type Blueprint, type Guid, type Override, byName } from '~engine/data';
 
-/** A `"change": "name"` override. */
 export type NameOverride = Extract<Override, { change: 'name' }>;
 
-/** A source's qualifiers for one blueprint, each with how near it is (lower is nearer). */
 export type Candidates = ReadonlyMap<string, number>;
 
-/** How a blueprint's name was settled: by which source, with which qualifier (none for a bare name). */
 export interface Settled<S extends string> {
   readonly source: S | 'override' | 'bare';
   readonly qualifier: string | undefined;
-  /** For a Gear twin: the item the pickers offer in its place. */
   readonly twinOf?: Guid;
 }
 
-/** One group while it is settled: the blueprints left open, and the settled ones. */
 export interface Group<S extends string> {
   readonly name: string;
   left: Guid[];
@@ -30,37 +21,26 @@ export function openGroup<S extends string>(name: string, guids: readonly Guid[]
   return { name, left: [...guids], settled: new Map() };
 }
 
-/** Whether a settled member keeps the bare name: no qualifier, and not a twin. */
 export function hasBare<S extends string>(group: Group<S>): boolean {
   return [...group.settled.values()].some((s) => s.qualifier === undefined && s.twinOf === undefined);
 }
 
-/** A group member as the name sources settled it. */
 export interface Member<S extends string> {
   readonly guid: Guid;
-  /** What settled it, or `undefined` while it is open. */
   readonly source: Settled<S>['source'] | undefined;
-  /** The qualifier written after the name; for a twin, the one it collapses into has it. */
   readonly qualifier: string | undefined;
-  /** For a Gear twin: the item the pickers offer in its place. */
   readonly twinOf?: Guid;
 }
 
-/** Settles `guid` and takes it out of those left. */
 export function settle<S extends string>(group: Group<S>, guid: Guid, settled: Settled<S>): void {
   group.settled.set(guid, settled);
   group.left = group.left.filter((g) => g !== guid);
 }
 
-/** The qualifiers already taken in the group (`undefined` for a bare name). */
 export function usedQualifiers<S extends string>(group: Group<S>): Set<string | undefined> {
   return new Set([...group.settled.values()].map((s) => s.qualifier));
 }
 
-/**
- * One source's pass over the blueprints left: each takes its nearest qualifier that no other blueprint left has as
- * near and the group hasn't taken, so two never take the same one. Returns whether it settled any.
- */
 export function candidatePass<S extends string>(
   group: Group<S>,
   source: S,
@@ -81,25 +61,16 @@ export function candidatePass<S extends string>(
   return found.size > 0;
 }
 
-/** A single qualifier, or none, as candidates. */
 export function only(qualifier: string | undefined): Candidates {
   return qualifier === undefined ? new Map() : new Map([[qualifier, 0]]);
 }
 
-/**
- * Runs the steps in order until none settles any or one blueprint is left. Once a step settles some, the rest start
- * again from the first: a settled blueprint no longer stands in the way of a nearer qualifier it shared with them.
- */
 export function runSteps<S extends string>(group: Group<S>, steps: readonly (() => boolean)[]): void {
   for (let progress = true; progress && group.left.length > 1;) {
     progress = steps.some((step) => group.left.length > 1 && step());
   }
 }
 
-/**
- * The last source: the name overrides of the blueprints the steps leave, where more than one is left or one already
- * keeps the bare name. Each override met is added to `consumed`, applied or refused; a refused one is a problem.
- */
 export function overridePass<S extends string>(
   group: Group<S>,
   nameOverrides: ReadonlyMap<Guid, NameOverride>,
@@ -121,13 +92,11 @@ export function overridePass<S extends string>(
   }
 }
 
-/** One blueprint left over keeps the plain name, when none does yet. */
 export function lastBare<S extends string>(group: Group<S>): void {
   if (group.left.length === 1 && !hasBare(group))
     settle(group, group.left[0]!, { source: 'bare', qualifier: undefined });
 }
 
-/** Each name override no group used: the source that settled its target instead, or that nothing shares its name. */
 export function unusedOverrideProblems(
   nameOverrides: ReadonlyMap<Guid, NameOverride>,
   consumed: ReadonlySet<Guid>,
@@ -151,10 +120,6 @@ export function unusedOverrideProblems(
   return problems;
 }
 
-/**
- * The `"change": "name"` overrides of items (`items`, Gear's) or of every other blueprint, by target, and the targets
- * named by more than one.
- */
 export function nameOverridesOf(
   overrides: readonly Override[],
   data: Pick<CheckedData, 'blueprints'>,
@@ -174,12 +139,6 @@ export function nameOverridesOf(
   return { byTarget, repeated };
 }
 
-/**
- * Qualifies the names `guids` share: each name more than one has is a group, in name order, its members in `order`.
- * `steps` settles a group from its sources; the name overrides then settle what is left, one left over keeps the bare
- * name, and `last` runs. Returns the groups with their members, and the written name of each qualified blueprint (a
- * twin's is the name of the item it collapses into).
- */
 export function qualifyGroups<S extends string>(opts: {
   readonly guids: Iterable<Guid>;
   readonly bp: (guid: Guid) => Blueprint;
@@ -209,7 +168,6 @@ export function qualifyGroups<S extends string>(opts: {
     for (const [g, s] of group.settled) {
       if (s.twinOf === undefined && s.qualifier !== undefined) names.set(g, `${name} (${s.qualifier})`);
     }
-    // A twin is written with the name of the item it collapses into.
     for (const [g, s] of group.settled)
       if (s.twinOf !== undefined && names.has(s.twinOf)) names.set(g, names.get(s.twinOf)!);
     groups.push({
@@ -223,7 +181,6 @@ export function qualifyGroups<S extends string>(opts: {
   return { groups, names };
 }
 
-/** The word for a blueprint's kind (qualify.ts's source 3; for an item, Gear's slot word), in our own words. */
 export const kindWords: { readonly [K in Blueprint['$type']]: string } = {
   BlueprintRoot: 'root',
   BlueprintCharacterClass: 'class',
@@ -264,12 +221,10 @@ export const kindWords: { readonly [K in Blueprint['$type']]: string } = {
   BlueprintArmorEnchantment: 'enchantment',
 };
 
-/** The written names that more than one of `guids` still has, by name. */
 export function collisionsOf(guids: Iterable<Guid>, written: (guid: Guid) => string): Map<string, readonly Guid[]> {
   return new Map([...byName(guids, written)].filter(([, g]) => g.length > 1).sort(([a], [b]) => compare(a, b)));
 }
 
-/** A blueprint's name where a player sees it (`isShown`); a nameless or hidden blueprint has none to give. */
 export function shownName(data: Pick<CheckedData, 'blueprints'>, guid: Guid): string | undefined {
   const bp = data.blueprints.get(guid);
   return bp !== undefined && isShown(bp) ? bp.name : undefined;

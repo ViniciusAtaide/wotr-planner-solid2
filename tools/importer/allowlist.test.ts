@@ -1,34 +1,18 @@
-// Module A (guide §4): the allowlist keeps every field its cited methods read. Each citation names a decompiled file,
-// a method and, in parentheses, the kept fields that method reads. These tests check that the citations and the kept
-// fields agree, and, where the git-ignored decompiled/ sources are present, that each cited method exists, reads the
-// fields it is cited for, and reads no field of the entry's class (or of a kept struct's class) that the entry drops
-// without a listed reason (`notKept`, `awaiting`).
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { readerProblems } from '~engine/areas';
+import { readerProblems, walkAreas } from '~engine/walk';
 import { grantTypes } from '~engine/grants';
 import { isPrerequisite, paramPrerequisiteTypes, prerequisiteTypes } from '~engine/prerequisites';
-import { walkAreas } from '~engine/walk/areas';
 import { allowlist, type AllowEntry } from './allowlist';
 import { gearNameTypes } from './gear-names';
-import { body, elementType, readSources, reads, type ClassFields, type Sources } from './csharp';
+import { body, elementType, readSources, reads, type ClassFields, type Sources } from '../decompiled';
+import { parseCite } from '~engine/cite';
 import type { AnySpec } from './spec';
 
 const sources = readSources(fileURLToPath(new URL('../../decompiled/', import.meta.url)));
 
-interface Citation {
-  readonly file: string;
-  readonly method: string;
-  readonly fields: readonly string[];
-}
-
-/** What module A checks: an allowlist entry, or a variant of a polymorphic value (`poly`) inside one's kept fields. */
 type Checked = Pick<AllowEntry, 'type' | 'fields' | 'cite' | 'notKept' | 'awaiting'>;
 
-/**
- * Every variant of a polymorphic value (a condition, an evaluator, an action) inside the entries' kept fields, through
- * structs, lists and nested variants, once each by class name.
- */
 function variantsIn(entries: readonly Checked[]): Checked[] {
   const found = new Map<string, Checked>();
   const seen = new Set<object>();
@@ -50,22 +34,10 @@ function variantsIn(entries: readonly Checked[]): Checked[] {
 
 const variants = variantsIn(allowlist);
 
-function parse(cite: string): Citation {
-  const m = /^([\w/]+\.cs) (\w+)(?: \(([\w, ]+)\))?$/.exec(cite);
-  if (m === null) throw new Error(`not a citation: ${cite}`);
-  return { file: m[1], method: m[2], fields: m[3]?.split(', ') ?? [] };
-}
-
-/**
- * Every field of the entry's class (and, inside a kept struct, of the struct's class) that a cited method reads and
- * the entry neither keeps nor lists in `notKept` or `awaiting`; and every listing that is stale, because the field is
- * kept or no cited method reads it. A field a method reads under the same name on another object is listed too, with
- * that reason: the check matches names, so it errs towards asking.
- */
 function fieldReadProblems(entry: Checked, src: Sources): string[] {
   const chain = src.fields(entry.type);
   if (chain === undefined) return [`${entry.type}: no class of that name in the sources`];
-  const bodies = entry.cite.map(parse).map((c) => body(src.file(c.file) ?? '', c.method) ?? '');
+  const bodies = entry.cite.map(parseCite).map((c) => body(src.file(c.file) ?? '', c.method) ?? '');
   const listed = new Map(
     [...Object.keys(entry.notKept ?? {}), ...Object.keys(entry.awaiting ?? {})].map((at) => [at, false]),
   );
@@ -101,7 +73,7 @@ describe('allowlist', () => {
   it('cites a decompiled method for every entry', () => {
     for (const entry of allowlist) {
       expect(entry.cite.length, entry.type).toBeGreaterThan(0);
-      for (const cite of entry.cite) expect(() => parse(cite), entry.type).not.toThrow();
+      for (const cite of entry.cite) expect(() => parseCite(cite), entry.type).not.toThrow();
     }
   });
 
@@ -112,7 +84,6 @@ describe('allowlist', () => {
 
   describe('every allowlisted component type is read once: by P, by G, by a landed area or by the Gear names', () => {
     const components = allowlist.filter((e) => e.role === 'component').map((e) => e.type);
-    // A landed area adds its exported set of types here.
     const readers = new Map<string, Iterable<string>>([
       ['P', [...prerequisiteTypes, ...paramPrerequisiteTypes]],
       ['G', grantTypes],
@@ -125,7 +96,6 @@ describe('allowlist', () => {
     });
 
     it('fails when the allowlist keeps a grant type G does not read', () => {
-      // AddFeatureToPet is a real grant type of the game's, which the allowlist leaves out (not-needed.ts).
       expect(readerProblems([...components, 'AddFeatureToPet'], readers)).toEqual([
         'AddFeatureToPet: allowlisted, but no module reads it',
       ]);
@@ -134,7 +104,6 @@ describe('allowlist', () => {
 
   describe('reads the fields its cited methods read (module A)', () => {
     it.runIf(sources !== undefined)('fails when an entry drops a field its cited method reads', () => {
-      // BuffExtraEffects.CheckHadPrerequiredBuff reads m_CheckedBuffList as well as m_CheckedBuff.
       const real = allowlist.find((e) => e.type === 'BuffExtraEffects')!;
       expect(fieldReadProblems({ ...real, awaiting: {}, notKept: {} }, sources!)).toEqual([
         'm_CheckedBuffList: a cited method reads it; keep it, or list it in notKept or awaiting',
@@ -144,7 +113,6 @@ describe('allowlist', () => {
     it.runIf(sources !== undefined)(
       'fails when a variant of a polymorphic value drops a field its method reads',
       () => {
-        // UnitClass.CheckCondition reads LimitMaxLevel and MaxLevel as well as the minimum.
         const real = variants.find((v) => v.type === 'UnitClass')!;
         const { LimitMaxLevel: _limit, MaxLevel: _max, ...fields } = real.fields;
         expect(fieldReadProblems({ ...real, fields }, sources!)).toEqual([
@@ -169,7 +137,7 @@ describe('allowlist', () => {
   });
 
   describe.each([...allowlist, ...variants].map((e) => [e.type, e] as const))('%s', (_type, entry) => {
-    const citations = entry.cite.map(parse);
+    const citations = entry.cite.map(parseCite);
     const cited = new Set(citations.flatMap((c) => c.fields));
     const kept = new Set(Object.keys(entry.fields));
     const keptAndNested = new Set([...kept, ...nestedFields(entry.fields)]);
@@ -199,7 +167,6 @@ describe('allowlist', () => {
   });
 });
 
-/** Field names inside struct specs (`LevelEntries` → `Level`, `m_Features`), which citations may also name. */
 function nestedFields(fields: Readonly<Record<string, AnySpec>>): string[] {
   return Object.values(fields).flatMap((spec) =>
     spec.struct === undefined ? [] : [...Object.keys(spec.struct), ...nestedFields(spec.struct)],

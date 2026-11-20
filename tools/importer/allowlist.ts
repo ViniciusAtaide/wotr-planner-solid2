@@ -1,11 +1,3 @@
-// The allowlist (guide §3 point 1, ADR 0005): each `$type` the engine reads, the fields kept of it, and a citation
-// to the decompiled method that reads them. The importer keeps nothing else. Every entry is tied to its TypeScript
-// type in engine/data/types.ts: its specs must name every field of that type and match each field's type, or it fails
-// to compile.
-//
-// Citations are relative to decompiled/Assembly-CSharp/Kingmaker/ at WrathDecompiled 6ce4a6b, as
-// `<file> <method> (<the kept fields it reads>)`. Every kept field appears in some citation's list, and the A tests
-// (allowlist.test.ts) check that the cited method exists and reads it.
 import {
   kindOf,
   type AddStatBonusEquipment,
@@ -139,7 +131,7 @@ import {
   type PrerequisiteNoFeature,
   type RemoveFeatureOnApply,
   type StatType,
-} from '~engine/data/types';
+} from '~engine/data';
 import { actionGrant } from '~engine/grants';
 import {
   bool,
@@ -165,20 +157,10 @@ import {
   type Variant,
 } from './spec';
 
-/** The text field that holds a blueprint's display name, or `null` for a type the game never names. */
 export type NameField = 'm_DisplayName' | 'm_DisplayNameText' | 'LocalizedName' | 'Name' | 'm_TypeNameText' | null;
 
-/**
- * What module A (allowlist.test.ts) asks of an entry besides its kept fields: every field its cited methods read is
- * kept, or listed here. A nested field is named by its path (`Value.ValueShared`).
- */
 interface Unkept {
-  /** Fields a cited method reads that the engine doesn't need, each with why. */
   readonly notKept?: Readonly<Record<string, NotKept>>;
-  /**
-   * Fields a cited method reads that the engine needs and no area reads yet, each with the area that will. An entry
-   * leaves when its area lands.
-   */
   readonly awaiting?: Readonly<Record<string, string>>;
 }
 
@@ -195,15 +177,8 @@ export interface ComponentEntry extends Unkept {
   readonly role: 'component';
   readonly type: string;
   readonly fields: Readonly<Record<string, AnySpec>>;
-  /**
-   * Reference fields that must name a blueprint the planner holds. A grant of an ability, a buff or nothing (null),
-   * or a grant conditioned on an ability or buff, is not one the planner models: the importer drops the component and
-   * counts it in the report.
-   */
   readonly requiresHeld?: readonly string[];
-  /** Whether the kept component still says anything; when not, it is dropped and counted (an empty action tree). */
   readonly keepIf?: (kept: Record<string, unknown>) => boolean;
-  /** A reason to drop the dump component before it is read (a trigger behind an unmodelled condition), or none. */
   readonly preFilter?: (raw: Record<string, unknown>) => string | undefined;
   readonly cite: readonly string[];
 }
@@ -236,16 +211,10 @@ function component<T extends Component>(
   return { role: 'component', ...entry } as ComponentEntry;
 }
 
-/** The kinds a `BlueprintFeatureReference` can name: every kept subclass of BlueprintFeature. */
 const FEATURE: Kind[] = ['features', 'selections', 'progressions', 'races'];
 
-/**
- * The kinds a `BlueprintUnitFactReference` can name among those the planner holds: features, and the buffs, abilities
- * and toggles held as Grant carriers.
- */
 const FACT: Kind[] = [...FEATURE, 'buffs', 'abilities', 'activatables'];
 
-/** Kingmaker/EntitySystem/Stats/StatType.cs, every member. */
 const statType: Spec<StatType> = enumOf(
   'Unknown',
   'HitPoints',
@@ -288,19 +257,15 @@ const statType: Spec<StatType> = enumOf(
   'BonusCasterLevel',
 );
 
-/** The citation for the fields every prerequisite shares. */
 const PREREQUISITE =
   'Blueprints/Classes/BlueprintFeature.cs MeetsPrerequisites (Group, CheckInProgression, IsFeatureSelectionWhiteList)';
 
-/** The fields every prerequisite shares (Blueprints/Classes/Prerequisites/Prerequisite.cs). */
 const prerequisite = {
   Group: enumOf('All', 'Any', 'ForcedTrue'),
   CheckInProgression: bool,
-  // Many prerequisites' JSON omits it; the C# field has no initializer, so the game loads false.
   IsFeatureSelectionWhiteList: orDefault(bool, false),
 };
 
-/** Kingmaker/Enums/ModifierDescriptor.cs, every member. */
 const modifierDescriptor: Spec<ModifierDescriptor> = enumOf(
   'None',
   'Racial',
@@ -363,7 +328,6 @@ const modifierDescriptor: Spec<ModifierDescriptor> = enumOf(
   'Haste',
 );
 
-/** Kingmaker/UnitLogic/Mechanics/ContextValueType.cs. */
 const contextValueType = enumOf(
   'Simple',
   'Rank',
@@ -380,13 +344,8 @@ const contextValueType = enumOf(
   'TargetBuffRank',
 );
 
-/** Kingmaker/UnitLogic/Mechanics/ContextValue.cs: its type and its constant (`Calculate` returns `Value` for Simple). */
 const contextValue: Spec<ContextValue> = struct({ ValueType: contextValueType, Value: int });
 
-/**
- * The ContextValue fields `Calculate` reads only for a ValueType other than Simple and Rank, the two a kept Racial
- * bonus uses (engine/walk/unit.ts `contextValue`), as `notKept` entries under the struct field `at`.
- */
 function otherValueTypes(at: string, fields: readonly string[]): Record<string, NotKept> {
   const reason = 'ContextValue.Calculate reads it only for a ValueType other than Simple and Rank';
   const holds = (raw: Record<string, unknown>) =>
@@ -394,7 +353,6 @@ function otherValueTypes(at: string, fields: readonly string[]): Record<string, 
   return Object.fromEntries(fields.map((f) => [`${at}.${f}`, { reason, holds }]));
 }
 
-/** Kingmaker/UnitLogic/ActivatableAbilities/ActivatableAbilityGroup.cs. */
 const activatableAbilityGroup = enumOf(
   'None',
   'BardicPerformance',
@@ -457,7 +415,6 @@ const activatableAbilityGroup = enumOf(
   'Manifestation',
 );
 
-/** Kingmaker/UnitLogic/Mechanics/AbilityRankType.cs. */
 const abilityRankType = enumOf(
   'Default',
   'DamageDice',
@@ -468,15 +425,12 @@ const abilityRankType = enumOf(
   'SpeedBonus',
 );
 
-/** A ContextValue whose Rank reads the fact's ContextRankConfig of the same AbilityRankType (ContextValue.Calculate). */
 const rankedContextValue = struct({
   ValueType: contextValueType,
   Value: int,
-  // Older components omit it; the C# field has no initializer, so the game loads Default.
   ValueRank: orDefault(abilityRankType, 'Default'),
 });
 
-/** Kingmaker/UnitLogic/Mechanics/Components/ContextRankProgression.cs. */
 const contextRankProgression = enumOf(
   'AsIs',
   'Div2',
@@ -495,7 +449,6 @@ const contextRankProgression = enumOf(
   'SquaredValue',
 );
 
-/** Kingmaker/Blueprints/Classes/FeatureGroup.cs, every member. */
 const featureGroup: Spec<FeatureGroup> = enumOf(
   'None',
   'Feat',
@@ -593,7 +546,6 @@ const featureGroup: Spec<FeatureGroup> = enumOf(
   'DeceiverWay',
 );
 
-/** Kingmaker/Enums/WeaponCategory.cs, every member. */
 const weaponCategory: Spec<WeaponCategory> = enumOf(
   'UnarmedStrike',
   'Dagger',
@@ -681,7 +633,6 @@ const weaponCategory: Spec<WeaponCategory> = enumOf(
   'SawtoothSabre',
 );
 
-/** Blueprints/Items/Armors/ArmorProficiencyGroup.cs, every member. */
 const armorProficiencyGroup: Spec<ArmorProficiencyGroup> = enumOf(
   'None',
   'Light',
@@ -698,7 +649,6 @@ const armorProficiencyGroup: Spec<ArmorProficiencyGroup> = enumOf(
 
 const petType = enumOf('AnimalCompanion', 'MythicSkeletalChampion', 'AzataHavocDragon', 'Clone', 'NightHag');
 
-/** Kingmaker/Enums/AlignmentMaskType.cs, every member. */
 const alignmentMask = flagsOf(
   'LawfulGood',
   'NeutralGood',
@@ -717,7 +667,6 @@ const alignmentMask = flagsOf(
   'None',
 );
 
-/** Blueprints/Items/Weapons/WeaponFighterGroupFlags.cs, every member. */
 const weaponFighterGroupFlags = flagsOf(
   'None',
   'Axes',
@@ -766,7 +715,6 @@ const featureParameterType = enumOf(
   'FeatureSelection',
 );
 
-/** Kingmaker/Blueprints/Classes/Spells/SpellSchool.cs. */
 const spellSchool = enumOf(
   'None',
   'Abjuration',
@@ -780,7 +728,6 @@ const spellSchool = enumOf(
   'Universalist',
 );
 
-/** The unit a condition looks at: each evaluator's `GetValueInternal` returns it. */
 const unitEvaluator: Spec<UnitEvaluator> = poly<UnitEvaluator>({
   PlayerCharacter: {
     fields: {},
@@ -800,17 +747,14 @@ const intEvaluator: Spec<IntEvaluator> = poly<IntEvaluator>({
   },
 });
 
-/** Every condition's `Not`, which ElementsSystem/Condition.cs `Check` reads around the variant's `CheckCondition`. */
 const NOT = 'ElementsSystem/Condition.cs Check (Not)';
 
-/** A story condition keeps only `Not`: the planner treats it as met (map ticket 21), so what it checks isn't kept. */
 function storyFields(...fields: string[]): Record<string, NotKept> {
   return Object.fromEntries(
     fields.map((f) => [f, 'a story condition, which the planner treats as met (map ticket 21)']),
   );
 }
 
-/** A condition tree (map ticket 20). Each variant keeps the fields its `CheckCondition` reads. */
 const condition: Spec<Condition> = poly<Condition>({
   OrAndLogic: {
     fields: { Not: bool, ConditionsChecker: lazy(() => conditionsChecker) },
@@ -838,7 +782,6 @@ const condition: Spec<Condition> = poly<Condition>({
       m_Class: ref('classes'),
       LimitMinLevel: bool,
       MinLevel: orNull(intEvaluator),
-      // Some conditions' JSON omits them; LimitMaxLevel has no initializer, so the game loads false and no evaluator.
       LimitMaxLevel: orDefault(bool, false),
       MaxLevel: orDefault(orNull(intEvaluator), null),
     },
@@ -881,7 +824,6 @@ const condition: Spec<Condition> = poly<Condition>({
   ContextConditionIsWeaponEquipped: {
     fields: {
       Not: bool,
-      // Older conditions' JSON omits the next four; none has an initializer, so the game loads false and PrimaryHand.
       JustCheckEmptyHand: orDefault(bool, false),
       BothHandsAreEmpty: orDefault(bool, false),
       CheckSlot: orDefault(bool, false),
@@ -931,7 +873,6 @@ const condition: Spec<Condition> = poly<Condition>({
   },
 });
 
-/** The actions G counts as grants (`actionGrant`), each with the fields its `RunAction` reads that are kept. */
 const grantActionVariants: {
   readonly [K in Exclude<GrantAction['$type'], 'Conditional'>]: Variant<
     Fields<Omit<Extract<GrantAction, { $type: K }>, '$type'>>
@@ -940,7 +881,6 @@ const grantActionVariants: {
   ContextActionAddFeature: {
     fields: {
       m_PermanentFeature: ref(...FEATURE),
-      // Older actions' JSON omits it; the field has no initializer, so the game loads null.
       m_SetRankFrom: orDefault(refOrNull(...FEATURE), null),
     },
     cite: ['UnitLogic/Mechanics/Actions/ContextActionAddFeature.cs RunAction (m_PermanentFeature, m_SetRankFrom)'],
@@ -977,10 +917,8 @@ const grantActionVariants: {
   },
 };
 
-/** The grant actions, each kept by its variant. */
 const grantAction = poly<Exclude<GrantAction, { $type: 'Conditional' }>>(grantActionVariants);
 
-/** `Conditional`, the one action a grant list keeps around grants: its branches, run by its conditions. */
 const conditionalVariant: Variant<Fields<Omit<Extract<GrantAction, { $type: 'Conditional' }>, '$type'>>> = {
   fields: {
     ConditionsChecker: lazy(() => conditionsChecker),
@@ -990,11 +928,6 @@ const conditionalVariant: Variant<Fields<Omit<Extract<GrantAction, { $type: 'Con
   cite: ['Designers/EventConditionActionSystem/Actions/Conditional.cs RunAction (ConditionsChecker, IfTrue, IfFalse)'],
 };
 
-/**
- * An action list holding only grants (map ticket 23): `Conditional` and the actions G counts as grants (`actionGrant`)
- * of a blueprint the planner holds. Every other action, a grant of something the planner doesn't hold, and a
- * Conditional left with no grants are dropped and counted.
- */
 const grantActions: Spec<ActionList> = {
   describe: 'an action list of grants (an object with Actions)',
   variants: { ...grantAction.variants, Conditional: conditionalVariant },
@@ -1009,10 +942,8 @@ const grantActions: Spec<ActionList> = {
       const a = action as Record<string, unknown>;
       const type = shortType(a?.$type);
       const here = `${at}.Actions[${i}]`;
-      // A grant action is dropped when what it grants isn't held, so it names nothing (KeepContext.names).
       const grantCtx = { ...ctx, names: undefined };
       if (type === 'Conditional') {
-        // Branches first: a Conditional whose branches grant nothing is dropped, conditions unread.
         const { IfTrue, IfFalse } = conditionalVariant.fields;
         const branches = keepFields({ IfTrue, IfFalse }, a, here, ctx);
         const unmodelled = unmodelledCondition(a.ConditionsChecker);
@@ -1043,13 +974,8 @@ const grantActions: Spec<ActionList> = {
   },
 };
 
-/** The condition types the condition spec models: its variants. */
 const MODELLED_CONDITIONS: ReadonlySet<string> = new Set(Object.keys(condition.variants!));
 
-/**
- * The first condition type in a dump ConditionsChecker that the condition spec doesn't model (a shared value, the
- * difficulty), or `undefined`. A grant behind one is dropped and counted, so the report shows what the walk can't see.
- */
 function unmodelledCondition(checker: unknown): string | undefined {
   for (const c of ((checker as { Conditions?: unknown[] } | null)?.Conditions ?? []) as Record<string, unknown>[]) {
     const type = shortType(c?.$type);
@@ -1061,19 +987,14 @@ function unmodelledCondition(checker: unknown): string | undefined {
   return undefined;
 }
 
-/** Kingmaker/ElementsSystem/ConditionsChecker.cs Check: all (And) or any (Or) of its conditions. */
 const conditionsChecker = struct({ Operation: enumOf('And', 'Or'), Conditions: list(condition) });
 
-/** A list of Blueprints/Classes/LevelEntry.cs: the features granted (or, in RemoveFeatures, removed) at a level. */
 const levelEntries = list(struct({ Level: int, m_Features: list(ref(...FEATURE)) }));
 
-/** An item's own enchantments: only those the planner holds (they carry a kept component) are kept. */
 const enchantments = heldRefs('enchantments');
 
-/** The citation for an item's own enchantments, read with its type's (BlueprintItem.CollectEnchantments). */
 const WORN_SLOT = 'Items/Slots/EquipmentSlot.cs IsItemSupported';
 
-/** A worn item: its place is its `$type`, and its enchantments are its own. */
 function worn<T extends Blueprint & { m_Enchantments: readonly Ref[] }>(type: T['$type']): BlueprintEntry {
   return blueprint<T>({
     type,
@@ -1086,7 +1007,6 @@ function worn<T extends Blueprint & { m_Enchantments: readonly Ref[] }>(type: T[
   });
 }
 
-/** The weapon and armour types' shared enchantment list (BlueprintWeaponType, BlueprintArmorType `Enchantments`). */
 const ARMOR_TYPE_FIELDS = {
   m_ProficiencyGroup: armorProficiencyGroup,
   m_IsArmor: bool,
@@ -1099,10 +1019,6 @@ const ARMOR_TYPE_CITE = [
   'Blueprints/Items/Armors/BlueprintArmorType.cs Enchantments (m_Enchantments)',
 ];
 
-/**
- * Items (map ticket 12) and what ticket 03's Gear checks read: each item's place, its weapon or armour type, its
- * restrictions, and the enchantments that give a stat bonus counted toward prerequisites (ADR 0002) or a fact.
- */
 const itemEntries: readonly AllowEntry[] = [
   blueprint<BlueprintItemWeapon>({
     type: 'BlueprintItemWeapon',
@@ -1226,8 +1142,6 @@ const itemEntries: readonly AllowEntry[] = [
     requiresHeld: ['m_Blueprint'],
     cite: ['Designers/Mechanics/EquipmentEnchants/AddUnitFactEquipment.cs OnActivate (m_Blueprint)'],
   }),
-  // An item's enhancement bonus (map ticket 29's rule 3, as amended by build ticket 02g): Gear names tell items of
-  // one name apart by it, as Finnean's stages (+1, +3, +5).
   component<WeaponEnhancementBonus>({
     type: 'WeaponEnhancementBonus',
     fields: { EnhancementBonus: int, Stack: bool },
@@ -1270,7 +1184,6 @@ const itemEntries: readonly AllowEntry[] = [
   }),
 ];
 
-/** Drops an item stat bonus that never counts toward a prerequisite: only `Enhancement` is permanent (ADR 0002). */
 function notEnhancement(raw: Record<string, unknown>): string | undefined {
   return raw.Descriptor === 'Enhancement' ? undefined : `${shortType(raw.$type)} (not Enhancement)`;
 }
@@ -1284,7 +1197,6 @@ export const allowlist: readonly AllowEntry[] = [
       HitDie: enumOf('Zero', 'One', 'D2', 'D3', 'D4', 'D6', 'D8', 'D10', 'D12', 'D20', 'D100'),
       PrestigeClass: bool,
       IsMythic: bool,
-      // Some classes' JSON omits these two; both C# fields have no initializer, so the game loads false.
       DontAddCasterLevels: orDefault(bool, false),
       m_IsHigherMythic: orDefault(bool, false),
       m_BaseAttackBonus: ref('tables'),
@@ -1402,8 +1314,6 @@ export const allowlist: readonly AllowEntry[] = [
   blueprint<BlueprintBuff>({
     type: 'BlueprintBuff',
     name: 'm_DisplayName',
-    // Kingmaker/UnitLogic/Buffs/Blueprints/StackingType.cs, less Rank: a buff stacking by Rank raises its rank
-    // (Buff.AddRank) up to its Ranks, which no kept buff needs, so a kept Rank buff fails the import.
     fields: { Stacking: enumOf('Replace', 'Prolong', 'Ignore', 'Stack', 'Poison', 'Summ') },
     cite: [
       'UnitLogic/FactLogic/AddFacts.cs UpdateFacts',
@@ -1498,7 +1408,6 @@ export const allowlist: readonly AllowEntry[] = [
       Mode: enumOf('Default', 'OnlyNew', 'OnlyRankUp'),
       Group: featureGroup,
       IgnorePrerequisites: bool,
-      // Some selections' JSON omits it; the C# field has no initializer, so the game loads false.
       ExceptWhiteListed: orDefault(bool, false),
       Obligatory: bool,
     },
@@ -1563,7 +1472,6 @@ export const allowlist: readonly AllowEntry[] = [
       RequireProficiency: bool,
       m_Prerequisite: refOrNull('features'),
       HasNoSuchFeature: bool,
-      // Some feats' JSON omits it; the C# field has no initializer, so the game loads false.
       IgnoreParameterFeaturePrerequisites: orDefault(bool, false),
       BlueprintParameterVariants: orNull(heldRefs(...FEATURE)),
     },
@@ -1643,7 +1551,6 @@ export const allowlist: readonly AllowEntry[] = [
   component<AddFeatureOnClassLevel>({
     type: 'AddFeatureOnClassLevel',
     fields: {
-      // Null means the character level (ReplaceCasterLevelOfAbility.CalculateClassLevel).
       m_Class: refOrNull('classes'),
       Level: int,
       m_Feature: ref(...FEATURE),
@@ -1680,7 +1587,6 @@ export const allowlist: readonly AllowEntry[] = [
       Alignment: enumOf('None', 'Neutral', 'Good', 'Evil', 'Lawful', 'Chaotic'),
       m_Facts: heldRefs(...FACT),
     },
-    // Most grant only buffs and toggles the planner doesn't hold; with none left, the component grants nothing.
     keepIf: (kept) => kept.m_Facts.length > 0,
     cite: ['Designers/Mechanics/Facts/AddFeatureOnAlignment.cs OnActivate (Alignment, m_Facts)'],
   }),
@@ -1720,7 +1626,6 @@ export const allowlist: readonly AllowEntry[] = [
   component<FactSinglify>({
     type: 'FactSinglify',
     fields: { m_OldFacts: heldRefs(...FACT), m_NewFacts: heldRefs(...FACT) },
-    // Most only swap abilities the planner doesn't hold; with nothing left, the component says nothing.
     keepIf: (kept) => kept.m_OldFacts.length + kept.m_NewFacts.length > 0,
     cite: ['Designers/Mechanics/Facts/FactSinglify.cs OnActivate (m_OldFacts, m_NewFacts)'],
   }),
@@ -1729,7 +1634,6 @@ export const allowlist: readonly AllowEntry[] = [
     fields: { m_Focus: ref('features') },
     cite: ['Designers/Mechanics/Facts/KensaiChosenWeapon.cs OnActivate (m_Focus)'],
   }),
-  // Ticket 03's class skills, skill points and proficiencies areas.
   component<AddClassSkill>({
     type: 'AddClassSkill',
     fields: { Skill: statType },
@@ -1766,13 +1670,11 @@ export const allowlist: readonly AllowEntry[] = [
     fields: { Proficiency: armorProficiencyGroup },
     cite: ['UnitLogic/FactLogic/AddBackgroundArmorProficiency.cs OnTurnOn (Proficiency)'],
   }),
-  // Ticket 03's aspects kept on (map 32): how many toggles of a group can be on at once.
   component<IncreaseActivatableAbilityGroupSize>({
     type: 'IncreaseActivatableAbilityGroupSize',
     fields: { Group: activatableAbilityGroup },
     cite: ['UnitLogic/FactLogic/IncreaseActivatableAbilityGroupSize.cs OnTurnOn (Group)'],
   }),
-  // Ticket 03's spellbook area: spellbooks as prerequisite gates.
   component<AddSpellbookLevel>({
     type: 'AddSpellbookLevel',
     fields: { m_Spellbook: ref('spellbooks') },
@@ -1788,7 +1690,6 @@ export const allowlist: readonly AllowEntry[] = [
     fields: {},
     cite: ['Blueprints/Classes/Prerequisites/PrerequisiteCasterTypeSpellLevel.cs GetCasterTypeSpellLevel'],
   }),
-  // Ticket 03's ability-score area: the Racial bonuses a stat prerequisite counts.
   component<AddContextStatBonus>({
     type: 'AddContextStatBonus',
     fields: {
@@ -1796,7 +1697,6 @@ export const allowlist: readonly AllowEntry[] = [
       Stat: statType,
       Multiplier: int,
       Value: rankedContextValue,
-      // Older components omit both; the C# fields have no initializer, so the game loads false and 0.
       HasMinimal: orDefault(bool, false),
       Minimal: orDefault(int, 0),
     },
@@ -1886,7 +1786,6 @@ export const allowlist: readonly AllowEntry[] = [
     fields: {
       TargetStat: statType,
       BaseAttributeReplacement: enumOf('Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma'),
-      // Some components omit it; the C# field has no initializer, so the game loads false.
       ReplaceIfHigher: orDefault(bool, false),
     },
     cite: [
@@ -1909,7 +1808,6 @@ export const allowlist: readonly AllowEntry[] = [
     fields: {
       ...prerequisite,
       m_Features: list(ref(...FEATURE)),
-      // Many lists' JSON omits it; the C# field has no initializer, so the game loads false.
       m_RestrictIfNot: orDefault(bool, false),
       Amount: int,
     },
@@ -1924,7 +1822,6 @@ export const allowlist: readonly AllowEntry[] = [
       ...prerequisite,
       m_CharacterClass: ref('classes'),
       Level: int,
-      // Many components' JSON omits it; the C# field has no initializer, so the game loads false.
       Not: orDefault(bool, false),
     },
     cite: [
@@ -1990,7 +1887,6 @@ export const allowlist: readonly AllowEntry[] = [
     type: 'PrerequisiteAlignment',
     fields: {
       ...prerequisite,
-      // Some components' JSON omits these two; neither C# field has an initializer, so the game loads false.
       IngorePrerequisiteCheck: orDefault(bool, false),
       Alignment: alignmentMask,
       ArchetypeAlignment: orDefault(bool, false),
@@ -2186,7 +2082,6 @@ export const allowlist: readonly AllowEntry[] = [
     fields: {
       m_CheckedBuff: refOrNull('buffs'),
       m_ExtraEffectBuff: ref('buffs'),
-      // PrimalistRagePowersFeature's component omits it; the C# field has no initializer, so the game loads none.
       m_ExceptionFact: orDefault(refOrNull(...FACT), null),
     },
     requiresHeld: ['m_ExtraEffectBuff'],
@@ -2195,9 +2090,6 @@ export const allowlist: readonly AllowEntry[] = [
       'Designers/Mechanics/Facts/BuffExtraEffects.cs CheckHadPrerequiredBuff (m_CheckedBuff)',
     ],
     notKept: {
-      // Map 32 (amended) keeps it like m_CheckedBuff, but every component that sets it is dropped: its extra buff
-      // grants nothing a Build holds (requiresHeld), as for ShapeshiftersHelmEnchantment and the cantrip features.
-      // `holds` fails the import if a kept component ever sets it, so it is allowlisted then.
       m_CheckedBuffList: {
         reason: 'no kept BuffExtraEffects sets it: each that does has an extra buff that grants nothing a Build holds',
         holds: (raw) => !Array.isArray(raw.m_CheckedBuffList) || raw.m_CheckedBuffList.length === 0,
@@ -2224,7 +2116,6 @@ export const allowlist: readonly AllowEntry[] = [
     fields: {
       m_NewFact: ref(...FACT),
       IsZenArcher: orDefault(bool, false),
-      // Only the Zen Archer's components set it; the C# field has no initializer, so the game loads none.
       m_BowWeaponTypes: orDefault(list(ref('itemtypes')), []),
       IsSohei: orDefault(bool, false),
     },
@@ -2238,9 +2129,7 @@ export const allowlist: readonly AllowEntry[] = [
     type: 'HasArmorFeatureUnlock',
     fields: {
       m_NewFact: ref(...FACT),
-      // Some components' JSON omits these four; none has an initializer, so the game loads false and 0 (no flag).
       FilterByBlueprintArmorTypes: orDefault(bool, false),
-      // Some components' JSON omits it too; the game loads no types. A null entry matches no armour.
       m_BlueprintArmorTypes: orDefault(list(refOrNull('itemtypes')), []),
       FilterByArmorProficiencyGroup: orDefault(bool, false),
       m_ArmorProficiencyGroupEntries: orDefault<string | number>(

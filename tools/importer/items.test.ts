@@ -1,4 +1,3 @@
-// The sourcing rules on a small made-up dump: which references give an item, and which don't.
 import { describe, expect, it } from 'vitest';
 import type { DumpIndex } from './import';
 import { checkSourcedCount, naturalWeapons, itemSourcing, RESEARCH_COUNT } from './items';
@@ -7,7 +6,6 @@ const g = (n: number) => `b${String(n).padStart(31, '0')}`;
 const r = (n: number) => `!bp_${g(n)}`;
 const t = (type: string) => `0, ${type}`;
 
-/** Blueprint number → its type and JSON; the index is built from them as indexDump would. */
 function dump(blueprints: Record<number, Record<string, unknown>>) {
   const json = new Map<string, Record<string, unknown>>();
   const types = new Map<string, string>();
@@ -59,12 +57,10 @@ describe('item sourcing', () => {
   it("takes a recruited companion's gear and a shield's parts, but no extra limb", () => {
     expect(sourced.get(g(12))).toEqual(new Set(['companion gear']));
     expect(sourced.get(g(11))).toEqual(new Set(['form or part']));
-    expect(sourced.has(g(10))).toBe(false); // an additional limb is no gear
+    expect(sourced.has(g(10))).toBe(false);
   });
 
   it('takes the empty hand as the research did, and names it as a natural weapon for an override to drop', () => {
-    // WeaponEmptyHand 20375b5a0c9243d45966bd72c690ab74 comes in through a companion's m_EmptyHandWeapon; map 12's
-    // hand-kept list drops it.
     expect(sourced.get(g(9))).toEqual(new Set(['companion gear']));
     expect(naturalWeapons(sourced.keys(), json)).toEqual([g(9)]);
   });

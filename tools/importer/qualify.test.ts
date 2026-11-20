@@ -1,9 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import type { Blueprint, Guid, Override } from '~engine/data/types';
+import type { Blueprint, Guid, Override } from '~engine/data';
 import { qualifyNames } from './qualify';
 
-// Hand-built from the game's own groups (build ticket 02c): each blueprint keeps its GUID and asset name from the
-// dump, with only the fields G and P read. Names are the game's display names; nameless progressions stay nameless.
 const r = (guid: Guid) => `!bp_${guid}`;
 const blueprint = (guid: Guid, $type: string, assetName: string, name?: string, fields: object = {}, Components = []) =>
   [guid, { $type, guid, assetName, ...(name === undefined ? {} : { name }), Components, ...fields }] as const;
@@ -77,8 +75,6 @@ const blueprints = new Map<Guid, Blueprint>(
       },
       m_DefaultPlayerCharacter: null,
     }),
-    // Arcanist and Inquisitor, and Loremaster's secrets named after them: picks from the wizard's or the druid's spell
-    // list for that class's spellbook. Loremaster's own Arcanist spellbook pick is one the game hides.
     cls(ARCANIST, 'ArcanistClass', 'Arcanist', '974911193b8a8b947a8275f96bb265d6'),
     progression('974911193b8a8b947a8275f96bb265d6', 'ArcanistProgression', undefined, []),
     blueprint(INQUISITOR, 'BlueprintCharacterClass', 'InquisitorClass', 'Inquisitor', {
@@ -115,7 +111,6 @@ const blueprints = new Map<Guid, Blueprint>(
     blueprint(LOREMASTER_ARCANIST, 'BlueprintFeatureReplaceSpellbook', 'LoremasterArcanist', 'Arcanist', {
       HideInUI: true,
     }),
-    // The Witch's patrons, each granting its Patron Spells at levels 2, 4…
     cls('1b9873f1e7bfe5449bc84d03e9c8e3cc', 'WitchClass', 'Witch', 'c5e9e2b086a9814409fb6a29a5acdd0f'),
     progression('c5e9e2b086a9814409fb6a29a5acdd0f', 'WitchProgression', undefined, [
       [1, '381cf4c890815d049a4420c6f31d063f'],
@@ -136,7 +131,6 @@ const blueprints = new Map<Guid, Blueprint>(
     blueprint(WINTER_4, 'BlueprintFeature', 'WitchPatronSpellLevel2', 'Patron Spells'),
     blueprint(ELEMENTS_2, 'BlueprintFeature', 'WitchPatronSpellLevel1', 'Patron Spells'),
     blueprint(ELEMENTS_4, 'BlueprintFeature', 'WitchPatronSpellLevel2', 'Patron Spells'),
-    // The sorcerer's bloodline feat selections, an option of SorcererFeatSelection each, needing their bloodline.
     cls('b3a505fb61437dc4097f43c3f8f9a4cf', 'SorcererClass', 'Sorcerer', '997665565ca80a649aedd72455c4df1f'),
     progression('997665565ca80a649aedd72455c4df1f', 'SorcererProgression', undefined, [
       [1, '24bef8d1bee12274686f6da6ccbc8914'],
@@ -150,8 +144,6 @@ const blueprints = new Map<Guid, Blueprint>(
       'aa79c65fa0e11464d9d100b038c50796',
       '8a95d80a3162d274896d50c2f18bb6b1',
     ]),
-    // Two of the ten draconic bloodlines, each granting the one draconic bloodline spell feature at level 5, and the
-    // celestial and empyreal bloodlines, sharing a feature of the same name.
     progression('7bd143ead2d6c3a409aad6ee22effe34', 'BloodlineDraconicBlackProgression', 'Draconic Bloodline — Black', [
       [5, DRACONIC_RESIST_ENERGY],
     ]),
@@ -167,8 +159,6 @@ const blueprints = new Map<Guid, Blueprint>(
     progression('8a95d80a3162d274896d50c2f18bb6b1', 'EmpyrealBloodlineProgression', 'Empyreal Bloodline', [
       [5, CELESTIAL_RESIST_ENERGY],
     ]),
-    // The ranger's Favored Enemy: the first pick at level 1, and the rank-ups from level 5. The Sable Company Marine
-    // (a ranger archetype) adds the first pick, and the Sacred Huntsmaster (an inquisitor's) both.
     blueprint(RANGER, 'BlueprintCharacterClass', 'RangerClass', 'Ranger', {
       m_Progression: r('97261d609529d834eba4fd4da1bc44dc'),
       m_Archetypes: [r('475117e837fa461589005a5339f653a0'), r('9f147dbae4a34cda9f0e6091dc1a4a7c')],
@@ -186,8 +176,6 @@ const blueprints = new Map<Guid, Blueprint>(
     ]),
     selection(FAVORED_ENEMY, 'FavoriteEnemySelection', 'Favored Enemy', []),
     selection(FAVORED_ENEMY_RANK_UP, 'FavoriteEnemyRankUp', 'Favored Enemy', []),
-    // The ranger's Archery combat style: the level-2 and level-6 picks, each an option of its level's Combat Style
-    // Feat selection, which Nomad adds at those levels too and the slayer's level-2 talent selection offers.
     selection('c6d0da9124735a44f93ac31df803b9a9', 'RangerStyleSelection2', 'Combat Style Feat', [ARCHERY_2]),
     selection('61f82ba786fe05643beb3cd3910233a8', 'RangerStyleSelection6', 'Combat Style Feat', [ARCHERY_6]),
     archetype('9f147dbae4a34cda9f0e6091dc1a4a7c', 'NomadArchetype', 'Nomad', [
@@ -221,7 +209,6 @@ const blueprints = new Map<Guid, Blueprint>(
     blueprint(ARCANE_FEATS, 'BlueprintFeatureSelection', 'BloodlineArcaneFeatSelection', 'Bloodline Feat Selection', {
       m_AllFeatures: [],
     }),
-    // The kineticist's air bonus feats: two copies offered side by side in Wild Talents, which nothing tells apart.
     cls('42a455d9ec1ad924d889272429eb8391', 'KineticistClass', 'Kineticist', 'b79e92dd495edd64e90fb483c504b8df'),
     progression('b79e92dd495edd64e90fb483c504b8df', 'KineticistProgression', undefined, [
       [2, '5c883ae0cd6d7d5448b7a420f51f8459'],
@@ -231,7 +218,6 @@ const blueprints = new Map<Guid, Blueprint>(
     selection(AIR_BONUS_1, 'WildTalentBonusFeatAir1', 'Kineticist Bonus Feat — Air', []),
   ].map(([guid, value]) => [guid, value as unknown as Blueprint]),
 );
-// The bloodline feat selections' prerequisites: each needs its bloodline's requisite feature.
 for (const [selectionGuid, requisite] of [
   [ABYSSAL_FEATS, 'b09b58c7f8efff244a33269489abeac6'],
   [ARCANE_FEATS, '60d8632e96739a74dbac23dd078d205d'],
@@ -239,7 +225,6 @@ for (const [selectionGuid, requisite] of [
   const bp = blueprints.get(selectionGuid)!;
   blueprints.set(selectionGuid, { ...bp, Components: [requires(requisite)] } as unknown as Blueprint);
 }
-// …and the requisite features carry their bloodline's name, as in the game.
 for (const [guid, name] of [
   ['b09b58c7f8efff244a33269489abeac6', 'Abyssal Bloodline'],
   ['60d8632e96739a74dbac23dd078d205d', 'Arcane Bloodline'],
@@ -262,8 +247,6 @@ function settled(overrides: readonly Override[] = []) {
 
 describe('shared names (map ticket 27)', () => {
   it("qualifies the Witch's patron spells by patron and level (source 2)", () => {
-    // WitchWinterPatronProgression e98d8d9f907c1814aa7376d6cdaac012 grants WitchPatronSpellLevel1 at level 2 and
-    // WitchPatronSpellLevel2 at level 4, and so does each other patron: the patron alone can't tell them apart.
     const { of } = settled();
     expect(of(WINTER_2)).toEqual({ source: 'level', name: 'Patron Spells (Winter 2)' });
     expect(of(WINTER_4)).toEqual({ source: 'level', name: 'Patron Spells (Winter 4)' });
@@ -272,22 +255,16 @@ describe('shared names (map ticket 27)', () => {
   });
 
   it("qualifies Loremaster's Arcanist secrets by their grantor (source 1)", () => {
-    // LoremasterWizardSecretArcanist is an option of LoremasterWizardSpellSecret f97986f19a595e2409cfe5d92bcf697c and
-    // LoremasterDruidSecretArcanist of LoremasterDruidSpellSecret 6b73ba9d8a718fb419a484c6e1b92c6d.
     const { of } = settled();
     expect(of(WIZARD_SECRET_ARCANIST)).toEqual({ source: 'grantor', name: 'Arcanist (Wizard Spell)' });
     expect(of(DRUID_SECRET_ARCANIST)).toEqual({ source: 'grantor', name: 'Arcanist (Druid Spell)' });
   });
 
   it('leaves out a blueprint the game hides, as it is never shown', () => {
-    // LoremasterArcanist 39d9362873634e24c8f7a1932e425340 has HideInUI (UnitLogic/Feature.cs Hidden).
     expect(settled().q.groups.flatMap((g) => g.members.map((m) => m.guid))).not.toContain(LOREMASTER_ARCANIST);
   });
 
   it("names the draconic bloodlines' shared feature by their family, never by one colour (source 6)", () => {
-    // BloodlineDraconicSpellLevel2 1d3fcbb51257dd6448a48db489cdd3ad is granted by every draconic bloodline, so no one
-    // colour holds on every route; their names share "Draconic Bloodline". The celestial and empyreal bloodlines'
-    // BloodlineCelestialSpellLevel2 62ff99899efcf9c4eb2656fbe9d9522c shares no family name, and stays bare.
     const { q, of } = settled();
     expect(of(DRACONIC_RESIST_ENERGY)).toEqual({ source: 'family', name: 'Resist Energy (Draconic Bloodline)' });
     expect(of(CELESTIAL_RESIST_ENERGY)).toEqual({ source: 'bare', name: undefined });
@@ -295,9 +272,6 @@ describe('shared names (map ticket 27)', () => {
   });
 
   it("keeps the ranger's Favored Enemy bare as the class's own copy (source 5), and overrides the rank-up", () => {
-    // FavoriteEnemySelection 16cc2c937ea8d714193017780e7d4fc6: RangerProgression at level 1, and two archetypes. The
-    // rank-up FavoriteEnemyRankUp c1be13839472aad46b152cf10cf46179 is also the Sacred Huntsmaster's, an inquisitor
-    // archetype, so the ranger's level doesn't hold on every route: it needs an override.
     const open = settled();
     expect(open.of(FAVORED_ENEMY)).toEqual({ source: 'class', name: undefined });
     expect(open.of(FAVORED_ENEMY_RANK_UP).source).toBeUndefined();
@@ -307,8 +281,6 @@ describe('shared names (map ticket 27)', () => {
   });
 
   it('never names a combat style by one archetype among its grantors; an override settles it', () => {
-    // RangerStyleArcherySelection2 3cf94df3f1cf9a443a880bc1ae9be3c6 and …6 6c799d09d5b93f344b9ade0e0c765c2d: the ranger's
-    // Combat Style Feat selections, Nomad and the slayer's talents all give them, so no source tells them apart.
     const open = settled();
     expect(open.of(ARCHERY_2).source).toBeUndefined();
     expect(open.of(ARCHERY_6).source).toBeUndefined();
@@ -319,9 +291,6 @@ describe('shared names (map ticket 27)', () => {
   });
 
   it('keeps a class bare beside the picks named after it (source 3)', () => {
-    // ArcanistClass 52dbfd8505e22f84fad8d702611f60b7 stays bare once its picks are told apart; InquisitorClass
-    // f1a70d9e1b0b41e49874e1fa9052a1ce stays bare by its kind while the two Wizard Spell picks named after it, for a
-    // Hunter's and an Inquisitor's spellbook, are still shared.
     const { q, of } = settled();
     expect(of(ARCANIST)).toEqual({ source: 'bare', name: undefined });
     expect(of(INQUISITOR)).toEqual({ source: 'kind', name: undefined });
@@ -329,8 +298,6 @@ describe('shared names (map ticket 27)', () => {
   });
 
   it("qualifies a bloodline's feat selection by the bloodline it requires (source 4)", () => {
-    // BloodlineAbyssalFeatSelection 7781831170d794a4d8f147a1326c35fd needs AbyssalBloodlineRequisiteFeature
-    // b09b58c7f8efff244a33269489abeac6 (PrerequisiteFeature); its only grantor, SorcererFeatSelection, shares its name.
     const { of } = settled();
     expect(of(ABYSSAL_FEATS)).toEqual({
       source: 'prerequisite',
@@ -341,8 +308,6 @@ describe('shared names (map ticket 27)', () => {
   });
 
   it('leaves two identical picks shared, and settles them with an override (source 5), one staying bare', () => {
-    // WildTalentBonusFeatAir 4ff45d291d0ee9c4b8c83a298b0b4969 and WildTalentBonusFeatAir1 95ab2bdf0d45b2742a357f5780aac4a3
-    // are both options of WildTalentSelection, with no level or prerequisite between them.
     const open = settled();
     expect(open.of(AIR_BONUS).source).toBeUndefined();
     expect(open.q.collisions.get('Kineticist Bonus Feat — Air')).toEqual([AIR_BONUS, AIR_BONUS_1]);

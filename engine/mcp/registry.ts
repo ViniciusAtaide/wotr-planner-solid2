@@ -1,5 +1,3 @@
-// The MCP tools as the protocol lists them (map 08): each tool's name, description and JSON Schema, and the call that
-// runs it. Both transports (HTTP at /mcp and stdio) serve this one list.
 import type { Engine } from './tools';
 import * as tools from './tools';
 
@@ -51,7 +49,6 @@ const object = (properties: Json, required: readonly string[] = []): Json => ({
   additionalProperties: false,
 });
 
-/** Every tool, in map 08's order. */
 export const TOOLS: readonly ToolDef[] = [
   {
     name: 'start_build',

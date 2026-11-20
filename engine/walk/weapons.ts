@@ -1,8 +1,5 @@
-// The weapon categories' subcategories: a table in the game's code, not in its blueprints, so the walk carries a copy.
-// Ported from decompiled/Assembly-CSharp/Kingmaker/Enums/WeaponCategoryExtension.cs (its Data array, in its order).
-import type { WeaponCategory, WeaponSubCategory } from '../data/types';
+import type { WeaponCategory, WeaponSubCategory } from '../data';
 
-/** WeaponCategoryExtension.Data: each category with its subcategories. */
 const SUBCATEGORIES: Readonly<Record<WeaponCategory, readonly WeaponSubCategory[]>> = {
   UnarmedStrike: ['Melee', 'Finessable', 'Monk'],
   Dagger: ['Simple', 'Melee', 'Finessable', 'Knives', 'Light', 'OneHandedPiercing', 'Metal'],
@@ -90,10 +87,8 @@ const SUBCATEGORIES: Readonly<Record<WeaponCategory, readonly WeaponSubCategory[
   HookedHammer: ['Exotic', 'Melee', 'Metal'],
 };
 
-/** Every weapon category, in WeaponCategoryExtension.Data's order. */
 export const WEAPON_CATEGORIES = Object.keys(SUBCATEGORIES) as readonly WeaponCategory[];
 
-/** WeaponCategoryExtension.HasSubCategory: `None` is every category's; otherwise the table's. */
 export function hasSubCategory(category: WeaponCategory, subCategory: WeaponSubCategory): boolean {
   return subCategory === 'None' || SUBCATEGORIES[category].includes(subCategory);
 }

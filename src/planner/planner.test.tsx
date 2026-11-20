@@ -1,15 +1,13 @@
-// The planner UI against the MCP (build ticket 05): every Build code the MCP returns opens the same Build in the UI,
-// and a change that breaks later picks goes through the Cascade preview, so no UI action reaches an impossible Build.
 import { join } from 'node:path';
 import { render } from '@solidjs/testing-library';
 import { flush } from 'solid-js';
 import { describe, expect, test } from 'vitest';
 import { slotKey, type Build } from '~engine/build';
 import { encodeBuild } from '~engine/codec';
-import { loadData } from '~engine/data/load';
-import { readDataDir } from '~engine/data/read-dir';
-import type { BlueprintCharacterClass } from '~engine/data/types';
-import { jackInTheGreen } from '~engine/gold/jack-in-the-green';
+import { loadData } from '~engine/load';
+import { readDataDir } from '~engine/data-dir';
+import type { BlueprintCharacterClass } from '~engine/data';
+import { jackInTheGreen } from '~engine/gold';
 import {
   engineOf,
   level_up,
@@ -20,14 +18,13 @@ import {
   type Changed,
   type OptionView,
   type ToolRefusal,
-} from '~engine/mcp/tools';
+} from '~engine/mcp';
 
 import { buildFromHash } from './link';
 import { createPlanner } from './state';
 import Timeline from './Timeline';
 import { optionName } from './words';
 
-// jsdom's import.meta.url isn't a file: URL, so the data is found from the repo root.
 const files = readDataDir(join(process.cwd(), 'data'));
 const e = engineOf(loadData(files.files, files.overrides));
 
@@ -43,7 +40,6 @@ const fighter = [...e.data.blueprints.values()].find(
 )?.guid as string;
 const SCORES = { Strength: 13, Dexterity: 10, Constitution: 10, Intelligence: 10, Wisdom: 10, Charisma: 10 };
 
-/** A level 1 Fighter through the MCP: Strength 13, then the first open option in every slot, Power Attack where open. */
 async function fighterThroughMcp(): Promise<Changed[]> {
   const steps: Changed[] = [await start_build(e)];
   const last = () => steps.at(-1) as Changed;
@@ -74,13 +70,11 @@ async function fighterThroughMcp(): Promise<Changed[]> {
   return steps;
 }
 
-/** A Build with its picks in one order: the code keeps the picks, not the order they were made in. */
 const ordered = (b: Build): Build => ({
   ...b,
   picks: [...b.picks].sort((x, y) => slotKey(x.slot).localeCompare(slotKey(y.slot))),
 });
 
-/** The Timeline the UI shows for a Build. */
 function timelineOf(build: Build) {
   const planner = render(() => {
     const p = createPlanner(e, build);

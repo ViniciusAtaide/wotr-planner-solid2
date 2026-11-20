@@ -1,7 +1,3 @@
-// Component types on written blueprints that the allowlist leaves out, by family, each family with the one reason the
-// planner doesn't read its types (ticket 02a). The report lists every other unlisted type for review, and the import
-// fails when a type here is allowlisted or carried by no written blueprint, so the list stays exact.
-
 export interface NotNeededFamily {
   readonly title: string;
   readonly reason: string;
@@ -553,7 +549,6 @@ export const notNeededFamilies: readonly NotNeededFamily[] = [
   },
 ];
 
-/** Each noted type with its family's reason. */
 export const notNeeded: ReadonlyMap<string, string> = new Map(
   notNeededFamilies.flatMap((f) => f.types.map((type): [string, string] => [type, f.reason])),
 );

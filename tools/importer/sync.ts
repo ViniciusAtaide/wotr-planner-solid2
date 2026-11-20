@@ -1,16 +1,12 @@
-// Server side only: compares the importer's files with data/ and applies the difference. The importer owns each kind's
-// folder and report.md; data/overrides/ is hand-kept and never touched here.
 import { mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-import { kindOf } from '~engine/data/types';
+import { kindOf } from '~engine/data';
 
 const OWNED_FOLDERS = [...new Set(Object.values(kindOf))];
 const OWNED_FILES = ['report.md'];
 
 export interface DataDiff {
-  /** Paths whose content is new or changed. */
   readonly write: readonly string[];
-  /** Paths the importer owns that it no longer produces. */
   readonly remove: readonly string[];
 }
 

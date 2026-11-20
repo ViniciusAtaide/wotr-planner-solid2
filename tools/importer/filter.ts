@@ -1,29 +1,21 @@
-// The generic filter (guide §3 points 1 and 3, module I): one dump blueprint in, its allowlisted fields and
-// components out, in the game's own shape and field names. There is no per-area code here: a new field is a new
-// allowlist line and a rerun.
-import { refGuid, type Guid } from '~engine/data/types';
+import { refGuid, type Guid } from '~engine/data';
 import type { BlueprintEntry, ComponentEntry } from './allowlist';
 import { checkNotKept, keepFields, shortType, type KeepContext } from './spec';
 
-/** A blueprint as the dump has it, parsed. */
 export interface RawBlueprint {
   readonly guid: Guid;
   readonly assetName: string;
-  /** The dump's class name, without its type GUID. */
   readonly type: string;
   readonly json: Record<string, unknown>;
 }
 
 export interface FilterContext extends KeepContext {
-  /** Counts a component dropped because a field in its `requiresHeld` names a blueprint the planner doesn't hold. */
   readonly droppedComponent: (type: string) => void;
-  /** Counts a component the allowlist doesn't list, by its class name. */
   readonly unlisted: (type: string, owner: Guid) => void;
 }
 
 export { shortType };
 
-/** The kept form of one blueprint: `$type`, identity, display name, allowlisted fields and allowlisted components. */
 export function keepBlueprint(
   raw: RawBlueprint,
   entry: BlueprintEntry,
@@ -67,7 +59,6 @@ export function keepBlueprint(
         ctx.droppedComponent(type);
         continue;
       }
-      // A `requiresHeld` field drops the component when its target isn't held, so it names nothing (KeepContext.names).
       const required = new Set((allowed.requiresHeld ?? []).map((field) => refGuid(fields[field])));
       const names = ctx.names;
       const fieldCtx =

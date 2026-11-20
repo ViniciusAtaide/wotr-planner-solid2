@@ -1,5 +1,3 @@
-// A progression's level and its level entries (guide §2 "Progression and level"): BlueprintProgression.CalcLevel and
-// ProgressionData.CalculateLevelEntries, ported onto the walk's character.
 import {
   refGuid,
   type BlueprintArchetype,
@@ -7,17 +5,15 @@ import {
   type BlueprintProgression,
   type Guid,
   type LevelEntry,
-} from '../data/types';
+} from '../data';
 import type { Unit } from './unit';
 
-/** Blueprints/Classes/BlueprintProgression.cs CalcLevel. */
 export function calcLevel(unit: Unit, p: BlueprintProgression): number {
   const archetypes = p.m_Archetypes;
   if (p.m_Classes.length === 0 && archetypes.length === 0) return unit.characterLevel;
   let level = 0;
   for (const ref of p.m_FeaturesRankIncrease ?? []) level += unit.rank(refGuid(ref) ?? '');
   const listed = new Set(archetypes.map((a) => refGuid(a.m_Archetype)));
-  // A listed class counts only when none of its archetypes is listed; then the listed archetypes count instead.
   const classCounts = (cls: Guid) => {
     const bp = unit.bp(cls) as BlueprintCharacterClass | undefined;
     return !(bp?.m_Archetypes ?? []).some((a) => listed.has(refGuid(a)));
@@ -51,11 +47,6 @@ export function calcLevel(unit: Unit, p: BlueprintProgression): number {
   return level;
 }
 
-/**
- * UnitLogic/ProgressionData.cs CalculateLevelEntries: each archetype merged into the progression level by level, its
- * removes taken out (one occurrence each) and its adds put in; an archetype's add at a level the progression lacks
- * becomes an entry of its own.
- */
 export function levelEntries(
   unit: Unit,
   p: BlueprintProgression,
@@ -92,10 +83,6 @@ export function levelEntries(
   return out.sort((a, b) => a.Level - b.Level);
 }
 
-/**
- * UnitLogic/ProgressionData.cs CanAddArchetype: at most one archetype that changes the spellbook, and every remove
- * still present in the merged entries.
- */
 export function canAddArchetype(unit: Unit, p: BlueprintProgression, held: readonly Guid[], archetype: Guid): boolean {
   const a = unit.bp(archetype);
   if (a?.$type !== 'BlueprintArchetype') return false;

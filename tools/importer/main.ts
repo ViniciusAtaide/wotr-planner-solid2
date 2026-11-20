@@ -1,6 +1,3 @@
-// The importer's command line, run directly by Bun, which strips the types and resolves `~engine` from tsconfig.json:
-//   bun run import            import the dump into data/ (writes nothing while any import check fails)
-//   bun run import -- --check fail if an import check fails or data/ differs from a fresh import; skip without the dump
 import { existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { runImport } from './import';

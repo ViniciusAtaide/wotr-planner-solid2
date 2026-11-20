@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { readDataDir } from '~engine/data/read-dir';
+import { readDataDir } from '~engine/data-dir';
 import { serialise } from './serialise';
 
 describe('serialise', () => {
@@ -17,7 +17,7 @@ describe('serialise', () => {
   });
 
   it('is the form every committed fixture file is in', () => {
-    const root = fileURLToPath(new URL('../../engine/data/fixtures/small', import.meta.url));
+    const root = fileURLToPath(new URL('../../engine/load/fixtures/small', import.meta.url));
     const { files, overrides } = readDataDir(root);
     for (const file of [...files, ...overrides]) {
       expect(readFileSync(`${root}/${file.path}`, 'utf8'), file.path).toBe(serialise(file.value));

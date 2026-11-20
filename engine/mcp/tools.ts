@@ -1,7 +1,3 @@
-// The MCP's tools (map 08; map 06; build ticket 05): a thin, stateless layer over the engine. Every tool that reads a
-// Build takes its Build code; every tool that changes one returns the new code beside the Build, or a Refusal worded by
-// R. The server keeps nothing between calls. These are plain functions, so the tests drive them directly; the HTTP
-// and stdio transports (src/mcp/) only route calls here.
 import {
   placeKey,
   slotKey,
@@ -13,7 +9,7 @@ import {
   type SlotId,
 } from '../build';
 import { decodeBuild, DecodeError, encodeBuild } from '../codec';
-import type { CheckedData } from '../data/load';
+import type { CheckedData } from '../load';
 import {
   isShown,
   kindOf,
@@ -22,18 +18,15 @@ import {
   type Guid,
   type Kind,
   type StatType,
-} from '../data/types';
+} from '../data';
 import { describe, NO_SUMMARY, type Description } from '../describe';
 import { allows, apply, breaksOf, cascade, type Breaks, type Edit } from '../edits';
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
 import { linkIndex } from '../links';
 import { picker, type OptionStatus } from '../pickers';
 import { gearNote, nameOf, refusal, statName, type Refusal } from '../refusals';
-import { maxSpellLevel } from '../walk/spellbooks';
-import { ATTRIBUTES, SKILL_ATTRIBUTE } from '../walk/unit';
-import { bandOf, pauseAt, walk, type Band, type Failure } from '../walk/walk';
+import { maxSpellLevel, ATTRIBUTES, SKILL_ATTRIBUTE, bandOf, pauseAt, walk, type Band, type Failure } from '../walk';
 
-/** What every tool reads: the checked data and its grant index. */
 export interface Engine {
   readonly data: CheckedData;
   readonly G: GrantIndex;
@@ -43,16 +36,13 @@ export function engineOf(data: CheckedData): Engine {
   return { data, G: buildGrantIndex(data) };
 }
 
-/** A tool's refusal: R's words, and what the change would break. */
 export interface ToolRefusal {
   readonly refused: true;
   readonly reason: string;
   readonly unmet?: readonly string[];
-  /** What the change would break: each pick with its slot, or another choice with R's reason. */
   readonly breaks?: readonly string[];
 }
 
-/** A changed Build: its code (also a Share link, `/#b=<code>`) and the Build itself. */
 export interface Changed {
   readonly code: string;
   readonly build: Build;
@@ -75,16 +65,14 @@ async function open(e: Engine, code: string): Promise<Build | ToolRefusal> {
 
 const isRefusal = (x: unknown): x is ToolRefusal => typeof x === 'object' && x !== null && 'refused' in x;
 
-/** A pick in words: `L3 Feat: Power Attack`. */
-function pickText(e: Engine, p: Pick): string {
+function pickInWords(e: Engine, p: Pick): string {
   return `${placeKey(p.slot.place)} ${nameOf(e.data, p.slot.selection)}: ${nameOf(e.data, p.feature)}`;
 }
 
-/** What an edit breaks, in words, each line R's. */
-function breaksText(e: Engine, b: Breaks, unitOf?: () => Parameters<typeof refusal>[0]['unit']): string[] {
+function breaksInWords(e: Engine, b: Breaks, unitOf?: () => Parameters<typeof refusal>[0]['unit']): string[] {
   const w = { data: e.data, G: e.G, unit: unitOf?.() };
   return [
-    ...b.picks.map((p) => pickText(e, p)),
+    ...b.picks.map((p) => pickInWords(e, p)),
     ...b.others.map((f: Failure) => `${placeKey(f.place)} ${f.choice}: ${refusal(w, f).text}`),
   ];
 }
@@ -93,14 +81,12 @@ async function changed(e: Engine, build: Build): Promise<Changed> {
   return { code: await encodeBuild(e.data, build), build };
 }
 
-/** A plain edit: the new code, or a Refusal naming what it breaks. */
-async function strict(e: Engine, build: Build, edit: Edit): Promise<Changed | ToolRefusal> {
+async function plainEdit(e: Engine, build: Build, edit: Edit): Promise<Changed | ToolRefusal> {
   const verdict = allows(e.data, build, edit, e.G);
   if (verdict.ok) return changed(e, verdict.build);
-  return refused('The change would break other choices.', { breaks: breaksText(e, verdict) });
+  return refused('The change would break other choices.', { breaks: breaksInWords(e, verdict) });
 }
 
-/** `mode` of pick and equip: strict refuses what breaks, preview lists what a cascade would clear, cascade clears it. */
 export type Mode = 'strict' | 'preview' | 'cascade';
 
 async function withMode(
@@ -109,21 +95,17 @@ async function withMode(
   edit: Edit,
   mode: Mode,
 ): Promise<Changed | ToolRefusal | { readonly preview: true; readonly clears: readonly string[] }> {
-  if (mode === 'strict') return strict(e, build, edit);
+  if (mode === 'strict') return plainEdit(e, build, edit);
   const c = cascade(e.data, build, edit, e.G);
-  if (!c.ok) return refused('A cascade can’t mend what the change breaks.', { breaks: breaksText(e, c) });
-  if (mode === 'preview') return { preview: true, clears: c.cleared.map((p) => pickText(e, p)) };
+  if (!c.ok) return refused('A cascade can’t mend what the change breaks.', { breaks: breaksInWords(e, c) });
+  if (mode === 'preview') return { preview: true, clears: c.cleared.map((p) => pickInWords(e, p)) };
   return changed(e, c.build);
 }
 
-// ---- the tools ---------------------------------------------------------------------------------------------------
-
-/** start_build: an empty Build. */
 export function start_build(e: Engine): Promise<Changed> {
   return changed(e, { levels: [], picks: [] });
 }
 
-/** set_start: the race, its chosen +2, the point buy and the alignment; each left out stays as it is. */
 export async function set_start(
   e: Engine,
   args: {
@@ -146,32 +128,28 @@ export async function set_start(
     ...(args.scores !== undefined ? [{ kind: 'scores', scores: args.scores } as const] : []),
     ...(args.alignment !== undefined ? [{ kind: 'alignment', alignment: args.alignment } as const] : []),
   ];
-  return strictAll(e, build, edits);
+  return plainEdits(e, build, edits);
 }
 
-/** Several edits as one plain edit: refused when the Build after all of them breaks anything. */
-async function strictAll(e: Engine, build: Build, edits: readonly Edit[]): Promise<Changed | ToolRefusal> {
+async function plainEdits(e: Engine, build: Build, edits: readonly Edit[]): Promise<Changed | ToolRefusal> {
   const after = edits.reduce(apply, build);
   const broken = breaksOf(e.data, build, after, e.G);
   if (broken.picks.length > 0 || broken.others.length > 0) {
-    return refused('The change would break other choices.', { breaks: breaksText(e, broken) });
+    return refused('The change would break other choices.', { breaks: breaksInWords(e, broken) });
   }
   return changed(e, after);
 }
 
-/** MythicsSettings.GetCharacterLevelRestriction: a Mythic rank's Expected level (ADR 0003); 0 outside the table. */
 export function expectedLevel(data: CheckedData, rank: number): number {
   const settings = [...data.blueprints.values()].find((b) => b.$type === 'BlueprintMythicsSettings');
   return settings?.$type === 'BlueprintMythicsSettings' ? (settings.CharcaterLevelRestrictions[rank] ?? 0) : 0;
 }
 
-/** An open slot, as next_slots and level_up list it. */
 export interface SlotView {
   readonly slot: SlotId;
   readonly place: string;
   readonly selection: string;
   readonly band: Band;
-  /** The selection's blueprint type: a feature selection, a parametrized feat or a Mythic spellbook. */
   readonly kind: string;
 }
 
@@ -192,12 +170,6 @@ function openSlots(e: Engine, build: Build, place?: Place): SlotView[] {
     });
 }
 
-/**
- * level_up: one more level of a class. A Mythic class adds the next Mythic rank, at its Expected level or after the
- * last character level when that comes later (ADR 0003; place_rank moves it). Archetypes apply at the class's first
- * level, and an ability increase with the level it comes at (SelectClass.Apply grants the point at every fourth).
- * Returns the new code with the slots the level opened.
- */
 export async function level_up(
   e: Engine,
   args: {
@@ -224,13 +196,12 @@ export async function level_up(
       ? [{ kind: 'increase', level: build.levels.length + 1, increase: args.increase } as const]
       : []),
   ];
-  const r = await strictAll(e, build, edits);
+  const r = await plainEdits(e, build, edits);
   if (isRefusal(r)) return r;
   const place: Place = mythic ? { rank } : { level: build.levels.length + 1 };
   return { ...r, slots: openSlots(e, r.build, place) };
 }
 
-/** next_slots: the open slots, in walk order. */
 export async function next_slots(
   e: Engine,
   args: { readonly code: string },
@@ -239,26 +210,18 @@ export async function next_slots(
   return isRefusal(build) ? build : openSlots(e, build);
 }
 
-/** One option as options lists it. */
 export interface OptionView {
   readonly feature: Guid;
   readonly param?: GrantParam;
   readonly name: string;
   readonly summary: string;
-  /** Synergy badges (map 09, the chain kind): what the Build holds that this option builds on. */
   readonly buildsOn: readonly string[];
-  /** ADR 0002's note, for an open option that needs the Gear counted. */
   readonly gear?: string;
-  /** For a closed option: R's words. */
   readonly refusal?: Refusal;
 }
 
-const PAGE = 25;
+const OPTIONS_PER_PAGE = 25;
 
-/**
- * options: a slot's options the game shows, open ones first, 25 a page, filtered by name. Closed ones are counts by
- * reason, listed one by one only with `include_closed`.
- */
 export async function options(
   e: Engine,
   args: {
@@ -286,11 +249,13 @@ export async function options(
   const held = new Set(unit === undefined ? [] : [...unit.facts()].map((f) => f.blueprint));
   const links = linkIndex(e.data, e.G);
   const text = args.text?.toLowerCase();
-  const listed = p.options.filter((o) => o.shown && (text === undefined || label(e, o).toLowerCase().includes(text)));
+  const listed = p.options.filter(
+    (o) => o.shown && (text === undefined || optionName(e, o).toLowerCase().includes(text)),
+  );
   const view = (o: OptionStatus): OptionView => ({
     feature: o.feature,
     ...(o.param && { param: o.param }),
-    name: label(e, o),
+    name: optionName(e, o),
     summary: NO_SUMMARY,
     buildsOn: links
       .needs(o.feature)
@@ -308,7 +273,7 @@ export async function options(
     closedByReason[text] = (closedByReason[text] ?? 0) + 1;
   }
   return {
-    open: openOnes.slice((page - 1) * PAGE, page * PAGE).map(view),
+    open: openOnes.slice((page - 1) * OPTIONS_PER_PAGE, page * OPTIONS_PER_PAGE).map(view),
     openTotal: openOnes.length,
     page,
     closedByReason,
@@ -316,8 +281,7 @@ export async function options(
   };
 }
 
-/** An option's name: the feature's, with its parameter. */
-function label(e: Engine, o: { readonly feature: Guid; readonly param?: GrantParam }): string {
+function optionName(e: Engine, o: { readonly feature: Guid; readonly param?: GrantParam }): string {
   const name = nameOf(e.data, o.feature);
   if (o.param === undefined) return name;
   if ('WeaponCategory' in o.param) return `${name} (${o.param.WeaponCategory.replace(/([a-z])([A-Z])/g, '$1 $2')})`;
@@ -326,10 +290,6 @@ function label(e: Engine, o: { readonly feature: Guid; readonly param?: GrantPar
   return `${name} (${nameOf(e.data, o.param.Blueprint)})`;
 }
 
-/**
- * pick: an option in a slot. A closed option is refused with R's words. Otherwise `mode` decides: strict refuses a
- * pick that breaks later ones, preview lists what a cascade would clear, cascade clears it.
- */
 export async function pick(
   e: Engine,
   args: {
@@ -357,7 +317,6 @@ export async function pick(
   return withMode(e, build, edit, args.mode ?? 'strict');
 }
 
-/** set_skills: a character level's skill ranks, replacing that level's. */
 export async function set_skills(
   e: Engine,
   args: { readonly code: string; readonly level: number; readonly ranks: Readonly<Partial<Record<StatType, number>>> },
@@ -370,10 +329,9 @@ export async function set_skills(
     (f) => f.choice === 'skills' && 'level' in f.place && f.place.level === args.level,
   );
   if (own !== undefined) return refused(refusal({ data: e.data, G: e.G }, own).text);
-  return strict(e, build, { kind: 'skills', level: args.level, skills: args.ranks });
+  return plainEdit(e, build, { kind: 'skills', level: args.level, skills: args.ranks });
 }
 
-/** place_rank: a Mythic rank's character level (ADR 0003), noting when it is off the Expected level. */
 export async function place_rank(
   e: Engine,
   args: { readonly code: string; readonly rank: number; readonly level: number },
@@ -381,7 +339,7 @@ export async function place_rank(
   const build = await open(e, args.code);
   if (isRefusal(build)) return build;
   if (args.rank < 1 || args.rank > (build.ranks?.length ?? 0)) return refused('The Build has no such Mythic rank.');
-  const r = await strict(e, build, { kind: 'rankLevel', rank: args.rank, level: args.level });
+  const r = await plainEdit(e, build, { kind: 'rankLevel', rank: args.rank, level: args.level });
   if (isRefusal(r)) return r;
   const expected = expectedLevel(e.data, args.rank);
   return args.level === expected
@@ -389,7 +347,6 @@ export async function place_rank(
     : { ...r, note: `Mythic rank ${args.rank} is usually reached at character level ${expected} (ADR 0003).` };
 }
 
-/** equip: an item in a Gear place, or none to take it off, with pick's modes. */
 export async function equip(
   e: Engine,
   args: { readonly code: string; readonly place: GearPlace; readonly item?: Guid; readonly mode?: Mode },
@@ -404,7 +361,6 @@ export async function equip(
   return withMode(e, build, edit, args.mode ?? 'strict');
 }
 
-/** synergies: at a slot (or every open slot), the open options that build on what the Build holds (the chain kind). */
 export async function synergies(
   e: Engine,
   args: { readonly code: string; readonly slot?: SlotId },
@@ -427,14 +383,13 @@ export async function synergies(
 
 async function allOpen(e: Engine, code: string, slot: SlotId, total: number): Promise<OptionView[]> {
   const out: OptionView[] = [];
-  for (let page = 1; (page - 1) * PAGE < total; page++) {
+  for (let page = 1; (page - 1) * OPTIONS_PER_PAGE < total; page++) {
     const r = await options(e, { code, slot, page });
     if (!isRefusal(r)) out.push(...r.open);
   }
   return out;
 }
 
-/** search: the shown blueprints whose name holds the text, of one kind when asked, at most 50. */
 export function search(
   e: Engine,
   args: { readonly text: string; readonly kind?: Kind },
@@ -450,12 +405,10 @@ export function search(
   return out;
 }
 
-/** explain: a blueprint's basic description. */
 export function explain(e: Engine, args: { readonly guid: Guid }): Description | ToolRefusal {
   return describe(e.data, args.guid, e.G) ?? refused('Not a blueprint the game shows.');
 }
 
-/** The numbers the walk computes, at a character level. */
 export interface Sheet {
   readonly level: number;
   readonly scores: Readonly<Record<Attribute, number>>;
@@ -470,8 +423,7 @@ export interface Sheet {
   }[];
 }
 
-/** The Build up to a character level: its levels to there, and the Mythic ranks placed at or before it. */
-function upTo(build: Build, level: number): Build {
+function buildUpToLevel(build: Build, level: number): Build {
   return {
     ...build,
     levels: build.levels.slice(0, level),
@@ -481,7 +433,7 @@ function upTo(build: Build, level: number): Build {
 }
 
 function sheetOf(e: Engine, build: Build, level: number): Sheet {
-  const unit = walk(e.data, upTo(build, level), e.G).unit;
+  const unit = walk(e.data, buildUpToLevel(build, level), e.G).unit;
   const skills: Record<string, { ranks: number; value: number }> = {};
   for (const skill of Object.keys(SKILL_ATTRIBUTE) as StatType[]) {
     skills[statName(skill)] = { ranks: unit.base.get(skill) ?? 0, value: unit.skillBase(skill) };
@@ -505,7 +457,6 @@ function sheetOf(e: Engine, build: Build, level: number): Sheet {
   };
 }
 
-/** sheet: the numbers at a character level, the Build's last by default. */
 export async function sheet(
   e: Engine,
   args: { readonly code: string; readonly level?: number },
@@ -515,7 +466,6 @@ export async function sheet(
   return sheetOf(e, build, args.level ?? build.levels.length);
 }
 
-/** compare: 2–4 Builds' sheets at checkpoint levels, their chain link counts, and the first level they diverge. */
 export async function compare(
   e: Engine,
   args: { readonly codes: readonly string[]; readonly levels: readonly number[] },
@@ -546,7 +496,6 @@ export async function compare(
   };
 }
 
-/** The first place where the Builds' choices differ: a level's class or picks, in Build order. */
 export function divergence(builds: readonly Build[]): { divergeAt?: string } {
   const at = (b: Build, place: Place) =>
     JSON.stringify([

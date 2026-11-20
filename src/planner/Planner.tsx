@@ -1,28 +1,28 @@
-// The planner page (map 13): the Timeline, the side panel, undo and redo, the Share link, fork and compare. It runs in
-// the browser only: the engine loads the data document once (ADR 0004) and the Build opens from `#b=<code>`.
 import { createEffect, createMemo, createSignal, onSettled, Show } from 'solid-js';
 import type { Build } from '~engine/build';
 import { encodeBuild } from '~engine/codec';
-import { divergence, type Engine } from '~engine/mcp/tools';
+import { divergence, type Engine } from '~engine/mcp';
 import { nameOf } from '~engine/refusals';
-import { ATTRIBUTES } from '~engine/walk/unit';
+import { ATTRIBUTES } from '~engine/walk';
 
-import Button from '../components/design/Button';
-import CascadePreview from '../components/design/CascadePreview';
-import CompareToggle from '../components/design/CompareToggle';
-import PickerSheet from '../components/design/PickerSheet';
-import Refusal from '../components/design/Refusal';
-import ShareLink from '../components/design/ShareLink';
-import StatBlock, { type Stat } from '../components/design/StatBlock';
+import {
+  Button,
+  CascadePreview,
+  CompareToggle,
+  PickerSheet,
+  Refusal,
+  ShareLink,
+  StatBlock,
+  type Stat,
+} from '../design';
 import { loadEngine } from './engine';
 import { buildFromHash, EMPTY } from './link';
 import { AddPanel, GearPanel, LevelPanel, RankPanel, SlotPicker, StartPanel } from './panels';
 import { createPlanner, placeWords, type Planner as PlannerState } from './state';
 import Timeline, { type Selection } from './Timeline';
 
-/** Below this width the page is one column and the side panel is a full-screen sheet (map 13). */
-const PHONE = '(max-width: 767px)';
-const SHORT: Readonly<Record<string, string>> = {
+const PHONE_WIDTH_QUERY = '(max-width: 767px)';
+const ATTRIBUTE_ABBREVIATIONS: Readonly<Record<string, string>> = {
   Strength: 'STR',
   Dexterity: 'DEX',
   Constitution: 'CON',
@@ -31,7 +31,6 @@ const SHORT: Readonly<Record<string, string>> = {
   Charisma: 'CHA',
 };
 
-/** Loads the engine and the linked Build, then shows the planner. */
 export default function Planner() {
   const [ready, setReady] = createSignal<{ engine: Engine; build: Build; stale: boolean }>();
   const [failed, setFailed] = createSignal<string>();
@@ -48,8 +47,7 @@ export default function Planner() {
   );
 }
 
-/** The Build code of a planner's Build, kept current; the last encode wins. */
-function codeOf(engine: Engine, planner: PlannerState) {
+function liveBuildCode(engine: Engine, planner: PlannerState) {
   const [code, setCode] = createSignal('');
   let latest = 0;
   createEffect(
@@ -64,7 +62,6 @@ function codeOf(engine: Engine, planner: PlannerState) {
   return code;
 }
 
-/** Which of the two Builds the side panel edits. */
 type Side = 'first' | 'second';
 interface Focus {
   readonly side: Side;
@@ -80,12 +77,10 @@ interface WorkspaceProps {
 function Workspace(props: WorkspaceProps) {
   const first = createPlanner(props.staticEngine, props.initialBuild);
   const second = createPlanner(props.staticEngine, EMPTY);
-  const firstCode = codeOf(props.staticEngine, first);
-  const secondCode = codeOf(props.staticEngine, second);
+  const firstCode = liveBuildCode(props.staticEngine, first);
+  const secondCode = liveBuildCode(props.staticEngine, second);
   const [forked, setForked] = createSignal(false);
-  /** Which Builds show: one, the other, or both side by side. */
-  const [view, setView] = createSignal('First');
-  /** What the side panel shows, and in which Build. A new focus mounts a fresh panel (its filter starts empty). */
+  const [shownBuilds, setShownBuilds] = createSignal('First');
   const [focus, setFocus] = createSignal<Focus>({
     side: 'first',
     selected: props.initialBuild.levels.length === 0 ? { kind: 'start' } : undefined,
@@ -100,7 +95,6 @@ function Workspace(props: WorkspaceProps) {
   const code = () => (side() === 'first' ? firstCode() : secondCode());
   const url = () => `${location.origin}/#b=${code()}`;
 
-  // The first Build's code is the page's link, so a reload reopens it.
   createEffect(
     () => firstCode(),
     (c) => {
@@ -112,18 +106,19 @@ function Workspace(props: WorkspaceProps) {
   const fork = () => {
     second.reset(first.build());
     setForked(true);
-    setView(phone() ? 'Second' : 'Side by side');
+    setShownBuilds(phone() ? 'Second' : 'Side by side');
     setSide('second');
   };
   const unfork = () => {
     setForked(false);
-    setView('First');
+    setShownBuilds('First');
     setSide('first');
   };
-  const shows = (s: Side) => (!forked() ? s === 'first' : view() === 'Side by side' || view().toLowerCase() === s);
+  const shows = (s: Side) =>
+    !forked() ? s === 'first' : shownBuilds() === 'Side by side' || shownBuilds().toLowerCase() === s;
 
   onSettled(() => {
-    const media = matchMedia(PHONE);
+    const media = matchMedia(PHONE_WIDTH_QUERY);
     const onMedia = () => setPhone(media.matches);
     onMedia();
     media.addEventListener('change', onMedia);
@@ -144,7 +139,6 @@ function Workspace(props: WorkspaceProps) {
       }
     };
     window.addEventListener('keydown', onKey);
-    // A Share link pasted into this tab changes only the hash: open its Build (undo returns to the one before).
     const onHash = () => {
       if (location.hash === `#b=${firstCode()}`) return;
       void buildFromHash(props.staticEngine, location.hash).then(({ build, stale: s }) => {
@@ -160,12 +154,11 @@ function Workspace(props: WorkspaceProps) {
     };
   });
 
-  /** The six scores at the Build's last level, marked where the two Builds differ. */
-  const stats = (p: PlannerState, other?: PlannerState): Stat[] =>
+  const lastLevelScores = (p: PlannerState, other?: PlannerState): Stat[] =>
     ATTRIBUTES.map((a) => {
       const value = p.walked().unit.permanent(a);
       return {
-        name: SHORT[a] ?? a,
+        name: ATTRIBUTE_ABBREVIATIONS[a] ?? a,
         value,
         ...(other && forked() && { diff: other.walked().unit.permanent(a) !== value }),
       };
@@ -190,7 +183,6 @@ function Workspace(props: WorkspaceProps) {
         return 'Gear';
     }
   };
-  /** The panel for a focus, mounted fresh for each one. */
   const panelOf = (f: Focus) => {
     const p = f.side === 'first' ? first : second;
     const sel = f.selected;
@@ -228,7 +220,7 @@ function Workspace(props: WorkspaceProps) {
       <Show when={forked()}>
         <h2 class="planner-build__title">{s === 'first' ? 'First Build' : 'Second Build'}</h2>
       </Show>
-      <StatBlock stats={stats(p, other)} />
+      <StatBlock stats={lastLevelScores(p, other)} />
       <Timeline planner={p} selected={side() === s ? selected() : undefined} onSelect={select(s)} />
       <div class="planner-build__more">
         <Button onClick={() => select(s)({ kind: 'add' })}>Add a level or rank</Button>
@@ -254,9 +246,9 @@ function Workspace(props: WorkspaceProps) {
         <Show when={forked()} fallback={<Button onClick={fork}>Fork this Build</Button>}>
           <CompareToggle
             segments={phone() ? ['First', 'Second'] : ['First', 'Second', 'Side by side']}
-            value={view()}
+            value={shownBuilds()}
             onChange={(v) => {
-              setView(v);
+              setShownBuilds(v);
               if (v !== 'Side by side') setSide(v === 'First' ? 'first' : 'second');
             }}
           />
@@ -296,7 +288,7 @@ function Workspace(props: WorkspaceProps) {
           </p>
         )}
       </Show>
-      <div class={['planner-body', { 'planner-body--compare': forked() && view() === 'Side by side' }]}>
+      <div class={['planner-body', { 'planner-body--compare': forked() && shownBuilds() === 'Side by side' }]}>
         <div class="planner-builds">
           <Show when={shows('first')}>{column('first', first, second)}</Show>
           <Show when={forked() && shows('second')}>{column('second', second, first)}</Show>

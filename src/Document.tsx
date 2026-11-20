@@ -1,8 +1,6 @@
 import type { ParentProps } from 'solid-js';
 import { HydrationScript } from '@solidjs/web';
 
-// The document shell (the index.html replacement), picked up by the src/Document.* convention; it must render the
-// full <html>. <HydrationScript /> activates under `ssr: true`.
 export default function Document(props: ParentProps) {
   return (
     <html lang="en">

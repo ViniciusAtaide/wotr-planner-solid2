@@ -1,9 +1,6 @@
-// ADR 0002's marking (ticket 03c): under the Gear opt-in, a choice the game allows only because of the Gear is marked
-// with the worn items whose bonus it needs, a later choice resting on it is marked with the same items, and class
-// choices are marked like feats (Walker.markGearDependent). Real data, cited by blueprint, and hand-built data.
 import { describe, expect, it } from 'vitest';
 import { placeKey, type Build, type Pick } from '../build';
-import type { BlueprintArchetype, BlueprintCharacterClass } from '../data/types';
+import type { BlueprintArchetype, BlueprintCharacterClass } from '../data';
 import {
   BASIC_FEAT_SELECTION,
   build,
@@ -42,8 +39,6 @@ const marked = (w: Walk) =>
 
 describe('ADR 0002: what a choice needs of the Gear', () => {
   it('marks a pick with the item that raises the score it reads, only when the score falls short without it', () => {
-    // Dodge 97e216dbb46ae3c4faef90cf6bbe6fd5 needs Dexterity 13. BeltOfDexterity2 b6af4c1834999e74497b41588d1071cd
-    // gives Dexterity +2 and HeadbandOfCharisma2 a3e8e907908ca7a40ac6da78e70bf33d Charisma +2: only the belt is marked.
     const dodge = (dex: number) =>
       walk(
         data,
@@ -61,8 +56,6 @@ describe('ADR 0002: what a choice needs of the Gear', () => {
   });
 
   it('marks a later pick that rests on a gear-dependent pick with its items', () => {
-    // DodgeMythicFeat 3812d9ca1377c014c97fb3ac421ba9e6 needs only Dodge (PrerequisiteFeature), taken at M2 in
-    // MythicFeatSelection 9ee0f6745f555484299b0a1563b99d81.
     const w = walk(
       data,
       build({
@@ -86,7 +79,6 @@ describe('ADR 0002: what a choice needs of the Gear', () => {
   });
 
   it('marks a class level whose prerequisites rest on a gear-dependent pick', () => {
-    // StalwartDefenderClass d5917881586ff1d4d96d5b7cebda9464 needs Dodge, Toughness, Endurance and base attack 7.
     const stalwart: Build = build({
       scores: scores({ Dexterity: 12 }),
       levels: [...levels(FIGHTER, 7), { class: STALWART_DEFENDER }],
@@ -128,9 +120,6 @@ describe('ADR 0002: what a choice needs of the Gear', () => {
     });
 
     it('marks an archetype and a class whose stat prerequisite needs the belt', () => {
-      // TwoHandedFighterArchetype 84643e02a764bff4a9c1aba333a53c89 and StalwartDefenderClass, each given Dexterity 13 as
-      // their only prerequisite besides the class's own. The fighter levels start at 2: the Gear goes on in the
-      // ApplyClass band, after the Archetype band, so a first level's archetype never rests on it.
       const TWO_HANDED = '84643e02a764bff4a9c1aba333a53c89';
       const archetype = data.blueprints.get(TWO_HANDED) as BlueprintArchetype;
       const cls = data.blueprints.get(STALWART_DEFENDER) as BlueprintCharacterClass;

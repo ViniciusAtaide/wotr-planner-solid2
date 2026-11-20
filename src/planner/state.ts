@@ -1,14 +1,10 @@
-// One Build being planned: its state and history. Every change goes through E (engine/edits.ts), so no sequence of UI
-// actions reaches an impossible Build: a plain edit applies at once; one that breaks later picks opens the Cascade
-// preview (map 11), which applies only on confirm; one a cascade can't mend is refused with R's words.
 import { createMemo, createSignal } from 'solid-js';
 import { placeKey, type Build, type Pick } from '~engine/build';
 import { allows, cascade, type Breaks, type Edit } from '~engine/edits';
-import type { Engine } from '~engine/mcp/tools';
+import type { Engine } from '~engine/mcp';
 import { nameOf, refusal } from '~engine/refusals';
-import { walk } from '~engine/walk/walk';
+import { walk } from '~engine/walk';
 
-/** A Cascade edit waiting for its confirm: what it clears, and the Build it leaves. */
 export interface Pending {
   readonly title: string;
   readonly summary: string;
@@ -16,7 +12,6 @@ export interface Pending {
   readonly build: Build;
 }
 
-/** A place in words: "Level 8", "Rank 3". */
 export function placeWords(p: Pick['slot']['place']): string {
   return 'level' in p ? `Level ${p.level}` : `Rank ${p.rank}`;
 }
@@ -26,7 +21,6 @@ export function createPlanner(engine: Engine, initial: Build) {
   const [past, setPast] = createSignal<readonly Build[]>([]);
   const [future, setFuture] = createSignal<readonly Build[]>([]);
   const [pending, setPending] = createSignal<Pending | undefined>();
-  /** Why the last edit couldn't apply, in R's words. */
   const [notice, setNotice] = createSignal<readonly string[] | undefined>();
   const walked = createMemo(() => walk(engine.data, build(), engine.G));
 
@@ -38,7 +32,6 @@ export function createPlanner(engine: Engine, initial: Build) {
     setNotice(undefined);
   };
 
-  /** What an edit breaks, in words: each pick with its place, each other choice with R's reason. */
   const brokenWords = (b: Breaks): string[] => [
     ...b.picks.map((p) => `${nameOf(engine.data, p.feature)} (${placeWords(p.slot.place)})`),
     ...b.others.map(
@@ -46,10 +39,6 @@ export function createPlanner(engine: Engine, initial: Build) {
     ),
   ];
 
-  /**
-   * Makes an edit: at once when it breaks nothing; through the Cascade preview when clearing picks mends what it
-   * breaks; otherwise refused, naming what it would break.
-   */
   const edit = (e: Edit, title: string) => {
     const now = build();
     const verdict = allows(engine.data, now, e, engine.G);
@@ -101,9 +90,7 @@ export function createPlanner(engine: Engine, initial: Build) {
       setBuild(next);
       setPending(undefined);
     },
-    /** Replaces the Build outright, as opening a link does. Undo still reaches the one before. */
     replace: (next: Build) => commit(next),
-    /** Starts over from a Build with no history: a fork's copy. */
     reset: (next: Build) => {
       setPast([]);
       setFuture([]);

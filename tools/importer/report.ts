@@ -1,6 +1,4 @@
-// The importer's report (ticket 02, "The report lists"), written to data/report.md. It is deterministic like the
-// data, so a rerun on the same dump leaves it unchanged. It holds asset names, counts and display names only.
-import type { CheckedData } from '~engine/data/load';
+import type { CheckedData } from '~engine/load';
 import type { KeepSummary, Tally } from './import';
 import type { GrantorCheck } from './grantors';
 import { RESEARCH_COUNT, type ItemSource } from './items';
@@ -12,14 +10,10 @@ import { sharedNameExceptions } from './shared-names';
 export interface ReportInput {
   readonly reached: number;
   readonly tally: Tally;
-  /** The checked data, when the import passed its checks. */
   readonly data: CheckedData | undefined;
   readonly grantors: GrantorCheck | undefined;
-  /** What the keep rule did, when the import got that far. */
   readonly keep: KeepSummary | undefined;
-  /** The shared names and how each was qualified, when the data loaded. */
   readonly names?: Qualified | undefined;
-  /** The Gear items' shared names, twins and how each was qualified, when the data loaded. */
   readonly gearNames?: GearNames | undefined;
 }
 
@@ -142,7 +136,6 @@ export function buildReport({ reached, tally, data, grantors, keep, names, gearN
   return `${lines.join('\n')}\n`;
 }
 
-/** The shared-names section (build ticket 02c): counts by source, the exceptions, and every group. */
 function sharedNames(names: Qualified, data: CheckedData): string[] {
   const asset = (guid: string) => data.blueprints.get(guid)?.assetName ?? '?';
   const members = names.groups.flatMap((g) => g.members);
@@ -183,7 +176,6 @@ function sharedNames(names: Qualified, data: CheckedData): string[] {
   return lines;
 }
 
-/** The Gear section (map ticket 29, build ticket 02f): counts by rule, the twins, and every group of items. */
 function gearShared(gear: GearNames, data: CheckedData): string[] {
   const asset = (guid: string) => data.blueprints.get(guid)?.assetName ?? '?';
   const members = gear.groups.flatMap((g) => g.members);

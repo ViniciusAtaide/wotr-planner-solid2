@@ -1,13 +1,11 @@
-// The MCP's tools end to end (build ticket 05): an agent takes a Build from start_build to level 20 and Mythic rank 10
-// through the tools alone, with no pick failing validation; every step's code opens the Build it returned.
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
 import { placeKey, slotKey, type Build, type Place } from '../build';
 import { decodeBuild, encodeBuild } from '../codec';
-import { loadData } from '../data/load';
-import { readDataDir } from '../data/read-dir';
-import { jackInTheGreen } from '../gold/jack-in-the-green';
-import { walk } from '../walk/walk';
+import { loadData } from '../load';
+import { readDataDir } from '../data-dir';
+import { jackInTheGreen } from '../gold';
+import { walk } from '../walk';
 import {
   engineOf,
   equip,
@@ -29,11 +27,12 @@ import {
 const files = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)));
 const e = engineOf(loadData(files.files, files.overrides));
 
-/** Jack's known gap (map 22): SpellSpecializationFirst f327a765a4353d04f872482ef3e48c35 at L11, and the slot it opens. */
-const GAP = 'f327a765a4353d04f872482ef3e48c35';
+const SPELL_SPECIALIZATION_FIRST = 'f327a765a4353d04f872482ef3e48c35';
 const jack: Build = {
   ...jackInTheGreen.build,
-  picks: jackInTheGreen.build.picks.filter((p) => p.feature !== GAP && p.slot.selection !== GAP),
+  picks: jackInTheGreen.build.picks.filter(
+    (p) => p.feature !== SPELL_SPECIALIZATION_FIRST && p.slot.selection !== SPELL_SPECIALIZATION_FIRST,
+  ),
 };
 
 function ok<T>(r: T | ToolRefusal, step: string): T {
@@ -41,7 +40,6 @@ function ok<T>(r: T | ToolRefusal, step: string): T {
   return r;
 }
 
-/** Every place of a Build, in walk order: each level, then the ranks placed at it. */
 function timeline(b: Build): Place[] {
   const out: Place[] = [];
   const ranks = b.ranks ?? [];
@@ -100,7 +98,6 @@ describe('the MCP, end to end', () => {
         if ('preview' in r) throw new Error('a strict pick never previews');
         step = r;
       }
-      // Every code a step returns opens the Build it returned (its picks in slot order, as the code holds them).
       const opened = await decodeBuild(e.data, step.code);
       expect(await encodeBuild(e.data, opened)).toBe(step.code);
       expect(new Set(opened.picks.map((q) => JSON.stringify(q)))).toEqual(
@@ -131,7 +128,6 @@ describe('the MCP, end to end', () => {
     expect(listed.openTotal).toBeGreaterThan(25);
     expect(Object.values(listed.closedByReason).reduce((a, b) => a + b, 0)).toBeGreaterThan(0);
     expect(listed.closed).toBeUndefined();
-    // PowerAttackFeature needs Strength 13; an empty Build's scores are 10.
     const refused = await pick(e, { code: fighter.code, slot, feature: '9972f33f977fc724c838e59641b2fca5' });
     expect(refused).toEqual({
       refused: true,
@@ -149,7 +145,6 @@ describe('the MCP, end to end', () => {
     });
     const code = (await start_build(e)).code;
     const fighter = ok(await level_up(e, { code, class: '48ac8db94d5de7645906c7d0ad3bcfbd' }), 'level_up');
-    // FighterClass's base attack table gives 1 at level 1.
     expect(ok(await sheet(e, { code: fighter.code }), 'sheet')).toMatchObject({ level: 1, baseAttackBonus: 1 });
   });
 });

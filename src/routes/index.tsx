@@ -1,8 +1,7 @@
 import { Title } from '@solidjs/meta';
 
-import Planner from '../planner/Planner';
+import { Planner } from '../planner';
 
-/** The planner's page: one page at `/`, the Build in `#b=<code>` (map 13). */
 export default function Home() {
   return (
     <>

@@ -1,10 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { deriveTwins } from '~engine/data/twins';
-import type { Blueprint, Guid, Override } from '~engine/data/types';
+import { deriveTwins } from '~engine/data';
+import type { Blueprint, Guid, Override } from '~engine/data';
 import { qualifyGear } from './gear-names';
 
-// Hand-built from the game's own items (build ticket 02f, map ticket 29): each keeps its GUID and asset name from the
-// dump, with only the fields the Gear rules read.
 const r = (guid: Guid) => `!bp_${guid}`;
 const blueprint = (guid: Guid, $type: string, assetName: string, name: string | undefined, fields: object = {}) =>
   [guid, { $type, guid, assetName, ...(name === undefined ? {} : { name }), Components: [], ...fields }] as const;
@@ -31,7 +29,6 @@ const blueprints = new Map<Guid, Blueprint>(
   [
     blueprint('15a85e67b7d69554cab9ed5830d0268e', 'BlueprintCharacterClass', 'AeonMythicClass', 'Aeon'),
     blueprint('a5a9fe8f663d701488bd1db8ea40484e', 'BlueprintCharacterClass', 'AngelMythicClass', 'Angel'),
-    // The Bound of Possibility: one cloak per Mythic path; the Golden Dragon's has no restriction.
     blueprint(AEON_CLOAK, 'BlueprintItemEquipmentShoulders', 'Artifact_AeonCloakItem', 'The Bound of Possibility', {
       Components: requiresClass('15a85e67b7d69554cab9ed5830d0268e'),
       m_Enchantments: [],
@@ -43,7 +40,6 @@ const blueprints = new Map<Guid, Blueprint>(
     blueprint(DRAGON_CLOAK, 'BlueprintItemEquipmentShoulders', 'Artifact_DragonCloakItem', 'The Bound of Possibility', {
       m_Enchantments: [],
     }),
-    // Adamantine Full Plate +2 and its Hellknight copy: equal in everything but GUID and asset name.
     blueprint('afd9065539b3ac5499eddca923654c4b', 'BlueprintArmorType', 'FullplateType', 'Heavy Armor — Full Plate'),
     blueprint('d1b05b901bab9524388ebfa0435902a6', 'BlueprintShieldType', 'HeavyShieldType', undefined),
     ...[FULL_PLATE, FULL_PLATE_HELLKNIGHT].map((guid, i) =>
@@ -59,7 +55,6 @@ const blueprints = new Map<Guid, Blueprint>(
         },
       ),
     ),
-    // Executioner of Evil: one relic per axe, told apart by the weapon type's name.
     blueprint('2bc77aa47f97de348aefcf03ec8fa43b', 'BlueprintWeaponType', 'Battleaxe', 'Battleaxe'),
     blueprint('54e7473ff73910c47812fd39c897dc1a', 'BlueprintWeaponType', 'Handaxe', 'Handaxe'),
     ...[
@@ -73,7 +68,6 @@ const blueprints = new Map<Guid, Blueprint>(
         m_SecondWeapon: null,
       }),
     ),
-    // Finnean the Talking Weapon: one weapon per type and stage, the stages differing in their enhancement bonus.
     blueprint('b1cbf457fd471d148b39ae56667f405a', 'BlueprintWeaponType', 'Bardiche', 'Bardiche'),
     blueprint('7a14a1b224cd173449cb7ffc77d5f65c', 'BlueprintWeaponType', 'Glaive', 'Glaive'),
     ...[ENHANCEMENT_1, ENHANCEMENT_3].map((guid, i) =>
@@ -94,7 +88,6 @@ const blueprints = new Map<Guid, Blueprint>(
         m_SecondWeapon: null,
       }),
     ),
-    // The Bashing Shield and its armour half share a name; the half is worn only as part of the shield.
     blueprint(BASHING_SHIELD, 'BlueprintItemShield', 'BashingShield', 'Bashing Shield', {
       m_ArmorComponent: r(BASHING_SHIELD_ARMOR),
       m_WeaponComponent: null,
@@ -112,7 +105,6 @@ describe('Gear names (map ticket 29)', () => {
   const member = (guid: Guid) => gear.groups.flatMap((g) => g.members).find((m) => m.guid === guid);
 
   it('qualifies The Bound of Possibility by the Mythic path each cloak requires, the unrestricted one staying bare', () => {
-    // Artifact_AeonCloakItem b24d6185acea1f949b026c3b58e47947 requires AeonMythicClass (EquipmentRestrictionClass).
     expect(gear.names.get(AEON_CLOAK)).toBe('The Bound of Possibility (Aeon)');
     expect(member(AEON_CLOAK)?.source).toBe('restriction');
     expect(gear.names.get(ANGEL_CLOAK)).toBe('The Bound of Possibility (Angel)');
@@ -120,7 +112,6 @@ describe('Gear names (map ticket 29)', () => {
   });
 
   it('collapses the Hellknight copy of a plain armour into one choice, offered as the lowest GUID', () => {
-    // AdamantineFullplateStandartPlus2_Hellknight 29f9eb542c9985f4b904add8d843caf1 has the lower GUID.
     expect(data.twins.get(FULL_PLATE)).toBe(FULL_PLATE_HELLKNIGHT);
     expect(member(FULL_PLATE)).toMatchObject({ source: 'twin', twinOf: FULL_PLATE_HELLKNIGHT });
     expect(member(FULL_PLATE_HELLKNIGHT)?.source).toBe('bare');
@@ -133,8 +124,6 @@ describe('Gear names (map ticket 29)', () => {
   });
 
   it("tells Finnean's stages apart by their weapon type and enhancement bonus together, so none are twins", () => {
-    // FinneanBardicheStage1 carries Enhancement1 (WeaponEnhancementBonus 1), Stage2 Enhancement3: +1 in chapter 1 and
-    // +3 in chapter 3 (GameFAQs items.txt). Neither the type nor the bonus alone tells the four apart.
     expect(data.twins.has(FINNEAN_BARDICHE_2)).toBe(false);
     expect(gear.names.get(FINNEAN_BARDICHE_1)).toBe('Finnean the Talking Weapon (Bardiche +1)');
     expect(gear.names.get(FINNEAN_BARDICHE_2)).toBe('Finnean the Talking Weapon (Bardiche +3)');

@@ -1,0 +1,43 @@
+import type { Cites } from '~engine/cite';
+
+export const cites = {
+  statType: ['EntitySystem/Stats/StatType.cs StatType'],
+  prerequisite: ['Blueprints/Classes/Prerequisites/Prerequisite.cs Prerequisite'],
+  modifierDescriptor: ['Enums/ModifierDescriptor.cs ModifierDescriptor'],
+  contextValueType: ['UnitLogic/Mechanics/ContextValueType.cs ContextValueType'],
+  contextValue: ['UnitLogic/Mechanics/ContextValue.cs Calculate (ValueType, Value)'],
+  otherValueTypes: ['UnitLogic/Mechanics/ContextValue.cs Calculate'],
+  activatableAbilityGroup: ['UnitLogic/ActivatableAbilities/ActivatableAbilityGroup.cs ActivatableAbilityGroup'],
+  abilityRankType: ['Enums/AbilityRankType.cs AbilityRankType'],
+  rankedContextValue: ['UnitLogic/Mechanics/ContextValue.cs Calculate (ValueRank)'],
+  contextRankProgression: ['UnitLogic/Mechanics/Components/ContextRankProgression.cs ContextRankProgression'],
+  featureGroup: ['Blueprints/Classes/FeatureGroup.cs FeatureGroup'],
+  weaponCategory: ['Enums/WeaponCategory.cs WeaponCategory'],
+  armorProficiencyGroup: ['Blueprints/Items/Armors/ArmorProficiencyGroup.cs ArmorProficiencyGroup'],
+  alignmentMask: ['UnitLogic/Alignments/AlignmentMaskType.cs AlignmentMaskType'],
+  weaponFighterGroupFlags: ['Blueprints/Items/Weapons/WeaponFighterGroupFlags.cs WeaponFighterGroupFlags'],
+  spellSchool: ['Blueprints/Classes/Spells/SpellSchool.cs SpellSchool'],
+  UnitClass: ['Designers/EventConditionActionSystem/Conditions/UnitClass.cs CheckCondition (LimitMaxLevel, MaxLevel)'],
+  conditionsChecker: ['ElementsSystem/ConditionsChecker.cs Check (Operation, Conditions)'],
+  levelEntries: ['Blueprints/Classes/LevelEntry.cs LevelEntry'],
+  WORN_SLOT: ['Blueprints/Items/BlueprintItem.cs CollectEnchantments'],
+  ARMOR_TYPE_FIELDS: [
+    'Blueprints/Items/Weapons/BlueprintWeaponType.cs Enchantments (m_Enchantments)',
+    'Blueprints/Items/Armors/BlueprintArmorType.cs Enchantments (m_Enchantments)',
+  ],
+  'BlueprintBuff.Stacking': [
+    'UnitLogic/Buffs/Blueprints/StackingType.cs StackingType',
+    'UnitLogic/Buffs/Buff.cs AddRank',
+  ],
+  'AddFeatureOnClassLevel.m_Class': ['Designers/Mechanics/Facts/ReplaceCasterLevelOfAbility.cs CalculateClassLevel'],
+  'BuffExtraEffects.m_CheckedBuffList': [
+    'Designers/Mechanics/Facts/BuffExtraEffects.cs CheckHadPrerequiredBuff (m_CheckedBuffList)',
+  ],
+  'itemFacts.bonus': [
+    'Designers/GameHelper.cs GetWeaponEnhancementBonus',
+    'Designers/GameHelper.cs GetArmorEnhancementBonus',
+    'Designers/GameHelper.cs GetItemEnhancementBonus',
+  ],
+  naturalWeapons: ['Items/ItemEntityWeapon.cs IsLootable'],
+  qualifyNames: ['UnitLogic/Feature.cs Hidden'],
+} satisfies Cites;

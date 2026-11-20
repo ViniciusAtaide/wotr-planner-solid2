@@ -11,14 +11,17 @@
     "start": "bun dist/server/node.js",
     "serve": "bun --bun vite preview",
     "test": "vitest",
-    "lint": "bun --bun oxlint src engine tools scripts",
+    "lint": "bun --bun oxlint src engine tools vite",
     "typecheck": "bun --bun tsc --noEmit -p .",
     "format": "bun --bun oxfmt",
     "format:check": "bun --bun oxfmt --check",
     "import": "bun tools/importer/main.ts",
     "engine-run": "bun --tsconfig-override=tsconfig.json",
-    "census": "bun scripts/dump/census.ts",
-    "check": "bun run format:check && bun run lint && bun run typecheck && bun run import -- --check && vitest run --project engine && vitest run --project client --project server"
+    "check:repo": "bun tools/repo-checks/main.ts",
+    "census": "bun tools/importer/census.ts",
+    "show": "bun tools/dump/show.mjs",
+    "mcp-stdio": "bun src/mcp-server/stdio.ts",
+    "check": "bun run format:check && bun run lint && bun run check:repo && bun run typecheck && bun run import -- --check && vitest run --project engine && vitest run --project client --project server"
   },
   "license": "MIT",
   "devDependencies": {
@@ -31,6 +34,7 @@
     "eslint-plugin-solid": "~0.20.0",
     "filesystem-routing": "0.5.0",
     "jsdom": "^31.0.0",
+    "oxc-parser": "0.139.0",
     "oxfmt": "0.76.0",
     "oxlint": "~1.92.0",
     "typescript": "^7.0.2",

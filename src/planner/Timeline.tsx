@@ -1,16 +1,12 @@
-// The Timeline (map 13): one row per character level, with each Mythic rank at its Rank level, and a chip for every
-// slot the walk opens there, filled or empty. Refusal text never shows here; it belongs to the picker.
 import { For, Show } from 'solid-js';
 import { placeKey, slotKey, type Place, type SlotId } from '~engine/build';
-import { expectedLevel } from '~engine/mcp/tools';
+import { expectedLevel } from '~engine/mcp';
 import { nameOf } from '~engine/refusals';
 
-import LevelRow, { Timeline as TimelineFrame, type PickChip } from '../components/design/LevelRow';
-import RankMarker from '../components/design/RankMarker';
+import { LevelRow, RankMarker, Timeline as TimelineFrame, type PickChip } from '../design';
 import type { Planner } from './state';
 import { optionName, ordinal } from './words';
 
-/** What the side panel shows. */
 export type Selection =
   | { readonly kind: 'slot'; readonly slot: SlotId }
   | { readonly kind: 'level'; readonly level: number }
@@ -19,8 +15,7 @@ export type Selection =
   | { readonly kind: 'add' }
   | { readonly kind: 'gear' };
 
-/** Each place of the Build in walk order: every level, then the ranks placed at it. */
-function timeline(levels: number, rankLevels: readonly number[]): Place[] {
+function placesInWalkOrder(levels: number, rankLevels: readonly number[]): Place[] {
   const out: Place[] = [];
   let r = 0;
   for (let l = 1; l <= levels; l++) {
@@ -40,11 +35,10 @@ export interface TimelineProps {
 export default function Timeline(props: TimelineProps) {
   const data = () => props.planner.engine.data;
   const places = () =>
-    timeline(
+    placesInWalkOrder(
       props.planner.build().levels.length,
       (props.planner.build().ranks ?? []).map((r) => r.level),
     );
-  /** The chips of a place: every slot the walk opened there, with its pick or what it waits for. */
   const chips = (place: Place): PickChip[] => {
     const w = props.planner.walked();
     const gear = new Set(w.gearDependent.flatMap((d) => (d.slot ? [slotKey(d.slot)] : [])));

@@ -1,25 +1,17 @@
-// The sourced items (map ticket 12): the equipment blueprints the dump traces to a source in play. The dump records a
-// source as a reference from a container or a giving action to the item; the item itself carries no "obtainable" flag.
-// The method, and every source below, is the research's (.scratch/wotr-planner/research/obtainable-items.md, "How to
-// redo the count"), which counted 3,397 on this dump.
-import { kindOf, references, refGuid, type Guid } from '~engine/data/types';
+import { kindOf, references, refGuid, type Guid } from '~engine/data';
 import type { DumpIndex } from './import';
 
-/** What the research counted: the import fails when the sourced count strays further than `TOLERANCE` from it. */
 export const RESEARCH_COUNT = 3397;
 const TOLERANCE = 34;
 
-/** The equipment types: weapon, armour, shield and the eleven worn slots, as `kindOf` files them under `items`. */
 export const EQUIPMENT_TYPES: ReadonlySet<string> = new Set(
   Object.entries(kindOf)
     .filter(([, kind]) => kind === 'items')
     .map(([type]) => type),
 );
 
-/** A hidden item (Finnean's base) gives its forms (ItemPolymorph) when a source gives it, though it is no equipment. */
 const HIDDEN_ITEM = 'BlueprintHiddenItem';
 
-/** Where the dump says an item comes from: the research's labels. */
 export type ItemSource =
   | 'chest'
   | 'vendor'
@@ -40,7 +32,6 @@ const LOOT_TABLES: ReadonlySet<string> = new Set([
   'TrashLootSettings',
 ]);
 
-/** The blueprints whose dialogues, quests and DLC rewards give items through a scripted action. */
 const SCRIPT_HOLDERS: ReadonlySet<string> = new Set([
   'BlueprintCue',
   'BlueprintAnswer',
@@ -51,23 +42,14 @@ const SCRIPT_HOLDERS: ReadonlySet<string> = new Set([
   'BlueprintFeature',
 ]);
 
-/**
- * A companion's body slots and starting inventory (BlueprintUnit): what the companion joins with. Additional limbs
- * are natural weapons, so they are left out. `m_EmptyHandWeapon` is kept, as the research did: the one item it brings
- * in, WeaponEmptyHand 20375b5a0c9243d45966bd72c690ab74, is dropped by its override file, as map ticket 12's hand-kept
- * list says, and `naturalWeapons` holds the import to that.
- */
 const COMPANION_GEAR =
   /^m_(PrimaryHand|SecondaryHand|PrimaryHandAlternative\d|SecondaryHandAlternative\d|Armor|Shirt|Belt|Head|Glasses|Feet|Gloves|Neck|Ring1|Ring2|Wrist|Shoulders|EmptyHandWeapon|StartingInventory)$/;
 
 export interface ItemSourcing {
-  /** The blueprints whose JSON `source` reads: items, weapon types, and whatever names an item, a table or a unit. */
   readonly want: ReadonlySet<Guid>;
-  /** The sourced equipment items, each with its sources. */
   source(json: ReadonlyMap<Guid, Record<string, unknown>>): Map<Guid, Set<ItemSource>>;
 }
 
-/** Prepares the sourcing from the dump index: which blueprints it reads, and which tables something references. */
 export function itemSourcing(index: DumpIndex): ItemSourcing {
   const typeOf = (g: Guid) => index.types.get(g) ?? '';
   const isItem = (g: Guid) => EQUIPMENT_TYPES.has(typeOf(g)) || typeOf(g) === HIDDEN_ITEM;
@@ -87,7 +69,6 @@ export function itemSourcing(index: DumpIndex): ItemSourcing {
   return {
     want,
     source(json) {
-      // Only the blueprints `want` names matter; each one's references are walked once.
       const walked = new Map<Guid, readonly { enclosing: string; field: string; to: Guid }[]>();
       for (const g of want) {
         if (!json.has(g)) continue;
@@ -98,15 +79,13 @@ export function itemSourcing(index: DumpIndex): ItemSourcing {
         );
       }
       const refsOf = (g: Guid) => walked.get(g) ?? [];
-      // Companions: the units a Recruit, RecruitInactive or ExchangeRecruits action names.
-      const companions = new Set<Guid>();
-      // Midnight Isles tables that give at play time: BlueprintDungeonRoot.m_Loot, DungeonAddLootToVendor on a unit,
-      // and the island rewards a BlueprintDungeonExpedition names. The filter lists only drive the editor.
+      const recruitedCompanions = new Set<Guid>();
       const liveDungeon = new Set<Guid>();
       for (const g of walked.keys()) {
         for (const { enclosing, field, to } of refsOf(g)) {
-          if (/^(Recruit|RecruitInactive)$/.test(enclosing) && field === 'm_CompanionBlueprint') companions.add(to);
-          if (enclosing === 'ExchangeRecruits' && field === 'm_NewUnit') companions.add(to);
+          if (/^(Recruit|RecruitInactive)$/.test(enclosing) && field === 'm_CompanionBlueprint')
+            recruitedCompanions.add(to);
+          if (enclosing === 'ExchangeRecruits' && field === 'm_NewUnit') recruitedCompanions.add(to);
           if (typeOf(g) === 'BlueprintDungeonRoot' && field === 'm_Loot') liveDungeon.add(to);
           if (enclosing === 'DungeonAddLootToVendor') liveDungeon.add(to);
           if (typeOf(g) === 'BlueprintDungeonExpedition' && typeOf(to) === 'BlueprintDungeonIslandRewardLoot')
@@ -126,15 +105,13 @@ export function itemSourcing(index: DumpIndex): ItemSourcing {
           if (!isItem(to)) continue;
           const source = sourceOf(type, enclosing, field, {
             live: referenced.has(g),
-            companion: companions.has(g),
+            companion: recruitedCompanions.has(g),
             liveDungeon: liveDungeon.has(g),
           });
           if (source !== undefined) give(to, source);
         }
       }
 
-      // Forms and parts count when their parent does: an ItemPolymorph's forms, a double weapon's second end, and a
-      // shield's armour half and bash weapon.
       const queue = [...sources.keys()];
       for (let g = queue.pop(); g !== undefined; g = queue.pop()) {
         for (const { enclosing, field, to } of refsOf(g)) {
@@ -149,18 +126,12 @@ export function itemSourcing(index: DumpIndex): ItemSourcing {
         }
       }
 
-      // Hidden items are no equipment.
       for (const g of sources.keys()) if (!EQUIPMENT_TYPES.has(typeOf(g))) sources.delete(g);
       return sources;
     },
   };
 }
 
-/**
- * The source a reference gives its item from, by the referring blueprint's type, the object around the reference
- * and the field, or `undefined` for a reference that doesn't give (a check, a removal, a body weapon, a cutscene, a
- * developer preset or a save migration). `live` says something references the referring blueprint.
- */
 function sourceOf(
   type: string,
   enclosing: string,
@@ -196,11 +167,6 @@ function sourceOf(
   return undefined;
 }
 
-/**
- * The held items whose weapon type is natural: never Gear, since a natural weapon is never looted
- * (Items/ItemEntityWeapon.cs IsLootable). Map ticket 12 drops each through the hand-kept list, so the import fails on
- * any one no `remove` override drops.
- */
 export function naturalWeapons(items: Iterable<Guid>, json: ReadonlyMap<Guid, Record<string, unknown>>): Guid[] {
   return [...items].filter((g) => {
     const type = refGuid(json.get(g)?.m_Type);
@@ -208,7 +174,6 @@ export function naturalWeapons(items: Iterable<Guid>, json: ReadonlyMap<Guid, Re
   });
 }
 
-/** The import problem when the sourced count strays from the research's, or `undefined`. */
 export function checkSourcedCount(count: number): string | undefined {
   if (Math.abs(count - RESEARCH_COUNT) <= TOLERANCE) return undefined;
   return `the dump traces ${count} equipment items to a source, but the research counted ${RESEARCH_COUNT}; investigate before writing (obtainable-items.md)`;
