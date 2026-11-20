@@ -55,3 +55,4 @@ Coordinator, 2026-11-20, on ticket 05's questions and the user's standing instru
 - **`sheet` leaves out HP.** The table promised only numbers the walk already computes, and the walk computes no HP. No prerequisite reads HP. Build ticket 06 may add it from the game's method.
 - **`search`** is case-insensitive over shown names (map 19), with an optional kind from the data's `kindOf`. Each hit gives its GUID, name and the basic description's first line.
 - **Transport:** the official `@modelcontextprotocol/sdk` serves `/mcp` (streamable HTTP) and the stdio wrapper. The tools are plain engine functions.
+- **`level_up` takes an optional `increase`:** the ability score raised at levels 4, 8, 12… No other tool in the table could set it (build ticket 05).
