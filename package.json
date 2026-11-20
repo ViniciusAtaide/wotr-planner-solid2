@@ -11,7 +11,7 @@
     "start": "bun dist/server/node.js",
     "serve": "bun --bun vite preview",
     "test": "vitest",
-    "lint": "bun --bun oxlint src engine tools vite",
+    "lint": "bun --bun oxlint --deny-warnings src engine tools vite",
     "typecheck": "bun --bun tsc --noEmit -p .",
     "format": "bun --bun oxfmt",
     "format:check": "bun --bun oxfmt --check",
