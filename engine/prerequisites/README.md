@@ -96,7 +96,6 @@ Besides the readers:
 
 ## Tests
 
-- `prerequisites.test.ts` reads the hand-written fixture in `engine/load/fixtures/small/`: a blueprint without prerequisites gives no leaves; a required fact keeps its group and its `CheckInProgression`; an `Any` group and a forbidden fact come back in the game's component order.
 - `prerequisites.data.test.ts` runs P on the committed `data/`: one game blueprint per reader that does more than name a fact. Each expectation is that blueprint's own component as the dump has it:
   - `MythicStartingClass` `247aa787806d5da4f89cfc3dff0b217f`: a `PrerequisiteClassLevel` with `Not`, so the class closes from its own 7th level on.
   - `CriticalMastery` `fc85925cd241dd0408ab2f4cb171b7e3`: two critical feats from its list (`Amount` 2).

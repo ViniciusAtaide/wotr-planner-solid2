@@ -82,7 +82,7 @@ props types and helper types:
 ## Design notes
 
 - `tokens.css` is the only file under `src/` that writes a color; everything else uses its custom properties
-  (`colors.test.tsx` holds the rule). It sets `color-scheme: dark`, so native controls (selects, scrollbars, date
+  (a convention, checked in review). It sets `color-scheme: dark`, so native controls (selects, scrollbars, date
   pickers) draw dark too.
 - `components.css` is the published `components/bundle.css`, unchanged apart from dropping its comments. Every value
   comes from `tokens.css`, and every class has the `ww-` prefix. Its sections follow the components: Button, Kbd,
@@ -93,13 +93,4 @@ props types and helper types:
 
 ## Tests
 
-- `design.test.tsx` checks that the components render the markup their published previews show: an open
-  `PickerOption` is a button with ✓ Open that picks on click; a closed one stays focusable, with ✕ Closed and its
-  Refusal lines unchanged, and what the character has is set apart, not reworded; a gear-dependent one shows ◈ Gear
-  beside ✓ Open with R's note. `CascadePreview` lists what it clears, names the count on its primary action, and
-  cancels on Esc.
-- `colors.test.tsx` checks the color rule: no color literal in any file under `src/` outside `tokens.css`, which must
-  hold its colors. A color literal (`COLOR_LITERAL`, `colorLiterals`) is a hex color of 3, 4, 6 or 8 digits, or an
-  rgb, rgba, hsl, hsla or oklch color function. It plants one of each kind, and checks that a Share link's fragment
-  is not taken for a color. It finds `src/` from the repo root vitest runs in, because jsdom gives `import.meta.url`
-  no `file:` scheme.
+None of its own. The planner's tests (`src/planner/planner.test.tsx`) render these components in use.

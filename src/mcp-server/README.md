@@ -26,5 +26,4 @@ Run it from the repo root, or set `WOTR_DATA` to the data directory.
 
 ## Tests
 
-`server.test.ts` drives the server through the SDK, in memory: a client lists map 08's 14 tools, in order, and a call
-to `start_build` answers with the tool's JSON.
+None of its own: the tools behind it are tested end to end in `engine/mcp/tools.test.ts`.

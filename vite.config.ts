@@ -39,6 +39,7 @@ export default defineConfig({
           environment: 'node',
           setupFiles: [],
           include: ['engine/**/*.test.ts', 'tools/**/*.test.ts'],
+          isolate: false,
         },
       },
       {
