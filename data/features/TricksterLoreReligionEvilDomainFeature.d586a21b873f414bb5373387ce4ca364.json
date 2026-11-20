@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFactContextActions",
+      "Activated": {
+        "Actions": [
+          {
+            "$type": "ContextActionAddFeature",
+            "m_PermanentFeature": "!bp_5e6852592ebb4c218139136f60d3ac08",
+            "m_SetRankFrom": "!bp_c0e6f7e7a9fc4db386f5f84466c0195f"
+          }
+        ]
+      }
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_a8936d29b6051a1418682da1878b644e"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterLoreReligionEvilDomainFeature",
+  "guid": "d586a21b873f414bb5373387ce4ca364",
+  "name": "Evil Domain (Lore (Religion) 2 Rank)"
+}

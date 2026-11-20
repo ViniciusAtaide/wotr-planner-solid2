@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "DLC3_GlovesOfSurgicalExtractionItem",
+  "guid": "7fc098d7fbf24964874e81fcb9321a57",
+  "m_Enchantments": [
+    "!bp_0524503389fe4d23b710428f66781a66"
+  ],
+  "name": "Gloves of Phlebotomy"
+}

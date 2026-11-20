@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_76a759fbfbc5430ab824144e995d5569"
+    }
+  ],
+  "assetName": "HeadbandOfPerfection8ExtraEnchant",
+  "guid": "2c52f27b36d34196930d895de24524a4"
+}

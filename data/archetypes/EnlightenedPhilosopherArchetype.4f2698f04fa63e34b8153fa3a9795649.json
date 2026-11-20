@@ -1,0 +1,83 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_9d5fdd3b4a6cd4f40beddbc72b2c07a0",
+        "!bp_611e863120c0f9a4cab2d099f1eb20b4",
+        "!bp_60008a10ad7ad6543b1f63016741a5d2"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_736d3d5d940736b4e87792e94eaff96b"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_eaeb8f3cd11eead43876fe727af43972"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_736d3d5d940736b4e87792e94eaff96b"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_736d3d5d940736b4e87792e94eaff96b"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_736d3d5d940736b4e87792e94eaff96b"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_736d3d5d940736b4e87792e94eaff96b"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_5531b975dcdf0e24c98f1ff7e017e741",
+        "!bp_60008a10ad7ad6543b1f63016741a5d2"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_60008a10ad7ad6543b1f63016741a5d2"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_0336dc22538ba5f42b73da4fb3f50849"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "EnlightenedPhilosopherArchetype",
+  "guid": "4f2698f04fa63e34b8153fa3a9795649",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Enlightened Philosopher"
+}

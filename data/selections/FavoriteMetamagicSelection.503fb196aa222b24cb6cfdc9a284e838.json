@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "FavoriteMetamagicSelection",
+  "guid": "503fb196aa222b24cb6cfdc9a284e838",
+  "m_AllFeatures": [
+    "!bp_abebb469211025b48ac7a32da41f06e8",
+    "!bp_37118163dcb572047b995158346f0058",
+    "!bp_9430a7211ba62cb4091d90abfdde58d0",
+    "!bp_4ecf1a86ddc45d04c8b2df3a1c318e78",
+    "!bp_ac946df6c29143544aeefbde2b360ff1",
+    "!bp_8d44a7d4950f4d6cbfda8530d108e63a",
+    "!bp_3cdc012185334b7da4ed42c6fcc948cf",
+    "!bp_eb6483b366a14a83afda1963799c3387",
+    "!bp_8713d3ce0275459b8ff67ef799d31d4b",
+    "!bp_bd38adc649b9431d89269f00b55014bc"
+  ],
+  "name": "Favorite Metamagic"
+}

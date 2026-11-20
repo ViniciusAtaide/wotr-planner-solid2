@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "RapierShockPlus1",
+  "guid": "e3a431db2bac0d745806d666a8ebf824",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_2ece38f30500f454b8569136221e55b0",
+  "name": "Shock Rapier +1"
+}

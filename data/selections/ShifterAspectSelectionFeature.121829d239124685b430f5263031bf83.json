@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ShifterAspectSelectionFeature",
+  "guid": "121829d239124685b430f5263031bf83",
+  "m_AllFeatures": [
+    "!bp_73ef2c330ff14e4bb2f5b7300622c552",
+    "!bp_9ee4074cbae746ba96463c0b2a562226",
+    "!bp_b8ba81c46d904603b8fe4d3c361c5d5e",
+    "!bp_f6d14c560a3d41edbaee68110bd21c62",
+    "!bp_e8c3d7a903a6433bbcfb3d70c97451ce",
+    "!bp_534e48fa35914f1d93f8813ff4213729",
+    "!bp_e3c2c68adaa344aca0354750044611a2",
+    "!bp_ab2bffed0cc2447fae15ee4e0942578f",
+    "!bp_ddf5d65742c842d79f74ac0d5cfbedf5",
+    "!bp_4fc5f64d13ce4c0e8258a83ff63c50af"
+  ],
+  "name": "Shifter Aspect"
+}

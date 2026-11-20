@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanSoullessWeaponItem",
+  "guid": "3dbadcf7268d4a73b2773830e8c38433",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d56c44bc9eb10204c8b386a02c7eed21",
+  "name": "Finnean (Longsword)"
+}

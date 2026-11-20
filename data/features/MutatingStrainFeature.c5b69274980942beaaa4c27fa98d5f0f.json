@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 12,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [
+        "!bp_bcd758a75fb54651a7f668fe2661a307"
+      ],
+      "m_Class": "!bp_145f1d3d360a7ad48bd95d392c81b38e",
+      "m_Feature": "!bp_6aa16e16a689467eb258003d06630db0"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MutatingStrainFeature",
+  "guid": "c5b69274980942beaaa4c27fa98d5f0f",
+  "name": "Mutating Strain"
+}

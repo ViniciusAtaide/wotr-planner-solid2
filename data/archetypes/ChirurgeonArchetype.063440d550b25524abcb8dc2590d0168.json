@@ -1,0 +1,62 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_adc8774dd97dd4d40b83909dc0efa4c3"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_c541f80af8d0af4498e1abb6025780c7"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_ee4bad9521a00a94fbf60317631aaa92"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_c9022272c87bd66429176ce5c597989c"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_c9022272c87bd66429176ce5c597989c"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_c9022272c87bd66429176ce5c597989c"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_202af59b918143a4ab7c33d72c8eb6d5"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "ChirurgeonArchetype",
+  "guid": "063440d550b25524abcb8dc2590d0168",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Chirurgeon"
+}

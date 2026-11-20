@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_cf57e3971a4f8d340a200794ba586bf9"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "UnswornShamanMinorSpiritFeature 3",
+  "guid": "102cd634847750f4cb39982aa3b85d0e",
+  "name": "Minor Spirit — Third (Unsworn Shaman)"
+}

@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 1,
+      "m_AdditionalClasses": [
+        "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+        "!bp_52dbfd8505e22f84fad8d702611f60b7"
+      ],
+      "m_Archetypes": [
+        "!bp_c5f6e53e71059fb4d802ce81a277a12d",
+        "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+      ],
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc",
+      "m_Feature": "!bp_82f5101e7f6f1064181f0e29f0eb7a62"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WolfScarredFaceCurseFeatureLevel1NoProgression",
+  "guid": "3719895b1519447b8bb65428351507ba",
+  "name": "Wolf-Scarred Face (level 1)"
+}

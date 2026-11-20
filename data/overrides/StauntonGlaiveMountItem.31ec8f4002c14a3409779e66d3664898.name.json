@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "mounted",
+  "reason": "Three glaives are named \"Soulshear\": DemonicHungerItem and Staunton's two, StauntonGlaiveHealItem and StauntonGlaiveMountItem, each with its own enchantment. Type and slot are the same, so each of Staunton's is qualified by what its enchantment's asset name says it does; DemonicHungerItem stays bare.",
+  "target": "31ec8f4002c14a3409779e66d3664898"
+}

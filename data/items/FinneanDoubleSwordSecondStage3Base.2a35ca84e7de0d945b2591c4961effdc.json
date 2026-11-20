@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanDoubleSwordSecondStage3Base",
+  "guid": "2a35ca84e7de0d945b2591c4961effdc",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_e95efb85a0912a7489be69d5f03a5308",
+  "name": "Finnean the Talking Weapon"
+}

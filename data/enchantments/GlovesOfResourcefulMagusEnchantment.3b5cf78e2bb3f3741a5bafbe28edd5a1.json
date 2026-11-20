@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f33b06bc349a20a44b1c7e74cf6451db"
+    }
+  ],
+  "assetName": "GlovesOfResourcefulMagusEnchantment",
+  "guid": "3b5cf78e2bb3f3741a5bafbe28edd5a1"
+}

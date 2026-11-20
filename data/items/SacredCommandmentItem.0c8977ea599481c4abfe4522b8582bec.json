@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "SacredCommandmentItem",
+  "guid": "0c8977ea599481c4abfe4522b8582bec",
+  "m_Enchantments": [
+    "!bp_481087f6a42bff24ab5bc417042587fb"
+  ],
+  "name": "Sacred Commandment"
+}

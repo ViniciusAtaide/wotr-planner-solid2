@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DuelingSwordPositiveDamagePlus2",
+  "guid": "f0a5658e1dac1774182578bb1756dadc",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a6f7e3dc443ff114ba68b4648fd33e9f",
+  "name": "Radiant Dueling Sword +2"
+}

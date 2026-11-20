@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "DawnOfLifeItem",
+  "guid": "188904a110b0d9d4cb897f4c01fd8ebc",
+  "m_ArmorComponent": "!bp_a4a1611e6a359f54abc33ba7c3582a05",
+  "m_WeaponComponent": null,
+  "name": "Dawn of Life"
+}

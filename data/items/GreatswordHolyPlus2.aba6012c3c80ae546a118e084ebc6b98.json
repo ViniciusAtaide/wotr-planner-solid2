@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "GreatswordHolyPlus2",
+  "guid": "aba6012c3c80ae546a118e084ebc6b98",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_5f824fbb0766a3543bbd6ae50248688f",
+  "name": "Holy Greatsword +2"
+}

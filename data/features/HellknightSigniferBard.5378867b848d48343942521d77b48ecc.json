@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_772c83a25e2268e448e841dcd548235f"
+    }
+  ],
+  "Groups": [
+    "HellknightSigniferSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "HellknightSigniferBard",
+  "guid": "5378867b848d48343942521d77b48ecc",
+  "m_Spellbook": "!bp_bc04fc157a8801d41b877ad0d9af03dd",
+  "name": "Bard"
+}

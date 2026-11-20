@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_fc5201ff9200431dae385d7bd7b6c5b4"
+    }
+  ],
+  "assetName": "TwilightShadeEnchantment",
+  "guid": "46bba0c7eeb5413f8b7f8a25923f277b"
+}

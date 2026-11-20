@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ChaosDomainGreaterFeature",
+  "guid": "41b647ee4591dc1448a665a62b7a7b5f",
+  "name": "Chaos Blade"
+}

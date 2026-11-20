@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_aa271e69902044b47a8e62c4e58a9dcb"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_ba34257984f4c41408ce1dc2004e342e"
+    }
+  ],
+  "Groups": [
+    "HellknightSigniferSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "HellknightSigniferThassilonianIllusion",
+  "guid": "444211da5e9592f41a4334825eb7ea2c",
+  "m_Spellbook": "!bp_74b87962a97d56c4583979216631eb4c",
+  "name": "Thassilonian Specialist — Pride"
+}

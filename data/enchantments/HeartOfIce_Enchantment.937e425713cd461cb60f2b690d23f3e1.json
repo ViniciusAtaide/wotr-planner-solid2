@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_9ae23798a9284e044ad2716a772a410e"
+    }
+  ],
+  "assetName": "HeartOfIce_Enchantment",
+  "guid": "937e425713cd461cb60f2b690d23f3e1"
+}

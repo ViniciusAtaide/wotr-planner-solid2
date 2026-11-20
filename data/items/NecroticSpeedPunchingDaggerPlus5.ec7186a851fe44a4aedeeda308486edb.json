@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "NecroticSpeedPunchingDaggerPlus5",
+  "guid": "ec7186a851fe44a4aedeeda308486edb",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_89dc4dc5f386e2049b5e0a5e209a3407",
+  "name": "Necrotic Speed Punching Dagger +5"
+}

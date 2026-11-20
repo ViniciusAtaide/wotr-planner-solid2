@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "AxiomaticCompositeLongbowPlus5Item",
+  "guid": "b33525c6a4b544819b186ead037a01b4",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1ac79088a7e5dde46966636a3ac71c35",
+  "name": "Axiomatic Composite Longbow +5"
+}

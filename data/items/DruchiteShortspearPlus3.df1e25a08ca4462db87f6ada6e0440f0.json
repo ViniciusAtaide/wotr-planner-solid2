@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DruchiteShortspearPlus3",
+  "guid": "df1e25a08ca4462db87f6ada6e0440f0",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_cf72040b79c99504785976b28d54b2b7"
+}

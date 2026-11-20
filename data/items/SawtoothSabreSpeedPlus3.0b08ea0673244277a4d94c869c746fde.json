@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "SawtoothSabreSpeedPlus3",
+  "guid": "0b08ea0673244277a4d94c869c746fde",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_ef50f200e4ab429b8bcb66a56f886c2f",
+  "name": "Speed Sawtooth Saber +3"
+}

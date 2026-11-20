@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ClubShockPlus2",
+  "guid": "b87bb73cdd7f1454fa344647e3af86ef",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_26aa0672af2c7d84ba93bec37758c712",
+  "name": "Shock Club +2"
+}

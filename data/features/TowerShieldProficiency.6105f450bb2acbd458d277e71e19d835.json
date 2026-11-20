@@ -1,0 +1,48 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [
+        "TowerShield"
+      ],
+      "WeaponProficiencies": [],
+      "m_RaceRestriction": null
+    },
+    {
+      "$type": "PrerequisiteNotProficient",
+      "ArmorProficiencies": [
+        "TowerShield"
+      ],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": []
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_cb8686e7357a68c42bdd9d4e65334633"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": true,
+      "m_CharacterClass": "!bp_26b10d4340839004f960f9816f6109fe"
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "CombatFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TowerShieldProficiency",
+  "guid": "6105f450bb2acbd458d277e71e19d835",
+  "name": "Tower Shield Proficiency"
+}

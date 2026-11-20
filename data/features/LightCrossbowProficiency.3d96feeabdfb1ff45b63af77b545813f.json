@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "LightCrossbow"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "LightCrossbowProficiency",
+  "guid": "3d96feeabdfb1ff45b63af77b545813f",
+  "name": "Weapon Proficiency (Light Crossbow)"
+}

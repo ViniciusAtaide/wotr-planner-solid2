@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e9590244effb4be4f830b1e3fffced13"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_ae98ab7bda409ef4bb39149a212d6732"
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 20,
+  "assetName": "ExtraKi",
+  "guid": "231a2a603d0b437e939553e6da3e7247",
+  "name": "Extra Ki"
+}

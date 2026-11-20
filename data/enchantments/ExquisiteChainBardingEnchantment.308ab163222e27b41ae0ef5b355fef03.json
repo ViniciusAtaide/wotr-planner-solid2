@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_acb7138cdeaa637458d20918695f7aaf"
+    }
+  ],
+  "assetName": "ExquisiteChainBardingEnchantment",
+  "guid": "308ab163222e27b41ae0ef5b355fef03"
+}

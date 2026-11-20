@@ -1,0 +1,74 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_8b359846202ec6c4fa8f0ad5e998ff0f"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_644c0e9618e417947bd0a1252a5e6ecf"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_718fe8e143d38cc4899ae798dd098b6e"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_685ee64e43fcb6546b65436a3deb98bd"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_8edcfd5e80898e34cb6c09a850b76083"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_261270d064148224fb982590b7a65414"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "EldritchFontArchetype",
+  "guid": "2f35608fc073c04448a9c162a20852ce",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": "!bp_67b574abd845f3e42983ea6eb53a6f90",
+  "m_WillSave": null,
+  "name": "Eldritch Font"
+}

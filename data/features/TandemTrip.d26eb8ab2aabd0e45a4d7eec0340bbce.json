@@ -1,0 +1,45 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_0f15c6f70d8fb2b49aa6cc24239cc5fa"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_965ea9716b87f4b46a6a8f50523393bd"
+      ]
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_965ea9716b87f4b46a6a8f50523393bd",
+      "m_Feature": "!bp_965ea9716b87f4b46a6a8f50523393bd"
+    }
+  ],
+  "Groups": [
+    "CombatFeat",
+    "Feat",
+    "TeamworkFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TandemTrip",
+  "guid": "d26eb8ab2aabd0e45a4d7eec0340bbce",
+  "name": "Tandem Trip (feature)"
+}

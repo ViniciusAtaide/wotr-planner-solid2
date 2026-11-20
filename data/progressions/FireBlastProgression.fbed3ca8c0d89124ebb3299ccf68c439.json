@@ -1,0 +1,47 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_cb30a291c75def84090430fbf2b5c05e"
+      ]
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_9ff81732daddb174aa8138ad1297c787",
+      "m_Feature": "!bp_17fc78086533bfd4aa3818317c6210bc"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_cbc88c4c166a0ce4a95375a0a721bd01"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "FireBlastProgression",
+  "guid": "fbed3ca8c0d89124ebb3299ccf68c439",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Fire Blast"
+}

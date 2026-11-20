@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "DemonMajorAspect"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "VavakiaAspectFeature",
+  "guid": "3df57316028799448aa1b18cad1ad939",
+  "name": "Aspect of the Vavakia"
+}

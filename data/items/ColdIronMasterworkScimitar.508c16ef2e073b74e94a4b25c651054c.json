@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronMasterworkScimitar",
+  "guid": "508c16ef2e073b74e94a4b25c651054c",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d9fbec4637d71bd4ebc977628de3daf3",
+  "name": "Cold Iron Masterwork Scimitar"
+}

@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Rapier",
+  "Components": [],
+  "assetName": "Rapier",
+  "guid": "2ece38f30500f454b8569136221e55b0",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "BladesLight",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Rapier"
+}

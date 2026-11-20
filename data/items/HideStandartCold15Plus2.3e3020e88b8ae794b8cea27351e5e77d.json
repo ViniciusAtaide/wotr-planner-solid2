@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "HideStandartCold15Plus2",
+  "guid": "3e3020e88b8ae794b8cea27351e5e77d",
+  "m_Enchantments": [
+    "!bp_758b77a97640fd747abf149f5bf538d0",
+    "!bp_581c22e55f03e4e4f9f9ea619d89af5f"
+  ],
+  "m_Type": "!bp_7a01292cef39bf2408f7fae7a9f47594",
+  "name": "Hide Armor of Medium Cold Resistance"
+}

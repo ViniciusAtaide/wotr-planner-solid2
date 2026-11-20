@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "RuggedHelmetItem",
+  "guid": "9b422adf4bdb9994a9690ac20ca74370",
+  "m_Enchantments": [
+    "!bp_94c15727e5dbc984eb0362ebbec18489"
+  ],
+  "name": "Rugged Helmet"
+}

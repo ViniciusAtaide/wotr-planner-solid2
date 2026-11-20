@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "VanwardFeature",
+  "guid": "883237e9dac35ba4fba0cffc2af73fb9",
+  "name": "Vanguard"
+}

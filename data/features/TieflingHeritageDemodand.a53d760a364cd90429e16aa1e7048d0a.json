@@ -1,0 +1,64 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "CheckIntimidate",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillLoreReligion",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Constitution",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Wisdom",
+      "Value": 2
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddStatBonusIfHasFact",
+      "Descriptor": "Racial",
+      "InvertCondition": true,
+      "RequireAllFacts": false,
+      "Stat": "Intelligence",
+      "Value": {
+        "Value": -2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_CheckedFacts": [
+        "!bp_325f078c584318849bfe3da9ea245b9d"
+      ]
+    }
+  ],
+  "Groups": [
+    "Racial",
+    "TieflingHeritage"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TieflingHeritageDemodand",
+  "guid": "a53d760a364cd90429e16aa1e7048d0a",
+  "name": "Foulspawn (Demodand-Spawn)"
+}

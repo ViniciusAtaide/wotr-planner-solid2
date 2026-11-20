@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ThunderingBlows",
+  "guid": "8081c981b95ad9f49a421e7345c8c6f6",
+  "name": "Thundering Blows"
+}

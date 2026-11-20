@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "SpikedHeavyShieldViciousPlus2",
+  "guid": "4d26bb6db654e624ca499382ddf525ed",
+  "m_Enchantments": [
+    "!bp_a1455a289da208144981e4b1ef92cc56"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a1b85d048fb5003438f34356df938a9f"
+}

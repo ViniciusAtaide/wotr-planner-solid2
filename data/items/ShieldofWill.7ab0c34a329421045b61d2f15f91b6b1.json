@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "ShieldofWill",
+  "guid": "7ab0c34a329421045b61d2f15f91b6b1",
+  "m_ArmorComponent": "!bp_0dd267dde82f58f49aaa81a4b2f2681c",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Ironclad Will"
+}

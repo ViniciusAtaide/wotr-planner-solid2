@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShamanStonesSpiritTrueFeature",
+  "guid": "6ea4b2cfa00bb75408662cd6168a64c1",
+  "name": "Elemental Form (Stone)"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "AmuletOfJoustingItem",
+  "guid": "97d9b639fb5948947881392260340892",
+  "m_Enchantments": [
+    "!bp_30bbe86f50acfb74e9a5b06849dd16bc"
+  ],
+  "name": "Amulet of Jousting"
+}

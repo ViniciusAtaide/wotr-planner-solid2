@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanSaiStage3Base",
+  "guid": "970bbcd3350c1574bb42b5ebaf7ea0d7",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_0944f411666c7594aa1398a7476ecf7d"
+}

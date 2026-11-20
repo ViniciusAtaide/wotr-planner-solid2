@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintActivatableAbility",
+  "Components": [],
+  "Group": "ShifterAspect",
+  "WeightInGroup": 1,
+  "assetName": "ShifterAspectBoarAbility",
+  "guid": "43bc6e6b0f91413095d4f68206598a69",
+  "m_Buff": "!bp_0fdc579eafbf4fceae649beed8188a5c",
+  "name": "Boar (Shifter 1)"
+}

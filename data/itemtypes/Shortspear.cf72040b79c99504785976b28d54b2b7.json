@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Shortspear",
+  "Components": [],
+  "assetName": "Shortspear",
+  "guid": "cf72040b79c99504785976b28d54b2b7",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Spears, Thrown",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Shortspear"
+}

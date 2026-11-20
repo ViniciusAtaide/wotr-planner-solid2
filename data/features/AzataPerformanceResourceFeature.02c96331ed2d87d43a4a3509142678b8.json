@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "AzataPerformanceResourceFeature",
+  "guid": "02c96331ed2d87d43a4a3509142678b8",
+  "name": "Bardic Performance"
+}

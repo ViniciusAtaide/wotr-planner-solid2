@@ -1,0 +1,3832 @@
+# Importer report
+
+Written by `bun run import`; do not edit.
+
+## Blueprints
+
+115713 blueprints are reachable from ProgressionRoot. Written, by kind:
+
+- abilities: 22
+- activatables: 12
+- archetypes: 207
+- buffs: 71
+- classes: 59
+- enchantments: 715
+- features: 6031
+- items: 3397
+- itemtypes: 100
+- progressions: 552
+- races: 13
+- selections: 445
+- settings: 2
+- spellbooks: 53
+- tables: 36
+- units: 1
+
+## Items and the keep rule
+
+The dump traces 3398 equipment items to a source in play; the research counted 3397
+(map ticket 12, `obtainable-items.md`). By source, an item counted under each of its sources:
+
+- Midnight Isles: 2417
+- chest: 761
+- companion gear: 258
+- crusade: 197
+- form or part: 463
+- random-encounter trash: 426
+- scripted: 208
+- start kit: 57
+- unit loot: 77
+- vendor: 1602
+
+Added and removed by hand (`data/overrides/`, each with its reason):
+
+- remove ce0842546b73aa34b8fcf40a970ede68 (not in data/)
+- add RingofConstitution 6c7f785bab7bd1243a43e365dc2089bd "Colossus Ring"
+- remove 20375b5a0c9243d45966bd72c690ab74 (not in data/)
+
+The keep rule kept 11716 of the 24764 blueprints held before trimming and trimmed 13048:
+what G reaches from the root and from the sourced items, plus what their kept fields name.
+
+## Component types the allowlist lacks
+
+On written blueprints, by how many carry them. Each must be allowlisted or noted in `tools/importer/not-needed.ts`.
+
+None left to review.
+
+### Reviewed as not needed
+
+By family, with the reason in `tools/importer/not-needed.ts`; each type with how many carry it.
+
+- **Caster levels and spellbooks that gate nothing** (5): AddCasterLevel (1), AddCasterLevelForAbility (2), AddCasterLevelForSpellbook (1), AddSpellbook (1), IsSinMagicSpecialistSpellbook (7).
+
+- **Spells** (23): AddCustomSpells (2), AddKnownSpell (345), AddMetamagicFeat (12), AddOppositionSchool (8), AddSpecialSpellList (76), AddSpecialSpellListForArchetype (37), AddSpellKnownTemporary (8), AddSpellListAsAbilities (1), AddSpellsPerDay (5), AddUnlimitedSpell (2), ForbidSpecificSpellsCast (1), ForbidSpellbookOnAlignmentDeviation (36), ForbidSpellbookOnArmorEquip (1), LearnSpellList (38), LearnSpellParametrized (73), LearnSpells (27), MagicHackSpellbookComponent (1), MysticTheurgeCombinedSpells (5), MysticTheurgeSpellbook (13), RemoveOppositionSchool (1), ReplaceSpellbook (1), SpellLevelByClassLevel (3), SpontaneousSpellConversion (18).
+
+- **Pets, companions and other units** (14): AddClassLevelToSummonDuration (1), AddClassLevels (3), AddFactsToMount (4), AddFactsToPet (3), AddFeatureToNPC (2), AddFeatureToPet (73), AddFeatureToPetParametrized (4), ClassLevelLimit (1), CompanionBoon (1), FullWeaponMasterySkeletonParametrized (1), OnSpawnBuff (18), RedirectDamageToPet (1), ShareFavoredEnemies (1), ShareFeaturesWithPet (4).
+
+- **Armies and the crusade** (2): AddGlobalMapSpellFeature (15), TacticalCombatVisibleFeature (3).
+
+- **DLC gating** (2): DlcCondition (267), ItemDlcRestriction (8).
+
+- **Story state** (2): FeatureSurvivesRespec (1), MythicClassLockComponent (11).
+
+- **Recommendations** (16): LevelUpRecommendation (1), PureRecommendation (10), RecommendationAccomplishedSneakAttacker (1), RecommendationBaseAttackPart (31), RecommendationCompanionBoon (1), RecommendationForWeaponCategory (1), RecommendationHasClasses (17), RecommendationHasFeature (43), RecommendationNoFeatFromGroup (34), RecommendationRequiresSpellbook (22), RecommendationRequiresSpellbookSource (2), RecommendationStatComparison (4), RecommendationStatMiminum (9), RecommendationWeaponSubcategoryFocus (6), RecommendationWeaponTypeFocus (11), RecommendedClass (11).
+
+- **UI and art** (19): AddEquipmentEntity (9), AddFeaturesFromSelectionToDescription (20), AddSpellsToDescription (35), AddUnitScale (3), ChangeActivatableAbilitiesCommandType (3), ChangeMythicClassArtComponent (1), ChangePortraitComponent (1), DeityDependencyClass (6), DisableClassAdditionalVisualSettings (2), FeatureTagsComponent (242), HideClassIfPrerequisitesRequiredComponent (5), HideFeatureInInspect (6), MythicClassArtComponent (14), ReplaceAsksList (31), ReplaceCastSource (32), ReplaceSourceBone (32), ReplaceUnitPrefab (2), SkipClassPhaseIfSelected (1), UpdateClassAdditionalVisualSettings (1).
+
+- **Old saves and dead components** (7): AddFactToEquipmentWielder (1), HigherMythicsReplace (1), SavesFixedRecalculateThievery (1), SavesFixerFactReplacer (2), SavesFixerParamSpellSchool (1), SavesFixerRecalculate (73), SavesFixerReplaceInProgression (1).
+
+- **Grants of abilities and buffs** (4): AddFactIfArchetype (2), BuffOnArmor (1), BuffOnLightOrNoArmor (2), HasShieldFeatureUnlock (8).
+
+- **Items handed out or changed** (5): AddStartingEquipment (52), IncreaseFeatRankByGroup (4), LockEquipmentSlot (2), TricksterArcanaAdditionalEnchantments (2), TricksterArcanaBetterEnhancements (1).
+
+- **In play** (376): ACBonusAgainstAttackOfOpportunity (2), ACBonusAgainstAttacks (8), ACBonusAgainstBuffOwner (1), ACBonusAgainstFactOwner (24), ACBonusAgainstFactOwnerEquipment (1), ACBonusAgainstSize (7), ACBonusAgainstSpellsWithDescriptor (1), ACBonusAgainstWeaponCategory (2), ACBonusAgainstWeaponGroup (1), ACBonusAgainstWeaponSubcategory (2), ACBonusAgainstWeaponType (9), ACContextBonusAgainstFactOwner (3), ACTouchBonus (2), AbilityEffectRunAction (2), AbilityMythicParams (2), AbilityResourceLogic (20), AbilityResourceOverride (1), AbilityScoreCheckBonus (2), AbilityTargetHasCondition (1), AbilityTargetsAround (2), AbilityUsagesCountTrigger (2), AbilityVariants (3), AccomplishedSneakAttacker (1), ActivatableAbilityResourceLogic (12), ActivatableAbilityRestrictionByWeapon (1), AddAbilityResourceTrigger (2), AddAbilityResources (596), AddAbilityUseTargetTrigger (7), AddAbilityUseTrigger (63), AddAdditionalLimb (16), AddAreaEffect (1), AddBuffActions (2), AddBuffInBadWeather (1), AddBuffOnCombatStart (1), AddBuffOnCorruptionClear (1), AddCalculatedWeapon (7), AddClusteredAttack (1), AddConcealment (2), AddCondition (7), AddConditionImmunity (54), AddConditionImmunityEquipment (2), AddConditionTrigger (2), AddCumulativeDamageBonus (1), AddCumulativeDamageBonusX3 (1), AddDamageResistanceEnergy (139), AddDamageResistancePhysical (59), AddDispelMagicSuccessTrigger (2), AddEffectContextFastHealing (1), AddEffectFastHealing (1), AddEnergyDamageImmunity (31), AddEnergyDamageTrigger (1), AddEnergyImmunity (28), AddEnergyVulnerability (3), AddFortification (15), AddGoldenDragonSkillBonus (1), AddHealTrigger (2), AddIdentifyBonus (1), AddImmunityToAbilityScoreDamage (6), AddImmunityToCriticalHits (11), AddImmunityToEnergyDrain (3), AddImmunityToPrecisionDamage (12), AddIncomingDamageTrigger (24), AddInitiatorAttackRollTrigger (28), AddInitiatorAttackWithWeaponTrigger (139), AddInitiatorHealTrigger (1), AddInitiatorSavingThrowTrigger (1), AddItemCasterLevelBonus (2), AddKineticistAcceptBurnTrigger (2), AddKineticistBurnModifier (3), AddKineticistBurnValueChangedTrigger (9), AddKineticistElementalOverflow (2), AddKineticistMechanicalPart (1), AddKineticistPart (4), AddLocustSwarmMechanicPart (1), AddMagusMechanicPart (7), AddOutgoingDamageTrigger (19), AddOutgoingPhysicalDamageProperty (25), AddOverHealTrigger (1), AddRestTrigger (11), AddSecondaryAttacks (1), AddSpellDiceBonusTrigger (2), AddSpellResistance (18), AddSpellTypeFailureChance (5), AddStatBonusScaled (1), AddTargetAttackRollTrigger (18), AddTargetAttackWithWeaponTrigger (21), AddTargetSpellResistanceCheckTrigger (2), AddTriggerOnActivationChanged (12), AddUndetectableAlignment (2), AddWeaponEnhancementBonusToStat (1), AdditionalDiceForWeapon (1), AdditionalDiceOnAttack (36), AdditionalDiceOnDamage (5), AdditionalStatBonusOnAttackDamage (4), AdvanceArmorStats (20), AllAttacksEnhancement (1), AllSavesBonusEquipment (1), AlliedSpellcaster (1), AllowDyingCondition (1), AnyWeaponDamageStatReplacement (2), ArcaneArmorProficiency (10), ArcaneBloodlineArcana (1), ArcaneSpellFailureIncrease (7), ArmorCheckPenaltyIncrease (2), ArmorClassBonusAgainstAlignment (2), ArmorFocus (3), ArmorSpeedPenaltyRemoval (2), ArmorWeightCoef (1), AscendantElement (7), AttackBonusAgainstAlignment (1), AttackBonusAgainstFactOwner (20), AttackBonusAgainstSize (4), AttackBonusConditional (11), AttackOfOpportunityAttackBonus (7), AttackOfOpportunityCriticalConfirmationBonus (1), AttackOfOpportunityDamageBonus (4), AttackStatReplacement (5), AttackTypeAttackBonus (6), AttackTypeCriticalMultiplierIncrease (1), AuraFeatureComponent (28), AutoConfirmCritAgainstFlanked (1), AutoDetectStealth (1), AutoMetamagic (35), AzataFavorableMagic (1), BackToBack (1), BackToBackBetter (1), BashingFinish (1), BindAbilitiesToClass (55), BlindnessACCompensation (3), Blindsense (60), BuffAllSavesBonus (4), BuffAllSkillsBonus (4), BuffDescriptorImmunity (116), BuffEnchantAnyWeapon (3), BuffExtraAttack (4), BuffMovementSpeed (33), BuffOnHealthTickingTrigger (1), BuffSubstitutionOnApply (3), BurstBarrier (1), CMBBonusAgainstSize (2), CMBBonusForManeuver (1), CMDBonus (1), CMDBonusAgainstManeuvers (6), CMDBonusAgainstSize (1), CampingSpecialAbility (1), CannyDefensePermanent (2), CavalierMountedMastery (1), CavalierStealGlory (1), ChangeHitDie (1), ChangeSizeTrigger (1), ChangeSpellElementalDamageHalfUntyped (5), ChangeUnitSize (4), CombatAgainstMeTrigger (2), CombatStateTrigger (21), ConcentrationBonus (19), ConcentrationBonusOnArmorType (1), ContextCalculateAbilityParams (3), ContextCalculateAbilityParamsBasedOnClass (2), ContextCalculateSharedValue (82), ContextSetAbilityParams (45), CoordinatedDefense (1), CoordinatedManeuvers (1), CounterAttackOfOpportunityOnCombatManeuver (5), CraftBonus (1), CritAutoconfirmAgainstAlignment (2), CriticalConfirmationACBonus (4), CriticalConfirmationACBonusAgainstFactOwner (1), CriticalConfirmationACBonusInHeavyArmor (1), CriticalConfirmationBonus (3), CustomItemAbilityActionType (2), CustomKnowledgeCheck (5), DamageBonusAgainstFactOwner (16), DamageBonusConditional (5), DamageBonusOrderOfCockatrice (1), DamageGrace (2), DamageReductionAgainstFactOwner (3), DamageReductionBelowZero (1), DeactivateTrigger (2), DeathActions (6), DefensiveCombatTraining (2), DeflectArrows (3), DerivativeStatBonus (7), DiceDamageBonusOnSpell (1), DisableRegenerationOnCriticalHit (1), DispelCasterLevelCheckBonus (2), DistanceAttackBonus (2), DistanceDamageBonus (2), DraconicBloodlineArcana (18), DublicateSpellComponent (1), DuelistPreciseStrike (1), EchoesOfStoneTerrainBonus (1), EmptyHandWeaponOverride (15), EncumbranceSpeedPenaltyRemoval (2), EnduringSpells (1), EnhancePotion (1), Evasion (8), EvasionWithTowerShield (2), ExpandedArsenalMagicSchools (1), FactsChangeTrigger (4), FavoredEnemy (22), FavoredTerrain (6), FavoredTerrainExpertise (6), FlamewardenBurningRenewal (1), FlatFootedIgnore (5), FormationACBonus (5), FreeActionSpell (2), FullSpeedInStealth (1), GreaterCombatMeneuver (1), HalveIncomingAreaDamage (1), Hardy (1), IgnoreAttacksOfOpportunityForSpellList (2), IgnoreDamageReductionOnAttack (4), IgnoreDamageReductionOnCriticalHit (3), IgnoreDamageReductionOnTarget (2), IgnorePartialConcealmentOnRangedAttacks (1), IgnoreSpellImmunity (1), IgnoreSpellResistanceForSpells (1), ImprovedCriticalEdgeParametrized (2), ImprovedCriticalMythicParametrized (2), ImprovedCriticalParametrized (1), ImprovedEvasion (3), IncomingDamageAndHealingModifier (1), IncreaseAllSpellsDC (6), IncreaseCasterLevel (1), IncreaseCastersSavingThrowTypeDC (2), IncreaseDiceSizeOnAttackCustomProgressions (9), IncreaseResourceAmount (89), IncreaseResourceAmountBySharedValue (38), IncreaseResourcesByClass (5), IncreaseSpellContextDescriptorDC (8), IncreaseSpellDC (8), IncreaseSpellDamageByClassLevel (2), IncreaseSpellDescriptorCasterLevel (11), IncreaseSpellDescriptorDC (33), IncreaseSpellSchoolCasterLevel (6), IncreaseSpellSchoolDC (20), IncreaseSpellSpellbookDC (1), InitiatorCritAutoconfirm (1), InitiatorDisarmTrapTrigger (1), InitiatorSavingThrowTrigger (1), IntenseSpells (1), KeepAlliesAlive (1), KensaiCriticalPerfection (1), KensaiIaijutsuFocus (1), KensaiPowerfulCrit (1), KensaiWeaponMastery (1), LiquidateTowerShieldPenalty (1), MadDogPackTactics (1), ManeuverBonus (18), ManeuverBonusFromStat (1), ManeuverDefenceBonus (11), ManeuverImmunity (7), ManeuverIncreaseDuration (3), ManeuverOnAttack (3), ManeuverProvokeAttack (2), ManeuverTrigger (5), MaxDexBonusIncrease (2), ModifyD20 (20), ModifySpell (1), MonkReplaceAbilityDC (2), MovementDistanceTrigger (1), MythicUnarmedStrike (1), Opportunist (1), OutflankAttackBonus (1), OutflankDamageBonus (1), OutflankProvokeAttack (1), OwnerAbilityTargetSavingThrowBonus (4), PenetratingStrike (2), PointBlankMasterParametrized (1), Polymorph (30), PolymorphEnchantment (1), PowerAttackWatcher (2), PreciseShot (1), PreciseStrike (1), PreventAbilityInterruption (1), PromoteSpellDices (3), PropertyCalculatorComponent (2), RangedCleave (1), RecalculateConcealment (2), RecalculateOnFactsChange (15), RecalculateOnLocustSwarmChange (6), RecalculateOnOwnerFactUpdated (14), RecalculateOnStatChange (95), ReplaceAbilitiesStat (130), ReplaceAbilityDC (6), ReplaceCasterLevelOfAbility (39), ReplaceCombatManeuverStat (2), RerollConcealment (3), ResistEnergy (5), ResistEnergyContext (1), RestRoleBonus (1), RestrictionHasUnitCondition (1), RuleCalculateDamageWithWeaponTrigger (1), SacredWeaponFavoriteDamageOverride (33), SavingSlash (2), SavingThrowBonusAgainstAbilityType (1), SavingThrowBonusAgainstAlignment (2), SavingThrowBonusAgainstAllies (1), SavingThrowBonusAgainstDescriptor (83), SavingThrowBonusAgainstFact (12), SavingThrowBonusAgainstFactMultiple (4), SavingThrowBonusAgainstSchool (22), SavingThrowBonusAgainstSchoolAbilityValue (1), SavingThrowBonusAgainstSpecificSpells (4), SavingThrowContextBonusAgainstDescriptor (1), SavingThrowsReplace (1), SchoolMasteryParametrized (1), ScrollSpecialization (1), SetAttackerMissChance (3), ShakeItOff (1), ShieldFocus (2), ShieldMaster (1), ShieldWall (1), ShieldedCaster (1), SiezeTheMoment (1), SpecificBuffImmunity (4), SpeedBonusInArmorCategory (5), SpellDescriptorComponent (42), SpellFocusParametrized (3), SpellFool (2), SpellImmunityToSpellDescriptor (55), SpellPenetrationBonus (22), SpellResistanceAgainstAlignment (2), SpellSpecializationParametrized (21), SpellTurning (2), SpendChargesOnSpellCast (1), StatBonusWeaponRestriction (1), StonyStepTerrainBonus (1), SuppressBuffs (33), SurpriseSpells (1), SwarmAoeVulnerability (1), SwarmDamageResistance (1), Take10ForSuccess (1), TellingBlow (1), TemporaryHitPointsPerLevel (1), TimeOfDayChangedTrigger (1), ToughnessLogic (3), TowerShieldSpecialistTotalCover (1), TricksterKnowledgeWorldD20 (1), TricksterKnowledgeWorldSkillBonus (1), TricksterLoreNatureRestTrigger (1), TricksterParry (1), TwoWeaponFightingAttackPenalty (1), TwoWeaponFightingAttacks (1), TwoWeaponFightingDamagePenalty (1), UndeadHealth (1), UnitDeathTrigger (3), WatchYourBack (3), WeaponAttackTypeDamageBonus (2), WeaponCategoryAttackBonus (2), WeaponCriticalEdgeIncrease (1), WeaponCriticalEdgeIncreaseStackable (6), WeaponCriticalEdgeStackable (4), WeaponDamageAgainstAlignment (2), WeaponDamageOverride (10), WeaponDamageStatReplacement (1), WeaponEnergyDamageDice (1), WeaponFocusParametrized (2), WeaponGroupAttackBonus (16), WeaponGroupDamageBonus (17), WeaponGroupEnchant (1), WeaponMasteryParametrized (1), WeaponMaterial (1), WeaponMultipleCategoriesAttackBonus (2), WeaponParametersAttackBonus (4), WeaponParametersDamageBonus (5), WeaponSizeChange (3), WeaponSnatcher (1), WeaponSpecializationParametrized (3), WeaponTraining (14), WeaponTrainingAttackStatReplacement (1), WeaponTrainingBonuses (3), WeaponTypeCriticalMultiplierIncrease (1), WeaponTypeDamageBonus (1), WeaponTypeDamageStatReplacement (32), WizardEnergyAbsorption (1).
+
+## References dropped
+
+References to blueprints the planner does not hold (abilities, buffs…). In a kept list the reference is dropped
+(counted by field); where it is what a grant gives or checks, the whole component is (counted by type).
+
+- ActivateTrigger (component): 1
+- AddContextStatBonus (not Racial): 286
+- AddFact (action): 10
+- AddFactContextActions (component): 123
+- AddFeatureIfHasFact (component): 141
+- AddFeatureOnAlignment (component): 44
+- AddFeatureOnClassLevel (component): 11
+- AddItemToPlayer (action): 1
+- AddStatBonusEquipment (not Enhancement): 61
+- AddUnitFactEquipment (component): 2
+- BlueprintParameterVariants: 24602
+- BuffActionAddStatBonus (action): 1
+- BuffExtraEffects (component): 285
+- Components AddFacts.m_Facts: 2177
+- Components AddFeatureOnAlignment.m_Facts: 44
+- Components FactSinglify.m_NewFacts: 14
+- Components FactSinglify.m_OldFacts: 6
+- Conditional (action): 804
+- ContextActionAddFeature (action): 5
+- ContextActionApplyBuff (action): 301
+- ContextActionChangeSharedValue (action): 6
+- ContextActionPartyMembers (action): 3
+- ContextActionRemoveBuff (action): 1101
+- ContextActionRemoveBuffsByDescriptor (action): 1
+- ContextActionRepeatedActions (action): 1
+- ContextActionSpawnFx (action): 2
+- ContextActionsOnPet (action): 9
+- ContextRankConfig (a base type no Racial bonus uses): 233
+- ContextRestoreResource (action): 1
+- ContextSpendResource (action): 2
+- FactSinglify (component): 3
+- HasArmorFeatureUnlock (component): 9
+- PartyUnits (action): 1
+- RemoveFact (action): 1
+- RemoveFeatureOnApply (component): 31
+- RemoveItemFromPlayer (action): 6
+- m_Enchantments: 2722
+
+## Template names
+
+Names the game fills in at runtime, written in a neutral form (ADR 0006).
+
+- LichDeityFeature b4153b422d02d4f48b3f8f0ceb6a10eb: "{Name}, L{mf|ord|ady} of Death" → "Lord/Lady of Death"
+
+## Shared names
+
+605 display names are shared by 2249 blueprints a Build can reach and a player
+sees, features only Gear gives among them. Each is qualified from the first source that tells it apart (map
+tickets 27, 29 and 30); one in a group may stay bare. A grantor or level qualifies only when every route to the
+blueprint passes through it, and no label names one grantor among several. Blueprints settled, by source:
+
+- item: 6
+- grantor: 1020
+- level: 576
+- kind: 57
+- prerequisite: 21
+- class: 5
+- family: 9
+- override: 208
+- bare: 347
+- open: 0
+
+### Names still shared
+
+Each with why both stay (`tools/importer/shared-names.ts`).
+
+None.
+
+### Groups whose blueprints share an asset name too
+
+- "Arcane Heavy Armor"
+- "Arcane Medium Armor"
+- "Defensive Parry"
+- "Divine Hunter"
+- "Elemental Damage"
+- "Elemental Focus"
+- "Energy Immunity"
+- "Energy Resistance"
+- "Improved Evasion"
+- "Master Hunter"
+- "Nature Sense"
+- "Patron Spells"
+- "Seeker"
+- "Teamwork Feat"
+
+### Every group
+
+Each blueprint with the source that settled it and its written name.
+
+- "AC Bonus" (4)
+  - MonkACBonus e241bdfd6333b9843a7bfd674d607ac4: bare, "AC Bonus"
+  - MonkACBonusUnlock 2615c5f87b3d72b42ac0e73b56d895e0: grantor, "AC Bonus (Monk)"
+  - ScaledFistACBonusUnlock 2a8922e28b3eba54fa7a244f7b05bd9e: grantor, "AC Bonus (Scaled Fist)"
+  - StalwartDefenderACBonus 60b4e1f781e9aac439b8d2ad4c635524: grantor, "AC Bonus (Stalwart Defender)"
+- "Aasimar" (2)
+  - AasimarRace b7f02ba92b363064fb873963bec275ee: bare, "Aasimar"
+  - ClassicHeritage 3b545be3f5cc9fd4081937c226360625: grantor, "Aasimar (Heritage)"
+- "Abyssal" (2)
+  - BloodragerAbyssalBloodline 55d5bbf4b5ae1744ab26c71be98067f9: grantor, "Abyssal (Bloodline)"
+  - BloodragerAbyssalSecondBloodline 12af0fda00774784b45feacb67c014f8: grantor, "Abyssal (Second Bloodrager Bloodline)"
+- "Abyssal Bloodline" (3)
+  - BloodlineAbyssalProgression d3a4cb7be97a6694290f0dcfbd147113: bare, "Abyssal Bloodline"
+  - CrossbloodedSecondaryBloodlineAbyssalProgression 7e9c25e11e2333b4ea16b39964c2f8f1: grantor, "Abyssal Bloodline (Secondary Bloodline)"
+  - SeekerBloodlineAbyssalProgression 17b752be1e0f4a34e8914df52eebeb75: grantor, "Abyssal Bloodline (Bloodline)"
+- "Acid Bomb" (2)
+  - AcidBombsFeature 1ee30ffd28843b84282b04e5d4e8bc7b: bare, "Acid Bomb"
+  - ArcaneBombsAcidFeature e34406825b1d5b145a12af91f1844df3: grantor, "Acid Bomb (Arcane Bombs)"
+- "Acid Resistance" (2)
+  - EarthDomainGreaterFeature 761e8208dc1e2074d89d7cd968f432eb: bare, "Acid Resistance"
+  - EarthDomainGreaterFeatureSeparatist b0b94804c93349c9ace535faf7c6381e: grantor, "Acid Resistance (Forbidden Rites)"
+- "Advanced Weapon Training" (4)
+  - AdvancedWeaponTraining1 3aa4cbdd4af5ba54888b0dc7f07f80c4: prerequisite, "Advanced Weapon Training (Fighter 5)"
+  - AdvancedWeaponTraining2 70a139f0a4c6c534eaa34feea0d08622: prerequisite, "Advanced Weapon Training (Fighter 10)"
+  - AdvancedWeaponTraining3 ee9ab0117ca06b84f9c66469f4428c61: prerequisite, "Advanced Weapon Training (Fighter 15)"
+  - AdvancedWeaponTraining4 0b55d725ded1ae549bb858fba1d84114: prerequisite, "Advanced Weapon Training (Fighter 20)"
+- "Aeon's Companion Immunities" (2)
+  - AeonNinthLevelImmunitiesFeature afa3b2a4db84e0540b3e503de3fabfd2: level, "Aeon's Companion Immunities (Aeon 7)"
+  - AeonThirdLevelImmunitiesFeature b9d14e7d160794844aaf11df3efba7c7: level, "Aeon's Companion Immunities (Aeon 5)"
+- "Aeon's Immunities" (4)
+  - AeonFifthLevelImmunities c52b48a922161fe45a258f0214d6501a: level, "Aeon's Immunities (Aeon 3)"
+  - AeonSeventhLevelImmunities e4d96713f033cc347b43e941b6f5a743: level, "Aeon's Immunities (Aeon 5)"
+  - AeonTenthLevelImmunities 711f6abfab877d342af9743a11c8f3aa: level, "Aeon's Immunities (Aeon 8)"
+  - AeonThirdLevelImmunities 2be3d3d82e6ced345ac3c5e0c0fa3e50: level, "Aeon's Immunities (Aeon 1)"
+- "Air" (5)
+  - AirBlessingFeature e1ff99dc3aeaa064e8eecde51c1c4773: grantor, "Air (Blessings)"
+  - ElementalFocusAir 2bd0d44953a536f489082534c48f8e31: grantor, "Air (Elemental Focus)"
+  - KineticKnightElementalFocusAir 93bd14dd916cfd1429c11ad66adf5e2b: grantor, "Air (Kinetic Knight)"
+  - SecondaryElementAir 659c39542b728c04b83e969c834782a9: level, "Air (Kineticist 7)"
+  - ThirdElementAir 651570c873e22b84f893f146ce2de502: level, "Air (Kineticist 15)"
+- "Air Barrier" (2)
+  - OracleRevelationAirBarrier 7e9743e4be4aad9438a58988cfe521bb: grantor, "Air Barrier (Revelation)"
+  - ShamanHexAirBarrierFeature 4b5b0f429730a984fb56fc3e34e5231e: bare, "Air Barrier"
+- "Air Blast" (2)
+  - AirBlastProgression 6f1d86ae43adf1049834457ce5264003: bare, "Air Blast"
+  - AirBlastSelection 49e55e8f24e1ad24e910fefc0258adba: grantor, "Air Blast (Air)"
+- "Air Domain" (7)
+  - AirDomainBaseFeature 39b0c7db785560041b436b558c9df2bb: level, "Air Domain (level 1)"
+  - AirDomainBaseFeatureSeparatist b7f7096b7d394f219e6f28b957cd5f39: grantor, "Air Domain (Separatist)"
+  - AirDomainProgression 750bfcd133cd52f42acbd4f7bc9cc365: bare, "Air Domain"
+  - AirDomainProgressionDruid 3aef017b78329db4fa53fe8560069886: grantor, "Air Domain (Druid)"
+  - AirDomainProgressionSecondary d7169e8978d9e9d418398eab946c49e5: grantor, "Air Domain (Domain Selection)"
+  - AirDomainProgressionSeparatist 0a794d48ccec4a91a1230f714f0666b9: grantor, "Air Domain (Forbidden Rites)"
+  - TricksterLoreReligionAirDomainFeature 2dc50974356942c7b9f2ccfdcdeb7d61: grantor, "Air Domain (Lore (Religion) 2 Rank)"
+- "Alignment Restriction" (2)
+  - DruidAlignmentRestriction d00ff3791359311449c481126fbf71ce: grantor, "Alignment Restriction (Druid)"
+  - PaladinAlignmentRestriction f8c91c0135d5fc3458fcc131c4b77e96: grantor, "Alignment Restriction (Paladin)"
+- "All Is Darkness" (2)
+  - AllIsdarknessLvlUpFeature a1cf87d341064810b032780ecd8df079: override, "All Is Darkness (rank)"
+  - TorturedCrusaderAllIsDarknessFeature 2ddbfce6b2844c60bb28ecf33923d2a2: bare, "All Is Darkness"
+- "Allied Spellcaster" (2)
+  - AlliedSpellcaster 9093ceeefe9b84746a5993d619d7c86f: kind, "Allied Spellcaster (feature)"
+  - CavalierTacticianAlliedSpellcasterBuff 3de0359d9480cb549ab6cf1eac51f9dc: kind, "Allied Spellcaster (buff)"
+- "Alone in the Dark" (2)
+  - AloneInTheDarkFeatureDescription ecbfbffc97544ef1892e37514ec6643f: level, "Alone in the Dark (Tortured Crusader 1)"
+  - AloneinTheDarkLastManStandingFeature 3ca1d2a2633c46b69236fbc637db6980: level, "Alone in the Dark (Tortured Crusader 2)"
+- "Ameliorating" (2)
+  - ShamanHexAmelioratingFeature 8e19da021854b9b4e805f0e919663894: override, "Ameliorating (shaman hex)"
+  - WitchHexAmelioratingFeature 3cdd3660fb69f3e4db0160fa97dfa85d: override, "Ameliorating (witch hex)"
+- "Ancestor" (3)
+  - DivineHerbalistAncestorsMysteryFeature 2af1112188727bf469ec50c5575b6c52: override, "Ancestor (Divine Herbalist)"
+  - EnlightenedPhilosopherAncestorsMysteryFeature 36e136a4cc77a434083a12a72678a9ba: override, "Ancestor (Enlightened Philosopher)"
+  - OracleAncestorsMysteryFeature 9936554e9372dab4a874c1dd165fb6f8: bare, "Ancestor"
+- "Animal Companion" (22)
+  - AnimalCompanionSelectionDivineHound 8abc5936b95d4983866f3bcace522e23: grantor, "Animal Companion (Divine Hound)"
+  - AnimalCompanionSelectionDomain 2ecd6c64683b59944a7fe544033bb533: grantor, "Animal Companion (Animal Domain)"
+  - AnimalCompanionSelectionDruid 571f8434d98560c43935e132df65fe76: grantor, "Animal Companion (Druid)"
+  - AnimalCompanionSelectionHunter 715ac15eb8bd5e342bc8a0a3c9e3e38f: grantor, "Animal Companion (Hunter)"
+  - AnimalCompanionSelectionMadDog 738b59d0b58187f4d846b0caaf0f80d7: grantor, "Animal Companion (Mad Dog)"
+  - AnimalCompanionSelectionPrimalDruid fad1127127d9413c8e3e85f8f0450bc1: grantor, "Animal Companion (Primal Druid)"
+  - AnimalCompanionSelectionRanger ee63330662126374e8785cc901941ac7: grantor, "Animal Companion (Hunter's Bond)"
+  - AnimalCompanionSelectionSacredHuntsmaster 2995b36659b9ad3408fd26f137ee2c67: grantor, "Animal Companion (Sacred Huntsmaster)"
+  - AnimalCompanionSelectionSylvanSorcerer a540d7dfe1e2a174a94198aba037274c: grantor, "Animal Companion (Sylvan Sorcerer)"
+  - AnimalCompanionSelectionUrbanHunter 257375cd139800e459d69ccfe4ca309c: grantor, "Animal Companion (Urban Hunter)"
+  - AnimalCompanionSelectionWildlandShaman 164c875d6b27483faba479c7f5261915: grantor, "Animal Companion (Wildland Shaman)"
+  - ArcaneRiderMountSelection 82c791d4790c45dcac6038ef6932c3e3: grantor, "Animal Companion (Arcane Rider)"
+  - BeastRiderMountSelection f7da602dae8944d499f00074c973c28a: grantor, "Animal Companion (Beast Rider)"
+  - BloodriderMountSelection c81bb2aa48c113c4ba3ee8582eb058ea: grantor, "Animal Companion (Bloodrider)"
+  - CavalierMountSelection 0605927df6e2fdd42af6ee2424eb89f2: grantor, "Animal Companion (Cavalier)"
+  - NomadMountSelection 8e1957da5a8144d1b0fcf8875ac6bab7: grantor, "Animal Companion (Nomad)"
+  - OracleRevelationBondedMount 0234d0dd1cead22428e71a2500afa2e1: grantor, "Animal Companion (Revelation)"
+  - OrderOfThePawMountSelection 7b8b6474cc374a23830341d2a40eecaf: grantor, "Animal Companion (Cavalier of the Paw)"
+  - PaladinDivineMountSelection e2f0e0efc9e155e43ba431984429678e: grantor, "Animal Companion (Divine Bond)"
+  - ScalykindCompanionSelectionDomain de9a327caa5b45eeb05ed9fe0f0ed4ce: grantor, "Animal Companion (Scalykind Domain)"
+  - ScalykindCompanionSelectionDomainSeparatist f2806f436f80427b99875962784ef80b: grantor, "Animal Companion (Forbidden Rites)"
+  - SoheiMonasticMountHorseSelection 918432cc97b146a4b93e2b3060bdd1ed: grantor, "Animal Companion (Sohei)"
+- "Animal Domain" (6)
+  - AnimalDomainBaseFeature d577aba79b5727a4ab74627c4c6ba23c: level, "Animal Domain (level 1)"
+  - AnimalDomainProgression 23d2f87aa54c89f418e68e790dba11e0: bare, "Animal Domain"
+  - AnimalDomainProgressionDruid a75ad4936e099c54881cf553e2110703: grantor, "Animal Domain (Druid)"
+  - AnimalDomainProgressionSecondary f13eb6be93dd5234c8126e5384040009: grantor, "Animal Domain (Domain Selection)"
+  - AnimalDomainProgressionSeparatist e3d58ae932554987a6e247e281efc2f0: grantor, "Animal Domain (Forbidden Rites)"
+  - TricksterLoreReligionAnimalDomainFeature 8c67207f838b43df9f2050de4ca035dd: grantor, "Animal Domain (Lore (Religion) 2 Rank)"
+- "Animal Focus" (2)
+  - ForesterAnimalFocusFeature f63fdfe05a7393b40b5cd60e270bb117: grantor, "Animal Focus (Forester)"
+  - HunterAnimalFocusFeature 443365823b7d6d14b8d12f4e7bce1077: bare, "Animal Focus"
+- "Arcane" (2)
+  - BloodragerArcaneBloodline aeff0a749e20ffe4b9e2846eae29c386: grantor, "Arcane (Bloodline)"
+  - BloodragerArcaneSecondBloodline a83c0d19fdcc41c79f04df934e7ebf29: grantor, "Arcane (Second Bloodrager Bloodline)"
+- "Arcane Accuracy" (2)
+  - ArcaneAccuracyFeature 2eacbdbf1c4f4134aa7fea99ab8763dc: bare, "Arcane Accuracy"
+  - EldritchArcaneAccuracyFeature dd7c42ce29d2b9e40ac2b5161326554a: grantor, "Arcane Accuracy (Magus Arcana)"
+- "Arcane Bloodline" (3)
+  - BloodlineArcaneProgression 4d491cf9631f7e9429444f4aed629791: bare, "Arcane Bloodline"
+  - CrossbloodedSecondaryBloodlineArcaneProgression 1c49400550b6c954a9e40fabea7f435b: grantor, "Arcane Bloodline (Secondary Bloodline)"
+  - SeekerBloodlineArcaneProgression 562c5e4031d268244a39e01cc4b834bb: grantor, "Arcane Bloodline (Bloodline)"
+- "Arcane Bond" (2)
+  - ArcaneBondSelection 03a1781486ba98043afddaabf6b7d8ff: grantor, "Arcane Bond (Wizard)"
+  - BloodlineArcaneArcaneBondFeature 1740a701ac0a14c4394a7f76f0b07799: grantor, "Arcane Bond (Arcane Bloodline)"
+- "Arcane Bond — Object" (3)
+  - BloodlineArcaneItemBondFeature 473fca42a1f049ef88ba8824c9827d87: grantor, "Arcane Bond — Object (Arcane Bond)"
+  - HeraldOfTheHornItemBondFeature 4f92e08a658e5b34c961fc12c560672b: grantor, "Arcane Bond — Object (Herald of the Horn)"
+  - ItemBondFeature 2fb5e65bd57caa943b45ee32d825e9b9: grantor, "Arcane Bond — Object (Wizard)"
+- "Arcane Heavy Armor" (2)
+  - ArcaneHeavyArmor 447ca91389e5c9246acb2c640d63f4da: bare, "Arcane Heavy Armor"
+  - ArcaneHeavyArmor c7afb6c47798b7a4abf21f343f07f8d5: grantor, "Arcane Heavy Armor (Magus)"
+- "Arcane Medium Armor" (2)
+  - ArcaneMediumArmor 8498cdb82f5eb6d4f91e72b1a18944ff: grantor, "Arcane Medium Armor (Magus)"
+  - ArcaneMediumArmor b24897e082896654c8dd64c8fb677363: bare, "Arcane Medium Armor"
+- "Arcane Metamagic" (4)
+  - ArcaneMetamagicFeature 842528c733db422a915b7b06e9a71178: level, "Arcane Metamagic (Phantasmal Mage 1)"
+  - ArcaneMetamagicFeature11 402d0054da7e45dcb6b554ed1db6bd1f: level, "Arcane Metamagic (Phantasmal Mage 11)"
+  - ArcaneMetamagicFeature17 bbb28051942243cf81dc90ec40b646ba: level, "Arcane Metamagic (Phantasmal Mage 17)"
+  - ArcaneMetamagicFeature5 9905e8d1afa644afaa7d61ba979b7dec: level, "Arcane Metamagic (Phantasmal Mage 5)"
+- "Arcane Pool" (2)
+  - ArcanePoolFeature 3ce9bb90749c21249adc639031d5eed1: bare, "Arcane Pool"
+  - ArmoredBattlemageArcanePoolFeature 466c40aba50096341bf6532b1e53e8bd: grantor, "Arcane Pool (Armored Battlemage)"
+- "Arcane Reservoir" (2)
+  - ArcaneEnforcerArcaneReservoirFeature 9d1e2212594cf47438fff2fa3477b954: grantor, "Arcane Reservoir (Arcane Enforcer)"
+  - ArcanistArcaneReservoirFeature 55db1859bd72fd04f9bd3fe1f10e4cbb: bare, "Arcane Reservoir"
+- "Arcane Spellcasting" (4)
+  - ArcaneTricksterSpellbookSelection ae04b7cdeb88b024b9fd3882cc7d3d76: grantor, "Arcane Spellcasting (Arcane Trickster)"
+  - DragonDiscipleSpellbookSelection 8c1ba14c0b6dcdb439c56341385ee474: grantor, "Arcane Spellcasting (Dragon Disciple)"
+  - EldritchKnightSpellbookSelection dc3ab8d0484467a4787979d93114ebc3: grantor, "Arcane Spellcasting (Eldritch Knight)"
+  - MysticTheurgeArcaneSpellbookSelection 97f510c6483523c49bc779e93e4c4568: grantor, "Arcane Spellcasting (Mystic Theurge)"
+- "Arcane Weapon (+2)" (2)
+  - ArcaneWeaponPlus2 36b609a6946733c42930c55ac540416b: bare, "Arcane Weapon (+2)"
+  - EldritchWeaponPlus2 8d7e93b703135e647b158e3dfab9a2c7: grantor, "Arcane Weapon (+2) (Magus)"
+- "Arcane Weapon (+3)" (2)
+  - ArcaneWeaponPlus3 70be888059f99a245a79d6d61b90edc5: bare, "Arcane Weapon (+3)"
+  - EldritchWeaponPlus3 010ec746da5d9374aa7dfb8a1dd817db: grantor, "Arcane Weapon (+3) (Magus)"
+- "Arcane Weapon (+4)" (2)
+  - ArcaneWeaponPlus4 1804187264121cd439d70a96234d4ddb: bare, "Arcane Weapon (+4)"
+  - EldritchWeaponPlus4 dde9f0600ef3ead4ea5bf5a983e9f765: grantor, "Arcane Weapon (+4) (Magus)"
+- "Arcane Weapon (+5)" (2)
+  - ArcaneWeaponPlus5 3cbe3e308342b3247ba2f4fbaf5e6307: bare, "Arcane Weapon (+5)"
+  - EldritchWeaponPlus5 93b9c7f77097d074198f746baf744c80: grantor, "Arcane Weapon (+5) (Magus)"
+- "Arcanist" (4)
+  - ArcanistClass 52dbfd8505e22f84fad8d702611f60b7: bare, "Arcanist"
+  - LoremasterClericSecretArcanist cd3058b460930a5418f3811ec9be9ebb: grantor, "Arcanist (Cleric Spell)"
+  - LoremasterDruidSecretArcanist 084b3340727f0574a82239ecf74f8910: grantor, "Arcanist (Druid Spell)"
+  - LoremasterWizardSecretArcanist 17a4c17d48c295543b3c449f91de8076: grantor, "Arcanist (Wizard Spell)"
+- "Archery" (3)
+  - RangerStyleArcherySelection10 7ef950ca681955d47bc4efbe77073e2c: override, "Archery (level 10)"
+  - RangerStyleArcherySelection2 3cf94df3f1cf9a443a880bc1ae9be3c6: override, "Archery (level 2)"
+  - RangerStyleArcherySelection6 6c799d09d5b93f344b9ade0e0c765c2d: override, "Archery (level 6)"
+- "Armor Proficiency" (2)
+  - AngelfireApostleProficiencies 955a3cc721c067b4da06508526aabc55: grantor, "Armor Proficiency (Angelfire Apostle)"
+  - BeastRiderProficiencies 801edc0eaf2d36d4983f1fe5c0f79818: grantor, "Armor Proficiency (Beast Rider)"
+- "Armor Proficiency (Heavy Armor)" (2)
+  - DevilbanePriestHeavyArmorProficiency 907baa147cfa41b41b4a13c9a3bf3880: grantor, "Armor Proficiency (Heavy Armor) (Demonbane Priest)"
+  - HeavyArmorProficiency 1b0f68188dcc435429fb87a022239681: bare, "Armor Proficiency (Heavy Armor)"
+- "Armor Training" (3)
+  - ArmorTraining 3c380607706f209499d951b29d3c44f3: bare, "Armor Training"
+  - ArmoredBattlemageArmorTraining 7be523d531bb17449bdba98df0e197ff: grantor, "Armor Training (Armored Battlemage)"
+  - SteelbloodArmorTraining 8d6acd9ac87cf0149b7d92eb6ed105d2: grantor, "Armor Training (Steelblood)"
+- "Armored Swiftness" (2)
+  - ArmoredHulkArmoredSwiftness f95f4f3a10917114c82bcbebc4d0fd36: grantor, "Armored Swiftness (Armored Hulk)"
+  - SteelbloodArmoredSwiftness bd4397ee26a3baf4cadaeb766b018cff: grantor, "Armored Swiftness (Steelblood)"
+- "Artifice Domain" (5)
+  - ArtificeDomainBaseFeature 01025d876ac28d349ac42d69ba462059: level, "Artifice Domain (level 1)"
+  - ArtificeDomainProgression 6454b37f50e10ae41bca83aaaa81ffc2: bare, "Artifice Domain"
+  - ArtificeDomainProgressionSecondary 988f3e10cc2fd8f48915acdc640a65b3: grantor, "Artifice Domain (Domain Selection)"
+  - ArtificeDomainProgressionSeparatist 5e9fec83791a40e484f4013388768d24: grantor, "Artifice Domain (Forbidden Rites)"
+  - TricksterLoreReligionArtificeDomainFeature 3cdb99f36b4f4322a28565d0f0a588ed: grantor, "Artifice Domain (Lore (Religion) 2 Rank)"
+- "Ascension" (2)
+  - BloodlineCelestialAscensionAbility d85e0396d8f68e047b7b67a1290f8dbc: prerequisite, "Ascension (Empyreal Bloodline)"
+  - BloodragerCelestialAscension 22026a36e62907f41a8c49717d4eac96: bare, "Ascension"
+- "Aura of Courage" (3)
+  - AloneInTheDarkFeatureLevel3AuraOfCourageFeature 25a015e8c4724a4699b96a4002a9711b: grantor, "Aura of Courage (Tortured Crusader)"
+  - AuraOfCourageFeature e45ab30f49215054e83b4ea12165409f: grantor, "Aura of Courage (Paladin)"
+  - MartyrAuraOfCourageFeature 8121d2fb0b4cd4746a2cda39ef77a9a5: grantor, "Aura of Courage (Martyr)"
+- "Aura of Efficiency: Damage Resistance" (2)
+  - ArtificeDomainGreaterFeature 9c536f77cae0c5c46a9cf871003ebe43: bare, "Aura of Efficiency: Damage Resistance"
+  - ArtificeDomainGreaterFeatureSeparatist b583d95677c24f5eb7a891ebd4ceebc1: grantor, "Aura of Efficiency: Damage Resistance (Forbidden Rites)"
+- "Aura of Faith" (2)
+  - AloneInTheDarkFeatureLevel14AuraOfFaithFeature 672835d0cf244539aa89bf566a070ffb: grantor, "Aura of Faith (Tortured Crusader)"
+  - AuraOfFaithFeature 0437f4af5ad49b544bccf48aa7a51319: grantor, "Aura of Faith (Paladin)"
+- "Aura of Madness" (2)
+  - MadnessDomainGreaterFeature 9acc8ab2f313d0e49bb01e030c868e3f: bare, "Aura of Madness"
+  - MadnessDomainGreaterFeatureSeparatist 249e48a1be504850808042c3ed053cda: grantor, "Aura of Madness (Forbidden Rites)"
+- "Aura of Protection" (3)
+  - ProtectionBlessingMajorFeature 46039a223264d284fb1af7d21aaa994a: grantor, "Aura of Protection (Protection)"
+  - ProtectionDomainGreaterFeature e2e9d41bfa7aa364592b9d57dd74c9db: bare, "Aura of Protection"
+  - ProtectionDomainGreaterFeatureSeparatist 7eb39ba8115a422bb69c702cc20ca58a: grantor, "Aura of Protection (Forbidden Rites)"
+- "Aura of Purity" (2)
+  - ShamanHexAuraOfPurityFeature 558e9265731aa9f4b9d6c269d827a2a3: override, "Aura of Purity (shaman hex)"
+  - WitchHexAuraOfPurityFeature 3459664f16e56124f95ec4c9f9856d06: override, "Aura of Purity (witch hex)"
+- "Aura of Resolve" (3)
+  - AloneInTheDarkFeatureLevel8AuraOfResolveFeature ab0a392eb6884091845644de3985730c: grantor, "Aura of Resolve (Tortured Crusader)"
+  - AuraOfResolveFeature a28693b24cc412c478b8b85877f2dad2: grantor, "Aura of Resolve (Paladin)"
+  - MartyrAuraOfResolveFeature 9d079fd1448ca1d4b9e009c5628cc132: grantor, "Aura of Resolve (Martyr)"
+- "Aura of Righteousness" (3)
+  - AloneInTheDarkFeatureLevel17AuraOfRightFeature 23711255f6ca4a9b8f0337ad2ffb2ac6: grantor, "Aura of Righteousness (Tortured Crusader)"
+  - AuraOfRighteousnessFeature 6bd4a71232014254e80726f3a3756962: grantor, "Aura of Righteousness (Paladin)"
+  - MartyrAuraOfRighteousnessFeature 1230b414cac49234fbcb00c46ba45503: grantor, "Aura of Righteousness (Martyr)"
+- "Back to Back" (2)
+  - BackToBack c920f2cd2244d284aa69a146aeefcb2c: kind, "Back to Back (feature)"
+  - CavalierTacticianBackToBackBuff 693964e674883e74b8d0005dbf4a4e6b: kind, "Back to Back (buff)"
+- "Bane Blade" (2)
+  - BaneBladeFeature a2e0691dcfda2374e84d8bbf480e06a0: bare, "Bane Blade"
+  - EldritchBaneBladeFeature 94564072c5e32d34d88a2d4203bc5bbf: grantor, "Bane Blade (Magus Arcana)"
+- "Banishment" (2)
+  - BloodlineArcaneSpellLevel7 34e80f2817741e1498d36947a65c15f6: override, "Banishment (Arcane Bloodline or Sage Sorcerer)"
+  - BloodlineCelestialSpellLevel7 e4e7db6c16a91fd4bbfa55d9cdc9bc27: bare, "Banishment"
+- "Bard" (4)
+  - BardClass 772c83a25e2268e448e841dcd548235f: bare, "Bard"
+  - LoremasterClericSecretBard 0fcb8e80d559ee942bbf6e9761513cdf: grantor, "Bard (Cleric Spell)"
+  - LoremasterDruidSecretBard 0d9ebea70810c9b49bd31a0158e1998d: grantor, "Bard (Druid Spell)"
+  - LoremasterWizardSecretBard b8310eac977d2c7498184f2523490f31: grantor, "Bard (Wizard Spell)"
+- "Bardic Knowledge" (3)
+  - BardicKnowledge 65cff8410a336654486c98fd3bacd8c5: bare, "Bardic Knowledge"
+  - BattleScionBardicKnowledge a26443d8c4ccdf040965cfe0066a61f6: grantor, "Bardic Knowledge (Battle Scion)"
+  - SkaldBardicKnowledge b2cc2d1d1844d0443866164466613c5c: grantor, "Bardic Knowledge (Skald)"
+- "Basic" (2)
+  - BaseRaceFeature 8b2da1d0f9504872809e63b39c24c502: bare, "Basic"
+  - BaseRaseHalfElfSelection a9d54aab4e9243ca867341257aaa253e: grantor, "Basic (Half-Elf)"
+- "Battle" (7)
+  - DivineHerbalistBattleMysteryFeature c880da2dea6b54f4bad7d1f4b79c2d63: override, "Battle (Divine Herbalist)"
+  - EnlightenedPhilosopherBattleMysteryFeature 677fbcaa2a87cf94296138568db117a8: override, "Battle (Enlightened Philosopher)"
+  - OracleBattleMysteryFeature 6b8e676943cb91648b21b7ca72fbb833: bare, "Battle"
+  - ShamanBattleSpiritProgression 26e81d83d13dbf6448b10019c802612d: kind, "Battle (progression)"
+  - ShamanBattleSpiritWanderingFeature 82ec7a49f3ab65a44bbf4177dfdfe469: level, "Battle (Shaman 4)"
+  - UnswornShamanBattleSpiritWanderingFeature 1 8e3b0e7b907296940bb038f2c684996a: level, "Battle (Unsworn Shaman 2)"
+  - UnswornShamanBattleSpiritWanderingFeature 2 171830526d38ec142836c42db504ceda: level, "Battle (Unsworn Shaman 6)"
+- "Battle Companion" (4)
+  - AnimalBlessingMajorFeature 4a9feb61035b23447a83b52d401c3b2b: grantor, "Battle Companion (Animal)"
+  - ChaosBlessingMajorFeature 2067f183d94f69a418533c9611ed127e: grantor, "Battle Companion (Chaos)"
+  - EvilBlessingMajorFeature 883897b5ba5a0144fb051a4ad1b84d97: grantor, "Battle Companion (Evil)"
+  - PlantBlessingMajorFeature 26602734a3744815bd00f04abd7b86d2: grantor, "Battle Companion (Plant)"
+- "Battle Master" (4)
+  - ShamanHexBattleMasterFeature 4db9f3d913a59f14f9cc4ffaa73de2f0: kind, "Battle Master (feature)"
+  - ShamanHexBattleMasterProgression 840651aac9b854a4980ec19e2fced74f: kind, "Battle Master (progression)"
+  - ShamanHexBattleMasterSelection16 a658b783516e2e84380a86dce6289bf0: level, "Battle Master (level 16)"
+  - ShamanHexBattleMasterSelection8 f18fea9a4f78fc94e842c02e24b1dad3: level, "Battle Master (level 8)"
+- "Battle Prowess" (2)
+  - BattleProwessFeature 225940b509289224e83cd900f15b852e: kind, "Battle Prowess (feature)"
+  - BattleProwessSelection 29b480a26a88f9e47a10d8c9fab84ee6: kind, "Battle Prowess (selection)"
+- "Bear" (4)
+  - ShifterAspectBear 73ef2c330ff14e4bb2f5b7300622c552: grantor, "Bear (Shifter Aspect)"
+  - ShifterAspectBearAbility e66b1350f66949d997e31a57ce638fee: level, "Bear (Shifter 1)"
+  - ShifterAspectBearBuff a237792fc2644a4ebc6eefa2d325f181: level, "Bear (Shifter 9)"
+  - ShifterFeyChimeraBearFeature 5eee711de0b149e9aa25cbf72db2af07: grantor, "Bear (Feyform Shifter)"
+- "Blackened" (4)
+  - BlackenedCurseFeatureLevel1 0b6eeed955daedd4896ef104cfc2afb9: level, "Blackened (level 1)"
+  - BlackenedCurseNoPenaltyProgression 44d0e9af729cf4b419295bce03e7afdd: grantor, "Blackened (Beneficial Curse)"
+  - BlackenedCurseNoProgression 572848eba7b34f589d8adca9ffcda2d8: bare, "Blackened"
+  - BlackenedCurseProgression ca1e4627a1ad8fc4f83158f6497d5c54: grantor, "Blackened (Oracle's Curse)"
+- "Blessings" (2)
+  - BlessingSelection 6d9dcc2a59210a14891aeedb09d406aa: bare, "Blessings"
+  - SecondBlessingSelection b7ce4a67287cda746a59b31c042305cf: family, "Blessings (Warpriest)"
+- "Blind Fight" (2)
+  - BlindFight 4e219f5894ad0ea4daa0699e28c37b1d: bare, "Blind Fight"
+  - DarkLurkerBlindFight 02933a1e1e4345d8b9aaf606444b0432: grantor, "Blind Fight (Dark Lurker)"
+- "Blizzard Servant — Crystallized Affinity" (2)
+  - WinterChildCompanionSecondUpgradeFeature 4bdb7506054f484296a3f1582de090b5: level, "Blizzard Servant — Crystallized Affinity (Winter Child 11)"
+  - WinterChildCompanionTrirdUpgradeFeature 45e4928aa4174aaf8b8297ea9f8f2108: level, "Blizzard Servant — Crystallized Affinity (Winter Child 16)"
+- "Bloodline" (5)
+  - BloodragerBloodlineSelection 62b33ac8ceb18dd47ad4c8f06849bc01: grantor, "Bloodline (Bloodrager)"
+  - EldritchScionBloodlineSelection 94c29f69cdc34594a6a4677441ed7375: grantor, "Bloodline (Eldritch Scion)"
+  - ReformedFiendBloodlineSelection dd62cb5011f64cd38b8b08abb19ba2cc: grantor, "Bloodline (Reformed Fiend)"
+  - SeekerBloodlineSelection 7bda7cdb0ccda664c9eb8978cf512dbc: grantor, "Bloodline (Seeker)"
+  - SorcererBloodlineSelection 24bef8d1bee12274686f6da6ccbc8914: bare, "Bloodline"
+- "Bloodline Arcana" (2)
+  - EmpyrealBloodlineArcana d9c68634b6f3aad47a03a24984b93520: grantor, "Bloodline Arcana (Empyreal Bloodline)"
+  - SageBloodlineArcana 0d188736c79e85b44b3cc49ad8d1bb1e: grantor, "Bloodline Arcana (Sage Sorcerer)"
+- "Bloodrage" (3)
+  - BloodragerRageFeature 6991ee8175d87c04790067515f6fb322: grantor, "Bloodrage (Bloodrager)"
+  - BloodragerStandartRageActivateableAbility e3a0056eedac7754ca9a50603ba05177: level, "Bloodrage (Bloodrager 1)"
+  - BloodragerStandartRageBuff 5eac31e457999334b98f98b60fc73b2f: bare, "Bloodrage"
+- "Bloodrager" (5)
+  - BloodragerClass d77e67a814d686842802c9cfd8ef8499: kind, "Bloodrager"
+  - BloodragerProgression 69dec3bda9a94914bb159cba128300b9: kind, "Bloodrager (progression)"
+  - LoremasterClericSecretBloodrager bbd1ce5be15155f49b99be31a0ab99f4: grantor, "Bloodrager (Cleric Spell)"
+  - LoremasterDruidSecretBloodrager 305051416daa8d041a2d32475947dc47: grantor, "Bloodrager (Druid Spell)"
+  - LoremasterWizardSecretBloodrager eb8e30350bb79ac438143b6389dbb9ed: grantor, "Bloodrager (Wizard Spell)"
+- "Boar" (4)
+  - ShifterAspectBoar 9ee4074cbae746ba96463c0b2a562226: grantor, "Boar (Shifter Aspect)"
+  - ShifterAspectBoarAbility 43bc6e6b0f91413095d4f68206598a69: level, "Boar (Shifter 1)"
+  - ShifterAspectBoarBuff 0fdc579eafbf4fceae649beed8188a5c: level, "Boar (Shifter 9)"
+  - ShifterFeyChimeraBoarFeature 28861cff75d04622a2d43d8ab6789032: grantor, "Boar (Feyform Shifter)"
+- "Body of Ice" (2)
+  - IceSubdomainGreaterFeature b105ed7a854948bda3d7ee23e60b7c70: bare, "Body of Ice"
+  - IceSubdomainGreaterFeatureSeparatist f43f6f98eaad4506b87b98d5fb7d6acd: grantor, "Body of Ice (Forbidden Rites)"
+- "Bones" (7)
+  - DivineHerbalistBonesMysteryFeature e083bd3fa7dfc924fb4e6ab371eda368: override, "Bones (Divine Herbalist)"
+  - EnlightenedPhilosopherBonesMysteryFeature 511ee1f805f8d1445b64f4c8398ca938: override, "Bones (Enlightened Philosopher)"
+  - OracleBonesMysteryFeature 067b175d3df0d1a408efd7eee2b36b9b: bare, "Bones"
+  - ShamanBonesSpiritProgression 65b5e7f17a1b928418fc9e8a6b55eafa: kind, "Bones (progression)"
+  - ShamanBonesSpiritWanderingFeature a3862152ae6010445bc25915ac58fc8e: level, "Bones (Shaman 4)"
+  - UnswornShamanBonesSpiritWanderingFeature 1 6e97c24ac0e08744baa3bfdfa0c2036d: level, "Bones (Unsworn Shaman 2)"
+  - UnswornShamanBonesSpiritWanderingFeature 2 3ca1734f2bd13a54f90a657e760629d0: level, "Bones (Unsworn Shaman 6)"
+- "Bonus Combat Feat" (8)
+  - EldritchKnightFeatSelection da03141df23f3fe45b0c7c323a8e5a0e: grantor, "Bonus Combat Feat (Eldritch Knight)"
+  - FighterFeatSelection 41c8486641f7d6d4283ca9dae4147a9f: bare, "Bonus Combat Feat"
+  - GriffonheartShifterFeatSelection f1add10c87fa4563ad5f71779eecde19: grantor, "Bonus Combat Feat (Griffon Aspect)"
+  - LichSkeletalCombatParametrized b8a52bbe63e7d6b48b002ee474e90fdd: grantor, "Bonus Combat Feat (Skeleton Upgrade Selection)"
+  - LichSkeletalCombatSelection 5701afd6f00754240987fbb02101824d: grantor, "Bonus Combat Feat (Skeletal Fighter I)"
+  - SelfSuffisientBonusFeats db3c26e791cb4b70a82203b28563da02: grantor, "Bonus Combat Feat (Tortured Crusader)"
+  - WarDomainGreaterFeatSelection 79c6421dbdb028c4fa0c31b8eea95f16: grantor, "Bonus Combat Feat (War Domain)"
+  - WarpriestFeatSelection 303fd456ddb14437946e344bad9a893b: grantor, "Bonus Combat Feat (Warpriest)"
+- "Bonus Feat" (3)
+  - CavalierBonusFeatSelection dd17090d14958ef48ba601688b611970: grantor, "Bonus Feat (Cavalier)"
+  - PackRagerTeamworkFeatSelection 94ebbd6472c19fa4ea7196eaff11a740: grantor, "Bonus Feat (Pack Rager)"
+  - SkaldFeatSelection 0a1999535b4f77b4d89f689a385e5ec9: grantor, "Bonus Feat (Skald)"
+- "Bonus Feats" (25)
+  - ArcaneRiderMountedCombatFeature f6021e6d04e14e65a90e416ef08dc521: grantor, "Bonus Feats (Arcane Rider)"
+  - BloodragerAbyssalFeatSelection 4faaa616d43602c40806977a5c518e40: level, "Bonus Feats (Abyssal 12)"
+  - BloodragerAbyssalFeatSelectionGreenrager 989a6fd870f7c944dac365381a7c7c31: level, "Bonus Feats (Abyssal 6)"
+  - BloodragerArcaneFeatSelection d94311bc1342db14d8c48c08b73e94c7: level, "Bonus Feats (Arcane 12)"
+  - BloodragerArcaneFeatSelectionGreenrager c6ec51fa71aaadf4f9cd77549c4e45e8: level, "Bonus Feats (Arcane 6)"
+  - BloodragerCelestialFeatSelection 7eff1ba637c68b74ea562b4659636764: level, "Bonus Feats (Celestial 12)"
+  - BloodragerCelestialFeatSelectionGreenrager 0c96650e80e712f439c2a4da8a4272d9: level, "Bonus Feats (Celestial 6)"
+  - BloodragerDragonFeatSelection 8a2a8d623f6cb574f9e0b6c82ae65c74: family, "Bonus Feats (Draconic 12)"
+  - BloodragerDragonFeatSelectionGreenrager 3d0b4942c400a7f448ca09e04edfb52a: family, "Bonus Feats (Draconic 6)"
+  - BloodragerElementalFeatSelection 107b4ff0240382e4f9a4659484e1c0fa: family, "Bonus Feats (Elemental 12)"
+  - BloodragerElementalFeatSelectionGreenrager 4adc208e35b9ef64285014c1af47fc4a: family, "Bonus Feats (Elemental 6)"
+  - BloodragerFeyFeatSelection ae13cd63a0f0c4243bbc6566d1f98485: level, "Bonus Feats (Fey 12)"
+  - BloodragerFeyFeatSelectionGreenrager 4cacd14dc0ed7b94997c96e79bf67335: level, "Bonus Feats (Fey 6)"
+  - BloodragerHagFeatSelection 019780ef68324fcdaf58354921a0931e: grantor, "Bonus Feats (Hag)"
+  - BloodragerInfernalFeatSelection d3139e9bd4146af41938cb10b436a6eb: level, "Bonus Feats (Infernal 12)"
+  - BloodragerInfernalFeatSelectionGreenrager 56cc435ae8647354ea3ab6131ae43e8f: level, "Bonus Feats (Infernal 6)"
+  - BloodragerSerpentineFeatSelection 4a84be500fd481c40a79c2adb243905d: level, "Bonus Feats (Serpentine Bloodline 12)"
+  - BloodragerSerpentineFeatSelectionGreenrager f2d845da2ce13d745bbe54bf6838bb91: level, "Bonus Feats (Serpentine Bloodline 6)"
+  - BloodragerUndeadFeatSelection 6980b5eb325e5fb47b12e54b31caff9e: level, "Bonus Feats (Undead 12)"
+  - BloodragerUndeadFeatSelectionGreenrager d54d36748d84548469653d09dfb312a4: level, "Bonus Feats (Undead 6)"
+  - DisenchanterFeatSelection 234772e17012d554f8661e3f365b68ae: level, "Bonus Feats (Disenchanter 3)"
+  - DisenchanterFeatSelection12 6b0dd75a4f3872543842179cf6e456e0: level, "Bonus Feats (Disenchanter 12)"
+  - DisenchanterFeatSelection9 f20d10e43ed9ede43959678bb246c531: level, "Bonus Feats (Disenchanter 9)"
+  - GendarmeFeatSelection ef1cd58e0b7fc7f45baedb09407a1cd1: grantor, "Bonus Feats (Gendarme)"
+  - SoheiMountedCombatFeatFeature 64f12b8a5149e8e4386a767eaf2b62b4: grantor, "Bonus Feats (Sohei)"
+- "Bonus Spell — Protection from Energy" (4)
+  - BloodragerElementalAcidSpell13 61428a46e3dc48845b53762ce37612cb: grantor, "Bonus Spell — Protection from Energy (Elemental — Earth)"
+  - BloodragerElementalColdSpell13 3293d44f0437bd24f9ae94a6976d0749: grantor, "Bonus Spell — Protection from Energy (Elemental — Water)"
+  - BloodragerElementalElectricitySpell13 b7ca4d5a105e4cb418601e1cf652b32f: grantor, "Bonus Spell — Protection from Energy (Elemental — Air)"
+  - BloodragerElementalFireSpell13 3d13d85a8680ed044bcac7bc6523fe35: grantor, "Bonus Spell — Protection from Energy (Elemental — Fire)"
+- "Bonus Spell — Resist Energy" (2)
+  - BloodragerCelestialSpell10 a7861893a017dce4fa8bc0cfba78a251: grantor, "Bonus Spell — Resist Energy (Celestial)"
+  - BloodragerDragonSpell10 906b529e689eee54d98cc69d63309d1b: bare, "Bonus Spell — Resist Energy"
+- "Bonus Spell — Scorching Ray" (2)
+  - BloodragerElementalFireSpell10 02c9c19d1b663c44c91c2094039ac866: grantor, "Bonus Spell — Scorching Ray (Elemental — Fire)"
+  - BloodragerInfernalSpell10 da1f5f8709ca9814888ea525881594fd: grantor, "Bonus Spell — Scorching Ray (Infernal)"
+- "Bramble Armor" (2)
+  - PlantDomainGreaterFeature 24ec8901c8092264f864c7626ec3677e: bare, "Bramble Armor"
+  - PlantDomainGreaterFeatureSeparatist d9077523b71643c39f6e3a5209e6ee5a: grantor, "Bramble Armor (Forbidden Rites)"
+- "Breath Weapon" (41)
+  - BloodlineDraconicBlackBreathWeaponBaseFeature 2708d24e2b4200346994c82821c3b47b: grantor, "Breath Weapon (Draconic Bloodline — Black)"
+  - BloodlineDraconicBlackBreathWeaponExtraUse 7459c25b2cc9cdd4d8367cb555f0fe5a: override, "Breath Weapon (Draconic Bloodline — Black, extra use)"
+  - BloodlineDraconicBlackBreathWeaponFeature 73939e14b956b884688a6e1dccf9c043: override, "Breath Weapon (Draconic Bloodline — Black, ability)"
+  - BloodlineDraconicBlueBreathWeaponBaseFeature aa7704d95f479044f9779e0b3b489c87: grantor, "Breath Weapon (Draconic Bloodline — Blue)"
+  - BloodlineDraconicBlueBreathWeaponExtraUse 4675fb43f872c6546b43f55f564a9020: override, "Breath Weapon (Draconic Bloodline — Blue, extra use)"
+  - BloodlineDraconicBlueBreathWeaponFeature a2a2caf3f73681643b0251c5561ce6ce: override, "Breath Weapon (Draconic Bloodline — Blue, ability)"
+  - BloodlineDraconicBrassBreathWeaponBaseFeature 807a97d06f5cdf245b9cc17d7b2429a9: grantor, "Breath Weapon (Draconic Bloodline — Brass)"
+  - BloodlineDraconicBrassBreathWeaponExtraUse 32031d5563b54e045a7faf714cb14875: override, "Breath Weapon (Draconic Bloodline — Brass, extra use)"
+  - BloodlineDraconicBrassBreathWeaponFeature 9d7bb2a6d590ba0498992f6ce825f2cc: override, "Breath Weapon (Draconic Bloodline — Brass, ability)"
+  - BloodlineDraconicBronzeBreathWeaponBaseFeature f97e345b9f474764fae2b7eff1c1a1c7: grantor, "Breath Weapon (Draconic Bloodline — Bronze)"
+  - BloodlineDraconicBronzeBreathWeaponExtraUse 8b1f74151e06fd54786e2354df6e7b28: override, "Breath Weapon (Draconic Bloodline — Bronze, extra use)"
+  - BloodlineDraconicBronzeBreathWeaponFeature e86286b52aeefb540a67c3c1af235167: override, "Breath Weapon (Draconic Bloodline — Bronze, ability)"
+  - BloodlineDraconicCopperBreathWeaponBaseFeature 8e339ab3898fdd14b879753eaaae933d: grantor, "Breath Weapon (Draconic Bloodline — Copper)"
+  - BloodlineDraconicCopperBreathWeaponExtraUse ff5c413c97362bc40b27b27347d521f9: override, "Breath Weapon (Draconic Bloodline — Copper, extra use)"
+  - BloodlineDraconicCopperBreathWeaponFeature 63718b3248898134eba94a139ea07313: override, "Breath Weapon (Draconic Bloodline — Copper, ability)"
+  - BloodlineDraconicGoldBreathWeaponBaseFeature 2a711cd134b91d34ab027b50d721778b: grantor, "Breath Weapon (Draconic Bloodline — Gold)"
+  - BloodlineDraconicGoldBreathWeaponExtraUse 6d421317055dcf04093cbfdc1c4a4c48: override, "Breath Weapon (Draconic Bloodline — Gold, extra use)"
+  - BloodlineDraconicGoldBreathWeaponFeature fcf0cb61b79b6fd47a6ed91f40820cea: override, "Breath Weapon (Draconic Bloodline — Gold, ability)"
+  - BloodlineDraconicGreenBreathWeaponBaseFeature 919e81dec12943c4d936bd90bacf5519: grantor, "Breath Weapon (Draconic Bloodline — Green)"
+  - BloodlineDraconicGreenBreathWeaponExtraUse 754bc5933712bab4ea08710a1577cb27: override, "Breath Weapon (Draconic Bloodline — Green, extra use)"
+  - BloodlineDraconicGreenBreathWeaponFeature 4d107a429575cb344bcba32a5b1a6abe: override, "Breath Weapon (Draconic Bloodline — Green, ability)"
+  - BloodlineDraconicRedBreathWeaponBaseFeature 97e25dac9d4da934e8c628a71a6a5792: grantor, "Breath Weapon (Draconic Bloodline — Red)"
+  - BloodlineDraconicRedBreathWeaponExtraUse 8526bb6390ec1064f9dfa903a5b98eeb: override, "Breath Weapon (Draconic Bloodline — Red, extra use)"
+  - BloodlineDraconicRedBreathWeaponFeature 9cbaf9563f8f6fb47810e0cbeb5e93ed: override, "Breath Weapon (Draconic Bloodline — Red, ability)"
+  - BloodlineDraconicSilverBreathWeaponBaseFeature cd36514cf1f38f84a977a265cec113ae: grantor, "Breath Weapon (Draconic Bloodline — Silver)"
+  - BloodlineDraconicSilverBreathWeaponExtraUse 6772a8f320672c940b7bef018fd762f5: override, "Breath Weapon (Draconic Bloodline — Silver, extra use)"
+  - BloodlineDraconicSilverBreathWeaponFeature a1cde01a9790834449d8f547ca52fc88: override, "Breath Weapon (Draconic Bloodline — Silver, ability)"
+  - BloodlineDraconicWhiteBreathWeaponBaseFeature 43bfe183b93ce0347a3f02c2b0438b77: grantor, "Breath Weapon (Draconic Bloodline — White)"
+  - BloodlineDraconicWhiteBreathWeaponExtraUse 436e8e4d16f180a43a45c4e09cbbaf79: override, "Breath Weapon (Draconic Bloodline — White, extra use)"
+  - BloodlineDraconicWhiteBreathWeaponFeature a24420dcf53ad834783c0945882371d6: override, "Breath Weapon (Draconic Bloodline — White, ability)"
+  - BloodragerDragonBlackBreath 9eb3980b50eff064090fb14c717e047e: override, "Breath Weapon (bloodrager, black)"
+  - BloodragerDragonBlueBreath d3ab2068d426f224a89e3da640eb762d: override, "Breath Weapon (bloodrager, blue)"
+  - BloodragerDragonBrassBreath 1eb9903ed2600574fa76d2545a1a55ac: override, "Breath Weapon (bloodrager, brass)"
+  - BloodragerDragonBronzeBreath add37a4af38aab345a82e1c572770bbd: override, "Breath Weapon (bloodrager, bronze)"
+  - BloodragerDragonCopperBreath c77f94d216144f145a3a4b4e615b4e87: override, "Breath Weapon (bloodrager, copper)"
+  - BloodragerDragonGoldBreath 7dcfe929bc9003a45b1d4c5adf00be11: override, "Breath Weapon (bloodrager, gold)"
+  - BloodragerDragonGreenBreath df0ff44d6fe42b543bd471342afcbc41: override, "Breath Weapon (bloodrager, green)"
+  - BloodragerDragonRedBreath 20693da8f467f6943931245f167e17a6: override, "Breath Weapon (bloodrager, red)"
+  - BloodragerDragonSilverBreath 76148c4ea58ea40419a649b0f66ba5c9: override, "Breath Weapon (bloodrager, silver)"
+  - BloodragerDragonWhiteBreath 7f9e9c9bb4d82e1469112283d9e6645d: override, "Breath Weapon (bloodrager, white)"
+  - DragonDiscipleBreathFeature 0aadb51129cb0c147b5d2464c0db10b3: grantor, "Breath Weapon (Dragon Disciple)"
+- "Bull Rush" (3)
+  - ImprovedBullRush b3614622866fe7046b787a548bbd7f59: bare, "Bull Rush"
+  - OracleRevelationManeuverMasteryBullRush 485bfaffc5d906241ac2fb4529175279: grantor, "Bull Rush (Maneuver Mastery)"
+  - OracleRevelationManeuverMasteryBullRushImproved 2bbaa45421a6418391f11f59ed342cbd: grantor, "Bull Rush (Revelation)"
+- "Burn" (3)
+  - BurnFeature 57e3577a0eb53294e9d7cc649d5239a3: bare, "Burn"
+  - PsychokineticistBurnFeature 2fa48527ba627254ba9bf4556330a4d4: grantor, "Burn (Psychokineticist)"
+  - RampageExtraEffect11 b0e6b4d760eb47538f424ce313c47388: grantor, "Burn (Fire Rampage)"
+- "Call of the Wild" (3)
+  - CallOfTheWildBeastShapeIFeature 8debcb06fccab7249a09db5e58be954e: level, "Call of the Wild (Hunt Caller 10)"
+  - CallOfTheWildBeastShapeIIFeature 45e8873cc6894fd42b98d7745b42e826: level, "Call of the Wild (Hunt Caller 14)"
+  - CallOfTheWildBeastShapeIIIFeature d62c37cd671849f4a898c91c34660bc5: level, "Call of the Wild (Hunt Caller 18)"
+- "Camouflage" (2)
+  - Camouflage ff1b5aa8dcc7d7d4d9aa85e1cb3f9e88: grantor, "Camouflage (Ranger)"
+  - ForesterCamouflage df6c28d42a029bf4f94b65390b9b624a: grantor, "Camouflage (Forester)"
+- "Canny Defense" (2)
+  - CannyDefense 9a0a447e161207d46829ce2bd8b3cc6f: grantor, "Canny Defense (Duelist)"
+  - SwordSaintCannyDefense f58e19256746efa419e640175d4e21ad: grantor, "Canny Defense (Sword Saint)"
+- "Cantrips" (9)
+  - ArcanistCantripsFeature 5ad7c9fb13ecb52489a89824f0e3db08: grantor, "Cantrips (Arcanist)"
+  - BardCantripsFeature 4f422e8490ec7d94592a8069cce47f98: grantor, "Cantrips (Bard)"
+  - EldritchScionCantripsFeature d093b8dec70b5d144acb593a3029d830: grantor, "Cantrips (Magus)"
+  - EldritchScoundrelCantripFeature 0e451b208e7b855468986e03fcd4f990: grantor, "Cantrips (Eldritch Scoundrel)"
+  - EmpyrealSorcererCantripsFeature 6acb21fbc1bb76c4c9d65ba94c9f15ac: grantor, "Cantrips (Empyreal Sorcerer)"
+  - MagusCantripsFeature fa5799fb32844e94e88d4cb3430610ff: bare, "Cantrips"
+  - SageSorcererCantripsFeature 50d700ea98467834c9fc622efa03d598: grantor, "Cantrips (Sage Sorcerer)"
+  - SorcererCantripsFeature c58b36ec3f759c84089c67611d1bcc21: grantor, "Cantrips (Sorcerer)"
+  - WizardCantripsFeature 44d19b62d00179e4bad7afae7684f2e2: grantor, "Cantrips (Wizard)"
+- "Captor" (3)
+  - UrbanHunterCaptor 6a7183b066616464b838b10e92cf7146: kind, "Captor (feature)"
+  - UrbanHunterCaptorSelection12 9839caff86642584bbf07699e8238c1b: level, "Captor (Urban Hunter 12)"
+  - UrbanHunterCaptorSelection6 a27990877466ec04e80d7cfa967ed69b: kind, "Captor (selection)"
+- "Cause Fear" (2)
+  - BloodlineAbyssalSpellLevel1 d8aa811c2c36e594dab77cb5385a78a8: grantor, "Cause Fear (Abyssal Bloodline)"
+  - BloodlineUndeadSpellLevel1 3e4080a48cbd3154aac907befca64801: grantor, "Cause Fear (Undead Bloodline)"
+- "Celestial" (2)
+  - BloodragerCelestialBloodline 05a141717bbce594a8a763c227f4ee2f: grantor, "Celestial (Bloodline)"
+  - BloodragerCelestialSecondBloodline d4d3824a31df4f249833357dffe2da61: grantor, "Celestial (Second Bloodrager Bloodline)"
+- "Celestial Bloodline" (3)
+  - BloodlineCelestialProgression aa79c65fa0e11464d9d100b038c50796: bare, "Celestial Bloodline"
+  - CrossbloodedSecondaryBloodlineCelestialProgression ba000ce2bc1aba0468df75f57e7c265c: grantor, "Celestial Bloodline (Secondary Bloodline)"
+  - SeekerBloodlineCelestialProgression 17ac9d771a944194a92ac15b5ff861c9: grantor, "Celestial Bloodline (Bloodline)"
+- "Celestial Resistances" (4)
+  - BloodlineCelestialResistancesAbilityAdd b46ef711b4825e04a9380bd0b88d5b06: bare, "Celestial Resistances"
+  - BloodlineCelestialResistancesAbilityLevel1 bf1429cc15c22f045b19e11d6bffeefb: override, "Celestial Resistances (before level 9)"
+  - BloodlineCelestialResistancesAbilityLevel2 8175ef1252eb8fb4f9bf531d3472a2ea: level, "Celestial Resistances (level 9)"
+  - BloodragerCelestialResistances 16b632b134b2c27458fb2559e72815f4: override, "Celestial Resistances (bloodrager)"
+- "Challenge" (7)
+  - CavalierChallengeFeature dc77cd2ad52cb0e43bb88b264d7af648: bare, "Challenge"
+  - CavalierCockatriceChallenge ba176bca404967b47bf9e583e80c3fd5: grantor, "Challenge (Order of the Cockatrice)"
+  - CavalierLionChallenge 1a42774a957681c42a1161acf654086a: grantor, "Challenge (Order of the Lion)"
+  - CavalierPawChallenge d67ed8bfadc8466c86a0779fdd18a2cf: grantor, "Challenge (Cavalier of the Paw)"
+  - CavalierShroudChallenge 248b0fced52cbdf40a48d44705663799: grantor, "Challenge (Order of the Shroud)"
+  - CavalierStarChallenge 3b8d907d35d636247bda8032a459e499: grantor, "Challenge (Order of the Star)"
+  - CavalierSwordChallenge fec8611d2564cb34e8263d350b7eb2f6: grantor, "Challenge (Order of the Sword)"
+- "Change Shape" (2)
+  - ChangeShapeKitsune 88063b0ec1cbc8b499e313cde36a8519: grantor, "Change Shape (Kitsune)"
+  - TransmutationSchoolChangeShapeFeatureAdd aeb56418768235640a3ee858d5ee05e8: grantor, "Change Shape (Specialist School — Transmutation)"
+- "Change bloodline power for two rage powers" (5)
+  - PrimalistSecondBloodlineTakeRagePowers12 c7254db3798e4e68baa85a084ca3d73b: level, "Change bloodline power for two rage powers (Second Bloodrager Bloodline 12)"
+  - PrimalistSecondBloodlineTakeRagePowers16 531d1dd9dd7b4cdf9849ae027b2caf6d: level, "Change bloodline power for two rage powers (Second Bloodrager Bloodline 16)"
+  - PrimalistSecondBloodlineTakeRagePowers20 32525ed3aea0480ebd7ad3654dca96cc: level, "Change bloodline power for two rage powers (Second Bloodrager Bloodline 20)"
+  - PrimalistSecondBloodlineTakeRagePowers4 39fd1f34c8ab45d997192773281291e3: level, "Change bloodline power for two rage powers (Second Bloodrager Bloodline 4)"
+  - PrimalistSecondBloodlineTakeRagePowers8 cc0ed1ccd6664dd881922321fec7a8ba: level, "Change bloodline power for two rage powers (Second Bloodrager Bloodline 8)"
+- "Channel" (2)
+  - OracleRevelationChannel ade57ae9bbe55c142a012c2453b3088c: grantor, "Channel (Revelation)"
+  - ShamanLifeSpiritBaseFeature 9ae3ba76663a19141a3996c1e3ce95e3: grantor, "Channel (Life)"
+- "Channel Energy" (5)
+  - ChannelEnergySelection d332c1748445e8f4f9e92763123e31bd: grantor, "Channel Energy (Cleric)"
+  - HexChannelerChannelSelection c464ab12993745c44a7d21f386562cb6: grantor, "Channel Energy (Hex Channeler)"
+  - WarpriestChannelEnergySelection 1a871294410971745bba12ef11e41f6e: bare, "Channel Energy"
+  - WarpriestShieldbearerChannelEnergySelection 4d4f00bb16467144780538107387af78: grantor, "Channel Energy (Shieldbearer)"
+  - WitchDoctorChannelPositiveFeature eb388d17f07e0b44d9f83ada0148cc69: grantor, "Channel Energy (Witch Doctor)"
+- "Channel Negative Energy" (5)
+  - ChannelNegativeFeature 3adb2c906e031ee41a01bfc1d5fb7eea: grantor, "Channel Negative Energy (Cleric)"
+  - HexChannelerChannelNegativeFeature 7c8d5e2ab326fdb4cabafc1c84a5c8e2: grantor, "Channel Negative Energy (Hex Channeler)"
+  - LichChannelNegativeFeature 295dff380fb8ed743bd5c76a30a49a46: grantor, "Channel Negative Energy (Danse Macabre)"
+  - WarpriestChannelNegativeFeature e02c8a7336a542f4baffa116b6506950: bare, "Channel Negative Energy"
+  - WarpriestShieldbearerChannelNegativeFeature 5aebdef7644a74e4d8c0d3cd8909de2b: grantor, "Channel Negative Energy (Shieldbearer)"
+- "Channel Positive Energy" (9)
+  - ChannelEnergyEmpyrealFeature 7d49d7f590dc9a948b3bd1c8b7979854: grantor, "Channel Positive Energy (Empyreal Bloodline)"
+  - ChannelEnergyFeature a79013ff4bcd4864cb669622a29ddafb: grantor, "Channel Positive Energy (Cleric)"
+  - ChannelEnergyHospitalerFeature a9ab1bbc79ecb174d9a04699986ce8d5: grantor, "Channel Positive Energy (Hospitaler)"
+  - ChannelEnergyPaladinFeature cb6d55dda5ab906459d18a435994a760: grantor, "Channel Positive Energy (Paladin)"
+  - HexChannelerChannelPositiveFeature b423fbf947bc51344bac21752c47471c: grantor, "Channel Positive Energy (Hex Channeler)"
+  - OracleRevelationChannelFeature 4bf9a9afadca5304e89bf52f2ac2d236: grantor, "Channel Positive Energy (Revelation)"
+  - ShamanLifeSpiritChannelEnergyFeature b8ec9dccc0e7ef74fb4072b0679c2aec: grantor, "Channel Positive Energy (Life)"
+  - WarpriestChannelEnergyFeature bd588bc544d2f8547a02bb82ad9f466a: bare, "Channel Positive Energy"
+  - WarpriestShieldbearerChannelEnergyFeature 332c43d3f25fb9a429a42067142c41d5: grantor, "Channel Positive Energy (Shieldbearer)"
+- "Chaos Blade" (2)
+  - ChaosDomainGreaterFeature 41b647ee4591dc1448a665a62b7a7b5f: bare, "Chaos Blade"
+  - ChaosDomainGreaterFeatureSeparatist 6f22f294a7ab467d8e4e9cec807e139e: grantor, "Chaos Blade (Forbidden Rites)"
+- "Chaos Domain" (6)
+  - ChaosDomainBaseFeature 0c9d931180a19a646bcf4165f66bd318: level, "Chaos Domain (level 1)"
+  - ChaosDomainBaseFeatureSeparatist 058710e9c9d14431a0d3380461b565bc: grantor, "Chaos Domain (Separatist)"
+  - ChaosDomainProgression 5a5d19c246961484a97e1e5dded98ab2: bare, "Chaos Domain"
+  - ChaosDomainProgressionSecondary 85e8db7e938d4f947a084a21d3535adf: grantor, "Chaos Domain (Domain Selection)"
+  - ChaosDomainProgressionSeparatist 714706ca6958440cbbb217c2d167e6ec: grantor, "Chaos Domain (Forbidden Rites)"
+  - TricksterLoreReligionChaosDomainFeature f60859b1946f4b618b7c173e9ba38dda: grantor, "Chaos Domain (Lore (Religion) 2 Rank)"
+- "Charm Domain" (6)
+  - CharmDomainBaseFeature 4847d450fbef9b444abcc3a82337b426: level, "Charm Domain (level 1)"
+  - CharmDomainBaseFeatureSeparatist e3b7b40a0a214894aed4acf95ea2ae0d: grantor, "Charm Domain (Separatist)"
+  - CharmDomainProgression b5c056787d1bf544588ec3a150ed0b3b: bare, "Charm Domain"
+  - CharmDomainProgressionSecondary 242eba70a5e2317479de39de3c1e64ad: grantor, "Charm Domain (Domain Selection)"
+  - CharmDomainProgressionSeparatist a50c791490674d019ea1eba09dfe3f07: grantor, "Charm Domain (Forbidden Rites)"
+  - TricksterLoreReligionCharmDomainFeature 8c193c5267624ff388ab43c572622dbd: grantor, "Charm Domain (Lore (Religion) 2 Rank)"
+- "Charming Smile" (2)
+  - CharmDomainGreaterFeature d1fee57aa8f12b849b5abd5f2b7c4616: bare, "Charming Smile"
+  - CharmDomainGreaterFeatureSeparatist 6d35c10ae6ce4ef0ab4363b5528da300: grantor, "Charming Smile (Forbidden Rites)"
+- "Chosen Weapon" (2)
+  - SwordSaintChosenWeaponFeature c0b4ec0175e3ff940a45fc21f318a39a: bare, "Chosen Weapon"
+  - SwordSaintChosenWeaponSelection 3130e3083845b7b4fa2ac5b6f1a1ae6e: grantor, "Chosen Weapon (Sword Saint)"
+- "Class Skill — Athletics" (2)
+  - BloodlineAbyssalClassSkill 58e97e23349f115408d768ff7ad55c43: grantor, "Class Skill — Athletics (Abyssal Bloodline)"
+  - StudentOfWarAdditionalSkillAthletics fec26793abe4f7c4f87b6a7811dd0ed3: grantor, "Class Skill — Athletics (Additional Class Skill)"
+- "Class Skill — Knowledge (World)" (3)
+  - BloodlineArcaneClassSkill2 d20eeb3f8da1e89489289bf53cc7dd05: grantor, "Class Skill — Knowledge (World) (Bloodline Class Skill Selection)"
+  - BloodlineInfernalClassSkill f07a37a5b245304429530842cb65e213: grantor, "Class Skill — Knowledge (World) (Infernal Bloodline)"
+  - StudentOfWarAdditionalSkillKnowledgeWorld 5b048c32212b9e34c80a13ee913050cf: grantor, "Class Skill — Knowledge (World) (Additional Class Skill)"
+- "Class Skill — Lore (Nature)" (3)
+  - BloodlineArcaneClassSkill3 67bc9641c77ba0f4c8e3456a471c0927: grantor, "Class Skill — Lore (Nature) (Bloodline Class Skill Selection)"
+  - BloodlineFeyClassSkill 243f474ce797acb4086c2dbc58660c4a: bare, "Class Skill — Lore (Nature)"
+  - StudentOfWarAdditionalSkillLoreNature b61f4f19df123474db9a2700c480ca9f: grantor, "Class Skill — Lore (Nature) (Additional Class Skill)"
+- "Class Skill — Lore (Religion)" (4)
+  - BloodlineArcaneClassSkill1 3e833ef2e85a82a4395516cfc55113b7: grantor, "Class Skill — Lore (Religion) (Bloodline Class Skill Selection)"
+  - BloodlineCelestialClassSkill b0520c35f31ba544189d3293ed14dd67: bare, "Class Skill — Lore (Religion)"
+  - BloodlineUndeadClassSkill 461a5980bfe5579468ba99d369f75308: grantor, "Class Skill — Lore (Religion) (Undead Bloodline)"
+  - StudentOfWarAdditionalSkillLoreReligion 30eeba164c872624dbae94717febf6da: grantor, "Class Skill — Lore (Religion) (Additional Class Skill)"
+- "Class Skill — Mobility" (2)
+  - BloodlineElementalClassSkill 582a0ee43b0a38c4581c96cec8ddcdfd: bare, "Class Skill — Mobility"
+  - StudentOfWarAdditionalSkillMobility a3017982e66981f4dadc1878094241f3: grantor, "Class Skill — Mobility (Additional Class Skill)"
+- "Class Skill — Perception" (2)
+  - BloodlineDraconicClassSkill fb4615bd462372a44b778ac9f035675f: bare, "Class Skill — Perception"
+  - StudentOfWarAdditionalSkillPerception a71398135d016714aa579a581ce213c0: grantor, "Class Skill — Perception (Additional Class Skill)"
+- "Class Skill — Stealth" (2)
+  - BloodlineSerpentineClassSkill 70e2242c7d52a1b428938d406adfd8ef: grantor, "Class Skill — Stealth (Serpentine Bloodline)"
+  - StudentOfWarAdditionalSkillStealth 01ded78316f908c468cf28ce455c0f47: grantor, "Class Skill — Stealth (Additional Class Skill)"
+- "Class Skills" (3)
+  - FireClassSkills e76a453abe7a7304cbde17a8c123ad76: grantor, "Class Skills (Fire)"
+  - MetamorphClassSkills 1d42191a101f2fb42b6e87b7bfc99a5e: grantor, "Class Skills (Metamorph)"
+  - WaterClassSkills 96e9396ffce22de498a0d29a0f14117b: grantor, "Class Skills (Water)"
+- "Claws" (9)
+  - BloodragerAbyssalClawFeature1 60e5fd5e4a8213148a6de41b829bfb1b: override, "Claws (Abyssal, level 1)"
+  - BloodragerAbyssalClawFeature12 fdcf2a4bd9228c04fa8552e3eadcda95: grantor, "Claws (Abyssal)"
+  - BloodragerAbyssalClawFeature4 60bab0f263bcd1b4f9b4e1c105bba89b: override, "Claws (Abyssal, level 4)"
+  - BloodragerAbyssalClawFeature8 1c5f037dc7a46c94bae5a4c92d8cbdee: override, "Claws (Abyssal, level 8)"
+  - BloodragerDraconicClawFeature1 419dcd95d81401e4eaebbfb4779b0135: override, "Claws (Draconic, level 1)"
+  - BloodragerDraconiclClawFeature4 385807df7d8f64845972e2636dfcc61e: override, "Claws (Draconic, level 4)"
+  - ElementalRampagerClaws1d10 bd273aafc6104aacb0e0bf2727a2ce4d: level, "Claws (Elemental Rampager 15)"
+  - ElementalRampagerClaws1d6 1c592a4f288a46889aa70a0eac774c4f: level, "Claws (Elemental Rampager 1)"
+  - ElementalRampagerClaws1d8 c88eb191d1dd4f5dafc9988822ae24fd: level, "Claws (Elemental Rampager 9)"
+- "Claws of the Hag" (6)
+  - HagRivenClawsFeatureAddLevel e0065edfef8e46e3a175d5c9694b8ff6: level, "Claws of the Hag (Hag-Riven 1)"
+  - HagRivenClawsFeatureAddLevel1 dc5f3f8886084f5e948e00503e7f1b73: level, "Claws of the Hag (Hag-Riven 2)"
+  - HagRivenClawsFeatureAddLevel2 f349d26212084f4980a731c2e04bd811: level, "Claws of the Hag (Hag-Riven 5)"
+  - HagRivenClawsFeatureAddLevel3 dcbf2ee286c540cebfba87671c108d80: level, "Claws of the Hag (Hag-Riven 9)"
+  - HagRivenClawsFeatureAddLevel4 3e54e4f0db1947cea29b1d6a2f8e5a5c: level, "Claws of the Hag (Hag-Riven 13)"
+  - HagRivenClawsFeatureAddLevel5 cecfbb4d624e4afcaf19ee0761426a68: level, "Claws of the Hag (Hag-Riven 17)"
+- "Cleanser of Evil" (4)
+  - ProclaimerCleanserOfEvil10FeetFeatureLimit f236ddd506258794c9f1a18d0a1548d9: level, "Cleanser of Evil (Proclaimer 7)"
+  - ProclaimerCleanserOfEvil15FeetFeatureLimit f0f07c512fa3bc44f8593154bf6b2a11: level, "Cleanser of Evil (Proclaimer 13)"
+  - ProclaimerCleanserOfEvil20FeetFeatureLimit 0bb21b9818eac054a979be0fa82aade4: level, "Cleanser of Evil (Proclaimer 19)"
+  - ProclaimerCleanserOfEvil5FeetFeatureLimit e23f6e72498cb224b939ee5ea2c5d4e4: level, "Cleanser of Evil (Proclaimer 2)"
+- "Cleric" (3)
+  - ClericClass 67819271767a9dd4fbfd4ae700befea0: bare, "Cleric"
+  - LoremasterDruidSecretCleric 94ed52baf5e81cd43b55c73031411b2e: grantor, "Cleric (Druid Spell)"
+  - LoremasterWizardSecretCleric 831a826eb46790e4b84ade632846d043: grantor, "Cleric (Wizard Spell)"
+- "Cold Resistance" (2)
+  - WaterDomainGreaterFeature 8f8d0892cbe15b54ebe10552603349b2: bare, "Cold Resistance"
+  - WaterDomainGreaterFeatureSeparatist e6400324eb764f54a56eea9f0656e53c: grantor, "Cold Resistance (Forbidden Rites)"
+- "Combat Casting Adept" (5)
+  - BloodlineArcaneCombatCastingAdeptFeatureAddLevel1 7aa83ee3526a946419561d8d1aa09e75: bare, "Combat Casting Adept"
+  - BloodlineArcaneCombatCastingAdeptFeatureLevel1 82a966061553ea442b0ce0cdb4e1d49c: override, "Combat Casting Adept (step 1)"
+  - BloodlineArcaneCombatCastingAdeptFeatureLevel2 165523faea799a947a047101e220259c: override, "Combat Casting Adept (step 2)"
+  - BloodlineArcaneCombatCastingAdeptFeatureLevel3 5598c11ec09688c479edeef10e7d6957: override, "Combat Casting Adept (step 3)"
+  - SeekerBloodlineArcaneCombatCastingAdeptFeatureAddLevel9 e407e1a130324fa8866dcbfd21ba1fa7: grantor, "Combat Casting Adept (Arcane Bloodline)"
+- "Combat Feat" (3)
+  - LoremasterCombatFeatSelection 90f105c8e31a6224ea319e6a810e4af8: bare, "Combat Feat"
+  - LoremasterTricksterCombatFeatSelection 0ce1432869c74b778ab48890edf2021d: override, "Combat Feat (with Perception 2 Rank)"
+  - StudentOfWarCombatFeatSelection 78fffe8e5d5bc574a9fd5efbbb364a03: grantor, "Combat Feat (Student of War)"
+- "Combat Style Feat" (3)
+  - RangerStyleSelection10 78177315fc63b474ea3cbb8df38fafcd: prerequisite, "Combat Style Feat (Ranger 10)"
+  - RangerStyleSelection2 c6d0da9124735a44f93ac31df803b9a9: bare, "Combat Style Feat"
+  - RangerStyleSelection6 61f82ba786fe05643beb3cd3910233a8: prerequisite, "Combat Style Feat (Ranger 6)"
+- "Communal Aspect" (8)
+  - DrovierAnimalAspectBaseFeature 951d01f8091b4af48b2417e6a700a17f: level, "Communal Aspect (Drovier 4)"
+  - DrovierAnimalAspectFeature f07d141e29c01cf498bcc2c0402c3fd2: bare, "Communal Aspect"
+  - DrovierAnimalAspectFreeUse ced7b7d0c4f78e44b8930a802a1c265d: level, "Communal Aspect (Drovier 20)"
+  - DrovierAnimalAspectGreaterFeature 4ab732622752d51439afd19e911abe6b: level, "Communal Aspect (Drovier 6)"
+  - DrovierAspectOfTheBearFeature 4f576cc5fab868e4d9bbe37d40bd2a57: level, "Communal Aspect (Drovier 10)"
+  - DrovierAspectOfTheFalconFeature 7c3a2b21ffb8faf49a4656a04487d8b4: level, "Communal Aspect (Drovier 8)"
+  - DrovierAspectOfTheStagFeature 6449ed3a54f5b7942b655fd798ae4d4b: level, "Communal Aspect (Drovier 12)"
+  - DrovierAspectOfTheWolfFeature 1bc2172a483c76541b313465ca070c4b: level, "Communal Aspect (Drovier 14)"
+- "Community Domain" (6)
+  - CommunityDomainBaseFeature 102d61a114786894bb2b30568943ef1f: level, "Community Domain (level 1)"
+  - CommunityDomainBaseFeatureSeparatist 4b21b19a676f4373bd0a97f4bb49dc27: grantor, "Community Domain (Separatist)"
+  - CommunityDomainProgression b8bbe42616d61ac419971b7910d79fc8: bare, "Community Domain"
+  - CommunityDomainProgressionSecondary 3a397e27682edfd409cb73ff12de7c51: grantor, "Community Domain (Domain Selection)"
+  - CommunityDomainProgressionSeparatist 01eb613f85234739ab56814d533f9049: grantor, "Community Domain (Forbidden Rites)"
+  - TricksterLoreReligionCommunityDomainFeature 194b5f522afd477680f5ed7ac0069e2c: grantor, "Community Domain (Lore (Religion) 2 Rank)"
+- "Companion Ability Score Bonus — Charisma" (2)
+  - DivineHunterPetBonusCharismaFirst 9d4ed7d3abea49dcb777b8241ed6f848: bare, "Companion Ability Score Bonus — Charisma"
+  - DivineHunterPetBonusCharismaSecond 2aa3f0ed804748968fcffa41b5f05fc0: override, "Companion Ability Score Bonus — Charisma (second pick)"
+- "Companion Ability Score Bonus — Constitution" (2)
+  - DivineHunterPetBonusConstitutionFirst e2a6a229d5154f5ba72308eacf5adb62: bare, "Companion Ability Score Bonus — Constitution"
+  - DivineHunterPetBonusConstitutionSecond e20dab3ba1574a4db4304f268d3a02ae: override, "Companion Ability Score Bonus — Constitution (second pick)"
+- "Companion Ability Score Bonus — Dexterity" (2)
+  - DivineHunterPetBonusDexterityFirst 8231365f87974524bcbd2dd04d461251: bare, "Companion Ability Score Bonus — Dexterity"
+  - DivineHunterPetBonusDexteritySecond 5361cc2680274efc883070862fa98885: override, "Companion Ability Score Bonus — Dexterity (second pick)"
+- "Companion Ability Score Bonus — Intelligence" (2)
+  - DivineHunterPetBonusIntelligenceFirst bdd12ea0c9a34d9f9b311f5b3052d5b2: bare, "Companion Ability Score Bonus — Intelligence"
+  - DivineHunterPetBonusIntelligenceSecond 48940db1f6684f81b4f569b17ff65c87: override, "Companion Ability Score Bonus — Intelligence (second pick)"
+- "Companion Ability Score Bonus — Strength" (2)
+  - DivineHunterPetBonusStrengthFirst c925d15a4407446da3f7dbcd48db2328: bare, "Companion Ability Score Bonus — Strength"
+  - DivineHunterPetBonusStrengthSecond f0b2001098cc4788ab0bb0a49b27c8c4: override, "Companion Ability Score Bonus — Strength (second pick)"
+- "Companion Ability Score Bonus — Wisdom" (2)
+  - DivineHunterPetBonusWisdomFirst c3a5cb12fe8748be93f30976875ea26d: bare, "Companion Ability Score Bonus — Wisdom"
+  - DivineHunterPetBonusWisdomSecond 698e18c1e60244118011f1c3270f5295: override, "Companion Ability Score Bonus — Wisdom (second pick)"
+- "Conviction" (2)
+  - BloodlineCelestialConvictionAbility befc48b88995ea941a9b3ae196b2d5ea: bare, "Conviction"
+  - BloodragerCelestialConviction 713d244738edd8e488b924fe43ff880e: override, "Conviction (bloodrager)"
+- "Coordinated Defense" (2)
+  - CavalierTacticianCoordinatedDefenseBuff 9c179de4894c295499822714878f3590: kind, "Coordinated Defense (buff)"
+  - CoordinatedDefense 992fd59da1783de49b135ad89142c6d7: kind, "Coordinated Defense (feature)"
+- "Coordinated Maneuvers" (2)
+  - CavalierTacticianCoordinatedManeuversBuff c7223802e54e8524c8b1e5c71df22f7b: kind, "Coordinated Maneuvers (buff)"
+  - CoordinatedManeuvers b186cea78dce3a04aacff0a81786008c: kind, "Coordinated Maneuvers (feature)"
+- "Crumbling Blast" (2)
+  - CrumblingBlastFeatureMain 024e019efc3b9cb4ea9e7ea0bab709c0: level, "Crumbling Blast (Herald of the Horn 11)"
+  - CrumblingBlastTier2Feature 777f1610f18a3b947908bfcd01f49bc3: level, "Crumbling Blast (Herald of the Horn 17)"
+- "Crusader Bonus Feat" (3)
+  - CrusaderBonusFeat1 c5357c05cf4f8414ebd0a33e534aec50: level, "Crusader Bonus Feat (Crusader 1)"
+  - CrusaderBonusFeat10 50dc57d2662ccbd479b6bc8ab44edc44: level, "Crusader Bonus Feat (Crusader 10)"
+  - CrusaderBonusFeat20 2049abc955bf6fe41a76f2cb6ba8214a: level, "Crusader Bonus Feat (Crusader 20)"
+- "Curse Conduit" (2)
+  - BloodragerHagBloodlineCurseConduitBuff e8473665806543c1a79c7f15725ba5cb: grantor, "Curse Conduit (Bloodrage)"
+  - BloodragerHagBloodlineCurseConduitFeature 2aefef394cb6491f9191a2d67ebb6b86: grantor, "Curse Conduit (Hag)"
+- "Damage Reduction" (6)
+  - BloodragerDamageReduction 07eba4bb72c2e3845bb442dce85d3b58: bare, "Damage Reduction"
+  - DamageReduction cffb5cddefab30140ac133699d52a8f8: grantor, "Damage Reduction (Barbarian)"
+  - InvulnerableRagerDamageReduction e71bd204a2579b1438ebdfbf75aeefae: grantor, "Damage Reduction (Invulnerable Rager)"
+  - MadDogDamageReductionMaster a0d4a3295224b8f4387464a4447c31d5: grantor, "Damage Reduction (Mad Dog)"
+  - SkaldDR d9446a35d1401cf418bb9b5e0e199d57: grantor, "Damage Reduction (Skald)"
+  - StalwartDefenderDamageReduction 4d4f48f401d5d8b408c2e7a973fba9ea: grantor, "Damage Reduction (Stalwart Defender)"
+- "Danger Sense" (3)
+  - ArchaelogistDangerSense f3ce82243623f414a94fd83cb22d5528: grantor, "Danger Sense (Archaeologist)"
+  - DangerSenseBarbarian fdd591c1fbf1c0b41a359d59756f2888: grantor, "Danger Sense (Barbarian)"
+  - DangerSenseRogue 0bcbe9e450b0e7b428f08f66c53c5136: grantor, "Danger Sense (Rogue)"
+- "Darkness Domain" (7)
+  - DarknessDomainBaseFeature 9dc5863168155854fa8daf4a780f6663: level, "Darkness Domain (level 1)"
+  - DarknessDomainBaseFeatureSeparatist 4cd75a11ca884f9589583576c31b51d3: grantor, "Darkness Domain (Separatist)"
+  - DarknessDomainProgression 1e1b4128290b11a41ba55280ede90d7d: bare, "Darkness Domain"
+  - DarknessDomainProgressionDruid 57e97f4cda643734eb4800972c53b960: grantor, "Darkness Domain (Blight Bond)"
+  - DarknessDomainProgressionSecondary bfdc224a1362f2b4688b57f70adcc26f: grantor, "Darkness Domain (Domain Selection)"
+  - DarknessDomainProgressionSeparatist 6996f3fc4eb74f6d958ab823b6f7289e: grantor, "Darkness Domain (Forbidden Rites)"
+  - TricksterLoreReligionDarknessDomainFeature 26845c3c10514868b8244c42caf6f82d: grantor, "Darkness Domain (Lore (Religion) 2 Rank)"
+- "Death Domain" (8)
+  - DeathDomainBaseFeature 9809efa15e5f9ad478594479af575a5d: level, "Death Domain (level 1)"
+  - DeathDomainBaseFeatureSeparatist 4243f62e30994a36b971ef9a02061018: grantor, "Death Domain (Separatist)"
+  - DeathDomainProgression 710d8c959e7036448b473ffa613cdeba: bare, "Death Domain"
+  - DeathDomainProgressionDruid 7d3f0f00b1f8ad54ba6abc6aeac84c05: grantor, "Death Domain (Blight Bond)"
+  - DeathDomainProgressionSecondary 023794a8386506c49aad142846700594: grantor, "Death Domain (Domain Selection)"
+  - DeathDomainProgressionSeparatist a5de477a5b594917b56b271614ef7940: grantor, "Death Domain (Forbidden Rites)"
+  - MurderDomainBaseFeatureSeparatist f41a97edb97f445fa6e9fc68cd711d0e: grantor, "Death Domain (Murder Subdomain)"
+  - TricksterLoreReligionDeathDomainFeature eb76327ee39c4148aaaf5c97a9ab7961: grantor, "Death Domain (Lore (Religion) 2 Rank)"
+- "Death's Embrace" (2)
+  - DeathDomainGreaterFeature b0acce833384b9b428f32517163c9117: bare, "Death's Embrace"
+  - DeathDomainGreaterFeatureSeparatist 518a6ce2c1d141b78f54521f6b0075b1: grantor, "Death's Embrace (Forbidden Rites)"
+- "Death's Gift" (2)
+  - BloodlineUndeadDeathsGift fd5f14d44e82f464196fdf0ea82347cc: grantor, "Death's Gift (Undead Bloodline)"
+  - BloodragerUndeadDeathsGift 50a660c13e507584f8da6eb9c0d923a0: bare, "Death's Gift"
+- "Death's Touch" (2)
+  - DeathBlessingMajorFeature 751fddfe9096fdd41b2104b0cd2a68de: grantor, "Death's Touch (Death)"
+  - OracleRevelationDeathsTouch 1a25afc333021a64cbe9f23ef8c5ebd8: grantor, "Death's Touch (Revelation)"
+- "Defensive Parry" (2)
+  - SwordlordDefensiveParryFeature c3a3a5e26059cb4419d243f3acf05f5b: grantor, "Defensive Parry (Aldori Swordlord)"
+  - SwordlordDefensiveParryFeature faa56353e193e5940a305c60b4412ea5: grantor, "Defensive Parry (Aldori Defender)"
+- "Deflect Arrows" (3)
+  - DeflectArrows 2c61fdbf242866f4e93c3e1477fb96b5: bare, "Deflect Arrows"
+  - DuelistDeflectArrows c44158612f496fc4b863a0a7691401e3: grantor, "Deflect Arrows (Duelist)"
+  - RageDeflectArrowsFeature d971bbb15f354621ac37fd51d0ab9044: prerequisite, "Deflect Arrows (Instinctual Warrior)"
+- "Demon Resistances" (4)
+  - BloodlineAbyssalResistancesAbilityAdd 8cbf303d479cf0d42a8e36092c76fa7c: grantor, "Demon Resistances (Abyssal Bloodline)"
+  - BloodlineAbyssalResistancesAbilityLevel1 2a958a63c210621449d38b61ef7e8b17: level, "Demon Resistances (Abyssal Bloodline 3)"
+  - BloodlineAbyssalResistancesAbilityLevel2 67ac4240f1c0418409ac09f768e89908: level, "Demon Resistances (level 9)"
+  - BloodragerAbyssalDemonResistances cbe641b9f6e57d94280ef05eb8aa7121: bare, "Demon Resistances"
+- "Demonic" (5)
+  - DemonicCurseFeatureLevel1 b256f446392d1bc489ed9c1bc79e89b7: level, "Demonic (level 1)"
+  - DemonicCurseNoPenaltyFeatureLevel1 67726c24a56e2584abaeac609bc79de7: level, "Demonic (Beneficial Curse 1)"
+  - DemonicCurseNoPenaltyProgression b1de8f8f1250b0c4aa342e1895348cac: grantor, "Demonic (Beneficial Curse)"
+  - DemonicCurseNoProgression 8ee65f750e2c45d99011effdef829e53: bare, "Demonic"
+  - DemonicCurseProgression a565a4eb482424548ad2bcc1b6f6ff61: grantor, "Demonic (Oracle's Curse)"
+- "Destruction Domain" (7)
+  - DestructionDomainBaseFeature 2d3b9491bc05a114ab10e5b1b30dc86a: level, "Destruction Domain (level 1)"
+  - DestructionDomainBaseFeatureSeparatist ecb027afbdd4456bb61731f9832f2e8e: grantor, "Destruction Domain (Separatist)"
+  - DestructionDomainProgression 269ff0bf4596f5248864bc2653a2f0e0: bare, "Destruction Domain"
+  - DestructionDomainProgressionDruid 7a73be7fab8efd34b8449e0fbba8399e: grantor, "Destruction Domain (Blight Bond)"
+  - DestructionDomainProgressionSecondary 8edced7121849414f8b1dc77a119b4a2: grantor, "Destruction Domain (Domain Selection)"
+  - DestructionDomainProgressionSeparatist 33beafc93b5c4bd98932e04f6043d325: grantor, "Destruction Domain (Forbidden Rites)"
+  - TricksterLoreReligionDestructionDomainFeature 6f4ef07e9bf847659769802c115bfb53: grantor, "Destruction Domain (Lore (Religion) 2 Rank)"
+- "Destructive Aura" (2)
+  - DestructionDomainGreaterFeature b047e72c88cbdfe409ea0aaea3dfddf6: bare, "Destructive Aura"
+  - DestructionDomainGreaterFeatureSeparatist 3701fc31a71c42a78ac0e8a62a208c61: grantor, "Destructive Aura (Forbidden Rites)"
+- "Devastating Form" (3)
+  - RageshaperDevastatingFormFeature 3f6793b722fb4172abcd605cd84c9be7: level, "Devastating Form (Rageshaper 1)"
+  - RageshaperDevastatingFormGreater 16690665414d4675919c0747aeb16100: level, "Devastating Form (Rageshaper 10)"
+  - RageshaperDevastatingFormMighty c62ceaf7706444a2ba93d1990ee6ea12: level, "Devastating Form (Rageshaper 20)"
+- "Devoted Blade" (2)
+  - DevotedBladeFeature 4be0bb10e110a35419e406da767bd1e3: bare, "Devoted Blade"
+  - EldritchDevotedBladeFeature e1fdb05451a073647a0f483299db8c4b: grantor, "Devoted Blade (Magus Arcana)"
+- "Dhampir" (2)
+  - DhampirHeritageClassic 213e132588cfe9743ab0ddc446992eb6: grantor, "Dhampir (Dhampir Heritage)"
+  - DhampirRace 64e8b7d5f1ae91d45bbf1e56a3fdff01: bare, "Dhampir"
+- "Dimension Strike" (2)
+  - DimensionStrikeFeature cb6916027e3c25e4185de068249254dc: bare, "Dimension Strike"
+  - EldritchDimensionStrikeFeature bbb9e0fb2fe51634a9b6d4586c65c407: grantor, "Dimension Strike (Magus Arcana)"
+- "Dimensional Hop" (2)
+  - TravelDomainGreaterFeature 9c4b72c847277cd4c94933a647d846cc: bare, "Dimensional Hop"
+  - TravelDomainGreaterFeatureSeparatist daf88d067c0443958230d6a6f7b8eb55: grantor, "Dimensional Hop (Forbidden Rites)"
+- "Diminished Spellcasting" (2)
+  - AngelfireApostleSPellSlotsFeature e3219e7f8055cd54e8324a3ba0fff576: grantor, "Diminished Spellcasting (Angelfire Apostle)"
+  - DevilbanePriestDiminishedSpellcasting e47dba0476b36cf42809819237f44da1: grantor, "Diminished Spellcasting (Demonbane Priest)"
+- "Dinosaur" (4)
+  - ShifterAspectDinosaur b8ba81c46d904603b8fe4d3c361c5d5e: grantor, "Dinosaur (Shifter Aspect)"
+  - ShifterAspectDinosaurAbility 4b399131ebbf485e940ccd3690eab8d3: level, "Dinosaur (Shifter 1)"
+  - ShifterAspectDinosaurBuff 4a981c46dc60474cad17549a2b9f7f65: level, "Dinosaur (Shifter 9)"
+  - ShifterFeyChimeraDinosaurFeature 36136c931e2d49b1ae77c52f5dc6861a: grantor, "Dinosaur (Feyform Shifter)"
+- "Dirge of Doom" (2)
+  - DirgeOfDoom 12a03dce517a43e45b7203c8f8d4e110: grantor, "Dirge of Doom (Skald)"
+  - DirgeOfDoomFeature 1d48ab2bded57a74dad8af3da07d313a: grantor, "Dirge of Doom (Bard)"
+- "Dirty Trick" (2)
+  - ImprovedDirtyTrick ed699d64870044b43bb5a7fbe3f29494: bare, "Dirty Trick"
+  - OracleRevelationManeuverMasteryDirtyTrick 42f46ce3ecf00e549ad8a0bd0ef84919: grantor, "Dirty Trick (Maneuver Mastery)"
+- "Disarm" (3)
+  - ImprovedDisarm 25bc9c439ac44fd44ac3b1e58890916f: bare, "Disarm"
+  - OracleRevelationManeuverMasteryDisarm 8142f89d36cc52243ad1cfd48ce8f655: grantor, "Disarm (Maneuver Mastery)"
+  - OracleRevelationManeuverMasteryDisarmimproved ac721e90aae441878fa75619e13c66e9: grantor, "Disarm (Revelation)"
+- "Disarming Strike" (2)
+  - DisarmingStrike 3af3476f6034a924e96f3ffa198424b7: bare, "Disarming Strike"
+  - SwordlordDisarmingStrike c7ea46f5e1822994ba069c11819844ae: grantor, "Disarming Strike (Aldori Defender)"
+- "Discovery" (2)
+  - DiscoverySelection cd86c437488386f438dcc9ae727ea2a6: grantor, "Discovery (Alchemist)"
+  - UndergroundChemistSelection c3d08fdb481aa2e4a9f71c4349141826: grantor, "Discovery (Underground Chemist)"
+- "Dispel Magic" (2)
+  - BloodlineArcaneSpellLevel3 d49fa0b62594e7949a3736e08f621786: bare, "Dispel Magic"
+  - BloodlineDraconicSpellLevel3 606cdd9198fb270429ab6dce1a6b14f1: family, "Dispel Magic (Draconic Bloodline)"
+- "Dispel Magic, Greater" (2)
+  - BloodlineCelestialSpellLevel6 ba488e4ecdfb459418c4d3e19523d1fc: bare, "Dispel Magic, Greater"
+  - BloodlineFeySpellLevel6 ee79528fc9614884687738c6dd114869: override, "Dispel Magic, Greater (Fey Bloodline or Sylvan Bloodline)"
+- "Dispelling Touch" (3)
+  - MagicDomainGreaterFeature cf47e96abd88c9f418f8e67f5a14381f: bare, "Dispelling Touch"
+  - MagicDomainGreaterFeatureFake 4cd9c5a1bba840308424a436c1f7a95f: item, "Dispelling Touch (Razmir's Ring)"
+  - MagicDomainGreaterFeatureSeparatist 724216a6124d486fa55d7476db26bf1a: grantor, "Dispelling Touch (Forbidden Rites)"
+- "Divine Fortune" (2)
+  - LuckDomainGreaterFeature dd58b458af054e642bf845c3f01307e5: bare, "Divine Fortune"
+  - LuckDomainGreaterFeatureSeparatist 58db10a0b5a143e2a4867793ca869225: grantor, "Divine Fortune (Forbidden Rites)"
+- "Divine Hunter" (2)
+  - DivineHunterArchetype f996f0a18e5d945459e710ee3a6dd485: grantor, "Divine Hunter (Hunter)"
+  - DivineHunterArchetype fec08c1a3187da549abd6b85f27e4432: grantor, "Divine Hunter (Paladin)"
+- "Divine Hunter Bond" (5)
+  - DivineHunterBondFeature 275d3dd6cad51cf4db9b0bceebff02f2: level, "Divine Hunter Bond (Divine Hunter 5)"
+  - DivineHunterBondPlus2 c5b169a910918e540a5494a1f24bd6ee: level, "Divine Hunter Bond (Divine Hunter 8)"
+  - DivineHunterBondPlus3 a3b4881f0510423c82e9fbecebc53833: level, "Divine Hunter Bond (Divine Hunter 11)"
+  - DivineHunterBondPlus4 36a6017145a742c0a0a20eb314b3a884: level, "Divine Hunter Bond (Divine Hunter 14)"
+  - DivineHunterBondPlus6 6752ecab81984f05830764b321355eb0: level, "Divine Hunter Bond (Divine Hunter 20)"
+- "Domain Selection" (3)
+  - DivineHunterDomainsSelection 72909a37a1ed5344f88ec9d1d31f5c5b: grantor, "Domain Selection (Divine Hunter)"
+  - DomainsSelection 48525e5da45c9c243a343fc6545dbdb9: bare, "Domain Selection"
+  - SecondDomainsSelection 43281c3d7fe18cc4d91928395837cd1e: grantor, "Domain Selection (Cleric)"
+- "Draconic Bloodline — Black" (4)
+  - BloodlineDraconicBlackProgression 7bd143ead2d6c3a409aad6ee22effe34: bare, "Draconic Bloodline — Black"
+  - CrossbloodedSecondaryBloodlineDraconicBlackProgression 601387ac1873bba448bddcfbf00af8d7: grantor, "Draconic Bloodline — Black (Secondary Bloodline)"
+  - DragonheirBlackProgression 6127949882384a5cb75074e4d77ceae3: grantor, "Draconic Bloodline — Black (Draconic Bloodline)"
+  - SeekerBloodlineDraconicBlackProgression cf448fafcd8452d4b830bcc9ca074189: grantor, "Draconic Bloodline — Black (Bloodline)"
+- "Draconic Bloodline — Blue" (4)
+  - BloodlineDraconicBlueProgression 8a7f100c02d0b254d8f5f3affc8ef386: bare, "Draconic Bloodline — Blue"
+  - CrossbloodedSecondaryBloodlineDraconicBlueProgression cbc80f3fdc72aac4bb6963efe3062473: grantor, "Draconic Bloodline — Blue (Secondary Bloodline)"
+  - DragonheirBlueProgression 3da0972ad5574bfd8a7de9bc5460e7e9: grantor, "Draconic Bloodline — Blue (Draconic Bloodline)"
+  - SeekerBloodlineDraconicBlueProgression 82f76646a7f96ed4cafa18480adc0b8c: grantor, "Draconic Bloodline — Blue (Bloodline)"
+- "Draconic Bloodline — Brass" (4)
+  - BloodlineDraconicBrassProgression 5f9ecbee67db8364985e9d0500eb25f1: bare, "Draconic Bloodline — Brass"
+  - CrossbloodedSecondaryBloodlineDraconicBrassProgression b7555ce6cfc7fc042bb7b701d2618307: grantor, "Draconic Bloodline — Brass (Secondary Bloodline)"
+  - DragonheirBrassProgression 47f3f1a3349349fe9a7f68f8d2b6da5d: grantor, "Draconic Bloodline — Brass (Draconic Bloodline)"
+  - SeekerBloodlineDraconicBrassProgression c355b8777a3bda7429d863367bda3851: grantor, "Draconic Bloodline — Brass (Bloodline)"
+- "Draconic Bloodline — Bronze" (4)
+  - BloodlineDraconicBronzeProgression 7e0f57d8d00464441974e303b84238ac: bare, "Draconic Bloodline — Bronze"
+  - CrossbloodedSecondaryBloodlineDraconicBronzeProgression b71dc10096302384c901787a40b81fbf: grantor, "Draconic Bloodline — Bronze (Secondary Bloodline)"
+  - DragonheirBronzeProgression df2807f0649c4237ab7c4d62a2acaaee: grantor, "Draconic Bloodline — Bronze (Draconic Bloodline)"
+  - SeekerBloodlineDraconicBronzeProgression 468ecbdd58fbd6045a0a1888308031fe: grantor, "Draconic Bloodline — Bronze (Bloodline)"
+- "Draconic Bloodline — Copper" (4)
+  - BloodlineDraconicCopperProgression b522759a265897b4f8f7a1a180a692e4: bare, "Draconic Bloodline — Copper"
+  - CrossbloodedSecondaryBloodlineDraconicCopperProgression c0684cd2e00de724990bb389e672db90: grantor, "Draconic Bloodline — Copper (Secondary Bloodline)"
+  - DragonheirCopperProgression 416ee6e6b4834bb8bd5afe8b08a69865: grantor, "Draconic Bloodline — Copper (Draconic Bloodline)"
+  - SeekerBloodlineDraconicCopperProgression 2ad98f60b29ae604da0297037054080c: grantor, "Draconic Bloodline — Copper (Bloodline)"
+- "Draconic Bloodline — Gold" (4)
+  - BloodlineDraconicGoldProgression 6c67ef823db8d7d45bb0ef82f959743d: bare, "Draconic Bloodline — Gold"
+  - CrossbloodedSecondaryBloodlineDraconicGoldProgression be355f1518587224799e6c125aad2ac0: grantor, "Draconic Bloodline — Gold (Secondary Bloodline)"
+  - DragonheirGoldProgression 5172cdce55b2455f878ff8c74c964a1e: grantor, "Draconic Bloodline — Gold (Draconic Bloodline)"
+  - SeekerBloodlineDraconicGoldProgression 63c9d62a56e6921409a58de1ab9a9f9b: grantor, "Draconic Bloodline — Gold (Bloodline)"
+- "Draconic Bloodline — Green" (4)
+  - BloodlineDraconicGreenProgression 7181be57d1cc3bc40bc4b552e4e4ce24: bare, "Draconic Bloodline — Green"
+  - CrossbloodedSecondaryBloodlineDraconicGreenProgression a335def5677a4dc46bab211b30a9f33c: grantor, "Draconic Bloodline — Green (Secondary Bloodline)"
+  - DragonheirGreenProgression db69413e69184b099f7825092c5dbc4f: grantor, "Draconic Bloodline — Green (Draconic Bloodline)"
+  - SeekerBloodlineDraconicGreenProgression 6de526eeee72852448c5595f7a44a39d: grantor, "Draconic Bloodline — Green (Bloodline)"
+- "Draconic Bloodline — Red" (4)
+  - BloodlineDraconicRedProgression 8c6e5b3cf12f71e43949f52c41ae70a8: bare, "Draconic Bloodline — Red"
+  - CrossbloodedSecondaryBloodlineDraconicRedProgression 12484c4d15c3e134f9fd23931c38e996: grantor, "Draconic Bloodline — Red (Secondary Bloodline)"
+  - DragonheirRedProgression 267dbd4789fa4b75a44294c7d1625bba: grantor, "Draconic Bloodline — Red (Draconic Bloodline)"
+  - SeekerBloodlineDraconicRedProgression d69a7785de1959c4497e4ff1e9490509: grantor, "Draconic Bloodline — Red (Bloodline)"
+- "Draconic Bloodline — Silver" (4)
+  - BloodlineDraconicSilverProgression c7d2f393e6574874bb3fc728a69cc73a: bare, "Draconic Bloodline — Silver"
+  - CrossbloodedSecondaryBloodlineDraconicSilverProgression 076d1648e1341f841a222de5b89ba215: grantor, "Draconic Bloodline — Silver (Secondary Bloodline)"
+  - DragonheirSilverProgression b6a90286e6894c7b8fbd52a29dda9f48: grantor, "Draconic Bloodline — Silver (Draconic Bloodline)"
+  - SeekerBloodlineDraconicSilverProgression efabab987569bf54abf23848c250e4d5: grantor, "Draconic Bloodline — Silver (Bloodline)"
+- "Draconic Bloodline — White" (4)
+  - BloodlineDraconicWhiteProgression b0f79497a0d1f4f4b8293e82c8f8fa0c: bare, "Draconic Bloodline — White"
+  - CrossbloodedSecondaryBloodlineDraconicWhiteProgression 0970d63bc8e90274a90f6c001318df77: grantor, "Draconic Bloodline — White (Secondary Bloodline)"
+  - DragonheirWhiteProgression 1bdad91f7210419b9e5b4801d084e14b: grantor, "Draconic Bloodline — White (Draconic Bloodline)"
+  - SeekerBloodlineDraconicWhiteProgression 7572e8c020a6b8a46bde3ab3ad8c6f70: grantor, "Draconic Bloodline — White (Bloodline)"
+- "Draconic Breath" (10)
+  - FeatureScaledFistBlackBreathWeapon a546282f300c1d44f975cee6e01ebded: grantor, "Draconic Breath (Black Dragon — Acid)"
+  - FeatureScaledFistBlueBreathWeapon b88794e3937a03e4d95f3048df2e6b85: grantor, "Draconic Breath (Blue Dragon — Electricity)"
+  - FeatureScaledFistBrassBreathWeapon 9853668113c414d4d9053577e5cc1e32: grantor, "Draconic Breath (Brass Dragon — Fire)"
+  - FeatureScaledFistBronzeBreathWeapon 95784ae1838c0e14ba145ec1573f60fc: grantor, "Draconic Breath (Bronze Dragon — Electricity)"
+  - FeatureScaledFistCopperBreathWeapon 7497d32115317b643a7e76cfa9caf264: grantor, "Draconic Breath (Copper Dragon — Acid)"
+  - FeatureScaledFistGoldBreathWeapon 1ef82ad84f1691346af86067ed3d1f93: grantor, "Draconic Breath (Gold Dragon — Fire)"
+  - FeatureScaledFistGreenBreathWeapon 463c31d209d21e340bc66cab9df728d7: grantor, "Draconic Breath (Green Dragon — Acid)"
+  - FeatureScaledFistRedBreathWeapon a8c7ba9330f14b343b58210174a800ed: grantor, "Draconic Breath (Red Dragon — Fire)"
+  - FeatureScaledFistSilverBreathWeapon 9e6f6a240b022c346b16038b20c238ce: grantor, "Draconic Breath (Silver Dragon — Cold)"
+  - FeatureScaledFistWhiteBreathWeapon d88d9faea279e8142adbda357bcc8377: grantor, "Draconic Breath (White Dragon — Cold)"
+- "Draconic Defenses" (4)
+  - DragonicDefencesAcid b24ffb93a4fce9f4e9790b202d09ebd9: override, "Draconic Defenses (acid)"
+  - DragonicDefencesCold 3add20ed60e4e4344afbfa3e3ff4635a: override, "Draconic Defenses (cold)"
+  - DragonicDefencesElectricity af0027e0c0432bc418e813e32de0460b: override, "Draconic Defenses (electricity)"
+  - DragonicDefencesFire d2a31af5bd02f9a4a87d6015fdba56bb: override, "Draconic Defenses (fire)"
+- "Draconic Strike" (4)
+  - DragonicStrikeAcid b7d0c5d733a06e543b35d4e1c88d04f7: override, "Draconic Strike (acid)"
+  - DragonicStrikeCold 3ff9333e578d7c2448ba18b6ffacb885: override, "Draconic Strike (cold)"
+  - DragonicStrikeElectricity db64de9cdbad45b4cbc8b369cd7a007c: override, "Draconic Strike (electricity)"
+  - DragonicStrikeFire 42aee53be1b64334caa5c73d34d10fad: override, "Draconic Strike (fire)"
+- "Draconic — Black" (2)
+  - BloodragerDragonBlackBloodline 3d030a2fed2b5cf45919fc1e40629a9e: grantor, "Draconic — Black (Bloodline)"
+  - BloodragerDragonBlackSecondBloodline 7384587bd92a417793894022b03e298e: grantor, "Draconic — Black (Second Bloodrager Bloodline)"
+- "Draconic — Blue" (2)
+  - BloodragerDragonBlueBloodline 17bbb6790ca500d4190b978cab5c4dfc: grantor, "Draconic — Blue (Bloodline)"
+  - BloodragerDragonBlueSecondBloodline 4c495ac785134983b99f77eb559a81a0: grantor, "Draconic — Blue (Second Bloodrager Bloodline)"
+- "Draconic — Brass" (2)
+  - BloodragerDragonBrassBloodline 56e22cb1dde3f5a4297d45744ca19043: grantor, "Draconic — Brass (Bloodline)"
+  - BloodragerDragonBrassSecondBloodline 3a16aa26238a453da33338871d7183fd: grantor, "Draconic — Brass (Second Bloodrager Bloodline)"
+- "Draconic — Bronze" (2)
+  - BloodragerDragonBronzeBloodline 0cf41c61c8ac463478e5ba733fd26b40: grantor, "Draconic — Bronze (Bloodline)"
+  - BloodragerDragonBronzeSecondBloodline a787a6e193c244c5901c799f4c3afe2d: grantor, "Draconic — Bronze (Second Bloodrager Bloodline)"
+- "Draconic — Copper" (2)
+  - BloodragerDragonCopperBloodline 53f189dce67466c4f9e60610e5d1c4ba: grantor, "Draconic — Copper (Bloodline)"
+  - BloodragerDragonCopperSecondBloodline 49e5e1528329494e84c7dc6aa0b6bd7b: grantor, "Draconic — Copper (Second Bloodrager Bloodline)"
+- "Draconic — Gold" (2)
+  - BloodragerDragonGoldBloodline ffcb3d0a1a45d8048a691eda9f0219b9: grantor, "Draconic — Gold (Bloodline)"
+  - BloodragerDragonGoldSecondBloodline 6e0236ac698449edb60a8beeb923d2b2: grantor, "Draconic — Gold (Second Bloodrager Bloodline)"
+- "Draconic — Green" (2)
+  - BloodragerDragonGreenBloodline 69b27eb6bd71ac747a2fac8399c27c3a: grantor, "Draconic — Green (Bloodline)"
+  - BloodragerDragonGreenSecondBloodline b48fa4abd8a444b281bf12f7c17f0d0f: grantor, "Draconic — Green (Second Bloodrager Bloodline)"
+- "Draconic — Red" (2)
+  - BloodragerDragonRedBloodline 34209f220733fc444a039df1b1076b0b: grantor, "Draconic — Red (Bloodline)"
+  - BloodragerDragonRedSecondBloodline 4a947725f58441aeafc2ae0859526d1b: grantor, "Draconic — Red (Second Bloodrager Bloodline)"
+- "Draconic — Silver" (2)
+  - BloodragerDragonSilverBloodline df182ceef2330d74b9bd7bfdb23d144b: grantor, "Draconic — Silver (Bloodline)"
+  - BloodragerDragonSilverSecondBloodline 27bf16b1f4154059b0b5dcf994add205: grantor, "Draconic — Silver (Second Bloodrager Bloodline)"
+- "Draconic — White" (2)
+  - BloodragerDragonWhiteBloodline c97cf6524b89d474989378d841c7cf5c: grantor, "Draconic — White (Bloodline)"
+  - BloodragerDragonWhiteSecondBloodline 215efcf398f442c4925d59dd5e836cfe: grantor, "Draconic — White (Second Bloodrager Bloodline)"
+- "Dragon Bite" (2)
+  - DragonDiscipleBiteFeatureFirst 7e7e4cd3d93984b439799048e6657237: level, "Dragon Bite (Dragon Disciple 2)"
+  - DragonDiscipleBiteFeatureSecond 01971351119121d429ecf62c2ab94de3: level, "Dragon Bite (Dragon Disciple 6)"
+- "Dragon Form" (13)
+  - BloodragerDragonFormOfTheDragonBlack c718420085ffa0640916ec1e28a55566: override, "Dragon Form (bloodrager, black)"
+  - BloodragerDragonFormOfTheDragonBlue 3a25cc2124689484499451091e986e0a: override, "Dragon Form (bloodrager, blue)"
+  - BloodragerDragonFormOfTheDragonBrass 9aa2f1035075c424080cbd3c4dc31fa1: override, "Dragon Form (bloodrager, brass)"
+  - BloodragerDragonFormOfTheDragonBronze 33445c46c6fc9d04ba9f3a2be1d9a9a1: override, "Dragon Form (bloodrager, bronze)"
+  - BloodragerDragonFormOfTheDragonCopper 03e33edd9202e454a84ede3f83b8ab7d: override, "Dragon Form (bloodrager, copper)"
+  - BloodragerDragonFormOfTheDragonGold 6e1d6a6daef62b945a07c2887429cf2d: override, "Dragon Form (bloodrager, gold)"
+  - BloodragerDragonFormOfTheDragonGreen 80a7968889937a44f87f7b625bf067b8: override, "Dragon Form (bloodrager, green)"
+  - BloodragerDragonFormOfTheDragonRed 361134f67b400a1449aaceeb5ef8040f: override, "Dragon Form (bloodrager, red)"
+  - BloodragerDragonFormOfTheDragonWhite 868dce0c097e7054d9989b67b758c3b1: override, "Dragon Form (bloodrager, white)"
+  - BloodragerFormOfTheDragonIISilver b8305412a9e77af4583903edf81bf270: override, "Dragon Form (bloodrager, silver)"
+  - DragonDiscipleFormFeatureFirst 0ee31c9fc504b51489d12d43168b5009: level, "Dragon Form (Dragon Disciple 7)"
+  - DragonDiscipleFormFeatureSecond 76dc9a65841190d46a8fc25dce00a242: grantor, "Dragon Form (Dragon Disciple)"
+  - DragonDiscipleFormFeatureUltimate 717699191d106eb46a7d820a872ed24d: level, "Dragon Form (Dragon Disciple 10)"
+- "Dragon Resistances" (40)
+  - BloodlineDraconicBlackResistancesAbilityAddLevel1 c97e9ec3c7687bc488094d13807cbee0: grantor, "Dragon Resistances (Draconic Bloodline — Black)"
+  - BloodlineDraconicBlackResistancesAbilityLevel1 5623c02b343f59a46a4227f32f44ba8b: level, "Dragon Resistances (Draconic Bloodline — Black 3)"
+  - BloodlineDraconicBlackResistancesAbilityLevel2 307544d817c7d5f4883f1400918d07fb: level, "Dragon Resistances (Draconic Bloodline — Black 9)"
+  - BloodlineDraconicBlackResistancesAbilityLevel3 586f50b2310239647b8c054e9d12a3e3: level, "Dragon Resistances (Draconic Bloodline — Black 15)"
+  - BloodlineDraconicBlueResistancesAbilityAddLevel1 b28fd00f894fd2846bd77a26d1344425: grantor, "Dragon Resistances (Draconic Bloodline — Blue)"
+  - BloodlineDraconicBlueResistancesAbilityLevel1 73916f082fbb1b843a55dec6671da447: level, "Dragon Resistances (Draconic Bloodline — Blue 3)"
+  - BloodlineDraconicBlueResistancesAbilityLevel2 9fc2e77baef2ee5429d6918678102d80: level, "Dragon Resistances (Draconic Bloodline — Blue 9)"
+  - BloodlineDraconicBlueResistancesAbilityLevel3 c4f5015c46c12ab40b6274ee5e49f33e: level, "Dragon Resistances (Draconic Bloodline — Blue 15)"
+  - BloodlineDraconicBrassResistancesAbilityAddLevel1 66ac2480fcd5b2c41b886e1bdd65f5de: grantor, "Dragon Resistances (Draconic Bloodline — Brass)"
+  - BloodlineDraconicBrassResistancesAbilityLevel1 3930769e8ee7e0848afdf1f6fb55f020: level, "Dragon Resistances (Draconic Bloodline — Brass 3)"
+  - BloodlineDraconicBrassResistancesAbilityLevel2 b39740c2f25412145963ae28b51bddb6: level, "Dragon Resistances (Draconic Bloodline — Brass 9)"
+  - BloodlineDraconicBrassResistancesAbilityLevel3 5fcd4542dc32af146a7121ef8a3853f0: level, "Dragon Resistances (Draconic Bloodline — Brass 15)"
+  - BloodlineDraconicBronzeResistancesAbilityAddLevel1 71bea6cd9a9e9ad469bc459f1b18f9c3: grantor, "Dragon Resistances (Draconic Bloodline — Bronze)"
+  - BloodlineDraconicBronzeResistancesAbilityLevel1 920ae03f1b4ed1b4bb5217099103e54a: level, "Dragon Resistances (Draconic Bloodline — Bronze 3)"
+  - BloodlineDraconicBronzeResistancesAbilityLevel2 57b9d5a7cce17b846a9a1b6ec4b73648: level, "Dragon Resistances (Draconic Bloodline — Bronze 9)"
+  - BloodlineDraconicBronzeResistancesAbilityLevel3 2698841e4b5974e4f94968d61cf64b2f: level, "Dragon Resistances (Draconic Bloodline — Bronze 15)"
+  - BloodlineDraconicCopperResistancesAbilityAddLevel1 89d90c28dcad6704096f34d8782fb944: grantor, "Dragon Resistances (Draconic Bloodline — Copper)"
+  - BloodlineDraconicCopperResistancesAbilityLevel1 64c443cd6c84bd946a29fafa874a3c24: level, "Dragon Resistances (Draconic Bloodline — Copper 3)"
+  - BloodlineDraconicCopperResistancesAbilityLevel2 1652a1b9d85fd9d478f1cc28624db64e: level, "Dragon Resistances (Draconic Bloodline — Copper 9)"
+  - BloodlineDraconicCopperResistancesAbilityLevel3 e67d06fab10bf39438afba1f9663d328: level, "Dragon Resistances (Draconic Bloodline — Copper 15)"
+  - BloodlineDraconicGoldResistancesAbilityAddLevel1 c540433df26c8454e80161e7532064ac: grantor, "Dragon Resistances (Draconic Bloodline — Gold)"
+  - BloodlineDraconicGoldResistancesAbilityLevel1 0c9c41ffc4471b64f8d72a12362a70f9: level, "Dragon Resistances (Draconic Bloodline — Gold 3)"
+  - BloodlineDraconicGoldResistancesAbilityLevel2 90f8fc30b79672844b10dc371a5ac5da: level, "Dragon Resistances (Draconic Bloodline — Gold 9)"
+  - BloodlineDraconicGoldResistancesAbilityLevel3 3fcb5d4f201cfba4da2095214b999bef: level, "Dragon Resistances (Draconic Bloodline — Gold 15)"
+  - BloodlineDraconicGreenResistancesAbilityAddLevel1 68009d99ecfdcf84191071feebe853f4: grantor, "Dragon Resistances (Draconic Bloodline — Green)"
+  - BloodlineDraconicGreenResistancesAbilityLevel1 2603c92ec7d5c564fac40a7d34099289: level, "Dragon Resistances (Draconic Bloodline — Green 3)"
+  - BloodlineDraconicGreenResistancesAbilityLevel2 89e1bae9246c12d4bb1578ec1724202f: level, "Dragon Resistances (Draconic Bloodline — Green 9)"
+  - BloodlineDraconicGreenResistancesAbilityLevel3 9e0ace7ba157ee14bacc866aa1cef64a: level, "Dragon Resistances (Draconic Bloodline — Green 15)"
+  - BloodlineDraconicRedResistancesAbilityAddLevel1 e3f7c6de540a3ed478fa32be32c7fc02: grantor, "Dragon Resistances (Draconic Bloodline — Red)"
+  - BloodlineDraconicRedResistancesAbilityLevel1 67979ecc80c4fed40954d62e3844583e: level, "Dragon Resistances (Draconic Bloodline — Red 3)"
+  - BloodlineDraconicRedResistancesAbilityLevel2 e353df68a1bb5894ea1d33b0bda1400d: level, "Dragon Resistances (Draconic Bloodline — Red 9)"
+  - BloodlineDraconicRedResistancesAbilityLevel3 d102a33c03260a6458b7508a243e1958: level, "Dragon Resistances (Draconic Bloodline — Red 15)"
+  - BloodlineDraconicSilverResistancesAbilityAddLevel1 48e5aff05dfe73b4e9574364fbde2a20: grantor, "Dragon Resistances (Draconic Bloodline — Silver)"
+  - BloodlineDraconicSilverResistancesAbilityLevel1 7e873e39082c78a4b87ad081cb59ef14: level, "Dragon Resistances (Draconic Bloodline — Silver 3)"
+  - BloodlineDraconicSilverResistancesAbilityLevel2 8b30236008a0d5a49bacb2d38ce04b31: level, "Dragon Resistances (Draconic Bloodline — Silver 9)"
+  - BloodlineDraconicSilverResistancesAbilityLevel3 3bf5f1e83c542e640bb3e7fb66b1104c: level, "Dragon Resistances (Draconic Bloodline — Silver 15)"
+  - BloodlineDraconicWhiteResistancesAbilityAddLevel1 2e8c53c30eefe11439c81b28ae58eb2a: grantor, "Dragon Resistances (Draconic Bloodline — White)"
+  - BloodlineDraconicWhiteResistancesAbilityLevel1 f0808daee57206645a2b23b17d5b63f0: level, "Dragon Resistances (Draconic Bloodline — White 3)"
+  - BloodlineDraconicWhiteResistancesAbilityLevel2 64b243d2b7d780e459779c446af558e4: level, "Dragon Resistances (Draconic Bloodline — White 9)"
+  - BloodlineDraconicWhiteResistancesAbilityLevel3 66d8598b2c9c69f468c2efcdc9ad0e2d: level, "Dragon Resistances (Draconic Bloodline — White 15)"
+- "Dragonkind I" (2)
+  - BloodlineDraconicSpellLevel6 b10c54491148de84b858763588664a8a: bare, "Dragonkind I"
+  - MetamorphFormOfTheDragonIFeature 5f50f9ba34093454d96a11c702a124a0: grantor, "Dragonkind I (Metamorph)"
+- "Dragonkind II" (2)
+  - BloodlineDraconicSpellLevel7 5b13008bdc18a0c4db321ae9f04ba77f: bare, "Dragonkind II"
+  - MetamorphFormOfTheDragonIIFeature 1dfe123d979d86f4aad0ab96385e8ac1: grantor, "Dragonkind II (Metamorph)"
+- "Druid" (4)
+  - DruidClass 610d836f3a3a9ed42a4349b62f002e96: kind, "Druid"
+  - DruidProgression 01006f2ac8866764fb7af135e73be81c: kind, "Druid (progression)"
+  - LoremasterClericSecretDruid 2dfc4cd0816dc204e8ddbf4067e20b62: grantor, "Druid (Cleric Spell)"
+  - LoremasterWizardSecretDruid 524cda3acafcf4145bdea05b43155845: grantor, "Druid (Wizard Spell)"
+- "Drunken Ki" (2)
+  - DrunkenKiSelection 97da13a43026460f8d4d54e1c69af202: level, "Drunken Ki (Drunken Master 4)"
+  - KiPowerDrunkenFeature 814ddce615b84e488fb7a196acebd408: level, "Drunken Ki (Drunken Master 3)"
+- "Drunken Resilience" (2)
+  - DamageReductionDrunkenMaster 187ddd9028a1413fa256fdc9f46bf7d5: bare, "Drunken Resilience"
+  - DrunkenResilienceFeature 4db82a5a352543b3842f63e2583a85f1: grantor, "Drunken Resilience (Drunken Master)"
+- "Earth" (5)
+  - EarthBlessingFeature 73c37a22bc9a523409a47218d507acf6: grantor, "Earth (Blessings)"
+  - ElementalFocusEarth c6816ad80a3df9c4ea7d3b012b06bacd: grantor, "Earth (Elemental Focus)"
+  - KineticKnightElementalFocusEarth d2a93ab18fcff8c419b03a2c3d573606: grantor, "Earth (Kinetic Knight)"
+  - SecondaryElementEarth 956b65effbf37e5419c13100ab4385a3: level, "Earth (Kineticist 7)"
+  - ThirdElementEarth c43d9c2d23e56fb428a4eb60da9ba1cb: level, "Earth (Kineticist 15)"
+- "Earth Domain" (7)
+  - EarthDomainBaseFeature 828d82a0e8c5a944bbdb6b12f802ff02: level, "Earth Domain (level 1)"
+  - EarthDomainBaseFeatureSeparatist dfa493d6b1434ec5963e03e41c2ec61a: grantor, "Earth Domain (Separatist)"
+  - EarthDomainProgression 08bbcbfe5eb84604481f384c517ac800: bare, "Earth Domain"
+  - EarthDomainProgressionDruid a3217dc55003b914aa296da7ada029bc: grantor, "Earth Domain (Druid)"
+  - EarthDomainProgressionSecondary 4132a011b835a36479d6bc19a1b962e6: grantor, "Earth Domain (Domain Selection)"
+  - EarthDomainProgressionSeparatist 9cd779ca26f745f9bef2e2f9da2a4725: grantor, "Earth Domain (Forbidden Rites)"
+  - TricksterLoreReligionEarthDomainFeature d544494e10fc4004829ae7668a030960: grantor, "Earth Domain (Lore (Religion) 2 Rank)"
+- "Eldritch Scoundrel" (5)
+  - EldritchScoundrelArchetype 57f93dd8423c97c49989501281296c4a: grantor, "Eldritch Scoundrel (Rogue)"
+  - EldritchScoundrelProficiencies 240dd3a98d72c7c4bb1d369d3e40292a: bare, "Eldritch Scoundrel"
+  - LoremasterClericSecretRogue 82c78af6a0e3ff740b9015bd42f20d53: grantor, "Eldritch Scoundrel (Cleric Spell)"
+  - LoremasterDruidSecretRogue d24ac0184a8562347a2bae1b086b8253: grantor, "Eldritch Scoundrel (Druid Spell)"
+  - LoremasterWizardSecretRogue 66286a8fc619a3847a5a446b334544ad: grantor, "Eldritch Scoundrel (Wizard Spell)"
+- "Electricity Resistance" (2)
+  - AirDomainGreaterFeature 8a8e3f80abc04c34b98324823d14b057: bare, "Electricity Resistance"
+  - AirDomainGreaterFeatureSeparatist b7643a75adbf455790450fdc6a98a6ad: grantor, "Electricity Resistance (Forbidden Rites)"
+- "Elemental Blast" (4)
+  - BloodlineElementalAirElementalBlastFeature 553d9802d5d9de04b941b55cb47d3096: grantor, "Elemental Blast (Elemental Bloodline — Air)"
+  - BloodlineElementalEarthElementalBlastFeature fbf8013a12804314db29f95f7ef1d3d3: grantor, "Elemental Blast (Elemental Bloodline — Earth)"
+  - BloodlineElementalFireElementalBlastFeature 3022a5066a5604a498dd289b37dfd8aa: grantor, "Elemental Blast (Elemental Bloodline — Fire)"
+  - BloodlineElementalWaterElementalBlastFeature 2cc65f00bc312c94f9bc000c3090226c: grantor, "Elemental Blast (Elemental Bloodline — Water)"
+- "Elemental Bloodline — Air" (3)
+  - BloodlineElementalAirProgression cd788df497c6f10439c7025e87864ee4: bare, "Elemental Bloodline — Air"
+  - CrossbloodedSecondaryBloodlineElementalAirProgression 7612db46a7df4f04a9eb81503f006154: grantor, "Elemental Bloodline — Air (Secondary Bloodline)"
+  - SeekerBloodlineElementalAirProgression 940d34be432a1e543b0c0cbecd4ffc1d: grantor, "Elemental Bloodline — Air (Bloodline)"
+- "Elemental Bloodline — Earth" (3)
+  - BloodlineElementalEarthProgression 32393034410fb2f4d9c8beaa5c8c8ab7: bare, "Elemental Bloodline — Earth"
+  - CrossbloodedSecondaryBloodlineElementalEarthProgression a058253edb9770542998724a2799e1b9: grantor, "Elemental Bloodline — Earth (Secondary Bloodline)"
+  - SeekerBloodlineElementalEarthProgression 1c1cdb13caa111d49bd82a7e1f320803: grantor, "Elemental Bloodline — Earth (Bloodline)"
+- "Elemental Bloodline — Fire" (3)
+  - BloodlineElementalFireProgression 17cc794d47408bc4986c55265475c06f: bare, "Elemental Bloodline — Fire"
+  - CrossbloodedSecondaryBloodlineElementalFireProgression 94bbb5a79f006674cbcbb03995b3f728: grantor, "Elemental Bloodline — Fire (Secondary Bloodline)"
+  - SeekerBloodlineElementalFireProgression b19f95964e4a18f4cb3e4e3101593f22: grantor, "Elemental Bloodline — Fire (Bloodline)"
+- "Elemental Bloodline — Water" (3)
+  - BloodlineElementalWaterProgression 7c692e90592257a4e901d12ae6ec1e41: bare, "Elemental Bloodline — Water"
+  - CrossbloodedSecondaryBloodlineElementalWaterProgression 9f4648353fb3cd641baefd3ec31b6630: grantor, "Elemental Bloodline — Water (Secondary Bloodline)"
+  - SeekerBloodlineElementalWaterProgression 179a53407d1141142a91baace7e43325: grantor, "Elemental Bloodline — Water (Bloodline)"
+- "Elemental Body" (4)
+  - BloodlineElementalAirElementalBodyFeature 7c3be22702ee39a418a5fba0e85e68de: override, "Elemental Body (air)"
+  - BloodlineElementalEarthElementalBodyFeature 6541fc1423987a341b30ea68a54f0327: override, "Elemental Body (earth)"
+  - BloodlineElementalFireElementalBodyFeature 5d974328297021a479b4e3a1de749126: override, "Elemental Body (fire)"
+  - BloodlineElementalWaterElementalBodyFeature c459fcee6baabd149ac79acb0cb1d40e: override, "Elemental Body (water)"
+- "Elemental Damage" (4)
+  - RampageOnHitDamage 0665256ed3804f03872928ad115652fe: grantor, "Elemental Damage (Fire Rampage)"
+  - RampageOnHitDamage 9b9d7408c30640ed9b8b158b706a98c2: grantor, "Elemental Damage (Cold Rampage)"
+  - RampageOnHitDamage a0fbe19f87134774890d8f74c143a9b7: grantor, "Elemental Damage (Electricity Rampage)"
+  - RampageOnHitDamage b55375fc8af84eebbb14f857f94daeac: grantor, "Elemental Damage (Acid Rampage)"
+- "Elemental Focus" (3)
+  - ElementalFocusSelection 1f3a15a3ae8a5524ab8b97f469bf4e3d: grantor, "Elemental Focus (Kineticist)"
+  - ElementalFocusSelection bb24cc01319528849b09a3ae8eec0b31: bare, "Elemental Focus"
+  - KineticKnightElementalFocusSelection b1f296f0bd16bc242ae35d0638df82eb: grantor, "Elemental Focus (Kinetic Knight)"
+- "Elemental Form" (4)
+  - ShamanFlameSpiritTrueFeature c66e1a4780a28d34bb13fc2c492b86d3: grantor, "Elemental Form (Flame)"
+  - ShamanStonesSpiritTrueFeature 6ea4b2cfa00bb75408662cd6168a64c1: grantor, "Elemental Form (Stone)"
+  - ShamanWavesSpiritTrueFeature 8bc2929a165ba5940844aad982e2a2a6: grantor, "Elemental Form (Waves)"
+  - ShamanWindSpiritTrueFeature 2eef2cb6c24fd324196a6ae10739d39b: grantor, "Elemental Form (Wind)"
+- "Elemental Movement" (5)
+  - BloodlineElementalAirElementalMovementFeature 1ae6835b8f568d44c8deb911f74762e4: grantor, "Elemental Movement (Elemental Bloodline — Air)"
+  - BloodlineElementalEarthElementalMovementFeature 277d9c2a2392e8940a452888aa67f32e: grantor, "Elemental Movement (Elemental Bloodline — Earth)"
+  - BloodlineElementalFireElementalMovementFeature f48c7d56a8a13af4d8e1cc9aae579b01: grantor, "Elemental Movement (Elemental Bloodline — Fire)"
+  - BloodlineElementalWaterElementalMovementFeature 737ef897849327b45b88b83a797918c8: grantor, "Elemental Movement (Elemental Bloodline — Water)"
+  - BloodragerElementalMovement c1aa1514e23d0424fa3d78c782dcabc7: bare, "Elemental Movement"
+- "Elemental Ray" (6)
+  - BloodlineElementalAirElementalRayFeature acf668c24dfbcdd499276eaf1881486e: grantor, "Elemental Ray (Elemental Bloodline — Air)"
+  - BloodlineElementalEarthElementalRayFeature cb15c04cf43b93a4589077078b4188eb: grantor, "Elemental Ray (Elemental Bloodline — Earth)"
+  - BloodlineElementalFireElementalRayFeature ce0889b5c1b392e48baf1e004d1efd67: grantor, "Elemental Ray (Elemental Bloodline — Fire)"
+  - BloodlineElementalWaterElementalRayFeature f6a811bf5650ac04ea2c21f4df390455: grantor, "Elemental Ray (Elemental Bloodline — Water)"
+  - ElementaWitchEnergySelection 9ec1bf2087874390a9d9be62884a0027: level, "Elemental Ray (Elemental Witch 1)"
+  - ElementaWitchEnergySelection11 edbb5084c34a486fb39d38cc75f2f994: level, "Elemental Ray (Elemental Witch 11)"
+- "Elemental Resistance" (13)
+  - BloodlineElementalAirResistanceAbilityAdd 6472c51065d734e4b99ac56694925920: grantor, "Elemental Resistance (Elemental Bloodline — Air)"
+  - BloodlineElementalAirResistanceAbilityLevel1 d28bfb661fabaf94fa65b0e50ef9b5b0: level, "Elemental Resistance (Elemental Bloodline — Air 3)"
+  - BloodlineElementalAirResistanceAbilityLevel2 25679ad97d19f934c9c964fa87374b36: level, "Elemental Resistance (Elemental Bloodline — Air 9)"
+  - BloodlineElementalEarthResistanceAbilityAdd 3dc0ba141d7aeb647ac428cdaf05b42a: grantor, "Elemental Resistance (Elemental Bloodline — Earth)"
+  - BloodlineElementalEarthResistanceAbilityLevel1 c0062132f5d24b644a050452af99ec00: level, "Elemental Resistance (Elemental Bloodline — Earth 3)"
+  - BloodlineElementalEarthResistanceAbilityLevel2 11df2f786d8b3a748a372866a380190a: level, "Elemental Resistance (Elemental Bloodline — Earth 9)"
+  - BloodlineElementalFireResistanceAbilityAdd 24980315c1bdcc4478ebb717e9b81961: grantor, "Elemental Resistance (Elemental Bloodline — Fire)"
+  - BloodlineElementalFireResistanceAbilityLevel1 bc2a39d12271198488809646afd88128: level, "Elemental Resistance (Elemental Bloodline — Fire 3)"
+  - BloodlineElementalFireResistanceAbilityLevel2 bcfbd2e30b6df7d4eab9414dd0f2c6e4: level, "Elemental Resistance (Elemental Bloodline — Fire 9)"
+  - BloodlineElementalWaterResistanceAbilityAdd 30ba5298a6246184cb034aa7ef0c6b12: grantor, "Elemental Resistance (Elemental Bloodline — Water)"
+  - BloodlineElementalWaterResistanceAbilityLevel1 8f15689164a7ba74bb99e7c737e5ee7f: level, "Elemental Resistance (Elemental Bloodline — Water 3)"
+  - BloodlineElementalWaterResistanceAbilityLevel2 146b1c7b743a6814eb8fa45653cac5f5: level, "Elemental Resistance (Elemental Bloodline — Water 9)"
+  - BloodragerElementalResistance e1c3a051676728a46963cc7c6c0d0696: bare, "Elemental Resistance"
+- "Elemental — Air" (2)
+  - BloodragerElementalElectricityBloodline 777bc77d3dc652c488a20d1a7b0b95e5: grantor, "Elemental — Air (Bloodline)"
+  - BloodragerElementalElectricitySecondBloodline a09931d3e0054addad73a5c9d759ca41: grantor, "Elemental — Air (Second Bloodrager Bloodline)"
+- "Elemental — Earth" (2)
+  - BloodragerElementalAcidBloodline dafe58c4f0785e94e93c0f07901f1343: grantor, "Elemental — Earth (Bloodline)"
+  - BloodragerElementalAcidSecondBloodline caeae1df04194eef813118be2b187fb9: grantor, "Elemental — Earth (Second Bloodrager Bloodline)"
+- "Elemental — Fire" (2)
+  - BloodragerElementalFireBloodline 12f7b4c5d603f3744b2b1def28c0a4fa: grantor, "Elemental — Fire (Bloodline)"
+  - BloodragerElementalFireSecondBloodline 5151e4d7512e41a2a35c1c2707281a64: grantor, "Elemental — Fire (Second Bloodrager Bloodline)"
+- "Elemental — Water" (2)
+  - BloodragerElementalColdBloodline 5286db4f19f31eb44af99fb881c99517: grantor, "Elemental — Water (Bloodline)"
+  - BloodragerElementalColdSecondBloodline 38fce508b837482cbf94eaae74431e74: grantor, "Elemental — Water (Second Bloodrager Bloodline)"
+- "Endurance" (2)
+  - Endurance 54ee847996c25cd4ba8773d7b8555174: bare, "Endurance"
+  - WitchEndurancePatronProgression 8fe0a14c90d3ea94a833d087b8a09bb9: grantor, "Endurance (Patron)"
+- "Enduring Blade" (2)
+  - EldritchEnduringBladeFeature 3a44bc91586b6304fa60cd5172a3679f: grantor, "Enduring Blade (Magus Arcana)"
+  - EnduringBladeFeature 7a73bf165e8eda6478b4419f857d1ab5: bare, "Enduring Blade"
+- "Energy Immunity" (4)
+  - RampageEI 1da8b2233d59448fa045d9c2f1b1e275: grantor, "Energy Immunity (Cold Rampage)"
+  - RampageEI 37f5b7c9baaf41e2a115263436213620: grantor, "Energy Immunity (Fire Rampage)"
+  - RampageEI 6f6c79ccdd794f91bbe069467e36762c: grantor, "Energy Immunity (Electricity Rampage)"
+  - RampageEI 747b767ba54a40af84cf3a83baae9ea6: grantor, "Energy Immunity (Acid Rampage)"
+- "Energy Resistance" (13)
+  - EnergyResistanceOread 6e60bfd48a63c8542a3552c2a05b3283: grantor, "Energy Resistance (Oread)"
+  - RampageER10 679b30752cf74d6ea21d0dce8c24baab: level, "Energy Resistance (Acid Rampage 9)"
+  - RampageER10 829a3a8bc2a841b9b77987d29b9008ae: level, "Energy Resistance (Fire Rampage 9)"
+  - RampageER10 96eee5429ac34130931628eab913587c: level, "Energy Resistance (Cold Rampage 9)"
+  - RampageER10 c8f919e1a60f4447b912b8a73cb50d8d: level, "Energy Resistance (Electricity Rampage 9)"
+  - RampageER20 7321a73805b44b8c8d73e1496bf65ffb: level, "Energy Resistance (Acid Rampage 15)"
+  - RampageER20 907e145125ea415695799212ee057530: level, "Energy Resistance (Fire Rampage 15)"
+  - RampageER20 bc78f22ddef24d0daed007b89668add8: level, "Energy Resistance (Electricity Rampage 15)"
+  - RampageER20 c820d19919964a38a903e4725a22a594: level, "Energy Resistance (Cold Rampage 15)"
+  - RampageER5 06acd00ba8d34489baea16962cf937c9: level, "Energy Resistance (Fire Rampage 4)"
+  - RampageER5 1679745f05164ae6bf7ecd470571b69c: level, "Energy Resistance (Acid Rampage 4)"
+  - RampageER5 1744efd76b9d4c67ab692a874f5f5c80: level, "Energy Resistance (Cold Rampage 4)"
+  - RampageER5 5c47d81e33a147b98b4d0cc2c8950bd5: level, "Energy Resistance (Electricity Rampage 4)"
+- "Enforcing Gaze" (4)
+  - AeonGazeFeature 2689d57a889951241912f4bc7d6bb77e: kind, "Enforcing Gaze (feature)"
+  - AeonGazeFirstSelection 7e468a5266235454e9dcefee315ee6d5: kind, "Enforcing Gaze (selection)"
+  - AeonGazeSecondSelection 7d498e034d18ca94baea19d7edee7403: level, "Enforcing Gaze (Aeon 3)"
+  - AeonGazeThirdSelection 0bec49f67ecb49a5826fcfefb9408a35: level, "Enforcing Gaze (Aeon 6)"
+- "Enforcing Gaze — Extra Gaze" (2)
+  - AeonGazeFeatureExtraGaze 9b3399bb6cea0044faa42cd61169cc29: level, "Enforcing Gaze — Extra Gaze (Aeon 4)"
+  - AeonGazeFeatureExtraGaze2 7d827b9679f8427cb9c64bb934252261: level, "Enforcing Gaze — Extra Gaze (Aeon 8)"
+- "Evil Domain" (6)
+  - EvilDomainBaseFeature 80de18178ff13304e8cf27ba3ef3d77d: level, "Evil Domain (level 1)"
+  - EvilDomainBaseFeatureSeparatist 10e46db6c6994f43a497ee264f206afd: grantor, "Evil Domain (Separatist)"
+  - EvilDomainProgression a8936d29b6051a1418682da1878b644e: bare, "Evil Domain"
+  - EvilDomainProgressionSecondary 82b654d68ea6ce143be5f7df646d6385: grantor, "Evil Domain (Domain Selection)"
+  - EvilDomainProgressionSeparatist bd2a6afae68a445da4d17b32116798fc: grantor, "Evil Domain (Forbidden Rites)"
+  - TricksterLoreReligionEvilDomainFeature d586a21b873f414bb5373387ce4ca364: grantor, "Evil Domain (Lore (Religion) 2 Rank)"
+- "Evil Eye" (2)
+  - ShamanHexEvilEyeFeature 890cd9309dc515c4199d811c36760d17: override, "Evil Eye (shaman hex)"
+  - WitchHexEvilEyeFeature a977bcfb36169d447914f084793cac2c: override, "Evil Eye (witch hex)"
+- "Expanded Element" (2)
+  - SecondatyElementalFocusSelection 4204bc10b3d5db440b1f52f0c375848b: level, "Expanded Element (Kineticist 7)"
+  - ThirdElementalFocusSelection e2c1718828fc843479f18ab4d75ded86: level, "Expanded Element (Kineticist 15)"
+- "Fade from Memory" (3)
+  - HermitRevelationFadeFromMemory b4d233bae6b7e3f44b8d86c19bd500c5: bare, "Fade from Memory"
+  - HermitRevelationFadeFromMemory14 7bb526fcbbc826048a2a65c1b60fa36d: level, "Fade from Memory (Lone Strider 14)"
+  - HermitRevelationFadeFromMemoryBase 996c51938bc82f1408d868ddb7bf2a4f: level, "Fade from Memory (Lone Strider 7)"
+- "Familiar" (2)
+  - Familiar 363cab72f77c47745bf3a8807074d183: bare, "Familiar"
+  - UnletteredArcanistFamiliar cb4d4a8b2c5f7aa49ad0ad74217dbbe3: grantor, "Familiar (Unlettered Arcanist)"
+- "Fascinate" (2)
+  - FascinateFeature ddaec3a5845bc7d4191792529b687d65: bare, "Fascinate"
+  - FascinateFeature_Penta 1c763def5b8e411bba494776f699b70e: grantor, "Fascinate (Numerian Companion)"
+- "Fast Healing" (2)
+  - FastHealing 318ce88da1832744c87fd15be5010dc0: grantor, "Fast Healing (Grand Discovery)"
+  - HealingBlessingMajorFeature 4ef6d989132eaf7438df8acb9aa92458: grantor, "Fast Healing (Healing)"
+- "Fast Movement" (4)
+  - BloodragerFastMovement 5a7eb193611e0f642bfa6da16fe22b5a: grantor, "Fast Movement (Bloodrager)"
+  - FastMovement d294a5dddd0120046aae7d4eb6cbc4fc: grantor, "Fast Movement (Barbarian)"
+  - MonkFastMovement ac18d5741dfb2f541b222e3a416c5942: bare, "Fast Movement"
+  - MonkFastMovementUnlock 73ab5b41fa465ee429ad6658368c6629: grantor, "Fast Movement (Monk)"
+- "Favored Enemy" (3)
+  - FavoriteEnemyRankUp c1be13839472aad46b152cf10cf46179: override, "Favored Enemy (rank up)"
+  - FavoriteEnemySelection 16cc2c937ea8d714193017780e7d4fc6: class, "Favored Enemy"
+  - OrderOfTheNailFavoriteEnemySelection 5dff09eef981483baffb0de48eb07e02: grantor, "Favored Enemy (Order of the Nail)"
+- "Favored Enemy — Aberrations" (2)
+  - FavoriteEnemyAberrations 7081934ab5f8573429dbd26522adcc39: bare, "Favored Enemy — Aberrations"
+  - OrderOfTheNailFavoriteEnemyAberrationsProgression 0e2e022299a54b1bbc8ee317ccce8970: grantor, "Favored Enemy — Aberrations (Order of the Nail)"
+- "Favored Enemy — Animals" (2)
+  - FavoriteEnemyAnimals 1ef8d7ab3ca4795498ff446cb027e2f3: bare, "Favored Enemy — Animals"
+  - OrderOfTheNailFavoriteEnemyAnimalsProgression 6677739552b74348a40f256bc638f6f4: grantor, "Favored Enemy — Animals (Order of the Nail)"
+- "Favored Enemy — Constructs" (2)
+  - FavoriteEnemyConstructs 6ea5a4a19ccb81a498e18a229cc5038a: bare, "Favored Enemy — Constructs"
+  - OrderOfTheNailFavoriteEnemyConstructsProgression c9c2076a64114e28b6c5837c588b055c: grantor, "Favored Enemy — Constructs (Order of the Nail)"
+- "Favored Enemy — Demons of Magic" (2)
+  - FavoriteEnemyDemonOfMagic 21328361091fd2c44a3909fcae0dd598: bare, "Favored Enemy — Demons of Magic"
+  - OrderOfTheNailFavoriteEnemyDemonOfMagicProgression befc145854e64865b227a06c4813cb36: grantor, "Favored Enemy — Demons of Magic (Favored Enemy)"
+- "Favored Enemy — Demons of Slaughter" (2)
+  - FavoriteEnemyDemonOfSlaughter 6c450765555b1554294b5556f50d304e: bare, "Favored Enemy — Demons of Slaughter"
+  - OrderOfTheNailFavoriteEnemyDemonOfSlaughterProgression 44d3e5e31aaf44a0bf8390785612d90b: grantor, "Favored Enemy — Demons of Slaughter (Favored Enemy)"
+- "Favored Enemy — Demons of Strength" (2)
+  - FavoriteEnemyDemonOfStrength 48e9e7ecca39c4a438d9262a20ab5066: bare, "Favored Enemy — Demons of Strength"
+  - OrderOfTheNailFavoriteEnemyDemonOfStrengthProgression 809aca4962b4494db4f1649128d1b605: grantor, "Favored Enemy — Demons of Strength (Favored Enemy)"
+- "Favored Enemy — Dragons" (2)
+  - FavoriteEnemyDragons 918555c021b3a2944beed35df53b4c56: bare, "Favored Enemy — Dragons"
+  - OrderOfTheNailFavoriteEnemyDragonsProgression b3376fcfe9f441298fc01c78744dab72: grantor, "Favored Enemy — Dragons (Order of the Nail)"
+- "Favored Enemy — Dwarves" (2)
+  - FavoriteEnemyDwarfs 8bf97ce6a52d7274197a6c1911378b27: bare, "Favored Enemy — Dwarves"
+  - OrderOfTheNailFavoriteEnemyDwarfsProgression 78cc386ccf474ca0b75299a79e51561f: grantor, "Favored Enemy — Dwarves (Order of the Nail)"
+- "Favored Enemy — Elves" (2)
+  - FavoriteEnemyElfs 7ed4cbc226539d6419d6c60320bfd244: bare, "Favored Enemy — Elves"
+  - OrderOfTheNailFavoriteEnemyElfsProgression a161d8b644834a3ea053fc1ae140026d: grantor, "Favored Enemy — Elves (Order of the Nail)"
+- "Favored Enemy — Fey" (2)
+  - FavoriteEnemyFey be3d454ea70a8bb468b0a8a087e7e65b: bare, "Favored Enemy — Fey"
+  - OrderOfTheNailFavoriteEnemyFeyProgression bad00bacd4f546b78d448ae9214159ed: grantor, "Favored Enemy — Fey (Order of the Nail)"
+- "Favored Enemy — Giant Humanoids" (2)
+  - FavoriteEnemyGiants bd59614d30bcadd46bd56aabe0de819f: bare, "Favored Enemy — Giant Humanoids"
+  - OrderOfTheNailFavoriteEnemyGiantsProgression dc74387d14de4e5392c9d52738500db9: grantor, "Favored Enemy — Giant Humanoids (Order of the Nail)"
+- "Favored Enemy — Gnomes" (2)
+  - FavoriteEnemyGnome 04314be4be2b7f444883ca8caf78a8a8: bare, "Favored Enemy — Gnomes"
+  - OrderOfTheNailFavoriteEnemyGnomeProgression c11df41e32264752b083c749e9c4983d: grantor, "Favored Enemy — Gnomes (Order of the Nail)"
+- "Favored Enemy — Goblins" (2)
+  - FavoriteEnemyGoblins c03dc59e2ce30484b82e7aead6d10471: bare, "Favored Enemy — Goblins"
+  - OrderOfTheNailFavoriteEnemyGoblinsProgression ae403d6aaf2d44f9be6de660ed024bcc: grantor, "Favored Enemy — Goblins (Order of the Nail)"
+- "Favored Enemy — Halflings" (2)
+  - FavoriteEnemyHalfling 8a18b8eec185cd24eb55c3457a7f69b1: bare, "Favored Enemy — Halflings"
+  - OrderOfTheNailFavoriteEnemyHalflingProgression 065bd5eaa2684df8a3e7ca39c4061d72: grantor, "Favored Enemy — Halflings (Order of the Nail)"
+- "Favored Enemy — Humans" (2)
+  - FavoriteEnemyHuman 7283344b0309d8e4cb77eb22f1e7c57a: bare, "Favored Enemy — Humans"
+  - OrderOfTheNailFavoriteEnemyHumanProgression 7e011821b3e642ec8c9dfbfbf7d0f938: grantor, "Favored Enemy — Humans (Order of the Nail)"
+- "Favored Enemy — Magical Beasts" (2)
+  - FavoriteEnemyMagicalBeasts f807fac786faa86438428c79f5629654: bare, "Favored Enemy — Magical Beasts"
+  - OrderOfTheNailFavoriteEnemyMagicalBeastsProgression 2259eb6d3f9e4a189ca357b7882e34b0: grantor, "Favored Enemy — Magical Beasts (Order of the Nail)"
+- "Favored Enemy — Monstrous Humanoids" (2)
+  - FavoriteEnemyMonstrousHumanoid 0fd21e10dff071e4580ef9f30a0334df: bare, "Favored Enemy — Monstrous Humanoids"
+  - OrderOfTheNailFavoriteEnemyMonstrousHumanoidProgression dfa3a87c01114c4685aea70b914978ab: grantor, "Favored Enemy — Monstrous Humanoids (Order of the Nail)"
+- "Favored Enemy — Outsiders" (2)
+  - FavoriteEnemyOutsider f643b38acc23e8e42a3ed577daeb6949: bare, "Favored Enemy — Outsiders"
+  - OrderOfTheNailFavoriteEnemyOutsiderProgression 871df9af90064d34bb258779898306b0: grantor, "Favored Enemy — Outsiders (Order of the Nail)"
+- "Favored Enemy — Plants" (2)
+  - FavoriteEnemyPlant 4ae78c44858bc1942934efe7c149d039: bare, "Favored Enemy — Plants"
+  - OrderOfTheNailFavoriteEnemyPlantProgression 9e9bda1c015e4c9ea4439375c264326a: grantor, "Favored Enemy — Plants (Order of the Nail)"
+- "Favored Enemy — Reptilian Humanoids" (2)
+  - FavoriteEnemyReptilian 3b0f03e24ad0b7243b5973c3d8ab7af5: bare, "Favored Enemy — Reptilian Humanoids"
+  - OrderOfTheNailFavoriteEnemyReptilianProgression 9aa5374e5d6c47eca4e8ce736a4ee60c: grantor, "Favored Enemy — Reptilian Humanoids (Order of the Nail)"
+- "Favored Enemy — Undead" (2)
+  - FavoriteEnemyUndead 5941963eae3e9864d91044ba771f2cc2: bare, "Favored Enemy — Undead"
+  - OrderOfTheNailFavoriteEnemyUndeadProgression 3fff9c64c8474e3996a878809ef357dd: grantor, "Favored Enemy — Undead (Order of the Nail)"
+- "Favored Enemy — Vermin" (2)
+  - FavoriteEnemyVermin f6dac9009747b91408644fa834dd0d99: bare, "Favored Enemy — Vermin"
+  - OrderOfTheNailFavoriteEnemyVerminProgression 3ee5df39ada24a0ca22c99d2b12c2505: grantor, "Favored Enemy — Vermin (Order of the Nail)"
+- "Favored Terrain" (4)
+  - FavoriteTerrainSelection a6ea422d7308c0d428a541562faedefd: class, "Favored Terrain"
+  - FavoriteTerrainSelectionRankUp c4de22ecac494c91b3d2f077ec162bbd: override, "Favored Terrain (rank up)"
+  - GeomancerFavoriteTerrainSelection 876a82245a004b318e3929b469e2e757: level, "Favored Terrain (Geomancer 7)"
+  - GeomancerFavoriteTerrainSelectionRankUp a04687e5e4a542daa5063debdb07a7f2: level, "Favored Terrain (Geomancer 13)"
+- "Fey" (2)
+  - BloodragerFeyBloodline a6e8fae8a6d6e374a9af2893840be4ac: grantor, "Fey (Bloodline)"
+  - BloodragerFeySecondBloodline 42af960c4cb84ef6b85ec3500d5a38e4: grantor, "Fey (Second Bloodrager Bloodline)"
+- "Fey Aspect" (3)
+  - ShifterAspectFey 906fae8f17fd4be98fbea399ae4deb3e: grantor, "Fey Aspect (Feyform Shifter)"
+  - ShifterAspectFeyAbility 343f39876b1c47d2868f06f882cf0cb6: grantor, "Fey Aspect (Shifter)"
+  - ShifterAspectFeyBuff 727381f8a2ee46a19ab96eedfe1d9daa: bare, "Fey Aspect"
+- "Fey Bloodline" (3)
+  - BloodlineFeyProgression e8445256abbdc45488c2d90373f7dae8: bare, "Fey Bloodline"
+  - CrossbloodedSecondaryBloodlineFeyProgression 8869b0ac2a1c9f240b3c440dc9b61263: grantor, "Fey Bloodline (Secondary Bloodline)"
+  - SeekerBloodlineFeyProgression 8e6dcc9095dacd042a644dd8c04ffac0: grantor, "Fey Bloodline (Bloodline)"
+- "Fey Magic" (3)
+  - BloodlineFeyFeyMagicFeature a9ffe3e08a080c8478bae321e70c7de6: bare, "Fey Magic"
+  - FeyspeakerMagicFeature ea0ce0aeef8c9e04eadc1ed766455178: grantor, "Fey Magic (Druid)"
+  - FeyspeakerMagicSelection 237efc6a131c8174bbd466ed239f21fc: grantor, "Fey Magic (Feyspeaker)"
+- "Fey Shape" (5)
+  - ShifterWildShapeFeyFeature d4b91e6a44674b24a2059894732809ca: level, "Fey Shape (Feyform Shifter 4)"
+  - ShifterWildShapeFeyFeature15 89a6811b68bd41d69341ab82c30d87cc: level, "Fey Shape (level 15)"
+  - ShifterWildShapeFeyFeature8 d47261bfd0b642d686123062f81e1258: bare, "Fey Shape"
+  - ShifterWildShapeFeyFeatureLevelUp 24a4fb8991344fd5beb2a1a1a517da87: grantor, "Fey Shape (Feyform Shifter)"
+  - ShifterWildShapeFeyFeatureLevelUp1 e808f6eb0a1f42a186125b5dcdea7833: level, "Fey Shape (level 8)"
+- "Fiendish Maw" (4)
+  - FiendishMaw1d6Feature a5f55fc653c389e4ea1c032342a507bd: level, "Fiendish Maw (Demon Dancer 3)"
+  - FiendishMaw1d8Feature b78ddb104afa442408c520f84b0c0281: level, "Fiendish Maw (Demon Dancer 7)"
+  - FiendishMaw2d6Feature 594ac4d1c4067d74a881a1a4a7cfcb31: level, "Fiendish Maw (Demon Dancer 12)"
+  - FiendishMaw3d6Feature 486c52f5ef06ec54f82683ac221b2a6a: level, "Fiendish Maw (Demon Dancer 17)"
+- "Fighter Training" (3)
+  - EldritchScionFighterTraining eadc14e84c7e3c34684252b5c6459a45: grantor, "Fighter Training (Magus)"
+  - FighterTraining 2b636b9e8dd7df94cbd372c52237eebf: bare, "Fighter Training"
+  - SwordSaintFighterTraining 9ab2ec65977cc524a99600babc7fe3b6: grantor, "Fighter Training (Sword Saint)"
+- "Final Aspect" (4)
+  - FiendflashShifterFinalAspect 6b8a596ef20c4d79b539147424c056e4: grantor, "Final Aspect (Fiendflesh Shifter)"
+  - FinalShifterAspectFeature 5a155f5c3f834a319feab52dc66ee185: bare, "Final Aspect"
+  - FinalWeretouchedShifterAspectFeature 0de9ff05339a47d2bdce00c024b172a8: grantor, "Final Aspect (Weretouched)"
+  - ShifterAspectGriffonFree 38f0034df27e40509320b28029d1169e: grantor, "Final Aspect (Griffonheart Shifter)"
+- "Final Revelation" (11)
+  - EnlightenedPhilosopherFinalRevelation eaeb8f3cd11eead43876fe727af43972: grantor, "Final Revelation (Enlightened Philosopher)"
+  - OracleAncestorFinalRevelation 933b4d571a31b9a43aa424eac0a22068: grantor, "Final Revelation (Ancestor)"
+  - OracleBattleFinalRevelation 9caa8060ec83c0842b127c318571c6d1: grantor, "Final Revelation (Battle)"
+  - OracleBonesFinalRevelation d20e184293942774eac71acb48ad7f26: grantor, "Final Revelation (Bones)"
+  - OracleFinalRevelation 0336dc22538ba5f42b73da4fb3f50849: bare, "Final Revelation"
+  - OracleFlameFinalRevelation 2b61f2c215ec8cb46ab28c4d08ac2cd5: grantor, "Final Revelation (Flame)"
+  - OracleLifeFinalRevelation ee23b52c6a06c0b48a09a7a23071aa52: grantor, "Final Revelation (Life)"
+  - OracleNatureFinalRevelation e46981dfc05f3924784942b8684194ec: grantor, "Final Revelation (Nature)"
+  - OracleStoneFinalRevelation 46d347b49df9ac143b32fa9ef1926ee7: grantor, "Final Revelation (Stone)"
+  - OracleWavesFinalRevelation 0d5d8144b1e98f74882be1e0756edda6: grantor, "Final Revelation (Waves)"
+  - OracleWindFinalRevelation 169f0e005a5cc9143b0009359fa1453f: grantor, "Final Revelation (Wind)"
+- "Fire" (6)
+  - ElementalFocusFire 3d8d3d6678b901444a07984294a1bc24: grantor, "Fire (Elemental Focus)"
+  - ElementalistFireFeature 089e7f52b4ff45df856f0eda3e6c56af: grantor, "Fire (Focused Element)"
+  - FireBlessingFeature 2368212fa3856d74589e924d3e2074d8: grantor, "Fire (Blessings)"
+  - KineticKnightElementalFocusFire d4a2a75d01d1e77489ff692636a538bf: grantor, "Fire (Kinetic Knight)"
+  - SecondaryElementFire caa7edca64af1914d9e14785beb6a143: level, "Fire (Kineticist 7)"
+  - ThirdElementFire 56e2fc3abed8f2247a621ac37e75f303: level, "Fire (Kineticist 15)"
+- "Fire Domain" (7)
+  - FireDomainBaseFeature 42cc125d570c5334c89c6499b55fc0a3: level, "Fire Domain (level 1)"
+  - FireDomainBaseFeatureSeparatist 211c2b6cbb144ccd9535c960feb8a4c3: grantor, "Fire Domain (Separatist)"
+  - FireDomainProgression 881b2137a1779294c8956fe5b497cc35: bare, "Fire Domain"
+  - FireDomainProgressionDruid 562567d7c244fae43ac61df3d55547ca: grantor, "Fire Domain (Druid)"
+  - FireDomainProgressionSecondary 2bd6aa3c4979fd045bbbda8da586d3fb: grantor, "Fire Domain (Domain Selection)"
+  - FireDomainProgressionSeparatist d3949a3deaf044c2bfcbed10321f2a32: grantor, "Fire Domain (Forbidden Rites)"
+  - TricksterLoreReligionFireDomainFeature 1fafe3f981bc449da02f29bd42bb177f: grantor, "Fire Domain (Lore (Religion) 2 Rank)"
+- "Fire Resistance" (2)
+  - FireDomainGreaterFeature ef5aedb6a97071b46969b61a86a967db: bare, "Fire Resistance"
+  - FireDomainGreaterFeatureSeparatist 178a2867656c4b02ac677d04e14362a8: grantor, "Fire Resistance (Forbidden Rites)"
+- "Flame" (7)
+  - DivineHerbalistFlameMysteryFeature eac5d0fc2b143c247a42f790230eb778: override, "Flame (Divine Herbalist)"
+  - EnlightenedPhilosopherFlameMysteryFeature 804e1560f21c95b43a45a9825336bd19: override, "Flame (Enlightened Philosopher)"
+  - OracleFlameMysteryFeature 3b68909df737cd4458509d7f3a9c3706: bare, "Flame"
+  - ShamanFlameSpiritProgression 50efeb23b314869409365c8061a4082d: kind, "Flame (progression)"
+  - ShamanFlameSpiritWanderingFeature d12c230082825b945b92574df6f3caf1: level, "Flame (Shaman 4)"
+  - UnswornShamanFlameSpiritWanderingFeature 1 19cc6629ba73f634d8f74a46fb24041f: level, "Flame (Unsworn Shaman 2)"
+  - UnswornShamanFlameSpiritWanderingFeature 2 307491c23e4cdc14d836570a7c83db74: level, "Flame (Unsworn Shaman 6)"
+- "Flesh of Stone" (2)
+  - FleshOfStoneEffectFeature a942347023fedb2419f8bdbb4450e528: override, "Flesh of Stone (effect)"
+  - FleshOfStoneFeature a275b35f282601944a97e694f6bc79f8: bare, "Flesh of Stone"
+- "Flurry of Blows" (5)
+  - FlurryOfBlows 332362f3bd39ebe46a740a36960fdcb4: bare, "Flurry of Blows"
+  - MonkFlurryOfBlowstUnlock fd99770e6bd240a4aab70f7af103e56a: grantor, "Flurry of Blows (Monk)"
+  - QuarterstaffMasterFlurryUnlock 44b0f313ec56481eb447019fbe714330: grantor, "Flurry of Blows (Quarterstaff Master)"
+  - SoheiFlurryOfBlowsUnlock cd4381b73b6709146bbcc0a528a6f471: grantor, "Flurry of Blows (Sohei)"
+  - ZenArcherFlurryOfBlowsUnlock 3e470edc8a733b641bcbbbb5b9527ff6: grantor, "Flurry of Blows (Zen Archer)"
+- "Fortune" (3)
+  - FortuneRevelationFeature 16935c4660ee4c7da976b5f6cafb43dd: grantor, "Fortune (Revelation)"
+  - ShamanHexFortuneFeature 64ed6d1a539434c469c69011e8df7163: override, "Fortune (shaman hex)"
+  - WitchHexFortuneFeature 0e4ebaf16c5958f4bbe6a8f50fe3afcd: override, "Fortune (witch hex)"
+- "Freedom of Movement" (2)
+  - CloakOfMortaFreedomOfMovement 1d96c608b7a24b2ca10a0cb1dbf37813: item, "Freedom of Movement (Cape of Morta)"
+  - ShifterFeyFreedomOfMovement 3aad3a2eaa2b404dbd4ad0655be8c8ed: bare, "Freedom of Movement"
+- "Freedom's Call" (2)
+  - LiberationDomainGreaterFeature 25636a46d4e7a484d903946ef4a6f6db: bare, "Freedom's Call"
+  - LiberationDomainGreaterFeatureSeparatist ed2444e2adac4b748b674e36f434680a: grantor, "Freedom's Call (Forbidden Rites)"
+- "Freezing Cold" (3)
+  - RampageExtraEffect20 e96fc2da3bfe42c780af21ae9a02a43f: grantor, "Freezing Cold (Cold Rampage)"
+  - WinterWitchFreezingCold 84e3920082103a34eb54dcca2e7904ae: level, "Freezing Cold (Winter Witch 3)"
+  - WinterWitchFreezingColdUpgradeFeature b2552d80cdd24e17af922ec8ef669192: level, "Freezing Cold (Winter Witch 6)"
+- "Friend to Animals" (2)
+  - OracleRevelationFriendToAnimals 9a56368c28795544fbeb43fe70e1a40d: grantor, "Friend to Animals (Revelation)"
+  - ShamanHexFriendToAnimalsFeature 0d92799cecf414249a23ad82f7e9901a: bare, "Friend to Animals"
+- "Frightful Gaze" (3)
+  - GhostRiderFrightfulGazeFeature cb8d643ade7d42e5a0860abe73ea1c25: level, "Frightful Gaze (Ghost Rider 1)"
+  - GhostRiderFrightfulGazeMindEffectingFeature d91e2275d193423d880ee0a86af81ac4: bare, "Frightful Gaze"
+  - GhostRiderFrightfulGazeNoMindEffectingFeature ca2a132606a645189a4536924efa4e43: level, "Frightful Gaze (Ghost Rider 9)"
+- "Frost" (4)
+  - ShamanFrostSpiritProgression 44c130a12d49ebf4a95945feffe5aae7: bare, "Frost"
+  - ShamanFrostSpiritWanderingFeature 6aeab860502ca2643affcbf1a83187e0: level, "Frost (Shaman 4)"
+  - UnswornShamanFrostSpiritWanderingFeature 1 1e9b966bfe4735f4aadddf9923ba2bdb: level, "Frost (Unsworn Shaman 2)"
+  - UnswornShamanFrostSpiritWanderingFeature 2 92e5d0d60d97043428ce06a9e1520dc7: level, "Frost (Unsworn Shaman 6)"
+- "Ghost Blade" (2)
+  - EldritchGhostBladeFeature 6c8f7b68b47b57343ba6cd5b6426068a: grantor, "Ghost Blade (Magus Arcana)"
+  - GhostBladeFeature 8896f327c59569c4eaf129bf35b96c1f: bare, "Ghost Blade"
+- "Ghost Wind" (2)
+  - GhostRiderGhostWindAirborneFeature f0cbaedadf8c45c4867085cec771a198: level, "Ghost Wind (Ghost Rider 14)"
+  - GhostRiderGhostWindFeature 56291c792a014cb994b943774556895d: level, "Ghost Wind (Ghost Rider 11)"
+- "Glory Domain" (6)
+  - GloryDomainBaseFeature 17e891b3964492f43aae44f994b5d454: level, "Glory Domain (level 1)"
+  - GloryDomainBaseFeatureSeparatist dd5582108f2a4c0a981fc2423e8b3a59: grantor, "Glory Domain (Separatist)"
+  - GloryDomainProgression f0a61a043bcdf0f4c8efc59962afafb8: bare, "Glory Domain"
+  - GloryDomainProgressionSecondary 434531fa0827f4c4a97482ffc71e7234: grantor, "Glory Domain (Domain Selection)"
+  - GloryDomainProgressionSeparatist bb1acd9230eb43e5bb14b6c418158447: grantor, "Glory Domain (Forbidden Rites)"
+  - TricksterLoreReligionGloryDomainFeature 88be4ab5990e47758d8a8cde3476947c: grantor, "Glory Domain (Lore (Religion) 2 Rank)"
+- "Good Domain" (6)
+  - GoodDomainBaseFeature f27684b3b72c2f546abf3ef2fb611a05: level, "Good Domain (level 1)"
+  - GoodDomainBaseFeatureSeparatist b874d5ac99df40feaf8c07ee32700528: grantor, "Good Domain (Separatist)"
+  - GoodDomainProgression 243ab3e7a86d30243bdfe79c83e6adb4: bare, "Good Domain"
+  - GoodDomainProgressionSecondary efc4219c7894afc438180737adc0b7ac: grantor, "Good Domain (Domain Selection)"
+  - GoodDomainProgressionSeparatist 9370c9720dd84695bac921b711b44c66: grantor, "Good Domain (Forbidden Rites)"
+  - TricksterLoreReligionGoodDomainFeature 101eeb38deae444c81c39d92190e60f0: grantor, "Good Domain (Lore (Religion) 2 Rank)"
+- "Greater Blind Fight" (2)
+  - BlindFightGreater 80a50d9744a40ac4c96e2cc6451a6703: bare, "Greater Blind Fight"
+  - DarkLurkerBlindFightGreater ce5533d0af114d81b0e3537c5a20c1aa: grantor, "Greater Blind Fight (Dark Lurker)"
+- "Greater Wyrmshifter" (7)
+  - ShifterDragonForm20Evil f619bb36520a48478f900431b20d50c4: override, "Greater Wyrmshifter (Chromatic ability)"
+  - ShifterDragonForm20Good 2d52be9832e542bc88b1959be2f3b2e2: override, "Greater Wyrmshifter (Metallic ability)"
+  - ShifterDragonForm20Neutral c35a9830c7684f76a704aff424128851: override, "Greater Wyrmshifter (Universal ability)"
+  - ShifterDragonFormFeature20Evil 013a7537227c4b1f9d0bcff263aa21f6: override, "Greater Wyrmshifter (Chromatic)"
+  - ShifterDragonFormFeature20Good 3c3fdc824b084d8b8af30c2bc328b1d5: override, "Greater Wyrmshifter (Metallic)"
+  - ShifterDragonFormFeature20Neutral e7079843d2454c08a61da4001009c9a1: override, "Greater Wyrmshifter (Universal)"
+  - ShifterDragonFormFeatureFinal c676ba5eb744492583d989244c81f127: grantor, "Greater Wyrmshifter (Dragonblood Shifter)"
+- "Griffon Aspect" (2)
+  - ShifterAspectGriffon db747698ad3746a38b1d92981695b8f4: bare, "Griffon Aspect"
+  - ShifterAspectGriffonProgression 05517d2e4d9e4a5fa86ad37d6b061fa4: grantor, "Griffon Aspect (Griffonheart Shifter)"
+- "Griffon Shape" (4)
+  - GriffonheartShifterGriffonShapeFakeFeature 1d3656c3090e48f59888d86ff7014acc: grantor, "Griffon Shape (Griffonheart Shifter)"
+  - ShifterWildShapeGriffonFeature e39fbdbb7a1d41f1b3d09ba8355fa20c: grantor, "Griffon Shape (Griffon Aspect)"
+  - ShifterWildShapeGriffonFeature14 45d04a1bafcd496f9920454618172278: level, "Griffon Shape (Griffon Aspect 14)"
+  - ShifterWildShapeGriffonFeature9 0db5de09248f45758122b64a7d1b893a: level, "Griffon Shape (Griffon Aspect 9)"
+- "Grow Claws" (11)
+  - BloodlineAbyssalClawsFeatureAddLevel1 e17698ef77dc3174cbd0a42422c22441: grantor, "Grow Claws (Abyssal Bloodline)"
+  - BloodlineDraconicBlackClawsFeatureAddLevel1 b80b73ef73535d54fbf76654c32f606b: grantor, "Grow Claws (Draconic Bloodline — Black)"
+  - BloodlineDraconicBlueClawsFeatureAddLevel1 75d76373f7b7c2b429c6ad6cde02edb0: grantor, "Grow Claws (Draconic Bloodline — Blue)"
+  - BloodlineDraconicBrassClawsFeatureAddLevel1 ff20de46d8e39aa45b1c07855518539a: grantor, "Grow Claws (Draconic Bloodline — Brass)"
+  - BloodlineDraconicBronzeClawsFeatureAddLevel1 fb1a5347f7188b740a125daa28704c31: grantor, "Grow Claws (Draconic Bloodline — Bronze)"
+  - BloodlineDraconicCopperClawsFeatureAddLevel1 dba3870830663394cbd8ff0da1db0df0: grantor, "Grow Claws (Draconic Bloodline — Copper)"
+  - BloodlineDraconicGoldClawsFeatureAddLevel1 3da86713fc3fc8d4eb325c1cc9826792: grantor, "Grow Claws (Draconic Bloodline — Gold)"
+  - BloodlineDraconicGreenClawsFeatureAddLevel1 1153887dc485da34b8687dca3cde80be: grantor, "Grow Claws (Draconic Bloodline — Green)"
+  - BloodlineDraconicRedClawsFeatureAddLevel1 4c42839011af9b74faac703df7a41a48: grantor, "Grow Claws (Draconic Bloodline — Red)"
+  - BloodlineDraconicSilverClawsFeatureAddLevel1 b795bc1cdf828b04ea31b6a21e7dad76: grantor, "Grow Claws (Draconic Bloodline — Silver)"
+  - BloodlineDraconicWhiteClawsFeatureAddLevel1 702aab8392206d14694bfde40dda5578: grantor, "Grow Claws (Draconic Bloodline — White)"
+- "Grow Spikes" (7)
+  - GrowingSpikesFeatureAddLevel 554c352806644367a5286b9cae289a37: level, "Grow Spikes (Child of the Manticore 1)"
+  - GrowingSpikesFeatureAddLevel1 732f9a584fac48fbb74a57fc38a6154b: level, "Grow Spikes (Child of the Manticore 3)"
+  - GrowingSpikesFeatureAddLevel2 0d08c683ae7d444a8423062afd181e79: level, "Grow Spikes (Child of the Manticore 7)"
+  - GrowingSpikesFeatureAddLevel3 146cd9071114489e9d13d56f306a5a7e: level, "Grow Spikes (Child of the Manticore 11)"
+  - GrowingSpikesFeatureAddLevel4 148e5047cffa42abb50c8f741a53a4c4: level, "Grow Spikes (Child of the Manticore 13)"
+  - GrowingSpikesFeatureAddLevel5 9afa32537e9a4959818b235c61ecb42e: level, "Grow Spikes (Child of the Manticore 17)"
+  - GrowingSpikesFeatureAddLevel6 8b58cbab4a9b416ab540b5f364190c5a: level, "Grow Spikes (Child of the Manticore 19)"
+- "Guarded Hearth" (2)
+  - CommunityDomainGreaterFeature 4cddbb24833e1d24ea1ff0f59574284a: bare, "Guarded Hearth"
+  - CommunityDomainGreaterFeatureSeparatist c3fa43dbf6a3454da6284955313e96cf: grantor, "Guarded Hearth (Forbidden Rites)"
+- "Hag Transformation" (2)
+  - BloodragerHagBloodlineHagTransformationFeature 158cc5887d884b639acb39c9088d8b39: grantor, "Hag Transformation (Hag)"
+  - HagboundWitchHagTransformationFeature 516ded0e532e4ea48bfef6287d6e68de: grantor, "Hag Transformation (Hagbound)"
+- "Hasted Assault" (2)
+  - EldritchHastedAssaultFeature 48955e048ed9f614fa95b1f836733f49: grantor, "Hasted Assault (Magus Arcana)"
+  - HastedAssaultFeature 85c05a8120e3e9f4e8ae01625038809a: bare, "Hasted Assault"
+- "Healer's Blessing" (2)
+  - HealingDomainGreaterFeature b9ea4eb16ded8b146868540e711f81c8: bare, "Healer's Blessing"
+  - HealingDomainGreaterFeatureSeparatist eb5452358666414bbe0f505ce1f0225b: grantor, "Healer's Blessing (Forbidden Rites)"
+- "Healing" (4)
+  - HealingBlessingFeature f3881a1a7b44dc74c9d76907c94e49f2: grantor, "Healing (Blessings)"
+  - ShamanHexHealingFeature 3fb96b69065bcc643a696c6ba908d588: override, "Healing (shaman hex)"
+  - WitchHealingPatronProgression a3e4ef40ad99f4d47af15cc5f16afc97: grantor, "Healing (Patron)"
+  - WitchHexHealingFeature 47b6e7bd155d2434ebde6ca21a61cf32: override, "Healing (witch hex)"
+- "Healing Domain" (6)
+  - HealingDomainBaseFeature 303cf1c933f343c4d91212f8f4953e3c: level, "Healing Domain (level 1)"
+  - HealingDomainBaseFeatureSeparatist dd2d81c2bbfe40248c2af37d95ae5850: grantor, "Healing Domain (Separatist)"
+  - HealingDomainProgression b0a26ee984b6b6945b884467aa2f1baa: bare, "Healing Domain"
+  - HealingDomainProgressionSecondary 599fb0d60358c354d8c5c4304a73e19a: grantor, "Healing Domain (Domain Selection)"
+  - HealingDomainProgressionSeparatist 5343f51863404929876ebde9ff60bdb1: grantor, "Healing Domain (Forbidden Rites)"
+  - TricksterLoreReligionHealingDomainFeature cac896eb0e314601ba8c7d3606a6ad01: grantor, "Healing Domain (Lore (Religion) 2 Rank)"
+- "Heart of Earth" (2)
+  - HeartOfEarthShifterBuff c3ad4aca75764e82ab047533a8d5aea6: bare, "Heart of Earth"
+  - HeartOfEarthShifterFeature 0b09ce94b5fe48dfa81b9a6f9d55a351: grantor, "Heart of Earth (Wild Effigy)"
+- "Hellbound" (5)
+  - HellboundCurseFeatureLevel1 0ff5141fe79c43345a1c8ff72b75923d: level, "Hellbound (level 1)"
+  - HellboundCurseNoPenaltyFeatureLevel1 f4a25a72c6c254a44abfdda5643225b9: level, "Hellbound (Beneficial Curse 1)"
+  - HellboundCurseNoPenaltyProgression d1457c03dff2887409b92f88b9c9fcf0: grantor, "Hellbound (Beneficial Curse)"
+  - HellboundCurseNoProgression 44fd929670304896961d4ae38189d7bc: bare, "Hellbound"
+  - HellboundCurseProgression 9f08f0d1faf141c41a3d8205f1911e96: grantor, "Hellbound (Oracle's Curse)"
+- "Hellfire Ray" (2)
+  - ArcanistExploitHellfireRayFeature 7d56376148919f64e826bfc63fd2187d: bare, "Hellfire Ray"
+  - BloodlineInfernalSpellLevel6 88bcb7d7f62edf74a863d6e8c02add40: grantor, "Hellfire Ray (Infernal Bloodline)"
+- "Hex" (2)
+  - ShamanHexSelection 4223fe18c75d4d14787af196a04e14e7: grantor, "Hex (Shaman)"
+  - WitchHexSelection 9846043cf51251a4897728ed6e24e76f: grantor, "Hex (Witch)"
+- "Hide in Plain Sight" (2)
+  - CultLeaderHideInPlainSight 069cdd06fb747694bb4326d8ae13305a: grantor, "Hide in Plain Sight (Cult Leader)"
+  - HideInPlainSight 6a0e4c8021fd6fa41ad28b54ba3355cb: grantor, "Hide in Plain Sight (Forester)"
+- "Hollow Spark" (2)
+  - FakeDivineSparkFeature bcf3ea648bd94612b8e8f1a69e9026e5: kind, "Hollow Spark (feature)"
+  - FakeDivineSparkSelection e6d337e709b4478cb6e5389d3f85b601: kind, "Hollow Spark (selection)"
+- "Holy Lance" (3)
+  - GloryDomainGreaterFeatureSeparatist ee3c843eac344176b565611a3df09e32: grantor, "Holy Lance (Glory Domain)"
+  - GoodDomainGreaterFeature c90f8979927db4b4fbf6159297e01af8: bare, "Holy Lance"
+  - GoodDomainGreaterFeatureSeparatist 3b4e631f152d4a96bf5a0371976839a3: grantor, "Holy Lance (Forbidden Rites)"
+- "Horse" (5)
+  - GhostRiderAnimalCompanionFeatureHorse f8895e843e3d456e9f76b595968072a4: grantor, "Horse (Ghost Mount)"
+  - ShifterAspectHorse e8c3d7a903a6433bbcfb3d70c97451ce: grantor, "Horse (Shifter Aspect)"
+  - ShifterAspectHorseAbility 5107da0ffa3a4b7bac5fd24f87e7852d: level, "Horse (Shifter 1)"
+  - ShifterAspectHorseBuff 0bdfd34b7e5a4639bf6b716fa2ac0098: level, "Horse (Shifter 9)"
+  - ShifterFeyChimeraHorseFeature d04153a4fcba47c38e12e9eb5a2f6cb3: grantor, "Horse (Feyform Shifter)"
+- "Hunter" (2)
+  - BackgroundHunter dd715e89fceb7ad44b120a49e4395332: grantor, "Hunter (Background Selection)"
+  - HunterClass 34ecd1b5e1b90b9498795791b0855239: bare, "Hunter"
+- "Hunter Tactics" (2)
+  - HunterTactics 1b9916f7675d6ef4fb427081250d49de: grantor, "Hunter Tactics (Hunter)"
+  - SacredHuntsmasterTactics e1f437048db80164792155102375b62c: grantor, "Hunter Tactics (Sacred Huntsmaster)"
+- "Ice Subdomain" (6)
+  - IceSubdomainBaseFeature fe2be05e3ee04b818554a2fc93f7605b: level, "Ice Subdomain (level 1)"
+  - IceSubdomainBaseFeatureSeparatist bf1ad04566be42c4befde5120ee2b69e: grantor, "Ice Subdomain (Separatist)"
+  - IceSubdomainProgression 2108d8e7019e4c1faa094d2d6725e936: bare, "Ice Subdomain"
+  - IceSubdomainProgressionDruid 2ef9e78640ae4d99a7cf2ac1eedde69a: grantor, "Ice Subdomain (Druid)"
+  - IceSubdomainProgressionSecondary 09431040db0c4b36af11cdc8834cabfb: grantor, "Ice Subdomain (Domain Selection)"
+  - IceSubdomainProgressionSeparatist 3988841b91b74f7b990e177abb40403a: grantor, "Ice Subdomain (Forbidden Rites)"
+- "Iceplant" (2)
+  - ShamanHexIceplantFeature 999e367bbabc42d46bf864d3f4bda86d: override, "Iceplant (shaman hex)"
+  - WitchHexIceplantFeature 9af6dc2697c8ef24eab8ce1c697b05c4: override, "Iceplant (witch hex)"
+- "Impromptu Sneak Attack" (2)
+  - ImpromptuSneakAttackAdditionalUse d48de79ddcbc08f42a2b3afef9ae150f: level, "Impromptu Sneak Attack (Arcane Trickster 5)"
+  - ImpromptuSneakAttackFeature 8ec618121de114845981933a3d5c4b02: level, "Impromptu Sneak Attack (Arcane Trickster 3)"
+- "Improved Blind Fight" (2)
+  - BlindFightImproved 4f1a78b02ac71bd4fa7d6e011d6f8ce0: bare, "Improved Blind Fight"
+  - DarkLurkerBlindFightImproved feff67b620244f09a78d76aba1479814: grantor, "Improved Blind Fight (Dark Lurker)"
+- "Improved Evasion" (2)
+  - ImprovedEvasion 0d35d6c4d5eef8d4790d09bd9a874e57: prerequisite, "Improved Evasion (Advanced Talents)"
+  - ImprovedEvasion ce96af454a6137d47b9c6a1e02e66803: bare, "Improved Evasion"
+- "Improved Uncanny Dodge" (2)
+  - ImprovedUncannyDodge 485a18c05792521459c7d06c63128c79: bare, "Improved Uncanny Dodge"
+  - ImprovedUncannyDodgeTalent e821c61b2711cea4cb993725b910e7e8: prerequisite, "Improved Uncanny Dodge (Bard)"
+- "Improved Wyrmshifter" (4)
+  - ShifterDragonFormFeature14Evil e3fcc1e9f21f4792959a7e969cda7914: override, "Improved Wyrmshifter (Chromatic)"
+  - ShifterDragonFormFeature14Good e822e95685e947d69a669fe495ad4f40: override, "Improved Wyrmshifter (Metallic)"
+  - ShifterDragonFormFeature14Neutral afa7bd483b344f7f9a005daa66938abf: override, "Improved Wyrmshifter (Universal)"
+  - ShifterDragonFormFeatureImproved 5cae07b7e9474d3eb382baa703e82ca8: grantor, "Improved Wyrmshifter (Dragonblood Shifter)"
+- "Incense Fog" (2)
+  - IncenseFog30Feature 27c7f9e491a540243a535ac9aabb8ea5: grantor, "Incense Fog (Incense Fog — Increased Range)"
+  - IncenseFogFeature 7614401346b64a8409f7b8c367db488f: grantor, "Incense Fog (Incense Synthesizer)"
+- "Incite Rage — Enemies" (2)
+  - InciteRageFeature 35ac4bd7990fa0842bfc22e80665c2f9: grantor, "Incite Rage — Enemies (Thundercaller)"
+  - InciteRageFeaturePenta 4530cc83b49b408996593eae8eddfb89: grantor, "Incite Rage — Enemies (Numerian Companion)"
+- "Increased Damage Reduction" (2)
+  - IncreasedDamageReductionDefensivePower d10496e92d0799a40bb3930b8f4fda0d: grantor, "Increased Damage Reduction (Defensive Powers)"
+  - IncreasedDamageReductionFeature ddaee203ee4dcb24c880d633fbd77db6: bare, "Increased Damage Reduction"
+- "Indomitable Stance" (2)
+  - ArmoredHulkIndomitableStance 74c59090138e28f4687c8a3400030763: grantor, "Indomitable Stance (Armored Hulk)"
+  - SteelbloodIndomitableStance a9d5cbe23248e654aa52412336d3cb53: grantor, "Indomitable Stance (Steelblood)"
+- "Indomitable Will" (2)
+  - BloodragerIndomitableWill 80c27aae29b793a49b4023dc82a3a69e: grantor, "Indomitable Will (Bloodrager)"
+  - IndomitableWill e9ae7276574c170468937b617d993357: grantor, "Indomitable Will (Barbarian)"
+- "Infernal" (2)
+  - BloodragerInfernalBloodline 9aef64b53406f114cb43f898a3aec01e: grantor, "Infernal (Bloodline)"
+  - BloodragerInfernalSecondBloodline 36bb7ed75f0c4dcc9fd3374c603b2d0e: grantor, "Infernal (Second Bloodrager Bloodline)"
+- "Infernal Bloodline" (3)
+  - BloodlineInfernalProgression e76a774cacfb092498177e6ca706064d: bare, "Infernal Bloodline"
+  - CrossbloodedSecondaryBloodlineInfernalProgression bd9911293c5ab84458b631990df11967: grantor, "Infernal Bloodline (Secondary Bloodline)"
+  - SeekerBloodlineInfernalProgression 71f9b9d63f3683b4eb57e0025771932e: grantor, "Infernal Bloodline (Bloodline)"
+- "Infernal Resistances" (3)
+  - BloodlineInfernalResistancesAbilityAdd c8b51c7112077384da68c48359419046: grantor, "Infernal Resistances (Infernal Bloodline)"
+  - BloodlineInfernalResistancesAbilityLevel1 5e4a85494c5b1ed4b99d72fe4b1b21e5: level, "Infernal Resistances (Infernal Bloodline 3)"
+  - BloodlineInfernalResistancesAbilityLevel2 3e57968fc3b23e54b8b9b53fd81e83ae: level, "Infernal Resistances (level 9)"
+- "Infusion" (2)
+  - Infusion 57d5077b301ade749b840b0ea9230bb9: bare, "Infusion"
+  - InfusionSelection 58d6f8e9eea63f6418b107ce64f315ea: grantor, "Infusion (Kineticist)"
+- "Inquisitor" (7)
+  - InquisitorClass f1a70d9e1b0b41e49874e1fa9052a1ce: kind, "Inquisitor"
+  - LoremasterClericSecretHunter 0b6cd5a9937b4048b6ffcb4ee1bc6d9b: override, "Inquisitor (Cleric Spell, Hunter)"
+  - LoremasterClericSecretInquisitor cfaa74bae1117c643ba8f1bc15b9e460: override, "Inquisitor (Cleric Spell, Inquisitor)"
+  - LoremasterDruidSecretHunter d46e1841a26e4b3e9efafd9a880f681e: override, "Inquisitor (Druid Spell, Hunter)"
+  - LoremasterDruidSecretInquisitor bae61dca3fd295c4e8ff6e6095844668: override, "Inquisitor (Druid Spell, Inquisitor)"
+  - LoremasterWizardSecretHunter 0e2d4ced86db4807b3173086717e7e60: override, "Inquisitor (Wizard Spell, Hunter)"
+  - LoremasterWizardSecretInquisitor dd394bbb971530f4f8e99a5715da917d: override, "Inquisitor (Wizard Spell, Inquisitor)"
+- "Inspire Competence" (2)
+  - InspireCompetenceFeature 6d3fcfab6d935754c918eb0e004b5ef7: grantor, "Inspire Competence (Bard)"
+  - SenseiInspireCompetenceFeature c58dd36e625a7f840b6351cab2969785: grantor, "Inspire Competence (Sensei)"
+- "Inspire Courage" (3)
+  - InspireCourageFeature acb4df34b25ca9043a6aba1a4c92bc69: grantor, "Inspire Courage (Bard)"
+  - MartyrInspireCourageFeature c0a1b34b616abb74fa4e9d749d6c3cd3: grantor, "Inspire Courage (Martyr)"
+  - SenseiInspireCourageFeature 0db24d413471405469d1f3137944f1f7: grantor, "Inspire Courage (Sensei)"
+- "Inspire Ferocity" (5)
+  - BeastTamerInspireFerocity10Feature 8e1c039bebf4346408c02cc79026802d: level, "Inspire Ferocity (Beast Tamer 10)"
+  - BeastTamerInspireFerocity14Feature f6f4bc35fcb61be4295ea290e8bfce4e: level, "Inspire Ferocity (Beast Tamer 14)"
+  - BeastTamerInspireFerocity18Feature 0d72ff5398412064cbcec0af95b32286: level, "Inspire Ferocity (Beast Tamer 18)"
+  - BeastTamerInspireFerocityFeature 2106e5e252e59ae4c81cea04627869ca: level, "Inspire Ferocity (Beast Tamer 1)"
+  - InspireFerocityFeature 32c4d277007aed74c905779cd04a6fed: bare, "Inspire Ferocity"
+- "Inspire Greatness" (3)
+  - InspireGreatnessFeature 9ae0f32c72f8df84dab023d1b34641dc: grantor, "Inspire Greatness (Bard)"
+  - MartyrInspireGreatnessFeature d5462ffa4e044694781126316950f836: grantor, "Inspire Greatness (Martyr)"
+  - SenseiInspireGreatnessFeature a80268e2d2c68d141aa32c0e7f67de7b: grantor, "Inspire Greatness (Sensei)"
+- "Inspire Heroics" (2)
+  - InspireHeroicsFeature 199d6fa0de149d044a8ab622a542cc79: grantor, "Inspire Heroics (Bard)"
+  - MartyrInspireHeroicsFeature 6a7f94467a64e8a4993a7f45b891e667: grantor, "Inspire Heroics (Martyr)"
+- "Inspiring Command" (2)
+  - NobilityDomainGreaterFeature 75acf3f9598248344b76f0b87ad27ac1: bare, "Inspiring Command"
+  - NobilityDomainGreaterFeatureSeparatist eadf65f845a74d83a79e18c23a04c719: grantor, "Inspiring Command (Forbidden Rites)"
+- "Internal Fortitude" (2)
+  - InternalFortitudeDefensivePower 727fcc6ef87e568479ab9dc3a8a5dc6c: grantor, "Internal Fortitude (Defensive Powers)"
+  - InternalFortitudeFeature c6ceaa9bb284fae4c908658a05aa5f4d: bare, "Internal Fortitude"
+- "Invisibility" (3)
+  - BloodlineArcaneSpellLevel2 de0d31a008840754a9e13f0b130ffc54: bare, "Invisibility"
+  - OracleRevelationInvisibility 1f72e7cdcc07d994bac4fb65fc341971: grantor, "Invisibility (Revelation)"
+  - StygianSlayerInvisibilityFeature c38720e9140d5b34f8f22b25c23168a9: grantor, "Invisibility (Stygian Slayer)"
+- "Judgment" (3)
+  - JudgmentAdditionalUse ee50875819478774b8968701893b52f5: override, "Judgment (additional use)"
+  - JudgmentFaithHunterFeature 19a36bd554ff4fd492d7458d4f922be4: grantor, "Judgment (Faith Hunter)"
+  - JudgmentFeature 981def910b98200499c0c8f85a78bde8: class, "Judgment"
+- "Ki Pool" (2)
+  - KiPowerFeature e9590244effb4be4f830b1e3fffced13: bare, "Ki Pool"
+  - ScaledFistPowerFeature ae98ab7bda409ef4bb39149a212d6732: grantor, "Ki Pool (Scaled Fist)"
+- "Ki Power" (2)
+  - MonkKiPowerSelection 3049386713ff04245a38b32483362551: bare, "Ki Power"
+  - ScaledFistKiPowerSelection 4694f6ac27eaed34abb7d09ab67b4541: grantor, "Ki Power (Scaled Fist)"
+- "Ki Power: Abundant Step" (3)
+  - DrunkenKiAbudantStepFeature ba74cb907d0849d6b2afccebe69bef81: grantor, "Ki Power: Abundant Step (Drunken Ki)"
+  - KiAbudantStepFeature 008466f45b3e2e64793b30f3d16e41c0: grantor, "Ki Power: Abundant Step (Monk)"
+  - ScaledFistAbudantStepFeature b56f18c437dc324438f0d956fb34a8cd: grantor, "Ki Power: Abundant Step (Ki Power)"
+- "Ki Power: Barkskin" (3)
+  - DrunkenKiBarskinFeature 29e17b65c26b433ab9b05e73b84b230f: grantor, "Ki Power: Barkskin (Drunken Ki)"
+  - KiBarskinFeature 7259ec579682c2f45a6444b9e64f122d: bare, "Ki Power: Barkskin"
+  - ScaledFistBarskinFeature 4cebd8d46ab97584384bf974ef56ab20: grantor, "Ki Power: Barkskin (Scaled Fist)"
+- "Ki Power: Cold Ice Strike" (3)
+  - DrunkenKiColdIceStrikeFeature 04441890a76241599e883916d64d12c6: grantor, "Ki Power: Cold Ice Strike (Drunken Ki)"
+  - KiColdIceStrikeFeature bd0eea84b4ff6994a96b119a3cee8357: bare, "Ki Power: Cold Ice Strike"
+  - ScaledFistColdIceStrikeFeature 3df55c1210c7d8a49a4d7c006bf0fd20: grantor, "Ki Power: Cold Ice Strike (Scaled Fist)"
+- "Ki Power: Diamond Body" (2)
+  - KiDiamondBodyFeature a8819b70975701b4e874b2f9862aac24: grantor, "Ki Power: Diamond Body (Monk)"
+  - RageDiamondBodyFeature 39d6ef0cb9794afbb5af3cae7288029d: bare, "Ki Power: Diamond Body"
+- "Ki Power: Diamond Soul" (2)
+  - KiDiamondSoulFeature 01182bcee8cb41640b7fa1b1ad772421: grantor, "Ki Power: Diamond Soul (Monk)"
+  - RageDiamondSoulFeature d4c929bffb80464bbe6daf1471088bf8: bare, "Ki Power: Diamond Soul"
+- "Ki Power: Perfect Self" (2)
+  - KiPerfectSelfFeature 3854f693180168a4980646aee9494c72: grantor, "Ki Power: Perfect Self (Monk)"
+  - RagePerfectSelfFeature 07777880a89d434c896660e4a521df92: bare, "Ki Power: Perfect Self"
+- "Ki Power: Poison" (3)
+  - DrunkenKiPoisonFeature 30d680b335254fb292c18603bd31e88b: grantor, "Ki Power: Poison (Drunken Ki)"
+  - KiPoisonFeature 7368732975b40eb42aa83889fdfaa3f2: bare, "Ki Power: Poison"
+  - ScaledFistPoisonFeature f11f418b6ec75a142b683a10bcb199eb: grantor, "Ki Power: Poison (Scaled Fist)"
+- "Ki Power: Quivering Palm" (3)
+  - DrunkenKiQuiveringPalmFeature 9bbbb3a50ff1460f9ff50c46190bad54: grantor, "Ki Power: Quivering Palm (Drunken Ki)"
+  - KiQuiveringPalmFeature 25d1247bb1a66b74081095085e169eb1: grantor, "Ki Power: Quivering Palm (Monk)"
+  - ScaledFistQuiveringPalmFeature cb8670cbc16bd43428cebe5a3ca9ad62: grantor, "Ki Power: Quivering Palm (Ki Power)"
+- "Ki Power: Restoration" (3)
+  - DrunkenKiRestorationFeature 781dab3705de4915a89a76370594f20e: grantor, "Ki Power: Restoration (Drunken Ki)"
+  - KiRestorationFeature 64dea39d32b9400469ef84a8fb4b171d: bare, "Ki Power: Restoration"
+  - ScaledFistRestorationFeature a9be3ca7d5fd145428c35295f693294d: grantor, "Ki Power: Restoration (Scaled Fist)"
+- "Ki Power: Scorching Ray" (3)
+  - DrunkenKiScorchingRayFeature ff1b154a9e044e79a6eda27972997480: grantor, "Ki Power: Scorching Ray (Drunken Ki)"
+  - KiScorchingRayFeature 16612cc8d88ef83458d05fd063709af7: bare, "Ki Power: Scorching Ray"
+  - ScaledFistScorchingRayFeature fa1e4965fe009be478a1283727e68c65: grantor, "Ki Power: Scorching Ray (Scaled Fist)"
+- "Ki Power: Shout" (3)
+  - DrunkenKiShoutFeature 11e1819a4f524e2ab76a322dd4aba0af: grantor, "Ki Power: Shout (Drunken Ki)"
+  - KiShoutFeature 474870c516601a444857f41e7b219557: bare, "Ki Power: Shout"
+  - ScaledFistShoutFeature 4da8509d040d25346869aa3722532c2c: grantor, "Ki Power: Shout (Scaled Fist)"
+- "Ki Power: Spit Venom" (3)
+  - DrunkenKiSpitVenomFeature ed0a79e7d03b4fea9d78dca2c87e12f9: grantor, "Ki Power: Spit Venom (Drunken Ki)"
+  - KiSpitVenomFeature 35012509f410a4b478d76922f8db5b96: bare, "Ki Power: Spit Venom"
+  - ScaledFistSpitVenomFeature f2a5f1d040ab6144296069b7269c42e4: grantor, "Ki Power: Spit Venom (Scaled Fist)"
+- "Ki Power: Sudden Speed" (3)
+  - DrunkenKiSuddenSpeedFeature e3dca1403795418aafa1dd9134bd86e7: grantor, "Ki Power: Sudden Speed (Drunken Ki)"
+  - KiSuddenSpeedFeature 96d96f5b6f71004418e7a7e42a81c94d: bare, "Ki Power: Sudden Speed"
+  - ScaledFistSuddenSpeedFeature 0f20a31e37fdb8240957b5a5c38e8226: grantor, "Ki Power: Sudden Speed (Scaled Fist)"
+- "Ki Power: True Strike" (3)
+  - DrunkenKiTrueStrikeFeature 97e677d4fd014240a14758fd6cfbf321: grantor, "Ki Power: True Strike (Drunken Ki)"
+  - KiTrueStrikeFeature 98e18d4659f390d4d84c9cc2765ac9c3: bare, "Ki Power: True Strike"
+  - ScaledFistTrueStrikeFeature 8059b100625d18141a0f4c7d87105f72: grantor, "Ki Power: True Strike (Scaled Fist)"
+- "Ki Power: Wholeness of Body" (3)
+  - DrunkenKiWholenessOfBodyFeature 24b080d6d7914fd2b358e8449b177c2a: grantor, "Ki Power: Wholeness of Body (Drunken Ki)"
+  - KiWholenessOfBodyFeature e9c8117e70e168345b3f4c01538936e5: grantor, "Ki Power: Wholeness of Body (Monk)"
+  - ScaledFistWholenessOfBodyFeature ae997f16b38fcee4fb4ad31e0588cd07: grantor, "Ki Power: Wholeness of Body (Ki Power)"
+- "Ki Strike — Adamantine" (2)
+  - KiStrikeAdamantine ddc10a3463bd4d54dbcbe993655cf64e: bare, "Ki Strike — Adamantine"
+  - SoheiKiStrikeAdamantineUnlock 707756f8da99563429d869ca17ae76d2: grantor, "Ki Strike — Adamantine (Sohei)"
+- "Ki Strike — Cold Iron and Silver" (2)
+  - KiStrikeColdIronSilver 7b657938fde78b14cae10fc0d3dcb991: bare, "Ki Strike — Cold Iron and Silver"
+  - SoheiKiStrikeColdIronSilverUnlock 06256d5184cba5641a0839c310b64b85: grantor, "Ki Strike — Cold Iron and Silver (Sohei)"
+- "Ki Strike — Lawful" (2)
+  - KiStrikeLawful 34439e527a8f5fb4588024e71960dd42: bare, "Ki Strike — Lawful"
+  - SoheiKiStrikeLawfulUnlock c8dd874cf2fa8b244a1bc416e9bb66ad: grantor, "Ki Strike — Lawful (Sohei)"
+- "Ki Strike — Magic" (2)
+  - KiStrikeMagic 1188005ee3160f84f8bed8b19a7d46cf: bare, "Ki Strike — Magic"
+  - SoheiKiStrikeMagicUnlock 17f744d48f014924f91534abc4d7ee98: grantor, "Ki Strike — Magic (Sohei)"
+- "Kinetic Blast" (2)
+  - KineticBlastFeature 93efbde2764b5504e98e6824cab3d27c: bare, "Kinetic Blast"
+  - KineticBlastProgression 30a5b8cf728bd4a4d8d90fc4953e322e: grantor, "Kinetic Blast (Kineticist)"
+- "Kineticist Bonus Feat — Air" (4)
+  - WildTalentBonusFeatAir 4ff45d291d0ee9c4b8c83a298b0b4969: bare, "Kineticist Bonus Feat — Air"
+  - WildTalentBonusFeatAir1 95ab2bdf0d45b2742a357f5780aac4a3: override, "Kineticist Bonus Feat — Air (with Lightning Reflexes)"
+  - WildTalentBonusFeatAir2 a8a481c7fbcc9c446a0eecb6e5604405: override, "Kineticist Bonus Feat — Air (with Dodge)"
+  - WildTalentBonusFeatAir3 a82e3b11fc5935d4289c807b241a2bb5: override, "Kineticist Bonus Feat — Air (with Dodge and Lightning Reflexes)"
+- "Kineticist Bonus Feat — Earth" (4)
+  - WildTalentBonusFeatEarth 28bd446d8aeab1341acc8d2fba91e455: bare, "Kineticist Bonus Feat — Earth"
+  - WildTalentBonusFeatEarth1 fc75b0bcfcb5236419d1a47e1bc555a9: override, "Kineticist Bonus Feat — Earth (with Trip)"
+  - WildTalentBonusFeatEarth2 2205fc9ed34368548b1358a781326bab: override, "Kineticist Bonus Feat — Earth (with Great Fortitude)"
+  - WildTalentBonusFeatEarth3 f593346da04badb4185a47af8e4c4f7f: override, "Kineticist Bonus Feat — Earth (with Great Fortitude and Trip)"
+- "Kineticist Bonus Feat — Fire" (4)
+  - WildTalentBonusFeatFire 4d14baf0ee4da2a4cb05fb4312921ee4: bare, "Kineticist Bonus Feat — Fire"
+  - WildTalentBonusFeatFire1 0e0207491a09a9e428409c4a1b2871a3: override, "Kineticist Bonus Feat — Fire (with Dazzling Display)"
+  - WildTalentBonusFeatFire2 cd107bf355f84b64f9f472ca288c208b: override, "Kineticist Bonus Feat — Fire (with Iron Will)"
+  - WildTalentBonusFeatFire3 0213c0c9062203540bd0365cbde44b99: override, "Kineticist Bonus Feat — Fire (with Dazzling Display and Iron Will)"
+- "Kineticist Bonus Feat — Water" (6)
+  - WildTalentBonusFeatWater 31c18eae013b09c4f9ee51da71a2d61c: bare, "Kineticist Bonus Feat — Water"
+  - WildTalentBonusFeatWater1 b6f42b59d000228498445526042dfd1b: override, "Kineticist Bonus Feat — Water (with Bull Rush)"
+  - WildTalentBonusFeatWater2 b881e2d840eaf6044b0d243b239cccd7: override, "Kineticist Bonus Feat — Water (with Blind Fight)"
+  - WildTalentBonusFeatWater3 1d341cc7535e64b4b8e2c53fb6726394: override, "Kineticist Bonus Feat — Water (with Improved Blind Fight)"
+  - WildTalentBonusFeatWater4 ebf90f9f8a5e43f40bee85fd6506b922: override, "Kineticist Bonus Feat — Water (with Blind Fight and Bull Rush)"
+  - WildTalentBonusFeatWater5 40a4fb42aafa7ee4991d3e3140e98856: override, "Kineticist Bonus Feat — Water (with Blind Fight, Improved Blind Fight and Bull Rush)"
+- "Kitsune" (2)
+  - KitsuneHeritageClassic cd6cd774fb7cc844b8417193ee3a5ebe: grantor, "Kitsune (Kitsune Heritage)"
+  - KitsuneRace fd188bb7bb0002e49863aec93bfb9d99: bare, "Kitsune"
+- "Know Your Enemy" (2)
+  - StudentOfWarKnowSlowYourEnemyFeature 13d93becd091494fb629621094ccbfa4: bare, "Know Your Enemy"
+  - StudentOfWarKnowYourEnemyFeature 846c2094392076a4f9f3c84f0ecfe180: grantor, "Know Your Enemy (Student of War)"
+- "Knowledge Domain" (6)
+  - KnowledgeDomainBaseFeature 5335f015063776d429a0b5eab97eb060: grantor, "Knowledge Domain (Void Form)"
+  - KnowledgeDomainBaseFeatureSeparatist e3e9a34a843342ae82d995edf3233be6: grantor, "Knowledge Domain (Separatist)"
+  - KnowledgeDomainProgression 28edbdbefca579b4ab4992e98af71981: bare, "Knowledge Domain"
+  - KnowledgeDomainProgressionSecondary 72c0d2f6379114947a6072278baedb90: grantor, "Knowledge Domain (Domain Selection)"
+  - KnowledgeDomainProgressionSeparatist 918b5f6fa5f34724aa0c026ffadef5b7: grantor, "Knowledge Domain (Forbidden Rites)"
+  - TricksterLoreReligionKnowledgeDomainFeature 114bada69049422784ae4fcaf1c4865c: grantor, "Knowledge Domain (Lore (Religion) 2 Rank)"
+- "Lame" (5)
+  - LameCurseFeatureLevel1 077dd0c839f5dfd498cb2e34835fb06d: level, "Lame (level 1)"
+  - LameCurseNoPenaltyFeatureLevel1 e7c9639c7b27bef4d930ce9df877bc4e: level, "Lame (Beneficial Curse 1)"
+  - LameCurseNoPenaltyProgression f9dadbcdecb41c6419f9297a2425eabd: grantor, "Lame (Beneficial Curse)"
+  - LameCurseNoProgression 857c97115ec745d58cc8fa7bdedc794f: bare, "Lame"
+  - LameCurseProgression 3d319da9614c76a41a095a4467c3233f: grantor, "Lame (Oracle's Curse)"
+- "Law Domain" (6)
+  - LawDomainBaseFeature 9bd2d216e56a0db44be0df48ffc515af: level, "Law Domain (level 1)"
+  - LawDomainBaseFeatureSeparatist 7739c57240b746428e13ffd7a83114e7: grantor, "Law Domain (Separatist)"
+  - LawDomainProgression a723d11a5ae5df0488775e31fac9117d: bare, "Law Domain"
+  - LawDomainProgressionSecondary 0d9749df9d68ded438ecdf8527085963: grantor, "Law Domain (Domain Selection)"
+  - LawDomainProgressionSeparatist 94ea125ce3cd42a19bb804e267ab127c: grantor, "Law Domain (Forbidden Rites)"
+  - TricksterLoreReligionLawDomainFeature 4feb91f2318449e9ad5eaf20e0661cca: grantor, "Law Domain (Lore (Religion) 2 Rank)"
+- "Legend" (4)
+  - FakeLegendClass b82f1fbd191e1f2498266ca41f05027f: kind, "Legend"
+  - FakeLegendFeature 63dbc00439ff894489a624abaa8ba79c: override, "Legend (path choice)"
+  - LegendClass 3d420403f3e7340499931324640efe96: prerequisite, "Legend (Mythic Hero)"
+  - LegendFeature 7f99961610390044391f300c7ef5e0c8: override, "Legend (Legend class)"
+- "Legend's Corruption Resistance" (2)
+  - FakeLegend_UniqueRestFeature cba1120af1fc4b7697e6799b926d0f0b: override, "Legend's Corruption Resistance (path choice)"
+  - Legend_UniqueRestFeature 27327f8954cd4f91ab3deaebf1f8cfa7: bare, "Legend's Corruption Resistance"
+- "Liberation Domain" (6)
+  - LiberationDomainBaseFeature 7cc934aa505172a40b4a10c14c7681c4: level, "Liberation Domain (level 1)"
+  - LiberationDomainBaseFeatureSeparatist a10a7a8e62ee4ec8a78d617273df1e49: grantor, "Liberation Domain (Separatist)"
+  - LiberationDomainProgression df2f14ced8710664ba7db914880c4a02: bare, "Liberation Domain"
+  - LiberationDomainProgressionSecondary 34b0e4bb90e3a4f4183b095f0d44ca5d: grantor, "Liberation Domain (Domain Selection)"
+  - LiberationDomainProgressionSeparatist ef3eee75850241cfb7713543c1d33046: grantor, "Liberation Domain (Forbidden Rites)"
+  - TricksterLoreReligionLiberationDomainFeature 9598994665b0426cbe5188ccc5ba5119: grantor, "Liberation Domain (Lore (Religion) 2 Rank)"
+- "Life" (7)
+  - DivineHerbalistLifeMysteryFeature 45472076126dc154f9386b0bc4d8416c: override, "Life (Divine Herbalist)"
+  - EnlightenedPhilosopherLifeMysteryFeature db8b731dfb6c9974b8bf67a19aefe225: override, "Life (Enlightened Philosopher)"
+  - OracleLifeMysteryFeature a5458a1c316d1f24e8d9770f4fc179fa: bare, "Life"
+  - ShamanLifeSpiritProgression f9ee5a9146561ba4bac4cb8a7126f85c: kind, "Life (progression)"
+  - ShamanLifeSpiritWanderingFeature ea7b7bf33205d4b41a913c2a8487c7c7: level, "Life (Shaman 4)"
+  - UnswornShamanLifeSpiritWanderingFeature 1 8954e8e311d1ec142ba4285ceeb34b58: level, "Life (Unsworn Shaman 2)"
+  - UnswornShamanLifeSpiritWanderingFeature 2 046fdb9688fb6e14c83f37519e7bc5b8: level, "Life (Unsworn Shaman 6)"
+- "Life-Bonding Friendship" (2)
+  - LifeBondingFriendshipFeature 5b63a6690ebbaa4459df3e04fe094cbd: bare, "Life-Bonding Friendship"
+  - LifeBondingFriendshipSelection cfad18f581584ac4ba066df067956477: grantor, "Life-Bonding Friendship (Superpowers)"
+- "Lightning Lord" (2)
+  - WeatherDomainGreaterFeature 8e44306af595c8d44aad2f1260fd7be2: bare, "Lightning Lord"
+  - WeatherDomainGreaterFeatureSeparatist a9497f9c70cb4463a491401a28bec741: grantor, "Lightning Lord (Forbidden Rites)"
+- "Lizard" (4)
+  - ShifterAspectLizard 534e48fa35914f1d93f8813ff4213729: grantor, "Lizard (Shifter Aspect)"
+  - ShifterAspectLizardAbility 22386071787246c597748ae8378d4bc9: level, "Lizard (Shifter 1)"
+  - ShifterAspectLizardBuff 29c0e16558b043278f061b128b9d180c: level, "Lizard (Shifter 9)"
+  - ShifterFeyChimeraLizardFeature d664b46470c84390a07311ed17c6cd1c: grantor, "Lizard (Feyform Shifter)"
+- "Lore (Religion) 2 Rank" (3)
+  - TricksterLoreReligionTier2Parametrized 3e006bc9bbf0b884a8d8853350bee846: bare, "Lore (Religion) 2 Rank"
+  - TricksterLoreReligionTier2Progression fd158d5f035346288776f18e76f6721e: grantor, "Lore (Religion) 2 Rank (Improved Mythic Trick)"
+  - TricksterLoreReligionTier2Selection ae4e619162a44996b77973f3abd7781a: grantor, "Lore (Religion) 2 Rank (Trickster)"
+- "Lore Master" (2)
+  - BardLoreMaster 4bea694e79a87cd4d8c14fb91578059e: grantor, "Lore Master (Bard)"
+  - SkaldLoreMaster 5eb7d688e472ca546a30d4a99cdb16a0: grantor, "Lore Master (Skald)"
+- "Loremaster" (2)
+  - LoremasterClass 4a7c05adfbaf05446a6bf664d28fb103: bare, "Loremaster"
+  - LoremasterElf fb69a451e7064015b5dbe512c9122ef8: grantor, "Loremaster (Racial Heritage)"
+- "Luck Domain" (6)
+  - LuckDomainBaseFeature 2b3818bf4656c1a41b93467755662c78: level, "Luck Domain (level 1)"
+  - LuckDomainBaseFeatureSeparatist f456bcbb57904fa3ae18c35e803603c6: grantor, "Luck Domain (Separatist)"
+  - LuckDomainProgression 8bd8cfad69085654b9118534e4aa215e: bare, "Luck Domain"
+  - LuckDomainProgressionSecondary 1ba7fc652568a524db218ccff2f9ed90: grantor, "Luck Domain (Domain Selection)"
+  - LuckDomainProgressionSeparatist 1f26551e7e61436c8ee188064038a896: grantor, "Luck Domain (Forbidden Rites)"
+  - TricksterLoreReligionLuckDomainFeature 805118bd86a5456096e02780d56b3f65: grantor, "Luck Domain (Lore (Religion) 2 Rank)"
+- "Madness Domain" (6)
+  - MadnessDomainBaseFeature 84bf46e8086dbdc438bac875ab0e5c2f: level, "Madness Domain (level 1)"
+  - MadnessDomainBaseFeatureSeparatist bdde630b62c049c7b2f6d56df755d8fa: grantor, "Madness Domain (Separatist)"
+  - MadnessDomainProgression 9ebe166b9b901c746b1858029f13a2c5: bare, "Madness Domain"
+  - MadnessDomainProgressionSecondary ae9c936c86d248848b2fb90b32b3b41d: grantor, "Madness Domain (Domain Selection)"
+  - MadnessDomainProgressionSeparatist f1c18d677cdb4926815b4f1e5a08b503: grantor, "Madness Domain (Forbidden Rites)"
+  - TricksterLoreReligionMadnessDomainFeature 55332211832a407bb9002b0b33638c41: grantor, "Madness Domain (Lore (Religion) 2 Rank)"
+- "Magic Attacks" (2)
+  - GhostRiderMagicAttacks 0841f061226446fc8cbd197977a27e3d: level, "Magic Attacks (Ghost Rider 3)"
+  - GhostRiderMagicAttacksAlignment a2d8ff309cd844c2812ad17ed4a176db: level, "Magic Attacks (Ghost Rider 10)"
+- "Magic Domain" (8)
+  - MagicDomainBaseFeature 90f939eb611ac3743b5de3dd00135e22: level, "Magic Domain (level 1)"
+  - MagicDomainBaseFeatureFake 1a4bb1a08e644e77b3140c2e4ff6a9d0: item, "Magic Domain (Razmir's Ring 1)"
+  - MagicDomainBaseFeatureSeparatist e04e3432601140808d6f58d7d1087894: grantor, "Magic Domain (Separatist)"
+  - MagicDomainProgression 8f90e7129b0f3b742921c2c9c9bd64fc: bare, "Magic Domain"
+  - MagicDomainProgressionFake a490170187d446d4839038ef774ddc49: item, "Magic Domain (Razmir's Ring)"
+  - MagicDomainProgressionSecondary 9c5053b1ad83a9742839b3ab824abbd2: grantor, "Magic Domain (Domain Selection)"
+  - MagicDomainProgressionSeparatist 7a8a6023c27d45fc97c237f9c311fa31: grantor, "Magic Domain (Forbidden Rites)"
+  - TricksterLoreReligionMagicDomainFeature 19af7836206a4494b4746a923acded54: grantor, "Magic Domain (Lore (Religion) 2 Rank)"
+- "Magical Tail" (9)
+  - MagicalTailArchetypeFeature1 c78a6efed8b2a8e4aacc0f3fb6908d93: level, "Magical Tail (Nine-Tailed Heir 3)"
+  - MagicalTailArchetypeFeature2 7e5d817088ee7044190b53d0b78252a0: level, "Magical Tail (Nine-Tailed Heir 5)"
+  - MagicalTailArchetypeFeature3 3b80f30290bb4a64ba0d0b16230a4591: level, "Magical Tail (Nine-Tailed Heir 7)"
+  - MagicalTailArchetypeFeature4 f082aa7549b5779468be328230aba755: level, "Magical Tail (Nine-Tailed Heir 9)"
+  - MagicalTailArchetypeFeature5 51bee12541f1145449eb019948d0ba14: level, "Magical Tail (Nine-Tailed Heir 11)"
+  - MagicalTailArchetypeFeature6 9e5a0a071a547bc49afb6340dce50d22: level, "Magical Tail (Nine-Tailed Heir 13)"
+  - MagicalTailArchetypeFeature7 a797d7587a4d87149bc71b9b720976d0: level, "Magical Tail (Nine-Tailed Heir 15)"
+  - MagicalTailArchetypeFeature8 a47528ef92050b54693b303fc1fbddbe: level, "Magical Tail (Nine-Tailed Heir 17)"
+  - MagicalTailArchetypeFeature9 bc5aad8f46c6fdf4ea52b8d4f3d1cd6b: level, "Magical Tail (Nine-Tailed Heir 19)"
+- "Magus" (5)
+  - EldritchScionProgression 6c63247d1b72c7b46be3b75eba09a39f: grantor, "Magus (Magus (Eldritch Scion))"
+  - LoremasterClericSecretMagus a556692d441296c449e70ac3d368634c: grantor, "Magus (Cleric Spell)"
+  - LoremasterDruidSecretMagus 4f12647b325ecab47ac8559e90b3f7ef: grantor, "Magus (Druid Spell)"
+  - LoremasterWizardSecretMagus ff544ab3ca11fda41ab785bbdc13d8a0: grantor, "Magus (Wizard Spell)"
+  - MagusClass 45a4607686d96a1498891b3286121780: bare, "Magus"
+- "Magus Arcana" (2)
+  - EldritchMagusArcanaSelection d4b54d9db4932454ab2899f931c2042c: grantor, "Magus Arcana (Magus)"
+  - MagusArcanaSelection e9dc4dfc73eaaf94aae27e0ed6cc9ada: bare, "Magus Arcana"
+- "Magus Bonus Feat" (2)
+  - ArcaneRiderFeatSelection 8e627812dc034b9db12fa396fdc9ec75: grantor, "Magus Bonus Feat (Arcane Rider)"
+  - MagusFeatSelection 66befe7b24c42dd458952e3c47c93563: grantor, "Magus Bonus Feat (Magus)"
+- "Mammoth" (4)
+  - ShifterAspectElephant f6d14c560a3d41edbaee68110bd21c62: grantor, "Mammoth (Shifter Aspect)"
+  - ShifterAspectElephantAbility 1035bab01a9d420dbb070818afb88215: level, "Mammoth (Shifter 1)"
+  - ShifterAspectElephantBuff c4c39e7078224b6caaf3c8a02032b5cb: level, "Mammoth (Shifter 9)"
+  - ShifterFeyChimeraElephantFeature 9cf5b2d5cc39466cb4fa2ae3767e2ee8: grantor, "Mammoth (Feyform Shifter)"
+- "Manifestation" (10)
+  - PestilenceSpiritManifestationFeature 2e193b5df54c4726b1894bc0a7dfc6c1: grantor, "Manifestation (Pestilence Spirit)"
+  - ShamanBattleSpiritManifestationFeature 1ddcc62d55d24285be8c687c94180578: grantor, "Manifestation (Battle)"
+  - ShamanBonesSpiritManifestationFeature 10bb6847ee6b4cbf86dded2d86b76ab6: grantor, "Manifestation (Bones)"
+  - ShamanFlameSpiritManifestationFeature e508bc6f64d64fc197ace10d66084b6d: grantor, "Manifestation (Flame)"
+  - ShamanFrostSpiritManifestationFeature 5d396a800c34407fb3e01b8782b91c86: grantor, "Manifestation (Frost)"
+  - ShamanLifeSpiritManifestationFeature 83a2f66218554ea3ada1aceacb4aad54: grantor, "Manifestation (Life)"
+  - ShamanNatureSpiritManifestationFeature f0bf97f286bb44a686108a97988de89c: grantor, "Manifestation (Nature)"
+  - ShamanStonesSpiritManifestationFeature 936734437ee8493497760174a0543045: grantor, "Manifestation (Stone)"
+  - ShamanWavesSpiritManifestationFeature 600780f354f24984b2fe210e2b54ad57: grantor, "Manifestation (Waves)"
+  - ShamanWindSpiritManifestationFeature a8c0403a27b6471f85d2bc441db5a993: grantor, "Manifestation (Wind)"
+- "Manticore Shape" (5)
+  - ShifterWildShapeManticoreFeature 2b13f4b72130494aa65f400c09f2c176: level, "Manticore Shape (Child of the Manticore 4)"
+  - ShifterWildShapeManticoreFeature15 f8a18c38bcb348d6be34817b0241cf28: level, "Manticore Shape (level 14)"
+  - ShifterWildShapeManticoreFeature8 f909e259de324931a9816d93ec986f8b: bare, "Manticore Shape"
+  - ShifterWildShapeManticoreFeatureLevelUp 719be33c87f94ed58414ba3eb5a4b664: grantor, "Manticore Shape (Child of the Manticore)"
+  - ShifterWildShapeManticoreFeatureLevelUp1 4f9c07f21ec742b6882d3d1453a9c2df: level, "Manticore Shape (level 8)"
+- "Massive Attacks" (3)
+  - TitanFighterStyleTwoWeaponSelection10 0e41c3c5e88c42c3af31162743982c22: level, "Massive Attacks (Titan Fighter 10)"
+  - TitanFighterStyleTwoWeaponSelection2 9c3e4b49b9f243f080c0432d2a1e5cbf: level, "Massive Attacks (Titan Fighter 2)"
+  - TitanFighterStyleTwoWeaponSelection6 855b2b531df740cfa4536d0ba0729fd8: level, "Massive Attacks (Titan Fighter 6)"
+- "Master Hunter" (3)
+  - FreebooterMasterHunter 6ce95769148f40c4aada8c01ee39d9a1: grantor, "Master Hunter (Freebooter)"
+  - MasterHunter 9d53ef63441b5d84297587d75f72fc17: bare, "Master Hunter"
+  - MasterHunter d8a126a3ed3b62943a597c937a4bf840: grantor, "Master Hunter (Hunter)"
+- "Master Slayer" (2)
+  - ImitatorMasterSlayerFeature 97c7054442504513b0324c00db0290fc: grantor, "Master Slayer (Imitator)"
+  - MasterSlayerFeature a26c0279a423fc94cabeea898f4d9f8a: bare, "Master Slayer"
+- "Master's Illusion" (2)
+  - TrickeryDomainGreaterFeature a681aa60d35344c4b9ceb49de4e169ac: bare, "Master's Illusion"
+  - TrickeryDomainGreaterFeatureSeparatist fbf670d0f7fc4b8dafbd4410fb29d948: grantor, "Master's Illusion (Forbidden Rites)"
+- "Menacing" (3)
+  - RangerStyleMenacingSelection10 7d5bd07830a5e2c478852bf8b860db2c: override, "Menacing (level 10)"
+  - RangerStyleMenacingSelection2 1c5988e90e0657645972e7b28ba4ce8b: override, "Menacing (level 2)"
+  - RangerStyleMenacingSelection6 a9998f05a0472bb4f8950304fe26ec0c: override, "Menacing (level 6)"
+- "Mental Prowess" (2)
+  - OverwhelmingSoulBurnFeature a3051f965d971ed44b9c6c63bf240b79: level, "Mental Prowess (Overwhelming Soul 1)"
+  - OverwhelmingSoulMentalProwessFeature c07916b1fe7400c4c97472337b719e64: level, "Mental Prowess (Overwhelming Soul 6)"
+- "Mercy" (2)
+  - SelectionMercy 02b187038a8dce545bb34bbfb346428d: grantor, "Mercy (Paladin)"
+  - WitchMercyPatronProgression cad7c2fdabeb9574f95f4b9ffee20afe: grantor, "Mercy (Patron)"
+- "Metakinesis — Empowered" (2)
+  - MetakinesisEmpowerFeature 70322f5a2a294e54a9552f77ee85b0a7: grantor, "Metakinesis — Empowered (Kineticist)"
+  - MetakinesisMasterEmpower 5b910d6c2b0a8384a996502d64051e4c: grantor, "Metakinesis — Empowered (Metakinetic Master)"
+- "Metakinesis — Maximized" (2)
+  - MetakinesisMasterMaximize 5cda9f923cb35ea4a957b0e899420ec5: grantor, "Metakinesis — Maximized (Metakinetic Master)"
+  - MetakinesisMaximizedFeature 0306bc7c6930a5c4b879c7dea78208c2: grantor, "Metakinesis — Maximized (Kineticist)"
+- "Metakinesis — Quicken" (2)
+  - MetakinesisMasterQuicken 71e53b59bd103904c93b5b5beb0e930e: grantor, "Metakinesis — Quicken (Metakinetic Master)"
+  - MetakinesisQuickenFeature 4bb9d2328a3fdca419243d6116b337ac: grantor, "Metakinesis — Quicken (Kineticist)"
+- "Might of Wyrms" (4)
+  - MightOfWyrmsAcid d9669e30f6f0eeb498d9b3dbe6e348f7: override, "Might of Wyrms (acid)"
+  - MightOfWyrmsCold 5d67e30a39ee85e4eb2700bad26bf443: override, "Might of Wyrms (cold)"
+  - MightOfWyrmsElectricity ed321c33edae32c4f8cfb20046eb593b: override, "Might of Wyrms (electricity)"
+  - MightOfWyrmsFire 4a4d6b0b69c7fb348b6d12e93cdaf3e9: override, "Might of Wyrms (fire)"
+- "Might of the Gods" (2)
+  - StrengthDomainGreaterFeature 3298fd30e221ef74189a06acbf376d29: bare, "Might of the Gods"
+  - StrengthDomainGreaterFeatureSeparatist fb3d1b1ff65441fa9413cda1d107c1ea: grantor, "Might of the Gods (Forbidden Rites)"
+- "Minor Spirit" (2)
+  - UnswornShamanMinorSpiritAbility 1 bff5039c06a4a494b84bbca5c1cf93e5: bare, "Minor Spirit"
+  - UnswornShamanMinorSpiritFeature 1 66ac87c379d8fd241b2e6bd3b4ae8774: grantor, "Minor Spirit (Unsworn Shaman)"
+- "Minor Spirit — Fifth" (2)
+  - UnswornShamanMinorSpiritAbility 5 49c4c45281805fc43aa66cd036825450: bare, "Minor Spirit — Fifth"
+  - UnswornShamanMinorSpiritFeature 5 220be7261ab7e3e48996ef11862a1219: grantor, "Minor Spirit — Fifth (Unsworn Shaman)"
+- "Minor Spirit — Fourth" (2)
+  - UnswornShamanMinorSpiritAbility 4 4248be819e269724086d8f6b44fafd10: bare, "Minor Spirit — Fourth"
+  - UnswornShamanMinorSpiritFeature 4 aa7a455ccc63fd74ca2c10aad616fe68: grantor, "Minor Spirit — Fourth (Unsworn Shaman)"
+- "Minor Spirit — Second" (2)
+  - UnswornShamanMinorSpiritAbility 2 8e37166acde792f458c1c02a7392ab7c: bare, "Minor Spirit — Second"
+  - UnswornShamanMinorSpiritFeature 2 f5e75561d34a41443968673167e69305: grantor, "Minor Spirit — Second (Unsworn Shaman)"
+- "Minor Spirit — Sixth" (2)
+  - UnswornShamanMinorSpiritAbility 6 6485fe813137acd41aa56df5a39e0195: bare, "Minor Spirit — Sixth"
+  - UnswornShamanMinorSpiritFeature 6 1f6caa4503b5a1d4ea5e15499f65431e: grantor, "Minor Spirit — Sixth (Unsworn Shaman)"
+- "Minor Spirit — Third" (2)
+  - UnswornShamanMinorSpiritAbility 3 cf57e3971a4f8d340a200794ba586bf9: bare, "Minor Spirit — Third"
+  - UnswornShamanMinorSpiritFeature 3 102cd634847750f4cb39982aa3b85d0e: grantor, "Minor Spirit — Third (Unsworn Shaman)"
+- "Misfortune" (3)
+  - MisfortuneRevelationFeature 8121fe70a7974970a8a560bd2267cc24: grantor, "Misfortune (Revelation)"
+  - ShamanHexMisfortuneFeature e7fe4ed2a56a4454396d5dfda9e58a18: override, "Misfortune (shaman hex)"
+  - WitchHexMisfortuneFeature 4e3dfdf000cc24d4fb96fd04e4e5cd0f: override, "Misfortune (witch hex)"
+- "Mixed Bloodline" (2)
+  - MixedBloodlineAbility 352b4e8bb5ca4301b6e6084304a86546: bare, "Mixed Bloodline"
+  - MixedBloodlineFeature 2c2283f5735d4e278f4088d9ff90edbb: grantor, "Mixed Bloodline (Mixed-Blood Rager)"
+- "Monk Bonus Feat" (10)
+  - MonkBonusFeatSelectionLevel1 ac3b7f5c11bce4e44aeb332f66b75bab: level, "Monk Bonus Feat (Monk 1)"
+  - MonkBonusFeatSelectionLevel10 1051170c612d5b844bfaa817d6f4cfff: level, "Monk Bonus Feat (Monk 10)"
+  - MonkBonusFeatSelectionLevel6 b993f42cb119b4f40ac423ae76394374: level, "Monk Bonus Feat (Monk 6)"
+  - SoheiMountedCombatFeatSelection 59bd6f915ba1dee44a8316f97fd51967: level, "Monk Bonus Feat (Sohei 1)"
+  - SoheiMountedCombatFeatSelection10 8d0ea7db870327b43b44265531be256f: level, "Monk Bonus Feat (Sohei 10)"
+  - SoheiMountedCombatFeatSelection6 46e8b9c91698ac74fa3f2d283d72a970: level, "Monk Bonus Feat (Sohei 6)"
+  - StudentOfStoneBonusFeatSelectionLevel10 6eabad04593b4f9f966cbdece0a8d3bf: level, "Monk Bonus Feat (Student of Stone 10)"
+  - StudentOfStoneBonusFeatSelectionLevel14 bfca1d29e52f45ae964cf3847d80cbd5: level, "Monk Bonus Feat (Student of Stone 14)"
+  - StudentOfStoneBonusFeatSelectionLevel18 dbe69e6febd74c6fa1e9a56719ad66c6: level, "Monk Bonus Feat (Student of Stone 18)"
+  - StudentOfStoneBonusFeatSelectionLevel6 a4a78358ba604afb8182ce1adffada31: level, "Monk Bonus Feat (Student of Stone 6)"
+- "Moonfire" (2)
+  - DarknessDomainGreaterFeature 0653cd3fee730654eb4daa6629e07fad: bare, "Moonfire"
+  - DarknessDomainGreaterFeatureSeparatist def73a2785fa4a1bae1f21ccde48f83f: grantor, "Moonfire (Forbidden Rites)"
+- "Murder Subdomain" (4)
+  - MurderSubdomainProgression 3b75b9afcb5a485aab990f12c1a22e64: bare, "Murder Subdomain"
+  - MurderSubdomainProgressionDruid f6c6c595314f40fdb64cf45516dcf7fc: grantor, "Murder Subdomain (Blight Bond)"
+  - MurderSubdomainProgressionSecondary 61955d5db8a74ca2a8089ae333d33190: grantor, "Murder Subdomain (Domain Selection)"
+  - MurderSubdomainProgressionSeparatist c7aaf0477ed1424d8fd9cd5f20179ae4: grantor, "Murder Subdomain (Forbidden Rites)"
+- "Mutagen" (2)
+  - MutagenFeature cee8f65448ce71c4b8b8ca13751dd8ea: grantor, "Mutagen (Alchemist)"
+  - MutationWarriorMutagenFeature 20b8ea6975554b347b43c6c5f5e65ca8: grantor, "Mutagen (Mutation Warrior)"
+- "Mystery" (4)
+  - DivineHerbalistMysterySelection c11ff5dbd8518c941849b3112d4d6b68: grantor, "Mystery (Divine Herbalist)"
+  - EnlightenedPhilosopherMysterySelection 9d5fdd3b4a6cd4f40beddbc72b2c07a0: grantor, "Mystery (Enlightened Philosopher)"
+  - HermitMysterySelection bc86ea452bef22a45989c6fa644bd2eb: grantor, "Mystery (Lone Strider)"
+  - OracleMysterySelection 5531b975dcdf0e24c98f1ff7e017e741: bare, "Mystery"
+- "Mystic Powers" (2)
+  - SenseiMysticPowersFeature d5f7bcde6e7e5ed498f430ebf5c29837: level, "Mystic Powers (Sensei 6)"
+  - SenseiMysticPowersMass a316044187ec61344ba33535f42f6a4d: level, "Mystic Powers (Sensei 10)"
+- "Mystic Wisdom" (2)
+  - SenseiMysticWisdom 4356b5d6d34489747bba68d43924a857: level, "Mystic Wisdom (Sensei 10)"
+  - SenseiMysticWisdomMass 1c02ec3a153954b459becc0d40d3cf60: level, "Mystic Wisdom (Sensei 14)"
+- "Mythic Suppression" (3)
+  - AeonDemythication c62280cbab88eb7458b867ff899cea3e: level, "Mythic Suppression (Aeon 3)"
+  - AeonDemythicationUpgrade1 60d4387ce45efa848a65c5a5838171c7: level, "Mythic Suppression (Aeon 5)"
+  - AeonDemythicationUpgrade2 0352a91d533acc64c936a3555d8d2a7b: level, "Mythic Suppression (Aeon 7)"
+- "Nails" (2)
+  - ShamanHexNailsFeature e87b3db81ab2e344fbe35a00a450d2d7: override, "Nails (shaman hex)"
+  - WitchHexNailsFeature 6a9a6cd57f30ffb4784625742c2f1756: override, "Nails (witch hex)"
+- "Nature" (7)
+  - DivineHerbalistNatureMysteryFeature b52fb5bc68d3edc4b9525f4e7414765f: override, "Nature (Divine Herbalist)"
+  - EnlightenedPhilosopherNatureMysteryFeature 8b74ff25102c72047bf77e6e3642ee2d: override, "Nature (Enlightened Philosopher)"
+  - OracleNatureMysteryFeature 69579bfe28e15b942af0722021d8725c: bare, "Nature"
+  - ShamanNatureSpiritProgression 379d33ef16e812146b5517601ab25e66: kind, "Nature (progression)"
+  - ShamanNatureSpiritWanderingFeature 54943a544ec1b31438366aaf73e5f310: level, "Nature (Shaman 4)"
+  - UnswornShamanNatureSpiritWanderingFeature 1 c9e7ff30a6a61144e85ae99c4800e795: level, "Nature (Unsworn Shaman 2)"
+  - UnswornShamanNatureSpiritWanderingFeature 2 b2e1a5196bda50547bece53b3ef07c6f: level, "Nature (Unsworn Shaman 6)"
+- "Nature Sense" (2)
+  - NatureSense 22f280eeb4abde34bb92b58ec2673dad: grantor, "Nature Sense (Hunter)"
+  - NatureSense 3a859e435fdd6d343b80d4970a7664c1: grantor, "Nature Sense (Druid)"
+- "New Arcana" (3)
+  - BloodlineArcaneNewArcanaFeature 4a2e8388c2f0dd3478811d9c947bebfb: bare, "New Arcana"
+  - BloodlineArcaneNewArcanaFeatureMagus c66e61dea38f3d8479a54eabec20ac99: prerequisite, "New Arcana (Eldritch Scion)"
+  - BloodlineArcaneNewArcanaSelection 20a2435574bdd7f4e947f405df2b25ce: kind, "New Arcana (selection)"
+- "Nimbus of Light" (2)
+  - SunDomainGreaterFeature 3e301c9d0e735b649955139ee0f5f165: bare, "Nimbus of Light"
+  - SunDomainGreaterFeatureSeparatist fe7e6703cd62470da842a5402949846a: grantor, "Nimbus of Light (Forbidden Rites)"
+- "Nobility Domain" (6)
+  - NobilityDomainBaseFeature a1a7f3dd904ed8e45b074232f48190d1: level, "Nobility Domain (level 1)"
+  - NobilityDomainBaseFeatureSeparatist dce4d1e921ce4f0d97ef3473453718d9: grantor, "Nobility Domain (Separatist)"
+  - NobilityDomainProgression 8480f2d1ca764774895ee6fd610a568e: bare, "Nobility Domain"
+  - NobilityDomainProgressionSecondary 6bddbc86f5ee80146ac0fc51923ef4fd: grantor, "Nobility Domain (Domain Selection)"
+  - NobilityDomainProgressionSeparatist 7cfbf666697b4d21a6dd80a194cfb0e1: grantor, "Nobility Domain (Forbidden Rites)"
+  - TricksterLoreReligionNobilityDomainFeature a554b0801bee463a8c2ddaebf57048bf: grantor, "Nobility Domain (Lore (Religion) 2 Rank)"
+- "Nomad" (2)
+  - BackgroundNomad 3335c5ea5b84e7f499498382d9dd33a5: grantor, "Nomad (Background Selection)"
+  - NomadArchetype 9f147dbae4a34cda9f0e6091dc1a4a7c: grantor, "Nomad (Ranger)"
+- "Numerian Companion" (7)
+  - DLC5_PentaSpell10_Feature a20f8a3d96d4498396a44d6c138e9c15: level, "Numerian Companion (level 13)"
+  - DLC5_PentaSpell6_Feature ba1ba73c0da24449916db64e3ce074c5: level, "Numerian Companion (level 1)"
+  - DLC5_PentaSpell7_Feature 2b295c4d724444cba30aa0961120e381: level, "Numerian Companion (level 4)"
+  - DLC5_PentaSpell8_Feature e9983b5fecd941c9a478d5a056bfb11d: level, "Numerian Companion (level 7)"
+  - DLC5_PentaSpell9_Feature dca813701f654e2a8e5af4c142a7aebc: level, "Numerian Companion (level 10)"
+  - Penta_Numerian_Background 0eb9884373934d5980c7aad03e710778: grantor, "Numerian Companion (Background Selection)"
+  - Penta_UniqueBard 074a9dd227cb43669d5b160c5282e146: grantor, "Numerian Companion (Bard)"
+- "Oracle" (4)
+  - LoremasterClericSecretOracle bdeff03c5e9be1e45b551226b96458b3: grantor, "Oracle (Cleric Spell)"
+  - LoremasterDruidSecretOracle 7dcd285d67d2cc44985056866757378a: grantor, "Oracle (Druid Spell)"
+  - LoremasterWizardSecretOracle 5357717b4a96ded4ba653bebe429d0e0: grantor, "Oracle (Wizard Spell)"
+  - OracleClass 20ce9bf8af32bee4c8557a045ab499b1: bare, "Oracle"
+- "Order" (2)
+  - CavalierOrderSelection d710e30ea20240247ad87ad86bcd50f2: grantor, "Order (Cavalier)"
+  - HellKnightOrderSelection e31d849e4eb2578458419c9df622270f: bare, "Order"
+- "Order of the Chain" (4)
+  - HellKnightOrderOfTheChain 90eb2a2cec75a8f4fb79ed637c082f47: grantor, "Order of the Chain (Order)"
+  - HellKnightOrderOfTheChainFeature1 60d852d4978584e4d8ed8ed71cde401c: level, "Order of the Chain (Order 1)"
+  - HellKnightOrderOfTheChainFeature5 6f69608c88f88f74d88a2aab7858ba31: level, "Order of the Chain (Order 5)"
+  - HellKnightOrderOfTheChainFeature9 d20cb27b25ab2c144ad610788d12f9d9: level, "Order of the Chain (level 9)"
+- "Order of the Gate" (4)
+  - HellKnightOrderOfTheGate 475a3716ef4756849acf7c0c855dbe31: grantor, "Order of the Gate (Order)"
+  - HellKnightOrderOfTheGateFeature1 95443efe59bd63e49892620fc5ef847a: level, "Order of the Gate (level 1)"
+  - HellKnightOrderOfTheGateFeature5 bf25e35c3d3ee094a9659045f3b3a9e1: level, "Order of the Gate (level 5)"
+  - HellKnightOrderOfTheGateFeature9 2409f35b4c073484893a177b5f89b304: level, "Order of the Gate (level 9)"
+- "Order of the Godclaw" (4)
+  - HellKnightOrderOfTheGodclaw 5636564c278583342aec54eb2b409029: grantor, "Order of the Godclaw (Order)"
+  - HellKnightOrderOfTheGodclawFeature1 2e54719cdb9e8114f928dcc8ad3c471f: level, "Order of the Godclaw (level 1)"
+  - HellKnightOrderOfTheGodclawFeature5 12b637093f814a44c8c425604a61617a: level, "Order of the Godclaw (level 5)"
+  - HellKnightOrderOfTheGodclawFeature9 1333c86f7d5fb9b46bf989b54a3f2a59: level, "Order of the Godclaw (level 9)"
+- "Order of the Pyre" (4)
+  - HellKnightOrderOfThePyre 603944646bb64a34d8a9e526301398ee: grantor, "Order of the Pyre (Order)"
+  - HellKnightOrderOfThePyreFeature1 b7f8b1f93610ea34f978c849e54ac318: level, "Order of the Pyre (level 1)"
+  - HellKnightOrderOfThePyreFeature5 9a788e30f783ed74f8f92f1fb03b30a0: level, "Order of the Pyre (level 5)"
+  - HellKnightOrderOfThePyreFeature9 5c3a2912db578c547bd1884a864dcec4: level, "Order of the Pyre (level 9)"
+- "Order of the Rack" (2)
+  - HellKnightOrderOfTheRack 9ff89287e89287c4498d551d88221447: grantor, "Order of the Rack (Order)"
+  - HellKnightOrderOfTheRackFeature 44b24a99d1c0c30438b814ad2eff79a7: bare, "Order of the Rack"
+- "Order of the Scourge" (4)
+  - HellKnightOrderOfTheScourge 552f196e7a10bea4b9a5e7cb0147c89f: grantor, "Order of the Scourge (Order)"
+  - HellKnightOrderOfTheScourgeFeature1 b8d534de20e5c684abc689f5b85bc7e3: level, "Order of the Scourge (level 1)"
+  - HellKnightOrderOfTheScourgeFeature5 05a7202154a23424f8c3e7da65c03d59: level, "Order of the Scourge (level 5)"
+  - HellKnightOrderOfTheScourgeFeature9 10bb771a02b0c5c409530ceb4e0594a4: level, "Order of the Scourge (level 9)"
+- "Oread" (2)
+  - OreadHeritageClassic 69b13ee3489bd4c4cb4bf99a0f643ff4: grantor, "Oread (Oread Heritage)"
+  - OreadRace 4d4555326b9b7144f93be1ea61337cd7: bare, "Oread"
+- "Outflank" (2)
+  - CavalierTacticianOutflankBuff 44569e9e95364bf42b1071382a8a89da: kind, "Outflank (buff)"
+  - Outflank 422dab7309e1ad343935f33a4d6e9f11: kind, "Outflank (feature)"
+- "Paladin" (5)
+  - LoremasterClericSecretPaladin 8f49595e5d4a35048aa454149a9a4757: grantor, "Paladin (Cleric Spell)"
+  - LoremasterDruidSecretPaladin 46376609217852444bf9b0021b088c02: grantor, "Paladin (Druid Spell)"
+  - LoremasterWizardSecretPaladin a3d5b69e306df3a408270f9f83fb4c99: grantor, "Paladin (Wizard Spell)"
+  - PaladinClass bfa11238e7ae3544bbeb4d0b92e897ec: kind, "Paladin"
+  - PaladinProgression fd325cbba872e5f40b618970678db002: kind, "Paladin (progression)"
+- "Patron Spells" (126)
+  - WitchAgilityPatronSpellLevel1 9f2e7426e5e61224e93d2c3072bf9c1c: level, "Patron Spells (Agility 2)"
+  - WitchAgilityPatronSpellLevel2 beb4a8ad0033dbf47939c96ec14583fa: level, "Patron Spells (Agility 4)"
+  - WitchAgilityPatronSpellLevel3 38d34391d7cf2da4e8705c2cb23edd30: level, "Patron Spells (Agility 6)"
+  - WitchAgilityPatronSpellLevel4 88b19f1f895da364099c5975b04b2fdc: level, "Patron Spells (Agility 8)"
+  - WitchAgilityPatronSpellLevel5 2e44d8b36eb8be14db7bf05a1cc81df1: level, "Patron Spells (Agility 10)"
+  - WitchAgilityPatronSpellLevel6 68e539d674b037f4a8db194e8307b8fb: level, "Patron Spells (Agility 12)"
+  - WitchAgilityPatronSpellLevel7 2c5574dce48718d449183d8c5056d286: level, "Patron Spells (Agility 14)"
+  - WitchAgilityPatronSpellLevel8 6164c2aa71247bd4d91274ebe93a6c0f: level, "Patron Spells (Agility 16)"
+  - WitchAgilityPatronSpellLevel9 1e418c5f030347542ad47dd752cdea05: level, "Patron Spells (Agility 18)"
+  - WitchDarkPactPatronSpellLevel1 cf4a9c0244c64a75a09f0793080ee69e: level, "Patron Spells (Dark Pact 2)"
+  - WitchDarkPactPatronSpellLevel2 98b46a1f46fd4a5288b670f9dbf98359: level, "Patron Spells (Dark Pact 4)"
+  - WitchDarkPactPatronSpellLevel3 2798832d5c1c4525882b9efe840d32ca: level, "Patron Spells (Dark Pact 6)"
+  - WitchDarkPactPatronSpellLevel4 ace7fad1d97041218cc7a07c7d0d64d2: level, "Patron Spells (Dark Pact 8)"
+  - WitchDarkPactPatronSpellLevel5 bc8bb2a6cb1e49b583269b52f24c4ce8: level, "Patron Spells (Dark Pact 10)"
+  - WitchDarkPactPatronSpellLevel6 0e6c69d966df48bab11f2385d9d7acbb: level, "Patron Spells (Dark Pact 12)"
+  - WitchDarkPactPatronSpellLevel7 0f0c0555c8f24a5ab48a2eda55262bbc: level, "Patron Spells (Dark Pact 14)"
+  - WitchDarkPactPatronSpellLevel8 6a326f88f3a1406090143141b90a7958: level, "Patron Spells (Dark Pact 16)"
+  - WitchDarkPactPatronSpellLevel9 e425c404622246a6b90ce680e05cc943: level, "Patron Spells (Dark Pact 18)"
+  - WitchPatronSpellLevel1 2e28c42c019f7174682c700046eb0e15: level, "Patron Spells (Mercy 2)"
+  - WitchPatronSpellLevel1 2e2f50be52f7ea245a4bc29fa2177cc4: level, "Patron Spells (Transformation 2)"
+  - WitchPatronSpellLevel1 394a16c90dcbd9242850248195490a7f: level, "Patron Spells (Elements 2)"
+  - WitchPatronSpellLevel1 4f068ba134bcabf47a370c5ecde812c4: level, "Patron Spells (Strength 2)"
+  - WitchPatronSpellLevel1 5478de32d30eab3469981fa7396da80a: level, "Patron Spells (Healing 2)"
+  - WitchPatronSpellLevel1 656268a8f122c0844b74a8d99e051d1d: level, "Patron Spells (Insanity 2)"
+  - WitchPatronSpellLevel1 87107350a4f8c65458da367c102c610e: level, "Patron Spells (Endurance 2)"
+  - WitchPatronSpellLevel1 8821290b22ea5ea4a96d82be45f2bd61: level, "Patron Spells (Ancestors 2)"
+  - WitchPatronSpellLevel1 ad7f803d19c18fc4f9c5ee65fc12a237: level, "Patron Spells (Deception 2)"
+  - WitchPatronSpellLevel1 b50f42b1ef5334544862c3458d5b06cf: level, "Patron Spells (Devotion 2)"
+  - WitchPatronSpellLevel1 c60530818159a304b8b21a8979e53776: level, "Patron Spells (Shadow 2)"
+  - WitchPatronSpellLevel1 fb5ae7deb7cbfd94a85c986df8f47c20: level, "Patron Spells (Winter 2)"
+  - WitchPatronSpellLevel2 04cba945e33f7db4daa8532477b0abeb: level, "Patron Spells (Healing 4)"
+  - WitchPatronSpellLevel2 393c66ba0fdd5d048ace42eef4f1f213: level, "Patron Spells (Elements 4)"
+  - WitchPatronSpellLevel2 3b4f1cbcbb0a00b41b4c39f6185b1188: level, "Patron Spells (Mercy 4)"
+  - WitchPatronSpellLevel2 40ff77fb544b2f84ca34ee709580acea: level, "Patron Spells (Strength 4)"
+  - WitchPatronSpellLevel2 5cb9fb6181937914eb18bbee827a2890: level, "Patron Spells (Insanity 4)"
+  - WitchPatronSpellLevel2 6414624190cc33f4facc0db67374514b: level, "Patron Spells (Shadow 4)"
+  - WitchPatronSpellLevel2 98ef9856915d231479c9744b341ce32a: level, "Patron Spells (Devotion 4)"
+  - WitchPatronSpellLevel2 d46fd148c1c4f9c42a7734d8476878f8: level, "Patron Spells (Deception 4)"
+  - WitchPatronSpellLevel2 dd33b6eb65ada894fbb991eb573092a7: level, "Patron Spells (Transformation 4)"
+  - WitchPatronSpellLevel2 e3d5551eb4f83dd4fba5f8e383114642: level, "Patron Spells (Endurance 4)"
+  - WitchPatronSpellLevel2 e770cbbaf5948164f8995973f412cac9: level, "Patron Spells (Ancestors 4)"
+  - WitchPatronSpellLevel2 f4b39358356bf4b4d9cef1182dc792a8: level, "Patron Spells (Winter 4)"
+  - WitchPatronSpellLevel3 03df6cb9fdd13cb499cb390f7c119f59: level, "Patron Spells (Healing 6)"
+  - WitchPatronSpellLevel3 040d5d2c03c6fe742834af9ec84bc859: level, "Patron Spells (Transformation 6)"
+  - WitchPatronSpellLevel3 188d61d3f5ac1874e8365f1b2bf940c4: level, "Patron Spells (Strength 6)"
+  - WitchPatronSpellLevel3 240f0fac5f96ded4fb689640818153d3: level, "Patron Spells (Devotion 6)"
+  - WitchPatronSpellLevel3 3f64af92e090f81418d267003d5ed0c7: level, "Patron Spells (Mercy 6)"
+  - WitchPatronSpellLevel3 4945e9fe38f49ce488bfc796a1bd4da3: level, "Patron Spells (Elements 6)"
+  - WitchPatronSpellLevel3 53f733d1f1704a64cb896b984b1c06d5: level, "Patron Spells (Deception 6)"
+  - WitchPatronSpellLevel3 788e8aa1b5b0a4742a010d13383ad9b8: level, "Patron Spells (Shadow 6)"
+  - WitchPatronSpellLevel3 8a8f1bb088a9a9e4497eea6412180431: level, "Patron Spells (Winter 6)"
+  - WitchPatronSpellLevel3 9ca706b0ff28d984ab610135ef892ffd: level, "Patron Spells (Ancestors 6)"
+  - WitchPatronSpellLevel3 a8302b15c2b26b84ea5f255b456e8b8d: level, "Patron Spells (Insanity 6)"
+  - WitchPatronSpellLevel3 e5c954e6c9091c440adabc6be70a4a9e: level, "Patron Spells (Endurance 6)"
+  - WitchPatronSpellLevel4 038f684bc9f52924ab82d60cfa365597: level, "Patron Spells (Insanity 8)"
+  - WitchPatronSpellLevel4 15dca01777ab73749bced5f5f582aa8a: level, "Patron Spells (Ancestors 8)"
+  - WitchPatronSpellLevel4 2ad0c36d8d5b1b24d8328a8d9771ecad: level, "Patron Spells (Shadow 8)"
+  - WitchPatronSpellLevel4 2f2457040b93e884894f5891ab4eaa30: level, "Patron Spells (Healing 8)"
+  - WitchPatronSpellLevel4 3448b8790e5447c4ea78bdf7fdda4e5d: level, "Patron Spells (Mercy 8)"
+  - WitchPatronSpellLevel4 53167b837ba41284abd67f8be189e649: level, "Patron Spells (Transformation 8)"
+  - WitchPatronSpellLevel4 67b193a85d73dd142b1de8eeba2647c6: level, "Patron Spells (Devotion 8)"
+  - WitchPatronSpellLevel4 8c168bda09ca64d4c983acdd2f620adb: level, "Patron Spells (Endurance 8)"
+  - WitchPatronSpellLevel4 8dd29385bdf79094092cd90e4d9cd0a2: level, "Patron Spells (Elements 8)"
+  - WitchPatronSpellLevel4 b65b8d9c577a39548b6ca4c6c74d4c3c: level, "Patron Spells (Strength 8)"
+  - WitchPatronSpellLevel4 dabf0576d727f9a4fb40c0b4acf03cf1: level, "Patron Spells (Winter 8)"
+  - WitchPatronSpellLevel4 fa7eafc737f43df4db9e896b0cb7a14b: level, "Patron Spells (Deception 8)"
+  - WitchPatronSpellLevel5 056a13563b658254bae138d71b97faa7: level, "Patron Spells (Shadow 10)"
+  - WitchPatronSpellLevel5 061f0afdb62334945a2a1be7be4c6597: level, "Patron Spells (Ancestors 10)"
+  - WitchPatronSpellLevel5 57f0558877e728b409b9d11b8a3abb83: level, "Patron Spells (Deception 10)"
+  - WitchPatronSpellLevel5 7c042e2ede1e0b540865c11221d28816: level, "Patron Spells (Winter 10)"
+  - WitchPatronSpellLevel5 89c3d83e6ccac754cbb07152dd4b19a9: level, "Patron Spells (Endurance 10)"
+  - WitchPatronSpellLevel5 8dbb2e686b793a2459d3b21181ed2c15: level, "Patron Spells (Strength 10)"
+  - WitchPatronSpellLevel5 9b6482a26fbf38b4abed7896718a8183: level, "Patron Spells (Elements 10)"
+  - WitchPatronSpellLevel5 a6f14ca03face8048904c92518677e89: level, "Patron Spells (Transformation 10)"
+  - WitchPatronSpellLevel5 bb76d9b9332f42141b13a818f87fb9e0: level, "Patron Spells (Healing 10)"
+  - WitchPatronSpellLevel5 e475fb2cf16248b479254d970b7d43ad: level, "Patron Spells (Insanity 10)"
+  - WitchPatronSpellLevel5 f0aa1997efdba6246b7b8a8acc9de92e: level, "Patron Spells (Mercy 10)"
+  - WitchPatronSpellLevel5 f9ee8eee80b93e640840ae87d9760623: level, "Patron Spells (Devotion 10)"
+  - WitchPatronSpellLevel6 1f18168f5112b494ca3e9cbd58956f87: level, "Patron Spells (Winter 12)"
+  - WitchPatronSpellLevel6 1fe59c0c5a60557438e9211e04328068: level, "Patron Spells (Devotion 12)"
+  - WitchPatronSpellLevel6 429a261686c7c5742a610a92b41601d1: level, "Patron Spells (Deception 12)"
+  - WitchPatronSpellLevel6 59691a0b57baee54192d4c8a17e75b77: level, "Patron Spells (Ancestors 12)"
+  - WitchPatronSpellLevel6 62a358b0b5bb36349b330ea40d7ea573: level, "Patron Spells (Mercy 12)"
+  - WitchPatronSpellLevel6 68027fbdb1cdf43439e79f0336c2a4c5: level, "Patron Spells (Transformation 12)"
+  - WitchPatronSpellLevel6 792e5fded79f3db4785e2592644bfb76: level, "Patron Spells (Shadow 12)"
+  - WitchPatronSpellLevel6 7a9e7eaf9d8c3b14e802c9cb0aa382d7: level, "Patron Spells (Healing 12)"
+  - WitchPatronSpellLevel6 8978b46115e80c64ba09d8e45cab6870: level, "Patron Spells (Insanity 12)"
+  - WitchPatronSpellLevel6 8a0b860669f60714f8ebf7285bb81535: level, "Patron Spells (Elements 12)"
+  - WitchPatronSpellLevel6 b2f582468e52b5c4fbda00215479a818: level, "Patron Spells (Endurance 12)"
+  - WitchPatronSpellLevel6 d905e4e477a6c8d4ea09906d35e14261: level, "Patron Spells (Strength 12)"
+  - WitchPatronSpellLevel7 15f01e7b13cd26f48acf521a7f3d937b: level, "Patron Spells (Endurance 14)"
+  - WitchPatronSpellLevel7 16fff96e05cd1a24db1e0254894d74e3: level, "Patron Spells (Deception 14)"
+  - WitchPatronSpellLevel7 1a8eb95a1381eec48859b691c002f327: level, "Patron Spells (Healing 14)"
+  - WitchPatronSpellLevel7 2b25d85f5cac64247b02fdc29d50ef45: level, "Patron Spells (Insanity 14)"
+  - WitchPatronSpellLevel7 2d011ba269fb19344a1d0aeecd005aee: level, "Patron Spells (Ancestors 14)"
+  - WitchPatronSpellLevel7 67bafbb5f78e34545a0c1f0335b98c5a: level, "Patron Spells (Strength 14)"
+  - WitchPatronSpellLevel7 6e349aacc60b5b54ebd132fdc65c17bf: level, "Patron Spells (Elements 14)"
+  - WitchPatronSpellLevel7 86cf4e8935e5f5e43bf31fd6c3c66525: level, "Patron Spells (Winter 14)"
+  - WitchPatronSpellLevel7 a7844d165e9ab7e4aa1113df7beb4167: level, "Patron Spells (Devotion 14)"
+  - WitchPatronSpellLevel7 c2b9cadeb701a104f8a27852aab98d76: level, "Patron Spells (Transformation 14)"
+  - WitchPatronSpellLevel7 e435cd96feb0a67428bd44fbd2619111: level, "Patron Spells (Shadow 14)"
+  - WitchPatronSpellLevel7 fa3585ef505ebd847b377a20d5c2e485: level, "Patron Spells (Mercy 14)"
+  - WitchPatronSpellLevel8 2f4098d98f92ba1488c58d91fb3df780: level, "Patron Spells (Endurance 16)"
+  - WitchPatronSpellLevel8 52e1cff2a17a0a044b1306962ab6f1fd: level, "Patron Spells (Devotion 16)"
+  - WitchPatronSpellLevel8 537afa5b4ab46fd45897a20f6690b337: level, "Patron Spells (Shadow 16)"
+  - WitchPatronSpellLevel8 799a0b3658f7af24ca125f4d7a2b8a69: level, "Patron Spells (Transformation 16)"
+  - WitchPatronSpellLevel8 82f76f119c9bf4045a49ebe981cfe0d0: level, "Patron Spells (Deception 16)"
+  - WitchPatronSpellLevel8 937c6595be0888749ab5fe3b10c358fb: level, "Patron Spells (Ancestors 16)"
+  - WitchPatronSpellLevel8 972153fdefa0e994e8c0f0c1b977a496: level, "Patron Spells (Healing 16)"
+  - WitchPatronSpellLevel8 a519ac6294927b74fa3abcc451732a2b: level, "Patron Spells (Winter 16)"
+  - WitchPatronSpellLevel8 b15ac28bffa3ca64b9297f8d2a80c435: level, "Patron Spells (Strength 16)"
+  - WitchPatronSpellLevel8 d2cac6ebfff96d04284d9893c4833cd8: level, "Patron Spells (Insanity 16)"
+  - WitchPatronSpellLevel8 d81e17108e77cb847a1ae1cd8a55383e: level, "Patron Spells (Mercy 16)"
+  - WitchPatronSpellLevel8 fa87073eb39634141a289e8ffe50a99a: level, "Patron Spells (Elements 16)"
+  - WitchPatronSpellLevel9 060f73b067ea43946985530258e53d85: level, "Patron Spells (Endurance 18)"
+  - WitchPatronSpellLevel9 0cedb51c1da1897408efc9ffb37603c1: level, "Patron Spells (Insanity 18)"
+  - WitchPatronSpellLevel9 107c8557267fd534091c8fd0eb76bc3a: level, "Patron Spells (Healing 18)"
+  - WitchPatronSpellLevel9 160d0bf31f229c8488f3a889d3f45b9a: level, "Patron Spells (Shadow 18)"
+  - WitchPatronSpellLevel9 391a6ff799fa6da40becedf4f5460be5: level, "Patron Spells (Elements 18)"
+  - WitchPatronSpellLevel9 5e1ff08d0d520ec458f4c72d8e396bc1: level, "Patron Spells (Devotion 18)"
+  - WitchPatronSpellLevel9 6dde63856e5db5d45ac71dfb4775c61d: level, "Patron Spells (Ancestors 18)"
+  - WitchPatronSpellLevel9 8fcbe0b311ed75c4eadd4789f0e78f70: level, "Patron Spells (Transformation 18)"
+  - WitchPatronSpellLevel9 a9a8a35b1ac265b44b13a282ca1b3e95: level, "Patron Spells (Strength 18)"
+  - WitchPatronSpellLevel9 b148f0d1925de18449bbf22b7cf7a8e3: level, "Patron Spells (Winter 18)"
+  - WitchPatronSpellLevel9 c586b9b7c4b48054bbfb7f67a28b18ad: level, "Patron Spells (Deception 18)"
+  - WitchPatronSpellLevel9 d148fe7ea7478234a830498773ab9ae4: level, "Patron Spells (Mercy 18)"
+- "Perfect Strike" (2)
+  - PerfectStrikeFeature 7477e2e0b72f4ce4fb674f4b21d5e81d: bare, "Perfect Strike"
+  - SwordSaintPerfectStrikeFeature 9ff65b68c09567e48af9b33848b23323: grantor, "Perfect Strike (Sword Saint)"
+- "Plagued" (5)
+  - PlaguedCurseFeatureLevel1 add0c93a50a9f3c47a40edeb225f8ee4: level, "Plagued (level 1)"
+  - PlaguedCurseNoPenaltyFeatureLevel1 db4bef691eb96b24181c27792896f245: level, "Plagued (Beneficial Curse 1)"
+  - PlaguedCurseNoPenaltyProgression ae0e1b45d567af04a8bc7b052a4c54e1: grantor, "Plagued (Beneficial Curse)"
+  - PlaguedCurseNoProgression b1f3b639d54540e59eb0643d77f3736c: bare, "Plagued"
+  - PlaguedCurseProgression 8be8108c3bdac5d4cbad2e54e581d830: grantor, "Plagued (Oracle's Curse)"
+- "Plant Domain" (7)
+  - PlantDomainBaseFeature e433267d36089d049b34900fde38032b: level, "Plant Domain (level 1)"
+  - PlantDomainBaseFeatureSeparatist 7c61c1b3ab5a41b6b24b7fcce0810a9d: grantor, "Plant Domain (Separatist)"
+  - PlantDomainProgression 467d2a1d2107da64395b591393baad17: bare, "Plant Domain"
+  - PlantDomainProgressionDruid ee77836d10835fd49a8831adb3a14640: grantor, "Plant Domain (Druid)"
+  - PlantDomainProgressionSecondary 22f3a592849c06e4c8869e2132e11597: grantor, "Plant Domain (Domain Selection)"
+  - PlantDomainProgressionSeparatist ad7f2170334642fabf6adae5c36e04f4: grantor, "Plant Domain (Forbidden Rites)"
+  - TricksterLoreReligionPlantDomainFeature 3281ed11705e465485ab9d8440198f0b: grantor, "Plant Domain (Lore (Religion) 2 Rank)"
+- "Point-Blank Master" (3)
+  - NomadPointBLankMaster 07e550ec04bc4cbc8642e41c20519449: grantor, "Point-Blank Master (Nomad)"
+  - PointBlankMaster 05a3b543b0a0a0346a5061e90f293f0b: bare, "Point-Blank Master"
+  - ZenArcherPointBlankMasterSelection 50e6aa55653bc014aafe556aad79e5c0: grantor, "Point-Blank Master (Zen Archer)"
+- "Poison" (2)
+  - BloodlineFeySpellLevel4 e7aec99942280534ea1a59805218571c: bare, "Poison"
+  - BloodlineSerpentineSpellLevel4 0b20de05c8f8f5c4ca9b7530eff64dd9: grantor, "Poison (Serpentine Bloodline)"
+- "Poison Immunity" (2)
+  - DLC3_BrokenTricksterPoisonImmunityFeature fc678e0a5d014cd7b221e0a17df8b4e6: item, "Poison Immunity (Broken Trickster)"
+  - PoisonImmunity 202af59b918143a4ab7c33d72c8eb6d5: bare, "Poison Immunity"
+- "Polar Midnight" (2)
+  - BloodlineInfernalSpellLevel9 5aad3b20e57afce4fab4b227f21e18bd: grantor, "Polar Midnight (Infernal Bloodline)"
+  - BloodlineSerpentineSpellLevel9 5688e4239698c2d4b8bdcec914727e3a: grantor, "Polar Midnight (Serpentine Bloodline)"
+- "Power Word Stun" (2)
+  - BloodlineArcaneSpellLevel8 501a7264c8b3be2418bd081d4acbe908: bare, "Power Word Stun"
+  - BloodlineInfernalSpellLevel8 7c19e812043f182409c5abcf2478fe4a: grantor, "Power Word Stun (Infernal Bloodline)"
+- "Power of Faith" (9)
+  - PowerOfFaithTier1Feature 6a585dce1d94c9b4c8cf95dede6b0568: level, "Power of Faith (Paladin 4)"
+  - PowerOfFaithTier1MainFeature 1631263dd628af44e8b2181d62122088: level, "Power of Faith (Warrior of the Holy Light 4)"
+  - PowerOfFaithTier2Feature 50c957284c8ee5a4da93ecc95df6d37a: level, "Power of Faith (Paladin 8)"
+  - PowerOfFaithTier2MainFeature a83eff2f92b2e9147a43a7b8accaa46d: level, "Power of Faith (Warrior of the Holy Light 8)"
+  - PowerOfFaithTier3Feature 02051971d5a0fc0478ee4165387d4eb8: level, "Power of Faith (Paladin 12)"
+  - PowerOfFaithTier3MainFeature 25c08230cdac4b14995b6c8d80bdf943: level, "Power of Faith (Warrior of the Holy Light 12)"
+  - PowerOfFaithTier4Feature b383b11ebcdbf684bbc0e6bd2f0fc2e1: level, "Power of Faith (Paladin 16)"
+  - PowerOfFaithTier4MainFeature 5d5f11207836a374583ffffbd4d86c9c: level, "Power of Faith (Warrior of the Holy Light 16)"
+  - PowerOfFaithTier5Feature c4cff8089665a494a8d620192269132f: level, "Power of Faith (Warrior of the Holy Light 20)"
+- "Powerless Prophecy" (4)
+  - PowerlessProphecyCurseFeatureLevel1 e567696843b0da74b8d7e1e7f0649b9e: level, "Powerless Prophecy (level 1)"
+  - PowerlessProphecyCurseNoProgression 2816b2179b0a477197d487cabc5474d2: override, "Powerless Prophecy (Mysterious Gift or Second Curse)"
+  - PowerlessProphecyCurseProgression 88c89ab44a36a67438347e257f70c8fe: class, "Powerless Prophecy"
+  - PowerlessProphecyNoPenaltyCurseProgression 3df8af6c9acb29c49b5eaaac88c90aa0: grantor, "Powerless Prophecy (Beneficial Curse)"
+- "Pranked" (5)
+  - PrankedCurseFeatureLevel1 cfba3d40cfa879f4b9a0b12060790a72: level, "Pranked (level 1)"
+  - PrankedCurseNoPenaltyFeatureLevel1 aafda401eed1e504b93462ab1dadd8b6: level, "Pranked (Beneficial Curse 1)"
+  - PrankedCurseNoPenaltyProgression 1c8dd487cca2fd34abbc367f66081c68: grantor, "Pranked (Beneficial Curse)"
+  - PrankedCurseNoProgression f261717def0a46e4a7d24cc2ee2e576d: bare, "Pranked"
+  - PrankedCurseProgression 15631616e56ccf44ab8659e55c36185f: grantor, "Pranked (Oracle's Curse)"
+- "Precise Strike" (3)
+  - CavalierTacticianPreciseStrikeBuff 731a11dcc952e744f8a88768e07a0542: kind, "Precise Strike (buff)"
+  - PreciseStrike 5662d1b793db90c4b9ba68037fd2a768: kind, "Precise Strike (feature)"
+  - PreciseStrikeAbility 4247758d93b218a43aed6aecc1f50fbb: grantor, "Precise Strike (Duelist)"
+- "Prescient Attack" (2)
+  - EldritchPrescientAttackFeature f488849e6b23632459f4e07a151e14e8: grantor, "Prescient Attack (Magus Arcana)"
+  - PrescientAttackFeature a3909a7293533fe49a2d7cfe051f17e4: bare, "Prescient Attack"
+- "Primal Choices" (11)
+  - PrimalistLevel12Selection 43b684433ff1e7d439b87099f1717154: level, "Primal Choices (level 12)"
+  - PrimalistLevel16Selection 63c42e0d1a84f004c8e4290bb26f359a: level, "Primal Choices (level 16)"
+  - PrimalistLevel20Selection 8cfab12649049e44aaa49691a8a16d88: level, "Primal Choices (level 20)"
+  - PrimalistLevel4Selection e6228dd80521e1149abc6257a8279b75: level, "Primal Choices (level 4)"
+  - PrimalistLevel8Selection 1c7cc7d948c64e549a45d2524c61de35: level, "Primal Choices (level 8)"
+  - PrimalistProgression d8b8d1dd83393484cbacf6c8830080ae: grantor, "Primal Choices (Primalist)"
+  - PrimalistSecondBloodlineLevel12Selection c63fcfd424a64d1aa195e7721b33863e: level, "Primal Choices (Second Bloodrager Bloodline 12)"
+  - PrimalistSecondBloodlineLevel16Selection d43b1581b1f64f928e55d7ad6d36cb13: level, "Primal Choices (Second Bloodrager Bloodline 16)"
+  - PrimalistSecondBloodlineLevel20Selection 171a7125128f407fb439c1f31d9cec43: level, "Primal Choices (Second Bloodrager Bloodline 20)"
+  - PrimalistSecondBloodlineLevel4Selection dfbd18edfa9443b98b1ed3b643551d31: level, "Primal Choices (Second Bloodrager Bloodline 4)"
+  - PrimalistSecondBloodlineLevel8Selection f820e9272d234162a7e6ef3b64be0f38: level, "Primal Choices (Second Bloodrager Bloodline 8)"
+- "Protection Domain" (6)
+  - ProtectionDomainBaseFeature a05a8959c594daa40a1c5add79566566: level, "Protection Domain (level 1)"
+  - ProtectionDomainBaseFeatureSeparatist 7f6b270327ca454b802ed15f4a6ee4f4: grantor, "Protection Domain (Separatist)"
+  - ProtectionDomainProgression b750650400d9d554b880dbf4c8347b24: bare, "Protection Domain"
+  - ProtectionDomainProgressionSecondary 6be37e1316160d949aa2e5a0be99404a: grantor, "Protection Domain (Domain Selection)"
+  - ProtectionDomainProgressionSeparatist 8946570bc2c34584ac7e7560e21c245a: grantor, "Protection Domain (Forbidden Rites)"
+  - TricksterLoreReligionProtectionDomainFeature bf09136ee6d14642a8deafa92144fd9e: grantor, "Protection Domain (Lore (Religion) 2 Rank)"
+- "Protection from Energy" (2)
+  - BloodlineCelestialSpellLevel3 2daeecf78fb226243ac695e158971d04: bare, "Protection from Energy"
+  - BloodlineElementalSpellLevel3 814670503f7b3ee43a2442e8e0a9f05d: family, "Protection from Energy (Elemental Bloodline)"
+- "Protective Luck" (2)
+  - ShamanHexProtectiveLuckFeature f0db7409313e50c41ab1bfe36584a4e1: override, "Protective Luck (shaman hex)"
+  - WitchHexProtectiveLuckFeature ddfc51eaa495acb40a01b92a2dd4ab73: override, "Protective Luck (witch hex)"
+- "Purity of Body" (2)
+  - PurityOfBody 9b02f77c96d6bba4daf9043eff876c76: grantor, "Purity of Body (Monk)"
+  - RagePurityOfBodyFeature a4418aa778cb4ebd965d78af19becced: bare, "Purity of Body"
+- "Quarterstaff Damage" (3)
+  - QuarterstaffMasterDamageBonus12 169a9c271ad74afb819fe3cb904fb8c7: level, "Quarterstaff Damage (Quarterstaff Master 12)"
+  - QuarterstaffMasterDamageBonus20 4f0e077d20c3463ebfd18d14fc1c3663: level, "Quarterstaff Damage (Quarterstaff Master 20)"
+  - QuarterstaffMasterDamageBonus4 11ce78cdcbe6427a8a4dd9dd1e36c914: level, "Quarterstaff Damage (Quarterstaff Master 4)"
+- "Racial Heritage" (6)
+  - DwarfHeritageSelection fd6e1f53589049cbbbc6a8e058d83b74: grantor, "Racial Heritage (Dwarf)"
+  - ElvenHeritageSelection 5482f879dcfd40f9a3168fdb48bc938c: grantor, "Racial Heritage (Elf)"
+  - GnomeHeritageSelection 584d8b50817b49b2bb7aab3d6add8d3a: grantor, "Racial Heritage (Gnome)"
+  - HalfElfHeritageSelection 9df7b68d60544bcf8e5b56c0a4688e04: grantor, "Racial Heritage (Half-Elf)"
+  - HalfOrcHeritageSelection 8c3244440e0b4d1d9d9b182685cbacbd: grantor, "Racial Heritage (Half-Orc)"
+  - HalflingHeritageSelection b3bebe76e6c64e2ca11585f9e3e2554a: grantor, "Racial Heritage (Halfling)"
+- "Rage" (2)
+  - BloodlineAbyssalSpellLevel3 e3662943915676a438ec0f975ed7e35b: grantor, "Rage (Abyssal Bloodline)"
+  - RageFeature 2479395977cfeeb46b482bc3385f4647: grantor, "Rage (Barbarian)"
+- "Rage Power" (3)
+  - LichSkeletalRageParametrized aaba9ebd2074e454aaed211698a34db0: grantor, "Rage Power (Skeleton Upgrade Selection)"
+  - LichSkeletalRageSelection 36f0d962a9f2d0a458062d5edc9795e5: grantor, "Rage Power (Skeletal Barbarian I)"
+  - RagePowerSelection 28710502f46848d48b3f0d6132817c4e: bare, "Rage Power"
+- "Ranger" (4)
+  - LoremasterClericSecretRanger b061858883c5f2c489b8991fc02e8f15: grantor, "Ranger (Cleric Spell)"
+  - LoremasterDruidSecretRanger 9450f60e975a7d24fa9d3bbd04321132: grantor, "Ranger (Druid Spell)"
+  - LoremasterWizardSecretRanger d445a062f980b8746a27c6c9490c6584: grantor, "Ranger (Wizard Spell)"
+  - RangerClass cda0615668a6df14eb36ba19ee881af6: bare, "Ranger"
+- "Red Shroud" (3)
+  - MantisZealotRedShroudFeature f36cb1250cec4c028a6229727f5e87cf: level, "Red Shroud (Mantis Zealot 1)"
+  - MantisZealotRedShroudFreeFeature f8482294f55043a29cc1753ab496b4b7: level, "Red Shroud (Mantis Zealot 13)"
+  - MantisZealotRedShroudSwiftFeature 256fc27834f44ae280fcec30533ca8de: level, "Red Shroud (Mantis Zealot 7)"
+- "Repose Domain" (6)
+  - ReposeDomainBaseFeature 8526bc808c303034cb2b7832bccf1482: level, "Repose Domain (level 1)"
+  - ReposeDomainBaseFeatureSeparatist 7a9e144f5d9b4f1db90eb0954b3fa13c: grantor, "Repose Domain (Separatist)"
+  - ReposeDomainProgression a2ab5a696d0dd134d94b2631151a15ee: bare, "Repose Domain"
+  - ReposeDomainProgressionSecondary a12fa2f458841ca4bb4ef666e1fbceef: grantor, "Repose Domain (Domain Selection)"
+  - ReposeDomainProgressionSeparatist b9eb51038cf146ccae56757e7809431a: grantor, "Repose Domain (Forbidden Rites)"
+  - TricksterLoreReligionReposeDomainFeature 2ca999329e9b411c964201b6a4330c21: grantor, "Repose Domain (Lore (Religion) 2 Rank)"
+- "Resist Energy" (2)
+  - BloodlineCelestialSpellLevel2 62ff99899efcf9c4eb2656fbe9d9522c: bare, "Resist Energy"
+  - BloodlineDraconicSpellLevel2 1d3fcbb51257dd6448a48db489cdd3ad: family, "Resist Energy (Draconic Bloodline)"
+- "Resistance" (2)
+  - AbjurationResistanceFeature 1abe070e7a00ddd48b8a141d71f79e70: grantor, "Resistance (Specialist School — Abjuration)"
+  - ResistanceBackgroundsFeature 5f94b6d19093f60499f7532f1b084b06: grantor, "Resistance (Scholar — Nature)"
+- "Rogue Talent" (2)
+  - DarkLurkerRogueTalentSelection 1edbb68422c046f98a86f4726f6721b2: grantor, "Rogue Talent (Dark Lurker)"
+  - RogueTalentSelection c074a5d615200494b8f2a9c845799d93: bare, "Rogue Talent"
+- "Rune Domain" (6)
+  - RuneDomainBaseFeature b74c64a0152c7ee46b13ecdd72dda6f3: level, "Rune Domain (level 1)"
+  - RuneDomainBaseFeatureSeparatist 7582f6f8c26b4b34b99ef8ea6f73280c: grantor, "Rune Domain (Separatist)"
+  - RuneDomainProgression 6d4dac497c182754d8b1f49071cca3fd: bare, "Rune Domain"
+  - RuneDomainProgressionSecondary 8d176f8fe5616a64ca37835be7c2ccfe: grantor, "Rune Domain (Domain Selection)"
+  - RuneDomainProgressionSeparatist b98292eec7a746a789b54084a2064572: grantor, "Rune Domain (Forbidden Rites)"
+  - TricksterLoreReligionRuneDomainFeature 0b08e6a69c5c4e1a9e162245d95653b8: grantor, "Rune Domain (Lore (Religion) 2 Rank)"
+- "Saber Fighting" (4)
+  - MantisZealotSabreFightingFocus 86892c35059f4c918e4ed5950f402833: level, "Saber Fighting (Mantis Zealot 1)"
+  - MantisZealotSabreFightingGreaterFocus bafa3572814440b185b795c1d3491490: level, "Saber Fighting (Mantis Zealot 8)"
+  - MantisZealotSabreFightingGreaterSpecialization 97c8c2f5141c4af5990b6f7fcab8f05d: level, "Saber Fighting (Mantis Zealot 12)"
+  - MantisZealotSabreFightingSpecialization 19f3eb9afc174449bc2ee9ca347c7608: level, "Saber Fighting (Mantis Zealot 4)"
+- "Sacred Shield" (5)
+  - SacredArmorShieldEnchantPlus2 9051a98e60cca2742ad5a80ab9c9a1f3: level, "Sacred Shield (Shieldbearer 8)"
+  - SacredArmorShieldEnchantPlus3 0f14e7ea4ae157248b7e6b29da64e0d7: level, "Sacred Shield (Shieldbearer 12)"
+  - SacredArmorShieldEnchantPlus4 c4c8dd0b8c017044b851bf56c5376864: level, "Sacred Shield (Shieldbearer 16)"
+  - SacredArmorShieldEnchantPlus5 a71f5193e7d0bb041a88dedc5737c07b: level, "Sacred Shield (Shieldbearer 20)"
+  - SacredArmorShieldFeature f79f9f5207c2d5648a0a2e2b32beefcf: level, "Sacred Shield (Shieldbearer 4)"
+- "Sacred Weapon" (3)
+  - SacredWeaponEnchantFeature 6db4ccce643b7b2468717effb303afcf: level, "Sacred Weapon (Warpriest 4)"
+  - SacredWeaponShieldEnchantFeature 36e8628cb4d37d84d96017815f7ceb42: grantor, "Sacred Weapon (Shieldbearer)"
+  - WarpriestSacredWeaponBaseDamageFeature 8eb5505ae69cc174fb1781134f949e5f: level, "Sacred Weapon (Warpriest 1)"
+- "Sacred Word" (5)
+  - LivingGrimoireSacredWordFeature 0e19c677fcd44465a0dcf271228e97c1: level, "Sacred Word (Living Grimoire 4)"
+  - LivingGrimoireSacredWordPlus2 7c9e0727b5394dab8bd850420f5f18c8: level, "Sacred Word (Living Grimoire 8)"
+  - LivingGrimoireSacredWordPlus3 820c37f616a44265b1e53b9455153a73: level, "Sacred Word (Living Grimoire 12)"
+  - LivingGrimoireSacredWordPlus4 4e3449dd48764ff79bbbddc6ed10cb14: level, "Sacred Word (Living Grimoire 16)"
+  - LivingGrimoireSacredWordPlus5 2b590a953e544acf94c7a9a1e2b90b64: level, "Sacred Word (Living Grimoire 20)"
+- "Sage Sorcerer" (2)
+  - SageBloodlineProgression 7d990675841a7354c957689a6707c6c2: bare, "Sage Sorcerer"
+  - SageSorcererArchetype 00b990c8be2117e45ae6514ee4ef561c: grantor, "Sage Sorcerer (Sorcerer)"
+- "Scaled Fist Bonus Feat" (3)
+  - ScaledFistBonusFeatSelectionLevel1 8705b13f703cbdc43ad1d9150f8cacca: level, "Scaled Fist Bonus Feat (Scaled Fist 1)"
+  - ScaledFistBonusFeatSelectionLevel10 c569fc66f22825445a7b7f3b5d6d208f: level, "Scaled Fist Bonus Feat (Scaled Fist 10)"
+  - ScaledFistBonusFeatSelectionLevel6 92f7b37ef1cf5484db02a924592ceb74: level, "Scaled Fist Bonus Feat (Scaled Fist 6)"
+- "Scalykind Domain" (3)
+  - ScalykindDomainProgression 67034c0985b240e5ad6e41e905461951: bare, "Scalykind Domain"
+  - ScalykindDomainProgressionSeparatist 3a5f747801a4420fb3e8d820985d4615: grantor, "Scalykind Domain (Forbidden Rites)"
+  - TricksterLoreReligionScalykindDomainFeature 38ff8b57036b45a49492aafd3004e0dc: grantor, "Scalykind Domain (Lore (Religion) 2 Rank)"
+- "Scholar — Nature" (2)
+  - BackgroundScholarNature b2eec7193059fbc4a92076d6b8a83eea: bare, "Scholar — Nature"
+  - BackgroundsDruidSpellLikeSelection 2fc911f0de029134585b5f35ff16be88: grantor, "Scholar — Nature (Background Selection)"
+- "School Power" (2)
+  - BloodlineArcaneSchoolPowerFeature 8891303b67eb273428f1691864b08cf8: kind, "School Power (feature)"
+  - BloodlineArcaneSchoolPowerSelection 3524a71d57d99bb4b835ad20582cf613: kind, "School Power (selection)"
+- "Scorching Ray" (2)
+  - BloodlineElementalFireSpellLevel2 e8f0a50b4549a764eb0264ed6b181ce6: grantor, "Scorching Ray (Elemental Bloodline — Fire)"
+  - BloodlineInfernalSpellLevel2 742d5e17af337ee43896225c511afbeb: grantor, "Scorching Ray (Infernal Bloodline)"
+- "Scythe of Evil" (2)
+  - EvilDomainGreaterFeature 3784df3083cb6404fbce7a585be24bcf: bare, "Scythe of Evil"
+  - EvilDomainGreaterFeatureSeparatist 8c08db2d70574310b42da1a6b65ed977: grantor, "Scythe of Evil (Forbidden Rites)"
+- "Searing Flesh" (2)
+  - SearingFlesh 8ad77685e64842c45a6f5b19f9086c6c: bare, "Searing Flesh"
+  - SearingFleshEffectFeature 642bb6097c37b3b4b8be1f46d2d9296e: override, "Searing Flesh (effect)"
+- "Second Chance" (4)
+  - SecondChanceFeatureLevel16 ae91786a9fb948798e6c9bab5b277420: level, "Second Chance (level 15)"
+  - SecondChanceFeatureLevel8 70412db9154842849995adf78a64deb1: level, "Second Chance (level 8)"
+  - SecondChanceProgression 2936d727551c4e8796dc18f717e9bf07: grantor, "Second Chance (Tortured Crusader)"
+  - TorturedCrusaderLayOnHandsFeatureDescription dad3bd49a6bb4c5f871a8c6888201452: level, "Second Chance (level 2)"
+- "Second Mixed Bloodline" (2)
+  - MixedBloodlineAbility2 291fa8cf38fa401397dd3c9b7515b153: bare, "Second Mixed Bloodline"
+  - MixedBloodlineFeature2 cd9ba53d5b144fd4aad4fc6b717ecd50: grantor, "Second Mixed Bloodline (Mixed-Blood Rager)"
+- "Secret" (2)
+  - LoremasterSecretSelection beeb25d7a7732e14f9986cdb79acecfc: grantor, "Secret (Loremaster)"
+  - ShamanHexSecretSelection 1342b5bfb876e434797cdcf7311bccad: bare, "Secret"
+- "Secrets of the Grave" (2)
+  - DirgeBardSecretsOfTheGraveFeature ff657fbdd7576f647a24fbe25f684e18: grantor, "Secrets of the Grave (Dirge Bard)"
+  - DirgeBardSecretsOfTheGraveReapplyClassFeature 2bb97589b67b450fb8363f8aa62f0be0: bare, "Secrets of the Grave"
+- "Seeker" (2)
+  - SeekerArchetype 7229db6fc0b07af4180e783eed43c4d9: grantor, "Seeker (Sorcerer)"
+  - SeekerArchetype c539d65b7682c8d469e6f122922f1dee: grantor, "Seeker (Oracle)"
+- "Seeker's Trapfinding" (2)
+  - SeekerTrapfinding cb3abfaa682b67c48953dfa200aab325: grantor, "Seeker's Trapfinding (Oracle)"
+  - SorcererSeekerTrapfinding b1c4f14bc87534e4da7ecd8e0b0658d2: grantor, "Seeker's Trapfinding (Sorcerer)"
+- "Seize the Moment" (2)
+  - CavalierTacticianSiezeTheMomentBuff 953c3dbda63dcdb4aad6c54c1a4590d0: kind, "Seize the Moment (buff)"
+  - SiezeTheMoment 1191ef3065e6f8e4f9fbe1b7e3c0f760: kind, "Seize the Moment (feature)"
+- "Serpentine Bloodline" (5)
+  - BloodlineSerpentineProgression 739c1e842bf77994baf963f4ad964379: bare, "Serpentine Bloodline"
+  - BloodragerSerpentineBloodline f5b06b67f04949f4c8d88fd3bbc0771e: grantor, "Serpentine Bloodline (Bloodrager)"
+  - BloodragerSerpentineSecondBloodline bedecc3e55af4fd2b46af1fd42d0fc97: grantor, "Serpentine Bloodline (Second Bloodrager Bloodline)"
+  - CrossbloodedSecondaryBloodlineSerpentineProgression 78be9df6023310f48b7a2b0d634da23b: grantor, "Serpentine Bloodline (Secondary Bloodline)"
+  - SeekerBloodlineSerpentineProgression 59904bf6cc50a52489ebc648fb35f36f: grantor, "Serpentine Bloodline (Seeker)"
+- "Shake It Off" (2)
+  - CavalierTacticianShakeItOffBuff 2f5768f642de59f40acd5211a627a237: kind, "Shake It Off (buff)"
+  - ShakeItOff 6337b37f2a7c11b4ab0831d6780bce2a: kind, "Shake It Off (feature)"
+- "Shaman" (4)
+  - LoremasterClericSecretShaman 2da160af99f21704282628acf0c50aae: grantor, "Shaman (Cleric Spell)"
+  - LoremasterDruidSecretShaman b2979afd344255140aebfe7bf7b0181a: grantor, "Shaman (Druid Spell)"
+  - LoremasterWizardSecretShaman 291b1cabaa3405c4991c892204546bcb: grantor, "Shaman (Wizard Spell)"
+  - ShamanClass 145f1d3d360a7ad48bd95d392c81b38e: bare, "Shaman"
+- "Shield Wall" (2)
+  - CavalierTacticianShieldWallBuff cc26546e4f73fe142b606b4759b4eb18: kind, "Shield Wall (buff)"
+  - ShieldWall 8976de442862f82488a4b138a0a89907: kind, "Shield Wall (feature)"
+- "Shielded Caster" (2)
+  - CavalierTacticianShieldedCasterBuff e5079510480031146992dafde835c3b8: kind, "Shielded Caster (buff)"
+  - ShieldedCaster 0b707584fc2ea724aa72c396c2230dc7: kind, "Shielded Caster (feature)"
+- "Shifter Claws" (7)
+  - ShifterClawsFeatureAddLevel 08a8cfba6ae34505a64d6ba00225c4d2: level, "Shifter Claws (Shifter 1)"
+  - ShifterClawsFeatureAddLevel1 f7996c5b51e348fc9277480d9cc0a88c: level, "Shifter Claws (Shifter 3)"
+  - ShifterClawsFeatureAddLevel2 19b7335626b3434cbe2af01fb33582ff: level, "Shifter Claws (Shifter 7)"
+  - ShifterClawsFeatureAddLevel3 8d6b338131764a4fb68eaf5b5c6cfe47: level, "Shifter Claws (Shifter 11)"
+  - ShifterClawsFeatureAddLevel4 024b8248f85d412cb7c520a9f746c547: level, "Shifter Claws (Shifter 13)"
+  - ShifterClawsFeatureAddLevel5 76b8314a83ff4825a145ac8f7b59d6e4: level, "Shifter Claws (Shifter 17)"
+  - ShifterClawsFeatureAddLevel6 28991899db1948d9bdd5f958b4add2d8: level, "Shifter Claws (Shifter 19)"
+- "Skald" (4)
+  - LoremasterClericSecretSkald a1d9a5a1ab5e47e29f3ea583b60db50b: grantor, "Skald (Cleric Spell)"
+  - LoremasterDruidSecretSkald 1d777f19d9c74a1e991f081c762cbff0: grantor, "Skald (Druid Spell)"
+  - LoremasterWizardSecretSkald 69a6f42e00464198a36b3d300c04bb6e: grantor, "Skald (Wizard Spell)"
+  - SkaldClass 6afa347d804838b48bda16acb0573dc0: bare, "Skald"
+- "Skald Talent" (2)
+  - ProvocateurTalentSelection aa88cb5263a54791b8d1e471bc192ad4: grantor, "Skald Talent (Inciter)"
+  - SkaldTalentSelection d2a8fde8985691045b90e1ec57e3cc57: bare, "Skald Talent"
+- "Skeletal Barbarian I" (5)
+  - LichSkeletalBarbarianProgression2 f2ec22e48d9fd334496462367e16a24f: prerequisite, "Skeletal Barbarian I (Lich 2)"
+  - LichSkeletalBarbarianProgression4 f003add893b243f0ae27a8242dd28b0b: prerequisite, "Skeletal Barbarian I (Lich 4)"
+  - LichSkeletalBarbarianProgression6 8e81428b108f440db11fdaa9597a37f4: prerequisite, "Skeletal Barbarian I (Lich 6)"
+  - LichSkeletalBarbarianProgression8 f8b516bea12d4a6daa5e72e2898d2467: prerequisite, "Skeletal Barbarian I (Lich 8)"
+  - LichSkeletalBarbarianTierI e2ae828e848a30d4d9471a0dd393435e: level, "Skeletal Barbarian I (level 2)"
+- "Skeletal Fighter I" (5)
+  - LichSkeletalFighterProgression2 c871a3847e860504a806e1b21ab12a48: prerequisite, "Skeletal Fighter I (Lich 2)"
+  - LichSkeletalFighterProgression4 4b5998dec1574f1f824ac1455251b11e: prerequisite, "Skeletal Fighter I (Lich 4)"
+  - LichSkeletalFighterProgression6 83fde47999da4c0688944dcdda2c6383: prerequisite, "Skeletal Fighter I (Lich 6)"
+  - LichSkeletalFighterProgression8 c75ae86a01954b7292b311f3205e7431: prerequisite, "Skeletal Fighter I (Lich 8)"
+  - LichSkeletalFighterTierI b398a2ac41ea6c94683efd968b928595: level, "Skeletal Fighter I (level 2)"
+- "Skeletal Inquisitor I" (3)
+  - LichSkeletalInquisitorProgression c237f25a4541d784b971d260c88f2f14: grantor, "Skeletal Inquisitor I (Skeleton Upgrade Selection)"
+  - LichSkeletalInquisitorTierI f9f5e55cbf4026b47a5f622e3f06fb5f: kind, "Skeletal Inquisitor I (feature)"
+  - LichSkeletalTeamworkSelection 03168a77717179c43bcddb71d52f6167: kind, "Skeletal Inquisitor I (selection)"
+- "Skill Focus" (2)
+  - MasterOfAllSkillFocus f2d2c1702d8a4cc6adfcbd4ebff8eee4: grantor, "Skill Focus (Master of All)"
+  - SkillFocusSelection c9629ef9eebb88b479b2fbc5e836656a: bare, "Skill Focus"
+- "Skilled" (2)
+  - HalfOrcSkilled 4e8fe10f42f314e4fa7c7918bcfadbd5: grantor, "Skilled (Human-Raised)"
+  - HumanSkilled 3adf9274a210b164cb68f472dc1e4544: grantor, "Skilled (Human)"
+- "Skills" (5)
+  - CavalierLionSkills 7c00cd81a50bd4944bce094d870c8f5e: grantor, "Skills (Order of the Lion)"
+  - CavalierShroudSkills 3fc4db417af250f4ea0b81db21f2f7e0: grantor, "Skills (Order of the Shroud)"
+  - CavalierStarSkills 30cab0aee32cd86429f5bdf304291f3a: grantor, "Skills (Order of the Star)"
+  - CavalierSwordSkills 0e333ad0b9537d0478c771cd0fe38e66: grantor, "Skills (Order of the Sword)"
+  - SoheiLoreNatureFeature d59fe46a1aa1ace4e987d843c8e309ff: grantor, "Skills (Sohei)"
+- "Slayer Talents" (3)
+  - SlayerTalentSelection10 913b9cf25c9536949b43a2651b7ffb66: override, "Slayer Talents (level 10)"
+  - SlayerTalentSelection2 04430ad24988baa4daa0bcd4f1c7d118: grantor, "Slayer Talents (Slayer)"
+  - SlayerTalentSelection6 43d1b15873e926848be2abf0ea3ad9a8: class, "Slayer Talents"
+- "Slayer's Advance" (2)
+  - SlayersAdvanceFeature 758e04f4568ec3f4c8d1fd83aed06fb9: level, "Slayer's Advance (Slayer 13)"
+  - SlayersAdvanceIncreaseResourceFeature f4df3231977753d4ebd2ceb2ef5901ed: level, "Slayer's Advance (Slayer 17)"
+- "Slow Movement" (2)
+  - SlowSpeedGnome 09bc9ccb8ee0ffe4b8827066b1ed7e11: grantor, "Slow Movement (Gnome)"
+  - SlowSpeedHalfling b8926aeaac17dc7408a5059788255819: grantor, "Slow Movement (Halfling)"
+- "Slumber" (2)
+  - ShamanHexSlumberFeature 894ef7374b805dd43b97603371b7ef10: override, "Slumber (shaman hex)"
+  - WitchHexSlumberFeature 498d7668a6086454cb2def921b89bd8f: override, "Slumber (witch hex)"
+- "Snakeskin" (4)
+  - BloodlineSerpentineSnakeskinFeatureAddLevel1 19d2ea3d212681946920c7b70bb44492: grantor, "Snakeskin (Serpentine Bloodline)"
+  - BloodlineSerpentineSnakeskinFeatureLevel1 9741a84aa7a7a004bbe2d5861c03de56: level, "Snakeskin (Serpentine Bloodline 9)"
+  - BloodlineSerpentineSnakeskinFeatureLevel2 ed9c751be99c3b4438b6483c1c0fc781: level, "Snakeskin (Serpentine Bloodline 13)"
+  - BloodlineSerpentineSnakeskinFeatureLevel3 f5f622f867f4ff044b9fe9b64c0a6f89: level, "Snakeskin (Serpentine Bloodline 17)"
+- "Sorcerer" (4)
+  - LoremasterClericSecretSorcerer c7586f526d72d474ba5442c4e6bcb46b: grantor, "Sorcerer (Cleric Spell)"
+  - LoremasterDruidSecretSorcerer c7466e5b4e32a124b87d4b2cc155a57c: grantor, "Sorcerer (Druid Spell)"
+  - LoremasterWizardSecretSorcerer a26834acd0f797c4e948660f4eb6ccd9: grantor, "Sorcerer (Wizard Spell)"
+  - SorcererClass b3a505fb61437dc4097f43c3f8f9a4cf: bare, "Sorcerer"
+- "Specialist School — Abjuration" (2)
+  - SpecialisationSchoolAbjurationProgression c451fde0aec46454091b70384ea91989: grantor, "Specialist School — Abjuration (Wizard)"
+  - SpecializationSchoolAbjuration 30f20e6f850519b48aa59e8c0ff66ae9: bare, "Specialist School — Abjuration"
+- "Specialist School — Conjuration" (2)
+  - SpecialisationSchoolConjurationProgression 567801abe990faf4080df566fadcd038: grantor, "Specialist School — Conjuration (Wizard)"
+  - SpecializationSchoolConjuration cee0f7edbd874a042952ee150f878b84: bare, "Specialist School — Conjuration"
+- "Specialist School — Evocation" (2)
+  - SpecialisationSchoolEvocationProgression f8019b7724d72a241a97157bc37f1c3b: grantor, "Specialist School — Evocation (Wizard)"
+  - SpecializationSchoolEvocation c46512b796216b64899f26301241e4e6: bare, "Specialist School — Evocation"
+- "Specialist School — Necromancy" (2)
+  - NecromancySchoolBaseFeature 927707dce06627d4f880c90b5575125f: bare, "Specialist School — Necromancy"
+  - SpecialisationSchoolNecromancyProgression e9450978cc9feeb468fb8ee3a90607e3: grantor, "Specialist School — Necromancy (Wizard)"
+- "Specialist School — Transmutation" (2)
+  - SpecialisationSchoolTransmutationProgression b6a604dab356ac34788abf4ad79449ec: grantor, "Specialist School — Transmutation (Wizard)"
+  - SpecializationSchoolTransmutation c459c8200e666ef4c990873d3e501b91: bare, "Specialist School — Transmutation"
+- "Spell Resistance" (2)
+  - ArcanistExploitSpellResistanceFeature 72d6f0a1d508738419b90f90ad1258fb: bare, "Spell Resistance"
+  - BloodlineDraconicSpellLevel5 2386614435b923a4397a41e1d112eca9: family, "Spell Resistance (Draconic Bloodline)"
+- "Spell Specialization" (22)
+  - SpellSpecialization1 e69a85f633ae8ca4398abeb6fa11b1fe: override, "Spell Specialization (change 1)"
+  - SpellSpecialization10 2b96df8e6eb1f794eaf7e1defbf4f54b: override, "Spell Specialization (change 10)"
+  - SpellSpecialization11 ec77f8ec59534ac4887296392ffec97e: override, "Spell Specialization (change 11)"
+  - SpellSpecialization12 c222c3b2679ff6d4da400cd954f9c5fc: override, "Spell Specialization (change 12)"
+  - SpellSpecialization13 1d38a238a88b9aa49917b3a6b7f7f3ba: override, "Spell Specialization (change 13)"
+  - SpellSpecialization14 c80f7a789ea11e8419acecfbad430759: override, "Spell Specialization (change 14)"
+  - SpellSpecialization15 0455bde9d7c7b8d488dd546ae140af64: override, "Spell Specialization (change 15)"
+  - SpellSpecialization16 b75abb0228e6ddb4c80e00cd76e343f6: override, "Spell Specialization (change 16)"
+  - SpellSpecialization17 74441cf4ebc51734c885617f61cf72b9: override, "Spell Specialization (change 17)"
+  - SpellSpecialization18 75d2790d361aef44ba551ae84d766bbc: override, "Spell Specialization (change 18)"
+  - SpellSpecialization19 09a6ff29f55dad544b9949702f2ed2c8: override, "Spell Specialization (change 19)"
+  - SpellSpecialization2 66f3e2b78b5d29c45a4c2f622541da79: override, "Spell Specialization (change 2)"
+  - SpellSpecialization20 8a2bdb52b158bc24d83c9ef1a2cb2af4: override, "Spell Specialization (change 20)"
+  - SpellSpecialization3 4e44d8d7dcf273345b154bb5f1e437ed: override, "Spell Specialization (change 3)"
+  - SpellSpecialization4 e974bdad073505b478a441acba207f48: override, "Spell Specialization (change 4)"
+  - SpellSpecialization5 fad3217b3e569ec48a052ae7918078c1: override, "Spell Specialization (change 5)"
+  - SpellSpecialization6 4c141a49e4a416944adbdefab8f9bc9b: override, "Spell Specialization (change 6)"
+  - SpellSpecialization7 28af16000bcaa614094783bb6af86428: override, "Spell Specialization (change 7)"
+  - SpellSpecialization8 e953dabc5485bc64ba88c5c539e338bf: override, "Spell Specialization (change 8)"
+  - SpellSpecialization9 eabd9c10a6c30934f9d7e22b6027977b: override, "Spell Specialization (change 9)"
+  - SpellSpecializationFirst f327a765a4353d04f872482ef3e48c35: bare, "Spell Specialization"
+  - SpellSpecializationSelection fe67bc3b04f1cd542b4df6e28b6e0ff5: level, "Spell Specialization (level 1)"
+- "Spellcasting" (4)
+  - FlamewardenSpellcasting1 2cb57c0d74d143f4da1ef6704012b0f4: level, "Spellcasting (Flamewarden 4)"
+  - FlamewardenSpellcasting2 275d72a20f615b54eb89460cd3aa8e1b: level, "Spellcasting (Flamewarden 7)"
+  - FlamewardenSpellcasting3 0dc70999341cdd644be0b972dd83900b: level, "Spellcasting (Flamewarden 10)"
+  - FlamewardenSpellcasting4 891441bcd187d4d43abc46d3202e07a0: level, "Spellcasting (Flamewarden 13)"
+- "Spider" (4)
+  - ShifterAspectSpider e3c2c68adaa344aca0354750044611a2: grantor, "Spider (Shifter Aspect)"
+  - ShifterAspectSpiderAbility 56af94739fbf401799f6e54b091750e5: level, "Spider (Shifter 1)"
+  - ShifterAspectSpiderBuff 49e196492d2c4aa588bafffea6db8c43: level, "Spider (Shifter 9)"
+  - ShifterFeyChimeraSpiderFeature 941ac3b6d42146958731058692a3c2c4: grantor, "Spider (Feyform Shifter)"
+- "Spirit of Nature" (2)
+  - OracleRevelationSpiritOfNature a5ab3559cb7921a4a8c288110be248ec: grantor, "Spirit of Nature (Revelation)"
+  - ShamanNatureSpiritGreaterFeature f54191d614633da4baac7a47a659746b: grantor, "Spirit of Nature (Nature)"
+- "Spirited Mount" (2)
+  - GhostRiderSpiritedMountConcealmentFeature f45ad0cec5b9444994def90fc4db056f: level, "Spirited Mount (Ghost Rider 8)"
+  - GhostRiderSpiritedMountFeature 2f05eae7c5bd43238fcd0f4e665a5144: level, "Spirited Mount (Ghost Rider 5)"
+- "Spontaneous Healing" (4)
+  - ClericSpontaneousCure 5e4620cea099c9345a9207c11d7bc916: grantor, "Spontaneous Healing (Channel Positive Energy)"
+  - SpontaneousHealingFeature 2bc1ee626a69667469ab5c1698b99956: bare, "Spontaneous Healing"
+  - WhiteMageSpontaneousHealing 1f90a0504ae3f11408ca0ff54444b9a4: level, "Spontaneous Healing (White Mage 1)"
+  - WhiteMageSpontaneousHealing10 e0d20af8a458e0849bb5f814bc4e9e95: level, "Spontaneous Healing (White Mage 10)"
+- "Spontaneous Summoning" (2)
+  - BeastTamerSpontaneousSummon f026602be18bc194dbb77f75487a2b41: grantor, "Spontaneous Summoning (Beast Tamer)"
+  - DruidSpontaneousSummon b296531ffe013c8499ad712f8ae97f6b: grantor, "Spontaneous Summoning (Druid)"
+- "Staff of Order" (2)
+  - LawDomainGreaterFeature 3dc5e2b315ff07f438582a2468beb1fb: bare, "Staff of Order"
+  - LawDomainGreaterFeatureSeparatist e1ac3d1b6f8a4a18b18f61f49a40722e: grantor, "Staff of Order (Forbidden Rites)"
+- "Stone" (7)
+  - DivineHerbalistStoneMysteryFeature 09106dcc03321154f955e2d0296a082e: override, "Stone (Divine Herbalist)"
+  - EnlightenedPhilosopherStoneMysteryFeature 2127c37ccc7986e4083665552d6ecd5c: override, "Stone (Enlightened Philosopher)"
+  - OracleStoneMysteryFeature 7bb4bb3e7fd26f34e8ca035a27e03e85: bare, "Stone"
+  - ShamanStonesSpiritProgression acff6b0cf279a31439010afea01df912: kind, "Stone (progression)"
+  - ShamanStonesSpiritWanderingFeature e6468a6fac9e1074897b2487a0659e96: level, "Stone (Shaman 4)"
+  - UnswornShamanStonesSpiritWanderingFeature 1 24c5bf81776927143ba0284ab57d2a08: level, "Stone (Unsworn Shaman 2)"
+  - UnswornShamanStonesSpiritWanderingFeature 2 3598cb7add5a41f4abca1d85322fb7a2: level, "Stone (Unsworn Shaman 6)"
+- "Stone Stability" (2)
+  - OracleRevelationStoneStability 4244aa481ad9a604db8442c02712c1e0: grantor, "Stone Stability (Revelation)"
+  - ShamanHexStoneStabilityFeature 05b6b99b0f394284899eccd4728031b7: bare, "Stone Stability"
+- "Strength" (2)
+  - StrengthBlessingFeature 44f9162736a5c2040ae8ede853bc6639: grantor, "Strength (Blessings)"
+  - WitchStrengthPatronProgression 850ac8a2bc65d814db9f3fea871c18bb: grantor, "Strength (Witch)"
+- "Strength Domain" (6)
+  - StrengthDomainBaseFeature 526f99784e9fe4346824e7f210d46112: level, "Strength Domain (level 1)"
+  - StrengthDomainBaseFeatureSeparatist f62fd51ae6514ab4acc6432bd90cd4a4: grantor, "Strength Domain (Separatist)"
+  - StrengthDomainProgression 07854f99c8d029b4cbfdf6ae6c7bc452: bare, "Strength Domain"
+  - StrengthDomainProgressionSecondary 2ed973db1af2c8e428ce404fb1e9a20d: grantor, "Strength Domain (Domain Selection)"
+  - StrengthDomainProgressionSeparatist 6432f22418924cf6be527c8eac6701d4: grantor, "Strength Domain (Forbidden Rites)"
+  - TricksterLoreReligionStrengthDomainFeature baeb86e6678e4d9ebc3329718d450208: grantor, "Strength Domain (Lore (Religion) 2 Rank)"
+- "Strength of the Abyss" (4)
+  - BloodlineAbyssalStrengthAbilityAddLevel1 489c8c4a53a111d4094d239054b26e32: grantor, "Strength of the Abyss (Abyssal Bloodline)"
+  - BloodlineAbyssalStrengthAbilityLevel1 d3ccd7c74caab594485c20f694aca91d: level, "Strength of the Abyss (Abyssal Bloodline 9)"
+  - BloodlineAbyssalStrengthAbilityLevel2 13ea370344ca1444c928ddf8177fcdfc: level, "Strength of the Abyss (Abyssal Bloodline 13)"
+  - BloodlineAbyssalStrengthAbilityLevel3 004b1185318ad0b4dbd275bb5ba00294: level, "Strength of the Abyss (Abyssal Bloodline 17)"
+- "Studied Target" (3)
+  - SanctifiedSlayerStudyTargetFeature 6d9d3fbc30564e64d966dba27cd6357a: grantor, "Studied Target (Sanctified Slayer)"
+  - SlayerStudyTargetFeature 09bdd9445ac38044389476689ae8d5a1: bare, "Studied Target"
+  - TandemExecutionerStudyTargetFeature 3dac0ae65dec4b619c035df07751b59d: grantor, "Studied Target (Tandem Executioner)"
+- "Stunning Fist: Fatigue" (2)
+  - ScaledFistStunningFistFatigueFeature abcf396b95e3dbc4686c8547783a719c: grantor, "Stunning Fist: Fatigue (Scaled Fist)"
+  - StunningFistFatigueFeature 819645da2e446f84d9b168ed1676ec29: bare, "Stunning Fist: Fatigue"
+- "Stunning Fist: Sicken" (2)
+  - ScaledFistStunningFistSickenedFeature e754ea837ee7a6e438ff7ebf6da40b79: grantor, "Stunning Fist: Sicken (Scaled Fist)"
+  - StunningFistSickenedFeature d256ab3837538cc489d4b571e3a813eb: bare, "Stunning Fist: Sicken"
+- "Summon Astral Deva" (2)
+  - AngelSummonFeatureTier6 e09826de98d995448aeff3b6b0a61851: grantor, "Summon Astral Deva (Angel)"
+  - AzataSummonFeatureTier6 edc2d236d6993814fb4f09fb8d2b6c17: grantor, "Summon Astral Deva (Azata)"
+- "Summon Astral Devas" (2)
+  - AngelSummonFeatureTier7 7e374dcfb85d51f4a94acda1b59582a4: grantor, "Summon Astral Devas (Angel)"
+  - AzataSummonFeatureTier7 ab8e798732dc2284eb7ae2b1c48b09c6: grantor, "Summon Astral Devas (Azata)"
+- "Summon Hamadryad" (2)
+  - AzataSummonFeatureTier9 8403a6cec131de949b42cfa329963736: grantor, "Summon Hamadryad (Azata)"
+  - BloodlineFeySpellLevel9 c6d25830bf5c1cc47bd48cf47f363d29: bare, "Summon Hamadryad"
+- "Summon Monster III" (2)
+  - BloodlineSerpentineSpellLevel3 abb8d705ed5391a49bf42fe4e83f4a20: grantor, "Summon Monster III (Serpentine Bloodline)"
+  - MonsterTacticianSummonFeature3 7cbeff1ae7fa5b7489a299702a717b9f: grantor, "Summon Monster III (Monster Tactician)"
+- "Summon Monster IX" (3)
+  - BloodlineAbyssalSpellLevel9 49bc246d795aa2d4da23a61f3c36c902: grantor, "Summon Monster IX (Abyssal Bloodline)"
+  - BloodlineCelestialSpellLevel9 8556697a3f12de64cb1c71083233b3c7: bare, "Summon Monster IX"
+  - MonsterTacticianSummonAddition9 f63d23b4e41b3264fa6aa2be8079d28d: grantor, "Summon Monster IX (Monster Tactician)"
+- "Summon Monster VII" (3)
+  - BloodlineAbyssalSpellLevel7 63c26435ee9628c4eb4d2e833c1ddbab: grantor, "Summon Monster VII (Abyssal Bloodline)"
+  - BloodlineSerpentineSpellLevel7 7b442d746153bad49b855226b9e0b64e: grantor, "Summon Monster VII (Serpentine Bloodline)"
+  - MonsterTacticianSummonFeature7 fb61ce4319101b945b1041c01f078275: grantor, "Summon Monster VII (Monster Tactician)"
+- "Summon Monster VIII" (2)
+  - BloodlineElementalSpellLevel8 a97a9d3ce2ea0d24e8a9b96642c576f5: bare, "Summon Monster VIII"
+  - MonsterTacticianSummonFeature8 46613bd8e84708a49ab33e0155cec453: grantor, "Summon Monster VIII (Monster Tactician)"
+- "Summon Movanic Deva" (2)
+  - AngelSummonFeatureTier4 494113cf886b0f742b364287ee12f2f3: grantor, "Summon Movanic Deva (Angel)"
+  - AzataSummonFeatureTier4 d779bcb070a85ec47a49a2723b00f79f: grantor, "Summon Movanic Deva (Azata)"
+- "Summon Shadow" (2)
+  - SummonShadowProgression c6d8da10ecfb4618ac208d0bbfa4ecc0: grantor, "Summon Shadow (Shadowcaster)"
+  - SummonShadowsFeature 9477b30179b14385ab3851de96b675c5: bare, "Summon Shadow"
+- "Summon Wild Hunt" (2)
+  - TricksterSummonFeatureTier7 b09dffefcb537a74083459167444c927: level, "Summon Wild Hunt (Trickster 5)"
+  - TricksterSummonFeatureTier9 47b2a61348ebd554eb0adf10d17f8b18: level, "Summon Wild Hunt (Trickster 7)"
+- "Summoning Rager" (4)
+  - GreenragerSummoningRager ee9356da2f43ce144bee7e034760fbe7: level, "Summoning Rager (Greenrager 6)"
+  - GreenragerSummoningRager10 c8d3a1f34b8c4a348a41fcfb213da466: level, "Summoning Rager (Greenrager 10)"
+  - GreenragerSummoningRager13 d0167cb030647ae4ea0cb8d401699d80: level, "Summoning Rager (Greenrager 13)"
+  - GreenragerSummoningRager7 35a04536a5707ef4f876ccd2155d7bc4: level, "Summoning Rager (Greenrager 7)"
+- "Sun Domain" (6)
+  - SunDomainBaseFeature 3d8e38c9ed54931469281ab0cec506e9: level, "Sun Domain (level 1)"
+  - SunDomainBaseFeatureSeparatist c227cd852640467cbcf907e0756ee5bf: grantor, "Sun Domain (Separatist)"
+  - SunDomainProgression c85c8791ee13d4c4ea10d93c97a19afc: bare, "Sun Domain"
+  - SunDomainProgressionSecondary 0877f33e01ba9884daed94cc7633e09c: grantor, "Sun Domain (Domain Selection)"
+  - SunDomainProgressionSeparatist 48539e37c0b74b8f806d0b29880bb005: grantor, "Sun Domain (Forbidden Rites)"
+  - TricksterLoreReligionSunDomainFeature 5f72100f333241f297b40a5ff14534ea: grantor, "Sun Domain (Lore (Religion) 2 Rank)"
+- "Sunder Armor" (3)
+  - ImprovedSunder 9719015edcbf142409592e2cbaab7fe1: bare, "Sunder Armor"
+  - OracleRevelationManeuverMasterySunder f6331dc792c40eb4ab99a4ad36eb7b41: grantor, "Sunder Armor (Maneuver Mastery)"
+  - OracleRevelationManeuverMasterySunderImproved 88b65edf00b646c1846d0b588037e18f: grantor, "Sunder Armor (Revelation)"
+- "Swarm Clone" (3)
+  - LocustCloneLevel08Feature 9af0119d6e194f98b3ebd6732ac81816: level, "Swarm Clone (Swarm That Walks 1)"
+  - LocustCloneLevel09Feature a4217bf42d8b41429f83663ef4d44a10: level, "Swarm Clone (Swarm That Walks 2)"
+  - LocustCloneLevel10Feature 1e648f7a98d84d71bb28cb4bf7dc0865: level, "Swarm Clone (Swarm That Walks 3)"
+- "Swift Tactician" (2)
+  - TacticalLeaderFeatShareFeature 93e78cad499b1b54c859a970cbe4f585: level, "Swift Tactician (Tactical Leader 3)"
+  - TacticalLeaderFeatShareSwift 4ca47c023f1c158428bd55deb44c735f: level, "Swift Tactician (Tactical Leader 12)"
+- "Sworn Enemy — Smite" (2)
+  - FaithHunterSwornEnemySmiteExtraUse 2fab74210ab73ba47b8bad213becce4f: level, "Sworn Enemy — Smite (Faith Hunter 10)"
+  - FaithHunterSwornEnemySmiteFeature 3ffb55877d0a7764e8f15c3ce84d3ae3: level, "Sworn Enemy — Smite (Faith Hunter 6)"
+- "Tactician" (3)
+  - CavalierTacticianAbility 3ff8ef7ba7b5be0429cf32cd4ddf637c: bare, "Tactician"
+  - CavalierTacticianFeature 404f6e3da48b87f4e9fca21150d47f71: grantor, "Tactician (Cavalier)"
+  - ForesterTacticianFeature 994db4abfa0d6194eb3c847605e6f148: grantor, "Tactician (Forester)"
+- "Tandem Trip" (2)
+  - CavalierTacticianTandemTripBuff 965ea9716b87f4b46a6a8f50523393bd: kind, "Tandem Trip (buff)"
+  - TandemTrip d26eb8ab2aabd0e45a4d7eec0340bbce: kind, "Tandem Trip (feature)"
+- "Teaching Moment" (2)
+  - KnowledgeDomainGreaterFeature 74ac5dbc420501c4cae29a9db24e4e3a: bare, "Teaching Moment"
+  - KnowledgeDomainGreaterFeatureSeparatist de87cf92a9a344198dd5a2880c6029cb: grantor, "Teaching Moment (Forbidden Rites)"
+- "Teamwork Feat" (5)
+  - DevilbanePriestTeamworkFeatSelection cf2ca457ffb585a4995fd79441167a72: grantor, "Teamwork Feat (Demonbane Priest)"
+  - HunterTeamworkFeatSelection 01046afc774beee48abde8e35da0f4ba: grantor, "Teamwork Feat (Hunter)"
+  - LichSkeletalTeamworkParametrized b042ff9901e7b104eac92c05aa39957a: grantor, "Teamwork Feat (Skeletal Inquisitor I)"
+  - TeamworkFeat 90b882830b3988446ae681c6596460cc: grantor, "Teamwork Feat (Vanguard)"
+  - TeamworkFeat d87e2f6a9278ac04caeb0f93eff95fcb: grantor, "Teamwork Feat (Inquisitor)"
+- "Terrible Slam" (7)
+  - TerribleSlamFeatureAddLevel b703d4bd5e6c457abdc4a1d0bbb30ad0: level, "Terrible Slam (Rageshaper 1)"
+  - TerribleSlamFeatureAddLevel1 06657eb8873e4d95825412e5117e41e7: level, "Terrible Slam (Rageshaper 3)"
+  - TerribleSlamFeatureAddLevel2 63be73e54b154c1a8b09d36df11de718: level, "Terrible Slam (Rageshaper 7)"
+  - TerribleSlamFeatureAddLevel3 f50f79b2933a49119a79a469dcf119c4: level, "Terrible Slam (Rageshaper 11)"
+  - TerribleSlamFeatureAddLevel4 b29832f6305f40fdbc20cf3784bcf3e5: level, "Terrible Slam (Rageshaper 13)"
+  - TerribleSlamFeatureAddLevel5 527150153c1947ad933239a43d6e4245: level, "Terrible Slam (Rageshaper 17)"
+  - TerribleSlamFeatureAddLevel6 fb1b80cf0ce94372b8e7c520f11b6caf: level, "Terrible Slam (Rageshaper 19)"
+- "Thassilonian Specialist" (2)
+  - ThassilonianSchoolSelection f431178ec0e2b4946a34ab504bb46285: bare, "Thassilonian Specialist"
+  - ThassilonianSpecialistArchetype 55a8ce15e30d71547a44c69bb2e8a84f: grantor, "Thassilonian Specialist (Wizard)"
+- "Throw Anything" (2)
+  - AlchemistThrowAnything e6c2a4b287ca91541843734f2161928a: grantor, "Throw Anything (Alchemist)"
+  - ThrowAnything 65c538dcfd91930489ad3ab18ad9204b: bare, "Throw Anything"
+- "Thunder Call" (2)
+  - ThunderCall 5ebb5d1f76b602d44818a21e9b6e31b8: grantor, "Thunder Call (Thundercaller)"
+  - ThunderCall_Penta 0b19d1df538949af8fb4e031866445eb: grantor, "Thunder Call (Numerian Companion)"
+- "Tiefling" (2)
+  - TieflingHeritageClassic c82bc8134f3a6e24994b8ef70fb4014a: grantor, "Tiefling (Tiefling Heritage)"
+  - TieflingRace 5c4e42124dc2b4647af6e36cf2590500: bare, "Tiefling"
+- "Tiger" (4)
+  - ShifterAspectTiger ab2bffed0cc2447fae15ee4e0942578f: grantor, "Tiger (Shifter Aspect)"
+  - ShifterAspectTigerAbility 958fcd0e2e674c72b97dea83b806eec1: level, "Tiger (Shifter 1)"
+  - ShifterAspectTigerBuff 0555960c7ab8431d86de4e7db0c22160: level, "Tiger (Shifter 9)"
+  - ShifterFeyChimeraTigerFeature 41250ca8a9ce4d019eea2663415b5a86: grantor, "Tiger (Feyform Shifter)"
+- "Tireless Rage" (2)
+  - ShifterWolverineTirelessRage e14fc59ea6774f43834e73d81138d19e: grantor, "Tireless Rage (Wolverine)"
+  - TirelessRage ca9343d75a83a2745a22fa11c383153a: grantor, "Tireless Rage (Barbarian)"
+- "Touch of Acid" (2)
+  - OracleRevelationTouchOfAcid 9333c3106d4a6c24d8f22279194aeeff: grantor, "Touch of Acid (Revelation)"
+  - ShamanStonesSpiritBaseFeature 5c3ccab7cb27f4a408531197eb2abd3f: grantor, "Touch of Acid (Stone)"
+- "Touch of Flame" (2)
+  - FlamewardenWeaponFeature 0718a2218ce5b3745bee20d8a7846946: grantor, "Touch of Flame (Flamewarden)"
+  - OracleRevelationTouchOfFlame 7551135fc3779744396b229b38dca152: grantor, "Touch of Flame (Revelation)"
+- "Tower Shield Specialist" (2)
+  - TowerShieldNegatePenalty 4808f1ac7432cbf488cf9213610acda0: bare, "Tower Shield Specialist"
+  - TowerShieldSpecialistArchetype a599da9a8a6b9e54083b0a4d2a25db59: grantor, "Tower Shield Specialist (Fighter)"
+- "Transformation" (3)
+  - BloodlineAbyssalSpellLevel6 fcf44b483ac6e5648bec808b5444f2f4: grantor, "Transformation (Abyssal Bloodline)"
+  - BloodlineSerpentineSpellLevel6 ea23d2d5188943142977f59a7321b845: grantor, "Transformation (Serpentine Bloodline)"
+  - WitchTransformationhPatronProgression 23ea5ade326f80b488164f75580c03af: grantor, "Transformation (Patron)"
+- "Trapfinding" (3)
+  - MasterSpyTrapfindingFeature d55acf213bf709c40b2bc72b997fb345: grantor, "Trapfinding (Espionage Expert)"
+  - SlayerTrapfinding e3c12938c2f93544da89824fbe0933a5: bare, "Trapfinding"
+  - Trapfinding dbb6b3bffe6db3547b31c3711653838e: grantor, "Trapfinding (Rogue)"
+- "Travel Domain" (6)
+  - TravelDomainBaseFeature 3079cdfba971d614ab4f49220c6cd228: level, "Travel Domain (level 1)"
+  - TravelDomainBaseFeatureSeparatist 2519a72bae8c4630a1bda96858d40241: grantor, "Travel Domain (Separatist)"
+  - TravelDomainProgression d169dd2de3630b749a2363c028bb6e7b: bare, "Travel Domain"
+  - TravelDomainProgressionSecondary 9dc676c4ab1d0c643bb2293696375fcf: grantor, "Travel Domain (Domain Selection)"
+  - TravelDomainProgressionSeparatist f5198dee99fe48c5bcbeefbaac0de3f6: grantor, "Travel Domain (Forbidden Rites)"
+  - TricksterLoreReligionTravelDomainFeature 1f180126ed8845dcaf5de6e1e5302a43: grantor, "Travel Domain (Lore (Religion) 2 Rank)"
+- "Trickery Domain" (6)
+  - TrickeryDomainBaseFeature cd1f4a784e0820647a34fe9bd5ffa770: level, "Trickery Domain (level 1)"
+  - TrickeryDomainBaseFeatureSeparatist 1b9ad1d739094039906abff310b4b574: grantor, "Trickery Domain (Separatist)"
+  - TrickeryDomainProgression cc2d330bb0200e840aeb79140e770198: bare, "Trickery Domain"
+  - TrickeryDomainProgressionSecondary 720cb8ed96386d24d8dfe38cad153cbd: grantor, "Trickery Domain (Domain Selection)"
+  - TrickeryDomainProgressionSeparatist 715e142cfa484b23b76e3c1813f43580: grantor, "Trickery Domain (Forbidden Rites)"
+  - TricksterLoreReligionTrickeryDomainFeature 5fd4a416ff3e4755bf5821aa68241187: grantor, "Trickery Domain (Lore (Religion) 2 Rank)"
+- "Trip" (3)
+  - ImprovedTrip 0f15c6f70d8fb2b49aa6cc24239cc5fa: bare, "Trip"
+  - OracleRevelationManeuverMasteryTrip 86f1c6ea242b6c74e81e370e4ffad4d1: grantor, "Trip (Maneuver Mastery)"
+  - OracleRevelationManeuverMasteryTripImproved fd2ff793aa20419892810845f52bd136: grantor, "Trip (Revelation)"
+- "Two-Handed Weapon" (3)
+  - RangerStyleTwoHandedSelection10 f96ad7f1fe7e62c4d8f7540d0f4c7313: override, "Two-Handed Weapon (level 10)"
+  - RangerStyleTwoHandedSelection2 f489d9f696c588d43907b879d89451be: override, "Two-Handed Weapon (level 2)"
+  - RangerStyleTwoHandedSelection6 83a4b2605333e004f875e2fd22f6be30: override, "Two-Handed Weapon (level 6)"
+- "Two-Weapon Combat" (3)
+  - RangerStyleTwoWeaponSelection10 ee907845112b8aa4e907cf326e6142a6: override, "Two-Weapon Combat (level 10)"
+  - RangerStyleTwoWeaponSelection2 019e68517c95c5447bff125b8a91c73f: override, "Two-Weapon Combat (level 2)"
+  - RangerStyleTwoWeaponSelection6 59d5445392ac62245a5ece9b01c05ee8: override, "Two-Weapon Combat (level 6)"
+- "Umbral Mind" (2)
+  - ShadowySpecialisationProgression 28222114243e496bafa3b4b9f83d9036: grantor, "Umbral Mind (Shadowcaster)"
+  - ShadowySpecialisationShadowIntelegence 38ab68e159884c97ae4160a4c798db4f: bare, "Umbral Mind"
+- "Unarmed Strike" (2)
+  - MonkUnarmedStrike c3fbeb2ffebaaa64aa38ce7a0bb18fb0: bare, "Unarmed Strike"
+  - SoheiUnarmedStrikeFeature 60e81557bac3a11458657685515c1c16: grantor, "Unarmed Strike (Sohei)"
+- "Uncanny Dodge" (2)
+  - UncannyDodge 3c08d842e802c3e4eb19d15496145709: bare, "Uncanny Dodge"
+  - UncannyDodgeChecker 8f800ed6ce8c42e8a01fd8f3e990c459: override, "Uncanny Dodge (class feature)"
+- "Undead" (3)
+  - BloodragerUndeadBloodline 9f4ea90e9b9c27c48b541dbef184b3b7: grantor, "Undead (Bloodline)"
+  - BloodragerUndeadSecondBloodline 0dae08e932ef4430b391790bdf9ab9d5: grantor, "Undead (Second Bloodrager Bloodline)"
+  - UndeadType 734a29b693e9ec346ba2951b27987e33: item, "Undead (Dead Man's Hat)"
+- "Undead Bloodline" (3)
+  - BloodlineUndeadProgression a1a8bf61cadaa4143b2d4966f2d1142e: bare, "Undead Bloodline"
+  - CrossbloodedSecondaryBloodlineUndeadProgression 618c6b173f6947843a62e0cbbed86d16: grantor, "Undead Bloodline (Secondary Bloodline)"
+  - SeekerBloodlineUndeadProgression 5bc63fdb68b539f4fa500cfb2d0fe0f6: grantor, "Undead Bloodline (Bloodline)"
+- "Undead Subdomain" (7)
+  - MurderSubdomainGreaterFeatureSeparatist 80ac76df4a1d4c12a221e7aa17b9fba7: grantor, "Undead Subdomain (Murder Subdomain)"
+  - UndeadSubdomainBaseFeature 665fabebb632402d948fbe45e03a0b86: level, "Undead Subdomain (level 1)"
+  - UndeadSubdomainBaseFeatureSeparatist 0873e3d21968486e8eed1760536242e2: grantor, "Undead Subdomain (Separatist)"
+  - UndeadSubdomainProgression 4f0332ac85174cdcb47e2d866a7948c3: bare, "Undead Subdomain"
+  - UndeadSubdomainProgressionDruid 7ab638ea6b6742149807e168c1d017d7: grantor, "Undead Subdomain (Blight Bond)"
+  - UndeadSubdomainProgressionSecondary fb3811120baf4913a296e1991469fa88: grantor, "Undead Subdomain (Domain Selection)"
+  - UndeadSubdomainProgressionSeparatist 3c9f7beebf484fb3a2e270abfb2b4d6a: grantor, "Undead Subdomain (Forbidden Rites)"
+- "Urban Hunter" (2)
+  - BackgroundRekarthDLC2 ab8136b1b9d54982a5c9faf100547483: grantor, "Urban Hunter (Background Selection)"
+  - UrbanHunterArchetype f1341c61c77092643ae63d7cb52f83f8: grantor, "Urban Hunter (Hunter)"
+- "Venomous Stare" (2)
+  - ScalykindDomainBaseFeature e22881ef284148fa972af9f521abf66d: bare, "Venomous Stare"
+  - ScalykindDomainBaseFeatureSeparatist 867fc058107b4636a4d33a7eb25f302e: grantor, "Venomous Stare (Forbidden Rites)"
+- "Volley Fire" (2)
+  - CavalierTacticianVolleyFireBuff a6298b0f87fc7694086cd8eac9d6a2aa: kind, "Volley Fire (buff)"
+  - VolleyFireFeature c4b555225f565bb40a855c1bfeeff07e: kind, "Volley Fire (feature)"
+- "Vortex Spells" (2)
+  - OracleRevelationVortexSpells cd9791a958181544a8b71346ec0722db: grantor, "Vortex Spells (Revelation)"
+  - ShamanHexVortexSpellsFeature d54e52f0e3d086f468ede43222e053e9: bare, "Vortex Spells"
+- "Wand Mastery" (2)
+  - EldritchWandMastery d88e219124a9e5d4da4908f599aef7aa: grantor, "Wand Mastery (Magus Arcana)"
+  - WandMastery 1b94043744e83494c8a083319e1602f3: bare, "Wand Mastery"
+- "Wand Wielder" (2)
+  - EldritchWandWielder 83ca7d2b7ae56354b96148caa1c3f3de: grantor, "Wand Wielder (Magus Arcana)"
+  - WandWielder 5826562b74d529e41af2d60feeca093d: bare, "Wand Wielder"
+- "Wandering Hex" (3)
+  - ShamanWanderingHexAbility e7be24dd1cf591d4baecd9578705513d: bare, "Wandering Hex"
+  - ShamanWanderingHexFeature 2674f98616188814fbba9f8fccf43564: level, "Wandering Hex (Shaman 6)"
+  - ShamanWanderingHexFeature2 f15d95a394e950a42b1d6afbb9f781d9: level, "Wandering Hex (Shaman 14)"
+- "Wandering Spirit" (7)
+  - PossessedShamanWanderingSkillsAbility c8d7c885c44d6014499119be5b464ec6: grantor, "Wandering Spirit (Wandering Skills)"
+  - ShamanWanderingSpiritAbility 709db7ec794271b43b9c416b520d765c: bare, "Wandering Spirit"
+  - ShamanWanderingSpiritFeature 70e6075a72633ba49804ccb6203fb18c: level, "Wandering Spirit (Shaman 4)"
+  - UnswornShamanWanderingSpiritAbility 1 88032ba214e97a442849ef0d15ce1485: level, "Wandering Spirit (Shaman 2)"
+  - UnswornShamanWanderingSpiritAbility 2 77e02067a4f59ba4793c79a34391a658: level, "Wandering Spirit (Shaman 6)"
+  - UnswornShamanWanderingSpiritFeature 1 4439ae8c6360cd544b69d9d80ed42d5e: level, "Wandering Spirit (Unsworn Shaman 2)"
+  - UnswornShamanWanderingSpiritFeature 2 5f4ce80c304ed374caa1683fecb0a4e0: level, "Wandering Spirit (Unsworn Shaman 6)"
+- "Wandering Witch Hex" (2)
+  - WitchWanderingHex fb8490d1721bd5a4883c3b6559310351: kind, "Wandering Witch Hex (feature)"
+  - WitchWanderingHexAbility b209beab784d93546b40a2fa2a09ffa8: kind, "Wandering Witch Hex (ability)"
+- "War Domain" (6)
+  - TricksterLoreReligionWarDomainFeature dfe432ad78914b71a79f8a772bff3ac7: grantor, "War Domain (Lore (Religion) 2 Rank)"
+  - WarDomainBaseFeature 640c20da7d6fcbc43b0d30a0a762f122: level, "War Domain (level 1)"
+  - WarDomainBaseFeatureSeparatist 08bc520f095d433ea117b1e84c81b336: grantor, "War Domain (Separatist)"
+  - WarDomainProgression 8d454cbb7f25070419a1c8eaf89b5be5: bare, "War Domain"
+  - WarDomainProgressionSecondary 2d2b61d86f93ce84f8375f9e59489072: grantor, "War Domain (Domain Selection)"
+  - WarDomainProgressionSeparatist bdb05cd7289b4c5cb90d5b517688cec9: grantor, "War Domain (Forbidden Rites)"
+- "Ward" (2)
+  - ShamanHexWardFeature 41f4d078eb70c7b4e9dc54ad0e3630fb: override, "Ward (shaman hex)"
+  - WitchHexWardFeature 4649c74487a4b7d499aed2c5b02ae89d: override, "Ward (witch hex)"
+- "Ward Against Death" (2)
+  - ReposeDomainGreaterFeature e06bfe3ad866c0e4f8a3d5516b844881: bare, "Ward Against Death"
+  - ReposeDomainGreaterFeatureSeparatist 3bcbd229a4584679bf70ea46d789d105: grantor, "Ward Against Death (Forbidden Rites)"
+- "Warding Rune" (2)
+  - RuneDomainGreaterFeature 8a2064b6e41c90e4c8a2880deccac139: bare, "Warding Rune"
+  - RuneDomainGreaterFeatureSeparatist a228512ff40e4e2abb97a0618e8d4484: grantor, "Warding Rune (Forbidden Rites)"
+- "Wasting" (5)
+  - WastingCurseFeatureLevel1 a8fc9415538caac4e9f99c5d2a88b0ca: level, "Wasting (level 1)"
+  - WastingCurseFeatureNoPenaltyLevel1 4c258169104dbc147ba88b6e574d0919: level, "Wasting (Beneficial Curse 1)"
+  - WastingCurseNoPenaltyProgression b09246c465079d142a65b55f1f5391cf: grantor, "Wasting (Beneficial Curse)"
+  - WastingCurseNoProgression e2ea9d9214674e2382cc140e057e7aaa: bare, "Wasting"
+  - WastingCurseProgression 1dddfbb862b6857478d13fcdd78911f4: grantor, "Wasting (Oracle's Curse)"
+- "Water" (5)
+  - ElementalFocusWater 7ab8947ce2e19c44a9edcf5fd1466686: grantor, "Water (Elemental Focus)"
+  - KineticKnightElementalFocusWater 5e839c743c6da6649a43cdeb70b6018f: grantor, "Water (Kinetic Knight)"
+  - SecondaryElementWater faa5f1233600d864fa998bc0afe351ab: level, "Water (Kineticist 7)"
+  - ThirdElementWater 86eff374d040404438ad97fedd7218bc: level, "Water (Kineticist 15)"
+  - WaterBlessingFeature 0f457943bb99f9b48b709c90bfc0467e: grantor, "Water (Blessings)"
+- "Water Blast" (2)
+  - WaterBlastProgression e4027e0fec48e8048a172c6627d4eba9: bare, "Water Blast"
+  - WaterBlastSelection 53a8c2f3543147b4d913c6de0c57c7e8: grantor, "Water Blast (Water)"
+- "Water Domain" (7)
+  - TricksterLoreReligionWaterDomainFeature ada9e60ddd4a40e9a73a03034482b84f: grantor, "Water Domain (Lore (Religion) 2 Rank)"
+  - WaterDomainBaseFeature 4c21ad24f55f64d4fb722f40720d9ab0: level, "Water Domain (level 1)"
+  - WaterDomainBaseFeatureSeparatist 734dbc09248e4b668028e9439ecf8ab7: grantor, "Water Domain (Separatist)"
+  - WaterDomainProgression e63d9133cebf2cf4788e61432a939084: bare, "Water Domain"
+  - WaterDomainProgressionDruid e48425d6fdafdba449beec54fe158339: grantor, "Water Domain (Druid)"
+  - WaterDomainProgressionSecondary f05fb4f417465f94fb1b4d6c48ea42cf: grantor, "Water Domain (Domain Selection)"
+  - WaterDomainProgressionSeparatist 2192e09ff3334894b4884b7977fd2b4d: grantor, "Water Domain (Forbidden Rites)"
+- "Waves" (7)
+  - DivineHerbalistWavesMysteryFeature d91dcec40f768ea47b45bb4c4b2af40d: override, "Waves (Divine Herbalist)"
+  - EnlightenedPhilosopherWavesMysteryFeature 1267082c536549c4c86f0725b6eea627: override, "Waves (Enlightened Philosopher)"
+  - OracleWavesMysteryFeature e2f8bd7c45dfb954c8c42b168505c783: bare, "Waves"
+  - ShamanWavesSpiritProgression 2196e093593903f4ebc36467ccbf1d9a: kind, "Waves (progression)"
+  - ShamanWavesSpiritWanderingFeature 9d7c85f90f9d34845bd80ac09b34938c: level, "Waves (Shaman 4)"
+  - UnswornShamanWavesSpiritWanderingFeature 1 e3b9b5159b1252342a6d40520623a6c9: level, "Waves (Unsworn Shaman 2)"
+  - UnswornShamanWavesSpiritWanderingFeature 2 2d7b0da52c1143b46992f870c46e879b: level, "Waves (Unsworn Shaman 6)"
+- "Weapon Focus" (3)
+  - LichSkeletalWeaponParametrized 90f171fadf81f164d9828ce05441e617: grantor, "Weapon Focus (Skeleton Upgrade Selection)"
+  - LichSkeletalWeaponSelection f832862da7f07dd4eba342a27451c3a8: grantor, "Weapon Focus (Skeletal Fighter I)"
+  - WeaponFocus 1e1f627d26ad36f43bbd26cc2bf8ac7e: bare, "Weapon Focus"
+- "Weapon Mastery" (4)
+  - OracleRevelationWeaponMastery 0a4c3556355747241b2d3dcc0a88ec10: grantor, "Weapon Mastery (Revelation)"
+  - SwordSaintWeaponMastery 5b31af13868166d4c9bb452f19277f19: grantor, "Weapon Mastery (Sword Saint)"
+  - WeaponMasteryParametrized 38ae5ac04463a8947b7c06a6c72dd6bb: bare, "Weapon Mastery"
+  - WeaponMasterySelection 55f516d7d1fc5294aba352a5a1c92786: grantor, "Weapon Mastery (Fighter)"
+- "Weapon Training" (7)
+  - DIscipleOfThePikeWeaponTrainingSelection bc050eac79b34d4abf63e2f1152badad: grantor, "Weapon Training (Disciple of the Pike)"
+  - LichSkeletalWeaponTrainingSelection ce56b6dce7ea48d08eb30a6d345d953a: grantor, "Weapon Training (Skeletal Fighter I)"
+  - LichSkeletalWeaponTrainingtParametrized bc4cc2147809483fbb195841b8567127: grantor, "Weapon Training (Skeleton Upgrade Selection)"
+  - SoheiWeaponRankUpTrainingSelection bcb63879905b4b00b44b6309d137935e: level, "Weapon Training (Sohei 12)"
+  - SoheiWeaponTrainingSelection 5f08ae15929f02341a3f328449d443f3: level, "Weapon Training (Sohei 6)"
+  - WeaponTrainingRankUpSelection 5f3cc7b9a46b880448275763fe70c0b0: level, "Weapon Training (Fighter 9)"
+  - WeaponTrainingSelection b8cecf4e5e464ad41b79d5b42b76b399: level, "Weapon Training (Fighter 5)"
+- "Weapon and Armor Proficiency" (9)
+  - CavalierProficiencies 0a0f032ccfe411d4d86b298da4657e58: grantor, "Weapon and Armor Proficiency (Cavalier)"
+  - CultLeaderWeaponProficiencies c12afa02355cd8142981980d37a77556: grantor, "Weapon and Armor Proficiency (Cult Leader)"
+  - HellknightSigniferProficiency 45e620a5821d8a44fa65a212c23a0d4e: grantor, "Weapon and Armor Proficiency (Hellknight Signifer)"
+  - HunterProficiencies 873f1f12bb43cda40bcc7d2878d16bf1: grantor, "Weapon and Armor Proficiency (Hunter)"
+  - KineticistProficiencies 31ad04e4c767f5d4b96c13a71fd7ff15: grantor, "Weapon and Armor Proficiency (Kineticist)"
+  - MantisZealotProficiencies 4cea744f5eb84a6385c269b1da1da523: grantor, "Weapon and Armor Proficiency (Mantis Zealot)"
+  - SkaldProficiencies 64e3e3fb96c439b4f8d896339b2f358a: grantor, "Weapon and Armor Proficiency (Skald)"
+  - SoheiProficiencies f267aefc13507d342909a66183a5292e: grantor, "Weapon and Armor Proficiency (Sohei)"
+  - SteelbloodArmorProficiency 86cb0c8eacd562e469375cef71698f9b: grantor, "Weapon and Armor Proficiency (Steelblood)"
+- "Weapon and Shield" (3)
+  - RangerStyleShieldSelection10 b2e73b554839a314a8c716dbf33fcfc3: override, "Weapon and Shield (level 10)"
+  - RangerStyleShieldSelection2 2d54cc761ab82604f93d82b4b358cf7e: override, "Weapon and Shield (level 2)"
+  - RangerStyleShieldSelection6 10d8245011456224cb6358f640364e26: override, "Weapon and Shield (level 6)"
+- "Weather Domain" (7)
+  - TricksterLoreReligionWeatherDomainFeature 41947e0523ff4eae8236729551a40605: grantor, "Weather Domain (Lore (Religion) 2 Rank)"
+  - WeatherDomainBaseFeature 1c37869ee06ca33459f16f23f4969e7d: level, "Weather Domain (level 1)"
+  - WeatherDomainBaseFeatureSeparatist 0ed9a7e2d3844d96b75a7f00304fdbd3: grantor, "Weather Domain (Separatist)"
+  - WeatherDomainProgression c18a821ee662db0439fb873165da25be: bare, "Weather Domain"
+  - WeatherDomainProgressionDruid 4a3516fdc4cda764ebd1279b22d10205: grantor, "Weather Domain (Druid)"
+  - WeatherDomainProgressionSecondary d124d29c7c96fc345943dd17e24990e8: grantor, "Weather Domain (Domain Selection)"
+  - WeatherDomainProgressionSeparatist 42828a56014b49d889a58220d85dfb83: grantor, "Weather Domain (Forbidden Rites)"
+- "Well-Versed" (2)
+  - BardWellVersed 8f4060852a4c8604290037365155662f: grantor, "Well-Versed (Bard)"
+  - SkaldWellVersed 17e1dede01c763a439852a1d0d8014c7: grantor, "Well-Versed (Skald)"
+- "Wild Shape (Bear)" (2)
+  - FeralChampnionWildShapeIVBearFeature 0d1d0aa3da5e6b848b08503389dd30b6: grantor, "Wild Shape (Bear) (Feral Champion)"
+  - WildShapeIVBearFeature 1368c7ce69702444893af5ffd3226e19: grantor, "Wild Shape (Bear) (Druid)"
+- "Wild Shape (Leopard)" (2)
+  - FeralChampnionWildShapeIILeopardFeature 6727cf53d94d2d949bff4ecaade78dca: grantor, "Wild Shape (Leopard) (Feral Champion)"
+  - WildShapeIILeopardFeature c4d651bc0d4eabd41b08ee81bfe701d8: grantor, "Wild Shape (Leopard) (Druid)"
+- "Wild Shape (Smilodon)" (2)
+  - FeralChampnionWildShapeIIISmilodonFeature f5ddaa7f64e19a140af8ef9702094094: grantor, "Wild Shape (Smilodon) (Feral Champion)"
+  - WildShapeIIISmilodonFeature 253c0c0d00e50a24797445f20af52dc8: grantor, "Wild Shape (Smilodon) (Druid)"
+- "Wild Shape (Wolf)" (2)
+  - FeralChampnionWildShapeIWolfFeature 1b60050091002ad458bd49788e84f13a: grantor, "Wild Shape (Wolf) (Feral Champion)"
+  - WildShapeIWolfFeature 19bb148cb92db224abb431642d10efeb: grantor, "Wild Shape (Wolf) (Druid)"
+- "Wind" (7)
+  - DivineHerbalistWindMysteryFeature 4fb980ffe85793b4194b11d3adb70d9e: override, "Wind (Divine Herbalist)"
+  - EnlightenedPhilosopherWindMysteryFeature 3812dcb2fe59ecd449285391db677edc: override, "Wind (Enlightened Philosopher)"
+  - OracleWindMysteryFeature 7c1fdd831af747b47bb2cce0051f309b: bare, "Wind"
+  - ShamanWindSpiritProgression eae7cee2a5da93442a7563dfeda33432: kind, "Wind (progression)"
+  - ShamanWindSpiritWanderingFeature cc05b2fff3e20c64e968f490a5160c08: level, "Wind (Shaman 4)"
+  - UnswornShamanWindSpiritWanderingFeature 1 5e9efa38d26775d4e9af931b9ecde7c3: level, "Wind (Unsworn Shaman 2)"
+  - UnswornShamanWindSpiritWanderingFeature 2 67a47a69e1da8ec499873b657622e6a0: level, "Wind (Unsworn Shaman 6)"
+- "Wings" (16)
+  - DragonDiscipleFormFeatureWings aa36f82ab9a046c4a853dccf0cdbaf53: grantor, "Wings (Dragon Disciple)"
+  - FeatureWingsAngel d9bd0fde6deb2e44a93268f2dfb3e169: prerequisite, "Wings (Aasimar)"
+  - FeatureWingsAngelSorcerer 894d21ff523481d49a51ab1750fca3a0: override, "Wings (Celestial Bloodline or Empyreal Bloodline)"
+  - FeatureWingsDemon 36db25d9e0848f04da604ff9e3d931af: override, "Wings (Abyssal Bloodline or Demon)"
+  - FeatureWingsDevil 85243106886a0384380d5b5f04046909: override, "Wings (Infernal Bloodline or Devil)"
+  - FeatureWingsDraconicBlack e0bdad79800cbfd40afdbe7fdec2441e: override, "Wings (black dragon)"
+  - FeatureWingsDraconicBlue 5f2ab9f9940b8324d9965087ea34cc66: override, "Wings (blue dragon)"
+  - FeatureWingsDraconicBrass f3f88c3dbf45d8c43ae82ed85e9a430e: override, "Wings (brass dragon)"
+  - FeatureWingsDraconicBronze ed71d51317d79d24ebe172cd9107e695: override, "Wings (bronze dragon)"
+  - FeatureWingsDraconicCopper 0d42c3500717d294886409527b211d3b: override, "Wings (copper dragon)"
+  - FeatureWingsDraconicGold 6929bac6c67ae194c8c8446e3d593953: override, "Wings (gold dragon)"
+  - FeatureWingsDraconicGreen 0daa7635fbdf4d44e96c6880b3baf8c7: override, "Wings (green dragon)"
+  - FeatureWingsDraconicRed df86a121e5d1bd04b8afdbaf8d24a1ce: override, "Wings (red dragon)"
+  - FeatureWingsDraconicSilver 0080e2cf464f67143809ed0f96ddd1f7: override, "Wings (silver dragon)"
+  - FeatureWingsDraconicWhite 9730cfba8da6b144aa9094196df93a56: override, "Wings (white dragon)"
+  - ShifterFeyWingsFeature e61c86be52ef44b7a95cf81cd2f5da15: grantor, "Wings (Fey Aspect)"
+- "Witch" (4)
+  - LoremasterClericSecretWitch d6d21b17d77e5d14ea15ce9bd22c80aa: grantor, "Witch (Cleric Spell)"
+  - LoremasterDruidSecretWitch 32392efe253dffa43b34fd9d1185eb59: grantor, "Witch (Druid Spell)"
+  - LoremasterWizardSecretWitch 6d7d4acede258984b8633d9b00d53877: grantor, "Witch (Wizard Spell)"
+  - WitchClass 1b9873f1e7bfe5449bc84d03e9c8e3cc: bare, "Witch"
+- "Wizard" (4)
+  - LoremasterClericSecretWizard 58f5725a418383f418489cf330b737d5: grantor, "Wizard (Cleric Spell)"
+  - LoremasterDruidSecretWizard 7d43568733326b547928e1ba1e0c8f14: grantor, "Wizard (Druid Spell)"
+  - LoremasterWizardSecretWizard d0e31ebe24d95694a804e84d4d02bf25: grantor, "Wizard (Wizard Spell)"
+  - WizardClass ba34257984f4c41408ce1dc2004e342e: bare, "Wizard"
+- "Wolf" (4)
+  - ShifterAspectWolf ddf5d65742c842d79f74ac0d5cfbedf5: grantor, "Wolf (Shifter Aspect)"
+  - ShifterAspectWolfAbility 2ec2c06d00574e6795c48cb65e17cb52: level, "Wolf (Shifter 1)"
+  - ShifterAspectWolfBuff d61bd26255d4425d929d73e57ef0e6dd: level, "Wolf (Shifter 9)"
+  - ShifterFeyChimeraWolfFeature f3563014b21c4414a5dfd2b81df5aeb6: grantor, "Wolf (Feyform Shifter)"
+- "Wolf-Scarred Face" (6)
+  - WolfScarredFaceCurseFeatureLevel1 54958e9d7fd415847bb99ba34ad56642: level, "Wolf-Scarred Face (Oracle's Curse 1)"
+  - WolfScarredFaceCurseFeatureLevel1NoProgression 3719895b1519447b8bb65428351507ba: level, "Wolf-Scarred Face (level 1)"
+  - WolfScarredFaceCurseNoPenaltyFeatureLevel1 15bd713e24004853afa0079abcb496ab: level, "Wolf-Scarred Face (Beneficial Curse 1)"
+  - WolfScarredFaceCurseNoPenaltyProgression b6c775555bade694e8b8c7e82c7a71fb: grantor, "Wolf-Scarred Face (Beneficial Curse)"
+  - WolfScarredFaceCurseNoProgression 5028b6e5c8714e08af161c98a5fde6b2: bare, "Wolf-Scarred Face"
+  - WolfScarredFaceCurseProgression e8a1096467696d14288079c6393bb58c: grantor, "Wolf-Scarred Face (Oracle's Curse)"
+- "Wolverine" (5)
+  - ShifterAspectWolverine bb8958efd9df41869a0f4c7a3ada92cf: level, "Wolverine (level 1)"
+  - ShifterAspectWolverineAbility 28471f7cdf854170a1bdd8facbb2f054: bare, "Wolverine"
+  - ShifterAspectWolverineBuff e0b35a32cf234381ab13c831106937f1: level, "Wolverine (Shifter 9)"
+  - ShifterFeyChimeraWolverineFeature 86763af06631409881d9313fae171113: grantor, "Wolverine (Feyform Shifter)"
+  - ShifterWolverineProgression 4fc5f64d13ce4c0e8258a83ff63c50af: grantor, "Wolverine (Shifter Aspect)"
+- "Woodland Stride" (3)
+  - BloodlineFeyWoodlandStride 11f4072ea766a5840a46e6660894527d: bare, "Woodland Stride"
+  - DruidWoodlandStride 4c1419ef6cfc430a9071405788da4a73: grantor, "Woodland Stride (Druid)"
+  - HunterWoodlandStride 2efe5983c9064cc6b55f16bc68f0fc33: grantor, "Woodland Stride (Hunter)"
+- "Wrack" (2)
+  - BloodKineticistWrackFeature 9e7f94f8d42a74240b9329f5e68121ee: grantor, "Wrack (Blood Kineticist)"
+  - HellknightDisciplineWrackFeature 813d9df0462ac8f43bcc4fb9e528659e: grantor, "Wrack (Disciplines)"
+- "Wyrmshifter" (4)
+  - ShifterDragonFormFeature d8e9d249a426400bb47fefa6d0158049: grantor, "Wyrmshifter (Dragonblood Shifter)"
+  - ShifterDragonFormFeature9Evil 94be432b7f80427b955db7b354274b2c: override, "Wyrmshifter (Chromatic)"
+  - ShifterDragonFormFeature9Good a95cf8129b1a4741a2a7cf1eb011b21e: override, "Wyrmshifter (Metallic)"
+  - ShifterDragonFormFeature9Neutral 7ef78403a4004f1aaec7b5d150cc76c7: override, "Wyrmshifter (Universal)"
+- "Zen Archer Bonus Feat" (3)
+  - ZenArcherBonusFeatSelectionLevel1 69255e0ec330ee94b9593dfabf8f7c09: level, "Zen Archer Bonus Feat (Zen Archer 1)"
+  - ZenArcherBonusFeatSelectionLevel10 15e623d9dba4e314aa0649e4f61e132b: level, "Zen Archer Bonus Feat (Zen Archer 10)"
+  - ZenArcherBonusFeatSelectionLevel6 2a1eec5b782182f4cafbd20fcd069692: level, "Zen Archer Bonus Feat (Zen Archer 6)"
+- "Zone of Sanctification" (4)
+  - ProclaimerZoneOfSanctification10FeetFeatureLimit 90c3821c0fbc4644b9855580b16052e2: level, "Zone of Sanctification (Proclaimer 7)"
+  - ProclaimerZoneOfSanctification15FeetFeatureLimit 723a3c89c44901c4191a92f6e1693a8b: level, "Zone of Sanctification (Proclaimer 13)"
+  - ProclaimerZoneOfSanctification20FeetFeatureLimit 25d0c15a1b8f94d4bb137fda7a3e293d: level, "Zone of Sanctification (Proclaimer 19)"
+  - ProclaimerZoneOfSanctification5FeetFeatureLimit e400dd6aaef906f46bbddd6667996e0a: level, "Zone of Sanctification (Proclaimer 4)"
+
+## Shared Gear names
+
+111 display names are shared by 473 items a Build can equip. Twins collapse into
+one choice (the loader derives them: `CheckedData.twins`); each other item is qualified by the first rule that
+tells it apart (map ticket 29); one in a group may stay bare. Items settled, by rule:
+
+- twin: 39
+- restriction: 9
+- slot: 76
+- type: 90
+- enhancement: 6
+- type and enhancement: 159
+- override: 33
+- bare: 61
+- open: 0
+
+### Every group
+
+Each item with the rule that settled it and its written name; a twin names the item offered for it.
+
+- "Adamantine Breastplate +3" (2)
+  - AdamantineBreastplatePlus3 8b4085ffcf2c1984fa7500f9da06214a: bare, "Adamantine Breastplate +3"
+  - AdamantineBreastplateStandartPlus3_Hellknight 8b9427d9406042e1bf31f803d6619bcf: twin, "Adamantine Breastplate +3", offered as AdamantineBreastplatePlus3 8b4085ffcf2c1984fa7500f9da06214a
+- "Adamantine Full Plate +2" (2)
+  - AdamantineFullplateStandartPlus2_Hellknight 29f9eb542c9985f4b904add8d843caf1: bare, "Adamantine Full Plate +2"
+  - AdamantineFullplateStandartPlus2 b067c338ede1bfc45be97d2d9ab934e8: twin, "Adamantine Full Plate +2", offered as AdamantineFullplateStandartPlus2_Hellknight 29f9eb542c9985f4b904add8d843caf1
+- "Adamantine Full Plate +3" (2)
+  - AdamantineFullplateStandartPlus3_Hellknight 421577e21cdf4051b90a77f05c30b35e: bare, "Adamantine Full Plate +3"
+  - AdamantineFullplateStandartPlus3 9404338472b5b8b4c9013cb8dcf74b7e: twin, "Adamantine Full Plate +3", offered as AdamantineFullplateStandartPlus3_Hellknight 421577e21cdf4051b90a77f05c30b35e
+- "Adamantine Full Plate +4" (2)
+  - AdamantineFullplateStandartPlus4_UseThisOne 0dab0f3855529264aa53e748735cdd0a: bare, "Adamantine Full Plate +4"
+  - AdamantineFullplateStandartPlus4_Hellknight 29174f14508c40b9bbbf8fc1fe1730c6: twin, "Adamantine Full Plate +4", offered as AdamantineFullplateStandartPlus4_UseThisOne 0dab0f3855529264aa53e748735cdd0a
+- "Ancestral Retribution" (3)
+  - PortalStoneStanceRingItem 0603e6ed25543054c995b516ad75de51: slot, "Ancestral Retribution (ring)"
+  - PortalStoneStanceHeadbandItem 37f12d7427858f5428f4143402b81279: slot, "Ancestral Retribution (head)"
+  - PortalStoneStanceSaiItem 8aad5b82266bbce4b8c4c952f00e1bfa: slot, "Ancestral Retribution (weapon)"
+- "Banded Mail +3" (2)
+  - BandedStandartPlus3 2a38ff515dc63854798edb397eeeb046: bare, "Banded Mail +3"
+  - AsziteBandedStandardPlus3 ec22ba6e1b574ac696af44db65216e65: override, "Banded Mail +3 (aszite)"
+- "Banded Mail +4" (2)
+  - BandedStandartPlus4 b4c6b4912b755ff49afb55357c329cbf: bare, "Banded Mail +4"
+  - AsziteBandedStandardPlus4 c9c5e1f26b1b4d06b504a516e17a799e: override, "Banded Mail +4 (aszite)"
+- "Bane of Flesh" (2)
+  - BrokenPhylacteryBodyScytheItem c9d5b614aadc5ea4a8958e4df2ecda38: slot, "Bane of Flesh (weapon)"
+  - BrokenPhylacteryBodyRingItem e99cdec7b56a0b4448e88d5326fe7921: slot, "Bane of Flesh (ring)"
+- "Bane of Spirit" (2)
+  - BrokenPhylacterySoulRingItem 29c12c43b02e5ad41895388d47bf4efb: slot, "Bane of Spirit (ring)"
+  - BrokenPhylacterySoulScytheItem 37b04b03f5e49bf48b4d012e04194801: slot, "Bane of Spirit (weapon)"
+- "Bellowing Howl" (2)
+  - GowrowSonicSpikedLightShieldItem 67bf27804a830c84ca0b592c38759cfd: slot, "Bellowing Howl (shield)"
+  - GowrowSonicShortspearItem e0fee8a84167be042993acc1a35761de: slot, "Bellowing Howl (weapon)"
+- "Bone Amulet" (2)
+  - BoneAmuletItem 08de14e8676f56347b1d57e79fb48bd0: bare, "Bone Amulet"
+  - CameliaAmuletItem 94b2b8b9ef254344cbc71663fecf8b99: override, "Bone Amulet (Camellia)"
+- "Breastplate +1" (2)
+  - BreastplateStandartPlus1 5041415db3e6c394a8b2173c39fd4ec4: bare, "Breastplate +1"
+  - BreastplateStandartPlus1_HellknightArmiger 7dfdb9b2655b4b35b0eb6578104844d4: twin, "Breastplate +1", offered as BreastplateStandartPlus1 5041415db3e6c394a8b2173c39fd4ec4
+- "Breastplate +3" (3)
+  - BreastplateStandartPlus3__HellknightArmiger 393d145fe2d8437b8cab49ffc17ebfdf: bare, "Breastplate +3"
+  - BreastplateStandartPlus3 a7a2500acce8faf46b6ecb79ec05691e: twin, "Breastplate +3", offered as BreastplateStandartPlus3__HellknightArmiger 393d145fe2d8437b8cab49ffc17ebfdf
+  - AsziteBreastplateStandartPlus3 d3712e7e176f42bcac114ee606475b81: override, "Breastplate +3 (aszite)"
+- "Breastplate +4" (2)
+  - AsziteBreastplateStandartPlus4 84a2cc4aa928493087dcfa158b3f9d98: override, "Breastplate +4 (aszite)"
+  - BreastplateStandartPlus4 a2e198d62e0285a4abe5085b3c8bdf46: bare, "Breastplate +4"
+- "Buckler +3" (2)
+  - AsziteBucklerItemPlus3 48c1a9cbd64944ee9474f6581ba01eb0: bare, "Buckler +3"
+  - BucklerItemPlus3 9552d3843ff7b4140a8cf04b753848eb: twin, "Buckler +3", offered as AsziteBucklerItemPlus3 48c1a9cbd64944ee9474f6581ba01eb0
+- "Buckler +4" (2)
+  - AsziteBucklerItemPlus4 85a55ba689e148edb9cbafa89f1e89f8: bare, "Buckler +4"
+  - BucklerItemPlus4 c7c5ff1f7c5800f44b51fade5f183655: twin, "Buckler +4", offered as AsziteBucklerItemPlus4 85a55ba689e148edb9cbafa89f1e89f8
+- "Call of the Fiery Things" (2)
+  - BaphometFireCloth_AnimalisticFireItem 7453858a493f49239b7c99657c80df58: slot, "Call of the Fiery Things (shirt)"
+  - BaphometFireGloves_AnimalisticFireItem 8706dcd7a22541b1838acdb50a636c70: slot, "Call of the Fiery Things (gloves)"
+- "Chainmail +3" (2)
+  - ChainmailStandartPlus3 22c16b38998ebf342acdccba4f55a3b6: bare, "Chainmail +3"
+  - AsziteChainmailStandartPlus3 62eb53e87fdd4c0cbad1636820e292c6: override, "Chainmail +3 (aszite)"
+- "Chainmail +4" (2)
+  - ChainmailStandartPlus4 0eccea9793a6b114ab321c76e95fe7e7: bare, "Chainmail +4"
+  - AsziteChainmailStandartPlus4 343eb5b843b14e9e8f1cdcb14872a511: override, "Chainmail +4 (aszite)"
+- "Chainmail Barding +3" (2)
+  - AsziteChainmailBardingStandardPlus3 476630c318694184a24b4ed2841ac445: override, "Chainmail Barding +3 (aszite)"
+  - ChainmailBardingStandartPlus3 9962ccff122276e40b8f28c0127ad4b3: bare, "Chainmail Barding +3"
+- "Chainmail Barding +4" (2)
+  - AsziteChainmailBardingStandardPlus4 667bfcfe6ac645b3ae00760aea508a0f: override, "Chainmail Barding +4 (aszite)"
+  - ChainmailBardingStandartPlus4 ab5872087af668e45823dae34255233b: bare, "Chainmail Barding +4"
+- "Chainshirt +3" (2)
+  - ChainshirtStandartPlus3 19144cbc80e7cb84aa53692a7ddf5ba6: bare, "Chainshirt +3"
+  - AsziteChainshirtStandartPlus3 bf1928b0e1c64b2d9b447fd4b78eb1ab: override, "Chainshirt +3 (aszite)"
+- "Chainshirt +4" (2)
+  - AsziteChainshirtStandartPlus4 741e5ae153c440e6b41ff9da3a27685a: override, "Chainshirt +4 (aszite)"
+  - ChainshirtStandartPlus4 e50f247de0697b041b77ace217d1c795: bare, "Chainshirt +4"
+- "Chainshirt Barding +3" (2)
+  - ChainshirtBardingStandartPlus3 6baae08075c23344bb15d14354d00565: bare, "Chainshirt Barding +3"
+  - AsziteChainshirtBardingStandardPlus3 b89b302cd157445ea315b5b1148e12e5: override, "Chainshirt Barding +3 (aszite)"
+- "Chainshirt Barding +4" (2)
+  - AsziteChainshirtBardingStandardPlus4 391efb43a4e74422b6f234e7e9c8a73c: override, "Chainshirt Barding +4 (aszite)"
+  - ChainshirtBardingStandartPlus4 9a1438068b1046644bb7fc62f530bca4: bare, "Chainshirt Barding +4"
+- "Cinder Goggles" (3)
+  - CinderGogglesItem 7e8fdec022c503a4ab8feddd08a712c9: bare, "Cinder Goggles"
+  - MephistophelesGogglesItemCorrect f22670905bc245238e86fd59da07616a: twin, "Cinder Goggles", offered as CinderGogglesItem 7e8fdec022c503a4ab8feddd08a712c9
+  - MephistophelesGogglesItem fd724c344be64719a700bc0426e64484: twin, "Cinder Goggles", offered as CinderGogglesItem 7e8fdec022c503a4ab8feddd08a712c9
+- "Clemency of Shadows" (3)
+  - PortalStoneSpiderSaiItem 829aba5a56615aa4ab12a7528833f8d0: slot, "Clemency of Shadows (weapon)"
+  - PortalStoneSpiderHeadbandItem 881b1782496145a49a1d7747d2a7c11b: slot, "Clemency of Shadows (head)"
+  - PortalStoneSpiderRingItem b2374fa6162e1f54c83b3f02af487a76: slot, "Clemency of Shadows (ring)"
+- "Cold Iron Dwarven Waraxe" (2)
+  - ColdIronDwarvenWaraxe 2c1665f62069e7f4581599cb04ba440e: bare, "Cold Iron Dwarven Waraxe"
+  - ColdIronMasterworkDwarvenWaraxe 3fd30003d9a4a5d4eb05ddb6eeb7c902: twin, "Cold Iron Dwarven Waraxe", offered as ColdIronDwarvenWaraxe 2c1665f62069e7f4581599cb04ba440e
+- "Cold Iron Masterwork Longsword" (2)
+  - MasterworkColdIronLongsword a11ec024bc460ab43803f3ac8ef374cb: bare, "Cold Iron Masterwork Longsword"
+  - ColdIronMasterworkLongsword d5ef11b6d5ac0624ca73b7bbbd817f74: twin, "Cold Iron Masterwork Longsword", offered as MasterworkColdIronLongsword a11ec024bc460ab43803f3ac8ef374cb
+- "Coldbite" (2)
+  - GowrowAquaticSpikedLightShieldItem 3e8133cca215cd14ab36efc71c7ec2e6: slot, "Coldbite (shield)"
+  - GowrowAquaticShortspearItem e5b2c8653720368479f026b002158e17: slot, "Coldbite (weapon)"
+- "Conthyr's Wisdom" (2)
+  - ZeorisDaggerHeadband_BetrayalItem 23c2b6daf43d40afbd3ed2f25509a36d: slot, "Conthyr's Wisdom (head)"
+  - ZeorisDaggerRing_Betrayal 50f28e3830734174aa9b355c737d3e08: slot, "Conthyr's Wisdom (ring)"
+- "Corrosive Light Hammer +2" (2)
+  - CorrosiveLightHammerPlus2Item d0a9721d027e7ce4e8d63639b12c77db: bare, "Corrosive Light Hammer +2"
+  - LightHammerCorrosivePlus2 d88dfb01df6a2964b866b01638c14f92: twin, "Corrosive Light Hammer +2", offered as CorrosiveLightHammerPlus2Item d0a9721d027e7ce4e8d63639b12c77db
+- "Craving Maw" (2)
+  - ChimeraRoughPowerFlailItem 472ac0ac346ea604a8207372710af1d7: type, "Craving Maw (Flail)"
+  - ChimeraRoughPowerClubItem 54a610357a883654c9046156de001abe: type, "Craving Maw (Club)"
+- "Dark Master's Robe" (2)
+  - DarkMastersRobeItemShirt 62d2df6b7f534378b3492a4d2f78889d: slot, "Dark Master's Robe (shirt)"
+  - DarkMastersRobeItem 987c0cf4f89acd64eb984e29a383d630: slot, "Dark Master's Robe (armor)"
+- "Dawnflower's Kiss" (4)
+  - DawnflowersKiss_Basic_Scimitar 4ca4986b49b01954997f37c24c98d1f3: bare, "Dawnflower's Kiss"
+  - DawnflowersKiss_Evil_Scimitar 654fbcf89618c4d46a784f3db98e8282: override, "Dawnflower's Kiss (evil)"
+  - DawnflowersKiss_Good_Scimitar 68f6f11c28909314fbe40c96ab0d4bc2: twin, "Dawnflower's Kiss", offered as DawnflowersKiss_Basic_Scimitar 4ca4986b49b01954997f37c24c98d1f3
+  - DawnflowersKiss_Good02_Scimitar 90c5017c761d4f92bd2198e944766969: override, "Dawnflower's Kiss (good)"
+- "Dead Bough" (2)
+  - MapWoundBardicheItem 68cfee28137f0794d914abb1ab4c03dd: type, "Dead Bough (Bardiche)"
+  - MapWoundHeavyPickItem f646018df65ce1a4d9b4646706740bed: type, "Dead Bough (Heavy Pick)"
+- "Death's Consonant" (2)
+  - MapPlaningBardicheItem 764e3e64021900f4fb014e6630a8e775: type, "Death's Consonant (Bardiche)"
+  - MapPlaningHeavyPickItem bd579ca12da96334b92894c8c0d19595: type, "Death's Consonant (Heavy Pick)"
+- "Devouring Lust" (2)
+  - AmberLustGlovesItem d3622c4bb0fb743409c673243921452f: slot, "Devouring Lust (gloves)"
+  - AmberLustLightCrossbowItem ddd930462aea5454bad2ba2d63e14f74: slot, "Devouring Lust (weapon)"
+- "Embrace of the Faceless" (2)
+  - OldEarthSandBeltItem 1cd4f9cd28dbda641bd76a058ad4c7bd: slot, "Embrace of the Faceless (belt)"
+  - OldEarthSandAmuletItem 268815ce58edc3a48856cf8a0f145b17: slot, "Embrace of the Faceless (neck)"
+- "Executioner of Evil" (3)
+  - RovagugRelicGrasshopperGreataxeItem 0a002cb050a084a4da9d2c83ecb62847: type, "Executioner of Evil (Greataxe)"
+  - RovagugRelicGrasshopperHandaxeItem 87f84ad210f27264fa7b7465e43e0348: type, "Executioner of Evil (Handaxe)"
+  - RovagugRelicGrasshopperBattlaxeItem 8fa0e2f75519e36429b045c19f56d43c: type, "Executioner of Evil (Battleaxe)"
+- "Finger of the Heiress" (2)
+  - MapFormationBardicheItem 559088bb334d8d141ba00b2268115d95: type, "Finger of the Heiress (Bardiche)"
+  - MapFormationHeavyPickItem 934941fdd98438c41a50675e447910a6: type, "Finger of the Heiress (Heavy Pick)"
+- "Finnean" (58)
+  - FinneanEarthBreakerStage3Lich 0390883cb0c75b44aa995a21b4af2c98: type, "Finnean (Earth Breaker)"
+  - FinneanDartStage3Lich 053d7d3280b50c14d8d7994a5aad894a: type, "Finnean (Dart)"
+  - FinneanHandaxeStage3Lich 071e5cebcc46aed49a1af79c1a2c0d1b: type, "Finnean (Handaxe)"
+  - FinneanDuelingSwordStage3Lich 0bd93265c5a13c34ca7c86d39eb4fa9c: type, "Finnean (Dueling Sword)"
+  - FinneanRapierStage3Lich 10cc7b3520979f340abe4ceddbff0e06: type, "Finnean (Rapier)"
+  - FinneanScimitarStage3Lich 128fcd7a32c135f448c87a21fc447b7e: type, "Finnean (Scimitar)"
+  - FinneanSickleStage3Lich 18ab629f27cceb941974f72111d7734e: type, "Finnean (Sickle)"
+  - FinneanClubStage3Lich 1ca2a4735b4a4e045b288efd2f6b0bad: type, "Finnean (Club)"
+  - FinneanDaggerStage3Lich 1ea51ba3d4927bf49ac598a11c67686a: type, "Finnean (Dagger)"
+  - FinneanEstocStage3Lich 1ffa471e532a6d047b3b7f26ac8e9438: type, "Finnean (Estoc)"
+  - FinneanLightHammerStage3Lich 287cc38d483282348b98aef1acb44402: type, "Finnean (Light Hammer)"
+  - FinneanElvenCurvedBladeStage3Lich 2d0c4d077c924e8cb922891f9d3ccd8d: type, "Finnean (Elven Curve Blade)"
+  - FinneanScytheStage3Lich 323f83256ae6cb946ba7fea1ca47b683: type, "Finnean (Scythe)"
+  - FinneanFlailStage3Lich 37e7182023c29634b85bd1542a5e65c9: type, "Finnean (Flail)"
+  - FinneanBattleaxeStage3Lich 3974d3dac1a02a046810b2d413a166eb: type, "Finnean (Battleaxe)"
+  - FinneanDwarvenWaraxeStage3Lich 3c6ae4ccbd163274094bcb9abfefc4f3: type, "Finnean (Dwarven Waraxe)"
+  - FinneanSoullessWeaponItem 3dbadcf7268d4a73b2773830e8c38433: type, "Finnean (Longsword)"
+  - FinneanHeavyCrossbowStage3Lich 419a59f2af63fa240be24c66ec8b7789: type, "Finnean (Heavy Crossbow)"
+  - FinneanGreatswordStage3Lich 463f4d1597121f7478a64764581f0b9b: type, "Finnean (Greatsword)"
+  - FinneanBastardSwordStage3Lich 48070b5dfb6e66e44845a83cc47ccbac: type, "Finnean (Bastard Sword)"
+  - FinneanShortspearStage3Lich 4b51753452c01e0439e327478311561f: type, "Finnean (Shortspear)"
+  - FinneanGlaiveStage3Lich 4cb03b6c20e7a964cb1f9db1e056e1e2: type, "Finnean (Glaive)"
+  - FinneanGreatclubStage3Lich 5db93e7e535945041850896cfe9db126: type, "Finnean (Greatclub)"
+  - FinneanKamaStage3Lich 68a84c7f0f7e4654d99de4ded9e1e260: type, "Finnean (Kama)"
+  - FinneanTongiStage3Lich 743c57bc52dce634db791844a65e8535: type, "Finnean (Tongi)"
+  - FinneanFalcataStage3Lich 7930cf0f52ea4274abbe67dfa711ff63: type, "Finnean (Falcata)"
+  - FinneanlingStaffStage3Lich 7eb4f32866716e94eba8e8f3f9739dbe: type, "Finnean (Sling Staff)"
+  - FinneanHeavyPickStage3Lich 8327b032ef7bbe049a702498780ce312: type, "Finnean (Heavy Pick)"
+  - FinneanKukriStage3Lich 8cda05f38a1d490469e9173bb4235868: type, "Finnean (Kukri)"
+  - FinneanFalchionStage3Lich 934b8c305cd646442a0c228e5d28ffe9: type, "Finnean (Falchion)"
+  - FinneanWarhammerStage3Lich 94bf16709fcb6974c953f6b71c6d20fc: type, "Finnean (Warhammer)"
+  - FinneanLongswordStage3Lich 9b198f6d0e13a9f4bbe66a26415f1d9a: twin, "Finnean (Longsword)", offered as FinneanSoullessWeaponItem 3dbadcf7268d4a73b2773830e8c38433
+  - FinneanCompositeShortbowStage3Lich 9cf4054c70e8eae43ba32f76297f0544: type, "Finnean (Composite Shortbow)"
+  - FinneanShortswordStage3Lich 9f03215ad1ef55c46ad021324c24fcae: type, "Finnean (Shortsword)"
+  - FinneanQuarterstaffStage3Lich 9f67a72bd3dbb2a4c9cab3daab7ec5f6: type, "Finnean (Quarterstaff)"
+  - FinneanFauchardStage3Lich a25a17b153853464491956339ca032cd: type, "Finnean (Fauchard)"
+  - FinneanTridentStage3Lich a347109a870efc248abe71eb1f5b9ccd: type, "Finnean (Trident)"
+  - FinneanSpearStage3Lich a4655315ec7cdb54a90b436ebfe3ab3c: type, "Finnean (Spear)"
+  - FinneanLightMaceStage3Lich b43f67bc248bce946856ec8114d85771: type, "Finnean (Light Mace)"
+  - FinneanHeavyMaceStage3Lich bc9b3a3dc02de574d8244fb8a37cd736: type, "Finnean (Heavy Mace)"
+  - FinneanLightCrossbowStage3Lich bcaf26636c251c347b8b6d4f113f0678: type, "Finnean (Light Crossbow)"
+  - FinneanSaiStage3Lich bd13e1af2981f914fa30637bdb8bac90: type, "Finnean (Sai)"
+  - FinneanDwarvenUrgroshStage3Lich be2ddb8bc9d8d9e49bee02ac720684b4: type, "Finnean (Dwarven Urgrosh)"
+  - FinneanStarknifeStage3Lich bf16fbb49b31d5d4fa94924b24f6796b: type, "Finnean (Starknife)"
+  - FinneanNunchakuStage3Lich ca1151aa883b2be49a70127acdfceaa2: type, "Finnean (Nunchaku)"
+  - FinneanThrowingAxeStage3Lich cd867ddc3fd28ca4fbb3d77f8f345e71: type, "Finnean (Throwing Axe)"
+  - FinneanJavelinStage3Lich ce13b8efdc7d93141b11057bf4d3bad7: type, "Finnean (Javelin)"
+  - FinneanDoubleSwordStage3Lich d5aada6f899c09747883180eb07453e5: type, "Finnean (Two-Bladed Sword)"
+  - FinneanSawtoothSabreStage3Lich d88abbbd41c04b4a9a84240d0e649d42: type, "Finnean (Sawtooth Saber)"
+  - FinneanLightPickStage3Lich dda2a70bd51c1ec41a5649cf65391ab2: type, "Finnean (Light Pick)"
+  - FinneanPunchingDaggerStage3Lich de06efbda8e36274685babe61b643818: type, "Finnean (Punching Dagger)"
+  - FinneanGnomeHookedHammerStage3Lich e3cf168b7a4e97145b3658c05cbca632: type, "Finnean (Gnome Hooked Hammer)"
+  - FinneanBardicheStage3Lich e532565adc750544e82dfd151b8a7757: type, "Finnean (Bardiche)"
+  - FinneanLongspearStage3Lich e70c51901bd1cc643a183317b54d6d26: type, "Finnean (Longspear)"
+  - FinneanDoubleAxeStage3Lich f03a72e594454464a81d8b4b1236ed03: type, "Finnean (Orc Double Axe)"
+  - FinneanHeavyFlailStage3Lich f1bbb941296a4eb469918726c1eb826a: type, "Finnean (Heavy Flail)"
+  - FinneanGreataxeStage3Lich f703b58d755e0424698b313a2a9cb858: type, "Finnean (Greataxe)"
+  - FinneanCompositeLongbowStage3Lich fd98e307249ad5b49ac2df773fe632d9: type, "Finnean (Composite Longbow)"
+- "Finnean the Talking Weapon" (159)
+  - FinneanFauchardStage3Base 006d21bbbc5d30f46a6bfd02cbb1aa82: type and enhancement, "Finnean the Talking Weapon (Fauchard +5)"
+  - FinneanKamaStage2 012dd551f66089c4597c0c3d322372ba: type and enhancement, "Finnean the Talking Weapon (Kama +3)"
+  - FinneanDoubleAxeStage1 0172c4d10bf7173488ac47b3a43d4aaa: type and enhancement, "Finnean the Talking Weapon (Orc Double Axe +1)"
+  - FinneanHeavyFlailStage1 024ed89ace6a0ab4e98dc4005f7bcd6c: type and enhancement, "Finnean the Talking Weapon (Heavy Flail +1)"
+  - FinneanHeavyFlailStage3Base 04216cdaba34ff5448537731dd5fbfcd: type and enhancement, "Finnean the Talking Weapon (Heavy Flail +5)"
+  - FinneanSickleStage1 0655df5332e45644daa75f2054e28d43: type and enhancement, "Finnean the Talking Weapon (Sickle +1)"
+  - FinneanClubStage3Base 06f7c35c9c4ace0469e93e250e736e48: type and enhancement, "Finnean the Talking Weapon (Club +5)"
+  - FinneanDuelingSwordStage2 09141e69a4dcbf540b1955391a2a7d0c: type and enhancement, "Finnean the Talking Weapon (Dueling Sword +3)"
+  - FinneanFalcataStage1 0b86db762e9e8b746bf13f4a20b89c1a: type and enhancement, "Finnean the Talking Weapon (Falcata +1)"
+  - FinneanKamaStage3Base 0bb4226b15059d2449faa4183432635c: type and enhancement, "Finnean the Talking Weapon (Kama +5)"
+  - FinneanDwarvenWaraxeStage3Base 0c4c7a51389003549893c08ea792838a: type and enhancement, "Finnean the Talking Weapon (Dwarven Waraxe +5)"
+  - FinneanLightMaceStage1 0d58e41a53695e844a749f9f6e206b45: type and enhancement, "Finnean the Talking Weapon (Light Mace +1)"
+  - FinneanTridentStage3Base 0f10a7a78ae36934dbbedca65865ba45: type and enhancement, "Finnean the Talking Weapon (Trident +5)"
+  - FinneanScytheStage2 120257c1e29162349ae305731e595952: type and enhancement, "Finnean the Talking Weapon (Scythe +3)"
+  - FinneanBattleaxeStage2 123af2d7f67feed4984a3602443f15bd: type and enhancement, "Finnean the Talking Weapon (Battleaxe +3)"
+  - FinneanStarknifeStage3Base 13ba8689545ee644f8bcd7cae514a5a6: type and enhancement, "Finnean the Talking Weapon (Starknife +5)"
+  - FinneanFalcataStage2 13f0a60db6ba5104581c4af9ad58fadf: type and enhancement, "Finnean the Talking Weapon (Falcata +3)"
+  - FinneanHeavyPickStage1 143f51fd5adce6f4aac59f3950257a38: type and enhancement, "Finnean the Talking Weapon (Heavy Pick +1)"
+  - FinneanFauchardStage2 147633a231996c446a71fb6bc83fe789: type and enhancement, "Finnean the Talking Weapon (Fauchard +3)"
+  - FinneanDoubleSwordStage2 14b4a6ecc6b875f40ba53aa561c64578: type and enhancement, "Finnean the Talking Weapon (Two-Bladed Sword +3)"
+  - FinneanSpearStage2 1612f305b153647408ace32586d08e19: type and enhancement, "Finnean the Talking Weapon (Spear +3)"
+  - FinneanLongswordStage1 167234a9f905629468a7466fdbd5f89d: type and enhancement, "Finnean the Talking Weapon (Longsword +1)"
+  - FinneanScytheStage1 1830557a4dff0d446849aa7bd3481e8b: type and enhancement, "Finnean the Talking Weapon (Scythe +1)"
+  - FinneanKukriStage1 18da1866d76528648b7846e5fd07b99b: type and enhancement, "Finnean the Talking Weapon (Kukri +1)"
+  - FinneanBattleaxeStage3Base 1c422121ca7adfa4497a90fce994e02f: type and enhancement, "Finnean the Talking Weapon (Battleaxe +5)"
+  - FinneanElvenCurvedBladeStage3Base 1fe1630220e4417e84148a427be65d0f: type and enhancement, "Finnean the Talking Weapon (Elven Curve Blade +5)"
+  - FinneanCompositeShortbowStage3Base 229cf8e6a33af4745b8c7f15e5d6e7bd: type and enhancement, "Finnean the Talking Weapon (Composite Shortbow +5)"
+  - FinneanDoubleSwordStage3Base 24be940d9afed9c49801a00efb808ecc: type and enhancement, "Finnean the Talking Weapon (Two-Bladed Sword +5)"
+  - FinneanLightMaceStage3Base 2caef59f6ea6faa42b3d4eb5f9be9f05: type and enhancement, "Finnean the Talking Weapon (Light Mace +5)"
+  - FinneanHeavyCrossbowStage2 2d42e6bd102e86e41a1fd5c33ca277b0: type and enhancement, "Finnean the Talking Weapon (Heavy Crossbow +3)"
+  - FinneanCompositeLongbowStage1 2eadd186cc5c92147a5188b583842bcb: type and enhancement, "Finnean the Talking Weapon (Composite Longbow +1)"
+  - FinneanGnomeHookedHammerStage1 30049e24ebf8a33419c6da2bd5da6898: type and enhancement, "Finnean the Talking Weapon (Gnome Hooked Hammer +1)"
+  - FinneanDwarvenWaraxeStage1 33926be7ec793c944a303f6e484f2599: type and enhancement, "Finnean the Talking Weapon (Dwarven Waraxe +1)"
+  - FinneanElvenCurvedBladeStage1 344bb62ac6d0b5a4b809dc89db0274c2: type and enhancement, "Finnean the Talking Weapon (Elven Curve Blade +1)"
+  - FinneanGreataxeStage2 3506c5776d1edad40b9b98f00665b8f6: type and enhancement, "Finnean the Talking Weapon (Greataxe +3)"
+  - FinneanGreatclubStage3Base 35fda89c3e9cf5d46bbe1085cdd7ec82: type and enhancement, "Finnean the Talking Weapon (Greatclub +5)"
+  - FinneanSickleStage2 367403695cdaa0c4487d8c9a43b762e1: type and enhancement, "Finnean the Talking Weapon (Sickle +3)"
+  - FinneanEarthBreakerStage3Base 3824a42a3060cba4a893a25dcad450c1: type and enhancement, "Finnean the Talking Weapon (Earth Breaker +5)"
+  - FinneanLightHammerStage1 3861034aa359d5145aa0154ec8be936d: type and enhancement, "Finnean the Talking Weapon (Light Hammer +1)"
+  - FinneanHandaxeStage2 39e1387f77c921c47bf0dd9ef3355df5: type and enhancement, "Finnean the Talking Weapon (Handaxe +3)"
+  - FinneanThrowingAxeStage3Base 3b931a04bcfd7ba4c9250141beebea79: type and enhancement, "Finnean the Talking Weapon (Throwing Axe +5)"
+  - FinneanScimitarStage3Base 3c3a403360540b042ba822023904a789: type and enhancement, "Finnean the Talking Weapon (Scimitar +5)"
+  - FinneanClubStage2 3e0c4771cda65994f891895a77f447cb: type and enhancement, "Finnean the Talking Weapon (Club +3)"
+  - FinneanScimitarStage2 414c020c2ee7bd84b90d2effa4ace81c: type and enhancement, "Finnean the Talking Weapon (Scimitar +3)"
+  - FinneanLongspearStage1 422c62b0dd57f3048ac589e38fd16d47: type and enhancement, "Finnean the Talking Weapon (Longspear +1)"
+  - FinneanGlaiveStage2 4623ea8c6b6457549bb99d3b040813f7: type and enhancement, "Finnean the Talking Weapon (Glaive +3)"
+  - FinneanGreatswordStage1 4842ff48c9b0cb8409972b42d1c9cd95: type and enhancement, "Finnean the Talking Weapon (Greatsword +1)"
+  - FinneanHeavyCrossbowStage1 4b885d9b0acc48d4cbad0178512a7dd9: type and enhancement, "Finnean the Talking Weapon (Heavy Crossbow +1)"
+  - FinneanWarhammerStage1 4c0086236c6f53743993ed771baf8a75: type and enhancement, "Finnean the Talking Weapon (Warhammer +1)"
+  - FinneanGreataxeStage1 4c76732571c23c645bda3a0de20de88c: type and enhancement, "Finnean the Talking Weapon (Greataxe +1)"
+  - FinneanClubStage1 4e885723d086c694698122902c8f5911: type and enhancement, "Finnean the Talking Weapon (Club +1)"
+  - FinneanBastardSwordStage3Base 4fc818ab429d53c47843ea1e1c908f3d: type and enhancement, "Finnean the Talking Weapon (Bastard Sword +5)"
+  - FinneanLightPickStage1 505c2694a814757409565a7adf4a97bd: type and enhancement, "Finnean the Talking Weapon (Light Pick +1)"
+  - FinneanDoubleAxeStage3Base 51d8e93181b75834dbf626cd50d3b6b4: type and enhancement, "Finnean the Talking Weapon (Orc Double Axe +5)"
+  - FinneanDaggerStage2 52a5c1edbf1846a45a1cb2d9bb4134ff: type and enhancement, "Finnean the Talking Weapon (Dagger +3)"
+  - FinneanDuelingSwordStage3Base 52db679d90af3524fb27750e749d9033: type and enhancement, "Finnean the Talking Weapon (Dueling Sword +5)"
+  - FinneanLongswordStage2 532f736a3e89b0047bf2507923a35732: type and enhancement, "Finnean the Talking Weapon (Longsword +3)"
+  - FinneanTongiStage3Base 53770ec0c7b859e4ab8ed7146ab252aa: type and enhancement, "Finnean the Talking Weapon (Tongi +5)"
+  - FinneanSaiStage2 553276983017cc44d93c4b08a13e0bed: type and enhancement, "Finnean the Talking Weapon (Sai +3)"
+  - FinneanJavelinStage3Base 57bcfef326b4c08488f2f24fd7f0ecdd: type and enhancement, "Finnean the Talking Weapon (Javelin +5)"
+  - FinneanRapierStage1 5888cc91fcebd404bb03dfd5c8f0e953: type and enhancement, "Finnean the Talking Weapon (Rapier +1)"
+  - FinneanSlingStaffStage3Base 5966fdd35b5d8464a892e872dfb5cd0c: type and enhancement, "Finnean the Talking Weapon (Sling Staff +5)"
+  - FinneanEarthBreakerStage2 5ae17a6c03a2586428a8a0ea7368b881: type and enhancement, "Finnean the Talking Weapon (Earth Breaker +3)"
+  - FinneanBardicheStage1 5c504850b5d3c824f9cd8b965ad2ccdb: type and enhancement, "Finnean the Talking Weapon (Bardiche +1)"
+  - FinneanGreatswordStage2 6374abdb467f15e4ca5ccb91f42c5f54: type and enhancement, "Finnean the Talking Weapon (Greatsword +3)"
+  - FinneanQuarterstaffStage1 6483d12acd884894c83cef4a17c35d40: type and enhancement, "Finnean the Talking Weapon (Quarterstaff +1)"
+  - FinneanNunchakuStage1 65dac4e783a04a244b502df772be4993: type and enhancement, "Finnean the Talking Weapon (Nunchaku +1)"
+  - FinneanGreatclubStage1 6a256bef984d84f4bb0ee3a08b6b2395: type and enhancement, "Finnean the Talking Weapon (Greatclub +1)"
+  - FinneanFlailStage2 6a498e0ab2dbcc542a06899f6828e54e: type and enhancement, "Finnean the Talking Weapon (Flail +3)"
+  - FinneanFlailStage3Base 6c2a8d3c05f430549b8ef48c59d9d8fb: type and enhancement, "Finnean the Talking Weapon (Flail +5)"
+  - FinneanLightPickStage2 6d218a86eef908847a1f9f95d5770c31: type and enhancement, "Finnean the Talking Weapon (Light Pick +3)"
+  - FinneanCompositeLongbowStage3Base 719bf58b857ee7f4882eb6b03d2c6fc7: type and enhancement, "Finnean the Talking Weapon (Composite Longbow +5)"
+  - FinneanScimitarStage1 738af55ecb0349b429d403c2ed691dda: type and enhancement, "Finnean the Talking Weapon (Scimitar +1)"
+  - FinneanSawtoothSabreStage2 77fcb6274a8847a3bf2b3a7a10b639fe: type and enhancement, "Finnean the Talking Weapon (Sawtooth Saber +3)"
+  - FinneanHeavyMaceStage3Base 791ed8083d252b6498d0ff826a532bc4: type and enhancement, "Finnean the Talking Weapon (Heavy Mace +5)"
+  - FinneanTridentStage2 79bd5f71c66de8e47a7ff796d026babc: type and enhancement, "Finnean the Talking Weapon (Trident +3)"
+  - FinneanHandaxeStage1 79ec67b9b1a2bbe40b03f1bd936ef3f7: type and enhancement, "Finnean the Talking Weapon (Handaxe +1)"
+  - FinneanKamaStage1 7b56c5845426f034babe409491528495: type and enhancement, "Finnean the Talking Weapon (Kama +1)"
+  - FinneanShortswordStage1 7c9900757dbf1f4478c382f5c717b07d: type and enhancement, "Finnean the Talking Weapon (Shortsword +1)"
+  - FinneanCompositeShortbowStage1 7f83a841b75c2324d97b01fc3c234b0c: type and enhancement, "Finnean the Talking Weapon (Composite Shortbow +1)"
+  - FinneanGreatswordStage3Base 80c92e3a756a1fb4ebf794b998ac09ee: type and enhancement, "Finnean the Talking Weapon (Greatsword +5)"
+  - FinneanPunchingDaggerStage1 80d77160c2ae4d3448777b09e0bfd287: type and enhancement, "Finnean the Talking Weapon (Punching Dagger +1)"
+  - FinneanTridentStage1 841b65d3b1f12d0419a1c9567c45d023: type and enhancement, "Finnean the Talking Weapon (Trident +1)"
+  - FinneanThrowingAxeStage1 86b662e2cd809d84690f03dc511c075b: type and enhancement, "Finnean the Talking Weapon (Throwing Axe +1)"
+  - FinneanGreatclubStage2 88c9b798a2ca1e14e9cb69092919379e: type and enhancement, "Finnean the Talking Weapon (Greatclub +3)"
+  - FinneanFalcataStage3Base 89219cd5f40ecf34cb8763073ac91a84: type and enhancement, "Finnean the Talking Weapon (Falcata +5)"
+  - FinneanStarknifeStage2 8a668978ce3ba3b4390a286eac525acc: type and enhancement, "Finnean the Talking Weapon (Starknife +3)"
+  - FinneanHeavyPickStage3Base 8aa6f2d8af5dae048baa8bacbf1b1b46: type and enhancement, "Finnean the Talking Weapon (Heavy Pick +5)"
+  - FinneanShortspearStage2 8b81ecf390feb49439b8368361421225: type and enhancement, "Finnean the Talking Weapon (Shortspear +3)"
+  - FinneanSaiStage1 8cbc41f740b01fa4ca511806692810af: type and enhancement, "Finnean the Talking Weapon (Sai +1)"
+  - FinneanSawtoothSabreStage1 8d0f8e80a0b54b02871548c6817b190c: type and enhancement, "Finnean the Talking Weapon (Sawtooth Saber +1)"
+  - FinneanSlingStaffStage1 8ef37aa9c08351a47b2a1677b1317cff: type and enhancement, "Finnean the Talking Weapon (Sling Staff +1)"
+  - FinneanDartStage3Base 901bcb53a9754344999c665d989c0b49: type and enhancement, "Finnean the Talking Weapon (Dart +5)"
+  - FinneanShortspearStage1 90284e227950b1b4cba799fc11a3c5e9: type and enhancement, "Finnean the Talking Weapon (Shortspear +1)"
+  - FinneanGreataxeStage3Base 91ef379b61c3337438e85ebee89a89e4: type and enhancement, "Finnean the Talking Weapon (Greataxe +5)"
+  - FinneanBattleaxeStage1 93ccc6c7c7281014f9a03c16319cee2a: type and enhancement, "Finnean the Talking Weapon (Battleaxe +1)"
+  - FinneanFalchionStage3Base 974e3ab427e191846aaa32fa8a1ac944: type and enhancement, "Finnean the Talking Weapon (Falchion +5)"
+  - FinneanLightPickStage3Base 9ab52c8176cd1064ea6e6c8f1f8684f1: type and enhancement, "Finnean the Talking Weapon (Light Pick +5)"
+  - FinneanDoubleSwordStage1 9b666adc6f7539b45aa7d7265a94dfd9: type and enhancement, "Finnean the Talking Weapon (Two-Bladed Sword +1)"
+  - FinneanLightHammerStage2 9e46130495348d54fbd3c22cac8b08b9: type and enhancement, "Finnean the Talking Weapon (Light Hammer +3)"
+  - FinneanKukriStage2 9effb1436eefe56439a40dc04da0beac: type and enhancement, "Finnean the Talking Weapon (Kukri +3)"
+  - FinneanDwarvenWaraxeStage2 9f1a168156e135348af3fba15b2454ed: type and enhancement, "Finnean the Talking Weapon (Dwarven Waraxe +3)"
+  - FinneanTongiStage1 9fb029fe013e0664bbcf987889286f57: type and enhancement, "Finnean the Talking Weapon (Tongi +1)"
+  - FinneanHeavyPickStage2 a0413b52595c70c45a3a88b7a526a688: type and enhancement, "Finnean the Talking Weapon (Heavy Pick +3)"
+  - FinneanDaggerStage3Base a0fcdf7509c4a2f46adc914f55ed6ec0: type and enhancement, "Finnean the Talking Weapon (Dagger +5)"
+  - FinneanDaggerStage1 a47a055edd9493640bd923b6656b5e0d: type and enhancement, "Finnean the Talking Weapon (Dagger +1)"
+  - FinneanNunchakuStage2 a676c2005345cd34dba896ca145e5288: type and enhancement, "Finnean the Talking Weapon (Nunchaku +3)"
+  - FinneanDwarvenUrgroshStage2 a857f20837dc15d4085b4d1085163e0a: type and enhancement, "Finnean the Talking Weapon (Dwarven Urgrosh +3)"
+  - FinneanLightCrossbowStage3Base a90018d1841186c4e9335d5392bacfa9: type and enhancement, "Finnean the Talking Weapon (Light Crossbow +5)"
+  - FinneanGlaiveStage3Base aaf43b3b7580265428767bd6d279963e: type and enhancement, "Finnean the Talking Weapon (Glaive +5)"
+  - FinneanHeavyMaceStage2 ac90854ed7541024c85698fda52c3386: type and enhancement, "Finnean the Talking Weapon (Heavy Mace +3)"
+  - FinneanBastardSwordStage2 ad6a57b0ff750c94d98f95b768f14d5b: type and enhancement, "Finnean the Talking Weapon (Bastard Sword +3)"
+  - FinneanSpearStage1 aeeda9f5ce07d8d4f9bfcdd839ca4704: type and enhancement, "Finnean the Talking Weapon (Spear +1)"
+  - FinneanHeavyFlailStage2 aef7d82cbd9f2c048b85760f18c12fbd: type and enhancement, "Finnean the Talking Weapon (Heavy Flail +3)"
+  - FinneanCompositeLongbowStage2 b0b5340c522ed9e4ab0a57564fe4f00b: type and enhancement, "Finnean the Talking Weapon (Composite Longbow +3)"
+  - FinneanFalchionStage1 b2066a7dc17777e43adeaeea34165555: type and enhancement, "Finnean the Talking Weapon (Falchion +1)"
+  - FinneanGnomeHookedHammerStage2 b21135bc1d6a119458e91b8a682cdd0c: type and enhancement, "Finnean the Talking Weapon (Gnome Hooked Hammer +3)"
+  - FinneanEstocStage3Base b22640b5d0d51ce41b31a02d4bae0d8d: type and enhancement, "Finnean the Talking Weapon (Estoc +5)"
+  - FinneanFalchionStage2 b276f068854ef9740bd260bbb6823bfb: type and enhancement, "Finnean the Talking Weapon (Falchion +3)"
+  - FinneanLightCrossbowStage2 b48aa6a368a24824b9ac901b55b0c289: type and enhancement, "Finnean the Talking Weapon (Light Crossbow +3)"
+  - FinneanTongiStage2 b5245267644022a4f8e73ad7f0724dfd: type and enhancement, "Finnean the Talking Weapon (Tongi +3)"
+  - FinneanKukriStage3Base b5bba7c5b9bf4ab4d9cfb99346c5475f: type and enhancement, "Finnean the Talking Weapon (Kukri +5)"
+  - FinneanDwarvenUrgroshStage3Base b628f9e74a89fb84ea28ad4b340a7cf4: type and enhancement, "Finnean the Talking Weapon (Dwarven Urgrosh +5)"
+  - FinneanWarhammerStage3Base b7480044214fd1f40ab17a649f75ffd5: type and enhancement, "Finnean the Talking Weapon (Warhammer +5)"
+  - FinneanCompositeShortbowStage2 b7c749239fb34f6fae137c6eba652658: type and enhancement, "Finnean the Talking Weapon (Composite Shortbow +3)"
+  - FinneanDartStage1 ba065dde5c10c5c4683b1e33003a9090: type and enhancement, "Finnean the Talking Weapon (Dart +1)"
+  - FinneanEstocStage1 bb1a1a1f598b56c47a6e97094c6631d8: type and enhancement, "Finnean the Talking Weapon (Estoc +1)"
+  - FinneanLongspearStage2 be9f384260dd7a4449aedf641a5e95ac: type and enhancement, "Finnean the Talking Weapon (Longspear +3)"
+  - FinneanSlingStaffStage2 c08bcfd8d5bd0cb40ad2ea4211d67e81: type and enhancement, "Finnean the Talking Weapon (Sling Staff +3)"
+  - FinneanDwarvenUrgroshStage1 c187de412ffb9e746861f782eb010cb9: type and enhancement, "Finnean the Talking Weapon (Dwarven Urgrosh +1)"
+  - FinneanLightMaceStage2 c1949917cc62a7a47b3f969a6f1da569: type and enhancement, "Finnean the Talking Weapon (Light Mace +3)"
+  - FinneanGlaiveStage1 c34fb7763fd01aa4fb2e6c5d2ee19781: type and enhancement, "Finnean the Talking Weapon (Glaive +1)"
+  - FinneanElvenCurvedBladeStage2 c9bca7178f863af4889492901d894aca: type and enhancement, "Finnean the Talking Weapon (Elven Curve Blade +3)"
+  - FinneanQuarterstaffStage2 ca584d32087348a45b6f59f6f2de8468: type and enhancement, "Finnean the Talking Weapon (Quarterstaff +3)"
+  - FinneanJavelinStage2 cf873ed5b99b7c64cafd81b71b652462: type and enhancement, "Finnean the Talking Weapon (Javelin +3)"
+  - FinneanHandaxeStage3Base d0d2d44ddde0a5443bb96a998f0f4a53: type and enhancement, "Finnean the Talking Weapon (Handaxe +5)"
+  - FinneanHeavyCrossbowStage3Base d33c4d6f65d6282459c10e55a720c912: type and enhancement, "Finnean the Talking Weapon (Heavy Crossbow +5)"
+  - FinneanLightHammerStage3Base d88a403b29dad224aa1d4987fed655e7: type and enhancement, "Finnean the Talking Weapon (Light Hammer +5)"
+  - FinneanBastardSwordStage1 df82571de69195c4499633f1155aa3d0: type and enhancement, "Finnean the Talking Weapon (Bastard Sword +1)"
+  - FinneanShortswordStage2 e0fe7e8f8b4f48844860e5381c78afe7: type and enhancement, "Finnean the Talking Weapon (Shortsword +3)"
+  - FinneanSawtoothSabreStage3Base e1dc7bdad79f442f9c4252e6c70bb67a: type and enhancement, "Finnean the Talking Weapon (Sawtooth Saber +5)"
+  - FinneanWarhammerStage2 e3b02406ec7153b438ffc7b2a0016243: type and enhancement, "Finnean the Talking Weapon (Warhammer +3)"
+  - FinneanJavelinStage1 e665fb133158a5446af98729ca47a387: type and enhancement, "Finnean the Talking Weapon (Javelin +1)"
+  - FinneanFauchardStage1 ec1242eb8f0fac04abce47d115c59561: type and enhancement, "Finnean the Talking Weapon (Fauchard +1)"
+  - FinneanFlailStage1 ed8cb5d1d8d3f394984196f3959cd5a8: type and enhancement, "Finnean the Talking Weapon (Flail +1)"
+  - FinneanBardicheStage2 ee434b374a4c22845b46b517bab24eab: type and enhancement, "Finnean the Talking Weapon (Bardiche +3)"
+  - FinneanGnomeHookedHammerStage3Base eebe7407f6e61fb4f946b781210c7ffb: type and enhancement, "Finnean the Talking Weapon (Gnome Hooked Hammer +5)"
+  - FinneanPunchingDaggerStage2 effce0e7aea32af4fa0fe4079284dcff: type and enhancement, "Finnean the Talking Weapon (Punching Dagger +3)"
+  - FinneanRapierStage2 f130646349a30f04b833ed0925c61114: type and enhancement, "Finnean the Talking Weapon (Rapier +3)"
+  - FinneanBardicheStage3Base f1d2289dad94caf4c937cff5ded14548: type and enhancement, "Finnean the Talking Weapon (Bardiche +5)"
+  - FinneanDuelingSwordStage1 f2ab96365365c44498f645c55eceee35: type and enhancement, "Finnean the Talking Weapon (Dueling Sword +1)"
+  - FinneanEstocStage2 f31647405e0640c45a2ca20245a37408: type and enhancement, "Finnean the Talking Weapon (Estoc +3)"
+  - FinneanHeavyMaceStage1 f3d4ed29948652149a535f2b93d495a5: type and enhancement, "Finnean the Talking Weapon (Heavy Mace +1)"
+  - FinneanStarknifeStage1 f4d0fb848ef585d41bc2f9dfe8d5c1e7: type and enhancement, "Finnean the Talking Weapon (Starknife +1)"
+  - FinneanThrowingAxeStage2 f4d9dec89a83aa3408d8b83335ef011f: type and enhancement, "Finnean the Talking Weapon (Throwing Axe +3)"
+  - FinneanDoubleAxeStage2 f8a28e2cdc239964c8f2fc6a234f150d: type and enhancement, "Finnean the Talking Weapon (Orc Double Axe +3)"
+  - FinneanDartStage2 f9b951dd5a4a2534cb1b31f29c6dd03e: type and enhancement, "Finnean the Talking Weapon (Dart +3)"
+  - FinneanEarthBreakerStage1 facb10a9660058046a75c998ee06d428: type and enhancement, "Finnean the Talking Weapon (Earth Breaker +1)"
+  - FinneanLightCrossbowStage1 fd76c99a3f65e3f4fa73b6753d7f500c: type and enhancement, "Finnean the Talking Weapon (Light Crossbow +1)"
+- "Flame's Cleansing" (3)
+  - NemaryStigmaTrident_MagicSealingItem 4044d7baf9524f17a71c004adbac4f94: type, "Flame's Cleansing (Trident)"
+  - NemaryStigmaSlingStaff_MagicSealingItem a43a27bb8b214d4797d975cb5800e615: type, "Flame's Cleansing (Sling Staff)"
+  - NemaryStigmaBardiche_MagicSealingItem baea2042d7b3408992c466e443be9978: type, "Flame's Cleansing (Bardiche)"
+- "Flame's Hatred" (3)
+  - NemaryStigmaTrident_HatredItem 7e3c1617280b43859c780ab242b33a51: type, "Flame's Hatred (Trident)"
+  - NemaryStigmaBardiche_HatredItem 90daead03f95472dabf19140d8a877d6: type, "Flame's Hatred (Bardiche)"
+  - NemaryStigmaSlingStaff_HatredItem c3a4222dc63341e5a077ac74b33dc466: type, "Flame's Hatred (Sling Staff)"
+- "Flame's Will" (3)
+  - NemaryStigmaBardiche_ObedienceItem b6224ab884fd4ca992d365c097d080a0: type, "Flame's Will (Bardiche)"
+  - NemaryStigmaSlingStaff_ObedienceItem d849fc0e8b824e39aacd21a101894add: type, "Flame's Will (Sling Staff)"
+  - NemaryStigmaTrident_ObedienceItem f86a7e5869c945449ac257941ed82808: type, "Flame's Will (Trident)"
+- "Flaming Orc Double Axe +2" (2)
+  - StandardDoubleAxeFlamingPlus2 9ebc24aaed0279b4bb25f3ddb7f32838: bare, "Flaming Orc Double Axe +2"
+  - StandardDoubleAxeFlamingPlus2 a2483f0d1edccc7408773ef17c480aff: twin, "Flaming Orc Double Axe +2", offered as StandardDoubleAxeFlamingPlus2 9ebc24aaed0279b4bb25f3ddb7f32838
+- "Flaming Rapier +1" (2)
+  - FlamingRapierPlus1 1b53486f8fb1f404ca3f7ad0d116cf6a: bare, "Flaming Rapier +1"
+  - RapierFlamingPlus1 26beaf5837b242b42b9ec1050780d5ea: twin, "Flaming Rapier +1", offered as FlamingRapierPlus1 1b53486f8fb1f404ca3f7ad0d116cf6a
+- "Flaming Two-Bladed Sword +2" (2)
+  - StandardDoubleSwordFlamingPlus2 d20e5282daf4aeb4582fb690eae0ab5d: bare, "Flaming Two-Bladed Sword +2"
+  - FlamingDoubleSwordPlus2Item f7f1de11c5666e24da6ba1aadd66cf2c: twin, "Flaming Two-Bladed Sword +2", offered as StandardDoubleSwordFlamingPlus2 d20e5282daf4aeb4582fb690eae0ab5d
+- "Frost Rapier +1" (2)
+  - FrostRapierPlus1 3817c9fd86a745c42a602acf0f35bd7c: bare, "Frost Rapier +1"
+  - RapierFrostPlus1 d2f9e450c6b370344a92a21a30d86202: twin, "Frost Rapier +1", offered as FrostRapierPlus1 3817c9fd86a745c42a602acf0f35bd7c
+- "Full Barding +3" (2)
+  - AsziteFullBardingStandartPlus3 46d481e6ebc04044b3a3c08e0c3d2f78: override, "Full Barding +3 (aszite)"
+  - FullBardingStandartPlus3 5f635a9db4f2a554991e7b6b0d97977b: bare, "Full Barding +3"
+- "Full Barding +4" (2)
+  - FullBardingStandartPlus4 88e39c7e591199042964cc44979b78b5: bare, "Full Barding +4"
+  - AsziteFullBardingStandartPlus4 ab64798aacb94e879e7ed2484154ac14: override, "Full Barding +4 (aszite)"
+- "Full Plate +1" (3)
+  - FullplateStandartPlus1_PitaxGuard 5db137db6719b55418cb7dfe75b6a10c: bare, "Full Plate +1"
+  - FullplateStandartPlus1 ba780a9c1e5b0304892bd2bc0c22fe4d: twin, "Full Plate +1", offered as FullplateStandartPlus1_PitaxGuard 5db137db6719b55418cb7dfe75b6a10c
+  - FullplateStandartPlus1_Hellknight d2266151de1381a49a35c637c5b6b48f: twin, "Full Plate +1", offered as FullplateStandartPlus1_PitaxGuard 5db137db6719b55418cb7dfe75b6a10c
+- "Full Plate +2" (2)
+  - FullplateStandartPlus2 61787c56c01996f4c82866aca8fb0187: bare, "Full Plate +2"
+  - FullplateStandartPlus2_HellKnight a7dd02b2dc5e6064ba6e190f3a0a6d4d: twin, "Full Plate +2", offered as FullplateStandartPlus2 61787c56c01996f4c82866aca8fb0187
+- "Full Plate +3" (3)
+  - AsziteFullplateStandartPlus3 0021a312f4be4ca18e926da850a49a05: override, "Full Plate +3 (aszite)"
+  - FullplateStandartPlus3 1e0289b5e2a002d4592c0ac079d828d9: bare, "Full Plate +3"
+  - FullplateStandartPlus3_HellKnight 8612951e58338854b890dcc13d271b53: twin, "Full Plate +3", offered as FullplateStandartPlus3 1e0289b5e2a002d4592c0ac079d828d9
+- "Full Plate +4" (3)
+  - FullplateStandartPlus4_Hellknight 1d6c641a4c6e80d4682fe3bcc022c09a: bare, "Full Plate +4"
+  - FullplateStandartPlus4 4e3f583caaf179d4fa6ff9e9573f072f: twin, "Full Plate +4", offered as FullplateStandartPlus4_Hellknight 1d6c641a4c6e80d4682fe3bcc022c09a
+  - AsziteFullplateStandartPlus4 91d99802340f4131a28c88d1cd994241: override, "Full Plate +4 (aszite)"
+- "Full Plate +5" (3)
+  - FullplateStandartPlus5_Hellknight1 0e721789a63243d8b22cdababf21020b: bare, "Full Plate +5"
+  - FullplateStandartPlus5_Hellknight 4d313845e0481964aad728f1ebd15cf7: twin, "Full Plate +5", offered as FullplateStandartPlus5_Hellknight1 0e721789a63243d8b22cdababf21020b
+  - FullplateStandartPlus5 5f50f22f2aa231d439ca25d61626a305: twin, "Full Plate +5", offered as FullplateStandartPlus5_Hellknight1 0e721789a63243d8b22cdababf21020b
+- "Grave Singer" (3)
+  - RovagugRelicSteppeHandaxeItem 499ed99cf350dba4aa6785cb6346f5b6: type, "Grave Singer (Handaxe)"
+  - RovagugRelicSteppeGreataxeItem 5c40d8d5ba41d7c4799ad622b431b1bc: type, "Grave Singer (Greataxe)"
+  - RovagugRelicSteppeBattlaxeItem 7e4c2f4f0db6d644590b610458d9dde7: type, "Grave Singer (Battleaxe)"
+- "Half-Plate +3" (2)
+  - AsziteHalfplateStandardPlus3 559fdfe9241a4000925535760dcbca88: override, "Half-Plate +3 (aszite)"
+  - HalfplateStandartPlus3 76e68c81dd261e64789d5f2bdc77302b: bare, "Half-Plate +3"
+- "Half-Plate +4" (2)
+  - HalfplateStandartPlus4 70c54b0e4c767d240963ba5f8dc7b436: bare, "Half-Plate +4"
+  - AsziteHalfplateStandardPlus4 f9b2dc3b036e4123abbbc7f44660a3d2: override, "Half-Plate +4 (aszite)"
+- "Haramaki +3" (2)
+  - AsziteHaramakiStandardPlus3 7f70b0fe5a80478585e2760db9cb75b7: override, "Haramaki +3 (aszite)"
+  - HaramakiStandartPlus3 abd35673ea2062f4282e660ad8a542d2: bare, "Haramaki +3"
+- "Haramaki +4" (2)
+  - AsziteHaramakiStandardPlus4 980ed8dc52e545d4aca16b28185e9c31: override, "Haramaki +4 (aszite)"
+  - HaramakiStandartPlus4 bc0cbc0747713184da5d8f8ecb38d3fe: bare, "Haramaki +4"
+- "Heavy Shield +1" (3)
+  - HeavyShieldItemPlus1RedWhite 2076055c75387664a9a3dbf1799c1964: bare, "Heavy Shield +1"
+  - HeavyShieldItemPlus1 5c7b898a1bfb6cb4f8c14a0ebc143abe: twin, "Heavy Shield +1", offered as HeavyShieldItemPlus1RedWhite 2076055c75387664a9a3dbf1799c1964
+  - HeavyShieldItemPlus1IHellknight fb9795dd15fc19c43aa41a689b1fe48c: type, "Heavy Shield +1 (Spiked Heavy Shield)"
+- "Heavy Shield +3" (3)
+  - AsziteHeavyShieldItemPlus3 6e935fd4475241a38c6ee5bc1a86520f: bare, "Heavy Shield +3"
+  - HeavyShieldItemPlusCultist3 7ae5e6ce236b4dc3a2b4495653b98adb: twin, "Heavy Shield +3", offered as AsziteHeavyShieldItemPlus3 6e935fd4475241a38c6ee5bc1a86520f
+  - HeavyShieldItemPlus3 7e23918977b18524591204c93fae0a37: twin, "Heavy Shield +3", offered as AsziteHeavyShieldItemPlus3 6e935fd4475241a38c6ee5bc1a86520f
+- "Heavy Shield +4" (2)
+  - AsziteHeavyShieldItemPlus4 6bafbb55c421439fbff2ae0e4aa69d08: override, "Heavy Shield +4 (aszite)"
+  - HeavyShieldItemPlus4 777f5b91bdda1804cacd3f45dd9f0cf1: bare, "Heavy Shield +4"
+- "Immaculate Petal" (2)
+  - SosielQuestHeavyShieldItemPlus4 7981ecd15a0d4a96837ff015a696a701: enhancement, "Immaculate Petal (+4)"
+  - SosielQuestHeavyShieldItemPlus1 8f407eb3b4bb4f94cb41b889a9b28457: enhancement, "Immaculate Petal (+1)"
+- "Indomitable Life" (2)
+  - PlagueDeathQuarterstaffItem 052fc0b447f7a90448f322a2db0a2a03: slot, "Indomitable Life (weapon)"
+  - PlagueDeathBandedItem 80d23345b57ffac478ca7e33be545a7e: slot, "Indomitable Life (armor)"
+- "Keen Rapier +1" (2)
+  - RapierKeenPlus1 017ba87ce662d0e4aab4249f169e6977: bare, "Keen Rapier +1"
+  - KeenRapierPlus1 a0f13997114379b4a8278780c1dc1628: twin, "Keen Rapier +1", offered as RapierKeenPlus1 017ba87ce662d0e4aab4249f169e6977
+- "Leather Armor +4" (2)
+  - LeatherStandartPlus4 6870dfd46da933149b1b0e41f5ed6bea: bare, "Leather Armor +4"
+  - LeatherStandartPlus5 de1916a857f28ff428f0283585a250e4: twin, "Leather Armor +4", offered as LeatherStandartPlus4 6870dfd46da933149b1b0e41f5ed6bea
+- "Lenses of Prolonged Gaze" (2)
+  - LensesOfProlonguedGazeItem 335d50d92efde4f4e91747bfe3c06d6e: slot, "Lenses of Prolonged Gaze (head)"
+  - LensesOfProlonguedGaze_CorrectItem 50f803b35e824b618132750c06dcb1fb: slot, "Lenses of Prolonged Gaze (glasses)"
+- "Light Shield +3" (2)
+  - AsziteLightShieldItemPlus3 397412c3132d40429f7a5cb15b7e60d7: bare, "Light Shield +3"
+  - LightShieldItemPlus3 3b3f25ba61ba5f346b4d546e702732cb: twin, "Light Shield +3", offered as AsziteLightShieldItemPlus3 397412c3132d40429f7a5cb15b7e60d7
+- "Light Shield +4" (2)
+  - LightShieldItemPlus4 38455bc9dc12b6b4895d49e27e559f51: bare, "Light Shield +4"
+  - AsziteLightShieldItemPlus4 d1266897c40f4843a23fc85c42528f06: override, "Light Shield +4 (aszite)"
+- "Mallander's Insult" (3)
+  - KnightsEmblemSunsetShortswordItem 0b650c5561c1a5644806a0317d694ca4: slot, "Mallander's Insult (weapon)"
+  - KnightsEmblemSunsetChainmailItem 5f367e27b872836449447bc2bb8018ab: slot, "Mallander's Insult (armor)"
+  - KnightsEmblemSunsetBeltItem f21d7afb2cd9c2a408677be2059eab19: slot, "Mallander's Insult (belt)"
+- "Mallander's Penance" (3)
+  - KnightsEmblemEmeraldShortswordItem 699d16a646c91884daddab70a42aec8a: slot, "Mallander's Penance (weapon)"
+  - KnightsEmblemEmeraldBeltItem bf6579e0e434d0e4ea65da6bbad09645: slot, "Mallander's Penance (belt)"
+  - KnightsEmblemEmeraldChainmailItem fde498ce6b3542042a7dbb71efe62370: slot, "Mallander's Penance (armor)"
+- "Passion's Sweet Poison" (2)
+  - AmberLoveLightCrossbowItem 2cdc803d9f3e17f4abcef6916f962c60: slot, "Passion's Sweet Poison (weapon)"
+  - AmberLoveGlovesItem 4ed720cb649b9874b8a0f509c8741dc1: slot, "Passion's Sweet Poison (gloves)"
+- "Plague of Madness" (2)
+  - PlaguePersistenceQuarterstaffItem 39755c2bcd870e1499825a4eb8b5abf8: slot, "Plague of Madness (weapon)"
+  - PlaguePersistenceBandedItem 5c6c9d14b7b88394b9d93aefa56412c2: slot, "Plague of Madness (armor)"
+- "Planar Navigator" (3)
+  - PortalStonePlanarRingItem 031e6d000ff5b4849b84f15707a625ec: slot, "Planar Navigator (ring)"
+  - PortalStonePlanarHeadbandItem 0ee3539546ad9d34a8d6e3f90b086efd: slot, "Planar Navigator (head)"
+  - PortalStonePlanarSaiItem cc23cd7701fbbc3469d37ab544dbc027: slot, "Planar Navigator (weapon)"
+- "Pristine Mind" (2)
+  - MaskOfAreshkagalHeadband_TabulaRasaItem 10c2f790c8644c0a880b2ee7c7d74676: slot, "Pristine Mind (head)"
+  - MaskOfAreshkagalBelt_TabulaRasaItem c3f88225e63d420492ba111e97cbf64a: slot, "Pristine Mind (belt)"
+- "Radiance" (7)
+  - Yaniel_Longsword4HolyAvenger 0ff011d62af77e9428e12ac08f63709e: enhancement, "Radiance (+4)"
+  - Yaniel_Longsword4BaneLiving 27bab9c65039ef54d8fc24d9641cbea0: twin, "Radiance (+4)", offered as Yaniel_Longsword4HolyAvenger 0ff011d62af77e9428e12ac08f63709e
+  - RadianceMasterwork 3b2df06a731030d49a1240b763cb6069: bare, "Radiance"
+  - RadiancePlus2 6a80e629e9a5ca74da1dabc2984bba3b: enhancement, "Radiance (+2)"
+  - Yaniel_Longsword6BaneLiving bff8a4bb7f24a2c499db0781b5750133: enhancement, "Radiance (+6)"
+  - Yaniel_Longsword6HolyAvenger cf5c1a507825f184dacbc3abe14b9db1: twin, "Radiance (+6)", offered as Yaniel_Longsword6BaneLiving bff8a4bb7f24a2c499db0781b5750133
+  - RadiancePlus1ITem de1fc233ad934a0a93a17ebed3ec0cfb: enhancement, "Radiance (+1)"
+- "Robe of Air" (2)
+  - RobeOfAir_CorrectItem 75f2d4bf94a14398ad1ca9db8e3a579f: slot, "Robe of Air (shirt)"
+  - RobeOfAirItem b5a204f4311dafe42ab06d1d8ee7c1b9: slot, "Robe of Air (armor)"
+- "Robe of False Death" (2)
+  - RobeOfFalseDeathItem 2258062337f6ad9488bdd3b6e6b313b1: slot, "Robe of False Death (armor)"
+  - RobeOfFalseDeathCorrectItem 4f56360fd24e44049d8899fe17f132d2: slot, "Robe of False Death (shirt)"
+- "Robe of Fire" (2)
+  - RobeOfFire_CorrectItem 2055779fa05642a7a069b2d958e3be97: slot, "Robe of Fire (shirt)"
+  - RobeOfFireItem 86f0292dc48f0e8458384f9198f4db81: slot, "Robe of Fire (armor)"
+- "Robe of Water" (2)
+  - RobeOfWaterItem 028cee4babc7c9c4d95043fc4a1f4359: slot, "Robe of Water (armor)"
+  - RobeOfWater_CorrectItem aeb82599c5c745d9b6ec12e282569f30: slot, "Robe of Water (shirt)"
+- "Sacred Commandment" (2)
+  - SacredCommandmentItem 0c8977ea599481c4abfe4522b8582bec: bare, "Sacred Commandment"
+  - RingOfDeadlyFingersItem 705375e487b4422439000e5c79e74463: twin, "Sacred Commandment", offered as SacredCommandmentItem 0c8977ea599481c4abfe4522b8582bec
+- "Sanguineous Sundown" (2)
+  - SarenraeObliteratingLightHeavyFlailItem 85e44d5153e14fc45ac52bf3228fa1b7: slot, "Sanguineous Sundown (weapon)"
+  - SarenraeObliteratingLightScalemailItem a0cde64ee1853da499c9a863091754b4: slot, "Sanguineous Sundown (armor)"
+- "Scale Barding +3" (2)
+  - AsziteScaleBardingStandardPlus3 196ff6e8bf104a40b427ed2a8d389907: override, "Scale Barding +3 (aszite)"
+  - ScaleBardingStandartPlus3 cb6db86ce67e3e541aabb561444a1369: bare, "Scale Barding +3"
+- "Scale Barding +4" (2)
+  - ScaleBardingStandartPlus4 27803eb1a4844a84cb131b67a5ecbeeb: bare, "Scale Barding +4"
+  - AsziteScaleBardingStandardPlus4 5d1ea277957b41f2b6c7e7f3b9973e78: override, "Scale Barding +4 (aszite)"
+- "Scalemail +3" (2)
+  - ScalemailStandartPlus3 19e04b15a6d439441acd654a80e9f353: bare, "Scalemail +3"
+  - AsziteScalemailStandardPlus3 e0f5932f270b42f4906bd7684af6ebdd: override, "Scalemail +3 (aszite)"
+- "Scalemail +4" (2)
+  - ScalemailStandartPlus4 606c5bb47021aef4a8e6b19ffbb5033e: bare, "Scalemail +4"
+  - AsziteScalemailStandardPlus4 b4b8fce2cdc74929a3154d9957b47f78: override, "Scalemail +4 (aszite)"
+- "Scorpion's Kiss" (3)
+  - RovagugRelicScorpionHandaxeItem 38f5bd76f3cf1a448971a33c83d78f84: type, "Scorpion's Kiss (Handaxe)"
+  - RovagugRelicScorpionGreataxeItem a4fa987324d150547abd8a85b508c129: type, "Scorpion's Kiss (Greataxe)"
+  - RovagugRelicScorpionBattlaxeItem c8cbabf8272ab574ca158fd46ebb6899: type, "Scorpion's Kiss (Battleaxe)"
+- "Seal of Jubilex" (2)
+  - ColorlessRemainsGoggles_SolidItem 0a5bb37581c24706bda2b7d230afaa20: slot, "Seal of Jubilex (glasses)"
+  - ColorlessRemainsBreastplate_SolidItem d5a53604d7ad4fc2b6f6d359c5a7e5d1: slot, "Seal of Jubilex (armor)"
+- "Seal of Madness" (2)
+  - ColorlessRemainsGoggles_MadnessItem 5b2fa590883042948dcebfa162025ead: slot, "Seal of Madness (glasses)"
+  - ColorlessRemainsBreastplate_MadnessItem 692f4af5a7164f65afd34d2c3aa30c4d: slot, "Seal of Madness (armor)"
+- "Shock Falcata +1" (2)
+  - FalcataShockPlus2 02f4a90d95808a64eb80d3ea95097dd4: bare, "Shock Falcata +1"
+  - FalcataShockPlus1 72834b597b5f28c49b57d8cfe820c96b: twin, "Shock Falcata +1", offered as FalcataShockPlus2 02f4a90d95808a64eb80d3ea95097dd4
+- "Shock Rapier +1" (2)
+  - RapierShockPlus1 e3a431db2bac0d745806d666a8ebf824: bare, "Shock Rapier +1"
+  - ShockRapierPlus1 e5b6b637ccb463548ad35d10f509bff6: twin, "Shock Rapier +1", offered as RapierShockPlus1 e3a431db2bac0d745806d666a8ebf824
+- "Shroud of the Eternal Hunger" (2)
+  - DemonicAltarTrypophobiaPaddedItem 6ca286a34cec62040b165974570d38cf: slot, "Shroud of the Eternal Hunger (armor)"
+  - DemonicAltarTrypophobiaClothItem c3311fb9253b3b94bb640961a189910b: slot, "Shroud of the Eternal Hunger (shirt)"
+- "Soulshear" (3)
+  - StauntonGlaiveMountItem 31ec8f4002c14a3409779e66d3664898: override, "Soulshear (mounted)"
+  - DemonicHungerItem 3e55085dbfd139c438b9dfb12427adec: bare, "Soulshear"
+  - StauntonGlaiveHealItem dcad4ba70ad5fcd4c814c7978eaf67bd: override, "Soulshear (healing)"
+- "Steel Helm" (2)
+  - SteelHelm_Hellknight 2db24f8127080d243adfc4fac3939357: bare, "Steel Helm"
+  - SteelHelm 7bf221661e9c5bf4bb6269627d5abd92: twin, "Steel Helm", offered as SteelHelm_Hellknight 2db24f8127080d243adfc4fac3939357
+- "The Bound of Possibility" (10)
+  - Artifact_LichCloakItem 1622ceba1d7829b4f9ee709b71bd6baf: restriction, "The Bound of Possibility (Lich)"
+  - Artifact_LocustCloakItem 217ca79948e2c7a4698b4944b1ed9bf3: restriction, "The Bound of Possibility (Swarm That Walks)"
+  - Artifact_DragonCloakItem 2c0129fc1485da149a68a1b0584cad91: bare, "The Bound of Possibility"
+  - Artifact_AngelCloakItem 2f45a11adb74b5a4a81f857a9886c5bd: restriction, "The Bound of Possibility (Angel)"
+  - Artifact_TricksterCloakItem 50b398d4630d9f244a5db288124ff181: restriction, "The Bound of Possibility (Trickster)"
+  - Artifact_AzataCloakItem 78cd50deada655e4cbe49765c0bbb7e4: restriction, "The Bound of Possibility (Azata)"
+  - Artifact_AeonCloakItem b24d6185acea1f949b026c3b58e47947: restriction, "The Bound of Possibility (Aeon)"
+  - Artifact_DemonCloakItem cdc95a3c4a74a874a895b3be61369564: restriction, "The Bound of Possibility (Demon)"
+  - Artifact_LegendCloakItem ceaf9f93f42d40f468fc89ba6c32ea9d: restriction, "The Bound of Possibility (Legend)"
+  - Artifact_DevilCloakItem d7a89e21497bcd94a8f8c0e278574b5b: restriction, "The Bound of Possibility (Devil)"
+- "Tower Shield +3" (2)
+  - TowerShieldItemPlus3 4c7ca318e6754f542a7f9a685f375f4b: bare, "Tower Shield +3"
+  - AsziteTowerShieldItemPlus3 fbde60368d444717b6f67bb0844b2985: override, "Tower Shield +3 (aszite)"
+- "Tower Shield +4" (2)
+  - AsziteTowerShieldItemPlus4 a290a20212e4463d9102b58c9a1487bf: override, "Tower Shield +4 (aszite)"
+  - TowerShieldItemPlus4 b0a27282bc64ca045b0607de36c4d426: bare, "Tower Shield +4"
+- "Treacherous Flame" (2)
+  - BaphometFireCloth_BurningCunningItem 1d48edb7478d41b9897b54542d169ca8: slot, "Treacherous Flame (shirt)"
+  - BaphometFireGloves_BurningCunningItem 6c4605b63da845b8975fe6ee18eb36f6: slot, "Treacherous Flame (gloves)"
+- "Triumphant Noontide" (3)
+  - SarenraeLifeSourceHeavyFlailtem 6638256bc200ec64383ebbecd69f5787: slot, "Triumphant Noontide (weapon)"
+  - SarenraeLifeSourceLightShieldItem 6dc409a42e157dc46b56f5ec651953f8: slot, "Triumphant Noontide (shield)"
+  - SarenraeLifeSourceScalemailItem 9bc71131768976b49bad5473a019580f: slot, "Triumphant Noontide (armor)"
+- "Unending Distortion" (2)
+  - ChimeraTwistedFormFlailItem 943b418e0d219294aacaf19989adb446: type, "Unending Distortion (Flail)"
+  - ChimeraTwistedFormClubItem caea1a7db9a06fe42955c2baab2f2fcd: type, "Unending Distortion (Club)"
+- "Unslumbering Predator" (2)
+  - ChimeraThousandEyeFlailItem a66a16d09f160394ea3145996599e57b: type, "Unslumbering Predator (Flail)"
+  - ChimeraThousandEyeClubItem d1e0a9aaa73c14a459d5647cb3f23fe7: type, "Unslumbering Predator (Club)"
+- "Victims' Madness" (2)
+  - MaskOfAreshkagalBelt_VoidItem 2217cd38e0c642c7addfb4e3d7095105: slot, "Victims' Madness (belt)"
+  - MaskOfAreshkagalHeadband_VoidItem 417c8c47cbf244ef8f4a1e52bf92493d: slot, "Victims' Madness (head)"
+- "Voice of the Faceless" (2)
+  - OldEarthShriekAmuletItem 1e67d8ab112c4784e8150d01bec4a5a4: slot, "Voice of the Faceless (neck)"
+  - OldEarthShriekBeltItem c62696ace05e34b4eadd77ecc77c4e11: slot, "Voice of the Faceless (belt)"
+- "Web Strider" (2)
+  - DemonicAltarAgilityClothItem 8ac08cece7840174a80407516fdff043: slot, "Web Strider (shirt)"
+  - DemonicAltarAgilityPaddedItem a201976226dcfe34abda0e04c6b6b29b: slot, "Web Strider (armor)"
+- "Wedding Ring" (2)
+  - WeddingRingItemSecond 20d2c8b320e84e719852827c550cd456: bare, "Wedding Ring"
+  - WeddingRingItemFirst b02a19d1087b483a9c72905f5c5cc704: twin, "Wedding Ring", offered as WeddingRingItemSecond 20d2c8b320e84e719852827c550cd456
+- "Your Phylactery" (4)
+  - PlayersPhylacteryLongswordItem 7975e85be8964948b48ab3be83954af1: type, "Your Phylactery (Longsword)"
+  - PlayersPhylacteryAmuletItem 7efa2d3fd0da4769b380caf9b221233a: slot, "Your Phylactery (neck)"
+  - PlayersPhylacteryDaggerItem 955fed173f194e50a0207a1233cb51e6: type, "Your Phylactery (Dagger)"
+  - PlayersPhylacteryBracersItem c903f7c0f0a7437dae32ce25d7c10a9e: slot, "Your Phylactery (wrist)"
+- "Zaoris's Beauty" (2)
+  - ZeorisDaggerRing_Governing cb30b69394a847b2b8ec1db71541685a: slot, "Zaoris's Beauty (ring)"
+  - ZeorisDaggerHeadband_GoverningItem fc3a3c1b31a34a6dacf5dccac92e248c: slot, "Zaoris's Beauty (head)"
+- "Zon-Kuthon's Suffocating Caress" (2)
+  - DemonicAltarMasochisticPaddedItem 1bebcd1de0b92db4d894713280289d5e: slot, "Zon-Kuthon's Suffocating Caress (armor)"
+  - DemonicAltarMasochisticClothItem 7393c642e36be6e488ddd7eb7ca30a31: slot, "Zon-Kuthon's Suffocating Caress (shirt)"
+
+## Defaults filled
+
+Fields some blueprints omit, given their C# initializer (`orDefault` in the allowlist), by type and field.
+
+- AddContextStatBonus.HasMinimal: 6 of 12
+- AddContextStatBonus.Minimal: 6 of 12
+- BlueprintCharacterClass.DontAddCasterLevels: 40 of 59
+- BlueprintCharacterClass.m_IsHigherMythic: 12 of 59
+- BlueprintFeatureSelection.ExceptWhiteListed: 284 of 443
+- BlueprintParametrizedFeature.IgnoreParameterFeaturePrerequisites: 18 of 122
+- BuffExtraEffects.m_ExceptionFact: 1 of 51
+- ContextActionAddFeature.m_SetRankFrom: 12 of 144
+- ContextConditionIsWeaponEquipped.BothHandsAreEmpty: 7 of 24
+- ContextConditionIsWeaponEquipped.CheckSlot: 7 of 24
+- ContextConditionIsWeaponEquipped.JustCheckEmptyHand: 7 of 24
+- ContextConditionIsWeaponEquipped.Slot: 7 of 24
+- HasArmorFeatureUnlock.FilterByArmorProficiencyGroup: 2 of 6
+- HasArmorFeatureUnlock.FilterByBlueprintArmorTypes: 2 of 6
+- HasArmorFeatureUnlock.m_ArmorProficiencyGroupEntries: 2 of 6
+- HasArmorFeatureUnlock.m_BlueprintArmorTypes: 2 of 6
+- HasArmorFeatureUnlock.m_DisableWhenHasShield: 4 of 6
+- PrerequisiteAlignment.ArchetypeAlignment: 30 of 78
+- PrerequisiteAlignment.IngorePrerequisiteCheck: 21 of 78
+- PrerequisiteAlignment.IsFeatureSelectionWhiteList: 22 of 78
+- PrerequisiteArchetypeLevel.IsFeatureSelectionWhiteList: 113 of 156
+- PrerequisiteCasterType.IsFeatureSelectionWhiteList: 1 of 3
+- PrerequisiteCasterTypeSpellLevel.IsFeatureSelectionWhiteList: 6 of 12
+- PrerequisiteCharacterLevel.IsFeatureSelectionWhiteList: 3 of 4
+- PrerequisiteClassLevel.IsFeatureSelectionWhiteList: 198 of 317
+- PrerequisiteClassLevel.Not: 127 of 317
+- PrerequisiteClassSpellLevel.IsFeatureSelectionWhiteList: 163 of 188
+- PrerequisiteCondition.IsFeatureSelectionWhiteList: 114 of 162
+- PrerequisiteEtude.IsFeatureSelectionWhiteList: 12 of 16
+- PrerequisiteFeature.IsFeatureSelectionWhiteList: 707 of 1101
+- PrerequisiteFeaturesFromList.IsFeatureSelectionWhiteList: 136 of 194
+- PrerequisiteFeaturesFromList.m_RestrictIfNot: 155 of 194
+- PrerequisiteIsPet.IsFeatureSelectionWhiteList: 21 of 42
+- PrerequisiteMainCharacter.IsFeatureSelectionWhiteList: 8 of 13
+- PrerequisiteMythicLevel.IsFeatureSelectionWhiteList: 2 of 3
+- PrerequisiteNoArchetype.IsFeatureSelectionWhiteList: 254 of 506
+- PrerequisiteNoClassLevel.IsFeatureSelectionWhiteList: 71 of 148
+- PrerequisiteNoFeature.IsFeatureSelectionWhiteList: 248 of 815
+- PrerequisiteNotProficient.IsFeatureSelectionWhiteList: 24 of 30
+- PrerequisitePet.IsFeatureSelectionWhiteList: 3 of 23
+- PrerequisitePlayerHasFeature.IsFeatureSelectionWhiteList: 4 of 5
+- PrerequisiteProficiency.IsFeatureSelectionWhiteList: 12 of 45
+- PrerequisiteStatValue.IsFeatureSelectionWhiteList: 141 of 230
+- ReplaceStatBaseAttribute.ReplaceIfHigher: 11 of 16
+
+## Prerequisites with no grantor
+
+Facts that a requiring leaf on a reachable blueprint names, which no grant G holds gives, with the reason.
+
+- CorruptedGoldenDragonFeature 1e66cfb4f351466fb05636082bce50d6 "Vow of Dahak", needed by GoldDragonBreathDecaying c606a6897125480ebde14b63bb8fb18e "Decaying Breath"; GoldDragonBreathAnnihilating e8b9aad5295c49539f1bbf901d314964 "Annihilating Breath": granted only by the story: a dialogue cue gives it (and a save upgrader). A story-granted feature is never held (map ticket 25), so a leaf requiring it is never met and one forbidding it is always met.
+- AnimalCompanionClass 26b10d4340839004f960f9816f6109fe "Animal Companion", needed by MediumBardingProficiency 7213b7bd026d4414da2308df23715d8f "Armor Proficiency (Medium Barding)"; HeavyBardingProficiency aed0b33e17a3b3d44a718852e87305bd "Armor Proficiency (Heavy Barding)"; LightBardingProficiency c62ba548b1a34b94b9802925b35737c2 "Armor Proficiency (Light Barding)": a pet's class: animal companions and mounts level in it, and ProgressionRoot doesn't offer it to a character, so no Build has a level in it. A leaf requiring its levels (the Barding Proficiency feats, which are for a mount) is never met for the main character, and one forbidding them always is.
+- Scout_FeatureList 27d646fc04ff43f48af74300a4a58f9e, needed by BackgroundRekarthDLC2 ab8136b1b9d54982a5c9faf100547483 "Urban Hunter (Background Selection)": a companion's pregenerated feature list, given only to that companion's unit. No Build holds it, so the leaf is never met for the main character.
+- Penta_FeatureList 29f6945052434f4a8392b511099a3ce6, needed by Penta_Numerian_Background 0eb9884373934d5980c7aad03e710778 "Numerian Companion (Background Selection)": a companion's pregenerated feature list, given only to that companion's unit. No Build holds it, so the leaf is never met for the main character.
+- WoljifPregenTestFeatureList 4bf1e3da22a4fe44f8a516cc24e6ef79, needed by TieflingHeritageBaphomet 48b6d747d3310724ba4d76c8aabae2de: a companion's pregenerated feature list, given only to that companion's unit. No Build holds it, so the leaf is never met for the main character.
+- AnimalClass 4cd1757a0eea7694ba5c933729a53920 "Animal", needed by MediumBardingProficiency 7213b7bd026d4414da2308df23715d8f "Armor Proficiency (Medium Barding)"; HeavyBardingProficiency aed0b33e17a3b3d44a718852e87305bd "Armor Proficiency (Heavy Barding)"; LightBardingProficiency c62ba548b1a34b94b9802925b35737c2 "Armor Proficiency (Light Barding)": a pet's class: animal companions and mounts level in it, and ProgressionRoot doesn't offer it to a character, so no Build has a level in it. A leaf requiring its levels (the Barding Proficiency feats, which are for a mount) is never met for the main character, and one forbidding them always is.
+- MythicTestFeature aa846143662cea944b0cc4aa87fcb894, needed by AeonMythicClass 15a85e67b7d69554cab9ed5830d0268e "Aeon"; LichMythicClass 5d501618a28bdc24c80007a5c937dcb7 "Lich"; TricksterMythicClass 8df873a8c6e48294abdb78c45834aa0a "Trickster"; AzataMythicClass 9a3b2c63afa79744cbca46bea0da9a16 "Azata": a test flag no blueprint grants. It is one Any-group alternative on the Mythic path classes, so the other alternatives decide.
+- MongrelmanRace daca06a3f3355664bba1e87e67f3b5b3 "Mongrel", needed by DestinyBeyondBirthMythicFeat 325f078c584318849bfe3da9ea245b9d "Destiny Beyond Birth": Lann's race, held only by companion and army units; it isn't one of ProgressionRoot's character races, so no Build has it.
+- ShamanNatureSpiritWanderingProgression f3e19b0d6d82e2a4d98957af591f5d36 "Nature", needed by ShamanHexFriendToAnimalsFeature 0d92799cecf414249a23ad82f7e9901a "Friend to Animals": granted by nothing in the dump (refs.mjs finds only the prerequisite naming it). It is one Any-group alternative on ShamanHexFriendToAnimalsFeature, beside the Nature wandering spirit, so the other alternatives decide.
+
+## Prerequisites naming a fact no Build can reach
+
+Facts that a leaf on a reachable blueprint names, which G reaches neither from the root nor from the sourced
+items, with the reason. A leaf forbidding one is always met.
+
+- CorruptedGoldenDragonFeature 1e66cfb4f351466fb05636082bce50d6 "Vow of Dahak", named by GoldDragonBreathEnlighting 0351c6c95adc48b3b39073167094cd19 "Enlightening Breath"; GoldDragonBreathDecaying c606a6897125480ebde14b63bb8fb18e "Decaying Breath"; GoldDragonBreathAnnihilating e8b9aad5295c49539f1bbf901d314964 "Annihilating Breath"; GoldDragonBreathRejuvinating ef3690c36872422d9bfadeb276b5c3fe "Rejuvenating Breath": granted only by the story: a dialogue cue gives it (and a save upgrader). A story-granted feature is never held (map ticket 25), so a leaf requiring it is never met and one forbidding it is always met.
+- AnimalCompanionClass 26b10d4340839004f960f9816f6109fe "Animal Companion", named by HeavyArmorProficiency 1b0f68188dcc435429fb87a022239681 "Armor Proficiency (Heavy Armor)"; MartialWeaponProficiency 203992ef5b35c864390b4e4a1e200629 "Martial Weapons Proficiency"; MediumArmorProficiency 46f4fb320f35704488ba3d513397789d "Armor Proficiency (Medium Armor)"; TowerShieldProficiency 6105f450bb2acbd458d277e71e19d835 "Tower Shield Proficiency"; IndomitableMount 68e814f1f3ce55942a52c1dd536eaa5b "Indomitable Mount"; LightArmorProficiency 6d3728d4e9c9898458fe5e9532951132 "Armor Proficiency (Light Armor)"; MediumBardingProficiency 7213b7bd026d4414da2308df23715d8f "Armor Proficiency (Medium Barding)"; BucklerProficiency 7c28228ce4eed1543a6b670fd2a88e72 "Buckler Proficiency"; ExoticWeaponProficiencySelection 9a01b6815d6c3684cb25f30b8bf20932 "Exotic Weapon Proficiency"; HeavyBardingProficiency aed0b33e17a3b3d44a718852e87305bd "Armor Proficiency (Heavy Barding)"; LightBardingProficiency c62ba548b1a34b94b9802925b35737c2 "Armor Proficiency (Light Barding)"; ShieldsProficiency cb8686e7357a68c42bdd9d4e65334633 "Shield Proficiency"; SimpleWeaponProficiency e70ecf1ed95ca2f40b754f1adb22bbdd "Simple Weapon Proficiency"; FuriousFocus f09b89812cc94b89a09069671002b899 "Focused Strike"; MountedCombat f308a03bea0d69843a8ed0af003d47a9 "Mounted Combat": a pet's class: animal companions and mounts level in it, and ProgressionRoot doesn't offer it to a character, so no Build has a level in it. A leaf requiring its levels (the Barding Proficiency feats, which are for a mount) is never met for the main character, and one forbidding them always is.
+- Scout_FeatureList 27d646fc04ff43f48af74300a4a58f9e, named by BackgroundRekarthDLC2 ab8136b1b9d54982a5c9faf100547483 "Urban Hunter (Background Selection)": a companion's pregenerated feature list, given only to that companion's unit. No Build holds it, so the leaf is never met for the main character.
+- Penta_FeatureList 29f6945052434f4a8392b511099a3ce6, named by Penta_Numerian_Background 0eb9884373934d5980c7aad03e710778 "Numerian Companion (Background Selection)": a companion's pregenerated feature list, given only to that companion's unit. No Build holds it, so the leaf is never met for the main character.
+- WoljifPregenTestFeatureList 4bf1e3da22a4fe44f8a516cc24e6ef79, named by TieflingHeritageBaphomet 48b6d747d3310724ba4d76c8aabae2de: a companion's pregenerated feature list, given only to that companion's unit. No Build holds it, so the leaf is never met for the main character.
+- AnimalClass 4cd1757a0eea7694ba5c933729a53920 "Animal", named by MysticTheurgeClass 0920ea7e4fd7a404282e3d8b0ac41838 "Mystic Theurge"; AlchemistClass 0937bec61c0dabc468428f496580c721 "Alchemist"; OracleClass 20ce9bf8af32bee4c8557a045ab499b1 "Oracle"; RogueClass 299aa766dee3cbf4790da4efb8c72484 "Rogue"; MagusClass 45a4607686d96a1498891b3286121780 "Magus"; FighterClass 48ac8db94d5de7645906c7d0ad3bcfbd "Fighter"; DuelistClass 4e0ea99612ae87a499c7fb0588e31828 "Duelist"; ArcanistClass 52dbfd8505e22f84fad8d702611f60b7 "Arcanist"; DruidClass 610d836f3a3a9ed42a4349b62f002e96 "Druid"; ClericClass 67819271767a9dd4fbfd4ae700befea0 "Cleric"; DragonDiscipleClass 72051275b1dbb2d42ba9118237794f7c "Dragon Disciple"; MediumBardingProficiency 7213b7bd026d4414da2308df23715d8f "Armor Proficiency (Medium Barding)"; BardClass 772c83a25e2268e448e841dcd548235f "Bard"; SwordlordClass 90e4d7da3ccd1a8478411e07e91d5750 "Aldori Swordlord"; Trample 92db263bfb7445d4aa592a5d15128fc5 "Trample"; SpiritedCharge 95ef0ff14771f2549897f300ce62c95c "Spirited Charge"; ArcaneTricksterClass 9c935a076d4fe4d4999fd48d853e3cf3 "Arcane Trickster"; HeavyBardingProficiency aed0b33e17a3b3d44a718852e87305bd "Armor Proficiency (Heavy Barding)"; SorcererClass b3a505fb61437dc4097f43c3f8f9a4cf "Sorcerer"; WizardClass ba34257984f4c41408ce1dc2004e342e "Wizard"; PaladinClass bfa11238e7ae3544bbeb4d0b92e897ec "Paladin"; LightBardingProficiency c62ba548b1a34b94b9802925b35737c2 "Armor Proficiency (Light Barding)"; RangerClass cda0615668a6df14eb36ba19ee881af6 "Ranger"; StalwartDefenderClass d5917881586ff1d4d96d5b7cebda9464 "Stalwart Defender"; BloodragerClass d77e67a814d686842802c9cfd8ef8499 "Bloodrager"; EldritchKnightClass de52b73972f0ed74c87f8f6a8e20b542 "Eldritch Knight"; MountedShield e5bee904e6724fc44aae8887dcefae51 "Mounted Shield"; MonkClass e8f21e5b58e0569468e420ebea456124 "Monk"; InquisitorClass f1a70d9e1b0b41e49874e1fa9052a1ce "Inquisitor"; EldritchScionClass f5b8c63b141b2f44cbb8c2d7579c34f5 "Magus (Eldritch Scion)"; BarbarianClass f7d7eb166b3dd594fb330d085df41853 "Barbarian": a pet's class: animal companions and mounts level in it, and ProgressionRoot doesn't offer it to a character, so no Build has a level in it. A leaf requiring its levels (the Barding Proficiency feats, which are for a mount) is never met for the main character, and one forbidding them always is.
+- MonstrousHumanoidClass 8a3c86893f383214da070e9c84c1e95b "Monstrous Humanoid", named by IndomitableMount 68e814f1f3ce55942a52c1dd536eaa5b "Indomitable Mount": a monster's class, which ProgressionRoot doesn't offer; Indomitable Mount names it among the classes a mount may have.
+- MythicTestFeature aa846143662cea944b0cc4aa87fcb894, named by AeonMythicClass 15a85e67b7d69554cab9ed5830d0268e "Aeon"; LichMythicClass 5d501618a28bdc24c80007a5c937dcb7 "Lich"; TricksterMythicClass 8df873a8c6e48294abdb78c45834aa0a "Trickster"; AzataMythicClass 9a3b2c63afa79744cbca46bea0da9a16 "Azata": a test flag no blueprint grants. It is one Any-group alternative on the Mythic path classes, so the other alternatives decide.
+- ScalykindDomainProgressionSecondary af40f7b8e21048ae80123b5a395b3bbb "Scalykind Domain", named by ScalykindDomainProgressionSeparatist 3a5f747801a4420fb3e8d820985d4615 "Scalykind Domain (Forbidden Rites)"; ScalykindDomainProgression 67034c0985b240e5ad6e41e905461951 "Scalykind Domain": no selection lists it: only the Scalykind domain progressions, which forbid it, and ScalykindDomainAllowed name it.
+- SpiritTotemLesserFeature bd63d3ea0e030cf4c930db9ba5eaf931 "Spirit Totem, Lesser", named by DaemonTotemLesserFeature 45102fd7aab96f94d81ec80768549e12 "Daemon Totem, Lesser"; FiendTotemLesserFeature 76437492f801f054ba536473ad2fde79 "Fiend Totem, Lesser"; CelestialTotemLesserFeature aba61e0b0e66bf3439cc247ee89fddae "Celestial Totem, Lesser"; BeastTotemLesserFeature d99dfc9238a8a6646b32be09057c1729 "Beast Totem, Lesser": no selection, progression or grant offers it: only the four other lesser totems, which forbid it, and SpiritTotemFeature name it.
+- GroetusFeature c3e4d5681906d5246ab8b0637b98cbfe "Groetus", named by MagicDeceiverWayOfLivingGodProgression 464ffaf88140474a949618bec7955e78 "Living Deity"; MagicDeceiverWayOfRazmiriInfiltratorProgression cd96109ca30b45dcb6d7390945c8487d "Razmiri Infiltrator"; FeralChampionArchetype f68ca492c9c15e241ab73735fbd0fb9f "Feral Champion": the deity selection doesn't offer Groetus, and no grant gives it to a character; the Deceiver ways and the Feral Champion forbid it.
+- GreenFaithCameliaFeature ca763809e01f4247a3639965364c26cb "Green Faith", named by MagicDeceiverWayOfLivingGodProgression 464ffaf88140474a949618bec7955e78 "Living Deity"; MagicDeceiverWayOfRazmiriInfiltratorProgression cd96109ca30b45dcb6d7390945c8487d "Razmiri Infiltrator": Camelia's own faith, given only to her companion and pregen units (Camelia_FeatureList); the Deceiver ways forbid it.
+- MongrelmanRace daca06a3f3355664bba1e87e67f3b5b3 "Mongrel", named by DestinyBeyondBirthMythicFeat 325f078c584318849bfe3da9ea245b9d "Destiny Beyond Birth": Lann's race, held only by companion and army units; it isn't one of ProgressionRoot's character races, so no Build has it.
+- BlizzardServantLockEquipmentFeature daf893d14cc54e98a319fb121d7ac4d9, named by WeaponFinesse 90e54424d682d104ab36436bd527af09 "Weapon Finesse": held only by the Blizzard servant, a summoned unit (BlizzardServantUnit 287a354894264478b6190632380e85f4), and its upgrade features; Weapon Finesse forbids it so the servant never takes the feat.
+- ShamanNatureSpiritWanderingProgression f3e19b0d6d82e2a4d98957af591f5d36 "Nature", named by ShamanHexFriendToAnimalsFeature 0d92799cecf414249a23ad82f7e9901a "Friend to Animals": granted by nothing in the dump (refs.mjs finds only the prerequisite naming it). It is one Any-group alternative on ShamanHexFriendToAnimalsFeature, beside the Nature wandering spirit, so the other alternatives decide.
+
+## Nameless prerequisites with no named grantor
+
+A Refusal words these by a readable asset name, marked as internal (map ticket 19).
+
+- Scout_FeatureList 27d646fc04ff43f48af74300a4a58f9e, named by BackgroundRekarthDLC2 ab8136b1b9d54982a5c9faf100547483 "Urban Hunter (Background Selection)"
+- Penta_FeatureList 29f6945052434f4a8392b511099a3ce6, named by Penta_Numerian_Background 0eb9884373934d5980c7aad03e710778 "Numerian Companion (Background Selection)"
+- WoljifPregenTestFeatureList 4bf1e3da22a4fe44f8a516cc24e6ef79, named by TieflingHeritageBaphomet 48b6d747d3310724ba4d76c8aabae2de
+- MythicTestFeature aa846143662cea944b0cc4aa87fcb894, named by AeonMythicClass 15a85e67b7d69554cab9ed5830d0268e "Aeon"; LichMythicClass 5d501618a28bdc24c80007a5c937dcb7 "Lich"; TricksterMythicClass 8df873a8c6e48294abdb78c45834aa0a "Trickster"; AzataMythicClass 9a3b2c63afa79744cbca46bea0da9a16 "Azata"
+- ForbiddenDeityFeature c4403567ea9e5fe478ca38e3052fadc2, named by LichDeityFeature b4153b422d02d4f48b3f8f0ceb6a10eb "Lord/Lady of Death"; BaphometFeature bd72ca8ffcfec5745899ac56c93f12c5 "Baphomet"; AreshkagalFeature d714ecb5d5bb89a42957de0304e459c9 "Areshkagal"; DeskariFeature ddf913858bdf43b4da3b731e082fbcc0 "Deskari"; PuluraFeature ebb0b46f95dbac74681c78aae895dbd0 "Pulura"; KabririFeature f12c1ccc9d600c04f8887cd28a8f45a5 "Kabriri"
+- GoldenDragonClass daf1235b6217787499c14e4e32142523, named by GoldDragonBreathEnlighting 0351c6c95adc48b3b39073167094cd19 "Enlightening Breath"; AeonMythicClass 15a85e67b7d69554cab9ed5830d0268e "Aeon"; DevilMythicClass 211f49705f478b3468db6daa802452a2 "Devil"; LegendClass 3d420403f3e7340499931324640efe96 "Legend (Mythic Hero)"; LichMythicClass 5d501618a28bdc24c80007a5c937dcb7 "Lich"; TricksterMythicClass 8df873a8c6e48294abdb78c45834aa0a "Trickster"; DemonMythicClass 8e19495ea576a8641964102d177e34b7 "Demon"; AzataMythicClass 9a3b2c63afa79744cbca46bea0da9a16 "Azata"; AngelMythicClass a5a9fe8f663d701488bd1db8ea40484e "Angel"; GoldDragonBreathDecaying c606a6897125480ebde14b63bb8fb18e "Decaying Breath"; GoldDragonBreathAnnihilating e8b9aad5295c49539f1bbf901d314964 "Annihilating Breath"; GoldDragonBreathRejuvinating ef3690c36872422d9bfadeb276b5c3fe "Rejuvenating Breath"
+- BlizzardServantLockEquipmentFeature daf893d14cc54e98a319fb121d7ac4d9, named by WeaponFinesse 90e54424d682d104ab36436bd527af09 "Weapon Finesse"
+
+## Feats whose parameter is a spell
+
+Out of v1 until phase 2 brings spells (map ticket 22): held, but offered with no parameter.
+
+- BloodlineArcaneNewArcanaFeature 4a2e8388c2f0dd3478811d9c947bebfb "New Arcana" (LearnSpell)
+- BloodlineArcaneNewArcanaFeatureMagus c66e61dea38f3d8479a54eabec20ac99 "New Arcana (Eldritch Scion)" (LearnSpell)
+- FeyspeakerMagicFeature ea0ce0aeef8c9e04eadc1ed766455178 "Fey Magic (Druid)" (LearnSpell)
+- LoremasterClericSecretArcanist cd3058b460930a5418f3811ec9be9ebb "Arcanist (Cleric Spell)" (LearnSpell)
+- LoremasterClericSecretBard 0fcb8e80d559ee942bbf6e9761513cdf "Bard (Cleric Spell)" (LearnSpell)
+- LoremasterClericSecretBloodrager bbd1ce5be15155f49b99be31a0ab99f4 "Bloodrager (Cleric Spell)" (LearnSpell)
+- LoremasterClericSecretDruid 2dfc4cd0816dc204e8ddbf4067e20b62 "Druid (Cleric Spell)" (LearnSpell)
+- LoremasterClericSecretHunter 0b6cd5a9937b4048b6ffcb4ee1bc6d9b "Inquisitor (Cleric Spell, Hunter)" (LearnSpell)
+- LoremasterClericSecretInquisitor cfaa74bae1117c643ba8f1bc15b9e460 "Inquisitor (Cleric Spell, Inquisitor)" (LearnSpell)
+- LoremasterClericSecretMagus a556692d441296c449e70ac3d368634c "Magus (Cleric Spell)" (LearnSpell)
+- LoremasterClericSecretOracle bdeff03c5e9be1e45b551226b96458b3 "Oracle (Cleric Spell)" (LearnSpell)
+- LoremasterClericSecretPaladin 8f49595e5d4a35048aa454149a9a4757 "Paladin (Cleric Spell)" (LearnSpell)
+- LoremasterClericSecretRanger b061858883c5f2c489b8991fc02e8f15 "Ranger (Cleric Spell)" (LearnSpell)
+- LoremasterClericSecretRogue 82c78af6a0e3ff740b9015bd42f20d53 "Eldritch Scoundrel (Cleric Spell)" (LearnSpell)
+- LoremasterClericSecretShaman 2da160af99f21704282628acf0c50aae "Shaman (Cleric Spell)" (LearnSpell)
+- LoremasterClericSecretSkald a1d9a5a1ab5e47e29f3ea583b60db50b "Skald (Cleric Spell)" (LearnSpell)
+- LoremasterClericSecretSorcerer c7586f526d72d474ba5442c4e6bcb46b "Sorcerer (Cleric Spell)" (LearnSpell)
+- LoremasterClericSecretWitch d6d21b17d77e5d14ea15ce9bd22c80aa "Witch (Cleric Spell)" (LearnSpell)
+- LoremasterClericSecretWizard 58f5725a418383f418489cf330b737d5 "Wizard (Cleric Spell)" (LearnSpell)
+- LoremasterDruidSecretArcanist 084b3340727f0574a82239ecf74f8910 "Arcanist (Druid Spell)" (LearnSpell)
+- LoremasterDruidSecretBard 0d9ebea70810c9b49bd31a0158e1998d "Bard (Druid Spell)" (LearnSpell)
+- LoremasterDruidSecretBloodrager 305051416daa8d041a2d32475947dc47 "Bloodrager (Druid Spell)" (LearnSpell)
+- LoremasterDruidSecretCleric 94ed52baf5e81cd43b55c73031411b2e "Cleric (Druid Spell)" (LearnSpell)
+- LoremasterDruidSecretHunter d46e1841a26e4b3e9efafd9a880f681e "Inquisitor (Druid Spell, Hunter)" (LearnSpell)
+- LoremasterDruidSecretInquisitor bae61dca3fd295c4e8ff6e6095844668 "Inquisitor (Druid Spell, Inquisitor)" (LearnSpell)
+- LoremasterDruidSecretMagus 4f12647b325ecab47ac8559e90b3f7ef "Magus (Druid Spell)" (LearnSpell)
+- LoremasterDruidSecretOracle 7dcd285d67d2cc44985056866757378a "Oracle (Druid Spell)" (LearnSpell)
+- LoremasterDruidSecretPaladin 46376609217852444bf9b0021b088c02 "Paladin (Druid Spell)" (LearnSpell)
+- LoremasterDruidSecretRanger 9450f60e975a7d24fa9d3bbd04321132 "Ranger (Druid Spell)" (LearnSpell)
+- LoremasterDruidSecretRogue d24ac0184a8562347a2bae1b086b8253 "Eldritch Scoundrel (Druid Spell)" (LearnSpell)
+- LoremasterDruidSecretShaman b2979afd344255140aebfe7bf7b0181a "Shaman (Druid Spell)" (LearnSpell)
+- LoremasterDruidSecretSkald 1d777f19d9c74a1e991f081c762cbff0 "Skald (Druid Spell)" (LearnSpell)
+- LoremasterDruidSecretSorcerer c7466e5b4e32a124b87d4b2cc155a57c "Sorcerer (Druid Spell)" (LearnSpell)
+- LoremasterDruidSecretWitch 32392efe253dffa43b34fd9d1185eb59 "Witch (Druid Spell)" (LearnSpell)
+- LoremasterDruidSecretWizard 7d43568733326b547928e1ba1e0c8f14 "Wizard (Druid Spell)" (LearnSpell)
+- LoremasterWizardSecretArcanist 17a4c17d48c295543b3c449f91de8076 "Arcanist (Wizard Spell)" (LearnSpell)
+- LoremasterWizardSecretBard b8310eac977d2c7498184f2523490f31 "Bard (Wizard Spell)" (LearnSpell)
+- LoremasterWizardSecretBloodrager eb8e30350bb79ac438143b6389dbb9ed "Bloodrager (Wizard Spell)" (LearnSpell)
+- LoremasterWizardSecretCleric 831a826eb46790e4b84ade632846d043 "Cleric (Wizard Spell)" (LearnSpell)
+- LoremasterWizardSecretDruid 524cda3acafcf4145bdea05b43155845 "Druid (Wizard Spell)" (LearnSpell)
+- LoremasterWizardSecretHunter 0e2d4ced86db4807b3173086717e7e60 "Inquisitor (Wizard Spell, Hunter)" (LearnSpell)
+- LoremasterWizardSecretInquisitor dd394bbb971530f4f8e99a5715da917d "Inquisitor (Wizard Spell, Inquisitor)" (LearnSpell)
+- LoremasterWizardSecretMagus ff544ab3ca11fda41ab785bbdc13d8a0 "Magus (Wizard Spell)" (LearnSpell)
+- LoremasterWizardSecretOracle 5357717b4a96ded4ba653bebe429d0e0 "Oracle (Wizard Spell)" (LearnSpell)
+- LoremasterWizardSecretPaladin a3d5b69e306df3a408270f9f83fb4c99 "Paladin (Wizard Spell)" (LearnSpell)
+- LoremasterWizardSecretRanger d445a062f980b8746a27c6c9490c6584 "Ranger (Wizard Spell)" (LearnSpell)
+- LoremasterWizardSecretRogue 66286a8fc619a3847a5a446b334544ad "Eldritch Scoundrel (Wizard Spell)" (LearnSpell)
+- LoremasterWizardSecretShaman 291b1cabaa3405c4991c892204546bcb "Shaman (Wizard Spell)" (LearnSpell)
+- LoremasterWizardSecretSkald 69a6f42e00464198a36b3d300c04bb6e "Skald (Wizard Spell)" (LearnSpell)
+- LoremasterWizardSecretSorcerer a26834acd0f797c4e948660f4eb6ccd9 "Sorcerer (Wizard Spell)" (LearnSpell)
+- LoremasterWizardSecretWitch 6d7d4acede258984b8633d9b00d53877 "Witch (Wizard Spell)" (LearnSpell)
+- LoremasterWizardSecretWizard d0e31ebe24d95694a804e84d4d02bf25 "Wizard (Wizard Spell)" (LearnSpell)
+- MysticTheurgeHunterLevelParametrized1 01be9f7549374df2b503c3116274ed9a "Hunter Spell (1st Level)" (LearnSpell)
+- MysticTheurgeHunterLevelParametrized2 fba063ef591d4405901213bc66eb1486 "Hunter Spell (2nd Level)" (LearnSpell)
+- MysticTheurgeHunterLevelParametrized3 a9381bc517c749d18a310842e2dff221 "Hunter Spell (3rd Level)" (LearnSpell)
+- MysticTheurgeHunterLevelParametrized4 8db0f6582454453ca005a626b3df4823 "Hunter Spell (4th Level)" (LearnSpell)
+- MysticTheurgeHunterLevelParametrized5 8576efc2744a4087b3a0b337680fdd85 "Hunter Spell (5th Level)" (LearnSpell)
+- MysticTheurgeHunterLevelParametrized6 3e77f63396f04664bfde81cb81de6947 "Hunter Spell (6th Level)" (LearnSpell)
+- MysticTheurgeInquisitorLevelParametrized1 bcd757ac2aeef3c49b77e5af4e510956 "Inquisitor Spell (1st Level)" (LearnSpell)
+- MysticTheurgeInquisitorLevelParametrized2 4869109802e135e45af20741f9056fd5 "Inquisitor Spell (2nd Level)" (LearnSpell)
+- MysticTheurgeInquisitorLevelParametrized3 e3a9ed781f9093341ac1073f59018e3f "Inquisitor Spell (3rd Level)" (LearnSpell)
+- MysticTheurgeInquisitorLevelParametrized4 7668fd94a4f943e4f85ee025a0140434 "Inquisitor Spell (4th Level)" (LearnSpell)
+- MysticTheurgeInquisitorLevelParametrized5 d3d8b837733879848b549189f02f535c "Inquisitor Spell (5th Level)" (LearnSpell)
+- MysticTheurgeInquisitorLevelParametrized6 0495474b37304054eaf016016d0002b4 "Inquisitor Spell (6th Level)" (LearnSpell)
+- MysticTheurgeOracleLevelParametrized1 4794ccdbd52760647ae0d5c437da8649 "Oracle Spell (1st Level)" (LearnSpell)
+- MysticTheurgeOracleLevelParametrized2 495a6ae3ea2c4a6498504f5ac72d33df "Oracle Spell (2nd Level)" (LearnSpell)
+- MysticTheurgeOracleLevelParametrized3 aa0078ba438c0654ca8c106ea8febcca "Oracle Spell (3rd Level)" (LearnSpell)
+- MysticTheurgeOracleLevelParametrized4 024b8378af19ecb48877abbcfc0574f9 "Oracle Spell (4th Level)" (LearnSpell)
+- MysticTheurgeOracleLevelParametrized5 02356babc7723dd449b0918108fdfe6e "Oracle Spell (5th Level)" (LearnSpell)
+- MysticTheurgeOracleLevelParametrized6 1f7635f3cd5dd1946a40e6fe9c706574 "Oracle Spell (6th Level)" (LearnSpell)
+- MysticTheurgeOracleLevelParametrized7 19d2143db7f860f4486d01a454b4ae25 "Oracle Spell (7th Level)" (LearnSpell)
+- MysticTheurgeOracleLevelParametrized8 1802716c3110f044ca5707a331885a7c "Oracle Spell (8th Level)" (LearnSpell)
+- MysticTheurgeOracleLevelParametrized9 4a2fa8146d6263649bd91a0a2006ebad "Oracle Spell (9th Level)" (LearnSpell)
+- SpellSpecialization1 e69a85f633ae8ca4398abeb6fa11b1fe "Spell Specialization (change 1)" (SpellSpecialization)
+- SpellSpecialization10 2b96df8e6eb1f794eaf7e1defbf4f54b "Spell Specialization (change 10)" (SpellSpecialization)
+- SpellSpecialization11 ec77f8ec59534ac4887296392ffec97e "Spell Specialization (change 11)" (SpellSpecialization)
+- SpellSpecialization12 c222c3b2679ff6d4da400cd954f9c5fc "Spell Specialization (change 12)" (SpellSpecialization)
+- SpellSpecialization13 1d38a238a88b9aa49917b3a6b7f7f3ba "Spell Specialization (change 13)" (SpellSpecialization)
+- SpellSpecialization14 c80f7a789ea11e8419acecfbad430759 "Spell Specialization (change 14)" (SpellSpecialization)
+- SpellSpecialization15 0455bde9d7c7b8d488dd546ae140af64 "Spell Specialization (change 15)" (SpellSpecialization)
+- SpellSpecialization16 b75abb0228e6ddb4c80e00cd76e343f6 "Spell Specialization (change 16)" (SpellSpecialization)
+- SpellSpecialization17 74441cf4ebc51734c885617f61cf72b9 "Spell Specialization (change 17)" (SpellSpecialization)
+- SpellSpecialization18 75d2790d361aef44ba551ae84d766bbc "Spell Specialization (change 18)" (SpellSpecialization)
+- SpellSpecialization19 09a6ff29f55dad544b9949702f2ed2c8 "Spell Specialization (change 19)" (SpellSpecialization)
+- SpellSpecialization2 66f3e2b78b5d29c45a4c2f622541da79 "Spell Specialization (change 2)" (SpellSpecialization)
+- SpellSpecialization20 8a2bdb52b158bc24d83c9ef1a2cb2af4 "Spell Specialization (change 20)" (SpellSpecialization)
+- SpellSpecialization3 4e44d8d7dcf273345b154bb5f1e437ed "Spell Specialization (change 3)" (SpellSpecialization)
+- SpellSpecialization4 e974bdad073505b478a441acba207f48 "Spell Specialization (change 4)" (SpellSpecialization)
+- SpellSpecialization5 fad3217b3e569ec48a052ae7918078c1 "Spell Specialization (change 5)" (SpellSpecialization)
+- SpellSpecialization6 4c141a49e4a416944adbdefab8f9bc9b "Spell Specialization (change 6)" (SpellSpecialization)
+- SpellSpecialization7 28af16000bcaa614094783bb6af86428 "Spell Specialization (change 7)" (SpellSpecialization)
+- SpellSpecialization8 e953dabc5485bc64ba88c5c539e338bf "Spell Specialization (change 8)" (SpellSpecialization)
+- SpellSpecialization9 eabd9c10a6c30934f9d7e22b6027977b "Spell Specialization (change 9)" (SpellSpecialization)
+- SpellSpecializationFirst f327a765a4353d04f872482ef3e48c35 "Spell Specialization" (SpellSpecialization)

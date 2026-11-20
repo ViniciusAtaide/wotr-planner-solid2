@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Penalty",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AdditionalAttackBonus",
+      "Value": -2
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ColorlessRemainsGoggles_SolidFeature",
+  "guid": "97aaee699610481aa73c65cebfbd1957"
+}

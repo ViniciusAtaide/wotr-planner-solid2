@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_0601925a028b788469365d5f8f39e14a",
+      "m_Feature": "!bp_0601925a028b788469365d5f8f39e14a"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "InfernalBondRingFeature",
+  "guid": "d35b3bad000c3e94dbe95eef8332b2c7"
+}

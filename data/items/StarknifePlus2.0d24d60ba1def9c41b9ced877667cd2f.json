@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StarknifePlus2",
+  "guid": "0d24d60ba1def9c41b9ced877667cd2f",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_5a939137fc039084580725b2b0845c3f"
+}

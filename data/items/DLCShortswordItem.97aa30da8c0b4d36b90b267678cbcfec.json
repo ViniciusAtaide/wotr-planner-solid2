@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DLCShortswordItem",
+  "guid": "97aa30da8c0b4d36b90b267678cbcfec",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_e531187e84cd4000be34f8d32fd9e864",
+  "name": "Sham Shortsword"
+}

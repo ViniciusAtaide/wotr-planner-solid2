@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    },
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "ContextConditionCharacterClass",
+        "CheckCaster": false,
+        "MinLevel": 1,
+        "Not": true,
+        "m_Class": "!bp_26b10d4340839004f960f9816f6109fe"
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BrewPotions",
+  "guid": "c0f8c4e513eb493408b8070a1de93fc0",
+  "name": "Brew Potions"
+}

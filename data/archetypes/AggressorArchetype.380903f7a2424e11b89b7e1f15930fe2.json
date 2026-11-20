@@ -1,0 +1,69 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_37f3ca7f3e584a5b9edb2cad88cf5ba7",
+        "!bp_9972f33f977fc724c838e59641b2fca5"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_37f3ca7f3e584a5b9edb2cad88cf5ba7"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_37f3ca7f3e584a5b9edb2cad88cf5ba7"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_37f3ca7f3e584a5b9edb2cad88cf5ba7"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_37f3ca7f3e584a5b9edb2cad88cf5ba7"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_226f939b7dfd47b4697ec52f79799012"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_ce96af454a6137d47b9c6a1e02e66803"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_576933720c440aa4d8d42b0c54b77e80"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "AggressorArchetype",
+  "guid": "380903f7a2424e11b89b7e1f15930fe2",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Aggressor"
+}

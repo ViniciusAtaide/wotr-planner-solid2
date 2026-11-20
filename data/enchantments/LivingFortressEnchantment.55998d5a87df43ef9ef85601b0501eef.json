@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_56fef1ab3e324d8093ebc514cd629b2f"
+    }
+  ],
+  "assetName": "LivingFortressEnchantment",
+  "guid": "55998d5a87df43ef9ef85601b0501eef"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_eda45c57c0e14b2d913c0bd717d54938"
+    }
+  ],
+  "assetName": "CloakOfAstoundingProwessEnchantment",
+  "guid": "430bf7cabb9c494195e7b0dc9a192900"
+}

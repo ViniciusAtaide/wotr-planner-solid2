@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "Stability",
+  "guid": "2f254c6068d58b643b8de2fc7ec32dbb",
+  "name": "Stability"
+}

@@ -1,0 +1,77 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_d89fb8ce9152ffa4dacd69390f3d7721",
+      "m_Feature": "!bp_4a146ef4c763b2a48af5430abb911664"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_64e1f27147b642448842ab8dcbaca03f",
+      "m_Feature": "!bp_96323f327003b254da17b8c36385d0a6"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_12bb1056a5f3f9f4b9facdb78b8d8914",
+      "m_Feature": "!bp_4f201655c33009f4687202038b8b7b99"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_1d34d95ad4961e343b02db14690eb6d8",
+      "m_Feature": "!bp_67c353ebded781b43973e4e27e82e1b9"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_eef664d1e4318f64cb2304d1628d29ae",
+      "m_Feature": "!bp_9885c9cb32519ae4a88ac3e026bf51d8"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_bef8d08ee3c20b246b404ce3ef948291",
+      "m_Feature": "!bp_85d08b6fdb5c8614cb98149aea44cad2"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_49115e2147cd32841baa34c305171daa",
+      "m_Feature": "!bp_1c65cf4f3301a1648831d5128c969727"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_9c5ed34089fedf54ba8d0f43565bcc91",
+      "m_Feature": "!bp_8e984d94a90c0dd4cb58102f4f2082cd"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_01e7aab638d6a0b43bc4e9d5b49e68d9",
+      "m_Feature": "!bp_efb6b46128c45364189d36afa56fbe95"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_3867419bf47841b428333808dfdf4ae0",
+      "m_Feature": "!bp_1f2c6a3b9b92db34da7629c99be27139"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_df42a6863f535e54e8aa7749176a7f7e",
+      "m_Feature": "!bp_285920dfe2858164589229c4bf1bf774"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DragonDiscipleBreathFeature",
+  "guid": "0aadb51129cb0c147b5d2464c0db10b3",
+  "name": "Breath Weapon (Dragon Disciple)"
+}

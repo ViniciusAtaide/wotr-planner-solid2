@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ElementaWitchEnergySelection",
+  "guid": "9ec1bf2087874390a9d9be62884a0027",
+  "m_AllFeatures": [
+    "!bp_8006c9d043724f34b2745b3e5a5c2ef1",
+    "!bp_8cb71f2cc612478ea00b03d180b9e22c",
+    "!bp_1c630250f9dd41a784ec0da1f1361615",
+    "!bp_97e4fe7723b749849f182186764c23a4"
+  ],
+  "name": "Elemental Ray (Elemental Witch 1)"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_bc096e4b32580084e95108bcced09fdd"
+    }
+  ],
+  "assetName": "IncorruptibleHeartShieldEnchantment",
+  "guid": "62657cd2723e8474ba94a5cc94f0d2ed"
+}

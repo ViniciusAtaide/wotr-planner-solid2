@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "Chromatic ability",
+  "reason": "The Dragonblood Shifter's dragon forms come in three sets, one for each draconic aspect, gated by 'Draconic Aspect — Chromatic' and the rest (AddFeatureIfHasFact on the Wyrmshifter features). This is the ability that ShifterDragonFormFeature20Evil, the Chromatic set's 'Greater Wyrmshifter', gives (AddFacts); the three abilities share that name with the three features and with each other, so each is qualified by its aspect and 'ability'.",
+  "target": "f619bb36520a48478f900431b20d50c4"
+}

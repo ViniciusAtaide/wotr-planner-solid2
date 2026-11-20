@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFactContextActions",
+      "Activated": {
+        "Actions": [
+          {
+            "$type": "ContextActionAddFeature",
+            "m_PermanentFeature": "!bp_462f12d0e8554fef8d459718783dc963",
+            "m_SetRankFrom": "!bp_c0e6f7e7a9fc4db386f5f84466c0195f"
+          }
+        ]
+      }
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_1e1b4128290b11a41ba55280ede90d7d"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterLoreReligionDarknessDomainFeature",
+  "guid": "26845c3c10514868b8244c42caf6f82d",
+  "name": "Darkness Domain (Lore (Religion) 2 Rank)"
+}

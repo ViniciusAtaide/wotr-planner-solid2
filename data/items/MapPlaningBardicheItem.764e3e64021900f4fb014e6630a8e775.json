@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MapPlaningBardicheItem",
+  "guid": "764e3e64021900f4fb014e6630a8e775",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b",
+    "!bp_47f2aca64ba035c44bf00b23aa2882ec"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_b1cbf457fd471d148b39ae56667f405a",
+  "name": "Death's Consonant (Bardiche)"
+}

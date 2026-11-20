@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [],
+  "assetName": "ClothType",
+  "guid": "56d86616f18533e4d87f9a56a85f015d",
+  "m_Enchantments": [],
+  "m_IsArmor": false,
+  "m_ProficiencyGroup": "None",
+  "name": "Cloth"
+}

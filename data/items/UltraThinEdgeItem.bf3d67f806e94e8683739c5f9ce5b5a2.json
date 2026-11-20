@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "UltraThinEdgeItem",
+  "guid": "bf3d67f806e94e8683739c5f9ce5b5a2",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979",
+    "!bp_1b26f03c53eb49009208bfd2dba3d75f"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_ef50f200e4ab429b8bcb66a56f886c2f",
+  "name": "Ultrathin Edge"
+}

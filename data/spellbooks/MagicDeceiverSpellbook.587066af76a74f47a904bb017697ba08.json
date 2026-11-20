@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": true,
+  "IsMythic": false,
+  "Spontaneous": true,
+  "assetName": "MagicDeceiverSpellbook",
+  "guid": "587066af76a74f47a904bb017697ba08",
+  "m_SpellsPerDay": "!bp_0965015334a5458da741e213626abf23",
+  "name": "Magic Deceiver"
+}

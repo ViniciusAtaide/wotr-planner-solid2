@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [],
+  "Groups": [],
+  "HasNoSuchFeature": false,
+  "HideInUI": true,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "LearnSpell",
+  "Ranks": 20,
+  "RequireProficiency": false,
+  "WeaponSubCategory": "None",
+  "assetName": "MysticTheurgeInquisitorLevelParametrized5",
+  "guid": "d3d8b837733879848b549189f02f535c",
+  "m_Prerequisite": null,
+  "name": "Inquisitor Spell (5th Level)"
+}

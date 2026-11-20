@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "FinneanDoubleAxeStage3Base",
+  "guid": "51d8e93181b75834dbf626cd50d3b6b4",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": "!bp_cea60dea088daa34097a1b53fa8f71ab",
+  "m_Type": "!bp_87d76c7534506a546a065731ee6a38cd",
+  "name": "Finnean the Talking Weapon (Orc Double Axe +5)"
+}

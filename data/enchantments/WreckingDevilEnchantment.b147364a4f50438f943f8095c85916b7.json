@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_be242154b3c448f98e5d6be26d381309"
+    }
+  ],
+  "assetName": "WreckingDevilEnchantment",
+  "guid": "b147364a4f50438f943f8095c85916b7"
+}

@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Competence",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SaveReflex",
+      "Value": 4
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "BeltOfAlacrityFeature",
+  "guid": "76d9b40f12694d34791a507e736d58c8"
+}

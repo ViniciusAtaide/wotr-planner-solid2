@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SplitSecondFeature",
+  "guid": "2f3f34f0d1284137b2a7988c6caea274",
+  "name": "Split Second"
+}

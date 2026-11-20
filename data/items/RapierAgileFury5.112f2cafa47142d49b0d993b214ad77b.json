@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "RapierAgileFury5",
+  "guid": "112f2cafa47142d49b0d993b214ad77b",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_2ece38f30500f454b8569136221e55b0",
+  "name": "Agile Flaming Frost Shock Corrosive Rapier +4"
+}

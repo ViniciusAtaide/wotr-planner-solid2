@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_891e5a530afc43642a8349f93095c544"
+    }
+  ],
+  "assetName": "InterceptorEnchantment",
+  "guid": "2352d162e23217649bca4e1002aaa476"
+}

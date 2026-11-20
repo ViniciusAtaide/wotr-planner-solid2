@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "WaterDomainAllowed",
+  "guid": "8f49469c40e2c6e4db61296558e08966"
+}

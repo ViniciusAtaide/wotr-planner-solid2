@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanHeavyPickStage1",
+  "guid": "143f51fd5adce6f4aac59f3950257a38",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a492410f3d65f744c892faf09daad84a",
+  "name": "Finnean the Talking Weapon (Heavy Pick +1)"
+}

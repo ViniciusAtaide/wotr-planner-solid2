@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_961461148d554914a7e530fba39bda18"
+    }
+  ],
+  "assetName": "DaggerOfFateFirstEnchantment",
+  "guid": "5179b6ef2b3248d2ab22f5fa7c1308df"
+}

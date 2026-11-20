@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DruchiteGnomehookedHammerSecondPlus3",
+  "guid": "6547de03077c4d1d9e87b559aebf62ac",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_018ad48ffd3460d47900491656d2ff26"
+}

@@ -1,0 +1,56 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_c5357c05cf4f8414ebd0a33e534aec50"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_c5357c05cf4f8414ebd0a33e534aec50"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_50dc57d2662ccbd479b6bc8ab44edc44"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_50dc57d2662ccbd479b6bc8ab44edc44"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_2049abc955bf6fe41a76f2cb6ba8214a"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_43281c3d7fe18cc4d91928395837cd1e"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "CrusaderArchetype",
+  "guid": "6bfb7e74b530f3749b590286dd2b9b30",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": "!bp_673d39f7da699aa408cdda6282e7dcc0",
+  "m_WillSave": null,
+  "name": "Crusader"
+}

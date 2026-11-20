@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DeadlyPerformanceFeature",
+  "guid": "a6e13797b0a20d2458a086a8a511fd8c",
+  "name": "Deadly Performance"
+}

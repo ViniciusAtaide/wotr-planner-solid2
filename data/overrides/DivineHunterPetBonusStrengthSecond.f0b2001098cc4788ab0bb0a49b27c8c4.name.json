@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "second pick",
+  "reason": "The Divine Hunter archetype (DivineHunterArchetype) adds two selections at level 6, DivineHunterAnimalDomainTypeBonusSelectionFirst cb2d6e74641e4facbd250b53892bafa3 and DivineHunterAnimalDomainTypeBonusSelectionSecond 7ad7db0cbdc44428ad2e5334ef378586, which share a name, a level and a prerequisite (Animal Domain). Each offers its own copy of every ability score bonus, under the same name; this copy is the second selection's. The first selection's copy stays bare.",
+  "target": "f0b2001098cc4788ab0bb0a49b27c8c4"
+}

@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_a9ab1bbc79ecb174d9a04699986ce8d5"
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "ExtraChannelHospitaler",
+  "guid": "8d4f82fdb4d09b247ae8cd1ae7ce02de",
+  "name": "Extra Channel (Hospitaler)"
+}

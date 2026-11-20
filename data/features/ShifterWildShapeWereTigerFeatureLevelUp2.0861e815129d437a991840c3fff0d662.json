@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_caadece2cdc84c19a72bd62888f3118a"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_013ba91dd66b4a58ac769ba78e58d768"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ShifterWildShapeWereTigerFeatureLevelUp2",
+  "guid": "0861e815129d437a991840c3fff0d662"
+}

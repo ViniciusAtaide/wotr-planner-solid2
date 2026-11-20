@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFactContextActions",
+      "Activated": {
+        "Actions": [
+          {
+            "$type": "ContextActionAddFeature",
+            "m_PermanentFeature": "!bp_5e9edb9d48e04f90bce23b2ddd402c66",
+            "m_SetRankFrom": "!bp_c0e6f7e7a9fc4db386f5f84466c0195f"
+          }
+        ]
+      }
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_750bfcd133cd52f42acbd4f7bc9cc365"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_2dc50974356942c7b9f2ccfdcdeb7d61"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterLoreReligionAirDomainFeature",
+  "guid": "2dc50974356942c7b9f2ccfdcdeb7d61",
+  "name": "Air Domain (Lore (Religion) 2 Rank)"
+}

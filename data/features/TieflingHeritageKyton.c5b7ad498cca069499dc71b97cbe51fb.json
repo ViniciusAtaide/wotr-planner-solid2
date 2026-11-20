@@ -1,0 +1,71 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillMobility",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "CheckIntimidate",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Constitution",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Charisma",
+      "Value": 2
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "NaturalArmor",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AC",
+      "Value": 1
+    },
+    {
+      "$type": "AddStatBonusIfHasFact",
+      "Descriptor": "Racial",
+      "InvertCondition": true,
+      "RequireAllFacts": false,
+      "Stat": "Wisdom",
+      "Value": {
+        "Value": -2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_CheckedFacts": [
+        "!bp_325f078c584318849bfe3da9ea245b9d"
+      ]
+    }
+  ],
+  "Groups": [
+    "Racial",
+    "TieflingHeritage"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TieflingHeritageKyton",
+  "guid": "c5b7ad498cca069499dc71b97cbe51fb",
+  "name": "Shackleborn (Kyton-Spawn)"
+}

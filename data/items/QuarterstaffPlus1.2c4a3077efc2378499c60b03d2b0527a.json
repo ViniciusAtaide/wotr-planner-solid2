@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "QuarterstaffPlus1",
+  "guid": "2c4a3077efc2378499c60b03d2b0527a",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_629736dabac7f9f4a819dc854eaed2d6"
+}

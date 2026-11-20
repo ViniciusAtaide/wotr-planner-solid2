@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "BattleforgedItem",
+  "guid": "2e63d0ddf5eb41e45b3b235202698e1a",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_fac41e149f49cba4a8e06ce39b41a6fa",
+  "name": "Battle-Forged"
+}

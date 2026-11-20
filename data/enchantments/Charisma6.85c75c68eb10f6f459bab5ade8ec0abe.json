@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Enhancement",
+      "Stat": "Charisma",
+      "Value": 6
+    }
+  ],
+  "assetName": "Charisma6",
+  "guid": "85c75c68eb10f6f459bab5ade8ec0abe"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanScytheStage2",
+  "guid": "120257c1e29162349ae305731e595952",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_4eacfc7e152930a45a1a16217c35011c",
+  "name": "Finnean the Talking Weapon (Scythe +3)"
+}

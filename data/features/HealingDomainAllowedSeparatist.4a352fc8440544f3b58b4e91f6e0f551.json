@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "HealingDomainAllowedSeparatist",
+  "guid": "4a352fc8440544f3b58b4e91f6e0f551"
+}

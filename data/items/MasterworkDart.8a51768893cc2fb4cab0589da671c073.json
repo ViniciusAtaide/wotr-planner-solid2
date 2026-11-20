@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkDart",
+  "guid": "8a51768893cc2fb4cab0589da671c073",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_f415ae950523a7843a74d7780dd551af",
+  "name": "Masterwork Dart"
+}

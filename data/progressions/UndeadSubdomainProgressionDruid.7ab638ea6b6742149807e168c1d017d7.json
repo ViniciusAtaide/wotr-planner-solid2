@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": false,
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "BlightDruidDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_665fabebb632402d948fbe45e03a0b86",
+        "!bp_2b7215decd3646cc9d6a867bb1a596c5"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_b0acce833384b9b428f32517163c9117"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "UndeadSubdomainProgressionDruid",
+  "guid": "7ab638ea6b6742149807e168c1d017d7",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Undead Subdomain (Blight Bond)"
+}

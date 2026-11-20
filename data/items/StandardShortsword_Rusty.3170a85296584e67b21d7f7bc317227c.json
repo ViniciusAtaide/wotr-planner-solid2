@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardShortsword_Rusty",
+  "guid": "3170a85296584e67b21d7f7bc317227c",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_bfaf9d2cb3d342b8808bb12b4b36d841",
+  "name": "Rusty Shortsword"
+}

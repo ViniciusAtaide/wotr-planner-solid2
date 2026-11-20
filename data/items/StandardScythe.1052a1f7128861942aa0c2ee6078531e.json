@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardScythe",
+  "guid": "1052a1f7128861942aa0c2ee6078531e",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_4eacfc7e152930a45a1a16217c35011c"
+}

@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "HalfOrcHeritage",
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "HalfOrcHeritageSelection",
+  "guid": "8c3244440e0b4d1d9d9b182685cbacbd",
+  "m_AllFeatures": [
+    "!bp_8b2da1d0f9504872809e63b39c24c502",
+    "!bp_289d95c2c26f4e638c1f26d5ea7c594b",
+    "!bp_eb20cb0326444e348fc18f9b4d1644da"
+  ],
+  "name": "Racial Heritage (Half-Orc)"
+}

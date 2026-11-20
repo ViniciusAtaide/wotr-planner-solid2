@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardDagger",
+  "guid": "aa514dbf4c3d61f4e9c0738bd4d373cb",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_07cc1a7fceaee5b42b3e43da960fe76d"
+}

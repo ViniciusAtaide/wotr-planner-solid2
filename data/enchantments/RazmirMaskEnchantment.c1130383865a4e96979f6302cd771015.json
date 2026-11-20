@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_13d5818737694021b001641437a4ba29"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_12435ed2443c41c78ac47b8ef076e997"
+    }
+  ],
+  "assetName": "RazmirMaskEnchantment",
+  "guid": "c1130383865a4e96979f6302cd771015"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkJavelin",
+  "guid": "2c7b186e938933247a00e019732786c9",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a70cea34b275522458654beb3c53fe3f",
+  "name": "Masterwork Javelin"
+}

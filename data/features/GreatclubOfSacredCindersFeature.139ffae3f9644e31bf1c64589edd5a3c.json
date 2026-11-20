@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Competence",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillLoreReligion",
+      "Value": 12
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "GreatclubOfSacredCindersFeature",
+  "guid": "139ffae3f9644e31bf1c64589edd5a3c"
+}

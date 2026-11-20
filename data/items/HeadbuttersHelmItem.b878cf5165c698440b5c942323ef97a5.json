@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HeadbuttersHelmItem",
+  "guid": "b878cf5165c698440b5c942323ef97a5",
+  "m_Enchantments": [
+    "!bp_b58b3ea3b9d2b244e8661de97b0162f8"
+  ],
+  "name": "Headbutter's Helm"
+}

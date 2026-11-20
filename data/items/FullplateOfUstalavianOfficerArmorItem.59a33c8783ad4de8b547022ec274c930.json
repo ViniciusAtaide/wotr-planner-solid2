@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "FullplateOfUstalavianOfficerArmorItem",
+  "guid": "59a33c8783ad4de8b547022ec274c930",
+  "m_Enchantments": [
+    "!bp_9448d3026111d6d49b31fc85e7f3745a",
+    "!bp_d273924897ed4e298661e66170916073",
+    "!bp_7206fa43786eff647a08dd7278654252"
+  ],
+  "m_Type": "!bp_afd9065539b3ac5499eddca923654c4b",
+  "name": "Ustalavic Pride"
+}

@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 6,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_5d501618a28bdc24c80007a5c937dcb7",
+      "m_Feature": "!bp_c5a8aafe9694eec4395859a8aaa0cf8d"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "LichSummonFeatureTier5",
+  "guid": "d577689cc2c31b6459644de459baf968",
+  "name": "Summon Plague Beast Mastodons"
+}

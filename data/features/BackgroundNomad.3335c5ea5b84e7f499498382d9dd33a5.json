@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreNature"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_75146ee0b32e5424ab77902bf86f91ee"
+      ]
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillLoreNature"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Scimitar"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundNomad",
+  "guid": "3335c5ea5b84e7f499498382d9dd33a5",
+  "name": "Nomad (Background Selection)"
+}

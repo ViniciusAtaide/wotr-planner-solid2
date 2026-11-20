@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "CruelFateItem",
+  "guid": "beca6746dda054f40865c49085656e77",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b",
+    "!bp_e4459db6cc251ba45b7f4f2e97b65b62"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_89dc4dc5f386e2049b5e0a5e209a3407",
+  "name": "Prowling Death"
+}

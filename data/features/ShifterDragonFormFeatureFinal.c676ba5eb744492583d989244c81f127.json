@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_98f8aaf2baec4abcb1f868a6f2ece134",
+      "m_Feature": "!bp_73290f79a79a4eb78e310a8bb166d3e8"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_4cdc4c0bda6c48a3bc1baff7f782dd0e",
+      "m_Feature": "!bp_fdd15b03962b41a5a0d9f9d19ba219fd"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_d8cd18b343834b7097dd364b75e0c800",
+      "m_Feature": "!bp_60e0aeb936a84576a44ea9b620bb12d9"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShifterDragonFormFeatureFinal",
+  "guid": "c676ba5eb744492583d989244c81f127",
+  "name": "Greater Wyrmshifter (Dragonblood Shifter)"
+}

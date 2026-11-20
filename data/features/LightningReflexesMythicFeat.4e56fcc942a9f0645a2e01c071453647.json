@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_15e7da6645a7f3d41bdad7c8c4b9de1e"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "LightningReflexesMythicFeat",
+  "guid": "4e56fcc942a9f0645a2e01c071453647",
+  "name": "Lightning Reflexes (Mythic)"
+}

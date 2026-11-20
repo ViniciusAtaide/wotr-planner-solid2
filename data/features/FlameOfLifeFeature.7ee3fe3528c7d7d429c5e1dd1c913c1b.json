@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "AngelMythcHalo"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FlameOfLifeFeature",
+  "guid": "7ee3fe3528c7d7d429c5e1dd1c913c1b",
+  "name": "Flame of Life"
+}

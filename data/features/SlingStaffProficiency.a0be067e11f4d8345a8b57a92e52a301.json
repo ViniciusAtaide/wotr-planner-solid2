@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "SlingStaff"
+      ],
+      "m_RaceRestriction": null
+    },
+    {
+      "$type": "PrerequisiteNotProficient",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "SlingStaff"
+      ]
+    }
+  ],
+  "Groups": [
+    "ExoticWeaponProficiency"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SlingStaffProficiency",
+  "guid": "a0be067e11f4d8345a8b57a92e52a301",
+  "name": "Weapon Proficiency (Sling Staff)"
+}

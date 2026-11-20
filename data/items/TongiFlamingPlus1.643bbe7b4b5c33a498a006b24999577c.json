@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "TongiFlamingPlus1",
+  "guid": "643bbe7b4b5c33a498a006b24999577c",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_13fa38737d46c9e4abc7f4d74aaa59c3",
+  "name": "Flaming Tongi +1"
+}

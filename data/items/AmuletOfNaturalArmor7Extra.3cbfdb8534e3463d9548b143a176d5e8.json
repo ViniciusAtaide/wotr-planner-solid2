@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "AmuletOfNaturalArmor7Extra",
+  "guid": "3cbfdb8534e3463d9548b143a176d5e8",
+  "m_Enchantments": [
+    "!bp_7b9af1df333b4003b07d16f164645929"
+  ],
+  "name": "Flawless Amulet of Natural Armor +7"
+}

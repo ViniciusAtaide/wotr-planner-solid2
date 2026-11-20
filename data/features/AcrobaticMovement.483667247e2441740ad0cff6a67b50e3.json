@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AcrobaticMovement",
+  "guid": "483667247e2441740ad0cff6a67b50e3",
+  "name": "Acrobatic Movement"
+}

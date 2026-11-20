@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "QuarterstaffShockFrostPlus2",
+  "guid": "458dc7ccd3aaf3c4cbd647da7202c769",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_629736dabac7f9f4a819dc854eaed2d6",
+  "name": "Frost Shock Quarterstaff +2"
+}

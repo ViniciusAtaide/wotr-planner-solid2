@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkDuelingSword",
+  "guid": "354f5109f1da7d24c830f37ef3b56cb8",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a6f7e3dc443ff114ba68b4648fd33e9f",
+  "name": "Masterwork Dueling Sword"
+}

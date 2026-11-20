@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d5190eed73964203a02f331a3759461c"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c36f274c3f7443cba4fc8e559f1c7917"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 16,
+      "Not": false,
+      "m_CharacterClass": "!bp_34ecd1b5e1b90b9498795791b0855239"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TandemExecutionerTidbitFeature",
+  "guid": "6b8eb3870131434da4391533a99c149d",
+  "name": "Prey of Choice"
+}

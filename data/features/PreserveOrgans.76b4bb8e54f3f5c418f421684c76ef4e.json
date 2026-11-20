@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_ac242ddeaa05af449bfc5230231fab84",
+      "m_CharacterClass": "!bp_0937bec61c0dabc468428f496580c721"
+    }
+  ],
+  "Groups": [
+    "Discovery",
+    "VivisectionistDiscovery",
+    "UndergroundChemistDiscovery"
+  ],
+  "HideInUI": false,
+  "Ranks": 3,
+  "assetName": "PreserveOrgans",
+  "guid": "76b4bb8e54f3f5c418f421684c76ef4e",
+  "name": "Preserve Organs"
+}

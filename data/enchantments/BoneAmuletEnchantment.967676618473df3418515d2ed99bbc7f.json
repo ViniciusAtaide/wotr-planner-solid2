@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b66da104771028542b89206c252e8a6b"
+    }
+  ],
+  "assetName": "BoneAmuletEnchantment",
+  "guid": "967676618473df3418515d2ed99bbc7f"
+}

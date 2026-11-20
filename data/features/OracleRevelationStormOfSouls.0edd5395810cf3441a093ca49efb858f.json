@@ -1,0 +1,42 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 7,
+      "Not": false,
+      "m_CharacterClass": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_9936554e9372dab4a874c1dd165fb6f8",
+        "!bp_36e136a4cc77a434083a12a72678a9ba",
+        "!bp_2af1112188727bf469ec50c5575b6c52"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "Groups": [
+    "OracleRevelation"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleRevelationStormOfSouls",
+  "guid": "0edd5395810cf3441a093ca49efb858f",
+  "name": "Storm of Souls"
+}

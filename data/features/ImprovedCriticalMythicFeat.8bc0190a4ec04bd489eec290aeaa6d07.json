@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_f4201c85a991369408740c6888362e20"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "WeaponCategory",
+  "Ranks": 1,
+  "RequireProficiency": true,
+  "WeaponSubCategory": "None",
+  "assetName": "ImprovedCriticalMythicFeat",
+  "guid": "8bc0190a4ec04bd489eec290aeaa6d07",
+  "m_Prerequisite": "!bp_f4201c85a991369408740c6888362e20",
+  "name": "Improved Critical (Mythic)"
+}

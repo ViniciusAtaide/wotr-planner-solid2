@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "LawfulNeutral, TrueNeutral, ChaoticNeutral, Evil",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OtherworldlyCompanionFiendish",
+  "guid": "4d7607a0155af7d43b49b785f2051e21",
+  "name": "Otherworldly Companion — Fiendish"
+}

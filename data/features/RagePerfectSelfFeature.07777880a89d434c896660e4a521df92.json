@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 20,
+      "m_Archetype": "!bp_adffdd8a99094a89823a79292a503ee9",
+      "m_CharacterClass": "!bp_f7d7eb166b3dd594fb330d085df41853"
+    }
+  ],
+  "Groups": [
+    "RagePower"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "RagePerfectSelfFeature",
+  "guid": "07777880a89d434c896660e4a521df92",
+  "name": "Ki Power: Perfect Self"
+}

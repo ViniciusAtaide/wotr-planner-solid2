@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "OldEarthShriekBeltItem",
+  "guid": "c62696ace05e34b4eadd77ecc77c4e11",
+  "m_Enchantments": [
+    "!bp_8da5b80b2e3c30f468ac6975be2eff70",
+    "!bp_5f25b5f8c89d40c46ba8026bd7b73dcc"
+  ],
+  "name": "Voice of the Faceless (belt)"
+}

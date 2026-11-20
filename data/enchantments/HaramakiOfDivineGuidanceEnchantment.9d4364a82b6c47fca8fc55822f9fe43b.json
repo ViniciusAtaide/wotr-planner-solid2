@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_0c76ed195272411198e76c6fbed7fed6"
+    }
+  ],
+  "assetName": "HaramakiOfDivineGuidanceEnchantment",
+  "guid": "9d4364a82b6c47fca8fc55822f9fe43b"
+}

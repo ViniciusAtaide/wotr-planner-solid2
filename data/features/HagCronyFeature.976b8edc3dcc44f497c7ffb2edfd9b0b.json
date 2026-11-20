@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddPet",
+      "Type": "NightHag"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HagCronyFeature",
+  "guid": "976b8edc3dcc44f497c7ffb2edfd9b0b",
+  "name": "Hag Crony"
+}

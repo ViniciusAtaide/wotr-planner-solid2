@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Insight",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "CheckIntimidate",
+      "Value": 7
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "OverlordsChainmailFeature",
+  "guid": "08a2b9fe005945da947949359d71f505"
+}

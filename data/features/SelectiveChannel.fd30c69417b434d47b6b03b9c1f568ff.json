@@ -1,0 +1,98 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d332c1748445e8f4f9e92763123e31bd"
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Charisma",
+      "Value": 13
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_a9ab1bbc79ecb174d9a04699986ce8d5"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_7d49d7f590dc9a948b3bd1c8b7979854"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_cb6d55dda5ab906459d18a435994a760"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_b8ec9dccc0e7ef74fb4072b0679c2aec"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_4bf9a9afadca5304e89bf52f2ac2d236"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_bd588bc544d2f8547a02bb82ad9f466a"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_b40316f05d4772e4894688e6743602bd"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_a79013ff4bcd4864cb669622a29ddafb"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_295dff380fb8ed743bd5c76a30a49a46"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_eb388d17f07e0b44d9f83ada0148cc69"
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SelectiveChannel",
+  "guid": "fd30c69417b434d47b6b03b9c1f568ff",
+  "name": "Selective Channel"
+}

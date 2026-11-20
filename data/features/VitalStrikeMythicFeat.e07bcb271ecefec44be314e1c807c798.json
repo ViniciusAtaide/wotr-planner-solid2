@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_14a1fc1356df9f146900e1e42142fc9d"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "VitalStrikeMythicFeat",
+  "guid": "e07bcb271ecefec44be314e1c807c798",
+  "name": "Vital Strike (Mythic)"
+}

@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteProficiency",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "LightMace"
+      ]
+    }
+  ],
+  "Groups": [
+    "FinesseTraining"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FinesseTrainingLightMace",
+  "guid": "21ac913e0a93ca546bb500d8cbfbb9ba",
+  "name": "Finesse Training (Light Mace)"
+}

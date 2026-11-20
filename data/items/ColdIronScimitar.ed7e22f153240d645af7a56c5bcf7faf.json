@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronScimitar",
+  "guid": "ed7e22f153240d645af7a56c5bcf7faf",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d9fbec4637d71bd4ebc977628de3daf3",
+  "name": "Cold Iron Scimitar"
+}

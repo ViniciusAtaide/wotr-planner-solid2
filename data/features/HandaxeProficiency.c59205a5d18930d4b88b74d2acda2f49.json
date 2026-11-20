@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Handaxe"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HandaxeProficiency",
+  "guid": "c59205a5d18930d4b88b74d2acda2f49",
+  "name": "Weapon Proficiency (Handaxe)"
+}

@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_30b5e47d47a0e37438cc5a80c96cfb99",
+      "m_Feature": "!bp_7381f6ea613383041a50f715c96bd644"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_08a5686378a87b64399d329ba4ef71b8"
+    }
+  ],
+  "Groups": [
+    "WarpriestBlessing"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MagicBlessingFeature",
+  "guid": "1754ff61a0805714fa2b89c8c1bb87ad",
+  "name": "Magic"
+}

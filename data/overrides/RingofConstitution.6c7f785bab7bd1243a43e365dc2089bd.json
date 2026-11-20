@@ -1,0 +1,5 @@
+{
+  "change": "add",
+  "reason": "Hand-kept item (map ticket 12): the ring the Rust planner calls colossus-ring. No container, vendor, giving action or companion in the dump gives it, so the sourcing misses it. It is worn in m_Ring2 by DLC4_ShifterMythicDemonBoss 00f35416b8cc46279fe3a556064a72ca, a unit that ten BlueprintCue blueprints use as a speaker, so a scene places it, and the unit has no Unlootable component, so its worn items go into its corpse's inventory (Items/Slots/ItemSlot.cs InsertItem, UnitEntityData.HasLoot). The dump has no scenes to show the fight itself (research: gear-vs-rust-data.md).",
+  "target": "6c7f785bab7bd1243a43e365dc2089bd"
+}

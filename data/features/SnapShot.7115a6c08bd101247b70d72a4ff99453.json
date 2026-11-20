@@ -1,0 +1,40 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_0da0c194d6e1d43419eb8d990b28e0ab"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8f3d1e6b4be006f4d896081f2f889665"
+    },
+    {
+      "$type": "PrerequisiteFullStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "BaseAttackBonus",
+      "Value": 6
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "SnapShot"
+    }
+  ],
+  "Groups": [
+    "CombatFeat",
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SnapShot",
+  "guid": "7115a6c08bd101247b70d72a4ff99453",
+  "name": "Snap Shot"
+}

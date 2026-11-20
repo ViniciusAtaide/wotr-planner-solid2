@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SavingSlash",
+  "guid": "eee7abd42ef7bac4ea117b2f41f85ec3",
+  "name": "Saving Slash"
+}

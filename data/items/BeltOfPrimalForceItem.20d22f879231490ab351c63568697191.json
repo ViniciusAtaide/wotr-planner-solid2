@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfPrimalForceItem",
+  "guid": "20d22f879231490ab351c63568697191",
+  "m_Enchantments": [
+    "!bp_55d8befe270846beaed9bb4182d259a0"
+  ],
+  "name": "Belt of Primal Force"
+}

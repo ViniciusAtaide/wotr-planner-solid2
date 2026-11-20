@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HatOfHearteningSongItem",
+  "guid": "0f84e6afc9aed26469d3a00da7caa95f",
+  "m_Enchantments": [
+    "!bp_b2a4026edb36a164984818fce4fdf6bc"
+  ],
+  "name": "Hat of Heartening Song"
+}

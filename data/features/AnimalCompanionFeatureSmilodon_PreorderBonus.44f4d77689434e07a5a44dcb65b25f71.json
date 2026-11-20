@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddPet",
+      "Type": "AnimalCompanion"
+    },
+    {
+      "$type": "PrerequisitePet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "NoCompanion": true,
+      "Type": "AnimalCompanion"
+    }
+  ],
+  "Groups": [
+    "AnimalCompanion"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "AnimalCompanionFeatureSmilodon_PreorderBonus",
+  "guid": "44f4d77689434e07a5a44dcb65b25f71",
+  "name": "Animal Companion — Black Smilodon"
+}

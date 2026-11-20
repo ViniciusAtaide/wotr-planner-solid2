@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BurnFeature",
+  "guid": "57e3577a0eb53294e9d7cc649d5239a3",
+  "name": "Burn"
+}

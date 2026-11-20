@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "DisenchanterFeatSelection",
+  "guid": "234772e17012d554f8661e3f365b68ae",
+  "m_AllFeatures": [
+    "!bp_79042cb55f030614ea29956177977c52",
+    "!bp_175d1577bb6c9a04baf88eec99c66334",
+    "!bp_15e7da6645a7f3d41bdad7c8c4b9de1e",
+    "!bp_cad1b9175e8c0e64583432a22134d33c",
+    "!bp_60ed5ba87ac9e3241adc8212d3f6a24c"
+  ],
+  "name": "Bonus Feats (Disenchanter 3)"
+}

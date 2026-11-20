@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfShadowsItem",
+  "guid": "d0d136d4b4f6f2e4ba4e72c7215ac89e",
+  "m_Enchantments": [
+    "!bp_15008553994dd7e48af2ad1a1426d733"
+  ],
+  "name": "Belt of Shadows"
+}

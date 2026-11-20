@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "WanderingDuelistsSpearItem",
+  "guid": "800864f302984ff880fc6c539cb6d85c",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_cc8af16eeeb7445c9833df469a14178d"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_4b289eccefe6d704093201e52eb6d123",
+  "name": "Wandering Duelist's Spear"
+}

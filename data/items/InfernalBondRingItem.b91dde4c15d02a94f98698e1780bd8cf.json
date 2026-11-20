@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "InfernalBondRingItem",
+  "guid": "b91dde4c15d02a94f98698e1780bd8cf",
+  "m_Enchantments": [
+    "!bp_3dbc31019a444944ea587e756c4f40a7"
+  ],
+  "name": "Infernal Bond"
+}

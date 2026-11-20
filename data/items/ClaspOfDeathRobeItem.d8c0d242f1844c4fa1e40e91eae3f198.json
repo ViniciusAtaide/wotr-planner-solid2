@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "ClaspOfDeathRobeItem",
+  "guid": "d8c0d242f1844c4fa1e40e91eae3f198",
+  "m_Enchantments": [
+    "!bp_82ad1b6eeb2be3f4a901d8e685a669a7",
+    "!bp_85c75c68eb10f6f459bab5ade8ec0abe",
+    "!bp_575de3a13d4040c4cb84891036e9e76b",
+    "!bp_cb4a39044b59f5e47ad5bc08ff9d6669"
+  ],
+  "name": "Clasp of Death"
+}

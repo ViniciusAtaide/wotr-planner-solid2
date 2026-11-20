@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 10,
+      "m_AdditionalClasses": [
+        "!bp_34ecd1b5e1b90b9498795791b0855239"
+      ],
+      "m_Archetypes": [
+        "!bp_339659f6b09b4136bf8c2b2c3df87c65"
+      ],
+      "m_Class": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce",
+      "m_Feature": "!bp_112314658d0848645b34555a41def2ff"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "JudgmentFeature",
+  "guid": "981def910b98200499c0c8f85a78bde8",
+  "name": "Judgment"
+}

@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Javelin"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "JavelinProficiency",
+  "guid": "8e85b6347caa4e84fa67d71f65a6a990",
+  "name": "Weapon Proficiency (Javelin)"
+}

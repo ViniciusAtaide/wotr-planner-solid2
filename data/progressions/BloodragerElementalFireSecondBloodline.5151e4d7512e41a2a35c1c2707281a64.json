@@ -1,0 +1,230 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "OrAndLogic",
+              "ConditionsChecker": {
+                "Conditions": [
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_dafe58c4f0785e94e93c0f07901f1343"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_5286db4f19f31eb44af99fb881c99517"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_777bc77d3dc652c488a20d1a7b0b95e5"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_12f7b4c5d603f3744b2b1def28c0a4fa"
+                  }
+                ],
+                "Operation": "Or"
+              },
+              "Not": true
+            },
+            {
+              "$type": "OrAndLogic",
+              "ConditionsChecker": {
+                "Conditions": [
+                  {
+                    "$type": "OrAndLogic",
+                    "ConditionsChecker": {
+                      "Conditions": [
+                        {
+                          "$type": "ContextConditionHasFact",
+                          "Not": true,
+                          "m_Fact": "!bp_31e1c4c926d64e258c75e21968edac2d"
+                        },
+                        {
+                          "$type": "ContextConditionHasFact",
+                          "Not": true,
+                          "m_Fact": "!bp_60c99d78a70e0b44f87ba01d02d909a6"
+                        }
+                      ],
+                      "Operation": "And"
+                    },
+                    "Not": false
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_17cc794d47408bc4986c55265475c06f"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_b19f95964e4a18f4cb3e4e3101593f22"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_94bbb5a79f006674cbcbb03995b3f728"
+                  }
+                ],
+                "Operation": "Or"
+              },
+              "Not": false
+            }
+          ],
+          "Operation": "And"
+        },
+        "Not": false
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "BloodragerBloodline"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_0fb267c8f74fa5f4ea2e31b0f2384286",
+        "!bp_ed7138a56e5db624895828546283806e",
+        "!bp_363737ca96b4a084b852688fd7430fa5"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": []
+    },
+    {
+      "Level": 3,
+      "m_Features": []
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_e1c3a051676728a46963cc7c6c0d0696",
+        "!bp_dfbd18edfa9443b98b1ed3b643551d31"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": []
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_4adc208e35b9ef64285014c1af47fc4a"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_9f9aef67313c76d43ac01d40d8bc5b86"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_c1aa1514e23d0424fa3d78c782dcabc7",
+        "!bp_f820e9272d234162a7e6ef3b64be0f38"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_4adc208e35b9ef64285014c1af47fc4a"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_02c9c19d1b663c44c91c2094039ac866"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": []
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_107b4ff0240382e4f9a4659484e1c0fa",
+        "!bp_7a2cef447f364544e9dddb0f8bb410ce",
+        "!bp_c63fcfd424a64d1aa195e7721b33863e"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_3d13d85a8680ed044bcac7bc6523fe35"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": []
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_107b4ff0240382e4f9a4659484e1c0fa"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_2bc7c0ace4682914bb78f88191bfdd72",
+        "!bp_35ff63e637358d94aae9968e8528fbbf",
+        "!bp_d43b1581b1f64f928e55d7ad6d36cb13"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": []
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_107b4ff0240382e4f9a4659484e1c0fa"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": []
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_79816cb554c5bf842be1e54c3cceb565",
+        "!bp_171a7125128f407fb439c1f31d9cec43"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "BloodragerElementalFireSecondBloodline",
+  "guid": "5151e4d7512e41a2a35c1c2707281a64",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Elemental — Fire (Second Bloodrager Bloodline)"
+}

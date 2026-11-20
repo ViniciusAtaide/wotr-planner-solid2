@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_1f6fabee66d54992bc912236d36b50f8"
+    }
+  ],
+  "assetName": "ZeorisDaggerRing_BetrayalEnchantment",
+  "guid": "0dc4254f731346ce99f981c769b0ec9d"
+}

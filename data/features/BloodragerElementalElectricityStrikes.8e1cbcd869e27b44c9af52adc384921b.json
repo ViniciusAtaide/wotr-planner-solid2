@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499",
+      "m_Feature": "!bp_a3daf22d72afa184e8fa79c4e3848d75"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499",
+      "m_Feature": "!bp_99e577bf8876f294eaaa47dec8dae994"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodragerElementalElectricityStrikes",
+  "guid": "8e1cbcd869e27b44c9af52adc384921b",
+  "name": "Elemental Strikes — Electricity"
+}

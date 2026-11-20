@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_65473b1285d74bbf8f74aaf0f94de9ed"
+    }
+  ],
+  "assetName": "JesterCapEnchantment",
+  "guid": "2fde880dca774b6a919b191863d9b4f9"
+}

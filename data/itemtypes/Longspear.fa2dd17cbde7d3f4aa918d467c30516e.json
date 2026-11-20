@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Longspear",
+  "Components": [],
+  "assetName": "Longspear",
+  "guid": "fa2dd17cbde7d3f4aa918d467c30516e",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Spears",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": true,
+  "name": "Longspear"
+}

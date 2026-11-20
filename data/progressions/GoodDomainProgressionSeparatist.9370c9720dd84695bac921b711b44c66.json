@@ -1,0 +1,96 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_7fd23a5b7fc84e59a71b69289e468294"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_882521af8012fc749930b03dc18a69de"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_351235ac5fc2b7e47801f63d117b656c"
+    },
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "Good",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_243ab3e7a86d30243bdfe79c83e6adb4"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_efc4219c7894afc438180737adc0b7ac"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_9370c9720dd84695bac921b711b44c66"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "SeparatistSecondaryDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_b874d5ac99df40feaf8c07ee32700528"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_3b4e631f152d4a96bf5a0371976839a3"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "GoodDomainProgressionSeparatist",
+  "guid": "9370c9720dd84695bac921b711b44c66",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_67401c74ee094e82a2afd645a847f5cc"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Good Domain (Forbidden Rites)"
+}

@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_eb5330cbcbc04044a6f043fcd0571ce5"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_41bb1d0e3dc24e9b8c60729222fa81f6"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ShifterWildShapeWereRatFeatureLevelUp1",
+  "guid": "2acabe19873f4d95ab0db6ad6f2b6123"
+}

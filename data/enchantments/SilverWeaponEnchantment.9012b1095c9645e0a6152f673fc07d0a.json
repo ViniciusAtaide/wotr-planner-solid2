@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3f4643597da241c987703324f493fd3a"
+    }
+  ],
+  "assetName": "SilverWeaponEnchantment",
+  "guid": "9012b1095c9645e0a6152f673fc07d0a"
+}

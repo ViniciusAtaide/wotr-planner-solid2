@@ -1,0 +1,84 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_9dfdfd4904e98fa48b80c8f63ec2cf11"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_d124d29c7c96fc345943dd17e24990e8"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_42828a56014b49d889a58220d85dfb83"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "Domain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_1c37869ee06ca33459f16f23f4969e7d"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_8e44306af595c8d44aad2f1260fd7be2"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WeatherDomainProgression",
+  "guid": "c18a821ee662db0439fb873165da25be",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": -2,
+      "m_Archetype": "!bp_f996f0a18e5d945459e710ee3a6dd485"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_34ecd1b5e1b90b9498795791b0855239"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [
+    "!bp_4b81b908d864412d92ea22f91044c0b8"
+  ],
+  "name": "Weather Domain"
+}

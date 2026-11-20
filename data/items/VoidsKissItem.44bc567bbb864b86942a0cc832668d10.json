@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "VoidsKissItem",
+  "guid": "44bc567bbb864b86942a0cc832668d10",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_0deddf9e33f442dba90a1c0e7d241c29"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a7da36e0e7bb60e42b9f23462ce2f4fc",
+  "name": "Void's Kiss"
+}

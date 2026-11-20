@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "aszite",
+  "reason": "\"Banded Mail +3\" is two items: the plain one and the aszite one (AsziteBandedStandardPlus3), whose armour carries AsziteArmorEnchantment. Restrictions, slot and type are the same, and their enhancement bonus isn't in data/, so the aszite one is qualified by its material; the plain one stays bare.",
+  "target": "ec22ba6e1b574ac696af44db65216e65"
+}

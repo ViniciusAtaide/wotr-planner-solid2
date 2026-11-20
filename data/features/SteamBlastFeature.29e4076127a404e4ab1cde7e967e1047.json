@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_9ff81732daddb174aa8138ad1297c787",
+      "m_Feature": "!bp_e80f7c9cf46be8a47a280c3af51557a5"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 20,
+  "assetName": "SteamBlastFeature",
+  "guid": "29e4076127a404e4ab1cde7e967e1047",
+  "name": "Steam Blast"
+}

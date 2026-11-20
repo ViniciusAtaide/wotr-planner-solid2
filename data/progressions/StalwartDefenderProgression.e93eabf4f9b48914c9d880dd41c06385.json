@@ -1,0 +1,91 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_60b4e1f781e9aac439b8d2ad4c635524",
+        "!bp_2a6a2f8e492ab174eb3f01acf5b7c90a",
+        "!bp_05dfc7b4dd2840f99609c3b570343898"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_2cd91c501bda80b47ac2df0d51b02973"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_8f800ed6ce8c42e8a01fd8f3e990c459"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_60b4e1f781e9aac439b8d2ad4c635524",
+        "!bp_2cd91c501bda80b47ac2df0d51b02973"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_4d4f48f401d5d8b408c2e7a973fba9ea"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_2cd91c501bda80b47ac2df0d51b02973"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_485a18c05792521459c7d06c63128c79",
+        "!bp_60b4e1f781e9aac439b8d2ad4c635524",
+        "!bp_4d4f48f401d5d8b408c2e7a973fba9ea"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_2cd91c501bda80b47ac2df0d51b02973"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_64c2f599a29756041a98b2134fdfeeb4"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_60b4e1f781e9aac439b8d2ad4c635524",
+        "!bp_2cd91c501bda80b47ac2df0d51b02973",
+        "!bp_4d4f48f401d5d8b408c2e7a973fba9ea"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "StalwartDefenderProgression",
+  "guid": "e93eabf4f9b48914c9d880dd41c06385",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_d5917881586ff1d4d96d5b7cebda9464"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": []
+}

@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "Feat",
+    "RogueTalent",
+    "KineticWildTalent"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "SkillFocusSelection",
+  "guid": "c9629ef9eebb88b479b2fbc5e836656a",
+  "m_AllFeatures": [
+    "!bp_52dd89af385466c499338b7297896ded",
+    "!bp_1621be43793c5bb43be55493e9c45924",
+    "!bp_cad1b9175e8c0e64583432a22134d33c",
+    "!bp_611e863120c0f9a4cab2d099f1eb20b4",
+    "!bp_6507d2da389ed55448e0e1e5b871c013",
+    "!bp_c541f80af8d0af4498e1abb6025780c7",
+    "!bp_f74c6bdf5c5f5374fb9302ecdc1f7d64",
+    "!bp_9db907332bdaec1468cff3a99efef5b4",
+    "!bp_3a8d34905eae4a74892aae37df3352b9",
+    "!bp_7feda1b98f0c169418aa9af78a85953b",
+    "!bp_f43ffc8e3f8ad8a43be2d44ad6e27914"
+  ],
+  "name": "Skill Focus"
+}

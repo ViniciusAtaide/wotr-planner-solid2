@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "SawtoothSabreFlamingPlus1",
+  "guid": "c92eca91caf844f9a990bed7f6905a61",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_ef50f200e4ab429b8bcb66a56f886c2f",
+  "name": "Flaming Sawtooth Saber +1"
+}

@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_d078b2ef073f2814c9e338a789d97b73",
+      "m_CharacterClass": "!bp_45a4607686d96a1498891b3286121780"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 2,
+      "m_CharacterClass": "!bp_45a4607686d96a1498891b3286121780"
+    }
+  ],
+  "Groups": [
+    "ArcaneTricksterSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ArcaneTricksterEldritchScion",
+  "guid": "9469f31fa9a89e04f9e3937d84014c67",
+  "m_Spellbook": "!bp_e2763fbfdb91920458c4686c3e7ed085",
+  "name": "Eldritch Scion"
+}

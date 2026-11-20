@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_5e63cd194075c494eae2db421cd06898"
+    }
+  ],
+  "assetName": "SkinnedLeatherCloakEnchantment",
+  "guid": "4ce017d8c8dd45d4e9e16ff3aa82b4e8"
+}

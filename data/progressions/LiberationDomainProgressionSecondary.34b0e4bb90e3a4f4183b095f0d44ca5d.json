@@ -1,0 +1,68 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_801ca88338451a546bca2ee59da87c53"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_df2f14ced8710664ba7db914880c4a02"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_34b0e4bb90e3a4f4183b095f0d44ca5d"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_ef3eee75850241cfb7713543c1d33046"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "ClericSecondaryDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_7cc934aa505172a40b4a10c14c7681c4"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_25636a46d4e7a484d903946ef4a6f6db"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "LiberationDomainProgressionSecondary",
+  "guid": "34b0e4bb90e3a4f4183b095f0d44ca5d",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Liberation Domain (Domain Selection)"
+}

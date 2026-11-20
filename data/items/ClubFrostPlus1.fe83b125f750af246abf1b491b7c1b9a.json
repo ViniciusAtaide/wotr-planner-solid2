@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ClubFrostPlus1",
+  "guid": "fe83b125f750af246abf1b491b7c1b9a",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_26aa0672af2c7d84ba93bec37758c712",
+  "name": "Frost Club +1"
+}

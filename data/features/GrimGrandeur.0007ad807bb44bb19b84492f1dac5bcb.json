@@ -1,0 +1,45 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d452e7b91bd34a61ba9d4768e40f9cae"
+    },
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "IsUnitMythicLevel",
+        "CheckMaxLevel": false,
+        "CheckMinLevel": true,
+        "MaxLevel": null,
+        "MinLevel": {
+          "$type": "IntConstant",
+          "Value": 2
+        },
+        "Not": false,
+        "Unit": {
+          "$type": "ContextTargetUnit"
+        }
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "GrimGrandeur",
+  "guid": "0007ad807bb44bb19b84492f1dac5bcb",
+  "name": "Grim Splendor"
+}

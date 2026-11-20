@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_e8f21e5b58e0569468e420ebea456124"
+    },
+    {
+      "$type": "EquipmentRestrictionAlignment",
+      "Alignment": "Good"
+    }
+  ],
+  "assetName": "RobeOfVirtueItem",
+  "guid": "17c5e2686dbb5a843b5ba859f22aeea1",
+  "m_Enchantments": [
+    "!bp_f1d48244362d7aa4386d5437d9135f2a"
+  ],
+  "name": "Robe of Virtue"
+}

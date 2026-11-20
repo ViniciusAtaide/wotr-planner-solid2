@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfCourageousChargeItem",
+  "guid": "ca893ba89b2c9db4287d4a57abd286df",
+  "m_Enchantments": [
+    "!bp_f9278c2ea13c2b34cb56be078428a0bb",
+    "!bp_15008553994dd7e48af2ad1a1426d733",
+    "!bp_717ea085eb284bb4392f15534a00426a"
+  ],
+  "name": "Belt of Courageous Charge"
+}

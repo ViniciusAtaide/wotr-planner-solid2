@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "HammerOfMasterpieceItem",
+  "guid": "f4f5a4be045c23f4db45681d83a486bb",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_bbf7d0ea57e4c9349b65c82abc6787b4",
+  "name": "Hammer of Masterpiece"
+}

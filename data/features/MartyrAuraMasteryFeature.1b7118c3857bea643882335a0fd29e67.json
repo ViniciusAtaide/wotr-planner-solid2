@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MartyrAuraMasteryFeature",
+  "guid": "1b7118c3857bea643882335a0fd29e67",
+  "name": "Aura Mastery"
+}

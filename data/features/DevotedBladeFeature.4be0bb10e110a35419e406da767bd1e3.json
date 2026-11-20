@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 12,
+      "Not": false,
+      "m_CharacterClass": "!bp_45a4607686d96a1498891b3286121780"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_67ec8dcae6fb3d3439e5ae874ddc7b9b",
+      "m_CharacterClass": "!bp_45a4607686d96a1498891b3286121780"
+    }
+  ],
+  "Groups": [
+    "MagusArcana"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DevotedBladeFeature",
+  "guid": "4be0bb10e110a35419e406da767bd1e3",
+  "name": "Devoted Blade"
+}

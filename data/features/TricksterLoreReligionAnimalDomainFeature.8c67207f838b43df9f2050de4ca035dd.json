@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFactContextActions",
+      "Activated": {
+        "Actions": [
+          {
+            "$type": "ContextActionAddFeature",
+            "m_PermanentFeature": "!bp_9d3d3bce80564b6e9468b723f2da7ad4",
+            "m_SetRankFrom": "!bp_c0e6f7e7a9fc4db386f5f84466c0195f"
+          }
+        ]
+      }
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_23d2f87aa54c89f418e68e790dba11e0"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterLoreReligionAnimalDomainFeature",
+  "guid": "8c67207f838b43df9f2050de4ca035dd",
+  "name": "Animal Domain (Lore (Religion) 2 Rank)"
+}

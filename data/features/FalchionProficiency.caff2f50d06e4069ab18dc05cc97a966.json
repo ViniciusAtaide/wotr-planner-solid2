@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Falchion"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FalchionProficiency",
+  "guid": "caff2f50d06e4069ab18dc05cc97a966",
+  "name": "Weapon Proficiency (Falchion)"
+}

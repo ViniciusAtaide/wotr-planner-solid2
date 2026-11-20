@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "Pulura_SarcorianDagger_18",
+  "guid": "1b29d5fde6ab94c4fa4372cb2498bb72",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_07cc1a7fceaee5b42b3e43da960fe76d",
+  "name": "Funerary Dagger of Aregau the Saint"
+}

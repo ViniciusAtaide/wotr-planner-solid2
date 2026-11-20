@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_3d420403f3e7340499931324640efe96"
+    }
+  ],
+  "assetName": "Artifact_LegendCloakItem",
+  "guid": "ceaf9f93f42d40f468fc89ba6c32ea9d",
+  "m_Enchantments": [
+    "!bp_b2ba70c11729488184073ba9c1f1c463"
+  ],
+  "name": "The Bound of Possibility (Legend)"
+}

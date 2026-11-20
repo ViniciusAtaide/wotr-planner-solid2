@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_c96a1ff463bde004380238a569638996"
+    }
+  ],
+  "assetName": "SarenraeObliteratingLightLightShieldArmorEnchantment",
+  "guid": "8344e036f910a664f88b1a3eb721d247"
+}

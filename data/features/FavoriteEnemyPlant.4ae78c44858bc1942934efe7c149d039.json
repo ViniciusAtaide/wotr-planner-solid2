@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "FavoriteEnemy"
+  ],
+  "HideInUI": false,
+  "Ranks": 8,
+  "assetName": "FavoriteEnemyPlant",
+  "guid": "4ae78c44858bc1942934efe7c149d039",
+  "name": "Favored Enemy — Plants"
+}

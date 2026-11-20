@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "LongbowPlus5",
+  "guid": "015b7388cf7d5804486c86ebc051efbf",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a1211c05ec2c46428f41e3c0db9423f"
+}

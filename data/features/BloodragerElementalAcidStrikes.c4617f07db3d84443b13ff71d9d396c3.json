@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499",
+      "m_Feature": "!bp_572b68a739589a547bfe9933009e3e69"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499",
+      "m_Feature": "!bp_d37a8f6f5df057a4ea50b2c065288263"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodragerElementalAcidStrikes",
+  "guid": "c4617f07db3d84443b13ff71d9d396c3",
+  "name": "Elemental Strikes — Earth"
+}

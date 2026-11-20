@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingofArodenItem",
+  "guid": "9699071c8bf046bca5272d0a14b717e0",
+  "m_Enchantments": [
+    "!bp_f7c4d6d644674c78916473c0c73c9387",
+    "!bp_02fa62090f8c4c34bffe230ad64c93a5"
+  ],
+  "name": "The Seven Virtues of a True Ruler"
+}

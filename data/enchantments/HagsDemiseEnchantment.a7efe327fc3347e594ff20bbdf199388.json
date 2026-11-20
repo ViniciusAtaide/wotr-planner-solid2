@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_fd9732a0740149e290b124822b341136"
+    }
+  ],
+  "assetName": "HagsDemiseEnchantment",
+  "guid": "a7efe327fc3347e594ff20bbdf199388"
+}

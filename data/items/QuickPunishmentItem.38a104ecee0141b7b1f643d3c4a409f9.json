@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "QuickPunishmentItem",
+  "guid": "38a104ecee0141b7b1f643d3c4a409f9",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4",
+    "!bp_29093cf543a94380ab2ec4273d789fe4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_ef50f200e4ab429b8bcb66a56f886c2f",
+  "name": "Quick Punishment"
+}

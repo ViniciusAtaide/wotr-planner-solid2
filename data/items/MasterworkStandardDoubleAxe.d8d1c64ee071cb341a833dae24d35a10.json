@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "MasterworkStandardDoubleAxe",
+  "guid": "d8d1c64ee071cb341a833dae24d35a10",
+  "m_Enchantments": [],
+  "m_SecondWeapon": "!bp_47581f1683fe58b499a9dac66e7f39c1",
+  "m_Type": "!bp_87d76c7534506a546a065731ee6a38cd",
+  "name": "Masterwork Orc Double Axe"
+}

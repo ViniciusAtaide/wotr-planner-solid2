@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDwarvenUrgroshCorrosivePlus1",
+  "guid": "20174ad86decdaf40a8f23c7df323bfd",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": "!bp_1514f529e05d7a34497c02a78b8aac04",
+  "m_Type": "!bp_0ec97c08fdf87e44f8f16ba87b511743",
+  "name": "Corrosive Dwarven Urgrosh +1"
+}

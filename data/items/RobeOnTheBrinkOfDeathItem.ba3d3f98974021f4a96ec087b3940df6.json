@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "RobeOnTheBrinkOfDeathItem",
+  "guid": "ba3d3f98974021f4a96ec087b3940df6",
+  "m_Enchantments": [
+    "!bp_ee493d50ee2806f45a1def3677884702"
+  ],
+  "name": "On the Brink of Death"
+}

@@ -1,0 +1,41 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_89dfce413170db049b0386fff333e9e1",
+        "!bp_cbc88c4c166a0ce4a95375a0a721bd01"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 8,
+      "Not": false,
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_1f3a15a3ae8a5524ab8b97f469bf4e3d"
+    }
+  ],
+  "Groups": [
+    "KineticBlastInfusion"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DetonationInfusion",
+  "guid": "77c24cc95ce319c44a0e5fc6ff466d5b",
+  "name": "Detonation"
+}

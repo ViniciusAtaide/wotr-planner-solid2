@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_999f71c22d7c4751bc150884204236b5"
+    }
+  ],
+  "assetName": "ElectricRoseEnchantment",
+  "guid": "9ccbd9b0efd54f18ba69dc27ecf18cc5"
+}

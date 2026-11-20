@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "DraconicBloodlineSelection",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "DragonheirDragonSelection",
+  "guid": "729411185291d704696e58316420fe38",
+  "m_AllFeatures": [
+    "!bp_6127949882384a5cb75074e4d77ceae3",
+    "!bp_3da0972ad5574bfd8a7de9bc5460e7e9",
+    "!bp_47f3f1a3349349fe9a7f68f8d2b6da5d",
+    "!bp_df2807f0649c4237ab7c4d62a2acaaee",
+    "!bp_416ee6e6b4834bb8bd5afe8b08a69865",
+    "!bp_5172cdce55b2455f878ff8c74c964a1e",
+    "!bp_db69413e69184b099f7825092c5dbc4f",
+    "!bp_267dbd4789fa4b75a44294c7d1625bba",
+    "!bp_b6a90286e6894c7b8fbd52a29dda9f48",
+    "!bp_1bdad91f7210419b9e5b4801d084e14b"
+  ],
+  "name": "Draconic Bloodline"
+}

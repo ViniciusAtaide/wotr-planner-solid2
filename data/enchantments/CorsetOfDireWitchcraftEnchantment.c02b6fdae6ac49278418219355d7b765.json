@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_2be6fc062e88490ba86fdc1492da5074"
+    }
+  ],
+  "assetName": "CorsetOfDireWitchcraftEnchantment",
+  "guid": "c02b6fdae6ac49278418219355d7b765"
+}

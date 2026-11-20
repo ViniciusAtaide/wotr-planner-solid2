@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "PortalStoneSpiderSaiItem",
+  "guid": "829aba5a56615aa4ab12a7528833f8d0",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_0944f411666c7594aa1398a7476ecf7d",
+  "name": "Clemency of Shadows (weapon)"
+}

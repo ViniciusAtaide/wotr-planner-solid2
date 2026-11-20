@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "ImprovedSwordOfHeaven",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "AngelSwordImprovementsSelection",
+  "guid": "c4a7679515ae2374eb634dd8087faf47",
+  "m_AllFeatures": [
+    "!bp_ebcda8f579e7d494a8befda94279968f",
+    "!bp_f02537712cd2af34c93ce979599f7b12",
+    "!bp_b35e4f149f17d924c97fbd27e30e948b",
+    "!bp_317c795278362f84581f7cf35023a19f",
+    "!bp_432c96835aee50341a4ff0b364cdb85a",
+    "!bp_0b082785884d35c4c8f252d93b8f3616",
+    "!bp_3b27bebe971f9484f93f72e3d05182ee",
+    "!bp_84f001f9aaaa73c479659edfa87f4782"
+  ],
+  "name": "Improved Sword of Heaven"
+}

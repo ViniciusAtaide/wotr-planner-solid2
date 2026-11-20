@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteProficiency",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "Claw"
+      ]
+    },
+    {
+      "$type": "PrerequisiteConditionForWeaponCategory",
+      "m_Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "ContextConditionIsWeaponEquipped",
+              "BothHandsAreEmpty": false,
+              "Category": "Claw",
+              "CheckOnCaster": true,
+              "CheckSlot": false,
+              "CheckWeaponCategory": true,
+              "CheckWeaponRangeType": false,
+              "JustCheckEmptyHand": false,
+              "Not": false,
+              "RangeType": "Melee",
+              "Slot": "PrimaryHand"
+            }
+          ],
+          "Operation": "And"
+        },
+        "Not": false
+      },
+      "m_WeaponCategories": [
+        "Claw"
+      ]
+    }
+  ],
+  "Groups": [
+    "FinesseTraining"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FinesseTrainingClaw",
+  "guid": "6b2dee734f5db0043b15ed3d0f49d32d",
+  "name": "Finesse Training (Claw)"
+}

@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "Draconic Bloodline — Black, extra use",
+  "reason": "The black draconic bloodline has three \"Breath Weapon\" blueprints: the base power (qualified by the bloodline), this extra use, granted at level 17, and the feature both of them give. They share the bloodline as grantor, and the extra use is also reached through the base power, so no level holds on every route. It is qualified by its bloodline and as the extra use.",
+  "target": "7459c25b2cc9cdd4d8367cb555f0fe5a"
+}

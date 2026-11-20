@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SpiritWardenLaughAtDeath",
+  "guid": "6c59dbd856a2f834880da58d07a868ee",
+  "name": "Laugh at Death"
+}

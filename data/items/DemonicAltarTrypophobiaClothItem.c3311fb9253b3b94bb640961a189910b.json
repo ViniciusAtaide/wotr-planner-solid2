@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "DemonicAltarTrypophobiaClothItem",
+  "guid": "c3311fb9253b3b94bb640961a189910b",
+  "m_Enchantments": [
+    "!bp_9ea1aa3cd192dff4992fd10e9f10e5ec"
+  ],
+  "name": "Shroud of the Eternal Hunger (shirt)"
+}

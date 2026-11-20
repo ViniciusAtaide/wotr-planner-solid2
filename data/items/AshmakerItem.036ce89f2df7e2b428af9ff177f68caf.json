@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "AshmakerItem",
+  "guid": "036ce89f2df7e2b428af9ff177f68caf",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979",
+    "!bp_3cf303da46e98c54d857a9a7ef5a58a2"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_629736dabac7f9f4a819dc854eaed2d6",
+  "name": "Ashmaker"
+}

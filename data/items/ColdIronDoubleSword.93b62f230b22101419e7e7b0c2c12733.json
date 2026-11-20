@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "ColdIronDoubleSword",
+  "guid": "93b62f230b22101419e7e7b0c2c12733",
+  "m_Enchantments": [],
+  "m_SecondWeapon": "!bp_4ef23a92a79b0934f9c78df43ff2c50f",
+  "m_Type": "!bp_e95efb85a0912a7489be69d5f03a5308",
+  "name": "Cold Iron Two-Bladed Sword"
+}

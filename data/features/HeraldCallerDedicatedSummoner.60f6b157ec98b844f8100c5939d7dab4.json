@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_6d3728d4e9c9898458fe5e9532951132",
+        "!bp_e70ecf1ed95ca2f40b754f1adb22bbdd"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HeraldCallerDedicatedSummoner",
+  "guid": "60f6b157ec98b844f8100c5939d7dab4",
+  "name": "Dedicated Summoner"
+}

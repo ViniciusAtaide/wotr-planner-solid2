@@ -1,0 +1,130 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Handaxe",
+        "Kukri",
+        "LightHammer",
+        "LightPick",
+        "Shortsword",
+        "Starknife",
+        "Battleaxe",
+        "Flail",
+        "HeavyPick",
+        "Longsword",
+        "Rapier",
+        "Scimitar",
+        "Warhammer",
+        "Longbow",
+        "Shortbow",
+        "EarthBreaker",
+        "Falchion",
+        "Glaive",
+        "Greataxe",
+        "Greatsword",
+        "HeavyFlail",
+        "Scythe",
+        "Bardiche",
+        "Trident",
+        "ThrowingAxe"
+      ],
+      "m_RaceRestriction": null
+    },
+    {
+      "$type": "PrerequisiteNotProficient",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "Handaxe",
+        "Kukri",
+        "LightHammer",
+        "LightPick",
+        "Shortsword",
+        "Starknife",
+        "Battleaxe",
+        "Flail",
+        "HeavyPick",
+        "Longsword",
+        "Rapier",
+        "Scimitar",
+        "Warhammer",
+        "Longbow",
+        "Shortbow",
+        "EarthBreaker",
+        "Falchion",
+        "Glaive",
+        "Greataxe",
+        "Greatsword",
+        "HeavyFlail",
+        "Scythe",
+        "Bardiche",
+        "Trident",
+        "ThrowingAxe"
+      ]
+    },
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "DwarvenWaraxe",
+        "Urgrosh"
+      ],
+      "m_RaceRestriction": "!bp_c4faf439f0e70bd40b5e36ee80d06be7"
+    },
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "ElvenCurvedBlade"
+      ],
+      "m_RaceRestriction": "!bp_25a5878d125338244896ebd3238226c8"
+    },
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "DoubleAxe"
+      ],
+      "m_RaceRestriction": "!bp_1dc20e195581a804890ddc74218bfd8e"
+    },
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "HookedHammer"
+      ],
+      "m_RaceRestriction": "!bp_ef35a22c9a27da345a4528f0d5889157"
+    },
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "SlingStaff"
+      ],
+      "m_RaceRestriction": "!bp_b0c3ef2729c498f47970bb50fa1acd30"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": true,
+      "m_CharacterClass": "!bp_26b10d4340839004f960f9816f6109fe"
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "CombatFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MartialWeaponProficiency",
+  "guid": "203992ef5b35c864390b4e4a1e200629",
+  "name": "Martial Weapons Proficiency"
+}

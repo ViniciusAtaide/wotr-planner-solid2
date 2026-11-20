@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "CeremonialFalcataItem",
+  "guid": "a3081b5219943ad4b9d88a5569a70146",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5",
+    "!bp_db23a8d4abcd1c04ab2e0859a20c272a"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1af5621e2ae551e42bd1dd6744d98639",
+  "name": "Ceremonial Falcata"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "BucklerArmor4ACagainstVerminItemPlus2",
+  "guid": "e11f0643729cd6248904f0e770950261",
+  "m_Enchantments": [
+    "!bp_7b9f2f78a83577d49927c78be0f7fbc1",
+    "!bp_ab2703dbb2c7b5a4d8d70ade1f36aa7e"
+  ],
+  "m_Type": "!bp_26fcc43f7d20374498d2e1643381d345"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "RapierCorrosivePlus1",
+  "guid": "4c4fdbaa12aff814b856ba458fcdb2d4",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_2ece38f30500f454b8569136221e55b0",
+  "name": "Corrosive Rapier +1"
+}

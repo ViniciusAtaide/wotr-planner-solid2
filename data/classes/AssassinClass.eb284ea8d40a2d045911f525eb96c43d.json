@@ -1,0 +1,53 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillMobility",
+    "SkillPersuasion",
+    "SkillThievery",
+    "SkillPerception",
+    "SkillStealth",
+    "SkillUseMagicDevice"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "TrueNeutral, Evil",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "SkillStealth",
+      "Value": 5
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": true,
+  "SkillPoints": 3,
+  "assetName": "AssassinClass",
+  "guid": "eb284ea8d40a2d045911f525eb96c43d",
+  "m_Archetypes": [],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_a02e1f0e13baa8c43b758425eda9e973",
+  "m_ReflexSave": "!bp_1f309006cd2855e4e91a6c3707f3f700",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "name": "Assassin"
+}

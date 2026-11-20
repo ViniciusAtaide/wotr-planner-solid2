@@ -1,0 +1,95 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_9f835c539f6e4a96a7b64461f4267d06",
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": true,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_8146ffda8c4f4bb795db89341a16324a"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_8146ffda8c4f4bb795db89341a16324a"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_8146ffda8c4f4bb795db89341a16324a"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_8146ffda8c4f4bb795db89341a16324a"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_8146ffda8c4f4bb795db89341a16324a"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_8146ffda8c4f4bb795db89341a16324a"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_8146ffda8c4f4bb795db89341a16324a"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_8146ffda8c4f4bb795db89341a16324a"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_8146ffda8c4f4bb795db89341a16324a"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_8146ffda8c4f4bb795db89341a16324a"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WinterWitchWinterChildProgression",
+  "guid": "b43cc3384c834e408eafd02a2c1a859b",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_eb24ca44debf6714aabe1af1fd905a07"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Winter Child"
+}

@@ -1,0 +1,105 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_30cab0aee32cd86429f5bdf304291f3a",
+        "!bp_3b8d907d35d636247bda8032a459e499"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_271af8eb5d6ccd04899f548380bff006",
+        "!bp_eff49ecc28a0ce54caf416bdacedf4f3"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_2cc3041fdc8693640a0b18c8d14e77e0"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_bb1487fcae090c446aff904b0980347c"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_eff49ecc28a0ce54caf416bdacedf4f3"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_eff49ecc28a0ce54caf416bdacedf4f3"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_eff49ecc28a0ce54caf416bdacedf4f3"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_eff49ecc28a0ce54caf416bdacedf4f3"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_eff49ecc28a0ce54caf416bdacedf4f3"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_eff49ecc28a0ce54caf416bdacedf4f3"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_eff49ecc28a0ce54caf416bdacedf4f3"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_eff49ecc28a0ce54caf416bdacedf4f3"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_eff49ecc28a0ce54caf416bdacedf4f3"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "CavalierOrderOfTheStarProgression",
+  "guid": "80004ec12a45b4d40936207341797361",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_3adc3439f98cb534ba98df59838f02c7"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Order of the Star"
+}

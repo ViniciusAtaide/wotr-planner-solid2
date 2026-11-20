@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_84bf6d1284d4457e94dab4baa0b64b15"
+    }
+  ],
+  "assetName": "RingOfReveredChampionEnchantment",
+  "guid": "f66e0424c33045ef9d331ba131ae5227"
+}

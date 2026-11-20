@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a357eaf7f5e104442a74f9013cfdfc23"
+    }
+  ],
+  "assetName": "DarkMastersRobeConcentrationEnchant",
+  "guid": "4d69aaff9f2137a48ba6c88f947ff47a"
+}

@@ -1,0 +1,41 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_50efeb23b314869409365c8061a4082d"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d12c230082825b945b92574df6f3caf1"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_ee5503b51c0c9684cb7300d28e3fc4e1"
+    }
+  ],
+  "Groups": [
+    "ShamanHex"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShamanHexFireNimbusFeature",
+  "guid": "24074b42608fff54f8e1a5b7fa4a7d29",
+  "name": "Fire Nimbus"
+}

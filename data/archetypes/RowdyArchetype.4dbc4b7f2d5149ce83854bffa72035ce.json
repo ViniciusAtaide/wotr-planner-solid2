@@ -1,0 +1,76 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_203992ef5b35c864390b4e4a1e200629",
+        "!bp_14a1fc1356df9f146900e1e42142fc9d",
+        "!bp_6ce0dd0cd1ef43eda9e62cdf483e05c3"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_52913092cd018da47845f36e6fbe240f"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_e2d1fa11f6b095e4fb2fd1dcf5e36eb3"
+      ]
+    }
+  ],
+  "AddSkillPoints": -2,
+  "ClassSkills": [
+    "SkillMobility",
+    "SkillAthletics",
+    "SkillPersuasion",
+    "SkillThievery",
+    "SkillPerception"
+  ],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_b78d146cea711a84598f0acef69462ea"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_b78d146cea711a84598f0acef69462ea"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_b78d146cea711a84598f0acef69462ea"
+      ]
+    },
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_90e54424d682d104ab36436bd527af09"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_576933720c440aa4d8d42b0c54b77e80"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": true,
+  "assetName": "RowdyArchetype",
+  "guid": "4dbc4b7f2d5149ce83854bffa72035ce",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Rowdy"
+}

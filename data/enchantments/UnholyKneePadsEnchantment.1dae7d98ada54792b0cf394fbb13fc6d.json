@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_5b86fd22b2034d2c81ab2d8f006a7678"
+    }
+  ],
+  "assetName": "UnholyKneePadsEnchantment",
+  "guid": "1dae7d98ada54792b0cf394fbb13fc6d"
+}

@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_b8ec9dccc0e7ef74fb4072b0679c2aec",
+        "!bp_eb388d17f07e0b44d9f83ada0148cc69"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "ExtraChannelShaman",
+  "guid": "4cc73e43ab814bc48ade2e291729b359",
+  "name": "Extra Channel (Shaman)"
+}

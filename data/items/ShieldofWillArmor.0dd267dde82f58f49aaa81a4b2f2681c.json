@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "ShieldofWillArmor",
+  "guid": "0dd267dde82f58f49aaa81a4b2f2681c",
+  "m_Enchantments": [
+    "!bp_a5d27d73859bd19469a6dde3b49750ff"
+  ],
+  "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6"
+}

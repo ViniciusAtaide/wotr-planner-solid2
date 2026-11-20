@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_116125402c804046a7b7ca2229e118eb"
+    }
+  ],
+  "assetName": "BootsOfMagicalWhirlEnchantment",
+  "guid": "25fd94a2fbf34e07bd3d087734b2083c"
+}

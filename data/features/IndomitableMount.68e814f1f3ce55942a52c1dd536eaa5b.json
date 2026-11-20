@@ -1,0 +1,45 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "SkillMobility",
+      "Value": 5
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_26b10d4340839004f960f9816f6109fe"
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_8a3c86893f383214da070e9c84c1e95b"
+    }
+  ],
+  "Groups": [
+    "MountedCombatFeat",
+    "Feat",
+    "CombatFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "IndomitableMount",
+  "guid": "68e814f1f3ce55942a52c1dd536eaa5b",
+  "name": "Indomitable Mount"
+}

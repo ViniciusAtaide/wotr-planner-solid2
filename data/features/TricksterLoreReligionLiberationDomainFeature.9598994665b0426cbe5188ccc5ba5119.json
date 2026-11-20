@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFactContextActions",
+      "Activated": {
+        "Actions": [
+          {
+            "$type": "ContextActionAddFeature",
+            "m_PermanentFeature": "!bp_9df8ac2b6a294d6983834fd11eaa0402",
+            "m_SetRankFrom": "!bp_c0e6f7e7a9fc4db386f5f84466c0195f"
+          }
+        ]
+      }
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_df2f14ced8710664ba7db914880c4a02"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterLoreReligionLiberationDomainFeature",
+  "guid": "9598994665b0426cbe5188ccc5ba5119",
+  "name": "Liberation Domain (Lore (Religion) 2 Rank)"
+}

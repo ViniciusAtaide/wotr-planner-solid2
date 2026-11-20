@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "LightHammerFlamingPlus2",
+  "guid": "b3d80be4f6bf29a49947c2ae7d8f2755",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_bbf7d0ea57e4c9349b65c82abc6787b4",
+  "name": "Flaming Light Hammer +2"
+}

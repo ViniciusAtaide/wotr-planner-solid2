@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronMasterworkSai",
+  "guid": "7786e617e492538488d3a3a7b7f0b0f2",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_0944f411666c7594aa1398a7476ecf7d",
+  "name": "Cold Iron Masterwork Sai"
+}

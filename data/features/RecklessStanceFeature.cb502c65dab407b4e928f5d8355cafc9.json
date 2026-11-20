@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "RagePower"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "RecklessStanceFeature",
+  "guid": "cb502c65dab407b4e928f5d8355cafc9",
+  "name": "Reckless Stance"
+}

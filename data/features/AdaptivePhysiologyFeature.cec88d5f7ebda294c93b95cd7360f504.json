@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 3,
+  "assetName": "AdaptivePhysiologyFeature",
+  "guid": "cec88d5f7ebda294c93b95cd7360f504",
+  "name": "Adaptive Physiology"
+}

@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 12,
+      "Not": false,
+      "m_CharacterClass": "!bp_45a4607686d96a1498891b3286121780"
+    }
+  ],
+  "Groups": [
+    "EldritchScionArcana"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EldritchDevotedBladeFeature",
+  "guid": "e1fdb05451a073647a0f483299db8c4b",
+  "name": "Devoted Blade (Magus Arcana)"
+}

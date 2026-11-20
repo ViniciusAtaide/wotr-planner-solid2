@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteProficiency",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "WeaponLightShield"
+      ]
+    }
+  ],
+  "Groups": [
+    "FinesseTraining"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FinesseTrainingLightShield",
+  "guid": "bbe497b750f698c4eb99bcf97240a0d1",
+  "name": "Finesse Training (Light Shield)"
+}

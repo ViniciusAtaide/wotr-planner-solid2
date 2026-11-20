@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_24d5402c0c1de48468b563f6174c6256",
+        "!bp_9be5e050244352d43a1cb50aad8d548f"
+      ]
+    }
+  ],
+  "Groups": [
+    "ThassilonianSpellbook"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ThassilonianIllusionFeature",
+  "guid": "aa271e69902044b47a8e62c4e58a9dcb",
+  "m_Spellbook": "!bp_74b87962a97d56c4583979216631eb4c",
+  "name": "Pride (Illusion)"
+}

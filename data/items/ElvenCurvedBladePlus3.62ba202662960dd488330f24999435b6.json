@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ElvenCurvedBladePlus3",
+  "guid": "62ba202662960dd488330f24999435b6",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_b5e6838ad2a62b146b49619bcf9f42aa"
+}

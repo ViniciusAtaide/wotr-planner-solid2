@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EnergyResistanceOread",
+  "guid": "6e60bfd48a63c8542a3552c2a05b3283",
+  "name": "Energy Resistance (Oread)"
+}

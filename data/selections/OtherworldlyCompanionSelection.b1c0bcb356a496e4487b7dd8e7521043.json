@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "OtherworldlyCompanionSelection",
+  "guid": "b1c0bcb356a496e4487b7dd8e7521043",
+  "m_AllFeatures": [
+    "!bp_4d7607a0155af7d43b49b785f2051e21",
+    "!bp_3db2fd3394613b4438d3c844a0c034ca"
+  ],
+  "name": "Otherworldly Companion"
+}

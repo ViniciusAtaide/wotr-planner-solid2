@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "AmuletOfLifeVeilItem",
+  "guid": "138f2b7ce23a4fa4fa3d633c1d3a0ae3",
+  "m_Enchantments": [
+    "!bp_177510057a2f71a4c8e61bebabaefa28"
+  ],
+  "name": "Life Veil"
+}

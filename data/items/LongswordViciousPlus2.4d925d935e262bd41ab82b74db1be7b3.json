@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "LongswordViciousPlus2",
+  "guid": "4d925d935e262bd41ab82b74db1be7b3",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5",
+    "!bp_a1455a289da208144981e4b1ef92cc56"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d56c44bc9eb10204c8b386a02c7eed21",
+  "name": "Vicious Longsword +2"
+}

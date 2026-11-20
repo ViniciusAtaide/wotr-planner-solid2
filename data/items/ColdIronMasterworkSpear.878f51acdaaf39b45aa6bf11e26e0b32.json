@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronMasterworkSpear",
+  "guid": "878f51acdaaf39b45aa6bf11e26e0b32",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_4b289eccefe6d704093201e52eb6d123",
+  "name": "Cold Iron Masterwork Spear"
+}

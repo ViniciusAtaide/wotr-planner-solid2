@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronMasterworkSpikedHeavyShield",
+  "guid": "508580f6aabd5154381fd940673ee3e4",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a1b85d048fb5003438f34356df938a9f",
+  "name": "Cold Iron Masterwork Spiked Heavy Shield"
+}

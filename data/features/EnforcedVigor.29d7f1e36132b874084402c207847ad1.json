@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EnforcedVigor",
+  "guid": "29d7f1e36132b874084402c207847ad1",
+  "name": "Enforced Vigor"
+}

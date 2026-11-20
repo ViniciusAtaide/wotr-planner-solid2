@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HeadbandOfCharismaWisdom2",
+  "guid": "7fd3f27a27c94e8aac9f55d9c2523c2d",
+  "m_Enchantments": [
+    "!bp_f945413e1b120294780ba9de26bd2f7a",
+    "!bp_69f5c9eaa39301b4eb99a51f23629af4"
+  ],
+  "name": "Headband of Mental Form +2"
+}

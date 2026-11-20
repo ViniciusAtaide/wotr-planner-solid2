@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_a406d6ebea5c46bba3160246be03e96f"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "StartPlusDivStep",
+      "m_StartLevel": 1,
+      "m_StepLevel": 7,
+      "m_Type": "DamageDice",
+      "m_UseMax": true,
+      "m_UseMin": false
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_54ee847996c25cd4ba8773d7b8555174"
+      ]
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "ShifterAspectHorseBuff",
+  "guid": "0bdfd34b7e5a4639bf6b716fa2ac0098",
+  "name": "Horse (Shifter 9)"
+}

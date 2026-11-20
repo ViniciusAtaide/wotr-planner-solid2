@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanRapierStage2",
+  "guid": "f130646349a30f04b833ed0925c61114",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_2ece38f30500f454b8569136221e55b0",
+  "name": "Finnean the Talking Weapon (Rapier +3)"
+}

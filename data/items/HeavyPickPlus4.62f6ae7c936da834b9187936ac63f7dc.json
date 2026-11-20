@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "HeavyPickPlus4",
+  "guid": "62f6ae7c936da834b9187936ac63f7dc",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a492410f3d65f744c892faf09daad84a"
+}

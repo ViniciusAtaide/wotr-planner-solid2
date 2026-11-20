@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_255c71644a79475b950a1270a882ff65"
+    }
+  ],
+  "assetName": "BeltOfArodenSpellTurningEnchantment",
+  "guid": "841131231db847aeaf82f9b94f7f44cc"
+}

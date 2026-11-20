@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_52c6b07a68940af41b270b3710682dc7"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "OracleRevelationManeuverMasteryDirtyTrickGreater",
+  "guid": "7de08f6a9a5125944a79c488ca097db3"
+}

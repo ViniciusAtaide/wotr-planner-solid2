@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 20,
+  "assetName": "TricksterLoreReligionHealingDomainRankFeature",
+  "guid": "9cd4d20596844f26b27be341790acbdb"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardLongsword",
+  "guid": "6fd0a849531617844b195f452661b2cd",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d56c44bc9eb10204c8b386a02c7eed21"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDoubleSwordSpeedPlus4",
+  "guid": "4dc1905c824d6b0489ccded2a501ee71",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": "!bp_45142a881524ffa4f996eb3261c8b80d",
+  "m_Type": "!bp_e95efb85a0912a7489be69d5f03a5308",
+  "name": "Speed Two-Bladed Sword +4"
+}

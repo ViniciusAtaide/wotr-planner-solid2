@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Morale",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillPersuasion",
+      "Value": 5
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ScarletAllureFeature",
+  "guid": "19d4bdf5cc64c95419577505ad89c3bf"
+}

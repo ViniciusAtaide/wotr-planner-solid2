@@ -1,0 +1,38 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "IsUnitMythicLevel",
+        "CheckMaxLevel": false,
+        "CheckMinLevel": true,
+        "MaxLevel": null,
+        "MinLevel": {
+          "$type": "IntConstant",
+          "Value": 2
+        },
+        "Not": false,
+        "Unit": {
+          "$type": "ContextTargetUnit"
+        }
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BearingTheShard",
+  "guid": "ffae1721b245412ab68514252b9d271d",
+  "name": "Shard Bearer"
+}

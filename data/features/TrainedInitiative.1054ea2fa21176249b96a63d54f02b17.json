@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 9,
+      "Not": false,
+      "m_CharacterClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd"
+    }
+  ],
+  "Groups": [
+    "WeaponTraining"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TrainedInitiative",
+  "guid": "1054ea2fa21176249b96a63d54f02b17",
+  "name": "Trained Initiative"
+}

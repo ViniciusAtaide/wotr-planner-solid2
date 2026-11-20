@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "ColdIronStandardDoubleAxe",
+  "guid": "25e6b7c3685d14645bbd99dc19fba40b",
+  "m_Enchantments": [],
+  "m_SecondWeapon": "!bp_01b9c767f4ba0574086da17b6c13cac5",
+  "m_Type": "!bp_87d76c7534506a546a065731ee6a38cd",
+  "name": "Cold Iron Orc Double Axe"
+}

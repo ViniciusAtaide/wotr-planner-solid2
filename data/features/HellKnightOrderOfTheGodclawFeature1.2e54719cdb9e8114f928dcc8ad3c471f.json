@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HellKnightOrderOfTheGodclawFeature1",
+  "guid": "2e54719cdb9e8114f928dcc8ad3c471f",
+  "name": "Order of the Godclaw (level 1)"
+}

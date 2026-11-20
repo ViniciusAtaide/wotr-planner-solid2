@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "WanderingConmanItem",
+  "guid": "fdc89dbe3502c7843ac5685099aac211",
+  "m_Enchantments": [
+    "!bp_35586229165ba3845bdf7da1d622cbee"
+  ],
+  "name": "Wandering Conman"
+}

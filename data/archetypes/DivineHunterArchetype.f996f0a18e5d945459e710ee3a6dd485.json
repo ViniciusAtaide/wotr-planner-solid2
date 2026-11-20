@@ -1,0 +1,84 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_72909a37a1ed5344f88ec9d1d31f5c5b"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_b1c0bcb356a496e4487b7dd8e7521043"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_cb2d6e74641e4facbd250b53892bafa3",
+        "!bp_7ad7db0cbdc44428ad2e5334ef378586"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillLoreNature",
+    "SkillLoreReligion",
+    "SkillPersuasion",
+    "SkillPerception",
+    "SkillStealth",
+    "SkillKnowledgeArcana"
+  ],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_1b9916f7675d6ef4fb427081250d49de",
+        "!bp_01046afc774beee48abde8e35da0f4ba"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_01046afc774beee48abde8e35da0f4ba"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_01046afc774beee48abde8e35da0f4ba"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_01046afc774beee48abde8e35da0f4ba"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_01046afc774beee48abde8e35da0f4ba"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_01046afc774beee48abde8e35da0f4ba"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": true,
+  "assetName": "DivineHunterArchetype",
+  "guid": "f996f0a18e5d945459e710ee3a6dd485",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Divine Hunter (Hunter)"
+}

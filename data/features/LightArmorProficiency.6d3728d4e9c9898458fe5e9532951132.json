@@ -1,0 +1,41 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [
+        "Light"
+      ],
+      "WeaponProficiencies": [],
+      "m_RaceRestriction": null
+    },
+    {
+      "$type": "PrerequisiteNotProficient",
+      "ArmorProficiencies": [
+        "Light"
+      ],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": true,
+      "m_CharacterClass": "!bp_26b10d4340839004f960f9816f6109fe"
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "CombatFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "LightArmorProficiency",
+  "guid": "6d3728d4e9c9898458fe5e9532951132",
+  "name": "Armor Proficiency (Light Armor)"
+}

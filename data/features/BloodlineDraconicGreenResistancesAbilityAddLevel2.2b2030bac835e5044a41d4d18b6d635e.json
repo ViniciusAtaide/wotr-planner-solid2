@@ -1,0 +1,38 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 15,
+      "m_AdditionalClasses": [
+        "!bp_45a4607686d96a1498891b3286121780",
+        "!bp_72051275b1dbb2d42ba9118237794f7c"
+      ],
+      "m_Archetypes": [
+        "!bp_d078b2ef073f2814c9e338a789d97b73"
+      ],
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf",
+      "m_Feature": "!bp_89e1bae9246c12d4bb1578ec1724202f"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 15,
+      "m_AdditionalClasses": [
+        "!bp_45a4607686d96a1498891b3286121780",
+        "!bp_72051275b1dbb2d42ba9118237794f7c"
+      ],
+      "m_Archetypes": [
+        "!bp_d078b2ef073f2814c9e338a789d97b73"
+      ],
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf",
+      "m_Feature": "!bp_9e0ace7ba157ee14bacc866aa1cef64a"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 2,
+  "assetName": "BloodlineDraconicGreenResistancesAbilityAddLevel2",
+  "guid": "2b2030bac835e5044a41d4d18b6d635e"
+}

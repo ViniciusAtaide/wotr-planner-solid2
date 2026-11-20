@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f03d384bd6ad49639628eef2b8eaba58"
+    }
+  ],
+  "assetName": "CrystalMaidenEnchantment",
+  "guid": "69c69daf94e34daebffe70614fe28670"
+}

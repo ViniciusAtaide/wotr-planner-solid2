@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f04f701dbed84824b0618bd9b0d1a556"
+    }
+  ],
+  "assetName": "DLC3_GuardianBattleaxeEnchantment",
+  "guid": "65734781b09647ed92177461a50d92d6"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_228a318c8b7e435bacaca59b87ed5c25"
+    }
+  ],
+  "assetName": "TalionKeeperEnchantment",
+  "guid": "f84f500226b94603b3a2101f1f60ba8e"
+}

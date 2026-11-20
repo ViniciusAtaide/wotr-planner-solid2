@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_bef8d08ee3c20b246b404ce3ef948291"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicGoldPowerOfWyrms",
+  "guid": "3247396087a747148b17e1a0e37a3e67",
+  "name": "Power of Wyrms (Gold)"
+}

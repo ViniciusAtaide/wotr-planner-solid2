@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronSawtoothSabre",
+  "guid": "45e76b1480d14d959d780f1182a6cabf",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_ef50f200e4ab429b8bcb66a56f886c2f",
+  "name": "Cold Iron Sawtooth Saber"
+}

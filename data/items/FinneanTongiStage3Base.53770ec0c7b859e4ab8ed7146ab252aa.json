@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanTongiStage3Base",
+  "guid": "53770ec0c7b859e4ab8ed7146ab252aa",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_13fa38737d46c9e4abc7f4d74aaa59c3",
+  "name": "Finnean the Talking Weapon (Tongi +5)"
+}

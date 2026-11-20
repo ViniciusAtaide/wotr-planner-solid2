@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_2e1763b3d7c67894e8a0601612f1c242"
+    }
+  ],
+  "assetName": "SeasonedAssassinsEnchantment",
+  "guid": "a7821afa6d4239244b243c7bd5ea3b50"
+}

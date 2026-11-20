@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "DLC3_DemonhideLeatherArmorItem",
+  "guid": "f125e2f29ffd44e7acfb7619586a7e24",
+  "m_Enchantments": [
+    "!bp_eaeb89df5be2b784c96181552414ae5a",
+    "!bp_f8494f446b324cfcb5d8a4be3b859f2d"
+  ],
+  "m_Type": "!bp_c850ba40ed3a61b489b438a5ffa71de9",
+  "name": "Snakeskin"
+}

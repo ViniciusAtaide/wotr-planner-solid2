@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "AsziteLightShieldArmorItemPlus4",
+  "guid": "0d119a02325e4576b33b7fc0e92d1e63",
+  "m_Enchantments": [
+    "!bp_a5d27d73859bd19469a6dde3b49750ff",
+    "!bp_b6dff2f7ec3e4a4bbc5090d27752b465"
+  ],
+  "m_Type": "!bp_d38e8ea23ce653c4582eb3e002555483"
+}

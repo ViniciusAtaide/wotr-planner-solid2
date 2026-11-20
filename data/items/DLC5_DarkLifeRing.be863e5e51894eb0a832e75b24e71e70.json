@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "DLC5_DarkLifeRing",
+  "guid": "be863e5e51894eb0a832e75b24e71e70",
+  "m_Enchantments": [
+    "!bp_67454e07466246ac916e553ccf268fdd"
+  ],
+  "name": "Dark Life Ring"
+}

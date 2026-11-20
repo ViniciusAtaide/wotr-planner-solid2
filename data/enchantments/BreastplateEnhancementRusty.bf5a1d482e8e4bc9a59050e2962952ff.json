@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "ArmorEnhancementBonus",
+      "EnhancementValue": -3
+    }
+  ],
+  "assetName": "BreastplateEnhancementRusty",
+  "guid": "bf5a1d482e8e4bc9a59050e2962952ff"
+}

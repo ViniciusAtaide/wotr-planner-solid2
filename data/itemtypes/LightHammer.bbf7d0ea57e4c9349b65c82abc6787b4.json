@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "LightHammer",
+  "Components": [],
+  "assetName": "LightHammer",
+  "guid": "bbf7d0ea57e4c9349b65c82abc6787b4",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Hammers, Thrown",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Light Hammer"
+}

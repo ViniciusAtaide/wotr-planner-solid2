@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_c599c021c7d6e5543a44f356eea8d56a"
+    }
+  ],
+  "assetName": "QuarterstaffOfSlipEnchantment",
+  "guid": "91a2ce7cb7e9fc04ca489c9fe5fecde7"
+}

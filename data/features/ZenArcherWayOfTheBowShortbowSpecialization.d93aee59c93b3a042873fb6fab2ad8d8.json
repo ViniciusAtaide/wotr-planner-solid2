@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddParametrizedFeatures",
+      "m_Features": [
+        {
+          "ParamObject": null,
+          "ParamSpellSchool": "None",
+          "ParamWeaponCategory": "Shortbow",
+          "Stat": "Unknown",
+          "m_Feature": "!bp_31470b17e8446ae4ea0dacd6c5817d86"
+        }
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ZenArcherWayOfTheBowShortbowSpecialization",
+  "guid": "d93aee59c93b3a042873fb6fab2ad8d8"
+}

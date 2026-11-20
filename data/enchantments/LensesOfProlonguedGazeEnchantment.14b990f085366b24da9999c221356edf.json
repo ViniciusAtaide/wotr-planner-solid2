@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_be444e31ce4160342bfaf5dbede30379"
+    }
+  ],
+  "assetName": "LensesOfProlonguedGazeEnchantment",
+  "guid": "14b990f085366b24da9999c221356edf"
+}

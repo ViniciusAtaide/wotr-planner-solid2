@@ -1,0 +1,49 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillPersuasion",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillPerception",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Wisdom",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Constitution",
+      "Value": 2
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "Racial",
+    "AasimarHeritage"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArchonHeritage",
+  "guid": "72c04df144dbb644583184a7828c69b9",
+  "name": "Lawbringer (Archon-Blooded)"
+}

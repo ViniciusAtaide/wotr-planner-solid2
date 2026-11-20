@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "CannotBeFlanked"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "LoneWolfsScalemailFeature",
+  "guid": "947dd952c490d0c47b29a62293088479"
+}

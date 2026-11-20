@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8577502c51b74622b85338f7ef2fc1ee"
+    }
+  ],
+  "assetName": "GnawingMagicEnchantment",
+  "guid": "bf7d358dc2d949f48d2ed20999751bbf"
+}

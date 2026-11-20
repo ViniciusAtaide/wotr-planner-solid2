@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "class feature",
+  "reason": "Two blueprints are named \"Uncanny Dodge\". UncannyDodgeChecker is the one class progressions grant (assassin, barbarian, bloodrager, rogue and others, and the Powerless Prophecy curses), and it gives UncannyDodge (AddFact). Talents and archetypes give UncannyDodge directly. The checker is qualified as the class feature; UncannyDodge stays bare.",
+  "target": "8f800ed6ce8c42e8a01fd8f3e990c459"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanEstocStage3Lich",
+  "guid": "1ffa471e532a6d047b3b7f26ac8e9438",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d516765b3c2904e4a939749526a52a9a",
+  "name": "Finnean (Estoc)"
+}

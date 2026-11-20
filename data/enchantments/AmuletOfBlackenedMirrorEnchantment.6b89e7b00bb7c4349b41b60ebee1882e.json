@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_12abfff23d82feb4fb985129d599bf98"
+    }
+  ],
+  "assetName": "AmuletOfBlackenedMirrorEnchantment",
+  "guid": "6b89e7b00bb7c4349b41b60ebee1882e"
+}

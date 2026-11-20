@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_5d501618a28bdc24c80007a5c937dcb7"
+    }
+  ],
+  "assetName": "Artifact_LichCloakItem",
+  "guid": "1622ceba1d7829b4f9ee709b71bd6baf",
+  "m_Enchantments": [
+    "!bp_79a17694ce3944a7b10e6bea48a7688e"
+  ],
+  "name": "The Bound of Possibility (Lich)"
+}

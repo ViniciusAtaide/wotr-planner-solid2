@@ -1,0 +1,42 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_c2c28b6f6f000314eb35fff49bb99920",
+        "!bp_9b7bf2754e2012e4dac135fd6c782fac",
+        "!bp_295080cf4691df9438f58ff5ce79ee65"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 6,
+      "Not": false,
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "Groups": [
+    "KineticBlastInfusion"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "SynapticInfusionFeature",
+  "guid": "53c80f136f2bf65409d358f28b0c5bb4",
+  "name": "Synaptic Infusion"
+}

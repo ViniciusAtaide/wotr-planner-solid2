@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Feat",
+    "CombatFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BlindFight",
+  "guid": "4e219f5894ad0ea4daa0699e28c37b1d",
+  "name": "Blind Fight"
+}

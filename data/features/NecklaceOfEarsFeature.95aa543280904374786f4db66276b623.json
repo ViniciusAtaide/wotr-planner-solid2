@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Competence",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillKnowledgeWorld",
+      "Value": 10
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Competence",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 10
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "NecklaceOfEarsFeature",
+  "guid": "95aa543280904374786f4db66276b623"
+}

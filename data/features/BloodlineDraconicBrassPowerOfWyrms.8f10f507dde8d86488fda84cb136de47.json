@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_12bb1056a5f3f9f4b9facdb78b8d8914"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicBrassPowerOfWyrms",
+  "guid": "8f10f507dde8d86488fda84cb136de47",
+  "name": "Power of Wyrms (Brass)"
+}

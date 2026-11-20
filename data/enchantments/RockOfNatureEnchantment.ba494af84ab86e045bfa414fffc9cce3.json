@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f365092f34361104a84332f31e7bd784"
+    }
+  ],
+  "assetName": "RockOfNatureEnchantment",
+  "guid": "ba494af84ab86e045bfa414fffc9cce3"
+}

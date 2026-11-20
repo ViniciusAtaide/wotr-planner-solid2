@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3b41a9ab5628bb64face7d19afa9dbd4"
+    }
+  ],
+  "assetName": "HermitsCloakEnchantment",
+  "guid": "08d99b1ce1179254ca9236a77a2601b2"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Feat",
+    "CombatFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DefensiveCombatTraining",
+  "guid": "479c7f3b0dba69a4bbcb43e101f3f7f9",
+  "name": "Defensive Combat Training"
+}

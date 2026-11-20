@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "CrimsonMoonItem",
+  "guid": "e77bb8df912b4e98b6587b179d1bcc80",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_6344f483e53d491fabbdc28fbedfa832"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d56c44bc9eb10204c8b386a02c7eed21",
+  "name": "Blade of the Crimson Moon"
+}

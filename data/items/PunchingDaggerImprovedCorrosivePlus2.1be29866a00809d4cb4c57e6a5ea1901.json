@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "PunchingDaggerImprovedCorrosivePlus2",
+  "guid": "1be29866a00809d4cb4c57e6a5ea1901",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_89dc4dc5f386e2049b5e0a5e209a3407",
+  "name": "Greater Corrosive Punching Dagger +2"
+}

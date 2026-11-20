@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 14,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_7347d9a047b2493aa10da546b76149d4"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShifterAspectChimericFiend",
+  "guid": "0d408b6f5ae84dd39be81f5975811882",
+  "name": "Chimeric Fiend"
+}

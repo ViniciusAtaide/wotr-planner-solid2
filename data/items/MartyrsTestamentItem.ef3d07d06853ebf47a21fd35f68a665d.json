@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "MartyrsTestamentItem",
+  "guid": "ef3d07d06853ebf47a21fd35f68a665d",
+  "m_Enchantments": [
+    "!bp_102b24b114f56bc4ea6681d4230cda91"
+  ],
+  "name": "Martyr's Testament"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "GreatswordKeenBaneLycanPlus2",
+  "guid": "e803ac987fdea3d48a5ec6a5998f2570",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_5f824fbb0766a3543bbd6ae50248688f",
+  "name": "Anarchic Lycanthrope Bane Greatsword +2"
+}

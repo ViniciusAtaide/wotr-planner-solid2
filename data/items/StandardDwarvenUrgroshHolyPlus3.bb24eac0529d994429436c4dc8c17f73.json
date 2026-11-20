@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDwarvenUrgroshHolyPlus3",
+  "guid": "bb24eac0529d994429436c4dc8c17f73",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": "!bp_3549e5a721c1aca479e6e8d9ad471d17",
+  "m_Type": "!bp_0ec97c08fdf87e44f8f16ba87b511743",
+  "name": "Holy Dwarven Urgrosh +3"
+}

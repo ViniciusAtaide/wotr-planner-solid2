@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SwordlordSteelNetFeature",
+  "guid": "b4202533d1748f84484658491d2ff766",
+  "name": "Steel Net"
+}

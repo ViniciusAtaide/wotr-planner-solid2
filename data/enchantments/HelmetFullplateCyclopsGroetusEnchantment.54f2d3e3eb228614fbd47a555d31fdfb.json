@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_32bb692f8d1a45d1896a37f65b16ddd0"
+    }
+  ],
+  "assetName": "HelmetFullplateCyclopsGroetusEnchantment",
+  "guid": "54f2d3e3eb228614fbd47a555d31fdfb"
+}

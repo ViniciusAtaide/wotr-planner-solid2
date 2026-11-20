@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_edfa93db12353944f9e75194dd0809f7"
+    }
+  ],
+  "assetName": "RobeOnTheBrinkOfDeathEnchantment",
+  "guid": "ee493d50ee2806f45a1def3677884702"
+}

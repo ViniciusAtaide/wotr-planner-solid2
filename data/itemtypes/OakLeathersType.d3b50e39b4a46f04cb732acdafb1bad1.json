@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [],
+  "assetName": "OakLeathersType",
+  "guid": "d3b50e39b4a46f04cb732acdafb1bad1",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "Light",
+  "name": "Light Armor — Leather"
+}

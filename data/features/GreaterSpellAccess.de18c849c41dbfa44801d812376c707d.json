@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "GreaterSpellAccess",
+  "guid": "de18c849c41dbfa44801d812376c707d",
+  "name": "Greater Spell Access"
+}

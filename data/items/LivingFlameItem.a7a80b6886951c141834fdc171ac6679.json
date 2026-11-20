@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "LivingFlameItem",
+  "guid": "a7a80b6886951c141834fdc171ac6679",
+  "m_Enchantments": [
+    "!bp_280fc4781b253a548bc52ccbd2fbcfbf"
+  ],
+  "name": "Living Flame"
+}

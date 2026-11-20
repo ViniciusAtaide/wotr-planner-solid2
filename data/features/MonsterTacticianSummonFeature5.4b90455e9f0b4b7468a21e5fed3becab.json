@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 11,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce",
+      "m_Feature": "!bp_00fda605a917fcc4e89612dd31683bdd"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MonsterTacticianSummonFeature5",
+  "guid": "4b90455e9f0b4b7468a21e5fed3becab",
+  "name": "Summon Monster V"
+}

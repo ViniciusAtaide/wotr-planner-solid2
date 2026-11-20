@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "IncreaseActivatableAbilityGroupSize",
+      "Group": "DivineWeaponProperty"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WeaponBondPlus5",
+  "guid": "f17c3ba33bb44d44782cb3851d823011",
+  "name": "Divine Weapon Bond (+5)"
+}

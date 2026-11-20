@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "LightShieldArmorItemLesserNegativeREsistPlus1",
+  "guid": "2cd9e43732eecd0488110a19cc5a11cb",
+  "m_Enchantments": [
+    "!bp_e90c252e08035294eba39bafce76c119",
+    "!bp_34504fb2cecda144aaff34929ba10202"
+  ],
+  "m_Type": "!bp_d38e8ea23ce653c4582eb3e002555483"
+}

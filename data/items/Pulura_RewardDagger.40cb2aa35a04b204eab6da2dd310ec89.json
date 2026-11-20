@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "Pulura_RewardDagger",
+  "guid": "40cb2aa35a04b204eab6da2dd310ec89",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_07cc1a7fceaee5b42b3e43da960fe76d",
+  "name": "Holy Dagger +3"
+}

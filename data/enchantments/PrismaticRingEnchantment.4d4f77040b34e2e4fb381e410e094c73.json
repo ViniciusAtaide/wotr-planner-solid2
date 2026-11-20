@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_40365c7ca844d11459cd8be4c1ce7586"
+    }
+  ],
+  "assetName": "PrismaticRingEnchantment",
+  "guid": "4d4f77040b34e2e4fb381e410e094c73"
+}

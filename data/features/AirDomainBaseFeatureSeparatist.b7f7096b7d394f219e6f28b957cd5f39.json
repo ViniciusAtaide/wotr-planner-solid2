@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 1,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0",
+      "m_Feature": "!bp_421ddcc7dbb6ee7479de949aaa81108d"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AirDomainBaseFeatureSeparatist",
+  "guid": "b7f7096b7d394f219e6f28b957cd5f39",
+  "name": "Air Domain (Separatist)"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronMasterworkPunchingDagger",
+  "guid": "12f1641de657b4647bad6193f4b79e54",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_89dc4dc5f386e2049b5e0a5e209a3407",
+  "name": "Cold Iron Masterwork Punching Dagger"
+}

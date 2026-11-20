@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronTrident",
+  "guid": "fed59d344fe866d42a51c128dc1cc86b",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_6ff66364e0a2c89469c2e52ebb46365e",
+  "name": "Cold Iron Trident"
+}

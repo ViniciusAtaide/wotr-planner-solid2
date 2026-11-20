@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_0138fd1cfbe644f9ae60c436395950bf"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_cb06f0e72ffb5c640a156bd9f8000c1d"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_65af7290b4efd5f418132141aaa36c1b"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ArcaneRiderMountSelection",
+  "guid": "82c791d4790c45dcac6038ef6932c3e3",
+  "m_AllFeatures": [
+    "!bp_9dc58b5901677c942854019d1dd98374",
+    "!bp_bfeb9be0a3c9420b8b2beecc8171029c",
+    "!bp_472091361cf118049a2b4339c4ea836a"
+  ],
+  "name": "Animal Companion (Arcane Rider)"
+}

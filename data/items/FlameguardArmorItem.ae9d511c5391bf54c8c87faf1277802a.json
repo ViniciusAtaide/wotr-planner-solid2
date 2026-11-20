@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "FlameguardArmorItem",
+  "guid": "ae9d511c5391bf54c8c87faf1277802a",
+  "m_Enchantments": [
+    "!bp_e90c252e08035294eba39bafce76c119",
+    "!bp_47f45701cc9545049b3745ef949d7446"
+  ],
+  "m_Type": "!bp_5f0f4b6e480e7054b8592b5a8b55854a",
+  "name": "Flameguard"
+}

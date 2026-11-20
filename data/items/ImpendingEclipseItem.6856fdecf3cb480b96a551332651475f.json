@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_26b10d4340839004f960f9816f6109fe"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "ImpendingEclipseItem",
+  "guid": "6856fdecf3cb480b96a551332651475f",
+  "m_Enchantments": [
+    "!bp_6628f9d77fd07b54c911cd8930c0d531",
+    "!bp_08e07a3e7b834418b476fdf057bce0a9"
+  ],
+  "m_Type": "!bp_9511d62bcfc57c245bf64350a5933470",
+  "name": "Impending Eclipse"
+}

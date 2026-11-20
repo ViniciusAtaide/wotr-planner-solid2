@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 8,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_d4b91e6a44674b24a2059894732809ca"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 8,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_e808f6eb0a1f42a186125b5dcdea7833"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShifterWildShapeFeyFeatureLevelUp",
+  "guid": "24a4fb8991344fd5beb2a1a1a517da87",
+  "name": "Fey Shape (Feyform Shifter)"
+}

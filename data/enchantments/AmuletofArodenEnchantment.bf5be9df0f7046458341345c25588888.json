@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_7f7c95672aac4454a2918fbb11f1743a"
+    }
+  ],
+  "assetName": "AmuletofArodenEnchantment",
+  "guid": "bf5be9df0f7046458341345c25588888"
+}

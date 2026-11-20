@@ -1,0 +1,45 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_0f8939ae6f220984e8fb568abbdfba95"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_953c3dbda63dcdb4aad6c54c1a4590d0"
+      ]
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_953c3dbda63dcdb4aad6c54c1a4590d0",
+      "m_Feature": "!bp_953c3dbda63dcdb4aad6c54c1a4590d0"
+    }
+  ],
+  "Groups": [
+    "CombatFeat",
+    "Feat",
+    "TeamworkFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SiezeTheMoment",
+  "guid": "1191ef3065e6f8e4f9fbe1b7e3c0f760",
+  "name": "Seize the Moment (feature)"
+}

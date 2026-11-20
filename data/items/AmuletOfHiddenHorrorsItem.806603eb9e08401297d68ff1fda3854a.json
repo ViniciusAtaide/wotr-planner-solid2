@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "AmuletOfHiddenHorrorsItem",
+  "guid": "806603eb9e08401297d68ff1fda3854a",
+  "m_Enchantments": [
+    "!bp_a3e6cbc71a5344738a89350e3acd0946"
+  ],
+  "name": "Amulet of Hidden Horrors"
+}

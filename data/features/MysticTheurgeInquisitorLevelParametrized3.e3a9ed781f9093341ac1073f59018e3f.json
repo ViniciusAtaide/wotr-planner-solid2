@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [],
+  "Groups": [],
+  "HasNoSuchFeature": false,
+  "HideInUI": true,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "LearnSpell",
+  "Ranks": 20,
+  "RequireProficiency": false,
+  "WeaponSubCategory": "None",
+  "assetName": "MysticTheurgeInquisitorLevelParametrized3",
+  "guid": "e3a9ed781f9093341ac1073f59018e3f",
+  "m_Prerequisite": null,
+  "name": "Inquisitor Spell (3rd Level)"
+}

@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_52dbfd8505e22f84fad8d702611f60b7",
+      "m_Feature": "!bp_fea87be2552a4f3e8cf456b624be25fc"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_52dbfd8505e22f84fad8d702611f60b7",
+      "m_Feature": "!bp_ead8ffa4abe44d679d71f765a2f16dc8"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "RazmiryMaskFeatureUpgrade",
+  "guid": "e5cae174489f449282df168abe07c3c5"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfConstitution4",
+  "guid": "dbeb5ba83e9fd2046a31590636b8b36d",
+  "m_Enchantments": [
+    "!bp_4b9573fa2b0e74043a4682740e9ae138"
+  ],
+  "name": "Belt of Mighty Constitution +4"
+}

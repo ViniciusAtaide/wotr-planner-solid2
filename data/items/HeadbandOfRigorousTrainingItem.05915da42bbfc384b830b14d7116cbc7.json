@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HeadbandOfRigorousTrainingItem",
+  "guid": "05915da42bbfc384b830b14d7116cbc7",
+  "m_Enchantments": [
+    "!bp_575de3a13d4040c4cb84891036e9e76b",
+    "!bp_299f71ea466049d47859699f41c1cc46"
+  ],
+  "name": "Headband of Rigorous Training"
+}

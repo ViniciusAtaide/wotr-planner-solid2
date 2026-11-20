@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "KineticBlast"
+  ],
+  "HideInUI": true,
+  "Ranks": 20,
+  "assetName": "ElectricBlastFeature",
+  "guid": "c2c28b6f6f000314eb35fff49bb99920",
+  "name": "Electric Blast"
+}

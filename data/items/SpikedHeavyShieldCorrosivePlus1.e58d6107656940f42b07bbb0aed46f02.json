@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "SpikedHeavyShieldCorrosivePlus1",
+  "guid": "e58d6107656940f42b07bbb0aed46f02",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a1b85d048fb5003438f34356df938a9f",
+  "name": "Corrosive Spiked Heavy Shield +1"
+}

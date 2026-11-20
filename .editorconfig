@@ -1,0 +1,26 @@
+# The project's code style, so the IDE's formatter keeps the Solid template's conventions.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+[*.{ts,tsx,js,mjs,cjs}]
+max_line_length = 120
+ij_typescript_spaces_within_imports = true
+ij_typescript_spaces_within_object_literal_braces = true
+ij_typescript_spaces_within_object_type_braces = true
+ij_typescript_use_double_quotes = false
+ij_typescript_enforce_trailing_comma = whenmultiline
+ij_javascript_spaces_within_imports = true
+ij_javascript_spaces_within_object_literal_braces = true
+ij_javascript_use_double_quotes = false
+ij_javascript_enforce_trailing_comma = whenmultiline
+
+[*.md]
+trim_trailing_whitespace = false
+max_line_length = off

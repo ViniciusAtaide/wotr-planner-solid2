@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "BaseAttackBonus",
+      "Value": 1
+    },
+    {
+      "$type": "PrerequisiteProficiency",
+      "ArmorProficiencies": [
+        "Medium"
+      ],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArmorFocusMedium",
+  "guid": "7dc004879037638489b64d5016997d12",
+  "name": "Medium Armor Focus"
+}

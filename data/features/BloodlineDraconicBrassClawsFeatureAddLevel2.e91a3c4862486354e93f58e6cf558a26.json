@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 7,
+      "m_AdditionalClasses": [
+        "!bp_45a4607686d96a1498891b3286121780",
+        "!bp_72051275b1dbb2d42ba9118237794f7c"
+      ],
+      "m_Archetypes": [
+        "!bp_d078b2ef073f2814c9e338a789d97b73"
+      ],
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf",
+      "m_Feature": "!bp_d1e704d19309d1542aefd6cf0eb75e0b"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicBrassClawsFeatureAddLevel2",
+  "guid": "e91a3c4862486354e93f58e6cf558a26"
+}

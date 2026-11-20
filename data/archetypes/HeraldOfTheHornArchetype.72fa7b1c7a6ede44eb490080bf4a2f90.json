@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_4f92e08a658e5b34c961fc12c560672b"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_7ab19a006c4abb0489d6d1a99e54fb99"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_024e019efc3b9cb4ea9e7ea0bab709c0"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_777f1610f18a3b947908bfcd01f49bc3"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_5eb7d688e472ca546a30d4a99cdb16a0"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "HeraldOfTheHornArchetype",
+  "guid": "72fa7b1c7a6ede44eb490080bf4a2f90",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Herald of the Horn"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TripImmune",
+  "guid": "c1b26f97b974aec469613f968439e7bb",
+  "name": "Immune to Trip"
+}

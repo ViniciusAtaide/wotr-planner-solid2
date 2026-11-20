@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_727381f8a2ee46a19ab96eedfe1d9daa",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_d61bd26255d4425d929d73e57ef0e6dd"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShifterFeyChimeraWolfFeature",
+  "guid": "f3563014b21c4414a5dfd2b81df5aeb6",
+  "name": "Wolf (Feyform Shifter)"
+}

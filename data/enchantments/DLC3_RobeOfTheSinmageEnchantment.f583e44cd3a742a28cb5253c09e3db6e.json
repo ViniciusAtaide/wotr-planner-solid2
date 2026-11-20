@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_0349b6dfdcd040b993735e240846a925"
+    }
+  ],
+  "assetName": "DLC3_RobeOfTheSinmageEnchantment",
+  "guid": "f583e44cd3a742a28cb5253c09e3db6e"
+}

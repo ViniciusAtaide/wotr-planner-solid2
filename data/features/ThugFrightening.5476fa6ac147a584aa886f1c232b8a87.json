@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "FrighteningThug"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ThugFrightening",
+  "guid": "5476fa6ac147a584aa886f1c232b8a87",
+  "name": "Frightening"
+}

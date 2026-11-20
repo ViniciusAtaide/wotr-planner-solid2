@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_5c77110cd0414e7eb4c2e485659c9a46",
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 2,
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "Groups": [
+    "EldritchKnightSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "EldritchKnightArcanistMagicDeceiver",
+  "guid": "ad6b14b53faa437494f2a77d7022a726",
+  "m_Spellbook": "!bp_587066af76a74f47a904bb017697ba08",
+  "name": "Arcanist"
+}

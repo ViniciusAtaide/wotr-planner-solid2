@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "DLC3_CloakOfRadianceItem",
+  "guid": "a9e22202c101432fa5dc28f3a4769e4f",
+  "m_Enchantments": [
+    "!bp_06cec593bd28452a9a3a710bfb46abb3"
+  ],
+  "name": "Cloak of Cinders"
+}

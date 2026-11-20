@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b0b7b2b56b0c75841bab1861724d3a99"
+    }
+  ],
+  "assetName": "GowrowSonicShortspearEnchantment",
+  "guid": "e5b5cd1f83255d040807153413ae572e"
+}

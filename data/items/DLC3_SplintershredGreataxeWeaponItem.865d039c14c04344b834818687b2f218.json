@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DLC3_SplintershredGreataxeWeaponItem",
+  "guid": "865d039c14c04344b834818687b2f218",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_e8059a8eac62cd74f9171d748a5ae428",
+  "name": "Splintershred"
+}

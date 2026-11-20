@@ -1,0 +1,63 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_121829d239124685b430f5263031bf83"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_50b0bb6a4c824a06adc5e56c079a0a1d"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_c2872505b99c43b8b146ed89ffeb9af5"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_906fae8f17fd4be98fbea399ae4deb3e"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_a52705ab3a0644e6922cffe6bbe2b002"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_05517d2e4d9e4a5fa86ad37d6b061fa4"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_d6f5aa6fba3149c28a25036fceed03c9"
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ExtendedAspectsFeature",
+  "guid": "88e0ca9a742b436ea48ce4845d178c8a",
+  "name": "Extended Aspects"
+}

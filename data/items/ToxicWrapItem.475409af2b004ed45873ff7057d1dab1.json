@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "ToxicWrapItem",
+  "guid": "475409af2b004ed45873ff7057d1dab1",
+  "m_Enchantments": [
+    "!bp_890c34b1031e1484e902213bf9f7cacf"
+  ],
+  "name": "Toxic Wrap"
+}

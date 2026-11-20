@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_95aa543280904374786f4db66276b623"
+    }
+  ],
+  "assetName": "NecklaceOfEarsEnchantment",
+  "guid": "bbbb03ff1ce3d2642b152aa2f675b1e5"
+}

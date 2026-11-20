@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b8a670ba3d1346345bb8ad118ba8f1c3"
+    }
+  ],
+  "assetName": "HawksEyesEnchantment",
+  "guid": "facc85b3008bbc24b9ba41e61b4bae74"
+}

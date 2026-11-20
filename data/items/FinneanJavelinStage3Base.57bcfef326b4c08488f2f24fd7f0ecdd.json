@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanJavelinStage3Base",
+  "guid": "57bcfef326b4c08488f2f24fd7f0ecdd",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a70cea34b275522458654beb3c53fe3f",
+  "name": "Finnean the Talking Weapon (Javelin +5)"
+}

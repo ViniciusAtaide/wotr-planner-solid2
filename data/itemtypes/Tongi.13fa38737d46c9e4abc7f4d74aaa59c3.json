@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Tongi",
+  "Components": [],
+  "assetName": "Tongi",
+  "guid": "13fa38737d46c9e4abc7f4d74aaa59c3",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Axes",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Tongi"
+}

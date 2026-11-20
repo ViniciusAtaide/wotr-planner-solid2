@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_7060a735afc12e144942d853ad5b7a65"
+    }
+  ],
+  "assetName": "AllRoundDefenseEnchatment",
+  "guid": "4f444d9161590f84a928b2afb09c987e"
+}

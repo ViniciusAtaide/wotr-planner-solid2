@@ -1,0 +1,98 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8f49469c40e2c6e4db61296558e08966"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_f15ae4713cee44e98de47746c95c76ab"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_f05fb4f417465f94fb1b4d6c48ea42cf"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_3988841b91b74f7b990e177abb40403a"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_2192e09ff3334894b4884b7977fd2b4d"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "Domain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_fe2be05e3ee04b818554a2fc93f7605b"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_b105ed7a854948bda3d7ee23e60b7c70"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "IceSubdomainProgression",
+  "guid": "2108d8e7019e4c1faa094d2d6725e936",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": -2,
+      "m_Archetype": "!bp_f996f0a18e5d945459e710ee3a6dd485"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_34ecd1b5e1b90b9498795791b0855239"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [
+    "!bp_8de3ac7ef2f14a29a02911875d4bc743"
+  ],
+  "name": "Ice Subdomain"
+}

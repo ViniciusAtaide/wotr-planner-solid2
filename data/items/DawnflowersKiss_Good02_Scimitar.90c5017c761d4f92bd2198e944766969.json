@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DawnflowersKiss_Good02_Scimitar",
+  "guid": "90c5017c761d4f92bd2198e944766969",
+  "m_Enchantments": [
+    "!bp_04df81bad85b49c8a50a463c3b32f943",
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d9fbec4637d71bd4ebc977628de3daf3",
+  "name": "Dawnflower's Kiss (good)"
+}

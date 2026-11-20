@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "FactSinglify",
+      "m_NewFacts": [],
+      "m_OldFacts": [
+        "!bp_a26c62f50bec9fa4ab8ea7cd98fed19a",
+        "!bp_d401aca4712aa38489c9afeab9c3f08e",
+        "!bp_ef4a1ca413a58cf4eae3e138457a4a74",
+        "!bp_eea5698f942ea2c45b4e0f58c5240038",
+        "!bp_b04f2983f024ec446ac2928f5ad52b99",
+        "!bp_ee11459a122c3f847985801cd982c047",
+        "!bp_a63b8c491578b574ea7c6ebb28fb5c43",
+        "!bp_3fff8457c4650d842b9337b440c0dd52"
+      ]
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_233d0e5bdd25a7f44a56c09c8b5041e7"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineSerpentineScaledSoulFeature",
+  "guid": "18436c3dfd2000142ae087bf03740fdf",
+  "name": "Scaled Soul"
+}

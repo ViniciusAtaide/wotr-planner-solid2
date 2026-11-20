@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_9dcd9dabe32c4a298c3c3582263358b7"
+    }
+  ],
+  "assetName": "DLC3_GlassesOfundeniableTruthEnchantment",
+  "guid": "303e8c4538c94aa89752a9579f7ef734"
+}

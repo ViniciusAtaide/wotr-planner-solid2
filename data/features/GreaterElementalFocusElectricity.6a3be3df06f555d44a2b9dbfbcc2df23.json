@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d439691f37d17804890bd9c263ae1e80"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "GreaterElementalFocusElectricity",
+  "guid": "6a3be3df06f555d44a2b9dbfbcc2df23",
+  "name": "Greater Elemental Focus — Electricity"
+}

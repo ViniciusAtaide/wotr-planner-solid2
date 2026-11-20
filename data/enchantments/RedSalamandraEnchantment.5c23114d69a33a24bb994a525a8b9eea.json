@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_07d734e0740ee084593d3b9ce2e03c86"
+    }
+  ],
+  "assetName": "RedSalamandraEnchantment",
+  "guid": "5c23114d69a33a24bb994a525a8b9eea"
+}

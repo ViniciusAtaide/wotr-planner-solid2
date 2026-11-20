@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ThrowingAxePlus4",
+  "guid": "a9b76fe93bf7e984c8a46ee461c35b6a",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_ca131c71f4fefcb48b30b5991520e01d"
+}

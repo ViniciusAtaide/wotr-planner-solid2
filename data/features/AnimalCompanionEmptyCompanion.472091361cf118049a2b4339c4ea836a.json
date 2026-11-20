@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisitePet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "NoCompanion": false,
+      "Type": "AnimalCompanion"
+    }
+  ],
+  "Groups": [
+    "AnimalCompanion"
+  ],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "AnimalCompanionEmptyCompanion",
+  "guid": "472091361cf118049a2b4339c4ea836a",
+  "name": "Animal Companion — Continue"
+}

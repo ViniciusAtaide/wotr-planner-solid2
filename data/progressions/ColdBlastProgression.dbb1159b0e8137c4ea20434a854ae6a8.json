@@ -1,0 +1,72 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_cb30a291c75def84090430fbf2b5c05e"
+      ]
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_9ff81732daddb174aa8138ad1297c787",
+      "m_Feature": "!bp_52f6af214e8954149b71bb59a80d222f"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_ce625487d909b154c9305e60e4fc7d60",
+      "m_Feature": "!bp_ce625487d909b154c9305e60e4fc7d60"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_365b50dba54efb74fa24c07e9b7a838c",
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 13,
+      "m_Archetype": "!bp_365b50dba54efb74fa24c07e9b7a838c",
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "KineticBlast"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_ce625487d909b154c9305e60e4fc7d60"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ColdBlastProgression",
+  "guid": "dbb1159b0e8137c4ea20434a854ae6a8",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Cold Blast"
+}

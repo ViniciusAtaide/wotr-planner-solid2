@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardDwarvenWaraxe",
+  "guid": "30711e40771796340ac67172abfd3279",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a6925f5f897801449a648d865637e5a0"
+}

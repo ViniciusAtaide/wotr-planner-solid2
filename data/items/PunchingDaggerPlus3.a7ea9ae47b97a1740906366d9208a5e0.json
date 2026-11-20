@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "PunchingDaggerPlus3",
+  "guid": "a7ea9ae47b97a1740906366d9208a5e0",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_89dc4dc5f386e2049b5e0a5e209a3407"
+}

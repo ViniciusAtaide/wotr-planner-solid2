@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "BastardSword",
+  "Components": [],
+  "assetName": "BastardSword",
+  "guid": "d2fe2c5516b56f04da1d5ea51ae3ddfe",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "BladesHeavy",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Bastard Sword"
+}

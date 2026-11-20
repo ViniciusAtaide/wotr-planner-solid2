@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_f7c534123e334f3a99c7683962936075",
+        "!bp_090d39a5813d4537ba24b55fff7fe6be"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_fd30841e0ede46769708367be0c01a49"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_0e245032368c4cb9bc1a3251c669acf8"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_86beb0391653faf43aec60d5ec05b538"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_5a13756fb4be25f46951bc3f16448276"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "ElementalEngineArchetype",
+  "guid": "4a8324d676d642c99edcdda6988ca3b1",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Elemental Engine"
+}

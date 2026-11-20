@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CloakOfSacredStudiesItem",
+  "guid": "bb8d01d4726941269c88386aa2aeb906",
+  "m_Enchantments": [
+    "!bp_7df1e77c65d44b87a290a4b3aee41683"
+  ],
+  "name": "Cloak of Sacred Studies"
+}

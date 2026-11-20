@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_dab5255d809f77c4395afc2b713e9cd6"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_aaf7ace9642192d4389eab95e6cd04fd",
+      "m_CharacterClass": "!bp_30b5e47d47a0e37438cc5a80c96cfb99"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WarpriestSpointaneousNegative",
+  "guid": "da7be78f753c11544a0264d72a51d831",
+  "name": "Spontaneous Inflict"
+}

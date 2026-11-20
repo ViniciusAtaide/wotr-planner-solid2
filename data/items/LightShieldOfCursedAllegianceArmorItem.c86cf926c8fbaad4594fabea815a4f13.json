@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "LightShieldOfCursedAllegianceArmorItem",
+  "guid": "c86cf926c8fbaad4594fabea815a4f13",
+  "m_Enchantments": [
+    "!bp_ac2e3a582b5faa74aab66e0a31c935a9"
+  ],
+  "m_Type": "!bp_d38e8ea23ce653c4582eb3e002555483"
+}

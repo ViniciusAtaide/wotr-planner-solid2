@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499"
+    }
+  ],
+  "assetName": "AmuletOfCirculatingBloodItem",
+  "guid": "5043aad8b5815cc4a86f93c7ff2b50e3",
+  "m_Enchantments": [
+    "!bp_5bfd6b8e0384c8c4eab70b554414ae2e"
+  ],
+  "name": "Amulet of Circulating Blood"
+}

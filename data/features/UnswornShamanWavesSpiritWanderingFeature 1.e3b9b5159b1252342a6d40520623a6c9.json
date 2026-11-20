@@ -1,0 +1,57 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFactContextActions",
+      "Activated": {
+        "Actions": [
+          {
+            "$type": "ContextActionApplyBuff",
+            "Permanent": true,
+            "m_Buff": "!bp_bcf3cbf3e81f9f9448f281768c9c0fe7"
+          }
+        ]
+      }
+    },
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "AsIs",
+      "m_StartLevel": 0,
+      "m_StepLevel": 0,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": false
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_2196e093593903f4ebc36467ccbf1d9a"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_700942eefb96b0c40b523ee228c1ed8c"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "UnswornShamanWavesSpiritWanderingFeature 1",
+  "guid": "e3b9b5159b1252342a6d40520623a6c9",
+  "name": "Waves (Unsworn Shaman 2)"
+}

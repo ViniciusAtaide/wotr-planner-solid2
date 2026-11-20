@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f"
+    }
+  ],
+  "assetName": "BestialRagsItem",
+  "guid": "efc86eef11d548d7be4ebfba999b9e9d",
+  "m_Enchantments": [
+    "!bp_bdb593cb435c4c1387679d4c52071396"
+  ],
+  "name": "Bestial Rags"
+}

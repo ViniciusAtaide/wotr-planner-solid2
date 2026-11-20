@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 2,
+      "m_CharacterClass": "!bp_6afa347d804838b48bda16acb0573dc0"
+    }
+  ],
+  "Groups": [
+    "MysticTheurgeArcaneSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "MysticTheurgeSkald",
+  "guid": "866874606e674aaf91e2b5e3da8da3f0",
+  "m_Spellbook": "!bp_8f159d2f22ced074ea32995eb5a446a0",
+  "name": "Skald"
+}

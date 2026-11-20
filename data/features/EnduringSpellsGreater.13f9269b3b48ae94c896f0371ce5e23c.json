@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_2f206e6d292bdfb4d981e99dcf08153f"
+    }
+  ],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EnduringSpellsGreater",
+  "guid": "13f9269b3b48ae94c896f0371ce5e23c",
+  "name": "Greater Enduring Spells"
+}

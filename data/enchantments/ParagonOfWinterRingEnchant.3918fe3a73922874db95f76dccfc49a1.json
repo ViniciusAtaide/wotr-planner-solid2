@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_9cbb2285756bcde429edd116f53b96c6"
+    }
+  ],
+  "assetName": "ParagonOfWinterRingEnchant",
+  "guid": "3918fe3a73922874db95f76dccfc49a1"
+}

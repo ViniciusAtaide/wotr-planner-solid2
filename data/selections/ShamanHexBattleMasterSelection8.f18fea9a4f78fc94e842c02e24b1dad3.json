@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ShamanHexBattleMasterSelection8",
+  "guid": "f18fea9a4f78fc94e842c02e24b1dad3",
+  "m_AllFeatures": [
+    "!bp_31470b17e8446ae4ea0dacd6c5817d86"
+  ],
+  "name": "Battle Master (level 8)"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPersuasion"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "StudentOfWarAdditionalSkillPersuasion",
+  "guid": "e381dbeed8c9c31468b6b6e102b26c02",
+  "name": "Class Skill — Persuasion"
+}

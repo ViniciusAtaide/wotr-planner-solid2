@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "CursedBardVoiceAmulet_VoiceItem",
+  "guid": "a55e366756a34fff80a0b07c439db677",
+  "m_Enchantments": [
+    "!bp_9bbad988e6914f4baef06c8d4773f57e"
+  ],
+  "name": "Francest's Mighty Call"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 20,
+  "assetName": "ColdBlastFeature",
+  "guid": "ce625487d909b154c9305e60e4fc7d60",
+  "name": "Cold Blast"
+}

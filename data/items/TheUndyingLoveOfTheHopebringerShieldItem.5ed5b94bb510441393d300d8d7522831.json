@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "TheUndyingLoveOfTheHopebringerShieldItem",
+  "guid": "5ed5b94bb510441393d300d8d7522831",
+  "m_ArmorComponent": "!bp_77581164eef94b47b1402528755c60a0",
+  "m_WeaponComponent": "!bp_aa91465ab54946609c8e48886c4ed659",
+  "name": "The Undying Love of the Hopebringer"
+}

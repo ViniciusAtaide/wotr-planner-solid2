@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8bc2f9b88a0cf704ea72d86c2a3e2aef"
+    }
+  ],
+  "Groups": [
+    "MythicTrick2"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterPerceptionTier2Feature",
+  "guid": "e9298851786c5334dba1398e9635a83d",
+  "name": "Perception 2 Rank"
+}

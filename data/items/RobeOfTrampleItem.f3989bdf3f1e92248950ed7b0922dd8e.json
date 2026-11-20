@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "RobeOfTrampleItem",
+  "guid": "f3989bdf3f1e92248950ed7b0922dd8e",
+  "m_Enchantments": [
+    "!bp_8088a3ad51bf3a44ea142b81b3a04b8b"
+  ],
+  "name": "Robe of Inevitability"
+}

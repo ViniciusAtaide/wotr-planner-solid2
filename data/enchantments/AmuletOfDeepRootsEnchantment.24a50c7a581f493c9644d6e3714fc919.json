@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_27d0e6894ba6484a939efc0afe2b13fe"
+    }
+  ],
+  "assetName": "AmuletOfDeepRootsEnchantment",
+  "guid": "24a50c7a581f493c9644d6e3714fc919"
+}

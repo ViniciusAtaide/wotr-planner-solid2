@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_7a472f4c0f7d36b4c8f52d3b17e7b292"
+    }
+  ],
+  "assetName": "ExterminatorEnchantment",
+  "guid": "4504594972c94a74bad53b78b50b7c1b"
+}

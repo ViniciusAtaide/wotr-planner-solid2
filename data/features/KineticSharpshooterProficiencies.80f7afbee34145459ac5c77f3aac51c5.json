@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [
+        "LightShield",
+        "HeavyShield",
+        "Buckler"
+      ],
+      "WeaponProficiencies": [
+        "LightCrossbow",
+        "HeavyCrossbow",
+        "Shortbow",
+        "Longbow"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "KineticSharpshooterProficiencies",
+  "guid": "80f7afbee34145459ac5c77f3aac51c5",
+  "name": "Kinetic Sharpshooter Proficiencies"
+}

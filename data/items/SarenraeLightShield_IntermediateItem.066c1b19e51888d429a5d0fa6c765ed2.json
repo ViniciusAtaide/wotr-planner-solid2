@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "SarenraeLightShield_IntermediateItem",
+  "guid": "066c1b19e51888d429a5d0fa6c765ed2",
+  "m_ArmorComponent": "!bp_cbd7c1370eb4fd8499b4ab960854f589",
+  "m_WeaponComponent": "!bp_62c90581f9892e9468f0d8229c7321c4",
+  "name": "Light Shield of the Faultless Daybreak"
+}

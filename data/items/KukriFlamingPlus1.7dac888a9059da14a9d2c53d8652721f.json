@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "KukriFlamingPlus1",
+  "guid": "7dac888a9059da14a9d2c53d8652721f",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_006ecd4715809b343b7001e859e3ddb2",
+  "name": "Flaming Kukri +1"
+}

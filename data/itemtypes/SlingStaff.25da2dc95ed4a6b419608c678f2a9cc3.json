@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "SlingStaff",
+  "Components": [],
+  "assetName": "SlingStaff",
+  "guid": "25da2dc95ed4a6b419608c678f2a9cc3",
+  "m_AttackType": "Ranged",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Thrown",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": true,
+  "name": "Sling Staff"
+}

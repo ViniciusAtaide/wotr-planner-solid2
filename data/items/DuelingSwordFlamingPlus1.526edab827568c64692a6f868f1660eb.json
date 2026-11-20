@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DuelingSwordFlamingPlus1",
+  "guid": "526edab827568c64692a6f868f1660eb",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a6f7e3dc443ff114ba68b4648fd33e9f",
+  "name": "Flaming Dueling Sword +1"
+}

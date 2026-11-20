@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "AvengingRingItem",
+  "guid": "cf2c22ad1f75a704187b34580c39eff1",
+  "m_Enchantments": [
+    "!bp_3f58cc3d333449d47b58fe9791eeb693"
+  ],
+  "name": "Avenging Ring"
+}

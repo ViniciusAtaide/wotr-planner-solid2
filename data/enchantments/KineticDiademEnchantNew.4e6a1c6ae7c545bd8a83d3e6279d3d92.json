@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_16dfac17eb3e4d37be7d7a3c48c5e24f"
+    }
+  ],
+  "assetName": "KineticDiademEnchantNew",
+  "guid": "4e6a1c6ae7c545bd8a83d3e6279d3d92"
+}

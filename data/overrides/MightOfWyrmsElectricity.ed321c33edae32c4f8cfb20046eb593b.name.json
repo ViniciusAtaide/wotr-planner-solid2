@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "electricity",
+  "reason": "Every draconic bloodline grants the \"Might of Wyrms\" of its dragon's energy type, so each copy has several colours as grantors (acid: black, copper, green; cold: silver, white; electricity: blue, bronze; fire: brass, gold, red), all with the same family name. The copies differ only in their energy, which the asset names MightOfWyrmsAcid, Cold, Electricity and Fire state; each is qualified by it.",
+  "target": "ed321c33edae32c4f8cfb20046eb593b"
+}

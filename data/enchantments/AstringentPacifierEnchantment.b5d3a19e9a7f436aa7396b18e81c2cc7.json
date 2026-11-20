@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_0734c66cdb7842828e9380893521c4b8"
+    }
+  ],
+  "assetName": "AstringentPacifierEnchantment",
+  "guid": "b5d3a19e9a7f436aa7396b18e81c2cc7"
+}

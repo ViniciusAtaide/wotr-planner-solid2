@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "GreatswordPlus3",
+  "guid": "b734631d6b981a844bd817c2961d5f29",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_5f824fbb0766a3543bbd6ae50248688f"
+}

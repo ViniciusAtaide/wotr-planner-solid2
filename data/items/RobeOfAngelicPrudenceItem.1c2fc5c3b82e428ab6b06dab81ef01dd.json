@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "RobeOfAngelicPrudenceItem",
+  "guid": "1c2fc5c3b82e428ab6b06dab81ef01dd",
+  "m_Enchantments": [
+    "!bp_c3c2a133c0aa12240ade34762c146664",
+    "!bp_4dcb81fcbfb11714db17ece0c152ed8b"
+  ],
+  "name": "Robe of Angelic Prudence"
+}

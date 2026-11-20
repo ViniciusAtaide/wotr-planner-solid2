@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ImmunityToCharm",
+  "guid": "c0845a4e242a9f04d9368fe03ac3e431",
+  "name": "Immunity to Charm"
+}

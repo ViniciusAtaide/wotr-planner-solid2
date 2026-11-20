@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_a5a9fe8f663d701488bd1db8ea40484e"
+    }
+  ],
+  "assetName": "Artifact_AngelCloakItem",
+  "guid": "2f45a11adb74b5a4a81f857a9886c5bd",
+  "m_Enchantments": [
+    "!bp_10b62f56302c49c887d53787948c5cda"
+  ],
+  "name": "The Bound of Possibility (Angel)"
+}

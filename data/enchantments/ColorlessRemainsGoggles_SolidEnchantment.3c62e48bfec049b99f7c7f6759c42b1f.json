@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_97aaee699610481aa73c65cebfbd1957"
+    }
+  ],
+  "assetName": "ColorlessRemainsGoggles_SolidEnchantment",
+  "guid": "3c62e48bfec049b99f7c7f6759c42b1f"
+}

@@ -1,0 +1,42 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillMobility",
+    "SkillPerception",
+    "SkillStealth"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": false
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 4,
+  "assetName": "AnimalCompanionClass",
+  "guid": "26b10d4340839004f960f9816f6109fe",
+  "m_Archetypes": [
+    "!bp_c0408f7c61c3f934abb5d98e3eece6c3",
+    "!bp_2f3eb33b70e86d14787f62fd584fa4f2",
+    "!bp_3ae8abeef5615294c85a2d0f92f592de",
+    "!bp_98ce0856db141964ebb3ad46379c66b5",
+    "!bp_0a146638c22af254895f332dc865cdca",
+    "!bp_b56b64f13a2b4c0ea507e86e1620aa98",
+    "!bp_380903f7a2424e11b89b7e1f15930fe2"
+  ],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_f54159e8cfda69f4dbcfdf6ffbbd3293",
+  "m_ReflexSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "name": "Animal Companion"
+}

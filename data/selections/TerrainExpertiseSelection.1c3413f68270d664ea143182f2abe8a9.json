@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "TerrainDominance",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "OnlyNew",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "TerrainExpertiseSelection",
+  "guid": "1c3413f68270d664ea143182f2abe8a9",
+  "m_AllFeatures": [
+    "!bp_c0fdbea534083554ab79f5654e4d2032",
+    "!bp_ed3d8aec565efb541af67716944dc587",
+    "!bp_ef710ae526973d240921f35437da7ca0",
+    "!bp_3dc48f3b99dae6d41a0f533a02a2a6b2",
+    "!bp_e420ae9cbe3840a4691a1f469f529ce2",
+    "!bp_6e21a09a954950745a7691f6a42ec355"
+  ],
+  "name": "Terrain Expertise"
+}

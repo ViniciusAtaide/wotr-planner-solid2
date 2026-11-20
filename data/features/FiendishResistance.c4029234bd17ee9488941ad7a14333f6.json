@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FiendishResistance",
+  "guid": "c4029234bd17ee9488941ad7a14333f6",
+  "name": "Fiendish Resistance"
+}

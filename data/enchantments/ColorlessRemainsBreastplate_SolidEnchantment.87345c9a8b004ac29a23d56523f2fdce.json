@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_06d2f00616ad40c3b136d06dffc8f0b5"
+    }
+  ],
+  "assetName": "ColorlessRemainsBreastplate_SolidEnchantment",
+  "guid": "87345c9a8b004ac29a23d56523f2fdce"
+}

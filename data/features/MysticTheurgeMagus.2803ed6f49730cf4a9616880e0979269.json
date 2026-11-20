@@ -1,0 +1,38 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 2,
+      "m_CharacterClass": "!bp_45a4607686d96a1498891b3286121780"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_d078b2ef073f2814c9e338a789d97b73",
+      "m_CharacterClass": "!bp_45a4607686d96a1498891b3286121780"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_7d6678f2160018049814838af2ab4236",
+      "m_CharacterClass": "!bp_45a4607686d96a1498891b3286121780"
+    }
+  ],
+  "Groups": [
+    "MysticTheurgeArcaneSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "MysticTheurgeMagus",
+  "guid": "2803ed6f49730cf4a9616880e0979269",
+  "m_Spellbook": "!bp_5d8d04e76dff6c5439de99af0d57be63",
+  "name": "Magus"
+}

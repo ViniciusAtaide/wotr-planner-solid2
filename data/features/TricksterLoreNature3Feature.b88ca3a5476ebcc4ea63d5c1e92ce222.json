@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_9c437a5ba123619448322642ffbdc9e1"
+    }
+  ],
+  "Groups": [
+    "MythicTrick3"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterLoreNature3Feature",
+  "guid": "b88ca3a5476ebcc4ea63d5c1e92ce222",
+  "name": "Lore (Nature) 3 Rank"
+}

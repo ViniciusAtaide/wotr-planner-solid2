@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_9ff81732daddb174aa8138ad1297c787",
+      "m_Feature": "!bp_30a92d0b741ac8547a24a4ec2561c6dd"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 20,
+  "assetName": "SandstormBlastFeature",
+  "guid": "af70dce0745f91f4b8aa99a98620e45b",
+  "name": "Sandstorm Blast"
+}

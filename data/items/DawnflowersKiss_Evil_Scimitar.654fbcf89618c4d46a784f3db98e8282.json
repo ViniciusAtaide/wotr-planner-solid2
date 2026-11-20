@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DawnflowersKiss_Evil_Scimitar",
+  "guid": "654fbcf89618c4d46a784f3db98e8282",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_a1455a289da208144981e4b1ef92cc56",
+    "!bp_50aaa83762ed4d6b8e39592d4d55fcf8"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d9fbec4637d71bd4ebc977628de3daf3",
+  "name": "Dawnflower's Kiss (evil)"
+}

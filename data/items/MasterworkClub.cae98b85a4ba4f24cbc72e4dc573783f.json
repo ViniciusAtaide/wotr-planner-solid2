@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkClub",
+  "guid": "cae98b85a4ba4f24cbc72e4dc573783f",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_26aa0672af2c7d84ba93bec37758c712",
+  "name": "Masterwork Club"
+}

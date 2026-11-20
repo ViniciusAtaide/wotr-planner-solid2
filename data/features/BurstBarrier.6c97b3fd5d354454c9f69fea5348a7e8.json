@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 5,
+  "assetName": "BurstBarrier",
+  "guid": "6c97b3fd5d354454c9f69fea5348a7e8",
+  "name": "Burst Barrier"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "DamageReduction",
+  "guid": "cffb5cddefab30140ac133699d52a8f8",
+  "name": "Damage Reduction (Barbarian)"
+}

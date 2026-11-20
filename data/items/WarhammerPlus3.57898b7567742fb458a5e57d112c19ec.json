@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "WarhammerPlus3",
+  "guid": "57898b7567742fb458a5e57d112c19ec",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_fac41e149f49cba4a8e06ce39b41a6fa"
+}

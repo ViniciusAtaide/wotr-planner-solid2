@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 9,
+      "Not": false,
+      "m_CharacterClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd"
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "SoloTactics"
+    }
+  ],
+  "Groups": [
+    "WeaponTraining"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FightersTactics",
+  "guid": "87d6de4d30adc7244b7a3427d041dcaa",
+  "name": "Fighter's Tactics"
+}

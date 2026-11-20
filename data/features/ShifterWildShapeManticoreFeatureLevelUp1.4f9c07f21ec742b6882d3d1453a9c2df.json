@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 14,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_f909e259de324931a9816d93ec986f8b"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 14,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_f8a18c38bcb348d6be34817b0241cf28"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShifterWildShapeManticoreFeatureLevelUp1",
+  "guid": "4f9c07f21ec742b6882d3d1453a9c2df",
+  "name": "Manticore Shape (level 8)"
+}

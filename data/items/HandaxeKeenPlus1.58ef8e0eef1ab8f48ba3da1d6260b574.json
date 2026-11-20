@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "HandaxeKeenPlus1",
+  "guid": "58ef8e0eef1ab8f48ba3da1d6260b574",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_54e7473ff73910c47812fd39c897dc1a",
+  "name": "Keen Handaxe +1"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "Rapier",
+  "guid": "c83ff52bb6f90c3469660e0da575c9f8",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_2ece38f30500f454b8569136221e55b0",
+  "name": "Rapier"
+}

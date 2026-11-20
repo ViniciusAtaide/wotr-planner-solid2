@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_ab32f12f647277743bbaf6e791b38c3a"
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Insight",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillPerception",
+      "Value": 4
+    }
+  ],
+  "Groups": [
+    "TerrainDominance"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TerrainExpertiseUnderground",
+  "guid": "e420ae9cbe3840a4691a1f469f529ce2",
+  "name": "Terrain Expertise — Underground"
+}

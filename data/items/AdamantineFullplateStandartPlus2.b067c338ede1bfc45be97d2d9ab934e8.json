@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "AdamantineFullplateStandartPlus2",
+  "guid": "b067c338ede1bfc45be97d2d9ab934e8",
+  "m_Enchantments": [
+    "!bp_758b77a97640fd747abf149f5bf538d0",
+    "!bp_933456ff83c454146a8bf434e39b1f93"
+  ],
+  "m_Type": "!bp_afd9065539b3ac5499eddca923654c4b",
+  "name": "Adamantine Full Plate +2"
+}

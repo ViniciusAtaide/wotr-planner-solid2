@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "HeavyFlailPlus4",
+  "guid": "d1fff205ad3df364fb9e23735a8dcc50",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_8fefb7e0da38b06408f185e29372c703"
+}

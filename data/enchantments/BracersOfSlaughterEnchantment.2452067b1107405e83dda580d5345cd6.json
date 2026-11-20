@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8037f7fbb9b048fea2d9f5ff0b1516ac"
+    }
+  ],
+  "assetName": "BracersOfSlaughterEnchantment",
+  "guid": "2452067b1107405e83dda580d5345cd6"
+}

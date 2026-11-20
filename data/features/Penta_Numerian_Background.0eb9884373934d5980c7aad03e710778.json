@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Intelligence",
+      "Value": 1
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_29f6945052434f4a8392b511099a3ce6"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "Penta_Numerian_Background",
+  "guid": "0eb9884373934d5980c7aad03e710778",
+  "name": "Numerian Companion (Background Selection)"
+}

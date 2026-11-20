@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "ReboundFirstItem",
+  "guid": "d5c6e226b13144947a3070a0e570ca6c",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": "!bp_db991474c92217f479fa315160958e0a",
+  "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3",
+  "name": "Rebound"
+}

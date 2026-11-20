@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "TheFlashingGreatswordItem",
+  "guid": "5a1f85a6539b3ee479a0ec6e7a42dae8",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_5f824fbb0766a3543bbd6ae50248688f",
+  "name": "Lustrous Blade"
+}

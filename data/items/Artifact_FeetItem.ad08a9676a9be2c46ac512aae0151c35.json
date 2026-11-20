@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "Artifact_FeetItem",
+  "guid": "ad08a9676a9be2c46ac512aae0151c35",
+  "m_Enchantments": [
+    "!bp_0f22f4c02677e6a4aaf82d7b2942b6fc",
+    "!bp_5614fc22a6e629c43a72a2559ab8213f"
+  ],
+  "name": "Ronneck's Sacrifice"
+}

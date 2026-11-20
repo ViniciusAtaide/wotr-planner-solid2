@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardGreataxe",
+  "guid": "6efea466862f014469cec6c3f2b85cb7",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_e8059a8eac62cd74f9171d748a5ae428"
+}

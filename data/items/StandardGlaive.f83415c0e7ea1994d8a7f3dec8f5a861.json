@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardGlaive",
+  "guid": "f83415c0e7ea1994d8a7f3dec8f5a861",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a14a1b224cd173449cb7ffc77d5f65c"
+}

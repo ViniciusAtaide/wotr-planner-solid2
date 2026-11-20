@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_306a257cceaa5a14982861a3891763fb"
+    }
+  ],
+  "assetName": "CloakOfArcaneReservesEnchantment",
+  "guid": "79ab6916d9732a049973d6ebf4ac0c18"
+}

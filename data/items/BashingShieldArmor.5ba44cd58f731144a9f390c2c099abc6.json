@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "BashingShieldArmor",
+  "guid": "5ba44cd58f731144a9f390c2c099abc6",
+  "m_Enchantments": [
+    "!bp_e90c252e08035294eba39bafce76c119"
+  ],
+  "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6",
+  "name": "Bashing Shield"
+}

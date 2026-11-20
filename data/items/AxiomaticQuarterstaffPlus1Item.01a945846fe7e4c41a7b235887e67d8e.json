@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "AxiomaticQuarterstaffPlus1Item",
+  "guid": "01a945846fe7e4c41a7b235887e67d8e",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_629736dabac7f9f4a819dc854eaed2d6",
+  "name": "Axiomatic Quarterstaff +1"
+}

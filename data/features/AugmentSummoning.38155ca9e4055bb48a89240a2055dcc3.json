@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteParametrizedFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "ParameterType": "SpellSchool",
+      "SpellSchool": "Conjuration",
+      "WeaponCategory": "UnarmedStrike",
+      "m_Feature": "!bp_16fa59cc9a72a6043b566b49184f53fe"
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "WizardFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AugmentSummoning",
+  "guid": "38155ca9e4055bb48a89240a2055dcc3",
+  "name": "Augment Summoning"
+}

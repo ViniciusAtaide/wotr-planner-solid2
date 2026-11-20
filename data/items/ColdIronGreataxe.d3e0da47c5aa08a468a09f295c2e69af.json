@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronGreataxe",
+  "guid": "d3e0da47c5aa08a468a09f295c2e69af",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_e8059a8eac62cd74f9171d748a5ae428",
+  "name": "Cold Iron Greataxe"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "DemonLordAspect"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PazuzuAspectFeature",
+  "guid": "fd126181b5886e54e88d9f7ed09d077b",
+  "name": "Aspect of Pazuzu"
+}

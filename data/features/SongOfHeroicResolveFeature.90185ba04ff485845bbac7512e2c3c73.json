@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_02c96331ed2d87d43a4a3509142678b8"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SongOfHeroicResolveFeature",
+  "guid": "90185ba04ff485845bbac7512e2c3c73",
+  "name": "Song of Heroic Resolve"
+}

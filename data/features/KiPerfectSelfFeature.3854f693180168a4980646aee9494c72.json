@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 20,
+      "Not": false,
+      "m_CharacterClass": "!bp_e8f21e5b58e0569468e420ebea456124"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "KiPerfectSelfFeature",
+  "guid": "3854f693180168a4980646aee9494c72",
+  "name": "Ki Power: Perfect Self (Monk)"
+}

@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "DoubleAxe"
+      ],
+      "m_RaceRestriction": null
+    },
+    {
+      "$type": "PrerequisiteNotProficient",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "DoubleAxe"
+      ]
+    }
+  ],
+  "Groups": [
+    "ExoticWeaponProficiency"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DoubleAxeProficiency",
+  "guid": "0ea5cf20b69aea44793043e1926e9057",
+  "name": "Weapon Proficiency (Orc Double Axe)"
+}

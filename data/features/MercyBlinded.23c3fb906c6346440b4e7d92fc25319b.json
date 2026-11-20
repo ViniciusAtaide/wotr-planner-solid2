@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 12,
+      "Not": false,
+      "m_CharacterClass": "!bp_bfa11238e7ae3544bbeb4d0b92e897ec"
+    }
+  ],
+  "Groups": [
+    "Mercy"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MercyBlinded",
+  "guid": "23c3fb906c6346440b4e7d92fc25319b",
+  "name": "Mercy — Blinded"
+}

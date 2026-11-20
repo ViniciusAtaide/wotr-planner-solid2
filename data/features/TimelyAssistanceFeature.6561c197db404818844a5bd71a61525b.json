@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "TimelyAssistanceFeature",
+  "guid": "6561c197db404818844a5bd71a61525b"
+}

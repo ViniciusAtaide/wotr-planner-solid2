@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_4b0308a41e4b48e09f1fee095d11b484"
+    }
+  ],
+  "assetName": "UltraThinEdgeEnchantment",
+  "guid": "1b26f03c53eb49009208bfd2dba3d75f"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SubtypeEarth",
+  "guid": "e147258e5b7c40643893d80c9f2816e8",
+  "name": "Earth Subtype"
+}

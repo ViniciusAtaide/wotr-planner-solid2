@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "MonkNoArmorAndMonkWeaponFeatureUnlock",
+      "IsSohei": true,
+      "IsZenArcher": false,
+      "m_BowWeaponTypes": [],
+      "m_NewFact": "!bp_6e1bbca504b447a409462aa5f242c9ff"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SoheiKiStrikeLawfulUnlock",
+  "guid": "c8dd874cf2fa8b244a1bc416e9bb66ad",
+  "name": "Ki Strike — Lawful (Sohei)"
+}

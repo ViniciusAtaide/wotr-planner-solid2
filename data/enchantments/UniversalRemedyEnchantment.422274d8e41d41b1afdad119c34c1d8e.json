@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_e16e01f215ee4e4b80aa35e471a8c915"
+    }
+  ],
+  "assetName": "UniversalRemedyEnchantment",
+  "guid": "422274d8e41d41b1afdad119c34c1d8e"
+}

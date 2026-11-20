@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "aszite",
+  "reason": "\"Heavy Shield +4\" is two items: the plain one and the aszite one (AsziteHeavyShieldItemPlus4), whose armour carries AsziteArmorEnchantment. Restrictions, slot and type are the same, and their enhancement bonus isn't in data/, so the aszite one is qualified by its material; the plain one stays bare.",
+  "target": "6bafbb55c421439fbff2ae0e4aa69d08"
+}

@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_85514caba3364033a12070bfecf39bf5"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TandemExecutionerIPushItYouBiteItFeature",
+  "guid": "771263db65bf4158bf4a3dc80a619fdb",
+  "name": "Push and Bite"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CloakOfBloodScentItem",
+  "guid": "876255a39ab11734a8c12cfb451a146e",
+  "m_Enchantments": [
+    "!bp_0436324f1191ec64687efcfc0b790aee"
+  ],
+  "name": "Cloak of Blood Scent"
+}

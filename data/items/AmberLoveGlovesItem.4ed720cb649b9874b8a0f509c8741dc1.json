@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "AmberLoveGlovesItem",
+  "guid": "4ed720cb649b9874b8a0f509c8741dc1",
+  "m_Enchantments": [
+    "!bp_09e9b14717e3e0c4cac13a8dbe091e5d"
+  ],
+  "name": "Passion's Sweet Poison (gloves)"
+}

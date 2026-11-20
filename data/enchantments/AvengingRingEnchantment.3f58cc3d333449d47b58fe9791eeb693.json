@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_c128cdb303f094146be2a08bd915691b"
+    }
+  ],
+  "assetName": "AvengingRingEnchantment",
+  "guid": "3f58cc3d333449d47b58fe9791eeb693"
+}

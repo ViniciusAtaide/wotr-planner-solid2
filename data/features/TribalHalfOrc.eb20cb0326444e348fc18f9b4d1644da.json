@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_c99f3405d1ef79049bd90678a666e1d7"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_9c747d24f6321f744aa1bb4bd343880d"
+    },
+    {
+      "$type": "AddContextStatBonus",
+      "Descriptor": "Racial",
+      "HasMinimal": false,
+      "Minimal": 0,
+      "Multiplier": 1,
+      "Stat": "SkillLoreNature",
+      "Value": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TribalHalfOrc",
+  "guid": "eb20cb0326444e348fc18f9b4d1644da",
+  "name": "Tribal"
+}

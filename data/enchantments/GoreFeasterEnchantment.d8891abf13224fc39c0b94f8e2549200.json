@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a6e92af68d7c4cf9ab375a53cb60b7df"
+    }
+  ],
+  "assetName": "GoreFeasterEnchantment",
+  "guid": "d8891abf13224fc39c0b94f8e2549200"
+}

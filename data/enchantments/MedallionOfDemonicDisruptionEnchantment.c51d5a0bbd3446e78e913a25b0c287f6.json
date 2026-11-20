@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_de47e9205bed41d88fc8c005e36482e1"
+    }
+  ],
+  "assetName": "MedallionOfDemonicDisruptionEnchantment",
+  "guid": "c51d5a0bbd3446e78e913a25b0c287f6"
+}

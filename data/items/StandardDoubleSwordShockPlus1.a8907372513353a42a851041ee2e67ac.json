@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDoubleSwordShockPlus1",
+  "guid": "a8907372513353a42a851041ee2e67ac",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": "!bp_747399c126abb8449912defe6e37b880",
+  "m_Type": "!bp_e95efb85a0912a7489be69d5f03a5308",
+  "name": "Shock Two-Bladed Sword +1"
+}

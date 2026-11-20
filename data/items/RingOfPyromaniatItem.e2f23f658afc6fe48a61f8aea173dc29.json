@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfPyromaniatItem",
+  "guid": "e2f23f658afc6fe48a61f8aea173dc29",
+  "m_Enchantments": [
+    "!bp_3e4b52d0c7595574fa871fb125a67a83"
+  ],
+  "name": "Ring of Pyromania"
+}

@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "NorthLightShieldItem",
+  "guid": "9b8e47989eb3b4d4ea13ae6b70579b46",
+  "m_ArmorComponent": "!bp_1aadb3a0a09171944a57d153ea3bef0e",
+  "m_WeaponComponent": "!bp_62c90581f9892e9468f0d8229c7321c4",
+  "name": "Northern Lights"
+}

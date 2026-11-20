@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "PrayingKillerItem",
+  "guid": "f3b3227cac1f472983a619bc38d8fbd3",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979",
+    "!bp_05c195d03ee442b48a9f1f9a1444ea03"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_ef50f200e4ab429b8bcb66a56f886c2f",
+  "name": "Praying Killer"
+}

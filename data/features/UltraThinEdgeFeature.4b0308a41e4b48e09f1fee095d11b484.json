@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "UltraThinEdgeFeature",
+  "guid": "4b0308a41e4b48e09f1fee095d11b484",
+  "name": "Ultrathin Edge"
+}

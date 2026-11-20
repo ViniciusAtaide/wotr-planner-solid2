@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "HideStandartPlus2",
+  "guid": "01117df73f22d5b4294136d2ae8efad4",
+  "m_Enchantments": [
+    "!bp_758b77a97640fd747abf149f5bf538d0"
+  ],
+  "m_Type": "!bp_7a01292cef39bf2408f7fae7a9f47594",
+  "name": "Hide Armor +2"
+}

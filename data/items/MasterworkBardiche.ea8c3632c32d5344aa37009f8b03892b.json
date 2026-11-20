@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkBardiche",
+  "guid": "ea8c3632c32d5344aa37009f8b03892b",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_b1cbf457fd471d148b39ae56667f405a",
+  "name": "Masterwork Bardiche"
+}

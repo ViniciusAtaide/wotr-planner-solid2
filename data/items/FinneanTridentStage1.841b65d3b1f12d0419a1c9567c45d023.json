@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanTridentStage1",
+  "guid": "841b65d3b1f12d0419a1c9567c45d023",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_6ff66364e0a2c89469c2e52ebb46365e",
+  "name": "Finnean the Talking Weapon (Trident +1)"
+}

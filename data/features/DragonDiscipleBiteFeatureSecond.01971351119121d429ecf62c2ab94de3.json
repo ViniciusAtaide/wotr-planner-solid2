@@ -1,0 +1,71 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_d89fb8ce9152ffa4dacd69390f3d7721",
+      "m_Feature": "!bp_3dd9b0e80be99124c9f76d682539b96f"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_64e1f27147b642448842ab8dcbaca03f",
+      "m_Feature": "!bp_2a7a37d9eff1edb48947788127d4dafb"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_12bb1056a5f3f9f4b9facdb78b8d8914",
+      "m_Feature": "!bp_a909bb70937f96d4c81e6dcd09962a15"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_1d34d95ad4961e343b02db14690eb6d8",
+      "m_Feature": "!bp_2a7a37d9eff1edb48947788127d4dafb"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_eef664d1e4318f64cb2304d1628d29ae",
+      "m_Feature": "!bp_3dd9b0e80be99124c9f76d682539b96f"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_bef8d08ee3c20b246b404ce3ef948291",
+      "m_Feature": "!bp_a909bb70937f96d4c81e6dcd09962a15"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_49115e2147cd32841baa34c305171daa",
+      "m_Feature": "!bp_3dd9b0e80be99124c9f76d682539b96f"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_9c5ed34089fedf54ba8d0f43565bcc91",
+      "m_Feature": "!bp_a909bb70937f96d4c81e6dcd09962a15"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_01e7aab638d6a0b43bc4e9d5b49e68d9",
+      "m_Feature": "!bp_d71642948aca60e4db870af3b36ad371"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_3867419bf47841b428333808dfdf4ae0",
+      "m_Feature": "!bp_d71642948aca60e4db870af3b36ad371"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DragonDiscipleBiteFeatureSecond",
+  "guid": "01971351119121d429ecf62c2ab94de3",
+  "name": "Dragon Bite (Dragon Disciple 6)"
+}

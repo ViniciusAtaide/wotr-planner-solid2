@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 6,
+      "Not": false,
+      "m_CharacterClass": "!bp_45a4607686d96a1498891b3286121780"
+    }
+  ],
+  "Groups": [
+    "MagusArcana"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PrescientAttackFeature",
+  "guid": "a3909a7293533fe49a2d7cfe051f17e4",
+  "name": "Prescient Attack"
+}

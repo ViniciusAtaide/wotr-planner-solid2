@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [
+    "!bp_1b18d6a1297950f4bba9d121cfc735e9",
+    "!bp_e0401ecade57d4144978dbd714c4069f",
+    "!bp_9cdfc2a236ee6d349ad6d8a2170477d5",
+    "!bp_a7a7ad500d4e2a847b450b85cbe68d65",
+    "!bp_8bb8579622b823c4285d851274a009c3",
+    "!bp_2a0ce0186af38ed419f47fce16f93c2a",
+    "!bp_4923409590bdb604590e04da4253ab78",
+    "!bp_baebdad7bb0a44a4bba402859d0cedb1",
+    "!bp_3ab76d4a8aa9e4c459add32139080206",
+    "!bp_c062c6d16aecddc4ab67d9c783b2ad46",
+    "!bp_d5c04077fc063e44784384a00377b7cf",
+    "!bp_0bbf10151dd1d8d4c8653d245e425453"
+  ],
+  "Components": [],
+  "Groups": [],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "FeatureSelection",
+  "Ranks": 1,
+  "RequireProficiency": false,
+  "WeaponSubCategory": "None",
+  "assetName": "LichSkeletalWeaponTrainingtParametrized",
+  "guid": "bc4cc2147809483fbb195841b8567127",
+  "m_Prerequisite": null,
+  "name": "Weapon Training (Skeleton Upgrade Selection)"
+}

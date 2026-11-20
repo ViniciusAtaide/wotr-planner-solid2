@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillKnowledgeWorld"
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "UntypedStackable",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillKnowledgeWorld",
+      "Value": 2
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillKnowledgeWorld"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundOsirionHistorian",
+  "guid": "759e9118b89068245afc0e25817aaf58",
+  "name": "Osirian Historian"
+}

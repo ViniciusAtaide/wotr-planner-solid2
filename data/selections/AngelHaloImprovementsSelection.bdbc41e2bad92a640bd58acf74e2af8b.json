@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "AngelMythcHalo",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "AngelHaloImprovementsSelection",
+  "guid": "bdbc41e2bad92a640bd58acf74e2af8b",
+  "m_AllFeatures": [
+    "!bp_7ee3fe3528c7d7d429c5e1dd1c913c1b",
+    "!bp_67b80136595b60245b787d688f47b346",
+    "!bp_1faccd51363ce0c4798e3f74c4fa2d8e",
+    "!bp_0042d02f5a4d9374e94b5e9d4c2d36b3",
+    "!bp_066213b574290694c815f3b2a491839f",
+    "!bp_6cc656805710b8247b27bbfc696e2cac"
+  ],
+  "name": "Improved Angelic Halo"
+}

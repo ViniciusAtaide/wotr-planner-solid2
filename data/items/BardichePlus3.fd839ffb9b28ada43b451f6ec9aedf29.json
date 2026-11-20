@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "BardichePlus3",
+  "guid": "fd839ffb9b28ada43b451f6ec9aedf29",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_b1cbf457fd471d148b39ae56667f405a"
+}

@@ -1,0 +1,94 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_0e422fce8572c8d4399bbf0880ba7d6e",
+        "!bp_0b9af221d99a91842b3a2afbc6a68a1e"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_53a90334e15796d48a45a3d22cdb147b"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_53a90334e15796d48a45a3d22cdb147b"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_53a90334e15796d48a45a3d22cdb147b"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_1e205c95881c20946bd70c4f993040ec"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_516ded0e532e4ea48bfef6287d6e68de"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f",
+        "!bp_381cf4c890815d049a4420c6f31d063f"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "HagboundWitchArchetype",
+  "guid": "96e4c06b6add0a64a8ad8976f9c38c37",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Hagbound"
+}

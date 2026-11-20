@@ -1,0 +1,85 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_77637f81d6aa33b4f82873d7934e8c4b"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_8d176f8fe5616a64ca37835be7c2ccfe"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_b98292eec7a746a789b54084a2064572"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "Domain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_b74c64a0152c7ee46b13ecdd72dda6f3"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_8a2064b6e41c90e4c8a2880deccac139"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "RuneDomainProgression",
+  "guid": "6d4dac497c182754d8b1f49071cca3fd",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": -2,
+      "m_Archetype": "!bp_f996f0a18e5d945459e710ee3a6dd485"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_34ecd1b5e1b90b9498795791b0855239"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [
+    "!bp_3758edaa5cc54cb88b0d87a9f4a34df1",
+    "!bp_5cb6a8bd344740bc91d50e2f144d1a7b"
+  ],
+  "name": "Rune Domain"
+}

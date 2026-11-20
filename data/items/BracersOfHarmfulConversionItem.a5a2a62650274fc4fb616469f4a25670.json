@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "BracersOfHarmfulConversionItem",
+  "guid": "a5a2a62650274fc4fb616469f4a25670",
+  "m_Enchantments": [
+    "!bp_9840918fbd5b9074cb6c6b2fae8c88f8"
+  ],
+  "name": "Bracers of Harmful Conversion"
+}

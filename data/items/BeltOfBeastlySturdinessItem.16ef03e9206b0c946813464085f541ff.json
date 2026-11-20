@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfBeastlySturdinessItem",
+  "guid": "16ef03e9206b0c946813464085f541ff",
+  "m_Enchantments": [
+    "!bp_4b9573fa2b0e74043a4682740e9ae138",
+    "!bp_39c16220c3b0f81459c45aca0787e30b"
+  ],
+  "name": "Belt of Beastly Sturdiness"
+}

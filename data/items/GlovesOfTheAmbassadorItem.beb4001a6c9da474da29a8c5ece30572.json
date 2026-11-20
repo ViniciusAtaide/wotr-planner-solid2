@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "GlovesOfTheAmbassadorItem",
+  "guid": "beb4001a6c9da474da29a8c5ece30572",
+  "m_Enchantments": [
+    "!bp_8b00ab1d5fef5d1449a5d76ed2e2b3dd"
+  ],
+  "name": "Gloves of the Ambassador"
+}

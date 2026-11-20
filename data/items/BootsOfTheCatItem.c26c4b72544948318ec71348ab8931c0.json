@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "BootsOfTheCatItem",
+  "guid": "c26c4b72544948318ec71348ab8931c0",
+  "m_Enchantments": [
+    "!bp_35ddae787ff647fa8d4994e2f2fe8eb3"
+  ],
+  "name": "Cat's Boots"
+}

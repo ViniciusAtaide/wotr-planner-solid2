@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "HexChannelerChannelSelection",
+  "guid": "c464ab12993745c44a7d21f386562cb6",
+  "m_AllFeatures": [
+    "!bp_b423fbf947bc51344bac21752c47471c",
+    "!bp_7c8d5e2ab326fdb4cabafc1c84a5c8e2"
+  ],
+  "name": "Channel Energy (Hex Channeler)"
+}

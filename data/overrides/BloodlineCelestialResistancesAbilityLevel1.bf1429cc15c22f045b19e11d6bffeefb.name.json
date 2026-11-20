@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "before level 9",
+  "reason": "BloodlineCelestialResistancesAbilityAdd, the celestial bloodline's \"Celestial Resistances\" at level 3, grants this blueprint below level 9 and BloodlineCelestialResistancesAbilityLevel2 from level 9 (AddFeatureOnClassLevel, BeforeThisLevel). The level-9 step is qualified by its level; this one is qualified as the step before it, and the power itself stays bare.",
+  "target": "bf1429cc15c22f045b19e11d6bffeefb"
+}

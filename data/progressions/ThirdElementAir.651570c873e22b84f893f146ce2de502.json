@@ -1,0 +1,89 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "ActivateTrigger",
+      "Actions": {
+        "Actions": [
+          {
+            "$type": "AddFact",
+            "Unit": {
+              "$type": "FactOwner"
+            },
+            "m_Fact": "!bp_295080cf4691df9438f58ff5ce79ee65"
+          }
+        ]
+      },
+      "Conditions": {
+        "Conditions": [
+          {
+            "$type": "HasFact",
+            "Not": false,
+            "Unit": {
+              "$type": "FactOwner"
+            },
+            "m_Fact": "!bp_2bd0d44953a536f489082534c48f8e31"
+          },
+          {
+            "$type": "HasFact",
+            "Not": false,
+            "Unit": {
+              "$type": "FactOwner"
+            },
+            "m_Fact": "!bp_93bd14dd916cfd1429c11ad66adf5e2b"
+          }
+        ],
+        "Operation": "Or"
+      }
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_cb30a291c75def84090430fbf2b5c05e"
+      ]
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_659c39542b728c04b83e969c834782a9"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "KineticElementalFocus"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_49e55e8f24e1ad24e910fefc0258adba"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": []
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ThirdElementAir",
+  "guid": "651570c873e22b84f893f146ce2de502",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Air (Kineticist 15)"
+}

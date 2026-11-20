@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_9d0477ebd71d43041b419c216b5d6cff"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "FrostSpiritSpellListFeature",
+  "guid": "fa4577e0f0b319a4995a3dba2359463c"
+}

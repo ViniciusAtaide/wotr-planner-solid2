@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "LensesOfProlonguedGaze_CorrectItem",
+  "guid": "50f803b35e824b618132750c06dcb1fb",
+  "m_Enchantments": [
+    "!bp_14b990f085366b24da9999c221356edf"
+  ],
+  "name": "Lenses of Prolonged Gaze (glasses)"
+}

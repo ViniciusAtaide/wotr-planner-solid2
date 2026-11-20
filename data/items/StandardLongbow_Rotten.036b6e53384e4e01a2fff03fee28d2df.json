@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardLongbow_Rotten",
+  "guid": "036b6e53384e4e01a2fff03fee28d2df",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a1211c05ec2c46428f41e3c0db9423f",
+  "name": "Rotten Longbow"
+}

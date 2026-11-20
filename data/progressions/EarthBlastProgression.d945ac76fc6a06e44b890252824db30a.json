@@ -1,0 +1,47 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_cb30a291c75def84090430fbf2b5c05e"
+      ]
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_9ff81732daddb174aa8138ad1297c787",
+      "m_Feature": "!bp_cfb2ef3aacffde141915a7d5464d3bb3"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_7f5f82c1108b961459c9884a0fa0f5c4"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "EarthBlastProgression",
+  "guid": "d945ac76fc6a06e44b890252824db30a",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Earth Blast"
+}

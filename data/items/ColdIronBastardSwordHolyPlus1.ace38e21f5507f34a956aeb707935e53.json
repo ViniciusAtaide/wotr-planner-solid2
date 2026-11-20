@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronBastardSwordHolyPlus1",
+  "guid": "ace38e21f5507f34a956aeb707935e53",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d2fe2c5516b56f04da1d5ea51ae3ddfe",
+  "name": "Cold Iron Holy Bastard Sword +1"
+}

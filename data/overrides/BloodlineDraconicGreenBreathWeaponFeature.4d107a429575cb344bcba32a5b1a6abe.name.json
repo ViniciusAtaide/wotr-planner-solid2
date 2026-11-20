@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "Draconic Bloodline — Green, ability",
+  "reason": "The green draconic bloodline has three \"Breath Weapon\" blueprints: the base power (qualified by the bloodline), the extra use at level 17, and this feature, which both of them give (AddFeatureIfHasFact) and which carries the breath itself. It is qualified by its bloodline and as the ability.",
+  "target": "4d107a429575cb344bcba32a5b1a6abe"
+}

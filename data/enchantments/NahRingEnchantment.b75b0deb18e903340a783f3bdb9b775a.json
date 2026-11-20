@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_847729dbb1f27044e900e93bcda1a04e"
+    }
+  ],
+  "assetName": "NahRingEnchantment",
+  "guid": "b75b0deb18e903340a783f3bdb9b775a"
+}

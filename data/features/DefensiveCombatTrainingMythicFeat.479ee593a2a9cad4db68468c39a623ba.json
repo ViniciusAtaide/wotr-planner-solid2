@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_479c7f3b0dba69a4bbcb43e101f3f7f9"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DefensiveCombatTrainingMythicFeat",
+  "guid": "479ee593a2a9cad4db68468c39a623ba",
+  "name": "Defensive Combat Training (Mythic)"
+}

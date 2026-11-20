@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DruchiteGreataxePlus3",
+  "guid": "32a085c648ff490eac488845a4747e78",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_e8059a8eac62cd74f9171d748a5ae428"
+}

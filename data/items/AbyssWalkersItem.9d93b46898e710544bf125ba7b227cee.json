@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "AbyssWalkersItem",
+  "guid": "9d93b46898e710544bf125ba7b227cee",
+  "m_Enchantments": [
+    "!bp_502459ea2f9390745864dbd27ef6677a"
+  ],
+  "name": "Abyss Walkers"
+}

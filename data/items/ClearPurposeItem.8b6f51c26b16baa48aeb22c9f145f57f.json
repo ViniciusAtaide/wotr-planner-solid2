@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "ClearPurposeItem",
+  "guid": "8b6f51c26b16baa48aeb22c9f145f57f",
+  "m_Enchantments": [
+    "!bp_e10df546d20f0b54493ba31de6feb093"
+  ],
+  "name": "Clear Purpose"
+}

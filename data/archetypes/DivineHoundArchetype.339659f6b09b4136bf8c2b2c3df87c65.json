@@ -1,0 +1,90 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_8abc5936b95d4983866f3bcace522e23",
+        "!bp_981def910b98200499c0c8f85a78bde8",
+        "!bp_90a4d9f74ea1480abc1365f3e77bc73e"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_ee50875819478774b8968701893b52f5"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_ee50875819478774b8968701893b52f5"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_33bf0404b70d65f42acac989ec5295b2"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_ee50875819478774b8968701893b52f5"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_ee50875819478774b8968701893b52f5"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_ee50875819478774b8968701893b52f5",
+        "!bp_490c7e92b22cc8a4bb4885a027b355db"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_ee50875819478774b8968701893b52f5"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_443365823b7d6d14b8d12f4e7bce1077",
+        "!bp_715ac15eb8bd5e342bc8a0a3c9e3e38f"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_cbc90fcdb60809744989d386a98cd21c"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_d8a126a3ed3b62943a597c937a4bf840"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "DivineHoundArchetype",
+  "guid": "339659f6b09b4136bf8c2b2c3df87c65",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Divine Hound"
+}

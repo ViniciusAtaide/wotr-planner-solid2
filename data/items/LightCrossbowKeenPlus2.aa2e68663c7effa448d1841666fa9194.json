@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "LightCrossbowKeenPlus2",
+  "guid": "aa2e68663c7effa448d1841666fa9194",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d525e7a6d8d5aa648a976ac41194b8d0",
+  "name": "Keen Light Crossbow +2"
+}

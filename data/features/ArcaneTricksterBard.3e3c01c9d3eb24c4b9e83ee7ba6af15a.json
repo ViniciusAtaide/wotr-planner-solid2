@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 2,
+      "m_CharacterClass": "!bp_772c83a25e2268e448e841dcd548235f"
+    }
+  ],
+  "Groups": [
+    "ArcaneTricksterSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ArcaneTricksterBard",
+  "guid": "3e3c01c9d3eb24c4b9e83ee7ba6af15a",
+  "m_Spellbook": "!bp_bc04fc157a8801d41b877ad0d9af03dd",
+  "name": "Bard"
+}

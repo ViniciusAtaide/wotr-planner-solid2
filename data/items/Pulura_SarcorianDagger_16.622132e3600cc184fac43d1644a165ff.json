@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "Pulura_SarcorianDagger_16",
+  "guid": "622132e3600cc184fac43d1644a165ff",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_07cc1a7fceaee5b42b3e43da960fe76d",
+  "name": "Funerary Dagger of Aremora the Skyreader"
+}

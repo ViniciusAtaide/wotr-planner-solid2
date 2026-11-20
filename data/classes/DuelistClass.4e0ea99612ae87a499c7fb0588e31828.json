@@ -1,0 +1,77 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillPerception",
+    "SkillPersuasion",
+    "SkillMobility"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "SkillMobility",
+      "Value": 2
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_90e54424d682d104ab36436bd527af09"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_2a6091b97ad940943b46262600eaeaeb"
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "BaseAttackBonus",
+      "Value": 6
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D10",
+  "IsMythic": false,
+  "PrestigeClass": true,
+  "SkillPoints": 3,
+  "assetName": "DuelistClass",
+  "guid": "4e0ea99612ae87a499c7fb0588e31828",
+  "m_Archetypes": [],
+  "m_BaseAttackBonus": "!bp_b3057560ffff3514299e8b93e7648a9d",
+  "m_FortitudeSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_a7b739bf4ba470542bd3e1346455a444",
+  "m_ReflexSave": "!bp_1f309006cd2855e4e91a6c3707f3f700",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "name": "Duelist"
+}

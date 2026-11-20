@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_ff5521b401d5a8f4d9f89f2927d0d96d"
+    }
+  ],
+  "assetName": "3ACAgainstGiantPlus2Enchant",
+  "guid": "e3c024b4749360e46869cebcabb5d893"
+}

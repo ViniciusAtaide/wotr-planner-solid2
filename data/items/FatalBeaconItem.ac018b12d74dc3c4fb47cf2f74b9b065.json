@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FatalBeaconItem",
+  "guid": "ac018b12d74dc3c4fb47cf2f74b9b065",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_5f824fbb0766a3543bbd6ae50248688f",
+  "name": "Fatal Beacon"
+}

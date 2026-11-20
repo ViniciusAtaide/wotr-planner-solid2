@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "RobeOfMephistophelesItem",
+  "guid": "204b71bd46194f9ab523dcd728f2f370",
+  "m_Enchantments": [
+    "!bp_abb6b6429ec24d77ab3e03f6c08b8274"
+  ],
+  "name": "Robe of Mephistopheles"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintShieldType",
+  "Components": [],
+  "assetName": "HeavyShieldType",
+  "guid": "d1b05b901bab9524388ebfa0435902a6",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "HeavyShield",
+  "name": "Heavy Shield"
+}

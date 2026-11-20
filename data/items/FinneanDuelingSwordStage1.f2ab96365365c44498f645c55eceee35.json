@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanDuelingSwordStage1",
+  "guid": "f2ab96365365c44498f645c55eceee35",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a6f7e3dc443ff114ba68b4648fd33e9f",
+  "name": "Finnean the Talking Weapon (Dueling Sword +1)"
+}

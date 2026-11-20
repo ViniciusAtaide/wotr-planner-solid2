@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "FakeEnhancement"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FakeEnchantmentFeature",
+  "guid": "40b906ec85584e43b5a11da0a8438363",
+  "name": "Fake Enhancement"
+}

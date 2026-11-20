@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DwarvenWaraxePlus4",
+  "guid": "3ee2e5cdcbf232d409ee1fcaf5b71258",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a6925f5f897801449a648d865637e5a0"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_2c57de6ce15bbf54a82f41077e7baaa5"
+    }
+  ],
+  "assetName": "WanderingConmanEnchantment",
+  "guid": "35586229165ba3845bdf7da1d622cbee"
+}

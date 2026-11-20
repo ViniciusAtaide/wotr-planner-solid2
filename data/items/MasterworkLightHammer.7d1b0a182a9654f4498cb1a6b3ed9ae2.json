@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkLightHammer",
+  "guid": "7d1b0a182a9654f4498cb1a6b3ed9ae2",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_bbf7d0ea57e4c9349b65c82abc6787b4",
+  "name": "Masterwork Light Hammer"
+}

@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "InvisibleThiefFeature",
+  "guid": "9a70f4efef9c2964c82cecefdd34292b",
+  "name": "Invisible Thief"
+}

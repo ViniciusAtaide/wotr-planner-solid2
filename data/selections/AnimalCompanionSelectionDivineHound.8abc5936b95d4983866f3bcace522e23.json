@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_56e99ebd958e4abdae91ba028a666728"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_cb06f0e72ffb5c640a156bd9f8000c1d"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_65af7290b4efd5f418132141aaa36c1b"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "AnimalCompanionSelectionDivineHound",
+  "guid": "8abc5936b95d4983866f3bcace522e23",
+  "m_AllFeatures": [
+    "!bp_472091361cf118049a2b4339c4ea836a",
+    "!bp_f894e003d31461f48a02f5caec4e3359",
+    "!bp_67a9dc42b15d0954ca4689b13e8dedea"
+  ],
+  "name": "Animal Companion (Divine Hound)"
+}

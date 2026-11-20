@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "HerbalRingItem",
+  "guid": "75069b8c7bf012b4dbc409bc52b8ff8c",
+  "m_Enchantments": [
+    "!bp_39dcb12fc0bb44347ab7eee152c4f612"
+  ],
+  "name": "Herbal Ring"
+}

@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintRace",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "SelectableRaceStat": false,
+  "assetName": "OreadRace",
+  "guid": "4d4555326b9b7144f93be1ea61337cd7",
+  "m_Features": [
+    "!bp_a9a3a4766b88af74a9d226dddf2927eb",
+    "!bp_9c747d24f6321f744aa1bb4bd343880d",
+    "!bp_6e60bfd48a63c8542a3552c2a05b3283",
+    "!bp_763a97c2216fd124da93b164994fd82b",
+    "!bp_064e0569f7966e746a76d01ef5dbe963"
+  ],
+  "name": "Oread"
+}

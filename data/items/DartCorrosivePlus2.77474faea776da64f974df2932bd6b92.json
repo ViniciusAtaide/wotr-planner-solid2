@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DartCorrosivePlus2",
+  "guid": "77474faea776da64f974df2932bd6b92",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_f415ae950523a7843a74d7780dd551af",
+  "name": "Corrosive Dart +2"
+}

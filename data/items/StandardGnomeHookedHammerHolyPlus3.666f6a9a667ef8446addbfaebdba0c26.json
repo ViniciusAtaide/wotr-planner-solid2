@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardGnomeHookedHammerHolyPlus3",
+  "guid": "666f6a9a667ef8446addbfaebdba0c26",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": "!bp_5668cb5d20a76c9468633a898ad9196a",
+  "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3",
+  "name": "Holy Gnome Hooked Hammer +3"
+}

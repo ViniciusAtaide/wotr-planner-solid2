@@ -1,0 +1,68 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_6b8e676943cb91648b21b7ca72fbb833",
+        "!bp_677fbcaa2a87cf94296138568db117a8",
+        "!bp_c880da2dea6b54f4bad7d1f4b79c2d63"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "OracleRevelation"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_7e360e025592a734bb6c3ae1210824f3"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_ec155bbe4e3fe2a4f943851a7c25e66b"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_01d6bcdf7ad8a2a41a51f8fe8d0a1d99"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "OracleRevelationWeaponMastery",
+  "guid": "0a4c3556355747241b2d3dcc0a88ec10",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Weapon Mastery (Revelation)"
+}

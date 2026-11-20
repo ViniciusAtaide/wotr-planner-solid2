@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FalchionFlamingPlus2",
+  "guid": "e278acf0d95b09b42ab282cd081f7b41",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_6ddc9acbbb6e40746a6a1671df1f7b47",
+  "name": "Flaming Falchion +2"
+}

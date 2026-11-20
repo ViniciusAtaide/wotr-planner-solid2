@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "PossessedOracleTwoMindsFeature",
+  "guid": "430e0c84bb41cad49a46a151d770de68",
+  "name": "Two Minds"
+}

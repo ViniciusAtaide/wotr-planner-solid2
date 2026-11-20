@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e9590244effb4be4f830b1e3fffced13"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_ae98ab7bda409ef4bb39149a212d6732"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_814ddce615b84e488fb7a196acebd408"
+    }
+  ],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AbundantKiPool",
+  "guid": "e8752f9126d986748b10d0bdac693264",
+  "name": "Abundant Ki"
+}

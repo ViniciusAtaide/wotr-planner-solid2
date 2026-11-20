@@ -1,0 +1,42 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_3b68909df737cd4458509d7f3a9c3706",
+        "!bp_804e1560f21c95b43a45a9825336bd19",
+        "!bp_eac5d0fc2b143c247a42f790230eb778"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 11,
+      "Not": false,
+      "m_CharacterClass": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    }
+  ],
+  "Groups": [
+    "OracleRevelation"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleRevelationFirestorm",
+  "guid": "3fdc528f56566984fbbe0baaef0027a2",
+  "name": "Firestorm"
+}

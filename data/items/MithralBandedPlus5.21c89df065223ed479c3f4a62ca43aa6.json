@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "MithralBandedPlus5",
+  "guid": "21c89df065223ed479c3f4a62ca43aa6",
+  "m_Enchantments": [
+    "!bp_7b95a819181574a4799d93939aa99aff",
+    "!bp_6628f9d77fd07b54c911cd8930c0d531"
+  ],
+  "m_Type": "!bp_da1b160cd13f16a429499b96636f6ed9",
+  "name": "Mithral Banded Mail +5"
+}

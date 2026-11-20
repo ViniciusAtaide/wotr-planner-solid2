@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_9093ceeefe9b84746a5993d619d7c86f",
+      "m_Feature": "!bp_9093ceeefe9b84746a5993d619d7c86f"
+    }
+  ],
+  "Stacking": "Prolong",
+  "assetName": "CavalierTacticianAlliedSpellcasterBuff",
+  "guid": "3de0359d9480cb549ab6cf1eac51f9dc",
+  "name": "Allied Spellcaster (buff)"
+}

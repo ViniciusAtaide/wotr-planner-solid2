@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": true,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "MysticTheurgeOracleLevelSelection1",
+  "guid": "3cb30f805e79a7944b0d0174c9a157b7",
+  "m_AllFeatures": [
+    "!bp_4794ccdbd52760647ae0d5c437da8649"
+  ],
+  "name": "Oracle Spell (1st Level)"
+}

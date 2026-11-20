@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "KamaPlus5AgileAxiomaticItem",
+  "guid": "2f4654e8a2aaeb6479acad163ba1ba3e",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_f5872eb0deb3a1b48a36549f8d92c19e",
+  "name": "Agile Axiomatic Kama +5"
+}

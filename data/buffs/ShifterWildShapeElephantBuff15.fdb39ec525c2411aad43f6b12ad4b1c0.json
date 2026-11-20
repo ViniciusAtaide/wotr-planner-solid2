@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "NaturalArmor",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AC",
+      "Value": 4
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Strength",
+      "Value": 4
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "ShifterWildShapeElephantBuff15",
+  "guid": "fdb39ec525c2411aad43f6b12ad4b1c0",
+  "name": "Major Form (Mammoth)"
+}

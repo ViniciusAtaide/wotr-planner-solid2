@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_6c03364712b415941a98f74522a81273"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "MysticTheurgeOracleLevelUp",
+  "guid": "3eaf8a57a407e3d4aa477f802f0a5bb4",
+  "name": "Oracle"
+}

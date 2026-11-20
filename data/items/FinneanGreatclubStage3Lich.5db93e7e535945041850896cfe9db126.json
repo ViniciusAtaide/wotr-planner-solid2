@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanGreatclubStage3Lich",
+  "guid": "5db93e7e535945041850896cfe9db126",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1b8c24cd1f9358c48839bb39266468c3",
+  "name": "Finnean (Greatclub)"
+}

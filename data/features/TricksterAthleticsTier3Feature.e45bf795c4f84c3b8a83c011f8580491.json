@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_198b6abf58a36404f8189787a082fa02"
+    }
+  ],
+  "Groups": [
+    "MythicTrick3"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterAthleticsTier3Feature",
+  "guid": "e45bf795c4f84c3b8a83c011f8580491",
+  "name": "Athletics 3 Rank"
+}

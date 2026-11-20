@@ -1,0 +1,81 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "WitchPatron"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_656268a8f122c0844b74a8d99e051d1d"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_5cb9fb6181937914eb18bbee827a2890"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_a8302b15c2b26b84ea5f255b456e8b8d"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_038f684bc9f52924ab82d60cfa365597"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_e475fb2cf16248b479254d970b7d43ad"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_8978b46115e80c64ba09d8e45cab6870"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_2b25d85f5cac64247b02fdc29d50ef45"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_d2cac6ebfff96d04284d9893c4833cd8"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_0cedb51c1da1897408efc9ffb37603c1"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WitchInsanityPatronProgression",
+  "guid": "eafc47304da734a4d922ae663d82f1e5",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Insanity"
+}

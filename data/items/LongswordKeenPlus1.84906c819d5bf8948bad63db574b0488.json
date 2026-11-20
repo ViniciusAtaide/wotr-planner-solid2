@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "LongswordKeenPlus1",
+  "guid": "84906c819d5bf8948bad63db574b0488",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d56c44bc9eb10204c8b386a02c7eed21",
+  "name": "Keen Longsword +1"
+}

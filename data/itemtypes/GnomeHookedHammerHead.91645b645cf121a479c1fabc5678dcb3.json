@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "HookedHammer",
+  "Components": [],
+  "assetName": "GnomeHookedHammerHead",
+  "guid": "91645b645cf121a479c1fabc5678dcb3",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Double",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Gnome Hooked Hammer"
+}

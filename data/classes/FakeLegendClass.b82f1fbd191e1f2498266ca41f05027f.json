@@ -1,0 +1,41 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteEtude",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteEtude",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteMainCharacter",
+      "CheckInProgression": false,
+      "Companion": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": true,
+  "PrestigeClass": false,
+  "SkillPoints": 0,
+  "assetName": "FakeLegendClass",
+  "guid": "b82f1fbd191e1f2498266ca41f05027f",
+  "m_Archetypes": [],
+  "m_BaseAttackBonus": "!bp_059c61483910c77408d0473b11d1b922",
+  "m_FortitudeSave": "!bp_059c61483910c77408d0473b11d1b922",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_03ac38ef7bac0aa40b0a0228ffa4838f",
+  "m_ReflexSave": "!bp_059c61483910c77408d0473b11d1b922",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_059c61483910c77408d0473b11d1b922",
+  "name": "Legend"
+}

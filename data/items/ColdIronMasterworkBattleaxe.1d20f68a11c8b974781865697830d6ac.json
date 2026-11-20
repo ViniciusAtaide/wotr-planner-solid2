@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronMasterworkBattleaxe",
+  "guid": "1d20f68a11c8b974781865697830d6ac",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_2bc77aa47f97de348aefcf03ec8fa43b",
+  "name": "Cold Iron Masterwork Battleaxe"
+}

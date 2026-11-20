@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "AmuletOfBlackenedMirrorItem",
+  "guid": "31894ce7e7d5a574d9777a99b45ad9de",
+  "m_Enchantments": [
+    "!bp_6b89e7b00bb7c4349b41b60ebee1882e"
+  ],
+  "name": "Amulet of Blackened Mirror"
+}

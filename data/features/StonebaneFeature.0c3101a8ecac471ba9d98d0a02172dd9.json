@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "StonebaneFeature",
+  "guid": "0c3101a8ecac471ba9d98d0a02172dd9",
+  "name": "Stonebane"
+}

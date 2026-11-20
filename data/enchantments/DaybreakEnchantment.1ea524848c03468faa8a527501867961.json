@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_6ab3ebcb44ca49b79da212090c815ae3"
+    }
+  ],
+  "assetName": "DaybreakEnchantment",
+  "guid": "1ea524848c03468faa8a527501867961"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": true,
+  "IsMythic": true,
+  "Spontaneous": true,
+  "assetName": "GoldDragonSpellbook",
+  "guid": "614b5ef6df084725aa872d43e0d0cd1e",
+  "m_SpellsPerDay": "!bp_5b2266070d72466eadbee7ed168c1d4a",
+  "name": "Gold Dragon"
+}

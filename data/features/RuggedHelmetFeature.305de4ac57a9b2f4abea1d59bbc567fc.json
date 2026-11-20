@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Penalty",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillPerception",
+      "Value": -3
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "RuggedHelmetFeature",
+  "guid": "305de4ac57a9b2f4abea1d59bbc567fc"
+}

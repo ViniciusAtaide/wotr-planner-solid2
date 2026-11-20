@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d8b8d1dd83393484cbacf6c8830080ae"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodragerSerpentineResistances4",
+  "guid": "6ef7c801217421647a68e74dd4678fe9",
+  "name": "Serpentine Resistances"
+}

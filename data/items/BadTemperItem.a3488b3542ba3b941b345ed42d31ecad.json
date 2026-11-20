@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "BadTemperItem",
+  "guid": "a3488b3542ba3b941b345ed42d31ecad",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b",
+    "!bp_1eb8e359c4f0e1a43b2df194b4ab54de"
+  ],
+  "m_SecondWeapon": "!bp_fc25d3ec4321af94bb48f8afa77b8e00",
+  "m_Type": "!bp_5f824fbb0766a3543bbd6ae50248688f",
+  "name": "Fang of Malice"
+}

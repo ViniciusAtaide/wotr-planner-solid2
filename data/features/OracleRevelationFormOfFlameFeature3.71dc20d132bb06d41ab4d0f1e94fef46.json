@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 13,
+      "m_AdditionalClasses": [
+        "!bp_52dbfd8505e22f84fad8d702611f60b7"
+      ],
+      "m_Archetypes": [
+        "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+      ],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_19837dcea4ce1af4eb71f324811503ca"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "OracleRevelationFormOfFlameFeature3",
+  "guid": "71dc20d132bb06d41ab4d0f1e94fef46"
+}

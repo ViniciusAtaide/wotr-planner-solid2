@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "GreataxeCorrosivePlus2",
+  "guid": "baee8e907006d5a4eb6ea900f0c933cd",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_e8059a8eac62cd74f9171d748a5ae428",
+  "name": "Corrosive Greataxe +2"
+}

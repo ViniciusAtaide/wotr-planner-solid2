@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DruchiteTridentPlus2",
+  "guid": "9023139431ff45f7bb2ec02e705fcf50",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_6ff66364e0a2c89469c2e52ebb46365e"
+}

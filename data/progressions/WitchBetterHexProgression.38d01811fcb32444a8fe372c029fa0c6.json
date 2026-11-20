@@ -1,0 +1,41 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_8ac781b33e380c84aa578f1b006dd6c5"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_d24c2467804ce0e4497d9978bafec1f9"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WitchBetterHexProgression",
+  "guid": "38d01811fcb32444a8fe372c029fa0c6",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_eb24ca44debf6714aabe1af1fd905a07"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Improved Hex"
+}

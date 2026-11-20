@@ -1,0 +1,52 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_acff6b0cf279a31439010afea01df912"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 5,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_145f1d3d360a7ad48bd95d392c81b38e",
+      "m_Feature": "!bp_0f15c6f70d8fb2b49aa6cc24239cc5fa"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_145f1d3d360a7ad48bd95d392c81b38e",
+      "m_Feature": "!bp_4cc71ae82bdd85b40b3cfe6697bb7949"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e6468a6fac9e1074897b2487a0659e96"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_5c3ccab7cb27f4a408531197eb2abd3f"
+    }
+  ],
+  "Groups": [
+    "ShamanHex"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShamanHexStoneStabilityFeature",
+  "guid": "05b6b99b0f394284899eccd4728031b7",
+  "name": "Stone Stability"
+}

@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "MythicTrick1"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterStealthTier1Feature",
+  "guid": "4e1948fed4201cf46b88836457c3bad8",
+  "name": "Stealth 1 Rank"
+}

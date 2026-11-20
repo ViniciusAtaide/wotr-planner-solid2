@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 4,
+      "Not": false,
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_1f3a15a3ae8a5524ab8b97f469bf4e3d"
+    }
+  ],
+  "Groups": [
+    "KineticBlastInfusion"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SpindleInfusion",
+  "guid": "c4f4a62a325f7c14dbcace3ce34782b5",
+  "name": "Spindle"
+}

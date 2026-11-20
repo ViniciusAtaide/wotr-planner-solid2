@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_578f810d1a25a794992b73dfa471e569"
+    }
+  ],
+  "assetName": "ShieldOfMagicalRetributionArmorEnchantment",
+  "guid": "5bd6315804bde494aa7dc33b47ab7924"
+}

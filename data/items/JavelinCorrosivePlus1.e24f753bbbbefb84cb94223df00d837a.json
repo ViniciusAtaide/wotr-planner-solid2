@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "JavelinCorrosivePlus1",
+  "guid": "e24f753bbbbefb84cb94223df00d837a",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a70cea34b275522458654beb3c53fe3f",
+  "name": "Corrosive Javelin +1"
+}

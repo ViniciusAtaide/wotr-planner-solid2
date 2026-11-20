@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "SacrificialElderCorrosiveBurstSpearPlus5",
+  "guid": "33be8266f38f41deb42cdeb5d7133e76",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_4b289eccefe6d704093201e52eb6d123",
+  "name": "Sacrificial Elder Corrosive Burst Spear +5"
+}

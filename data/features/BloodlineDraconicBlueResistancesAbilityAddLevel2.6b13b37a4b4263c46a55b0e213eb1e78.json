@@ -1,0 +1,38 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 15,
+      "m_AdditionalClasses": [
+        "!bp_45a4607686d96a1498891b3286121780",
+        "!bp_72051275b1dbb2d42ba9118237794f7c"
+      ],
+      "m_Archetypes": [
+        "!bp_d078b2ef073f2814c9e338a789d97b73"
+      ],
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf",
+      "m_Feature": "!bp_9fc2e77baef2ee5429d6918678102d80"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 15,
+      "m_AdditionalClasses": [
+        "!bp_45a4607686d96a1498891b3286121780",
+        "!bp_72051275b1dbb2d42ba9118237794f7c"
+      ],
+      "m_Archetypes": [
+        "!bp_d078b2ef073f2814c9e338a789d97b73"
+      ],
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf",
+      "m_Feature": "!bp_c4f5015c46c12ab40b6274ee5e49f33e"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 2,
+  "assetName": "BloodlineDraconicBlueResistancesAbilityAddLevel2",
+  "guid": "6b13b37a4b4263c46a55b0e213eb1e78"
+}

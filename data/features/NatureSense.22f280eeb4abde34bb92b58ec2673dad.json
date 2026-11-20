@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "UntypedStackable",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillLoreNature",
+      "Value": 2
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "NatureSense",
+  "guid": "22f280eeb4abde34bb92b58ec2673dad",
+  "name": "Nature Sense (Hunter)"
+}

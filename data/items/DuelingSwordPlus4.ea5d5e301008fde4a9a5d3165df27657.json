@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DuelingSwordPlus4",
+  "guid": "ea5d5e301008fde4a9a5d3165df27657",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a6f7e3dc443ff114ba68b4648fd33e9f"
+}

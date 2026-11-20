@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_99a340dd8ddf6d840b63c5f478f47006"
+    }
+  ],
+  "assetName": "NegotiatorsBracersEnchantment",
+  "guid": "55f63617e8d5b9e4393721246dff88de"
+}

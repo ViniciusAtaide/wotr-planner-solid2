@@ -1,0 +1,84 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_e31d849e4eb2578458419c9df622270f",
+        "!bp_45e620a5821d8a44fa65a212c23a0d4e",
+        "!bp_68782aa7a302b6d43a42a71c6e9b5277"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_afe6484d93092734a8acbdf1982cce6e"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_84ca7371fa09ccc46b14e80b9b7b371d"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_33c9dbdbe033a9f43894f8643fceb8fb"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": []
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_7dfba844cb70620488faa56dc068d1cb"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_33c9dbdbe033a9f43894f8643fceb8fb"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_84ca7371fa09ccc46b14e80b9b7b371d"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_1b5f30b11cc93684398ced084cd80303"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_c7e77ce541b07c7428e8199f5d854d3e"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "HellknightSigniferProgression",
+  "guid": "9dbe8102673d3e94e98e25cb9260e1c5",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_ee6425d6392101843af35f756ce7fefd"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null
+}

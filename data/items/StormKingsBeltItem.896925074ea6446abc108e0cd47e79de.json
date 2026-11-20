@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "StormKingsBeltItem",
+  "guid": "896925074ea6446abc108e0cd47e79de",
+  "m_Enchantments": [
+    "!bp_462db3b410635b54abc287d2280f336a",
+    "!bp_5614fc22a6e629c43a72a2559ab8213f",
+    "!bp_e2a5712732f52064494ed0b818440929",
+    "!bp_31245a0b22ce450da3b8e22a3ab221fa"
+  ],
+  "name": "Storm King's Belt"
+}

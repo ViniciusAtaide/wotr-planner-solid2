@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionAlignment",
+      "Alignment": "TrueNeutral, ChaoticNeutral, NeutralEvil, ChaoticEvil"
+    }
+  ],
+  "assetName": "ProtectorOfUnjustShieldItem",
+  "guid": "5505ca19d4e5b304cbf7f0bdda689ea5",
+  "m_ArmorComponent": "!bp_6b41050b430c8ad40ba0ac3b61ed908f",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Protector of Unjust"
+}

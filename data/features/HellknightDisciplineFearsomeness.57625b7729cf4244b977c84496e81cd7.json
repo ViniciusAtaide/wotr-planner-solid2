@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "HellknightFearsomeness"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HellknightDisciplineFearsomeness",
+  "guid": "57625b7729cf4244b977c84496e81cd7",
+  "name": "Fearsomeness"
+}

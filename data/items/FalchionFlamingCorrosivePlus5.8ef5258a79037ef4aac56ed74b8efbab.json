@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FalchionFlamingCorrosivePlus5",
+  "guid": "8ef5258a79037ef4aac56ed74b8efbab",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_6ddc9acbbb6e40746a6a1671df1f7b47",
+  "name": "Flaming Corrosive Falchion +5"
+}

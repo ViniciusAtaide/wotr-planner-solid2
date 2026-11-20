@@ -1,0 +1,59 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_06acd00ba8d34489baea16962cf937c9",
+        "!bp_0665256ed3804f03872928ad115652fe"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_829a3a8bc2a841b9b77987d29b9008ae"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_0665256ed3804f03872928ad115652fe",
+        "!bp_b0e6b4d760eb47538f424ce313c47388"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_907e145125ea415695799212ee057530"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_69004a7aa5914952af048dfd58fb89d4",
+        "!bp_37f5b7c9baaf41e2a115263436213620",
+        "!bp_0665256ed3804f03872928ad115652fe"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "FireRampageProgression",
+  "guid": "f0211aeaf54e461b957841e72406cce0",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Fire Rampage"
+}

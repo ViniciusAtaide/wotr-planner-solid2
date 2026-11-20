@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "RagePower"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ScentFeature",
+  "guid": "6e5d57a733d1eea46a9022a304f2c728",
+  "name": "Scent"
+}

@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillThievery"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillKnowledgeWorld"
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "UntypedStackable",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SaveReflex",
+      "Value": 1
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillThievery"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillKnowledgeWorld"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundVarisianExplorer",
+  "guid": "881e63a01d79ee445b96e888368b015d",
+  "name": "Varisian Explorer"
+}

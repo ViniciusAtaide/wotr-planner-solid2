@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "HowlingDoomItem",
+  "guid": "de2b7221ad7f4723b2d52136835c390a",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d2fe2c5516b56f04da1d5ea51ae3ddfe",
+  "name": "Howling Doom"
+}

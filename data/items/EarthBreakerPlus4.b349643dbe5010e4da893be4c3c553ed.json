@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "EarthBreakerPlus4",
+  "guid": "b349643dbe5010e4da893be4c3c553ed",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_54e960775daa4714fa52e0954d8cf862"
+}

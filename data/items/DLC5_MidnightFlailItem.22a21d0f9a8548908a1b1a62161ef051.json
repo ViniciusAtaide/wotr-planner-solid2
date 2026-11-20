@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DLC5_MidnightFlailItem",
+  "guid": "22a21d0f9a8548908a1b1a62161ef051",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b",
+    "!bp_a1455a289da208144981e4b1ef92cc56"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_bf1e53f7442ed0c43bf52d3abe55e16a",
+  "name": "Midnight Flail"
+}

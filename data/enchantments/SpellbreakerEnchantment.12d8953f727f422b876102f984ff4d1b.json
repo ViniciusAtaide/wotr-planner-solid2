@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_0a1417264c994f7d9c30a17f8783bc84"
+    }
+  ],
+  "assetName": "SpellbreakerEnchantment",
+  "guid": "12d8953f727f422b876102f984ff4d1b"
+}

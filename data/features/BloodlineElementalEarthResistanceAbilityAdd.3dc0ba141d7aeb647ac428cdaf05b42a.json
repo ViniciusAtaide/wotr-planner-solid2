@@ -1,0 +1,37 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 9,
+      "m_AdditionalClasses": [
+        "!bp_45a4607686d96a1498891b3286121780"
+      ],
+      "m_Archetypes": [
+        "!bp_d078b2ef073f2814c9e338a789d97b73"
+      ],
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf",
+      "m_Feature": "!bp_c0062132f5d24b644a050452af99ec00"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 9,
+      "m_AdditionalClasses": [
+        "!bp_45a4607686d96a1498891b3286121780"
+      ],
+      "m_Archetypes": [
+        "!bp_d078b2ef073f2814c9e338a789d97b73"
+      ],
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf",
+      "m_Feature": "!bp_11df2f786d8b3a748a372866a380190a"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "BloodlineElementalEarthResistanceAbilityAdd",
+  "guid": "3dc0ba141d7aeb647ac428cdaf05b42a",
+  "name": "Elemental Resistance (Elemental Bloodline — Earth)"
+}

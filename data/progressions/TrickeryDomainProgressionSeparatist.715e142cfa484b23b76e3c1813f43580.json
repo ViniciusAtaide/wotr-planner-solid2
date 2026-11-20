@@ -1,0 +1,80 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_085b645950fa492c85b3a3a2fffd6fd6"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_eaa368e08628a8641b16cd41cbd2cb33"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_cc2d330bb0200e840aeb79140e770198"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_720cb8ed96386d24d8dfe38cad153cbd"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_715e142cfa484b23b76e3c1813f43580"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "SeparatistSecondaryDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_1b9ad1d739094039906abff310b4b574"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_fbf670d0f7fc4b8dafbd4410fb29d948"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "TrickeryDomainProgressionSeparatist",
+  "guid": "715e142cfa484b23b76e3c1813f43580",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_67401c74ee094e82a2afd645a847f5cc"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Trickery Domain (Forbidden Rites)"
+}

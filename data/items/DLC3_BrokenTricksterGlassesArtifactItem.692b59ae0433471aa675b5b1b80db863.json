@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "DLC3_BrokenTricksterGlassesArtifactItem",
+  "guid": "692b59ae0433471aa675b5b1b80db863",
+  "m_Enchantments": [
+    "!bp_85c75c68eb10f6f459bab5ade8ec0abe",
+    "!bp_575de3a13d4040c4cb84891036e9e76b",
+    "!bp_9f5c5e8205604a018086590829bb5a6c",
+    "!bp_62db31daa40146f7b0be0e02b3bf9a18",
+    "!bp_f0154af8f3f541f9b7a9a2c5679e38e0"
+  ],
+  "name": "Broken Trickster"
+}

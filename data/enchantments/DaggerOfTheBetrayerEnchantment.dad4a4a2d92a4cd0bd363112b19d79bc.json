@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_c5a4240f62804dd1a1ed94c8f40e9bca"
+    }
+  ],
+  "assetName": "DaggerOfTheBetrayerEnchantment",
+  "guid": "dad4a4a2d92a4cd0bd363112b19d79bc"
+}

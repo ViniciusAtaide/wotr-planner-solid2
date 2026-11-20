@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "AngelMythcHalo"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "UnfailingBeaconFeature",
+  "guid": "6cc656805710b8247b27bbfc696e2cac",
+  "name": "Unfailing Beacon"
+}

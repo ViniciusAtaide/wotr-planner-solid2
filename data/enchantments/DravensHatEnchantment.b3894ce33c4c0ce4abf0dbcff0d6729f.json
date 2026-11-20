@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_21007755b76402743bec22faacfb5d02"
+    }
+  ],
+  "assetName": "DravensHatEnchantment",
+  "guid": "b3894ce33c4c0ce4abf0dbcff0d6729f"
+}

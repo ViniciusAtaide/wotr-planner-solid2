@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "RampageEI",
+  "guid": "6f6c79ccdd794f91bbe069467e36762c",
+  "name": "Energy Immunity (Electricity Rampage)"
+}

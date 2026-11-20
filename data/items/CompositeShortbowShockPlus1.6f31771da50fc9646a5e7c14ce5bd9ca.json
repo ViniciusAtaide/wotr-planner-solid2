@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "CompositeShortbowShockPlus1",
+  "guid": "6f31771da50fc9646a5e7c14ce5bd9ca",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_011f6f86a0b16df4bbf7f40878c3e80b",
+  "name": "Shock Composite Shortbow +1"
+}

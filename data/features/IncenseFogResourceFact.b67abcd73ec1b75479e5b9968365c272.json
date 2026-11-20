@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "IncenseFogResourceFact",
+  "guid": "b67abcd73ec1b75479e5b9968365c272",
+  "name": "Bardic Performance"
+}

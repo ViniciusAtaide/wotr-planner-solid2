@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_21328361091fd2c44a3909fcae0dd598",
+        "!bp_6c450765555b1554294b5556f50d304e",
+        "!bp_48e9e7ecca39c4a438d9262a20ab5066"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "DemonslayerFavoriteEnemyHiddenFeature",
+  "guid": "72f6c4eb17ca4544bb9aad33319e96c0"
+}

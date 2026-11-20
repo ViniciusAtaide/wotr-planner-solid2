@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintRace",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "SelectableRaceStat": true,
+  "assetName": "HumanRace",
+  "guid": "0a5d473ead98b0646b94495af250fdc4",
+  "m_Features": [
+    "!bp_247a4068296e8be42890143f451b4b45",
+    "!bp_3adf9274a210b164cb68f472dc1e4544"
+  ],
+  "name": "Human"
+}

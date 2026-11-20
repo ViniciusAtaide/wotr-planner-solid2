@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_587f8d40821e4becb96af80905e0198e"
+    }
+  ],
+  "assetName": "DestroyerOfPlanesEnchantment",
+  "guid": "f534453a5edb400bb5e9eb12c42f5001"
+}

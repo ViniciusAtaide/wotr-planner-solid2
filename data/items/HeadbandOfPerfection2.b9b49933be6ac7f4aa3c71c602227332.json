@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HeadbandOfPerfection2",
+  "guid": "b9b49933be6ac7f4aa3c71c602227332",
+  "m_Enchantments": [
+    "!bp_f945413e1b120294780ba9de26bd2f7a",
+    "!bp_69f5c9eaa39301b4eb99a51f23629af4",
+    "!bp_0f157adfc02708441b02725a24e8eb71"
+  ],
+  "name": "Headband of Mental Perfection +2"
+}

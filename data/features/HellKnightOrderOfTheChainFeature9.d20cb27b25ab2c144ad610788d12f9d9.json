@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "UntypedStackable",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AdditionalCMB",
+      "Value": 4
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "UntypedStackable",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AdditionalCMD",
+      "Value": 4
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HellKnightOrderOfTheChainFeature9",
+  "guid": "d20cb27b25ab2c144ad610788d12f9d9",
+  "name": "Order of the Chain (level 9)"
+}

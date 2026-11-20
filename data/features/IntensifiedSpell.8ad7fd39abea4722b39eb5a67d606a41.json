@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    }
+  ],
+  "Groups": [
+    "WizardFeat",
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "IntensifiedSpell",
+  "guid": "8ad7fd39abea4722b39eb5a67d606a41",
+  "name": "Metamagic (Intensified Spell)"
+}

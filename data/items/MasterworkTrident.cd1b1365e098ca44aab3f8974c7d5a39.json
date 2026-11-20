@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkTrident",
+  "guid": "cd1b1365e098ca44aab3f8974c7d5a39",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_6ff66364e0a2c89469c2e52ebb46365e",
+  "name": "Masterwork Trident"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_c551ab3923ae48778294d4552f8382f7"
+    }
+  ],
+  "assetName": "Artifact_LocustCloakEnchantment",
+  "guid": "f6487579bcb34d63ba686f1cd979d6c0"
+}

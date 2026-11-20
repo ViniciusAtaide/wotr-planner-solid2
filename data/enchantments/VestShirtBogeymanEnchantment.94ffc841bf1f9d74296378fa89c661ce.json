@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_15708517d202af745b1078cca8a32269"
+    }
+  ],
+  "assetName": "VestShirtBogeymanEnchantment",
+  "guid": "94ffc841bf1f9d74296378fa89c661ce"
+}

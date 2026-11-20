@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "WitchHex"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WitchHexFortuneFeature",
+  "guid": "0e4ebaf16c5958f4bbe6a8f50fe3afcd",
+  "name": "Fortune (witch hex)"
+}

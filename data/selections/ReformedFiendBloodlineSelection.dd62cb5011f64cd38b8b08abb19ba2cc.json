@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ReformedFiendBloodlineSelection",
+  "guid": "dd62cb5011f64cd38b8b08abb19ba2cc",
+  "m_AllFeatures": [
+    "!bp_55d5bbf4b5ae1744ab26c71be98067f9",
+    "!bp_9aef64b53406f114cb43f898a3aec01e"
+  ],
+  "name": "Bloodline (Reformed Fiend)"
+}

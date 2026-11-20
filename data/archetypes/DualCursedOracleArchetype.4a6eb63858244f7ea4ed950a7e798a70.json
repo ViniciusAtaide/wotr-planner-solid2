@@ -1,0 +1,39 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_cc6fda79e8c340b88c84689414a9abbe",
+        "!bp_41ee1bbd033f4c27ab7fa3a0a97783b1",
+        "!bp_37359ea0d4ee45e5aac59c4a3c9df315"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_60008a10ad7ad6543b1f63016741a5d2"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_60008a10ad7ad6543b1f63016741a5d2"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "DualCursedOracleArchetype",
+  "guid": "4a6eb63858244f7ea4ed950a7e798a70",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Dual-Cursed Oracle"
+}

@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillLoreReligion",
+    "SkillKnowledgeWorld",
+    "SkillKnowledgeArcana",
+    "SkillPersuasion"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_92c0d2da0a836ce418a267093c09ca54"
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 2,
+  "assetName": "WarpriestClass",
+  "guid": "30b5e47d47a0e37438cc5a80c96cfb99",
+  "m_Archetypes": [
+    "!bp_ad56b5819c4072345bff9aff6f1df13c",
+    "!bp_cd2d419961bb019438b77d4aecc2fc04",
+    "!bp_f68ca492c9c15e241ab73735fbd0fb9f",
+    "!bp_384a9d0c3f1b0634ba183b77d75618c0",
+    "!bp_d34dcc10e74961f44a81f72b54377b24",
+    "!bp_aaf7ace9642192d4389eab95e6cd04fd",
+    "!bp_fc403240fdca4a52a413578169ea7117"
+  ],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_062b215705430ad47b7174c1e75d285e",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": "!bp_7d7d51be2948d2544b3c2e1596fd7603",
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Warpriest"
+}

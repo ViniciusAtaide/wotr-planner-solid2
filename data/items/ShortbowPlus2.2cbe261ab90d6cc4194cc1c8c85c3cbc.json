@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ShortbowPlus2",
+  "guid": "2cbe261ab90d6cc4194cc1c8c85c3cbc",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_99ce02fb54639b5439d07c99c55b8542"
+}

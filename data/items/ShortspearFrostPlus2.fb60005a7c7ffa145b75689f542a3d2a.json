@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ShortspearFrostPlus2",
+  "guid": "fb60005a7c7ffa145b75689f542a3d2a",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_cf72040b79c99504785976b28d54b2b7",
+  "name": "Frost Shortspear +2"
+}

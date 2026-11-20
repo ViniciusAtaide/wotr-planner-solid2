@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "StormwalkerFlashShotFeature",
+  "guid": "e6a6c05e8e7827e42862478d37fb8fef",
+  "name": "Flash Shot"
+}

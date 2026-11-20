@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "HeavyPickFlamingPlus1",
+  "guid": "2bf5ee5f862565c4983cfb5415fb3323",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a492410f3d65f744c892faf09daad84a",
+  "name": "Flaming Heavy Pick +1"
+}

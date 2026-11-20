@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "DruchiteDoubleSwordPlus3",
+  "guid": "ad3123cd06e04915a763efcbb1c821ad",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": "!bp_740be5fc09504e859fb6e208edf12aa6",
+  "m_Type": "!bp_e95efb85a0912a7489be69d5f03a5308"
+}

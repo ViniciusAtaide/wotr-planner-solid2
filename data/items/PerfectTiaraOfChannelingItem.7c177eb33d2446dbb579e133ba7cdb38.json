@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "PerfectTiaraOfChannelingItem",
+  "guid": "7c177eb33d2446dbb579e133ba7cdb38",
+  "m_Enchantments": [
+    "!bp_bc66f5712a147874aaac6b397b83f874",
+    "!bp_02a37956195faf645bb956f2e6c1ef57",
+    "!bp_7669e7a9af237314dbb2a22e78e1a0b4",
+    "!bp_e988cf802d403d941b2ed8b6016de68f",
+    "!bp_cb4a39044b59f5e47ad5bc08ff9d6669"
+  ],
+  "name": "Perfect Tiara of Channeling"
+}

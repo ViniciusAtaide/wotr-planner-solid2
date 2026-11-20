@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a4cc4e71dcb64d7eacbf83ad0db51e9a"
+    }
+  ],
+  "assetName": "ScorchingBracersEnchantment",
+  "guid": "b9d7d00e93bd48b9aa056acaa3083a87"
+}

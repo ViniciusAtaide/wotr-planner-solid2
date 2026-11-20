@@ -1,0 +1,44 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_ced0f4e5d02d5914a9f9ff74acacf26d",
+        "!bp_5aeb44a9f56c4c2491f485d87e05758d",
+        "!bp_dab5290c632eb1a49bff9343144c9829",
+        "!bp_dab5290c632eb1a49bff9343144c9829",
+        "!bp_a108d291b3c0402aad87079def635876"
+      ]
+    },
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "IsUnitMythicLevel",
+        "CheckMaxLevel": false,
+        "CheckMinLevel": true,
+        "MaxLevel": null,
+        "MinLevel": {
+          "$type": "IntConstant",
+          "Value": 3
+        },
+        "Not": false,
+        "Unit": {
+          "$type": "ContextTargetUnit"
+        }
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FrozenInsides",
+  "guid": "4ebfa04ba46349dab38374bae69e18df",
+  "name": "Frozen Insides"
+}

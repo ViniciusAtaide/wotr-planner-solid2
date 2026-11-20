@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "LongbowMedium",
+  "guid": "9c46d77430705854d9698048e015813f",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a1211c05ec2c46428f41e3c0db9423f",
+  "name": "Longbow"
+}

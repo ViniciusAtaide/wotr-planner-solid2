@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "LightMacePlus4",
+  "guid": "c10ae0e9c0f76ff4884181b46738d36b",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_cf3e703db4b81904e982a66d7b8474ea"
+}

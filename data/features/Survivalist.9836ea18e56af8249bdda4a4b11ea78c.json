@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreNature"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_bd4e70bfb89a452b876713d61b9b8eb2",
+      "m_CharacterClass": "!bp_299aa766dee3cbf4790da4efb8c72484"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_490394869f666c141bf8647b1a365220",
+      "m_CharacterClass": "!bp_299aa766dee3cbf4790da4efb8c72484"
+    }
+  ],
+  "Groups": [
+    "RogueTalent",
+    "SlayerTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "Survivalist",
+  "guid": "9836ea18e56af8249bdda4a4b11ea78c",
+  "name": "Survivalist"
+}

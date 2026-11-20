@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "WildGuardianShieldItem",
+  "guid": "05d8f2e20b09a3d43871d76424c195c6",
+  "m_ArmorComponent": "!bp_1caff5f6e06bad641bcdc48e26f47067",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Wild Guardian"
+}

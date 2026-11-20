@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_27d7b88ee7438cf4697224a870e0d129"
+    }
+  ],
+  "assetName": "ClawsOfAMonsterEnchantment",
+  "guid": "1f04efa388c6b9d4da12ea027ecb4ac5"
+}

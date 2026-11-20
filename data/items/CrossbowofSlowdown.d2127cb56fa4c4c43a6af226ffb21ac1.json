@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "CrossbowofSlowdown",
+  "guid": "d2127cb56fa4c4c43a6af226ffb21ac1",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_36d0551b8a28587438a47fcbbf53c083",
+  "name": "Ankle Breaker"
+}

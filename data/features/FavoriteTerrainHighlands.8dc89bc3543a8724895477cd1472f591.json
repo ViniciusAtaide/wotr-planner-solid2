@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "FavoriteTerrain"
+  ],
+  "HideInUI": false,
+  "Ranks": 4,
+  "assetName": "FavoriteTerrainHighlands",
+  "guid": "8dc89bc3543a8724895477cd1472f591",
+  "name": "Favored Terrain — Highlands"
+}

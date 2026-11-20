@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Competence",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillAthletics",
+      "Value": 5
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Competence",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "CheckIntimidate",
+      "Value": 5
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "AmuletOfImposingPhysiqueFeature",
+  "guid": "6341e6f9cd21d6649beb3aad3785cd9a"
+}

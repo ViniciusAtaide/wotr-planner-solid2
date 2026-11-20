@@ -1,0 +1,146 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_6d9d3fbc30564e64d966dba27cd6357a"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87",
+        "!bp_40d4f55a5ac0e4f469d67d36c0dfc40b"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_db3767ba22ce84942af56525cb9f9ce6",
+        "!bp_43d1b15873e926848be2abf0ea3ad9a8"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_db3767ba22ce84942af56525cb9f9ce6",
+        "!bp_913b9cf25c9536949b43a2651b7ffb66"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_db3767ba22ce84942af56525cb9f9ce6",
+        "!bp_913b9cf25c9536949b43a2651b7ffb66"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_db3767ba22ce84942af56525cb9f9ce6",
+        "!bp_913b9cf25c9536949b43a2651b7ffb66"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_981def910b98200499c0c8f85a78bde8"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_ee50875819478774b8968701893b52f5"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_ee50875819478774b8968701893b52f5"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_ee50875819478774b8968701893b52f5"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_ee50875819478774b8968701893b52f5"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_ee50875819478774b8968701893b52f5",
+        "!bp_490c7e92b22cc8a4bb4885a027b355db"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_ee50875819478774b8968701893b52f5"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_f069b6557a2013544ac3636219186632"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_33bf0404b70d65f42acac989ec5295b2"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "SanctifiedSlayerArchetype",
+  "guid": "19b4a243d9a4bd34887d03c3dea03ced",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Sanctified Slayer"
+}

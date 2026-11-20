@@ -1,0 +1,64 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c6d0da9124735a44f93ac31df803b9a9"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_61f82ba786fe05643beb3cd3910233a8"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 6,
+      "Not": false,
+      "m_CharacterClass": "!bp_cda0615668a6df14eb36ba19ee881af6"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 6,
+      "Not": false,
+      "m_CharacterClass": "!bp_c75e0971973957d4dbad24bc7957e4fb"
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 6,
+      "m_Archetype": "!bp_19b4a243d9a4bd34887d03c3dea03ced",
+      "m_CharacterClass": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "RangerStyleSelection6",
+  "guid": "61f82ba786fe05643beb3cd3910233a8",
+  "m_AllFeatures": [
+    "!bp_6c799d09d5b93f344b9ade0e0c765c2d",
+    "!bp_a9998f05a0472bb4f8950304fe26ec0c",
+    "!bp_10d8245011456224cb6358f640364e26",
+    "!bp_83a4b2605333e004f875e2fd22f6be30",
+    "!bp_59d5445392ac62245a5ece9b01c05ee8"
+  ],
+  "name": "Combat Style Feat (Ranger 6)"
+}

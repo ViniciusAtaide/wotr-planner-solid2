@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "GogglesOfFeriociousPactItem",
+  "guid": "76d219c4b02f2d64bbf15363565647c3",
+  "m_Enchantments": [
+    "!bp_11095d4f0a37a534e92e8125a3f4ebb4"
+  ],
+  "name": "Goggles of Ferocious Pact"
+}

@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "PrimalistSecondBloodlineLevel20Selection",
+  "guid": "171a7125128f407fb439c1f31d9cec43",
+  "m_AllFeatures": [
+    "!bp_d67571685e6342ae9a5ad846727e09e3",
+    "!bp_32525ed3aea0480ebd7ad3654dca96cc"
+  ],
+  "name": "Primal Choices (Second Bloodrager Bloodline 20)"
+}

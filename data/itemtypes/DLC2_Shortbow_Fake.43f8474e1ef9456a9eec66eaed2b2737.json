@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Shortbow",
+  "Components": [],
+  "assetName": "DLC2_Shortbow_Fake",
+  "guid": "43f8474e1ef9456a9eec66eaed2b2737",
+  "m_AttackType": "Ranged",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Bows",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": true
+}

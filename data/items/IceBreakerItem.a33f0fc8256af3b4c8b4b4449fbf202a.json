@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "IceBreakerItem",
+  "guid": "a33f0fc8256af3b4c8b4b4449fbf202a",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_2bc77aa47f97de348aefcf03ec8fa43b",
+  "name": "Ice Breaker"
+}

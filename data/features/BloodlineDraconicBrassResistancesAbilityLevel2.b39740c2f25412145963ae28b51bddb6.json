@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "NaturalArmor",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AC",
+      "Value": 2
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "BloodlineDraconicBrassResistancesAbilityLevel2",
+  "guid": "b39740c2f25412145963ae28b51bddb6",
+  "name": "Dragon Resistances (Draconic Bloodline — Brass 9)"
+}

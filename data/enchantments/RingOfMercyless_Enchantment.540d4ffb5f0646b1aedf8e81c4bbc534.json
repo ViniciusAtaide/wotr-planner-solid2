@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_117dcb507dce441289da2cb06295d241"
+    }
+  ],
+  "assetName": "RingOfMercyless_Enchantment",
+  "guid": "540d4ffb5f0646b1aedf8e81c4bbc534"
+}

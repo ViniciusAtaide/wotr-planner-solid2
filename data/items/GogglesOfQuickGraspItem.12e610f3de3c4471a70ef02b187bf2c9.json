@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "GogglesOfQuickGraspItem",
+  "guid": "12e610f3de3c4471a70ef02b187bf2c9",
+  "m_Enchantments": [
+    "!bp_64b273a86e1444e98609dc2f0590ad7d"
+  ],
+  "name": "Goggles of Quick Grasp"
+}

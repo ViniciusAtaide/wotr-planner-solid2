@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "SickleFlamingPlus1",
+  "guid": "7945f84912cca234c824aded40fcb8e0",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_ec2da496c7936e14c9a28ce616a6b4cd",
+  "name": "Flaming Sickle +1"
+}

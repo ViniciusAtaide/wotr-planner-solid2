@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "LightShieldItemPlus3againstEvocation",
+  "guid": "ae204741f8f01a14eaaaf54a1a89388b",
+  "m_ArmorComponent": "!bp_96f184740ee0af14884a2fde51b159ba",
+  "m_WeaponComponent": "!bp_62c90581f9892e9468f0d8229c7321c4",
+  "name": "Ray Blocker"
+}

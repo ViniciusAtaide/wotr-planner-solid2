@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreNature"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SoheiLoreNatureFeature",
+  "guid": "d59fe46a1aa1ace4e987d843c8e309ff",
+  "name": "Skills (Sohei)"
+}

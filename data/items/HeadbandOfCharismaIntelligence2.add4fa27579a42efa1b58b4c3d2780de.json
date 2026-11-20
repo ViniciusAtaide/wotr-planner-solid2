@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HeadbandOfCharismaIntelligence2",
+  "guid": "add4fa27579a42efa1b58b4c3d2780de",
+  "m_Enchantments": [
+    "!bp_f945413e1b120294780ba9de26bd2f7a",
+    "!bp_0f157adfc02708441b02725a24e8eb71"
+  ],
+  "name": "Headband of Mental Flow +2"
+}

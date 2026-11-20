@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FalchionPlus3",
+  "guid": "a00f39e6fed1e544588782a73a5e9d99",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_6ddc9acbbb6e40746a6a1671df1f7b47"
+}

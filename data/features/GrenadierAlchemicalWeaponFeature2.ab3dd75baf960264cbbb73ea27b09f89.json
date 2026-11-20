@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_0937bec61c0dabc468428f496580c721",
+      "m_Feature": "!bp_be419a9c753560548a52d86741ce2186"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "GrenadierAlchemicalWeaponFeature2",
+  "guid": "ab3dd75baf960264cbbb73ea27b09f89",
+  "name": "Alchemical Weapon"
+}

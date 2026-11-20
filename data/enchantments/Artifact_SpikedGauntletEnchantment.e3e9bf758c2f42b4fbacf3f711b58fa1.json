@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_57cb56b1aaf9b894d97fa88b35a680db"
+    }
+  ],
+  "assetName": "Artifact_SpikedGauntletEnchantment",
+  "guid": "e3e9bf758c2f42b4fbacf3f711b58fa1"
+}

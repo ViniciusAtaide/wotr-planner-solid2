@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DruchiteFauchardPlus3",
+  "guid": "326f3bb3b9d24dada686894aeafb740a",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a40899c4defec94bb9c291bde74f1a8"
+}

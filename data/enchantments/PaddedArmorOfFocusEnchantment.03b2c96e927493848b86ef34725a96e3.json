@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f177d6d2ddfe1374798e242b335857ba"
+    }
+  ],
+  "assetName": "PaddedArmorOfFocusEnchantment",
+  "guid": "03b2c96e927493848b86ef34725a96e3"
+}

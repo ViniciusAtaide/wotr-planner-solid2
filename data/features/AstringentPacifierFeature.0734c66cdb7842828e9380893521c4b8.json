@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Competence",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "CheckIntimidate",
+      "Value": 15
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "AstringentPacifierFeature",
+  "guid": "0734c66cdb7842828e9380893521c4b8"
+}

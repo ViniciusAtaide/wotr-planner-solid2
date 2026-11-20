@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_79192af58e824fea95b4dae67499d149"
+    }
+  ],
+  "assetName": "BreastplateOfTirelessWarriorEnchantment",
+  "guid": "1cbd3e4d3c5f45069d2c0acc064dea94"
+}

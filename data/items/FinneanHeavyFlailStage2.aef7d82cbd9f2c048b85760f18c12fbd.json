@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanHeavyFlailStage2",
+  "guid": "aef7d82cbd9f2c048b85760f18c12fbd",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_8fefb7e0da38b06408f185e29372c703",
+  "name": "Finnean the Talking Weapon (Heavy Flail +3)"
+}

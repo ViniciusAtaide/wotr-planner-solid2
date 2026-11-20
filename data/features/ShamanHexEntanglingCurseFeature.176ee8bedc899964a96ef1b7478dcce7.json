@@ -1,0 +1,41 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_379d33ef16e812146b5517601ab25e66"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_54943a544ec1b31438366aaf73e5f310"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_0a7166e9c6ea5874e9fc4984f30f2d8d"
+    }
+  ],
+  "Groups": [
+    "ShamanHex"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShamanHexEntanglingCurseFeature",
+  "guid": "176ee8bedc899964a96ef1b7478dcce7",
+  "name": "Entangling Curse"
+}

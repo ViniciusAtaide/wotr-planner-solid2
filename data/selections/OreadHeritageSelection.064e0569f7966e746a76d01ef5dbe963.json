@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "OreadHeritage",
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "OreadHeritageSelection",
+  "guid": "064e0569f7966e746a76d01ef5dbe963",
+  "m_AllFeatures": [
+    "!bp_69b13ee3489bd4c4cb4bf99a0f643ff4",
+    "!bp_273315a6887001849a82fa739f922cae",
+    "!bp_81c7a84ae0fe7ac4e8fe3efed22649d2"
+  ],
+  "name": "Oread Heritage"
+}

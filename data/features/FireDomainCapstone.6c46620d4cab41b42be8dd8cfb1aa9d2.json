@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "FireDomainCapstone",
+  "guid": "6c46620d4cab41b42be8dd8cfb1aa9d2",
+  "name": "Fire Immunity"
+}

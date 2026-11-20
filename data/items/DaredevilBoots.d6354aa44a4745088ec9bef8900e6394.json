@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "DaredevilBoots",
+  "guid": "d6354aa44a4745088ec9bef8900e6394",
+  "m_Enchantments": [
+    "!bp_fbab1327c11a43788e05443690da8654"
+  ],
+  "name": "Daredevil Boots"
+}

@@ -1,0 +1,38 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "NeutralGood, TrueNeutral, NeutralEvil, Chaotic",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_528e316f9f092954b9e38d3a82b1634a"
+      ]
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 4,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_30b5e47d47a0e37438cc5a80c96cfb99",
+      "m_Feature": "!bp_b93880c5a57544545b2eab1c55372b8c"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ChampionOfTheFaithChaosFeature",
+  "guid": "4ee098d102ccf574a99f1cf63ee01a05",
+  "name": "Chosen Alignment — Chaotic"
+}

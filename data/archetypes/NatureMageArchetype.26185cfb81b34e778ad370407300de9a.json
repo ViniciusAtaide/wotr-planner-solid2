@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_ebd91eb0b9fa41279c2683a004e3593c"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "NatureMageArchetype",
+  "guid": "26185cfb81b34e778ad370407300de9a",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": "!bp_3ed7e38dc8134af28e1a2b105f74fb7b",
+  "m_WillSave": null,
+  "name": "Nature Mage"
+}

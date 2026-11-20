@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Nunchaku"
+      ],
+      "m_RaceRestriction": null
+    },
+    {
+      "$type": "PrerequisiteNotProficient",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "Nunchaku"
+      ]
+    }
+  ],
+  "Groups": [
+    "ExoticWeaponProficiency"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "NunchakuProficiency",
+  "guid": "097c1ceaf18f9a045b5969bad82b1fa4",
+  "name": "Weapon Proficiency (Nunchaku)"
+}

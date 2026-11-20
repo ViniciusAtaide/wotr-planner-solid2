@@ -1,0 +1,38 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_9719015edcbf142409592e2cbaab7fe1"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_589aa3d4131727b43aa57bc96003bb06"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_8ac319e47057e2741b42229210eb43ed"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "WrecherArchetype",
+  "guid": "0a146638c22af254895f332dc865cdca",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Wrecker"
+}

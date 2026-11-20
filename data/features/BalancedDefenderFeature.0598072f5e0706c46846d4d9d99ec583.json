@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 100,
+  "assetName": "BalancedDefenderFeature",
+  "guid": "0598072f5e0706c46846d4d9d99ec583"
+}

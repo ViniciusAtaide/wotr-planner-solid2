@@ -1,0 +1,3 @@
+[install]
+# Isolated installs: a package can import only what it declares, so an undeclared import fails.
+linker = "isolated"

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BlightMiasmaFeature",
+  "guid": "1917f240517cbf84e9ff9ba6adaf40c8",
+  "name": "Miasma"
+}

@@ -1,0 +1,49 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillKnowledgeArcana",
+    "SkillPersuasion",
+    "SkillUseMagicDevice"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D6",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 2,
+  "assetName": "SorcererClass",
+  "guid": "b3a505fb61437dc4097f43c3f8f9a4cf",
+  "m_Archetypes": [
+    "!bp_aa00d945f7cf6c34c909a29a25f2df38",
+    "!bp_711d5024ecc75f346b9cda609c3a1f83",
+    "!bp_00b990c8be2117e45ae6514ee4ef561c",
+    "!bp_e66a112ab57f69e418f1f11d5d2f3248",
+    "!bp_7229db6fc0b07af4180e783eed43c4d9",
+    "!bp_65a630aa291f65047b90a2af5df75d83",
+    "!bp_734917ec8b8542378c1d35519439d67f",
+    "!bp_a0e56a59ad0b44b8add84185da6bb845"
+  ],
+  "m_BaseAttackBonus": "!bp_0538081888b2d8c41893d25d098dee99",
+  "m_FortitudeSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_997665565ca80a649aedd72455c4df1f",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": "!bp_b3db3766a4b605040b366265e2af0e50",
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Sorcerer"
+}

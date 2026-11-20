@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "HandFreezerItem",
+  "guid": "b96bdcf09db071b4e9abe4564f0f5db2",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_cf3e703db4b81904e982a66d7b8474ea",
+  "name": "Finger Freezer"
+}

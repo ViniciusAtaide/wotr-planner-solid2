@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_00ede5401ff64f5aa5fd73f15542a2d3"
+    }
+  ],
+  "assetName": "FabledHerosLanceEnchantment",
+  "guid": "d1e0496e7e0442fe84a714cf051fe70a"
+}

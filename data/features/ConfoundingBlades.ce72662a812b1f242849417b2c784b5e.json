@@ -1,0 +1,41 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_7787030571e87704d9177401c595408e"
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 0,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_a33b99f95322d6741af83e9381b2391c",
+        "!bp_4e1dfa97892645988937cfdcf7253c5e"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+    }
+  ],
+  "Groups": [
+    "RogueTalent",
+    "VivisectionistDiscovery",
+    "SlayerTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ConfoundingBlades",
+  "guid": "ce72662a812b1f242849417b2c784b5e",
+  "name": "Confounding Blades"
+}

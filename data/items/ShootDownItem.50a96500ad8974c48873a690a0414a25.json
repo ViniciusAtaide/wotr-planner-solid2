@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "ShootDownItem",
+  "guid": "50a96500ad8974c48873a690a0414a25",
+  "m_Enchantments": [
+    "!bp_d134a5c08cf1d9d488d8a82012a2b3ff"
+  ],
+  "name": "Merciless Shot"
+}

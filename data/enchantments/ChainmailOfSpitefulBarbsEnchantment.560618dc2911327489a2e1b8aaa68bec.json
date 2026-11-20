@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_25385662f60aa8d4bac5568c996a01f9"
+    }
+  ],
+  "assetName": "ChainmailOfSpitefulBarbsEnchantment",
+  "guid": "560618dc2911327489a2e1b8aaa68bec"
+}

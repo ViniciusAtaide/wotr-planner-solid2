@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "QuarterstaffOfWarMageItem",
+  "guid": "1e24ac2407294c849bedce83ee129d4c",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b",
+    "!bp_b97f6c22d96d2e24ebdb3e259387b810"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_629736dabac7f9f4a819dc854eaed2d6",
+  "name": "Quarterstaff of the War Mage"
+}

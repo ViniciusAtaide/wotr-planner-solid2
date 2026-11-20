@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e343b492d1182404c91048186b7b58fb"
+    }
+  ],
+  "assetName": "BlindingEnlightenmentEnchantment",
+  "guid": "3f5740b4ce9e3964a85b9f05149e3a4f"
+}

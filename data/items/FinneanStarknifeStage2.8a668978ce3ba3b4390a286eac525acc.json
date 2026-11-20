@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanStarknifeStage2",
+  "guid": "8a668978ce3ba3b4390a286eac525acc",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_5a939137fc039084580725b2b0845c3f",
+  "name": "Finnean the Talking Weapon (Starknife +3)"
+}

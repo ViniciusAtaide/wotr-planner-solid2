@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AngelSwordMassHealFeature",
+  "guid": "1ba857f62f91768468f6d89fbc758d53",
+  "name": "Sword of Holy Healing"
+}

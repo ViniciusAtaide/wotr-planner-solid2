@@ -1,0 +1,96 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 2,
+      "m_CharacterClass": "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "MysticTheurgeDivineSpellbook"
+  ],
+  "HideInUI": true,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_5454910ae7ca9234cba35df073ed5116"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_5454910ae7ca9234cba35df073ed5116"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_5454910ae7ca9234cba35df073ed5116"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_5454910ae7ca9234cba35df073ed5116"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_5454910ae7ca9234cba35df073ed5116"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_5454910ae7ca9234cba35df073ed5116"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_5454910ae7ca9234cba35df073ed5116"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_5454910ae7ca9234cba35df073ed5116"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_5454910ae7ca9234cba35df073ed5116"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_5454910ae7ca9234cba35df073ed5116"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "MysticTheurgeShamanProgression",
+  "guid": "eeec6b308a958784d9920cc5a271bf70",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_0920ea7e4fd7a404282e3d8b0ac41838"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Shaman"
+}

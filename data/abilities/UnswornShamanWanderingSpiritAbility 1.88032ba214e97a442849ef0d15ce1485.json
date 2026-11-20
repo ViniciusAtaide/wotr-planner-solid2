@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintAbility",
+  "Components": [
+    {
+      "$type": "AbilityApplyFact",
+      "m_Facts": [
+        "!bp_8e3b0e7b907296940bb038f2c684996a",
+        "!bp_6e97c24ac0e08744baa3bfdfa0c2036d",
+        "!bp_19cc6629ba73f634d8f74a46fb24041f",
+        "!bp_1e9b966bfe4735f4aadddf9923ba2bdb",
+        "!bp_8954e8e311d1ec142ba4285ceeb34b58",
+        "!bp_c9e7ff30a6a61144e85ae99c4800e795",
+        "!bp_24c5bf81776927143ba0284ab57d2a08",
+        "!bp_e3b9b5159b1252342a6d40520623a6c9",
+        "!bp_5e9efa38d26775d4e9af931b9ecde7c3"
+      ],
+      "m_Restriction": "CasterHasNoFact"
+    }
+  ],
+  "assetName": "UnswornShamanWanderingSpiritAbility 1",
+  "guid": "88032ba214e97a442849ef0d15ce1485",
+  "name": "Wandering Spirit (Shaman 2)"
+}

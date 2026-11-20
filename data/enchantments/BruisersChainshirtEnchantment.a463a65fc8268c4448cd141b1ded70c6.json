@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_2f08e4d39c1c568478c43aba81c42525"
+    }
+  ],
+  "assetName": "BruisersChainshirtEnchantment",
+  "guid": "a463a65fc8268c4448cd141b1ded70c6"
+}

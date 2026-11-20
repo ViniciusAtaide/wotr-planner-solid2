@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "ShamanHex"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShamanHexAmelioratingFeature",
+  "guid": "8e19da021854b9b4e805f0e919663894",
+  "name": "Ameliorating (shaman hex)"
+}

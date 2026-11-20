@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_47a8a7fa7d4198f449db71cdbe4b8d3e",
+      "m_Feature": "!bp_315862e015604d2295c10f2dbfb23fe6"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_47a8a7fa7d4198f449db71cdbe4b8d3e",
+      "m_Feature": "!bp_47a8a7fa7d4198f449db71cdbe4b8d3e"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "PlayersPhylacteryFeature",
+  "guid": "8c5cd552e87c4264b9470156a92b616f"
+}

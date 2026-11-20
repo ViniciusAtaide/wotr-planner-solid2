@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 0,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_a33b99f95322d6741af83e9381b2391c",
+        "!bp_4e1dfa97892645988937cfdcf7253c5e"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "Groups": [
+    "RogueTalent",
+    "VivisectionistDiscovery",
+    "SlayerTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DispellingAttack",
+  "guid": "1b92146b8a9830d4bb97ab694335fa7c",
+  "name": "Dispelling Attack"
+}

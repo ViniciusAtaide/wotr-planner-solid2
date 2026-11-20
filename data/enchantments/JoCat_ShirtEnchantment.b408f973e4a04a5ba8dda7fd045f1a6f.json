@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_706edd2eaa8c4c9dbf731085e0397333"
+    }
+  ],
+  "assetName": "JoCat_ShirtEnchantment",
+  "guid": "b408f973e4a04a5ba8dda7fd045f1a6f"
+}

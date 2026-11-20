@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_65ad0982f3634905b1533f7244dace0f"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_6c72d29acb0b4d8089f9189ba817a94f"
+    }
+  ],
+  "assetName": "StaffOfLocustWeaponEnchantment",
+  "guid": "5f40a467dae347d6b332ac779ac1b810"
+}

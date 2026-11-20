@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "BucklerItem4ACagainstVerminPlus2",
+  "guid": "efa888fbcadeba04ba2492127a15e1ac",
+  "m_ArmorComponent": "!bp_e11f0643729cd6248904f0e770950261",
+  "m_WeaponComponent": null,
+  "name": "Ratcatcher's Buckler"
+}

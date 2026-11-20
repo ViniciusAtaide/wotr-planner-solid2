@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionHasAnyClassFromList",
+      "Not": false,
+      "m_Classes": [
+        "!bp_26b10d4340839004f960f9816f6109fe",
+        "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+      ]
+    }
+  ],
+  "assetName": "ScaleBardingStandard",
+  "guid": "292b8263268e5464e8d015de144ceee0",
+  "m_Enchantments": [],
+  "m_Type": "!bp_abefac7d8f98aeb40a167e0f5978d9c7"
+}

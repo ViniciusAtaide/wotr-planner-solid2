@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_75be304b51b1ac24eacda0db7e6d8be7"
+    }
+  ],
+  "assetName": "TunicOfArdentWarpriestEnchantment",
+  "guid": "49f53e7cb012fe545984ea349a31c580"
+}

@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "DoubleSword",
+  "Components": [],
+  "assetName": "DoubleSword",
+  "guid": "e95efb85a0912a7489be69d5f03a5308",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "BladesHeavy, Double",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Two-Bladed Sword"
+}

@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "LichSkeletalUpgrade"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "LichSkeletalTeamworkSelection",
+  "guid": "03168a77717179c43bcddb71d52f6167",
+  "m_AllFeatures": [
+    "!bp_b042ff9901e7b104eac92c05aa39957a"
+  ],
+  "name": "Skeletal Inquisitor I (selection)"
+}

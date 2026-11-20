@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "bronze dragon",
+  "reason": "Many blueprints are named \"Wings\". Each draconic bloodline has its own (FeatureWingsDraconicBronze, from the bronze bloodline at level 15), which the Dragon Disciple's \"Wings\" (DragonDiscipleFormFeatureWings, level 9) also gives for the matching colour (AddFeatureIfHasFact). No grantor holds on every route, so each is qualified by its dragon's colour.",
+  "target": "ed71d51317d79d24ebe172cd9107e695"
+}

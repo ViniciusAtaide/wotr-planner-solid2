@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 13,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_772c83a25e2268e448e841dcd548235f",
+      "m_Feature": "!bp_26ae24633fcdc4b48bb74509d553bb4d"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BeastCallSummonFeature6",
+  "guid": "665a4fb64f1aadf48a08585b2af994cc",
+  "name": "Summon Nature's Ally VI"
+}

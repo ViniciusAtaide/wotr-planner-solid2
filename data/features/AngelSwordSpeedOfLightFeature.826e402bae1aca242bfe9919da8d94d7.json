@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "GreaterSwordOfHeaven"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AngelSwordSpeedOfLightFeature",
+  "guid": "826e402bae1aca242bfe9919da8d94d7",
+  "name": "Speed of Light"
+}

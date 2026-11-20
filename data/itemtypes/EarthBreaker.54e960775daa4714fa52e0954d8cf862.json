@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "EarthBreaker",
+  "Components": [],
+  "assetName": "EarthBreaker",
+  "guid": "54e960775daa4714fa52e0954d8cf862",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Hammers",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": true,
+  "name": "Earth Breaker"
+}

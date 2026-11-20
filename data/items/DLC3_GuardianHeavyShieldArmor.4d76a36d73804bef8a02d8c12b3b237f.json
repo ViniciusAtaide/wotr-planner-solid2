@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "DLC3_GuardianHeavyShieldArmor",
+  "guid": "4d76a36d73804bef8a02d8c12b3b237f",
+  "m_Enchantments": [
+    "!bp_ac2e3a582b5faa74aab66e0a31c935a9",
+    "!bp_2491c3d7e94f4873bc67e465b0e588d2"
+  ],
+  "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6"
+}

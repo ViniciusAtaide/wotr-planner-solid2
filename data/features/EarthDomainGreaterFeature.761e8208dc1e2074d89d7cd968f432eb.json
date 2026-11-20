@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "EarthDomainGreaterFeature",
+  "guid": "761e8208dc1e2074d89d7cd968f432eb",
+  "name": "Acid Resistance"
+}

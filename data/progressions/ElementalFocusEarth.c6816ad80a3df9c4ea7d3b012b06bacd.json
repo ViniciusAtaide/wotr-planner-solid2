@@ -1,0 +1,49 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_365b50dba54efb74fa24c07e9b7a838c",
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "KineticElementalFocus"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_d945ac76fc6a06e44b890252824db30a",
+        "!bp_5c0916592017fbd419856df54db630f7"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_a275b35f282601944a97e694f6bc79f8"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ElementalFocusEarth",
+  "guid": "c6816ad80a3df9c4ea7d3b012b06bacd",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Earth (Elemental Focus)"
+}

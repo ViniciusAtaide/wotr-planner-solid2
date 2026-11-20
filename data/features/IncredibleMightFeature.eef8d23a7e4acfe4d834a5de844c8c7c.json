@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "AzataSuperpowerAbilities"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "IncredibleMightFeature",
+  "guid": "eef8d23a7e4acfe4d834a5de844c8c7c",
+  "name": "Incredible Might"
+}

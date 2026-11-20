@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [
+    {
+      "$type": "IsAlchemistSpellbook"
+    }
+  ],
+  "IsArcane": false,
+  "IsMythic": false,
+  "Spontaneous": false,
+  "assetName": "AlchemistSpellbook",
+  "guid": "027d37761f3804042afa96fe3e9086cc",
+  "m_SpellsPerDay": "!bp_bf4a0a03a45275d438b8c59cd5388259",
+  "name": "Alchemist"
+}

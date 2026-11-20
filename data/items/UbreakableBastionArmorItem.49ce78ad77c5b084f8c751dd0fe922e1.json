@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "UbreakableBastionArmorItem",
+  "guid": "49ce78ad77c5b084f8c751dd0fe922e1",
+  "m_Enchantments": [
+    "!bp_a5d27d73859bd19469a6dde3b49750ff"
+  ],
+  "m_Type": "!bp_5f0f4b6e480e7054b8592b5a8b55854a"
+}

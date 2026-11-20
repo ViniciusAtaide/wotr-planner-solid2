@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "ShamanHex"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShamanHexHealingFeature",
+  "guid": "3fb96b69065bcc643a696c6ba908d588",
+  "name": "Healing (shaman hex)"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "BracersOfRoughLandingItem",
+  "guid": "c7f2133ed2a154d4983cca2a82f73641",
+  "m_Enchantments": [
+    "!bp_3a6d4f95d5f00104591b998af20d6af9"
+  ],
+  "name": "Bracers of Rough Landing"
+}

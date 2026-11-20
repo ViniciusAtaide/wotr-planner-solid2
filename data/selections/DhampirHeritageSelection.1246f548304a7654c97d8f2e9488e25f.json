@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "DhampirHeritage",
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "DhampirHeritageSelection",
+  "guid": "1246f548304a7654c97d8f2e9488e25f",
+  "m_AllFeatures": [
+    "!bp_213e132588cfe9743ab0ddc446992eb6",
+    "!bp_8d16ab477910bb649abfe3d0711c04df",
+    "!bp_0af3ac7e1fa49b442ade70397053bbe8",
+    "!bp_c0ee7d6e7df47e54c892aba97148e7a2",
+    "!bp_48f465ebd6f7c7e4696ac55d1074f4db",
+    "!bp_a4e0d7fe3a18a874091541334cdac2d6"
+  ],
+  "name": "Dhampir Heritage"
+}

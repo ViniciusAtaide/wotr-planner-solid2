@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_45a4607686d96a1498891b3286121780"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 10,
+      "m_Min": 0,
+      "m_Progression": "Div2",
+      "m_StartLevel": 0,
+      "m_StepLevel": 3,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BladeboundLifeDrinkerFeature",
+  "guid": "3fc2666011fd4f128b235b040d9818af",
+  "name": "Life Drinker"
+}

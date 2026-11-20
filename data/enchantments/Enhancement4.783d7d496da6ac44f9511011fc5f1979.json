@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "WeaponEnhancementBonus",
+      "EnhancementBonus": 4,
+      "Stack": false
+    }
+  ],
+  "assetName": "Enhancement4",
+  "guid": "783d7d496da6ac44f9511011fc5f1979"
+}

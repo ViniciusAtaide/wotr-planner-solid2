@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_7d7d51be2948d2544b3c2e1596fd7603"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "LoremasterWarpriestLevelUp",
+  "guid": "d12e9da50f5a4d2cacdb9418d5c56580",
+  "name": "Warpriest"
+}

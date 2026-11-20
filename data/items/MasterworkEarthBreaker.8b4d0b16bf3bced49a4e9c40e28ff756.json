@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkEarthBreaker",
+  "guid": "8b4d0b16bf3bced49a4e9c40e28ff756",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_54e960775daa4714fa52e0954d8cf862",
+  "name": "Masterwork Earth Breaker"
+}

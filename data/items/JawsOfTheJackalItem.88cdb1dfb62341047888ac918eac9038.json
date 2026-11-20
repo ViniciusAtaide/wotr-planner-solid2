@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "JawsOfTheJackalItem",
+  "guid": "88cdb1dfb62341047888ac918eac9038",
+  "m_Enchantments": [
+    "!bp_76fcee01fb701b34d9951825a121f7a9"
+  ],
+  "name": "Jaws of the Jackal"
+}

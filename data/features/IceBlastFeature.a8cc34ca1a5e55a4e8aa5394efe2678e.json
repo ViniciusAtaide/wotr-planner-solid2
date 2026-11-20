@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_9ff81732daddb174aa8138ad1297c787",
+      "m_Feature": "!bp_b48284a3a6e71894a8101afe81b3f0b8"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 20,
+  "assetName": "IceBlastFeature",
+  "guid": "a8cc34ca1a5e55a4e8aa5394efe2678e",
+  "name": "Ice Blast"
+}

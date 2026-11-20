@@ -1,0 +1,38 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 2,
+      "m_CharacterClass": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_c5f6e53e71059fb4d802ce81a277a12d",
+      "m_CharacterClass": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_ee92a9813c04b1440a3af3c766b6b02d",
+      "m_CharacterClass": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    }
+  ],
+  "Groups": [
+    "EldritchKnightSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "EldritchKnightWitch",
+  "guid": "0d8491fcf41718740b5e62561bfb369a",
+  "m_Spellbook": "!bp_dd04f9239f655ea438976742728e4909",
+  "name": "Witch"
+}

@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "LightCrossbow",
+  "Components": [],
+  "assetName": "LightCrossbow",
+  "guid": "d525e7a6d8d5aa648a976ac41194b8d0",
+  "m_AttackType": "Ranged",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Crossbows",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": true,
+  "name": "Light Crossbow"
+}

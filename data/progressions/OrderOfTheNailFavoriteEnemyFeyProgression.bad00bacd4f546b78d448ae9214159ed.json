@@ -1,0 +1,43 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_be3d454ea70a8bb468b0a8a087e7e65b"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_be3d454ea70a8bb468b0a8a087e7e65b"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_be3d454ea70a8bb468b0a8a087e7e65b"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "OrderOfTheNailFavoriteEnemyFeyProgression",
+  "guid": "bad00bacd4f546b78d448ae9214159ed",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_ed246f1680e667b47b7427d51e651059"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Favored Enemy — Fey (Order of the Nail)"
+}

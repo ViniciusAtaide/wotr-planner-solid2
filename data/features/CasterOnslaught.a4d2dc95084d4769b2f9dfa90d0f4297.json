@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CasterOnslaught",
+  "guid": "a4d2dc95084d4769b2f9dfa90d0f4297",
+  "name": "Spellcaster's Onslaught"
+}

@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "None",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SaveWill",
+      "Value": 2
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_175d1577bb6c9a04baf88eec99c66334"
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "IronWillImproved",
+  "guid": "3ea2215150a1c8a4a9bfed9d9023903e",
+  "name": "Improved Iron Will"
+}

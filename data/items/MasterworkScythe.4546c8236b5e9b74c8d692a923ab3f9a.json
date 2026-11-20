@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkScythe",
+  "guid": "4546c8236b5e9b74c8d692a923ab3f9a",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_4eacfc7e152930a45a1a16217c35011c",
+  "name": "Masterwork Scythe"
+}

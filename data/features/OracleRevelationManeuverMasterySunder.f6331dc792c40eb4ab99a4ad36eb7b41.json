@@ -1,0 +1,44 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 11,
+      "m_AdditionalClasses": [
+        "!bp_52dbfd8505e22f84fad8d702611f60b7"
+      ],
+      "m_Archetypes": [
+        "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+      ],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_0d5af82f15dbcc9488e36f4fc783ffcd"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 7,
+      "m_AdditionalClasses": [
+        "!bp_52dbfd8505e22f84fad8d702611f60b7"
+      ],
+      "m_Archetypes": [
+        "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+      ],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_88b65edf00b646c1846d0b588037e18f"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleRevelationManeuverMasterySunder",
+  "guid": "f6331dc792c40eb4ab99a4ad36eb7b41",
+  "name": "Sunder Armor (Maneuver Mastery)"
+}

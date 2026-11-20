@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfStrengthDexterity2",
+  "guid": "6577d56f2da72874a8abea1a3cbd2fa0",
+  "m_Enchantments": [
+    "!bp_5f25b5f8c89d40c46ba8026bd7b73dcc",
+    "!bp_2042beb64a5e12443be55b413d7ff733"
+  ],
+  "name": "Belt of Physical Flow +2"
+}

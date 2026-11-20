@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_6afa347d804838b48bda16acb0573dc0"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "Div2",
+      "m_StartLevel": 0,
+      "m_StepLevel": 0,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HandlingTheCrowdFeature",
+  "guid": "804a4a407eac8484896a71c3e9cde234",
+  "name": "Handling the Crowd"
+}

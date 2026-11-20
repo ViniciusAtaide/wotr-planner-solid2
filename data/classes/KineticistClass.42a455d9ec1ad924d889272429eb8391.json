@@ -1,0 +1,43 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillMobility",
+    "SkillPersuasion",
+    "SkillStealth",
+    "SkillUseMagicDevice",
+    "SkillPerception"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 2,
+  "assetName": "KineticistClass",
+  "guid": "42a455d9ec1ad924d889272429eb8391",
+  "m_Archetypes": [
+    "!bp_f12f18ae8842425489d29f302e69134c",
+    "!bp_f2847dd4b12fffd41beaa3d7120d27ad",
+    "!bp_7d61d9b2250260a45b18c5634524a8fb",
+    "!bp_365b50dba54efb74fa24c07e9b7a838c",
+    "!bp_aa11888104d17f7459851e8d559ffa98",
+    "!bp_4a8324d676d642c99edcdda6988ca3b1",
+    "!bp_e0684d0a6ef44cae9d095f5318618a85"
+  ],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_b79e92dd495edd64e90fb483c504b8df",
+  "m_ReflexSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "name": "Kineticist"
+}

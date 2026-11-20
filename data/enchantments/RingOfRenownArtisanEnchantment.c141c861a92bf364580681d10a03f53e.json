@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_b325d593e7ee8ea409906afd30db11d9"
+    }
+  ],
+  "assetName": "RingOfRenownArtisanEnchantment",
+  "guid": "c141c861a92bf364580681d10a03f53e"
+}

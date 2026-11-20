@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_76c244c29fac4efba240c7a942468ff5"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_0b09ce94b5fe48dfa81b9a6f9d55a351"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_08bdc67f8ca245cb9ef8bccaaa54497f"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_1fd8085a71c94a2a94266cbeba71a562"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_43295870ce5344ffa718d100b742438e"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "WildEffigyShifterArchetype",
+  "guid": "c42d338616fa46ab9bcc67c94bca7609",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Wild Effigy"
+}

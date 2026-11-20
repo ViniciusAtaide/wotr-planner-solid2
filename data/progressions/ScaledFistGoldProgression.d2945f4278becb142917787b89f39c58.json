@@ -1,0 +1,41 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_aa1630f42d2ac5a4880bb61391e5fa3a"
+      ]
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_1ef82ad84f1691346af86067ed3d1f93"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ScaledFistGoldProgression",
+  "guid": "d2945f4278becb142917787b89f39c58",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_e8f21e5b58e0569468e420ebea456124"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Gold Dragon — Fire"
+}

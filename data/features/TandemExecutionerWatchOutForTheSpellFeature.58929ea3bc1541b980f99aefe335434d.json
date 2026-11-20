@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_4d64964f84a54a93864dc03821756226"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TandemExecutionerWatchOutForTheSpellFeature",
+  "guid": "58929ea3bc1541b980f99aefe335434d",
+  "name": "Timely Warning"
+}

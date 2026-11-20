@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "BracersOfOverwhelmingVigorItem",
+  "guid": "3ef2c9ea26cd01f419ae4afc5a44a632",
+  "m_Enchantments": [
+    "!bp_e79de42c06432874d81554d4604fac18"
+  ],
+  "name": "Bracers of Overwhelming Vigor"
+}

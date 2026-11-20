@@ -1,0 +1,76 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_8c769102f3996684fb6e09a2c4e7e5b9",
+        "!bp_dab5255d809f77c4395afc2b713e9cd6",
+        "!bp_a79013ff4bcd4864cb669622a29ddafb",
+        "!bp_3adb2c906e031ee41a01bfc1d5fb7eea",
+        "!bp_703623911bb34f2f9beeff17051b8533"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_6e88bfc908c44f87aa5a35f37edd4642"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_48da321f25524f8ebcb7640bdfa74884"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "LawfulNeutral, TrueNeutral, ChaoticNeutral",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": true,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 0,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_6122dacf418611540a3c91e67197ee4e",
+        "!bp_c7531715a3f046d4da129619be63f44c",
+        "!bp_8f49a5d8528a82c44b8c117a89f6b68c",
+        "!bp_4af983eec2d821b40a3065eb5e8c3a72",
+        "!bp_23a77a5985de08349820429ce1b5a234",
+        "!bp_6262cfce7c31626458325ca0909de997",
+        "!bp_458750bc214ab2e44abdeae404ab22e9"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_43281c3d7fe18cc4d91928395837cd1e",
+        "!bp_d332c1748445e8f4f9e92763123e31bd"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "PriestOfBalanceArchetype",
+  "guid": "a4560e3fb5d247d68fb1a2738fcc0855",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Priest of Balance"
+}

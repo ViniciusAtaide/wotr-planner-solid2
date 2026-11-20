@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a02a6cd1f02a95442805e417b9ec0a32"
+    }
+  ],
+  "assetName": "WelcomeRespiteEnchantment",
+  "guid": "65ddd5865a6421248aad7e099ca7269c"
+}

@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 14,
+      "Not": false,
+      "m_CharacterClass": "!bp_e8f21e5b58e0569468e420ebea456124"
+    }
+  ],
+  "Groups": [
+    "KiPowers"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "KiColdIceStrikeFeature",
+  "guid": "bd0eea84b4ff6994a96b119a3cee8357",
+  "name": "Ki Power: Cold Ice Strike"
+}

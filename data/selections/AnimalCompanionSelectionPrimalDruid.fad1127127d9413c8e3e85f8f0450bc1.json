@@ -1,0 +1,37 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_3853d5405ebfc0f4a86930bb7082b43b"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_cb06f0e72ffb5c640a156bd9f8000c1d"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_65af7290b4efd5f418132141aaa36c1b"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "AnimalCompanionSelectionPrimalDruid",
+  "guid": "fad1127127d9413c8e3e85f8f0450bc1",
+  "m_AllFeatures": [
+    "!bp_472091361cf118049a2b4339c4ea836a",
+    "!bp_6adc3aab7cde56b40aa189a797254271",
+    "!bp_126712ef923ab204983d6f107629c895",
+    "!bp_2d3f409bb0956d44187e9ec8340163f8",
+    "!bp_89420de28b6bb9443b62ce489ae5423b",
+    "!bp_44f4d77689434e07a5a44dcb65b25f71",
+    "!bp_52c854f77105445a9457572ab5826c00"
+  ],
+  "name": "Animal Companion (Primal Druid)"
+}

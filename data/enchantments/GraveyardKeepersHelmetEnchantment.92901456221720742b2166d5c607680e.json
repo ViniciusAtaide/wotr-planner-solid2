@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8fdd93bd60f1a2e49af041e849e1ce7c"
+    }
+  ],
+  "assetName": "GraveyardKeepersHelmetEnchantment",
+  "guid": "92901456221720742b2166d5c607680e"
+}

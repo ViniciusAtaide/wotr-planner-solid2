@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_e41c19849a1443faac732cb3cb3f84f7"
+    }
+  ],
+  "assetName": "RingofArodenEnchantment",
+  "guid": "f7c4d6d644674c78916473c0c73c9387"
+}

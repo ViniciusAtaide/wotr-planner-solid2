@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_7b76206e9c7c4976a1fe12fd75c40daa"
+    }
+  ],
+  "assetName": "HeadbandOfWiseNegotiatorEnchantment",
+  "guid": "e150ea0747ea41fcbeeb5dd183968a95"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPersuasion"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DemonicCurseFeatureLevel1",
+  "guid": "b256f446392d1bc489ed9c1bc79e89b7",
+  "name": "Demonic (level 1)"
+}

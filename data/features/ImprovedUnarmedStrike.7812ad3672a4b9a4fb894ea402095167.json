@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "ImprovedUnarmedStrike"
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    }
+  ],
+  "Groups": [
+    "CombatFeat",
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ImprovedUnarmedStrike",
+  "guid": "7812ad3672a4b9a4fb894ea402095167",
+  "name": "Improved Unarmed Strike"
+}

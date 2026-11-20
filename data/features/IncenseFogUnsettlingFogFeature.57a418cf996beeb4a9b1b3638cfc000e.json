@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 3,
+  "assetName": "IncenseFogUnsettlingFogFeature",
+  "guid": "57a418cf996beeb4a9b1b3638cfc000e",
+  "name": "Incense Fog — Unsettling Fog"
+}

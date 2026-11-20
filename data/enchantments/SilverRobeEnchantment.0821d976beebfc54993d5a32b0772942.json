@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_641f29dc936a75442a57e5bad16a5258"
+    }
+  ],
+  "assetName": "SilverRobeEnchantment",
+  "guid": "0821d976beebfc54993d5a32b0772942"
+}

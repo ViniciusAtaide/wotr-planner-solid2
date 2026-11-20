@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MapWoundBardicheItem",
+  "guid": "68cfee28137f0794d914abb1ab4c03dd",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_b1cbf457fd471d148b39ae56667f405a",
+  "name": "Dead Bough (Bardiche)"
+}

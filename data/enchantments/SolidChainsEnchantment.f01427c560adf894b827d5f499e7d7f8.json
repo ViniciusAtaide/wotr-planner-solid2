@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e9035d80737f6414cb52d2be0a2fdcc4"
+    }
+  ],
+  "assetName": "SolidChainsEnchantment",
+  "guid": "f01427c560adf894b827d5f499e7d7f8"
+}

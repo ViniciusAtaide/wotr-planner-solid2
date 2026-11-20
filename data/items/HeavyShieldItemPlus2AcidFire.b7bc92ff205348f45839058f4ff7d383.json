@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "HeavyShieldItemPlus2AcidFire",
+  "guid": "b7bc92ff205348f45839058f4ff7d383",
+  "m_ArmorComponent": "!bp_441264825d1c09c4f80bcf92349e7bdd",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Heavy Shield of Elemental Protection"
+}

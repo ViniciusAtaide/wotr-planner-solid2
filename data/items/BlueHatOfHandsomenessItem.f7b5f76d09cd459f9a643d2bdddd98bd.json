@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "BlueHatOfHandsomenessItem",
+  "guid": "f7b5f76d09cd459f9a643d2bdddd98bd",
+  "m_Enchantments": [
+    "!bp_f945413e1b120294780ba9de26bd2f7a"
+  ],
+  "name": "Blue Hat of Handsomeness"
+}

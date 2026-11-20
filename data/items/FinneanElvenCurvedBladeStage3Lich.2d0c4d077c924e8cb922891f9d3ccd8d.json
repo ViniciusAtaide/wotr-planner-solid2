@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanElvenCurvedBladeStage3Lich",
+  "guid": "2d0c4d077c924e8cb922891f9d3ccd8d",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_b5e6838ad2a62b146b49619bcf9f42aa",
+  "name": "Finnean (Elven Curve Blade)"
+}

@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 11,
+      "m_AdditionalClasses": [
+        "!bp_52dbfd8505e22f84fad8d702611f60b7"
+      ],
+      "m_Archetypes": [
+        "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+      ],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_bfd0f754df75bd2449bb7d021dc5c7a1"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 11,
+      "m_AdditionalClasses": [
+        "!bp_52dbfd8505e22f84fad8d702611f60b7"
+      ],
+      "m_Archetypes": [
+        "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+      ],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_742c9651e88d4b3387a8692a6227ed7d"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "OracleRevelationResistLifeFeatureUpgrade",
+  "guid": "115b7700e2e848b7a9e589e027133a67"
+}

@@ -1,0 +1,47 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_0da0c194d6e1d43419eb8d990b28e0ab"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_7115a6c08bd101247b70d72a4ff99453"
+    },
+    {
+      "$type": "PrerequisiteFullStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "BaseAttackBonus",
+      "Value": 9
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "ImprovedSnapShot"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_9c928dc570bb9e54a9649b3ebfe47a41"
+    }
+  ],
+  "Groups": [
+    "CombatFeat",
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SnapShotImproved",
+  "guid": "c3453e7e215c1f149b938be27ac754c6",
+  "name": "Improved Snap Shot"
+}

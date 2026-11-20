@@ -1,0 +1,56 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Dexterity",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Charisma",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonusIfHasFact",
+      "Descriptor": "Racial",
+      "InvertCondition": true,
+      "RequireAllFacts": false,
+      "Stat": "Constitution",
+      "Value": {
+        "Value": -2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_CheckedFacts": [
+        "!bp_325f078c584318849bfe3da9ea245b9d"
+      ]
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "CheckBluff",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillPerception",
+      "Value": 2
+    }
+  ],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DhampirHeritageClassic",
+  "guid": "213e132588cfe9743ab0ddc446992eb6",
+  "name": "Dhampir (Dhampir Heritage)"
+}

@@ -1,0 +1,81 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "WitchPatron"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_4f068ba134bcabf47a370c5ecde812c4"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_40ff77fb544b2f84ca34ee709580acea"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_188d61d3f5ac1874e8365f1b2bf940c4"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_b65b8d9c577a39548b6ca4c6c74d4c3c"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_8dbb2e686b793a2459d3b21181ed2c15"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_d905e4e477a6c8d4ea09906d35e14261"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_67bafbb5f78e34545a0c1f0335b98c5a"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_b15ac28bffa3ca64b9297f8d2a80c435"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_a9a8a35b1ac265b44b13a282ca1b3e95"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WitchStrengthPatronProgression",
+  "guid": "850ac8a2bc65d814db9f3fea871c18bb",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Strength (Witch)"
+}

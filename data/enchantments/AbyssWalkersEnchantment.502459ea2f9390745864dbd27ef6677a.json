@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_6628c4bdf103d0b4a9d2541178c03020"
+    }
+  ],
+  "assetName": "AbyssWalkersEnchantment",
+  "guid": "502459ea2f9390745864dbd27ef6677a"
+}

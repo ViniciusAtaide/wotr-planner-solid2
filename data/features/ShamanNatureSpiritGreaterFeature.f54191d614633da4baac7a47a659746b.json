@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_145f1d3d360a7ad48bd95d392c81b38e",
+      "m_Feature": "!bp_a27c6182e2938054f8e512416e5d4e99"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_145f1d3d360a7ad48bd95d392c81b38e",
+      "m_Feature": "!bp_822437f011f5d444889283e83d09314e"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShamanNatureSpiritGreaterFeature",
+  "guid": "f54191d614633da4baac7a47a659746b",
+  "name": "Spirit of Nature (Nature)"
+}

@@ -1,0 +1,71 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": false,
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_9f835c539f6e4a96a7b64461f4267d06",
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "DruidDomain",
+    "BlightDruidDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_828d82a0e8c5a944bbdb6b12f802ff02",
+        "!bp_af4714d3697e61545b4982ad29465b2c"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_761e8208dc1e2074d89d7cd968f432eb"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_761e8208dc1e2074d89d7cd968f432eb"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_3b8ca19cd6826324ca9b2e3120628268"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "EarthDomainProgressionDruid",
+  "guid": "a3217dc55003b914aa296da7ada029bc",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Earth Domain (Druid)"
+}

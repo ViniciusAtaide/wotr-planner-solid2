@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_ee7dc126939e4d9438357fbd5980d459"
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "TeamworkFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SpellChain",
+  "guid": "d8d641edc9a74a64809f56feff9495b6",
+  "name": "Spell Chain"
+}

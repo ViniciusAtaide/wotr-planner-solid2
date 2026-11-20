@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "NaturalArmorEnhancement",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AC",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "None",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillMobility",
+      "Value": 3
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineSerpentineSnakeskinFeatureLevel2",
+  "guid": "ed9c751be99c3b4438b6483c1c0fc781",
+  "name": "Snakeskin (Serpentine Bloodline 13)"
+}

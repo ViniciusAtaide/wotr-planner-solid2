@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "HolemakerShieldItem",
+  "guid": "c958b1a95bf1407a81670208d89fa986",
+  "m_ArmorComponent": "!bp_b48b6bcba5d641baa4d0df76b998ce73",
+  "m_WeaponComponent": "!bp_f0bc02a030a34df2a6afaa3d78d9d372",
+  "name": "Holemaker"
+}

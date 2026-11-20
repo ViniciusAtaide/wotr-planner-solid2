@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "GreatclubFrostPlus2",
+  "guid": "7e8937c677c2bf54d8467a29223230d2",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1b8c24cd1f9358c48839bb39266468c3",
+  "name": "Frost Greatclub +2"
+}

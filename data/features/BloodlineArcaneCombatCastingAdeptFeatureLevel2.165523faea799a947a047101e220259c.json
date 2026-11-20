@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineArcaneCombatCastingAdeptFeatureLevel2",
+  "guid": "165523faea799a947a047101e220259c",
+  "name": "Combat Casting Adept (step 2)"
+}

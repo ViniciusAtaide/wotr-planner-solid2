@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "DLC3_GuardianHeavyShieldSetItem",
+  "guid": "2d29d6d2674a476fb54c72e8906d7e8e",
+  "m_ArmorComponent": "!bp_4d76a36d73804bef8a02d8c12b3b237f",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Guardian's Shield"
+}

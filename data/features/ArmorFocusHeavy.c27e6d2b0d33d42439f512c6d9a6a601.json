@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "BaseAttackBonus",
+      "Value": 1
+    },
+    {
+      "$type": "PrerequisiteProficiency",
+      "ArmorProficiencies": [
+        "Heavy"
+      ],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArmorFocusHeavy",
+  "guid": "c27e6d2b0d33d42439f512c6d9a6a601",
+  "name": "Heavy Armor Focus"
+}

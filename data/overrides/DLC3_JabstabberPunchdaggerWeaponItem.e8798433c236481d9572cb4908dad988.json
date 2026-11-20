@@ -1,0 +1,12 @@
+{
+  "change": "patch",
+  "ops": [
+    {
+      "op": "replace",
+      "path": "/m_SecondWeapon",
+      "value": null
+    }
+  ],
+  "reason": "m_SecondWeapon names 98de502dabb74202b7d1af32c89dbaac, a blueprint the dump doesn't hold. The weapon isn't a double weapon (Double is false), and Items/ItemEntityWeapon.cs's constructor reads SecondWeapon only for one that is, so the game never follows the reference. Clearing it keeps the game's behaviour and lets every reference resolve.",
+  "target": "e8798433c236481d9572cb4908dad988"
+}

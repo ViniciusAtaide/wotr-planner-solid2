@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_a33b99f95322d6741af83e9381b2391c"
+    }
+  ],
+  "Groups": [
+    "RogueTalent",
+    "SlayerTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "RogueSkillMasteryKnowledge",
+  "guid": "4b104a7319393494ca8d449a3b38a45f",
+  "name": "Skill Mastery — Knowledge"
+}

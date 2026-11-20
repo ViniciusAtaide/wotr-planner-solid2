@@ -1,0 +1,37 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 11,
+      "m_AdditionalClasses": [
+        "!bp_45a4607686d96a1498891b3286121780"
+      ],
+      "m_Archetypes": [
+        "!bp_d078b2ef073f2814c9e338a789d97b73"
+      ],
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf",
+      "m_Feature": "!bp_c60055b2e275dc44195f27d4f706522c"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 11,
+      "m_AdditionalClasses": [
+        "!bp_45a4607686d96a1498891b3286121780"
+      ],
+      "m_Archetypes": [
+        "!bp_d078b2ef073f2814c9e338a789d97b73"
+      ],
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf",
+      "m_Feature": "!bp_f3fb124df6dbfe44a8975acf07e86aa0"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "BloodlineAbyssalClawsFeatureAddLevel3",
+  "guid": "5ca520a8e3e712240812e1500b4e20f0",
+  "name": "Grow Claws"
+}

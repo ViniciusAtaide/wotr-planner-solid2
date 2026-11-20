@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "BracersOfAbruptOnslaughtItem",
+  "guid": "d811544c0eb19f6489e44582bd671c9f",
+  "m_Enchantments": [
+    "!bp_95e9ca4f21ecbfd46b0beafd7950f209"
+  ],
+  "name": "Bracers of Abrupt Onslaught"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "RoaringHandaxeItem",
+  "guid": "9a5aa6e310b70a14593f08cff0ae8430",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_54e7473ff73910c47812fd39c897dc1a",
+  "name": "Roaring Handaxe"
+}

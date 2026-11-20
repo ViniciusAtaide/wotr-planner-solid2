@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Club",
+        "Dagger",
+        "HeavyCrossbow",
+        "LightCrossbow",
+        "Quarterstaff"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WizardProficiencies",
+  "guid": "a98d7cc4e30fe6c4bb3a2c2f69acc3fe",
+  "name": "Wizard Proficiencies"
+}

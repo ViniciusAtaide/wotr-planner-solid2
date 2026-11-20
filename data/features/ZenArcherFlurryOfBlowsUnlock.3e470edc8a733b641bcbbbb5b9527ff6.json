@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "MonkNoArmorAndMonkWeaponFeatureUnlock",
+      "IsSohei": false,
+      "IsZenArcher": true,
+      "m_BowWeaponTypes": [
+        "!bp_7a1211c05ec2c46428f41e3c0db9423f",
+        "!bp_1ac79088a7e5dde46966636a3ac71c35",
+        "!bp_99ce02fb54639b5439d07c99c55b8542",
+        "!bp_011f6f86a0b16df4bbf7f40878c3e80b"
+      ],
+      "m_NewFact": "!bp_332362f3bd39ebe46a740a36960fdcb4"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ZenArcherFlurryOfBlowsUnlock",
+  "guid": "3e470edc8a733b641bcbbbb5b9527ff6",
+  "name": "Flurry of Blows (Zen Archer)"
+}

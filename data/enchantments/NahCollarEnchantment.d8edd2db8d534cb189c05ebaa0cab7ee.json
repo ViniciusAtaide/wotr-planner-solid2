@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_48d6cf10a24c43c0bc0fb15a87faf18b"
+    }
+  ],
+  "assetName": "NahCollarEnchantment",
+  "guid": "d8edd2db8d534cb189c05ebaa0cab7ee"
+}

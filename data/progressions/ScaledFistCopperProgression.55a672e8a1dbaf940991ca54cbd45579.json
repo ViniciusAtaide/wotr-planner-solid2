@@ -1,0 +1,41 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_79c760e3be5fd7e4a9912cb95d825a90"
+      ]
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_7497d32115317b643a7e76cfa9caf264"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ScaledFistCopperProgression",
+  "guid": "55a672e8a1dbaf940991ca54cbd45579",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_e8f21e5b58e0569468e420ebea456124"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Copper Dragon — Acid"
+}

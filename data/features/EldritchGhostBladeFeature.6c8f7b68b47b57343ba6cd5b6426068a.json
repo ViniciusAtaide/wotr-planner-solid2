@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 9,
+      "Not": false,
+      "m_CharacterClass": "!bp_45a4607686d96a1498891b3286121780"
+    }
+  ],
+  "Groups": [
+    "EldritchScionArcana"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EldritchGhostBladeFeature",
+  "guid": "6c8f7b68b47b57343ba6cd5b6426068a",
+  "name": "Ghost Blade (Magus Arcana)"
+}

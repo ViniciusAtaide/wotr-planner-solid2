@@ -1,0 +1,154 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_d294a5dddd0120046aae7d4eb6cbc4fc",
+        "!bp_2479395977cfeeb46b482bc3385f4647",
+        "!bp_acc15a2d19f13864e8cce3ba133a1979"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_28710502f46848d48b3f0d6132817c4e",
+        "!bp_8f800ed6ce8c42e8a01fd8f3e990c459"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_fdd591c1fbf1c0b41a359d59756f2888"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_28710502f46848d48b3f0d6132817c4e"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_485a18c05792521459c7d06c63128c79"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_28710502f46848d48b3f0d6132817c4e",
+        "!bp_fdd591c1fbf1c0b41a359d59756f2888"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_cffb5cddefab30140ac133699d52a8f8"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_28710502f46848d48b3f0d6132817c4e"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_fdd591c1fbf1c0b41a359d59756f2888"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_28710502f46848d48b3f0d6132817c4e",
+        "!bp_cffb5cddefab30140ac133699d52a8f8"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_ce49c579fe0bcc647a32c96929fae982"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_28710502f46848d48b3f0d6132817c4e",
+        "!bp_fdd591c1fbf1c0b41a359d59756f2888"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_cffb5cddefab30140ac133699d52a8f8"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_28710502f46848d48b3f0d6132817c4e",
+        "!bp_e9ae7276574c170468937b617d993357"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_fdd591c1fbf1c0b41a359d59756f2888"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_28710502f46848d48b3f0d6132817c4e",
+        "!bp_cffb5cddefab30140ac133699d52a8f8"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_ca9343d75a83a2745a22fa11c383153a"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_28710502f46848d48b3f0d6132817c4e",
+        "!bp_fdd591c1fbf1c0b41a359d59756f2888"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_cffb5cddefab30140ac133699d52a8f8"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_28710502f46848d48b3f0d6132817c4e",
+        "!bp_06a7e5b60020ad947aed107d82d1f897"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "BarbarianProgression",
+  "guid": "74ad9fbd930a1d84aaf9a230f29f8f12",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_f7d7eb166b3dd594fb330d085df41853"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": []
+}

@@ -1,0 +1,62 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_51245c2b92a5b4247acf754156798fea"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_3964f0389e60da944aaa2ffd227ae531"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_f42f41dd022e73d4a95019bc03230014"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [
+    "SkillKnowledgeWorld",
+    "SkillKnowledgeArcana",
+    "SkillLoreNature",
+    "SkillLoreReligion",
+    "SkillUseMagicDevice"
+  ],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_8c3102c2ff3b69444b139a98521a4899"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_8c3102c2ff3b69444b139a98521a4899"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_8c3102c2ff3b69444b139a98521a4899"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": true,
+  "assetName": "ScrollmasterArchetype",
+  "guid": "f43c78692a4e10d43a38bd6aedf53c1b",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Scroll Savant"
+}

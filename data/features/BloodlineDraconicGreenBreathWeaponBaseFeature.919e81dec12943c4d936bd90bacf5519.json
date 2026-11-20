@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_4d107a429575cb344bcba32a5b1a6abe",
+      "m_Feature": "!bp_4d107a429575cb344bcba32a5b1a6abe"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicGreenBreathWeaponBaseFeature",
+  "guid": "919e81dec12943c4d936bd90bacf5519",
+  "name": "Breath Weapon (Draconic Bloodline — Green)"
+}

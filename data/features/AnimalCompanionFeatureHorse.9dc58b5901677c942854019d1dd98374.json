@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddPet",
+      "Type": "AnimalCompanion"
+    },
+    {
+      "$type": "PrerequisitePet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "NoCompanion": true,
+      "Type": "AnimalCompanion"
+    }
+  ],
+  "Groups": [
+    "AnimalCompanion"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AnimalCompanionFeatureHorse",
+  "guid": "9dc58b5901677c942854019d1dd98374",
+  "name": "Animal Companion — Horse"
+}

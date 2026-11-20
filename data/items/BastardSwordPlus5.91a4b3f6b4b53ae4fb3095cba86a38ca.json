@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "BastardSwordPlus5",
+  "guid": "91a4b3f6b4b53ae4fb3095cba86a38ca",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d2fe2c5516b56f04da1d5ea51ae3ddfe"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "ColdIronMasterworkGnomeHookedHammer",
+  "guid": "07ccfdd14fafa4344bb1d5479d440b72",
+  "m_Enchantments": [],
+  "m_SecondWeapon": "!bp_eeac9d5f49c82f44bbba4d97d21a307f",
+  "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3",
+  "name": "Cold Iron Masterwork Gnome Hooked Hammer"
+}

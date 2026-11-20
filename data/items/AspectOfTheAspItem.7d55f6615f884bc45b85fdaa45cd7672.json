@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "AspectOfTheAspItem",
+  "guid": "7d55f6615f884bc45b85fdaa45cd7672",
+  "m_Enchantments": [
+    "!bp_e935c1458b36b904fad1f823d3095c9b"
+  ],
+  "name": "Aspect of the Asp"
+}

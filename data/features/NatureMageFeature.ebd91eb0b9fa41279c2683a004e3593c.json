@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "NatureMageFeature",
+  "guid": "ebd91eb0b9fa41279c2683a004e3593c",
+  "name": "Nature Magic"
+}

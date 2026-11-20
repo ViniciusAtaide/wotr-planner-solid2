@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardGnomehookedHammerSecondSpeedPlus4",
+  "guid": "eba9be29e38e80648a6c70fd339973f3",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_018ad48ffd3460d47900491656d2ff26"
+}

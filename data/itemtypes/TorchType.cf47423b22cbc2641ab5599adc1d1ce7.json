@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Club",
+  "Components": [],
+  "assetName": "TorchType",
+  "guid": "cf47423b22cbc2641ab5599adc1d1ce7",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": 0,
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Torch"
+}

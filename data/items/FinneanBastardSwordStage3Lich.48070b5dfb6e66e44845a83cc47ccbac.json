@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanBastardSwordStage3Lich",
+  "guid": "48070b5dfb6e66e44845a83cc47ccbac",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d2fe2c5516b56f04da1d5ea51ae3ddfe",
+  "name": "Finnean (Bastard Sword)"
+}

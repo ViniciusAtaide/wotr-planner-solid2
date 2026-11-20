@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e3c6c1f2750140fc8bb37c96c849b4b1"
+    }
+  ],
+  "assetName": "StormKingsBeltEnchantment",
+  "guid": "31245a0b22ce450da3b8e22a3ab221fa"
+}

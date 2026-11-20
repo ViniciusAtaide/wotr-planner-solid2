@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Battleaxe",
+        "HeavyPick",
+        "Warhammer"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DwarvenWeaponFamiliarity",
+  "guid": "a1619e8d27fe97c40ba443f6f8ab1763",
+  "name": "Dwarven Weapon Familiarity"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "ClawsOfAMonsterItem",
+  "guid": "8316d6f5f87022c49afb36644d7566af",
+  "m_Enchantments": [
+    "!bp_1f04efa388c6b9d4da12ea027ecb4ac5"
+  ],
+  "name": "Claws of a Sacred Beast"
+}

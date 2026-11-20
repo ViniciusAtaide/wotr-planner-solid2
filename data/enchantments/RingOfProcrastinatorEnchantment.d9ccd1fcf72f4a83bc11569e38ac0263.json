@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_6aa216f4043f493a9c75fc0cd9f7893a"
+    }
+  ],
+  "assetName": "RingOfProcrastinatorEnchantment",
+  "guid": "d9ccd1fcf72f4a83bc11569e38ac0263"
+}

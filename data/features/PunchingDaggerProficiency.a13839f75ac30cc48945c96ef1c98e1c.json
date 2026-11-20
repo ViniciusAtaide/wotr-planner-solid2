@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "PunchingDagger"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PunchingDaggerProficiency",
+  "guid": "a13839f75ac30cc48945c96ef1c98e1c",
+  "name": "Weapon Proficiency (Punching Dagger)"
+}

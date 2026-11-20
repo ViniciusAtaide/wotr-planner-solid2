@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanHeavyFlailStage3Lich",
+  "guid": "f1bbb941296a4eb469918726c1eb826a",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_8fefb7e0da38b06408f185e29372c703",
+  "name": "Finnean (Heavy Flail)"
+}

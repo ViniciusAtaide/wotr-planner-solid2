@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "level 6",
+  "reason": "The ranger's combat style is three selections of feats named \"Two-Weapon Combat\", one opened at each of the ranger's levels 2, 6 and 10 (RangerProgression, through RangerStyleSelection6; Nomad and Stormwalker add the level-6 one at level 6). The slayer's Combat Style Feat talents offer them too, so no grantor or level holds on every route. Each is qualified by the level whose selection it is.",
+  "target": "59d5445392ac62245a5ece9b01c05ee8"
+}

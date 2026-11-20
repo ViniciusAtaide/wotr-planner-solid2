@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "MagnificentPlumeHatItem",
+  "guid": "3d6a088f897cf5c4f9e5eb49ceaeca34",
+  "m_Enchantments": [
+    "!bp_99ddcf8cfb3dcd244b5a8bb4872e3f5e"
+  ],
+  "name": "Magnificent Plume Hat"
+}

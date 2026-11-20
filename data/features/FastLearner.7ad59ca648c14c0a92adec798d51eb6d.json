@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_0a5d473ead98b0646b94495af250fdc4"
+    },
+    {
+      "$type": "AddSkillPointPerCharacterLevel"
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FastLearner",
+  "guid": "7ad59ca648c14c0a92adec798d51eb6d",
+  "name": "Fast Learner"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_0faee0a55f634902895b4e1faf828502"
+    }
+  ],
+  "assetName": "ZeorisDaggerRing_GoverningEnchantment",
+  "guid": "2a4e61dcd2b74da3b742e1e67837b825"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "LoremasterGreaterLore",
+  "guid": "d9961b36abaf72d48b154a07e631aac3",
+  "name": "Greater Lore"
+}

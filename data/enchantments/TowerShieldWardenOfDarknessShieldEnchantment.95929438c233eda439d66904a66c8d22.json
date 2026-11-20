@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_4211cdbf0bf04a540a366ba1d1c7dcc2"
+    }
+  ],
+  "assetName": "TowerShieldWardenOfDarknessShieldEnchantment",
+  "guid": "95929438c233eda439d66904a66c8d22"
+}

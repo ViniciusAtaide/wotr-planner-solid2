@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_65bc595a8a27acb48a8758c4d4caa338"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineElementalAirElementalBodyFeature",
+  "guid": "7c3be22702ee39a418a5fba0e85e68de",
+  "name": "Elemental Body (air)"
+}

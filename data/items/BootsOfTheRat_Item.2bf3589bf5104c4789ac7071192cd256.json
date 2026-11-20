@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "BootsOfTheRat_Item",
+  "guid": "2bf3589bf5104c4789ac7071192cd256",
+  "m_Enchantments": [
+    "!bp_c19d7c760e9b450aac190b81cd948868"
+  ],
+  "name": "Boots of the Rat"
+}

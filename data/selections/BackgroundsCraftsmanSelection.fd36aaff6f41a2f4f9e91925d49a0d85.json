@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "BackgroundSelection"
+  ],
+  "HideInUI": true,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BackgroundsCraftsmanSelection",
+  "guid": "fd36aaff6f41a2f4f9e91925d49a0d85",
+  "m_AllFeatures": [
+    "!bp_25b35e09665310d4faac3020f8198cfb",
+    "!bp_c61a9503d7025df41a7a968aeb4d140e",
+    "!bp_e4e06f443e158e646a495fce6e024546",
+    "!bp_2fc1ee0a5b240b5468efed9fffe416aa"
+  ],
+  "name": "Craftsman"
+}

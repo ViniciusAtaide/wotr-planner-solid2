@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "GogglesOfMindControlItem",
+  "guid": "bee991664c264045bde2573204943091",
+  "m_Enchantments": [
+    "!bp_cc86f2ca10d14600bdcec4464cd2825e"
+  ],
+  "name": "Goggles of Mind Control"
+}

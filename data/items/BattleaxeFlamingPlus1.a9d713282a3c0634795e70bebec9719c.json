@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "BattleaxeFlamingPlus1",
+  "guid": "a9d713282a3c0634795e70bebec9719c",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_2bc77aa47f97de348aefcf03ec8fa43b",
+  "name": "Flaming Battleaxe +1"
+}

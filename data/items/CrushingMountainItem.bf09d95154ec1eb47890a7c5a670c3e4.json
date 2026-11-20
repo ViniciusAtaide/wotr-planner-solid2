@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "CrushingMountainItem",
+  "guid": "bf09d95154ec1eb47890a7c5a670c3e4",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_54e7473ff73910c47812fd39c897dc1a",
+  "name": "Crushing Cold"
+}

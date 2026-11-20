@@ -1,0 +1,3 @@
+# A Mythic rank's table level is expected, not required
+
+The game has a table of character levels for Mythic ranks 1–10 (MythicsSettings `3b8a6729da1e13a4e8e606e9f0fa38d8`, `CharcaterLevelRestrictions`). But it only enforces that table in the respec window and in forced catch-up level-ups. In normal play the story grants a rank whatever the character's level. So the planner lets a Build place each Mythic rank at any character level, as long as the ranks come in order. The table only supplies each rank's Expected level: where the rank is placed by default, and a hint when a Build moves it away. This deliberately departs from the decompiled guide, which says a rank can be taken only at its table level or later.

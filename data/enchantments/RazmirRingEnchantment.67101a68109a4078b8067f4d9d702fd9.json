@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_71de726615404cefb9d7187dda2f5fa7"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a490170187d446d4839038ef774ddc49"
+    }
+  ],
+  "assetName": "RazmirRingEnchantment",
+  "guid": "67101a68109a4078b8067f4d9d702fd9"
+}

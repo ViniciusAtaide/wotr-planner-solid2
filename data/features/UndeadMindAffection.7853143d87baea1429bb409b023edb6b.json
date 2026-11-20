@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "UndeadMindAffection",
+  "guid": "7853143d87baea1429bb409b023edb6b",
+  "name": "Ability to overcome the undead's immunity to the mind-affecting effects."
+}

@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "WeaponMasterySelection",
+  "guid": "55f516d7d1fc5294aba352a5a1c92786",
+  "m_AllFeatures": [
+    "!bp_38ae5ac04463a8947b7c06a6c72dd6bb"
+  ],
+  "name": "Weapon Mastery (Fighter)"
+}

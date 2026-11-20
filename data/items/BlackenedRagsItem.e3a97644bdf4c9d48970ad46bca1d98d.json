@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "BlackenedRagsItem",
+  "guid": "e3a97644bdf4c9d48970ad46bca1d98d",
+  "m_Enchantments": [
+    "!bp_2af7cc6019320b84292166c0228a0dbe"
+  ],
+  "name": "Blackened Rags"
+}

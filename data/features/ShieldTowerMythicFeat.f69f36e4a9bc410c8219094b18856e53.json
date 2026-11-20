@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_ac57069b6bf8c904086171683992a92a"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShieldTowerMythicFeat",
+  "guid": "f69f36e4a9bc410c8219094b18856e53",
+  "name": "Mythic Tower Shield — Fortress"
+}

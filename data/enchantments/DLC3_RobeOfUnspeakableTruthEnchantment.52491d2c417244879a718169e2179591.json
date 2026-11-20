@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_4fb013afe66249508267542e3f3c11ba"
+    }
+  ],
+  "assetName": "DLC3_RobeOfUnspeakableTruthEnchantment",
+  "guid": "52491d2c417244879a718169e2179591"
+}

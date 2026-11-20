@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArmorPlatingShifterFeature",
+  "guid": "76c244c29fac4efba240c7a942468ff5",
+  "name": "Armor Plating"
+}

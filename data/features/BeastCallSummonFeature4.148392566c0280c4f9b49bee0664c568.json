@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 9,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_772c83a25e2268e448e841dcd548235f",
+      "m_Feature": "!bp_799a544915bf28543986e43e3ef0c4d8"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BeastCallSummonFeature4",
+  "guid": "148392566c0280c4f9b49bee0664c568",
+  "name": "Summon Nature's Ally IV"
+}

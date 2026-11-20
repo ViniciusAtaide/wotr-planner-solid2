@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "None",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillAthletics",
+      "Value": 2
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "Endurance"
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "CombatFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "Endurance",
+  "guid": "54ee847996c25cd4ba8773d7b8555174",
+  "name": "Endurance"
+}

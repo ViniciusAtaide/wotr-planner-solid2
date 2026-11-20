@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_36819dfb2fb34364f824821cf0170853"
+    }
+  ],
+  "assetName": "PitchTunerEnchantment",
+  "guid": "7f2136f879a590247843980ad1d74542"
+}

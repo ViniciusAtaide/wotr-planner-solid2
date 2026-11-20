@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "SpikedHeavyShieldHolyPlus3",
+  "guid": "5de129db16c218f4391d03ff63dd4b3b",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a1b85d048fb5003438f34356df938a9f"
+}

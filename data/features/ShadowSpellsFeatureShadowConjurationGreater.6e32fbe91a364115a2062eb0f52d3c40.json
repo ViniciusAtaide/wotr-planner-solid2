@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShadowSpellsFeatureShadowConjurationGreater",
+  "guid": "6e32fbe91a364115a2062eb0f52d3c40",
+  "name": "Shadow Conjuration, Greater"
+}

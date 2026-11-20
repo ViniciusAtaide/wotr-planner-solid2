@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "BashingShield",
+  "guid": "5a326f3961ad985448c9c7b72c82b1a7",
+  "m_ArmorComponent": "!bp_5ba44cd58f731144a9f390c2c099abc6",
+  "m_WeaponComponent": "!bp_d7fb623f94b42304db03645c6fdef245",
+  "name": "Bashing Shield"
+}

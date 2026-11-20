@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_5d2731cd839823746bcab82e9853f8fb"
+    }
+  ],
+  "assetName": "RovagugRelicSteppeEnchantment",
+  "guid": "2fa38ebb29f3bb946ba7098ccaa46d2e"
+}

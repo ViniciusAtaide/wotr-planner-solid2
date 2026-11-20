@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "ShieldofDivinePower",
+  "guid": "19d1b3535d22c0144babe51d7da1d028",
+  "m_ArmorComponent": "!bp_c5a62aaea18c5b44b9ee9393cacf365d",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Blessed Defense"
+}

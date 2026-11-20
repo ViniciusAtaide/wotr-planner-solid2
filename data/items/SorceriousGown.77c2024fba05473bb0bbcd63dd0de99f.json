@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "SorceriousGown",
+  "guid": "77c2024fba05473bb0bbcd63dd0de99f",
+  "m_Enchantments": [
+    "!bp_7f8c4c17afb94f95a7e527e70584611e"
+  ],
+  "name": "Sorcerous Gown"
+}

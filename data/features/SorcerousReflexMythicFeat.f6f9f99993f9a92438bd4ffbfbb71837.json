@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SorcerousReflexMythicFeat",
+  "guid": "f6f9f99993f9a92438bd4ffbfbb71837",
+  "name": "Sorcerous Reflex"
+}

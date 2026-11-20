@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_9936554e9372dab4a874c1dd165fb6f8",
+        "!bp_36e136a4cc77a434083a12a72678a9ba",
+        "!bp_2af1112188727bf469ec50c5575b6c52"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "OracleRevelation"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleRevelationBloodOfHeroes",
+  "guid": "1b9eebdfa2ad9d44eb60446d465b0cfd",
+  "name": "Blood of Heroes"
+}

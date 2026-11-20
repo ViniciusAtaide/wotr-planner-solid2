@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DruchiteFalchionPlus2",
+  "guid": "6cb901b321ff4713aa826950bbc53f7c",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_6ddc9acbbb6e40746a6a1671df1f7b47"
+}

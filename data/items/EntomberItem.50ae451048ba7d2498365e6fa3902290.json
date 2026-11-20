@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "EntomberItem",
+  "guid": "50ae451048ba7d2498365e6fa3902290",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_fac41e149f49cba4a8e06ce39b41a6fa",
+  "name": "Entomber"
+}

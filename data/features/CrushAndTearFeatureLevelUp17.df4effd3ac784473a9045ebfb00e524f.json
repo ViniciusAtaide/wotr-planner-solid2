@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 17,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_f7d7eb166b3dd594fb330d085df41853",
+      "m_Feature": "!bp_32d3320f95b2468dadc2419fcac30285"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "CrushAndTearFeatureLevelUp17",
+  "guid": "df4effd3ac784473a9045ebfb00e524f"
+}

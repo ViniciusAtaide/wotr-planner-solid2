@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "BardichePitaxGuardItem",
+  "guid": "c7e5f05e1dd1c9644adf31b0a5f0d121",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_b1cbf457fd471d148b39ae56667f405a",
+  "name": "Holy Chaotic Outsider Bane Bardiche +3"
+}

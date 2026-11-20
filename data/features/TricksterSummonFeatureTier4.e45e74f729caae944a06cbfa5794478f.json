@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 5,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_8df873a8c6e48294abdb78c45834aa0a",
+      "m_Feature": "!bp_349af29b0f173ad4498b49bae8a5072a"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterSummonFeatureTier4",
+  "guid": "e45e74f729caae944a06cbfa5794478f",
+  "name": "Summon Redcaps"
+}

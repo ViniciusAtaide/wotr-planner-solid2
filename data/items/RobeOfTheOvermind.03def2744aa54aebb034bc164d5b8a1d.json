@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "RobeOfTheOvermind",
+  "guid": "03def2744aa54aebb034bc164d5b8a1d",
+  "m_Enchantments": [
+    "!bp_94833c60b0ed492db8f55786ccc6f542"
+  ],
+  "name": "Robe of the Overmind"
+}

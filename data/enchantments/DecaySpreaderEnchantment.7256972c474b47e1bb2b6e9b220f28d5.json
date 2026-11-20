@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_2bb5368e55ef49ba994bfc1d4f385d77"
+    }
+  ],
+  "assetName": "DecaySpreaderEnchantment",
+  "guid": "7256972c474b47e1bb2b6e9b220f28d5"
+}

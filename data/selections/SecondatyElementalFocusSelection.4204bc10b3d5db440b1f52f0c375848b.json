@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "OnlyNew",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "SecondatyElementalFocusSelection",
+  "guid": "4204bc10b3d5db440b1f52f0c375848b",
+  "m_AllFeatures": [
+    "!bp_659c39542b728c04b83e969c834782a9",
+    "!bp_956b65effbf37e5419c13100ab4385a3",
+    "!bp_caa7edca64af1914d9e14785beb6a143",
+    "!bp_faa5f1233600d864fa998bc0afe351ab"
+  ],
+  "name": "Expanded Element (Kineticist 7)"
+}

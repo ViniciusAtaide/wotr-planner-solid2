@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "KnifeMaster"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "KnifeMasterSneakStab",
+  "guid": "df4f34f7cac73ab40986bc33f87b1a3c",
+  "name": "Sneak Stab"
+}

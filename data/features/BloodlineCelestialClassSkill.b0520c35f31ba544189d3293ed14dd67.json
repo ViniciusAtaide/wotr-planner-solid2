@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreReligion"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineCelestialClassSkill",
+  "guid": "b0520c35f31ba544189d3293ed14dd67",
+  "name": "Class Skill — Lore (Religion)"
+}

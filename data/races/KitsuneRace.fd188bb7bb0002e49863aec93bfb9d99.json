@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintRace",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "SelectableRaceStat": false,
+  "assetName": "KitsuneRace",
+  "guid": "fd188bb7bb0002e49863aec93bfb9d99",
+  "m_Features": [
+    "!bp_ec40cc350b18c8c47a59b782feb91d1f",
+    "!bp_0b71c1a7941bfa4429e281245371efc6",
+    "!bp_9c747d24f6321f744aa1bb4bd343880d",
+    "!bp_32944d9af38d25342ad32dc1f407c714",
+    "!bp_88063b0ec1cbc8b499e313cde36a8519"
+  ],
+  "name": "Kitsune"
+}

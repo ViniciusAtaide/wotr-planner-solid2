@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_8c7de3b7d51a4b49a46990d8dbc84853"
+    }
+  ],
+  "assetName": "ThroneKeeperEnchantment",
+  "guid": "e82cbaab66e2415dbb5869bbfc1664e7"
+}

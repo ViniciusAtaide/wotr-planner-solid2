@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_d665a364a60b7744c9bab833da6f9492"
+    }
+  ],
+  "assetName": "CloakOfDisguiseEnchantment",
+  "guid": "a222d78bd600dbc45bf42b79844cf7ee"
+}

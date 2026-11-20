@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_99439c9f1239c574dbcb3ea5f8509769"
+    }
+  ],
+  "assetName": "BracersOfBalanceEnchantment",
+  "guid": "175f756579fc5f54cbaab8de74a8969a"
+}

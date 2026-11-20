@@ -1,0 +1,58 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillKnowledgeArcana",
+    "SkillKnowledgeWorld",
+    "SkillUseMagicDevice",
+    "SkillAthletics",
+    "SkillPersuasion"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_f5b8c63b141b2f44cbb8c2d7579c34f5"
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 2,
+  "assetName": "MagusClass",
+  "guid": "45a4607686d96a1498891b3286121780",
+  "m_Archetypes": [
+    "!bp_d078b2ef073f2814c9e338a789d97b73",
+    "!bp_7d6678f2160018049814838af2ab4236",
+    "!bp_44388c01eb4a29d4d90a25cc0574320d",
+    "!bp_79ccf7a306a5d5547bebd97299f6fc89",
+    "!bp_67ec8dcae6fb3d3439e5ae874ddc7b9b",
+    "!bp_1125145639129cf45b6b9b674cbd62b1",
+    "!bp_2dff80a045794cb9b5452fe7b66b79d7",
+    "!bp_9b3915d38c7d4b6495415b38571e9d53"
+  ],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_1b912721a7e075d4f9cfe8dafa39414c",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": "!bp_5d8d04e76dff6c5439de99af0d57be63",
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Magus"
+}

@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "RovagugRelicScorpionHandaxeItem",
+  "guid": "38f5bd76f3cf1a448971a33c83d78f84",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5",
+    "!bp_08dfd84c0a80dfb48924a5f3800bbd2d"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_54e7473ff73910c47812fd39c897dc1a",
+  "name": "Scorpion's Kiss (Handaxe)"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "StormlordsResolveItem",
+  "guid": "28c18f4bdd1321e41aa96dad4732336a",
+  "m_Enchantments": [
+    "!bp_5b4757baddb724e46aaf58b79581c710"
+  ],
+  "name": "Stormlord's Resolve"
+}

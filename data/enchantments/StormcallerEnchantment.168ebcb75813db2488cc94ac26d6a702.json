@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_04488347797ed55439fd7403e84ed9fc"
+    }
+  ],
+  "assetName": "StormcallerEnchantment",
+  "guid": "168ebcb75813db2488cc94ac26d6a702"
+}

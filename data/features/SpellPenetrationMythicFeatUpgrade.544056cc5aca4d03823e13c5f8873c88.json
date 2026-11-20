@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "SpellPenetrationMythicFeatUpgrade",
+  "guid": "544056cc5aca4d03823e13c5f8873c88",
+  "name": "Spell Penetration (Mythic)"
+}

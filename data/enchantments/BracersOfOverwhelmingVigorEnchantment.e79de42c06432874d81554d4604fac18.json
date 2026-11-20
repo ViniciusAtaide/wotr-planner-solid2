@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b34921b9358e1154783b98fb6aac3cae"
+    }
+  ],
+  "assetName": "BracersOfOverwhelmingVigorEnchantment",
+  "guid": "e79de42c06432874d81554d4604fac18"
+}

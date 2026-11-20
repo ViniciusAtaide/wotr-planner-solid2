@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "HeavyShieldItemLesserColdResistPlus1",
+  "guid": "927514afea4061d42be6d167c2552645",
+  "m_ArmorComponent": "!bp_e8b5925a05e885049932e6f026872bee",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Heavy Shield of Lesser Cold Resistance"
+}

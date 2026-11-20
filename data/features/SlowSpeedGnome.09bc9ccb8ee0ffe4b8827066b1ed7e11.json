@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Speed",
+      "Value": -10
+    }
+  ],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SlowSpeedGnome",
+  "guid": "09bc9ccb8ee0ffe4b8827066b1ed7e11",
+  "name": "Slow Movement (Gnome)"
+}

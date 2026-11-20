@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3e8617be47ba5d846bd5f06b2eeac1b3"
+    }
+  ],
+  "assetName": "RobeOfFalseDeathEnchantment",
+  "guid": "26dbbd72d08a9874e967b23fe73a210d"
+}

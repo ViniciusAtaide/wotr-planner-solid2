@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "TowerShieldItemSavThrAgainstBlindPlus1",
+  "guid": "5ba0148e3ce36dc498e27089281a01e4",
+  "m_ArmorComponent": "!bp_d7f579cb2875b09498952d9135950dd3",
+  "m_WeaponComponent": null,
+  "name": "Colossal Shade"
+}

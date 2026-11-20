@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "CordOfStubbornFuryItem",
+  "guid": "3b7820965662afe4ab17627103e44228",
+  "m_Enchantments": [
+    "!bp_b98215ae135fe7144b20a2754e0fbda2",
+    "!bp_b27f55b3881e10444ba69e607a36958e"
+  ],
+  "name": "Cord of Stubborn Fury"
+}

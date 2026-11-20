@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 11,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_145f1d3d360a7ad48bd95d392c81b38e",
+      "m_Feature": "!bp_e7d35176e51587643bf513f8770d2bd4"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShamanNatureSpiritBaseFeature",
+  "guid": "0a7166e9c6ea5874e9fc4984f30f2d8d",
+  "name": "Storm Burst"
+}

@@ -1,0 +1,43 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_d89fb8ce9152ffa4dacd69390f3d7721",
+        "!bp_64e1f27147b642448842ab8dcbaca03f",
+        "!bp_12bb1056a5f3f9f4b9facdb78b8d8914",
+        "!bp_1d34d95ad4961e343b02db14690eb6d8",
+        "!bp_eef664d1e4318f64cb2304d1628d29ae",
+        "!bp_bef8d08ee3c20b246b404ce3ef948291",
+        "!bp_49115e2147cd32841baa34c305171daa",
+        "!bp_9c5ed34089fedf54ba8d0f43565bcc91",
+        "!bp_01e7aab638d6a0b43bc4e9d5b49e68d9",
+        "!bp_3867419bf47841b428333808dfdf4ae0"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_e66a112ab57f69e418f1f11d5d2f3248",
+      "m_CharacterClass": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    }
+  ],
+  "Groups": [
+    "DragonDiscipleSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DragonDiscipleCrossbloodedSorcerer",
+  "guid": "de01c813460e4eebb545edfce0c815b6",
+  "m_Spellbook": "!bp_cb0be5988031ebe4c947086a1170eacc",
+  "name": "Sorcerer"
+}

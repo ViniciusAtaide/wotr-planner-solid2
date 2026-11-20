@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FalcataCorrosivePlus2",
+  "guid": "8805591cc4c7b6342ad8584cd74d16eb",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1af5621e2ae551e42bd1dd6744d98639",
+  "name": "Corrosive Falcata +2"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_d26eb8ab2aabd0e45a4d7eec0340bbce",
+      "m_Feature": "!bp_d26eb8ab2aabd0e45a4d7eec0340bbce"
+    }
+  ],
+  "Stacking": "Prolong",
+  "assetName": "CavalierTacticianTandemTripBuff",
+  "guid": "965ea9716b87f4b46a6a8f50523393bd",
+  "name": "Tandem Trip (buff)"
+}

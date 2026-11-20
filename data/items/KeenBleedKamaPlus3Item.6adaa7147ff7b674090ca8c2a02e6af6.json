@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "KeenBleedKamaPlus3Item",
+  "guid": "6adaa7147ff7b674090ca8c2a02e6af6",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_f5872eb0deb3a1b48a36549f8d92c19e",
+  "name": "Keen Bleed Kama +3"
+}

@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_0f15c6f70d8fb2b49aa6cc24239cc5fa"
+    }
+  ],
+  "Groups": [
+    "CombatFeat",
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FurysFall",
+  "guid": "0fc1ed8532168f74a9441bd17ad59e66",
+  "name": "Fury's Fall"
+}

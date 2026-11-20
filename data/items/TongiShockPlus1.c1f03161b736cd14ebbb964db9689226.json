@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "TongiShockPlus1",
+  "guid": "c1f03161b736cd14ebbb964db9689226",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_13fa38737d46c9e4abc7f4d74aaa59c3",
+  "name": "Shock Tongi +1"
+}

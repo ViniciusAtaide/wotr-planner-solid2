@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardWeaponLightShield",
+  "guid": "62c90581f9892e9468f0d8229c7321c4",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1fd965e522502fe479fdd423cca07684"
+}

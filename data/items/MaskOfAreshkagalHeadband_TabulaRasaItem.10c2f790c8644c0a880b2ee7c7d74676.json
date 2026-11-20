@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "MaskOfAreshkagalHeadband_TabulaRasaItem",
+  "guid": "10c2f790c8644c0a880b2ee7c7d74676",
+  "m_Enchantments": [
+    "!bp_4dcb81fcbfb11714db17ece0c152ed8b",
+    "!bp_c3c2a133c0aa12240ade34762c146664",
+    "!bp_4a235cbdeebd2524681870153bab3cba",
+    "!bp_8da8913d674d4a988cd07d3a938a2880"
+  ],
+  "name": "Pristine Mind (head)"
+}

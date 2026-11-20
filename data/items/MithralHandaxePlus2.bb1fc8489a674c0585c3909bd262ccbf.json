@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MithralHandaxePlus2",
+  "guid": "bb1fc8489a674c0585c3909bd262ccbf",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_54e7473ff73910c47812fd39c897dc1a"
+}

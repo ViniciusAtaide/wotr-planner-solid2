@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_a33b99f95322d6741af83e9381b2391c"
+    }
+  ],
+  "Groups": [
+    "RogueTalent",
+    "SlayerTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SlipperyMind",
+  "guid": "a14e8c1801911334f96d410f10eab7bf",
+  "name": "Slippery Mind"
+}

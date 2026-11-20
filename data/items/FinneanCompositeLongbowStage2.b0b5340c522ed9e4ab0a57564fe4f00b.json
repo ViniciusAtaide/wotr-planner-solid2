@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanCompositeLongbowStage2",
+  "guid": "b0b5340c522ed9e4ab0a57564fe4f00b",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1ac79088a7e5dde46966636a3ac71c35",
+  "name": "Finnean the Talking Weapon (Composite Longbow +3)"
+}

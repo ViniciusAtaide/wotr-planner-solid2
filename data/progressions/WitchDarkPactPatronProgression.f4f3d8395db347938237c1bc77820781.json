@@ -1,0 +1,81 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "WitchPatron"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_cf4a9c0244c64a75a09f0793080ee69e"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_98b46a1f46fd4a5288b670f9dbf98359"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_2798832d5c1c4525882b9efe840d32ca"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_ace7fad1d97041218cc7a07c7d0d64d2"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_bc8bb2a6cb1e49b583269b52f24c4ce8"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_0e6c69d966df48bab11f2385d9d7acbb"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_0f0c0555c8f24a5ab48a2eda55262bbc"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_6a326f88f3a1406090143141b90a7958"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_e425c404622246a6b90ce680e05cc943"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WitchDarkPactPatronProgression",
+  "guid": "f4f3d8395db347938237c1bc77820781",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Dark Pact"
+}

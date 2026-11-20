@@ -1,0 +1,80 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_5d8dc80eb8714ad2a14353a0e3cbd20c"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d4ce7592bd12d63439907ad64e986e59"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_b750650400d9d554b880dbf4c8347b24"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_6be37e1316160d949aa2e5a0be99404a"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8946570bc2c34584ac7e7560e21c245a"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "SeparatistSecondaryDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_7f6b270327ca454b802ed15f4a6ee4f4"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_7eb39ba8115a422bb69c702cc20ca58a"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ProtectionDomainProgressionSeparatist",
+  "guid": "8946570bc2c34584ac7e7560e21c245a",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_67401c74ee094e82a2afd645a847f5cc"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Protection Domain (Forbidden Rites)"
+}

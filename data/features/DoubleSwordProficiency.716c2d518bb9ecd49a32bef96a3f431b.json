@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "DoubleSword"
+      ],
+      "m_RaceRestriction": null
+    },
+    {
+      "$type": "PrerequisiteNotProficient",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "DoubleSword"
+      ]
+    }
+  ],
+  "Groups": [
+    "ExoticWeaponProficiency"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DoubleSwordProficiency",
+  "guid": "716c2d518bb9ecd49a32bef96a3f431b",
+  "name": "Weapon Proficiency (Two-Bladed Sword)"
+}

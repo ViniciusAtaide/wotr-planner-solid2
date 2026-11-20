@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_68ae7033fa554d0cbf8e34101676bd28"
+    }
+  ],
+  "assetName": "CloakOfLoneWolfEnchantment",
+  "guid": "1582d0c65dcb4523a6ab61b792da0c1e"
+}

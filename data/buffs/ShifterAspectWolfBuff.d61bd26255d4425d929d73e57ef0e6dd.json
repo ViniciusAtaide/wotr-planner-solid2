@@ -1,0 +1,45 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_a406d6ebea5c46bba3160246be03e96f"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "StartPlusDivStep",
+      "m_StartLevel": 1,
+      "m_StepLevel": 7,
+      "m_Type": "DamageDice",
+      "m_UseMax": true,
+      "m_UseMin": false
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 8,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_473ed22925c54c95a3bee6a5143fc637"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 8,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_33684fea43334119b2b3ad5343955a0a"
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "ShifterAspectWolfBuff",
+  "guid": "d61bd26255d4425d929d73e57ef0e6dd",
+  "name": "Wolf (Shifter 9)"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronMasterworkBastardSword",
+  "guid": "f7c9f5d274164d04eb7c89d743e4461b",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d2fe2c5516b56f04da1d5ea51ae3ddfe",
+  "name": "Cold Iron Masterwork Bastard Sword"
+}

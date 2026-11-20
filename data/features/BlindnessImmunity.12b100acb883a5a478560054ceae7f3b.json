@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BlindnessImmunity",
+  "guid": "12b100acb883a5a478560054ceae7f3b",
+  "name": "Immunity to Blindness"
+}

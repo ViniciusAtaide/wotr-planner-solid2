@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "LichSkeletalWeaponTrainingSelection",
+  "guid": "ce56b6dce7ea48d08eb30a6d345d953a",
+  "m_AllFeatures": [
+    "!bp_bc4cc2147809483fbb195841b8567127"
+  ],
+  "name": "Weapon Training (Skeletal Fighter I)"
+}

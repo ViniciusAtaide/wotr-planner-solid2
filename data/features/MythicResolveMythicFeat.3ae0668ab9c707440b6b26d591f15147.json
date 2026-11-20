@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "None",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SaveWill",
+      "Value": 1
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "None",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SaveReflex",
+      "Value": 1
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "None",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SaveFortitude",
+      "Value": 1
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MythicResolveMythicFeat",
+  "guid": "3ae0668ab9c707440b6b26d591f15147",
+  "name": "Mythic Resolve"
+}

@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "KillingPaceItem",
+  "guid": "42ff7086907b46c88b4ebe08deadb717",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_01fe8f08c6e246f28fae2f5da908ceb5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1ac79088a7e5dde46966636a3ac71c35",
+  "name": "Killing Pace"
+}

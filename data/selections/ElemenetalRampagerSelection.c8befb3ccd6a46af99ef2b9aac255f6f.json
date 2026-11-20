@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ElemenetalRampagerSelection",
+  "guid": "c8befb3ccd6a46af99ef2b9aac255f6f",
+  "m_AllFeatures": [
+    "!bp_d56634b23c7145f1a471781eb9a63e8d",
+    "!bp_f0211aeaf54e461b957841e72406cce0",
+    "!bp_fb36ee66f6ec484fb0869d4ab6ddcb4c",
+    "!bp_7fe7abcf9837431b84460e2be3fafc00"
+  ],
+  "name": "Elemental Rampage"
+}

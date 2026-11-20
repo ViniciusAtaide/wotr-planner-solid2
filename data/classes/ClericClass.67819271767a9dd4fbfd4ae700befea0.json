@@ -1,0 +1,56 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillKnowledgeArcana",
+    "SkillKnowledgeWorld",
+    "SkillPersuasion",
+    "SkillLoreReligion"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_92c0d2da0a836ce418a267093c09ca54"
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 2,
+  "assetName": "ClericClass",
+  "guid": "67819271767a9dd4fbfd4ae700befea0",
+  "m_Archetypes": [
+    "!bp_857bc9fadf70f294795a9cba974a48b8",
+    "!bp_6bfb7e74b530f3749b590286dd2b9b30",
+    "!bp_c4a02990f15c0bb4d8749a90a5ed46b3",
+    "!bp_472af8cb3de628f4a805dc4a038971bc",
+    "!bp_2537d1312a462834aadbd1153a2a0d54",
+    "!bp_a4560e3fb5d247d68fb1a2738fcc0855",
+    "!bp_67401c74ee094e82a2afd645a847f5cc"
+  ],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_b2cd67193d1199f41bc6ecec3a2f2c87",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": "!bp_4673d19a0cf2fab4f885cc4d1353da33",
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Cleric"
+}

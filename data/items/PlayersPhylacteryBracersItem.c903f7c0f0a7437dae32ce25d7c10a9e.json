@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_5d501618a28bdc24c80007a5c937dcb7"
+    }
+  ],
+  "assetName": "PlayersPhylacteryBracersItem",
+  "guid": "c903f7c0f0a7437dae32ce25d7c10a9e",
+  "m_Enchantments": [
+    "!bp_b3ec7d3700324a7181ec5f327665f5de"
+  ],
+  "name": "Your Phylactery (wrist)"
+}

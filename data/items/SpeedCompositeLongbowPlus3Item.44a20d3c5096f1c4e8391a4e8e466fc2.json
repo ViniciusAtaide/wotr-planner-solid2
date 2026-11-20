@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "SpeedCompositeLongbowPlus3Item",
+  "guid": "44a20d3c5096f1c4e8391a4e8e466fc2",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1ac79088a7e5dde46966636a3ac71c35",
+  "name": "Speed Composite Longbow +3"
+}

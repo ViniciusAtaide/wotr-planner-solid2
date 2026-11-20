@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillAthletics"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_96c174b0ebca7b246b82d4bc4aac4574",
+        "!bp_3e9b859762db1cf43a23430c7fd6962f"
+      ]
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillAthletics"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Scythe"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundUstalavPeasant",
+  "guid": "e633b595bfb776d48858c0c51a6414ff",
+  "name": "Ustalavic Peasant"
+}

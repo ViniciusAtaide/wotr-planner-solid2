@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "Arcane Bloodline or Sage Sorcerer",
+  "reason": "Two bloodline spell features are named \"Banishment\": the arcane bloodline's (from the Arcane Bloodline and the Sage Sorcerer, at level 15) and the celestial one's (the Celestial and Empyreal bloodlines). Neither pair shares a family name; the arcane one is qualified by naming its grantors, and the celestial one stays bare.",
+  "target": "34e80f2817741e1498d36947a65c15f6"
+}

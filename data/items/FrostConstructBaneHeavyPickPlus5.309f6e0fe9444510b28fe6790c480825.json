@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FrostConstructBaneHeavyPickPlus5",
+  "guid": "309f6e0fe9444510b28fe6790c480825",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a492410f3d65f744c892faf09daad84a",
+  "name": "Frost Construct Bane Heavy Pick +5"
+}

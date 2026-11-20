@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_9ac239ce333b420e8afd0672fb8b11fa"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DragonLevel3MaxAbilityConstitutionFeature",
+  "guid": "d638bbb24421423d98c820307f158d60"
+}

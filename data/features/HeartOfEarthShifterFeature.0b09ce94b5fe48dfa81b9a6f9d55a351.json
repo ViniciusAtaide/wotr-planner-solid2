@@ -1,0 +1,251 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_a237792fc2644a4ebc6eefa2d325f181",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_0fdc579eafbf4fceae649beed8188a5c",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_4a981c46dc60474cad17549a2b9f7f65",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_c4c39e7078224b6caaf3c8a02032b5cb",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_0bdfd34b7e5a4639bf6b716fa2ac0098",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_29c0e16558b043278f061b128b9d180c",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_49e196492d2c4aa588bafffea6db8c43",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_0555960c7ab8431d86de4e7db0c22160",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_d61bd26255d4425d929d73e57ef0e6dd",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_e0b35a32cf234381ab13c831106937f1",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_68ca4094f4e7488c8e869af833e153f1",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_5adecdc82eda4271b6dc4a7e6a921c89",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_9cc0eceb9cbc44e4b1ecc5e8b5f97c45",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_c6b493bf01ec4478bbb7247f56d670f8",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_b8c0ad632442496aa20b96864dde4454",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_ae71fed93f9f442cbce5b601e4aa1a23",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_bdbc24300ebd4fd6810172e4d4b1ab19",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_ab0f757d55a74658b812829518566df4",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_f6d0e7d4d96b4f7897557968a0706f74",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_7e90cc7393624b13b6d319774bf6d812",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_fdb39ec525c2411aad43f6b12ad4b1c0",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_38f84f5a0da94b169131b863be81957b",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_b3e5540f487d4a2b9aa50aad34c60ec3",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_f493bc3e006d44fb8815267ffa49ec76",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_4a5e4c66ca8d4657b281060a24886ad1",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_0b15a8dce67746e1979dfc597f13827f",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_ba5b0df349c94c91ad7a38309b042537",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_f246e4e203f84f52bed2dc16e6d36087",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_58e7d688873242f38b6cc66a7ae3d794",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_d895c3b8663f4b73a3868e6369bba6d4",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_c163b127ce354363a20946bb01967cac",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_7a5da4b80a494bf2b96fa7756d3f89cc",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_f49109fdb0a24f75a4ab466bf95843af",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_defa946808514ab0a1023192fa13ede3",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_fe61e45eb3d1441795179eb0bff1ef3b",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_14bf6a8c9f9f40dba2f6fc41e6235270",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_a983157daa464ab7a725ed5f53110a32",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_350ba136f5d04e588f1a6e3ba22233cb",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_cd5f29d5f50a43f9a2d5f3debce86477",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    },
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_12272456258f4334a11b87610cf33abd",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c3ad4aca75764e82ab047533a8d5aea6"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HeartOfEarthShifterFeature",
+  "guid": "0b09ce94b5fe48dfa81b9a6f9d55a351",
+  "name": "Heart of Earth (Wild Effigy)"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_df266754759ade74eb6e3fd650bdb7c9"
+    }
+  ],
+  "assetName": "FencersGiftEnchantment",
+  "guid": "e67e212b00851824d9769c6fc09f7b75"
+}

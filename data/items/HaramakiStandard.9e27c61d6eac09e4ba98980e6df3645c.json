@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_26b10d4340839004f960f9816f6109fe"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "HaramakiStandard",
+  "guid": "9e27c61d6eac09e4ba98980e6df3645c",
+  "m_Enchantments": [],
+  "m_Type": "!bp_9511d62bcfc57c245bf64350a5933470"
+}

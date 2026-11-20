@@ -1,0 +1,81 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "WitchPatron"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_2e28c42c019f7174682c700046eb0e15"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_3b4f1cbcbb0a00b41b4c39f6185b1188"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_3f64af92e090f81418d267003d5ed0c7"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_3448b8790e5447c4ea78bdf7fdda4e5d"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_f0aa1997efdba6246b7b8a8acc9de92e"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_62a358b0b5bb36349b330ea40d7ea573"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_fa3585ef505ebd847b377a20d5c2e485"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_d81e17108e77cb847a1ae1cd8a55383e"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_d148fe7ea7478234a830498773ab9ae4"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WitchMercyPatronProgression",
+  "guid": "cad7c2fdabeb9574f95f4b9ffee20afe",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Mercy (Patron)"
+}

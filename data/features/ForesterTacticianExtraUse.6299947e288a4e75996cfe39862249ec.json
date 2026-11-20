@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 3,
+  "assetName": "ForesterTacticianExtraUse",
+  "guid": "6299947e288a4e75996cfe39862249ec",
+  "name": "Tactician"
+}

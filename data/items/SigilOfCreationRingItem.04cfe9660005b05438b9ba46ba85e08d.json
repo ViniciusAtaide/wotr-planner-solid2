@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "SigilOfCreationRingItem",
+  "guid": "04cfe9660005b05438b9ba46ba85e08d",
+  "m_Enchantments": [
+    "!bp_d724c6e3f30473947ab89085e2925c4f"
+  ],
+  "name": "Sigil of Creation"
+}

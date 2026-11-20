@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BoundlessHealing",
+  "guid": "c8bbb330aaecaf54dbc7570200653f8c",
+  "name": "Boundless Healing"
+}

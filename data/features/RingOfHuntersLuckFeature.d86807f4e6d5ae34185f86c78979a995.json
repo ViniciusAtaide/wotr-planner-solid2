@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Luck",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillLoreNature",
+      "Value": 2
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "RingOfHuntersLuckFeature",
+  "guid": "d86807f4e6d5ae34185f86c78979a995",
+  "name": "Ring of Plentiful Hunts"
+}

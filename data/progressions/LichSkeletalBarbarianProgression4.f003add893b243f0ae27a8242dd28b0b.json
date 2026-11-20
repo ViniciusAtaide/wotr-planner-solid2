@@ -1,0 +1,87 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 4,
+      "Not": false,
+      "m_CharacterClass": "!bp_5d501618a28bdc24c80007a5c937dcb7"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_f2ec22e48d9fd334496462367e16a24f"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8e81428b108f440db11fdaa9597a37f4"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_f8b516bea12d4a6daa5e72e2898d2467"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_f003add893b243f0ae27a8242dd28b0b"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e2ae828e848a30d4d9471a0dd393435e"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d36064f72b2844518acf1076ec90ef3f"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "LichSkeletalUpgrade"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_36f0d962a9f2d0a458062d5edc9795e5",
+        "!bp_36f0d962a9f2d0a458062d5edc9795e5",
+        "!bp_e2ae828e848a30d4d9471a0dd393435e"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "LichSkeletalBarbarianProgression4",
+  "guid": "f003add893b243f0ae27a8242dd28b0b",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_5d501618a28bdc24c80007a5c937dcb7"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Skeletal Barbarian I (Lich 4)"
+}

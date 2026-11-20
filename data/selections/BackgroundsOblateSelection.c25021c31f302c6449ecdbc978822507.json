@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "BackgroundSelection"
+  ],
+  "HideInUI": true,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BackgroundsOblateSelection",
+  "guid": "c25021c31f302c6449ecdbc978822507",
+  "m_AllFeatures": [
+    "!bp_f0d2840b6564c6f408c1e068d0707ca0",
+    "!bp_7cc9014488caa5445a0c8b5e17b95466",
+    "!bp_46d69a77c26701a459607c3f42e3664a"
+  ],
+  "name": "Oblate"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "Pulura_SarcorianDagger_13",
+  "guid": "1774490519aaf6f4fb481d5a9e142eec",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_07cc1a7fceaee5b42b3e43da960fe76d",
+  "name": "Funerary Dagger of Ruhad the Bookreader"
+}

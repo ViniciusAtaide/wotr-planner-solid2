@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_de40ae95fcf001046b4253c20bc536ce"
+    }
+  ],
+  "assetName": "OldEarthShriekBeltEnchantment",
+  "guid": "8da5b80b2e3c30f468ac6975be2eff70"
+}

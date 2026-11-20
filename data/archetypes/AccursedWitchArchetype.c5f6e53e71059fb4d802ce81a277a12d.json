@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_b0a5118b4fb793241bc7042464b23fab",
+        "!bp_d83becdd1ab644b995ae4aa96a493351"
+      ]
+    }
+  ],
+  "AddSkillPoints": 1,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_381cf4c890815d049a4420c6f31d063f",
+        "!bp_c213af60aba83ed4993948dce6b947b8"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "AccursedWitchArchetype",
+  "guid": "c5f6e53e71059fb4d802ce81a277a12d",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": "!bp_b897fe0947e4b804082b1a687c21e6e2",
+  "m_WillSave": null,
+  "name": "Stigmatized Witch"
+}

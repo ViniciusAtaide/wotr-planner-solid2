@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "LightHammerPlus2",
+  "guid": "a3bead35464782e4790c1cbc812839a1",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_bbf7d0ea57e4c9349b65c82abc6787b4"
+}

@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 4,
+      "Not": false,
+      "m_CharacterClass": "!bp_e8f21e5b58e0569468e420ebea456124"
+    }
+  ],
+  "Groups": [
+    "KiPowers"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "KiBarskinFeature",
+  "guid": "7259ec579682c2f45a6444b9e64f122d",
+  "name": "Ki Power: Barkskin"
+}

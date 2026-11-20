@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "LivingFortress",
+  "guid": "6c8fd3c960ce4197a3aa0e86dc3a565b",
+  "m_Enchantments": [
+    "!bp_6628f9d77fd07b54c911cd8930c0d531",
+    "!bp_9b1538c732e06544bbd955fee570a2be",
+    "!bp_55998d5a87df43ef9ef85601b0501eef"
+  ],
+  "m_Type": "!bp_afd9065539b3ac5499eddca923654c4b",
+  "name": "Living Fortress"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicTrick1"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterAthleticsTier1Feature",
+  "guid": "b7de8e5e4d67faf4791866966afc0a43",
+  "name": "Athletics 1 Rank"
+}

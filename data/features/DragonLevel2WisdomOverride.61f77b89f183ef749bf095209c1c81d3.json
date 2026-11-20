@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_8aebc472d039bc944b3a88c729f0e013"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DragonLevel2WisdomOverride",
+  "guid": "61f77b89f183ef749bf095209c1c81d3",
+  "name": "Perfect Mind"
+}

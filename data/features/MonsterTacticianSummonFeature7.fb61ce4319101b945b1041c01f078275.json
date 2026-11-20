@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce",
+      "m_Feature": "!bp_667fd017406abd548b89292edd7dbfb7"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MonsterTacticianSummonFeature7",
+  "guid": "fb61ce4319101b945b1041c01f078275",
+  "name": "Summon Monster VII (Monster Tactician)"
+}

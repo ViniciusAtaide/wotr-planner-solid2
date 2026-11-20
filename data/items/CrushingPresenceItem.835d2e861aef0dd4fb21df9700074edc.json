@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "CrushingPresenceItem",
+  "guid": "835d2e861aef0dd4fb21df9700074edc",
+  "m_Enchantments": [
+    "!bp_85c75c68eb10f6f459bab5ade8ec0abe"
+  ],
+  "name": "Crushing Presence"
+}

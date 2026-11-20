@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionHasAnyClassFromList",
+      "Not": false,
+      "m_Classes": [
+        "!bp_26b10d4340839004f960f9816f6109fe",
+        "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+      ]
+    }
+  ],
+  "assetName": "ChainshirtBardingStandartPlus1",
+  "guid": "0b1d85bf35a246349a26ecb82bcb999f",
+  "m_Enchantments": [
+    "!bp_a9ea95c5e02f9b7468447bc1010fe152"
+  ],
+  "m_Type": "!bp_7b9bb0bc92bb7414d8ba44bcdd55ece6",
+  "name": "Chainshirt Barding +1"
+}

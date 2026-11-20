@@ -1,0 +1,185 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 1,
+      "m_CharacterClass": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "MysticTheurgeDivineSpellbook"
+  ],
+  "HideInUI": true,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_3cb30f805e79a7944b0d0174c9a157b7"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_5290b422c5c02c44f99291688e798d8f"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_3cb30f805e79a7944b0d0174c9a157b7",
+        "!bp_5290b422c5c02c44f99291688e798d8f"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_f8cf4644c7ff15d4799a59593b900091"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_3cb30f805e79a7944b0d0174c9a157b7",
+        "!bp_5290b422c5c02c44f99291688e798d8f",
+        "!bp_f8cf4644c7ff15d4799a59593b900091"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_7f526cef9fcb7934aaaca1bf3d26fc0f"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_5290b422c5c02c44f99291688e798d8f",
+        "!bp_f8cf4644c7ff15d4799a59593b900091",
+        "!bp_7f526cef9fcb7934aaaca1bf3d26fc0f"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_2bf8b6fa7082d45409537d6112cb5647"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_5290b422c5c02c44f99291688e798d8f",
+        "!bp_f8cf4644c7ff15d4799a59593b900091",
+        "!bp_7f526cef9fcb7934aaaca1bf3d26fc0f",
+        "!bp_2bf8b6fa7082d45409537d6112cb5647"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_798bf6e210d9a0e42bf960390b5991ba"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_7f526cef9fcb7934aaaca1bf3d26fc0f",
+        "!bp_2bf8b6fa7082d45409537d6112cb5647",
+        "!bp_798bf6e210d9a0e42bf960390b5991ba"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_6bbc04c6c95fc694788ddb265dc15ea2"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_798bf6e210d9a0e42bf960390b5991ba",
+        "!bp_6bbc04c6c95fc694788ddb265dc15ea2"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_f6c08ecbd77a43b4dbc0252afc2cb578"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_6bbc04c6c95fc694788ddb265dc15ea2",
+        "!bp_f6c08ecbd77a43b4dbc0252afc2cb578"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_57dae97f6e587f54e9c0559c6fa6590f"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_f6c08ecbd77a43b4dbc0252afc2cb578",
+        "!bp_57dae97f6e587f54e9c0559c6fa6590f"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_3eaf8a57a407e3d4aa477f802f0a5bb4",
+        "!bp_57dae97f6e587f54e9c0559c6fa6590f"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "MysticTheurgeOracleProgression",
+  "guid": "04c7d6910a409cc4ca188e4b81cc5df8",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_0920ea7e4fd7a404282e3d8b0ac41838"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    }
+  ],
+  "m_ExclusiveProgression": "!bp_0920ea7e4fd7a404282e3d8b0ac41838",
+  "m_FeaturesRankIncrease": [],
+  "name": "Oracle"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_f61182592cf63ba46a99f56899a19afe"
+    }
+  ],
+  "assetName": "TribalScoutsHideEnchantment",
+  "guid": "673b7d8736c081e4e852c6bea428c6f1"
+}

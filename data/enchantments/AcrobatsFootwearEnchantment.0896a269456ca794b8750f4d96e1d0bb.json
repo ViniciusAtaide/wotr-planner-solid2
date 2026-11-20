@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_bb115b9d89d7b4b48814d059ecd29164"
+    }
+  ],
+  "assetName": "AcrobatsFootwearEnchantment",
+  "guid": "0896a269456ca794b8750f4d96e1d0bb"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "InspirationalLeaderFeature",
+  "guid": "ffa9a8b8ea27b2a48b3638e20673a687",
+  "name": "Inspirational Leader"
+}

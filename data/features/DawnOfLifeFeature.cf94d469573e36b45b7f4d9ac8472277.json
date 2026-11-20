@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Armor",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Speed",
+      "Value": -10
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DawnOfLifeFeature",
+  "guid": "cf94d469573e36b45b7f4d9ac8472277"
+}

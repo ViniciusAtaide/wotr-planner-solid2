@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanBattleaxeStage3Base",
+  "guid": "1c422121ca7adfa4497a90fce994e02f",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_2bc77aa47f97de348aefcf03ec8fa43b",
+  "name": "Finnean the Talking Weapon (Battleaxe +5)"
+}

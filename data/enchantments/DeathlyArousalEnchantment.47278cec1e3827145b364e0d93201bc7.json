@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_88487f992d40431696d370ad7c3e3c12"
+    }
+  ],
+  "assetName": "DeathlyArousalEnchantment",
+  "guid": "47278cec1e3827145b364e0d93201bc7"
+}

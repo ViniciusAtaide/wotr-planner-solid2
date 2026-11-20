@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_46c6e281f0be45a1a270bc8e2c22c137"
+    }
+  ],
+  "assetName": "BootsOfTheCatEnchantment",
+  "guid": "35ddae787ff647fa8d4994e2f2fe8eb3"
+}

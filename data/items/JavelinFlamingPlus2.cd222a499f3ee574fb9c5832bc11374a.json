@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "JavelinFlamingPlus2",
+  "guid": "cd222a499f3ee574fb9c5832bc11374a",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a70cea34b275522458654beb3c53fe3f",
+  "name": "Flaming Javelin +2"
+}

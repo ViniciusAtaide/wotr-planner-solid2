@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "HeavyFlailHolyPlus3",
+  "guid": "18f4e7992147c224eb018d481fe0e7b0",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_8fefb7e0da38b06408f185e29372c703",
+  "name": "Holy Heavy Flail +3"
+}

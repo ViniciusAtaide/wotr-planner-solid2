@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_a406d6ebea5c46bba3160246be03e96f"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "StartPlusDivStep",
+      "m_StartLevel": 1,
+      "m_StepLevel": 7,
+      "m_Type": "DamageDice",
+      "m_UseMax": true,
+      "m_UseMin": false
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "ShifterAspectLizardBuff",
+  "guid": "29c0e16558b043278f061b128b9d180c",
+  "name": "Lizard (Shifter 9)"
+}

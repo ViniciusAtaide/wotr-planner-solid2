@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CapeOfFeinting",
+  "guid": "3b12f5f57ab14e029576f8c0d25b136a",
+  "m_Enchantments": [
+    "!bp_2ca7f43918fa477f99a0df5f3c28b270"
+  ],
+  "name": "Cape of Feinting"
+}

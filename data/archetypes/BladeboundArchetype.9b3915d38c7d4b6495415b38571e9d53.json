@@ -1,0 +1,86 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_1e7c04a3151043d792d6a5153c84d779"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_a5f8b3acaa0e4df49a7cb1eb8456d09a"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_8c306308b09848bbb49c835dd3ea1030"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_4302fb536c604be9a7bc062252dcb9ff"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_3fc2666011fd4f128b235b040d9818af"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_fc7d5f4108a84caf84d3574558ede229"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_e9dc4dfc73eaaf94aae27e0ed6cc9ada"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_66befe7b24c42dd458952e3c47c93563"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_e9dc4dfc73eaaf94aae27e0ed6cc9ada"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_e9dc4dfc73eaaf94aae27e0ed6cc9ada"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_789c7539ba659174db702e18d7c2d330"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "BladeboundArchetype",
+  "guid": "9b3915d38c7d4b6495415b38571e9d53",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Bladebound"
+}

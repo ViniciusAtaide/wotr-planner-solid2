@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "MarksmansHatItem",
+  "guid": "7188029fda598f749a9dfbf23bec9bdc",
+  "m_Enchantments": [
+    "!bp_70df8e08c2c7f4a41ba6e6fc28849690"
+  ],
+  "name": "Marksman's Headset"
+}

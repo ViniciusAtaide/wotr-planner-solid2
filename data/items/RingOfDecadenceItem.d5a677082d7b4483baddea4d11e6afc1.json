@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfDecadenceItem",
+  "guid": "d5a677082d7b4483baddea4d11e6afc1",
+  "m_Enchantments": [
+    "!bp_9155aad08d85468fb6f891ba4131835a"
+  ],
+  "name": "Ring of Decadence"
+}

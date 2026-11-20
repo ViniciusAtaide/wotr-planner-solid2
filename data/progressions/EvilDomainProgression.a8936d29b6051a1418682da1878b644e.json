@@ -1,0 +1,93 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_351235ac5fc2b7e47801f63d117b656c"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_82b654d68ea6ce143be5f7df646d6385"
+    },
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "Evil",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_bd2a6afae68a445da4d17b32116798fc"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "Domain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_80de18178ff13304e8cf27ba3ef3d77d"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_3784df3083cb6404fbce7a585be24bcf"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "EvilDomainProgression",
+  "guid": "a8936d29b6051a1418682da1878b644e",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": -2,
+      "m_Archetype": "!bp_f996f0a18e5d945459e710ee3a6dd485"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_34ecd1b5e1b90b9498795791b0855239"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [
+    "!bp_5e6852592ebb4c218139136f60d3ac08"
+  ],
+  "name": "Evil Domain"
+}

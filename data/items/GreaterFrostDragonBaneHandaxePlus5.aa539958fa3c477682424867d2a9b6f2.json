@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "GreaterFrostDragonBaneHandaxePlus5",
+  "guid": "aa539958fa3c477682424867d2a9b6f2",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_54e7473ff73910c47812fd39c897dc1a",
+  "name": "Greater Frost Dragon Bane Handaxe +5"
+}

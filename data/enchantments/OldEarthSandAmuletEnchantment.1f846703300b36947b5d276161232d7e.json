@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_ad30167a519323d4b94e34df76adf466"
+    }
+  ],
+  "assetName": "OldEarthSandAmuletEnchantment",
+  "guid": "1f846703300b36947b5d276161232d7e"
+}

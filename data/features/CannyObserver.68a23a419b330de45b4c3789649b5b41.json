@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "None",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillPerception",
+      "Value": 4
+    }
+  ],
+  "Groups": [
+    "RogueTalent",
+    "SlayerTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CannyObserver",
+  "guid": "68a23a419b330de45b4c3789649b5b41",
+  "name": "Canny Observer"
+}

@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_5e4620cea099c9345a9207c11d7bc916"
+      ]
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8c769102f3996684fb6e09a2c4e7e5b9"
+    }
+  ],
+  "Groups": [
+    "ChannelEnergy"
+  ],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "ChannelEnergyFeature",
+  "guid": "a79013ff4bcd4864cb669622a29ddafb",
+  "name": "Channel Positive Energy (Cleric)"
+}

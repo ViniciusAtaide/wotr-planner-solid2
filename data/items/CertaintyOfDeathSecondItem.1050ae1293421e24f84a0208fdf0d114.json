@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "CertaintyOfDeathSecondItem",
+  "guid": "1050ae1293421e24f84a0208fdf0d114",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": "!bp_1050ae1293421e24f84a0208fdf0d114",
+  "m_Type": "!bp_c4e95e3c489721e4382fd8514a522f9d"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "SpearFrostPlus2",
+  "guid": "2794ecc469734d44da57e9df96733a8e",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_4b289eccefe6d704093201e52eb6d123",
+  "name": "Frost Spear +2"
+}

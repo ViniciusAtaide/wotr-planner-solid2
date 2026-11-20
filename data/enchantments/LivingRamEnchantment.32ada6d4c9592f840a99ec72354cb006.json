@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_d6709c00f074f814f91d09dd6d46372e"
+    }
+  ],
+  "assetName": "LivingRamEnchantment",
+  "guid": "32ada6d4c9592f840a99ec72354cb006"
+}

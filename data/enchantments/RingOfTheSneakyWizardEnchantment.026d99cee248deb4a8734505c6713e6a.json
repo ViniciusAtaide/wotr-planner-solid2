@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_d848f1f1b31b3e143ba4aeeecddb17f4"
+    }
+  ],
+  "assetName": "RingOfTheSneakyWizardEnchantment",
+  "guid": "026d99cee248deb4a8734505c6713e6a"
+}

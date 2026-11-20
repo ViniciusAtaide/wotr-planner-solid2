@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MagusArcana"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WandWielder",
+  "guid": "5826562b74d529e41af2d60feeca093d",
+  "name": "Wand Wielder"
+}

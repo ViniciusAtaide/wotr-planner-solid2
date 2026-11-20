@@ -1,0 +1,40 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_2fa48527ba627254ba9bf4556330a4d4",
+        "!bp_42b8ce9dfb087c74db531bad426ad2f3",
+        "!bp_5cf933b9ae8cfad4e98cc85d0df57a41",
+        "!bp_f53404854de9fd04a9ff1959385edb71"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_57e3577a0eb53294e9d7cc649d5239a3",
+        "!bp_86beb0391653faf43aec60d5ec05b538"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": []
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "PsychokineticistArchetype",
+  "guid": "f2847dd4b12fffd41beaa3d7120d27ad",
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_ReflexSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "name": "Psychokineticist"
+}

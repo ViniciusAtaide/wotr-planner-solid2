@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanLightHammerStage2",
+  "guid": "9e46130495348d54fbd3c22cac8b08b9",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_bbf7d0ea57e4c9349b65c82abc6787b4",
+  "name": "Finnean the Talking Weapon (Light Hammer +3)"
+}

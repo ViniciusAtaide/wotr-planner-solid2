@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "BloodlineUndeadGraspOfTheDeadExtraUse",
+  "guid": "dd5cffe0376788544a8f2b907c56186d",
+  "name": "Grasp of the Dead"
+}

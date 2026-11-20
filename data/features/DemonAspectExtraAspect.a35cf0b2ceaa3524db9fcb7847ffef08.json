@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "IncreaseActivatableAbilityGroupSize",
+      "Group": "DemonMinorAspect"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 5,
+  "assetName": "DemonAspectExtraAspect",
+  "guid": "a35cf0b2ceaa3524db9fcb7847ffef08",
+  "name": "Extra Minor Aspect"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_004b2856c07ff424ab0d3b0edd5dedcb"
+    }
+  ],
+  "assetName": "FlowingScalesEnchantment",
+  "guid": "2881e79b0ca86c844972f0d5f6baf33e"
+}

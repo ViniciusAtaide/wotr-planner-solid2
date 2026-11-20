@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_26b10d4340839004f960f9816f6109fe"
+    }
+  ],
+  "assetName": "CobraPadsItem",
+  "guid": "6497e0f07a3b49d8b50a33f27f86d8d2",
+  "m_Enchantments": [
+    "!bp_88f95c33d8ec444dacd059016bc9e520"
+  ],
+  "name": "Cobra Pads"
+}

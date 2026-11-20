@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronMasterworkLongspear",
+  "guid": "d337860b76913b243b43e92ba1491566",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_fa2dd17cbde7d3f4aa918d467c30516e",
+  "name": "Cold Iron Masterwork Longspear"
+}

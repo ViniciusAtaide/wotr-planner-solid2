@@ -1,0 +1,85 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c008853fe044bd442ae8bd22260592b7"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_9dc676c4ab1d0c643bb2293696375fcf"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_f5198dee99fe48c5bcbeefbaac0de3f6"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "Domain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_3079cdfba971d614ab4f49220c6cd228"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_9c4b72c847277cd4c94933a647d846cc"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "TravelDomainProgression",
+  "guid": "d169dd2de3630b749a2363c028bb6e7b",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": -2,
+      "m_Archetype": "!bp_f996f0a18e5d945459e710ee3a6dd485"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_34ecd1b5e1b90b9498795791b0855239"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [
+    "!bp_3758edaa5cc54cb88b0d87a9f4a34df1",
+    "!bp_87ca7098bb964c9c9860f453950efa79"
+  ],
+  "name": "Travel Domain"
+}

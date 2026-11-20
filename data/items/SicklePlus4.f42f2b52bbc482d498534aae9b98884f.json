@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "SicklePlus4",
+  "guid": "f42f2b52bbc482d498534aae9b98884f",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_ec2da496c7936e14c9a28ce616a6b4cd"
+}

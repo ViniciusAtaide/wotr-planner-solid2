@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "OakOfThunderItem",
+  "guid": "979e5ca29d444084aa1cf7534d2e8424",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_6972dd5ae56d473da36ac121608aceff"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_25da2dc95ed4a6b419608c678f2a9cc3",
+  "name": "Oak of Thunder"
+}

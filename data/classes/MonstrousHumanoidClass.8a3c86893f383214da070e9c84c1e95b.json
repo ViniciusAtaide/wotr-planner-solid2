@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillMobility",
+    "SkillPerception",
+    "SkillLoreNature"
+  ],
+  "Components": [],
+  "DontAddCasterLevels": false,
+  "HitDie": "D10",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 4,
+  "assetName": "MonstrousHumanoidClass",
+  "guid": "8a3c86893f383214da070e9c84c1e95b",
+  "m_Archetypes": [],
+  "m_BaseAttackBonus": "!bp_b3057560ffff3514299e8b93e7648a9d",
+  "m_FortitudeSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_74b05814c8dc58946b343be646b190b7",
+  "m_ReflexSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Monstrous Humanoid"
+}

@@ -1,0 +1,43 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [
+        "!bp_52dbfd8505e22f84fad8d702611f60b7"
+      ],
+      "m_Archetypes": [
+        "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+      ],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_e46981dfc05f3924784942b8684194ec"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 2,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_f16a771606839fe4db31090db4739efe"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreNature"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillAthletics"
+    }
+  ],
+  "Groups": [
+    "OracleMystery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleNatureMysteryFeature",
+  "guid": "69579bfe28e15b942af0722021d8725c",
+  "name": "Nature"
+}

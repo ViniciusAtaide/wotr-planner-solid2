@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanClubStage3Base",
+  "guid": "06f7c35c9c4ace0469e93e250e736e48",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_26aa0672af2c7d84ba93bec37758c712",
+  "name": "Finnean the Talking Weapon (Club +5)"
+}

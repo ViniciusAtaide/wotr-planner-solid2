@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_42a455d9ec1ad924d889272429eb8391"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "Div2PlusStep",
+      "m_StartLevel": 4,
+      "m_StepLevel": -1,
+      "m_Type": "DamageBonus",
+      "m_UseMax": false,
+      "m_UseMin": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 20,
+  "assetName": "FleshOfStoneEffectFeature",
+  "guid": "a942347023fedb2419f8bdbb4450e528",
+  "name": "Flesh of Stone (effect)"
+}

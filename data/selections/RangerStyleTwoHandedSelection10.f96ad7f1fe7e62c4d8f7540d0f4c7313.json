@@ -1,0 +1,37 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_83a4b2605333e004f875e2fd22f6be30"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "RangerStyleTwoHandedSelection10",
+  "guid": "f96ad7f1fe7e62c4d8f7540d0f4c7313",
+  "m_AllFeatures": [
+    "!bp_9972f33f977fc724c838e59641b2fca5",
+    "!bp_d809b6c4ff2aaff4fa70d712a70f7d7b",
+    "!bp_59bd93899149fa44687ff4121389b3a9",
+    "!bp_cc9c862ef2e03af4f89be5088851ea35",
+    "!bp_8ac59959b1b23c347a0361dc97cc786d",
+    "!bp_d76497bfc48516e45a0831628f767a0f",
+    "!bp_fc37b70e3d064a147a3a99db4a86ee12",
+    "!bp_d09b20029e9abfe4480b356c92095623",
+    "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5",
+    "!bp_175d1577bb6c9a04baf88eec99c66334",
+    "!bp_15e7da6645a7f3d41bdad7c8c4b9de1e",
+    "!bp_79042cb55f030614ea29956177977c52"
+  ],
+  "name": "Two-Handed Weapon (level 10)"
+}

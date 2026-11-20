@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_b487473ce4c54ebca18b78170c1854fa"
+    }
+  ],
+  "assetName": "PurgingChainsEnchantment",
+  "guid": "507cb6dcab0e450c87ec3d23388cedca"
+}

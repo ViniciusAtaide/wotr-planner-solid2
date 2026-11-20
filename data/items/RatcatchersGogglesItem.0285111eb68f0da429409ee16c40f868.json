@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "RatcatchersGogglesItem",
+  "guid": "0285111eb68f0da429409ee16c40f868",
+  "m_Enchantments": [
+    "!bp_8b32698fa16296a40b3448e196b061af"
+  ],
+  "name": "Ratcatcher's Goggles"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "SpiritTrackersItem",
+  "guid": "c5aeb081a0dd85a47b3190a187cad9a0",
+  "m_Enchantments": [
+    "!bp_7fe766fa2e2b4df4e8aae015335f65f1"
+  ],
+  "name": "Spirit Trackers"
+}

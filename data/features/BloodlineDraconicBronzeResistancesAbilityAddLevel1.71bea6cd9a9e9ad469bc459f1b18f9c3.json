@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 9,
+      "m_AdditionalClasses": [
+        "!bp_45a4607686d96a1498891b3286121780",
+        "!bp_72051275b1dbb2d42ba9118237794f7c"
+      ],
+      "m_Archetypes": [
+        "!bp_d078b2ef073f2814c9e338a789d97b73"
+      ],
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf",
+      "m_Feature": "!bp_920ae03f1b4ed1b4bb5217099103e54a"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "BloodlineDraconicBronzeResistancesAbilityAddLevel1",
+  "guid": "71bea6cd9a9e9ad469bc459f1b18f9c3",
+  "name": "Dragon Resistances (Draconic Bloodline — Bronze)"
+}

@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "with Trip",
+  "reason": "WildTalentSelection 5c883ae0cd6d7d5448b7a420f51f8459 and ExtraWildTalentSelection 0f73730cf1b44ee882671e55d5f6e471 offer every 'Kineticist Bonus Feat — Earth' copy side by side, at no level and under the same name. Their prerequisites tell them apart: each copy is for a character who already has a different set of Great Fortitude and Trip (PrerequisiteFeature and PrerequisiteNoFeature on each), so only one is ever open. No single named prerequisite sets one copy apart, since the copy for both shares each name with a copy for one. The copy for neither stays bare (WildTalentBonusFeatEarth).",
+  "target": "fc75b0bcfcb5236419d1a47e1bc555a9"
+}

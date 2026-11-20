@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "JokeOfFateItem",
+  "guid": "9630773155e5b964d9c4e8e235edadeb",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_5a939137fc039084580725b2b0845c3f",
+  "name": "Joke of Fate"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "SaiShockPlus1",
+  "guid": "7ebf1039d362bd04ebcaf64a4261ca87",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_0944f411666c7594aa1398a7476ecf7d",
+  "name": "Shock Sai +1"
+}

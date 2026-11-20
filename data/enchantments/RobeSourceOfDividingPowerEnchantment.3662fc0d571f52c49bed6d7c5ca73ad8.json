@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_ec66027e2f5d2404f9f846bbc9dc2ec0"
+    }
+  ],
+  "assetName": "RobeSourceOfDividingPowerEnchantment",
+  "guid": "3662fc0d571f52c49bed6d7c5ca73ad8"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FeralRaideritem",
+  "guid": "4513576d55584e54b9271d47641d4445",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_fa2dd17cbde7d3f4aa918d467c30516e",
+  "name": "Feral Raider"
+}

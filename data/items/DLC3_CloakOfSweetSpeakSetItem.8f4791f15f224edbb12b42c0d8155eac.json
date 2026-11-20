@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "DLC3_CloakOfSweetSpeakSetItem",
+  "guid": "8f4791f15f224edbb12b42c0d8155eac",
+  "m_Enchantments": [
+    "!bp_b746adf5d653427cbeeacd6ff610db15"
+  ],
+  "name": "Cloak of Sweet Lies"
+}

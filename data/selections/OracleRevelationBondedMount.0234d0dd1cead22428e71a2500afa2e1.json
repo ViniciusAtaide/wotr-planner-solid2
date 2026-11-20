@@ -1,0 +1,56 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_7d1c29c3101dd7643a625448fbbaa919"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_cb06f0e72ffb5c640a156bd9f8000c1d"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_65af7290b4efd5f418132141aaa36c1b"
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_69579bfe28e15b942af0722021d8725c",
+        "!bp_8b74ff25102c72047bf77e6e3642ee2d",
+        "!bp_b52fb5bc68d3edc4b9525f4e7414765f"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_0234d0dd1cead22428e71a2500afa2e1"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "OracleRevelation"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "OracleRevelationBondedMount",
+  "guid": "0234d0dd1cead22428e71a2500afa2e1",
+  "m_AllFeatures": [
+    "!bp_472091361cf118049a2b4339c4ea836a",
+    "!bp_9dc58b5901677c942854019d1dd98374",
+    "!bp_67a9dc42b15d0954ca4689b13e8dedea",
+    "!bp_bfeb9be0a3c9420b8b2beecc8171029c"
+  ],
+  "name": "Animal Companion (Revelation)"
+}

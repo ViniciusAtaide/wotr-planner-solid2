@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "EyesOfTheDragon",
+  "guid": "c3bf24ba54024fbe8f2a682371a9fc51",
+  "m_Enchantments": [
+    "!bp_9908521147334a9da464312c0e25f6d2"
+  ],
+  "name": "Eyes of the Dragon"
+}

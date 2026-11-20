@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StormcallerItem",
+  "guid": "859725fd13b5c3946a6ce3a94a0bc965",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_168ebcb75813db2488cc94ac26d6a702"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_4b289eccefe6d704093201e52eb6d123",
+  "name": "Stormcaller"
+}

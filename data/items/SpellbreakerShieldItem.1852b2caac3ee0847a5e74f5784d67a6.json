@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "SpellbreakerShieldItem",
+  "guid": "1852b2caac3ee0847a5e74f5784d67a6",
+  "m_ArmorComponent": "!bp_33d3dfb8c84cd2f4182e022e9adaea2f",
+  "m_WeaponComponent": null,
+  "name": "Spellbreaker"
+}

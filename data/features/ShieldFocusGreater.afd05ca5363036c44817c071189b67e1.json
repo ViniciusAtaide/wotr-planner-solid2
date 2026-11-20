@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteProficiency",
+      "ArmorProficiencies": [
+        "LightShield",
+        "HeavyShield",
+        "Buckler"
+      ],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 8,
+      "Not": false,
+      "m_CharacterClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_ac57069b6bf8c904086171683992a92a"
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 8,
+      "m_Archetype": "!bp_aed5b306ad734a6da5d5638edcb667c9",
+      "m_CharacterClass": "!bp_a406d6ebea5c46bba3160246be03e96f"
+    }
+  ],
+  "Groups": [
+    "CombatFeat",
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShieldFocusGreater",
+  "guid": "afd05ca5363036c44817c071189b67e1",
+  "name": "Greater Shield Focus"
+}

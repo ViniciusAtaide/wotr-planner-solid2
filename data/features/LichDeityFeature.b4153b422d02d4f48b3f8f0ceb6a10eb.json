@@ -1,0 +1,89 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "LawfulNeutral, TrueNeutral, LawfulEvil, NeutralEvil",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": true,
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_a099afe1b0b32554199b230699a69525",
+        "!bp_dab5255d809f77c4395afc2b713e9cd6",
+        "!bp_8c7d778bc39fec642befc1435b00f613",
+        "!bp_351235ac5fc2b7e47801f63d117b656c",
+        "!bp_58d2867520de17247ac6988a31f9e397",
+        "!bp_060dc9e6dea044a2a478e36545adfadc"
+      ]
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c4403567ea9e5fe478ca38e3052fadc2"
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_bfa11238e7ae3544bbeb4d0b92e897ec"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_a4560e3fb5d247d68fb1a2738fcc0855",
+      "m_CharacterClass": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_f68ca492c9c15e241ab73735fbd0fb9f",
+      "m_CharacterClass": "!bp_30b5e47d47a0e37438cc5a80c96cfb99"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_857bc9fadf70f294795a9cba974a48b8",
+      "m_CharacterClass": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_411fa458481e44f0855d47a19358874b",
+      "m_CharacterClass": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_464ffaf88140474a949618bec7955e78"
+    }
+  ],
+  "Groups": [
+    "Deities"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "LichDeityFeature",
+  "guid": "b4153b422d02d4f48b3f8f0ceb6a10eb",
+  "name": "Lord/Lady of Death"
+}

@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "MonkNoArmorAndMonkWeaponFeatureUnlock",
+      "IsSohei": true,
+      "IsZenArcher": false,
+      "m_BowWeaponTypes": [],
+      "m_NewFact": "!bp_f747687001c8c2944bc9c064d59f9627"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SoheiKiStrikeAdamantineUnlock",
+  "guid": "707756f8da99563429d869ca17ae76d2",
+  "name": "Ki Strike — Adamantine (Sohei)"
+}

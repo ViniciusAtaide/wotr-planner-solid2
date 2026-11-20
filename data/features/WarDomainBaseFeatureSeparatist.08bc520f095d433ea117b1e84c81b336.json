@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 1,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0",
+      "m_Feature": "!bp_7f76ea8b38d258d4f917a0e9d8455cec"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WarDomainBaseFeatureSeparatist",
+  "guid": "08bc520f095d433ea117b1e84c81b336",
+  "name": "War Domain (Separatist)"
+}

@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_26b10d4340839004f960f9816f6109fe"
+    }
+  ],
+  "assetName": "UnholyKneePadsItem",
+  "guid": "d657c55461344f748d76a8a03e6bdbd9",
+  "m_Enchantments": [
+    "!bp_1dae7d98ada54792b0cf394fbb13fc6d"
+  ],
+  "name": "Unholy Knee Pads"
+}

@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "GlobalSpellAmplifyResistanceFeature",
+  "guid": "4997c2c310c64702a72f6a2df03b960b"
+}

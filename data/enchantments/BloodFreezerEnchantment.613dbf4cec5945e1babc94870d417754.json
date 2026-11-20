@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_bab261011bb34be999f73bb26fa136ed"
+    }
+  ],
+  "assetName": "BloodFreezerEnchantment",
+  "guid": "613dbf4cec5945e1babc94870d417754"
+}

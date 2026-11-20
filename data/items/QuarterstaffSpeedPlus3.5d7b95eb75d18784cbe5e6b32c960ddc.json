@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "QuarterstaffSpeedPlus3",
+  "guid": "5d7b95eb75d18784cbe5e6b32c960ddc",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_629736dabac7f9f4a819dc854eaed2d6",
+  "name": "Speed Quarterstaff +3"
+}

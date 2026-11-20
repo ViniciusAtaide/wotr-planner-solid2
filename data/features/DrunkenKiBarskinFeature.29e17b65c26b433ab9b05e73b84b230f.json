@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 4,
+      "Not": false,
+      "m_CharacterClass": "!bp_e8f21e5b58e0569468e420ebea456124"
+    }
+  ],
+  "Groups": [
+    "KiPowers"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DrunkenKiBarskinFeature",
+  "guid": "29e17b65c26b433ab9b05e73b84b230f",
+  "name": "Ki Power: Barkskin (Drunken Ki)"
+}

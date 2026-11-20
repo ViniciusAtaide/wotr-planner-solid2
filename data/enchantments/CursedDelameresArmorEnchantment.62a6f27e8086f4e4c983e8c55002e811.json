@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_2870e55b0dc900c41b3578ab494ff849"
+    }
+  ],
+  "assetName": "CursedDelameresArmorEnchantment",
+  "guid": "62a6f27e8086f4e4c983e8c55002e811"
+}

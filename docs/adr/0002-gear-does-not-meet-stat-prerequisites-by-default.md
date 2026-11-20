@@ -1,0 +1,3 @@
+# Gear does not count toward stat prerequisites unless the Build opts in
+
+The game counts an item's enhancement bonus toward ability-score prerequisites, and it switches a feat off whenever that score later drops, for example when the item comes off. The planner promises never to hold a pick that can fail, so by default a Build must meet every stat prerequisite without its Gear. A Build may opt into counting Gear, and each pick that then depends on Gear is marked as gear-dependent along with the items it needs. The agent tools never opt in. This is stricter than the game on purpose: a reader who sees a legal in-game feat refused should know it is refused by design.

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "DisengageWithoutAttackOfOpportunity"
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "ShifterWildShapeHorseBuff8",
+  "guid": "4a5e4c66ca8d4657b281060a24886ad1",
+  "name": "Major Form (Horse)"
+}

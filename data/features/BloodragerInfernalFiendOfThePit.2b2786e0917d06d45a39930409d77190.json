@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d8b8d1dd83393484cbacf6c8830080ae"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodragerInfernalFiendOfThePit",
+  "guid": "2b2786e0917d06d45a39930409d77190",
+  "name": "Fiend of the Pit"
+}

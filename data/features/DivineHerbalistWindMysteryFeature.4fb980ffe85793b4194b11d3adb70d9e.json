@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_169f0e005a5cc9143b0009359fa1453f"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 2,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_f482b5b69aaab72489d1f0da74743106"
+    }
+  ],
+  "Groups": [
+    "DivineHerbalistMystery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DivineHerbalistWindMysteryFeature",
+  "guid": "4fb980ffe85793b4194b11d3adb70d9e",
+  "name": "Wind (Divine Herbalist)"
+}

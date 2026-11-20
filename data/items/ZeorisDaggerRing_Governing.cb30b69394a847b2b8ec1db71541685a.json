@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "ZeorisDaggerRing_Governing",
+  "guid": "cb30b69394a847b2b8ec1db71541685a",
+  "m_Enchantments": [
+    "!bp_2a4e61dcd2b74da3b742e1e67837b825"
+  ],
+  "name": "Zaoris's Beauty (ring)"
+}

@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c39576f8842e4505b14aa918b3a36a0a"
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "GreaterDispelFocus",
+  "guid": "d0cf79c8e0a44325b00dc8fa6ad37d7c",
+  "name": "Greater Dispel Focus"
+}

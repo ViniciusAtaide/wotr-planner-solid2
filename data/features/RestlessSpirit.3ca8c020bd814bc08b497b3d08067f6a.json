@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "IsUnitMythicLevel",
+        "CheckMaxLevel": false,
+        "CheckMinLevel": true,
+        "MaxLevel": null,
+        "MinLevel": {
+          "$type": "IntConstant",
+          "Value": 2
+        },
+        "Not": false,
+        "Unit": {
+          "$type": "ContextTargetUnit"
+        }
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "RestlessSpirit",
+  "guid": "3ca8c020bd814bc08b497b3d08067f6a",
+  "name": "Unreposing Spirit"
+}

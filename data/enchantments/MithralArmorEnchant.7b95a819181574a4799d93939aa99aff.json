@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "MithralEnchantment"
+    }
+  ],
+  "assetName": "MithralArmorEnchant",
+  "guid": "7b95a819181574a4799d93939aa99aff"
+}

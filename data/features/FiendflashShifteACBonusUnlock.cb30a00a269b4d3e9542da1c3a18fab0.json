@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "MonkNoArmorFeatureUnlock",
+      "m_NewFact": "!bp_5c9ac114c928420eb1a5041dfa84f07c"
+    },
+    {
+      "$type": "HasArmorFeatureUnlock",
+      "FilterByArmorProficiencyGroup": false,
+      "FilterByBlueprintArmorTypes": true,
+      "m_ArmorProficiencyGroupEntries": "Light",
+      "m_BlueprintArmorTypes": [
+        "!bp_aae2cb63162d6334b9a9150398124d46",
+        "!bp_b7e26eed57d524b478c0c90df0f0b8f1",
+        "!bp_c850ba40ed3a61b489b438a5ffa71de9",
+        "!bp_503056b4c5a01f44db0ed10ce4c9ef01",
+        "!bp_7a01292cef39bf2408f7fae7a9f47594",
+        "!bp_bcb6205a498355c47a972558565c7783",
+        "!bp_9511d62bcfc57c245bf64350a5933470",
+        "!bp_56d86616f18533e4d87f9a56a85f015d",
+        "!bp_d3b50e39b4a46f04cb732acdafb1bad1"
+      ],
+      "m_DisableWhenHasShield": false,
+      "m_NewFact": "!bp_42bf4675858647bdbebaed022e34872a"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FiendflashShifteACBonusUnlock",
+  "guid": "cb30a00a269b4d3e9542da1c3a18fab0",
+  "name": "Fiendish Resilience"
+}

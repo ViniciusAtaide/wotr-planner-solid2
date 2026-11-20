@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_6301c49e7bb2e804d94cb725582aaa31"
+    }
+  ],
+  "assetName": "RingOfDeadlySwingEnchantment",
+  "guid": "48fbd54e9c5a2154c8917bdcbc2c39e2"
+}

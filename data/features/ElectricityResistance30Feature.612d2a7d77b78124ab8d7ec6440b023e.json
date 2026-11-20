@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "ElectricityResistance30Feature",
+  "guid": "612d2a7d77b78124ab8d7ec6440b023e"
+}

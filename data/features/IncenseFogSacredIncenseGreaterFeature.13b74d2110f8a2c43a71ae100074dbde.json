@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 12,
+      "Not": false,
+      "m_CharacterClass": "!bp_0937bec61c0dabc468428f496580c721"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_a3c58f42ba0e324469381c027a1950a4"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "IncenseFogSacredIncenseGreaterFeature",
+  "guid": "13b74d2110f8a2c43a71ae100074dbde",
+  "name": "Incense Fog — Sacred Incense, Greater"
+}

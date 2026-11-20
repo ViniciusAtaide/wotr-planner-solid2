@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_d0313b3110357b14ebd3102c2d4cde20"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "MysticTheurgeAngelfireApostleLevelUp",
+  "guid": "61bf15564948bff4ab847bfe5d5d0f1f",
+  "name": "Angelfire Apostle"
+}

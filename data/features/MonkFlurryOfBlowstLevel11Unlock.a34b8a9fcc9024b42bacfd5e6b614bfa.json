@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "MonkNoArmorAndMonkWeaponFeatureUnlock",
+      "IsSohei": false,
+      "IsZenArcher": false,
+      "m_BowWeaponTypes": [],
+      "m_NewFact": "!bp_de25523acc24b1448aa90f74d6512a08"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "MonkFlurryOfBlowstLevel11Unlock",
+  "guid": "a34b8a9fcc9024b42bacfd5e6b614bfa"
+}

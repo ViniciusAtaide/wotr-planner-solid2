@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DivineDismissalItem",
+  "guid": "c896a13e9c2efd149814b93083d0c1b4",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979",
+    "!bp_dbbac4cf8ba06864c958f47ae6d4146f"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_54e960775daa4714fa52e0954d8cf862",
+  "name": "Divine Dismissal"
+}

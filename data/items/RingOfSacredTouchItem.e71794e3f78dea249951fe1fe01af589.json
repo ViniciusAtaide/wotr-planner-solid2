@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfSacredTouchItem",
+  "guid": "e71794e3f78dea249951fe1fe01af589",
+  "m_Enchantments": [
+    "!bp_e62079b8dfcd02a40b09cacc8c459e0e"
+  ],
+  "name": "Ring of Sacred Touch"
+}

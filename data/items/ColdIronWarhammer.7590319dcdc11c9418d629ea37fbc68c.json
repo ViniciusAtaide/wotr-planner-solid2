@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronWarhammer",
+  "guid": "7590319dcdc11c9418d629ea37fbc68c",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_fac41e149f49cba4a8e06ce39b41a6fa",
+  "name": "Cold Iron Warhammer"
+}

@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "DamageResistance2Feature",
+  "guid": "8847c22f8f2e39643a7023f5cabdb9d9"
+}

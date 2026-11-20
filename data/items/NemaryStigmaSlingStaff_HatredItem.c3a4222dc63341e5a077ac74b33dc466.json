@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "NemaryStigmaSlingStaff_HatredItem",
+  "guid": "c3a4222dc63341e5a077ac74b33dc466",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_a1455a289da208144981e4b1ef92cc56",
+    "!bp_af376a7a80ef46a1a9449c437a0b01fd"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_25da2dc95ed4a6b419608c678f2a9cc3",
+  "name": "Flame's Hatred (Sling Staff)"
+}

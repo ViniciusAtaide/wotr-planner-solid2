@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "MonkNoArmorFeatureUnlock",
+      "m_NewFact": "!bp_a71103ce28964f39b38442baa32a3031"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CunningElusionUnlockFeature",
+  "guid": "91c8b2e3abdb4e2e807fddb668b619f8",
+  "name": "Cunning Elusion"
+}

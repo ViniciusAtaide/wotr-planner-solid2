@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ScimitarKeenSpeedPlus2",
+  "guid": "d33b221de272d494cb443b9ca2035fbb",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d9fbec4637d71bd4ebc977628de3daf3",
+  "name": "Mithral Speed Scimitar +2"
+}

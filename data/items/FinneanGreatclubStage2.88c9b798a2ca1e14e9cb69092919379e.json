@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanGreatclubStage2",
+  "guid": "88c9b798a2ca1e14e9cb69092919379e",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1b8c24cd1f9358c48839bb39266468c3",
+  "name": "Finnean the Talking Weapon (Greatclub +3)"
+}

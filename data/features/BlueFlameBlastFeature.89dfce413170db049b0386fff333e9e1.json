@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_9ff81732daddb174aa8138ad1297c787",
+      "m_Feature": "!bp_f8934aab37bd99f4285cfa1e9d998f23"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 20,
+  "assetName": "BlueFlameBlastFeature",
+  "guid": "89dfce413170db049b0386fff333e9e1",
+  "name": "Blue Flame Blast"
+}

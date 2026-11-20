@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "GogglesOfPiercingGazeItem",
+  "guid": "f1bb19cd55a5d6a47ae9661c55614f2e",
+  "m_Enchantments": [
+    "!bp_826ea5e205e77004e830c2864d924583"
+  ],
+  "name": "Goggles of Piercing Gaze"
+}

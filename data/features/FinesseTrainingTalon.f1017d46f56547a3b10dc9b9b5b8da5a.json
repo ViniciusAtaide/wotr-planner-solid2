@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteProficiency",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "Talon"
+      ]
+    },
+    {
+      "$type": "PrerequisiteConditionForWeaponCategory",
+      "m_Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "ContextConditionIsWeaponEquipped",
+              "BothHandsAreEmpty": false,
+              "Category": "Talon",
+              "CheckOnCaster": true,
+              "CheckSlot": false,
+              "CheckWeaponCategory": true,
+              "CheckWeaponRangeType": false,
+              "JustCheckEmptyHand": false,
+              "Not": false,
+              "RangeType": "Melee",
+              "Slot": "PrimaryHand"
+            }
+          ],
+          "Operation": "And"
+        },
+        "Not": false
+      },
+      "m_WeaponCategories": [
+        "Talon"
+      ]
+    }
+  ],
+  "Groups": [
+    "FinesseTraining"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FinesseTrainingTalon",
+  "guid": "f1017d46f56547a3b10dc9b9b5b8da5a",
+  "name": "Finesse Training (Talon)"
+}

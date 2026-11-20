@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfProtection7Extra",
+  "guid": "b23ed741ab984225946c7d22c96c680d",
+  "m_Enchantments": [
+    "!bp_62ec0b22425fb424c82fd52d7f4c02a5"
+  ],
+  "name": "Flawless Ring of Protection +7"
+}

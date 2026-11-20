@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "DemonicAspect"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BrimorakAspectFeature",
+  "guid": "28f08ce20ee81b24abfd49404e4b9577",
+  "name": "Aspect of the Brimorak"
+}

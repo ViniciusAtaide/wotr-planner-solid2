@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "BastionOfLionHeartShieldItem",
+  "guid": "93eda98aab2ecb84eb1fe104d2ed449d",
+  "m_ArmorComponent": "!bp_1d8e0e7047b50f94e8c7bfe192c10a91",
+  "m_WeaponComponent": null,
+  "name": "Bastion of Lion's Heart"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "MasterworkDwarvenUrgrosh",
+  "guid": "f20fef6a2bcfdf349afdbb26ae78463b",
+  "m_Enchantments": [],
+  "m_SecondWeapon": "!bp_c3065fb76e553a94cafdcb1a4d3fa6b2",
+  "m_Type": "!bp_0ec97c08fdf87e44f8f16ba87b511743",
+  "name": "Masterwork Dwarven Urgrosh"
+}

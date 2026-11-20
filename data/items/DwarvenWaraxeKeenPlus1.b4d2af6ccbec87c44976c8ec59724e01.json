@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DwarvenWaraxeKeenPlus1",
+  "guid": "b4d2af6ccbec87c44976c8ec59724e01",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a6925f5f897801449a648d865637e5a0",
+  "name": "Keen Dwarven Waraxe +1"
+}

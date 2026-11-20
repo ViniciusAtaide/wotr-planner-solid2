@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintUnit",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_c4403567ea9e5fe478ca38e3052fadc2"
+      ]
+    }
+  ],
+  "assetName": "StartGame_Player_Unit",
+  "guid": "4391e8b9afbb0cf43aeba700c089f56d"
+}

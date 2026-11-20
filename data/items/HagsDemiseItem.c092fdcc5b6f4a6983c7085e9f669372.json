@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "HagsDemiseItem",
+  "guid": "c092fdcc5b6f4a6983c7085e9f669372",
+  "m_Enchantments": [
+    "!bp_a7efe327fc3347e594ff20bbdf199388"
+  ],
+  "name": "Hag's Demise"
+}

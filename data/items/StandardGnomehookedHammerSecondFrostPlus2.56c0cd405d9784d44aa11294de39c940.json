@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardGnomehookedHammerSecondFrostPlus2",
+  "guid": "56c0cd405d9784d44aa11294de39c940",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_018ad48ffd3460d47900491656d2ff26"
+}

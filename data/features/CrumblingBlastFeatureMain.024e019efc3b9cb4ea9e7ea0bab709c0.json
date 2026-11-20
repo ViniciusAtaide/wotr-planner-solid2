@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 17,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [
+        "!bp_72fa7b1c7a6ede44eb490080bf4a2f90"
+      ],
+      "m_Class": "!bp_6afa347d804838b48bda16acb0573dc0",
+      "m_Feature": "!bp_2e3414d6804be1f429f2ab703d53787c"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CrumblingBlastFeatureMain",
+  "guid": "024e019efc3b9cb4ea9e7ea0bab709c0",
+  "name": "Crumbling Blast (Herald of the Horn 11)"
+}

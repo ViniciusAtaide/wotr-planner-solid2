@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "LightPickPlus1",
+  "guid": "d70cf7ea5cc033f45b16d9bac9ead236",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_da922f4cdb60ef548a2ec0168620568a"
+}

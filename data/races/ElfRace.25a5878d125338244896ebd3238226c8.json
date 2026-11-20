@@ -1,0 +1,48 @@
+{
+  "$type": "BlueprintRace",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Dexterity",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Intelligence",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonusIfHasFact",
+      "Descriptor": "Racial",
+      "InvertCondition": true,
+      "RequireAllFacts": false,
+      "Stat": "Constitution",
+      "Value": {
+        "Value": -2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_CheckedFacts": [
+        "!bp_325f078c584318849bfe3da9ea245b9d"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "SelectableRaceStat": false,
+  "assetName": "ElfRace",
+  "guid": "25a5878d125338244896ebd3238226c8",
+  "m_Features": [
+    "!bp_9c747d24f6321f744aa1bb4bd343880d",
+    "!bp_55edf82380a1c8540af6c6037d34f322",
+    "!bp_2483a523984f44944a7cf157b21bf79c",
+    "!bp_03fd1e043fc678a4baf73fe67c3780ce",
+    "!bp_5482f879dcfd40f9a3168fdb48bc938c"
+  ],
+  "name": "Elf"
+}

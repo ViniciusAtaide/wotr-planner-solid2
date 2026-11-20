@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "BackgroundSelection"
+  ],
+  "HideInUI": true,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BackgroundsNobleSelection",
+  "guid": "7b11f589e81617a46b3e5eda3632508d",
+  "m_AllFeatures": [
+    "!bp_2aca424b9a5e1b1408078ac0a4ed7bc3",
+    "!bp_c4ec4d736067fa945b512a235b13030b",
+    "!bp_d7f5d62db424d3c4bbfb178bbb0b4e22"
+  ],
+  "name": "Noble"
+}

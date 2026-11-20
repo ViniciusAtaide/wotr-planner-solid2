@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": false,
+  "IsMythic": true,
+  "Spontaneous": true,
+  "assetName": "AeonSpellbook",
+  "guid": "6091d66a2a9876b4891b989804cfbcb6",
+  "m_SpellsPerDay": "!bp_d37182c66580e064480aaa8d2e33f293",
+  "name": "Aeon"
+}

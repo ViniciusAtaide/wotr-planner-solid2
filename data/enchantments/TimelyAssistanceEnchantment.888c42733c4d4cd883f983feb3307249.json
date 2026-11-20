@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_6561c197db404818844a5bd71a61525b"
+    }
+  ],
+  "assetName": "TimelyAssistanceEnchantment",
+  "guid": "888c42733c4d4cd883f983feb3307249"
+}

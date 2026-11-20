@@ -1,0 +1,95 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 1,
+      "m_CharacterClass": "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": true,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_2076161c9131d3f4ca76a0d5f5fde8d6",
+        "!bp_028cad27dabad7643844a6057bce1480"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_2076161c9131d3f4ca76a0d5f5fde8d6"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_2076161c9131d3f4ca76a0d5f5fde8d6"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_2076161c9131d3f4ca76a0d5f5fde8d6"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_2076161c9131d3f4ca76a0d5f5fde8d6"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_2076161c9131d3f4ca76a0d5f5fde8d6"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_2076161c9131d3f4ca76a0d5f5fde8d6"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_2076161c9131d3f4ca76a0d5f5fde8d6"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_2076161c9131d3f4ca76a0d5f5fde8d6"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_2076161c9131d3f4ca76a0d5f5fde8d6"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WinterWitchShamanProgression",
+  "guid": "0bb1ebe4749807244ab344e1ed25986f",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_eb24ca44debf6714aabe1af1fd905a07"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Shaman"
+}

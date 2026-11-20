@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "BattleaxeCorrosivePlus2",
+  "guid": "9072648f31590974781b5870af51c6c9",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_2bc77aa47f97de348aefcf03ec8fa43b",
+  "name": "Corrosive Battleaxe +2"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfReveredChampionItem",
+  "guid": "9d7a3cf8ea3448bc9dc7d7b844247e42",
+  "m_Enchantments": [
+    "!bp_f66e0424c33045ef9d331ba131ae5227"
+  ],
+  "name": "Ring of Revered Champion"
+}

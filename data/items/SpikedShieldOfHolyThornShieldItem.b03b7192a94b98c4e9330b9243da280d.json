@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "SpikedShieldOfHolyThornShieldItem",
+  "guid": "b03b7192a94b98c4e9330b9243da280d",
+  "m_ArmorComponent": "!bp_58c05084b6443234e99660f86a781d33",
+  "m_WeaponComponent": "!bp_5de129db16c218f4391d03ff63dd4b3b",
+  "name": "Shield of Holy Thorn"
+}

@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "BucklerOfRayNegationShieldItem",
+  "guid": "956a46cdf919c9c4ab39371b014a375f",
+  "m_ArmorComponent": "!bp_7663a420615c5344299943999c51b028",
+  "m_WeaponComponent": null,
+  "name": "Buckler of Ray Negation"
+}

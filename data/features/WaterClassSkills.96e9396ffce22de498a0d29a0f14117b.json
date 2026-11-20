@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreNature"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillAthletics"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WaterClassSkills",
+  "guid": "96e9396ffce22de498a0d29a0f14117b",
+  "name": "Class Skills (Water)"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "CompositeShortbowPlus4",
+  "guid": "327cd32ab719b1042bef7c45222eedf4",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_011f6f86a0b16df4bbf7f40878c3e80b"
+}

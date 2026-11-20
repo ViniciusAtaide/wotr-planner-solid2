@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_44f16931dabdff643bfe2a48138e769f"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "WinterWitchShamanLevelUp",
+  "guid": "2076161c9131d3f4ca76a0d5f5fde8d6",
+  "name": "Shaman"
+}

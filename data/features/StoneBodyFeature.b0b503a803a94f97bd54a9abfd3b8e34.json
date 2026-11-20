@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_ced0f4e5d02d5914a9f9ff74acacf26d"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "StoneBodyFeature",
+  "guid": "b0b503a803a94f97bd54a9abfd3b8e34",
+  "name": "Stone Body"
+}

@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 7,
+      "Not": false,
+      "m_CharacterClass": "!bp_ed246f1680e667b47b7427d51e651059"
+    }
+  ],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FreeFromEvil",
+  "guid": "a0a814897cd33ed4ea6ffca4b0e1197a",
+  "name": "Any Means Necessary"
+}

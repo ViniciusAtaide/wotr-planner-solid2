@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronGreatsword",
+  "guid": "d48ee6124ad593f429e2e618726f2ef7",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_5f824fbb0766a3543bbd6ae50248688f",
+  "name": "Cold Iron Greatsword"
+}

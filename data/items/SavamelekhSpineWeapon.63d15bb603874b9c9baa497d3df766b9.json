@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "SavamelekhSpineWeapon",
+  "guid": "63d15bb603874b9c9baa497d3df766b9",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_a1455a289da208144981e4b1ef92cc56"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1ac79088a7e5dde46966636a3ac71c35",
+  "name": "Savamelekh Spine"
+}

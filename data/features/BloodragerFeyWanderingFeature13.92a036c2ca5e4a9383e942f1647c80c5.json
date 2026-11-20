@@ -1,0 +1,65 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 1,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499",
+      "m_Feature": "!bp_7b2cee44ff286e640bb7ed053de80785"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 4,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499",
+      "m_Feature": "!bp_cfe2b18b06439b24b8bd5a1d6bf8754b"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 8,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499",
+      "m_Feature": "!bp_a15ebd7e497765442b1663a11ce621c4"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 12,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499",
+      "m_Feature": "!bp_1dcd8dc39c157b94f93077822d93ef58"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 16,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499",
+      "m_Feature": "!bp_3a6e7bb6f624e0f4d8e8003f92ff501c"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499",
+      "m_Feature": "!bp_49c7d32e5c60b2b4791dcaf728a4c8cf"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "BloodragerFeyWanderingFeature13",
+  "guid": "92a036c2ca5e4a9383e942f1647c80c5",
+  "name": "Fey"
+}

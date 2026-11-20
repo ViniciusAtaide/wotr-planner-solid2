@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_db564a58e77d1a64bada263b94d1ef8d"
+    }
+  ],
+  "assetName": "RobeOfEarthEnchant",
+  "guid": "87b96ae9ecf792741b409e85bebe30a7"
+}

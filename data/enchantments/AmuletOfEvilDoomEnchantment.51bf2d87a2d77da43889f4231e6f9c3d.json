@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_0a29cf9bc6ba9df4da329ce9feb4c7dc"
+    }
+  ],
+  "assetName": "AmuletOfEvilDoomEnchantment",
+  "guid": "51bf2d87a2d77da43889f4231e6f9c3d"
+}

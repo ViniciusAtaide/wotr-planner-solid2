@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_363737ca96b4a084b852688fd7430fa5"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineElementalFireElementalBodyFeature",
+  "guid": "5d974328297021a479b4e3a1de749126",
+  "name": "Elemental Body (fire)"
+}

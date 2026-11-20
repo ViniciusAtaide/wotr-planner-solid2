@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronLightMace",
+  "guid": "9d5b3d28fe5399f4ba4a82419f80cda3",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_cf3e703db4b81904e982a66d7b8474ea",
+  "name": "Cold Iron Light Mace"
+}

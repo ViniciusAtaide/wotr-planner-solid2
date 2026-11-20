@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e31d849e4eb2578458419c9df622270f"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "HellKnightOrderSelection",
+  "guid": "e31d849e4eb2578458419c9df622270f",
+  "m_AllFeatures": [
+    "!bp_90eb2a2cec75a8f4fb79ed637c082f47",
+    "!bp_475a3716ef4756849acf7c0c855dbe31",
+    "!bp_5636564c278583342aec54eb2b409029",
+    "!bp_e506d5dee7944b50824054c6526c6532",
+    "!bp_603944646bb64a34d8a9e526301398ee",
+    "!bp_9ff89287e89287c4498d551d88221447",
+    "!bp_552f196e7a10bea4b9a5e7cb0147c89f"
+  ],
+  "name": "Order"
+}

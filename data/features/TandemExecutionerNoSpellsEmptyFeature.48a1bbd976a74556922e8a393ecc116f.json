@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TandemExecutionerNoSpellsEmptyFeature",
+  "guid": "48a1bbd976a74556922e8a393ecc116f",
+  "name": "Aversion to Spellcasting"
+}

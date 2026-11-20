@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DeathPactItem",
+  "guid": "6fb23ea72faa4effb29f8c0674c9bdce",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a14a1b224cd173449cb7ffc77d5f65c",
+  "name": "Death Pact"
+}

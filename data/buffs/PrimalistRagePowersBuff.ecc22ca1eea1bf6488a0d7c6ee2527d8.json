@@ -1,0 +1,60 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFactContextActions",
+      "Activated": {
+        "Actions": [
+          {
+            "$type": "Conditional",
+            "ConditionsChecker": {
+              "Conditions": [
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_25954b1652bebc2409f9cb9d5728bceb"
+                }
+              ],
+              "Operation": "And"
+            },
+            "IfFalse": {
+              "Actions": []
+            },
+            "IfTrue": {
+              "Actions": [
+                {
+                  "$type": "ContextActionApplyBuff",
+                  "Permanent": true,
+                  "m_Buff": "!bp_a67b51a8074ae47438280be0a87b01b6"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_a406d6ebea5c46bba3160246be03e96f"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [
+        "!bp_e14fc59ea6774f43834e73d81138d19e"
+      ],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "AsIs",
+      "m_StartLevel": 0,
+      "m_StepLevel": 4,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": false
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "PrimalistRagePowersBuff",
+  "guid": "ecc22ca1eea1bf6488a0d7c6ee2527d8"
+}

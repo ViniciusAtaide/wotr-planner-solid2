@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintStatProgression",
+  "Bonuses": [
+    0,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    4,
+    4,
+    5,
+    5
+  ],
+  "Components": [],
+  "assetName": "SavesPrestigeHigh",
+  "guid": "1f309006cd2855e4e91a6c3707f3f700"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "TunicOfArdentWarpriestItem",
+  "guid": "10b4e06e151d35d4783ee9dada7c6df4",
+  "m_Enchantments": [
+    "!bp_49f53e7cb012fe545984ea349a31c580"
+  ],
+  "name": "Tunic of Ardent Warpriest"
+}

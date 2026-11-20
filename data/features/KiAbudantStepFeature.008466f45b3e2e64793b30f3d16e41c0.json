@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 8,
+      "Not": false,
+      "m_CharacterClass": "!bp_e8f21e5b58e0569468e420ebea456124"
+    }
+  ],
+  "Groups": [
+    "KiPowers"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "KiAbudantStepFeature",
+  "guid": "008466f45b3e2e64793b30f3d16e41c0",
+  "name": "Ki Power: Abundant Step (Monk)"
+}

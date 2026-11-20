@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_c263f44f72df009489409af122b5eefc",
+        "!bp_4b152a7bc5bab5042b437b955fea46cd",
+        "!bp_7e3f3228be49cce49bda37f7901bf246",
+        "!bp_52f8ef060a751a247964adae7fcb7e64",
+        "!bp_bd9df2d4a4cef274285b8827b6769bde",
+        "!bp_ced0f4e5d02d5914a9f9ff74acacf26d"
+      ]
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "CannotBeFlanked"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SubtypeElemental",
+  "guid": "198fd8924dabcb5478d0f78bd453c586",
+  "name": "Elemental Subtype"
+}

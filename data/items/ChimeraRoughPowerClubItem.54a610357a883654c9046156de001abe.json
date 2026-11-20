@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ChimeraRoughPowerClubItem",
+  "guid": "54a610357a883654c9046156de001abe",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_26aa0672af2c7d84ba93bec37758c712",
+  "name": "Craving Maw (Club)"
+}

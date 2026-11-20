@@ -1,0 +1,52 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "ShamanSpirit"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_5c3ccab7cb27f4a408531197eb2abd3f",
+        "!bp_f25964faa73484140b2efeafa0402965"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_ef692472df1b10f4caec90b4984965ef"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_6ea4b2cfa00bb75408662cd6168a64c1"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_936734437ee8493497760174a0543045"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ShamanStonesSpiritProgression",
+  "guid": "acff6b0cf279a31439010afea01df912",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Stone (progression)"
+}

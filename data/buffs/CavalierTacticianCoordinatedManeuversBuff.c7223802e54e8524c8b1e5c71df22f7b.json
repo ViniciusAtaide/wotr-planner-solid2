@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_b186cea78dce3a04aacff0a81786008c",
+      "m_Feature": "!bp_b186cea78dce3a04aacff0a81786008c"
+    }
+  ],
+  "Stacking": "Prolong",
+  "assetName": "CavalierTacticianCoordinatedManeuversBuff",
+  "guid": "c7223802e54e8524c8b1e5c71df22f7b",
+  "name": "Coordinated Maneuvers (buff)"
+}

@@ -1,0 +1,8 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "HeavyShieldItemFiendishPlus3",
+  "guid": "f4be34f359984edc83e4a4b2f204b7e2",
+  "m_ArmorComponent": "!bp_58c05084b6443234e99660f86a781d33",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393"
+}

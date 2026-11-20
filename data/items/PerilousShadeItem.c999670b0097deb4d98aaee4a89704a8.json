@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "PerilousShadeItem",
+  "guid": "c999670b0097deb4d98aaee4a89704a8",
+  "m_Enchantments": [
+    "!bp_14a6d538623462f4aaac123ca438e772"
+  ],
+  "name": "Perilous Shade"
+}

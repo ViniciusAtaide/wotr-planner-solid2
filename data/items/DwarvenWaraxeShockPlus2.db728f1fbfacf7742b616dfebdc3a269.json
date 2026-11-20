@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DwarvenWaraxeShockPlus2",
+  "guid": "db728f1fbfacf7742b616dfebdc3a269",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a6925f5f897801449a648d865637e5a0",
+  "name": "Shock Dwarven Waraxe +2"
+}

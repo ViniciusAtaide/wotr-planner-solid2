@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfLesserColdResistanceItem",
+  "guid": "546c72cd7d8ec664ea5fcfae47c7b91b",
+  "m_Enchantments": [
+    "!bp_c872314ecfab32949ad2e0eebd834919"
+  ],
+  "name": "Belt of Lesser Cold Resistance"
+}

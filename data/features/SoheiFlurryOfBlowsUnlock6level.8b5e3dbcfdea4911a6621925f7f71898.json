@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "MonkNoArmorAndMonkWeaponFeatureUnlock",
+      "IsSohei": true,
+      "IsZenArcher": false,
+      "m_BowWeaponTypes": [],
+      "m_NewFact": "!bp_332362f3bd39ebe46a740a36960fdcb4"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "SoheiFlurryOfBlowsUnlock6level",
+  "guid": "8b5e3dbcfdea4911a6621925f7f71898"
+}

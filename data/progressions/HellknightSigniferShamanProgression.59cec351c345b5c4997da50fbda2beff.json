@@ -1,0 +1,96 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "HellknightSigniferSpellbook"
+  ],
+  "HideInUI": true,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_f073d0122a4dd5f46a63403ef212fabe"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_f073d0122a4dd5f46a63403ef212fabe"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_f073d0122a4dd5f46a63403ef212fabe"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_f073d0122a4dd5f46a63403ef212fabe"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_f073d0122a4dd5f46a63403ef212fabe"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_f073d0122a4dd5f46a63403ef212fabe"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_f073d0122a4dd5f46a63403ef212fabe"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_f073d0122a4dd5f46a63403ef212fabe"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_f073d0122a4dd5f46a63403ef212fabe"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_f073d0122a4dd5f46a63403ef212fabe"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "HellknightSigniferShamanProgression",
+  "guid": "59cec351c345b5c4997da50fbda2beff",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_ee6425d6392101843af35f756ce7fefd"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Shaman"
+}

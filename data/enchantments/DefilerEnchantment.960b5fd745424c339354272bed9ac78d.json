@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_1a4b86e872084b38b2ee5429f2568eb2"
+    }
+  ],
+  "assetName": "DefilerEnchantment",
+  "guid": "960b5fd745424c339354272bed9ac78d"
+}

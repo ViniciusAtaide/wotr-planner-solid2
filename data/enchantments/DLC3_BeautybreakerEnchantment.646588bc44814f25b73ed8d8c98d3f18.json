@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8a627b385786402e8503206fdeff7b5e"
+    }
+  ],
+  "assetName": "DLC3_BeautybreakerEnchantment",
+  "guid": "646588bc44814f25b73ed8d8c98d3f18"
+}

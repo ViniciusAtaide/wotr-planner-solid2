@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "RedistributionOfLife",
+  "guid": "75e576a3950b41b0bf7ea1a9684c7797",
+  "name": "Redistribute Life"
+}

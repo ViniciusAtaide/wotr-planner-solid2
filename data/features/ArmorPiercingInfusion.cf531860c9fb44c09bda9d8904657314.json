@@ -1,0 +1,38 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 12,
+      "Not": false,
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 12,
+      "m_Archetype": "!bp_e0684d0a6ef44cae9d095f5318618a85",
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "Groups": [
+    "KineticBlastInfusion"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArmorPiercingInfusion",
+  "guid": "cf531860c9fb44c09bda9d8904657314",
+  "name": "Honed Infusion"
+}

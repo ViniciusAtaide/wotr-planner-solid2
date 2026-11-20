@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfStrength4",
+  "guid": "ede812de6b31b194686595fab33fc3ed",
+  "m_Enchantments": [
+    "!bp_f9278c2ea13c2b34cb56be078428a0bb"
+  ],
+  "name": "Belt of Giant Strength +4"
+}

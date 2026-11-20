@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "KitsuneHeritage",
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "KitsuneHeritageSelection",
+  "guid": "ec40cc350b18c8c47a59b782feb91d1f",
+  "m_AllFeatures": [
+    "!bp_cd6cd774fb7cc844b8417193ee3a5ebe",
+    "!bp_d6bc49651fbaa2944bba6e2e5a1720ff"
+  ],
+  "name": "Kitsune Heritage"
+}

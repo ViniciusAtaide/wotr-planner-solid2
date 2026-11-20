@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillStealth"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineSerpentineClassSkill",
+  "guid": "70e2242c7d52a1b428938d406adfd8ef",
+  "name": "Class Skill — Stealth (Serpentine Bloodline)"
+}

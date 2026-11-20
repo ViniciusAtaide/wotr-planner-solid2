@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 5,
+  "assetName": "StudentOfWarKnowSlowYourEnemyFeature",
+  "guid": "13d93becd091494fb629621094ccbfa4",
+  "name": "Know Your Enemy"
+}

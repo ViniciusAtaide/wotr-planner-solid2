@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Enhancement",
+      "Stat": "Strength",
+      "Value": 2
+    },
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_2141e1c10e28464fa43647cca2fb1fda"
+    }
+  ],
+  "assetName": "SarkorisDirgeEnchantment",
+  "guid": "e02dedda1d5248b3aa9016f918722c2e"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "MythicHardToKill"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MythicStartingClassFinished",
+  "guid": "bef12729fa3f9b34488634f61751e295",
+  "name": "Hard to Kill"
+}

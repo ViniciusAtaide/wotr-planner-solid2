@@ -1,0 +1,56 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_7c1fdd831af747b47bb2cce0051f309b"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_83bb307b3ee74090b7b86c1a8c0a7612"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_0d319cfd0a2f457cb5f99c90e9d6dc2e"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_5531b975dcdf0e24c98f1ff7e017e741"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_60008a10ad7ad6543b1f63016741a5d2"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_60008a10ad7ad6543b1f63016741a5d2"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "WIndWhispererArchetype",
+  "guid": "77769e43e63647c2b32298efcc577aca",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Wind Whisperer"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArcaneMetamagicFeature",
+  "guid": "842528c733db422a915b7b06e9a71178",
+  "name": "Arcane Metamagic (Phantasmal Mage 1)"
+}

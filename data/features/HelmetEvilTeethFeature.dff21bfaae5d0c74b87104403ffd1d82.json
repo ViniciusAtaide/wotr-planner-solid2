@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_734a29b693e9ec346ba2951b27987e33",
+      "m_Feature": "!bp_734a29b693e9ec346ba2951b27987e33"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "HelmetEvilTeethFeature",
+  "guid": "dff21bfaae5d0c74b87104403ffd1d82",
+  "name": "Dead Man's Hat"
+}

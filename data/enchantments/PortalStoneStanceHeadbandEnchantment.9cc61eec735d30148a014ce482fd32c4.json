@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_20668f918a503934ea00d4882e6c96c9"
+    }
+  ],
+  "assetName": "PortalStoneStanceHeadbandEnchantment",
+  "guid": "9cc61eec735d30148a014ce482fd32c4"
+}

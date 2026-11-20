@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_b5a8f5bb6503c9846bdea9428d3d442a"
+    }
+  ],
+  "assetName": "CrystalDaggerEnchantment",
+  "guid": "ac3b2efb35ed4c04d8be2db24f013847"
+}

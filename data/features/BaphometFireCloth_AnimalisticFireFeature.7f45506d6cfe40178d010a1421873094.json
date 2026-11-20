@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Penalty",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AC",
+      "Value": -2
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "BaphometFireCloth_AnimalisticFireFeature",
+  "guid": "7f45506d6cfe40178d010a1421873094"
+}

@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_e015d05ca18b5c24183cd062486fd46b",
+        "!bp_93919f8ce64dc5a4cbf058a486a44a1b"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SpecializationSchoolTransmutation",
+  "guid": "c459c8200e666ef4c990873d3e501b91",
+  "name": "Specialist School — Transmutation"
+}

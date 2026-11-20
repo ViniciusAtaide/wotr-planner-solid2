@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AssassinPublicExecutionFeature",
+  "guid": "0579b74972044b4ab2f88fa74cdc13e2",
+  "name": "Public Execution"
+}

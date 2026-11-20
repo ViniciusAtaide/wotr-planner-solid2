@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_dc2e4e8226fa4067a5ee8a8d3a07085a"
+    }
+  ],
+  "assetName": "DLC3_CloakOfSweetSpeakEnchantment",
+  "guid": "b746adf5d653427cbeeacd6ff610db15"
+}

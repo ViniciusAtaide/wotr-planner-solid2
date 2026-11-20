@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_94803619404f4ac4a7d478c9915a1509"
+    }
+  ],
+  "assetName": "ViciousStompersEnchantment",
+  "guid": "2e13b5587599492baf489d444ddb30f4"
+}

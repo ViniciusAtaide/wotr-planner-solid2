@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "RovagugRelicScorpionBattlaxeItem",
+  "guid": "c8cbabf8272ab574ca158fd46ebb6899",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5",
+    "!bp_08dfd84c0a80dfb48924a5f3800bbd2d"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_2bc77aa47f97de348aefcf03ec8fa43b",
+  "name": "Scorpion's Kiss (Battleaxe)"
+}

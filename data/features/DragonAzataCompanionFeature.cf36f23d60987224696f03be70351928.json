@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddPet",
+      "Type": "AzataHavocDragon"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DragonAzataCompanionFeature",
+  "guid": "cf36f23d60987224696f03be70351928",
+  "name": "Dragon Companion"
+}

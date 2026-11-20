@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "BlackHatOfHandsomenessItem",
+  "guid": "4a1b9d61532e4d9298ddd8fcf01cfdd6",
+  "m_Enchantments": [
+    "!bp_f945413e1b120294780ba9de26bd2f7a"
+  ],
+  "name": "Black Hat of Handsomeness"
+}

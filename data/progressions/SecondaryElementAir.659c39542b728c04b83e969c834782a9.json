@@ -1,0 +1,92 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "ActivateTrigger",
+      "Actions": {
+        "Actions": [
+          {
+            "$type": "AddFact",
+            "Unit": {
+              "$type": "FactOwner"
+            },
+            "m_Fact": "!bp_295080cf4691df9438f58ff5ce79ee65"
+          },
+          {
+            "$type": "ContextActionAddFeature",
+            "m_PermanentFeature": "!bp_cb09e292ad9acc3428fa0dfdcbb83883",
+            "m_SetRankFrom": null
+          },
+          {
+            "$type": "ContextActionAddFeature",
+            "m_PermanentFeature": "!bp_c2c28b6f6f000314eb35fff49bb99920",
+            "m_SetRankFrom": null
+          }
+        ]
+      },
+      "Conditions": {
+        "Conditions": [
+          {
+            "$type": "HasFact",
+            "Not": false,
+            "Unit": {
+              "$type": "FactOwner"
+            },
+            "m_Fact": "!bp_2bd0d44953a536f489082534c48f8e31"
+          },
+          {
+            "$type": "HasFact",
+            "Not": false,
+            "Unit": {
+              "$type": "FactOwner"
+            },
+            "m_Fact": "!bp_93bd14dd916cfd1429c11ad66adf5e2b"
+          }
+        ],
+        "Operation": "Or"
+      }
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_cb30a291c75def84090430fbf2b5c05e"
+      ]
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "KineticElementalFocus"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_49e55e8f24e1ad24e910fefc0258adba"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": []
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "SecondaryElementAir",
+  "guid": "659c39542b728c04b83e969c834782a9",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Air (Kineticist 7)"
+}

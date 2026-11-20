@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ScytheCorrosivePlus1",
+  "guid": "540f999d022b16f42b663af74ea6f102",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_4eacfc7e152930a45a1a16217c35011c",
+  "name": "Corrosive Scythe +1"
+}

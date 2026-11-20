@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "ClumsyHelmetItem",
+  "guid": "a24096fcf3ed4cca9623676f9a6f8a48",
+  "m_Enchantments": [
+    "!bp_f945413e1b120294780ba9de26bd2f7a"
+  ],
+  "name": "Clumsy Helmet"
+}

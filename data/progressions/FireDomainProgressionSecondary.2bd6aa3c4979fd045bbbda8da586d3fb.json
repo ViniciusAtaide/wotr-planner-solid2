@@ -1,0 +1,80 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8d4e9731082008640b28417f577f5f31"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_881b2137a1779294c8956fe5b497cc35"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_2bd6aa3c4979fd045bbbda8da586d3fb"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_d3949a3deaf044c2bfcbed10321f2a32"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "ClericSecondaryDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_42cc125d570c5334c89c6499b55fc0a3"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_ef5aedb6a97071b46969b61a86a967db"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_ef5aedb6a97071b46969b61a86a967db"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_6c46620d4cab41b42be8dd8cfb1aa9d2"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "FireDomainProgressionSecondary",
+  "guid": "2bd6aa3c4979fd045bbbda8da586d3fb",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Fire Domain (Domain Selection)"
+}

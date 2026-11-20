@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TwoHandedFighterOverhandChop",
+  "guid": "ad4d4db6bb9c75a4a9bc59174b948769",
+  "name": "Overhand Chop"
+}

@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "water",
+  "reason": "Each elemental bloodline grants its own \"Elemental Body\" at level 20 (BloodlineElementalWaterProgression and the seeker's copy), and the Mythic Bloodline Ascendance selection offers all four. The four share their grantors' family name, so each is qualified by its element.",
+  "target": "c459fcee6baabd149ac79acb0cb1d40e"
+}

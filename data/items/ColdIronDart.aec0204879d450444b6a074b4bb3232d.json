@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronDart",
+  "guid": "aec0204879d450444b6a074b4bb3232d",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_f415ae950523a7843a74d7780dd551af",
+  "name": "Cold Iron Dart"
+}

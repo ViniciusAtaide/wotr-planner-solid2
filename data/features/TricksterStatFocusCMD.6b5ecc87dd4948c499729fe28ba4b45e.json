@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Mythic",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AdditionalCMD",
+      "Value": 1
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterStatFocusCMD",
+  "guid": "6b5ecc87dd4948c499729fe28ba4b45e",
+  "name": "Stat Focus — CMD"
+}

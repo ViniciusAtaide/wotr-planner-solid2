@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "SkinnedLeatherCloakItem",
+  "guid": "98d3ea2a37f566c4ebce104c2d60fdb9",
+  "m_Enchantments": [
+    "!bp_4ce017d8c8dd45d4e9e16ff3aa82b4e8"
+  ],
+  "name": "Skinned Leather Cloak"
+}

@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_8872513a42974ab7bd30a5e2b4ce848d"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DragonLevel3MaxAbilityDexterityFeature",
+  "guid": "5db9024e9b4449308201f40e1943f810"
+}

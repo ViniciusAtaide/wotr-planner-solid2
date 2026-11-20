@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Morale",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SaveFortitude",
+      "Value": 4
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Morale",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SaveReflex",
+      "Value": 4
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Penalty",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SaveWill",
+      "Value": -4
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "NahCollarFeature",
+  "guid": "48d6cf10a24c43c0bc0fb15a87faf18b"
+}

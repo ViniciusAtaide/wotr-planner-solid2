@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_65a630aa291f65047b90a2af5df75d83",
+      "m_CharacterClass": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_a0e56a59ad0b44b8add84185da6bb845",
+      "m_CharacterClass": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineFeySpellLevel2",
+  "guid": "b90d5afdf3f1f8f448474de8d078b67e",
+  "name": "Hideous Laughter"
+}

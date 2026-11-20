@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_ee30c90f38cd09a43905e6507c02f63a"
+    }
+  ],
+  "assetName": "DamageResistance2MeleeEnchant",
+  "guid": "500d0eaa4ab890442b0b10e21baa7452"
+}

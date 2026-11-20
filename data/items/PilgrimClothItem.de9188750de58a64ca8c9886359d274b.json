@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "PilgrimClothItem",
+  "guid": "de9188750de58a64ca8c9886359d274b",
+  "m_Enchantments": [
+    "!bp_a2ae3618d6cfbcd409fe98ca47da50b1"
+  ],
+  "name": "Pilgrim's Shirt"
+}

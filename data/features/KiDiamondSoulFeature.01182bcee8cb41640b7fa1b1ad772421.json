@@ -1,0 +1,41 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 14,
+      "Not": false,
+      "m_CharacterClass": "!bp_e8f21e5b58e0569468e420ebea456124"
+    },
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_e8f21e5b58e0569468e420ebea456124"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "BonusValue",
+      "m_StartLevel": 0,
+      "m_StepLevel": 10,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": false
+    }
+  ],
+  "Groups": [
+    "KiPowers",
+    "ScaledFistKiPowers"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "KiDiamondSoulFeature",
+  "guid": "01182bcee8cb41640b7fa1b1ad772421",
+  "name": "Ki Power: Diamond Soul (Monk)"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_88a5cab73a14f324c99b40e213ef2cd7"
+    }
+  ],
+  "assetName": "FlowingHalfplateEnchantment",
+  "guid": "273ec10cc8d5b334ab67f38571387639"
+}

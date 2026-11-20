@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_9d7bb2a6d590ba0498992f6ce825f2cc",
+      "m_Feature": "!bp_9d7bb2a6d590ba0498992f6ce825f2cc"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicBrassBreathWeaponBaseFeature",
+  "guid": "807a97d06f5cdf245b9cc17d7b2429a9",
+  "name": "Breath Weapon (Draconic Bloodline — Brass)"
+}

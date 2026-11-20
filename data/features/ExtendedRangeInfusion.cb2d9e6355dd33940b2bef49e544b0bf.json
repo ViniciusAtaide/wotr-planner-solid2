@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_1f3a15a3ae8a5524ab8b97f469bf4e3d"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_e0684d0a6ef44cae9d095f5318618a85",
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "Groups": [
+    "KineticBlastInfusion"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ExtendedRangeInfusion",
+  "guid": "cb2d9e6355dd33940b2bef49e544b0bf",
+  "name": "Extended Range"
+}

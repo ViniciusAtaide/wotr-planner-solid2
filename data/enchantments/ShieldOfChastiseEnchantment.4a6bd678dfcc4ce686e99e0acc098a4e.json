@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_21ed093c157846c59792166a0becab50"
+    }
+  ],
+  "assetName": "ShieldOfChastiseEnchantment",
+  "guid": "4a6bd678dfcc4ce686e99e0acc098a4e"
+}

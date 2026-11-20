@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 15,
+      "Not": false,
+      "m_CharacterClass": "!bp_45a4607686d96a1498891b3286121780"
+    }
+  ],
+  "Groups": [
+    "EldritchScionArcana"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EldritchBaneBladeFeature",
+  "guid": "94564072c5e32d34d88a2d4203bc5bbf",
+  "name": "Bane Blade (Magus Arcana)"
+}

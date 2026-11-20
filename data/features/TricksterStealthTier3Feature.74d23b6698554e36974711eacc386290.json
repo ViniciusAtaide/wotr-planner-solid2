@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_0d1071f085c5c4f408cd2bf1ec4f6adc"
+    }
+  ],
+  "Groups": [
+    "MythicTrick3"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterStealthTier3Feature",
+  "guid": "74d23b6698554e36974711eacc386290",
+  "name": "Stealth 3 Rank"
+}

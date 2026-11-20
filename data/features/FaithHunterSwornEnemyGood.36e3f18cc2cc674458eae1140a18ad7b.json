@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "Evil",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FaithHunterSwornEnemyGood",
+  "guid": "36e3f18cc2cc674458eae1140a18ad7b",
+  "name": "Sworn Enemy — Good"
+}

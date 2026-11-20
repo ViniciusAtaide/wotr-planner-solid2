@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_b8cecf4e5e464ad41b79d5b42b76b399"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 5,
+      "Not": false,
+      "m_CharacterClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_3aa4cbdd4af5ba54888b0dc7f07f80c4"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "WeaponTraining",
+  "Groups": [
+    "CombatFeat",
+    "Feat"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "AdvancedWeaponTraining1",
+  "guid": "3aa4cbdd4af5ba54888b0dc7f07f80c4",
+  "m_AllFeatures": [
+    "!bp_40437224e8606d644a1986311981c1eb",
+    "!bp_318ae316d7aed5143b7a8cbd25fd8e77",
+    "!bp_0ad7c2825c8504642b571265757d7037",
+    "!bp_2f1619e253ea6a04087def71c7925715",
+    "!bp_8140fe21fd91da3439bf5ed017ca9f90",
+    "!bp_87d6de4d30adc7244b7a3427d041dcaa",
+    "!bp_1054ea2fa21176249b96a63d54f02b17"
+  ],
+  "name": "Advanced Weapon Training (Fighter 5)"
+}

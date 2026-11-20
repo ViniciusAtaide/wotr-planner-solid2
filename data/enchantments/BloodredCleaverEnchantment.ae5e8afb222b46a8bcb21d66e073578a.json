@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_59b9fc0e8ab5473e97e9483491133308"
+    }
+  ],
+  "assetName": "BloodredCleaverEnchantment",
+  "guid": "ae5e8afb222b46a8bcb21d66e073578a"
+}

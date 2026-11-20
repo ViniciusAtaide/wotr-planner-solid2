@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "AsIs",
+      "m_StartLevel": 0,
+      "m_StepLevel": 0,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BlessedScriptFeature",
+  "guid": "42559d1923644932bea28da3795a0db5",
+  "name": "Blessed Script"
+}

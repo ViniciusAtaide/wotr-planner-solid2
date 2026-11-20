@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_4a7b5012fb7964a4dbcce3ca10d8694a"
+    }
+  ],
+  "assetName": "GlovesStaglordEnchantment",
+  "guid": "e9ca6a90318f10a4480114c7701c3a74"
+}

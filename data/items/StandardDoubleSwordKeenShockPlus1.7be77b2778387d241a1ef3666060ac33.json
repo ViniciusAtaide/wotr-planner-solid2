@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDoubleSwordKeenShockPlus1",
+  "guid": "7be77b2778387d241a1ef3666060ac33",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": "!bp_9681298dceba5f8458615f48a059d602",
+  "m_Type": "!bp_e95efb85a0912a7489be69d5f03a5308",
+  "name": "Keen Shock Two-Bladed Sword +1"
+}

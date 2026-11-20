@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "BootsOfSwiftFoot",
+  "guid": "8644bca1c3bf6f64ab4d89be643a8850",
+  "m_Enchantments": [
+    "!bp_b7f6bb4a2ad6970409df85bf6db587a5"
+  ],
+  "name": "Swiftfoot Boots"
+}

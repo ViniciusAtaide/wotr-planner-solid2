@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDwarvenUrgroshSpeedPlus4",
+  "guid": "cca4fb8b78201ca469f9fae9ad4cc980",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": "!bp_da008c2def908b14784b05d4ef7d1a40",
+  "m_Type": "!bp_0ec97c08fdf87e44f8f16ba87b511743",
+  "name": "Speed Dwarven Urgrosh +4"
+}

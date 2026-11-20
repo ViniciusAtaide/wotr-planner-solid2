@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "MithralChainshirt",
+  "guid": "5fb6d5f9241cef241a4c878ff30d6bd4",
+  "m_Enchantments": [
+    "!bp_7b95a819181574a4799d93939aa99aff"
+  ],
+  "m_Type": "!bp_7467b0ab8641d8f43af7fc46f2108a1a",
+  "name": "Mithral Chainshirt"
+}

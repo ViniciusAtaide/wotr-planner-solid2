@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "AssertionOfDominanceShieldItem",
+  "guid": "2ad512d4b7d1438c97b48fe232fcceb5",
+  "m_ArmorComponent": "!bp_18ce7a5689b64f9caaf546c949ab616d",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Assertion of Dominance"
+}

@@ -1,0 +1,71 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_738c5666f8ef46c45942df9100a0d254",
+      "m_CharacterClass": "!bp_c75e0971973957d4dbad24bc7957e4fb"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_f6e304de008939d46960a2ebb075e150",
+      "m_CharacterClass": "!bp_c75e0971973957d4dbad24bc7957e4fb"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_67bbc0dcd471ea0428a362f6e94f3a51",
+      "m_CharacterClass": "!bp_c75e0971973957d4dbad24bc7957e4fb"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_23a5d0ca607f6094097d509b2b1f4a10",
+      "m_CharacterClass": "!bp_c75e0971973957d4dbad24bc7957e4fb"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_598f461cd7885304e8bae040122cb249",
+      "m_CharacterClass": "!bp_c75e0971973957d4dbad24bc7957e4fb"
+    },
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_c75e0971973957d4dbad24bc7957e4fb"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "Div2",
+      "m_StartLevel": 0,
+      "m_StepLevel": 0,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": false
+    }
+  ],
+  "Groups": [
+    "SlayerTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ExecutionerPainfulStrike",
+  "guid": "052c82521039f7b4e978207eb533ead5",
+  "name": "Painful Strike"
+}

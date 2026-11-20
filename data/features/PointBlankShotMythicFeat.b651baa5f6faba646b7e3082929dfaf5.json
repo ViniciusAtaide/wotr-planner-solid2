@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_0da0c194d6e1d43419eb8d990b28e0ab"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PointBlankShotMythicFeat",
+  "guid": "b651baa5f6faba646b7e3082929dfaf5",
+  "name": "Point-Blank Shot (Mythic)"
+}

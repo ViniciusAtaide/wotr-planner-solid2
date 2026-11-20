@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShadowSpellsFeatureVanish",
+  "guid": "bac639f6e6524da08334a0e4534bd23e",
+  "name": "Vanish"
+}

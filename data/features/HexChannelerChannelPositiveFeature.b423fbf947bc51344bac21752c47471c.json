@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_b40316f05d4772e4894688e6743602bd"
+      ]
+    },
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "Good, LawfulNeutral, TrueNeutral, ChaoticNeutral",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HexChannelerChannelPositiveFeature",
+  "guid": "b423fbf947bc51344bac21752c47471c",
+  "name": "Channel Positive Energy (Hex Channeler)"
+}

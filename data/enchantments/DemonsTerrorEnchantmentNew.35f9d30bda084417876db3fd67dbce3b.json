@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_0c756dfc1d434a2296cca6d029243c69"
+    }
+  ],
+  "assetName": "DemonsTerrorEnchantmentNew",
+  "guid": "35f9d30bda084417876db3fd67dbce3b"
+}

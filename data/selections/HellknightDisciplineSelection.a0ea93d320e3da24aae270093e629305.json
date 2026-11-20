@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "HellknightDisciplineSelection",
+  "guid": "a0ea93d320e3da24aae270093e629305",
+  "m_AllFeatures": [
+    "!bp_b4f4cfaaad1ea9d4d95fbf2ca135f654",
+    "!bp_989e1392aa908e8469a853f94c77f8f0",
+    "!bp_57625b7729cf4244b977c84496e81cd7",
+    "!bp_ec7f3da71cdbfa74bbc91f783879f2cf",
+    "!bp_089be9f194bc4be458b1ac269e47d9cb",
+    "!bp_0ba3efd3cd8bdbc4c867260139c4826d",
+    "!bp_813d9df0462ac8f43bcc4fb9e528659e",
+    "!bp_b9750875e9d7454e85347d739a1bc894"
+  ],
+  "name": "Disciplines"
+}

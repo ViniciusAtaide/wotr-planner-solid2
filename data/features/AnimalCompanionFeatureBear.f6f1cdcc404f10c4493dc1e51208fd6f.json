@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddPet",
+      "Type": "AnimalCompanion"
+    },
+    {
+      "$type": "PrerequisitePet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "NoCompanion": true,
+      "Type": "AnimalCompanion"
+    }
+  ],
+  "Groups": [
+    "AnimalCompanion"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AnimalCompanionFeatureBear",
+  "guid": "f6f1cdcc404f10c4493dc1e51208fd6f",
+  "name": "Animal Companion — Dire Bear"
+}

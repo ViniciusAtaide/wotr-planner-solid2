@@ -1,0 +1,128 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_6ef23b06bafd8f544b783979e01e3505"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_6ef23b06bafd8f544b783979e01e3505"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_6ef23b06bafd8f544b783979e01e3505"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_6ef23b06bafd8f544b783979e01e3505"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_bb5ac8111e7693242834c8271e212ba3"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_65dfe37150104e744b4a2e93090a46cc"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_a543999ab3659ee468d5b74a182af4b0"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_acb4df34b25ca9043a6aba1a4c92bc69"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_8f4060852a4c8604290037365155662f"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_acb4df34b25ca9043a6aba1a4c92bc69"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_acb4df34b25ca9043a6aba1a4c92bc69"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_acb4df34b25ca9043a6aba1a4c92bc69"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_6d3fcfab6d935754c918eb0e004b5ef7"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_6d3fcfab6d935754c918eb0e004b5ef7"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_6d3fcfab6d935754c918eb0e004b5ef7"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_6d3fcfab6d935754c918eb0e004b5ef7"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_6d3fcfab6d935754c918eb0e004b5ef7"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_a6e13797b0a20d2458a086a8a511fd8c"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "TranquilWhispererArchetype",
+  "guid": "bed077eaa12834b4495cf481ee721810",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Tranquil Whisperer"
+}

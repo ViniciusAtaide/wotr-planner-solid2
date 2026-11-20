@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_5648585af75596f4a9fa3ae385127f57",
+      "m_CharacterClass": "!bp_d77e67a814d686842802c9cfd8ef8499"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BloodragerFeyFeatSelectionGreenrager",
+  "guid": "4cacd14dc0ed7b94997c96e79bf67335",
+  "m_AllFeatures": [
+    "!bp_0f8939ae6f220984e8fb568abbdfba95",
+    "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5",
+    "!bp_797f25d709f559546b29e7bcb181cc74",
+    "!bp_15e7da6645a7f3d41bdad7c8c4b9de1e",
+    "!bp_2a6091b97ad940943b46262600eaeaeb",
+    "!bp_d76497bfc48516e45a0831628f767a0f",
+    "!bp_1e813eb8159b67a459b1c975027866e5"
+  ],
+  "name": "Bonus Feats (Fey 6)"
+}

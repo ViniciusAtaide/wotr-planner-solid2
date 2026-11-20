@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_fc678e0a5d014cd7b221e0a17df8b4e6"
+    }
+  ],
+  "assetName": "DLC3_BrokenTricksterPoisonImmunityEnchantment",
+  "guid": "f0154af8f3f541f9b7a9a2c5679e38e0"
+}

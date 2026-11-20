@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Urgrosh"
+      ],
+      "m_RaceRestriction": null
+    },
+    {
+      "$type": "PrerequisiteNotProficient",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "Urgrosh"
+      ]
+    }
+  ],
+  "Groups": [
+    "ExoticWeaponProficiency"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "UrgroshProficiency",
+  "guid": "d24f7545b1aa3b34e8216f8cb3140563",
+  "name": "Weapon Proficiency (Dwarven Urgrosh)"
+}

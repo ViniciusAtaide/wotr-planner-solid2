@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a37d1e737e21433392b8292e2810906c"
+    }
+  ],
+  "assetName": "SinmageStaffEnchantment",
+  "guid": "d83601ef01c64feea609fa8fc23b201f"
+}

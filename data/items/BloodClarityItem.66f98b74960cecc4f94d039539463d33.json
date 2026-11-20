@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "BloodClarityItem",
+  "guid": "66f98b74960cecc4f94d039539463d33",
+  "m_Enchantments": [
+    "!bp_44032c66e9f0eea4f84ef8d534e13450"
+  ],
+  "name": "Blood Clarity"
+}

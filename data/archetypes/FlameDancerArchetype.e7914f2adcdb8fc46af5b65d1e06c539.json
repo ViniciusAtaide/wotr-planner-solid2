@@ -1,0 +1,86 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_3c10a0069e7f110499d2e810f4861a6e"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_3c10a0069e7f110499d2e810f4861a6e"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_3c10a0069e7f110499d2e810f4861a6e"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_a317c030f0b3f304f84f2a52e7258e6a"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_6d3fcfab6d935754c918eb0e004b5ef7"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_6d3fcfab6d935754c918eb0e004b5ef7"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_1d48ab2bded57a74dad8af3da07d313a"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_6d3fcfab6d935754c918eb0e004b5ef7"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_cfd8940869a304f4aa9077415f93febe"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_6d3fcfab6d935754c918eb0e004b5ef7"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_6d3fcfab6d935754c918eb0e004b5ef7"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "FlameDancerArchetype",
+  "guid": "e7914f2adcdb8fc46af5b65d1e06c539",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Flame Dancer"
+}

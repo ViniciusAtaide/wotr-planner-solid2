@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_7bb4bb3e7fd26f34e8ca035a27e03e85",
+        "!bp_2127c37ccc7986e4083665552d6ecd5c",
+        "!bp_09106dcc03321154f955e2d0296a082e"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "Groups": [
+    "OracleRevelation"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleRevelationShardExplosion",
+  "guid": "650b9b5efa60c5d4ea25faad3d346fcf",
+  "name": "Shard Explosion"
+}

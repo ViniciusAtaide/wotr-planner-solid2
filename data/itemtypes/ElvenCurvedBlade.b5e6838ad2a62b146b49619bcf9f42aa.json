@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "ElvenCurvedBlade",
+  "Components": [],
+  "assetName": "ElvenCurvedBlade",
+  "guid": "b5e6838ad2a62b146b49619bcf9f42aa",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "BladesHeavy",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": true,
+  "name": "Elven Curve Blade"
+}

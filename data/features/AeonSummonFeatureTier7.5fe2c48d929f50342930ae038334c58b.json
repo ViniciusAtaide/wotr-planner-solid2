@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 8,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_15a85e67b7d69554cab9ed5830d0268e",
+      "m_Feature": "!bp_1bbe88581e176994898dfdb036716d16"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AeonSummonFeatureTier7",
+  "guid": "5fe2c48d929f50342930ae038334c58b"
+}

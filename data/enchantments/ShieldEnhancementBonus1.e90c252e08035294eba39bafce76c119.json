@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "ArmorEnhancementBonus",
+      "EnhancementValue": 1
+    }
+  ],
+  "assetName": "ShieldEnhancementBonus1",
+  "guid": "e90c252e08035294eba39bafce76c119"
+}

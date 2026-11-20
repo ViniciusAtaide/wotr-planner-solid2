@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteProficiency",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "LightPick"
+      ]
+    }
+  ],
+  "Groups": [
+    "FinesseTraining"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FinesseTrainingLightPick",
+  "guid": "21014d5e244acbd458e4cf39e92cf484",
+  "name": "Finesse Training (Light Pick)"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "HolemakerWeaponItem",
+  "guid": "f0bc02a030a34df2a6afaa3d78d9d372",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a1b85d048fb5003438f34356df938a9f"
+}

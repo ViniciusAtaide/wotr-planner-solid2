@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ImprovedSpellCombat",
+  "guid": "836879fcd5b29754eb664a090bd6c22f",
+  "name": "Improved Spell Combat"
+}

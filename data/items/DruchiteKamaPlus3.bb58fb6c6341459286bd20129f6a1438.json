@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DruchiteKamaPlus3",
+  "guid": "bb58fb6c6341459286bd20129f6a1438",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_f5872eb0deb3a1b48a36549f8d92c19e"
+}

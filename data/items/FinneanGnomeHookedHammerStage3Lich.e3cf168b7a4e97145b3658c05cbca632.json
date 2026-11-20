@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "FinneanGnomeHookedHammerStage3Lich",
+  "guid": "e3cf168b7a4e97145b3658c05cbca632",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": "!bp_093ce980a54f17541a5cafb22e9c79a4",
+  "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3",
+  "name": "Finnean (Gnome Hooked Hammer)"
+}

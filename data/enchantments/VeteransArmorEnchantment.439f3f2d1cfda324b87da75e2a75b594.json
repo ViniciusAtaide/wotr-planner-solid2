@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_bb46b0ecf65047549aa659a7b90871d6"
+    }
+  ],
+  "assetName": "VeteransArmorEnchantment",
+  "guid": "439f3f2d1cfda324b87da75e2a75b594"
+}

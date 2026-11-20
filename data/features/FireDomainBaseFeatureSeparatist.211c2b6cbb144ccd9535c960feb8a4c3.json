@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 1,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0",
+      "m_Feature": "!bp_255a5e42f16cf7c4bb0261e7afaef17d"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FireDomainBaseFeatureSeparatist",
+  "guid": "211c2b6cbb144ccd9535c960feb8a4c3",
+  "name": "Fire Domain (Separatist)"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "AxiomaticNullifyingLightPickPlus5",
+  "guid": "4e8cba365a1248fc85ba1bcc38fdd6b1",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_da922f4cdb60ef548a2ec0168620568a",
+  "name": "Axiomatic Nullifying Light Pick +5"
+}

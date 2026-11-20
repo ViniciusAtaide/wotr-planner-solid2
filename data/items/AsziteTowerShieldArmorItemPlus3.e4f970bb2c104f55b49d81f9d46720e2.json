@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "AsziteTowerShieldArmorItemPlus3",
+  "guid": "e4f970bb2c104f55b49d81f9d46720e2",
+  "m_Enchantments": [
+    "!bp_ac2e3a582b5faa74aab66e0a31c935a9",
+    "!bp_b6dff2f7ec3e4a4bbc5090d27752b465"
+  ],
+  "m_Type": "!bp_5f0f4b6e480e7054b8592b5a8b55854a"
+}

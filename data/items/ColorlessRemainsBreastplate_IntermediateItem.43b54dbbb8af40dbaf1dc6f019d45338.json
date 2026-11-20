@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "ColorlessRemainsBreastplate_IntermediateItem",
+  "guid": "43b54dbbb8af40dbaf1dc6f019d45338",
+  "m_Enchantments": [
+    "!bp_6628f9d77fd07b54c911cd8930c0d531"
+  ],
+  "m_Type": "!bp_d326c3c61a84c6f40977c84fab41503d",
+  "name": "Breastplate of the Colorless One"
+}

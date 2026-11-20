@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkSpikedHeavyShield",
+  "guid": "145ac24f8d7335d4a8d4f5d6eb659d10",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a1b85d048fb5003438f34356df938a9f",
+  "name": "Masterwork Spiked Heavy Shield"
+}

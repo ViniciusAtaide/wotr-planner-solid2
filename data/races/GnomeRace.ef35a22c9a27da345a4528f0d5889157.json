@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintRace",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Constitution",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Charisma",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonusIfHasFact",
+      "Descriptor": "Racial",
+      "InvertCondition": true,
+      "RequireAllFacts": false,
+      "Stat": "Strength",
+      "Value": {
+        "Value": -2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_CheckedFacts": [
+        "!bp_325f078c584318849bfe3da9ea245b9d"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "SelectableRaceStat": false,
+  "assetName": "GnomeRace",
+  "guid": "ef35a22c9a27da345a4528f0d5889157",
+  "m_Features": [
+    "!bp_9c747d24f6321f744aa1bb4bd343880d",
+    "!bp_020bd2ae61de90341b7f874b788c160a",
+    "!bp_f268a00e42618144e86c9db76af7f3e9",
+    "!bp_d030df93ea56d2b468650c4acf608f00",
+    "!bp_deaf46650a9d2dd4f85736ca552f9fb1",
+    "!bp_428899c30699b9c44a6c5ee4f74b5f57",
+    "!bp_09bc9ccb8ee0ffe4b8827066b1ed7e11",
+    "!bp_584d8b50817b49b2bb7aab3d6add8d3a"
+  ],
+  "name": "Gnome"
+}

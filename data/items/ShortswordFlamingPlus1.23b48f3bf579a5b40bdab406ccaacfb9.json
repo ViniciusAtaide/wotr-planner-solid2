@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ShortswordFlamingPlus1",
+  "guid": "23b48f3bf579a5b40bdab406ccaacfb9",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a7da36e0e7bb60e42b9f23462ce2f4fc",
+  "name": "Flaming Shortsword +1"
+}

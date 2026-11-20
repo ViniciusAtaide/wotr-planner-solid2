@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "NorthLightArmorItem",
+  "guid": "1aadb3a0a09171944a57d153ea3bef0e",
+  "m_Enchantments": [
+    "!bp_04fa37ad59430984987ae8f396c0d1fd",
+    "!bp_e90c252e08035294eba39bafce76c119"
+  ],
+  "m_Type": "!bp_d38e8ea23ce653c4582eb3e002555483"
+}

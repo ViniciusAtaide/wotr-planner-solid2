@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 5,
+  "assetName": "AssassinCreatePoisonConUnlock",
+  "guid": "4b28d5c267df88743afb272a2a874220",
+  "name": "Poison Use — Constitution"
+}

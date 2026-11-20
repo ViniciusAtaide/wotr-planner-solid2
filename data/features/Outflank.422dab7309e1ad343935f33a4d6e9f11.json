@@ -1,0 +1,53 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "BaseAttackBonus",
+      "Value": 4
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_44569e9e95364bf42b1071382a8a89da"
+      ]
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_422dab7309e1ad343935f33a4d6e9f11"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_44569e9e95364bf42b1071382a8a89da",
+      "m_Feature": "!bp_44569e9e95364bf42b1071382a8a89da"
+    }
+  ],
+  "Groups": [
+    "CombatFeat",
+    "Feat",
+    "TeamworkFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "Outflank",
+  "guid": "422dab7309e1ad343935f33a4d6e9f11",
+  "name": "Outflank (feature)"
+}

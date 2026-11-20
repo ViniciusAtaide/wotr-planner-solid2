@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 1,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0",
+      "m_Feature": "!bp_adfed72f2ce85bc4da6a42bd1e1ae991"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreNature"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AnimalDomainBaseFeature",
+  "guid": "d577aba79b5727a4ab74627c4c6ba23c",
+  "name": "Animal Domain (level 1)"
+}

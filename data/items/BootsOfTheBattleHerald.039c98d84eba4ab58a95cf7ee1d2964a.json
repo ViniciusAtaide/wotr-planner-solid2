@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "BootsOfTheBattleHerald",
+  "guid": "039c98d84eba4ab58a95cf7ee1d2964a",
+  "m_Enchantments": [
+    "!bp_852b98c9844046829e03ef12fbe65158"
+  ],
+  "name": "Boots of the Battle Herald"
+}

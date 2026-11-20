@@ -1,0 +1,122 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_09bdd9445ac38044389476689ae8d5a1"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_09bdd9445ac38044389476689ae8d5a1",
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87",
+        "!bp_ea37740e395f48b09298eb275a8e1dac"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_40d4f55a5ac0e4f469d67d36c0dfc40b"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_09bdd9445ac38044389476689ae8d5a1",
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_09bdd9445ac38044389476689ae8d5a1",
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_09bdd9445ac38044389476689ae8d5a1",
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    }
+  ],
+  "AddSkillPoints": 1,
+  "ClassSkills": [
+    "SkillPersuasion",
+    "SkillPerception",
+    "SkillLoreNature",
+    "SkillLoreReligion",
+    "SkillKnowledgeWorld",
+    "SkillKnowledgeArcana"
+  ],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_3a6db57fce75b0244a6a5819528ddf26"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_0f5c99ffb9c084545bbbe960b825d137"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_ad7dc4eba7bf92f4aba23f716d7a9ba6"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_0f5c99ffb9c084545bbbe960b825d137"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_0f5c99ffb9c084545bbbe960b825d137"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_9f13fdd044ccb8a439f27417481cb00e"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_0f5c99ffb9c084545bbbe960b825d137"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_0f5c99ffb9c084545bbbe960b825d137"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_0f5c99ffb9c084545bbbe960b825d137"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": true,
+  "assetName": "DivineScionArchetype",
+  "guid": "5ce3a2f8eae64cf2ba83865711e53e27",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Divine Scion"
+}

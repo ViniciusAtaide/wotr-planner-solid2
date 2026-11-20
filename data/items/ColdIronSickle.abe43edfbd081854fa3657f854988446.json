@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronSickle",
+  "guid": "abe43edfbd081854fa3657f854988446",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_ec2da496c7936e14c9a28ce616a6b4cd",
+  "name": "Cold Iron Sickle"
+}

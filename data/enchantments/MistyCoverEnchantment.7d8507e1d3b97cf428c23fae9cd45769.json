@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e34c0ad9232817545b52c5fc5a0d54e4"
+    }
+  ],
+  "assetName": "MistyCoverEnchantment",
+  "guid": "7d8507e1d3b97cf428c23fae9cd45769"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "BracersSpikedHodagItem",
+  "guid": "0237641b0c2de344d85821840419b4d2",
+  "m_Enchantments": [
+    "!bp_60e67f9d22f0ca848bfda284937e55d2"
+  ],
+  "name": "Hammer Fists"
+}

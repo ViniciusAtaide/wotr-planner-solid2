@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_d4dd8de353c7f1d4cb3f7d751123c8c2"
+    }
+  ],
+  "assetName": "BracersOfHarmfulConversionEnchantment",
+  "guid": "9840918fbd5b9074cb6c6b2fae8c88f8"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_79b47a435975401cab345d2cea0d3c16"
+    }
+  ],
+  "assetName": "GlovesOfEntropyEnchant",
+  "guid": "8c422fa1f19b45499b5a500ea0a772e6"
+}

@@ -1,0 +1,72 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_2bd0d44953a536f489082534c48f8e31"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_659c39542b728c04b83e969c834782a9"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_651570c873e22b84f893f146ce2de502"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_15e7da6645a7f3d41bdad7c8c4b9de1e"
+    },
+    {
+      "$type": "PrerequisiteSelectionPossible",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_ThisFeature": "!bp_a82e3b11fc5935d4289c807b241a2bb5"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_93bd14dd916cfd1429c11ad66adf5e2b"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "KineticWildTalent"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "WildTalentBonusFeatAir3",
+  "guid": "a82e3b11fc5935d4289c807b241a2bb5",
+  "m_AllFeatures": [
+    "!bp_2c61fdbf242866f4e93c3e1477fb96b5",
+    "!bp_1e813eb8159b67a459b1c975027866e5",
+    "!bp_2a6091b97ad940943b46262600eaeaeb"
+  ],
+  "name": "Kineticist Bonus Feat — Air (with Dodge and Lightning Reflexes)"
+}

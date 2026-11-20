@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_fa0c7448a257424dbd3fe854ddabea15"
+    }
+  ],
+  "assetName": "FortunesSmileEnchantment",
+  "guid": "6926ff24da4f435ba6226866217dc03a"
+}

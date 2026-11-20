@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_768bfa471deb465ab0ac6c6082ac44d5"
+    }
+  ],
+  "assetName": "TrueSerenityEnchantment",
+  "guid": "7a812495bce84ca6a30a0b6405004bf2"
+}

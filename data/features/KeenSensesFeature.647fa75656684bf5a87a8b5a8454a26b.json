@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_23b605ae90cd499d96e37978f109068d"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "KeenSensesFeature",
+  "guid": "647fa75656684bf5a87a8b5a8454a26b",
+  "name": "Keen Senses"
+}

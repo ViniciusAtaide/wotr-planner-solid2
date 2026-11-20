@@ -1,0 +1,49 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillAthletics"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_70ab8880eaf6c0640887ae586556a652",
+        "!bp_c59205a5d18930d4b88b74d2acda2f49",
+        "!bp_5d1fb7b0c7a8b634b9d7903d9264895d"
+      ]
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "UntypedStackable",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SaveFortitude",
+      "Value": 1
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillAthletics"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Greataxe"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Handaxe"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Battleaxe"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundLumberjack",
+  "guid": "2fc1ee0a5b240b5468efed9fffe416aa",
+  "name": "Lumberjack"
+}

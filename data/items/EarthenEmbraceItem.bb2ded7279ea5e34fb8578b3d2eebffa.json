@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "EarthenEmbraceItem",
+  "guid": "bb2ded7279ea5e34fb8578b3d2eebffa",
+  "m_Enchantments": [
+    "!bp_e92b599a1fb80574381e515d69f34473"
+  ],
+  "name": "Earth's Embrace"
+}

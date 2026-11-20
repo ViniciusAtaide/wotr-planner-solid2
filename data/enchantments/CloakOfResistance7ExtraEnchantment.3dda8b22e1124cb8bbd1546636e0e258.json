@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_5764b34d72ef4a4da31533cf186efdcc"
+    }
+  ],
+  "assetName": "CloakOfResistance7ExtraEnchantment",
+  "guid": "3dda8b22e1124cb8bbd1546636e0e258"
+}

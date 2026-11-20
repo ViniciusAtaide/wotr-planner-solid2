@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "ColdIronGnomeHookedHammerPlus1",
+  "guid": "0bcc1f169178d2d48bb48170a64b20e4",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": "!bp_3bd8231265d983045ba1f295a7818171",
+  "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3",
+  "name": "Cold Iron Gnome Hooked Hammer +1"
+}

@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "FavoriteMetamagicPersistent"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_cd26b9fa3f734461a0fcedc81cafaaac"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FavoriteMetamagicPersistent",
+  "guid": "eb6483b366a14a83afda1963799c3387",
+  "name": "Favorite Metamagic — Persistent"
+}

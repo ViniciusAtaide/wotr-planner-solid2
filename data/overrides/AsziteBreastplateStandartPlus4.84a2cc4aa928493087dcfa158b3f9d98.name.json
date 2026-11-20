@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "aszite",
+  "reason": "\"Breastplate +4\" is two items: the plain one and the aszite one (AsziteBreastplateStandartPlus4), whose armour carries AsziteArmorEnchantment. Restrictions, slot and type are the same, and their enhancement bonus isn't in data/, so the aszite one is qualified by its material; the plain one stays bare.",
+  "target": "84a2cc4aa928493087dcfa158b3f9d98"
+}

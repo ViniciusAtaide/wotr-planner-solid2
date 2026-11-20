@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "JesterCap",
+  "guid": "d3e3a641c5dd40dd971bd1c587d7f6a8",
+  "m_Enchantments": [
+    "!bp_575de3a13d4040c4cb84891036e9e76b",
+    "!bp_82ad1b6eeb2be3f4a901d8e685a669a7",
+    "!bp_85c75c68eb10f6f459bab5ade8ec0abe",
+    "!bp_2fde880dca774b6a919b191863d9b4f9"
+  ],
+  "name": "Jester Cap"
+}

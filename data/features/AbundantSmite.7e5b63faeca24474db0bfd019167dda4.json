@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_3a6db57fce75b0244a6a5819528ddf26"
+    }
+  ],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AbundantSmite",
+  "guid": "7e5b63faeca24474db0bfd019167dda4",
+  "name": "Abundant Smite"
+}

@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_727381f8a2ee46a19ab96eedfe1d9daa",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_c4c39e7078224b6caaf3c8a02032b5cb"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShifterFeyChimeraElephantFeature",
+  "guid": "9cf5b2d5cc39466cb4fa2ae3767e2ee8",
+  "name": "Mammoth (Feyform Shifter)"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "RedDragonHelmetItem",
+  "guid": "e6b06daad1ed43cea2eb80f2eb93bfce",
+  "m_Enchantments": [
+    "!bp_1ca7f14f0d4f4777a5b4e2e42433619f"
+  ],
+  "name": "Red Dragon Helmet"
+}

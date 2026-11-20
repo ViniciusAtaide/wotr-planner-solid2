@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "ImpassableGuardArmorItem",
+  "guid": "ca2e798f8ebc4a47bc420c22e7c98c2d",
+  "m_Enchantments": [
+    "!bp_84d191a748edef84ba30c13b8ab83bd9",
+    "!bp_02700b211af64db586b86642d9543d55"
+  ],
+  "m_Type": "!bp_5f0f4b6e480e7054b8592b5a8b55854a"
+}

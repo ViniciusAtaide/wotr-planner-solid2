@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "WrathOfTheCreatorSecondItem",
+  "guid": "fc706cebb8154cb19e8c3f10a112f176",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_d7cb995bf7fd4b30be7c52d71298e449"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_c4e95e3c489721e4382fd8514a522f9d"
+}

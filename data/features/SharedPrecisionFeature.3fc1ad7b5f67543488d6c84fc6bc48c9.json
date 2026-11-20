@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SharedPrecisionFeature",
+  "guid": "3fc1ad7b5f67543488d6c84fc6bc48c9",
+  "name": "Shared Precision"
+}

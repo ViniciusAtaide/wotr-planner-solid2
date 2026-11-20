@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_46f4fb320f35704488ba3d513397789d"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArcaneMediumArmor",
+  "guid": "8498cdb82f5eb6d4f91e72b1a18944ff",
+  "name": "Arcane Medium Armor (Magus)"
+}

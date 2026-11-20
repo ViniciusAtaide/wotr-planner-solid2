@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_6c03364712b415941a98f74522a81273"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "HellknightSigniferOracleLevelUp",
+  "guid": "9286a5a685edb084ca668a8598f6d11f",
+  "name": "Oracle"
+}

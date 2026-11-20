@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TowerShieldEvasion",
+  "guid": "bc678dd87b293ed4a99d0d75c1974f64",
+  "name": "Tower Shield Evasion"
+}

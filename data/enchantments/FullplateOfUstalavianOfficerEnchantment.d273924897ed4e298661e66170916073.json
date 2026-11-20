@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Enhancement",
+      "Stat": "AdditionalCMD",
+      "Value": 4
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e80f8d366436483c9499ac84d313f98a"
+    }
+  ],
+  "assetName": "FullplateOfUstalavianOfficerEnchantment",
+  "guid": "d273924897ed4e298661e66170916073"
+}

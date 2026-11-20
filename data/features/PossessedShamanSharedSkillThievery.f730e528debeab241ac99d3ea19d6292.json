@@ -1,0 +1,42 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "AsIs",
+      "m_StartLevel": 0,
+      "m_StepLevel": 0,
+      "m_Type": "DamageDice",
+      "m_UseMax": false,
+      "m_UseMin": false
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_f730e528debeab241ac99d3ea19d6292"
+    },
+    {
+      "$type": "ReplaceStatBaseAttribute",
+      "BaseAttributeReplacement": "Wisdom",
+      "ReplaceIfHigher": false,
+      "TargetStat": "SkillThievery"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PossessedShamanSharedSkillThievery",
+  "guid": "f730e528debeab241ac99d3ea19d6292",
+  "name": "Shared Skill — Trickery"
+}

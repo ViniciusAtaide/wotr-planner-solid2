@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "BorealMightItem",
+  "guid": "a61c1d4b6f5ef6f4c853651e8df94c0c",
+  "m_Enchantments": [
+    "!bp_e23546a98d62357418cdf7a93cf11847"
+  ],
+  "name": "Ring of Boreal Might"
+}

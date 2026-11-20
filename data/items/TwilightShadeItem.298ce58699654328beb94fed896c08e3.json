@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "TwilightShadeItem",
+  "guid": "298ce58699654328beb94fed896c08e3",
+  "m_Enchantments": [
+    "!bp_46bba0c7eeb5413f8b7f8a25923f277b"
+  ],
+  "name": "Twilight Shade"
+}

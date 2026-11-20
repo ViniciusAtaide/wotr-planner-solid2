@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardEstoc",
+  "guid": "4c863a47d69b63647b3b16bbb01d5ba8",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d516765b3c2904e4a939749526a52a9a"
+}

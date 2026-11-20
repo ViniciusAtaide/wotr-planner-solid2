@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "BlizzardTouchItem",
+  "guid": "71bb275ec1b130f4e857ea001582dd17",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_006ecd4715809b343b7001e859e3ddb2",
+  "name": "Blizzard Touch"
+}

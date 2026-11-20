@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "BaphometFireGloves_BurningCunningItem",
+  "guid": "6c4605b63da845b8975fe6ee18eb36f6",
+  "m_Enchantments": [
+    "!bp_edd9399fa02f4f09b47e2eb474abe5a5"
+  ],
+  "name": "Treacherous Flame (gloves)"
+}

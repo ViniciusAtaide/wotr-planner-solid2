@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "BracersOfArcheryLesser",
+  "guid": "01d51ff5f3db2164b88aaa662a9b0f2e",
+  "m_Enchantments": [
+    "!bp_d695146c6c6dcfd48980406a280faca1"
+  ],
+  "name": "Lesser Bracers of Archery"
+}

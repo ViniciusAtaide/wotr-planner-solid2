@@ -1,0 +1,11 @@
+{
+  "change": "patch",
+  "ops": [
+    {
+      "op": "remove",
+      "path": "/Components/0"
+    }
+  ],
+  "reason": "Fixture: shows the shape of a cited correction; no game fact behind it.",
+  "target": "f1000000000000000000000000000005"
+}

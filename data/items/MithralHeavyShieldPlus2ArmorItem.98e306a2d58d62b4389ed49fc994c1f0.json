@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "MithralHeavyShieldPlus2ArmorItem",
+  "guid": "98e306a2d58d62b4389ed49fc994c1f0",
+  "m_Enchantments": [
+    "!bp_7b95a819181574a4799d93939aa99aff",
+    "!bp_758b77a97640fd747abf149f5bf538d0"
+  ],
+  "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6"
+}

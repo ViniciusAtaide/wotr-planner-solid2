@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "FinneanGnomeHookedHammerStage2",
+  "guid": "b21135bc1d6a119458e91b8a682cdd0c",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": "!bp_e2ea1206002d0bc4c93fe5f4c5d153ce",
+  "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3",
+  "name": "Finnean the Talking Weapon (Gnome Hooked Hammer +3)"
+}

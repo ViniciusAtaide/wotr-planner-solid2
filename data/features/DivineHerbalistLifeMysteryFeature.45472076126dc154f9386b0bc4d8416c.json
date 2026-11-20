@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_ee23b52c6a06c0b48a09a7a23071aa52"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 2,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_3f35f05d83b90c94fa128254b0ccdd70"
+    }
+  ],
+  "Groups": [
+    "DivineHerbalistMystery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DivineHerbalistLifeMysteryFeature",
+  "guid": "45472076126dc154f9386b0bc4d8416c",
+  "name": "Life (Divine Herbalist)"
+}

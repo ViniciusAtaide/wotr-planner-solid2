@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "TowerShieldWardenOfDarknessArmorItem",
+  "guid": "f904d58d3e75e48498ae08aff85c50a0",
+  "m_Enchantments": [
+    "!bp_a5d27d73859bd19469a6dde3b49750ff",
+    "!bp_7b95a819181574a4799d93939aa99aff",
+    "!bp_95929438c233eda439d66904a66c8d22"
+  ],
+  "m_Type": "!bp_5f0f4b6e480e7054b8592b5a8b55854a"
+}

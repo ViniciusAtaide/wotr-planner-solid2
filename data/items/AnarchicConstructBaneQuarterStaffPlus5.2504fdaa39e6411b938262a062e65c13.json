@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "AnarchicConstructBaneQuarterStaffPlus5",
+  "guid": "2504fdaa39e6411b938262a062e65c13",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_629736dabac7f9f4a819dc854eaed2d6",
+  "name": "Anarchic Construct Bane Quarterstaff +5"
+}

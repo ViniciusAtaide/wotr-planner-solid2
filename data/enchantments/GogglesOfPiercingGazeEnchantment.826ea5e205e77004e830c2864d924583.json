@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_946b597ee9e74ce4eaacdafc73d2ec3c"
+    }
+  ],
+  "assetName": "GogglesOfPiercingGazeEnchantment",
+  "guid": "826ea5e205e77004e830c2864d924583"
+}

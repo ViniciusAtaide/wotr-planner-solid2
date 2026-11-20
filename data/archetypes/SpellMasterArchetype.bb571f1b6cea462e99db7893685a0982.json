@@ -1,0 +1,71 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_0933849149cfc9244ac05d6a5b57fd80",
+        "!bp_2fb5e65bd57caa943b45ee32d825e9b9",
+        "!bp_ee18ad78a7b046e789a763ab860cd50a"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_88fe74c940ce41a0ac62b9b22774be3f"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_88fe74c940ce41a0ac62b9b22774be3f"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_88fe74c940ce41a0ac62b9b22774be3f"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_88fe74c940ce41a0ac62b9b22774be3f"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_5f838049069f1ac4d804ce0862ab5110",
+        "!bp_03a1781486ba98043afddaabf6b7d8ff"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_8c3102c2ff3b69444b139a98521a4899"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_8c3102c2ff3b69444b139a98521a4899"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "SpellMasterArchetype",
+  "guid": "bb571f1b6cea462e99db7893685a0982",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Spell Master"
+}

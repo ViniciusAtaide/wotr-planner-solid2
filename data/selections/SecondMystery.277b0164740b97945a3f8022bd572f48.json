@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_5531b975dcdf0e24c98f1ff7e017e741"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_277b0164740b97945a3f8022bd572f48"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e9629fc4de4c4b3ea1c26e9c13c2402d"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "OracleMystery",
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "OnlyNew",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "SecondMystery",
+  "guid": "277b0164740b97945a3f8022bd572f48",
+  "m_AllFeatures": [
+    "!bp_9936554e9372dab4a874c1dd165fb6f8",
+    "!bp_6b8e676943cb91648b21b7ca72fbb833",
+    "!bp_067b175d3df0d1a408efd7eee2b36b9b",
+    "!bp_3b68909df737cd4458509d7f3a9c3706",
+    "!bp_a5458a1c316d1f24e8d9770f4fc179fa",
+    "!bp_69579bfe28e15b942af0722021d8725c",
+    "!bp_7bb4bb3e7fd26f34e8ca035a27e03e85",
+    "!bp_e2f8bd7c45dfb954c8c42b168505c783",
+    "!bp_7c1fdd831af747b47bb2cce0051f309b"
+  ],
+  "name": "Second Mystery"
+}

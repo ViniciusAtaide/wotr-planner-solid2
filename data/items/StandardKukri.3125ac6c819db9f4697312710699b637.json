@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardKukri",
+  "guid": "3125ac6c819db9f4697312710699b637",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_006ecd4715809b343b7001e859e3ddb2"
+}

@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 1,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0",
+      "m_Feature": "!bp_73bc020e32984b2d993fd1d5de9c58bd"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MurderSubdomainGreaterFeatureSeparatist",
+  "guid": "80ac76df4a1d4c12a221e7aa17b9fba7",
+  "name": "Undead Subdomain (Murder Subdomain)"
+}

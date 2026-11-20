@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "FavoriteEnemy"
+  ],
+  "HideInUI": false,
+  "Ranks": 8,
+  "assetName": "FavoriteEnemyGiants",
+  "guid": "bd59614d30bcadd46bd56aabe0de819f",
+  "name": "Favored Enemy — Giant Humanoids"
+}

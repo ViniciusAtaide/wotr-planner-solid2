@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteProficiency",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "Slam"
+      ]
+    },
+    {
+      "$type": "PrerequisiteConditionForWeaponCategory",
+      "m_Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "ContextConditionIsWeaponEquipped",
+              "BothHandsAreEmpty": false,
+              "Category": "Slam",
+              "CheckOnCaster": true,
+              "CheckSlot": false,
+              "CheckWeaponCategory": true,
+              "CheckWeaponRangeType": false,
+              "JustCheckEmptyHand": false,
+              "Not": false,
+              "RangeType": "Melee",
+              "Slot": "PrimaryHand"
+            }
+          ],
+          "Operation": "And"
+        },
+        "Not": false
+      },
+      "m_WeaponCategories": [
+        "Slam"
+      ]
+    }
+  ],
+  "Groups": [
+    "FinesseTraining"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FinesseTrainingSlam",
+  "guid": "3411b8c822dc4e148f4725a391e714df",
+  "name": "Finesse Training (Slam)"
+}

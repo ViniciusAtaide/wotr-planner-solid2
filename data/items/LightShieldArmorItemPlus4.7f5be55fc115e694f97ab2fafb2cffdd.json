@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "LightShieldArmorItemPlus4",
+  "guid": "7f5be55fc115e694f97ab2fafb2cffdd",
+  "m_Enchantments": [
+    "!bp_a5d27d73859bd19469a6dde3b49750ff"
+  ],
+  "m_Type": "!bp_d38e8ea23ce653c4582eb3e002555483"
+}

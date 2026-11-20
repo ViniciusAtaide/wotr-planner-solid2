@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "aszite",
+  "reason": "\"Light Shield +4\" is two items: the plain one and the aszite one (AsziteLightShieldItemPlus4), whose armour carries AsziteArmorEnchantment. Restrictions, slot and type are the same, and their enhancement bonus isn't in data/, so the aszite one is qualified by its material; the plain one stays bare.",
+  "target": "d1266897c40f4843a23fc85c42528f06"
+}

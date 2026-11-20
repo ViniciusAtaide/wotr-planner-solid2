@@ -1,0 +1,57 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillKnowledgeArcana",
+    "SkillKnowledgeWorld",
+    "SkillPerception"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteCasterTypeSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsArcane": true,
+      "IsFeatureSelectionWhiteList": false,
+      "OnlySpontaneous": false,
+      "RequiredSpellLevel": 3
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_203992ef5b35c864390b4e4a1e200629"
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D10",
+  "IsMythic": false,
+  "PrestigeClass": true,
+  "SkillPoints": 2,
+  "assetName": "EldritchKnightClass",
+  "guid": "de52b73972f0ed74c87f8f6a8e20b542",
+  "m_Archetypes": [],
+  "m_BaseAttackBonus": "!bp_b3057560ffff3514299e8b93e7648a9d",
+  "m_FortitudeSave": "!bp_1f309006cd2855e4e91a6c3707f3f700",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_b74d6e1fdd8ad154986968f0a01334d0",
+  "m_ReflexSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "name": "Eldritch Knight"
+}

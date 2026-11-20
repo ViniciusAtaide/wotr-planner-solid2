@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_1bdb66b298dbe524da357aee704d791d"
+    }
+  ],
+  "assetName": "UnholyShepherdEnchantment",
+  "guid": "1ba930da89ff7e84ca40d83d7aaca2aa"
+}

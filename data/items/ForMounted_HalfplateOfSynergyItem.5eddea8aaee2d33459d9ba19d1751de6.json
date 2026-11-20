@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "ForMounted_HalfplateOfSynergyItem",
+  "guid": "5eddea8aaee2d33459d9ba19d1751de6",
+  "m_Enchantments": [
+    "!bp_9448d3026111d6d49b31fc85e7f3745a",
+    "!bp_933456ff83c454146a8bf434e39b1f93",
+    "!bp_f1b7755d156fdb84188284f03ade01b9"
+  ],
+  "m_Type": "!bp_a59bf41f441456a4e8b04b09cb889af8",
+  "name": "Half-Plate of Synergy"
+}

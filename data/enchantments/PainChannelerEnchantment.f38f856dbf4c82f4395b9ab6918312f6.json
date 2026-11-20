@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_4340a658c3fe5cd4e81b41b732c6e451"
+    }
+  ],
+  "assetName": "PainChannelerEnchantment",
+  "guid": "f38f856dbf4c82f4395b9ab6918312f6"
+}

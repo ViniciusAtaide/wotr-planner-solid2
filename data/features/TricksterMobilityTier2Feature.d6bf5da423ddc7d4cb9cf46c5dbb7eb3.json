@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_6079a3c329989a64cad3fbd4076d5fb9"
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "TricksterMobilityAttackOfOpportunity"
+    }
+  ],
+  "Groups": [
+    "MythicTrick2"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterMobilityTier2Feature",
+  "guid": "d6bf5da423ddc7d4cb9cf46c5dbb7eb3",
+  "name": "Mobility 2 Rank"
+}

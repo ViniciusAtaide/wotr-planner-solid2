@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_1440703181bc6e54487b4673e73af34e"
+    }
+  ],
+  "assetName": "ArcheryLesserEnchantment",
+  "guid": "d695146c6c6dcfd48980406a280faca1"
+}

@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "TalionKeeperItem",
+  "guid": "1bc5bd269f55aa34f8dcc7b76eec03a4",
+  "m_ArmorComponent": "!bp_a2ff72d1bf38787448d708c1b541ce64",
+  "m_WeaponComponent": "!bp_428064e58c8468a4183667d2fb421b4c",
+  "name": "Talion Keeper"
+}

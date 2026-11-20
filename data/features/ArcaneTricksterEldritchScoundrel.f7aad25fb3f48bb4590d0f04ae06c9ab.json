@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_57f93dd8423c97c49989501281296c4a",
+      "m_CharacterClass": "!bp_299aa766dee3cbf4790da4efb8c72484"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 2,
+      "m_CharacterClass": "!bp_299aa766dee3cbf4790da4efb8c72484"
+    }
+  ],
+  "Groups": [
+    "ArcaneTricksterSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ArcaneTricksterEldritchScoundrel",
+  "guid": "f7aad25fb3f48bb4590d0f04ae06c9ab",
+  "m_Spellbook": "!bp_4f96fb20f06b7494a8b2bd731a70af6c",
+  "name": "Eldritch Scoundrel"
+}

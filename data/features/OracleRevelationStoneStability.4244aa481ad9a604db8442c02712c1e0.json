@@ -1,0 +1,52 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 5,
+      "m_AdditionalClasses": [
+        "!bp_52dbfd8505e22f84fad8d702611f60b7"
+      ],
+      "m_Archetypes": [
+        "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+      ],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_0f15c6f70d8fb2b49aa6cc24239cc5fa"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 10,
+      "m_AdditionalClasses": [
+        "!bp_52dbfd8505e22f84fad8d702611f60b7"
+      ],
+      "m_Archetypes": [
+        "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+      ],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_4cc71ae82bdd85b40b3cfe6697bb7949"
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_7bb4bb3e7fd26f34e8ca035a27e03e85",
+        "!bp_2127c37ccc7986e4083665552d6ecd5c",
+        "!bp_09106dcc03321154f955e2d0296a082e"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "Groups": [
+    "OracleRevelation"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleRevelationStoneStability",
+  "guid": "4244aa481ad9a604db8442c02712c1e0",
+  "name": "Stone Stability (Revelation)"
+}

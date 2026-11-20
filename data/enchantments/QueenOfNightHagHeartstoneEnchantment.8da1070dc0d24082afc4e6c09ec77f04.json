@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_97b4e7c27ca74442b61475328ba04686"
+    }
+  ],
+  "assetName": "QueenOfNightHagHeartstoneEnchantment",
+  "guid": "8da1070dc0d24082afc4e6c09ec77f04"
+}

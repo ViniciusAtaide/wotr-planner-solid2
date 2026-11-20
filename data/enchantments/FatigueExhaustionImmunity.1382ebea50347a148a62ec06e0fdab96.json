@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_7698c8ea21be9d843982a4f7551fd8e9"
+    }
+  ],
+  "assetName": "FatigueExhaustionImmunity",
+  "guid": "1382ebea50347a148a62ec06e0fdab96"
+}

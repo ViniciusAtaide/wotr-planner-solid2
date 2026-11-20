@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillStealth"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillThievery"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WitchOfTheVeilSecrecyFeature",
+  "guid": "8c189560d7f94dd688f0dc29f6963610",
+  "name": "Secrecy"
+}

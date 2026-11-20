@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 4,
+  "assetName": "ArchaeologistLuckFeature",
+  "guid": "03bf87dd753cd4f48a47eaf0ea6da9fe",
+  "name": "Archaeologist's Luck"
+}

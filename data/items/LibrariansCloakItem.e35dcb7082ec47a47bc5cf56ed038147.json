@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "LibrariansCloakItem",
+  "guid": "e35dcb7082ec47a47bc5cf56ed038147",
+  "m_Enchantments": [
+    "!bp_e5b91c171f0c0754f986fe74c2d8e274"
+  ],
+  "name": "Librarian's Cloak"
+}

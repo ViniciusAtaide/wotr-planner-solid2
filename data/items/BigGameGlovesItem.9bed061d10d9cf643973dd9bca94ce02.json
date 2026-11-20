@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "BigGameGlovesItem",
+  "guid": "9bed061d10d9cf643973dd9bca94ce02",
+  "m_Enchantments": [
+    "!bp_8239dd8bd2fcc0a4497955a8388b1cab"
+  ],
+  "name": "Big Game Gloves"
+}

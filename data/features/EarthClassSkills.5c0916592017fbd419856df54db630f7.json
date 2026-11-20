@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillKnowledgeWorld"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillAthletics"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EarthClassSkills",
+  "guid": "5c0916592017fbd419856df54db630f7",
+  "name": "Earth Class Skills"
+}

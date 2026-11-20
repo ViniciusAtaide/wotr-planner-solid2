@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_45c697a4418f4ad885e627006bf602b3"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TandemExecutionerDontTouchMyBuddyFeature",
+  "guid": "185d471608614a4a9a01ead064f1f69d",
+  "name": "Protective Duo"
+}

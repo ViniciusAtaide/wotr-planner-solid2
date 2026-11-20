@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 13,
+      "m_AdditionalClasses": [
+        "!bp_45a4607686d96a1498891b3286121780"
+      ],
+      "m_Archetypes": [
+        "!bp_d078b2ef073f2814c9e338a789d97b73"
+      ],
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf",
+      "m_Feature": "!bp_9741a84aa7a7a004bbe2d5861c03de56"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineSerpentineSnakeskinFeatureAddLevel1",
+  "guid": "19d2ea3d212681946920c7b70bb44492",
+  "name": "Snakeskin (Serpentine Bloodline)"
+}

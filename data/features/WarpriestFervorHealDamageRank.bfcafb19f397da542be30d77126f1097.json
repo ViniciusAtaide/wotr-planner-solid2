@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 20,
+  "assetName": "WarpriestFervorHealDamageRank",
+  "guid": "bfcafb19f397da542be30d77126f1097"
+}

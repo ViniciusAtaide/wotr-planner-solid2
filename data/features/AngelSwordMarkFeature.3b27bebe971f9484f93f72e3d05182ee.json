@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "ImprovedSwordOfHeaven"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AngelSwordMarkFeature",
+  "guid": "3b27bebe971f9484f93f72e3d05182ee",
+  "name": "Guide the Faithful"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FuriousElderFlamingGreatclubPlus5",
+  "guid": "90bae93b12654890be7af2896630b9f7",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1b8c24cd1f9358c48839bb39266468c3",
+  "name": "Furious Elder Flaming Greatclub +5"
+}

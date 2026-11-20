@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "BookwormsHeadbandItem",
+  "guid": "866f59db467f8414cbd909df9b10361f",
+  "m_Enchantments": [
+    "!bp_8a07ba5169caf3c4e9890d62b36552c7"
+  ],
+  "name": "Bookworm's Headband"
+}

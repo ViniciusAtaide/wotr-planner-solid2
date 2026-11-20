@@ -1,0 +1,106 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_8122e8b3ddb1e184ebf6decc8b1403b5"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_a18b8c3d6251d8641a8094e5c2a7bc78"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_ad6b9cecb5286d841a66e23cea3ef7bf"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_ad6b9cecb5286d841a66e23cea3ef7bf"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_ad6b9cecb5286d841a66e23cea3ef7bf",
+        "!bp_8ac781b33e380c84aa578f1b006dd6c5"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_ad6b9cecb5286d841a66e23cea3ef7bf"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_ad6b9cecb5286d841a66e23cea3ef7bf",
+        "!bp_d24c2467804ce0e4497d9978bafec1f9"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_61fc0521e9992624e9c518060bf89c0f"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_e9dc4dfc73eaaf94aae27e0ed6cc9ada"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_e9dc4dfc73eaaf94aae27e0ed6cc9ada"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_0ef6ec1c2fdfc204fbd3bff9f1609490"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_e9dc4dfc73eaaf94aae27e0ed6cc9ada"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_e9dc4dfc73eaaf94aae27e0ed6cc9ada"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_e9dc4dfc73eaaf94aae27e0ed6cc9ada"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "HexcrafterArchetype",
+  "guid": "79ccf7a306a5d5547bebd97299f6fc89",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Hexcrafter"
+}

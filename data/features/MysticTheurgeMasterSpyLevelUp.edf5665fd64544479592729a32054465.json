@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_12bfcf91d5416b047a2a9110ff8968c5"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "MysticTheurgeMasterSpyLevelUp",
+  "guid": "edf5665fd64544479592729a32054465",
+  "name": "Espionage Expert"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CloakOfMorta",
+  "guid": "1c28fa1d710041289dd83e18dfc8316d",
+  "m_Enchantments": [
+    "!bp_a63cf1a1b7bb45d289fe72feaff0cf55"
+  ],
+  "name": "Cape of Morta"
+}

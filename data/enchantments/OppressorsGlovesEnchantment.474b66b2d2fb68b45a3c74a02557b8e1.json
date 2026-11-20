@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_72b92ca337f301d40857d507d7613118"
+    }
+  ],
+  "assetName": "OppressorsGlovesEnchantment",
+  "guid": "474b66b2d2fb68b45a3c74a02557b8e1"
+}

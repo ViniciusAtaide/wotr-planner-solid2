@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "AnimalCompanionArchetypeSelection",
+  "guid": "65af7290b4efd5f418132141aaa36c1b",
+  "m_AllFeatures": [
+    "!bp_e7d53709a33bd9b45a89536ed6766264",
+    "!bp_9e410b20eb73409458148bddf8dea64b",
+    "!bp_595bcf381dc880b40b02610aba81bf64",
+    "!bp_9e449c3b76a8aac48be90d5c94ccb4a6",
+    "!bp_a5c7341c2ba847e43b0bd17c9c7f80a2",
+    "!bp_ee6ed699b7bab56449dbe8fc5dd80002",
+    "!bp_ed407d21a92d5f84a839be4350f78f7a"
+  ]
+}

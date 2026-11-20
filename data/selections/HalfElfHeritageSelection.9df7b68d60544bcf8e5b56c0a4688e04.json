@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "HalfElfHeritageSelection",
+  "guid": "9df7b68d60544bcf8e5b56c0a4688e04",
+  "m_AllFeatures": [
+    "!bp_a9d54aab4e9243ca867341257aaa253e",
+    "!bp_ac53bfa3023b41978f3e327c3a4a647f",
+    "!bp_5609d6e6cbd5422c8d6a1e7ee0b31a87"
+  ],
+  "name": "Racial Heritage (Half-Elf)"
+}

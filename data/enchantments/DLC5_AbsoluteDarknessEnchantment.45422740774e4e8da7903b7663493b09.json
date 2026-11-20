@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8fba84c1e3e64cd2baf8eba9dad52273"
+    }
+  ],
+  "assetName": "DLC5_AbsoluteDarknessEnchantment",
+  "guid": "45422740774e4e8da7903b7663493b09"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_ec4fdd66369b40b79a7da33b090007f9"
+    }
+  ],
+  "assetName": "BeltOfArodenEnchantment",
+  "guid": "f7c7cb4636b14197adae70618ba8838c"
+}

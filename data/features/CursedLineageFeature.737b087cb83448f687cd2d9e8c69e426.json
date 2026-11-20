@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_fa76a48428b0460c940a423a79fab0ba"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CursedLineageFeature",
+  "guid": "737b087cb83448f687cd2d9e8c69e426",
+  "name": "Bloodseeker's Cursed Lineage"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "InvulnerableRagerDamageReduction",
+  "guid": "e71bd204a2579b1438ebdfbf75aeefae",
+  "name": "Damage Reduction (Invulnerable Rager)"
+}

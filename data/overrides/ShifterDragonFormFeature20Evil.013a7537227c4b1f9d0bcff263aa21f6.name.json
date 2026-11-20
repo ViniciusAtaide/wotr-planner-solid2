@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "Chromatic",
+  "reason": "The Dragonblood Shifter's dragon forms come in three sets, one for each draconic aspect. The Wyrmshifter features grant ShifterDragonFormEvilFeatureLevelUp only while the shifter holds 'Draconic Aspect — Chromatic' (AddFeatureIfHasFact), and that feature grants this blueprint by AddFeatureOnClassLevel, directly or through ShifterDragonFormEvilFeatureLevelUp1. Grantors and levels are the same in each set and the names repeat, so only the aspect that gates the set tells the three apart; each is qualified by it.",
+  "target": "013a7537227c4b1f9d0bcff263aa21f6"
+}

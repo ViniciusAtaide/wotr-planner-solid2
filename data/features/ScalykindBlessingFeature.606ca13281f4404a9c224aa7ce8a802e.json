@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_30b5e47d47a0e37438cc5a80c96cfb99",
+      "m_Feature": "!bp_739c0a625d0c4c928b5cb4eb13edd4ae"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c8326083da8e40c4931f473bfa70f9f0"
+    }
+  ],
+  "Groups": [
+    "WarpriestBlessing"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ScalykindBlessingFeature",
+  "guid": "606ca13281f4404a9c224aa7ce8a802e",
+  "name": "Scalykind"
+}

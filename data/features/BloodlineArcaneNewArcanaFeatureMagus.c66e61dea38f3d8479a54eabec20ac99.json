@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_d078b2ef073f2814c9e338a789d97b73",
+      "m_CharacterClass": "!bp_45a4607686d96a1498891b3286121780"
+    }
+  ],
+  "Groups": [],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "LearnSpell",
+  "Ranks": 1,
+  "RequireProficiency": false,
+  "WeaponSubCategory": "None",
+  "assetName": "BloodlineArcaneNewArcanaFeatureMagus",
+  "guid": "c66e61dea38f3d8479a54eabec20ac99",
+  "m_Prerequisite": null,
+  "name": "New Arcana (Eldritch Scion)"
+}

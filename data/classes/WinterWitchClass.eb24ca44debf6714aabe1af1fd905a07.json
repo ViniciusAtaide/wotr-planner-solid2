@@ -1,0 +1,67 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillKnowledgeArcana",
+    "SkillLoreNature",
+    "SkillKnowledgeWorld",
+    "SkillUseMagicDevice",
+    "SkillPersuasion"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 5
+    },
+    {
+      "$type": "PrerequisiteCasterTypeSpellLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsArcane": false,
+      "IsFeatureSelectionWhiteList": false,
+      "OnlySpontaneous": false,
+      "RequiredSpellLevel": 3
+    },
+    {
+      "$type": "PrerequisiteCasterTypeSpellLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsArcane": true,
+      "IsFeatureSelectionWhiteList": false,
+      "OnlySpontaneous": false,
+      "RequiredSpellLevel": 3
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_44c130a12d49ebf4a95945feffe5aae7",
+        "!bp_e98d8d9f907c1814aa7376d6cdaac012",
+        "!bp_79922e274bf4444b93ea77ae0f876bd2"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D6",
+  "IsMythic": false,
+  "PrestigeClass": true,
+  "SkillPoints": 2,
+  "assetName": "WinterWitchClass",
+  "guid": "eb24ca44debf6714aabe1af1fd905a07",
+  "m_Archetypes": [],
+  "m_BaseAttackBonus": "!bp_0538081888b2d8c41893d25d098dee99",
+  "m_FortitudeSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_2703dc14f69421a44866e9046a95f348",
+  "m_ReflexSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_1f309006cd2855e4e91a6c3707f3f700",
+  "name": "Winter Witch"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_d3d641fceaa54209b40489b4cef44b7c"
+    }
+  ],
+  "assetName": "MaskOfTheFastBitesEnchantment",
+  "guid": "d8b9fc459ee84f58be10993c517fb89d"
+}

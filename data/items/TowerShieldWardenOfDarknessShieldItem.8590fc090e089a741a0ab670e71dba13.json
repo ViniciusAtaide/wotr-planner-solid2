@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionAlignment",
+      "Alignment": "Evil"
+    }
+  ],
+  "assetName": "TowerShieldWardenOfDarknessShieldItem",
+  "guid": "8590fc090e089a741a0ab670e71dba13",
+  "m_ArmorComponent": "!bp_f904d58d3e75e48498ae08aff85c50a0",
+  "m_WeaponComponent": null,
+  "name": "Warden of Darkness"
+}

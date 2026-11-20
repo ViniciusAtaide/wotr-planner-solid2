@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_30bc716021f041808be3b3d8610585eb"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DragonLevel3MaxAbilityCharismaFeature",
+  "guid": "24797a2af5954e9e943eec3b94341a99"
+}

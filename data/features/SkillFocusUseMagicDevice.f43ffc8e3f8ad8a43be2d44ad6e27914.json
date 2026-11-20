@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SkillFocusUseMagicDevice",
+  "guid": "f43ffc8e3f8ad8a43be2d44ad6e27914",
+  "name": "Skill Focus — Use Magic Device"
+}

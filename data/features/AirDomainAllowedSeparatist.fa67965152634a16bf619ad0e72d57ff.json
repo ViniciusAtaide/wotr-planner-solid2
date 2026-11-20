@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "AirDomainAllowedSeparatist",
+  "guid": "fa67965152634a16bf619ad0e72d57ff"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "CelestialBloodlineRequisiteFeature",
+  "guid": "6906eafd622304841bb45c2601aec7a7",
+  "name": "Celestial Bloodline"
+}

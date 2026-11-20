@@ -1,0 +1,38 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_0b06a41777524044bf36e9f43b6a6e03"
+    },
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "IsUnitMythicLevel",
+        "CheckMaxLevel": false,
+        "CheckMinLevel": true,
+        "MaxLevel": null,
+        "MinLevel": {
+          "$type": "IntConstant",
+          "Value": 3
+        },
+        "Not": false,
+        "Unit": {
+          "$type": "ContextTargetUnit"
+        }
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MaximizedCold",
+  "guid": "a88c26b9bd7242ecb2a68fb45e1ae621",
+  "name": "Maximized Cold"
+}

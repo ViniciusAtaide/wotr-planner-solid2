@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_a33b99f95322d6741af83e9381b2391c"
+    },
+    {
+      "$type": "IncreaseActivatableAbilityGroupSize",
+      "Group": "DebilitatingStrike"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_def114eb566dfca448e998969bf51586"
+    }
+  ],
+  "Groups": [
+    "RogueTalent",
+    "SlayerTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DoubleDebilitation",
+  "guid": "dd699394df0ef8847abba26038333f02",
+  "name": "Double Debilitation"
+}

@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_90e4d7da3ccd1a8478411e07e91d5750"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 1,
+      "m_Progression": "DivStep",
+      "m_StartLevel": 0,
+      "m_StepLevel": 2,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": true
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "SwordlordWeaponProwess"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DisplayWeaponProwess",
+  "guid": "ac8d4d2e375a8c841a19ed46696e5af2",
+  "name": "Display Weapon Prowess"
+}

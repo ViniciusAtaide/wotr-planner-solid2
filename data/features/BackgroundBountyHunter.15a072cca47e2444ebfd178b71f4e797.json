@@ -1,0 +1,47 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillStealth"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_6d3728d4e9c9898458fe5e9532951132",
+        "!bp_2c343b1606bc68248891bd53d38a3d18",
+        "!bp_d0a788c77b0eae948944fa424125c120",
+        "!bp_3f18330d717ea0148b496ee8cc291a60"
+      ]
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillStealth"
+    },
+    {
+      "$type": "AddBackgroundArmorProficiency",
+      "Proficiency": "Light"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Club"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "LightMace"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "HeavyMace"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundBountyHunter",
+  "guid": "15a072cca47e2444ebfd178b71f4e797",
+  "name": "Bounty Hunter"
+}

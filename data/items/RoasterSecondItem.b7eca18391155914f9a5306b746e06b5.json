@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "RoasterSecondItem",
+  "guid": "b7eca18391155914f9a5306b746e06b5",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_c4e95e3c489721e4382fd8514a522f9d"
+}

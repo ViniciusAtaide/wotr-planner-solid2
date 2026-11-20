@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    }
+  ],
+  "Groups": [
+    "WizardFeat",
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HeightenSpellFeat",
+  "guid": "2f5d1e705c7967546b72ad8218ccf99c",
+  "name": "Metamagic (Heighten Spell)"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_d727873ac94f4523a793b558a6160856"
+    }
+  ],
+  "assetName": "VoraciousSpiritEnchantment",
+  "guid": "08bfd2c4fb394c65a707f8bf20a3422a"
+}

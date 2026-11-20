@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_e628e68c785a4fa5b5247f148b39dc3c"
+    }
+  ],
+  "assetName": "SoullesCommandEnchantment",
+  "guid": "df5d7d31c272439496025716d4a42d3b"
+}

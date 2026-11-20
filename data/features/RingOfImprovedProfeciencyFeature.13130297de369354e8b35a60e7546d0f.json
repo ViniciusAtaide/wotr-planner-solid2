@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "RingOfImprovedProfeciencyFeature",
+  "guid": "13130297de369354e8b35a60e7546d0f",
+  "name": "Ring of Improved Proficiency"
+}

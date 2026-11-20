@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkLongbow",
+  "guid": "8e89a5d3c1a9dae44b967fb4fd7e5117",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a1211c05ec2c46428f41e3c0db9423f",
+  "name": "Masterwork Longbow"
+}

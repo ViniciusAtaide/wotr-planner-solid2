@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "OldEarthShriekAmuletItem",
+  "guid": "1e67d8ab112c4784e8150d01bec4a5a4",
+  "m_Enchantments": [
+    "!bp_50a904b61a19239459ff98a99d34db9e"
+  ],
+  "name": "Voice of the Faceless (neck)"
+}

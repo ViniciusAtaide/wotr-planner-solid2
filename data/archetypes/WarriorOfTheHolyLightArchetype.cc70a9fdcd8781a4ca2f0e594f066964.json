@@ -1,0 +1,74 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_1631263dd628af44e8b2181d62122088",
+        "!bp_e0b5b7a291506ae44b73653aa0f4feb4"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_a83eff2f92b2e9147a43a7b8accaa46d",
+        "!bp_e0b5b7a291506ae44b73653aa0f4feb4"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_25c08230cdac4b14995b6c8d80bdf943",
+        "!bp_e0b5b7a291506ae44b73653aa0f4feb4"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_a6da390e9deeca2468ca0786a0ba225c"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_5d5f11207836a374583ffffbd4d86c9c",
+        "!bp_e0b5b7a291506ae44b73653aa0f4feb4"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_f1339b083cf65644ca8dbbfa836adb24"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_c4cff8089665a494a8d620192269132f",
+        "!bp_e0b5b7a291506ae44b73653aa0f4feb4",
+        "!bp_f1339b083cf65644ca8dbbfa836adb24"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_0437f4af5ad49b544bccf48aa7a51319"
+      ]
+    }
+  ],
+  "RemoveSpellbook": true,
+  "ReplaceClassSkills": false,
+  "assetName": "WarriorOfTheHolyLightArchetype",
+  "guid": "cc70a9fdcd8781a4ca2f0e594f066964",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Warrior of the Holy Light"
+}

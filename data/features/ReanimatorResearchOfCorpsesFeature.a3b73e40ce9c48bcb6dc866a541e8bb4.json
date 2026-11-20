@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_2adda18522f446a699fbe1dcd5fb994d"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ReanimatorResearchOfCorpsesFeature",
+  "guid": "a3b73e40ce9c48bcb6dc866a541e8bb4",
+  "name": "Corpse Studying"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DruchiteFalcataPlus3",
+  "guid": "7134485c68894c2e8b9bb0a3702913ad",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1af5621e2ae551e42bd1dd6744d98639"
+}

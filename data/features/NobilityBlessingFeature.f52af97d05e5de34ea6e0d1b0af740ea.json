@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_30b5e47d47a0e37438cc5a80c96cfb99",
+      "m_Feature": "!bp_93284f69850f62e4b9f1e0b7bd14cf21"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e0471d01e73254a4ca23278705b75e57"
+    }
+  ],
+  "Groups": [
+    "WarpriestBlessing"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "NobilityBlessingFeature",
+  "guid": "f52af97d05e5de34ea6e0d1b0af740ea",
+  "name": "Nobility"
+}

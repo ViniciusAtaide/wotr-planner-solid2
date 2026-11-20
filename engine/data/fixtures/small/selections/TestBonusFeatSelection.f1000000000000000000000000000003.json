@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "CombatFeat",
+  "Group2": "None",
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Ranks": 1,
+  "assetName": "TestBonusFeatSelection",
+  "guid": "f1000000000000000000000000000003",
+  "m_AllFeatures": [
+    "!bp_f1000000000000000000000000000004",
+    "!bp_f1000000000000000000000000000005",
+    "!bp_f1000000000000000000000000000006",
+    "!bp_f1000000000000000000000000000007"
+  ],
+  "name": "Test Bonus Feat"
+}

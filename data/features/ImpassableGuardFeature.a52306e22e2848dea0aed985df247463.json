@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "ImpassableGuardFeature",
+  "guid": "a52306e22e2848dea0aed985df247463"
+}

@@ -1,0 +1,81 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillPerception",
+    "SkillMobility",
+    "CheckIntimidate"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d09b20029e9abfe4480b356c92095623"
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "BaseAttackBonus",
+      "Value": 7
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_54ee847996c25cd4ba8773d7b8555174"
+    },
+    {
+      "$type": "PrerequisiteProficiency",
+      "ArmorProficiencies": [
+        "Medium",
+        "Light"
+      ],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": []
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D12",
+  "IsMythic": false,
+  "PrestigeClass": true,
+  "SkillPoints": 2,
+  "assetName": "StalwartDefenderClass",
+  "guid": "d5917881586ff1d4d96d5b7cebda9464",
+  "m_Archetypes": [],
+  "m_BaseAttackBonus": "!bp_b3057560ffff3514299e8b93e7648a9d",
+  "m_FortitudeSave": "!bp_1f309006cd2855e4e91a6c3707f3f700",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_e93eabf4f9b48914c9d880dd41c06385",
+  "m_ReflexSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_1f309006cd2855e4e91a6c3707f3f700",
+  "name": "Stalwart Defender"
+}

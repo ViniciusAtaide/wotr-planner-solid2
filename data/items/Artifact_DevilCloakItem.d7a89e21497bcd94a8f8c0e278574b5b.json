@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_211f49705f478b3468db6daa802452a2"
+    }
+  ],
+  "assetName": "Artifact_DevilCloakItem",
+  "guid": "d7a89e21497bcd94a8f8c0e278574b5b",
+  "m_Enchantments": [
+    "!bp_3d4e6d1891274d359231146377d8e5a6"
+  ],
+  "name": "The Bound of Possibility (Devil)"
+}

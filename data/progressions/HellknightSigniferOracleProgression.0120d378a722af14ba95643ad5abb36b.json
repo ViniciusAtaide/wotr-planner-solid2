@@ -1,0 +1,185 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "HellknightSigniferSpellbook"
+  ],
+  "HideInUI": true,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_3cb30f805e79a7944b0d0174c9a157b7"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_5290b422c5c02c44f99291688e798d8f"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_3cb30f805e79a7944b0d0174c9a157b7",
+        "!bp_5290b422c5c02c44f99291688e798d8f"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_f8cf4644c7ff15d4799a59593b900091"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_3cb30f805e79a7944b0d0174c9a157b7",
+        "!bp_5290b422c5c02c44f99291688e798d8f",
+        "!bp_f8cf4644c7ff15d4799a59593b900091"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_7f526cef9fcb7934aaaca1bf3d26fc0f"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_5290b422c5c02c44f99291688e798d8f",
+        "!bp_f8cf4644c7ff15d4799a59593b900091",
+        "!bp_7f526cef9fcb7934aaaca1bf3d26fc0f"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_2bf8b6fa7082d45409537d6112cb5647"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_5290b422c5c02c44f99291688e798d8f",
+        "!bp_f8cf4644c7ff15d4799a59593b900091",
+        "!bp_7f526cef9fcb7934aaaca1bf3d26fc0f",
+        "!bp_2bf8b6fa7082d45409537d6112cb5647"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_b93df7bf0405a974cafcda21cbd070f1"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_7f526cef9fcb7934aaaca1bf3d26fc0f",
+        "!bp_2bf8b6fa7082d45409537d6112cb5647",
+        "!bp_798bf6e210d9a0e42bf960390b5991ba"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_6bbc04c6c95fc694788ddb265dc15ea2"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_798bf6e210d9a0e42bf960390b5991ba",
+        "!bp_6bbc04c6c95fc694788ddb265dc15ea2"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_f6c08ecbd77a43b4dbc0252afc2cb578"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_6bbc04c6c95fc694788ddb265dc15ea2",
+        "!bp_f6c08ecbd77a43b4dbc0252afc2cb578"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_57dae97f6e587f54e9c0559c6fa6590f"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_f6c08ecbd77a43b4dbc0252afc2cb578",
+        "!bp_57dae97f6e587f54e9c0559c6fa6590f"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_9286a5a685edb084ca668a8598f6d11f",
+        "!bp_57dae97f6e587f54e9c0559c6fa6590f"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "HellknightSigniferOracleProgression",
+  "guid": "0120d378a722af14ba95643ad5abb36b",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_ee6425d6392101843af35f756ce7fefd"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    }
+  ],
+  "m_ExclusiveProgression": "!bp_ee6425d6392101843af35f756ce7fefd",
+  "m_FeaturesRankIncrease": [],
+  "name": "Oracle"
+}

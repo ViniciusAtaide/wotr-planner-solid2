@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "DisenchanterFeatSelection12",
+  "guid": "6b0dd75a4f3872543842179cf6e456e0",
+  "m_AllFeatures": [
+    "!bp_79042cb55f030614ea29956177977c52",
+    "!bp_175d1577bb6c9a04baf88eec99c66334",
+    "!bp_15e7da6645a7f3d41bdad7c8c4b9de1e",
+    "!bp_cad1b9175e8c0e64583432a22134d33c",
+    "!bp_60ed5ba87ac9e3241adc8212d3f6a24c",
+    "!bp_f3e3e29608ba07844ab3cafc4c8e4343",
+    "!bp_f5db1cc7ad48d794f85252fa4a64157b",
+    "!bp_3ea2215150a1c8a4a9bfed9d9023903e",
+    "!bp_1e813eb8159b67a459b1c975027866e5",
+    "!bp_e92cb7c4c900dcf4282def347af42b9c",
+    "!bp_d298e64e14398e848a54db5a2619ba42"
+  ],
+  "name": "Bonus Feats (Disenchanter 12)"
+}

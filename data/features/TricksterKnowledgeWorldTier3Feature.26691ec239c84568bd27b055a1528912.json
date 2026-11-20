@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8b6fe337865492645892cc8db5dd0e01"
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "TricksterIgnoreFeatPrerequisites"
+    }
+  ],
+  "Groups": [
+    "MythicTrick3"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterKnowledgeWorldTier3Feature",
+  "guid": "26691ec239c84568bd27b055a1528912",
+  "name": "Knowledge (World) 3 Rank"
+}

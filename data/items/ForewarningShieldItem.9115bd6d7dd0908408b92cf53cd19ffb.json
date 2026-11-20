@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "ForewarningShieldItem",
+  "guid": "9115bd6d7dd0908408b92cf53cd19ffb",
+  "m_ArmorComponent": "!bp_44361f56fb860ca41b3e7e586477ba34",
+  "m_WeaponComponent": "!bp_62c90581f9892e9468f0d8229c7321c4",
+  "name": "Forewarning"
+}

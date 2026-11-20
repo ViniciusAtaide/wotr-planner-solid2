@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronLightPick",
+  "guid": "5945fc0f6d86888418b9be7eefc09d98",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_da922f4cdb60ef548a2ec0168620568a",
+  "name": "Cold Iron Light Pick"
+}

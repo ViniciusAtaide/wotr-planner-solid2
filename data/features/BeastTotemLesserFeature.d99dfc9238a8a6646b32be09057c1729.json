@@ -1,0 +1,41 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_76437492f801f054ba536473ad2fde79"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_aba61e0b0e66bf3439cc247ee89fddae"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_45102fd7aab96f94d81ec80768549e12"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_bd63d3ea0e030cf4c930db9ba5eaf931"
+    }
+  ],
+  "Groups": [
+    "RagePower"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BeastTotemLesserFeature",
+  "guid": "d99dfc9238a8a6646b32be09057c1729",
+  "name": "Beast Totem, Lesser"
+}

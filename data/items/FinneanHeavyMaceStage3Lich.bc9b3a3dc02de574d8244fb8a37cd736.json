@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanHeavyMaceStage3Lich",
+  "guid": "bc9b3a3dc02de574d8244fb8a37cd736",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d5a167f0f0208dd439ec7481e8989e21",
+  "name": "Finnean (Heavy Mace)"
+}

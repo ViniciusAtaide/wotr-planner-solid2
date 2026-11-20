@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_139ffae3f9644e31bf1c64589edd5a3c"
+    }
+  ],
+  "assetName": "GreatclubOfSacredCindersEnchantment",
+  "guid": "e6716f81a0e3495a9442237b3ce9f380"
+}

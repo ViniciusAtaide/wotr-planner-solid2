@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_819e5319070bec3438f7a44019fb9028"
+    }
+  ],
+  "assetName": "CelestialProtectionEnchantment",
+  "guid": "fb1630b28e902e04ab47032a326b64b9"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "AdaptiveTactics",
+  "guid": "e01152417a8ac2248b4f69711b819441",
+  "name": "Adaptive Tactics"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": true,
+  "IsMythic": false,
+  "Spontaneous": false,
+  "assetName": "ThassilonianEvocationSpellbook",
+  "guid": "05b105ddee654db4fb1547ba48ffa160",
+  "m_SpellsPerDay": "!bp_78bb94ed2e75122428232950bb09e97b",
+  "name": "Wizard"
+}

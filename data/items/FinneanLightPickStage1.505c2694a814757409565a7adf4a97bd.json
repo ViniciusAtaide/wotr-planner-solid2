@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanLightPickStage1",
+  "guid": "505c2694a814757409565a7adf4a97bd",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_da922f4cdb60ef548a2ec0168620568a",
+  "name": "Finnean the Talking Weapon (Light Pick +1)"
+}

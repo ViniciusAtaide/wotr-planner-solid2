@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_835965babf38498d8f523fd4001aa44c"
+    }
+  ],
+  "assetName": "NemaryStigma_HatredEnchantment",
+  "guid": "af376a7a80ef46a1a9449c437a0b01fd"
+}

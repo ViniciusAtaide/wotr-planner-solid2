@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "BreastplateSonicResistPlus1",
+  "guid": "168074029946f874bbfde86541e5a18d",
+  "m_Enchantments": [
+    "!bp_a9ea95c5e02f9b7468447bc1010fe152",
+    "!bp_6e2dfcafe4faf8941b1426a86a76c368"
+  ],
+  "m_Type": "!bp_d326c3c61a84c6f40977c84fab41503d",
+  "name": "Breastplate of Lesser Sonic Resistance"
+}

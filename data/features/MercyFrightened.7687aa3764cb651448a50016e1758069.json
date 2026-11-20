@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c4732ca5b0af7214a98f9b4dafe87da9"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 9,
+      "Not": false,
+      "m_CharacterClass": "!bp_bfa11238e7ae3544bbeb4d0b92e897ec"
+    }
+  ],
+  "Groups": [
+    "Mercy"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MercyFrightened",
+  "guid": "7687aa3764cb651448a50016e1758069",
+  "name": "Mercy — Frightened"
+}

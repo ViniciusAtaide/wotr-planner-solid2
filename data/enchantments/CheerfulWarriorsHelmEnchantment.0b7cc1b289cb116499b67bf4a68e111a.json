@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8d48c237fcdb4544797779aa73b64f63"
+    }
+  ],
+  "assetName": "CheerfulWarriorsHelmEnchantment",
+  "guid": "0b7cc1b289cb116499b67bf4a68e111a"
+}

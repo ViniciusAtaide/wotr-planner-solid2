@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "KineticDiademLesserItem",
+  "guid": "2c46e4062d47c5243922e60eb5ab3df1",
+  "m_Enchantments": [
+    "!bp_b7f90919facc376498266892c33cf2ec"
+  ],
+  "name": "Lesser Kinetic Diadem"
+}

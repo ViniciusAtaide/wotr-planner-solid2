@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_d8b8d1dd83393484cbacf6c8830080ae"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_c846fed2d31e1734ebad07a64f72df2f"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "PrimalistArchetype",
+  "guid": "4d588290ed0736e4f8cd3f4c3beacd69",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Primalist"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_22052bf3d30804645b2015327f0d9b00"
+    }
+  ],
+  "assetName": "CharredBulwarkShieldEnchantment",
+  "guid": "6ca584310fac2f1468594c629ccdfc89"
+}

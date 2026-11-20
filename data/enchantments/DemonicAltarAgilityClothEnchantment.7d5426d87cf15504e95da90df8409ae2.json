@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e2ba0a91ed4bcf5429e2d30a534c7e11"
+    }
+  ],
+  "assetName": "DemonicAltarAgilityClothEnchantment",
+  "guid": "7d5426d87cf15504e95da90df8409ae2"
+}

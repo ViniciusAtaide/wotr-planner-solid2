@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "FavoriteMetamagicPiercing"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c101ad6879a94204a780506f7a554865"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FavoriteMetamagicPiercing",
+  "guid": "bd38adc649b9431d89269f00b55014bc",
+  "name": "Favorite Metamagic — Piercing"
+}

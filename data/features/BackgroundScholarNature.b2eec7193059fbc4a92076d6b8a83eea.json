@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillUseMagicDevice"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreNature"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillUseMagicDevice"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillLoreNature"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundScholarNature",
+  "guid": "b2eec7193059fbc4a92076d6b8a83eea",
+  "name": "Scholar — Nature"
+}

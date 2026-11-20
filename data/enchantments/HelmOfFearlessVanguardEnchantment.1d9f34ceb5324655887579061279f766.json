@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_37e5ceb76a8e44768e2eaeaed2c0d0df"
+    }
+  ],
+  "assetName": "HelmOfFearlessVanguardEnchantment",
+  "guid": "1d9f34ceb5324655887579061279f766"
+}

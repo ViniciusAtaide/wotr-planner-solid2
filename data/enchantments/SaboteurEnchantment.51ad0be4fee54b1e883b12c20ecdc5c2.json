@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_35c85e465cd044a9870054e8d78dbcb7"
+    }
+  ],
+  "assetName": "SaboteurEnchantment",
+  "guid": "51ad0be4fee54b1e883b12c20ecdc5c2"
+}

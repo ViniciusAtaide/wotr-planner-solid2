@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "BrilliantEnergyScythePlus5Item",
+  "guid": "8643a451e47d43f080f47716bc07c0c5",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_4eacfc7e152930a45a1a16217c35011c",
+  "name": "Brilliant Energy Scythe +5"
+}

@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreReligion"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPersuasion"
+    },
+    {
+      "$type": "ReplaceStatBaseAttribute",
+      "BaseAttributeReplacement": "Wisdom",
+      "ReplaceIfHigher": true,
+      "TargetStat": "SkillPersuasion"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillLoreReligion"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillPersuasion"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundAcolyte",
+  "guid": "7cc9014488caa5445a0c8b5e17b95466",
+  "name": "Acolyte"
+}

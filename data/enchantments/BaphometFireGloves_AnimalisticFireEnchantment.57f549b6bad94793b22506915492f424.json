@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b5095bd2c3bc4615bffecb6ead9982b3"
+    }
+  ],
+  "assetName": "BaphometFireGloves_AnimalisticFireEnchantment",
+  "guid": "57f549b6bad94793b22506915492f424"
+}

@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Fauchard",
+  "Components": [],
+  "assetName": "Fauchard",
+  "guid": "7a40899c4defec94bb9c291bde74f1a8",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Polearms",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": true,
+  "name": "Fauchard"
+}

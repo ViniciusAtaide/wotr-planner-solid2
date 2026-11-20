@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanShortspearStage3Lich",
+  "guid": "4b51753452c01e0439e327478311561f",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_cf72040b79c99504785976b28d54b2b7",
+  "name": "Finnean (Shortspear)"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PerfectInfusionFeature",
+  "guid": "74686a88b35946219aa72455c50a15b0",
+  "name": "Perfect Infusion"
+}

@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "FavoriteMetamagicSelective"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_85f3340093d144dd944fff9a9adfd2f2"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FavoriteMetamagicSelective",
+  "guid": "3cdc012185334b7da4ed42c6fcc948cf",
+  "name": "Favorite Metamagic — Selective"
+}

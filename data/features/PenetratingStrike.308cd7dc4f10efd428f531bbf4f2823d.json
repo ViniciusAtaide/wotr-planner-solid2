@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 12,
+      "Not": false,
+      "m_CharacterClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_1e1f627d26ad36f43bbd26cc2bf8ac7e"
+    }
+  ],
+  "Groups": [
+    "CombatFeat",
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PenetratingStrike",
+  "guid": "308cd7dc4f10efd428f531bbf4f2823d",
+  "name": "Penetrating Strike"
+}

@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddPet",
+      "Type": "MythicSkeletalChampion"
+    }
+  ],
+  "Groups": [
+    "SkeletalChampion"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MythicLichSkeletonCompanionArcher",
+  "guid": "0cebe3b375b6397438909ac9752d9792",
+  "name": "Skeletal Marksman"
+}

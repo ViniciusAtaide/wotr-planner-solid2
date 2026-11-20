@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_550e3c2310f44e1bba5254385a0a2775"
+    }
+  ],
+  "assetName": "CrimsonMoonEnchantment",
+  "guid": "6344f483e53d491fabbdc28fbedfa832"
+}

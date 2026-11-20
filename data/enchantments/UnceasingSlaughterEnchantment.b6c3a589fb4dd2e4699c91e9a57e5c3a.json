@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_194eb8823e5a79c45abcab31aea44858"
+    }
+  ],
+  "assetName": "UnceasingSlaughterEnchantment",
+  "guid": "b6c3a589fb4dd2e4699c91e9a57e5c3a"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_782027e68010df048af8289ceb6f3c31"
+    }
+  ],
+  "assetName": "GogglesOfMalocchioEnchantment",
+  "guid": "256e94351c08aa94f91b110b7362c264"
+}

@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 4,
+      "Not": false,
+      "m_CharacterClass": "!bp_e8f21e5b58e0569468e420ebea456124"
+    }
+  ],
+  "Groups": [
+    "ScaledFistKiPowers"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ScaledFistScorchingRayFeature",
+  "guid": "fa1e4965fe009be478a1283727e68c65",
+  "name": "Ki Power: Scorching Ray (Scaled Fist)"
+}

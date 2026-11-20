@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "GrimHelmetItem",
+  "guid": "89c8089f4664d37438d24cd1440fedc8",
+  "m_Enchantments": [
+    "!bp_80123bea364a1144ab933d515e4f6be0"
+  ],
+  "name": "Eternal Night"
+}

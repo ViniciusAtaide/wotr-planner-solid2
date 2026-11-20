@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_30b5e47d47a0e37438cc5a80c96cfb99",
+      "m_Feature": "!bp_f5b993b62c3ef064ba9f35d1f21611d8"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8d4e9731082008640b28417f577f5f31"
+    }
+  ],
+  "Groups": [
+    "WarpriestBlessing"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FireBlessingFeature",
+  "guid": "2368212fa3856d74589e924d3e2074d8",
+  "name": "Fire (Blessings)"
+}

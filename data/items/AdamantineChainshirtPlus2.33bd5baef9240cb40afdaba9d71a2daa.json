@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "AdamantineChainshirtPlus2",
+  "guid": "33bd5baef9240cb40afdaba9d71a2daa",
+  "m_Enchantments": [
+    "!bp_5faa3aaee432ac444b101de2b7b0faf7",
+    "!bp_758b77a97640fd747abf149f5bf538d0"
+  ],
+  "m_Type": "!bp_7467b0ab8641d8f43af7fc46f2108a1a",
+  "name": "Adamantine Chainshirt +2"
+}

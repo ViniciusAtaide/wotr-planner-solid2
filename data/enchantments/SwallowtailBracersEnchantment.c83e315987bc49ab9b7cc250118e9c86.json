@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8a8aaa66c13940fba0b49de64a28f028"
+    }
+  ],
+  "assetName": "SwallowtailBracersEnchantment",
+  "guid": "c83e315987bc49ab9b7cc250118e9c86"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_c8c471f1f9889e1408347d3c7987b4f1"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "LoremasterFeyspeakerLevelUp",
+  "guid": "592a0bf74855f6b4b9518d32e1bdfec7",
+  "name": "Feyspeaker"
+}

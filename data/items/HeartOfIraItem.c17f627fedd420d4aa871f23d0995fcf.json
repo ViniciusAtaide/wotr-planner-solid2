@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "HeartOfIraItem",
+  "guid": "c17f627fedd420d4aa871f23d0995fcf",
+  "m_Enchantments": [
+    "!bp_1382ebea50347a148a62ec06e0fdab96"
+  ],
+  "name": "The Heart of Ira"
+}

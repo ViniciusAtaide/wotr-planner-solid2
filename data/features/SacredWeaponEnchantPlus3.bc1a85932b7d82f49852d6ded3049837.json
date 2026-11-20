@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "IncreaseActivatableAbilityGroupSize",
+      "Group": "SacredWeaponProperty"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SacredWeaponEnchantPlus3",
+  "guid": "bc1a85932b7d82f49852d6ded3049837",
+  "name": "Sacred Weapon +3"
+}

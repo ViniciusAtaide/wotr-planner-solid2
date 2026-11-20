@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "DLC3_RingOfInstantTriumphItem",
+  "guid": "b631f6412333463eb620b4fd0571698c",
+  "m_Enchantments": [
+    "!bp_cf86e52d03964ac4af5203ab478deba7"
+  ],
+  "name": "Ring of Triumphant Advance"
+}

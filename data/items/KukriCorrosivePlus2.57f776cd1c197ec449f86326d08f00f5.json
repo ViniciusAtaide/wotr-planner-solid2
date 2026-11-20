@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "KukriCorrosivePlus2",
+  "guid": "57f776cd1c197ec449f86326d08f00f5",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_006ecd4715809b343b7001e859e3ddb2",
+  "name": "Corrosive Kukri +2"
+}

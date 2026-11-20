@@ -1,0 +1,45 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Insight",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillLoreNature",
+      "Value": 3
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Insight",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillLoreReligion",
+      "Value": 3
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Insight",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillKnowledgeWorld",
+      "Value": 3
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Insight",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 3
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "None",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SaveReflex",
+      "Value": 2
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "LoremastersRobeFeature",
+  "guid": "dab656df16cf4707b827aea4023b6b0b"
+}

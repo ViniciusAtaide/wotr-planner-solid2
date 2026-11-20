@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CloakOfCleansingItem",
+  "guid": "6377f6b75ecef5c40b40e9f3b9efd65d",
+  "m_Enchantments": [
+    "!bp_c0e9729679d54f0459f19bf8c541b355"
+  ],
+  "name": "Cloak of Cleansing"
+}

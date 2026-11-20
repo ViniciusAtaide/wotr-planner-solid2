@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_145d3864feb4aa743a623f687ba427e2"
+    }
+  ],
+  "assetName": "MarksmansHatEnchant",
+  "guid": "70df8e08c2c7f4a41ba6e6fc28849690"
+}

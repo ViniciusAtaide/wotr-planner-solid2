@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "RobeOfMagma",
+  "guid": "7dca2a51b1e143cd9ab0b05aedd26ceb",
+  "m_Enchantments": [
+    "!bp_0000d783f2ee4154b6b46b73e727c54f"
+  ],
+  "name": "Robe of Magma"
+}

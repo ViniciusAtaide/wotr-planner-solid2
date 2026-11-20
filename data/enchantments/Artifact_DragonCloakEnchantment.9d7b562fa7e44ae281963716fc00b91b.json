@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_d4c507301e47431ca5b992aecfd7b313"
+    }
+  ],
+  "assetName": "Artifact_DragonCloakEnchantment",
+  "guid": "9d7b562fa7e44ae281963716fc00b91b"
+}

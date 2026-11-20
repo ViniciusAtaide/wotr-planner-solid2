@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SlayerSwiftStudyTargetFeature",
+  "guid": "40d4f55a5ac0e4f469d67d36c0dfc40b",
+  "name": "Studied Target (Swift)"
+}

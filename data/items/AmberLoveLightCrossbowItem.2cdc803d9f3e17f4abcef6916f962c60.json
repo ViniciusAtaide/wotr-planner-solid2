@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "AmberLoveLightCrossbowItem",
+  "guid": "2cdc803d9f3e17f4abcef6916f962c60",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d525e7a6d8d5aa648a976ac41194b8d0",
+  "name": "Passion's Sweet Poison (weapon)"
+}

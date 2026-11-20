@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ChromaticCloakFeature",
+  "guid": "6e9449f134504231bb74dad7f7c54b4f",
+  "name": "Cloak of Reflections"
+}

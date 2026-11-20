@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "WeaponLightShield",
+  "Components": [],
+  "assetName": "WeaponLightShield",
+  "guid": "1fd965e522502fe479fdd423cca07684",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Close",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Light Shield"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 20,
+  "assetName": "KineticBlastFeature",
+  "guid": "93efbde2764b5504e98e6824cab3d27c",
+  "name": "Kinetic Blast"
+}

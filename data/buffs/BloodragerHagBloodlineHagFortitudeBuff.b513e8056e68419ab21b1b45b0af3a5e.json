@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 4,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499",
+      "m_Feature": "!bp_9e0051f85452c0f4689eee2eda041bb3"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 8,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499",
+      "m_Feature": "!bp_7e3f3228be49cce49bda37f7901bf246"
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "BloodragerHagBloodlineHagFortitudeBuff",
+  "guid": "b513e8056e68419ab21b1b45b0af3a5e"
+}

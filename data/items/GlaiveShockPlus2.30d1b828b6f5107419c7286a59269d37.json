@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "GlaiveShockPlus2",
+  "guid": "30d1b828b6f5107419c7286a59269d37",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a14a1b224cd173449cb7ffc77d5f65c",
+  "name": "Shock Glaive +2"
+}

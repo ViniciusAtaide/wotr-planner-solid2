@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": true,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "MysticTheurgeHunterLevelSelection3",
+  "guid": "2e2decab18164a9ea18311a24d7f6451",
+  "m_AllFeatures": [
+    "!bp_a9381bc517c749d18a310842e2dff221"
+  ]
+}

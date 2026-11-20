@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodKineticistWrackFeature",
+  "guid": "9e7f94f8d42a74240b9329f5e68121ee",
+  "name": "Wrack (Blood Kineticist)"
+}

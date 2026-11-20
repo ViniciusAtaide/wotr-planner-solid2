@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "KnightsEmblemEmeraldShortswordItem",
+  "guid": "699d16a646c91884daddab70a42aec8a",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a7da36e0e7bb60e42b9f23462ce2f4fc",
+  "name": "Mallander's Penance (weapon)"
+}

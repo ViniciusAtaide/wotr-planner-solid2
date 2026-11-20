@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_c0d2067068f97434ab0d79b563aa7938"
+    }
+  ],
+  "assetName": "RoyalMessengersChainshirtEnchantment",
+  "guid": "720ef6f8cfebb224398b6a6259be6a99"
+}

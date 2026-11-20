@@ -1,0 +1,149 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "NomadMountProgression",
+  "guid": "41836efffaa346a091686e990b122ca4",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_9f147dbae4a34cda9f0e6091dc1a4a7c"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_cda0615668a6df14eb36ba19ee881af6"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": []
+}

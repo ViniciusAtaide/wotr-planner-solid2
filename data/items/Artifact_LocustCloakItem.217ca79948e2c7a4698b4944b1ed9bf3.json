@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_5295b8e13c2303f4c88bdb3d7760a757"
+    }
+  ],
+  "assetName": "Artifact_LocustCloakItem",
+  "guid": "217ca79948e2c7a4698b4944b1ed9bf3",
+  "m_Enchantments": [
+    "!bp_f6487579bcb34d63ba686f1cd979d6c0"
+  ],
+  "name": "The Bound of Possibility (Swarm That Walks)"
+}

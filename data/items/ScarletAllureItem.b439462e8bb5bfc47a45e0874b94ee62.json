@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "ScarletAllureItem",
+  "guid": "b439462e8bb5bfc47a45e0874b94ee62",
+  "m_Enchantments": [
+    "!bp_e82b3af9ee9ff4b4b85a88d711cd8db7"
+  ],
+  "name": "Scarlet Allure"
+}

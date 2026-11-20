@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 7,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_5d501618a28bdc24c80007a5c937dcb7",
+      "m_Feature": "!bp_ac5cfc218da4e414585c192919a0e941"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "LichSummonFeatureTier6",
+  "guid": "67a89bc88735c2140b905a28753e0b9a",
+  "name": "Summon Ecorche"
+}

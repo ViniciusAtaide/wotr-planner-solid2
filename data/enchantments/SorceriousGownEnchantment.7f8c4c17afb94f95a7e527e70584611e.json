@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_40c8515843864766844ab8b69ef1f29b"
+    }
+  ],
+  "assetName": "SorceriousGownEnchantment",
+  "guid": "7f8c4c17afb94f95a7e527e70584611e"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_dab656df16cf4707b827aea4023b6b0b"
+    }
+  ],
+  "assetName": "LoremastersRobeEnchantment",
+  "guid": "590c35b95cbe40f6bf7b8aafc7925235"
+}

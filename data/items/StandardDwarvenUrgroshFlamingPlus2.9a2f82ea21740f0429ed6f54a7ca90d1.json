@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDwarvenUrgroshFlamingPlus2",
+  "guid": "9a2f82ea21740f0429ed6f54a7ca90d1",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": "!bp_c84dbde492a4ff5408c53af60dfe5199",
+  "m_Type": "!bp_0ec97c08fdf87e44f8f16ba87b511743",
+  "name": "Flaming Dwarven Urgrosh +2"
+}

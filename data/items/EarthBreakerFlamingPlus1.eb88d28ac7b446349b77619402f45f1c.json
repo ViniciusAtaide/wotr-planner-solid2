@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "EarthBreakerFlamingPlus1",
+  "guid": "eb88d28ac7b446349b77619402f45f1c",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_54e960775daa4714fa52e0954d8cf862",
+  "name": "Flaming Earth Breaker +1"
+}

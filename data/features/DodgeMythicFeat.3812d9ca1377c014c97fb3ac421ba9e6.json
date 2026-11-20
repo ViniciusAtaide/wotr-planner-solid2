@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Dodge",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AC",
+      "Value": 1
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DodgeMythicFeat",
+  "guid": "3812d9ca1377c014c97fb3ac421ba9e6",
+  "name": "Dodge (Mythic)"
+}

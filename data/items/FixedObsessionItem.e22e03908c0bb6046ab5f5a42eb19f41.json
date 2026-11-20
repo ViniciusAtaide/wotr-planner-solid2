@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FixedObsessionItem",
+  "guid": "e22e03908c0bb6046ab5f5a42eb19f41",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_ca131c71f4fefcb48b30b5991520e01d",
+  "name": "Fixed Obsession"
+}

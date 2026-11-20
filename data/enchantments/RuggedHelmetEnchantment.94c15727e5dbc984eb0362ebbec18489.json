@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_305de4ac57a9b2f4abea1d59bbc567fc"
+    }
+  ],
+  "assetName": "RuggedHelmetEnchantment",
+  "guid": "94c15727e5dbc984eb0362ebbec18489"
+}

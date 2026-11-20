@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "AsziteLightShieldItemPlus3",
+  "guid": "397412c3132d40429f7a5cb15b7e60d7",
+  "m_ArmorComponent": "!bp_6aeefc00c7f544059332fd29b8ec7fc3",
+  "m_WeaponComponent": "!bp_62c90581f9892e9468f0d8229c7321c4",
+  "name": "Light Shield +3"
+}

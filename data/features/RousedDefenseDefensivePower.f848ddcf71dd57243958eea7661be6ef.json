@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "DefensivePower"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "RousedDefenseDefensivePower",
+  "guid": "f848ddcf71dd57243958eea7661be6ef",
+  "name": "Roused Defense"
+}

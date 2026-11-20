@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_df75fd7059c9fd94198852be7544c8b0"
+    }
+  ],
+  "assetName": "BootsOfWaryStepsEnchantment",
+  "guid": "f327a2d896e87a249b0662786284f569"
+}

@@ -1,0 +1,81 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "BaseAttackBonus",
+      "Value": 8
+    },
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_19bb148cb92db224abb431642d10efeb"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_6e843ca5ae8e41aea17458fb4c16a15d"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_1b60050091002ad458bd49788e84f13a"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_1d3656c3090e48f59888d86ff7014acc"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_24a4fb8991344fd5beb2a1a1a517da87"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_719be33c87f94ed58414ba3eb5a4b664"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_73290f79a79a4eb78e310a8bb166d3e8"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_fdd15b03962b41a5a0d9f9d19ba219fd"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_60e0aeb936a84576a44ea9b620bb12d9"
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "RakingClawsFeature",
+  "guid": "a1b262d2b1ef478994113fc941fa3a32",
+  "name": "Raking Claws"
+}

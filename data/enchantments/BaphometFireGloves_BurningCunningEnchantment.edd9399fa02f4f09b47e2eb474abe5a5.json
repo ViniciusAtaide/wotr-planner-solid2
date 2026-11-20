@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_6d803dc2301644a68c3c7b3d728f1f66"
+    }
+  ],
+  "assetName": "BaphometFireGloves_BurningCunningEnchantment",
+  "guid": "edd9399fa02f4f09b47e2eb474abe5a5"
+}

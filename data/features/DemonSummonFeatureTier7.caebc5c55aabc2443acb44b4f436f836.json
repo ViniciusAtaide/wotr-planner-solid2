@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 8,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_8e19495ea576a8641964102d177e34b7",
+      "m_Feature": "!bp_f116ee2eace32784bad419337c7d6a94"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DemonSummonFeatureTier7",
+  "guid": "caebc5c55aabc2443acb44b4f436f836",
+  "name": "Summon Lilitu"
+}

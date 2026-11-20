@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillMobility",
+    "SkillPerception",
+    "SkillPersuasion",
+    "SkillLoreReligion",
+    "SkillKnowledgeArcana",
+    "SkillStealth",
+    "SkillLoreNature"
+  ],
+  "Components": [],
+  "DontAddCasterLevels": false,
+  "HitDie": "D12",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 6,
+  "assetName": "DragonClass",
+  "guid": "01a754e7c1b7c5946ba895a5ff0faffc",
+  "m_Archetypes": [
+    "!bp_6e6135c91c2f84e46b7bb49f2158a9ce"
+  ],
+  "m_BaseAttackBonus": "!bp_b3057560ffff3514299e8b93e7648a9d",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_7b5c518870d11064b8e21988591bafaa",
+  "m_ReflexSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Dragon"
+}

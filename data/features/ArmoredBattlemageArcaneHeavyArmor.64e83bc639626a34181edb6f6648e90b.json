@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_447ca91389e5c9246acb2c640d63f4da"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArmoredBattlemageArcaneHeavyArmor",
+  "guid": "64e83bc639626a34181edb6f6648e90b",
+  "name": "Heavy Armor"
+}

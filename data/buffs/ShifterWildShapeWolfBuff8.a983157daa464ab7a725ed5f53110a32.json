@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillLoreNature",
+      "Value": 4
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "ShifterWildShapeWolfBuff8",
+  "guid": "a983157daa464ab7a725ed5f53110a32",
+  "name": "Major Form (Wolf)"
+}

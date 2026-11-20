@@ -1,0 +1,35 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_c75e0971973957d4dbad24bc7957e4fb"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 1,
+      "m_Progression": "Div2",
+      "m_StartLevel": 0,
+      "m_StepLevel": 0,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": true
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillThievery"
+    }
+  ],
+  "Groups": [
+    "SlayerTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SlayerTrapfinding",
+  "guid": "e3c12938c2f93544da89824fbe0933a5",
+  "name": "Trapfinding"
+}

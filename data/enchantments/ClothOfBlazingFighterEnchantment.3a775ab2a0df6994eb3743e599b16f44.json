@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_ee9c88d50e6bed145a0032b3778d5707"
+    }
+  ],
+  "assetName": "ClothOfBlazingFighterEnchantment",
+  "guid": "3a775ab2a0df6994eb3743e599b16f44"
+}

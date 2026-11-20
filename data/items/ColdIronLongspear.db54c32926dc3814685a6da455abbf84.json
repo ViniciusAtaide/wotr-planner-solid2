@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronLongspear",
+  "guid": "db54c32926dc3814685a6da455abbf84",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_fa2dd17cbde7d3f4aa918d467c30516e",
+  "name": "Cold Iron Longspear"
+}

@@ -1,0 +1,43 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_d89fb8ce9152ffa4dacd69390f3d7721",
+        "!bp_64e1f27147b642448842ab8dcbaca03f",
+        "!bp_12bb1056a5f3f9f4b9facdb78b8d8914",
+        "!bp_1d34d95ad4961e343b02db14690eb6d8",
+        "!bp_eef664d1e4318f64cb2304d1628d29ae",
+        "!bp_bef8d08ee3c20b246b404ce3ef948291",
+        "!bp_49115e2147cd32841baa34c305171daa",
+        "!bp_9c5ed34089fedf54ba8d0f43565bcc91",
+        "!bp_01e7aab638d6a0b43bc4e9d5b49e68d9",
+        "!bp_3867419bf47841b428333808dfdf4ae0"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_ee92a9813c04b1440a3af3c766b6b02d",
+      "m_CharacterClass": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    }
+  ],
+  "Groups": [
+    "DragonDiscipleSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DragonDiscipleLeyLineGuardianWitch",
+  "guid": "4020be12b2ce4b218d007425b2a111b7",
+  "m_Spellbook": "!bp_fb4e216b322d3924e9c7041016b46999",
+  "name": "Witch"
+}

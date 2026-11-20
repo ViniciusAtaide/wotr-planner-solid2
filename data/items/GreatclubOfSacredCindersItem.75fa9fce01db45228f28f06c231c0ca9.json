@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "GreatclubOfSacredCindersItem",
+  "guid": "75fa9fce01db45228f28f06c231c0ca9",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_e6716f81a0e3495a9442237b3ce9f380"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1b8c24cd1f9358c48839bb39266468c3",
+  "name": "Greatclub of Sacred Cinders"
+}

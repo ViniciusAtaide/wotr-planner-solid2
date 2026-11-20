@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "EstocAgilePlus3",
+  "guid": "4e1f98675226e40439d3d6ae2a4b1946",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d516765b3c2904e4a939749526a52a9a",
+  "name": "Agile Estoc +3"
+}

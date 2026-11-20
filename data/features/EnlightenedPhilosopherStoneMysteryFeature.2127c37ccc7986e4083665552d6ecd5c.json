@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 2,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_0509abed29bc79141ba4bdecb47bedf4"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreNature"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillAthletics"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPersuasion"
+    }
+  ],
+  "Groups": [
+    "EnlightenedPhilosopherMystery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EnlightenedPhilosopherStoneMysteryFeature",
+  "guid": "2127c37ccc7986e4083665552d6ecd5c",
+  "name": "Stone (Enlightened Philosopher)"
+}

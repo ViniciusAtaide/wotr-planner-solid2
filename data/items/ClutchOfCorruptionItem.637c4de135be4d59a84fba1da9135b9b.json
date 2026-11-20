@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "ClutchOfCorruptionItem",
+  "guid": "637c4de135be4d59a84fba1da9135b9b",
+  "m_Enchantments": [
+    "!bp_f9278c2ea13c2b34cb56be078428a0bb",
+    "!bp_e2a5712732f52064494ed0b818440929",
+    "!bp_8a433f9b5ecd4946a5c857c4ea069caf"
+  ],
+  "name": "Clutch of Corruption"
+}

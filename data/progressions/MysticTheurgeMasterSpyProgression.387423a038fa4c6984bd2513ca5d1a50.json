@@ -1,0 +1,105 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 2,
+      "m_CharacterClass": "!bp_cda0615668a6df14eb36ba19ee881af6"
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_7888187acfd26b7499cf255b0d6dcb0e",
+      "m_CharacterClass": "!bp_cda0615668a6df14eb36ba19ee881af6"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "MysticTheurgeDivineSpellbook"
+  ],
+  "HideInUI": true,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_edf5665fd64544479592729a32054465"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_edf5665fd64544479592729a32054465"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_edf5665fd64544479592729a32054465"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_edf5665fd64544479592729a32054465"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_edf5665fd64544479592729a32054465"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_edf5665fd64544479592729a32054465"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_edf5665fd64544479592729a32054465"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_edf5665fd64544479592729a32054465"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_edf5665fd64544479592729a32054465"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_edf5665fd64544479592729a32054465"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "MysticTheurgeMasterSpyProgression",
+  "guid": "387423a038fa4c6984bd2513ca5d1a50",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_0920ea7e4fd7a404282e3d8b0ac41838"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Espionage Expert"
+}

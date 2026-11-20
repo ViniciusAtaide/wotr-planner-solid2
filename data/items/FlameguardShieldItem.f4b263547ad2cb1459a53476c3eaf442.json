@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "FlameguardShieldItem",
+  "guid": "f4b263547ad2cb1459a53476c3eaf442",
+  "m_ArmorComponent": "!bp_ae9d511c5391bf54c8c87faf1277802a",
+  "m_WeaponComponent": null,
+  "name": "Flameguard"
+}

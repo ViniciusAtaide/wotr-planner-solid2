@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_59fea514ade4b474d8f6e8e618ff123e"
+      ]
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "BloodragerHagBloodlineCurseConduitBuff",
+  "guid": "e8473665806543c1a79c7f15725ba5cb",
+  "name": "Curse Conduit (Bloodrage)"
+}

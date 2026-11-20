@@ -1,0 +1,49 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_875fff6feb84f5240bf4375cb497e395"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "SpecialistSchool"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_9e4c4799735ae9c45964e9113107ef02",
+        "!bp_6c29030e9fea36949877c43a6f94ff31",
+        "!bp_6c29030e9fea36949877c43a6f94ff31"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_972ed7d4b0e497345a69b06afc052f67"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "SpecialisationSchoolEnchantmentProgression",
+  "guid": "252363458703f144788af49ef04d0803",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_ba34257984f4c41408ce1dc2004e342e"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Specialist School — Enchantment"
+}

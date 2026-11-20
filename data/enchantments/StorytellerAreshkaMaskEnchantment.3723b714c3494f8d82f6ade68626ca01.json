@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_57ccf2db05b1459fb4b2d1e78a286599"
+    }
+  ],
+  "assetName": "StorytellerAreshkaMaskEnchantment",
+  "guid": "3723b714c3494f8d82f6ade68626ca01"
+}

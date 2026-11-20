@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArtificeDomainGreaterFeature",
+  "guid": "9c536f77cae0c5c46a9cf871003ebe43",
+  "name": "Aura of Efficiency: Damage Resistance"
+}

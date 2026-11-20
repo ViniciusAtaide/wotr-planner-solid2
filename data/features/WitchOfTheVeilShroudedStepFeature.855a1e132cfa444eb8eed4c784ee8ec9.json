@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 8,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc",
+      "m_Feature": "!bp_c7c37bafb59f4e3d9a0387b67e779b05"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 8,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc",
+      "m_Feature": "!bp_e9b2f5532ad04a04bb1d4b3755a8a334"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WitchOfTheVeilShroudedStepFeature",
+  "guid": "855a1e132cfa444eb8eed4c784ee8ec9",
+  "name": "Shrouded Step"
+}

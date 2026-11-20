@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "NunchakuFlamingPlus1",
+  "guid": "a6a21ec9fd622014a9e62f577804fdd4",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_4703b4c0922142f4cbe8895c10a47a9f",
+  "name": "Flaming Nunchaku +1"
+}

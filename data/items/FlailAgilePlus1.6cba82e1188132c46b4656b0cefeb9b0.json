@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FlailAgilePlus1",
+  "guid": "6cba82e1188132c46b4656b0cefeb9b0",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_bf1e53f7442ed0c43bf52d3abe55e16a",
+  "name": "Agile Flail +1"
+}

@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "HeartOfThunderShieldItem",
+  "guid": "e9c7e91d3b032ab4d96d9588b985bab5",
+  "m_ArmorComponent": "!bp_f61ec85c52b765446b06d2b819381c80",
+  "m_WeaponComponent": "!bp_62c90581f9892e9468f0d8229c7321c4",
+  "name": "Heart of Thunder"
+}

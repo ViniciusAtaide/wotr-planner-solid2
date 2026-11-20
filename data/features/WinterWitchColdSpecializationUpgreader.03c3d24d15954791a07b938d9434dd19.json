@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_eb24ca44debf6714aabe1af1fd905a07",
+      "m_Feature": "!bp_fa40f1218b824073b7759dc0d4ca5a55"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_eb24ca44debf6714aabe1af1fd905a07",
+      "m_Feature": "!bp_d2926dfd0c3d4918bff84d8c292e732a"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "WinterWitchColdSpecializationUpgreader",
+  "guid": "03c3d24d15954791a07b938d9434dd19"
+}

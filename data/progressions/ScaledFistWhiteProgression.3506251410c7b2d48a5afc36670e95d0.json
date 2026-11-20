@@ -1,0 +1,41 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_3ca493a0495aecd468bd5489eddf85e9"
+      ]
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_d88d9faea279e8142adbda357bcc8377"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ScaledFistWhiteProgression",
+  "guid": "3506251410c7b2d48a5afc36670e95d0",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_e8f21e5b58e0569468e420ebea456124"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "White Dragon — Cold"
+}

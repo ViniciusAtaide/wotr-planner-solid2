@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a9dcf92f072ca7c4aa14eb12f9cb1d7b"
+    }
+  ],
+  "assetName": "StormAmberNecklaceEnchantment",
+  "guid": "b9847632dd3d6c241ba42fbf7a4b3799"
+}

@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "FavoriteMetamagicExtend"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_f180e72e4a9cbaa4da8be9bc958132ef"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FavoriteMetamagicExtend",
+  "guid": "37118163dcb572047b995158346f0058",
+  "name": "Favorite Metamagic — Extend"
+}

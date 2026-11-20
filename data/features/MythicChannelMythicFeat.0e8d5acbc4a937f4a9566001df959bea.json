@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_fd30c69417b434d47b6b03b9c1f568ff"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MythicChannelMythicFeat",
+  "guid": "0e8d5acbc4a937f4a9566001df959bea",
+  "name": "Mythic Channeling"
+}

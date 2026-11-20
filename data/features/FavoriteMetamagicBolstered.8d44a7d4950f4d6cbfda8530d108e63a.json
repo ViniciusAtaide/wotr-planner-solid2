@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "FavoriteMetamagicBolstered"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_fbf5d9ce931f47f3a0c818b3f8ef8414"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FavoriteMetamagicBolstered",
+  "guid": "8d44a7d4950f4d6cbfda8530d108e63a",
+  "name": "Favorite Metamagic — Bolstered"
+}

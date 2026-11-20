@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [],
+  "assetName": "ChainshirtBardingType",
+  "guid": "7b9bb0bc92bb7414d8ba44bcdd55ece6",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "LightBarding",
+  "name": "Light Armor — Chainshirt Barding"
+}

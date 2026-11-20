@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ReplaceStatForPrerequisites",
+      "NewStat": "Unknown",
+      "OldStat": "BaseAttackBonus",
+      "Policy": "ClassLevel",
+      "SpecificNumber": 0,
+      "m_CharacterClass": "!bp_30b5e47d47a0e37438cc5a80c96cfb99"
+    },
+    {
+      "$type": "ClassLevelsForPrerequisites",
+      "Modifier": 1,
+      "Summand": 0,
+      "m_ActualClass": "!bp_30b5e47d47a0e37438cc5a80c96cfb99",
+      "m_FakeClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd",
+      "m_ForSelection": "!bp_247a4068296e8be42890143f451b4b45"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "WarpriestClassAsBABFeature",
+  "guid": "2e134d80fef14a44aae9c087215c15af"
+}

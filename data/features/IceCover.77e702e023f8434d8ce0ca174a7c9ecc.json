@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "IceCover",
+  "guid": "77e702e023f8434d8ce0ca174a7c9ecc",
+  "name": "Ice Coating"
+}

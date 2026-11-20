@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronMasterworkLightPick",
+  "guid": "eb5754683de124d49a4048e0901b6fc6",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_da922f4cdb60ef548a2ec0168620568a",
+  "name": "Cold Iron Masterwork Light Pick"
+}

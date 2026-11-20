@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfBardResourcefulnessItem",
+  "guid": "9086249bc25640eca486f26d142134d1",
+  "m_Enchantments": [
+    "!bp_4eff9691e58d4ed99edd8c2baa3e1f51"
+  ],
+  "name": "Ring of Bardic Resourcefulness"
+}

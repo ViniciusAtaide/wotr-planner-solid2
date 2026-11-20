@@ -1,0 +1,42 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "AsIs",
+      "m_StartLevel": 0,
+      "m_StepLevel": 0,
+      "m_Type": "DamageDice",
+      "m_UseMax": false,
+      "m_UseMin": false
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_b759917c319f79b46b2040f6901aa5ce"
+    },
+    {
+      "$type": "ReplaceStatBaseAttribute",
+      "BaseAttributeReplacement": "Wisdom",
+      "ReplaceIfHigher": false,
+      "TargetStat": "SkillKnowledgeWorld"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PossessedShamanSharedSkillKnowledgeWorld",
+  "guid": "b759917c319f79b46b2040f6901aa5ce",
+  "name": "Shared Skill — Knowledge (World)"
+}

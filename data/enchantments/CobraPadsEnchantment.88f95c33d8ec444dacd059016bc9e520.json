@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_4f632b2b066b4757a99401d2d3ae4370"
+    }
+  ],
+  "assetName": "CobraPadsEnchantment",
+  "guid": "88f95c33d8ec444dacd059016bc9e520"
+}

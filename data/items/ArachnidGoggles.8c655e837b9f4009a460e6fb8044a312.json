@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "ArachnidGoggles",
+  "guid": "8c655e837b9f4009a460e6fb8044a312",
+  "m_Enchantments": [
+    "!bp_3b8b841e1e65494b9dd2034fb4ae07f9"
+  ],
+  "name": "Arachnid Goggles"
+}

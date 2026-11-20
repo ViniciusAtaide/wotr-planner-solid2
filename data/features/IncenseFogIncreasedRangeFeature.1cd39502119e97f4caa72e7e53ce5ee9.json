@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_7614401346b64a8409f7b8c367db488f"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_27c7f9e491a540243a535ac9aabb8ea5"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "IncenseFogIncreasedRangeFeature",
+  "guid": "1cd39502119e97f4caa72e7e53ce5ee9",
+  "name": "Incense Fog — Increased Range"
+}

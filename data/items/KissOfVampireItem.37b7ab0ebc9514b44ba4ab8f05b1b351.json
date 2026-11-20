@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "KissOfVampireItem",
+  "guid": "37b7ab0ebc9514b44ba4ab8f05b1b351",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_fa2dd17cbde7d3f4aa918d467c30516e",
+  "name": "Kiss of Vampire"
+}

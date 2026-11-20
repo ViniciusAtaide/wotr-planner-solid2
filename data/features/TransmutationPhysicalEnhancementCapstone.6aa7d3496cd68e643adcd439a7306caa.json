@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "IncreaseActivatableAbilityGroupSize",
+      "Group": "TransmutationPhysicalEnhancement"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TransmutationPhysicalEnhancementCapstone",
+  "guid": "6aa7d3496cd68e643adcd439a7306caa",
+  "name": "Ultimate Physical Enhancement"
+}

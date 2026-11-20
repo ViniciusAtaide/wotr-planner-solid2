@@ -1,0 +1,80 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteNotProficient",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "BastardSword",
+        "DuelingSword",
+        "DwarvenWaraxe",
+        "ElvenCurvedBlade",
+        "Estoc",
+        "Falcata",
+        "Fauchard",
+        "Kama",
+        "Sai",
+        "Tongi",
+        "SlingStaff",
+        "DoubleAxe",
+        "DoubleSword",
+        "Urgrosh",
+        "HookedHammer",
+        "Nunchaku"
+      ]
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "BaseAttackBonus",
+      "Value": 1
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": true,
+      "m_CharacterClass": "!bp_26b10d4340839004f960f9816f6109fe"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "ExoticWeaponProficiency",
+  "Groups": [
+    "Feat",
+    "CombatFeat"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ExoticWeaponProficiencySelection",
+  "guid": "9a01b6815d6c3684cb25f30b8bf20932",
+  "m_AllFeatures": [
+    "!bp_57299a78b2256604dadf1ab9a42e2873",
+    "!bp_0ea5cf20b69aea44793043e1926e9057",
+    "!bp_716c2d518bb9ecd49a32bef96a3f431b",
+    "!bp_9c37279588fd9e34e9c4cb234857492c",
+    "!bp_bd0d7feca087d2247b12965c1467790c",
+    "!bp_0fca9259e370cd049a1dd50bede687f7",
+    "!bp_9dc64f0b9161a354c9471a631318e16c",
+    "!bp_91fe4440ac82dbf4383c872c065c6661",
+    "!bp_b3f41cd91571ba54e8c3b0c5da4a7071",
+    "!bp_38691cbdccbbf4b42928a5ea39e42db8",
+    "!bp_403740e8112651141a12f0d73d793dbc",
+    "!bp_097c1ceaf18f9a045b5969bad82b1fa4",
+    "!bp_a9a692792f6668d4dbe32c9c4f023800",
+    "!bp_5829f3b193704b8096820875f2eb2368",
+    "!bp_a0be067e11f4d8345a8b57a92e52a301",
+    "!bp_8a81cd5caec059147ba5fbb74043b8f3",
+    "!bp_d24f7545b1aa3b34e8216f8cb3140563"
+  ],
+  "name": "Exotic Weapon Proficiency"
+}

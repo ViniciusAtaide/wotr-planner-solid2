@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_dd02f16c3ec847645bc5f67413acbeb3"
+    }
+  ],
+  "assetName": "FullplateOfRetributionEnchantment",
+  "guid": "36e5f0363039c924381fd2e6c82a37e7"
+}

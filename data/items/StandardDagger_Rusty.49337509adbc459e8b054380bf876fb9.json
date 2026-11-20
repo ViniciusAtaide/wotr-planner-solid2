@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardDagger_Rusty",
+  "guid": "49337509adbc459e8b054380bf876fb9",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_90ba10e82a7a4135bb380234a255f5ae",
+  "name": "Rusty Dagger"
+}

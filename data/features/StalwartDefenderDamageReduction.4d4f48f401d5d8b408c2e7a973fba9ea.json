@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "HasArmorFeatureUnlock",
+      "FilterByArmorProficiencyGroup": true,
+      "FilterByBlueprintArmorTypes": false,
+      "m_ArmorProficiencyGroupEntries": -1,
+      "m_BlueprintArmorTypes": [
+        null
+      ],
+      "m_DisableWhenHasShield": false,
+      "m_NewFact": "!bp_3563079f53894be9a5ace106107818e5"
+    },
+    {
+      "$type": "MonkNoArmorFeatureUnlock",
+      "m_NewFact": "!bp_ce36635292764199a2460c7a74a60cb9"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 3,
+  "assetName": "StalwartDefenderDamageReduction",
+  "guid": "4d4f48f401d5d8b408c2e7a973fba9ea",
+  "name": "Damage Reduction (Stalwart Defender)"
+}

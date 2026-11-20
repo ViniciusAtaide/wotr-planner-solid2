@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_b476307a7f6c39443b9f5ffc8d79125d"
+    }
+  ],
+  "assetName": "ElementalProtectorEnchantment",
+  "guid": "6a6f016ebf16438449a56ae6f29a57f5"
+}

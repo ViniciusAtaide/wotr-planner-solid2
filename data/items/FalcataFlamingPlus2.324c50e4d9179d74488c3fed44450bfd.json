@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FalcataFlamingPlus2",
+  "guid": "324c50e4d9179d74488c3fed44450bfd",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1af5621e2ae551e42bd1dd6744d98639",
+  "name": "Flaming Falcata +2"
+}

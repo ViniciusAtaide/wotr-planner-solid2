@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "RobeSourceOfDividingPowerItem",
+  "guid": "b9990c1a3ad005649adef3ece58ee854",
+  "m_Enchantments": [
+    "!bp_3662fc0d571f52c49bed6d7c5ca73ad8"
+  ],
+  "name": "Source of Dividing Power"
+}

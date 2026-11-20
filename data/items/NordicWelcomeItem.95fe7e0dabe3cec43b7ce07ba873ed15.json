@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "NordicWelcomeItem",
+  "guid": "95fe7e0dabe3cec43b7ce07ba873ed15",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_ca131c71f4fefcb48b30b5991520e01d",
+  "name": "Nordic Welcome"
+}

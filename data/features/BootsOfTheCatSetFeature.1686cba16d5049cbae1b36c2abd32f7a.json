@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "BootsOfTheCatSetFeature",
+  "guid": "1686cba16d5049cbae1b36c2abd32f7a",
+  "name": "Cat's Boots"
+}

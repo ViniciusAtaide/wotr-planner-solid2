@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e0ac733ba38f74d46a1712c95b9874f2"
+    }
+  ],
+  "assetName": "TripImmunityEnchant",
+  "guid": "6ead380e0a4b0c145be836cb5eb33a5d"
+}

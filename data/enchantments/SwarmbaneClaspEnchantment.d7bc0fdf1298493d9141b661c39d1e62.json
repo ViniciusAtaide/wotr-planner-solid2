@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_6c72d29acb0b4d8089f9189ba817a94f"
+    }
+  ],
+  "assetName": "SwarmbaneClaspEnchantment",
+  "guid": "d7bc0fdf1298493d9141b661c39d1e62"
+}

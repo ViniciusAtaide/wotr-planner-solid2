@@ -1,0 +1,47 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_f327a765a4353d04f872482ef3e48c35"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_e69a85f633ae8ca4398abeb6fa11b1fe"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e69a85f633ae8ca4398abeb6fa11b1fe"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_16fa59cc9a72a6043b566b49184f53fe"
+    },
+    {
+      "$type": "PrerequisiteAnySpellsInSpellbook",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_SpellSpecializationFeat": "!bp_f327a765a4353d04f872482ef3e48c35"
+    }
+  ],
+  "Groups": [],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "SpellSpecialization",
+  "Ranks": 1,
+  "RequireProficiency": false,
+  "WeaponSubCategory": "None",
+  "assetName": "SpellSpecialization2",
+  "guid": "66f3e2b78b5d29c45a4c2f622541da79",
+  "m_Prerequisite": "!bp_16fa59cc9a72a6043b566b49184f53fe",
+  "name": "Spell Specialization (change 2)"
+}

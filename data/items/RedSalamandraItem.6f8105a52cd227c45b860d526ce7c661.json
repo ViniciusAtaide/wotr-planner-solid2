@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RedSalamandraItem",
+  "guid": "6f8105a52cd227c45b860d526ce7c661",
+  "m_Enchantments": [
+    "!bp_5c23114d69a33a24bb994a525a8b9eea"
+  ],
+  "name": "Red Salamander"
+}

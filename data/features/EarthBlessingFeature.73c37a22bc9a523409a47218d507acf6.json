@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_30b5e47d47a0e37438cc5a80c96cfb99",
+      "m_Feature": "!bp_393424a93a6d2614cb93f46a48d97bf2"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_5ca99a6ae118feb449dbbd165a8fe7c4"
+    }
+  ],
+  "Groups": [
+    "WarpriestBlessing"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EarthBlessingFeature",
+  "guid": "73c37a22bc9a523409a47218d507acf6",
+  "name": "Earth (Blessings)"
+}

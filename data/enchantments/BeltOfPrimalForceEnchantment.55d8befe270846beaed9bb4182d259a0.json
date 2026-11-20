@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a13ceec9c40842a9a37812ba96ba24fc"
+    }
+  ],
+  "assetName": "BeltOfPrimalForceEnchantment",
+  "guid": "55d8befe270846beaed9bb4182d259a0"
+}

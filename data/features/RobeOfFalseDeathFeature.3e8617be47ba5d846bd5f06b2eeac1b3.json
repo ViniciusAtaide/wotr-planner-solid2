@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "RobeOfFalseDeathFeature",
+  "guid": "3e8617be47ba5d846bd5f06b2eeac1b3",
+  "name": "Immunity to critical hits"
+}

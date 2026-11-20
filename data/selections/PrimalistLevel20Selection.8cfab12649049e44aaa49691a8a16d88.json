@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "PrimalistLevel20Selection",
+  "guid": "8cfab12649049e44aaa49691a8a16d88",
+  "m_AllFeatures": [
+    "!bp_b264a03d036248544acfddbcad709345",
+    "!bp_5905a80d5934248439e83612d9101b4b"
+  ],
+  "name": "Primal Choices (level 20)"
+}

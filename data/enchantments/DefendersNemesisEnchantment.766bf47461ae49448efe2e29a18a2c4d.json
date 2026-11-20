@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_c641b977bf4b452097e1ada29a2e33fd"
+    }
+  ],
+  "assetName": "DefendersNemesisEnchantment",
+  "guid": "766bf47461ae49448efe2e29a18a2c4d"
+}

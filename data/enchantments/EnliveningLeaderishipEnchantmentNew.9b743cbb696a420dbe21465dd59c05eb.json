@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_23d10c328c70a4842a1a1a20fbd35979"
+    }
+  ],
+  "assetName": "EnliveningLeaderishipEnchantmentNew",
+  "guid": "9b743cbb696a420dbe21465dd59c05eb"
+}

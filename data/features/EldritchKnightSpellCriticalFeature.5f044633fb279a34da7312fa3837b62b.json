@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EldritchKnightSpellCriticalFeature",
+  "guid": "5f044633fb279a34da7312fa3837b62b",
+  "name": "Spell Critical"
+}

@@ -1,0 +1,35 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_2d54cc761ab82604f93d82b4b358cf7e"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "RangerStyleShieldSelection6",
+  "guid": "10d8245011456224cb6358f640364e26",
+  "m_AllFeatures": [
+    "!bp_121811173a614534e8720d7550aae253",
+    "!bp_ac57069b6bf8c904086171683992a92a",
+    "!bp_ac8aaf29054f5b74eb18f2af950e752d",
+    "!bp_9af88f3ed8a017b45a6837eab7437629",
+    "!bp_dbec636d84482944f87435bd31522fcc",
+    "!bp_d09b20029e9abfe4480b356c92095623",
+    "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5",
+    "!bp_175d1577bb6c9a04baf88eec99c66334",
+    "!bp_15e7da6645a7f3d41bdad7c8c4b9de1e",
+    "!bp_79042cb55f030614ea29956177977c52"
+  ],
+  "name": "Weapon and Shield (level 6)"
+}

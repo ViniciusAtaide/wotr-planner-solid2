@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "LoremastersRobeItem",
+  "guid": "68ed893157ce46deb6fdba8aae5deaa2",
+  "m_Enchantments": [
+    "!bp_590c35b95cbe40f6bf7b8aafc7925235"
+  ],
+  "name": "Loremaster's Robe"
+}

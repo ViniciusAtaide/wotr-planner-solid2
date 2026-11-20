@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ClassLevelsForPrerequisites",
+      "Modifier": 1,
+      "Summand": 0,
+      "m_ActualClass": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_FakeClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd",
+      "m_ForSelection": "!bp_247a4068296e8be42890143f451b4b45"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "GriffonheartShifterGriffonShapeFakeFeature",
+  "guid": "1d3656c3090e48f59888d86ff7014acc",
+  "name": "Griffon Shape (Griffonheart Shifter)"
+}

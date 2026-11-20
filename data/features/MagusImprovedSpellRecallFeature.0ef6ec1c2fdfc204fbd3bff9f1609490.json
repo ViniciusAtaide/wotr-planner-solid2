@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MagusImprovedSpellRecallFeature",
+  "guid": "0ef6ec1c2fdfc204fbd3bff9f1609490",
+  "name": "Improved Spell Recall"
+}

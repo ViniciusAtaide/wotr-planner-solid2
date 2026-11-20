@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "LichSkeletalUpgrade"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "LichSkeletalBardTierI",
+  "guid": "0bc53f33005d08146b916b1c400998d6",
+  "name": "Skeletal Bard I"
+}

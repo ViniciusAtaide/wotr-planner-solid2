@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CallToViolenceItem",
+  "guid": "25b37490da95d9541b73972837354eff",
+  "m_Enchantments": [
+    "!bp_a864da8cc74065e4aad897d24a66e3e1"
+  ],
+  "name": "Call to Violence"
+}

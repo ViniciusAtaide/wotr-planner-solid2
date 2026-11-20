@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "PitchTunerItem",
+  "guid": "46ef4528d79b830489ffe99688db39d4",
+  "m_Enchantments": [
+    "!bp_7f2136f879a590247843980ad1d74542"
+  ],
+  "name": "Perfect Pitch"
+}

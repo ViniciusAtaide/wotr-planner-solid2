@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "SarenraeObliteratingLightLightShieldItem",
+  "guid": "eec102a79c0fc0547a5da5a01d45cac7",
+  "m_ArmorComponent": "!bp_4f0781a1b6881a74cbc6a5b150196df3",
+  "m_WeaponComponent": "!bp_b0e71eae672c190449c14b500129e8a2",
+  "name": "Blinding Light"
+}

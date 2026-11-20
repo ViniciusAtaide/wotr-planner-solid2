@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_e66a112ab57f69e418f1f11d5d2f3248",
+      "m_CharacterClass": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    }
+  ],
+  "Groups": [
+    "EldritchKnightSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "EldritchKnightCrossblodedSorcerer",
+  "guid": "54d070de420e497a970faf2d2d311141",
+  "m_Spellbook": "!bp_cb0be5988031ebe4c947086a1170eacc",
+  "name": "Sorcerer"
+}

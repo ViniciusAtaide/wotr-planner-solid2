@@ -1,0 +1,59 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_1744efd76b9d4c67ab692a874f5f5c80",
+        "!bp_9b9d7408c30640ed9b8b158b706a98c2"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_96eee5429ac34130931628eab913587c"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_9b9d7408c30640ed9b8b158b706a98c2",
+        "!bp_df2076388506410e968a673946516611"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_c820d19919964a38a903e4725a22a594"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_e96fc2da3bfe42c780af21ae9a02a43f",
+        "!bp_1da8b2233d59448fa045d9c2f1b1e275",
+        "!bp_9b9d7408c30640ed9b8b158b706a98c2"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ColdRampageProgression",
+  "guid": "7fe7abcf9837431b84460e2be3fafc00",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Cold Rampage"
+}

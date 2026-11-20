@@ -1,0 +1,234 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_fd188bb7bb0002e49863aec93bfb9d99"
+    },
+    {
+      "$type": "AddFactContextActions",
+      "Activated": {
+        "Actions": [
+          {
+            "$type": "Conditional",
+            "ConditionsChecker": {
+              "Conditions": [
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_5114829572da5a04f896a8c5b67be413"
+                }
+              ],
+              "Operation": "And"
+            },
+            "IfFalse": {
+              "Actions": [
+                {
+                  "$type": "ContextActionAddFeature",
+                  "m_PermanentFeature": "!bp_5114829572da5a04f896a8c5b67be413",
+                  "m_SetRankFrom": null
+                }
+              ]
+            },
+            "IfTrue": {
+              "Actions": [
+                {
+                  "$type": "Conditional",
+                  "ConditionsChecker": {
+                    "Conditions": [
+                      {
+                        "$type": "ContextConditionHasFact",
+                        "Not": false,
+                        "m_Fact": "!bp_c032f65c0bd9f6048a927fb07fc0195d"
+                      }
+                    ],
+                    "Operation": "And"
+                  },
+                  "IfFalse": {
+                    "Actions": [
+                      {
+                        "$type": "ContextActionAddFeature",
+                        "m_PermanentFeature": "!bp_c032f65c0bd9f6048a927fb07fc0195d",
+                        "m_SetRankFrom": null
+                      }
+                    ]
+                  },
+                  "IfTrue": {
+                    "Actions": [
+                      {
+                        "$type": "Conditional",
+                        "ConditionsChecker": {
+                          "Conditions": [
+                            {
+                              "$type": "ContextConditionHasFact",
+                              "Not": false,
+                              "m_Fact": "!bp_d5050e13742d9b64da20921aaf7c2b2a"
+                            }
+                          ],
+                          "Operation": "And"
+                        },
+                        "IfFalse": {
+                          "Actions": [
+                            {
+                              "$type": "ContextActionAddFeature",
+                              "m_PermanentFeature": "!bp_d5050e13742d9b64da20921aaf7c2b2a",
+                              "m_SetRankFrom": null
+                            }
+                          ]
+                        },
+                        "IfTrue": {
+                          "Actions": [
+                            {
+                              "$type": "Conditional",
+                              "ConditionsChecker": {
+                                "Conditions": [
+                                  {
+                                    "$type": "ContextConditionHasFact",
+                                    "Not": false,
+                                    "m_Fact": "!bp_342b6aed6b2eaab4786de243f0bcbcb8"
+                                  }
+                                ],
+                                "Operation": "And"
+                              },
+                              "IfFalse": {
+                                "Actions": [
+                                  {
+                                    "$type": "ContextActionAddFeature",
+                                    "m_PermanentFeature": "!bp_342b6aed6b2eaab4786de243f0bcbcb8",
+                                    "m_SetRankFrom": null
+                                  }
+                                ]
+                              },
+                              "IfTrue": {
+                                "Actions": [
+                                  {
+                                    "$type": "Conditional",
+                                    "ConditionsChecker": {
+                                      "Conditions": [
+                                        {
+                                          "$type": "ContextConditionHasFact",
+                                          "Not": false,
+                                          "m_Fact": "!bp_044cd84818c36854abf61064ade542a1"
+                                        }
+                                      ],
+                                      "Operation": "And"
+                                    },
+                                    "IfFalse": {
+                                      "Actions": [
+                                        {
+                                          "$type": "ContextActionAddFeature",
+                                          "m_PermanentFeature": "!bp_044cd84818c36854abf61064ade542a1",
+                                          "m_SetRankFrom": null
+                                        }
+                                      ]
+                                    },
+                                    "IfTrue": {
+                                      "Actions": [
+                                        {
+                                          "$type": "Conditional",
+                                          "ConditionsChecker": {
+                                            "Conditions": [
+                                              {
+                                                "$type": "ContextConditionHasFact",
+                                                "Not": false,
+                                                "m_Fact": "!bp_053e37697a0d20547b06c3dbd8b71702"
+                                              }
+                                            ],
+                                            "Operation": "And"
+                                          },
+                                          "IfFalse": {
+                                            "Actions": [
+                                              {
+                                                "$type": "ContextActionAddFeature",
+                                                "m_PermanentFeature": "!bp_053e37697a0d20547b06c3dbd8b71702",
+                                                "m_SetRankFrom": null
+                                              }
+                                            ]
+                                          },
+                                          "IfTrue": {
+                                            "Actions": [
+                                              {
+                                                "$type": "Conditional",
+                                                "ConditionsChecker": {
+                                                  "Conditions": [
+                                                    {
+                                                      "$type": "ContextConditionHasFact",
+                                                      "Not": false,
+                                                      "m_Fact": "!bp_041f91c25586d48469dce6b4575053f6"
+                                                    }
+                                                  ],
+                                                  "Operation": "And"
+                                                },
+                                                "IfFalse": {
+                                                  "Actions": [
+                                                    {
+                                                      "$type": "ContextActionAddFeature",
+                                                      "m_PermanentFeature": "!bp_041f91c25586d48469dce6b4575053f6",
+                                                      "m_SetRankFrom": null
+                                                    }
+                                                  ]
+                                                },
+                                                "IfTrue": {
+                                                  "Actions": [
+                                                    {
+                                                      "$type": "Conditional",
+                                                      "ConditionsChecker": {
+                                                        "Conditions": [
+                                                          {
+                                                            "$type": "ContextConditionHasFact",
+                                                            "Not": false,
+                                                            "m_Fact": "!bp_df186ef345849d149bdbf4ddb45aee35"
+                                                          }
+                                                        ],
+                                                        "Operation": "And"
+                                                      },
+                                                      "IfFalse": {
+                                                        "Actions": [
+                                                          {
+                                                            "$type": "ContextActionAddFeature",
+                                                            "m_PermanentFeature": "!bp_df186ef345849d149bdbf4ddb45aee35",
+                                                            "m_SetRankFrom": null
+                                                          }
+                                                        ]
+                                                      },
+                                                      "IfTrue": {
+                                                        "Actions": []
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 8,
+  "assetName": "MagicalTail",
+  "guid": "febb8fe9a2d142fb80c1be6b0b539d9d",
+  "name": "Magical Tail (Kitsune)"
+}

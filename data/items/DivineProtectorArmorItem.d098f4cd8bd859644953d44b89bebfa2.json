@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "DivineProtectorArmorItem",
+  "guid": "d098f4cd8bd859644953d44b89bebfa2",
+  "m_Enchantments": [
+    "!bp_7b9f2f78a83577d49927c78be0f7fbc1",
+    "!bp_b759e9d8c59eccf4880c31c2221dc502",
+    "!bp_7b95a819181574a4799d93939aa99aff"
+  ],
+  "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6"
+}

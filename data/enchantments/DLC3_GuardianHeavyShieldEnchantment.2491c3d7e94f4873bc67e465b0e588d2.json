@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_937a539859794e8faef92aa55ce6e452"
+    }
+  ],
+  "assetName": "DLC3_GuardianHeavyShieldEnchantment",
+  "guid": "2491c3d7e94f4873bc67e465b0e588d2"
+}

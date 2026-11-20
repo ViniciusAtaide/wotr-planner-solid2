@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillMobility",
+    "SkillPerception",
+    "SkillPersuasion",
+    "SkillLoreReligion",
+    "SkillKnowledgeArcana",
+    "SkillStealth"
+  ],
+  "Components": [],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 2,
+  "assetName": "UndeadClass",
+  "guid": "19a2d9e58d916d04db4cd7ad2c7a3ee2",
+  "m_Archetypes": [
+    "!bp_2bed52fbf927d4848b7a36324ee8117e"
+  ],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_c7784cdabf146e74cba9af50742ad091",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Undead"
+}

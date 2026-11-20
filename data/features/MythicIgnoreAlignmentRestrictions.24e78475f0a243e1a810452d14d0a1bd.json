@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "MythicIgnoreAlignmentRestrictions",
+  "guid": "24e78475f0a243e1a810452d14d0a1bd"
+}

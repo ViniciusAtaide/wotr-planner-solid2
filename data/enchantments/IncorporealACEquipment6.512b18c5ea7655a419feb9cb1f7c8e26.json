@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_cfc5348738262074083a7358085dfacd"
+    }
+  ],
+  "assetName": "IncorporealACEquipment6",
+  "guid": "512b18c5ea7655a419feb9cb1f7c8e26"
+}

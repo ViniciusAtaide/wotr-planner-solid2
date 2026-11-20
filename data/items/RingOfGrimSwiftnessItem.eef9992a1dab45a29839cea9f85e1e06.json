@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfGrimSwiftnessItem",
+  "guid": "eef9992a1dab45a29839cea9f85e1e06",
+  "m_Enchantments": [
+    "!bp_2042beb64a5e12443be55b413d7ff733"
+  ],
+  "name": "Midnight Hunter's Ring"
+}

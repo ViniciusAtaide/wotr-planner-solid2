@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 9,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_3adc3439f98cb534ba98df59838f02c7",
+      "m_Feature": "!bp_d91e2275d193423d880ee0a86af81ac4"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "GhostRiderFrightfulGazeFeature",
+  "guid": "cb8d643ade7d42e5a0860abe73ea1c25",
+  "name": "Frightful Gaze (Ghost Rider 1)"
+}

@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 100,
+  "assetName": "StauntonGlaiveHealFeature",
+  "guid": "319109919467c2c409bb580e38b4c348"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "FavoriteEnemy"
+  ],
+  "HideInUI": false,
+  "Ranks": 8,
+  "assetName": "FavoriteEnemyDemonOfSlaughter",
+  "guid": "6c450765555b1554294b5556f50d304e",
+  "name": "Favored Enemy — Demons of Slaughter"
+}

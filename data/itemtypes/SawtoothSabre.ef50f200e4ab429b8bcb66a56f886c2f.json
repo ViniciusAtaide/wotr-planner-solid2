@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "SawtoothSabre",
+  "Components": [],
+  "assetName": "SawtoothSabre",
+  "guid": "ef50f200e4ab429b8bcb66a56f886c2f",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "BladesHeavy, BladesLight",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Sawtooth Saber"
+}

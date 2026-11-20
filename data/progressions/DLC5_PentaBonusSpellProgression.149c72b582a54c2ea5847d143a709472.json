@@ -1,0 +1,59 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_ba1ba73c0da24449916db64e3ce074c5"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_2b295c4d724444cba30aa0961120e381"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_e9983b5fecd941c9a478d5a056bfb11d"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_dca813701f654e2a8e5af4c142a7aebc"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_a20f8a3d96d4498396a44d6c138e9c15"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "DLC5_PentaBonusSpellProgression",
+  "guid": "149c72b582a54c2ea5847d143a709472",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_074a9dd227cb43669d5b160c5282e146"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_772c83a25e2268e448e841dcd548235f"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": []
+}

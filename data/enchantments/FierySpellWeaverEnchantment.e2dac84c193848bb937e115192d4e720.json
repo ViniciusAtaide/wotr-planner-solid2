@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_2b9a30da95e446ab819bc2366f57a5a9"
+    }
+  ],
+  "assetName": "FierySpellWeaverEnchantment",
+  "guid": "e2dac84c193848bb937e115192d4e720"
+}

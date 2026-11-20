@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanGlaiveStage3Lich",
+  "guid": "4cb03b6c20e7a964cb1f9db1e056e1e2",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a14a1b224cd173449cb7ffc77d5f65c",
+  "name": "Finnean (Glaive)"
+}

@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ClassLevelsForPrerequisites",
+      "Modifier": 0.5,
+      "Summand": 0,
+      "m_ActualClass": "!bp_45a4607686d96a1498891b3286121780",
+      "m_FakeClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd",
+      "m_ForSelection": "!bp_247a4068296e8be42890143f451b4b45"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EldritchScionFighterTraining",
+  "guid": "eadc14e84c7e3c34684252b5c6459a45",
+  "name": "Fighter Training (Magus)"
+}

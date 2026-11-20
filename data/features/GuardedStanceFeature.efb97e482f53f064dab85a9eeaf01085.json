@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "RagePower"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "GuardedStanceFeature",
+  "guid": "efb97e482f53f064dab85a9eeaf01085",
+  "name": "Guarded Stance"
+}

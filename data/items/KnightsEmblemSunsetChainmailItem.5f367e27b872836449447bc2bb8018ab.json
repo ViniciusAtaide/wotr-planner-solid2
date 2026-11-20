@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "KnightsEmblemSunsetChainmailItem",
+  "guid": "5f367e27b872836449447bc2bb8018ab",
+  "m_Enchantments": [
+    "!bp_758b77a97640fd747abf149f5bf538d0",
+    "!bp_024746258f526d649850fba4677f3824"
+  ],
+  "m_Type": "!bp_cd4a47c5bacbff3498e960eec3a83485",
+  "name": "Mallander's Insult (armor)"
+}

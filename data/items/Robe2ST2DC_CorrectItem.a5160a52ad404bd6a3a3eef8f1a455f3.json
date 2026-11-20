@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "Robe2ST2DC_CorrectItem",
+  "guid": "a5160a52ad404bd6a3a3eef8f1a455f3",
+  "m_Enchantments": [
+    "!bp_ff34bced1c8250044b3ca638958291ba"
+  ],
+  "name": "Robe of Transmutation"
+}

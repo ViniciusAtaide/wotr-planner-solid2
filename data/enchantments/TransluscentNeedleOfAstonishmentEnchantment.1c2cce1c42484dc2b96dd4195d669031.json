@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_5d0f3e43f4154fbcab29a871d7d55296"
+    }
+  ],
+  "assetName": "TransluscentNeedleOfAstonishmentEnchantment",
+  "guid": "1c2cce1c42484dc2b96dd4195d669031"
+}

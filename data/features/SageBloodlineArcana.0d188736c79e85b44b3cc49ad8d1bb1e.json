@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "None",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 2
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SageBloodlineArcana",
+  "guid": "0d188736c79e85b44b3cc49ad8d1bb1e",
+  "name": "Bloodline Arcana (Sage Sorcerer)"
+}

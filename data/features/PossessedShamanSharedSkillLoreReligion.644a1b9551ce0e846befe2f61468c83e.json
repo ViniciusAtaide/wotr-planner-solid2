@@ -1,0 +1,42 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "AsIs",
+      "m_StartLevel": 0,
+      "m_StepLevel": 0,
+      "m_Type": "DamageDice",
+      "m_UseMax": false,
+      "m_UseMin": false
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_644a1b9551ce0e846befe2f61468c83e"
+    },
+    {
+      "$type": "ReplaceStatBaseAttribute",
+      "BaseAttributeReplacement": "Wisdom",
+      "ReplaceIfHigher": false,
+      "TargetStat": "SkillLoreReligion"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PossessedShamanSharedSkillLoreReligion",
+  "guid": "644a1b9551ce0e846befe2f61468c83e",
+  "name": "Shared Skill — Lore (Religion)"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_673d39f7da699aa408cdda6282e7dcc0"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "HellknightSigniferCrusaderLevelUp",
+  "guid": "d179d2eaaf7016f4ab3b97113452f1ee",
+  "name": "Crusader"
+}

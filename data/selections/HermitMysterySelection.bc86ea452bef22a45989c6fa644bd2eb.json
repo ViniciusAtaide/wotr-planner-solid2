@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "HermitMysterySelection",
+  "guid": "bc86ea452bef22a45989c6fa644bd2eb",
+  "m_AllFeatures": [
+    "!bp_9936554e9372dab4a874c1dd165fb6f8",
+    "!bp_a5458a1c316d1f24e8d9770f4fc179fa",
+    "!bp_69579bfe28e15b942af0722021d8725c",
+    "!bp_e2f8bd7c45dfb954c8c42b168505c783",
+    "!bp_7bb4bb3e7fd26f34e8ca035a27e03e85"
+  ],
+  "name": "Mystery (Lone Strider)"
+}

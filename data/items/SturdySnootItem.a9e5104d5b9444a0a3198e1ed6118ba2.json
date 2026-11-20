@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "SturdySnootItem",
+  "guid": "a9e5104d5b9444a0a3198e1ed6118ba2",
+  "m_Enchantments": [
+    "!bp_8555b9c2a47846268279f5b966b95576"
+  ],
+  "name": "Sturdy Snoot"
+}

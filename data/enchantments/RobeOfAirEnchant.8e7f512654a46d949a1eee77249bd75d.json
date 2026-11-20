@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_51909b6144f1f2145ad46f9327817c27"
+    }
+  ],
+  "assetName": "RobeOfAirEnchant",
+  "guid": "8e7f512654a46d949a1eee77249bd75d"
+}

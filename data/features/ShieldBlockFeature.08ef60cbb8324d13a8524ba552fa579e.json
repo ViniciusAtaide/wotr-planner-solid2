@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShieldBlockFeature",
+  "guid": "08ef60cbb8324d13a8524ba552fa579e",
+  "name": "Shield Block"
+}

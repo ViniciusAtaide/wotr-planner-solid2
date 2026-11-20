@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_fd188bb7bb0002e49863aec93bfb9d99"
+    },
+    {
+      "$type": "PrerequisiteFullStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "BaseAttackBonus",
+      "Value": 10
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "Pounce"
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "VulpinePounce",
+  "guid": "cd258f1bce80ef54580f6b236c82608c",
+  "name": "Vulpine Pounce"
+}

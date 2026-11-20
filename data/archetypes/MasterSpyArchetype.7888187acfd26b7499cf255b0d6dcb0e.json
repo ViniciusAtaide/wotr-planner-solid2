@@ -1,0 +1,99 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_d55acf213bf709c40b2bc72b997fb345"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_4b575457914597c41b6925896be1b7b6"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_6dddf5ba2291f41498df2df7f8fa2b35",
+        "!bp_babd11fd792fe404ebdcb035af80229a"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_5d83bd56c95a5d14ab739bae65d488a8"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [
+    "SkillPersuasion",
+    "SkillKnowledgeWorld",
+    "SkillKnowledgeArcana",
+    "SkillStealth",
+    "SkillPerception",
+    "SkillUseMagicDevice",
+    "SkillThievery"
+  ],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_54ee847996c25cd4ba8773d7b8555174",
+        "!bp_a6ea422d7308c0d428a541562faedefd"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_b705c5184a96a84428eeb35ae2517a14"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_a6ea422d7308c0d428a541562faedefd",
+        "!bp_c4de22ecac494c91b3d2f077ec162bbd"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_ff1b5aa8dcc7d7d4d9aa85e1cb3f9e88"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_a6ea422d7308c0d428a541562faedefd",
+        "!bp_c4de22ecac494c91b3d2f077ec162bbd"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_9d53ef63441b5d84297587d75f72fc17"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_a6ea422d7308c0d428a541562faedefd",
+        "!bp_c4de22ecac494c91b3d2f077ec162bbd"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": true,
+  "assetName": "MasterSpyArchetype",
+  "guid": "7888187acfd26b7499cf255b0d6dcb0e",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": "!bp_12bfcf91d5416b047a2a9110ff8968c5",
+  "m_WillSave": null,
+  "name": "Espionage Expert"
+}

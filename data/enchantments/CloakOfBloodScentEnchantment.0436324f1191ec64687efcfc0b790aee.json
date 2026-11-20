@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_9db109eee03524f4aa89881c4539a14d"
+    }
+  ],
+  "assetName": "CloakOfBloodScentEnchantment",
+  "guid": "0436324f1191ec64687efcfc0b790aee"
+}

@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_e702a1335e1f66648afbe3e2ac182751"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_772cc2fcc6602874c9b0a828b2e990d9"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_faa12cd1a5ece2c408d3bd00803fe8a1"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_fa4577e0f0b319a4995a3dba2359463c"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_d920be3b06dabf74f9b01aa9752402dc"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_12afba6b29c15e042ba505cd1c0c1145"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_f25964faa73484140b2efeafa0402965"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_700942eefb96b0c40b523ee228c1ed8c"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_1e3380a7b127725418ebe738979f3a65"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_f54e725ca610c9b4584b9b78e8fa6f74"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SpiritWardenRestlessMagic",
+  "guid": "60ee27f8a3e105b45a8c674a6433817e",
+  "name": "Restless Magic"
+}

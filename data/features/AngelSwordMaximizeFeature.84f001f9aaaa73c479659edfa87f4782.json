@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "ImprovedSwordOfHeaven"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AngelSwordMaximizeFeature",
+  "guid": "84f001f9aaaa73c479659edfa87f4782",
+  "name": "Grand Blessing"
+}

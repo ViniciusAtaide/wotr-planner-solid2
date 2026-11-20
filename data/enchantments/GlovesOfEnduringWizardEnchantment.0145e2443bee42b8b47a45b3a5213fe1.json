@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f3f047fea04d47af8a92950706b24104"
+    }
+  ],
+  "assetName": "GlovesOfEnduringWizardEnchantment",
+  "guid": "0145e2443bee42b8b47a45b3a5213fe1"
+}

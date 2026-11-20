@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "DLC3_GlassesOfundeniableTruthItem",
+  "guid": "e77292f3222c4e97851dd363b916ef32",
+  "m_Enchantments": [
+    "!bp_303e8c4538c94aa89752a9579f7ef734"
+  ],
+  "name": "Glasses of Undeniable Truth"
+}

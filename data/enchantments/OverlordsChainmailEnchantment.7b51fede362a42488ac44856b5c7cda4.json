@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_08a2b9fe005945da947949359d71f505"
+    }
+  ],
+  "assetName": "OverlordsChainmailEnchantment",
+  "guid": "7b51fede362a42488ac44856b5c7cda4"
+}

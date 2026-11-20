@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardDoubleAxeColdIronCorrosiveSecondPlus5",
+  "guid": "a7389771ecac3384991c12cb994739b5",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_87d76c7534506a546a065731ee6a38cd",
+  "name": "Cold Iron Corrosive Orc Double Axe +2"
+}

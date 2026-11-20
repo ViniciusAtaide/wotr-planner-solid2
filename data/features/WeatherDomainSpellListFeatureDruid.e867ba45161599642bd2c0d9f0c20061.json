@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "WeatherDomainSpellListFeatureDruid",
+  "guid": "e867ba45161599642bd2c0d9f0c20061"
+}

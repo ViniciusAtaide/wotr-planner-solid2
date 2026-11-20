@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MightyAdvisorItem",
+  "guid": "e3b47f320b151ce48a6b6cce65054834",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979",
+    "!bp_8002c3ba364c49b3b610a71a1946770e"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a6925f5f897801449a648d865637e5a0",
+  "name": "Mighty Advisor"
+}

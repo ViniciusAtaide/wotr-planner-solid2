@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "BootsOfForestTrackerItem",
+  "guid": "428cd8a816255d84288acd366dd1ccd9",
+  "m_Enchantments": [
+    "!bp_fa9c47d68a49bc64aa680e74fca1bcc2"
+  ],
+  "name": "Forest Tracker's Boots"
+}

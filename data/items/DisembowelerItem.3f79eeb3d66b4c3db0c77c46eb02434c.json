@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DisembowelerItem",
+  "guid": "3f79eeb3d66b4c3db0c77c46eb02434c",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_a1455a289da208144981e4b1ef92cc56",
+    "!bp_38970e861eb243ad9ebf95c5ef067d54"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1af5621e2ae551e42bd1dd6744d98639",
+  "name": "Disemboweler"
+}

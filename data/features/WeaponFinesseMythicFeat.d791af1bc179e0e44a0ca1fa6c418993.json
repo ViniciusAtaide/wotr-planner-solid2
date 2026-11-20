@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_90e54424d682d104ab36436bd527af09"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_2f1619e253ea6a04087def71c7925715",
+      "m_Feature": "!bp_d55f530e9b0047af9dd888b543a8e9a0"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WeaponFinesseMythicFeat",
+  "guid": "d791af1bc179e0e44a0ca1fa6c418993",
+  "name": "Weapon Finesse (Mythic)"
+}

@@ -1,0 +1,64 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_cffe3f12c8d00ba4fa15d0c6fcd375c8"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_f1ca6cf566e473e47bb0f3aee435ded0"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_9a2272e181d624349896ffdbf1157d6c"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillLoreNature",
+    "SkillLoreReligion",
+    "SkillPersuasion",
+    "SkillPerception",
+    "SkillStealth",
+    "SkillKnowledgeArcana"
+  ],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_443365823b7d6d14b8d12f4e7bce1077"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_cbc90fcdb60809744989d386a98cd21c"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_d8a126a3ed3b62943a597c937a4bf840"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "ColludingScoundrelArchetype",
+  "guid": "34963fc6d87354c4fa85eb76f122c41c",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Colluding Scoundrel"
+}

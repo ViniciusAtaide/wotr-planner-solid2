@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Mythic",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Initiative",
+      "Value": 1
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterStatFocusInitiative",
+  "guid": "5138e24fbeca1594db6c5455301cf977",
+  "name": "Stat Focus — Initiative"
+}

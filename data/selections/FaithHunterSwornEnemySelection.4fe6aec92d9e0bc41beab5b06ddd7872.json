@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "FaithHunterSwornEnemySelection",
+  "guid": "4fe6aec92d9e0bc41beab5b06ddd7872",
+  "m_AllFeatures": [
+    "!bp_e637c38bb3acdc04eb2361456d2289b7",
+    "!bp_50f77e810ed75d947b6a223d324ec98b",
+    "!bp_36e3f18cc2cc674458eae1140a18ad7b",
+    "!bp_d6e3f241cddd50e45b1058d686735462"
+  ],
+  "name": "Sworn Enemy"
+}

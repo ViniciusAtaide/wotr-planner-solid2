@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Glaive",
+  "Components": [],
+  "assetName": "Glaive",
+  "guid": "7a14a1b224cd173449cb7ffc77d5f65c",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Polearms",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": true,
+  "name": "Glaive"
+}

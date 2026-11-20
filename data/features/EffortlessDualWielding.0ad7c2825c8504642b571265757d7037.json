@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 9,
+      "Not": false,
+      "m_CharacterClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd"
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "EffortlessDualWielding"
+    }
+  ],
+  "Groups": [
+    "WeaponTraining"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EffortlessDualWielding",
+  "guid": "0ad7c2825c8504642b571265757d7037",
+  "name": "Effortless Dual-Wielding"
+}

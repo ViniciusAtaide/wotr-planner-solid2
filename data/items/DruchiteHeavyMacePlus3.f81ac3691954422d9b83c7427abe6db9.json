@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DruchiteHeavyMacePlus3",
+  "guid": "f81ac3691954422d9b83c7427abe6db9",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d5a167f0f0208dd439ec7481e8989e21"
+}

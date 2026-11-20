@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_1a0298abacb6e0f45b7e28553e99e76c",
+      "m_Feature": "!bp_453f5181a5ed3a445abfa3bcd3f4ac0c"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HellknightSigniferArcaneArmorExpertise",
+  "guid": "afe6484d93092734a8acbdf1982cce6e",
+  "name": "Arcane Armor Expertise"
+}

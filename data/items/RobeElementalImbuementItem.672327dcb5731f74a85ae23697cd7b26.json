@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "RobeElementalImbuementItem",
+  "guid": "672327dcb5731f74a85ae23697cd7b26",
+  "m_Enchantments": [
+    "!bp_483e0a0f552967b409d25f995d9dcf7f"
+  ],
+  "name": "Elemental Imbuement"
+}

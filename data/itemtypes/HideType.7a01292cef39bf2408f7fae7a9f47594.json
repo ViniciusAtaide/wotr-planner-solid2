@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [],
+  "assetName": "HideType",
+  "guid": "7a01292cef39bf2408f7fae7a9f47594",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "Medium",
+  "name": "Medium Armor — Hide"
+}

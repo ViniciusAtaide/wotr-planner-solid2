@@ -1,0 +1,53 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_a62d155ca5b5458abde794ef5bee93cb",
+        "!bp_80f7afbee34145459ac5c77f3aac51c5",
+        "!bp_b6092295c3164f848256302280668189"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_e41305eb63584a60ae726af61c318fa9"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_dc059bdc9229446fb24ab00089a3a7f1"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_58d6f8e9eea63f6418b107ce64f315ea",
+        "!bp_71f526b1d4b50b94582b0b9cbe12b0e0"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_5a13756fb4be25f46951bc3f16448276"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "KineticSharpshooterArchetype",
+  "guid": "e0684d0a6ef44cae9d095f5318618a85",
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_ReflexSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "name": "Kinetic Sharpshooter"
+}

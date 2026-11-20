@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_b0a5118b4fb793241bc7042464b23fab"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BeneficialCurse",
+  "guid": "2dda67424ee8e0b4d83ef01a73ca6bff",
+  "m_AllFeatures": [
+    "!bp_44d0e9af729cf4b419295bce03e7afdd",
+    "!bp_b1de8f8f1250b0c4aa342e1895348cac",
+    "!bp_d1457c03dff2887409b92f88b9c9fcf0",
+    "!bp_f9dadbcdecb41c6419f9297a2425eabd",
+    "!bp_ae0e1b45d567af04a8bc7b052a4c54e1",
+    "!bp_3df8af6c9acb29c49b5eaaac88c90aa0",
+    "!bp_1c8dd487cca2fd34abbc367f66081c68",
+    "!bp_b09246c465079d142a65b55f1f5391cf",
+    "!bp_b6c775555bade694e8b8c7e82c7a71fb"
+  ],
+  "name": "Beneficial Curse"
+}

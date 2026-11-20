@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_374dea416237e1f4f96792263e8e4e5d"
+    }
+  ],
+  "assetName": "BracersOfBreachingEnchantment",
+  "guid": "436d0fdaf05ca644e8198a3519f51487"
+}

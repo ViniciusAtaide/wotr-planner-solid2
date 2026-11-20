@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "DaredevilsBeltItem",
+  "guid": "77f0ee6cd7103d04489ed8eea39cf187",
+  "m_Enchantments": [
+    "!bp_f9278c2ea13c2b34cb56be078428a0bb",
+    "!bp_15008553994dd7e48af2ad1a1426d733",
+    "!bp_2641c60243f3b824bbf59a2ae19de8d5"
+  ],
+  "name": "Daredevil's Belt"
+}

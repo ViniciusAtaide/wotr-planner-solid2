@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_fc4da183d8fb411fb60ab80ea9e636a2"
+    }
+  ],
+  "assetName": "AmuletofArodenInvincibleMeleeEnchantment",
+  "guid": "1e0cdf908032439e8b8213a828fdce4c"
+}

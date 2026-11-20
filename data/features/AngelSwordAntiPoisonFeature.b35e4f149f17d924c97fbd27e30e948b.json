@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "ImprovedSwordOfHeaven"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AngelSwordAntiPoisonFeature",
+  "guid": "b35e4f149f17d924c97fbd27e30e948b",
+  "name": "Abolish Poison"
+}

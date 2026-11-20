@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_44f16931dabdff643bfe2a48138e769f"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "HellknightSigniferShamanLevelUp",
+  "guid": "f073d0122a4dd5f46a63403ef212fabe",
+  "name": "Shaman"
+}

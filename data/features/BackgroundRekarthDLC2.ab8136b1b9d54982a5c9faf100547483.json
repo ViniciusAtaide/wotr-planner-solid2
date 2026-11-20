@@ -1,0 +1,61 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreNature"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPerception"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_e8096942d950c8843857c2545f8dc18f",
+        "!bp_0978f630fc5d6a6409ac641137bf6659"
+      ]
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillLoreNature"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillPerception"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Shortbow"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Longbow"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_0da0c194d6e1d43419eb8d990b28e0ab"
+      ]
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_27d646fc04ff43f48af74300a4a58f9e"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundRekarthDLC2",
+  "guid": "ab8136b1b9d54982a5c9faf100547483",
+  "name": "Urban Hunter (Background Selection)"
+}

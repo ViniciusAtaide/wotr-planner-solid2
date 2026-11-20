@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "MonkNoArmorAndMonkWeaponFeatureUnlock",
+      "IsSohei": true,
+      "IsZenArcher": false,
+      "m_BowWeaponTypes": [],
+      "m_NewFact": "!bp_bc5d3e27b3acbce4ca2be97256b1cfab"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SoheiKiStrikeMagicUnlock",
+  "guid": "17f744d48f014924f91534abc4d7ee98",
+  "name": "Ki Strike — Magic (Sohei)"
+}

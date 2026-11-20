@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_c25df29d2599a81428a7badf51ebd4d1"
+    }
+  ],
+  "assetName": "HatOfHearteningSongEnchantment",
+  "guid": "b2a4026edb36a164984818fce4fdf6bc"
+}

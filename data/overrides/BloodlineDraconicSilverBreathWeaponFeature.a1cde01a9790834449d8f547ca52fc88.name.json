@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "Draconic Bloodline — Silver, ability",
+  "reason": "The silver draconic bloodline has three \"Breath Weapon\" blueprints: the base power (qualified by the bloodline), the extra use at level 17, and this feature, which both of them give (AddFeatureIfHasFact) and which carries the breath itself. It is qualified by its bloodline and as the ability.",
+  "target": "a1cde01a9790834449d8f547ca52fc88"
+}

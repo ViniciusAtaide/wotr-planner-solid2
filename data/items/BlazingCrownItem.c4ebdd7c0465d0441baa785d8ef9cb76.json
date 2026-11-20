@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "BlazingCrownItem",
+  "guid": "c4ebdd7c0465d0441baa785d8ef9cb76",
+  "m_Enchantments": [
+    "!bp_4dcb81fcbfb11714db17ece0c152ed8b",
+    "!bp_66f6fe8776944f8198e22002827c1862"
+  ],
+  "name": "Blazing Crown"
+}

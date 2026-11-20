@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ReplaceStatForPrerequisites",
+      "NewStat": "Constitution",
+      "OldStat": "Intelligence",
+      "Policy": "NewStat",
+      "SpecificNumber": 0,
+      "m_CharacterClass": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "KineticWarriorFeature",
+  "guid": "ff14cb2bfab1c0547be66d8aaa7e4ada",
+  "name": "Kinetic Warrior"
+}

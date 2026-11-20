@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Shortbow",
+  "Components": [],
+  "assetName": "Shortbow",
+  "guid": "99ce02fb54639b5439d07c99c55b8542",
+  "m_AttackType": "Ranged",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Bows",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": true,
+  "name": "Shortbow"
+}

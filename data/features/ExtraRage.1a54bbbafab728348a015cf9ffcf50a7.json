@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_2479395977cfeeb46b482bc3385f4647"
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "ExtraRage",
+  "guid": "1a54bbbafab728348a015cf9ffcf50a7",
+  "name": "Extra Rage"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MantisZealotFadingFeature",
+  "guid": "724a017c96d643729f65d2d1eac54673",
+  "name": "Fading"
+}

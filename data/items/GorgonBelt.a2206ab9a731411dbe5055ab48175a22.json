@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "GorgonBelt",
+  "guid": "a2206ab9a731411dbe5055ab48175a22",
+  "m_Enchantments": [
+    "!bp_ab9cf374e21d457f808ea9aec4052296",
+    "!bp_f9278c2ea13c2b34cb56be078428a0bb"
+  ],
+  "name": "Gorgon Belt"
+}

@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "NaturalArmor",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AC",
+      "Value": 4
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "BloodlineDraconicBlackResistancesAbilityLevel3",
+  "guid": "586f50b2310239647b8c054e9d12a3e3",
+  "name": "Dragon Resistances (Draconic Bloodline — Black 15)"
+}

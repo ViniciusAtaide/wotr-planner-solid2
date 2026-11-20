@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionMainPlayer"
+    }
+  ],
+  "assetName": "MaskOfNothingItem",
+  "guid": "8344b46a6e404227b72d129073383a6c",
+  "m_Enchantments": [
+    "!bp_9b1a572bd3c741c582f8d68e12798390"
+  ],
+  "name": "Mask of Nothing"
+}

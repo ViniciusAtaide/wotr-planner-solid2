@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 12,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1186fc7362560c94bad3de6338cc509e"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WildShapeElementalFeatureAddLarge",
+  "guid": "e66154511a6f9fc49a9de644bd8922db",
+  "name": "Wild Shape (Large Elemental)"
+}

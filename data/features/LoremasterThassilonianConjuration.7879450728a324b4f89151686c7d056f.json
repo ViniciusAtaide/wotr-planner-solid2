@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_1a258cd8e93461a4ab011c73a2c43dac"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_ba34257984f4c41408ce1dc2004e342e"
+    }
+  ],
+  "Groups": [
+    "MythicAdditionalProgressions"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "LoremasterThassilonianConjuration",
+  "guid": "7879450728a324b4f89151686c7d056f",
+  "m_Spellbook": "!bp_cbc30bcc7b8adec48a53a6540f5596ae",
+  "name": "Thassilonian Specialist — Sloth"
+}

@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_5d501618a28bdc24c80007a5c937dcb7"
+    }
+  ],
+  "Double": false,
+  "assetName": "PlayersPhylacteryLongswordItem",
+  "guid": "7975e85be8964948b48ab3be83954af1",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_55eb2f3ecaeb47119d36bcbc3e902f24"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d56c44bc9eb10204c8b386a02c7eed21",
+  "name": "Your Phylactery (Longsword)"
+}

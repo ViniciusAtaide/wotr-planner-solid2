@@ -1,0 +1,87 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+        "!bp_48ac8db94d5de7645906c7d0ad3bcfbd"
+      ],
+      "m_CustomProgression": [
+        {
+          "BaseValue": 7,
+          "ProgressionValue": 1
+        },
+        {
+          "BaseValue": 8,
+          "ProgressionValue": 1
+        },
+        {
+          "BaseValue": 9,
+          "ProgressionValue": 1
+        },
+        {
+          "BaseValue": 10,
+          "ProgressionValue": 2
+        },
+        {
+          "BaseValue": 11,
+          "ProgressionValue": 2
+        },
+        {
+          "BaseValue": 12,
+          "ProgressionValue": 2
+        },
+        {
+          "BaseValue": 13,
+          "ProgressionValue": 3
+        },
+        {
+          "BaseValue": 14,
+          "ProgressionValue": 3
+        },
+        {
+          "BaseValue": 15,
+          "ProgressionValue": 3
+        },
+        {
+          "BaseValue": 16,
+          "ProgressionValue": 4
+        },
+        {
+          "BaseValue": 17,
+          "ProgressionValue": 4
+        },
+        {
+          "BaseValue": 18,
+          "ProgressionValue": 4
+        },
+        {
+          "BaseValue": 19,
+          "ProgressionValue": 5
+        },
+        {
+          "BaseValue": 20,
+          "ProgressionValue": 5
+        }
+      ],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "Custom",
+      "m_StartLevel": 10,
+      "m_StepLevel": 5,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EnlightenedPhilosopherRevelationMentalAcuity",
+  "guid": "736d3d5d940736b4e87792e94eaff96b",
+  "name": "Mental Acuity"
+}

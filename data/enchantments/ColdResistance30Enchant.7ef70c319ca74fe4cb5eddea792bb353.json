@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_979d2d37ce390924eb4567ba6bb4f663"
+    }
+  ],
+  "assetName": "ColdResistance30Enchant",
+  "guid": "7ef70c319ca74fe4cb5eddea792bb353"
+}

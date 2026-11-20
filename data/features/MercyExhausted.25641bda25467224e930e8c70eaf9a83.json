@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e5aa306af9b91974a9b2f2cbe702f562"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 9,
+      "Not": false,
+      "m_CharacterClass": "!bp_bfa11238e7ae3544bbeb4d0b92e897ec"
+    }
+  ],
+  "Groups": [
+    "Mercy"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MercyExhausted",
+  "guid": "25641bda25467224e930e8c70eaf9a83",
+  "name": "Mercy — Exhausted"
+}

@@ -1,0 +1,59 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillLoreNature",
+    "SkillKnowledgeWorld",
+    "SkillPerception",
+    "SkillAthletics",
+    "SkillKnowledgeArcana"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "NeutralGood, LawfulNeutral, TrueNeutral, ChaoticNeutral, NeutralEvil",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 3,
+  "assetName": "DruidClass",
+  "guid": "610d836f3a3a9ed42a4349b62f002e96",
+  "m_Archetypes": [
+    "!bp_35a3b7bfc663ac74aa8bb50adfe70813",
+    "!bp_782c46afacd88d448afba6178471a744",
+    "!bp_da69747aa3dd0044ebff5f3d701cdde3",
+    "!bp_a6bf603aa4d666f4f86dab0289e2048c",
+    "!bp_f815594bd1e3454182022d375bf70fd1",
+    "!bp_c1c86e2997fd4257a13ef5601b5dc6dd",
+    "!bp_9f835c539f6e4a96a7b64461f4267d06"
+  ],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_01006f2ac8866764fb7af135e73be81c",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": "!bp_fc78193f68150454483a7eea8b605b71",
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Druid"
+}

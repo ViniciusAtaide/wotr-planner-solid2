@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "ScreamReaperItem",
+  "guid": "698c2df9b0e1e0b4b84cb9cb33f875dc",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979",
+    "!bp_a1455a289da208144981e4b1ef92cc56"
+  ],
+  "m_SecondWeapon": "!bp_4f75fb5839ecaa14ebe5e2055997b30c",
+  "m_Type": "!bp_87d76c7534506a546a065731ee6a38cd",
+  "name": "Screaming Reaper"
+}

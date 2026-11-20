@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_7dc004879037638489b64d5016997d12"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArmorFocusMediumMythicFeatureVar2",
+  "guid": "4243c96836bf4b54aa4b36e1ab0c7fb1",
+  "name": "Mythic Armor Focus (Medium Armor) — Endurance"
+}

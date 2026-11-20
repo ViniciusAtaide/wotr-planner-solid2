@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DifficultyAdvancementBaseFeature",
+  "guid": "33bc1b86b3a2fa5489cc0a5bdcf3f6f8"
+}

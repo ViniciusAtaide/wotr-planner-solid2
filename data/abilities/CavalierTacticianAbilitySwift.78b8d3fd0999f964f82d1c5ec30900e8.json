@@ -1,0 +1,44 @@
+{
+  "$type": "BlueprintAbility",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_3adc3439f98cb534ba98df59838f02c7"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "Div2",
+      "m_StartLevel": 0,
+      "m_StepLevel": 0,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": false
+    },
+    {
+      "$type": "AbilityApplyFact",
+      "m_Facts": [
+        "!bp_3de0359d9480cb549ab6cf1eac51f9dc",
+        "!bp_693964e674883e74b8d0005dbf4a4e6b",
+        "!bp_9c179de4894c295499822714878f3590",
+        "!bp_c7223802e54e8524c8b1e5c71df22f7b",
+        "!bp_44569e9e95364bf42b1071382a8a89da",
+        "!bp_731a11dcc952e744f8a88768e07a0542",
+        "!bp_2f5768f642de59f40acd5211a627a237",
+        "!bp_e5079510480031146992dafde835c3b8",
+        "!bp_cc26546e4f73fe142b606b4759b4eb18",
+        "!bp_953c3dbda63dcdb4aad6c54c1a4590d0",
+        "!bp_965ea9716b87f4b46a6a8f50523393bd",
+        "!bp_a6298b0f87fc7694086cd8eac9d6a2aa"
+      ],
+      "m_Restriction": "CasterHasFact"
+    }
+  ],
+  "assetName": "CavalierTacticianAbilitySwift",
+  "guid": "78b8d3fd0999f964f82d1c5ec30900e8",
+  "name": "Tactician (Swift)"
+}

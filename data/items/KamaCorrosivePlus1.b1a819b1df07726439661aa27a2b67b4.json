@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "KamaCorrosivePlus1",
+  "guid": "b1a819b1df07726439661aa27a2b67b4",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_f5872eb0deb3a1b48a36549f8d92c19e",
+  "name": "Corrosive Kama +1"
+}

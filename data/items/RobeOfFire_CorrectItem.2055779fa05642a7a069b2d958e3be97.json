@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "RobeOfFire_CorrectItem",
+  "guid": "2055779fa05642a7a069b2d958e3be97",
+  "m_Enchantments": [
+    "!bp_dcf93e8d4b970ee408b410f2b01ad13f"
+  ],
+  "name": "Robe of Fire (shirt)"
+}

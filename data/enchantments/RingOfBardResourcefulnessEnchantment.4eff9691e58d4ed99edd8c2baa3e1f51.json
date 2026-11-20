@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_dc2c69c2264a4e3b87beb54145e49c8b"
+    }
+  ],
+  "assetName": "RingOfBardResourcefulnessEnchantment",
+  "guid": "4eff9691e58d4ed99edd8c2baa3e1f51"
+}

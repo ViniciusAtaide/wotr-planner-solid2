@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "WeaponTraining",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "DIscipleOfThePikeWeaponTrainingSelection",
+  "guid": "bc050eac79b34d4abf63e2f1152badad",
+  "m_AllFeatures": [
+    "!bp_d5c04077fc063e44784384a00377b7cf",
+    "!bp_c062c6d16aecddc4ab67d9c783b2ad46"
+  ],
+  "name": "Weapon Training (Disciple of the Pike)"
+}

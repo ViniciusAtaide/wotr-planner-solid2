@@ -1,0 +1,129 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_3d420403f3e7340499931324640efe96"
+    },
+    {
+      "$type": "PrerequisiteEtude",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteMainCharacter",
+      "CheckInProgression": false,
+      "Companion": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteMythicLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 7
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_3d420403f3e7340499931324640efe96"
+    },
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "OrAndLogic",
+              "ConditionsChecker": {
+                "Conditions": [
+                  {
+                    "$type": "EtudeStatus",
+                    "Not": true
+                  },
+                  {
+                    "$type": "EtudeStatus",
+                    "Not": true
+                  }
+                ],
+                "Operation": "And"
+              },
+              "Not": false
+            },
+            {
+              "$type": "OrAndLogic",
+              "ConditionsChecker": {
+                "Conditions": [
+                  {
+                    "$type": "UnitClass",
+                    "LimitMaxLevel": false,
+                    "LimitMinLevel": false,
+                    "MaxLevel": null,
+                    "MinLevel": {
+                      "$type": "IntConstant",
+                      "Value": 1
+                    },
+                    "Not": false,
+                    "Unit": {
+                      "$type": "PlayerCharacter"
+                    },
+                    "m_Class": "!bp_5295b8e13c2303f4c88bdb3d7760a757"
+                  },
+                  {
+                    "$type": "IsUnitMythicLevel",
+                    "CheckMaxLevel": true,
+                    "CheckMinLevel": true,
+                    "MaxLevel": {
+                      "$type": "IntConstant",
+                      "Value": 7
+                    },
+                    "MinLevel": {
+                      "$type": "IntConstant",
+                      "Value": 7
+                    },
+                    "Not": false,
+                    "Unit": {
+                      "$type": "PlayerCharacter"
+                    }
+                  }
+                ],
+                "Operation": "Or"
+              },
+              "Not": false
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": true,
+  "PrestigeClass": false,
+  "SkillPoints": 0,
+  "assetName": "SwarmThatWalksClass",
+  "guid": "5295b8e13c2303f4c88bdb3d7760a757",
+  "m_Archetypes": [],
+  "m_BaseAttackBonus": "!bp_059c61483910c77408d0473b11d1b922",
+  "m_FortitudeSave": "!bp_059c61483910c77408d0473b11d1b922",
+  "m_IsHigherMythic": true,
+  "m_Progression": "!bp_bf5f103ccdf69254abbad84fd371d5c9",
+  "m_ReflexSave": "!bp_059c61483910c77408d0473b11d1b922",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_059c61483910c77408d0473b11d1b922",
+  "name": "Swarm That Walks"
+}

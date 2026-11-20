@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "BracersOfHeavyHandItem",
+  "guid": "354a5656d0e75b847a42108cd587dbab",
+  "m_Enchantments": [
+    "!bp_e32573bd3a5fe66469412279f39b9416"
+  ],
+  "name": "Bracers of Heavy Hand"
+}

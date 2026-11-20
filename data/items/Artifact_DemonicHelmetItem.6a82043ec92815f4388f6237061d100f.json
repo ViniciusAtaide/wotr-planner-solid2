@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "Artifact_DemonicHelmetItem",
+  "guid": "6a82043ec92815f4388f6237061d100f",
+  "m_Enchantments": [
+    "!bp_55c633ac6777427e9fc8cff956eba091"
+  ],
+  "name": "Shy Lily's Helmet"
+}

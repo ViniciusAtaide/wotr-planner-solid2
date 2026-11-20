@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "NemaryStigmaBardiche_HatredItem",
+  "guid": "90daead03f95472dabf19140d8a877d6",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_a1455a289da208144981e4b1ef92cc56",
+    "!bp_af376a7a80ef46a1a9449c437a0b01fd"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_b1cbf457fd471d148b39ae56667f405a",
+  "name": "Flame's Hatred (Bardiche)"
+}

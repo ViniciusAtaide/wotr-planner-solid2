@@ -1,0 +1,59 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_1679745f05164ae6bf7ecd470571b69c",
+        "!bp_b55375fc8af84eebbb14f857f94daeac"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_679b30752cf74d6ea21d0dce8c24baab"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_b55375fc8af84eebbb14f857f94daeac",
+        "!bp_66adf91730c6448d8821cd3a3c2be778"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_7321a73805b44b8c8d73e1496bf65ffb"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_b2fd72c5400740929b61520938da88aa",
+        "!bp_747b767ba54a40af84cf3a83baae9ea6",
+        "!bp_b55375fc8af84eebbb14f857f94daeac"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "AcidRampageProgression",
+  "guid": "d56634b23c7145f1a471781eb9a63e8d",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Acid Rampage"
+}

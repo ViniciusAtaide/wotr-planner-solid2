@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_996ff15dc5898b34b9b4cd018d624497",
+      "m_Feature": "!bp_996ff15dc5898b34b9b4cd018d624497"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "SlayerStudyTargetFeature",
+  "guid": "09bdd9445ac38044389476689ae8d5a1",
+  "name": "Studied Target"
+}

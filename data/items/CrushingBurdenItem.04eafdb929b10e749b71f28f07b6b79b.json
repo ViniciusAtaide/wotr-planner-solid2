@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "CrushingBurdenItem",
+  "guid": "04eafdb929b10e749b71f28f07b6b79b",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_a1455a289da208144981e4b1ef92cc56"
+  ],
+  "m_SecondWeapon": "!bp_3208b2ba64099784c9bea697663106d2",
+  "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3",
+  "name": "Crushing Burden"
+}

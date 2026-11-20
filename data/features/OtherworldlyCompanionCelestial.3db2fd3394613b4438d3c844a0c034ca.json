@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "Good, LawfulNeutral, TrueNeutral, ChaoticNeutral",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OtherworldlyCompanionCelestial",
+  "guid": "3db2fd3394613b4438d3c844a0c034ca",
+  "name": "Otherworldly Companion — Celestial"
+}

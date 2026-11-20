@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "FavoriteEnemy"
+  ],
+  "HideInUI": false,
+  "Ranks": 8,
+  "assetName": "FavoriteEnemyGoblins",
+  "guid": "c03dc59e2ce30484b82e7aead6d10471",
+  "name": "Favored Enemy — Goblins"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "TowerShieldArmorItemPlus1",
+  "guid": "02498596f53bae448b939468f2ab5ef6",
+  "m_Enchantments": [
+    "!bp_e90c252e08035294eba39bafce76c119"
+  ],
+  "m_Type": "!bp_5f0f4b6e480e7054b8592b5a8b55854a"
+}

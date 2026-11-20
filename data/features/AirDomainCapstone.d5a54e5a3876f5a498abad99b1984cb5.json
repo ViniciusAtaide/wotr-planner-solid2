@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "AirDomainCapstone",
+  "guid": "d5a54e5a3876f5a498abad99b1984cb5",
+  "name": "Electricity Immunity"
+}

@@ -1,0 +1,94 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_e31d849e4eb2578458419c9df622270f",
+        "!bp_0c5065ffc67c4494cba9a14226714ae6"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_fcffd9b743a98784fb9e293c22ee6aff"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_fcffd9b743a98784fb9e293c22ee6aff"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_fcffd9b743a98784fb9e293c22ee6aff"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_fcffd9b743a98784fb9e293c22ee6aff"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_fcffd9b743a98784fb9e293c22ee6aff"
+      ]
+    }
+  ],
+  "AddSkillPoints": 1,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_f6388946f9f472f4585591b80e9f2452"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_f6388946f9f472f4585591b80e9f2452"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_f6388946f9f472f4585591b80e9f2452",
+        "!bp_41c8486641f7d6d4283ca9dae4147a9f"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_f6388946f9f472f4585591b80e9f2452"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_f6388946f9f472f4585591b80e9f2452"
+      ]
+    },
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_41c8486641f7d6d4283ca9dae4147a9f"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "ArmigerArchetype",
+  "guid": "fdee5f25a5d0fe0448d093b462435c0c",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Armiger"
+}

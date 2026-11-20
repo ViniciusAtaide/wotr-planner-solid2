@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_07eba4bb72c2e3845bb442dce85d3b58",
+        "!bp_07eba4bb72c2e3845bb442dce85d3b58",
+        "!bp_07eba4bb72c2e3845bb442dce85d3b58"
+      ]
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d8b8d1dd83393484cbacf6c8830080ae"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodragerUndeadOneFootInTheGrave",
+  "guid": "47cc5432a72f71e49969c0396fbf24e8",
+  "name": "One Foot in the Grave"
+}

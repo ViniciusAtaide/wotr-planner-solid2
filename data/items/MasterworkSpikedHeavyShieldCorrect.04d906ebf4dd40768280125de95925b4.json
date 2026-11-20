@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "MasterworkSpikedHeavyShieldCorrect",
+  "guid": "04d906ebf4dd40768280125de95925b4",
+  "m_ArmorComponent": "!bp_7a126271f91b82741aa0086463befd1b",
+  "m_WeaponComponent": "!bp_145ac24f8d7335d4a8d4f5d6eb659d10",
+  "name": "Masterwork Spiked Heavy Shield"
+}

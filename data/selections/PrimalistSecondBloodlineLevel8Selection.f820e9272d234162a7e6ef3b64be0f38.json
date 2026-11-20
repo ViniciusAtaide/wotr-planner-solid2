@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "PrimalistSecondBloodlineLevel8Selection",
+  "guid": "f820e9272d234162a7e6ef3b64be0f38",
+  "m_AllFeatures": [
+    "!bp_eaf71c6cc1a149b7af151037e9374ec3",
+    "!bp_cc0ed1ccd6664dd881922321fec7a8ba"
+  ],
+  "name": "Primal Choices (Second Bloodrager Bloodline 8)"
+}

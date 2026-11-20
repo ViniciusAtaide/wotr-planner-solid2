@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "GlovesOfCollidingElementsItem",
+  "guid": "8b679295cecb3584aad56d2c76701d8b",
+  "m_Enchantments": [
+    "!bp_fa694352f831aed47a657898ea5a5dd5"
+  ],
+  "name": "Gloves of Colliding Elements"
+}

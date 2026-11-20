@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PoisonImmunity",
+  "guid": "202af59b918143a4ab7c33d72c8eb6d5",
+  "name": "Poison Immunity"
+}

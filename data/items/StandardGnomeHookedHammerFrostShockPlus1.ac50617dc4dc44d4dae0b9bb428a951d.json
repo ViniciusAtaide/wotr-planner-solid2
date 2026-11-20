@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardGnomeHookedHammerFrostShockPlus1",
+  "guid": "ac50617dc4dc44d4dae0b9bb428a951d",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": "!bp_f219bdfdea571064fa3e1ee58919f54a",
+  "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3",
+  "name": "Frost Shock Gnome Hooked Hammer +1"
+}

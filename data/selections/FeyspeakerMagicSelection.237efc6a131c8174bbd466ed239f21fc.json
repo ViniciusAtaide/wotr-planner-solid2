@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "FeyspeakerMagicSelection",
+  "guid": "237efc6a131c8174bbd466ed239f21fc",
+  "m_AllFeatures": [
+    "!bp_ea0ce0aeef8c9e04eadc1ed766455178"
+  ],
+  "name": "Fey Magic (Feyspeaker)"
+}

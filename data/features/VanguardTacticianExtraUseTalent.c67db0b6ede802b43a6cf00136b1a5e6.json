@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_a14ff5eeeec5f434eb5c7fb8201afefb"
+    }
+  ],
+  "Groups": [
+    "SlayerTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "VanguardTacticianExtraUseTalent",
+  "guid": "c67db0b6ede802b43a6cf00136b1a5e6",
+  "name": "Vanguard Tactician — Extra Use"
+}

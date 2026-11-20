@@ -1,0 +1,55 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_38ab68e159884c97ae4160a4c798db4f"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_38ab68e159884c97ae4160a4c798db4f"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_38ab68e159884c97ae4160a4c798db4f"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_38ab68e159884c97ae4160a4c798db4f"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_38ab68e159884c97ae4160a4c798db4f"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ShadowySpecialisationProgression",
+  "guid": "28222114243e496bafa3b4b9f83d9036",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_9e1211f2c3db4d0c8313013df72d7187"
+    }
+  ],
+  "m_Classes": [],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Umbral Mind (Shadowcaster)"
+}

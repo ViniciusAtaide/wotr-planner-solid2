@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_915a6610cc9840df90e83ac5f2015ad4"
+    }
+  ],
+  "assetName": "BardingOfLifeEnchantment",
+  "guid": "ad59e2b1c14e4159805e642fe0fa2006"
+}

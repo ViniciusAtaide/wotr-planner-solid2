@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "ShieldOfMagicalRetributionShieldItem",
+  "guid": "9854f8de089c0fa4da8049f00894eeeb",
+  "m_ArmorComponent": "!bp_eefdc40910fce3948842611c2584a05c",
+  "m_WeaponComponent": "!bp_62c90581f9892e9468f0d8229c7321c4",
+  "name": "Shield of Magical Retribution"
+}

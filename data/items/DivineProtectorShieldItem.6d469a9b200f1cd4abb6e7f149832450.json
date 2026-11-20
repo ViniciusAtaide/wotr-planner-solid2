@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "DivineProtectorShieldItem",
+  "guid": "6d469a9b200f1cd4abb6e7f149832450",
+  "m_ArmorComponent": "!bp_d098f4cd8bd859644953d44b89bebfa2",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Divine Protector"
+}

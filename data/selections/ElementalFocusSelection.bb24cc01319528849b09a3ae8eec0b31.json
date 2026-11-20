@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "Feat",
+    "WizardFeat"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ElementalFocusSelection",
+  "guid": "bb24cc01319528849b09a3ae8eec0b31",
+  "m_AllFeatures": [
+    "!bp_52135eada006e9045a848cd659749608",
+    "!bp_2ed9d8bf76412ba4a8afe38fa9925fca",
+    "!bp_d439691f37d17804890bd9c263ae1e80",
+    "!bp_13bdf8d542811ac4ca228a53aa108145"
+  ],
+  "name": "Elemental Focus"
+}

@@ -1,0 +1,316 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillPersuasion",
+    "SkillKnowledgeArcana",
+    "SkillKnowledgeWorld",
+    "SkillPerception",
+    "SkillLoreNature",
+    "SkillLoreReligion",
+    "SkillMobility"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteCasterTypeSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsArcane": true,
+      "IsFeatureSelectionWhiteList": false,
+      "OnlySpontaneous": true,
+      "RequiredSpellLevel": 1
+    },
+    {
+      "$type": "SkipLevelsForSpellProgression",
+      "Levels": [
+        5,
+        9
+      ]
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 5
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "ForcedTrue",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": false,
+      "m_CharacterClass": "!bp_72051275b1dbb2d42ba9118237794f7c"
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    },
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "OrAndLogic",
+              "ConditionsChecker": {
+                "Conditions": [
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_94c29f69cdc34594a6a4677441ed7375"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_d89fb8ce9152ffa4dacd69390f3d7721"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_64e1f27147b642448842ab8dcbaca03f"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_12bb1056a5f3f9f4b9facdb78b8d8914"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_1d34d95ad4961e343b02db14690eb6d8"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_eef664d1e4318f64cb2304d1628d29ae"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_d89fb8ce9152ffa4dacd69390f3d7721"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_bef8d08ee3c20b246b404ce3ef948291"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_49115e2147cd32841baa34c305171daa"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_01e7aab638d6a0b43bc4e9d5b49e68d9"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_d89fb8ce9152ffa4dacd69390f3d7721"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_3867419bf47841b428333808dfdf4ae0"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_9c5ed34089fedf54ba8d0f43565bcc91"
+                  }
+                ],
+                "Operation": "Or"
+              },
+              "Not": false
+            },
+            {
+              "$type": "OrAndLogic",
+              "ConditionsChecker": {
+                "Conditions": [
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_62b33ac8ceb18dd47ad4c8f06849bc01"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_d89fb8ce9152ffa4dacd69390f3d7721"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_64e1f27147b642448842ab8dcbaca03f"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_12bb1056a5f3f9f4b9facdb78b8d8914"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_1d34d95ad4961e343b02db14690eb6d8"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_eef664d1e4318f64cb2304d1628d29ae"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_d89fb8ce9152ffa4dacd69390f3d7721"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_bef8d08ee3c20b246b404ce3ef948291"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_49115e2147cd32841baa34c305171daa"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_01e7aab638d6a0b43bc4e9d5b49e68d9"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_d89fb8ce9152ffa4dacd69390f3d7721"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_3867419bf47841b428333808dfdf4ae0"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_9c5ed34089fedf54ba8d0f43565bcc91"
+                  }
+                ],
+                "Operation": "Or"
+              },
+              "Not": false
+            },
+            {
+              "$type": "OrAndLogic",
+              "ConditionsChecker": {
+                "Conditions": [
+                  {
+                    "$type": "ContextConditionCharacterClass",
+                    "CheckCaster": false,
+                    "MinLevel": 1,
+                    "Not": true,
+                    "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_d89fb8ce9152ffa4dacd69390f3d7721"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_64e1f27147b642448842ab8dcbaca03f"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_12bb1056a5f3f9f4b9facdb78b8d8914"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_1d34d95ad4961e343b02db14690eb6d8"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_eef664d1e4318f64cb2304d1628d29ae"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_d89fb8ce9152ffa4dacd69390f3d7721"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_bef8d08ee3c20b246b404ce3ef948291"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_49115e2147cd32841baa34c305171daa"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_01e7aab638d6a0b43bc4e9d5b49e68d9"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_d89fb8ce9152ffa4dacd69390f3d7721"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_3867419bf47841b428333808dfdf4ae0"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_9c5ed34089fedf54ba8d0f43565bcc91"
+                  }
+                ],
+                "Operation": "Or"
+              },
+              "Not": false
+            }
+          ],
+          "Operation": "And"
+        },
+        "Not": false
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D12",
+  "IsMythic": false,
+  "PrestigeClass": true,
+  "SkillPoints": 2,
+  "assetName": "DragonDiscipleClass",
+  "guid": "72051275b1dbb2d42ba9118237794f7c",
+  "m_Archetypes": [],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_1f309006cd2855e4e91a6c3707f3f700",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_69fc2bad2eb331346a6c777423e0d0f7",
+  "m_ReflexSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_1f309006cd2855e4e91a6c3707f3f700",
+  "name": "Dragon Disciple"
+}

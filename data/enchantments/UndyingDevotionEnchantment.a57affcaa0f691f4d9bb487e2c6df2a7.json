@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_4922a535556540d4d861d9350b65a7d1"
+    }
+  ],
+  "assetName": "UndyingDevotionEnchantment",
+  "guid": "a57affcaa0f691f4d9bb487e2c6df2a7"
+}

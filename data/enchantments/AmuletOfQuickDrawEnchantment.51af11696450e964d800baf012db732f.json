@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_60c9144d13674a445aa303fa272aae0a"
+    }
+  ],
+  "assetName": "AmuletOfQuickDrawEnchantment",
+  "guid": "51af11696450e964d800baf012db732f"
+}

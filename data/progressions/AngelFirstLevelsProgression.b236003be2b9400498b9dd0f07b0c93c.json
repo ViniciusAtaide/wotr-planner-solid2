@@ -1,0 +1,62 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_58abcd052187a264aba9b0ce285c49f4"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_45c7c2ad6792fe44582d47ccdf71bfce",
+        "!bp_4bd30ab53ce6ee24791fb60f82e7811e"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": []
+    },
+    {
+      "Level": 4,
+      "m_Features": []
+    },
+    {
+      "Level": 5,
+      "m_Features": []
+    },
+    {
+      "Level": 6,
+      "m_Features": []
+    },
+    {
+      "Level": 7,
+      "m_Features": []
+    },
+    {
+      "Level": 8,
+      "m_Features": []
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "AngelFirstLevelsProgression",
+  "guid": "b236003be2b9400498b9dd0f07b0c93c",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_247aa787806d5da4f89cfc3dff0b217f"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Close to the Heavens"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "OracleRevelationAirBarrierFeature13",
+  "guid": "5e19620d07b6489a82834cc7692e793b",
+  "name": "Air Barrier"
+}

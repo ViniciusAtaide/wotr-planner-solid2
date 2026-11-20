@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "Corrupter",
+  "guid": "55c364c3f02e4fdc8a63125b5a4c256c",
+  "name": "Corruptor"
+}

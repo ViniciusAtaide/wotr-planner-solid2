@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "OldEarthSandAmuletItem",
+  "guid": "268815ce58edc3a48856cf8a0f145b17",
+  "m_Enchantments": [
+    "!bp_1f846703300b36947b5d276161232d7e"
+  ],
+  "name": "Embrace of the Faceless (neck)"
+}

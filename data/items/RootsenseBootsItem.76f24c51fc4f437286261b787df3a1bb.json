@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "RootsenseBootsItem",
+  "guid": "76f24c51fc4f437286261b787df3a1bb",
+  "m_Enchantments": [
+    "!bp_f9a1045049f54161a4cd1f166458905b"
+  ],
+  "name": "Rootspeaker's Boots"
+}

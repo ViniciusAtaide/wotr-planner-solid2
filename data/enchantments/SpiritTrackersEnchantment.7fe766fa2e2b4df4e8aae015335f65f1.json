@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_263d25b2cd876c540b6e82b2782756e8"
+    }
+  ],
+  "assetName": "SpiritTrackersEnchantment",
+  "guid": "7fe766fa2e2b4df4e8aae015335f65f1"
+}

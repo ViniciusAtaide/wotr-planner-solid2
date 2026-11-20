@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "PortalStoneSpiderHeadbandItem",
+  "guid": "881b1782496145a49a1d7747d2a7c11b",
+  "m_Enchantments": [
+    "!bp_f099f688ffca79144a89febf8ba96af2",
+    "!bp_0f157adfc02708441b02725a24e8eb71"
+  ],
+  "name": "Clemency of Shadows (head)"
+}

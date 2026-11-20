@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c0f8c4e513eb493408b8070a1de93fc0"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MythicBrewPotionsFeat",
+  "guid": "a155dc95e3fb2d44481c76bc4aea26b9",
+  "name": "Mythic Brew Potions"
+}

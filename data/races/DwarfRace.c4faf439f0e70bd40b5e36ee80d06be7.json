@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintRace",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Constitution",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Wisdom",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonusIfHasFact",
+      "Descriptor": "Racial",
+      "InvertCondition": true,
+      "RequireAllFacts": false,
+      "Stat": "Charisma",
+      "Value": {
+        "Value": -2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_CheckedFacts": [
+        "!bp_325f078c584318849bfe3da9ea245b9d"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "SelectableRaceStat": false,
+  "assetName": "DwarfRace",
+  "guid": "c4faf439f0e70bd40b5e36ee80d06be7",
+  "m_Features": [
+    "!bp_786588ad1694e61498e77321d4b07157",
+    "!bp_2f254c6068d58b643b8de2fc7ec32dbb",
+    "!bp_f75d3b6110f04d1409564b9d7647db60",
+    "!bp_f268a00e42618144e86c9db76af7f3e9",
+    "!bp_6cde66a7da5a2024c906d887db735223",
+    "!bp_9c747d24f6321f744aa1bb4bd343880d",
+    "!bp_a1619e8d27fe97c40ba443f6f8ab1763",
+    "!bp_fd6e1f53589049cbbbc6a8e058d83b74"
+  ],
+  "name": "Dwarf"
+}

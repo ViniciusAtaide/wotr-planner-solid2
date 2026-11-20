@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "AmuletOfDevourItem",
+  "guid": "ad1b47b1250c0c74c9aad58d91852f3a",
+  "m_Enchantments": [
+    "!bp_c172e797b44649940a51bdad269a31f2"
+  ],
+  "name": "Amulet of Devouring"
+}

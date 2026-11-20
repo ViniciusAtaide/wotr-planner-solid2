@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreReligion"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillLoreReligion"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundMendevianOrphan",
+  "guid": "1d27bef027bdecc42a80c950cdc11380",
+  "name": "Mendevian Orphan"
+}

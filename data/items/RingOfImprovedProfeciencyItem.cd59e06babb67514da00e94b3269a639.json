@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfImprovedProfeciencyItem",
+  "guid": "cd59e06babb67514da00e94b3269a639",
+  "m_Enchantments": [
+    "!bp_4119c5c9a3470454e9ced5d76cc11c95"
+  ],
+  "name": "Ring of Improved Proficiency"
+}

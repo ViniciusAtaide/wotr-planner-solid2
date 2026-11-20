@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "EarthBreakerCorrosivePlus2",
+  "guid": "2711f37ac03c41b44a7313a7250d79a7",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_54e960775daa4714fa52e0954d8cf862",
+  "name": "Corrosive Earth Breaker +2"
+}

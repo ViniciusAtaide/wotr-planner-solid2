@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_29e2f51e6dd7427099b015de88718990"
+    }
+  ],
+  "assetName": "ManglingFrenzyEnchantment",
+  "guid": "a3f6774bf1cb4861899361a2a01cf50c"
+}

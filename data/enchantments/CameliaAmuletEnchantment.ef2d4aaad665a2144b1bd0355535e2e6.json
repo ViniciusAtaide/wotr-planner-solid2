@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_14e09d21335cd81478252653ba1a8464"
+    }
+  ],
+  "assetName": "CameliaAmuletEnchantment",
+  "guid": "ef2d4aaad665a2144b1bd0355535e2e6"
+}

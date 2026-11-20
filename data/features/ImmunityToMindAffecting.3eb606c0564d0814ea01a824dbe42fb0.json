@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ImmunityToMindAffecting",
+  "guid": "3eb606c0564d0814ea01a824dbe42fb0",
+  "name": "Immunity to Mind-Affecting Effects"
+}

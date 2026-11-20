@@ -1,0 +1,54 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_89dfce413170db049b0386fff333e9e1",
+        "!bp_cbc88c4c166a0ce4a95375a0a721bd01",
+        "!bp_408b25c6d9f223b41b935e6ec550e88d",
+        "!bp_29e4076127a404e4ab1cde7e967e1047"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_cb2d9e6355dd33940b2bef49e544b0bf"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 6,
+      "Not": false,
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_1f3a15a3ae8a5524ab8b97f469bf4e3d"
+    }
+  ],
+  "Groups": [
+    "KineticBlastInfusion"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EruptionInfusion",
+  "guid": "00f8e4b846c367141afcd133f4a1c816",
+  "name": "Eruption"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_574545f26b67b974eb61b45b9bdde7b3"
+    }
+  ],
+  "assetName": "BracersOfHeavyHandEnchantment",
+  "guid": "e32573bd3a5fe66469412279f39b9416"
+}

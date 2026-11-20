@@ -1,0 +1,40 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_6906eafd622304841bb45c2601aec7a7"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8a95d80a3162d274896d50c2f18bb6b1"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": true,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BloodlineCelestialFeatSelection",
+  "guid": "101a87c6744a3f242836e657cd7f643e",
+  "m_AllFeatures": [
+    "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5",
+    "!bp_f180e72e4a9cbaa4da8be9bc958132ef",
+    "!bp_175d1577bb6c9a04baf88eec99c66334",
+    "!bp_197306972c98bb843af738dc7529a7ac",
+    "!bp_38155ca9e4055bb48a89240a2055dcc3",
+    "!bp_0477936c0f74841498b5c8753a8062a3",
+    "!bp_c541f80af8d0af4498e1abb6025780c7",
+    "!bp_90e54424d682d104ab36436bd527af09"
+  ],
+  "name": "Bloodline Feat Selection"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_5120e4e613472984da566da935b19474"
+    }
+  ],
+  "assetName": "4ACagainstVerminEnchant",
+  "guid": "ab2703dbb2c7b5a4d8d70ade1f36aa7e"
+}

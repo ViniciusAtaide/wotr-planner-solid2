@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "AcrobatsFootwearItem",
+  "guid": "e8a76b5341f32994d8dfa8d18bfd85a8",
+  "m_Enchantments": [
+    "!bp_0896a269456ca794b8750f4d96e1d0bb"
+  ],
+  "name": "Acrobat's Footwear"
+}

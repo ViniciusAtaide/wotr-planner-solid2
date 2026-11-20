@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDoubleAxeFrostShockPlus1",
+  "guid": "f426625f9f2d8fe4c866afc4bc4677c4",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": "!bp_17fe9f412523abd42bc58929988bcf0c",
+  "m_Type": "!bp_87d76c7534506a546a065731ee6a38cd",
+  "name": "Frost Shock Orc Double Axe +1"
+}

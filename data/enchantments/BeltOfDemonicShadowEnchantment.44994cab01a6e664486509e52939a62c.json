@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_d9d3950a55cc2af4ebb0739ae2c01474"
+    }
+  ],
+  "assetName": "BeltOfDemonicShadowEnchantment",
+  "guid": "44994cab01a6e664486509e52939a62c"
+}

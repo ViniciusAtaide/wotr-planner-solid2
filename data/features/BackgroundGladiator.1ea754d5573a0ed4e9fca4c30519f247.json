@@ -1,0 +1,47 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPersuasion"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_f9565a97342ac594e9b6a495368c1a57",
+        "!bp_9e828934974f0fc4bbf7542eb0446e45",
+        "!bp_6d3728d4e9c9898458fe5e9532951132",
+        "!bp_7c28228ce4eed1543a6b670fd2a88e72"
+      ]
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillPersuasion"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Trident"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Shortsword"
+    },
+    {
+      "$type": "AddBackgroundArmorProficiency",
+      "Proficiency": "Light"
+    },
+    {
+      "$type": "AddBackgroundArmorProficiency",
+      "Proficiency": "Buckler"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundGladiator",
+  "guid": "1ea754d5573a0ed4e9fca4c30519f247",
+  "name": "Gladiator"
+}

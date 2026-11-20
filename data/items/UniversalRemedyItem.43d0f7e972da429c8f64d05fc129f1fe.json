@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "UniversalRemedyItem",
+  "guid": "43d0f7e972da429c8f64d05fc129f1fe",
+  "m_Enchantments": [
+    "!bp_422274d8e41d41b1afdad119c34c1d8e"
+  ],
+  "name": "Universal Remedy"
+}

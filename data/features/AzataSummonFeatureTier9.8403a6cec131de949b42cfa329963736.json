@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_9a3b2c63afa79744cbca46bea0da9a16",
+      "m_Feature": "!bp_df5e5a947f8367f47825d17513e25bef"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AzataSummonFeatureTier9",
+  "guid": "8403a6cec131de949b42cfa329963736",
+  "name": "Summon Hamadryad (Azata)"
+}

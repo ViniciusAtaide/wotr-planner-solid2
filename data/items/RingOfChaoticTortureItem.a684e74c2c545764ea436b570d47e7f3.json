@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfChaoticTortureItem",
+  "guid": "a684e74c2c545764ea436b570d47e7f3",
+  "m_Enchantments": [
+    "!bp_dd81657fe9293004c850742dfda41ca8"
+  ],
+  "name": "Ring of Chaotic Fascination"
+}

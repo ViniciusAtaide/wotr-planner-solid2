@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_43e5ea5b37586d44982430b2d8c6cefb"
+    }
+  ],
+  "assetName": "BracersOfMindBreakEnchantment",
+  "guid": "939bc65002a19b944862633446a17293"
+}

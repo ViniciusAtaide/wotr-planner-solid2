@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Armor",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Speed",
+      "Value": -10
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "ImmunityToArmorSpeedPenalty"
+    }
+  ],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SlowAndSteady",
+  "guid": "786588ad1694e61498e77321d4b07157",
+  "name": "Slow and Steady"
+}

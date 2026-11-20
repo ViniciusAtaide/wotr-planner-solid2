@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "HeartOfIce_Item",
+  "guid": "a113c68406d74e37951717e417840bfa",
+  "m_Enchantments": [
+    "!bp_4b9573fa2b0e74043a4682740e9ae138",
+    "!bp_937e425713cd461cb60f2b690d23f3e1"
+  ],
+  "name": "Heart of Ice"
+}

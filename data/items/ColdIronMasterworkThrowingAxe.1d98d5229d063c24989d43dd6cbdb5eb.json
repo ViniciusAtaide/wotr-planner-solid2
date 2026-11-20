@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronMasterworkThrowingAxe",
+  "guid": "1d98d5229d063c24989d43dd6cbdb5eb",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_ca131c71f4fefcb48b30b5991520e01d",
+  "name": "Cold Iron Masterwork Throwing Axe"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HeadbandOfConfidenceItem",
+  "guid": "ee29287b36269ec468c2b38b1fde7551",
+  "m_Enchantments": [
+    "!bp_c3c2a133c0aa12240ade34762c146664",
+    "!bp_4dcb81fcbfb11714db17ece0c152ed8b",
+    "!bp_90b7d15789d40354b96891ea1c464dc3"
+  ],
+  "name": "Headband of Confidence"
+}

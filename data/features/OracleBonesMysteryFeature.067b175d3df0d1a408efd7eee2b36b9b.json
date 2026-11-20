@@ -1,0 +1,49 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [
+        "!bp_52dbfd8505e22f84fad8d702611f60b7"
+      ],
+      "m_Archetypes": [
+        "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+      ],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_d20e184293942774eac71acb48ad7f26"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 2,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_16d294569f390b245a2e349dd45e3bbf"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPersuasion"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillStealth"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_bcf3ea648bd94612b8e8f1a69e9026e5",
+      "m_Feature": "!bp_d20e184293942774eac71acb48ad7f26"
+    }
+  ],
+  "Groups": [
+    "OracleMystery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleBonesMysteryFeature",
+  "guid": "067b175d3df0d1a408efd7eee2b36b9b",
+  "name": "Bones"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_153fe103b10d70846a9fe54c8688e09d"
+    }
+  ],
+  "assetName": "CloakOfCaranageEnchantment",
+  "guid": "3641d35ec8817c24692995ec98a30402"
+}

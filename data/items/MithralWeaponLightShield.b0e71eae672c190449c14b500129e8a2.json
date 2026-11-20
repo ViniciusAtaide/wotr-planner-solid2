@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MithralWeaponLightShield",
+  "guid": "b0e71eae672c190449c14b500129e8a2",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1fd965e522502fe479fdd423cca07684"
+}

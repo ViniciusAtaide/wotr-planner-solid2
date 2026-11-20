@@ -1,0 +1,49 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_365b50dba54efb74fa24c07e9b7a838c",
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "KineticElementalFocus"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_fbed3ca8c0d89124ebb3299ccf68c439",
+        "!bp_e76a453abe7a7304cbde17a8c123ad76"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_8ad77685e64842c45a6f5b19f9086c6c"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ElementalFocusFire",
+  "guid": "3d8d3d6678b901444a07984294a1bc24",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Fire (Elemental Focus)"
+}

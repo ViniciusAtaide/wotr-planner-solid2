@@ -1,0 +1,87 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_05517d2e4d9e4a5fa86ad37d6b061fa4"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_38f0034df27e40509320b28029d1169e"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_1d3656c3090e48f59888d86ff7014acc"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_121829d239124685b430f5263031bf83"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_121829d239124685b430f5263031bf83"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_b42b4a58facf4d88b0d341f343bd2e42"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_121829d239124685b430f5263031bf83"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_29b6f12ebb17485fa783f6e284bab6b3"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_121829d239124685b430f5263031bf83"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_121829d239124685b430f5263031bf83",
+        "!bp_5a155f5c3f834a319feab52dc66ee185"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_6e843ca5ae8e41aea17458fb4c16a15d"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "GriffonheartShifterArchetype",
+  "guid": "aed5b306ad734a6da5d5638edcb667c9",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Griffonheart Shifter"
+}

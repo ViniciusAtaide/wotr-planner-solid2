@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "AmberLustGlovesItem",
+  "guid": "d3622c4bb0fb743409c673243921452f",
+  "m_Enchantments": [
+    "!bp_9ab0f698388a92d459c9604e849a0adb"
+  ],
+  "name": "Devouring Lust (gloves)"
+}

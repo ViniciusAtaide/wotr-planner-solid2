@@ -1,0 +1,56 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_5e01e267021bffe4e99ebee3fdc872d1"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_c4ed8d1a90c93754eacea361653a7d56"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_c94d764d2ce3cd14f892f7c00d9f3a70"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_261270d064148224fb982590b7a65414"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "BrownFurTransmuterArchetype",
+  "guid": "ce63b2df8c6c12649b02c278e73d8bfa",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Brown-Fur Transmuter"
+}

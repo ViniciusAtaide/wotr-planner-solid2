@@ -1,0 +1,44 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 4,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a5a9fe8f663d701488bd1db8ea40484e",
+      "m_Feature": "!bp_ae9691359fd0e704f8560a4eac686ebb"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_0efe2a9ef673ebe4181356748c88fbe9"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_4bd30ab53ce6ee24791fb60f82e7811e"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_62ece3b9b2126a44faa276bbb5bd1014"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_0a4b9114759b20a45af6642964fc56bc"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_506b4aeb2b7bb36448cf3858c943d5bb"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_8963c914c07ccd0489d1d34a8d1a5865"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AngelSummonFeatureTier3",
+  "guid": "295a0d23a64a85b4a9e99e05041a3f8c",
+  "name": "Summon Spirit Paladins"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f5b68204c2155074c9a05fbfe33a76c7"
+    }
+  ],
+  "assetName": "ShootDownEnchantment",
+  "guid": "d134a5c08cf1d9d488d8a82012a2b3ff"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": true,
+  "IsMythic": false,
+  "Spontaneous": true,
+  "assetName": "EldritchFontSpellbook",
+  "guid": "67b574abd845f3e42983ea6eb53a6f90",
+  "m_SpellsPerDay": "!bp_c0c98a8587a4470cb8c1004d43a7c97d",
+  "name": "Arcanist"
+}

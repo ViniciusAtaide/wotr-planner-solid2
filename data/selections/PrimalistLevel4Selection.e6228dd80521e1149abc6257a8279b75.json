@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "PrimalistLevel4Selection",
+  "guid": "e6228dd80521e1149abc6257a8279b75",
+  "m_AllFeatures": [
+    "!bp_2140040bf367e8b4a9c6a632820becbe",
+    "!bp_8eb5c34bb8471a0438e7eb3994de3b92"
+  ],
+  "name": "Primal Choices (level 4)"
+}

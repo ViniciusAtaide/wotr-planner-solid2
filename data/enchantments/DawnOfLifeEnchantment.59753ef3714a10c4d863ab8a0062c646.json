@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_cf94d469573e36b45b7f4d9ac8472277"
+    }
+  ],
+  "assetName": "DawnOfLifeEnchantment",
+  "guid": "59753ef3714a10c4d863ab8a0062c646"
+}

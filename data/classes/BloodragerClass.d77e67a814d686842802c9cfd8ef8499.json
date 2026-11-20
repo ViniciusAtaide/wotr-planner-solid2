@@ -1,0 +1,52 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillMobility",
+    "SkillAthletics",
+    "SkillPersuasion",
+    "SkillPerception",
+    "SkillLoreNature",
+    "SkillKnowledgeArcana"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D10",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 3,
+  "assetName": "BloodragerClass",
+  "guid": "d77e67a814d686842802c9cfd8ef8499",
+  "m_Archetypes": [
+    "!bp_9a8b323e5559dab45a23e0dc0b8e9c52",
+    "!bp_5648585af75596f4a9fa3ae385127f57",
+    "!bp_4d588290ed0736e4f8cd3f4c3beacd69",
+    "!bp_afe79636228fdd64ea8d9bf3644838a3",
+    "!bp_32a5dff92373a9641b43e97d453b9369",
+    "!bp_d55163eed9214367820654f0ebe0ff69",
+    "!bp_10d92d54d19e4a59b5bbd4259ec0974f",
+    "!bp_61edfe08d9e04a11844e5fcc01da3602"
+  ],
+  "m_BaseAttackBonus": "!bp_b3057560ffff3514299e8b93e7648a9d",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_69dec3bda9a94914bb159cba128300b9",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": "!bp_e19484252c2f80e4a9439b3681b20f00",
+  "m_WillSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "name": "Bloodrager"
+}

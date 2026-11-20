@@ -1,0 +1,53 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_52135eada006e9045a848cd659749608"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_2ed9d8bf76412ba4a8afe38fa9925fca"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d439691f37d17804890bd9c263ae1e80"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_13bdf8d542811ac4ca228a53aa108145"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "Feat",
+    "WizardFeat"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "GreaterElementalFocusSelection",
+  "guid": "1c17446a3eb744f438488711b792ca4d",
+  "m_AllFeatures": [
+    "!bp_49926dc94aca16145b6a608277b6f31c",
+    "!bp_f37a210a77d769c4ea2b23c22c07b83a",
+    "!bp_6a3be3df06f555d44a2b9dbfbcc2df23",
+    "!bp_7a722c3e782aa5349a867c3516a2a4cf"
+  ],
+  "name": "Greater Elemental Focus"
+}

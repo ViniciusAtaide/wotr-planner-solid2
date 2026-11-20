@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_775af7b6cd98b0e4a99b51898c97777d"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_cb06f0e72ffb5c640a156bd9f8000c1d"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_65af7290b4efd5f418132141aaa36c1b"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "OrderOfThePawMountSelection",
+  "guid": "7b8b6474cc374a23830341d2a40eecaf",
+  "m_AllFeatures": [
+    "!bp_472091361cf118049a2b4339c4ea836a",
+    "!bp_f894e003d31461f48a02f5caec4e3359",
+    "!bp_67a9dc42b15d0954ca4689b13e8dedea"
+  ],
+  "name": "Animal Companion (Cavalier of the Paw)"
+}

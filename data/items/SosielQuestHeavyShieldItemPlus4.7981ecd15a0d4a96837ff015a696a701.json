@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "SosielQuestHeavyShieldItemPlus4",
+  "guid": "7981ecd15a0d4a96837ff015a696a701",
+  "m_ArmorComponent": "!bp_f5df823333e743b4a51446f309e2b27a",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Immaculate Petal (+4)"
+}

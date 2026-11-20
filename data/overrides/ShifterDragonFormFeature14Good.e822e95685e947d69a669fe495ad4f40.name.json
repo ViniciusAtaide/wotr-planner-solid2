@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "Metallic",
+  "reason": "The Dragonblood Shifter's dragon forms come in three sets, one for each draconic aspect. The Wyrmshifter features grant ShifterDragonFormGoodFeatureLevelUp only while the shifter holds 'Draconic Aspect — Metallic' (AddFeatureIfHasFact), and that feature grants this blueprint by AddFeatureOnClassLevel, directly or through ShifterDragonFormGoodFeatureLevelUp1. Grantors and levels are the same in each set and the names repeat, so only the aspect that gates the set tells the three apart; each is qualified by it.",
+  "target": "e822e95685e947d69a669fe495ad4f40"
+}

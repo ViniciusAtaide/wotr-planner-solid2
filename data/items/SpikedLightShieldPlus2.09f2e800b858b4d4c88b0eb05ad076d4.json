@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "SpikedLightShieldPlus2",
+  "guid": "09f2e800b858b4d4c88b0eb05ad076d4",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_98a0dc03586a6d04791901c41700e516"
+}

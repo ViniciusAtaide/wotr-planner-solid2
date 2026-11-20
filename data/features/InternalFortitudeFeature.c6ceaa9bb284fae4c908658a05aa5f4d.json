@@ -1,0 +1,49 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 8,
+      "Not": false,
+      "m_CharacterClass": "!bp_f7d7eb166b3dd594fb330d085df41853"
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 8,
+      "m_Archetype": "!bp_4d588290ed0736e4f8cd3f4c3beacd69",
+      "m_CharacterClass": "!bp_d77e67a814d686842802c9cfd8ef8499"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 8,
+      "Not": false,
+      "m_CharacterClass": "!bp_6afa347d804838b48bda16acb0573dc0"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 8,
+      "Not": false,
+      "m_CharacterClass": "!bp_a406d6ebea5c46bba3160246be03e96f"
+    }
+  ],
+  "Groups": [
+    "RagePower"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "InternalFortitudeFeature",
+  "guid": "c6ceaa9bb284fae4c908658a05aa5f4d",
+  "name": "Internal Fortitude"
+}

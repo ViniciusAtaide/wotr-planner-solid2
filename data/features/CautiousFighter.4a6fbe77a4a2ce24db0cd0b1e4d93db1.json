@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_b0c3ef2729c498f47970bb50fa1acd30"
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CautiousFighter",
+  "guid": "4a6fbe77a4a2ce24db0cd0b1e4d93db1",
+  "name": "Cautious Fighter"
+}

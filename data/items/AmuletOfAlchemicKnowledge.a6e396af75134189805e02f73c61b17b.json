@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "AmuletOfAlchemicKnowledge",
+  "guid": "a6e396af75134189805e02f73c61b17b",
+  "m_Enchantments": [
+    "!bp_f3e428ffe59449258e7f151fb7167b6d"
+  ],
+  "name": "Amulet of Alchemical Knowledge"
+}

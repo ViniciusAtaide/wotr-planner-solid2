@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": true,
+  "IsMythic": true,
+  "Spontaneous": false,
+  "assetName": "LichSpellbook",
+  "guid": "08a80074263809c4b9616aac05af90ae",
+  "m_SpellsPerDay": "!bp_4924b73038564c543a371b4c4d1def45",
+  "name": "Lich"
+}

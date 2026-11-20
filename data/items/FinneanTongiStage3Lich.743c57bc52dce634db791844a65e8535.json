@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanTongiStage3Lich",
+  "guid": "743c57bc52dce634db791844a65e8535",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_13fa38737d46c9e4abc7f4d74aaa59c3",
+  "name": "Finnean (Tongi)"
+}

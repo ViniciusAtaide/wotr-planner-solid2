@@ -1,0 +1,40 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_2c82cecdcafb5c741bf4901e689a4844"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_a46d4bd93601427409d034a997673ece"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": true,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BloodlineFeyFeatSelection",
+  "guid": "d7f233e417c490545b00f49c3940638c",
+  "m_AllFeatures": [
+    "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5",
+    "!bp_797f25d709f559546b29e7bcb181cc74",
+    "!bp_15e7da6645a7f3d41bdad7c8c4b9de1e",
+    "!bp_197306972c98bb843af738dc7529a7ac",
+    "!bp_0da0c194d6e1d43419eb8d990b28e0ab",
+    "!bp_8f3d1e6b4be006f4d896081f2f889665",
+    "!bp_ef7ece7bb5bb66a41b256976b27f424e",
+    "!bp_6507d2da389ed55448e0e1e5b871c013"
+  ],
+  "name": "Bloodline Feat Selection"
+}

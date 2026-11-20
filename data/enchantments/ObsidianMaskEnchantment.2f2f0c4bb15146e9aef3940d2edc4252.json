@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_784cebe0778841e2856db5d8411d0a73"
+    }
+  ],
+  "assetName": "ObsidianMaskEnchantment",
+  "guid": "2f2f0c4bb15146e9aef3940d2edc4252"
+}

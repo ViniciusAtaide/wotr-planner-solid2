@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_d35b3bad000c3e94dbe95eef8332b2c7"
+    }
+  ],
+  "assetName": "InfernalBondRingEnchant",
+  "guid": "3dbc31019a444944ea587e756c4f40a7"
+}

@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MapFormationHeavyPickItem",
+  "guid": "934941fdd98438c41a50675e447910a6",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b",
+    "!bp_a7fdfb3bf41bbd241b475b8f4380c9c6"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a492410f3d65f744c892faf09daad84a",
+  "name": "Finger of the Heiress (Heavy Pick)"
+}

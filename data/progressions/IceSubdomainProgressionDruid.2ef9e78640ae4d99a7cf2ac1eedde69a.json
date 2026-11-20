@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": false,
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "DruidDomain",
+    "BlightDruidDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_fe2be05e3ee04b818554a2fc93f7605b",
+        "!bp_a598937317a24527abb59a45db7c398b"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_b105ed7a854948bda3d7ee23e60b7c70"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "IceSubdomainProgressionDruid",
+  "guid": "2ef9e78640ae4d99a7cf2ac1eedde69a",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Ice Subdomain (Druid)"
+}

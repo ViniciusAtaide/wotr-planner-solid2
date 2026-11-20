@@ -1,0 +1,62 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_2df27c2ac48abd949bdf891c6adb625e"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_4cd530e060eccbc4b99f232abbf9c3f1",
+        "!bp_8963c914c07ccd0489d1d34a8d1a5865"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": []
+    },
+    {
+      "Level": 4,
+      "m_Features": []
+    },
+    {
+      "Level": 5,
+      "m_Features": []
+    },
+    {
+      "Level": 6,
+      "m_Features": []
+    },
+    {
+      "Level": 7,
+      "m_Features": []
+    },
+    {
+      "Level": 8,
+      "m_Features": []
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "TricksterFirstLevelsProgression",
+  "guid": "11ba180ac736c894e937602e54f7320c",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_247aa787806d5da4f89cfc3dff0b217f"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Bit of Fun"
+}

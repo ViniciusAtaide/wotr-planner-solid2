@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "BlightDruidDomain",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "OnlyNew",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BlightDruidBond",
+  "guid": "096fc02f6cc817a43991c4b437e12b8e",
+  "m_AllFeatures": [
+    "!bp_3aef017b78329db4fa53fe8560069886",
+    "!bp_57e97f4cda643734eb4800972c53b960",
+    "!bp_7d3f0f00b1f8ad54ba6abc6aeac84c05",
+    "!bp_7a73be7fab8efd34b8449e0fbba8399e",
+    "!bp_a3217dc55003b914aa296da7ada029bc",
+    "!bp_562567d7c244fae43ac61df3d55547ca",
+    "!bp_ee77836d10835fd49a8831adb3a14640",
+    "!bp_e48425d6fdafdba449beec54fe158339",
+    "!bp_4a3516fdc4cda764ebd1279b22d10205",
+    "!bp_7ab638ea6b6742149807e168c1d017d7",
+    "!bp_f6c6c595314f40fdb64cf45516dcf7fc",
+    "!bp_a75ad4936e099c54881cf553e2110703"
+  ],
+  "name": "Blight Bond"
+}

@@ -1,0 +1,59 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Dexterity",
+      "Value": 13
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_90e54424d682d104ab36436bd527af09"
+    },
+    {
+      "$type": "PrerequisiteParametrizedWeaponSubcategory",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "SubCategory": "OneHandedPiercing",
+      "m_Feature": "!bp_1e1f627d26ad36f43bbd26cc2bf8ac7e"
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d791af1bc179e0e44a0ca1fa6c418993"
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "CombatFeat"
+  ],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "WeaponCategory",
+  "Ranks": 1,
+  "RequireProficiency": true,
+  "WeaponSubCategory": "OneHandedPiercing",
+  "assetName": "FencingGrace",
+  "guid": "47b352ea0f73c354aba777945760b441",
+  "m_Prerequisite": "!bp_1e1f627d26ad36f43bbd26cc2bf8ac7e",
+  "name": "Fencing Grace"
+}

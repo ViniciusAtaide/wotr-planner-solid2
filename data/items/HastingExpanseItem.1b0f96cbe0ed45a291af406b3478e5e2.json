@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "HastingExpanseItem",
+  "guid": "1b0f96cbe0ed45a291af406b3478e5e2",
+  "m_Enchantments": [
+    "!bp_ea0876f3f67c4170ba99bc429a2bfaa4"
+  ],
+  "name": "Hasting Expanse"
+}

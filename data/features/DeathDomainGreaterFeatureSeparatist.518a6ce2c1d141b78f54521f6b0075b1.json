@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_734a29b693e9ec346ba2951b27987e33",
+      "m_Feature": "!bp_49bf8c679d3a7424898a5cd448e5a06b"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_734a29b693e9ec346ba2951b27987e33",
+      "m_Feature": "!bp_fd7c08ccd3c7773458eb9613db3e93ad"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DeathDomainGreaterFeatureSeparatist",
+  "guid": "518a6ce2c1d141b78f54521f6b0075b1",
+  "name": "Death's Embrace (Forbidden Rites)"
+}

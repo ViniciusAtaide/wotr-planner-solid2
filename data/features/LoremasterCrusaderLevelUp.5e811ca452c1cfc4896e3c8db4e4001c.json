@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_673d39f7da699aa408cdda6282e7dcc0"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "LoremasterCrusaderLevelUp",
+  "guid": "5e811ca452c1cfc4896e3c8db4e4001c",
+  "name": "Crusader"
+}

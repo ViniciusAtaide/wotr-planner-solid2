@@ -1,0 +1,116 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "OrAndLogic",
+              "ConditionsChecker": {
+                "Conditions": [
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_62b33ac8ceb18dd47ad4c8f06849bc01"
+                  },
+                  {
+                    "$type": "ContextConditionCharacterClass",
+                    "CheckCaster": false,
+                    "MinLevel": 1,
+                    "Not": true,
+                    "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_94c29f69cdc34594a6a4677441ed7375"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_da48f9d7f697ae44ca891bfc50727988"
+                  }
+                ],
+                "Operation": "And"
+              },
+              "Not": false
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_7e0f57d8d00464441974e303b84238ac"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_0cf41c61c8ac463478e5ba733fd26b40"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_a787a6e193c244c5901c799f4c3afe2d"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_468ecbdd58fbd6045a0a1888308031fe"
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_af0027e0c0432bc418e813e32de0460b"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_db64de9cdbad45b4cbc8b369cd7a007c"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_ed71d51317d79d24ebe172cd9107e695"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_ed321c33edae32c4f8cfb20046eb593b"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "DragonheirBronzeProgression",
+  "guid": "df2807f0649c4237ab7c4d62a2acaaee",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Draconic Bloodline — Bronze (Draconic Bloodline)"
+}

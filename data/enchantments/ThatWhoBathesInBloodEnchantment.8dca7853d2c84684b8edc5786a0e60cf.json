@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_168fb7b7330145fbb3f0d039e9e21dee"
+    }
+  ],
+  "assetName": "ThatWhoBathesInBloodEnchantment",
+  "guid": "8dca7853d2c84684b8edc5786a0e60cf"
+}

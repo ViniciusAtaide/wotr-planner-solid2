@@ -1,0 +1,46 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_60f6b157ec98b844f8100c5939d7dab4",
+        "!bp_f6c112a579a81c0439c597f9ee222243"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_1ad9828c09fd28c4293c7b12845e6d20"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_d20d1b2a865e2eb40a18e3d93cbeeb60"
+      ]
+    }
+  ],
+  "AddSkillPoints": 1,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_43281c3d7fe18cc4d91928395837cd1e",
+        "!bp_8c971173613282844888dc20d572cfc9"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "HeraldCallerArchetype",
+  "guid": "c4a02990f15c0bb4d8749a90a5ed46b3",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Herald Caller"
+}

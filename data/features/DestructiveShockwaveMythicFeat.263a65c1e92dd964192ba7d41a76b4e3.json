@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DestructiveShockwaveMythicFeat",
+  "guid": "263a65c1e92dd964192ba7d41a76b4e3",
+  "name": "Destructive Shockwave"
+}

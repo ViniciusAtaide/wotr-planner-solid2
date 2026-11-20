@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "ImpassableGuardShieldItem",
+  "guid": "19d785ca55714780bc753b6f9ee7f703",
+  "m_ArmorComponent": "!bp_ca2e798f8ebc4a47bc420c22e7c98c2d",
+  "m_WeaponComponent": null,
+  "name": "Impassable Guard"
+}

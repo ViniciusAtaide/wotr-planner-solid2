@@ -1,0 +1,47 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillKnowledgeWorld"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_6d3728d4e9c9898458fe5e9532951132",
+        "!bp_0c10b4bbcbcb6a942a77a6804682c7d8",
+        "!bp_9c7b33404dc0ac1449ee2732657b722a",
+        "!bp_8e85b6347caa4e84fa67d71f65a6a990"
+      ]
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillKnowledgeWorld"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Spear"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Longspear"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Javelin"
+    },
+    {
+      "$type": "AddBackgroundArmorProficiency",
+      "Proficiency": "Light"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundMercenary",
+  "guid": "43b7315eb58242943848750af3671a25",
+  "name": "Mercenary"
+}

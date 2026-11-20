@@ -1,0 +1,68 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_2d957edad0adb3d49991cfcd3ac4cbf8"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_0605927df6e2fdd42af6ee2424eb89f2"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_859ec9d911cecf5438dc93ca3f88fa5d"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_638549b003555e948bd67fa6b55ebad6"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_0605927df6e2fdd42af6ee2424eb89f2"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_2d957edad0adb3d49991cfcd3ac4cbf8"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_ded43678aa1fbe241827175b65e9a749"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_77af3c58e71118d4481c50694bd99e77"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "StandardBearerArchetype",
+  "guid": "07db3fec753209546a792a7942288998",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Standard Bearer"
+}

@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AloneinTheDarkLastManStandingFeature",
+  "guid": "3ca1d2a2633c46b69236fbc637db6980",
+  "name": "Alone in the Dark (Tortured Crusader 2)"
+}

@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "PrimalistSecondBloodlineLevel16Selection",
+  "guid": "d43b1581b1f64f928e55d7ad6d36cb13",
+  "m_AllFeatures": [
+    "!bp_73e3ba6d3bf9434f8fa4a6ad53037eab",
+    "!bp_531d1dd9dd7b4cdf9849ae027b2caf6d"
+  ],
+  "name": "Primal Choices (Second Bloodrager Bloodline 16)"
+}

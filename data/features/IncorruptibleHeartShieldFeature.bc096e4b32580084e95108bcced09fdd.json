@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "IncorruptibleHeartShieldFeature",
+  "guid": "bc096e4b32580084e95108bcced09fdd"
+}

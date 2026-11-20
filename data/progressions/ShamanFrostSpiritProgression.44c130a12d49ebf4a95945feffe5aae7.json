@@ -1,0 +1,56 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "ShamanSpirit"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_30dc785861c12374c910e5ede5b87ef4",
+        "!bp_fa4577e0f0b319a4995a3dba2359463c"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_a84c3cf1a23eff74188a239c8182d6ee"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_7852fcc3e63c3914489e4788f4073e9b"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_5d396a800c34407fb3e01b8782b91c86"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ShamanFrostSpiritProgression",
+  "guid": "44c130a12d49ebf4a95945feffe5aae7",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_eb24ca44debf6714aabe1af1fd905a07"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Frost"
+}

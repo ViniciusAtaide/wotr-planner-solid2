@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3443f54b269d30540a0ab2e97005e416"
+    }
+  ],
+  "assetName": "ApprenticeRobeEnchantment",
+  "guid": "90c5b1c7c443cec44af9f7bac0fc4db8"
+}

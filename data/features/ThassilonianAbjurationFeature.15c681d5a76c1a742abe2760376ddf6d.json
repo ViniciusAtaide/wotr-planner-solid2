@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_c451fde0aec46454091b70384ea91989",
+        "!bp_30f20e6f850519b48aa59e8c0ff66ae9"
+      ]
+    }
+  ],
+  "Groups": [
+    "ThassilonianSpellbook"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ThassilonianAbjurationFeature",
+  "guid": "15c681d5a76c1a742abe2760376ddf6d",
+  "m_Spellbook": "!bp_58b15cc36ceda8942a7a29aafa755452",
+  "name": "Envy (Abjuration)"
+}

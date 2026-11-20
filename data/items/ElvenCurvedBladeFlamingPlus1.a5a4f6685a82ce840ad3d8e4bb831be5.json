@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ElvenCurvedBladeFlamingPlus1",
+  "guid": "a5a4f6685a82ce840ad3d8e4bb831be5",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_b5e6838ad2a62b146b49619bcf9f42aa",
+  "name": "Flaming Elven Curve Blade +1"
+}

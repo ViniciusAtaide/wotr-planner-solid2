@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "BootsOfStampedeItem",
+  "guid": "1e67f0071700eb5418b82009427bce8a",
+  "m_Enchantments": [
+    "!bp_9cf06515dfaf8894993872bca399c689"
+  ],
+  "name": "Boots of Stampede"
+}

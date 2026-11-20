@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkFauchard",
+  "guid": "9d92dd4b63803734997c80d0cb56a959",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a40899c4defec94bb9c291bde74f1a8",
+  "name": "Masterwork Fauchard"
+}

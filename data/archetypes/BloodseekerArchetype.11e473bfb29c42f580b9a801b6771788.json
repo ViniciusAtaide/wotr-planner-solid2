@@ -1,0 +1,180 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_737b087cb83448f687cd2d9e8c69e426",
+        "!bp_647fa75656684bf5a87a8b5a8454a26b"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_703c488da4a34dc883dd7787e8d7ed51",
+        "!bp_1fb15984335a4694a29b0346cac282c2",
+        "!bp_11047b71843a4ee2b42d3550a1fd6461",
+        "!bp_e68a3a764ffd4aff9b303fcf67a9322d"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_e68a3a764ffd4aff9b303fcf67a9322d",
+        "!bp_b38ceab4ccf3446b84b2e5881940dacf",
+        "!bp_38eee152c88b463987e75893c948e294"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_e68a3a764ffd4aff9b303fcf67a9322d",
+        "!bp_647fa75656684bf5a87a8b5a8454a26b"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_e68a3a764ffd4aff9b303fcf67a9322d",
+        "!bp_6fd9709a4e354e41ac6feb8ac471260e",
+        "!bp_38eee152c88b463987e75893c948e294"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_ea6a7bffdf2c43ddbf0ff7cc1bec5b06"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_e68a3a764ffd4aff9b303fcf67a9322d",
+        "!bp_0eb03d23f4744d9aa5a2584f08e4e38b"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_e68a3a764ffd4aff9b303fcf67a9322d",
+        "!bp_647fa75656684bf5a87a8b5a8454a26b",
+        "!bp_e72ea4085ca6418ab26278db11670075",
+        "!bp_38eee152c88b463987e75893c948e294"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_e68a3a764ffd4aff9b303fcf67a9322d"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_e68a3a764ffd4aff9b303fcf67a9322d",
+        "!bp_6bf8f672fa5f4f2fb54b93be9b170cb7",
+        "!bp_38eee152c88b463987e75893c948e294"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_e68a3a764ffd4aff9b303fcf67a9322d"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_e68a3a764ffd4aff9b303fcf67a9322d",
+        "!bp_5868f4a3414446ac9f5b4ce1aa1995f1"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "Evil",
+      "ArchetypeAlignment": true,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "RemoveFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_04430ad24988baa4daa0bcd4f1c7d118"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_04430ad24988baa4daa0bcd4f1c7d118"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_43d1b15873e926848be2abf0ea3ad9a8"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_43d1b15873e926848be2abf0ea3ad9a8"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_913b9cf25c9536949b43a2651b7ffb66",
+        "!bp_a33b99f95322d6741af83e9381b2391c"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_913b9cf25c9536949b43a2651b7ffb66"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_913b9cf25c9536949b43a2651b7ffb66"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_913b9cf25c9536949b43a2651b7ffb66"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_913b9cf25c9536949b43a2651b7ffb66"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_913b9cf25c9536949b43a2651b7ffb66",
+        "!bp_a26c0279a423fc94cabeea898f4d9f8a"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "BloodseekerArchetype",
+  "guid": "11e473bfb29c42f580b9a801b6771788",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Bloodseeker"
+}

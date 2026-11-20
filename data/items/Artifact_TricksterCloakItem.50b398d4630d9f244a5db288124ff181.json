@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_8df873a8c6e48294abdb78c45834aa0a"
+    }
+  ],
+  "assetName": "Artifact_TricksterCloakItem",
+  "guid": "50b398d4630d9f244a5db288124ff181",
+  "m_Enchantments": [
+    "!bp_86a60874bdeb4e999b4fa18310100574"
+  ],
+  "name": "The Bound of Possibility (Trickster)"
+}

@@ -1,0 +1,80 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_2814b1a6e97046abb2fe81215dccf241"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_2814b1a6e97046abb2fe81215dccf241"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_2814b1a6e97046abb2fe81215dccf241"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_2814b1a6e97046abb2fe81215dccf241"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_90bc32b5e7a141c1b20e5596772115e7"
+      ]
+    },
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_c146fde28ad2418ea3b0135a0b0cc26f"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_d6dd06f454b34014ab0903cb1ed2ade3"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_3a60f0c0442acfb419b0c03b584e1394"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_3a60f0c0442acfb419b0c03b584e1394"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_3a60f0c0442acfb419b0c03b584e1394"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "OverwhelimgMageArchetype",
+  "guid": "734917ec8b8542378c1d35519439d67f",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Overwhelming Mage"
+}

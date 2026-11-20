@@ -1,0 +1,182 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_0ab2f21a922feee4dab116238e3150b4",
+        "!bp_729411185291d704696e58316420fe38"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_6ba2b2178dfc4331a34cc2a8a2b68d6a"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_f6b7f213fc0e428d9a01ed4b02b50cce"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillKnowledgeArcana",
+    "SkillKnowledgeWorld",
+    "SkillLoreNature",
+    "SkillPersuasion",
+    "SkillUseMagicDevice"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "OrAndLogic",
+              "ConditionsChecker": {
+                "Conditions": [
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_62b33ac8ceb18dd47ad4c8f06849bc01"
+                  },
+                  {
+                    "$type": "ContextConditionCharacterClass",
+                    "CheckCaster": false,
+                    "MinLevel": 1,
+                    "Not": true,
+                    "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_94c29f69cdc34594a6a4677441ed7375"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_7bda7cdb0ccda664c9eb8978cf512dbc"
+                  }
+                ],
+                "Operation": "And"
+              },
+              "Not": false
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_3c2bd17e635d4afe936cd0dbbff233c8"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_213290bab56cc1b4eb67eab54d893956"
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_41c8486641f7d6d4283ca9dae4147a9f"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_f6388946f9f472f4585591b80e9f2452"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_f6388946f9f472f4585591b80e9f2452",
+        "!bp_41c8486641f7d6d4283ca9dae4147a9f"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_f6388946f9f472f4585591b80e9f2452"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_f6388946f9f472f4585591b80e9f2452"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_f6388946f9f472f4585591b80e9f2452"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_41c8486641f7d6d4283ca9dae4147a9f"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_3c380607706f209499d951b29d3c44f3"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_3c380607706f209499d951b29d3c44f3"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_3c380607706f209499d951b29d3c44f3"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_3c380607706f209499d951b29d3c44f3"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_ae177f17cfb45264291d4d7c2cb64671"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_55f516d7d1fc5294aba352a5a1c92786"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": true,
+  "assetName": "DragonheirScionArchetype",
+  "guid": "8dff97413c63c1147be8a5ca229abefc",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Dragonheir Scion"
+}

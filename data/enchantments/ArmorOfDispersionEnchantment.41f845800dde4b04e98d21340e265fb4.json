@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_2bdf748500fd7b94d88a993aa4c415d5"
+    }
+  ],
+  "assetName": "ArmorOfDispersionEnchantment",
+  "guid": "41f845800dde4b04e98d21340e265fb4"
+}

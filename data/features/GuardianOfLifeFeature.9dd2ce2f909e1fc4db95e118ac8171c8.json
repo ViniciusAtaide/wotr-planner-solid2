@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "GuardianOfLifeFeature",
+  "guid": "9dd2ce2f909e1fc4db95e118ac8171c8"
+}

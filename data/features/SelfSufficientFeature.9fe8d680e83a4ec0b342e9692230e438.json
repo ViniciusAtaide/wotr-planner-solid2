@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SelfSufficientFeature",
+  "guid": "9fe8d680e83a4ec0b342e9692230e438",
+  "name": "Self-Sufficient"
+}

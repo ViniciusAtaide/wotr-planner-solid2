@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PlagueHexConstitutionDamageFeature",
+  "guid": "bee6b9ab7b8d433bb438b616ad5476b4",
+  "name": "Plague Mutation: Constitution Damage"
+}

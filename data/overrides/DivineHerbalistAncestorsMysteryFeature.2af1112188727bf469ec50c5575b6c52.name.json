@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "Divine Herbalist",
+  "reason": "The oracle's mystery and the Divine Herbalist archetype's copy of it are separate blueprints. DivineHerbalistAncestorsMysteryFeature is offered by the archetype's mystery selection and by the Mythic \"Second Mystery\" selection, so neither the archetype alone nor a family name covers every route. The copy is qualified by the archetype whose mystery list it belongs to; the oracle's own copy stays bare.",
+  "target": "2af1112188727bf469ec50c5575b6c52"
+}

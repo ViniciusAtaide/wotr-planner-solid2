@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "DeathlyArousalItem",
+  "guid": "ced0c42331b39f5499846880a2b82c9b",
+  "m_Enchantments": [
+    "!bp_47278cec1e3827145b364e0d93201bc7"
+  ],
+  "name": "Deathly Arousal"
+}

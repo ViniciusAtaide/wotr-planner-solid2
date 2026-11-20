@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "FreeDancersBootsItem",
+  "guid": "693b9facfda93fe4cac07c3ac7c32d30",
+  "m_Enchantments": [
+    "!bp_f6b05ef07d6712646912e7fcbb55859c"
+  ],
+  "name": "Free Dancer's Boots"
+}

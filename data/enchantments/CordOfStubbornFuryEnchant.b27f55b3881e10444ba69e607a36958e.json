@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_bc6fe6188f5fb4b41866a2abdc519dc7"
+    }
+  ],
+  "assetName": "CordOfStubbornFuryEnchant",
+  "guid": "b27f55b3881e10444ba69e607a36958e"
+}

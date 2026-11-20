@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_6341e6f9cd21d6649beb3aad3785cd9a"
+    }
+  ],
+  "assetName": "AmuletOfImposingPhysiqueEnchantment",
+  "guid": "9b96fc6d3d86741489e0815941263f10"
+}

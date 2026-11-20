@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_734a29b693e9ec346ba2951b27987e33"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "UndeadProgression",
+  "guid": "c7784cdabf146e74cba9af50742ad091",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_19a2d9e58d916d04db4cd7ad2c7a3ee2"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null
+}

@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "None",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SneakAttack",
+      "Value": 1
+    },
+    {
+      "$type": "PrerequisiteFullStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "SneakAttack",
+      "Value": 1
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SneakAttackerMythicFeat",
+  "guid": "d0a53bf03b978634890e5ebab4a90ecb",
+  "name": "Mythic Sneak Attacker"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_8d904686a43f4eaeb451798e9088b9b9"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "LoremasterLivingGrimoireLevelUp",
+  "guid": "c7c1c05751d644d6ad2c1b73b52bd858",
+  "name": "Inquisitor"
+}

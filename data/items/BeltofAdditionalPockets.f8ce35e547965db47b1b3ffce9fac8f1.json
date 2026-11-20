@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltofAdditionalPockets",
+  "guid": "f8ce35e547965db47b1b3ffce9fac8f1",
+  "m_Enchantments": [
+    "!bp_2fe49d420a7ab8441a5d34d6667ebcd3"
+  ],
+  "name": "Bombardier's Utility Belt"
+}

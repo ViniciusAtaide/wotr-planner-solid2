@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "FavoriteEnemy"
+  ],
+  "HideInUI": false,
+  "Ranks": 8,
+  "assetName": "FavoriteEnemyDemonOfMagic",
+  "guid": "21328361091fd2c44a3909fcae0dd598",
+  "name": "Favored Enemy — Demons of Magic"
+}

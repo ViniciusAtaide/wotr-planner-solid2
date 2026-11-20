@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_42a455d9ec1ad924d889272429eb8391"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 1,
+      "m_Progression": "DivStep",
+      "m_StartLevel": 0,
+      "m_StepLevel": 4,
+      "m_Type": "DamageDice",
+      "m_UseMax": false,
+      "m_UseMin": true
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 20,
+  "assetName": "SearingFleshEffectFeature",
+  "guid": "642bb6097c37b3b4b8be1f46d2d9296e",
+  "name": "Searing Flesh (effect)"
+}

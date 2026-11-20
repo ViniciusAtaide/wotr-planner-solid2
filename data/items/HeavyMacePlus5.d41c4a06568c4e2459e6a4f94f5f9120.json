@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "HeavyMacePlus5",
+  "guid": "d41c4a06568c4e2459e6a4f94f5f9120",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d5a167f0f0208dd439ec7481e8989e21"
+}

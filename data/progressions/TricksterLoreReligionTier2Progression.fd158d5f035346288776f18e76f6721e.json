@@ -1,0 +1,46 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_fd158d5f035346288776f18e76f6721e"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_04177c4ddec20ae4ca04388f9cf23518"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "MythicTrick2"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_ae4e619162a44996b77973f3abd7781a",
+        "!bp_ae4e619162a44996b77973f3abd7781a"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "TricksterLoreReligionTier2Progression",
+  "guid": "fd158d5f035346288776f18e76f6721e",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [
+    "!bp_c0e6f7e7a9fc4db386f5f84466c0195f"
+  ],
+  "name": "Lore (Religion) 2 Rank (Improved Mythic Trick)"
+}

@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "ArrowguardBucklerItem",
+  "guid": "7c034e82710f36b45850f2127406992f",
+  "m_ArmorComponent": "!bp_903574a0707827f42bfa1020dbe26a47",
+  "m_WeaponComponent": null,
+  "name": "Arrowguard"
+}

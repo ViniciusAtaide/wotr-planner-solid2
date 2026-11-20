@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "JudgementOfRuleItem",
+  "guid": "f40895a7dfab41c40b42657fc3f5bdfe",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": "!bp_ca0e81e14d675c34b862aad509be573d",
+  "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3",
+  "name": "Honorable Judgment"
+}

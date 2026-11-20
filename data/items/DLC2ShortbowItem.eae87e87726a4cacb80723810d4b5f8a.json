@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DLC2ShortbowItem",
+  "guid": "eae87e87726a4cacb80723810d4b5f8a",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_43f8474e1ef9456a9eec66eaed2b2737",
+  "name": "Sham Shortbow"
+}

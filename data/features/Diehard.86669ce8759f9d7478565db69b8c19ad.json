@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c99f3405d1ef79049bd90678a666e1d7"
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "HalfOrcFerocity"
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "Diehard",
+  "guid": "86669ce8759f9d7478565db69b8c19ad",
+  "name": "Diehard"
+}

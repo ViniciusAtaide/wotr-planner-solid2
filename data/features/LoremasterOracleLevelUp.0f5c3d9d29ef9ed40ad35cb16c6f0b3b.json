@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_6c03364712b415941a98f74522a81273"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "LoremasterOracleLevelUp",
+  "guid": "0f5c3d9d29ef9ed40ad35cb16c6f0b3b",
+  "name": "Oracle"
+}

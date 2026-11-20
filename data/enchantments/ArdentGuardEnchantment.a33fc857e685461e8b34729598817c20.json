@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_5a9951052ad244b99934c9b1f733f98c"
+    }
+  ],
+  "assetName": "ArdentGuardEnchantment",
+  "guid": "a33fc857e685461e8b34729598817c20"
+}

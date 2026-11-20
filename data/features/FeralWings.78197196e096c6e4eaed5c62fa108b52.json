@@ -1,0 +1,39 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 6,
+      "Not": false,
+      "m_CharacterClass": "!bp_0937bec61c0dabc468428f496580c721"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_fd5f7b37ab4301c48a88cc196ee5f0ce"
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 6,
+      "m_Archetype": "!bp_758e0061a077e54409a3bf0eb51511e5",
+      "m_CharacterClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd"
+    }
+  ],
+  "Groups": [
+    "Discovery",
+    "VivisectionistDiscovery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FeralWings",
+  "guid": "78197196e096c6e4eaed5c62fa108b52",
+  "name": "Feral Wings"
+}

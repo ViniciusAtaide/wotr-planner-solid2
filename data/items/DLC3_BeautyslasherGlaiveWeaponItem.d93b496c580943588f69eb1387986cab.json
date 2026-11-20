@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DLC3_BeautyslasherGlaiveWeaponItem",
+  "guid": "d93b496c580943588f69eb1387986cab",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a14a1b224cd173449cb7ffc77d5f65c",
+  "name": "Mutilated Angel"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "StorytellerAreshkaMaskItem",
+  "guid": "5fe3e581a46d43649eb53c20d19c5073",
+  "m_Enchantments": [
+    "!bp_3723b714c3494f8d82f6ade68626ca01"
+  ],
+  "name": "Mask of the Most Worthy"
+}

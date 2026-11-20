@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "DeskariCultistLightShield",
+  "guid": "f79928c2d1e8f6348ba801c9b62a7b15",
+  "m_ArmorComponent": "!bp_00fd9875aaabba74099c8a2f35532133",
+  "m_WeaponComponent": "!bp_62c90581f9892e9468f0d8229c7321c4",
+  "name": "Deskari Cultist's Light Shield"
+}

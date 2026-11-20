@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "LightCrossbow",
+  "Components": [],
+  "assetName": "DCL2_LightCrossbow_Fake",
+  "guid": "a9a9a907dc704e1ca13f1b7714e3c172",
+  "m_AttackType": "Ranged",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Crossbows",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": true
+}

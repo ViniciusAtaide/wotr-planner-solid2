@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "CalmingWardenItem",
+  "guid": "ccadf79fbd028db49bc3dccf082e4297",
+  "m_Enchantments": [
+    "!bp_17b9a27ee87e8684c9af326e1accbe42"
+  ],
+  "name": "Calming Warden"
+}

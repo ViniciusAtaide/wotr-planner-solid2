@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SpawnSlayerGainLeverage",
+  "guid": "c14f5310a3a8fd84f868c65135708a31",
+  "name": "Gain Leverage"
+}

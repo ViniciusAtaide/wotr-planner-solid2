@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "UnholyShepherdItem",
+  "guid": "e75173b870a9d7f4ca1e18b576c5e3a3",
+  "m_Enchantments": [
+    "!bp_1ba930da89ff7e84ca40d83d7aaca2aa"
+  ],
+  "name": "Unholy Shepherd"
+}

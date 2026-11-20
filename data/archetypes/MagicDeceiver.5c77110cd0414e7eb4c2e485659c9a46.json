@@ -1,0 +1,118 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_f0310af68c7142cda950d61244cb0cff",
+        "!bp_2188d7f50f74418e88f925cc0a534e9c"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [
+    "SkillPersuasion",
+    "SkillLoreNature",
+    "SkillLoreReligion",
+    "SkillUseMagicDevice",
+    "SkillKnowledgeArcana",
+    "SkillKnowledgeWorld"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4a7c05adfbaf05446a6bf664d28fb103"
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_0920ea7e4fd7a404282e3d8b0ac41838"
+    }
+  ],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_55db1859bd72fd04f9bd3fe1f10e4cbb",
+        "!bp_69cfb4ab0d9812249b924b8f23d6d19f",
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7",
+        "!bp_c7536b93f17c70d4fa3a8cf9aa76bfb7"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_261270d064148224fb982590b7a65414"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": true,
+  "assetName": "MagicDeceiver",
+  "guid": "5c77110cd0414e7eb4c2e485659c9a46",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": "!bp_587066af76a74f47a904bb017697ba08",
+  "m_WillSave": null,
+  "name": "Magic Deceiver"
+}

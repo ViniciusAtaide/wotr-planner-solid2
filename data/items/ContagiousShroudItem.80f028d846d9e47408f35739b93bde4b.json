@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "ContagiousShroudItem",
+  "guid": "80f028d846d9e47408f35739b93bde4b",
+  "m_Enchantments": [
+    "!bp_7eebb46a3368e9b458f605611aec89d5"
+  ],
+  "name": "Contagious Shroud"
+}

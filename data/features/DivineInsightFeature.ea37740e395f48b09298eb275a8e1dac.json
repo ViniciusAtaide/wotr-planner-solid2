@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DivineInsightFeature",
+  "guid": "ea37740e395f48b09298eb275a8e1dac",
+  "name": "Divine Insight"
+}

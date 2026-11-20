@@ -1,0 +1,64 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_203992ef5b35c864390b4e4a1e200629"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_5c396342f614dd644a48c3af08d79701",
+        "!bp_73adc9753dd361549a0598ea781255fb"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_e39991a116cbbf74c9c75926b25988eb",
+        "!bp_ab3dd75baf960264cbbb73ea27b09f89"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_60c711f083204f945ae556d7616c38a3"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_507aac54bf13bae4396dd54fb4d0b722"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_c9022272c87bd66429176ce5c597989c"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_202af59b918143a4ab7c33d72c8eb6d5"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "GrenadierArchetype",
+  "guid": "6af888a7800b3e949a40f558ff204aae",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Grenadier"
+}

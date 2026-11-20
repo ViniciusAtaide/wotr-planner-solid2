@@ -1,0 +1,8 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Ranks": 1,
+  "assetName": "TestPowerAttackFeature",
+  "guid": "f1000000000000000000000000000004",
+  "name": "Test Power Attack"
+}

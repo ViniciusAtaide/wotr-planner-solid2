@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DLC2StandardShortspear",
+  "guid": "85b1b4acc11e44158a513f1910993d16",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_fafab7412f4847879eb36a292cd93b8e",
+  "name": "Sham Shortspear"
+}

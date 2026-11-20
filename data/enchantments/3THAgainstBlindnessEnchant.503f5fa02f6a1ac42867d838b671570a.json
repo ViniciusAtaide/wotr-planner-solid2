@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f021b59d7fca10e4fad5e9b75928ffc2"
+    }
+  ],
+  "assetName": "3THAgainstBlindnessEnchant",
+  "guid": "503f5fa02f6a1ac42867d838b671570a"
+}

@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 17,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499",
+      "m_Feature": "!bp_9142f896ddd2414e9060f9b6f3b1be89"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HagRivenClawsFeatureAddLevel5",
+  "guid": "cecfbb4d624e4afcaf19ee0761426a68",
+  "name": "Claws of the Hag (Hag-Riven 17)"
+}

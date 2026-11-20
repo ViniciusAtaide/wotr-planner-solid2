@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "BaphometCultistLightShieldItemPlus1",
+  "guid": "bca0a873b27f1964a84dbd1bda14a394",
+  "m_ArmorComponent": "!bp_10d92dcfc1dba62408825e68e854bfc8",
+  "m_WeaponComponent": "!bp_62c90581f9892e9468f0d8229c7321c4",
+  "name": "Baphomet Cultist's Light Shield +1"
+}

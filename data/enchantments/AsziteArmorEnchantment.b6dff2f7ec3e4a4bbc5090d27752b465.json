@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_83f0324192544ad38cebb7e8e13e417e"
+    }
+  ],
+  "assetName": "AsziteArmorEnchantment",
+  "guid": "b6dff2f7ec3e4a4bbc5090d27752b465"
+}

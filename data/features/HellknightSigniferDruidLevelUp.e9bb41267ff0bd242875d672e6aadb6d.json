@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_fc78193f68150454483a7eea8b605b71"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "HellknightSigniferDruidLevelUp",
+  "guid": "e9bb41267ff0bd242875d672e6aadb6d",
+  "name": "Druid"
+}

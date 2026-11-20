@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StauntonGlaiveMountItem",
+  "guid": "31ec8f4002c14a3409779e66d3664898",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b",
+    "!bp_f16382c7f231d424ca4caf3fb1d1bbdd"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a14a1b224cd173449cb7ffc77d5f65c",
+  "name": "Soulshear (mounted)"
+}

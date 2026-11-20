@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "singleQuote": true,
+  "printWidth": 120,
+  "trailingComma": "all",
+  "sortPackageJson": false,
+  "ignorePatterns": [
+    "/decompiled/",
+    "/blueprints/",
+    "dist/",
+    "node_modules/",
+    "/.scratch/",
+    "/.idea/",
+    "*.md",
+    "bun.lock",
+    "/file-routes.d.ts",
+    "/solid-env.d.ts",
+    "/data/",
+    "**/fixtures/"
+  ]
+}

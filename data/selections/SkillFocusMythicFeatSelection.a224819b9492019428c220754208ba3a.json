@@ -1,0 +1,52 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_52dd89af385466c499338b7297896ded",
+        "!bp_1621be43793c5bb43be55493e9c45924",
+        "!bp_cad1b9175e8c0e64583432a22134d33c",
+        "!bp_611e863120c0f9a4cab2d099f1eb20b4",
+        "!bp_6507d2da389ed55448e0e1e5b871c013",
+        "!bp_c541f80af8d0af4498e1abb6025780c7",
+        "!bp_f74c6bdf5c5f5374fb9302ecdc1f7d64",
+        "!bp_9db907332bdaec1468cff3a99efef5b4",
+        "!bp_3a8d34905eae4a74892aae37df3352b9",
+        "!bp_7feda1b98f0c169418aa9af78a85953b",
+        "!bp_f43ffc8e3f8ad8a43be2d44ad6e27914"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "SkillFocusMythicFeatSelection",
+  "guid": "a224819b9492019428c220754208ba3a",
+  "m_AllFeatures": [
+    "!bp_b100d726e75366347b998fd82ec22b0c",
+    "!bp_7dfd95e34132fad459b05fa0c4fe97bd",
+    "!bp_35fca26cfdb2ab34fac51cd068a1f7e7",
+    "!bp_49639dffba041a04f906aef5261ad746",
+    "!bp_1ca4a55c495cc2348a903cd11beffef3",
+    "!bp_122ebdbb2b6a4df4b944a947e78ec5f9",
+    "!bp_32fda52d2ec60094ba557df67babf824",
+    "!bp_5491480c766adb4479240167ea1efe29",
+    "!bp_b45c0db01c501864496f59b04a06b17b",
+    "!bp_9d277308f2d12af428f7726d58152ca5",
+    "!bp_93bc16aff4412aa4c9886b741116da37"
+  ],
+  "name": "Skill Focus (Mythic)"
+}

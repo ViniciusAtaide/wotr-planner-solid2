@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "WizardFeat"
+  ],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "SpellSchool",
+  "Ranks": 1,
+  "RequireProficiency": false,
+  "WeaponSubCategory": "None",
+  "assetName": "SpellFocus",
+  "guid": "16fa59cc9a72a6043b566b49184f53fe",
+  "m_Prerequisite": null,
+  "name": "Spell Focus"
+}

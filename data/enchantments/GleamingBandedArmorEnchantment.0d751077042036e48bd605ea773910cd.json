@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_7fe5a1396f298db43b532b0d8f81b53d"
+    }
+  ],
+  "assetName": "GleamingBandedArmorEnchantment",
+  "guid": "0d751077042036e48bd605ea773910cd"
+}

@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e1ebc61a71c55054991863a5f6f6d2c2"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_ba34257984f4c41408ce1dc2004e342e"
+    }
+  ],
+  "Groups": [
+    "HellknightSigniferSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "HellknightSigniferThassilonianEnchantment",
+  "guid": "a5ee048065eca5d45bb1f5facb14c063",
+  "m_Spellbook": "!bp_9e4b96d7b02f8c8498964aeee6eaef9b",
+  "name": "Thassilonian Specialist — Lust"
+}

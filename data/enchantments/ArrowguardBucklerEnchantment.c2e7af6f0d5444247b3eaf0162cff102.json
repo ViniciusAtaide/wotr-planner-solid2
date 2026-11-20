@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_9d40002221707ae49ad347d88242cb76"
+    }
+  ],
+  "assetName": "ArrowguardBucklerEnchantment",
+  "guid": "c2e7af6f0d5444247b3eaf0162cff102"
+}

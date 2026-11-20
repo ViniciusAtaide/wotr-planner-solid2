@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "DeceivingFacadeArmorItem",
+  "guid": "cfb4dc81f5153ac4db439588864c3394",
+  "m_Enchantments": [
+    "!bp_e90c252e08035294eba39bafce76c119",
+    "!bp_95c9f080488064048b397f2123969244"
+  ],
+  "m_Type": "!bp_26fcc43f7d20374498d2e1643381d345"
+}

@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 15,
+      "m_AdditionalClasses": [
+        "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+      ],
+      "m_Archetypes": [
+        "!bp_c5f6e53e71059fb4d802ce81a277a12d"
+      ],
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc",
+      "m_Feature": "!bp_a0435739ab615da4982c4eeb3472a151"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "WolfScarredFaceCurseFeatureLevel10",
+  "guid": "6af5caba597c42044a5b64e149ef494b"
+}

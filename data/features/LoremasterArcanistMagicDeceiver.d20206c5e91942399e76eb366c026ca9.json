@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_5c77110cd0414e7eb4c2e485659c9a46",
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "Groups": [
+    "MythicAdditionalProgressions"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "LoremasterArcanistMagicDeceiver",
+  "guid": "d20206c5e91942399e76eb366c026ca9",
+  "m_Spellbook": "!bp_587066af76a74f47a904bb017697ba08",
+  "name": "Arcanist"
+}

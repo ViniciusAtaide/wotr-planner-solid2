@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": true,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "MysticTheurgeHunterLevelSelection1",
+  "guid": "bbab32c87c08454c83d698b1a4f5db03",
+  "m_AllFeatures": [
+    "!bp_01be9f7549374df2b503c3116274ed9a"
+  ],
+  "name": "Hunter Spell (1st Level)"
+}

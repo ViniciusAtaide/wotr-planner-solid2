@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3e2ddd88c742410b9c5946bd7e7996f2"
+    }
+  ],
+  "assetName": "BootsOfTheBattleHeraldEnchantment",
+  "guid": "852b98c9844046829e03ef12fbe65158"
+}

@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "WeatherDomainAllowedSeparatist",
+  "guid": "8bc3629d677f48798235b94cc9ba0f36"
+}

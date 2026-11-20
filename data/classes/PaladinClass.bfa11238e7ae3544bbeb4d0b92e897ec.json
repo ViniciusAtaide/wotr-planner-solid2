@@ -1,0 +1,85 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillKnowledgeWorld",
+    "SkillLoreNature",
+    "SkillPersuasion",
+    "SkillKnowledgeArcana",
+    "SkillLoreReligion"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "LawfulGood",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_92c0d2da0a836ce418a267093c09ca54"
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 0,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_6122dacf418611540a3c91e67197ee4e",
+        "!bp_afc775188deb7a44aa4cbde03512c671",
+        "!bp_88d5da04361b16746bf5b65795e0c38c",
+        "!bp_23a77a5985de08349820429ce1b5a234",
+        "!bp_c1c4f7f64842e7e48849e5e67be11a1b",
+        "!bp_b382afa31e4287644b77a8b30ed4aa0b",
+        "!bp_d2d5c5a58885a6b489727467e13c3337",
+        "!bp_772e2673945e4583a804ae01f67efea0"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D10",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 2,
+  "assetName": "PaladinClass",
+  "guid": "bfa11238e7ae3544bbeb4d0b92e897ec",
+  "m_Archetypes": [
+    "!bp_fec08c1a3187da549abd6b85f27e4432",
+    "!bp_fcdb27e1a6cef834ea1d7fab7c6e2b61",
+    "!bp_5693945afac189a469ef970eac8f71d9",
+    "!bp_cc70a9fdcd8781a4ca2f0e594f066964",
+    "!bp_4d9a864eae278744aafa7ff23f2a6466",
+    "!bp_5ce3a2f8eae64cf2ba83865711e53e27",
+    "!bp_cf0f99b3cd7444a48681b1c1c4aa2a41",
+    "!bp_f91ea9596e6f42f8a23803c1b3e976b4"
+  ],
+  "m_BaseAttackBonus": "!bp_b3057560ffff3514299e8b93e7648a9d",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_fd325cbba872e5f40b618970678db002",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": "!bp_bce4989b070ce924b986bf346f59e885",
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Paladin"
+}

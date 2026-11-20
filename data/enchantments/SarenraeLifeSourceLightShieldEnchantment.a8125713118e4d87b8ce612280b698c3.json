@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_c1fca5942f224424ad70e4d999f7c102"
+    }
+  ],
+  "assetName": "SarenraeLifeSourceLightShieldEnchantment",
+  "guid": "a8125713118e4d87b8ce612280b698c3"
+}

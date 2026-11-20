@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "BlazingCavalierShieldItem",
+  "guid": "63beefff8449fd94a8e5fada3b18ef72",
+  "m_ArmorComponent": "!bp_a647de09d29dc2d4895164d81fdbdb61",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Child of the Wind"
+}

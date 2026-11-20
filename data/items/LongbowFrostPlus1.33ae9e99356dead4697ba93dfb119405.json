@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "LongbowFrostPlus1",
+  "guid": "33ae9e99356dead4697ba93dfb119405",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a1211c05ec2c46428f41e3c0db9423f",
+  "name": "Frost Longbow +1"
+}

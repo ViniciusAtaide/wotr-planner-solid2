@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_58cbca5cef264bf19fa5450009a47b5d"
+    }
+  ],
+  "assetName": "JaggedClawEnchantment",
+  "guid": "79c0791367194232b1898310e3cf69e2"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "GogglesOfDreadfulJudgeItem",
+  "guid": "f60c4386186224f4f8c4e4f823729516",
+  "m_Enchantments": [
+    "!bp_4973198c1a8c95c4785395bfae59ab3c"
+  ],
+  "name": "Goggles of Dreadful Judge"
+}

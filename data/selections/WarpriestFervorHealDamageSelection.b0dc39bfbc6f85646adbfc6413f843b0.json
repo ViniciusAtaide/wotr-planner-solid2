@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "WarpriestFervorHealDamageSelection",
+  "guid": "b0dc39bfbc6f85646adbfc6413f843b0",
+  "m_AllFeatures": [
+    "!bp_689fd51f02e3c5f40918b6a6e830bbc8",
+    "!bp_bf6e072089989444d8f3dddf84677798"
+  ],
+  "name": "Fervor"
+}

@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_567801abe990faf4080df566fadcd038",
+        "!bp_cee0f7edbd874a042952ee150f878b84"
+      ]
+    }
+  ],
+  "Groups": [
+    "ThassilonianSpellbook"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ThassilonianConjurationFeature",
+  "guid": "1a258cd8e93461a4ab011c73a2c43dac",
+  "m_Spellbook": "!bp_cbc30bcc7b8adec48a53a6540f5596ae",
+  "name": "Sloth (Conjuration)"
+}

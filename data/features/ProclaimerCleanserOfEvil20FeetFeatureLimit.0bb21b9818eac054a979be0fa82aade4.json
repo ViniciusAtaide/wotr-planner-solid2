@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 19,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_30b5e47d47a0e37438cc5a80c96cfb99",
+      "m_Feature": "!bp_ca671382988883543a24ec4ba80bae36"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ProclaimerCleanserOfEvil20FeetFeatureLimit",
+  "guid": "0bb21b9818eac054a979be0fa82aade4",
+  "name": "Cleanser of Evil (Proclaimer 19)"
+}

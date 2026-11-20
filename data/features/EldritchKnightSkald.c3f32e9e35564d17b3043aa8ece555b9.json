@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_6afa347d804838b48bda16acb0573dc0"
+    }
+  ],
+  "Groups": [
+    "EldritchKnightSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "EldritchKnightSkald",
+  "guid": "c3f32e9e35564d17b3043aa8ece555b9",
+  "m_Spellbook": "!bp_8f159d2f22ced074ea32995eb5a446a0",
+  "name": "Skald"
+}

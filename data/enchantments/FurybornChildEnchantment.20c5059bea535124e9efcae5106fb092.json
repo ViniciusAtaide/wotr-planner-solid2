@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_d0323a15d0ef9e74e8bb240c90858da6"
+    }
+  ],
+  "assetName": "FurybornChildEnchantment",
+  "guid": "20c5059bea535124e9efcae5106fb092"
+}

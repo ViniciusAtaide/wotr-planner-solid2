@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_727381f8a2ee46a19ab96eedfe1d9daa",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_0555960c7ab8431d86de4e7db0c22160"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShifterFeyChimeraTigerFeature",
+  "guid": "41250ca8a9ce4d019eea2663415b5a86",
+  "name": "Tiger (Feyform Shifter)"
+}

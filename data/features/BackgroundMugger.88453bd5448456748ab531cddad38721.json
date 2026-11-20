@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillThievery"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPersuasion"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_b776c19291928cf4184d4dc65f09f3a6",
+        "!bp_a13839f75ac30cc48945c96ef1c98e1c",
+        "!bp_f029268a6639a0745a849e5147734088"
+      ]
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillThievery"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillPersuasion"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Dagger"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "PunchingDagger"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Dart"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundMugger",
+  "guid": "88453bd5448456748ab531cddad38721",
+  "name": "Mugger"
+}

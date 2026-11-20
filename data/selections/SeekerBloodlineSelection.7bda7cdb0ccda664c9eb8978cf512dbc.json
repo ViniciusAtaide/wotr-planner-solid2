@@ -1,0 +1,44 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "NoSelectionIfAlreadyHasFeature",
+      "AnyFeatureFromSelection": true,
+      "m_Features": []
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "SeekerBloodlineSelection",
+  "guid": "7bda7cdb0ccda664c9eb8978cf512dbc",
+  "m_AllFeatures": [
+    "!bp_17b752be1e0f4a34e8914df52eebeb75",
+    "!bp_562c5e4031d268244a39e01cc4b834bb",
+    "!bp_17ac9d771a944194a92ac15b5ff861c9",
+    "!bp_cf448fafcd8452d4b830bcc9ca074189",
+    "!bp_82f76646a7f96ed4cafa18480adc0b8c",
+    "!bp_c355b8777a3bda7429d863367bda3851",
+    "!bp_468ecbdd58fbd6045a0a1888308031fe",
+    "!bp_2ad98f60b29ae604da0297037054080c",
+    "!bp_63c9d62a56e6921409a58de1ab9a9f9b",
+    "!bp_6de526eeee72852448c5595f7a44a39d",
+    "!bp_d69a7785de1959c4497e4ff1e9490509",
+    "!bp_efabab987569bf54abf23848c250e4d5",
+    "!bp_7572e8c020a6b8a46bde3ab3ad8c6f70",
+    "!bp_940d34be432a1e543b0c0cbecd4ffc1d",
+    "!bp_1c1cdb13caa111d49bd82a7e1f320803",
+    "!bp_b19f95964e4a18f4cb3e4e3101593f22",
+    "!bp_179a53407d1141142a91baace7e43325",
+    "!bp_8e6dcc9095dacd042a644dd8c04ffac0",
+    "!bp_71f9b9d63f3683b4eb57e0025771932e",
+    "!bp_59904bf6cc50a52489ebc648fb35f36f",
+    "!bp_5bc63fdb68b539f4fa500cfb2d0fe0f6"
+  ],
+  "name": "Bloodline (Seeker)"
+}

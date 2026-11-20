@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 10,
+      "m_Archetype": "!bp_bcd758a75fb54651a7f668fe2661a307",
+      "m_CharacterClass": "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_12426fc8134046a9b92e584af950d7fd"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PlagueHexDexterityWeakenedFeature",
+  "guid": "3cd072db976f468b85de017dd3c832be",
+  "name": "Plague Mutation: Dulled Reactions"
+}

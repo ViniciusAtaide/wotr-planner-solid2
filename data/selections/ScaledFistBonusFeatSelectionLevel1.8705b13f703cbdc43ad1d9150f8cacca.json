@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ScaledFistBonusFeatSelectionLevel1",
+  "guid": "8705b13f703cbdc43ad1d9150f8cacca",
+  "m_AllFeatures": [
+    "!bp_0f8939ae6f220984e8fb568abbdfba95",
+    "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5",
+    "!bp_0c17102f650d9044290922b0fad9132f",
+    "!bp_4e219f5894ad0ea4daa0699e28c37b1d",
+    "!bp_797f25d709f559546b29e7bcb181cc74",
+    "!bp_87ec6541cddfa394ab540dd13399d319",
+    "!bp_d76497bfc48516e45a0831628f767a0f"
+  ],
+  "name": "Scaled Fist Bonus Feat (Scaled Fist 1)"
+}

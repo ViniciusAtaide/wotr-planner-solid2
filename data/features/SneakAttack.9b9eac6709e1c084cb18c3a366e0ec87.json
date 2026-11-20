@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Feat",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SneakAttack",
+      "Value": 1
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 20,
+  "assetName": "SneakAttack",
+  "guid": "9b9eac6709e1c084cb18c3a366e0ec87",
+  "name": "Sneak Attack"
+}

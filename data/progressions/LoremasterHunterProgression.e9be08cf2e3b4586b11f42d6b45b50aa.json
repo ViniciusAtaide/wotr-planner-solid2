@@ -1,0 +1,141 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_34ecd1b5e1b90b9498795791b0855239"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "ReplaceSpellbook"
+  ],
+  "HideInUI": true,
+  "LevelEntries": [
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_c8ec38137b01492696cd516a73cabab8",
+        "!bp_2e2decab18164a9ea18311a24d7f6451"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_c8ec38137b01492696cd516a73cabab8",
+        "!bp_2e2decab18164a9ea18311a24d7f6451"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_c8ec38137b01492696cd516a73cabab8",
+        "!bp_25000b1e9f97424f8422709ba607a48b",
+        "!bp_4189cebfb9cd4f56909201f79ee73600",
+        "!bp_4189cebfb9cd4f56909201f79ee73600"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_c8ec38137b01492696cd516a73cabab8",
+        "!bp_bbab32c87c08454c83d698b1a4f5db03",
+        "!bp_4189cebfb9cd4f56909201f79ee73600"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_d6700ad6b9c4cab4b8b2ee58796da270",
+        "!bp_4189cebfb9cd4f56909201f79ee73600"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_c8ec38137b01492696cd516a73cabab8",
+        "!bp_2e2decab18164a9ea18311a24d7f6451",
+        "!bp_7af998111f3a4b4aae0c0a9c644cb546",
+        "!bp_7af998111f3a4b4aae0c0a9c644cb546"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_c8ec38137b01492696cd516a73cabab8",
+        "!bp_25000b1e9f97424f8422709ba607a48b",
+        "!bp_7af998111f3a4b4aae0c0a9c644cb546"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_c8ec38137b01492696cd516a73cabab8",
+        "!bp_7af998111f3a4b4aae0c0a9c644cb546"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_c8ec38137b01492696cd516a73cabab8",
+        "!bp_4189cebfb9cd4f56909201f79ee73600",
+        "!bp_ac5ad4f088e14dadb01a49a838caf227",
+        "!bp_ac5ad4f088e14dadb01a49a838caf227"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_d6700ad6b9c4cab4b8b2ee58796da270",
+        "!bp_2e2decab18164a9ea18311a24d7f6451",
+        "!bp_ac5ad4f088e14dadb01a49a838caf227"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_d6700ad6b9c4cab4b8b2ee58796da270",
+        "!bp_ac5ad4f088e14dadb01a49a838caf227"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_d6700ad6b9c4cab4b8b2ee58796da270",
+        "!bp_7af998111f3a4b4aae0c0a9c644cb546"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_d6700ad6b9c4cab4b8b2ee58796da270",
+        "!bp_4189cebfb9cd4f56909201f79ee73600",
+        "!bp_ac5ad4f088e14dadb01a49a838caf227"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "LoremasterHunterProgression",
+  "guid": "e9be08cf2e3b4586b11f42d6b45b50aa",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_4a7c05adfbaf05446a6bf664d28fb103"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_34ecd1b5e1b90b9498795791b0855239"
+    }
+  ],
+  "m_ExclusiveProgression": "!bp_4a7c05adfbaf05446a6bf664d28fb103",
+  "m_FeaturesRankIncrease": [],
+  "name": "Hunter"
+}

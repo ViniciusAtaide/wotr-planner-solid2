@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BloodragerFeyFeatSelection",
+  "guid": "ae13cd63a0f0c4243bbc6566d1f98485",
+  "m_AllFeatures": [
+    "!bp_0f8939ae6f220984e8fb568abbdfba95",
+    "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5",
+    "!bp_797f25d709f559546b29e7bcb181cc74",
+    "!bp_15e7da6645a7f3d41bdad7c8c4b9de1e",
+    "!bp_2a6091b97ad940943b46262600eaeaeb",
+    "!bp_d76497bfc48516e45a0831628f767a0f",
+    "!bp_1e813eb8159b67a459b1c975027866e5"
+  ],
+  "name": "Bonus Feats (Fey 12)"
+}

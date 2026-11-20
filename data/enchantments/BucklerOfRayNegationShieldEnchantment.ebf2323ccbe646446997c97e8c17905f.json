@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_7ff345fc456349d4fa4529c0baa8ed84"
+    }
+  ],
+  "assetName": "BucklerOfRayNegationShieldEnchantment",
+  "guid": "ebf2323ccbe646446997c97e8c17905f"
+}

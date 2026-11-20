@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Feat",
+    "CombatFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CombatReflexes",
+  "guid": "0f8939ae6f220984e8fb568abbdfba95",
+  "name": "Combat Reflexes"
+}

@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Dexterity",
+      "Value": 13
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_90e54424d682d104ab36436bd527af09"
+    },
+    {
+      "$type": "PrerequisiteParametrizedWeaponSubcategory",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "SubCategory": "OneHandedSlashing",
+      "m_Feature": "!bp_1e1f627d26ad36f43bbd26cc2bf8ac7e"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d791af1bc179e0e44a0ca1fa6c418993"
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "CombatFeat"
+  ],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "WeaponCategory",
+  "Ranks": 1,
+  "RequireProficiency": true,
+  "WeaponSubCategory": "OneHandedSlashing",
+  "assetName": "SlashingGrace",
+  "guid": "697d64669eb2c0543abb9c9b07998a38",
+  "m_Prerequisite": "!bp_1e1f627d26ad36f43bbd26cc2bf8ac7e",
+  "name": "Slashing Grace"
+}

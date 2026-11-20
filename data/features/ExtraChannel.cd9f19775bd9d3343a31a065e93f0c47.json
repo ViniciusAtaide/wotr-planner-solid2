@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_a79013ff4bcd4864cb669622a29ddafb"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_3adb2c906e031ee41a01bfc1d5fb7eea"
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "ExtraChannel",
+  "guid": "cd9f19775bd9d3343a31a065e93f0c47",
+  "name": "Extra Channel (Cleric)"
+}

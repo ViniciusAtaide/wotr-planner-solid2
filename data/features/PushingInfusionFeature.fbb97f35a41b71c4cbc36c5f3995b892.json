@@ -1,0 +1,40 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_cb09e292ad9acc3428fa0dfdcbb83883",
+        "!bp_9b7bf2754e2012e4dac135fd6c782fac",
+        "!bp_7f5f82c1108b961459c9884a0fa0f5c4",
+        "!bp_408b25c6d9f223b41b935e6ec550e88d",
+        "!bp_ad20bc4e586278c4996d4a81b2448998",
+        "!bp_6e33cde96209b5a4f9596a6e509de532",
+        "!bp_af70dce0745f91f4b8aa99a98620e45b",
+        "!bp_29e4076127a404e4ab1cde7e967e1047",
+        "!bp_560887b5187098b428364de03e628b53",
+        "!bp_52292a32bb5d0ab45a86621bac2c4c9a"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "Groups": [
+    "KineticBlastInfusion"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PushingInfusionFeature",
+  "guid": "fbb97f35a41b71c4cbc36c5f3995b892",
+  "name": "Pushing Infusion"
+}

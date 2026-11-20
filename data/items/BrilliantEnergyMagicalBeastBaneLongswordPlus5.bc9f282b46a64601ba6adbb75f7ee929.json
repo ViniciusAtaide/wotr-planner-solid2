@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "BrilliantEnergyMagicalBeastBaneLongswordPlus5",
+  "guid": "bc9f282b46a64601ba6adbb75f7ee929",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d56c44bc9eb10204c8b386a02c7eed21",
+  "name": "Brilliant Energy Magical Beast Bane Longsword +5"
+}

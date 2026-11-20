@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_175ad2c2b3dfb474aae4f827cb08e7f4"
+    }
+  ],
+  "assetName": "BeastKingEnchantment",
+  "guid": "39dcb12fc0bb44347ab7eee152c4f612"
+}

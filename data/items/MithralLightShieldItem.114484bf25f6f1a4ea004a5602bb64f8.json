@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "MithralLightShieldItem",
+  "guid": "114484bf25f6f1a4ea004a5602bb64f8",
+  "m_ArmorComponent": "!bp_b176908f2c9b58a479e2a6c293b22f81",
+  "m_WeaponComponent": "!bp_b0e71eae672c190449c14b500129e8a2",
+  "name": "Mithral Light Shield"
+}

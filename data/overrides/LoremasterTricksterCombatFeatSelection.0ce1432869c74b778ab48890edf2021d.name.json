@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "with Perception 2 Rank",
+  "reason": "Loremaster's 'Secret' offers two 'Combat Feat' selections that exclude each other. LoremasterTricksterCombatFeatSelection needs the main character to hold TricksterPerceptionTier2Feature e9298851786c5334dba1398e9635a83d ('Perception 2 Rank'), and LoremasterCombatFeatSelection 90f105c8e31a6224ea319e6a810e4af8 needs it not held (each a PrerequisiteCondition with HasFact). The prerequisite source reads both conditions as naming that fact, so it can't tell them apart; the other stays bare.",
+  "target": "0ce1432869c74b778ab48890edf2021d"
+}

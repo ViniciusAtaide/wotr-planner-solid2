@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "DuelingSword",
+  "Components": [],
+  "assetName": "DuelingSword",
+  "guid": "a6f7e3dc443ff114ba68b4648fd33e9f",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "BladesHeavy",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Dueling Sword"
+}

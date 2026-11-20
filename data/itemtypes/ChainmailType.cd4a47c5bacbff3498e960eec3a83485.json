@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [],
+  "assetName": "ChainmailType",
+  "guid": "cd4a47c5bacbff3498e960eec3a83485",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "Medium",
+  "name": "Medium Armor — Chainmail"
+}

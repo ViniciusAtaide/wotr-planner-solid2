@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DecaySpreaderItem",
+  "guid": "d84f6cc2f3f58d74888f502dc3d4fa3a",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_7256972c474b47e1bb2b6e9b220f28d5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_25da2dc95ed4a6b419608c678f2a9cc3",
+  "name": "Decay Spreader"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "RobeOfAir_CorrectItem",
+  "guid": "75f2d4bf94a14398ad1ca9db8e3a579f",
+  "m_Enchantments": [
+    "!bp_8e7f512654a46d949a1eee77249bd75d"
+  ],
+  "name": "Robe of Air (shirt)"
+}

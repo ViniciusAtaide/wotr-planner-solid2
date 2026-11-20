@@ -1,0 +1,42 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 11,
+      "Not": false,
+      "m_CharacterClass": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_6b8e676943cb91648b21b7ca72fbb833",
+        "!bp_677fbcaa2a87cf94296138568db117a8",
+        "!bp_c880da2dea6b54f4bad7d1f4b79c2d63"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "Groups": [
+    "OracleRevelation"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleRevelationIronSkin",
+  "guid": "7b3f171fe4577474ead600758543cbef",
+  "name": "Iron Skin"
+}

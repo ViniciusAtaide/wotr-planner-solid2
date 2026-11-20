@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "MithralLightShieldPlus2ArmorItem",
+  "guid": "56199a57ae9f3df46bc4e1cb9112c617",
+  "m_Enchantments": [
+    "!bp_7b95a819181574a4799d93939aa99aff",
+    "!bp_758b77a97640fd747abf149f5bf538d0"
+  ],
+  "m_Type": "!bp_d38e8ea23ce653c4582eb3e002555483"
+}

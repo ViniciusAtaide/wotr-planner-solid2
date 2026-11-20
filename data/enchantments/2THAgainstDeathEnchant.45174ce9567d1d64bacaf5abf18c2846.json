@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_ef4e2da9ac323ef4fb092726da6472bb"
+    }
+  ],
+  "assetName": "2THAgainstDeathEnchant",
+  "guid": "45174ce9567d1d64bacaf5abf18c2846"
+}

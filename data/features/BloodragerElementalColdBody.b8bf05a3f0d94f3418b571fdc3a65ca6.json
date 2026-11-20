@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d8b8d1dd83393484cbacf6c8830080ae"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodragerElementalColdBody",
+  "guid": "b8bf05a3f0d94f3418b571fdc3a65ca6",
+  "name": "Elemental Body — Water"
+}

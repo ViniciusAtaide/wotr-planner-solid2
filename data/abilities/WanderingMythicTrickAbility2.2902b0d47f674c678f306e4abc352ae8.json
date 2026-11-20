@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintAbility",
+  "Components": [
+    {
+      "$type": "AbilityApplyFact",
+      "m_Facts": [
+        "!bp_b7de8e5e4d67faf4791866966afc0a43",
+        "!bp_c7bb946de7454df4380c489a8350ba38",
+        "!bp_06983a66bd6bac04db3996cd3064d9f0",
+        "!bp_04177c4ddec20ae4ca04388f9cf23518",
+        "!bp_6079a3c329989a64cad3fbd4076d5fb9",
+        "!bp_4eefa883f5908a347a0b0a891fb859dd",
+        "!bp_4e1948fed4201cf46b88836457c3bad8",
+        "!bp_90bc71f1d8482184a9ede0bda4773d94",
+        "!bp_647c848dd47b93d42bd3000bce93dff6"
+      ],
+      "m_Restriction": "CasterHasNoFact"
+    }
+  ],
+  "assetName": "WanderingMythicTrickAbility2",
+  "guid": "2902b0d47f674c678f306e4abc352ae8",
+  "name": "Second Wandering Mythic Trick"
+}

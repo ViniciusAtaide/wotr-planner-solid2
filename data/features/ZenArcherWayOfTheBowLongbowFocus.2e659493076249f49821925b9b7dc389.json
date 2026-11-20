@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddParametrizedFeatures",
+      "m_Features": [
+        {
+          "ParamObject": null,
+          "ParamSpellSchool": "None",
+          "ParamWeaponCategory": "Longbow",
+          "Stat": "Unknown",
+          "m_Feature": "!bp_1e1f627d26ad36f43bbd26cc2bf8ac7e"
+        }
+      ]
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 6,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [
+        "!bp_2b1a58a7917084f49b097e86271df21c"
+      ],
+      "m_Class": "!bp_e8f21e5b58e0569468e420ebea456124",
+      "m_Feature": "!bp_0d696cb262584ee4b88ccc96a07d6821"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ZenArcherWayOfTheBowLongbowFocus",
+  "guid": "2e659493076249f49821925b9b7dc389",
+  "name": "Way of the Bow — Longbow"
+}

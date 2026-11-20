@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ShortbowCorrosivePlus1",
+  "guid": "d3fdd31ac4dc22a42b7337de103f92bf",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_99ce02fb54639b5439d07c99c55b8542",
+  "name": "Corrosive Shortbow +1"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SpellFoolFeature",
+  "guid": "ba992e0795e44c11bcb6da270c56d252",
+  "name": "Spell Fabrication"
+}

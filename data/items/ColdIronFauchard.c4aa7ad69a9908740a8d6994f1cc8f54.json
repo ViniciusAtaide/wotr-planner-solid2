@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronFauchard",
+  "guid": "c4aa7ad69a9908740a8d6994f1cc8f54",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a40899c4defec94bb9c291bde74f1a8",
+  "name": "Cold Iron Fauchard"
+}

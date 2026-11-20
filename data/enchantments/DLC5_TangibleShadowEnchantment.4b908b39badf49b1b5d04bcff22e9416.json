@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_15079c760edc4dec9dd5ab1dfdba3467"
+    }
+  ],
+  "assetName": "DLC5_TangibleShadowEnchantment",
+  "guid": "4b908b39badf49b1b5d04bcff22e9416"
+}

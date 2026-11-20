@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a8eeab62c8f335f4c95f29291527bd4a"
+    }
+  ],
+  "assetName": "DivineDismissalEnchantment",
+  "guid": "dbbac4cf8ba06864c958f47ae6d4146f"
+}

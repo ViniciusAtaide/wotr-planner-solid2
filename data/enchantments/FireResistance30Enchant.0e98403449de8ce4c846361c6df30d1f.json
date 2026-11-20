@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a6acd8df82219d24c8f746659212543b"
+    }
+  ],
+  "assetName": "FireResistance30Enchant",
+  "guid": "0e98403449de8ce4c846361c6df30d1f"
+}

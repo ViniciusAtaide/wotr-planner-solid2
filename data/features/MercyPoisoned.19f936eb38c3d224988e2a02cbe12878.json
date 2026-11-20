@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 9,
+      "Not": false,
+      "m_CharacterClass": "!bp_bfa11238e7ae3544bbeb4d0b92e897ec"
+    }
+  ],
+  "Groups": [
+    "Mercy"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MercyPoisoned",
+  "guid": "19f936eb38c3d224988e2a02cbe12878",
+  "name": "Mercy — Poisoned"
+}

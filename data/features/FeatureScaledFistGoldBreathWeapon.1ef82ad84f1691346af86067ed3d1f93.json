@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FeatureScaledFistGoldBreathWeapon",
+  "guid": "1ef82ad84f1691346af86067ed3d1f93",
+  "name": "Draconic Breath (Gold Dragon — Fire)"
+}

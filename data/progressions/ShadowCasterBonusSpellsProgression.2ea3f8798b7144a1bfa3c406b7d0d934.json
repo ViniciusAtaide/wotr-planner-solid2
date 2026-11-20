@@ -1,0 +1,79 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_bac639f6e6524da08334a0e4534bd23e"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_72d33ad731254612939fd5923eaac395"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_771c4f8a7a8d423d8572c9b891f7ba64"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_5cf5489167454def9ab8bd66b1a83ae1"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_7ac1e00b57c24928a0cc8e0fb58252f4"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_6994c7f7b5fa437a8d8758d1f519992b"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_6e32fbe91a364115a2062eb0f52d3c40"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_10ea354ed1e7493d9cb869817c4970b4"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_72338a1957db41eeac8efa05937b4cba"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ShadowCasterBonusSpellsProgression",
+  "guid": "2ea3f8798b7144a1bfa3c406b7d0d934",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_9e1211f2c3db4d0c8313013df72d7187"
+    }
+  ],
+  "m_Classes": [],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Shadow Spells"
+}

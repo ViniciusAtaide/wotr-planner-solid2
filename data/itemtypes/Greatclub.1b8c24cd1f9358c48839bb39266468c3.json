@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Greatclub",
+  "Components": [],
+  "assetName": "Greatclub",
+  "guid": "1b8c24cd1f9358c48839bb39266468c3",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Hammers",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": true,
+  "name": "Greatclub"
+}

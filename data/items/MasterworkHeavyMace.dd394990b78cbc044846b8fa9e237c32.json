@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkHeavyMace",
+  "guid": "dd394990b78cbc044846b8fa9e237c32",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d5a167f0f0208dd439ec7481e8989e21",
+  "name": "Masterwork Heavy Mace"
+}

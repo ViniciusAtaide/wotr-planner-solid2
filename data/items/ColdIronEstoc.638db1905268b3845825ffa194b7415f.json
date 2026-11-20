@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronEstoc",
+  "guid": "638db1905268b3845825ffa194b7415f",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d516765b3c2904e4a939749526a52a9a",
+  "name": "Cold Iron Estoc"
+}

@@ -1,0 +1,41 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_3ca493a0495aecd468bd5489eddf85e9"
+      ]
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_9e6f6a240b022c346b16038b20c238ce"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ScaledFistSilverProgression",
+  "guid": "80c8d99fb9c1daf4f98cfa7f9e186ce4",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_e8f21e5b58e0569468e420ebea456124"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Silver Dragon — Cold"
+}

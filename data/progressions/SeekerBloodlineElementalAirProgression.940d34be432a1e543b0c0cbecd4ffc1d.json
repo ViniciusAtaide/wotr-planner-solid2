@@ -1,0 +1,166 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "OrAndLogic",
+              "ConditionsChecker": {
+                "Conditions": [
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_62b33ac8ceb18dd47ad4c8f06849bc01"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_729411185291d704696e58316420fe38"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_94c29f69cdc34594a6a4677441ed7375"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_da48f9d7f697ae44ca891bfc50727988"
+                  }
+                ],
+                "Operation": "And"
+              },
+              "Not": false
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_cd788df497c6f10439c7025e87864ee4"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_777bc77d3dc652c488a20d1a7b0b95e5"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_a09931d3e0054addad73a5c9d759ca41"
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_acf668c24dfbcdd499276eaf1881486e",
+        "!bp_54ae8876bb5d78242beec0752592a018",
+        "!bp_582a0ee43b0a38c4581c96cec8ddcdfd",
+        "!bp_65bc595a8a27acb48a8758c4d4caa338"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_61c485af1f0e15941b12dfb889c87335"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_568acabc0e0598a4baa40b8237089df3"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_814670503f7b3ee43a2442e8e0a9f05d"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_553d9802d5d9de04b941b55cb47d3096",
+        "!bp_725c27fba6a877e4ba4de0136f927888"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_053df94db3c29444b96c0c50592e4cc1"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_7c479457662909e4f8023742b6df1447"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_06adbfd3dde3f8a40896224e3d0822b1"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_a97a9d3ce2ea0d24e8a9b96642c576f5",
+        "!bp_092c4c402cc8746478b251c99f9c53cd"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_1ed7c112f89d1024ea6c4e862f1d28d7"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_092c4c402cc8746478b251c99f9c53cd",
+        "!bp_7c3be22702ee39a418a5fba0e85e68de"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "SeekerBloodlineElementalAirProgression",
+  "guid": "940d34be432a1e543b0c0cbecd4ffc1d",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_d078b2ef073f2814c9e338a789d97b73"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_45a4607686d96a1498891b3286121780"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Elemental Bloodline — Air (Bloodline)"
+}

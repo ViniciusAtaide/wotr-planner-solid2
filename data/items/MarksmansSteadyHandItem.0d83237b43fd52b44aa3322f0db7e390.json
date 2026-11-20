@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "MarksmansSteadyHandItem",
+  "guid": "0d83237b43fd52b44aa3322f0db7e390",
+  "m_Enchantments": [
+    "!bp_e09f5b861fd9b3245988b43e4f869d1a"
+  ],
+  "name": "Marksman's Steady Hand"
+}

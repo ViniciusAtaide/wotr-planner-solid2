@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "PlaguePersistenceQuarterstaffItem",
+  "guid": "39755c2bcd870e1499825a4eb8b5abf8",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b",
+    "!bp_748be82ca42748f4adf255d6768d40e7"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_629736dabac7f9f4a819dc854eaed2d6",
+  "name": "Plague of Madness (weapon)"
+}

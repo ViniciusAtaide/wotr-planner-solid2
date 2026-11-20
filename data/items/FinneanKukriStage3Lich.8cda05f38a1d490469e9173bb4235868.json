@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanKukriStage3Lich",
+  "guid": "8cda05f38a1d490469e9173bb4235868",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_006ecd4715809b343b7001e859e3ddb2",
+  "name": "Finnean (Kukri)"
+}

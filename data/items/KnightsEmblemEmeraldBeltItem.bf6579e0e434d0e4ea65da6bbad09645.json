@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "KnightsEmblemEmeraldBeltItem",
+  "guid": "bf6579e0e434d0e4ea65da6bbad09645",
+  "m_Enchantments": [
+    "!bp_aa214fb9962d4ea7a696e37b9cafd3e5"
+  ],
+  "name": "Mallander's Penance (belt)"
+}

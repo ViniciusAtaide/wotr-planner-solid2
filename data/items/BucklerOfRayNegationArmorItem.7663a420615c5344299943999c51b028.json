@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "BucklerOfRayNegationArmorItem",
+  "guid": "7663a420615c5344299943999c51b028",
+  "m_Enchantments": [
+    "!bp_ac2e3a582b5faa74aab66e0a31c935a9",
+    "!bp_ebf2323ccbe646446997c97e8c17905f"
+  ],
+  "m_Type": "!bp_26fcc43f7d20374498d2e1643381d345"
+}

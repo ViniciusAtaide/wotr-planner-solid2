@@ -1,0 +1,37 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": true,
+  "LevelEntries": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_2496916d8465dbb4b9ddeafdf28c67d8"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_74e4520801f18ae42af3acf261ac7e90"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ElementalOverflowProgression",
+  "guid": "86beb0391653faf43aec60d5ec05b538",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Elemental Overflow"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": false,
+  "IsMythic": false,
+  "Spontaneous": true,
+  "assetName": "InquisitorSpellbook",
+  "guid": "57fab75111f377248810ece84193a5a5",
+  "m_SpellsPerDay": "!bp_83d3e15962e5d6949b90b5c226a2b487",
+  "name": "Inquisitor"
+}

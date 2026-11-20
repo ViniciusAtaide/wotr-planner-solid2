@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronMasterworkKama",
+  "guid": "d3936f97bd0b9cf4393757a0d042fd56",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_f5872eb0deb3a1b48a36549f8d92c19e",
+  "name": "Cold Iron Masterwork Kama"
+}

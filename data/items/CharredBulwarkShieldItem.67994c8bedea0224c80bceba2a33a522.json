@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "CharredBulwarkShieldItem",
+  "guid": "67994c8bedea0224c80bceba2a33a522",
+  "m_ArmorComponent": "!bp_da9de7f1bedccd448aa61bb63e57b5f8",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Charred Bulwark"
+}

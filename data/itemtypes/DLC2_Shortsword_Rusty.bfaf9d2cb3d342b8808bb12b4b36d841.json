@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Shortsword",
+  "Components": [],
+  "assetName": "DLC2_Shortsword_Rusty",
+  "guid": "bfaf9d2cb3d342b8808bb12b4b36d841",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "BladesLight",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false
+}

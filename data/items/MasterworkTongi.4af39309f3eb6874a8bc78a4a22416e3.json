@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkTongi",
+  "guid": "4af39309f3eb6874a8bc78a4a22416e3",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_13fa38737d46c9e4abc7f4d74aaa59c3",
+  "name": "Masterwork Tongi"
+}

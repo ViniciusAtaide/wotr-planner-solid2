@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "IncreaseActivatableAbilityGroupSize",
+      "Group": "HunterAnimalFocus"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HunterExtraAnimalFocus",
+  "guid": "cbc90fcdb60809744989d386a98cd21c",
+  "name": "Second Animal Focus"
+}

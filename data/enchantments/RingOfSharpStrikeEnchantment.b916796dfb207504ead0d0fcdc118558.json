@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_80509af6a726dbd4aaccbda7096d9253"
+    }
+  ],
+  "assetName": "RingOfSharpStrikeEnchantment",
+  "guid": "b916796dfb207504ead0d0fcdc118558"
+}

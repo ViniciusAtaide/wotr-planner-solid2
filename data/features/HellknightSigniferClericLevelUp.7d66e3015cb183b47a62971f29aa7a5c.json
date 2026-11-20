@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_4673d19a0cf2fab4f885cc4d1353da33"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "HellknightSigniferClericLevelUp",
+  "guid": "7d66e3015cb183b47a62971f29aa7a5c",
+  "name": "Cleric"
+}

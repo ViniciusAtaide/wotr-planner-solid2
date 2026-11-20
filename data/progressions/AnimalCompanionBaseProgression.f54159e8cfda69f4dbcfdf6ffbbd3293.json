@@ -1,0 +1,72 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_576933720c440aa4d8d42b0c54b77e80",
+        "!bp_1e570d5407a942b478e79297e0885101"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_226f939b7dfd47b4697ec52f79799012",
+        "!bp_1e570d5407a942b478e79297e0885101"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_8ac319e47057e2741b42229210eb43ed",
+        "!bp_1e570d5407a942b478e79297e0885101"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_ce96af454a6137d47b9c6a1e02e66803",
+        "!bp_1e570d5407a942b478e79297e0885101"
+      ]
+    },
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_75bb2b3c41c99e041b4743fdb16a4289",
+        "!bp_1e570d5407a942b478e79297e0885101",
+        "!bp_a95311b3dc996964cbaa30ff9965aaf6"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_1e570d5407a942b478e79297e0885101"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_1e570d5407a942b478e79297e0885101"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "AnimalCompanionBaseProgression",
+  "guid": "f54159e8cfda69f4dbcfdf6ffbbd3293",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_26b10d4340839004f960f9816f6109fe"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null
+}

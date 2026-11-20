@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Mythic",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AdditionalCMB",
+      "Value": 1
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterStatFocusCMB",
+  "guid": "ebdca04cd5b9c6443bb6281dd63bebab",
+  "name": "Stat Focus — CMB"
+}

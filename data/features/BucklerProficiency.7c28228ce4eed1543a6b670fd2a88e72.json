@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [
+        "Buckler"
+      ],
+      "WeaponProficiencies": [],
+      "m_RaceRestriction": null
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": true,
+      "m_CharacterClass": "!bp_26b10d4340839004f960f9816f6109fe"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BucklerProficiency",
+  "guid": "7c28228ce4eed1543a6b670fd2a88e72",
+  "name": "Buckler Proficiency"
+}

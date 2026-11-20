@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [],
+  "assetName": "ChainshirtType",
+  "guid": "7467b0ab8641d8f43af7fc46f2108a1a",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "Light",
+  "name": "Light Armor — Chainshirt"
+}

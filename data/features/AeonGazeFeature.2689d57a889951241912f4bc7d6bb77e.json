@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AeonGazeFeature",
+  "guid": "2689d57a889951241912f4bc7d6bb77e",
+  "name": "Enforcing Gaze (feature)"
+}

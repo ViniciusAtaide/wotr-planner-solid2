@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "WarpriestFervorBase",
+  "guid": "2d5140fd9f19a8e41be32d300eea2e18",
+  "name": "Fervor"
+}

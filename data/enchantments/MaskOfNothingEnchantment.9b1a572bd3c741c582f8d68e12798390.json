@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f717b703aa4a4bb99c12e32a9eab17f3"
+    }
+  ],
+  "assetName": "MaskOfNothingEnchantment",
+  "guid": "9b1a572bd3c741c582f8d68e12798390"
+}

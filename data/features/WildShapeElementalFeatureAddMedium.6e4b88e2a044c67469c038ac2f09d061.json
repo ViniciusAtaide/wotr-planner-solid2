@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_4d517e670ed4b6e4282d52855237a44f"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WildShapeElementalFeatureAddMedium",
+  "guid": "6e4b88e2a044c67469c038ac2f09d061",
+  "name": "Wild Shape (Medium Elemental)"
+}

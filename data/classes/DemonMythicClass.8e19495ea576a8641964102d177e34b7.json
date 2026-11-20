@@ -1,0 +1,109 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteMainCharacter",
+      "CheckInProgression": false,
+      "Companion": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 2,
+      "Not": false,
+      "m_CharacterClass": "!bp_247aa787806d5da4f89cfc3dff0b217f"
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_8df873a8c6e48294abdb78c45834aa0a"
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_5d501618a28bdc24c80007a5c937dcb7"
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_9a3b2c63afa79744cbca46bea0da9a16"
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_a5a9fe8f663d701488bd1db8ea40484e"
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_15a85e67b7d69554cab9ed5830d0268e"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "ForcedTrue",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": false,
+      "m_CharacterClass": "!bp_8e19495ea576a8641964102d177e34b7"
+    },
+    {
+      "$type": "PrerequisiteEtude",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_daf1235b6217787499c14e4e32142523"
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_5295b8e13c2303f4c88bdb3d7760a757"
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_3d420403f3e7340499931324640efe96"
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": true,
+  "PrestigeClass": false,
+  "SkillPoints": 0,
+  "assetName": "DemonMythicClass",
+  "guid": "8e19495ea576a8641964102d177e34b7",
+  "m_Archetypes": [],
+  "m_BaseAttackBonus": "!bp_059c61483910c77408d0473b11d1b922",
+  "m_FortitudeSave": "!bp_059c61483910c77408d0473b11d1b922",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_285fe49f7df8587468f676aa49362213",
+  "m_ReflexSave": "!bp_059c61483910c77408d0473b11d1b922",
+  "m_Spellbook": "!bp_e3daa889c72982e45a026f62cc84937d",
+  "m_WillSave": "!bp_059c61483910c77408d0473b11d1b922",
+  "name": "Demon"
+}

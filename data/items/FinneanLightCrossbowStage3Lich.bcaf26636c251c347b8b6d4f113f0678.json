@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanLightCrossbowStage3Lich",
+  "guid": "bcaf26636c251c347b8b6d4f113f0678",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d525e7a6d8d5aa648a976ac41194b8d0",
+  "name": "Finnean (Light Crossbow)"
+}

@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "ScaledFistKiPowers"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ScaledFistSuddenSpeedFeature",
+  "guid": "0f20a31e37fdb8240957b5a5c38e8226",
+  "name": "Ki Power: Sudden Speed (Scaled Fist)"
+}

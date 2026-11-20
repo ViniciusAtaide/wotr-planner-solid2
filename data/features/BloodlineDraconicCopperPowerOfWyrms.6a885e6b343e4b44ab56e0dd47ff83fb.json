@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_eef664d1e4318f64cb2304d1628d29ae"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicCopperPowerOfWyrms",
+  "guid": "6a885e6b343e4b44ab56e0dd47ff83fb",
+  "name": "Power of Wyrms (Copper)"
+}

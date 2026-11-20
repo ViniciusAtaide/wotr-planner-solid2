@@ -1,0 +1,68 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_5028b6e5c8714e08af161c98a5fde6b2"
+    }
+  ],
+  "ForAllOtherClasses": true,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "OracleCurse"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_54958e9d7fd415847bb99ba34ad56642"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_43c1305f3e4596f46b8d2ed782693ef7"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_6af5caba597c42044a5b64e149ef494b"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_30b6c0e75e82d4849b543173d0928f78"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WolfScarredFaceCurseProgression",
+  "guid": "e8a1096467696d14288079c6393bb58c",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_c5f6e53e71059fb4d802ce81a277a12d"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Wolf-Scarred Face (Oracle's Curse)"
+}

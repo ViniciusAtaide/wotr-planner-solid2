@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_7d49d7f590dc9a948b3bd1c8b7979854"
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "ExtraChannelEmpyrealSorcerer",
+  "guid": "347e8d794c9598e4abed70adda868ccd",
+  "name": "Extra Channel (Empyreal Sorcerer)"
+}

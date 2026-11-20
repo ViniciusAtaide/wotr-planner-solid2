@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PreciseStrikeAbility",
+  "guid": "4247758d93b218a43aed6aecc1f50fbb",
+  "name": "Precise Strike (Duelist)"
+}

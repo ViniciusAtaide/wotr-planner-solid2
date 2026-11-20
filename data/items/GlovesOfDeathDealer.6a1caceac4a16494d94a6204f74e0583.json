@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "GlovesOfDeathDealer",
+  "guid": "6a1caceac4a16494d94a6204f74e0583",
+  "m_Enchantments": [
+    "!bp_00bd514cdf5195f49be17d1313156636"
+  ],
+  "name": "Gloves of the Deathdealer"
+}

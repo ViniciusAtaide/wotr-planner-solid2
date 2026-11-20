@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "OnlyNew",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ElementalFocusSelection",
+  "guid": "1f3a15a3ae8a5524ab8b97f469bf4e3d",
+  "m_AllFeatures": [
+    "!bp_2bd0d44953a536f489082534c48f8e31",
+    "!bp_c6816ad80a3df9c4ea7d3b012b06bacd",
+    "!bp_3d8d3d6678b901444a07984294a1bc24",
+    "!bp_7ab8947ce2e19c44a9edcf5fd1466686"
+  ],
+  "name": "Elemental Focus (Kineticist)"
+}

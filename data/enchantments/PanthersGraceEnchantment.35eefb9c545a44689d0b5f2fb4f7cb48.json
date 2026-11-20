@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_4bf64290e21442cc9b20aaf36ceb0def"
+    }
+  ],
+  "assetName": "PanthersGraceEnchantment",
+  "guid": "35eefb9c545a44689d0b5f2fb4f7cb48"
+}

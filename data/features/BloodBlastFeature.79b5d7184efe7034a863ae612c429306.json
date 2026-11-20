@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_9ff81732daddb174aa8138ad1297c787",
+      "m_Feature": "!bp_4038e2f9b6cb4144bb017c7b5910ec51"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 20,
+  "assetName": "BloodBlastFeature",
+  "guid": "79b5d7184efe7034a863ae612c429306",
+  "name": "Blood Blast"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "BleedHeartseekerCompositeLongbowPlus5",
+  "guid": "1c4fbfd06f4a427d8c5ab80f8e82e76f",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1ac79088a7e5dde46966636a3ac71c35",
+  "name": "Bleed Heartseeker Composite Longbow +5"
+}

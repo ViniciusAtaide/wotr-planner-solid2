@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "AssailantsBeltItem",
+  "guid": "8d48d164b7a729b459db96ab7d5cf55a",
+  "m_Enchantments": [
+    "!bp_f3c17dcbd7a0e554eba4262fffa8f33b",
+    "!bp_c02a67098ab9da647b25eead5ece3e41"
+  ],
+  "name": "Assailant's Belt"
+}

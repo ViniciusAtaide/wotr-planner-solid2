@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "Yaniel_Longsword6BaneLiving",
+  "guid": "bff8a4bb7f24a2c499db0781b5750133",
+  "m_Enchantments": [
+    "!bp_0326d02d2e24d254a9ef626cc7a3850f"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d56c44bc9eb10204c8b386a02c7eed21",
+  "name": "Radiance (+6)"
+}

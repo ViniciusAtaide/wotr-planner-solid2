@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_4e606442182cb8249b07a4e12e95cc48"
+    }
+  ],
+  "assetName": "BeltofAdditionalPocketsEnchant",
+  "guid": "2fe49d420a7ab8441a5d34d6667ebcd3"
+}

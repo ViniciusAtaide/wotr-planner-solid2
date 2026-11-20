@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HelmetOfWeakeningTortureItem",
+  "guid": "2168d3e3b8ce32a478db0b7db49064d6",
+  "m_Enchantments": [
+    "!bp_fd740ea306b4aff479367e20ac026e84"
+  ],
+  "name": "Helmet of Weakening Torture"
+}

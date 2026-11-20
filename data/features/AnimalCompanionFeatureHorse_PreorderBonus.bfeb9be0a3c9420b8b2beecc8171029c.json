@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddPet",
+      "Type": "AnimalCompanion"
+    },
+    {
+      "$type": "PrerequisitePet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "NoCompanion": true,
+      "Type": "AnimalCompanion"
+    }
+  ],
+  "Groups": [
+    "AnimalCompanion"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AnimalCompanionFeatureHorse_PreorderBonus",
+  "guid": "bfeb9be0a3c9420b8b2beecc8171029c",
+  "name": "Animal Companion — Black Horse"
+}

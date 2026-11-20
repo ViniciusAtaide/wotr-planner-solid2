@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a699aa4b8eeb71344be5be24405da3b8"
+    }
+  ],
+  "assetName": "MagnificentPlumeHatEnchantment",
+  "guid": "99ddcf8cfb3dcd244b5a8bb4872e3f5e"
+}

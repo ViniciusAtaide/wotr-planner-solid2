@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "BootsOfFreestReinItem",
+  "guid": "b28591992726485fa18c71782e4c9f38",
+  "m_Enchantments": [
+    "!bp_0f9b75c10aa84ba68bd40ad3b6336ce4"
+  ],
+  "name": "Boots of Freest Rein"
+}

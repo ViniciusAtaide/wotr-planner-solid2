@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "BucklerArmorItemPlus1",
+  "guid": "e5c789f0b9bc97747af93d3700ee0f2c",
+  "m_Enchantments": [
+    "!bp_e90c252e08035294eba39bafce76c119"
+  ],
+  "m_Type": "!bp_26fcc43f7d20374498d2e1643381d345"
+}

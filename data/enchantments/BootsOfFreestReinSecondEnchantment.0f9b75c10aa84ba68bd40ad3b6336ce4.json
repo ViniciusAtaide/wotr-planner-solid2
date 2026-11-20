@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f8691be4f8be45a9881ef6cff12787dc"
+    }
+  ],
+  "assetName": "BootsOfFreestReinSecondEnchantment",
+  "guid": "0f9b75c10aa84ba68bd40ad3b6336ce4"
+}

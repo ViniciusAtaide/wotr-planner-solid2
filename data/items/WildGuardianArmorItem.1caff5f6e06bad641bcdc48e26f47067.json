@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "WildGuardianArmorItem",
+  "guid": "1caff5f6e06bad641bcdc48e26f47067",
+  "m_Enchantments": [
+    "!bp_ac2e3a582b5faa74aab66e0a31c935a9",
+    "!bp_4b9573fa2b0e74043a4682740e9ae138"
+  ],
+  "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6"
+}

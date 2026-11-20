@@ -1,0 +1,39 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [
+        "!bp_52dbfd8505e22f84fad8d702611f60b7"
+      ],
+      "m_Archetypes": [
+        "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+      ],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_ee23b52c6a06c0b48a09a7a23071aa52"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 2,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_3f35f05d83b90c94fa128254b0ccdd70"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreNature"
+    }
+  ],
+  "Groups": [
+    "OracleMystery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleLifeMysteryFeature",
+  "guid": "a5458a1c316d1f24e8d9770f4fc179fa",
+  "name": "Life"
+}

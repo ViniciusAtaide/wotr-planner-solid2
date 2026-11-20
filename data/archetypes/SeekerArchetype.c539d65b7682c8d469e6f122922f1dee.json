@@ -1,0 +1,56 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_cb3abfaa682b67c48953dfa200aab325"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_c6b609279cc3174478624182ac1ad812"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_c6b609279cc3174478624182ac1ad812"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_c6b609279cc3174478624182ac1ad812"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_60008a10ad7ad6543b1f63016741a5d2"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_60008a10ad7ad6543b1f63016741a5d2"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "SeekerArchetype",
+  "guid": "c539d65b7682c8d469e6f122922f1dee",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Seeker (Oracle)"
+}

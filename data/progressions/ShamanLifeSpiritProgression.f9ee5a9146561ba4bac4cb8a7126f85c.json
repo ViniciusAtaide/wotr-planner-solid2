@@ -1,0 +1,52 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "ShamanSpirit"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_9ae3ba76663a19141a3996c1e3ce95e3",
+        "!bp_d920be3b06dabf74f9b01aa9752402dc"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_8cae5b62ad604de41bf3e9f4489c6b8f"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_9f9ed643240c4f24386eecec8ba3325a"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_83a2f66218554ea3ada1aceacb4aad54"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ShamanLifeSpiritProgression",
+  "guid": "f9ee5a9146561ba4bac4cb8a7126f85c",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Life (progression)"
+}

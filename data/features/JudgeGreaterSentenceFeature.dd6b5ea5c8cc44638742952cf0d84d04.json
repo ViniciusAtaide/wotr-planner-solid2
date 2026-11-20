@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "JudgeGreaterSentenceFeature",
+  "guid": "dd6b5ea5c8cc44638742952cf0d84d04",
+  "name": "Greater Sentence"
+}

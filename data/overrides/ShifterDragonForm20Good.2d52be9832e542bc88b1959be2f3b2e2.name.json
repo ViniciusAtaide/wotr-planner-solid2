@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "Metallic ability",
+  "reason": "The Dragonblood Shifter's dragon forms come in three sets, one for each draconic aspect, gated by 'Draconic Aspect — Metallic' and the rest (AddFeatureIfHasFact on the Wyrmshifter features). This is the ability that ShifterDragonFormFeature20Good, the Metallic set's 'Greater Wyrmshifter', gives (AddFacts); the three abilities share that name with the three features and with each other, so each is qualified by its aspect and 'ability'.",
+  "target": "2d52be9832e542bc88b1959be2f3b2e2"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardSlingStaff",
+  "guid": "dda1a4f8cbf8ad34ca7845ca17313e86",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_25da2dc95ed4a6b419608c678f2a9cc3"
+}

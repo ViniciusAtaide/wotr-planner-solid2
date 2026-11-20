@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ElementalistColdHalfUntypedFeature",
+  "guid": "edfe8369c28441f0926e3e8c5fbd6851",
+  "name": "Focused Element"
+}

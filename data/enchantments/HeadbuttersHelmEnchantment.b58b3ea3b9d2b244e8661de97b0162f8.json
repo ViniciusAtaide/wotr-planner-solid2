@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_0e6687ff3f49ffc41bc9a39fad38ab01"
+    }
+  ],
+  "assetName": "HeadbuttersHelmEnchantment",
+  "guid": "b58b3ea3b9d2b244e8661de97b0162f8"
+}

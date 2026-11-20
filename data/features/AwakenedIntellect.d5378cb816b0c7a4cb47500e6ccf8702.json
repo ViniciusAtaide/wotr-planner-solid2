@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "None",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Intelligence",
+      "Value": 2
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AwakenedIntellect",
+  "guid": "d5378cb816b0c7a4cb47500e6ccf8702",
+  "name": "Awakened Intellect"
+}

@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_0da0c194d6e1d43419eb8d990b28e0ab"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_a6298b0f87fc7694086cd8eac9d6a2aa",
+      "m_Feature": "!bp_a6298b0f87fc7694086cd8eac9d6a2aa"
+    }
+  ],
+  "Groups": [
+    "CombatFeat",
+    "Feat",
+    "TeamworkFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "VolleyFireFeature",
+  "guid": "c4b555225f565bb40a855c1bfeeff07e",
+  "name": "Volley Fire (feature)"
+}

@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_9972f33f977fc724c838e59641b2fca5"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PowerAttackMythicFeat",
+  "guid": "d3ff895f7a79a764f9e16c588c781ab5",
+  "name": "Power Attack (Mythic)"
+}

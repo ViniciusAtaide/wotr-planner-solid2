@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "GraveyardKeepersHelmetItem",
+  "guid": "50aaf42c8b2d2ff488a46051da29980b",
+  "m_Enchantments": [
+    "!bp_92901456221720742b2166d5c607680e"
+  ],
+  "name": "Graveyard Keeper's Helmet"
+}

@@ -1,0 +1,103 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_d45d9304e7b64114fbca6d2a77baa997",
+        "!bp_0d188736c79e85b44b3cc49ad8d1bb1e",
+        "!bp_19ab16dba857d1a4ba617074f203f975"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_7aa83ee3526a946419561d8d1aa09e75",
+        "!bp_1af03b45f73153540ad4a08a646d4789"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_de0d31a008840754a9e13f0b130ffc54"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_d49fa0b62594e7949a3736e08f621786"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_3d7b19c8a1d03464aafeb306342be000",
+        "!bp_d243c38894086f148bdc6f5e66f29c29",
+        "!bp_20a2435574bdd7f4e947f405df2b25ce"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_f04798ff5a0701b498a291dc2f21ce6a"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_a86396be1a51f484fad3fae4ed921b53",
+        "!bp_20a2435574bdd7f4e947f405df2b25ce"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_34e80f2817741e1498d36947a65c15f6",
+        "!bp_3524a71d57d99bb4b835ad20582cf613"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_501a7264c8b3be2418bd081d4acbe908",
+        "!bp_20a2435574bdd7f4e947f405df2b25ce"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_74ab07974fa1c424bbd6fc0e56114db6"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_2086d8c0d40e35b40b86d47e47fb17e4"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "SageBloodlineProgression",
+  "guid": "7d990675841a7354c957689a6707c6c2",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_45a4607686d96a1498891b3286121780"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Sage Sorcerer"
+}

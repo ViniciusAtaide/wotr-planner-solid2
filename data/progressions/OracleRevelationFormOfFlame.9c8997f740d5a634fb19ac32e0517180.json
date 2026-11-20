@@ -1,0 +1,83 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 7,
+      "Not": false,
+      "m_CharacterClass": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_3b68909df737cd4458509d7f3a9c3706",
+        "!bp_804e1560f21c95b43a45a9825336bd19",
+        "!bp_eac5d0fc2b143c247a42f790230eb778"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "OracleRevelation"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_774a58477c052ec48896cd4cebd7437c"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_1d84f34bcb2e94840bab48256834aacc"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_71dc20d132bb06d41ab4d0f1e94fef46"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_bcb10dd685bd6774f87dfdb8aacdb257"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "OracleRevelationFormOfFlame",
+  "guid": "9c8997f740d5a634fb19ac32e0517180",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Form of Flame"
+}

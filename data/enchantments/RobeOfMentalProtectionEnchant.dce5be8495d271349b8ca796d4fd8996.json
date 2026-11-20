@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_1bf46667d31201848b77a95212827274"
+    }
+  ],
+  "assetName": "RobeOfMentalProtectionEnchant",
+  "guid": "dce5be8495d271349b8ca796d4fd8996"
+}

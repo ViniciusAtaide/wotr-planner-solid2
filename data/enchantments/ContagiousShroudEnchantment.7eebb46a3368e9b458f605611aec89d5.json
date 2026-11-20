@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_cb1fe2462d2f6ba489cc88c298707d90"
+    }
+  ],
+  "assetName": "ContagiousShroudEnchantment",
+  "guid": "7eebb46a3368e9b458f605611aec89d5"
+}

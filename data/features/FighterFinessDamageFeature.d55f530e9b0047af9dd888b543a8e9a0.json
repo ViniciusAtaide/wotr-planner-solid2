@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "FighterFinessDamageFeature",
+  "guid": "d55f530e9b0047af9dd888b543a8e9a0"
+}

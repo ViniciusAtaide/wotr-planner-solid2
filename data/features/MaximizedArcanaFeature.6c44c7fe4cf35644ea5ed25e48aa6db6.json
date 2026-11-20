@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 12,
+      "Not": false,
+      "m_CharacterClass": "!bp_45a4607686d96a1498891b3286121780"
+    }
+  ],
+  "Groups": [
+    "MagusArcana",
+    "EldritchScionArcana"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MaximizedArcanaFeature",
+  "guid": "6c44c7fe4cf35644ea5ed25e48aa6db6",
+  "name": "Maximized Magic"
+}

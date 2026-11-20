@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "RobeOfDeterminationItem",
+  "guid": "ee26e7fdc05725f48abae2db22ada906",
+  "m_Enchantments": [
+    "!bp_e935d98654111734990316016bc0a615"
+  ],
+  "name": "Robe of Determination"
+}

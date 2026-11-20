@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "IceSubdomainAllowedSeparatist",
+  "guid": "76e69d9915454f238c6b0eea0db62703"
+}

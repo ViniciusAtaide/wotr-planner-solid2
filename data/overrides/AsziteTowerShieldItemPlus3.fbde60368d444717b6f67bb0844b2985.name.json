@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "aszite",
+  "reason": "\"Tower Shield +3\" is two items: the plain one and the aszite one (AsziteTowerShieldItemPlus3), whose armour carries AsziteArmorEnchantment. Restrictions, slot and type are the same, and their enhancement bonus isn't in data/, so the aszite one is qualified by its material; the plain one stays bare.",
+  "target": "fbde60368d444717b6f67bb0844b2985"
+}

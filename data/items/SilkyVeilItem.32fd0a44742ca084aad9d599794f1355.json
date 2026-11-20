@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_e8f21e5b58e0569468e420ebea456124"
+    }
+  ],
+  "assetName": "SilkyVeilItem",
+  "guid": "32fd0a44742ca084aad9d599794f1355",
+  "m_Enchantments": [],
+  "name": "Silky Veil"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_82a53af552a3e3945ab76c51bddef637"
+    }
+  ],
+  "assetName": "GauntletsOfMightySwipeEnchantment",
+  "guid": "e1f633fea70b55749af12a9a9dd30ad7"
+}

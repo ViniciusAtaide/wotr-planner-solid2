@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "HeavyFlail"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HeavyFlailProficiency",
+  "guid": "a22e30bd35fbb704cab2d7e3c00717c1",
+  "name": "Weapon Proficiency (Heavy Flail)"
+}

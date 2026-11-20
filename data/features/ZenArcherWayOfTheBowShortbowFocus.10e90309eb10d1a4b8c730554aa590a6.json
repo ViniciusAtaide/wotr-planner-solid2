@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddParametrizedFeatures",
+      "m_Features": [
+        {
+          "ParamObject": null,
+          "ParamSpellSchool": "None",
+          "ParamWeaponCategory": "Shortbow",
+          "Stat": "Unknown",
+          "m_Feature": "!bp_1e1f627d26ad36f43bbd26cc2bf8ac7e"
+        }
+      ]
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 6,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [
+        "!bp_2b1a58a7917084f49b097e86271df21c"
+      ],
+      "m_Class": "!bp_e8f21e5b58e0569468e420ebea456124",
+      "m_Feature": "!bp_d93aee59c93b3a042873fb6fab2ad8d8"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ZenArcherWayOfTheBowShortbowFocus",
+  "guid": "10e90309eb10d1a4b8c730554aa590a6",
+  "name": "Way of the Bow — Shortbow"
+}

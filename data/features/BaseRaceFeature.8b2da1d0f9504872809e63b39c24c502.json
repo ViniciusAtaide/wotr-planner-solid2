@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BaseRaceFeature",
+  "guid": "8b2da1d0f9504872809e63b39c24c502",
+  "name": "Basic"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "HookedHammerOfDisciplineFirstItem",
+  "guid": "91bed48efb24aef4a985f3ef537a9ce1",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": "!bp_d25f5b80121140641aeaaa1e658da662",
+  "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3",
+  "name": "Gnome Hooked Hammer of Discipline"
+}

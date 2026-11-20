@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_ba34257984f4c41408ce1dc2004e342e"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 5,
+      "m_Min": 1,
+      "m_Progression": "StartPlusDivStep",
+      "m_StartLevel": -5,
+      "m_StepLevel": 5,
+      "m_Type": "Default",
+      "m_UseMax": true,
+      "m_UseMin": true
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EnchantmentSchoolBaseFeature",
+  "guid": "9e4c4799735ae9c45964e9113107ef02",
+  "name": "Enchanting Smile and Dazing Touch"
+}

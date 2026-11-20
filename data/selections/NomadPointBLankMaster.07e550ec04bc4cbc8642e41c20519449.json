@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "NomadPointBLankMaster",
+  "guid": "07e550ec04bc4cbc8642e41c20519449",
+  "m_AllFeatures": [
+    "!bp_05a3b543b0a0a0346a5061e90f293f0b"
+  ],
+  "name": "Point-Blank Master (Nomad)"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_44f16931dabdff643bfe2a48138e769f"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "LoremasterShamanLevelUp",
+  "guid": "2f7039b020af33c44b992e9301982fde",
+  "name": "Shaman"
+}

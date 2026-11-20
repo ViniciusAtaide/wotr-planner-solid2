@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ZenArcherPointBlankMasterSelection",
+  "guid": "50e6aa55653bc014aafe556aad79e5c0",
+  "m_AllFeatures": [
+    "!bp_05a3b543b0a0a0346a5061e90f293f0b"
+  ],
+  "name": "Point-Blank Master (Zen Archer)"
+}

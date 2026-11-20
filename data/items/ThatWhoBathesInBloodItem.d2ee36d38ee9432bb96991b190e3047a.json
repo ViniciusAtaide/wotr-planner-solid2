@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ThatWhoBathesInBloodItem",
+  "guid": "d2ee36d38ee9432bb96991b190e3047a",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_8dca7853d2c84684b8edc5786a0e60cf"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_ef50f200e4ab429b8bcb66a56f886c2f",
+  "name": "That Which Bathes in Blood"
+}

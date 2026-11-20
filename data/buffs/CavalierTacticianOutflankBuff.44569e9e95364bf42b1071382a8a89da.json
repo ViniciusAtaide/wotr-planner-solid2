@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_422dab7309e1ad343935f33a4d6e9f11",
+      "m_Feature": "!bp_422dab7309e1ad343935f33a4d6e9f11"
+    }
+  ],
+  "Stacking": "Prolong",
+  "assetName": "CavalierTacticianOutflankBuff",
+  "guid": "44569e9e95364bf42b1071382a8a89da",
+  "name": "Outflank (buff)"
+}

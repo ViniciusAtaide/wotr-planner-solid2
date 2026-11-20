@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HelmOfStaticDischargeItem",
+  "guid": "7cae86e681e1ab0428a3ceef370d5951",
+  "m_Enchantments": [
+    "!bp_b8fdc127c724f7f4dacb32b053193986"
+  ],
+  "name": "Helm of Static Discharge"
+}

@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_da7be78f753c11544a0264d72a51d831"
+    }
+  ],
+  "Groups": [
+    "ChannelEnergy"
+  ],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "WarpriestChannelNegativeFeature",
+  "guid": "e02c8a7336a542f4baffa116b6506950",
+  "name": "Channel Negative Energy"
+}

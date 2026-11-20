@@ -1,0 +1,81 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "WitchPatron"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_394a16c90dcbd9242850248195490a7f"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_393c66ba0fdd5d048ace42eef4f1f213"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_4945e9fe38f49ce488bfc796a1bd4da3"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_8dd29385bdf79094092cd90e4d9cd0a2"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_9b6482a26fbf38b4abed7896718a8183"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_8a0b860669f60714f8ebf7285bb81535"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_6e349aacc60b5b54ebd132fdc65c17bf"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_fa87073eb39634141a289e8ffe50a99a"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_391a6ff799fa6da40becedf4f5460be5"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WitchElementsPatronProgression",
+  "guid": "67e85f52b1f020847aaa738d8999d4cd",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Elements"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "SavageUnityItem",
+  "guid": "a2da8bdd1b544afb9768c3b951f50794",
+  "m_Enchantments": [
+    "!bp_62f9b356781e4810ba7418259b673799"
+  ],
+  "name": "Savage Unity"
+}

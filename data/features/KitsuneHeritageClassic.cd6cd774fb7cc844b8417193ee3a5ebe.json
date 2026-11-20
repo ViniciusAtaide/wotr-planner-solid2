@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Dexterity",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Charisma",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonusIfHasFact",
+      "Descriptor": "Racial",
+      "InvertCondition": true,
+      "RequireAllFacts": false,
+      "Stat": "Strength",
+      "Value": {
+        "Value": -2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_CheckedFacts": [
+        "!bp_325f078c584318849bfe3da9ea245b9d"
+      ]
+    },
+    {
+      "$type": "AddFeatureOnSkill",
+      "MinimalStat": 11,
+      "StatType": "Charisma",
+      "m_Facts": [
+        "!bp_a212fff222f57a841aa88bc49a5962d9"
+      ]
+    }
+  ],
+  "Groups": [
+    "Racial",
+    "KitsuneHeritage"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "KitsuneHeritageClassic",
+  "guid": "cd6cd774fb7cc844b8417193ee3a5ebe",
+  "name": "Kitsune (Kitsune Heritage)"
+}

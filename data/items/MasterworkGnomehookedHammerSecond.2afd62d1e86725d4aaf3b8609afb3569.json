@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkGnomehookedHammerSecond",
+  "guid": "2afd62d1e86725d4aaf3b8609afb3569",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_018ad48ffd3460d47900491656d2ff26",
+  "name": "Masterwork Gnome Hooked Hammer"
+}

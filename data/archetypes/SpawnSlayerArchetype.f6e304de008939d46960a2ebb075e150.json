@@ -1,0 +1,56 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_c2e2b3b4bd9601c43b8891957e830534"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_bd9f8b8e2217ab74ab5d6a81eec34691"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_04c9063177cce8044bb7997252a6d29f"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_596bf484e187cfd4b9f0a22d1727dbf3"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_c14f5310a3a8fd84f868c65135708a31"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_40d4f55a5ac0e4f469d67d36c0dfc40b"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "SpawnSlayerArchetype",
+  "guid": "f6e304de008939d46960a2ebb075e150",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Spawn Slayer"
+}

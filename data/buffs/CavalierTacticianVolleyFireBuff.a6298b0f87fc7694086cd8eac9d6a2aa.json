@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_c4b555225f565bb40a855c1bfeeff07e",
+      "m_Feature": "!bp_c4b555225f565bb40a855c1bfeeff07e"
+    }
+  ],
+  "Stacking": "Prolong",
+  "assetName": "CavalierTacticianVolleyFireBuff",
+  "guid": "a6298b0f87fc7694086cd8eac9d6a2aa",
+  "name": "Volley Fire (buff)"
+}

@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_5d501618a28bdc24c80007a5c937dcb7"
+    }
+  ],
+  "assetName": "PlayersPhylacteryAmuletItem",
+  "guid": "7efa2d3fd0da4769b380caf9b221233a",
+  "m_Enchantments": [
+    "!bp_b3ec7d3700324a7181ec5f327665f5de"
+  ],
+  "name": "Your Phylactery (neck)"
+}

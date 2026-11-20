@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FauchardThunderingPlus1",
+  "guid": "3037075f0a964064082e6ca4f477c620",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a40899c4defec94bb9c291bde74f1a8",
+  "name": "Thundering Fauchard +1"
+}

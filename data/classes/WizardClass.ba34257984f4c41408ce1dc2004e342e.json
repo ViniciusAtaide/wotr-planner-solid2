@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillKnowledgeArcana",
+    "SkillKnowledgeWorld",
+    "SkillLoreNature",
+    "SkillLoreReligion"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D6",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 2,
+  "assetName": "WizardClass",
+  "guid": "ba34257984f4c41408ce1dc2004e342e",
+  "m_Archetypes": [
+    "!bp_17b26d5302cd3e243a281a0beec6256b",
+    "!bp_55a8ce15e30d71547a44c69bb2e8a84f",
+    "!bp_f43c78692a4e10d43a38bd6aedf53c1b",
+    "!bp_6d2027b4eec590c41adb5caeb7bb026d",
+    "!bp_c4a866cef5134632a8a3ef5696f45a5b",
+    "!bp_bb571f1b6cea462e99db7893685a0982",
+    "!bp_8789dcfc6f8e4fe49d80b90472ea6993",
+    "!bp_9e1211f2c3db4d0c8313013df72d7187"
+  ],
+  "m_BaseAttackBonus": "!bp_0538081888b2d8c41893d25d098dee99",
+  "m_FortitudeSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_02f3049806dbf62459259ea8cae8f715",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": "!bp_5a38c9ac8607890409fcb8f6342da6f4",
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Wizard"
+}

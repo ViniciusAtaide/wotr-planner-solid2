@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DivinationSchoolForewarnedFeature",
+  "guid": "a6839f2a709288e43b68d3281b3bbd8f",
+  "name": "Forewarned — Initiative Rolls"
+}

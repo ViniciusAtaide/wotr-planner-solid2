@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "AxiomaticElderIncineratingTridentPlus5",
+  "guid": "6b3a8e7d54f043d3a7f6ed85f24246fb",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_6ff66364e0a2c89469c2e52ebb46365e",
+  "name": "Axiomatic Elder Incinerating Trident +5"
+}

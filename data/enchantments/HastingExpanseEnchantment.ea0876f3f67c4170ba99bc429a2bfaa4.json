@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_9003e32525a84b85828e04ea124f2e1c"
+    }
+  ],
+  "assetName": "HastingExpanseEnchantment",
+  "guid": "ea0876f3f67c4170ba99bc429a2bfaa4"
+}

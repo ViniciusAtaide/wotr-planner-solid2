@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "AnimalisticPerseveranceItem",
+  "guid": "61f8e441b7644ff49d3e86a588eb3727",
+  "m_Enchantments": [
+    "!bp_6628f9d77fd07b54c911cd8930c0d531",
+    "!bp_c7090597a05e40409426d2779f6f3c4b"
+  ],
+  "m_Type": "!bp_7a01292cef39bf2408f7fae7a9f47594",
+  "name": "Animalistic Perseverance"
+}

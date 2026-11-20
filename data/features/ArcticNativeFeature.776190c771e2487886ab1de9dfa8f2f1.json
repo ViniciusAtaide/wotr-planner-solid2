@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArcticNativeFeature",
+  "guid": "776190c771e2487886ab1de9dfa8f2f1",
+  "name": "Arctic Native"
+}

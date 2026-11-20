@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "NaturalArmor",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AC",
+      "Value": 4
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "BloodlineDraconicGoldResistancesAbilityLevel3",
+  "guid": "3fcb5d4f201cfba4da2095214b999bef",
+  "name": "Dragon Resistances (Draconic Bloodline — Gold 15)"
+}

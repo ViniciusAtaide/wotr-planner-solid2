@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "SavingThrowAgainsBlindnessFeature",
+  "guid": "fc7a7567948768743bcff98ec51d22d5"
+}

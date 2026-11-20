@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "CastersDreamItem",
+  "guid": "df6e44ea5e094ebc869b31c138ca1d1a",
+  "m_Enchantments": [
+    "!bp_54ca61d175714a048977d450b7a86d77"
+  ],
+  "name": "Caster's Dream"
+}

@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "ChannelEnergy",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ChannelEnergySelection",
+  "guid": "d332c1748445e8f4f9e92763123e31bd",
+  "m_AllFeatures": [
+    "!bp_a79013ff4bcd4864cb669622a29ddafb",
+    "!bp_3adb2c906e031ee41a01bfc1d5fb7eea"
+  ],
+  "name": "Channel Energy (Cleric)"
+}

@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_e8f21e5b58e0569468e420ebea456124"
+    }
+  ],
+  "assetName": "RobeOfOrderItem",
+  "guid": "32f8cc0a9152d224f933a5c0879ec368",
+  "m_Enchantments": [
+    "!bp_afb30cf7695c2f442910934023b9ab26"
+  ],
+  "name": "Robe of Order"
+}

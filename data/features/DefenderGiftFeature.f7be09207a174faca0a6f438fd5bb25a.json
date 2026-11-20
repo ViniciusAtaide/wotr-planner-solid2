@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DefenderGiftFeature",
+  "guid": "f7be09207a174faca0a6f438fd5bb25a",
+  "name": "Defender's Gift"
+}

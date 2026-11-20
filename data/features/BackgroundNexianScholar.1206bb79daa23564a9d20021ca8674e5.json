@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillKnowledgeArcana"
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "UntypedStackable",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 2
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillKnowledgeArcana"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundNexianScholar",
+  "guid": "1206bb79daa23564a9d20021ca8674e5",
+  "name": "Nexian Scholar"
+}

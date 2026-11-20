@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "StewardsHelmetItem",
+  "guid": "bc12035620054e8281ac281b71f17b23",
+  "m_Enchantments": [
+    "!bp_af0d48f8fbfc4c5c8b75b1c153887af3"
+  ],
+  "name": "The Steward of the Skein's defiled helmet"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SarkorisDirgeFeature",
+  "guid": "2141e1c10e28464fa43647cca2fb1fda",
+  "name": "Dirge for Sarkoris"
+}

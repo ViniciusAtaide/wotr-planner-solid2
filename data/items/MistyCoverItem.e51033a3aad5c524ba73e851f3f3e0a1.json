@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "MistyCoverItem",
+  "guid": "e51033a3aad5c524ba73e851f3f3e0a1",
+  "m_Enchantments": [
+    "!bp_7d8507e1d3b97cf428c23fae9cd45769"
+  ],
+  "name": "Misty Cover"
+}

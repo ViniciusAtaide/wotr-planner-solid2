@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "DLC3_RobeOfUnspeakableTruthItem",
+  "guid": "9d7e7dbc35ea4298bd51790644caa8c6",
+  "m_Enchantments": [
+    "!bp_52491d2c417244879a718169e2179591"
+  ],
+  "name": "Robe of Unspeakable Truth"
+}

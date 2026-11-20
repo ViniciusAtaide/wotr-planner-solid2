@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_2f35608fc073c04448a9c162a20852ce",
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "Groups": [
+    "DragonDiscipleSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DragonDiscipleEldritch Font",
+  "guid": "404785fe7e3c4e40afbfd2b75007b041",
+  "m_Spellbook": "!bp_67b574abd845f3e42983ea6eb53a6f90",
+  "name": "Arcanist"
+}

@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 12,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_52dbfd8505e22f84fad8d702611f60b7",
+      "m_Feature": "!bp_bc7d2a734ec04e56b1da6e6a9aa90661"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 12,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_52dbfd8505e22f84fad8d702611f60b7",
+      "m_Feature": "!bp_e5cae174489f449282df168abe07c3c5"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "RazmiryMaskFeature",
+  "guid": "d86d1a6bc5fc42ab9437527c28c07ad8",
+  "name": "Razmiri Mask"
+}

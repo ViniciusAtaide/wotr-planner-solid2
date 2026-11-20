@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_eb388d17f07e0b44d9f83ada0148cc69"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_74ce117848b4ea641acf266d84ee1602"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_4223fe18c75d4d14787af196a04e14e7"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_4223fe18c75d4d14787af196a04e14e7"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_4223fe18c75d4d14787af196a04e14e7"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "WitchDoctorArchetype",
+  "guid": "96c2b16450cc98548a0e82f743fbee80",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Witch Doctor"
+}

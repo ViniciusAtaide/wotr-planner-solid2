@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineCelestialConvictionAbility",
+  "guid": "befc48b88995ea941a9b3ae196b2d5ea",
+  "name": "Conviction"
+}

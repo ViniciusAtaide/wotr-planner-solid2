@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_ccf3bd576cea03a4bb7beb08f55b0a0f"
+    }
+  ],
+  "assetName": "AmuletOfFourElementsEnchantment",
+  "guid": "e6f396c2cdcbe7344bc2e43d4c55c9ee"
+}

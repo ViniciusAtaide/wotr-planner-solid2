@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CloakOfCarnageItem",
+  "guid": "638283d23c388174e9e27c7d02d543a2",
+  "m_Enchantments": [
+    "!bp_3641d35ec8817c24692995ec98a30402"
+  ],
+  "name": "Cloak of Carnage"
+}

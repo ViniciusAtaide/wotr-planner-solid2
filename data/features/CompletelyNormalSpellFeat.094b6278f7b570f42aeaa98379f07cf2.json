@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisitePlayerHasFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e9298851786c5334dba1398e9635a83d"
+    }
+  ],
+  "Groups": [
+    "TricksterFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CompletelyNormalSpellFeat",
+  "guid": "094b6278f7b570f42aeaa98379f07cf2",
+  "name": "Metamagic (Completely Normal Spell)"
+}

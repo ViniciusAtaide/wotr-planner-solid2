@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8b2f3dc0bef24023a473d92c10dab42e"
+    }
+  ],
+  "assetName": "BucklerOfElementalGuardEnchantment",
+  "guid": "d6af1230d246407a9fff24ee511e74c6"
+}

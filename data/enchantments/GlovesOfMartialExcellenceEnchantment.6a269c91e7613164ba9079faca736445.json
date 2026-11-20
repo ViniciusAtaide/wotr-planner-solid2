@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3071409660b56cc46b9476385b181ac2"
+    }
+  ],
+  "assetName": "GlovesOfMartialExcellenceEnchantment",
+  "guid": "6a269c91e7613164ba9079faca736445"
+}

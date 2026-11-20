@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_de09c5e3513bba14aa03f0d69542d9e3"
+    }
+  ],
+  "assetName": "BardingOfCeaselessServiceEnchantment",
+  "guid": "87182ae16e2f76143bc19d1aa8611575"
+}

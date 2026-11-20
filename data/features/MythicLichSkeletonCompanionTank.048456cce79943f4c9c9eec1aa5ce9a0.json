@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddPet",
+      "Type": "MythicSkeletalChampion"
+    }
+  ],
+  "Groups": [
+    "SkeletalChampion"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MythicLichSkeletonCompanionTank",
+  "guid": "048456cce79943f4c9c9eec1aa5ce9a0",
+  "name": "Skeletal Vanguard"
+}

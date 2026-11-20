@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_71a08d4b6ebb07a4ab3adb19b25947e6"
+    }
+  ],
+  "assetName": "2THEvocation2DCTransmEnchant",
+  "guid": "ff34bced1c8250044b3ca638958291ba"
+}

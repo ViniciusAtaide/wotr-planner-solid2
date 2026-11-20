@@ -1,0 +1,58 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillPersuasion",
+    "SkillLoreNature",
+    "SkillKnowledgeWorld",
+    "SkillKnowledgeArcana",
+    "SkillLoreReligion"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_772e2673945e4583a804ae01f67efea0"
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 3,
+  "assetName": "OracleClass",
+  "guid": "20ce9bf8af32bee4c8557a045ab499b1",
+  "m_Archetypes": [
+    "!bp_8f205adfab73b3c4c8c93d251a3cef02",
+    "!bp_4f2698f04fa63e34b8153fa3a9795649",
+    "!bp_204117c48168f2a41a8e155419e6e880",
+    "!bp_c539d65b7682c8d469e6f122922f1dee",
+    "!bp_09035bb5dbb714645bb08ea7db47884c",
+    "!bp_c9df67160a77ecd4a97928f2455545d7",
+    "!bp_77769e43e63647c2b32298efcc577aca",
+    "!bp_4a6eb63858244f7ea4ed950a7e798a70"
+  ],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_5dd9b4982c9ed0b4090d5a35c459b729",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": "!bp_6c03364712b415941a98f74522a81273",
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Oracle"
+}

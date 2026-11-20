@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanSaiStage2",
+  "guid": "553276983017cc44d93c4b08a13e0bed",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_0944f411666c7594aa1398a7476ecf7d",
+  "name": "Finnean the Talking Weapon (Sai +3)"
+}

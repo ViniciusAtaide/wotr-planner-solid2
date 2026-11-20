@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreReligion"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillLoreReligion"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundGebianNecromancer",
+  "guid": "25b4f7ff8723d6e498f9cdc5ef2fad57",
+  "name": "Gebbite Necromancer"
+}

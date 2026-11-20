@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 3,
+  "assetName": "RampageOnHitDamage",
+  "guid": "b55375fc8af84eebbb14f857f94daeac",
+  "name": "Elemental Damage (Acid Rampage)"
+}

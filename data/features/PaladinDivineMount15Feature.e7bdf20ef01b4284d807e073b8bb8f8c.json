@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PaladinDivineMount15Feature",
+  "guid": "e7bdf20ef01b4284d807e073b8bb8f8c",
+  "name": "Divine Mount — Spell Resistance"
+}

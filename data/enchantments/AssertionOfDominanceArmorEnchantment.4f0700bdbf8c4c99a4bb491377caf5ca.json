@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_cd09201e456345e7a39c983ff8912e58"
+    }
+  ],
+  "assetName": "AssertionOfDominanceArmorEnchantment",
+  "guid": "4f0700bdbf8c4c99a4bb491377caf5ca"
+}

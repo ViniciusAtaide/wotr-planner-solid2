@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_08b55e758d6e6e344b7e74b1a89b389a"
+    }
+  ],
+  "assetName": "RingOfEvasionEnchantment",
+  "guid": "b359e4aa7c2d01e46bcd827cdec8d5b4"
+}

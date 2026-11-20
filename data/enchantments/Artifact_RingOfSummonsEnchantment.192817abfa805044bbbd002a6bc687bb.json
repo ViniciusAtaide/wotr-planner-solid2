@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_1df2e928482541f7bd60274a1938d34e"
+    }
+  ],
+  "assetName": "Artifact_RingOfSummonsEnchantment",
+  "guid": "192817abfa805044bbbd002a6bc687bb"
+}

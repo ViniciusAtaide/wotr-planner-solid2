@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ReplaceStatBaseAttribute",
+      "BaseAttributeReplacement": "Charisma",
+      "ReplaceIfHigher": false,
+      "TargetStat": "SkillLoreReligion"
+    },
+    {
+      "$type": "ClassLevelsForPrerequisites",
+      "Modifier": 1,
+      "Summand": 0,
+      "m_ActualClass": "!bp_52dbfd8505e22f84fad8d702611f60b7",
+      "m_FakeClass": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_ForSelection": "!bp_60008a10ad7ad6543b1f63016741a5d2"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MysteryGiftFeature",
+  "guid": "318c99dad43240068ae092b906a8439d",
+  "name": "Mysterious Gift"
+}

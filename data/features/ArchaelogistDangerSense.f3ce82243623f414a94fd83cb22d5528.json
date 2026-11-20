@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 6,
+  "assetName": "ArchaelogistDangerSense",
+  "guid": "f3ce82243623f414a94fd83cb22d5528",
+  "name": "Danger Sense (Archaeologist)"
+}

@@ -1,0 +1,44 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 4,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_8df873a8c6e48294abdb78c45834aa0a",
+      "m_Feature": "!bp_5dc4b3a443c6cc24f8b06d9b60432c6c"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_0efe2a9ef673ebe4181356748c88fbe9"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_4bd30ab53ce6ee24791fb60f82e7811e"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_62ece3b9b2126a44faa276bbb5bd1014"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_0a4b9114759b20a45af6642964fc56bc"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_506b4aeb2b7bb36448cf3858c943d5bb"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_8963c914c07ccd0489d1d34a8d1a5865"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterSummonFeatureTier3",
+  "guid": "512e77595f0524147bb3381247a55eec",
+  "name": "Summon Nixie Prankster"
+}

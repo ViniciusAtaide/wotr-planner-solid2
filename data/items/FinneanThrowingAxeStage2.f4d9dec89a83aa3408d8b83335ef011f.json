@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanThrowingAxeStage2",
+  "guid": "f4d9dec89a83aa3408d8b83335ef011f",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_ca131c71f4fefcb48b30b5991520e01d",
+  "name": "Finnean the Talking Weapon (Throwing Axe +3)"
+}

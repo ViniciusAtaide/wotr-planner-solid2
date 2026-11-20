@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "DemonicAltarMasochisticClothItem",
+  "guid": "7393c642e36be6e488ddd7eb7ca30a31",
+  "m_Enchantments": [
+    "!bp_fe30acc7dec1c02408d73b436dde6ba2"
+  ],
+  "name": "Zon-Kuthon's Suffocating Caress (shirt)"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DetectMagic",
+  "guid": "ee0b69e90bac14446a4cf9a050f87f2e",
+  "name": "Detect Magic"
+}

@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_191b4be2152fde541ac8984c7f36e91d",
+      "m_CharacterClass": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    }
+  ],
+  "Groups": [
+    "WitchHex"
+  ],
+  "HideInUI": false,
+  "Ranks": 20,
+  "assetName": "HexChannelerChannelFeature",
+  "guid": "b40316f05d4772e4894688e6743602bd",
+  "name": "Hex Channeler — Channel Energy"
+}

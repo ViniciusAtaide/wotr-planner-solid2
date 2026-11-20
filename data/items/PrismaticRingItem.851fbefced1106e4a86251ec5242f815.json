@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "PrismaticRingItem",
+  "guid": "851fbefced1106e4a86251ec5242f815",
+  "m_Enchantments": [
+    "!bp_4d4f77040b34e2e4fb381e410e094c73"
+  ],
+  "name": "Prismatic Ring"
+}

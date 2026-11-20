@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HexcrafterSpells",
+  "guid": "8122e8b3ddb1e184ebf6decc8b1403b5",
+  "name": "Spells"
+}

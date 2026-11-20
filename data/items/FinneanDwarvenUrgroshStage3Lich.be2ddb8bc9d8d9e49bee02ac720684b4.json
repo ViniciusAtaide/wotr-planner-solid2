@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "FinneanDwarvenUrgroshStage3Lich",
+  "guid": "be2ddb8bc9d8d9e49bee02ac720684b4",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": "!bp_147e5606e8ee4434b934e3731aabdf3f",
+  "m_Type": "!bp_0ec97c08fdf87e44f8f16ba87b511743",
+  "name": "Finnean (Dwarven Urgrosh)"
+}

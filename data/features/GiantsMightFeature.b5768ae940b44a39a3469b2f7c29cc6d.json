@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "GiantsMightFeature",
+  "guid": "b5768ae940b44a39a3469b2f7c29cc6d",
+  "name": "Giant's Might"
+}

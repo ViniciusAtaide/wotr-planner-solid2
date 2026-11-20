@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_6394dd865317492684e371878e216d8c"
+    }
+  ],
+  "assetName": "ZeorisDaggerHeadband_GoverningEnchantment",
+  "guid": "fe29f7cf83a7449282b7f97d541dc575"
+}

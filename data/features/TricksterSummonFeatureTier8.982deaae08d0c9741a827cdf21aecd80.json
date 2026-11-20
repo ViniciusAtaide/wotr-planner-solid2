@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 9,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_8df873a8c6e48294abdb78c45834aa0a",
+      "m_Feature": "!bp_8c1622221f063fe46b53054d018634c7"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterSummonFeatureTier8",
+  "guid": "982deaae08d0c9741a827cdf21aecd80",
+  "name": "Summon Wild Hunt Monarch"
+}

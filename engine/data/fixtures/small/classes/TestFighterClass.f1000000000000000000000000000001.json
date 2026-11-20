@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillAthletics"
+  ],
+  "Components": [],
+  "HitDie": "D10",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 2,
+  "assetName": "TestFighterClass",
+  "guid": "f1000000000000000000000000000001",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_f1000000000000000000000000000002",
+  "name": "Test Fighter"
+}

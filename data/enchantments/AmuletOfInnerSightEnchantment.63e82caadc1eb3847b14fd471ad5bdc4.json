@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_12874996da4bc0f44ab7f75c69833e13"
+    }
+  ],
+  "assetName": "AmuletOfInnerSightEnchantment",
+  "guid": "63e82caadc1eb3847b14fd471ad5bdc4"
+}

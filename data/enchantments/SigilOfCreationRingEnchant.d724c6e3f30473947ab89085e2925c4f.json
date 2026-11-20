@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3e354532d3e41b548b883f7a67f27acf"
+    }
+  ],
+  "assetName": "SigilOfCreationRingEnchant",
+  "guid": "d724c6e3f30473947ab89085e2925c4f"
+}

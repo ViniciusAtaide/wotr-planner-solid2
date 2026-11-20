@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AuraOfResolveFeature",
+  "guid": "a28693b24cc412c478b8b85877f2dad2",
+  "name": "Aura of Resolve (Paladin)"
+}

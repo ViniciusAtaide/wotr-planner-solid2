@@ -1,0 +1,66 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_9677fd6917ce46ae9fbd34a97af0849d",
+        "!bp_e9450978cc9feeb468fb8ee3a90607e3"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_52ab0f623a2446758c0f22fedc2bda70"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_74686a88b35946219aa72455c50a15b0"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_64e8b7d5f1ae91d45bbf1e56a3fdff01"
+    }
+  ],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_03a1781486ba98043afddaabf6b7d8ff",
+        "!bp_5f838049069f1ac4d804ce0862ab5110"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_8c3102c2ff3b69444b139a98521a4899"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_8c3102c2ff3b69444b139a98521a4899"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "CruoromancerArchetype",
+  "guid": "8789dcfc6f8e4fe49d80b90472ea6993",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Cruoromancer"
+}

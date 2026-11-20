@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": true,
+  "IsMythic": false,
+  "Spontaneous": true,
+  "assetName": "CrossbloodedSpellbook",
+  "guid": "cb0be5988031ebe4c947086a1170eacc",
+  "m_SpellsPerDay": "!bp_dbff16956df2eda48a1da5c9617cc836",
+  "name": "Sorcerer"
+}

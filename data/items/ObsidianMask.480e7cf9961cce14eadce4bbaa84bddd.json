@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "ObsidianMask",
+  "guid": "480e7cf9961cce14eadce4bbaa84bddd",
+  "m_Enchantments": [
+    "!bp_2f2f0c4bb15146e9aef3940d2edc4252"
+  ],
+  "name": "Obsidian Mask of the Champion"
+}

@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "WeaponHeavyShield",
+  "Components": [],
+  "assetName": "WeaponHeavyShield",
+  "guid": "be9b6408e6101cb4997a8996484baf19",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Close",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Heavy Shield"
+}

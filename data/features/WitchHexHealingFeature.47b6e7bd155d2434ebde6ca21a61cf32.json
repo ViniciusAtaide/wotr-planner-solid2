@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "WitchHex"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WitchHexHealingFeature",
+  "guid": "47b6e7bd155d2434ebde6ca21a61cf32",
+  "name": "Healing (witch hex)"
+}

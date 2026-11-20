@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TowerShieldNegatePenalty",
+  "guid": "4808f1ac7432cbf488cf9213610acda0",
+  "name": "Tower Shield Specialist"
+}

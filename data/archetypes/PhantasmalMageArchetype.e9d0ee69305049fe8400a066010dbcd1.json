@@ -1,0 +1,82 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_842528c733db422a915b7b06e9a71178"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_9905e8d1afa644afaa7d61ba979b7dec"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_402d0054da7e45dcb6b554ed1db6bd1f"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_bbb28051942243cf81dc90ec40b646ba"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_c33f46bf901c47999ade64802df268af"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_ef35a22c9a27da345a4528f0d5889157"
+    }
+  ],
+  "RemoveFeatures": [
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_b8bf3d5023f2d8c428fdf6438cecaea7"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_261270d064148224fb982590b7a65414"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "PhantasmalMageArchetype",
+  "guid": "e9d0ee69305049fe8400a066010dbcd1",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Phantasmal Mage"
+}

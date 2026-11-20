@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Kama",
+  "Components": [],
+  "assetName": "Kama",
+  "guid": "f5872eb0deb3a1b48a36549f8d92c19e",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "BladesLight, Monk",
+  "m_IsMonk": true,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Kama"
+}

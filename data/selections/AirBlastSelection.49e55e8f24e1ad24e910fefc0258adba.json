@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "AirBlastSelection",
+  "guid": "49e55e8f24e1ad24e910fefc0258adba",
+  "m_AllFeatures": [
+    "!bp_6f1d86ae43adf1049834457ce5264003",
+    "!bp_ba7767cb03f7f3949ad08bd3ff8a646f"
+  ],
+  "name": "Air Blast (Air)"
+}

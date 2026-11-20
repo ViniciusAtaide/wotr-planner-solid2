@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "LocketOfMagicMissileMasteryItem",
+  "guid": "6c1f471b01500eb409ed73711ef3b79e",
+  "m_Enchantments": [
+    "!bp_d06f906b0fbfcdb48aa1aab50cff532c"
+  ],
+  "name": "Locket of Magic Missile Mastery"
+}

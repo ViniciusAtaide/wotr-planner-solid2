@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "CorsetOfDireWitchcraft",
+  "guid": "ded0ec6431f54b85be50a464006ac815",
+  "m_Enchantments": [
+    "!bp_c02b6fdae6ac49278418219355d7b765"
+  ],
+  "name": "Corset of Dire Witchcraft"
+}

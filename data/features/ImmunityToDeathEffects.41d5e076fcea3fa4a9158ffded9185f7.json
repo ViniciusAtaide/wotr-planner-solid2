@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ImmunityToDeathEffects",
+  "guid": "41d5e076fcea3fa4a9158ffded9185f7",
+  "name": "Immunity to Death"
+}

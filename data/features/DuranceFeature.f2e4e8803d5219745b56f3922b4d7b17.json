@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "DuranceFeature",
+  "guid": "f2e4e8803d5219745b56f3922b4d7b17",
+  "name": "Durance"
+}

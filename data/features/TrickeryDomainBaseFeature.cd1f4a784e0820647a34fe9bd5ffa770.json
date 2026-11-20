@@ -1,0 +1,35 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 1,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0",
+      "m_Feature": "!bp_f072255473353194ca5427759fab790d"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillThievery"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillStealth"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TrickeryDomainBaseFeature",
+  "guid": "cd1f4a784e0820647a34fe9bd5ffa770",
+  "name": "Trickery Domain (level 1)"
+}

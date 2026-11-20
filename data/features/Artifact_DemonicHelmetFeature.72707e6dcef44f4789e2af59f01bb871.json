@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Profane",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Strength",
+      "Value": 4
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Profane",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AC",
+      "Value": 2
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "Artifact_DemonicHelmetFeature",
+  "guid": "72707e6dcef44f4789e2af59f01bb871"
+}

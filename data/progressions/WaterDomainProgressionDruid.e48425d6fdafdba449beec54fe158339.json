@@ -1,0 +1,71 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": false,
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_9f835c539f6e4a96a7b64461f4267d06",
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "DruidDomain",
+    "BlightDruidDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_4c21ad24f55f64d4fb722f40720d9ab0",
+        "!bp_3a264a4d254827a4298925b32a312994"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_8f8d0892cbe15b54ebe10552603349b2"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_8f8d0892cbe15b54ebe10552603349b2"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_6ec8672a9dd06604b93d56c33904aee9"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WaterDomainProgressionDruid",
+  "guid": "e48425d6fdafdba449beec54fe158339",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Water Domain (Druid)"
+}

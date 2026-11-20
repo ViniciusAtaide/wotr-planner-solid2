@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_dde8a3d301a84215bb918dc9a6d61330"
+    }
+  ],
+  "assetName": "NumerianGreatswordEnhancement",
+  "guid": "539d25eac6a945689f7c51a976e73655"
+}

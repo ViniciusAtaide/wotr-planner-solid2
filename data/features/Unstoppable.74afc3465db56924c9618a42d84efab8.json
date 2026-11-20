@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "Unstoppable",
+  "guid": "74afc3465db56924c9618a42d84efab8",
+  "name": "Unstoppable"
+}

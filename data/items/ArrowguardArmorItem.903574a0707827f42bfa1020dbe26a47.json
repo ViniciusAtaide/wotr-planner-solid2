@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "ArrowguardArmorItem",
+  "guid": "903574a0707827f42bfa1020dbe26a47",
+  "m_Enchantments": [
+    "!bp_a5d27d73859bd19469a6dde3b49750ff",
+    "!bp_c2e7af6f0d5444247b3eaf0162cff102"
+  ],
+  "m_Type": "!bp_26fcc43f7d20374498d2e1643381d345"
+}

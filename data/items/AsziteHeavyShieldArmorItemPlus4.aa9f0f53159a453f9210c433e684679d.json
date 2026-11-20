@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "AsziteHeavyShieldArmorItemPlus4",
+  "guid": "aa9f0f53159a453f9210c433e684679d",
+  "m_Enchantments": [
+    "!bp_a5d27d73859bd19469a6dde3b49750ff",
+    "!bp_b6dff2f7ec3e4a4bbc5090d27752b465"
+  ],
+  "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6"
+}

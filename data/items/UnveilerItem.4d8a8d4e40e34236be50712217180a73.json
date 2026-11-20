@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "UnveilerItem",
+  "guid": "4d8a8d4e40e34236be50712217180a73",
+  "m_Enchantments": [
+    "!bp_2b3e38a0bd454611b40381d1d1c5aad2"
+  ],
+  "name": "The Unveiler"
+}

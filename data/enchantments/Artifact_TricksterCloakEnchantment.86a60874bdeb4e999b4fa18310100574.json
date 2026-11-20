@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_686fb5d5b4264e8d85f434efd9e7c5de"
+    }
+  ],
+  "assetName": "Artifact_TricksterCloakEnchantment",
+  "guid": "86a60874bdeb4e999b4fa18310100574"
+}

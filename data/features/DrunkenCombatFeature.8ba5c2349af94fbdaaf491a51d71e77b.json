@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "DisengageWithoutAttackOfOpportunity"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DrunkenCombatFeature",
+  "guid": "8ba5c2349af94fbdaaf491a51d71e77b",
+  "name": "Drunken Combat"
+}

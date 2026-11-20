@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "AsziteBucklerArmorItemPlus3",
+  "guid": "90f738b791dc43a8a4b0c31277aa30e2",
+  "m_Enchantments": [
+    "!bp_ac2e3a582b5faa74aab66e0a31c935a9"
+  ],
+  "m_Type": "!bp_26fcc43f7d20374498d2e1643381d345"
+}

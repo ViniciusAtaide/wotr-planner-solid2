@@ -1,0 +1,45 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPersuasion"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillThievery"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_292d51f3d6a331644a8c29be0614f671",
+        "!bp_7c28228ce4eed1543a6b670fd2a88e72"
+      ]
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillPersuasion"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillThievery"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Rapier"
+    },
+    {
+      "$type": "AddBackgroundArmorProficiency",
+      "Proficiency": "Buckler"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundCourtIntriguer",
+  "guid": "d7f5d62db424d3c4bbfb178bbb0b4e22",
+  "name": "Courtier"
+}

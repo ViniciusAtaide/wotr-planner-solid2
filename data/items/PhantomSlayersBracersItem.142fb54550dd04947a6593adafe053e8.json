@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "PhantomSlayersBracersItem",
+  "guid": "142fb54550dd04947a6593adafe053e8",
+  "m_Enchantments": [
+    "!bp_945236e147d163e458717c60c801eca7"
+  ],
+  "name": "Phantom Slayer's Bracers"
+}

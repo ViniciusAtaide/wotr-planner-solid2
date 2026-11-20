@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "DLC3_HelmOfBitterEndItem",
+  "guid": "2010d68d0aa44615ac3f6b6c41bc4ac3",
+  "m_Enchantments": [
+    "!bp_e0df18fe4db4473b91c92f3c915948c0"
+  ],
+  "name": "Hat of the Bitter End"
+}

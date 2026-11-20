@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "RogueTalent",
+    "SlayerTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "Trailblazer",
+  "guid": "5a5ad5a6ca394bf46a70a68902cf3fd7",
+  "name": "Trailblazer"
+}

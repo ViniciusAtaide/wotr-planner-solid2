@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "ArmorOfVigilanceItem",
+  "guid": "660453725a4b3754488fad6081647c56",
+  "m_Enchantments": [
+    "!bp_a9ea95c5e02f9b7468447bc1010fe152",
+    "!bp_c150bcd4036abc3429b2f66b99aa0d8e"
+  ],
+  "m_Type": "!bp_c850ba40ed3a61b489b438a5ffa71de9",
+  "name": "Armor of Vigilance"
+}

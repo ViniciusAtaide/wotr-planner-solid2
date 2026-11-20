@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_805d98a8f1d120d43ba689df6670a883"
+    }
+  ],
+  "assetName": "BracersOfRoughLandingEnchantment",
+  "guid": "3a6d4f95d5f00104591b998af20d6af9"
+}

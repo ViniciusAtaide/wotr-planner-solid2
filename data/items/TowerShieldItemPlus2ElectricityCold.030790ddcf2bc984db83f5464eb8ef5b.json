@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "TowerShieldItemPlus2ElectricityCold",
+  "guid": "030790ddcf2bc984db83f5464eb8ef5b",
+  "m_ArmorComponent": "!bp_95c90d30444b8d643addbe6d49721397",
+  "m_WeaponComponent": null,
+  "name": "Tower Shield of Elemental Protection"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3afd0b08870f8d44598dfdc8f0563184"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_604e2bda4ca0fb94296ac15e863659ce"
+    }
+  ],
+  "assetName": "LocketOfMagicMissileMasteryEnchant",
+  "guid": "d06f906b0fbfcdb48aa1aab50cff532c"
+}

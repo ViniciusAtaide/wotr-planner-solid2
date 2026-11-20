@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "PrimalistLevel12Selection",
+  "guid": "43b684433ff1e7d439b87099f1717154",
+  "m_AllFeatures": [
+    "!bp_57bb4dc36611c7444817c13135ec58b4",
+    "!bp_e43a7bfd5c90a514cab1c11b41c550b1"
+  ],
+  "name": "Primal Choices (level 12)"
+}

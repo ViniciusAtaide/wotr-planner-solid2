@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "BuffExtraEffects",
+      "m_CheckedBuff": "!bp_727381f8a2ee46a19ab96eedfe1d9daa",
+      "m_ExceptionFact": null,
+      "m_ExtraEffectBuff": "!bp_29c0e16558b043278f061b128b9d180c"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShifterFeyChimeraLizardFeature",
+  "guid": "d664b46470c84390a07311ed17c6cd1c",
+  "name": "Lizard (Feyform Shifter)"
+}

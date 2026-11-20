@@ -1,0 +1,43 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [
+        "!bp_52dbfd8505e22f84fad8d702611f60b7"
+      ],
+      "m_Archetypes": [
+        "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+      ],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_169f0e005a5cc9143b0009359fa1453f"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 2,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_f482b5b69aaab72489d1f0da74743106"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillMobility"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillStealth"
+    }
+  ],
+  "Groups": [
+    "OracleMystery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleWindMysteryFeature",
+  "guid": "7c1fdd831af747b47bb2cce0051f309b",
+  "name": "Wind"
+}

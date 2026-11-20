@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ZenArcherWayOfTheBowSelection",
+  "guid": "53420038fdc76944695bf927f7bcd51c",
+  "m_AllFeatures": [
+    "!bp_2e659493076249f49821925b9b7dc389",
+    "!bp_10e90309eb10d1a4b8c730554aa590a6"
+  ],
+  "name": "Way of the Bow"
+}

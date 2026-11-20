@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_a939cc14c6e378b4c9d747267aa833db"
+    }
+  ],
+  "assetName": "DeceivingFacadeEnchantment",
+  "guid": "95c9f080488064048b397f2123969244"
+}

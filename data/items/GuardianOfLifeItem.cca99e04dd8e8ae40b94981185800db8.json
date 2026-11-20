@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "GuardianOfLifeItem",
+  "guid": "cca99e04dd8e8ae40b94981185800db8",
+  "m_Enchantments": [
+    "!bp_159a473b73ab345419dab13e3d27d650"
+  ],
+  "name": "Guardian of Life"
+}

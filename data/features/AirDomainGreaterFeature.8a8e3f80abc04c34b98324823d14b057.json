@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "AirDomainGreaterFeature",
+  "guid": "8a8e3f80abc04c34b98324823d14b057",
+  "name": "Electricity Resistance"
+}

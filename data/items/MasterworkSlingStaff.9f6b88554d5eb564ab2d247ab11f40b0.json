@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MasterworkSlingStaff",
+  "guid": "9f6b88554d5eb564ab2d247ab11f40b0",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_25da2dc95ed4a6b419608c678f2a9cc3",
+  "name": "Masterwork Sling Staff"
+}

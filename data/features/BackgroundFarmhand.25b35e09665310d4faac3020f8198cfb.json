@@ -1,0 +1,47 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreNature"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillAthletics"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_96c174b0ebca7b246b82d4bc4aac4574"
+      ]
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "UntypedStackable",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SaveFortitude",
+      "Value": 1
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillLoreNature"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillAthletics"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Scythe"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundFarmhand",
+  "guid": "25b35e09665310d4faac3020f8198cfb",
+  "name": "Farmhand"
+}

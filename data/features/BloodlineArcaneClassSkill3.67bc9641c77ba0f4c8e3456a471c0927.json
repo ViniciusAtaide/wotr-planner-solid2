@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreNature"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineArcaneClassSkill3",
+  "guid": "67bc9641c77ba0f4c8e3456a471c0927",
+  "name": "Class Skill — Lore (Nature) (Bloodline Class Skill Selection)"
+}

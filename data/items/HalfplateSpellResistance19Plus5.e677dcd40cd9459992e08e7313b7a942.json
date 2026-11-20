@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "HalfplateSpellResistance19Plus5",
+  "guid": "e677dcd40cd9459992e08e7313b7a942",
+  "m_Enchantments": [
+    "!bp_6628f9d77fd07b54c911cd8930c0d531",
+    "!bp_583938eaafc820f49ad94eca1e5a98ca"
+  ],
+  "m_Type": "!bp_a59bf41f441456a4e8b04b09cb889af8",
+  "name": "Half-Plate of Greater Spell Resistance"
+}

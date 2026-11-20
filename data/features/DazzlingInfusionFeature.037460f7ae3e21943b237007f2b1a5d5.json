@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_cbc88c4c166a0ce4a95375a0a721bd01",
+        "!bp_89dfce413170db049b0386fff333e9e1",
+        "!bp_93d8bc401accfe6489ea3797e316e5d9"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "Groups": [
+    "KineticBlastInfusion"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DazzlingInfusionFeature",
+  "guid": "037460f7ae3e21943b237007f2b1a5d5",
+  "name": "Dazzling Infusion"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronMasterworkDwarvenWaraxe",
+  "guid": "3fd30003d9a4a5d4eb05ddb6eeb7c902",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a6925f5f897801449a648d865637e5a0",
+  "name": "Cold Iron Dwarven Waraxe"
+}

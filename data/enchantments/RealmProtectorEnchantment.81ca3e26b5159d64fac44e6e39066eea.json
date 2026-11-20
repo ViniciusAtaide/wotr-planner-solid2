@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e19008b823a221043b9184ef3c271db1"
+    }
+  ],
+  "assetName": "RealmProtectorEnchantment",
+  "guid": "81ca3e26b5159d64fac44e6e39066eea"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "IcyBurstKeenColdIronBastardSwordPlus3Item",
+  "guid": "6669b016fe9e8cd4db988a8046027a4a",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d2fe2c5516b56f04da1d5ea51ae3ddfe",
+  "name": "Icy Burst Keen Cold Iron Bastard Sword +3"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_0a4d68abcf634c548b1b029e55fa16ae"
+    }
+  ],
+  "assetName": "ShortbowOfCodeEnchantment",
+  "guid": "0687b1d194eab5d47ab716077804f92f"
+}

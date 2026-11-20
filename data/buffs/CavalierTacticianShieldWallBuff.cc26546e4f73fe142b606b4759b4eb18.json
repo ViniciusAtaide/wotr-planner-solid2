@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_8976de442862f82488a4b138a0a89907",
+      "m_Feature": "!bp_8976de442862f82488a4b138a0a89907"
+    }
+  ],
+  "Stacking": "Prolong",
+  "assetName": "CavalierTacticianShieldWallBuff",
+  "guid": "cc26546e4f73fe142b606b4759b4eb18",
+  "name": "Shield Wall (buff)"
+}

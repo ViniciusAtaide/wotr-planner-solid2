@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_f5f62828b6ebaa14c94d9ff32b3692d0"
+    }
+  ],
+  "assetName": "DarkOmenEnchantment",
+  "guid": "c1c0e5fb8e93a0043bcf1e0017b185a9"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "OldEarthSandBeltItem",
+  "guid": "1cd4f9cd28dbda641bd76a058ad4c7bd",
+  "m_Enchantments": [
+    "!bp_4b6c6a8bd65e6d8448620093005da69a",
+    "!bp_b98215ae135fe7144b20a2754e0fbda2"
+  ],
+  "name": "Embrace of the Faceless (belt)"
+}

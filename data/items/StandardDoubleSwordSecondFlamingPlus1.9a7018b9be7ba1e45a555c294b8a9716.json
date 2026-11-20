@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardDoubleSwordSecondFlamingPlus1",
+  "guid": "9a7018b9be7ba1e45a555c294b8a9716",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_e95efb85a0912a7489be69d5f03a5308"
+}

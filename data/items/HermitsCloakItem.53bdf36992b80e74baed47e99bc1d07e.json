@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "HermitsCloakItem",
+  "guid": "53bdf36992b80e74baed47e99bc1d07e",
+  "m_Enchantments": [
+    "!bp_08d99b1ce1179254ca9236a77a2601b2"
+  ],
+  "name": "Hermit's Cloak"
+}

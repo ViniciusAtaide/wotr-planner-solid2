@@ -1,0 +1,35 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_1a0298abacb6e0f45b7e28553e99e76c"
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_1a0298abacb6e0f45b7e28553e99e76c",
+      "m_Feature": "!bp_16e6a6d3d14142da96d2703812b732f6"
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "CombatFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArcaneArmorMastery",
+  "guid": "453f5181a5ed3a445abfa3bcd3f4ac0c",
+  "name": "Arcane Armor Mastery"
+}

@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 9,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_ed246f1680e667b47b7427d51e651059",
+      "m_Feature": "!bp_bafcd70454f3c2e46aebd86396f81997"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 9,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_ed246f1680e667b47b7427d51e651059",
+      "m_Feature": "!bp_fdc75e9ffd2c2824ba96f2cd7bdaf992"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HellknightDisciplineTrack",
+  "guid": "0ba3efd3cd8bdbc4c867260139c4826d",
+  "name": "Tracker"
+}

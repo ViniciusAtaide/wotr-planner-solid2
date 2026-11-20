@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShieldbearerShieldAdeptFeature",
+  "guid": "f2a0e9234b3e3564ba5eabadc4af0447",
+  "name": "Shield Adept"
+}

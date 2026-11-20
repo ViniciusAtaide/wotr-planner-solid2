@@ -1,0 +1,49 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_7f8c1b838ff2d2e4f971b42ccdfa0bfd"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "SpecialistSchool"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_30f20e6f850519b48aa59e8c0ff66ae9",
+        "!bp_6c29030e9fea36949877c43a6f94ff31",
+        "!bp_6c29030e9fea36949877c43a6f94ff31"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_e0a0f1ec8dd1fb94d99f824c6f032c64"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "SpecialisationSchoolAbjurationProgression",
+  "guid": "c451fde0aec46454091b70384ea91989",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_ba34257984f4c41408ce1dc2004e342e"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Specialist School — Abjuration (Wizard)"
+}

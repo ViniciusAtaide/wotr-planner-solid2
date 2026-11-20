@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 8,
+      "Not": false,
+      "m_CharacterClass": "!bp_e8f21e5b58e0569468e420ebea456124"
+    }
+  ],
+  "Groups": [
+    "KiPowers"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DrunkenKiWholenessOfBodyFeature",
+  "guid": "24b080d6d7914fd2b358e8449b177c2a",
+  "name": "Ki Power: Wholeness of Body (Drunken Ki)"
+}

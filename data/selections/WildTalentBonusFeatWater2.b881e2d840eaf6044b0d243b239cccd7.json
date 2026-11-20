@@ -1,0 +1,71 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_7ab8947ce2e19c44a9edcf5fd1466686"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_faa5f1233600d864fa998bc0afe351ab"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_86eff374d040404438ad97fedd7218bc"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_b3614622866fe7046b787a548bbd7f59"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_4e219f5894ad0ea4daa0699e28c37b1d"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_4f1a78b02ac71bd4fa7d6e011d6f8ce0"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_5e839c743c6da6649a43cdeb70b6018f"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "KineticWildTalent"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "WildTalentBonusFeatWater2",
+  "guid": "b881e2d840eaf6044b0d243b239cccd7",
+  "m_AllFeatures": [
+    "!bp_b3614622866fe7046b787a548bbd7f59",
+    "!bp_4f1a78b02ac71bd4fa7d6e011d6f8ce0"
+  ],
+  "name": "Kineticist Bonus Feat — Water (with Blind Fight)"
+}

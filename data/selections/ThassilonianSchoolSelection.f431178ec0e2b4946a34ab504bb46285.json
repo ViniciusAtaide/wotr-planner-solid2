@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "ThassilonianSpellbook",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": true,
+  "Ranks": 1,
+  "assetName": "ThassilonianSchoolSelection",
+  "guid": "f431178ec0e2b4946a34ab504bb46285",
+  "m_AllFeatures": [
+    "!bp_15c681d5a76c1a742abe2760376ddf6d",
+    "!bp_1a258cd8e93461a4ab011c73a2c43dac",
+    "!bp_e1ebc61a71c55054991863a5f6f6d2c2",
+    "!bp_5e33543285d1c3d49b55282cf466bef3",
+    "!bp_aa271e69902044b47a8e62c4e58a9dcb",
+    "!bp_fb343ede45ca1a84496c91c190a847ff",
+    "!bp_dd163630abbdace4e85284c55d269867"
+  ],
+  "name": "Thassilonian Specialist"
+}

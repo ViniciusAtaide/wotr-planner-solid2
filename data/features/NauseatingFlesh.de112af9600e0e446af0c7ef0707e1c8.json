@@ -1,0 +1,42 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 12,
+      "Not": false,
+      "m_CharacterClass": "!bp_0937bec61c0dabc468428f496580c721"
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 12,
+      "m_Archetype": "!bp_b4f5741d42c4cb04abf5ab3fe33f6fc5",
+      "m_CharacterClass": "!bp_299aa766dee3cbf4790da4efb8c72484"
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 12,
+      "m_Archetype": "!bp_758e0061a077e54409a3bf0eb51511e5",
+      "m_CharacterClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd"
+    }
+  ],
+  "Groups": [
+    "Discovery",
+    "VivisectionistDiscovery",
+    "UndergroundChemistDiscovery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "NauseatingFlesh",
+  "guid": "de112af9600e0e446af0c7ef0707e1c8",
+  "name": "Nauseating Flesh"
+}

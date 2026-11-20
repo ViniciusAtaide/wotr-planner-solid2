@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "AmuletOfInnerSightItem",
+  "guid": "6ba58bebb6e6e2046a2847c0f0d18dfe",
+  "m_Enchantments": [
+    "!bp_63e82caadc1eb3847b14fd471ad5bdc4"
+  ],
+  "name": "Amulet of Inner Sight"
+}

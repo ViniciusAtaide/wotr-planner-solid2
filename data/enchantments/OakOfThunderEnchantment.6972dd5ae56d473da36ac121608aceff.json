@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_0223b8c72c3a4d27a271a76cd924263a"
+    }
+  ],
+  "assetName": "OakOfThunderEnchantment",
+  "guid": "6972dd5ae56d473da36ac121608aceff"
+}

@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_44ccf877fb894944a87c81cd8851e37f",
+        "!bp_ff657fbdd7576f647a24fbe25f684e18"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_d90802b1a74ae004aac439036263825a"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_88550ccfc7811884bb859c35fcf0b109"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_8f4060852a4c8604290037365155662f"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_21fbafd5dc42d4d488c4d6caed46bc99"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "DirgeBardArchetype",
+  "guid": "f128f6cd9c140284caa244da069f250c",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Dirge Bard"
+}

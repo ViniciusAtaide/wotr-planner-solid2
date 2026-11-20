@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_59afbc282dcd4bfb9e0481fefa6e702b"
+    }
+  ],
+  "assetName": "QuickPunishmentEnchantment",
+  "guid": "29093cf543a94380ab2ec4273d789fe4"
+}

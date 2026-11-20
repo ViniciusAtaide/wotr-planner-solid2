@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 4,
+      "Not": false,
+      "m_CharacterClass": "!bp_d5917881586ff1d4d96d5b7cebda9464"
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 8,
+      "m_Archetype": "!bp_cf0f99b3cd7444a48681b1c1c4aa2a41",
+      "m_CharacterClass": "!bp_bfa11238e7ae3544bbeb4d0b92e897ec"
+    }
+  ],
+  "Groups": [
+    "DefensivePower"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FearlessDefenseDefensivePower",
+  "guid": "2c13bd43a7ed4844b9f4dcc919fd74f8",
+  "name": "Fearless Defense"
+}

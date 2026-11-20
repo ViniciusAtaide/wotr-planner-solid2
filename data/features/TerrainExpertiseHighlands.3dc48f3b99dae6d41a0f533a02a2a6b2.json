@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8dc89bc3543a8724895477cd1472f591"
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Insight",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillAthletics",
+      "Value": 4
+    }
+  ],
+  "Groups": [
+    "TerrainDominance"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TerrainExpertiseHighlands",
+  "guid": "3dc48f3b99dae6d41a0f533a02a2a6b2",
+  "name": "Terrain Expertise — Highlands"
+}

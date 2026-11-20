@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_73939e14b956b884688a6e1dccf9c043",
+      "m_Feature": "!bp_73939e14b956b884688a6e1dccf9c043"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicBlackBreathWeaponBaseFeature",
+  "guid": "2708d24e2b4200346994c82821c3b47b",
+  "name": "Breath Weapon (Draconic Bloodline — Black)"
+}

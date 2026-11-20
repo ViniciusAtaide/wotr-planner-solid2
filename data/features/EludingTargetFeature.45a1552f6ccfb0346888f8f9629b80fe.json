@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "EludingTargetFeature",
+  "guid": "45a1552f6ccfb0346888f8f9629b80fe"
+}

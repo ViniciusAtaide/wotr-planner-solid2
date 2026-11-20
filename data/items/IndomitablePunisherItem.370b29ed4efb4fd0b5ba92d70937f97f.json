@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "IndomitablePunisherItem",
+  "guid": "370b29ed4efb4fd0b5ba92d70937f97f",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_aae2af9b06b5469c814473a7dd2014e0"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_13fa38737d46c9e4abc7f4d74aaa59c3",
+  "name": "Indomitable Punisher"
+}

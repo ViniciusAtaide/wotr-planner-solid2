@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": false,
+  "IsMythic": true,
+  "Spontaneous": true,
+  "assetName": "AzataSpellbook",
+  "guid": "b21b9f5e2831c2549a782d8128fb905b",
+  "m_SpellsPerDay": "!bp_032e33f5d0e4d474b86e207455e80772",
+  "name": "Azata"
+}

@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 13,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_30b5e47d47a0e37438cc5a80c96cfb99",
+      "m_Feature": "!bp_24ac81b1f0da5ef4486e83d989d73f19"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ProclaimerZoneOfSanctification10FeetFeatureLimit",
+  "guid": "90c3821c0fbc4644b9855580b16052e2",
+  "name": "Zone of Sanctification (Proclaimer 7)"
+}

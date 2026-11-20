@@ -1,0 +1,59 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_5a155f5c3f834a319feab52dc66ee185",
+      "m_Feature": "!bp_0a0f11b242054d3397eead7694e41899"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_6b8a596ef20c4d79b539147424c056e4",
+      "m_Feature": "!bp_0a0f11b242054d3397eead7694e41899"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_d7bb76c183e245eda8b1074560895806",
+      "m_Feature": "!bp_0a0f11b242054d3397eead7694e41899"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_18e9f4a95d734ecbabc93d652b67753e",
+      "m_Feature": "!bp_0a0f11b242054d3397eead7694e41899"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_38f0034df27e40509320b28029d1169e",
+      "m_Feature": "!bp_0a0f11b242054d3397eead7694e41899"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_c676ba5eb744492583d989244c81f127",
+      "m_Feature": "!bp_0a0f11b242054d3397eead7694e41899"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_c62ceaf7706444a2ba93d1990ee6ea12",
+      "m_Feature": "!bp_0a0f11b242054d3397eead7694e41899"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_0de9ff05339a47d2bdce00c024b172a8",
+      "m_Feature": "!bp_0a0f11b242054d3397eead7694e41899"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "BeltOfPrimalForceFeature",
+  "guid": "a13ceec9c40842a9a37812ba96ba24fc",
+  "name": "Belt of Primal Force"
+}

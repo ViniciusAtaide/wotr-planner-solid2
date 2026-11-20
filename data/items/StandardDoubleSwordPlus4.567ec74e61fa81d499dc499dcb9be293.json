@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDoubleSwordPlus4",
+  "guid": "567ec74e61fa81d499dc499dcb9be293",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": "!bp_b0aeb5a4e2e087d4c9ea5e2ef3fabd75",
+  "m_Type": "!bp_e95efb85a0912a7489be69d5f03a5308"
+}

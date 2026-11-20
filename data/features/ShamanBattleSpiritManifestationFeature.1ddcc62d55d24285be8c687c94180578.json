@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "Pounce"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShamanBattleSpiritManifestationFeature",
+  "guid": "1ddcc62d55d24285be8c687c94180578",
+  "name": "Manifestation (Battle)"
+}

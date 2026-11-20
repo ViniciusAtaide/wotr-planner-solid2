@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ClericSpontaneousInflict",
+  "guid": "5ba6b9cc18acafd45b6293d1e03221ac",
+  "name": "Spontaneous Wounding"
+}

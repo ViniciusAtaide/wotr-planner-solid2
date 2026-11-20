@@ -1,0 +1,81 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_2ea3f8798b7144a1bfa3c406b7d0d934"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_44e9cf645be04bba90eff14265297a8a"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_c6d8da10ecfb4618ac208d0bbfa4ecc0",
+        "!bp_c0e67e3865df4ccab6fb6c5d98a4b36d"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_28222114243e496bafa3b4b9f83d9036"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_7f60ef83bdfc466093a4265b4c0a3a7d"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_03a1781486ba98043afddaabf6b7d8ff"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_8c3102c2ff3b69444b139a98521a4899"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_8c3102c2ff3b69444b139a98521a4899"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_8c3102c2ff3b69444b139a98521a4899"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_8c3102c2ff3b69444b139a98521a4899"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "ShadowCasterArchetype",
+  "guid": "9e1211f2c3db4d0c8313013df72d7187",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Shadowcaster"
+}

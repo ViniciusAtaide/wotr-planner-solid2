@@ -1,0 +1,53 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Profane",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Strength",
+      "Value": 4
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Profane",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Dexterity",
+      "Value": 4
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Profane",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Constitution",
+      "Value": 4
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Profane",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Intelligence",
+      "Value": 4
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Profane",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Wisdom",
+      "Value": 4
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Profane",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Charisma",
+      "Value": 4
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CursedMight",
+  "guid": "5cedc05cee0e40a6be5521b61c2b9ae7",
+  "name": "Cursed Might"
+}

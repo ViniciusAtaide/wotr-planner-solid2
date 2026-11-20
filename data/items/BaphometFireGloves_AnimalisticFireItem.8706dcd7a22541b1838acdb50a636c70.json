@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "BaphometFireGloves_AnimalisticFireItem",
+  "guid": "8706dcd7a22541b1838acdb50a636c70",
+  "m_Enchantments": [
+    "!bp_57f549b6bad94793b22506915492f424"
+  ],
+  "name": "Call of the Fiery Things (gloves)"
+}

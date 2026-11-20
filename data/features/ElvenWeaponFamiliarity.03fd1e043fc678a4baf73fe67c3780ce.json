@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Longbow",
+        "Longsword",
+        "Rapier",
+        "Shortbow"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ElvenWeaponFamiliarity",
+  "guid": "03fd1e043fc678a4baf73fe67c3780ce",
+  "name": "Elven Weapon Familiarity"
+}

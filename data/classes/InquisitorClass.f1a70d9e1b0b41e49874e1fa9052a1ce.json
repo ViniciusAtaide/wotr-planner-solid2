@@ -1,0 +1,63 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillMobility",
+    "SkillAthletics",
+    "SkillPersuasion",
+    "SkillThievery",
+    "SkillLoreNature",
+    "SkillPerception",
+    "SkillStealth",
+    "SkillUseMagicDevice",
+    "SkillLoreReligion",
+    "SkillKnowledgeWorld",
+    "SkillKnowledgeArcana"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_92c0d2da0a836ce418a267093c09ca54"
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 4,
+  "assetName": "InquisitorClass",
+  "guid": "f1a70d9e1b0b41e49874e1fa9052a1ce",
+  "m_Archetypes": [
+    "!bp_ac87f40932cfd324c90b441f93857c40",
+    "!bp_cdaabf4b146c9ba42ab7d05abe3b48c4",
+    "!bp_639b74fd2f48d474e965c596b1649095",
+    "!bp_46eb929c8b6d7164188eb4d9bcd0a012",
+    "!bp_19b4a243d9a4bd34887d03c3dea03ced",
+    "!bp_0e5e91c17f114d358910e0da4ae29b50",
+    "!bp_b68b52e5e802426d989a3d4f8c986761"
+  ],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_4e945c2fe5e252f4ea61eee7fb560017",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": "!bp_57fab75111f377248810ece84193a5a5",
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Inquisitor"
+}

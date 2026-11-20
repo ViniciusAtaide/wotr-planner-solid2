@@ -1,0 +1,174 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "NoSelectionIfAlreadyHasFeature",
+      "AnyFeatureFromSelection": true,
+      "m_Features": [
+        "!bp_cf448fafcd8452d4b830bcc9ca074189",
+        "!bp_82f76646a7f96ed4cafa18480adc0b8c",
+        "!bp_c355b8777a3bda7429d863367bda3851",
+        "!bp_468ecbdd58fbd6045a0a1888308031fe",
+        "!bp_2ad98f60b29ae604da0297037054080c",
+        "!bp_63c9d62a56e6921409a58de1ab9a9f9b",
+        "!bp_6de526eeee72852448c5595f7a44a39d",
+        "!bp_d69a7785de1959c4497e4ff1e9490509",
+        "!bp_efabab987569bf54abf23848c250e4d5",
+        "!bp_7572e8c020a6b8a46bde3ab3ad8c6f70",
+        "!bp_601387ac1873bba448bddcfbf00af8d7",
+        "!bp_cbc80f3fdc72aac4bb6963efe3062473",
+        "!bp_b7555ce6cfc7fc042bb7b701d2618307",
+        "!bp_b71dc10096302384c901787a40b81fbf",
+        "!bp_c0684cd2e00de724990bb389e672db90",
+        "!bp_be355f1518587224799e6c125aad2ac0",
+        "!bp_a335def5677a4dc46bab211b30a9f33c",
+        "!bp_12484c4d15c3e134f9fd23931c38e996",
+        "!bp_076d1648e1341f841a222de5b89ba215",
+        "!bp_0970d63bc8e90274a90f6c001318df77"
+      ]
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_cf448fafcd8452d4b830bcc9ca074189",
+      "m_Feature": "!bp_7bd143ead2d6c3a409aad6ee22effe34"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_82f76646a7f96ed4cafa18480adc0b8c",
+      "m_Feature": "!bp_8a7f100c02d0b254d8f5f3affc8ef386"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_c355b8777a3bda7429d863367bda3851",
+      "m_Feature": "!bp_5f9ecbee67db8364985e9d0500eb25f1"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_468ecbdd58fbd6045a0a1888308031fe",
+      "m_Feature": "!bp_7e0f57d8d00464441974e303b84238ac"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_2ad98f60b29ae604da0297037054080c",
+      "m_Feature": "!bp_b522759a265897b4f8f7a1a180a692e4"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_63c9d62a56e6921409a58de1ab9a9f9b",
+      "m_Feature": "!bp_6c67ef823db8d7d45bb0ef82f959743d"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_6de526eeee72852448c5595f7a44a39d",
+      "m_Feature": "!bp_7181be57d1cc3bc40bc4b552e4e4ce24"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_d69a7785de1959c4497e4ff1e9490509",
+      "m_Feature": "!bp_8c6e5b3cf12f71e43949f52c41ae70a8"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_efabab987569bf54abf23848c250e4d5",
+      "m_Feature": "!bp_c7d2f393e6574874bb3fc728a69cc73a"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_7572e8c020a6b8a46bde3ab3ad8c6f70",
+      "m_Feature": "!bp_b0f79497a0d1f4f4b8293e82c8f8fa0c"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_601387ac1873bba448bddcfbf00af8d7",
+      "m_Feature": "!bp_7bd143ead2d6c3a409aad6ee22effe34"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_cbc80f3fdc72aac4bb6963efe3062473",
+      "m_Feature": "!bp_8a7f100c02d0b254d8f5f3affc8ef386"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_b7555ce6cfc7fc042bb7b701d2618307",
+      "m_Feature": "!bp_5f9ecbee67db8364985e9d0500eb25f1"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_b71dc10096302384c901787a40b81fbf",
+      "m_Feature": "!bp_7e0f57d8d00464441974e303b84238ac"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_c0684cd2e00de724990bb389e672db90",
+      "m_Feature": "!bp_b522759a265897b4f8f7a1a180a692e4"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_be355f1518587224799e6c125aad2ac0",
+      "m_Feature": "!bp_6c67ef823db8d7d45bb0ef82f959743d"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_a335def5677a4dc46bab211b30a9f33c",
+      "m_Feature": "!bp_7181be57d1cc3bc40bc4b552e4e4ce24"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_12484c4d15c3e134f9fd23931c38e996",
+      "m_Feature": "!bp_8c6e5b3cf12f71e43949f52c41ae70a8"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_076d1648e1341f841a222de5b89ba215",
+      "m_Feature": "!bp_c7d2f393e6574874bb3fc728a69cc73a"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_0970d63bc8e90274a90f6c001318df77",
+      "m_Feature": "!bp_b0f79497a0d1f4f4b8293e82c8f8fa0c"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BloodOfDragonsSelection",
+  "guid": "da48f9d7f697ae44ca891bfc50727988",
+  "m_AllFeatures": [
+    "!bp_7bd143ead2d6c3a409aad6ee22effe34",
+    "!bp_8a7f100c02d0b254d8f5f3affc8ef386",
+    "!bp_5f9ecbee67db8364985e9d0500eb25f1",
+    "!bp_7e0f57d8d00464441974e303b84238ac",
+    "!bp_b522759a265897b4f8f7a1a180a692e4",
+    "!bp_6c67ef823db8d7d45bb0ef82f959743d",
+    "!bp_7181be57d1cc3bc40bc4b552e4e4ce24",
+    "!bp_8c6e5b3cf12f71e43949f52c41ae70a8",
+    "!bp_c7d2f393e6574874bb3fc728a69cc73a",
+    "!bp_b0f79497a0d1f4f4b8293e82c8f8fa0c"
+  ],
+  "name": "Blood of Dragons"
+}

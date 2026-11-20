@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "UrbanHunterCaptorSelection6",
+  "guid": "a27990877466ec04e80d7cfa967ed69b",
+  "m_AllFeatures": [
+    "!bp_b3614622866fe7046b787a548bbd7f59",
+    "!bp_ed699d64870044b43bb5a7fbe3f29494",
+    "!bp_25bc9c439ac44fd44ac3b1e58890916f",
+    "!bp_0f15c6f70d8fb2b49aa6cc24239cc5fa"
+  ],
+  "name": "Captor (selection)"
+}

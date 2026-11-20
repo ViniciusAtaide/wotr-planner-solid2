@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "HeavyShieldArmorRustyItem",
+  "guid": "7432826ebbfe462b8cc9e5414eea3d7b",
+  "m_Enchantments": [
+    "!bp_5fbb3964ceb9492da80806de8205a491"
+  ],
+  "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6",
+  "name": "Rotten Heavy Shield"
+}

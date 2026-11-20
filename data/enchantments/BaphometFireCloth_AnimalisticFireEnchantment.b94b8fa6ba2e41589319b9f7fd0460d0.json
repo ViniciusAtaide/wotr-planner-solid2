@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_7f45506d6cfe40178d010a1421873094"
+    }
+  ],
+  "assetName": "BaphometFireCloth_AnimalisticFireEnchantment",
+  "guid": "b94b8fa6ba2e41589319b9f7fd0460d0"
+}

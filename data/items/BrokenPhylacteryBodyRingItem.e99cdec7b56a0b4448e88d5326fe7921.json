@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "BrokenPhylacteryBodyRingItem",
+  "guid": "e99cdec7b56a0b4448e88d5326fe7921",
+  "m_Enchantments": [
+    "!bp_e37143e1ad523d7418da8bd698e42207"
+  ],
+  "name": "Bane of Flesh (ring)"
+}

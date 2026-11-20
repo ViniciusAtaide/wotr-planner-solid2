@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_136b8887c8de4f4ba819440e6db43790"
+    }
+  ],
+  "assetName": "BowBreakerEnchantmentNew",
+  "guid": "0679a94fdbc84473ad98b15fbc1db828"
+}

@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "RovagugRelicSteppeHandaxeItem",
+  "guid": "499ed99cf350dba4aa6785cb6346f5b6",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5",
+    "!bp_2fa38ebb29f3bb946ba7098ccaa46d2e"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_54e7473ff73910c47812fd39c897dc1a",
+  "name": "Grave Singer (Handaxe)"
+}

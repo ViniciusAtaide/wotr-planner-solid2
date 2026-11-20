@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_f3b1a7b396fc0b048b93967c6738708f"
+    }
+  ],
+  "assetName": "RobeOfVirtueEnchantment",
+  "guid": "f1d48244362d7aa4386d5437d9135f2a"
+}

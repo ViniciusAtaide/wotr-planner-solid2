@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "BardingOfSteadynessArmorItem",
+  "guid": "3541ca13dba54f69ad277e1515a22897",
+  "m_Enchantments": [
+    "!bp_6ead380e0a4b0c145be836cb5eb33a5d",
+    "!bp_866be7ba056a4f4e8fdacff8802d5463",
+    "!bp_9448d3026111d6d49b31fc85e7f3745a"
+  ],
+  "m_Type": "!bp_55a6ac3d3ed31fc4d8a7f26f509999a8",
+  "name": "Barding of Tenacity"
+}

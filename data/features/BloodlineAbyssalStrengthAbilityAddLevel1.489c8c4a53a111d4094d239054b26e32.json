@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 13,
+      "m_AdditionalClasses": [
+        "!bp_45a4607686d96a1498891b3286121780"
+      ],
+      "m_Archetypes": [
+        "!bp_d078b2ef073f2814c9e338a789d97b73"
+      ],
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf",
+      "m_Feature": "!bp_d3ccd7c74caab594485c20f694aca91d"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "BloodlineAbyssalStrengthAbilityAddLevel1",
+  "guid": "489c8c4a53a111d4094d239054b26e32",
+  "name": "Strength of the Abyss (Abyssal Bloodline)"
+}

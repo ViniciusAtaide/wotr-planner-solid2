@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_ea99aafffd17fcb45b1a8031c1e69321"
+    }
+  ],
+  "assetName": "StormlordsResolveEnchantment",
+  "guid": "5b4757baddb724e46aaf58b79581c710"
+}

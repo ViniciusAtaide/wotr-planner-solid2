@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "SurefireGlovesItem",
+  "guid": "29176558cc2f97e44a812ce5d599f256",
+  "m_Enchantments": [
+    "!bp_b0cee12d1cd1d204fbcf5d9de0bc23fd"
+  ],
+  "name": "Surefire Gloves"
+}

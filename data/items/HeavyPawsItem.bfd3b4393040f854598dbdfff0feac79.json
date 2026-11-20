@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_26b10d4340839004f960f9816f6109fe"
+    }
+  ],
+  "assetName": "HeavyPawsItem",
+  "guid": "bfd3b4393040f854598dbdfff0feac79",
+  "m_Enchantments": [
+    "!bp_9141d814d99fa354083b1939ff6a3835"
+  ],
+  "name": "Heavy Paws"
+}

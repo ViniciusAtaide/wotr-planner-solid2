@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_46bbcbdd234d41078e496c3c346db5a2"
+    }
+  ],
+  "assetName": "RampantCarnageEnchantment",
+  "guid": "1fff8605ee2447268f00ad9362876749"
+}

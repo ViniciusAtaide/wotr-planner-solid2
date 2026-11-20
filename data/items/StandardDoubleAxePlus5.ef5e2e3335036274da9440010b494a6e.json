@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDoubleAxePlus5",
+  "guid": "ef5e2e3335036274da9440010b494a6e",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": "!bp_d40c35660b8218e4498a1449ac07e5e2",
+  "m_Type": "!bp_87d76c7534506a546a065731ee6a38cd"
+}

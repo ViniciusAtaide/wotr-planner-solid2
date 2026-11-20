@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "AlchemistsClothItem",
+  "guid": "004e05369fd13e2428bf7eb84bcd38ec",
+  "m_Enchantments": [
+    "!bp_5ac1350dbddabd745baad8170d4e9c05"
+  ],
+  "name": "Alchemist's Shirt"
+}

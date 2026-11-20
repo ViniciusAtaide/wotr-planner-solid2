@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Kama",
+        "Nunchaku",
+        "Sai",
+        "Siangham",
+        "Shuriken",
+        "Dagger",
+        "Club",
+        "Shortsword",
+        "HeavyCrossbow",
+        "LightCrossbow",
+        "Handaxe",
+        "Javelin",
+        "Quarterstaff",
+        "Shortspear",
+        "Sling",
+        "Spear"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MonkWeaponProficiency",
+  "guid": "c7d6f5244c617734a8a76b6785a752b4",
+  "name": "Monk Proficiencies"
+}

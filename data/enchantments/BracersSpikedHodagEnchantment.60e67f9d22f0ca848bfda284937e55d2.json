@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Enhancement",
+      "Stat": "Strength",
+      "Value": 4
+    }
+  ],
+  "assetName": "BracersSpikedHodagEnchantment",
+  "guid": "60e67f9d22f0ca848bfda284937e55d2"
+}

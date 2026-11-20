@@ -1,0 +1,68 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_44fd929670304896961d4ae38189d7bc"
+    }
+  ],
+  "ForAllOtherClasses": true,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "OracleCurse"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_0ff5141fe79c43345a1c8ff72b75923d"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_ec58af8532fa55f4ea5a9bd8e694187c"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_47d816598a5c5944ebd479386520e20c"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_641334d44ce2a354297846e38ea1703a"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "HellboundCurseProgression",
+  "guid": "9f08f0d1faf141c41a3d8205f1911e96",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_c5f6e53e71059fb4d802ce81a277a12d"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Hellbound (Oracle's Curse)"
+}

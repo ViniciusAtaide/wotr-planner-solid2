@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ImmunityToConfusion",
+  "guid": "f429d531259c48e41a2b30c98d4812f9",
+  "name": "Immunity to Confusion"
+}

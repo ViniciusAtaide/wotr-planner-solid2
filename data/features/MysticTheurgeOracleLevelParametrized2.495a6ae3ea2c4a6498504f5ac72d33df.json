@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [],
+  "Groups": [],
+  "HasNoSuchFeature": false,
+  "HideInUI": true,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "LearnSpell",
+  "Ranks": 20,
+  "RequireProficiency": false,
+  "WeaponSubCategory": "None",
+  "assetName": "MysticTheurgeOracleLevelParametrized2",
+  "guid": "495a6ae3ea2c4a6498504f5ac72d33df",
+  "m_Prerequisite": null,
+  "name": "Oracle Spell (2nd Level)"
+}

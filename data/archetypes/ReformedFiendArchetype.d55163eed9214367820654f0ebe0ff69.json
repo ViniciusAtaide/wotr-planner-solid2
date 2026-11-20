@@ -1,0 +1,121 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_dd62cb5011f64cd38b8b08abb19ba2cc"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_fbc27acd44ab4f1cb0e2cbc0b573add7"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_2a3243ad1ccf43d5a5d69de3f9d0420e"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_2a3243ad1ccf43d5a5d69de3f9d0420e"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_64722692622245d9aaa502ec753545c8"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_2a3243ad1ccf43d5a5d69de3f9d0420e"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_2a3243ad1ccf43d5a5d69de3f9d0420e"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_2a3243ad1ccf43d5a5d69de3f9d0420e"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_5c4e42124dc2b4647af6e36cf2590500"
+    },
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "Good",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": true,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_62b33ac8ceb18dd47ad4c8f06849bc01"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_07eba4bb72c2e3845bb442dce85d3b58"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_07eba4bb72c2e3845bb442dce85d3b58"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_07eba4bb72c2e3845bb442dce85d3b58"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_07eba4bb72c2e3845bb442dce85d3b58"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_07eba4bb72c2e3845bb442dce85d3b58"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "ReformedFiendArchetype",
+  "guid": "d55163eed9214367820654f0ebe0ff69",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Reformed Fiend"
+}

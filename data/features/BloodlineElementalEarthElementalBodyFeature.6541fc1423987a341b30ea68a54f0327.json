@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_96e15b7b08b65d44b90a3f0c3c7ed72b"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineElementalEarthElementalBodyFeature",
+  "guid": "6541fc1423987a341b30ea68a54f0327",
+  "name": "Elemental Body (earth)"
+}

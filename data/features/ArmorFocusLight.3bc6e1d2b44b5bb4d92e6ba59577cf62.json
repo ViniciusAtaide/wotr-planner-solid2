@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "BaseAttackBonus",
+      "Value": 1
+    },
+    {
+      "$type": "PrerequisiteProficiency",
+      "ArmorProficiencies": [
+        "Light"
+      ],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArmorFocusLight",
+  "guid": "3bc6e1d2b44b5bb4d92e6ba59577cf62",
+  "name": "Light Armor Focus"
+}

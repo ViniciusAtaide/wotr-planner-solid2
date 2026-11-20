@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "HasArmorFeatureUnlock",
+      "FilterByArmorProficiencyGroup": false,
+      "FilterByBlueprintArmorTypes": false,
+      "m_ArmorProficiencyGroupEntries": 0,
+      "m_BlueprintArmorTypes": [],
+      "m_DisableWhenHasShield": false,
+      "m_NewFact": "!bp_89abdad6840c48e4f9c18595d6c488fa"
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "UntypedStackable",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillPersuasion",
+      "Value": 2
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HellKnightInfernalArmor",
+  "guid": "ebf6791573c8c834f99efb5bc16cf341",
+  "name": "Infernal Armor"
+}

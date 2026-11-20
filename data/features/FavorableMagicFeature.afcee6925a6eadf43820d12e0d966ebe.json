@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "AzataSuperpowerAbilities"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FavorableMagicFeature",
+  "guid": "afcee6925a6eadf43820d12e0d966ebe",
+  "name": "Favorable Magic"
+}

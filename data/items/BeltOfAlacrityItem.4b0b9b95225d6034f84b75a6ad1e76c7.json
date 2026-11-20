@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfAlacrityItem",
+  "guid": "4b0b9b95225d6034f84b75a6ad1e76c7",
+  "m_Enchantments": [
+    "!bp_3d2ebf32e8c47494ea1c1db6485e7d1e",
+    "!bp_15008553994dd7e48af2ad1a1426d733"
+  ],
+  "name": "Belt of Alacrity"
+}

@@ -1,0 +1,137 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_12af0fda00774784b45feacb67c014f8",
+      "m_Feature": "!bp_677171968b9a22f459c7391d8302dd36"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_a83c0d19fdcc41c79f04df934e7ebf29",
+      "m_Feature": "!bp_1d5079fa59fe01a4d8b822b790876e4d"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_d4d3824a31df4f249833357dffe2da61",
+      "m_Feature": "!bp_9167b251ca91d824da21a38b1eed495a"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_42af960c4cb84ef6b85ec3500d5a38e4",
+      "m_Feature": "!bp_3a6e7bb6f624e0f4d8e8003f92ff501c"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_36bb7ed75f0c4dcc9fd3374c603b2d0e",
+      "m_Feature": "!bp_cf008cfe7f26ff74baf1c26f42e4d497"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_bedecc3e55af4fd2b46af1fd42d0fc97",
+      "m_Feature": "!bp_d433705eb8dec9c419e245e593c4d2e1"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_7384587bd92a417793894022b03e298e",
+      "m_Feature": "!bp_c718420085ffa0640916ec1e28a55566"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_4c495ac785134983b99f77eb559a81a0",
+      "m_Feature": "!bp_3a25cc2124689484499451091e986e0a"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_3a16aa26238a453da33338871d7183fd",
+      "m_Feature": "!bp_9aa2f1035075c424080cbd3c4dc31fa1"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_a787a6e193c244c5901c799f4c3afe2d",
+      "m_Feature": "!bp_33445c46c6fc9d04ba9f3a2be1d9a9a1"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_49e5e1528329494e84c7dc6aa0b6bd7b",
+      "m_Feature": "!bp_03e33edd9202e454a84ede3f83b8ab7d"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_6e0236ac698449edb60a8beeb923d2b2",
+      "m_Feature": "!bp_6e1d6a6daef62b945a07c2887429cf2d"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_b48fa4abd8a444b281bf12f7c17f0d0f",
+      "m_Feature": "!bp_80a7968889937a44f87f7b625bf067b8"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_4a947725f58441aeafc2ae0859526d1b",
+      "m_Feature": "!bp_361134f67b400a1449aaceeb5ef8040f"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_27bf16b1f4154059b0b5dcf994add205",
+      "m_Feature": "!bp_b8305412a9e77af4583903edf81bf270"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_215efcf398f442c4925d59dd5e836cfe",
+      "m_Feature": "!bp_868dce0c097e7054d9989b67b758c3b1"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_caeae1df04194eef813118be2b187fb9",
+      "m_Feature": "!bp_79260e8622a179d44bb7a9b5753b7d09"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_38fce508b837482cbf94eaae74431e74",
+      "m_Feature": "!bp_0d77308bf9f33dd41a4b6e50afb13b9c"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_a09931d3e0054addad73a5c9d759ca41",
+      "m_Feature": "!bp_ea07437e8f4e99b4aaff4c7470bc8f8f"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_5151e4d7512e41a2a35c1c2707281a64",
+      "m_Feature": "!bp_35ff63e637358d94aae9968e8528fbbf"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_0dae08e932ef4430b391790bdf9ab9d5",
+      "m_Feature": "!bp_a9c737fe7912e4d49ab64e83aac86ca5"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "PrimalistSecondBloodlineTakeBloodlinePower16",
+  "guid": "73e3ba6d3bf9434f8fa4a6ad53037eab",
+  "name": "Retain bloodline power"
+}

@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "DemonicAltarAgilityPaddedItem",
+  "guid": "a201976226dcfe34abda0e04c6b6b29b",
+  "m_Enchantments": [
+    "!bp_9448d3026111d6d49b31fc85e7f3745a"
+  ],
+  "m_Type": "!bp_b7e26eed57d524b478c0c90df0f0b8f1",
+  "name": "Web Strider (armor)"
+}

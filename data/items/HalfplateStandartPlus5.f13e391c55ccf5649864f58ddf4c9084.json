@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "HalfplateStandartPlus5",
+  "guid": "f13e391c55ccf5649864f58ddf4c9084",
+  "m_Enchantments": [
+    "!bp_6628f9d77fd07b54c911cd8930c0d531"
+  ],
+  "m_Type": "!bp_a59bf41f441456a4e8b04b09cb889af8",
+  "name": "Half-Plate +5"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_83aa6a766fb642e5be4b14c3f5db241c"
+    }
+  ],
+  "assetName": "GraveShiveringEnchantment",
+  "guid": "f1d70140b91f4c4d9842be58c36196a4"
+}

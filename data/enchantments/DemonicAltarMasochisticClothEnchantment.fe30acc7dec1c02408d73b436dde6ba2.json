@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_af11264704786b6428962181bc750722"
+    }
+  ],
+  "assetName": "DemonicAltarMasochisticClothEnchantment",
+  "guid": "fe30acc7dec1c02408d73b436dde6ba2"
+}

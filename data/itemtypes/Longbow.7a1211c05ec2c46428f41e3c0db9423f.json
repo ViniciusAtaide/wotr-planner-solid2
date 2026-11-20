@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Longbow",
+  "Components": [],
+  "assetName": "Longbow",
+  "guid": "7a1211c05ec2c46428f41e3c0db9423f",
+  "m_AttackType": "Ranged",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Bows",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": true,
+  "name": "Longbow"
+}

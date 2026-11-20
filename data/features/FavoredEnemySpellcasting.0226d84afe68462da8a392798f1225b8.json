@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_16cc2c937ea8d714193017780e7d4fc6",
+        "!bp_f7b7c69d80dd12c40920803a8efb2306"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FavoredEnemySpellcasting",
+  "guid": "0226d84afe68462da8a392798f1225b8",
+  "name": "Favored Enemy Spellcasting"
+}

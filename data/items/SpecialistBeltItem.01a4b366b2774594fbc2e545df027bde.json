@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "SpecialistBeltItem",
+  "guid": "01a4b366b2774594fbc2e545df027bde",
+  "m_Enchantments": [
+    "!bp_ce4706ca9cf1b204bb9a43547f328d62"
+  ],
+  "name": "Specialist's Belt"
+}

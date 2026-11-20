@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_93efbde2764b5504e98e6824cab3d27c",
+      "m_Feature": "!bp_93efbde2764b5504e98e6824cab3d27c"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_93efbde2764b5504e98e6824cab3d27c",
+      "m_Feature": "!bp_93efbde2764b5504e98e6824cab3d27c"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "KineticDiademFeatureNewNormal",
+  "guid": "16dfac17eb3e4d37be7d7a3c48c5e24f"
+}

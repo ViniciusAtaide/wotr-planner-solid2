@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BloodragerInfernalFeatSelection",
+  "guid": "d3139e9bd4146af41938cb10b436a6eb",
+  "m_AllFeatures": [
+    "!bp_4e219f5894ad0ea4daa0699e28c37b1d",
+    "!bp_0f8939ae6f220984e8fb568abbdfba95",
+    "!bp_231a37321e26551489503e4e1d99e681",
+    "!bp_25bc9c439ac44fd44ac3b1e58890916f",
+    "!bp_9719015edcbf142409592e2cbaab7fe1",
+    "!bp_d76497bfc48516e45a0831628f767a0f",
+    "!bp_175d1577bb6c9a04baf88eec99c66334"
+  ],
+  "name": "Bonus Feats (Infernal 12)"
+}

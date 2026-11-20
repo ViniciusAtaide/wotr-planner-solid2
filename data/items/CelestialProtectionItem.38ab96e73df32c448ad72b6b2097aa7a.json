@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CelestialProtectionItem",
+  "guid": "38ab96e73df32c448ad72b6b2097aa7a",
+  "m_Enchantments": [
+    "!bp_fb1630b28e902e04ab47032a326b64b9"
+  ],
+  "name": "Celestial Protection"
+}

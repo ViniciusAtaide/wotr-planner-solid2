@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "DemonicAspect"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BabauAspectFeature",
+  "guid": "99a34a0fa0c3a154fbc5b11fe2d18009",
+  "name": "Aspect of the Babau"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 5,
+  "assetName": "TowerShieldTraining",
+  "guid": "d2dbc71b45efa8749bd9c1924534b2bb",
+  "name": "Tower Shield Training"
+}

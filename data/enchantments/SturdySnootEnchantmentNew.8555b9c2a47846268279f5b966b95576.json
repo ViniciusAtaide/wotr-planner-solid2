@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_190bd11d6ff64d3c9524cc541a5ba97a"
+    }
+  ],
+  "assetName": "SturdySnootEnchantmentNew",
+  "guid": "8555b9c2a47846268279f5b966b95576"
+}

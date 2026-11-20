@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "HarmPreventersItem",
+  "guid": "994594cba83e4d63a69c2ce609d8849a",
+  "m_Enchantments": [
+    "!bp_32ed041455824e37922fd59f5cc61dca"
+  ],
+  "name": "Harm Preventers"
+}

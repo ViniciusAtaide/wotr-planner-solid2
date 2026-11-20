@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "GreaterSwordOfHeaven"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AngelSwordAntiDemonFeature",
+  "guid": "249ff73e41a85b84eabbf254870a7499",
+  "name": "Demon Bane"
+}

@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_933b4d571a31b9a43aa424eac0a22068"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 2,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_a5d8db569c9c62042b1f35d68ed31232"
+    }
+  ],
+  "Groups": [
+    "DivineHerbalistMystery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DivineHerbalistAncestorsMysteryFeature",
+  "guid": "2af1112188727bf469ec50c5575b6c52",
+  "name": "Ancestor (Divine Herbalist)"
+}

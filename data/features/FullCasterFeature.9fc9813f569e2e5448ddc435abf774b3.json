@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "FullCasterFeature",
+  "guid": "9fc9813f569e2e5448ddc435abf774b3",
+  "name": "Full Caster"
+}

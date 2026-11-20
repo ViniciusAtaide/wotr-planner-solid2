@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "MedallionOfDemonicDisruption",
+  "guid": "96c3f59318944afeaaa003197733e02d",
+  "m_Enchantments": [
+    "!bp_c51d5a0bbd3446e78e913a25b0c287f6"
+  ],
+  "name": "Medallion of Demonic Disruption"
+}

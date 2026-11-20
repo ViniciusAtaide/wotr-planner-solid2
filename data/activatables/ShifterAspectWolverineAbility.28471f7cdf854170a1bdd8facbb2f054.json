@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintActivatableAbility",
+  "Components": [],
+  "Group": "ShifterAspect",
+  "WeightInGroup": 1,
+  "assetName": "ShifterAspectWolverineAbility",
+  "guid": "28471f7cdf854170a1bdd8facbb2f054",
+  "m_Buff": "!bp_e0b35a32cf234381ab13c831106937f1",
+  "name": "Wolverine"
+}

@@ -1,0 +1,178 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "OrAndLogic",
+              "ConditionsChecker": {
+                "Conditions": [
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_62b33ac8ceb18dd47ad4c8f06849bc01"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_729411185291d704696e58316420fe38"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_94c29f69cdc34594a6a4677441ed7375"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": true,
+                    "m_Fact": "!bp_da48f9d7f697ae44ca891bfc50727988"
+                  }
+                ],
+                "Operation": "And"
+              },
+              "Not": false
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_b522759a265897b4f8f7a1a180a692e4"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_53f189dce67466c4f9e60610e5d1c4ba"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_49e5e1528329494e84c7dc6aa0b6bd7b"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_416ee6e6b4834bb8bd5afe8b08a69865"
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_dba3870830663394cbd8ff0da1db0df0",
+        "!bp_2a8ed839d57f31a4983041645f5832e2",
+        "!bp_fb4615bd462372a44b778ac9f035675f",
+        "!bp_eef664d1e4318f64cb2304d1628d29ae"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_7d6a30b40a950434ba19b9561e81313b"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_1d3fcbb51257dd6448a48db489cdd3ad",
+        "!bp_1e3f2b482df6a59489fc0e11849f0698"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_606cdd9198fb270429ab6dce1a6b14f1",
+        "!bp_1d30e6104b1b6d84099d0bdda4d885fd"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_8e339ab3898fdd14b879753eaaae933d",
+        "!bp_7a985ce3ed6888644b0e12746de241f2",
+        "!bp_0fbdfba2f12527a49982d790a056d14b"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_2386614435b923a4397a41e1d112eca9"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_b10c54491148de84b858763588664a8a"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_5b13008bdc18a0c4db321ae9f04ba77f"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_ff5c413c97362bc40b27b27347d521f9",
+        "!bp_a5e3c6ee70f04c6489fd0bac3582db74"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_32d443e6a4103d84b9243822c3abec97"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_ff5c413c97362bc40b27b27347d521f9",
+        "!bp_6a885e6b343e4b44ab56e0dd47ff83fb"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "SeekerBloodlineDraconicCopperProgression",
+  "guid": "2ad98f60b29ae604da0297037054080c",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_d078b2ef073f2814c9e338a789d97b73"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_45a4607686d96a1498891b3286121780"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_72051275b1dbb2d42ba9118237794f7c"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Draconic Bloodline — Copper (Bloodline)"
+}

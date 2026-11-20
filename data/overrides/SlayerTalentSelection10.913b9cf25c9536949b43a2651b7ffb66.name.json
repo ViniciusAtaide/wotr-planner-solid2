@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "level 10",
+  "reason": "The slayer's \"Slayer Talents\" are three selections, opened from levels 2, 6 and 10 (SlayerProgression; the Sanctified Slayer, an inquisitor archetype, adds them at other levels). This one opens at the slayer's levels 10 to 20 and the Sanctified Slayer's 16, 17 and 20, so no level holds on every route. It is qualified by the level its slayer route starts at.",
+  "target": "913b9cf25c9536949b43a2651b7ffb66"
+}

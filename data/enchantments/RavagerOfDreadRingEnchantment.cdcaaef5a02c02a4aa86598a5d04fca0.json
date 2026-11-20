@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_26cbb4e193bd5fc47aefc10ac237551d"
+    }
+  ],
+  "assetName": "RavagerOfDreadRingEnchantment",
+  "guid": "cdcaaef5a02c02a4aa86598a5d04fca0"
+}

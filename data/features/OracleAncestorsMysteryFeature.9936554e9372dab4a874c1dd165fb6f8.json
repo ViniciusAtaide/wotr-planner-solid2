@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [
+        "!bp_52dbfd8505e22f84fad8d702611f60b7"
+      ],
+      "m_Archetypes": [
+        "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+      ],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_933b4d571a31b9a43aa424eac0a22068"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 2,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_a5d8db569c9c62042b1f35d68ed31232"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillKnowledgeWorld"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillKnowledgeArcana"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreNature"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreReligion"
+    }
+  ],
+  "Groups": [
+    "OracleMystery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleAncestorsMysteryFeature",
+  "guid": "9936554e9372dab4a874c1dd165fb6f8",
+  "name": "Ancestor"
+}

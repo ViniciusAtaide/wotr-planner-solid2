@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_9afe25535d7181a4c85af6ab744968fa"
+    }
+  ],
+  "assetName": "BloodyCrescentEnchantment",
+  "guid": "8e5b50200b0ee3648a11c57d03021ec3"
+}

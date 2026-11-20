@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "HawksEyesItem",
+  "guid": "6624d096cb193784a906f0fc1c779e04",
+  "m_Enchantments": [
+    "!bp_facc85b3008bbc24b9ba41e61b4bae74"
+  ],
+  "name": "Hawk's Eyes"
+}

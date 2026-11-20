@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanNunchakuStage3Base",
+  "guid": "1f99bb58d1e2206409d9d235a3c525a3",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_4703b4c0922142f4cbe8895c10a47a9f"
+}

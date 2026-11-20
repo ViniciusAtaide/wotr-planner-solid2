@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RazmirRing",
+  "guid": "1ef783f955584050972c13f9399eb9d8",
+  "m_Enchantments": [
+    "!bp_67101a68109a4078b8067f4d9d702fd9",
+    "!bp_bc66f5712a147874aaac6b397b83f874",
+    "!bp_02a37956195faf645bb956f2e6c1ef57",
+    "!bp_7669e7a9af237314dbb2a22e78e1a0b4"
+  ],
+  "name": "Razmir's Ring"
+}

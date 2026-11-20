@@ -1,0 +1,88 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "ActivateTrigger",
+      "Actions": {
+        "Actions": [
+          {
+            "$type": "AddFact",
+            "Unit": {
+              "$type": "FactOwner"
+            },
+            "m_Fact": "!bp_89dfce413170db049b0386fff333e9e1"
+          }
+        ]
+      },
+      "Conditions": {
+        "Conditions": [
+          {
+            "$type": "HasFact",
+            "Not": false,
+            "Unit": {
+              "$type": "FactOwner"
+            },
+            "m_Fact": "!bp_3d8d3d6678b901444a07984294a1bc24"
+          },
+          {
+            "$type": "HasFact",
+            "Not": false,
+            "Unit": {
+              "$type": "FactOwner"
+            },
+            "m_Fact": "!bp_d4a2a75d01d1e77489ff692636a538bf"
+          }
+        ],
+        "Operation": "Or"
+      }
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_cb30a291c75def84090430fbf2b5c05e"
+      ]
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_cbc88c4c166a0ce4a95375a0a721bd01",
+      "m_Feature": "!bp_cbc88c4c166a0ce4a95375a0a721bd01"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "KineticElementalFocus"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_fbed3ca8c0d89124ebb3299ccf68c439"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": []
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "SecondaryElementFire",
+  "guid": "caa7edca64af1914d9e14785beb6a143",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Fire (Kineticist 7)"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [],
+  "assetName": "ScalemailType",
+  "guid": "f95c21c70a5677346b75e447c7225ba6",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "Medium",
+  "name": "Medium Armor — Scalemail"
+}

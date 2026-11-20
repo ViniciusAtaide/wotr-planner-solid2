@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronMasterworkLightCrossbow",
+  "guid": "30467908b55bf0643a9257eb5c72f452",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d525e7a6d8d5aa648a976ac41194b8d0",
+  "name": "Cold Iron Masterwork Light Crossbow"
+}

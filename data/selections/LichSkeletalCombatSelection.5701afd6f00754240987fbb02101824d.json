@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "LichSkeletalCombatSelection",
+  "guid": "5701afd6f00754240987fbb02101824d",
+  "m_AllFeatures": [
+    "!bp_b8a52bbe63e7d6b48b002ee474e90fdd"
+  ],
+  "name": "Bonus Combat Feat (Skeletal Fighter I)"
+}

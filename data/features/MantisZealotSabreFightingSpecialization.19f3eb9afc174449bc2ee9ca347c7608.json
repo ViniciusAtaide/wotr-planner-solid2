@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddParametrizedFeatures",
+      "m_Features": [
+        {
+          "ParamObject": null,
+          "ParamSpellSchool": "None",
+          "ParamWeaponCategory": "SawtoothSabre",
+          "Stat": "Unknown",
+          "m_Feature": "!bp_31470b17e8446ae4ea0dacd6c5817d86"
+        }
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MantisZealotSabreFightingSpecialization",
+  "guid": "19f3eb9afc174449bc2ee9ca347c7608",
+  "name": "Saber Fighting (Mantis Zealot 4)"
+}

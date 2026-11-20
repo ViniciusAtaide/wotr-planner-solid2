@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Urgrosh",
+  "Components": [],
+  "assetName": "DwarvenUrgroshSpearHead",
+  "guid": "c4e95e3c489721e4382fd8514a522f9d",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Double, Spears",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Dwarven Urgrosh"
+}

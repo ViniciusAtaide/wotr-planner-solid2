@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfVeneratedChampionItem",
+  "guid": "87c5f3e1b5a01d0448d550b727f45cb4",
+  "m_Enchantments": [
+    "!bp_177510057a2f71a4c8e61bebabaefa28",
+    "!bp_3c7525be2155f3241b4c41288df8a5b9"
+  ],
+  "name": "Belt of the Venerated Champion"
+}

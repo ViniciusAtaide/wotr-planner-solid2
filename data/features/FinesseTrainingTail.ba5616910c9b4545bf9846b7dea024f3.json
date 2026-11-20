@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteProficiency",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "Tail"
+      ]
+    },
+    {
+      "$type": "PrerequisiteConditionForWeaponCategory",
+      "m_Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "ContextConditionIsWeaponEquipped",
+              "BothHandsAreEmpty": false,
+              "Category": "Tail",
+              "CheckOnCaster": true,
+              "CheckSlot": false,
+              "CheckWeaponCategory": true,
+              "CheckWeaponRangeType": false,
+              "JustCheckEmptyHand": false,
+              "Not": false,
+              "RangeType": "Melee",
+              "Slot": "PrimaryHand"
+            }
+          ],
+          "Operation": "And"
+        },
+        "Not": false
+      },
+      "m_WeaponCategories": [
+        "Tail"
+      ]
+    }
+  ],
+  "Groups": [
+    "FinesseTraining"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FinesseTrainingTail",
+  "guid": "ba5616910c9b4545bf9846b7dea024f3",
+  "name": "Finesse Training (Tail)"
+}

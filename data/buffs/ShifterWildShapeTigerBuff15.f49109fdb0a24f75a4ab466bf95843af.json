@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillStealth",
+      "Value": 4
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "ShifterWildShapeTigerBuff15",
+  "guid": "f49109fdb0a24f75a4ab466bf95843af",
+  "name": "Major Form (Tiger)"
+}

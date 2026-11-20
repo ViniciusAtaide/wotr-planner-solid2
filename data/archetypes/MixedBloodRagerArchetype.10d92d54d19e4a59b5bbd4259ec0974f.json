@@ -1,0 +1,38 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_2c2283f5735d4e278f4088d9ff90edbb"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_cd9ba53d5b144fd4aad4fc6b717ecd50"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_62b33ac8ceb18dd47ad4c8f06849bc01"
+      ]
+    }
+  ],
+  "RemoveSpellbook": true,
+  "ReplaceClassSkills": false,
+  "assetName": "MixedBloodRagerArchetype",
+  "guid": "10d92d54d19e4a59b5bbd4259ec0974f",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Mixed-Blood Rager"
+}

@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "MythicTrick3",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "TricksterRank3Selection",
+  "guid": "446f4a8b32019f5478a8dfeddac74710",
+  "m_AllFeatures": [
+    "!bp_e45bf795c4f84c3b8a83c011f8580491",
+    "!bp_5e26c673173e423881e318d2f0ae84f0",
+    "!bp_26691ec239c84568bd27b055a1528912",
+    "!bp_b88ca3a5476ebcc4ea63d5c1e92ce222",
+    "!bp_6db3651d9af54f28b5a3a5570f49f349",
+    "!bp_9f677bc314b84cc388044c3786148fd9",
+    "!bp_74d23b6698554e36974711eacc386290",
+    "!bp_64131f0ac1e2497a806856461bdcfe4e",
+    "!bp_c785d2718021449f895a960c7840b4d0",
+    "!bp_9d1446e4947544429a64e5fa20906ebf",
+    "!bp_eb196db561554341a571acb3216fc1dc"
+  ],
+  "name": "Greater Mythic Trick"
+}

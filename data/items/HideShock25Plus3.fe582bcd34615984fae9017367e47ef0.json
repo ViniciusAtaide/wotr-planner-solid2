@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "HideShock25Plus3",
+  "guid": "fe582bcd34615984fae9017367e47ef0",
+  "m_Enchantments": [
+    "!bp_9448d3026111d6d49b31fc85e7f3745a",
+    "!bp_26b91513989a653458986fabce24ba95"
+  ],
+  "m_Type": "!bp_7a01292cef39bf2408f7fae7a9f47594",
+  "name": "Hide Armor of Greater Electricity Resistance"
+}

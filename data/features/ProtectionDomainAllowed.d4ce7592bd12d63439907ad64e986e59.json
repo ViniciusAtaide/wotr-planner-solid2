@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ProtectionDomainAllowed",
+  "guid": "d4ce7592bd12d63439907ad64e986e59"
+}

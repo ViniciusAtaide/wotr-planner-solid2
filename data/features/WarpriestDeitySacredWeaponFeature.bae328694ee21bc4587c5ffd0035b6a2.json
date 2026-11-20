@@ -1,0 +1,184 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_6122dacf418611540a3c91e67197ee4e",
+      "m_Feature": "!bp_91d0bd9701afe994bab517d6529acf8a"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_a3a5ccc9c670e6f4ca4a686d23b89900",
+      "m_Feature": "!bp_2eacfd16f6bc0b445813f28473d3e6ba"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_bd72ca8ffcfec5745899ac56c93f12c5",
+      "m_Feature": "!bp_28bb44c3dc0373b45be589ad759cf40f"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_c7531715a3f046d4da129619be63f44c",
+      "m_Feature": "!bp_a8b41c73bfca4b94c935f45f6fce3601"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_300e212868bca984687c92bcb66d381b",
+      "m_Feature": "!bp_f793cb43d2d22cf468c2c3f1088d7540"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_ddf913858bdf43b4da3b731e082fbcc0",
+      "m_Feature": "!bp_f9b6e6d6a489609419b87b1f684d1a56"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_2c0a3b9971327ba4d9d85354d16998c1",
+      "m_Feature": "!bp_bb445cdb72b543f429ef375a1ccaba11"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_afc775188deb7a44aa4cbde03512c671",
+      "m_Feature": "!bp_a137e3937bb138946b8eff1ac924a179"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_8f49a5d8528a82c44b8c117a89f6b68c",
+      "m_Feature": "!bp_c1233306196e39f42bbf6ad37b1a9d89"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_4af983eec2d821b40a3065eb5e8c3a72",
+      "m_Feature": "!bp_5af93ce0555c7a940891fbb643a99836"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_c3e4d5681906d5246ab8b0637b98cbfe",
+      "m_Feature": "!bp_d78604693438eb244a41af991c78ce25"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_8b535b6842e063d48a571a042c3c6e8f",
+      "m_Feature": "!bp_b2ab335fb6d417242aa96d2f2d65da49"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_88d5da04361b16746bf5b65795e0c38c",
+      "m_Feature": "!bp_a28f8d92100760843b8ed61db1fcb4f0"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_23a77a5985de08349820429ce1b5a234",
+      "m_Feature": "!bp_79d23ee0026e83f4e9a1efe1d33831ff"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_f12c1ccc9d600c04f8887cd28a8f45a5",
+      "m_Feature": "!bp_a540c62c141a2b34597850ef3b86f454"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_f86bc8fbf13221f4f9041608a1fb8585",
+      "m_Feature": "!bp_33da4b380d949734aafbec2a9e701e03"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_6262cfce7c31626458325ca0909de997",
+      "m_Feature": "!bp_0e669814a8136ae468528150aae63c2c"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_805b6bdc8c96f4749afc687a003f9628",
+      "m_Feature": "!bp_6f7f3a0cbeba784469b17b3d8f8260ea"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_458750bc214ab2e44abdeae404ab22e9",
+      "m_Feature": "!bp_0bca569c95613264d844f1fd00937968"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_04bc2b62273ab744092d992ed72bff41",
+      "m_Feature": "!bp_6ccf540c207836142bd09a18ccca7f85"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_c1c4f7f64842e7e48849e5e67be11a1b",
+      "m_Feature": "!bp_9b16eed38ff2fe04d878e4dfb75dfe0f"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_b382afa31e4287644b77a8b30ed4aa0b",
+      "m_Feature": "!bp_0e95fb0d75b58104392ae4149ca751f8"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_d2d5c5a58885a6b489727467e13c3337",
+      "m_Feature": "!bp_0bdf6a0cb2400d442ba7e1b529245516"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_812f6c07148088e41a9ac94b56ac2fc8",
+      "m_Feature": "!bp_0c432f1060d7eff4cb257482882b0a23"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_f7eed400baa66a744ad361d4df0e6f1b",
+      "m_Feature": "!bp_5c73ec301e1e3094ebb031bda43e6481"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_583a26e88031d0a4a94c8180105692a5",
+      "m_Feature": "!bp_f29039db004a4a5d896900a423d44d7e"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_a3189d5b7c4d4d91beaa8bfffac3e38e",
+      "m_Feature": "!bp_c37574188b0242d2ac04a454a0430dd5"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_8f7118d68f6e44dea94dddb51f38cbdd",
+      "m_Feature": "!bp_1bc6e1f53b3447478638d1ea41a94ccc"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_772e2673945e4583a804ae01f67efea0",
+      "m_Feature": "!bp_0c0d5d2d92684538a9d9833e33db0b28"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "WarpriestDeitySacredWeaponFeature",
+  "guid": "bae328694ee21bc4587c5ffd0035b6a2"
+}

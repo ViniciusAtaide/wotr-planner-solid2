@@ -1,0 +1,43 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_0fd21e10dff071e4580ef9f30a0334df"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_0fd21e10dff071e4580ef9f30a0334df"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_0fd21e10dff071e4580ef9f30a0334df"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "OrderOfTheNailFavoriteEnemyMonstrousHumanoidProgression",
+  "guid": "dfa3a87c01114c4685aea70b914978ab",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_ed246f1680e667b47b7427d51e651059"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Favored Enemy — Monstrous Humanoids (Order of the Nail)"
+}

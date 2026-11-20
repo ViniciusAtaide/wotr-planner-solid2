@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "GoldDragonBreathFeatureSelection",
+  "guid": "81fe63677a4f4f7fb64e9be7cf075948",
+  "m_AllFeatures": [
+    "!bp_e8b9aad5295c49539f1bbf901d314964",
+    "!bp_a9ce14a6601c4bd1aea5d29d41e9162d",
+    "!bp_eb26e9df19a54ae2a634828f1cb7a708",
+    "!bp_d6fa1c8aead34a2ba2c18fc7a41a649c",
+    "!bp_9266dd19a70f44068929107484dc1250",
+    "!bp_ef3690c36872422d9bfadeb276b5c3fe",
+    "!bp_0cc6e15e961b4bb9b4328002cbc57388",
+    "!bp_c606a6897125480ebde14b63bb8fb18e",
+    "!bp_0351c6c95adc48b3b39073167094cd19",
+    "!bp_34b85b2c587545d383804455525c53b2"
+  ],
+  "name": "Improved Gold Dragon Breath"
+}

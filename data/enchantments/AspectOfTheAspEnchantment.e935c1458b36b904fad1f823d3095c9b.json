@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_9b3f6877efdf29a4e821c33ec830f312"
+    },
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_9b3f6877efdf29a4e821c33ec830f312"
+    }
+  ],
+  "assetName": "AspectOfTheAspEnchantment",
+  "guid": "e935c1458b36b904fad1f823d3095c9b"
+}

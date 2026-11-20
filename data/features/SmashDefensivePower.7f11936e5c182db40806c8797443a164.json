@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "DefensivePower"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SmashDefensivePower",
+  "guid": "7f11936e5c182db40806c8797443a164",
+  "name": "Smash"
+}

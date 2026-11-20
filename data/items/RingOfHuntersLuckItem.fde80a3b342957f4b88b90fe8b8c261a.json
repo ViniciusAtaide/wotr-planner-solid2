@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfHuntersLuckItem",
+  "guid": "fde80a3b342957f4b88b90fe8b8c261a",
+  "m_Enchantments": [
+    "!bp_442863695a5dec34eb71a4c257e0f04b"
+  ],
+  "name": "Ring of Plentiful Hunts"
+}

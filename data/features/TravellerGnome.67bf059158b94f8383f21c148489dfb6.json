@@ -1,0 +1,40 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_09bc9ccb8ee0ffe4b8827066b1ed7e11"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_020bd2ae61de90341b7f874b788c160a"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_859b33db7c0dced4bbbca14ef7f11da8"
+    },
+    {
+      "$type": "AddContextStatBonus",
+      "Descriptor": "Racial",
+      "HasMinimal": false,
+      "Minimal": 0,
+      "Multiplier": 1,
+      "Stat": "SkillLoreNature",
+      "Value": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_f268a00e42618144e86c9db76af7f3e9"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TravellerGnome",
+  "guid": "67bf059158b94f8383f21c148489dfb6",
+  "name": "Traveler"
+}

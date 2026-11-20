@@ -1,0 +1,40 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "KineticElementalFocus"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_96e9396ffce22de498a0d29a0f14117b",
+        "!bp_53a8c2f3543147b4d913c6de0c57c7e8"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_29ec36fa2a5b8b94ebce170bd369083a"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "KineticKnightElementalFocusWater",
+  "guid": "5e839c743c6da6649a43cdeb70b6018f",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Water (Kinetic Knight)"
+}

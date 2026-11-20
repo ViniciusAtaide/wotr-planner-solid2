@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8854dc78d9084631a9512b3ba4f12f9f"
+    }
+  ],
+  "assetName": "RingOfFoeFocusEnchantment",
+  "guid": "833da63d8b48415d8c0467fa049555eb"
+}

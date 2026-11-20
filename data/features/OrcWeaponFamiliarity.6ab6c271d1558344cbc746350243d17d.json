@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Greataxe",
+        "Falchion"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OrcWeaponFamiliarity",
+  "guid": "6ab6c271d1558344cbc746350243d17d",
+  "name": "Orc Weapon Familiarity"
+}

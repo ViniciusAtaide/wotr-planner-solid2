@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_ec270440c7b34774819d197b6d141e48"
+    }
+  ],
+  "assetName": "ArachnidGogglesEnchantment",
+  "guid": "3b8b841e1e65494b9dd2034fb4ae07f9"
+}

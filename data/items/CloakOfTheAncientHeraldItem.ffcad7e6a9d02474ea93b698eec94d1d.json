@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CloakOfTheAncientHeraldItem",
+  "guid": "ffcad7e6a9d02474ea93b698eec94d1d",
+  "m_Enchantments": [
+    "!bp_6280c2967a4a3d340b0cbe6ca0c306b9"
+  ],
+  "name": "Cloak of the Ancient Herald"
+}

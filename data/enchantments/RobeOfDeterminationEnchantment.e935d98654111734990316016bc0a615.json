@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b50ccdb58ae51d646b7ec8a5d2dc2a97"
+    }
+  ],
+  "assetName": "RobeOfDeterminationEnchantment",
+  "guid": "e935d98654111734990316016bc0a615"
+}

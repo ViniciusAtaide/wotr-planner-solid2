@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "BattleMagesHeadbandItem",
+  "guid": "229111433080fe247800e95385c9af20",
+  "m_Enchantments": [
+    "!bp_0f157adfc02708441b02725a24e8eb71",
+    "!bp_ce06157783244cd4b884a4cba0ed1b1a",
+    "!bp_f945413e1b120294780ba9de26bd2f7a"
+  ],
+  "name": "Battle Mage's Headband"
+}

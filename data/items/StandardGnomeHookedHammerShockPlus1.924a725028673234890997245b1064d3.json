@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardGnomeHookedHammerShockPlus1",
+  "guid": "924a725028673234890997245b1064d3",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": "!bp_12dcb97bb0f4ceb4eb78f9fbe37bd492",
+  "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3",
+  "name": "Shock Gnome Hooked Hammer +1"
+}

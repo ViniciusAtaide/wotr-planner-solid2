@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8c5cd552e87c4264b9470156a92b616f"
+    }
+  ],
+  "assetName": "PlayersPhylacteryWeaponEnchantment",
+  "guid": "55eb2f3ecaeb47119d36bcbc3e902f24"
+}

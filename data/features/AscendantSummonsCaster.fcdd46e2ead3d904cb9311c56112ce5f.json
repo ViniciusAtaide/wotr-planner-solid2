@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AscendantSummonsCaster",
+  "guid": "fcdd46e2ead3d904cb9311c56112ce5f",
+  "name": "Ascendant Summons"
+}

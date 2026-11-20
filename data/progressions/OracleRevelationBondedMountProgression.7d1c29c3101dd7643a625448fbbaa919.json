@@ -1,0 +1,153 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "OracleRevelationBondedMountProgression",
+  "guid": "7d1c29c3101dd7643a625448fbbaa919",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": []
+}

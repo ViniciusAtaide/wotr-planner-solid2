@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WitchDoctorCounterCurseFeature",
+  "guid": "74ce117848b4ea641acf266d84ee1602",
+  "name": "Counter Curse"
+}

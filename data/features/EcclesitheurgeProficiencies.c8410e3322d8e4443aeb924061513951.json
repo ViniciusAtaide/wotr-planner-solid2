@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Club",
+        "Dagger",
+        "LightCrossbow",
+        "HeavyCrossbow",
+        "Quarterstaff"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EcclesitheurgeProficiencies",
+  "guid": "c8410e3322d8e4443aeb924061513951",
+  "name": "Ecclesitheurge Proficiencies"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "RobeOfArcaneAnnihilationItemCorrect",
+  "guid": "f389db9e641c45a2b3f7ab9cca0f76ce",
+  "m_Enchantments": [
+    "!bp_cff0491e9570d5943ba48e8c872f40e4"
+  ],
+  "name": "Ambrosial Attire of Arcane Annihilation"
+}

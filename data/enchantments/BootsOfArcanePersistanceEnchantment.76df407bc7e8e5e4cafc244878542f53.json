@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_5e7bedc8d16a324468121c18cb0cd63a"
+    }
+  ],
+  "assetName": "BootsOfArcanePersistanceEnchantment",
+  "guid": "76df407bc7e8e5e4cafc244878542f53"
+}

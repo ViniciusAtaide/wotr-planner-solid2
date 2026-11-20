@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_e7f00249d26a306459a07094db488bec"
+    }
+  ],
+  "assetName": "GowrowAquaticSpikedLightShieldEnchantment",
+  "guid": "8376df0644480cf4580386036af8b0f6"
+}

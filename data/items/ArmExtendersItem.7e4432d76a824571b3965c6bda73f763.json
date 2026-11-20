@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "ArmExtendersItem",
+  "guid": "7e4432d76a824571b3965c6bda73f763",
+  "m_Enchantments": [
+    "!bp_f48815cda43c4b2c85cb22eee94cfa95"
+  ],
+  "name": "Arm Extenders"
+}

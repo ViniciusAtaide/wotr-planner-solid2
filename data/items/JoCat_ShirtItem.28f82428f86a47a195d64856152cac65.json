@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "JoCat_ShirtItem",
+  "guid": "28f82428f86a47a195d64856152cac65",
+  "m_Enchantments": [
+    "!bp_b408f973e4a04a5ba8dda7fd045f1a6f"
+  ],
+  "name": "Happy Traveler's Shirt"
+}

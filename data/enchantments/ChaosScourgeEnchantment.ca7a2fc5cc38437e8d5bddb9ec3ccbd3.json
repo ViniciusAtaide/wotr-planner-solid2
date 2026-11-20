@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_7df1da60a64d417598db94ac5f56e89a"
+    }
+  ],
+  "assetName": "ChaosScourgeEnchantment",
+  "guid": "ca7a2fc5cc38437e8d5bddb9ec3ccbd3"
+}

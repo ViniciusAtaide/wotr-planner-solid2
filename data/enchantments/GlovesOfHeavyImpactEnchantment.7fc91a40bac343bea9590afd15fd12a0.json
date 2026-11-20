@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_2b520766e6f84dfda2c04ea10d902511"
+    }
+  ],
+  "assetName": "GlovesOfHeavyImpactEnchantment",
+  "guid": "7fc91a40bac343bea9590afd15fd12a0"
+}

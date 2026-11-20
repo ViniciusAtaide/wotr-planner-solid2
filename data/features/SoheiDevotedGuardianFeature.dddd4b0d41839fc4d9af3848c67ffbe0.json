@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_e8f21e5b58e0569468e420ebea456124",
+      "m_Feature": "!bp_b43be83020afb874598e6fccdfb9fe8f"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_e70727ef967145d3b92f913bb368ddb4"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SoheiDevotedGuardianFeature",
+  "guid": "dddd4b0d41839fc4d9af3848c67ffbe0",
+  "name": "Devoted Guardian"
+}

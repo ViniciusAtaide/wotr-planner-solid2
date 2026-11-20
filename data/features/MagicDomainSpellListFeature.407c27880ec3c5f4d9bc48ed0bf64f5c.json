@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "MagicDomainSpellListFeature",
+  "guid": "407c27880ec3c5f4d9bc48ed0bf64f5c"
+}

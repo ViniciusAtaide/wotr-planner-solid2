@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "DragonAspectSelection",
+  "guid": "c2872505b99c43b8b146ed89ffeb9af5",
+  "m_AllFeatures": [
+    "!bp_4cdc4c0bda6c48a3bc1baff7f782dd0e",
+    "!bp_98f8aaf2baec4abcb1f868a6f2ece134",
+    "!bp_d8cd18b343834b7097dd364b75e0c800"
+  ],
+  "name": "Draconic Aspect Selection"
+}

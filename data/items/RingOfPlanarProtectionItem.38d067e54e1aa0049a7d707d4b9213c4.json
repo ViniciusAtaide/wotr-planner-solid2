@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfPlanarProtectionItem",
+  "guid": "38d067e54e1aa0049a7d707d4b9213c4",
+  "m_Enchantments": [
+    "!bp_fe1fbae6cd5dbdc408d02f7974b008f3"
+  ],
+  "name": "Ring of Planar Protection"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "WyrmwallArmorItem",
+  "guid": "2b0ef21fbc688a74fa20540f93a01aff",
+  "m_Enchantments": [
+    "!bp_84d191a748edef84ba30c13b8ab83bd9",
+    "!bp_92bf74444378fa0439b55932a89fd914"
+  ],
+  "m_Type": "!bp_5f0f4b6e480e7054b8592b5a8b55854a"
+}

@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "IncreaseActivatableAbilityGroupSize",
+      "Group": "ShifterChimeraAspect"
+    },
+    {
+      "$type": "IncreaseActivatableAbilityGroupSize",
+      "Group": "ShifterChimeraAspect"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_69dc82f92b3046e3b31e1a69cb434182"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FinalShifterAspectFeature",
+  "guid": "5a155f5c3f834a319feab52dc66ee185",
+  "name": "Final Aspect"
+}

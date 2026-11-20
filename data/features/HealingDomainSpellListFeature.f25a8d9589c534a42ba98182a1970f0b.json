@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "HealingDomainSpellListFeature",
+  "guid": "f25a8d9589c534a42ba98182a1970f0b"
+}

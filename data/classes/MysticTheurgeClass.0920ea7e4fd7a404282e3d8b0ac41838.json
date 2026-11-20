@@ -1,0 +1,82 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillKnowledgeArcana",
+    "SkillLoreReligion",
+    "SkillPerception"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 3
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "SkillLoreReligion",
+      "Value": 3
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteCasterTypeSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsArcane": true,
+      "IsFeatureSelectionWhiteList": false,
+      "OnlySpontaneous": false,
+      "RequiredSpellLevel": 2
+    },
+    {
+      "$type": "PrerequisiteCasterTypeSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsArcane": false,
+      "IsFeatureSelectionWhiteList": false,
+      "OnlySpontaneous": false,
+      "RequiredSpellLevel": 2
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_5c77110cd0414e7eb4c2e485659c9a46",
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D6",
+  "IsMythic": false,
+  "PrestigeClass": true,
+  "SkillPoints": 2,
+  "assetName": "MysticTheurgeClass",
+  "guid": "0920ea7e4fd7a404282e3d8b0ac41838",
+  "m_Archetypes": [],
+  "m_BaseAttackBonus": "!bp_0538081888b2d8c41893d25d098dee99",
+  "m_FortitudeSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_08c1075ef2786ef4fae11e82698a16e0",
+  "m_ReflexSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_1f309006cd2855e4e91a6c3707f3f700",
+  "name": "Mystic Theurge"
+}

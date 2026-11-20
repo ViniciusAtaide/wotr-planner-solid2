@@ -1,0 +1,8 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "HeavyShieldRusty",
+  "guid": "780499026e07419eac86b816b5f8e77e",
+  "m_ArmorComponent": "!bp_7432826ebbfe462b8cc9e5414eea3d7b",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393"
+}

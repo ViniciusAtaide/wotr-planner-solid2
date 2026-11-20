@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b4b2a35400e043478e16e3bf616ba7f8"
+    }
+  ],
+  "assetName": "PortalStoneStanceSaiEnchantment",
+  "guid": "59cfbb419e008ae489b452e25bfbc175"
+}

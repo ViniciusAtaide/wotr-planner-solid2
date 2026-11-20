@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_74a80c42774045f4d916dc0d990b7738"
+    }
+  ],
+  "assetName": "AdamantineArmorMediumEnchant",
+  "guid": "aa25531ab5bb58941945662aa47b73e7"
+}

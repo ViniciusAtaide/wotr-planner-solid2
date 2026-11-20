@@ -1,0 +1,40 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_88c89ab44a36a67438347e257f70c8fe",
+        "!bp_430e0c84bb41cad49a46a151d770de68"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_430e0c84bb41cad49a46a151d770de68"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_b0a5118b4fb793241bc7042464b23fab",
+        "!bp_60008a10ad7ad6543b1f63016741a5d2"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "PossessedOracleArchetype",
+  "guid": "09035bb5dbb714645bb08ea7db47884c",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Possessed Oracle"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_c920f2cd2244d284aa69a146aeefcb2c",
+      "m_Feature": "!bp_c920f2cd2244d284aa69a146aeefcb2c"
+    }
+  ],
+  "Stacking": "Prolong",
+  "assetName": "CavalierTacticianBackToBackBuff",
+  "guid": "693964e674883e74b8d0005dbf4a4e6b",
+  "name": "Back to Back (buff)"
+}

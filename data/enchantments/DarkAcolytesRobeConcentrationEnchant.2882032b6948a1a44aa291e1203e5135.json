@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_0f4db4bd870f1214c9e9bc3b42dd3c7f"
+    }
+  ],
+  "assetName": "DarkAcolytesRobeConcentrationEnchant",
+  "guid": "2882032b6948a1a44aa291e1203e5135"
+}

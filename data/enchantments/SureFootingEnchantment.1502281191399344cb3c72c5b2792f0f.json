@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_aa80afba7fdba9549aa018e786f265d6"
+    }
+  ],
+  "assetName": "SureFootingEnchantment",
+  "guid": "1502281191399344cb3c72c5b2792f0f"
+}

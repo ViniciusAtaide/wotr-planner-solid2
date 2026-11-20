@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "ShieldOfChastiseShieldItem",
+  "guid": "5d5ac048d6e24979845296249eeb9878",
+  "m_ArmorComponent": "!bp_89694f8b5bcd47ed8a59a6c5c1c25df3",
+  "m_WeaponComponent": null,
+  "name": "Shield of Chastise"
+}

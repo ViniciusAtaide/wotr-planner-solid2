@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "ShapeshiftersHelmItem",
+  "guid": "6b658e1f12d7a624ab4911873f78c694",
+  "m_Enchantments": [
+    "!bp_03fd4efccdae270419c560549a97cfd0"
+  ],
+  "name": "Shapeshifter's Helm"
+}

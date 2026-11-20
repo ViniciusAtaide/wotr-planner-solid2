@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_39144c817b70467499cc32e3cff59d81"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_84ffa66048d26b14c800a425199f9886"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CravenHalfling",
+  "guid": "889fa46af27148f9b9aefa27b7a29a2e",
+  "name": "Craven"
+}

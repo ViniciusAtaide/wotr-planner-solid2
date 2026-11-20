@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_7bb4bb3e7fd26f34e8ca035a27e03e85",
+        "!bp_2127c37ccc7986e4083665552d6ecd5c",
+        "!bp_09106dcc03321154f955e2d0296a082e"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "Groups": [
+    "OracleRevelation"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleRevelationClobberingStrike",
+  "guid": "b830f7ed7a68fa349a08cccc35975bdd",
+  "name": "Clobbering Strike"
+}

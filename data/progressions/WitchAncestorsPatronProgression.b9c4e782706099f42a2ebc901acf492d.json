@@ -1,0 +1,81 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "WitchPatron"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_8821290b22ea5ea4a96d82be45f2bd61"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_e770cbbaf5948164f8995973f412cac9"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_9ca706b0ff28d984ab610135ef892ffd"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_15dca01777ab73749bced5f5f582aa8a"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_061f0afdb62334945a2a1be7be4c6597"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_59691a0b57baee54192d4c8a17e75b77"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_2d011ba269fb19344a1d0aeecd005aee"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_937c6595be0888749ab5fe3b10c358fb"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_6dde63856e5db5d45ac71dfb4775c61d"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WitchAncestorsPatronProgression",
+  "guid": "b9c4e782706099f42a2ebc901acf492d",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Ancestors"
+}

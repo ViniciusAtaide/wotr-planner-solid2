@@ -1,0 +1,46 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_9cce1825c91045543b5d432aad9c416a",
+        "!bp_196aa46f32af5b34c9758aaaaa751ae4"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_9cce1825c91045543b5d432aad9c416a"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_29a333b7ccad3214ea3a51943fa0d8e9",
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "LeyLineGuardianWitchArchetype",
+  "guid": "ee92a9813c04b1440a3af3c766b6b02d",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": "!bp_fb4e216b322d3924e9c7041016b46999",
+  "m_WillSave": null,
+  "name": "Ley Line Guardian"
+}

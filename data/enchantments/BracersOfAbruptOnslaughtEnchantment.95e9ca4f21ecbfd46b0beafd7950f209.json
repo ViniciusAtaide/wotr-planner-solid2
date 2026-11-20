@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_da90fa4a0f6784241919ee191cc41be9"
+    }
+  ],
+  "assetName": "BracersOfAbruptOnslaughtEnchantment",
+  "guid": "95e9ca4f21ecbfd46b0beafd7950f209"
+}

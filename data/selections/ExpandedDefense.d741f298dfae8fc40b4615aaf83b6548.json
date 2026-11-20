@@ -1,0 +1,40 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 8,
+      "Not": false,
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    },
+    {
+      "$type": "PrerequisiteSelectionPossible",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_ThisFeature": "!bp_d741f298dfae8fc40b4615aaf83b6548"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "KineticWildTalent"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ExpandedDefense",
+  "guid": "d741f298dfae8fc40b4615aaf83b6548",
+  "m_AllFeatures": [
+    "!bp_29ec36fa2a5b8b94ebce170bd369083a",
+    "!bp_8ad77685e64842c45a6f5b19f9086c6c",
+    "!bp_a275b35f282601944a97e694f6bc79f8",
+    "!bp_bb0de2047c448bd46aff120be3b39b7a"
+  ],
+  "name": "Expanded Defense"
+}

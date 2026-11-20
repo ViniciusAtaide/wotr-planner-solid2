@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HeadbandOfWiseNegotiatorItem",
+  "guid": "7c1eadbabbfb8fb4cb6578d44c109469",
+  "m_Enchantments": [
+    "!bp_c3c2a133c0aa12240ade34762c146664",
+    "!bp_4dcb81fcbfb11714db17ece0c152ed8b",
+    "!bp_e150ea0747ea41fcbeeb5dd183968a95"
+  ],
+  "name": "Headband of the Wise Negotiator"
+}

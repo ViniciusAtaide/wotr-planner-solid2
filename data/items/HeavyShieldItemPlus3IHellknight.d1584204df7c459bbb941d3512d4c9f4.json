@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "HeavyShieldItemPlus3IHellknight",
+  "guid": "d1584204df7c459bbb941d3512d4c9f4",
+  "m_ArmorComponent": "!bp_58c05084b6443234e99660f86a781d33",
+  "m_WeaponComponent": "!bp_7c8f6712c444cf446a4bd3b8b717cb5c",
+  "name": "Spiked Heavy Shield +3"
+}

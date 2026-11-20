@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_dfc2ebb7f1fc41b8bd89aacb928dae3b"
+    }
+  ],
+  "assetName": "AncientWoodEnchantment",
+  "guid": "54276e617b5d4f2fa889a53e5271afff"
+}

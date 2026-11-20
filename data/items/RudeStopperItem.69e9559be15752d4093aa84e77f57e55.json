@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "RudeStopperItem",
+  "guid": "69e9559be15752d4093aa84e77f57e55",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_36d0551b8a28587438a47fcbbf53c083",
+  "name": "Rude Stopper"
+}

@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "TricksterAthleticsSavingThrows"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_b7de8e5e4d67faf4791866966afc0a43"
+    }
+  ],
+  "Groups": [
+    "MythicTrick2"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterAthleticsTier2Feature",
+  "guid": "198b6abf58a36404f8189787a082fa02",
+  "name": "Athletics 2 Rank"
+}

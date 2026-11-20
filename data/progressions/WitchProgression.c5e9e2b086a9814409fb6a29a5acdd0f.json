@@ -1,0 +1,96 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_d3e6275cfa6e7a04b9213b7b292a011c",
+        "!bp_29a333b7ccad3214ea3a51943fa0d8e9",
+        "!bp_381cf4c890815d049a4420c6f31d063f",
+        "!bp_9846043cf51251a4897728ed6e24e76f",
+        "!bp_c213af60aba83ed4993948dce6b947b8",
+        "!bp_e70ecf1ed95ca2f40b754f1adb22bbdd",
+        "!bp_38d01811fcb32444a8fe372c029fa0c6"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WitchProgression",
+  "guid": "c5e9e2b086a9814409fb6a29a5acdd0f",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": []
+}

@@ -1,0 +1,105 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_da69747aa3dd0044ebff5f3d701cdde3",
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "MythicAdditionalProgressions"
+  ],
+  "HideInUI": true,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_592a0bf74855f6b4b9518d32e1bdfec7"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_592a0bf74855f6b4b9518d32e1bdfec7"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_592a0bf74855f6b4b9518d32e1bdfec7"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_592a0bf74855f6b4b9518d32e1bdfec7"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_592a0bf74855f6b4b9518d32e1bdfec7"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_592a0bf74855f6b4b9518d32e1bdfec7"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_592a0bf74855f6b4b9518d32e1bdfec7"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_592a0bf74855f6b4b9518d32e1bdfec7"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_592a0bf74855f6b4b9518d32e1bdfec7"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_592a0bf74855f6b4b9518d32e1bdfec7"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "LoremasterFeyspeakerProgression",
+  "guid": "6042b0f9a2f23cc48829d9c4417f3a8b",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_4a7c05adfbaf05446a6bf664d28fb103"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Feyspeaker"
+}

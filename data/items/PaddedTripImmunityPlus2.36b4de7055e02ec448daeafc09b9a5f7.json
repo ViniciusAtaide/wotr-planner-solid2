@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "PaddedTripImmunityPlus2",
+  "guid": "36b4de7055e02ec448daeafc09b9a5f7",
+  "m_Enchantments": [
+    "!bp_758b77a97640fd747abf149f5bf538d0",
+    "!bp_6ead380e0a4b0c145be836cb5eb33a5d"
+  ],
+  "m_Type": "!bp_b7e26eed57d524b478c0c90df0f0b8f1",
+  "name": "Padded Armor of Firm Steps"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_d15fac7d8f7799341be06fc740b02cea"
+    }
+  ],
+  "assetName": "QuarterstaffOfWarMageEnchantment",
+  "guid": "b97f6c22d96d2e24ebdb3e259387b810"
+}

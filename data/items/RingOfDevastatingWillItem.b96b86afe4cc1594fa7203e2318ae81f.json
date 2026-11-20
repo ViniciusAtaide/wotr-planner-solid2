@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfDevastatingWillItem",
+  "guid": "b96b86afe4cc1594fa7203e2318ae81f",
+  "m_Enchantments": [
+    "!bp_fadf019d7d1943943ad874f500a21cab"
+  ],
+  "name": "Ring of Devastating Will"
+}

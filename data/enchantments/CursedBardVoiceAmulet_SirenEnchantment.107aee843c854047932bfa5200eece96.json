@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_bf606afc908e4f1a915f314d5fdfdbbc"
+    }
+  ],
+  "assetName": "CursedBardVoiceAmulet_SirenEnchantment",
+  "guid": "107aee843c854047932bfa5200eece96"
+}

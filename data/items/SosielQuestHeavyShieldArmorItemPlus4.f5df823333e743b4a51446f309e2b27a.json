@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "SosielQuestHeavyShieldArmorItemPlus4",
+  "guid": "f5df823333e743b4a51446f309e2b27a",
+  "m_Enchantments": [
+    "!bp_a5d27d73859bd19469a6dde3b49750ff",
+    "!bp_49fe9e1969afd874181ed7613120c250",
+    "!bp_27e95849860301b4ab257f72df627149"
+  ],
+  "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6"
+}

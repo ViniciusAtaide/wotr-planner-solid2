@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Shortsword",
+  "Components": [],
+  "assetName": "Shortsword",
+  "guid": "a7da36e0e7bb60e42b9f23462ce2f4fc",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "BladesLight",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Shortsword"
+}

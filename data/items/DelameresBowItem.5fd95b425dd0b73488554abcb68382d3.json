@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionAlignment",
+      "Alignment": "Good"
+    }
+  ],
+  "Double": false,
+  "assetName": "DelameresBowItem",
+  "guid": "5fd95b425dd0b73488554abcb68382d3",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_1ac79088a7e5dde46966636a3ac71c35",
+  "name": "Delamere's Bow"
+}

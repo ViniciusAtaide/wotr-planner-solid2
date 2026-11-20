@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_df569f5d5067429fac478985c8f2a14e"
+    }
+  ],
+  "assetName": "MaskOfAreshkagalBelt_VoidEnchantment",
+  "guid": "4ddcc8ba13274c57b71b7113391a6648"
+}

@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_72051275b1dbb2d42ba9118237794f7c",
+      "m_Feature": "!bp_76dc9a65841190d46a8fc25dce00a242"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DragonDiscipleFormFeatureFirst",
+  "guid": "0ee31c9fc504b51489d12d43168b5009",
+  "name": "Dragon Form (Dragon Disciple 7)"
+}

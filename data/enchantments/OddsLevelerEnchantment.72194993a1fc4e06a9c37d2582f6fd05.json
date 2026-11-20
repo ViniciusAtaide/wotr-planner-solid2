@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b2a3495a09444e169cb0dfd30319e7ab"
+    }
+  ],
+  "assetName": "OddsLevelerEnchantment",
+  "guid": "72194993a1fc4e06a9c37d2582f6fd05"
+}

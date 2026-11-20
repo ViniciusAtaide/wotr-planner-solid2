@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DruidAlignmentRestriction",
+  "guid": "d00ff3791359311449c481126fbf71ce",
+  "name": "Alignment Restriction (Druid)"
+}

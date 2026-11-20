@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ReplaceStatForPrerequisites",
+      "NewStat": "Unknown",
+      "OldStat": "BaseAttackBonus",
+      "Policy": "MagusBaseAttack",
+      "SpecificNumber": 0,
+      "m_CharacterClass": "!bp_45a4607686d96a1498891b3286121780"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SwordSaintCriticalPerfection",
+  "guid": "36837f00fc2f5d043847e37ba6af187c",
+  "name": "Critical Perfection"
+}

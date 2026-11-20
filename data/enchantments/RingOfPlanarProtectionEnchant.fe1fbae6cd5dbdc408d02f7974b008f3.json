@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_913b9166a8511c041a0ee1d8ff8f6998"
+    }
+  ],
+  "assetName": "RingOfPlanarProtectionEnchant",
+  "guid": "fe1fbae6cd5dbdc408d02f7974b008f3"
+}

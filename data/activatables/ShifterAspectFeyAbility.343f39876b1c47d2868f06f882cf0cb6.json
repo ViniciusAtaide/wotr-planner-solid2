@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintActivatableAbility",
+  "Components": [],
+  "Group": "ShifterAspect",
+  "WeightInGroup": 1,
+  "assetName": "ShifterAspectFeyAbility",
+  "guid": "343f39876b1c47d2868f06f882cf0cb6",
+  "m_Buff": "!bp_727381f8a2ee46a19ab96eedfe1d9daa",
+  "name": "Fey Aspect (Shifter)"
+}

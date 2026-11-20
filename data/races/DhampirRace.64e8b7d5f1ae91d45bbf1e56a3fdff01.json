@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintRace",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "SelectableRaceStat": false,
+  "assetName": "DhampirRace",
+  "guid": "64e8b7d5f1ae91d45bbf1e56a3fdff01",
+  "m_Features": [
+    "!bp_1246f548304a7654c97d8f2e9488e25f",
+    "!bp_c7b13c8ac6d9acd4bba02ceb648e9a35",
+    "!bp_38570ac838f9e7e48af006800c0fd69c",
+    "!bp_3cf4e66445219dc47b04a540794b879d"
+  ],
+  "name": "Dhampir"
+}

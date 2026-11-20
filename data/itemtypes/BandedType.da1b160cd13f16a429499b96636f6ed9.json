@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [],
+  "assetName": "BandedType",
+  "guid": "da1b160cd13f16a429499b96636f6ed9",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "Heavy",
+  "name": "Heavy Armor — Banded"
+}

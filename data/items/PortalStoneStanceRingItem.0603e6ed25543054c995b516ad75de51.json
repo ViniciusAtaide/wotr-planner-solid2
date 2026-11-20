@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "PortalStoneStanceRingItem",
+  "guid": "0603e6ed25543054c995b516ad75de51",
+  "m_Enchantments": [
+    "!bp_974bbb4d766bf6a49a6f155c39f0455c"
+  ],
+  "name": "Ancestral Retribution (ring)"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "ShiningLightAdditionalUse",
+  "guid": "f1339b083cf65644ca8dbbfa836adb24",
+  "name": "Shining Light"
+}

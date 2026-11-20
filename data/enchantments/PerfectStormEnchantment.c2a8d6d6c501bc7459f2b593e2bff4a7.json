@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f93deb8fb11e06743b6941626cd6f2e0"
+    }
+  ],
+  "assetName": "PerfectStormEnchantment",
+  "guid": "c2a8d6d6c501bc7459f2b593e2bff4a7"
+}

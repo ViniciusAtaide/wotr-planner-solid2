@@ -1,0 +1,54 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce",
+      "m_Feature": "!bp_5557debac323606498a4dd8569165e7d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce",
+      "m_Feature": "!bp_112314658d0848645b34555a41def2ff"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 6,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce",
+      "m_Feature": "!bp_6b96f8db83d8e754cb0c1993c71c39d0"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 6,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce",
+      "m_Feature": "!bp_5d7ba4fad7dc44c4280c78f1fee0099d"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "JudgmentFaithHunterFeature",
+  "guid": "19a36bd554ff4fd492d7458d4f922be4",
+  "name": "Judgment (Faith Hunter)"
+}

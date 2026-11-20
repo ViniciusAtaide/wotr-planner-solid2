@@ -1,0 +1,37 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_9c747d24f6321f744aa1bb4bd343880d"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_55edf82380a1c8540af6c6037d34f322"
+      ]
+    },
+    {
+      "$type": "AddContextStatBonus",
+      "Descriptor": "Racial",
+      "HasMinimal": false,
+      "Minimal": 0,
+      "Multiplier": 1,
+      "Stat": "SaveWill",
+      "Value": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DualMindedHalfElf",
+  "guid": "ac53bfa3023b41978f3e327c3a4a647f",
+  "name": "Dual Heritage"
+}

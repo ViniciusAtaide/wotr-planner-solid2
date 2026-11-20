@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "GlovesOfMonstersProtectionItem",
+  "guid": "ef231cad1002c924ba3d0b68f0a979ad",
+  "m_Enchantments": [
+    "!bp_2614fd00be65cd34dbbc54ffaf32fef4"
+  ],
+  "name": "Gloves of Monsters Protection"
+}

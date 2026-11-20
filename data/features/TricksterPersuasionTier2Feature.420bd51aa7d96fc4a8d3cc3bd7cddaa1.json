@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_4eefa883f5908a347a0b0a891fb859dd"
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "TricksterPersuasionParalyze"
+    }
+  ],
+  "Groups": [
+    "MythicTrick2"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterPersuasionTier2Feature",
+  "guid": "420bd51aa7d96fc4a8d3cc3bd7cddaa1",
+  "name": "Persuasion 2 Rank"
+}

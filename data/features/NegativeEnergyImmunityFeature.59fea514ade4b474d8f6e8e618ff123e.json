@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "NegativeEnergyImmunityFeature",
+  "guid": "59fea514ade4b474d8f6e8e618ff123e"
+}

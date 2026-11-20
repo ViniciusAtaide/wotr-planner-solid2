@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PlagueHexCharismaDamageFeature",
+  "guid": "9213e20f726e4785bd42f1e3d7acc703",
+  "name": "Plague Mutation: Charisma Damage"
+}

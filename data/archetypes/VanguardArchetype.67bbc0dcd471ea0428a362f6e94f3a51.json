@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_a14ff5eeeec5f434eb5c7fb8201afefb",
+        "!bp_90b882830b3988446ae681c6596460cc"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_4b4d4cae104579a4186070f3f62210fd"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_3c08d842e802c3e4eb19d15496145709"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_04430ad24988baa4daa0bcd4f1c7d118"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_04430ad24988baa4daa0bcd4f1c7d118"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "VanguardArchetype",
+  "guid": "67bbc0dcd471ea0428a362f6e94f3a51",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Vanguard"
+}

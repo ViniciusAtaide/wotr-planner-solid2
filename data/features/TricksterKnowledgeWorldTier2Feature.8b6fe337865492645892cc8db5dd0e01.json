@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_06983a66bd6bac04db3996cd3064d9f0"
+    }
+  ],
+  "Groups": [
+    "MythicTrick2"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterKnowledgeWorldTier2Feature",
+  "guid": "8b6fe337865492645892cc8db5dd0e01",
+  "name": "Knowledge (World) 2 Rank"
+}

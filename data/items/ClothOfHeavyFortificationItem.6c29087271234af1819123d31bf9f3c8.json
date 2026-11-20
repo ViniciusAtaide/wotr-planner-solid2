@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "ClothOfHeavyFortificationItem",
+  "guid": "6c29087271234af1819123d31bf9f3c8",
+  "m_Enchantments": [
+    "!bp_9b1538c732e06544bbd955fee570a2be"
+  ],
+  "name": "Cloth of Heavy Fortification"
+}

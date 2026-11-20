@@ -1,0 +1,44 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "BackgroundSelection",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BackgroundsBaseSelection",
+  "guid": "f926dabeee7f8a54db8f2010b323383c",
+  "m_AllFeatures": [
+    "!bp_7d300f497584d9245ac24c062dce0bd6",
+    "!bp_fd36aaff6f41a2f4f9e91925d49a0d85",
+    "!bp_7b11f589e81617a46b3e5eda3632508d",
+    "!bp_c25021c31f302c6449ecdbc978822507",
+    "!bp_fa621a249cc836f4382ca413b976e65e",
+    "!bp_273fab44409035f42a7e2af0858a463d",
+    "!bp_e17f74060f864ff459393e11d5e7fe2f",
+    "!bp_0cdd576724fce2240b372455889fac87",
+    "!bp_291f372e27b29f149ad15ff219fe15d9",
+    "!bp_ab8136b1b9d54982a5c9faf100547483",
+    "!bp_0eb9884373934d5980c7aad03e710778"
+  ],
+  "name": "Background Selection"
+}

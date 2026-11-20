@@ -1,0 +1,665 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "OrAndLogic",
+              "ConditionsChecker": {
+                "Conditions": [
+                  {
+                    "$type": "OrAndLogic",
+                    "ConditionsChecker": {
+                      "Conditions": [
+                        {
+                          "$type": "ContextConditionHasFact",
+                          "Not": true,
+                          "m_Fact": "!bp_62b33ac8ceb18dd47ad4c8f06849bc01"
+                        },
+                        {
+                          "$type": "ContextConditionHasFact",
+                          "Not": true,
+                          "m_Fact": "!bp_729411185291d704696e58316420fe38"
+                        }
+                      ],
+                      "Operation": "And"
+                    },
+                    "Not": false
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_17bbb6790ca500d4190b978cab5c4dfc"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_4c495ac785134983b99f77eb559a81a0"
+                  },
+                  {
+                    "$type": "ContextConditionHasFact",
+                    "Not": false,
+                    "m_Fact": "!bp_3da0972ad5574bfd8a7de9bc5460e7e9"
+                  },
+                  {
+                    "$type": "OrAndLogic",
+                    "ConditionsChecker": {
+                      "Conditions": [
+                        {
+                          "$type": "OrAndLogic",
+                          "ConditionsChecker": {
+                            "Conditions": [
+                              {
+                                "$type": "ContextConditionHasFact",
+                                "Not": false,
+                                "m_Fact": "!bp_7bda7cdb0ccda664c9eb8978cf512dbc"
+                              },
+                              {
+                                "$type": "OrAndLogic",
+                                "ConditionsChecker": {
+                                  "Conditions": [
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_7bd143ead2d6c3a409aad6ee22effe34"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_8a7f100c02d0b254d8f5f3affc8ef386"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_5f9ecbee67db8364985e9d0500eb25f1"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_7e0f57d8d00464441974e303b84238ac"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_b522759a265897b4f8f7a1a180a692e4"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_6c67ef823db8d7d45bb0ef82f959743d"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_7181be57d1cc3bc40bc4b552e4e4ce24"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_c7d2f393e6574874bb3fc728a69cc73a"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_b0f79497a0d1f4f4b8293e82c8f8fa0c"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_8c6e5b3cf12f71e43949f52c41ae70a8"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_d3a4cb7be97a6694290f0dcfbd147113"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_4d491cf9631f7e9429444f4aed629791"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_aa79c65fa0e11464d9d100b038c50796"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_e8445256abbdc45488c2d90373f7dae8"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_e76a774cacfb092498177e6ca706064d"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_739c1e842bf77994baf963f4ad964379"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_a1a8bf61cadaa4143b2d4966f2d1142e"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_cd788df497c6f10439c7025e87864ee4"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_32393034410fb2f4d9c8beaa5c8c8ab7"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_17cc794d47408bc4986c55265475c06f"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_7c692e90592257a4e901d12ae6ec1e41"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_7d990675841a7354c957689a6707c6c2"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_8a95d80a3162d274896d50c2f18bb6b1"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_a46d4bd93601427409d034a997673ece"
+                                    }
+                                  ],
+                                  "Operation": "Or"
+                                },
+                                "Not": false
+                              }
+                            ],
+                            "Operation": "Or"
+                          },
+                          "Not": false
+                        },
+                        {
+                          "$type": "OrAndLogic",
+                          "ConditionsChecker": {
+                            "Conditions": [
+                              {
+                                "$type": "ContextConditionHasFact",
+                                "Not": false,
+                                "m_Fact": "!bp_729411185291d704696e58316420fe38"
+                              },
+                              {
+                                "$type": "ContextConditionHasFact",
+                                "Not": false,
+                                "m_Fact": "!bp_62b33ac8ceb18dd47ad4c8f06849bc01"
+                              }
+                            ],
+                            "Operation": "Or"
+                          },
+                          "Not": false
+                        },
+                        {
+                          "$type": "ContextConditionHasFact",
+                          "Not": true,
+                          "m_Fact": "!bp_b7f62628915bdb14d8888c25da3fac56"
+                        }
+                      ],
+                      "Operation": "And"
+                    },
+                    "Not": false
+                  },
+                  {
+                    "$type": "OrAndLogic",
+                    "ConditionsChecker": {
+                      "Conditions": [
+                        {
+                          "$type": "OrAndLogic",
+                          "ConditionsChecker": {
+                            "Conditions": [
+                              {
+                                "$type": "ContextConditionHasFact",
+                                "Not": false,
+                                "m_Fact": "!bp_7bda7cdb0ccda664c9eb8978cf512dbc"
+                              },
+                              {
+                                "$type": "OrAndLogic",
+                                "ConditionsChecker": {
+                                  "Conditions": [
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_7bd143ead2d6c3a409aad6ee22effe34"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_8a7f100c02d0b254d8f5f3affc8ef386"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_5f9ecbee67db8364985e9d0500eb25f1"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_7e0f57d8d00464441974e303b84238ac"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_b522759a265897b4f8f7a1a180a692e4"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_6c67ef823db8d7d45bb0ef82f959743d"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_7181be57d1cc3bc40bc4b552e4e4ce24"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_c7d2f393e6574874bb3fc728a69cc73a"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_b0f79497a0d1f4f4b8293e82c8f8fa0c"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_8c6e5b3cf12f71e43949f52c41ae70a8"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_d3a4cb7be97a6694290f0dcfbd147113"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_4d491cf9631f7e9429444f4aed629791"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_aa79c65fa0e11464d9d100b038c50796"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_e8445256abbdc45488c2d90373f7dae8"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_e76a774cacfb092498177e6ca706064d"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_739c1e842bf77994baf963f4ad964379"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_a1a8bf61cadaa4143b2d4966f2d1142e"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_cd788df497c6f10439c7025e87864ee4"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_32393034410fb2f4d9c8beaa5c8c8ab7"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_17cc794d47408bc4986c55265475c06f"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_7c692e90592257a4e901d12ae6ec1e41"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_7d990675841a7354c957689a6707c6c2"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_8a95d80a3162d274896d50c2f18bb6b1"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_a46d4bd93601427409d034a997673ece"
+                                    }
+                                  ],
+                                  "Operation": "Or"
+                                },
+                                "Not": false
+                              }
+                            ],
+                            "Operation": "Or"
+                          },
+                          "Not": false
+                        },
+                        {
+                          "$type": "OrAndLogic",
+                          "ConditionsChecker": {
+                            "Conditions": [
+                              {
+                                "$type": "ContextConditionHasFact",
+                                "Not": false,
+                                "m_Fact": "!bp_31e1c4c926d64e258c75e21968edac2d"
+                              },
+                              {
+                                "$type": "OrAndLogic",
+                                "ConditionsChecker": {
+                                  "Conditions": [
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_601387ac1873bba448bddcfbf00af8d7"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_cbc80f3fdc72aac4bb6963efe3062473"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_b7555ce6cfc7fc042bb7b701d2618307"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_b71dc10096302384c901787a40b81fbf"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_c0684cd2e00de724990bb389e672db90"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_be355f1518587224799e6c125aad2ac0"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_a335def5677a4dc46bab211b30a9f33c"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_076d1648e1341f841a222de5b89ba215"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_0970d63bc8e90274a90f6c001318df77"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_12484c4d15c3e134f9fd23931c38e996"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_7e9c25e11e2333b4ea16b39964c2f8f1"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_1c49400550b6c954a9e40fabea7f435b"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_ba000ce2bc1aba0468df75f57e7c265c"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_8869b0ac2a1c9f240b3c440dc9b61263"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_bd9911293c5ab84458b631990df11967"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_78be9df6023310f48b7a2b0d634da23b"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_618c6b173f6947843a62e0cbbed86d16"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_7612db46a7df4f04a9eb81503f006154"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_a058253edb9770542998724a2799e1b9"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_94bbb5a79f006674cbcbb03995b3f728"
+                                    },
+                                    {
+                                      "$type": "ContextConditionHasFact",
+                                      "Not": false,
+                                      "m_Fact": "!bp_9f4648353fb3cd641baefd3ec31b6630"
+                                    }
+                                  ],
+                                  "Operation": "Or"
+                                },
+                                "Not": false
+                              }
+                            ],
+                            "Operation": "Or"
+                          },
+                          "Not": false
+                        },
+                        {
+                          "$type": "ContextConditionHasFact",
+                          "Not": false,
+                          "m_Fact": "!bp_b7f62628915bdb14d8888c25da3fac56"
+                        }
+                      ],
+                      "Operation": "And"
+                    },
+                    "Not": false
+                  }
+                ],
+                "Operation": "Or"
+              },
+              "Not": false
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": true,
+              "m_Fact": "!bp_8a7f100c02d0b254d8f5f3affc8ef386"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": true,
+              "m_Fact": "!bp_cbc80f3fdc72aac4bb6963efe3062473"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": true,
+              "m_Fact": "!bp_82f76646a7f96ed4cafa18480adc0b8c"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": true,
+              "m_Fact": "!bp_3c2bd17e635d4afe936cd0dbbff233c8"
+            }
+          ],
+          "Operation": "And"
+        },
+        "Not": false
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_3cf2ab2c320b73347a7c21cf0d0995bd",
+      "m_Feature": "!bp_31e1c4c926d64e258c75e21968edac2d"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "BloodLine",
+    "DraconicBloodlineSelection"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_75d76373f7b7c2b429c6ad6cde02edb0",
+        "!bp_0f0cb88a2ccc0814aa64c41fd251e84e",
+        "!bp_fb4615bd462372a44b778ac9f035675f",
+        "!bp_64e1f27147b642448842ab8dcbaca03f",
+        "!bp_3c2bd17e635d4afe936cd0dbbff233c8"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_b28fd00f894fd2846bd77a26d1344425",
+        "!bp_7d6a30b40a950434ba19b9561e81313b"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_1d3fcbb51257dd6448a48db489cdd3ad",
+        "!bp_2663e59ad9c8d2c44a30969be9f60505"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_606cdd9198fb270429ab6dce1a6b14f1",
+        "!bp_290304b6a5bb7d84b824e0ade804ed15"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_aa7704d95f479044f9779e0b3b489c87",
+        "!bp_6b13b37a4b4263c46a55b0e213eb1e78",
+        "!bp_0fbdfba2f12527a49982d790a056d14b"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_2386614435b923a4397a41e1d112eca9"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_b10c54491148de84b858763588664a8a"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_5b13008bdc18a0c4db321ae9f04ba77f",
+        "!bp_5f2ab9f9940b8324d9965087ea34cc66"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_4675fb43f872c6546b43f55f564a9020",
+        "!bp_a5e3c6ee70f04c6489fd0bac3582db74"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_32d443e6a4103d84b9243822c3abec97"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_4675fb43f872c6546b43f55f564a9020",
+        "!bp_582b25fef37373c4591a7994f3da9c69"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicBlueProgression",
+  "guid": "8a7f100c02d0b254d8f5f3affc8ef386",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_d078b2ef073f2814c9e338a789d97b73"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_45a4607686d96a1498891b3286121780"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_72051275b1dbb2d42ba9118237794f7c"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Draconic Bloodline — Blue"
+}

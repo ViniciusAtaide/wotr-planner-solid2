@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "BloodLustEffect",
+  "guid": "88a03539dc994d48b563bcea297b5f7d",
+  "name": "Bloodlust"
+}

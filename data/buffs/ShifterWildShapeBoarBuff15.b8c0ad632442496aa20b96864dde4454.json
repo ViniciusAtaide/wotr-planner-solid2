@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "ShifterWildShapeBoarBuff15",
+  "guid": "b8c0ad632442496aa20b96864dde4454",
+  "name": "Major Form (Boar)"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanElvenCurvedBladeStage3Base",
+  "guid": "1fe1630220e4417e84148a427be65d0f",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_b5e6838ad2a62b146b49619bcf9f42aa",
+  "name": "Finnean the Talking Weapon (Elven Curve Blade +5)"
+}

@@ -1,0 +1,55 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_e6228dd80521e1149abc6257a8279b75"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_1c7cc7d948c64e549a45d2524c61de35"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_43b684433ff1e7d439b87099f1717154"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_63c42e0d1a84f004c8e4290bb26f359a"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_8cfab12649049e44aaa49691a8a16d88"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "PrimalistProgression",
+  "guid": "d8b8d1dd83393484cbacf6c8830080ae",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Primal Choices (Primalist)"
+}

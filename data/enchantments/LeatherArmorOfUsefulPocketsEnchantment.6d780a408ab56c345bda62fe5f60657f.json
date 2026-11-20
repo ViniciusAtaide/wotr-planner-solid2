@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_2425b73a9e2630140ad68e5eefb8339e"
+    }
+  ],
+  "assetName": "LeatherArmorOfUsefulPocketsEnchantment",
+  "guid": "6d780a408ab56c345bda62fe5f60657f"
+}

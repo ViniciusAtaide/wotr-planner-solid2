@@ -1,0 +1,61 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Dexterity",
+      "Value": 13
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_90e54424d682d104ab36436bd527af09"
+    },
+    {
+      "$type": "PrerequisiteProficiency",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "DuelingSword"
+      ]
+    },
+    {
+      "$type": "PrerequisiteParametrizedFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "ParameterType": "WeaponCategory",
+      "SpellSchool": "None",
+      "WeaponCategory": "DuelingSword",
+      "m_Feature": "!bp_1e1f627d26ad36f43bbd26cc2bf8ac7e"
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "DuelingMastery"
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    }
+  ],
+  "Groups": [
+    "CombatFeat",
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DuelingMastery",
+  "guid": "c3a66c1bbd2fb65498b130802d5f183a",
+  "name": "Aldori Dueling Mastery"
+}

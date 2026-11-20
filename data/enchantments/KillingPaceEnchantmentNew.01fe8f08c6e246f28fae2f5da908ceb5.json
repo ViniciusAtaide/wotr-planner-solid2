@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_4a4084e7eea2447098f7edd24550618c"
+    }
+  ],
+  "assetName": "KillingPaceEnchantmentNew",
+  "guid": "01fe8f08c6e246f28fae2f5da908ceb5"
+}

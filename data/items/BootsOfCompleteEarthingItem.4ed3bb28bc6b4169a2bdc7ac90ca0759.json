@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "BootsOfCompleteEarthingItem",
+  "guid": "4ed3bb28bc6b4169a2bdc7ac90ca0759",
+  "m_Enchantments": [
+    "!bp_c4e5785ec6bc4d969b8414b1e44a877a"
+  ],
+  "name": "Boots of Perfect Grounding"
+}

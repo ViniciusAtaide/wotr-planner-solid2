@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "DemonLordAspect"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DeskariAspectFeature",
+  "guid": "60f57fe80fa1986478f474c0fb5e90ac",
+  "name": "Aspect of Deskari"
+}

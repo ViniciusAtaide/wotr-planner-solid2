@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillPerception",
+      "Value": 4
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "ShifterWildShapeSpiderBuff15",
+  "guid": "d895c3b8663f4b73a3868e6369bba6d4",
+  "name": "Major Form (Spider)"
+}

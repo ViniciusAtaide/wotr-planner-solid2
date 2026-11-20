@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionAlignment",
+      "Alignment": "Good, LawfulNeutral, TrueNeutral, ChaoticNeutral"
+    }
+  ],
+  "assetName": "WhiteWindsCloakItem",
+  "guid": "262b8ece36ba43f44bd407e82c079028",
+  "m_Enchantments": [],
+  "name": "White Wind's Cloak"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f517ade4146df8645b4c7533f649c5de"
+    }
+  ],
+  "assetName": "UnmakerRingEnchant",
+  "guid": "7cab8721c08918547bfdfbcf70582b23"
+}

@@ -1,0 +1,55 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_62b33ac8ceb18dd47ad4c8f06849bc01"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_b7f62628915bdb14d8888c25da3fac56"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "OnlyNew",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "SecondBloodragerBloodline",
+  "guid": "b7f62628915bdb14d8888c25da3fac56",
+  "m_AllFeatures": [
+    "!bp_12af0fda00774784b45feacb67c014f8",
+    "!bp_a83c0d19fdcc41c79f04df934e7ebf29",
+    "!bp_d4d3824a31df4f249833357dffe2da61",
+    "!bp_7384587bd92a417793894022b03e298e",
+    "!bp_4c495ac785134983b99f77eb559a81a0",
+    "!bp_3a16aa26238a453da33338871d7183fd",
+    "!bp_a787a6e193c244c5901c799f4c3afe2d",
+    "!bp_49e5e1528329494e84c7dc6aa0b6bd7b",
+    "!bp_6e0236ac698449edb60a8beeb923d2b2",
+    "!bp_b48fa4abd8a444b281bf12f7c17f0d0f",
+    "!bp_4a947725f58441aeafc2ae0859526d1b",
+    "!bp_27bf16b1f4154059b0b5dcf994add205",
+    "!bp_215efcf398f442c4925d59dd5e836cfe",
+    "!bp_caeae1df04194eef813118be2b187fb9",
+    "!bp_38fce508b837482cbf94eaae74431e74",
+    "!bp_a09931d3e0054addad73a5c9d759ca41",
+    "!bp_5151e4d7512e41a2a35c1c2707281a64",
+    "!bp_42af960c4cb84ef6b85ec3500d5a38e4",
+    "!bp_36bb7ed75f0c4dcc9fd3374c603b2d0e",
+    "!bp_bedecc3e55af4fd2b46af1fd42d0fc97",
+    "!bp_0dae08e932ef4430b391790bdf9ab9d5"
+  ],
+  "name": "Second Bloodrager Bloodline"
+}

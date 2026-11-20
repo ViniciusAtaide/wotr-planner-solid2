@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "DemonicAspect"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "IncubusAspectFeature",
+  "guid": "64c6b4e233e718d429dab47eb3a25ac6",
+  "name": "Aspect of the Incubus"
+}

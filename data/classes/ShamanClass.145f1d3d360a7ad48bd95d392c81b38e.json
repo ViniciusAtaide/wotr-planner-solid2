@@ -1,0 +1,44 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillPersuasion",
+    "SkillLoreNature",
+    "SkillLoreReligion",
+    "SkillKnowledgeWorld",
+    "SkillKnowledgeArcana"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 2,
+  "assetName": "ShamanClass",
+  "guid": "145f1d3d360a7ad48bd95d392c81b38e",
+  "m_Archetypes": [
+    "!bp_7939ff57cc2ce104693ea2f5afa595b6",
+    "!bp_39b2fd5000e5eb142bfde2afa6c83f76",
+    "!bp_a6ab54dbe2cc9314a8ad62863fbc64c4",
+    "!bp_556590a43467a27459ac1a80324c9f9f",
+    "!bp_96c2b16450cc98548a0e82f743fbee80",
+    "!bp_bb14b164c2ce4e2bb05434a3218ff73d",
+    "!bp_5086aef2b76c433584160f7b49aef95b",
+    "!bp_bcd758a75fb54651a7f668fe2661a307"
+  ],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_d04a543c82b45694c805301bce9dac24",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": "!bp_44f16931dabdff643bfe2a48138e769f",
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Shaman"
+}

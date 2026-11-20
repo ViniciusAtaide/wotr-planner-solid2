@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 3,
+  "assetName": "StalwartDefenderDamageReductionNoArmor",
+  "guid": "ce36635292764199a2460c7a74a60cb9"
+}

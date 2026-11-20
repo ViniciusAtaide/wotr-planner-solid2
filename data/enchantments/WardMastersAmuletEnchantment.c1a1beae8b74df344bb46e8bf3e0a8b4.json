@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_26dd8af83e2e54844840bcf4e33bf2e7"
+    }
+  ],
+  "assetName": "WardMastersAmuletEnchantment",
+  "guid": "c1a1beae8b74df344bb46e8bf3e0a8b4"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreReligion"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CavalierShroudSkills",
+  "guid": "3fc4db417af250f4ea0b81db21f2f7e0",
+  "name": "Skills (Order of the Shroud)"
+}

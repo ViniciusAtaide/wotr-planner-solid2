@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b94875a04bf8df44494f810b7b240940"
+    }
+  ],
+  "assetName": "BardingOfElderBeastsEnchantment",
+  "guid": "c4d1de75e050f344eb027ecc23a33174"
+}

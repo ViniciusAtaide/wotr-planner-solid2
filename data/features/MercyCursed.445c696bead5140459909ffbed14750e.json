@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 9,
+      "Not": false,
+      "m_CharacterClass": "!bp_bfa11238e7ae3544bbeb4d0b92e897ec"
+    }
+  ],
+  "Groups": [
+    "Mercy"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MercyCursed",
+  "guid": "445c696bead5140459909ffbed14750e",
+  "name": "Mercy — Cursed"
+}

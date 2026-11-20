@@ -1,0 +1,61 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_2faa80662a56ab644aec2f875a68597f"
+    },
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_00c8c566d1825dd4a871250f35285982"
+            },
+            {
+              "$type": "ContextConditionHasFact",
+              "Not": false,
+              "m_Fact": "!bp_557cd05f067b44e8a916d6324c0c6c42"
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "ShamanSpirit",
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "SecondSpirit",
+  "guid": "2faa80662a56ab644aec2f875a68597f",
+  "m_AllFeatures": [
+    "!bp_26e81d83d13dbf6448b10019c802612d",
+    "!bp_65b5e7f17a1b928418fc9e8a6b55eafa",
+    "!bp_50efeb23b314869409365c8061a4082d",
+    "!bp_44c130a12d49ebf4a95945feffe5aae7",
+    "!bp_f9ee5a9146561ba4bac4cb8a7126f85c",
+    "!bp_379d33ef16e812146b5517601ab25e66",
+    "!bp_acff6b0cf279a31439010afea01df912",
+    "!bp_2196e093593903f4ebc36467ccbf1d9a",
+    "!bp_eae7cee2a5da93442a7563dfeda33432"
+  ],
+  "name": "Second Spirit"
+}

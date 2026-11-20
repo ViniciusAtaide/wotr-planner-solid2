@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FlailFrostPlus1",
+  "guid": "ff4fd75550574de40a7b6acce3378881",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_bf1e53f7442ed0c43bf52d3abe55e16a",
+  "name": "Frost Flail +1"
+}

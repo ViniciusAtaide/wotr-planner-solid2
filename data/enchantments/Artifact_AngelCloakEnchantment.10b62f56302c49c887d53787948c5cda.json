@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_58b832df3c4a4ccba1f0c64138ca95fc"
+    }
+  ],
+  "assetName": "Artifact_AngelCloakEnchantment",
+  "guid": "10b62f56302c49c887d53787948c5cda"
+}

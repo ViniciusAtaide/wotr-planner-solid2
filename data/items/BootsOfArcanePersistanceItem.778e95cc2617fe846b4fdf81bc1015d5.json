@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "BootsOfArcanePersistanceItem",
+  "guid": "778e95cc2617fe846b4fdf81bc1015d5",
+  "m_Enchantments": [
+    "!bp_76df407bc7e8e5e4cafc244878542f53"
+  ],
+  "name": "Boots of Arcane Persistence"
+}

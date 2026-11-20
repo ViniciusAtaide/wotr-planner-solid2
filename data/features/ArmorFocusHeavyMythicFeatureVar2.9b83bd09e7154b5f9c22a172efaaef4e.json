@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c27e6d2b0d33d42439f512c6d9a6a601"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArmorFocusHeavyMythicFeatureVar2",
+  "guid": "9b83bd09e7154b5f9c22a172efaaef4e",
+  "name": "Mythic Armor Focus (Heavy Armor) — Avoidance"
+}

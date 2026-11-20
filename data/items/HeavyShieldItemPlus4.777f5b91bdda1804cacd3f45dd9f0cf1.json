@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "HeavyShieldItemPlus4",
+  "guid": "777f5b91bdda1804cacd3f45dd9f0cf1",
+  "m_ArmorComponent": "!bp_709260b3432e385468f0592db9a1f0cf",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Heavy Shield +4"
+}

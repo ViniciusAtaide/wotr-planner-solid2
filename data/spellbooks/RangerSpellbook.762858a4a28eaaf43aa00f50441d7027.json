@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": -3,
+  "Components": [],
+  "IsArcane": false,
+  "IsMythic": false,
+  "Spontaneous": false,
+  "assetName": "RangerSpellbook",
+  "guid": "762858a4a28eaaf43aa00f50441d7027",
+  "m_SpellsPerDay": "!bp_d2b0abf29cfaf8842b75c2efc7f40157",
+  "name": "Ranger"
+}

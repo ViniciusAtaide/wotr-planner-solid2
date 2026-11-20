@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 12,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [
+        "!bp_2b1a58a7917084f49b097e86271df21c"
+      ],
+      "m_Class": "!bp_e8f21e5b58e0569468e420ebea456124",
+      "m_Feature": "!bp_67bc0ccce8834cd58abc35f0803840d3"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ZenArcherKiArrowsFeatureLevel8",
+  "guid": "fe8f6067014cc7c4db0606c348aed049",
+  "name": "Ki Arrows"
+}

@@ -1,0 +1,146 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_79922e274bf4444b93ea77ae0f876bd2",
+        "!bp_bfe548bd90d4476c8afde9a0667384cd"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_776190c771e2487886ab1de9dfa8f2f1",
+        "!bp_025d5a55f50f44d2a3db30f9e8854bdf"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_a3e2972bb89b450ea6aab160fcb451c6"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_e2187ff69fdb4914b4357d7565ed005c"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_4a64c3265d5e490eadb33c4f33382992"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_4bdb7506054f484296a3f1582de090b5"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_a78be8dba1274689b8a97b08a3069087"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_45e4928aa4174aaf8b8297ea9f8f2108"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_1e272fa81008483bb6c7ed18f368a5ed"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_b296531ffe013c8499ad712f8ae97f6b",
+        "!bp_3830f3630a33eba49b60f511b4c8f2a8"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_ad6a5b0e1a65c3540986cf9a7b006388",
+        "!bp_19bb148cb92db224abb431642d10efeb"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_c4d651bc0d4eabd41b08ee81bfe701d8",
+        "!bp_f78260b9a089ccc44b55f0fed08b1752",
+        "!bp_bddd46a6f6a3e6e4b99008dcf5271c3b"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_1368c7ce69702444893af5ffd3226e19",
+        "!bp_f78260b9a089ccc44b55f0fed08b1752",
+        "!bp_6e4b88e2a044c67469c038ac2f09d061"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_5078622eb5cecaf4683fa16a9b948c2c"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_f78260b9a089ccc44b55f0fed08b1752",
+        "!bp_253c0c0d00e50a24797445f20af52dc8",
+        "!bp_e66154511a6f9fc49a9de644bd8922db",
+        "!bp_0f31b23c2ab39354bbde4e33e8151495"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_f78260b9a089ccc44b55f0fed08b1752",
+        "!bp_fe58dd496a36e274b86958f4677071b2"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_f78260b9a089ccc44b55f0fed08b1752"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_f78260b9a089ccc44b55f0fed08b1752"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_f78260b9a089ccc44b55f0fed08b1752"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "WinterChildArchetype",
+  "guid": "9f835c539f6e4a96a7b64461f4267d06",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Winter Child"
+}

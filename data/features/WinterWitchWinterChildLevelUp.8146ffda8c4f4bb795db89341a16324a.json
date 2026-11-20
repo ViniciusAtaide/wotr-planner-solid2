@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_fc78193f68150454483a7eea8b605b71"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "WinterWitchWinterChildLevelUp",
+  "guid": "8146ffda8c4f4bb795db89341a16324a",
+  "name": "Winter Child"
+}

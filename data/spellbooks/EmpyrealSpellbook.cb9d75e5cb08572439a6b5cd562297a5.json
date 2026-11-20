@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": true,
+  "IsMythic": false,
+  "Spontaneous": true,
+  "assetName": "EmpyrealSpellbook",
+  "guid": "cb9d75e5cb08572439a6b5cd562297a5",
+  "m_SpellsPerDay": "!bp_dbff16956df2eda48a1da5c9617cc836",
+  "name": "Sorcerer"
+}

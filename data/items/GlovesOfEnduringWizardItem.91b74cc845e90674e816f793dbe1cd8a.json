@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "GlovesOfEnduringWizardItem",
+  "guid": "91b74cc845e90674e816f793dbe1cd8a",
+  "m_Enchantments": [
+    "!bp_0145e2443bee42b8b47a45b3a5213fe1"
+  ],
+  "name": "Gloves of Enduring Wizard"
+}

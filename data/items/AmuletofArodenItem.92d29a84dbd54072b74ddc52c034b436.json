@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "AmuletofArodenItem",
+  "guid": "92d29a84dbd54072b74ddc52c034b436",
+  "m_Enchantments": [
+    "!bp_bf5be9df0f7046458341345c25588888",
+    "!bp_b1c0ffa352da4f5d961f24c25e74c1c0",
+    "!bp_1e0cdf908032439e8b8213a828fdce4c"
+  ],
+  "name": "Legacy of the Last Azlanti"
+}

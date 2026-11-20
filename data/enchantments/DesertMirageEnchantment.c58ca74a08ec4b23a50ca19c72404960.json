@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_49f8d20f6eb64348bd915ab4c5ce694d"
+    }
+  ],
+  "assetName": "DesertMirageEnchantment",
+  "guid": "c58ca74a08ec4b23a50ca19c72404960"
+}

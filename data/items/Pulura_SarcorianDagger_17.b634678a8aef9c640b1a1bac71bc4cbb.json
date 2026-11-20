@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "Pulura_SarcorianDagger_17",
+  "guid": "b634678a8aef9c640b1a1bac71bc4cbb",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_07cc1a7fceaee5b42b3e43da960fe76d",
+  "name": "Funerary Dagger of Hegwart the Snake"
+}

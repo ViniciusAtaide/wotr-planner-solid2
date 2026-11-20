@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "HeartOfTheHeraldItem",
+  "guid": "abd2459160cd479085fb2a75b927737f",
+  "m_Enchantments": [
+    "!bp_cf80d6172d85406a9ba459c496580b3e"
+  ],
+  "name": "Angel's Heart"
+}

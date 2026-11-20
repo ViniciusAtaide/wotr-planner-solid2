@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CloakOfLoneWolfItem",
+  "guid": "700eae066f5a50c47a482fbdf8378327",
+  "m_Enchantments": [
+    "!bp_1582d0c65dcb4523a6ab61b792da0c1e"
+  ],
+  "name": "Lone Wolf's Cloak"
+}

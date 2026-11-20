@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e7a07e95a8bc4f80ba162389946cf752"
+    }
+  ],
+  "assetName": "RingOfBoneBreakingEnchantment",
+  "guid": "524c94674ecf4ba69d7709b54c54d9c6"
+}

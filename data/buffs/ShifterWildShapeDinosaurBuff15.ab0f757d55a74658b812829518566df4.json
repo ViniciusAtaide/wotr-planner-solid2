@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillMobility",
+      "Value": 4
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Dodge",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AC",
+      "Value": 2
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "DisengageWithoutAttackOfOpportunity"
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "ShifterWildShapeDinosaurBuff15",
+  "guid": "ab0f757d55a74658b812829518566df4",
+  "name": "Major Form (Dinosaur)"
+}

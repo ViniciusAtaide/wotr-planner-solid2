@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": true,
+  "IsMythic": false,
+  "Spontaneous": false,
+  "assetName": "EldritchScoundrelSpellbook",
+  "guid": "4f96fb20f06b7494a8b2bd731a70af6c",
+  "m_SpellsPerDay": "!bp_6326b540f7c6a604f9d6f82cc0e2293c",
+  "name": "Rogue"
+}

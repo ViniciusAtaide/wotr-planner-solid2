@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "AdamantineScalemailPlus2",
+  "guid": "d7107904c47d8994987c612fa462bfb1",
+  "m_Enchantments": [
+    "!bp_aa25531ab5bb58941945662aa47b73e7",
+    "!bp_758b77a97640fd747abf149f5bf538d0"
+  ],
+  "m_Type": "!bp_f95c21c70a5677346b75e447c7225ba6",
+  "name": "Adamantine Scalemail +2"
+}

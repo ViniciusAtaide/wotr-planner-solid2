@@ -1,0 +1,99 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillPersuasion",
+    "SkillPerception",
+    "SkillKnowledgeArcana",
+    "SkillKnowledgeWorld",
+    "SkillLoreReligion",
+    "SkillLoreNature"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 5
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "SkillKnowledgeWorld",
+      "Value": 5
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "SkillPersuasion",
+      "Value": 2
+    },
+    {
+      "$type": "PrerequisiteCasterTypeSpellLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsArcane": true,
+      "IsFeatureSelectionWhiteList": false,
+      "OnlySpontaneous": false,
+      "RequiredSpellLevel": 3
+    },
+    {
+      "$type": "PrerequisiteCasterTypeSpellLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsArcane": false,
+      "IsFeatureSelectionWhiteList": false,
+      "OnlySpontaneous": false,
+      "RequiredSpellLevel": 3
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_1a0298abacb6e0f45b7e28553e99e76c",
+        "!bp_b9bee4e4e15573546b76a8d942ce914b"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "Lawful",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": true,
+  "SkillPoints": 2,
+  "assetName": "HellknightSigniferClass",
+  "guid": "ee6425d6392101843af35f756ce7fefd",
+  "m_Archetypes": [],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_9dbe8102673d3e94e98e25cb9260e1c5",
+  "m_ReflexSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_1f309006cd2855e4e91a6c3707f3f700",
+  "name": "Hellknight Signifer"
+}

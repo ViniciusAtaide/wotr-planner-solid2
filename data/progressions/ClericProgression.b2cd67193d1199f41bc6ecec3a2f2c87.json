@@ -1,0 +1,114 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_8c971173613282844888dc20d572cfc9",
+        "!bp_d332c1748445e8f4f9e92763123e31bd",
+        "!bp_48525e5da45c9c243a343fc6545dbdb9",
+        "!bp_43281c3d7fe18cc4d91928395837cd1e",
+        "!bp_e62f392949c24eb4b8fb2bc9db4345e3",
+        "!bp_d3e6275cfa6e7a04b9213b7b292a011c",
+        "!bp_62ef1cdb90f1d654d996556669caf7fa",
+        "!bp_9fc9813f569e2e5448ddc435abf774b3",
+        "!bp_ee0b69e90bac14446a4cf9a050f87f2e"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": []
+    },
+    {
+      "Level": 3,
+      "m_Features": []
+    },
+    {
+      "Level": 4,
+      "m_Features": []
+    },
+    {
+      "Level": 5,
+      "m_Features": []
+    },
+    {
+      "Level": 6,
+      "m_Features": []
+    },
+    {
+      "Level": 7,
+      "m_Features": []
+    },
+    {
+      "Level": 8,
+      "m_Features": []
+    },
+    {
+      "Level": 9,
+      "m_Features": []
+    },
+    {
+      "Level": 10,
+      "m_Features": []
+    },
+    {
+      "Level": 11,
+      "m_Features": []
+    },
+    {
+      "Level": 12,
+      "m_Features": []
+    },
+    {
+      "Level": 13,
+      "m_Features": []
+    },
+    {
+      "Level": 14,
+      "m_Features": []
+    },
+    {
+      "Level": 15,
+      "m_Features": []
+    },
+    {
+      "Level": 16,
+      "m_Features": []
+    },
+    {
+      "Level": 17,
+      "m_Features": []
+    },
+    {
+      "Level": 18,
+      "m_Features": []
+    },
+    {
+      "Level": 19,
+      "m_Features": []
+    },
+    {
+      "Level": 20,
+      "m_Features": []
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ClericProgression",
+  "guid": "b2cd67193d1199f41bc6ecec3a2f2c87",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null
+}

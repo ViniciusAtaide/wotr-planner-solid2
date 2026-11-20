@@ -1,0 +1,80 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 8,
+      "Not": false,
+      "m_CharacterClass": "!bp_5d501618a28bdc24c80007a5c937dcb7"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_f8b516bea12d4a6daa5e72e2898d2467"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8e81428b108f440db11fdaa9597a37f4"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_f003add893b243f0ae27a8242dd28b0b"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_f2ec22e48d9fd334496462367e16a24f"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e2ae828e848a30d4d9471a0dd393435e"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "LichSkeletalUpgrade"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_36f0d962a9f2d0a458062d5edc9795e5",
+        "!bp_36f0d962a9f2d0a458062d5edc9795e5",
+        "!bp_e2ae828e848a30d4d9471a0dd393435e"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "LichSkeletalBarbarianProgression8",
+  "guid": "f8b516bea12d4a6daa5e72e2898d2467",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_5d501618a28bdc24c80007a5c937dcb7"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Skeletal Barbarian I (Lich 8)"
+}

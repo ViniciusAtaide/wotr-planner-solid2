@@ -1,0 +1,38 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 4,
+      "Not": false,
+      "m_CharacterClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd"
+    },
+    {
+      "$type": "PrerequisiteParametrizedWeaponSubcategory",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "SubCategory": "Ranged",
+      "m_Feature": "!bp_31470b17e8446ae4ea0dacd6c5817d86"
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "CombatFeat"
+  ],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "WeaponCategory",
+  "Ranks": 1,
+  "RequireProficiency": true,
+  "WeaponSubCategory": "Ranged",
+  "assetName": "PointBlankMaster",
+  "guid": "05a3b543b0a0a0346a5061e90f293f0b",
+  "m_Prerequisite": "!bp_31470b17e8446ae4ea0dacd6c5817d86",
+  "name": "Point-Blank Master"
+}

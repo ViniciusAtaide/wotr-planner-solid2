@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "ChromaticCloak",
+  "guid": "6614f5a2b3004214820ad968b505a716",
+  "m_Enchantments": [
+    "!bp_ec0263c52a994c33a23f6f09e1a692e5"
+  ],
+  "name": "Cloak of Reflections"
+}

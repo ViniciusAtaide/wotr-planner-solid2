@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_4a57a9eaa24240da92d32631c904fb43"
+    }
+  ],
+  "assetName": "PlaguePersistenceBandedEnchantment",
+  "guid": "22159422e1a9ea04aad3594fcc9545b5"
+}

@@ -1,0 +1,107 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_2d59a47da1884633b3752ce3db477eb1"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_56bbadbf0be445d3ae4e08f45d107db6"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_fea02caee3934d169411ac4a883176f7"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_4c38ba233ef54c7886f0952c1e9ff38f"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_43e5810fc4eb4865984468c2eda9d851"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_ec4a2b7a15a84ac89547ac4c5d4d20f0"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e1788f55274641a4ab83ac6a1ed68a05"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_c9555a37d3434a988a1874b1f19a2308"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e93b79a834cc40368ebff577f45802db"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_bda94650513543edb178682b7bb17735"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_d98d8de647484f788957a24ad9160744"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b1b092a81aa646b8a284c3b622da1ecd"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8ca8093bea484f0cb7af335a195c2bd8"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3b190e9658e14d21a5735c9a23bcd5d4"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b5882ed24fb84f3bb1bfe088680982d6"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_73f374aeb5a0473f94be4592bba31e99"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e80c83f11f154a37b243826939038a4a"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f6cd309f5d614861aca9f69f23689e0a"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_9a5930950fdb48d89580ffd6311a8a15"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_cd735c674b7e49fcbf0f213dab144622"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_27b521eea954440e8dbe9270d6127811"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_51485209053249b9a1ad59765050dc41"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_7815b45f9ab24bf7a6e5192576a10f3e"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_edf9443f090b4c65aa89d9a4a6f11a9d"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_95abf3135ade4c75b196317d7fdbf239"
+    }
+  ],
+  "assetName": "DLC3_RingOfInstantTriumphEnchantment",
+  "guid": "cf86e52d03964ac4af5203ab478deba7"
+}

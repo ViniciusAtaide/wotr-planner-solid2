@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": false,
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "BlightDruidDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_9809efa15e5f9ad478594479af575a5d",
+        "!bp_01c9f3756c9d2e1488b6a2d29dd9d37f"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_b0acce833384b9b428f32517163c9117"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "DeathDomainProgressionDruid",
+  "guid": "7d3f0f00b1f8ad54ba6abc6aeac84c05",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Death Domain (Blight Bond)"
+}

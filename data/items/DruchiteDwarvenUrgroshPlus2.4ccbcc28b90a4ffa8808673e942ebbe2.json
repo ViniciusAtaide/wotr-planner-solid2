@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "DruchiteDwarvenUrgroshPlus2",
+  "guid": "4ccbcc28b90a4ffa8808673e942ebbe2",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": "!bp_b02e466b6acb4f44be61eb189d0f0722",
+  "m_Type": "!bp_0ec97c08fdf87e44f8f16ba87b511743"
+}

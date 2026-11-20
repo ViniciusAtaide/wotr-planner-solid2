@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DivineHealth",
+  "guid": "41d1d0de15e672349bf4262a5acf06ce",
+  "name": "Divine Health"
+}

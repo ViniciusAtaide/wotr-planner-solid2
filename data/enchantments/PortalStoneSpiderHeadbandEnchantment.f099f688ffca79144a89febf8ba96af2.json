@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_03f93d5e2cbe9044db864b448f0a68b8"
+    }
+  ],
+  "assetName": "PortalStoneSpiderHeadbandEnchantment",
+  "guid": "f099f688ffca79144a89febf8ba96af2"
+}

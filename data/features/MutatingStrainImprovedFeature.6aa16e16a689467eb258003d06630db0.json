@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "MutatingStrainImprovedFeature",
+  "guid": "6aa16e16a689467eb258003d06630db0",
+  "name": "Mutating Strain"
+}

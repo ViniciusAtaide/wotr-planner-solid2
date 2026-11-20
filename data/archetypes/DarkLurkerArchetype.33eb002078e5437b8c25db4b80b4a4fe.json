@@ -1,0 +1,159 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_d8bbc2750a7349eeb54b4cb97dc8e796"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_02933a1e1e4345d8b9aaf606444b0432"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_1edbb68422c046f98a86f4726f6721b2"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_1edbb68422c046f98a86f4726f6721b2"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_feff67b620244f09a78d76aba1479814"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_1edbb68422c046f98a86f4726f6721b2"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_1edbb68422c046f98a86f4726f6721b2"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_0c67c03754314f7eb980d6d9e27b4831"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_ce5533d0af114d81b0e3537c5a20c1aa"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_1edbb68422c046f98a86f4726f6721b2"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_1edbb68422c046f98a86f4726f6721b2"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_359b313177f74a17bda6007265a58207",
+        "!bp_1edbb68422c046f98a86f4726f6721b2"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_576933720c440aa4d8d42b0c54b77e80"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_c074a5d615200494b8f2a9c845799d93"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_c074a5d615200494b8f2a9c845799d93"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_c074a5d615200494b8f2a9c845799d93"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_c074a5d615200494b8f2a9c845799d93"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_c074a5d615200494b8f2a9c845799d93"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_c074a5d615200494b8f2a9c845799d93"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_c074a5d615200494b8f2a9c845799d93"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_c074a5d615200494b8f2a9c845799d93"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_c074a5d615200494b8f2a9c845799d93"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_c074a5d615200494b8f2a9c845799d93"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "DarkLurkerArchetype",
+  "guid": "33eb002078e5437b8c25db4b80b4a4fe",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Dark Lurker"
+}

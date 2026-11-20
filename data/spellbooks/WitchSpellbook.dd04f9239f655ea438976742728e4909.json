@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": true,
+  "IsMythic": false,
+  "Spontaneous": false,
+  "assetName": "WitchSpellbook",
+  "guid": "dd04f9239f655ea438976742728e4909",
+  "m_SpellsPerDay": "!bp_78bb94ed2e75122428232950bb09e97b",
+  "name": "Witch"
+}

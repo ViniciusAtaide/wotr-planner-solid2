@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ImmunityToFear",
+  "guid": "12a47d1d5d02fe34c8158ca58e0b3b60",
+  "name": "Immunity to Fear"
+}

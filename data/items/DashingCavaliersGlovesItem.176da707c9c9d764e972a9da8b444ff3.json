@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "DashingCavaliersGlovesItem",
+  "guid": "176da707c9c9d764e972a9da8b444ff3",
+  "m_Enchantments": [
+    "!bp_767793db17645ca41aad152cefd8c8bb"
+  ],
+  "name": "Dashing Cavalier's Gloves"
+}

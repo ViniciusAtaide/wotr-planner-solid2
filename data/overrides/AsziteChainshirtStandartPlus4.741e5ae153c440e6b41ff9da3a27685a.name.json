@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "aszite",
+  "reason": "\"Chainshirt +4\" is two items: the plain one and the aszite one (AsziteChainshirtStandartPlus4), whose armour carries AsziteArmorEnchantment. Restrictions, slot and type are the same, and their enhancement bonus isn't in data/, so the aszite one is qualified by its material; the plain one stays bare.",
+  "target": "741e5ae153c440e6b41ff9da3a27685a"
+}

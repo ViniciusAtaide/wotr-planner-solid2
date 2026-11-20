@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_21c84e44bf6c4639a0db1a515c0ee3c0"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DragonLevel3MaxAbilityIntelligenceFeature",
+  "guid": "48364e762f3645629efd79a9f1f3991b"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPerception"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicBaseFeature",
+  "guid": "3c2bd17e635d4afe936cd0dbbff233c8",
+  "name": "Draconic Bloodline"
+}

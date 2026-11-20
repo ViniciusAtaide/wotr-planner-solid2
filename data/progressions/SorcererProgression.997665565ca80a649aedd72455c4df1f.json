@@ -1,0 +1,119 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_25c97697236ccf2479d0c6a4185eae7f",
+        "!bp_c58b36ec3f759c84089c67611d1bcc21",
+        "!bp_24bef8d1bee12274686f6da6ccbc8914",
+        "!bp_d6dd06f454b34014ab0903cb1ed2ade3",
+        "!bp_9fc9813f569e2e5448ddc435abf774b3",
+        "!bp_d3e6275cfa6e7a04b9213b7b292a011c",
+        "!bp_62ef1cdb90f1d654d996556669caf7fa",
+        "!bp_ee0b69e90bac14446a4cf9a050f87f2e"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": []
+    },
+    {
+      "Level": 3,
+      "m_Features": []
+    },
+    {
+      "Level": 4,
+      "m_Features": []
+    },
+    {
+      "Level": 5,
+      "m_Features": []
+    },
+    {
+      "Level": 6,
+      "m_Features": []
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_3a60f0c0442acfb419b0c03b584e1394"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": []
+    },
+    {
+      "Level": 9,
+      "m_Features": []
+    },
+    {
+      "Level": 10,
+      "m_Features": []
+    },
+    {
+      "Level": 11,
+      "m_Features": []
+    },
+    {
+      "Level": 12,
+      "m_Features": []
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_3a60f0c0442acfb419b0c03b584e1394"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": []
+    },
+    {
+      "Level": 15,
+      "m_Features": []
+    },
+    {
+      "Level": 16,
+      "m_Features": []
+    },
+    {
+      "Level": 17,
+      "m_Features": []
+    },
+    {
+      "Level": 18,
+      "m_Features": []
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_3a60f0c0442acfb419b0c03b584e1394"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": []
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "SorcererProgression",
+  "guid": "997665565ca80a649aedd72455c4df1f",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null
+}

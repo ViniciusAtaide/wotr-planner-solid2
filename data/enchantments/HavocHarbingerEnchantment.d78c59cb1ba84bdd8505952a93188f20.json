@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_ec559f41dfb44c6bbd2f920a7c2cb63f"
+    }
+  ],
+  "assetName": "HavocHarbingerEnchantment",
+  "guid": "d78c59cb1ba84bdd8505952a93188f20"
+}

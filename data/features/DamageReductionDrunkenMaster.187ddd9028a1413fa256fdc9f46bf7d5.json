@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 3,
+  "assetName": "DamageReductionDrunkenMaster",
+  "guid": "187ddd9028a1413fa256fdc9f46bf7d5",
+  "name": "Drunken Resilience"
+}

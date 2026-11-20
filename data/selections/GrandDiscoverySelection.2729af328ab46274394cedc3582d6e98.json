@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "GrandDiscoverySelection",
+  "guid": "2729af328ab46274394cedc3582d6e98",
+  "m_AllFeatures": [
+    "!bp_d5378cb816b0c7a4cb47500e6ccf8702",
+    "!bp_318ce88da1832744c87fd15be5010dc0",
+    "!bp_15bac762b599b7e42824c333717d79d9"
+  ],
+  "name": "Grand Discovery"
+}

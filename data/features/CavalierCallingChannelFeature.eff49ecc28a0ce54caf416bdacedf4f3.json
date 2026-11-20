@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 20,
+  "assetName": "CavalierCallingChannelFeature",
+  "guid": "eff49ecc28a0ce54caf416bdacedf4f3"
+}

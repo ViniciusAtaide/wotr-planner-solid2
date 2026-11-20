@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_19e1c418cbad1b540ad52fee0fd7f16b"
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Insight",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillMobility",
+      "Value": 4
+    }
+  ],
+  "Groups": [
+    "TerrainDominance"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TerrainExpertiseForest",
+  "guid": "ef710ae526973d240921f35437da7ca0",
+  "name": "Terrain Expertise — Forest"
+}

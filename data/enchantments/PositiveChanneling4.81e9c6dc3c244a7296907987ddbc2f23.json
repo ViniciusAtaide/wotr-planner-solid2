@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_d3f8ed38e5a3471f89aa83d34a6347cd"
+    }
+  ],
+  "assetName": "PositiveChanneling4",
+  "guid": "81e9c6dc3c244a7296907987ddbc2f23"
+}

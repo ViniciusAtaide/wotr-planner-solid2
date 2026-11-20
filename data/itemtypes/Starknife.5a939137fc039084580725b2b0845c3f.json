@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Starknife",
+  "Components": [],
+  "assetName": "Starknife",
+  "guid": "5a939137fc039084580725b2b0845c3f",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "BladesLight, Thrown",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Starknife"
+}

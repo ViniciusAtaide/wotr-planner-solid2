@@ -1,0 +1,88 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillKnowledgeArcana",
+    "SkillKnowledgeWorld",
+    "SkillLoreNature",
+    "SkillLoreReligion",
+    "SkillThievery",
+    "SkillStealth",
+    "SkillPerception",
+    "SkillPersuasion",
+    "SkillAthletics",
+    "SkillMobility"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "SkillThievery",
+      "Value": 4
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "SkillMobility",
+      "Value": 4
+    },
+    {
+      "$type": "PrerequisiteFullStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "SneakAttack",
+      "Value": 2
+    },
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteCasterTypeSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsArcane": true,
+      "IsFeatureSelectionWhiteList": false,
+      "OnlySpontaneous": false,
+      "RequiredSpellLevel": 2
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 4
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D6",
+  "IsMythic": false,
+  "PrestigeClass": true,
+  "SkillPoints": 3,
+  "assetName": "ArcaneTricksterClass",
+  "guid": "9c935a076d4fe4d4999fd48d853e3cf3",
+  "m_Archetypes": [],
+  "m_BaseAttackBonus": "!bp_0538081888b2d8c41893d25d098dee99",
+  "m_FortitudeSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_e0a20a167db1a8f43933cd992d2146df",
+  "m_ReflexSave": "!bp_1f309006cd2855e4e91a6c3707f3f700",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_1f309006cd2855e4e91a6c3707f3f700",
+  "name": "Arcane Trickster"
+}

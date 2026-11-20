@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "Universal",
+  "reason": "The Dragonblood Shifter's dragon forms come in three sets, one for each draconic aspect. The Wyrmshifter features grant ShifterDragonFormNeutralFeatureLevelUp only while the shifter holds 'Draconic Aspect — Universal' (AddFeatureIfHasFact), and that feature grants this blueprint by AddFeatureOnClassLevel, directly or through ShifterDragonFormNeutralFeatureLevelUp1. Grantors and levels are the same in each set and the names repeat, so only the aspect that gates the set tells the three apart; each is qualified by it.",
+  "target": "afa7bd483b344f7f9a005daa66938abf"
+}

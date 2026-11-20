@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "AllRoundDefenseItem",
+  "guid": "1e40138a1fe478e408e65f7c1a4c0505",
+  "m_Enchantments": [
+    "!bp_4f444d9161590f84a928b2afb09c987e"
+  ],
+  "name": "All-Round Defense"
+}

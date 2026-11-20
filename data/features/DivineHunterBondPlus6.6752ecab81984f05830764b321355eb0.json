@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "IncreaseActivatableAbilityGroupSize",
+      "Group": "DivineWeaponProperty"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DivineHunterBondPlus6",
+  "guid": "6752ecab81984f05830764b321355eb0",
+  "name": "Divine Hunter Bond (Divine Hunter 20)"
+}

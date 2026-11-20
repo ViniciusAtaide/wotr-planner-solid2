@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionAlignment",
+      "Alignment": "Chaotic"
+    }
+  ],
+  "assetName": "RingOfChaosItem",
+  "guid": "97143f0ec43f505409929934811144c3",
+  "m_Enchantments": [
+    "!bp_79d0a60428fda2344872cc4fb811ed74"
+  ],
+  "name": "Ring of Chaos"
+}

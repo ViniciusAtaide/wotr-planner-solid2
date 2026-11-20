@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_52ebd2e6234eadd42a896208c1458586"
+    }
+  ],
+  "assetName": "DashingCavaliersGlovesEnchantment",
+  "guid": "767793db17645ca41aad152cefd8c8bb"
+}

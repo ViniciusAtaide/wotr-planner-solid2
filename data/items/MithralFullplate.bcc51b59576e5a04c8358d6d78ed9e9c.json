@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "MithralFullplate",
+  "guid": "bcc51b59576e5a04c8358d6d78ed9e9c",
+  "m_Enchantments": [
+    "!bp_7b95a819181574a4799d93939aa99aff"
+  ],
+  "m_Type": "!bp_afd9065539b3ac5499eddca923654c4b",
+  "name": "Mithral Full Plate"
+}

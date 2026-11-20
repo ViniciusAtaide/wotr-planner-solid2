@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d6bf5da423ddc7d4cb9cf46c5dbb7eb3"
+    }
+  ],
+  "Groups": [
+    "MythicTrick3"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterMobilityTier3Feature",
+  "guid": "6db3651d9af54f28b5a3a5570f49f349",
+  "name": "Mobility 3 Rank"
+}

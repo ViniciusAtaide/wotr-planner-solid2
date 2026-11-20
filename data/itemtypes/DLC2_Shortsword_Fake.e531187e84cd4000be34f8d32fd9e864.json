@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Shortsword",
+  "Components": [],
+  "assetName": "DLC2_Shortsword_Fake",
+  "guid": "e531187e84cd4000be34f8d32fd9e864",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "BladesLight",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false
+}

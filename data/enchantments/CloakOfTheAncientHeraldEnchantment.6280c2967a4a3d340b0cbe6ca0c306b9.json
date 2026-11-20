@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_151376158765fdb4d9fed6461717101f"
+    }
+  ],
+  "assetName": "CloakOfTheAncientHeraldEnchantment",
+  "guid": "6280c2967a4a3d340b0cbe6ca0c306b9"
+}

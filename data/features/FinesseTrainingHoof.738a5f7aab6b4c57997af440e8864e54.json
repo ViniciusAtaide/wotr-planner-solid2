@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteProficiency",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "Hoof"
+      ]
+    },
+    {
+      "$type": "PrerequisiteConditionForWeaponCategory",
+      "m_Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "ContextConditionIsWeaponEquipped",
+              "BothHandsAreEmpty": false,
+              "Category": "Hoof",
+              "CheckOnCaster": true,
+              "CheckSlot": false,
+              "CheckWeaponCategory": true,
+              "CheckWeaponRangeType": false,
+              "JustCheckEmptyHand": false,
+              "Not": false,
+              "RangeType": "Melee",
+              "Slot": "PrimaryHand"
+            }
+          ],
+          "Operation": "And"
+        },
+        "Not": false
+      },
+      "m_WeaponCategories": [
+        "Hoof"
+      ]
+    }
+  ],
+  "Groups": [
+    "FinesseTraining"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FinesseTrainingHoof",
+  "guid": "738a5f7aab6b4c57997af440e8864e54",
+  "name": "Finesse Training (Hoof)"
+}

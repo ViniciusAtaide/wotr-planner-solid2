@@ -1,0 +1,42 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_3bc6e1d2b44b5bb4d92e6ba59577cf62",
+        "!bp_c27e6d2b0d33d42439f512c6d9a6a601",
+        "!bp_7dc004879037638489b64d5016997d12"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ArmorFocusMythicSelection",
+  "guid": "068f833e8aea4cd58df003543e11b207",
+  "m_AllFeatures": [
+    "!bp_40be409a44084b2998eda225dd9c544a",
+    "!bp_b152e7fdfc6a452c8c47dd76de83e1aa",
+    "!bp_4243c96836bf4b54aa4b36e1ab0c7fb1",
+    "!bp_b28a0e962e3c40ee84411cccef31d4d0",
+    "!bp_9b83bd09e7154b5f9c22a172efaaef4e",
+    "!bp_037c3fde2ad14767a92768c9aa6d6de2",
+    "!bp_48168449f8ba465fab2843ba2dada063",
+    "!bp_6c6b8ba0ad1141df9316ab0ee28cbb77",
+    "!bp_3260cacb9fa64d3bba6f179cfb026abd"
+  ],
+  "name": "Armor Focus (Mythic)"
+}

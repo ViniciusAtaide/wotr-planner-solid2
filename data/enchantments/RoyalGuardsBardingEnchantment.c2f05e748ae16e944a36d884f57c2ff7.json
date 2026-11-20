@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_f733f7365f95d6a4998916a28d1f05ce"
+    }
+  ],
+  "assetName": "RoyalGuardsBardingEnchantment",
+  "guid": "c2f05e748ae16e944a36d884f57c2ff7"
+}

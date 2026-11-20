@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "LichUniqueAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "UndeadMountFeature",
+  "guid": "a46d64cfd32fc3749a5897657247a680",
+  "name": "Undead Mount"
+}

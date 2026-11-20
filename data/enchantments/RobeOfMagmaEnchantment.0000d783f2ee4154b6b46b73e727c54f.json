@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_11ac3433adfa74642a93111624376070"
+    }
+  ],
+  "assetName": "RobeOfMagmaEnchantment",
+  "guid": "0000d783f2ee4154b6b46b73e727c54f"
+}

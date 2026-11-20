@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "MetakinesisMaster",
+  "guid": "8c33002186eb2fd45a140eed1301e207",
+  "m_AllFeatures": [
+    "!bp_5b910d6c2b0a8384a996502d64051e4c",
+    "!bp_5cda9f923cb35ea4a957b0e899420ec5",
+    "!bp_71e53b59bd103904c93b5b5beb0e930e"
+  ],
+  "name": "Metakinetic Master"
+}

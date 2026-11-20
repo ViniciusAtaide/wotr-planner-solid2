@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "level 10",
+  "reason": "The ranger's combat style is three selections of feats named \"Weapon and Shield\", one opened at each of the ranger's levels 2, 6 and 10 (RangerProgression, through RangerStyleSelection10; Nomad and Stormwalker add the level-10 one at level 10). The slayer's Combat Style Feat talents offer them too, so no grantor or level holds on every route. Each is qualified by the level whose selection it is.",
+  "target": "b2e73b554839a314a8c716dbf33fcfc3"
+}

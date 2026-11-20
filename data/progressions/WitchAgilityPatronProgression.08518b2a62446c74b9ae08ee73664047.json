@@ -1,0 +1,81 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "WitchPatron"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_9f2e7426e5e61224e93d2c3072bf9c1c"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_beb4a8ad0033dbf47939c96ec14583fa"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_38d34391d7cf2da4e8705c2cb23edd30"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_88b19f1f895da364099c5975b04b2fdc"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_2e44d8b36eb8be14db7bf05a1cc81df1"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_68e539d674b037f4a8db194e8307b8fb"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_2c5574dce48718d449183d8c5056d286"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_6164c2aa71247bd4d91274ebe93a6c0f"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_1e418c5f030347542ad47dd752cdea05"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WitchAgilityPatronProgression",
+  "guid": "08518b2a62446c74b9ae08ee73664047",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Agility"
+}

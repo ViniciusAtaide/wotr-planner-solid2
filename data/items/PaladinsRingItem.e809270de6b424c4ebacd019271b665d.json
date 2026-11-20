@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "PaladinsRingItem",
+  "guid": "e809270de6b424c4ebacd019271b665d",
+  "m_Enchantments": [
+    "!bp_f107c60d8cc2ae6488704109e5ed51f5"
+  ],
+  "name": "Righteous Crusader's Ring"
+}

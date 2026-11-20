@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintShieldType",
+  "Components": [],
+  "assetName": "LightShieldType",
+  "guid": "d38e8ea23ce653c4582eb3e002555483",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "LightShield",
+  "name": "Light Shield"
+}

@@ -1,0 +1,193 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 5,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 6,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 7,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 8,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 9,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 11,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 12,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 13,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 14,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 16,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 17,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 18,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 19,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_9f835c539f6e4a96a7b64461f4267d06",
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "DruidDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_d577aba79b5727a4ab74627c4c6ba23c",
+        "!bp_2671b9a10b2e08c4da999d2374507b41"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_2ecd6c64683b59944a7fe544033bb533"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "AnimalDomainProgressionDruid",
+  "guid": "a75ad4936e099c54881cf553e2110703",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Animal Domain (Druid)"
+}

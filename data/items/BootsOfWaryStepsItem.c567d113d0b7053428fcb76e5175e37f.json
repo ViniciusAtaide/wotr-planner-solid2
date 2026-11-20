@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "BootsOfWaryStepsItem",
+  "guid": "c567d113d0b7053428fcb76e5175e37f",
+  "m_Enchantments": [
+    "!bp_f327a2d896e87a249b0662786284f569"
+  ],
+  "name": "Boots of Wary Steps"
+}

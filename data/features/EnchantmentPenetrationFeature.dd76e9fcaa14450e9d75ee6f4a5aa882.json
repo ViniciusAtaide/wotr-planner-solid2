@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EnchantmentPenetrationFeature",
+  "guid": "dd76e9fcaa14450e9d75ee6f4a5aa882",
+  "name": "Enchanter's Penetration"
+}

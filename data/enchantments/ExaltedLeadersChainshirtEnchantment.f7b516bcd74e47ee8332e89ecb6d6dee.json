@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_2968a2fec57a4296b62cac1e077dc000"
+    }
+  ],
+  "assetName": "ExaltedLeadersChainshirtEnchantment",
+  "guid": "f7b516bcd74e47ee8332e89ecb6d6dee"
+}

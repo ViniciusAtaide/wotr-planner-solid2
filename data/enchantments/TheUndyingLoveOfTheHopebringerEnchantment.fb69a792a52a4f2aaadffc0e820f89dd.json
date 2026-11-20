@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_c03a1dd822ef4bac84fe76a986d1993d"
+    }
+  ],
+  "assetName": "TheUndyingLoveOfTheHopebringerEnchantment",
+  "guid": "fb69a792a52a4f2aaadffc0e820f89dd"
+}

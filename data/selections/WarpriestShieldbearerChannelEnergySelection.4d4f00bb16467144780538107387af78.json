@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "WarpriestShieldbearerChannelEnergySelection",
+  "guid": "4d4f00bb16467144780538107387af78",
+  "m_AllFeatures": [
+    "!bp_332c43d3f25fb9a429a42067142c41d5",
+    "!bp_5aebdef7644a74e4d8c0d3cd8909de2b"
+  ],
+  "name": "Channel Energy (Shieldbearer)"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_25cc90188234bba4094451150a65df12"
+    }
+  ],
+  "assetName": "AlchemistsClothEnchantment",
+  "guid": "5ac1350dbddabd745baad8170d4e9c05"
+}

@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "BreastplateStandartPlus4",
+  "guid": "a2e198d62e0285a4abe5085b3c8bdf46",
+  "m_Enchantments": [
+    "!bp_eaeb89df5be2b784c96181552414ae5a"
+  ],
+  "m_Type": "!bp_d326c3c61a84c6f40977c84fab41503d",
+  "name": "Breastplate +4"
+}

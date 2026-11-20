@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionHasAnyClassFromList",
+      "Not": false,
+      "m_Classes": [
+        "!bp_26b10d4340839004f960f9816f6109fe",
+        "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+      ]
+    }
+  ],
+  "assetName": "LeatherBardingStandartPlus1",
+  "guid": "d5c5bb4eff4424b4390af40c16edb486",
+  "m_Enchantments": [
+    "!bp_a9ea95c5e02f9b7468447bc1010fe152"
+  ],
+  "m_Type": "!bp_503056b4c5a01f44db0ed10ce4c9ef01",
+  "name": "Leather Barding +1"
+}

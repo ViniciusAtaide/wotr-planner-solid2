@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddPet",
+      "Type": "AnimalCompanion"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_f668d6897a7545458013340e51c8a92d"
+    },
+    {
+      "$type": "PrerequisitePet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "NoCompanion": false,
+      "Type": "AnimalCompanion"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BlizzardServantFeature",
+  "guid": "025d5a55f50f44d2a3db30f9e8854bdf",
+  "name": "Blizzard Servant"
+}

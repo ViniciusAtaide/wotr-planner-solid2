@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DwarfDefensiveTrainingGiants",
+  "guid": "f268a00e42618144e86c9db76af7f3e9",
+  "name": "Defensive Training — Giants"
+}

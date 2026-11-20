@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_38155ca9e4055bb48a89240a2055dcc3"
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "WizardFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SuperiorSummoning",
+  "guid": "0477936c0f74841498b5c8753a8062a3",
+  "name": "Superior Summoning"
+}

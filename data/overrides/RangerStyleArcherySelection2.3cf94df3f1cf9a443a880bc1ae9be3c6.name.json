@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "level 2",
+  "reason": "The ranger's combat style is three selections of feats named \"Archery\", one opened at each of the ranger's levels 2, 6 and 10 (RangerProgression, through RangerStyleSelection2; Nomad and Stormwalker add the level-2 one at level 2). The slayer's Combat Style Feat talents offer them too, so no grantor or level holds on every route. Each is qualified by the level whose selection it is.",
+  "target": "3cf94df3f1cf9a443a880bc1ae9be3c6"
+}

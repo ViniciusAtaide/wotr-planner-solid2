@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [
+    {
+      "$type": "KensaiChosenWeapon",
+      "m_Focus": "!bp_1e1f627d26ad36f43bbd26cc2bf8ac7e"
+    }
+  ],
+  "Groups": [],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "WeaponCategory",
+  "Ranks": 1,
+  "RequireProficiency": false,
+  "WeaponSubCategory": "Melee",
+  "assetName": "SwordSaintChosenWeaponFeature",
+  "guid": "c0b4ec0175e3ff940a45fc21f318a39a",
+  "m_Prerequisite": null,
+  "name": "Chosen Weapon"
+}

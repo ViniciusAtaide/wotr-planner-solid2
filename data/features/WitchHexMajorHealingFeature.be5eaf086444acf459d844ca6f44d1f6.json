@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8ac781b33e380c84aa578f1b006dd6c5"
+    }
+  ],
+  "Groups": [
+    "WitchHex"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WitchHexMajorHealingFeature",
+  "guid": "be5eaf086444acf459d844ca6f44d1f6",
+  "name": "Major Healing"
+}

@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "bloodrager",
+  "reason": "The bloodrager's celestial bloodline has its own \"Celestial Resistances\" at level 4 (BloodragerCelestialBloodline, its second-bloodline copy and the wandering one, and the Primalist's retained powers), beside the sorcerer's. It is qualified as the bloodrager's.",
+  "target": "16b632b134b2c27458fb2559e72815f4"
+}

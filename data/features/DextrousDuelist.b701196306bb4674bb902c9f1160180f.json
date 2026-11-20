@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "GetUpWithoutAttackOfOpportunity"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DextrousDuelist",
+  "guid": "b701196306bb4674bb902c9f1160180f",
+  "name": "Dexterous Duelist"
+}

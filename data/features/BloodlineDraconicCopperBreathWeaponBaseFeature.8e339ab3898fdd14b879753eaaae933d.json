@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_63718b3248898134eba94a139ea07313",
+      "m_Feature": "!bp_63718b3248898134eba94a139ea07313"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicCopperBreathWeaponBaseFeature",
+  "guid": "8e339ab3898fdd14b879753eaaae933d",
+  "name": "Breath Weapon (Draconic Bloodline — Copper)"
+}

@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Inherent",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Strength",
+      "Value": 2
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "BloodlineAbyssalStrengthAbilityLevel1",
+  "guid": "d3ccd7c74caab594485c20f694aca91d",
+  "name": "Strength of the Abyss (Abyssal Bloodline 9)"
+}

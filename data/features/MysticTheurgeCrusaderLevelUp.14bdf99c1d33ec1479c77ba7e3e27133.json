@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_673d39f7da699aa408cdda6282e7dcc0"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "MysticTheurgeCrusaderLevelUp",
+  "guid": "14bdf99c1d33ec1479c77ba7e3e27133",
+  "name": "Crusader"
+}

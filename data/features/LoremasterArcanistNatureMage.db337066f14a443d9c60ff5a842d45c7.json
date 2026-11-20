@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_26185cfb81b34e778ad370407300de9a",
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "Groups": [
+    "MythicAdditionalProgressions"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "LoremasterArcanistNatureMage",
+  "guid": "db337066f14a443d9c60ff5a842d45c7",
+  "m_Spellbook": "!bp_3ed7e38dc8134af28e1a2b105f74fb7b",
+  "name": "Arcanist"
+}

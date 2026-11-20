@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "LichSkeletalUpgrade"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_03168a77717179c43bcddb71d52f6167",
+        "!bp_f9f5e55cbf4026b47a5f622e3f06fb5f"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "LichSkeletalInquisitorProgression",
+  "guid": "c237f25a4541d784b971d260c88f2f14",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_5d501618a28bdc24c80007a5c937dcb7"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Skeletal Inquisitor I (Skeleton Upgrade Selection)"
+}

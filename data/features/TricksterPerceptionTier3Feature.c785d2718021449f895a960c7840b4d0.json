@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e9298851786c5334dba1398e9635a83d"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_8b530a3e37df440f9f9502eb379d7c36",
+        "!bp_2902b0d47f674c678f306e4abc352ae8"
+      ]
+    }
+  ],
+  "Groups": [
+    "MythicTrick3"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterPerceptionTier3Feature",
+  "guid": "c785d2718021449f895a960c7840b4d0",
+  "name": "Perception 3 Rank"
+}

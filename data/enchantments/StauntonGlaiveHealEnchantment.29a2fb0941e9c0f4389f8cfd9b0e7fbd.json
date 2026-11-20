@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_319109919467c2c409bb580e38b4c348"
+    }
+  ],
+  "assetName": "StauntonGlaiveHealEnchantment",
+  "guid": "29a2fb0941e9c0f4389f8cfd9b0e7fbd"
+}

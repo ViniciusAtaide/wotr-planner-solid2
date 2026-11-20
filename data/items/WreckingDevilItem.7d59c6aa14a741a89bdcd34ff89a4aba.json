@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "WreckingDevilItem",
+  "guid": "7d59c6aa14a741a89bdcd34ff89a4aba",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_b147364a4f50438f943f8095c85916b7"
+  ],
+  "m_SecondWeapon": "!bp_f0135de0d7584f05a82e85e9a5809507",
+  "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3",
+  "name": "Wrecking Devil"
+}

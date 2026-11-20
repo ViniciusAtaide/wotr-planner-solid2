@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_082c41165746eb64fb0b696030ac4aa9"
+    }
+  ],
+  "assetName": "SacredCommandmentEnchantment",
+  "guid": "481087f6a42bff24ab5bc417042587fb"
+}

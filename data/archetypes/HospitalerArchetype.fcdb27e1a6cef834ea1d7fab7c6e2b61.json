@@ -1,0 +1,62 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_a9ab1bbc79ecb174d9a04699986ce8d5"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_d19ef94d056fd1a45bb08017b10a5e93"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_0f5c99ffb9c084545bbbe960b825d137"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_0f5c99ffb9c084545bbbe960b825d137"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_0f5c99ffb9c084545bbbe960b825d137"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_cb6d55dda5ab906459d18a435994a760"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_9f13fdd044ccb8a439f27417481cb00e"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "HospitalerArchetype",
+  "guid": "fcdb27e1a6cef834ea1d7fab7c6e2b61",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Hospitaler"
+}

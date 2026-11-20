@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ShortbowKeenPlus1",
+  "guid": "b9131c1ce18acc945bda1cc06e281af7",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_99ce02fb54639b5439d07c99c55b8542",
+  "name": "Keen Shortbow +1"
+}

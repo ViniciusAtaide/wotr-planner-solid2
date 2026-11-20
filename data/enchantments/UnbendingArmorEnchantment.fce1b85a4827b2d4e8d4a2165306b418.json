@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_aeb2da5269fe9b040b01e11272532c08"
+    }
+  ],
+  "assetName": "UnbendingArmorEnchantment",
+  "guid": "fce1b85a4827b2d4e8d4a2165306b418"
+}

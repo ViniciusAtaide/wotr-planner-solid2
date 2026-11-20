@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "JudgmentAdditionalUse",
+  "guid": "ee50875819478774b8968701893b52f5",
+  "name": "Judgment (additional use)"
+}

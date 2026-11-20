@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_5648585af75596f4a9fa3ae385127f57",
+      "m_CharacterClass": "!bp_d77e67a814d686842802c9cfd8ef8499"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BloodragerDragonFeatSelectionGreenrager",
+  "guid": "3d0b4942c400a7f448ca09e04edfb52a",
+  "m_AllFeatures": [
+    "!bp_4e219f5894ad0ea4daa0699e28c37b1d",
+    "!bp_d809b6c4ff2aaff4fa70d712a70f7d7b",
+    "!bp_79042cb55f030614ea29956177977c52",
+    "!bp_797f25d709f559546b29e7bcb181cc74",
+    "!bp_d09b20029e9abfe4480b356c92095623",
+    "!bp_9972f33f977fc724c838e59641b2fca5",
+    "!bp_d76497bfc48516e45a0831628f767a0f"
+  ],
+  "name": "Bonus Feats (Draconic 6)"
+}

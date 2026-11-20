@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintRace",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "SelectableRaceStat": false,
+  "assetName": "TieflingRace",
+  "guid": "5c4e42124dc2b4647af6e36cf2590500",
+  "m_Features": [
+    "!bp_c4029234bd17ee9488941ad7a14333f6",
+    "!bp_c862fd0e4046d2d4d9702dd60474a181"
+  ],
+  "name": "Tiefling"
+}

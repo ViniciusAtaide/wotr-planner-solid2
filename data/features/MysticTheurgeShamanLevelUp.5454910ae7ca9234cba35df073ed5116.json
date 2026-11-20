@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_44f16931dabdff643bfe2a48138e769f"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "MysticTheurgeShamanLevelUp",
+  "guid": "5454910ae7ca9234cba35df073ed5116",
+  "name": "Shaman"
+}

@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_dd163630abbdace4e85284c55d269867"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_ba34257984f4c41408ce1dc2004e342e"
+    }
+  ],
+  "Groups": [
+    "EldritchKnightSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "EldritchKnightThassilonianTransmutation",
+  "guid": "099a1dc2b15a8f54cb13af76abda5703",
+  "m_Spellbook": "!bp_5785f40e7b1bfc94ea078e7156aa9711",
+  "name": "Thassilonian Specialist — Greed"
+}

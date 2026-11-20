@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "ColorlessRemainsGoggles_SolidItem",
+  "guid": "0a5bb37581c24706bda2b7d230afaa20",
+  "m_Enchantments": [
+    "!bp_3c62e48bfec049b99f7c7f6759c42b1f"
+  ],
+  "name": "Seal of Jubilex (glasses)"
+}

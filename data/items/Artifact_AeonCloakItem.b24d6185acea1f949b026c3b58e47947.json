@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_15a85e67b7d69554cab9ed5830d0268e"
+    }
+  ],
+  "assetName": "Artifact_AeonCloakItem",
+  "guid": "b24d6185acea1f949b026c3b58e47947",
+  "m_Enchantments": [
+    "!bp_4720a88cdc8e47fe8526041cdfe2a5a4"
+  ],
+  "name": "The Bound of Possibility (Aeon)"
+}

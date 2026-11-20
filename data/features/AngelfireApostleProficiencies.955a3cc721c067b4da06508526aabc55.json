@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_6d3728d4e9c9898458fe5e9532951132",
+        "!bp_e70ecf1ed95ca2f40b754f1adb22bbdd",
+        "!bp_cb8686e7357a68c42bdd9d4e65334633"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AngelfireApostleProficiencies",
+  "guid": "955a3cc721c067b4da06508526aabc55",
+  "name": "Armor Proficiency (Angelfire Apostle)"
+}

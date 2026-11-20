@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "HolyDevoteesWrathItem",
+  "guid": "2a1edf00e8d9b234088e58e59f3c97b2",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b",
+    "!bp_34a029bf2af2cb146aaffd0bcbbf3f32"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d56c44bc9eb10204c8b386a02c7eed21",
+  "name": "Holy Devotee's Wrath"
+}

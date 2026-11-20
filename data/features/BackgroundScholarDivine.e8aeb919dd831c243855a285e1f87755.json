@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillUseMagicDevice"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreReligion"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillUseMagicDevice"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillLoreReligion"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_c0f8c4e513eb493408b8070a1de93fc0",
+      "m_Feature": "!bp_c0f8c4e513eb493408b8070a1de93fc0"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundScholarDivine",
+  "guid": "e8aeb919dd831c243855a285e1f87755",
+  "name": "Scholar — Divine"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "DLC3_RobeOfTheSinmageItem",
+  "guid": "b2b41b525b33406596ef4051d6232c1f",
+  "m_Enchantments": [
+    "!bp_f583e44cd3a742a28cb5253c09e3db6e"
+  ],
+  "name": "Robe of the Seven Sins"
+}

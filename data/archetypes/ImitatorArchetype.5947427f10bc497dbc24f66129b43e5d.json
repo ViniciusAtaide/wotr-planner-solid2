@@ -1,0 +1,120 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_35336c21b12f40ef9bf0ef7207107f4b"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_97c7054442504513b0324c00db0290fc"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_0a5d473ead98b0646b94495af250fdc4"
+    }
+  ],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_09bdd9445ac38044389476689ae8d5a1"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_04430ad24988baa4daa0bcd4f1c7d118"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_09bdd9445ac38044389476689ae8d5a1"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_40d4f55a5ac0e4f469d67d36c0dfc40b"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_913b9cf25c9536949b43a2651b7ffb66",
+        "!bp_09bdd9445ac38044389476689ae8d5a1"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_758e04f4568ec3f4c8d1fd83aed06fb9"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_09bdd9445ac38044389476689ae8d5a1"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_913b9cf25c9536949b43a2651b7ffb66"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_f4df3231977753d4ebd2ceb2ef5901ed"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_09bdd9445ac38044389476689ae8d5a1",
+        "!bp_a26c0279a423fc94cabeea898f4d9f8a"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "ImitatorArchetype",
+  "guid": "5947427f10bc497dbc24f66129b43e5d",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Imitator"
+}

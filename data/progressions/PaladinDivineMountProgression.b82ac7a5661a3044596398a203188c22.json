@@ -1,0 +1,139 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_1670990255e4fe948a863bafd5dbda5d"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d",
+        "!bp_ea31185f4e0f91041bf766d67214182f"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d",
+        "!bp_e7bdf20ef01b4284d807e073b8bb8f8c"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "PaladinDivineMountProgression",
+  "guid": "b82ac7a5661a3044596398a203188c22",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_bfa11238e7ae3544bbeb4d0b92e897ec"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": []
+}

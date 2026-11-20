@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "step 2",
+  "reason": "The arcane bloodline's \"Combat Casting Adept\" (granted at level 3 by the Arcane Bloodline and the Sage Sorcerer, and at level 9 by the seeker's copy) gives its bonus in steps, one blueprint each, swapped by level through AddFeatureOnClassLevel: before 9, before 15, and from 15 on, with different levels on the seeker's route. No level holds on every route, so each step is qualified by its order.",
+  "target": "165523faea799a947a047101e220259c"
+}

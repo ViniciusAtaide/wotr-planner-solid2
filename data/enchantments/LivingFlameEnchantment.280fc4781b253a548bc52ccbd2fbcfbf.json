@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_01276815beaf1c44bbfb842bc1bcb899"
+    }
+  ],
+  "assetName": "LivingFlameEnchantment",
+  "guid": "280fc4781b253a548bc52ccbd2fbcfbf"
+}

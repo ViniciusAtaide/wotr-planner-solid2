@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DestroyerOfPlanesItem",
+  "guid": "34a0526e03454f218afae7e2e0878a44",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_f534453a5edb400bb5e9eb12c42f5001"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d516765b3c2904e4a939749526a52a9a",
+  "name": "Destroyer of Planes"
+}

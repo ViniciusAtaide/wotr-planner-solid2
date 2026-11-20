@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EnergyEquilibriumFeature",
+  "guid": "703623911bb34f2f9beeff17051b8533",
+  "name": "Energy Equilibrium"
+}

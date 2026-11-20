@@ -1,0 +1,73 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8be8108c3bdac5d4cbad2e54e581d830"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_b1f3b639d54540e59eb0643d77f3736c"
+    }
+  ],
+  "ForAllOtherClasses": true,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_db4bef691eb96b24181c27792896f245"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_5e4a00d5bb3f7374888806c2324228de"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_a3fd927a448b22548a55bc1343a5c39a"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_64fcaf8d95396c840b1d008997b01b9f"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "PlaguedCurseNoPenaltyProgression",
+  "guid": "ae0e1b45d567af04a8bc7b052a4c54e1",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_c5f6e53e71059fb4d802ce81a277a12d"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Plagued (Beneficial Curse)"
+}

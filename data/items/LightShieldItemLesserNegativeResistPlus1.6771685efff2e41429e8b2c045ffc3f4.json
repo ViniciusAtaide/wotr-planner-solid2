@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "LightShieldItemLesserNegativeResistPlus1",
+  "guid": "6771685efff2e41429e8b2c045ffc3f4",
+  "m_ArmorComponent": "!bp_2cd9e43732eecd0488110a19cc5a11cb",
+  "m_WeaponComponent": "!bp_62c90581f9892e9468f0d8229c7321c4",
+  "name": "Light Shield of Lesser Negative Energy Resistance"
+}

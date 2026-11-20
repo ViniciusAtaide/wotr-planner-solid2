@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanDwarvenUrgroshSecondStage3Base",
+  "guid": "46d278a32a4594747b90a979d776640a",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_c4e95e3c489721e4382fd8514a522f9d",
+  "name": "Finnean the Talking Weapon"
+}

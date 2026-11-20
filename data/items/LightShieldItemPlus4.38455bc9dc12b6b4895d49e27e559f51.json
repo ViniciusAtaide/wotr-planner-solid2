@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "LightShieldItemPlus4",
+  "guid": "38455bc9dc12b6b4895d49e27e559f51",
+  "m_ArmorComponent": "!bp_7f5be55fc115e694f97ab2fafb2cffdd",
+  "m_WeaponComponent": "!bp_62c90581f9892e9468f0d8229c7321c4",
+  "name": "Light Shield +4"
+}

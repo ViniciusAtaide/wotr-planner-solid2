@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_0c7a9899e27cae6449ee1fb3049f128d",
+        "!bp_c59b2f256f5a70a4d896568658315b7d"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "ExtraBombs",
+  "guid": "54c57ce67fa1d9044b1b3edc459e05e2",
+  "name": "Extra Bombs"
+}

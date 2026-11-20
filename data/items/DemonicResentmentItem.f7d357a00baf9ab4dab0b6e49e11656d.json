@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "DemonicResentmentItem",
+  "guid": "f7d357a00baf9ab4dab0b6e49e11656d",
+  "m_Enchantments": [
+    "!bp_b9a1f3221435cd64b8a3c6cdfc780b0f"
+  ],
+  "name": "Demonic Resentment"
+}

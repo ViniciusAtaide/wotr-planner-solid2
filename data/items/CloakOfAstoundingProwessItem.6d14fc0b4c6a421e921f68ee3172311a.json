@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CloakOfAstoundingProwessItem",
+  "guid": "6d14fc0b4c6a421e921f68ee3172311a",
+  "m_Enchantments": [
+    "!bp_430bf7cabb9c494195e7b0dc9a192900"
+  ],
+  "name": "Cloak of Astounding Prowess"
+}

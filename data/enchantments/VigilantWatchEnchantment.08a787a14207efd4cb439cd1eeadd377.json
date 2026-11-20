@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_d4cf7afc49b81e34989f2dfa76889fed"
+    }
+  ],
+  "assetName": "VigilantWatchEnchantment",
+  "guid": "08a787a14207efd4cb439cd1eeadd377"
+}

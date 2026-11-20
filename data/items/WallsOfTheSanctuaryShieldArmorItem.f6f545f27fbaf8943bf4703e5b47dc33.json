@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "WallsOfTheSanctuaryShieldArmorItem",
+  "guid": "f6f545f27fbaf8943bf4703e5b47dc33",
+  "m_Enchantments": [
+    "!bp_65900d6225083fa42a7082a08f569d71",
+    "!bp_84d191a748edef84ba30c13b8ab83bd9"
+  ],
+  "m_Type": "!bp_5f0f4b6e480e7054b8592b5a8b55854a"
+}

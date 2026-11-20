@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Warhammer",
+  "Components": [],
+  "assetName": "Warhammer",
+  "guid": "fac41e149f49cba4a8e06ce39b41a6fa",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Hammers",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Warhammer"
+}

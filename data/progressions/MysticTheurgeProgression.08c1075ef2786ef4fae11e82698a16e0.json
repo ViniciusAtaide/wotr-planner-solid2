@@ -1,0 +1,76 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_7cd057944ce7896479717778330a4933",
+        "!bp_97f510c6483523c49bc779e93e4c4568",
+        "!bp_80ea00ac94323cd43b6e743f2fa168c8"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": []
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_2c793e9d0dccc564f9746c73fdac41d4"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": []
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_f34592b15e73c1445a204f07c5771abb"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": []
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_5c4e2ae002b0e834cbf267639ce06c3b"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": []
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_f5c7f64de0a57f645975fac2e5244851"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": []
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "MysticTheurgeProgression",
+  "guid": "08c1075ef2786ef4fae11e82698a16e0",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_0920ea7e4fd7a404282e3d8b0ac41838"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null
+}

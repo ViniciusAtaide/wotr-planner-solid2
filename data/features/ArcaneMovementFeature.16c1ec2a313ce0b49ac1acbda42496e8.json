@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArcaneMovementFeature",
+  "guid": "16c1ec2a313ce0b49ac1acbda42496e8",
+  "name": "Arcane Movement"
+}

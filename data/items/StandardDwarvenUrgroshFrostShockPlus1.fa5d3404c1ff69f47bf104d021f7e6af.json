@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDwarvenUrgroshFrostShockPlus1",
+  "guid": "fa5d3404c1ff69f47bf104d021f7e6af",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": "!bp_e2b95f4f91c08f145add635e89afbeac",
+  "m_Type": "!bp_0ec97c08fdf87e44f8f16ba87b511743",
+  "name": "Frost Shock Dwarven Urgrosh +1"
+}

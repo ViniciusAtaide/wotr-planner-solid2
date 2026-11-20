@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "DarkOmenItem",
+  "guid": "7d46733a8faf56544afac48c1b71283f",
+  "m_Enchantments": [
+    "!bp_c1c0e5fb8e93a0043bcf1e0017b185a9"
+  ],
+  "name": "Dark Omen"
+}

@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_c2bcbe0c9e4441d0af2cae4cf83bd7fb"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "MountedCombatFeat",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "OrderOfThePawCanineFerocitySelection",
+  "guid": "a31848a954134df4b2f048e9fecc3bd2",
+  "m_AllFeatures": [
+    "!bp_68e814f1f3ce55942a52c1dd536eaa5b",
+    "!bp_f308a03bea0d69843a8ed0af003d47a9",
+    "!bp_e5bee904e6724fc44aae8887dcefae51",
+    "!bp_95ef0ff14771f2549897f300ce62c95c",
+    "!bp_92db263bfb7445d4aa592a5d15128fc5"
+  ],
+  "name": "Canine Ferocity"
+}

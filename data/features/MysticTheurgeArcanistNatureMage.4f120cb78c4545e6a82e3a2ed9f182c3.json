@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_26185cfb81b34e778ad370407300de9a",
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 2,
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "Groups": [
+    "MysticTheurgeArcaneSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "MysticTheurgeArcanistNatureMage",
+  "guid": "4f120cb78c4545e6a82e3a2ed9f182c3",
+  "m_Spellbook": "!bp_3ed7e38dc8134af28e1a2b105f74fb7b",
+  "name": "Arcanist"
+}

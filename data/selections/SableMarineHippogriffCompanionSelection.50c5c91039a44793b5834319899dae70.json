@@ -1,0 +1,35 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_5ae998815e434033ac7260c812ed657f"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_cb06f0e72ffb5c640a156bd9f8000c1d"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_65af7290b4efd5f418132141aaa36c1b"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_fd055d1580284b0db077af5282eadb36"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "SableMarineHippogriffCompanionSelection",
+  "guid": "50c5c91039a44793b5834319899dae70",
+  "m_AllFeatures": [
+    "!bp_5de352323c7045b9b53669df16314558"
+  ],
+  "name": "Hippogriff Companion"
+}

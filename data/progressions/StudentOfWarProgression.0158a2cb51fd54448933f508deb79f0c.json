@@ -1,0 +1,92 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_846c2094392076a4f9f3c84f0ecfe180",
+        "!bp_922cb8ca89628e64f914f06dd4fc2a04"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_78fffe8e5d5bc574a9fd5efbbb364a03",
+        "!bp_708fe8142ac107345967de54fca15942"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_810d185f085e9c74087bd821cf3678ae",
+        "!bp_922cb8ca89628e64f914f06dd4fc2a04"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_846c2094392076a4f9f3c84f0ecfe180",
+        "!bp_712ce66020ddca34d96d3d0a946bb5ca"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_78fffe8e5d5bc574a9fd5efbbb364a03",
+        "!bp_922cb8ca89628e64f914f06dd4fc2a04"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_1cd672da802093d47a1473ff985acc63",
+        "!bp_79b6a8e55fddeda44884e253389a68e4"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_922cb8ca89628e64f914f06dd4fc2a04",
+        "!bp_846c2094392076a4f9f3c84f0ecfe180"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_78fffe8e5d5bc574a9fd5efbbb364a03"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_922cb8ca89628e64f914f06dd4fc2a04",
+        "!bp_ba3586b2bd61bc241972d6e6826a21cf"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_d71d6c64e0a174f4a99c1f115d630300"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "StudentOfWarProgression",
+  "guid": "0158a2cb51fd54448933f508deb79f0c",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_46b1fe9759ea01f4d883b23d8f0aecbb"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": []
+}

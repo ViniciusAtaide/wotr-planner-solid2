@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfEnergySourceItem",
+  "guid": "9525bbdd4aeb7db4ab7fe2a7b8f20902",
+  "m_Enchantments": [
+    "!bp_a302905173b29014fa1a1d12508ca432"
+  ],
+  "name": "Energy Source"
+}

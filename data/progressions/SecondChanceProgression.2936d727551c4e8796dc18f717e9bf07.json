@@ -1,0 +1,39 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_cba74c6e15294a0d8b308af81d792122",
+        "!bp_dad3bd49a6bb4c5f871a8c6888201452"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_70412db9154842849995adf78a64deb1"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_ae91786a9fb948798e6c9bab5b277420"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "SecondChanceProgression",
+  "guid": "2936d727551c4e8796dc18f717e9bf07",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Second Chance (Tortured Crusader)"
+}

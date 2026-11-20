@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_cee8f65448ce71c4b8b8ca13751dd8ea"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_20b8ea6975554b347b43c6c5f5e65ca8"
+    }
+  ],
+  "Groups": [
+    "Discovery",
+    "VivisectionistDiscovery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FeralMutagenFeature",
+  "guid": "fd5f7b37ab4301c48a88cc196ee5f0ce",
+  "name": "Feral Mutagen"
+}

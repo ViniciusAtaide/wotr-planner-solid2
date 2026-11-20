@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "DLC3_StandhardFullplateArmorItem",
+  "guid": "77dfad25fbaf4f3f842b66fa46e4ebf9",
+  "m_Enchantments": [
+    "!bp_933456ff83c454146a8bf434e39b1f93",
+    "!bp_d4f5fbfb6ea5460f945146c216681090"
+  ],
+  "m_Type": "!bp_afd9065539b3ac5499eddca923654c4b",
+  "name": "Black Rook"
+}

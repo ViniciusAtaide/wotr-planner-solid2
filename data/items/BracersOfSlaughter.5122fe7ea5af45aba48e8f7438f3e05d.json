@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "BracersOfSlaughter",
+  "guid": "5122fe7ea5af45aba48e8f7438f3e05d",
+  "m_Enchantments": [
+    "!bp_2452067b1107405e83dda580d5345cd6"
+  ],
+  "name": "Bracers of Slaughter"
+}

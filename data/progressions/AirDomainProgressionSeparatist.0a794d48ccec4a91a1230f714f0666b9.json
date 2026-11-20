@@ -1,0 +1,81 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_fa67965152634a16bf619ad0e72d57ff"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_6e5f4ff5a7010754ca78708ce1a9b233"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_750bfcd133cd52f42acbd4f7bc9cc365"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d7169e8978d9e9d418398eab946c49e5"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_0a794d48ccec4a91a1230f714f0666b9"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "SeparatistSecondaryDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_b7f7096b7d394f219e6f28b957cd5f39"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_b7643a75adbf455790450fdc6a98a6ad"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_b7643a75adbf455790450fdc6a98a6ad"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "AirDomainProgressionSeparatist",
+  "guid": "0a794d48ccec4a91a1230f714f0666b9",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Air Domain (Forbidden Rites)"
+}

@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "MonkNoArmorAndMonkWeaponFeatureUnlock",
+      "IsSohei": false,
+      "IsZenArcher": true,
+      "m_BowWeaponTypes": [
+        "!bp_7a1211c05ec2c46428f41e3c0db9423f",
+        "!bp_1ac79088a7e5dde46966636a3ac71c35",
+        "!bp_99ce02fb54639b5439d07c99c55b8542",
+        "!bp_011f6f86a0b16df4bbf7f40878c3e80b"
+      ],
+      "m_NewFact": "!bp_de25523acc24b1448aa90f74d6512a08"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ZenArcherFlurryOfBlowsLevel11Unlock",
+  "guid": "401574a8fc4390c44a4834d02a045360"
+}

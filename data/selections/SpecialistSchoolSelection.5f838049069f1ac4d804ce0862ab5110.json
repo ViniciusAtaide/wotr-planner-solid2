@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "SpecialistSchool",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "SpecialistSchoolSelection",
+  "guid": "5f838049069f1ac4d804ce0862ab5110",
+  "m_AllFeatures": [
+    "!bp_c451fde0aec46454091b70384ea91989",
+    "!bp_567801abe990faf4080df566fadcd038",
+    "!bp_d7d18ce5c24bd324d96173fdc3309646",
+    "!bp_252363458703f144788af49ef04d0803",
+    "!bp_f8019b7724d72a241a97157bc37f1c3b",
+    "!bp_24d5402c0c1de48468b563f6174c6256",
+    "!bp_e9450978cc9feeb468fb8ee3a90607e3",
+    "!bp_b6a604dab356ac34788abf4ad79449ec",
+    "!bp_0933849149cfc9244ac05d6a5b57fd80"
+  ],
+  "name": "Specialist School"
+}

@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "DwarvenWaraxe",
+  "Components": [],
+  "assetName": "DwarvenWaraxe",
+  "guid": "a6925f5f897801449a648d865637e5a0",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Axes",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Dwarven Waraxe"
+}

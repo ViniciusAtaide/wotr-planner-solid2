@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "DiskOfUnbalanceShieldItem",
+  "guid": "116d8113cb9f44b7b7e3bba4cec2bfe5",
+  "m_ArmorComponent": "!bp_6e5f45b35f064cb78dfe07ae0eefd96e",
+  "m_WeaponComponent": null,
+  "name": "Disk of Unbalance"
+}

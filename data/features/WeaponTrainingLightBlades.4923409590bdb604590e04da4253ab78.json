@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "WeaponTraining"
+  ],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "WeaponTrainingLightBlades",
+  "guid": "4923409590bdb604590e04da4253ab78",
+  "name": "Weapon Training (Light Blades)"
+}

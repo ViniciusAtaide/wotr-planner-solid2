@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_ac78f8850baeccb4d8777268aa74136c"
+    }
+  ],
+  "assetName": "SonicResistance30Enchant",
+  "guid": "8b940da1e47fb6843aacdeac9410ec41"
+}

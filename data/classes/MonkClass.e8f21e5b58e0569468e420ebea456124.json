@@ -1,0 +1,62 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillMobility",
+    "SkillAthletics",
+    "SkillPersuasion",
+    "SkillLoreReligion",
+    "SkillKnowledgeWorld",
+    "SkillPerception",
+    "SkillStealth"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "Lawful",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D10",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 3,
+  "assetName": "MonkClass",
+  "guid": "e8f21e5b58e0569468e420ebea456124",
+  "m_Archetypes": [
+    "!bp_5868fc82eb11a4244926363983897279",
+    "!bp_f8767821ec805bf479706392fcc3394c",
+    "!bp_8f3242d209994884bbb6c0999660f4df",
+    "!bp_2b1a58a7917084f49b097e86271df21c",
+    "!bp_fad7c56737ed12e42aacc330acc86428",
+    "!bp_3b81e57a75299b74ab6b144e830864e9",
+    "!bp_dde7724382ae4f63aa9786cb9b3b64b2",
+    "!bp_a8532f88b704413ba68f62e4e7ff84c1"
+  ],
+  "m_BaseAttackBonus": "!bp_b3057560ffff3514299e8b93e7648a9d",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_8a91753b978e3b34b9425419179aafd6",
+  "m_ReflexSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "name": "Monk"
+}

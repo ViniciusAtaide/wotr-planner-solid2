@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "CrusaderBonusFeat1",
+  "guid": "c5357c05cf4f8414ebd0a33e534aec50",
+  "m_AllFeatures": [
+    "!bp_1b0f68188dcc435429fb87a022239681",
+    "!bp_121811173a614534e8720d7550aae253",
+    "!bp_203992ef5b35c864390b4e4a1e200629",
+    "!bp_ac57069b6bf8c904086171683992a92a",
+    "!bp_6105f450bb2acbd458d277e71e19d835",
+    "!bp_1e1f627d26ad36f43bbd26cc2bf8ac7e"
+  ],
+  "name": "Crusader Bonus Feat (Crusader 1)"
+}

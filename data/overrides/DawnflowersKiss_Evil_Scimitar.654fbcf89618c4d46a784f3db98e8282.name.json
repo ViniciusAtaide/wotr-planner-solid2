@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "evil",
+  "reason": "The scimitar \"Dawnflower's Kiss\" comes in three forms: the basic one, and the evil and good forms with their own enchantments (DawnflowersKiss_Evil_ScimitarEnchantment, DawnflowersKiss_Good02_ScimitarEnchantment). Type and slot are the same, so each changed form is qualified by its asset's name for it; the basic one stays bare.",
+  "target": "654fbcf89618c4d46a784f3db98e8282"
+}

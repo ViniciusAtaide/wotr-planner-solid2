@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c451fde0aec46454091b70384ea91989"
+    }
+  ],
+  "Groups": [
+    "OppositionSchool"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OppositionSchoolAbjuration",
+  "guid": "7f8c1b838ff2d2e4f971b42ccdfa0bfd",
+  "name": "Opposition School — Abjuration"
+}

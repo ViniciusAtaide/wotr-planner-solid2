@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CloakOfDisguiseItem",
+  "guid": "dfcc9dc3411234d4a902960a7e00d669",
+  "m_Enchantments": [
+    "!bp_a222d78bd600dbc45bf42b79844cf7ee"
+  ],
+  "name": "Cloak of Disguise"
+}

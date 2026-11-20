@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_252363458703f144788af49ef04d0803",
+        "!bp_9e4c4799735ae9c45964e9113107ef02"
+      ]
+    }
+  ],
+  "Groups": [
+    "ThassilonianSpellbook"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ThassilonianEnchantmentFeature",
+  "guid": "e1ebc61a71c55054991863a5f6f6d2c2",
+  "m_Spellbook": "!bp_9e4b96d7b02f8c8498964aeee6eaef9b",
+  "name": "Lust (Enchantment)"
+}

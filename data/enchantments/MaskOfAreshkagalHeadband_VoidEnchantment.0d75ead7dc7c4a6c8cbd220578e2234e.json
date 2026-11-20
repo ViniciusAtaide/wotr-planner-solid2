@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_0f2d57d5fb8142caa8b8f42edc174ea1"
+    }
+  ],
+  "assetName": "MaskOfAreshkagalHeadband_VoidEnchantment",
+  "guid": "0d75ead7dc7c4a6c8cbd220578e2234e"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShatteringShot",
+  "guid": "b8b2f3f766144d269cd3c8bcec40527f",
+  "name": "Fragmentation Shot"
+}

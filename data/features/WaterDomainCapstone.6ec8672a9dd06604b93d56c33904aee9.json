@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "WaterDomainCapstone",
+  "guid": "6ec8672a9dd06604b93d56c33904aee9",
+  "name": "Cold Immunity"
+}

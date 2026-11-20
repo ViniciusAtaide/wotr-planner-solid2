@@ -1,0 +1,57 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_2bd0d44953a536f489082534c48f8e31",
+        "!bp_659c39542b728c04b83e969c834782a9",
+        "!bp_651570c873e22b84f893f146ce2de502",
+        "!bp_93bd14dd916cfd1429c11ad66adf5e2b"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 6,
+      "Not": false,
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_871e6b0bb9d050743b98b78990ae1cff"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_bb0de2047c448bd46aff120be3b39b7a"
+    }
+  ],
+  "Groups": [
+    "KineticWildTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AerialEvasionFeature",
+  "guid": "871e6b0bb9d050743b98b78990ae1cff",
+  "name": "Aerial Evasion"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_de2439aaded74882934ab3fd5c0d5a39"
+    }
+  ],
+  "assetName": "TwistedTemptationEnchantment",
+  "guid": "6cb2900c681747379db5c912d52298d3"
+}

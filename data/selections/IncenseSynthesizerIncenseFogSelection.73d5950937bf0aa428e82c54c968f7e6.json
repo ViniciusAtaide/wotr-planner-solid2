@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "IncenseSynthesizerIncenseFogSelection",
+  "guid": "73d5950937bf0aa428e82c54c968f7e6",
+  "m_AllFeatures": [
+    "!bp_1cd39502119e97f4caa72e7e53ce5ee9",
+    "!bp_8241699d20232084380fec8152434f2a",
+    "!bp_57a418cf996beeb4a9b1b3638cfc000e",
+    "!bp_c16dc187fd12ac54f83007ec4c0a676a",
+    "!bp_c5f14b5981ec3994c80def79b6f5a77a",
+    "!bp_ccea52d8cc5f8d34d95196d0a885be06",
+    "!bp_6dd6caccd12ff6a4d9c12d36980e1906",
+    "!bp_9e920c1457a19a04caa583e320022cc0",
+    "!bp_a3c58f42ba0e324469381c027a1950a4",
+    "!bp_13b74d2110f8a2c43a71ae100074dbde"
+  ],
+  "name": "Incense"
+}

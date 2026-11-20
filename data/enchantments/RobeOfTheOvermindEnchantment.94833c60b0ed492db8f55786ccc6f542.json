@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_06a6e758c3a84f50b0f8c57acd305492"
+    }
+  ],
+  "assetName": "RobeOfTheOvermindEnchantment",
+  "guid": "94833c60b0ed492db8f55786ccc6f542"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PersistantMutagen",
+  "guid": "75ba281feb2b96547a3bfb12ecaff052",
+  "name": "Persistent Mutagen"
+}

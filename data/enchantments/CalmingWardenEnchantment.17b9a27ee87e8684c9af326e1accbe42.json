@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_c1f695c1e7d520e4994b1ab1d1c458b6"
+    }
+  ],
+  "assetName": "CalmingWardenEnchantment",
+  "guid": "17b9a27ee87e8684c9af326e1accbe42"
+}

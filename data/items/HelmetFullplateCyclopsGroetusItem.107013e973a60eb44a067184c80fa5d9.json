@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HelmetFullplateCyclopsGroetusItem",
+  "guid": "107013e973a60eb44a067184c80fa5d9",
+  "m_Enchantments": [
+    "!bp_54f2d3e3eb228614fbd47a555d31fdfb"
+  ],
+  "name": "Gnome Brave's Helmet"
+}

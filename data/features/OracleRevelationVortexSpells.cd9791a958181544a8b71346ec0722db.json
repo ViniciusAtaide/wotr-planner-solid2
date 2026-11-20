@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_7c1fdd831af747b47bb2cce0051f309b",
+        "!bp_3812dcb2fe59ecd449285391db677edc",
+        "!bp_4fb980ffe85793b4194b11d3adb70d9e"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "Groups": [
+    "OracleRevelation"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleRevelationVortexSpells",
+  "guid": "cd9791a958181544a8b71346ec0722db",
+  "name": "Vortex Spells (Revelation)"
+}

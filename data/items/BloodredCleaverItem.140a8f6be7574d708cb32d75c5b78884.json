@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "BloodredCleaverItem",
+  "guid": "140a8f6be7574d708cb32d75c5b78884",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_a1455a289da208144981e4b1ef92cc56",
+    "!bp_ae5e8afb222b46a8bcb21d66e073578a"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_5f824fbb0766a3543bbd6ae50248688f",
+  "name": "Blood Red Cleaver"
+}

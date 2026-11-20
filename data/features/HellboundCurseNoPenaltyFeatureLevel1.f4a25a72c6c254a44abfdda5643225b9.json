@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPersuasion"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HellboundCurseNoPenaltyFeatureLevel1",
+  "guid": "f4a25a72c6c254a44abfdda5643225b9",
+  "name": "Hellbound (Beneficial Curse 1)"
+}

@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 6,
+      "Not": false,
+      "m_CharacterClass": "!bp_d5917881586ff1d4d96d5b7cebda9464"
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 12,
+      "m_Archetype": "!bp_cf0f99b3cd7444a48681b1c1c4aa2a41",
+      "m_CharacterClass": "!bp_bfa11238e7ae3544bbeb4d0b92e897ec"
+    }
+  ],
+  "Groups": [
+    "DefensivePower"
+  ],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "IncreasedDamageReductionDefensivePower",
+  "guid": "d10496e92d0799a40bb3930b8f4fda0d",
+  "name": "Increased Damage Reduction (Defensive Powers)"
+}

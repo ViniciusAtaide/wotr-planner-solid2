@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_9caf969deaf937247b3e5cc1cfd780e4"
+    }
+  ],
+  "assetName": "LightenedHarnessEnchantment",
+  "guid": "a8411bbd68294e540972a2030943776f"
+}

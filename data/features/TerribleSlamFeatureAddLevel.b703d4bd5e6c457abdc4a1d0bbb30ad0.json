@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 3,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_49a93eb9cf374fcdaffb0cb451141058"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TerribleSlamFeatureAddLevel",
+  "guid": "b703d4bd5e6c457abdc4a1d0bbb30ad0",
+  "name": "Terrible Slam (Rageshaper 1)"
+}

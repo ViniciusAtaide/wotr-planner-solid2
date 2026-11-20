@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_5600fc815bc0404e98b6f0bc4ce9665d"
+    }
+  ],
+  "assetName": "WrathOfTheCreatorItemEnchantment",
+  "guid": "d7cb995bf7fd4b30be7c52d71298e449"
+}

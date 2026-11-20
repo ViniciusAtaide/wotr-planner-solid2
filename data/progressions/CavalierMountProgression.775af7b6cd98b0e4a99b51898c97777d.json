@@ -1,0 +1,149 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_e7bdf20ef01b4284d807e073b8bb8f8c"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_1670990255e4fe948a863bafd5dbda5d"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "CavalierMountProgression",
+  "guid": "775af7b6cd98b0e4a99b51898c97777d",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_3adc3439f98cb534ba98df59838f02c7"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": []
+}

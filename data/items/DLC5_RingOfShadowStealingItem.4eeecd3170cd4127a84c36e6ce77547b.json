@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "DLC5_RingOfShadowStealingItem",
+  "guid": "4eeecd3170cd4127a84c36e6ce77547b",
+  "m_Enchantments": [
+    "!bp_bb8c6ec9bf454d83ae01709e2ab550a6"
+  ],
+  "name": "Ring of Shadow Stealing"
+}

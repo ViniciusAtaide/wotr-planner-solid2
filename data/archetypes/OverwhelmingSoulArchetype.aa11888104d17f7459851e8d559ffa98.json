@@ -1,0 +1,84 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_a3051f965d971ed44b9c6c63bf240b79",
+        "!bp_b8a9e8ae271dcf246a16a5a28bd7e6e7"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_6c24bf7cc2266f24f9b0c652799f1d91"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_6c24bf7cc2266f24f9b0c652799f1d91",
+        "!bp_c07916b1fe7400c4c97472337b719e64"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_6c24bf7cc2266f24f9b0c652799f1d91"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_ec41ec200f734c04baea35e27a103fcd"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_6c24bf7cc2266f24f9b0c652799f1d91"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_ec41ec200f734c04baea35e27a103fcd"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_6c24bf7cc2266f24f9b0c652799f1d91"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_6c24bf7cc2266f24f9b0c652799f1d91",
+        "!bp_ec41ec200f734c04baea35e27a103fcd"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_57e3577a0eb53294e9d7cc649d5239a3",
+        "!bp_86beb0391653faf43aec60d5ec05b538"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "OverwhelmingSoulArchetype",
+  "guid": "aa11888104d17f7459851e8d559ffa98",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Overwhelming Soul"
+}

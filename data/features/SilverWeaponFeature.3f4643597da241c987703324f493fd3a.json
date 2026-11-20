@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "SilverWeaponFeature",
+  "guid": "3f4643597da241c987703324f493fd3a",
+  "name": "Alchemical Silver"
+}

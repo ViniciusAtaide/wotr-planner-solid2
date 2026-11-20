@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_b8ec9dccc0e7ef74fb4072b0679c2aec"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShamanLifeSpiritBaseFeature",
+  "guid": "9ae3ba76663a19141a3996c1e3ce95e3",
+  "name": "Channel (Life)"
+}

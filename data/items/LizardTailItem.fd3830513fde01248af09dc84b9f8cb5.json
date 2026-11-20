@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "LizardTailItem",
+  "guid": "fd3830513fde01248af09dc84b9f8cb5",
+  "m_Enchantments": [
+    "!bp_3435e6af4b927b64e83340b18244a2dd"
+  ],
+  "name": "Lizard Tail"
+}

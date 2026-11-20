@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillUseMagicDevice"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "StudentOfWarAdditionalSkillUMD",
+  "guid": "1cf5bdc10b713cb4294fcca7b96df28a",
+  "name": "Class Skill — Use Magic Device"
+}

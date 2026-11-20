@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ArcaneBombSelection",
+  "guid": "0c7a9899e27cae6449ee1fb3049f128d",
+  "m_AllFeatures": [
+    "!bp_e34406825b1d5b145a12af91f1844df3",
+    "!bp_6ab67ef0e26be9449acbc3775ed6f5de",
+    "!bp_2ccffe3c3d16d20438606fc1e3b7c7ca",
+    "!bp_456a15ecac9dcaa4499b85eede4cb7b1"
+  ],
+  "name": "Arcane Bombs"
+}

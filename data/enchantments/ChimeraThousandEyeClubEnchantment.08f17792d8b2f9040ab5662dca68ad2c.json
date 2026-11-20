@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_98c19c4befdf0d541a9c54112308017b"
+    }
+  ],
+  "assetName": "ChimeraThousandEyeClubEnchantment",
+  "guid": "08f17792d8b2f9040ab5662dca68ad2c"
+}

@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e71d00a5aa1ed8f4591d021056a6dbe7"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineInfernalPowerOfThePitFeature",
+  "guid": "b6afdc50876e08149b1f9fdcdb2a308c",
+  "name": "Power of the Pit"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_86baea5d6bde19d4b9845c5c33eeec1b"
+    }
+  ],
+  "assetName": "MarksmansSteadyHandEnchantment",
+  "guid": "e09f5b861fd9b3245988b43e4f869d1a"
+}

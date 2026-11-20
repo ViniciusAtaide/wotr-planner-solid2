@@ -1,0 +1,179 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_38323bb032d740ab9045f1086705b0c7"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_9c3e4b49b9f243f080c0432d2a1e5cbf"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_f0235447f6f3430fa4a98d15642b849e"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_855b2b531df740cfa4536d0ba0729fd8"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_f0235447f6f3430fa4a98d15642b849e"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_b5768ae940b44a39a3469b2f7c29cc6d"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_0e41c3c5e88c42c3af31162743982c22"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_f0235447f6f3430fa4a98d15642b849e"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_0e41c3c5e88c42c3af31162743982c22"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_f0235447f6f3430fa4a98d15642b849e"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_7d60d8bb86a14e3188d208652d4a5581"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_0e41c3c5e88c42c3af31162743982c22"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_f0235447f6f3430fa4a98d15642b849e"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_41c8486641f7d6d4283ca9dae4147a9f"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_3c380607706f209499d951b29d3c44f3"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_b8cecf4e5e464ad41b79d5b42b76b399"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_41c8486641f7d6d4283ca9dae4147a9f"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_3c380607706f209499d951b29d3c44f3"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_b8cecf4e5e464ad41b79d5b42b76b399",
+        "!bp_5f3cc7b9a46b880448275763fe70c0b0"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_41c8486641f7d6d4283ca9dae4147a9f"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_3c380607706f209499d951b29d3c44f3"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_b8cecf4e5e464ad41b79d5b42b76b399",
+        "!bp_5f3cc7b9a46b880448275763fe70c0b0"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_41c8486641f7d6d4283ca9dae4147a9f"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_3c380607706f209499d951b29d3c44f3"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_b8cecf4e5e464ad41b79d5b42b76b399",
+        "!bp_5f3cc7b9a46b880448275763fe70c0b0"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_41c8486641f7d6d4283ca9dae4147a9f"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "TitanFighterArchetype",
+  "guid": "88a9dbb92a674ed995bae800896795f5",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Titan Fighter"
+}

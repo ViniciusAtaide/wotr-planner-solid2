@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_701e546112174d1eb15f49ad81308f10"
+    }
+  ],
+  "assetName": "ClutchOfCorruptionEnchantment",
+  "guid": "8a433f9b5ecd4946a5c857c4ea069caf"
+}

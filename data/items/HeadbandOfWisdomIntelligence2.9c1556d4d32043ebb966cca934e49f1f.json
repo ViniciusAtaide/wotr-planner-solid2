@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HeadbandOfWisdomIntelligence2",
+  "guid": "9c1556d4d32043ebb966cca934e49f1f",
+  "m_Enchantments": [
+    "!bp_69f5c9eaa39301b4eb99a51f23629af4",
+    "!bp_0f157adfc02708441b02725a24e8eb71"
+  ],
+  "name": "Headband of Mental Might +2"
+}

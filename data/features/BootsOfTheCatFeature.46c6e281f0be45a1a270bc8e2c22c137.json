@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "DisengageWithoutAttackOfOpportunity"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_3c8c3ab69fd442b4a56e921385677d95",
+      "m_Feature": "!bp_1686cba16d5049cbae1b36c2abd32f7a"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "BootsOfTheCatFeature",
+  "guid": "46c6e281f0be45a1a270bc8e2c22c137",
+  "name": "Cat's Boots"
+}

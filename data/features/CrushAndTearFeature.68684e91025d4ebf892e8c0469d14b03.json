@@ -1,0 +1,47 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 1,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_f7d7eb166b3dd594fb330d085df41853",
+      "m_Feature": "!bp_50c70b8fb6384ce085207d9a9f4d9fd3"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 5,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_f7d7eb166b3dd594fb330d085df41853",
+      "m_Feature": "!bp_50c70b8fb6384ce085207d9a9f4d9fd3"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 11,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_f7d7eb166b3dd594fb330d085df41853",
+      "m_Feature": "!bp_79f037b186e74f98840f3dc2acb9a58f"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 17,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_f7d7eb166b3dd594fb330d085df41853",
+      "m_Feature": "!bp_df4effd3ac784473a9045ebfb00e524f"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CrushAndTearFeature",
+  "guid": "68684e91025d4ebf892e8c0469d14b03",
+  "name": "Crush and Tear"
+}

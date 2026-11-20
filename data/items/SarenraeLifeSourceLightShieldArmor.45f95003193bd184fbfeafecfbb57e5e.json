@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "SarenraeLifeSourceLightShieldArmor",
+  "guid": "45f95003193bd184fbfeafecfbb57e5e",
+  "m_Enchantments": [
+    "!bp_ac2e3a582b5faa74aab66e0a31c935a9",
+    "!bp_a8125713118e4d87b8ce612280b698c3",
+    "!bp_7b95a819181574a4799d93939aa99aff"
+  ],
+  "m_Type": "!bp_d38e8ea23ce653c4582eb3e002555483"
+}

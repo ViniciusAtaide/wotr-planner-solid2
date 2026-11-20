@@ -1,0 +1,87 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_c4135465768c4119b2c7603c1d477ef3"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_b38e129e760940378d369a79a5c81b30"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_4223fe18c75d4d14787af196a04e14e7",
+        "!bp_70e6075a72633ba49804ccb6203fb18c"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_2674f98616188814fbba9f8fccf43564"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_f15d95a394e950a42b1d6afbb9f781d9"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "ShadowShamanArchetype",
+  "guid": "5086aef2b76c433584160f7b49aef95b",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Shadow Shaman"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "WeaponHeavyShieldPlus4",
+  "guid": "0ccc99b55f9a88048a97a5c5a4c4aea2",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_be9b6408e6101cb4997a8996484baf19"
+}

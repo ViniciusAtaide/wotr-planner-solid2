@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Dagger",
+  "Components": [],
+  "assetName": "DLC2_Dagger_Rusty",
+  "guid": "90ba10e82a7a4135bb380234a255f5ae",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "BladesLight, Thrown",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false
+}

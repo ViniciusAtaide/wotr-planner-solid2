@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": true,
+  "Ranks": 1,
+  "assetName": "ELementalistElementSelection",
+  "guid": "41964f61f24b4f38b695f36532d4b1a3",
+  "m_AllFeatures": [
+    "!bp_161027c9337d4f51a2c9b3ce4b797c7c",
+    "!bp_15beef5d93954cb8991acb9745c9150a",
+    "!bp_4bd021d45673492482a1db7a61581e9d",
+    "!bp_089e7f52b4ff45df856f0eda3e6c56af"
+  ],
+  "name": "Focused Element"
+}

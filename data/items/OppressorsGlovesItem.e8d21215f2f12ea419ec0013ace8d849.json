@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "OppressorsGlovesItem",
+  "guid": "e8d21215f2f12ea419ec0013ace8d849",
+  "m_Enchantments": [
+    "!bp_474b66b2d2fb68b45a3c74a02557b8e1"
+  ],
+  "name": "Oppressor's Gloves"
+}

@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "change 9",
+  "reason": "The Spell Specialization selection offers twenty copies of the feat under its own name, each the next change of the specialized spell: SpellSpecialization9 requires SpellSpecialization8 and removes it (PrerequisiteFeature, RemoveFeatureOnApply), along with SpellSpecializationFirst. They share their grantor and have no level, and their prerequisites name only copies of the same name, so each is qualified by its place in that chain.",
+  "target": "eabd9c10a6c30934f9d7e22b6027977b"
+}

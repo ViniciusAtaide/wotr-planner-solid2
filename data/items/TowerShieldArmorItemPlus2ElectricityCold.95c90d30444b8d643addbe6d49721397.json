@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "TowerShieldArmorItemPlus2ElectricityCold",
+  "guid": "95c90d30444b8d643addbe6d49721397",
+  "m_Enchantments": [
+    "!bp_7b9f2f78a83577d49927c78be0f7fbc1",
+    "!bp_2ed92b92b5381ef488282eb506170322",
+    "!bp_581c22e55f03e4e4f9f9ea619d89af5f"
+  ],
+  "m_Type": "!bp_5f0f4b6e480e7054b8592b5a8b55854a"
+}

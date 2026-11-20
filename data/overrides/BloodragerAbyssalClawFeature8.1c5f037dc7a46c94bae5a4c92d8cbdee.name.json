@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "Abyssal, level 8",
+  "reason": "The bloodrager's abyssal bloodline grants its \"Claws\" in steps: at levels 1, 4, 8 and 12 (BloodragerAbyssalBloodline and its second-bloodline copy; the wandering abyssal bloodline at levels 1, 4 and 8). The level-12 step is qualified by the bloodline alone; this one, sharing its grantors with the other steps, is qualified by the bloodline and its level.",
+  "target": "1c5f037dc7a46c94bae5a4c92d8cbdee"
+}

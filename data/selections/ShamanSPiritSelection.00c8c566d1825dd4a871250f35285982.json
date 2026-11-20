@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "ShamanSpirit",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ShamanSPiritSelection",
+  "guid": "00c8c566d1825dd4a871250f35285982",
+  "m_AllFeatures": [
+    "!bp_26e81d83d13dbf6448b10019c802612d",
+    "!bp_65b5e7f17a1b928418fc9e8a6b55eafa",
+    "!bp_50efeb23b314869409365c8061a4082d",
+    "!bp_44c130a12d49ebf4a95945feffe5aae7",
+    "!bp_f9ee5a9146561ba4bac4cb8a7126f85c",
+    "!bp_379d33ef16e812146b5517601ab25e66",
+    "!bp_acff6b0cf279a31439010afea01df912",
+    "!bp_2196e093593903f4ebc36467ccbf1d9a",
+    "!bp_eae7cee2a5da93442a7563dfeda33432"
+  ],
+  "name": "Spirit"
+}

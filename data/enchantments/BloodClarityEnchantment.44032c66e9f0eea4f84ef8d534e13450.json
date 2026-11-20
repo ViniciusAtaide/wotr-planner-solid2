@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e2dd9d04bc5e8084cbe2dfd1f96f15e0"
+    }
+  ],
+  "assetName": "BloodClarityEnchantment",
+  "guid": "44032c66e9f0eea4f84ef8d534e13450"
+}

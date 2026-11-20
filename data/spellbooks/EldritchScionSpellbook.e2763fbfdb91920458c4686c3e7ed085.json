@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": true,
+  "IsMythic": false,
+  "Spontaneous": true,
+  "assetName": "EldritchScionSpellbook",
+  "guid": "e2763fbfdb91920458c4686c3e7ed085",
+  "m_SpellsPerDay": "!bp_0a8eec9ca5c0dc64795243ab3c55d924",
+  "name": "Magus"
+}

@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "ShieldOfPainfulRemorseShieldItem",
+  "guid": "7e6b4a3fecdee8d4689b1b4b356cebc2",
+  "m_ArmorComponent": "!bp_05264ec82b364424ba2eacdf9d99a9a4",
+  "m_WeaponComponent": "!bp_4d26bb6db654e624ca499382ddf525ed",
+  "name": "Painful Remorse"
+}

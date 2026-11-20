@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_29c3befb0c416f44083ac0a68f041e70"
+    }
+  ],
+  "assetName": "LibrariansCloakEnchantment",
+  "guid": "e5b91c171f0c0754f986fe74c2d8e274"
+}

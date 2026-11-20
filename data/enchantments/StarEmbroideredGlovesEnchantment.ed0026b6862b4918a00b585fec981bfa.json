@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_45262126944d4b2d8a191ebe34039642"
+    }
+  ],
+  "assetName": "StarEmbroideredGlovesEnchantment",
+  "guid": "ed0026b6862b4918a00b585fec981bfa"
+}

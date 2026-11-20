@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "MaskOfAreshkagalHeadband_VoidItem",
+  "guid": "417c8c47cbf244ef8f4a1e52bf92493d",
+  "m_Enchantments": [
+    "!bp_4dcb81fcbfb11714db17ece0c152ed8b",
+    "!bp_c3c2a133c0aa12240ade34762c146664",
+    "!bp_4a235cbdeebd2524681870153bab3cba",
+    "!bp_0d75ead7dc7c4a6c8cbd220578e2234e"
+  ],
+  "name": "Victims' Madness (head)"
+}

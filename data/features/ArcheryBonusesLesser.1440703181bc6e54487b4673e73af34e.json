@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_b55f72cc64808a34fba65c5e0636ab18",
+        "!bp_3d14fa9e7620b134aba7e0f06aa107d6"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "ArcheryBonusesLesser",
+  "guid": "1440703181bc6e54487b4673e73af34e",
+  "name": "Lesser Bracers of Archery"
+}

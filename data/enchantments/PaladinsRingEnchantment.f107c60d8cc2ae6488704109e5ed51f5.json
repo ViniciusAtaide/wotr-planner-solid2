@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_9865ab29b25b69246a4e5a7edc040ec9"
+    }
+  ],
+  "assetName": "PaladinsRingEnchantment",
+  "guid": "f107c60d8cc2ae6488704109e5ed51f5"
+}

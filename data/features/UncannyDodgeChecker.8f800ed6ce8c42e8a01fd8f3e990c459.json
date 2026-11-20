@@ -1,0 +1,68 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFactContextActions",
+      "Activated": {
+        "Actions": [
+          {
+            "$type": "Conditional",
+            "ConditionsChecker": {
+              "Conditions": [
+                {
+                  "$type": "ContextConditionBuffRank",
+                  "Fact": "!bp_8f800ed6ce8c42e8a01fd8f3e990c459",
+                  "Not": false,
+                  "RankValue": {
+                    "Value": 2,
+                    "ValueType": "Simple"
+                  },
+                  "UseFactInsteadBuff": true
+                },
+                {
+                  "$type": "ContextConditionBuffRank",
+                  "Fact": "!bp_8f800ed6ce8c42e8a01fd8f3e990c459",
+                  "Not": true,
+                  "RankValue": {
+                    "Value": 3,
+                    "ValueType": "Simple"
+                  },
+                  "UseFactInsteadBuff": true
+                }
+              ],
+              "Operation": "And"
+            },
+            "IfFalse": {
+              "Actions": [
+                {
+                  "$type": "AddFact",
+                  "Unit": {
+                    "$type": "ContextTargetUnit"
+                  },
+                  "m_Fact": "!bp_3c08d842e802c3e4eb19d15496145709"
+                }
+              ]
+            },
+            "IfTrue": {
+              "Actions": [
+                {
+                  "$type": "AddFact",
+                  "Unit": {
+                    "$type": "ContextTargetUnit"
+                  },
+                  "m_Fact": "!bp_485a18c05792521459c7d06c63128c79"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "UncannyDodgeChecker",
+  "guid": "8f800ed6ce8c42e8a01fd8f3e990c459",
+  "name": "Uncanny Dodge (class feature)"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [],
+  "assetName": "ChainmailBardingType",
+  "guid": "bdcce0ac4c930b84a849f935a4bdd93e",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "MediumBarding",
+  "name": "Medium Armor — Chainmail Barding"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "CursedBardVoiceAmulet_SirenItem",
+  "guid": "1b1c3cf0fedf47bab0811b4ebf98b2e2",
+  "m_Enchantments": [
+    "!bp_107aee843c854047932bfa5200eece96"
+  ],
+  "name": "Francest's Charming Voice"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_0598072f5e0706c46846d4d9d99ec583"
+    }
+  ],
+  "assetName": "BalancedDefenderEnchantment",
+  "guid": "e398650c196635c4e93cfcc8cc1d06a5"
+}

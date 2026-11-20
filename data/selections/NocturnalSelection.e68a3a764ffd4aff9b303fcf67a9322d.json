@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "NocturnalSelection",
+  "guid": "e68a3a764ffd4aff9b303fcf67a9322d",
+  "m_AllFeatures": [
+    "!bp_02f9d14328f64233aaa30f7b493de059",
+    "!bp_a485f2e1a232435e986aea1f74c8e159",
+    "!bp_9b748f01f281406c8517e907cce551db",
+    "!bp_b2d8de6d91e1426a9cac33e1091f53c0",
+    "!bp_9f8e0804d4974db0877bf236348d5411",
+    "!bp_903e9775fc044b98be76833e7cfd3af8",
+    "!bp_8adca4a181cc444da922b5c861f3a86b",
+    "!bp_82bd9b37161b4b0493e91856eddfdd03",
+    "!bp_96089a505a5c4a0fb3ad0a88c9cc1d0a",
+    "!bp_f707fbd648224498b2d8c36a56045dfe",
+    "!bp_28294c00a938435b86f6468c49ef3969",
+    "!bp_8de40e7babd44419b797cdf51e56e0e0",
+    "!bp_d5581be0f6124fac900e23398a694750",
+    "!bp_845bc5d567a94b95bebac28bd77dbf93",
+    "!bp_613a8f55cd2e4570a45cbac3b0feb912"
+  ],
+  "name": "Nocturnal Abilities"
+}

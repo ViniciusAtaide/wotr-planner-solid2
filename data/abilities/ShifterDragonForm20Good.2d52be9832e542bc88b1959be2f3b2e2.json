@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintAbility",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_c263f44f72df009489409af122b5eefc"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_4b152a7bc5bab5042b437b955fea46cd"
+    }
+  ],
+  "assetName": "ShifterDragonForm20Good",
+  "guid": "2d52be9832e542bc88b1959be2f3b2e2",
+  "name": "Greater Wyrmshifter (Metallic ability)"
+}

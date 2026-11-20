@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "SwallowtailBracers",
+  "guid": "3196e3d722594522926b4cb361be5f17",
+  "m_Enchantments": [
+    "!bp_c83e315987bc49ab9b7cc250118e9c86"
+  ],
+  "name": "Swallowtail Bracers"
+}

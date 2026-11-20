@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AcidAffinityOread",
+  "guid": "763a97c2216fd124da93b164994fd82b",
+  "name": "Acid Affinity"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "AmuletOfImposingPhysiqueItem",
+  "guid": "6f7c7875303bc0d4686da084726416e8",
+  "m_Enchantments": [
+    "!bp_9b96fc6d3d86741489e0815941263f10"
+  ],
+  "name": "Amulet of Imposing Physique"
+}

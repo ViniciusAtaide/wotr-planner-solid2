@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DistractingShots",
+  "guid": "ad686f07a3deaf94ba91f97369156000",
+  "name": "Distracting Shots"
+}

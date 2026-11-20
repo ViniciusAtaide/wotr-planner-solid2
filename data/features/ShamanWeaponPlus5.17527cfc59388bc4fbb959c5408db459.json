@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "IncreaseActivatableAbilityGroupSize",
+      "Group": "SpiritWeaponProperty"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShamanWeaponPlus5",
+  "guid": "17527cfc59388bc4fbb959c5408db459",
+  "name": "Spirit Enchantment (+5)"
+}

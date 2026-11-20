@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_e9450978cc9feeb468fb8ee3a90607e3",
+        "!bp_927707dce06627d4f880c90b5575125f"
+      ]
+    }
+  ],
+  "Groups": [
+    "ThassilonianSpellbook"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ThassilonianNecromancyFeature",
+  "guid": "fb343ede45ca1a84496c91c190a847ff",
+  "m_Spellbook": "!bp_97cd3941ce333ce46ae09436287ed699",
+  "name": "Gluttony (Necromancy)"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "AngelMythcHalo"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HaloBlindingLightFeature",
+  "guid": "67b80136595b60245b787d688f47b346",
+  "name": "Blinding Light"
+}

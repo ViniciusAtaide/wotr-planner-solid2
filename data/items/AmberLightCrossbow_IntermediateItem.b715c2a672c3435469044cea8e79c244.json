@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "AmberLightCrossbow_IntermediateItem",
+  "guid": "b715c2a672c3435469044cea8e79c244",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d525e7a6d8d5aa648a976ac41194b8d0",
+  "name": "Light Crossbow of the Attractive Impulse"
+}

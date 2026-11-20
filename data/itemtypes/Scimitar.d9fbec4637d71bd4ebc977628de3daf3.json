@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Scimitar",
+  "Components": [],
+  "assetName": "Scimitar",
+  "guid": "d9fbec4637d71bd4ebc977628de3daf3",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "BladesHeavy",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Scimitar"
+}

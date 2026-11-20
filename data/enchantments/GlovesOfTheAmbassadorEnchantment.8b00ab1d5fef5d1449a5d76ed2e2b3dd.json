@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Enhancement",
+      "Stat": "Charisma",
+      "Value": 2
+    }
+  ],
+  "assetName": "GlovesOfTheAmbassadorEnchantment",
+  "guid": "8b00ab1d5fef5d1449a5d76ed2e2b3dd"
+}

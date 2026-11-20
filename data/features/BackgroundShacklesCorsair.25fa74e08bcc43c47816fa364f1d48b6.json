@@ -1,0 +1,40 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillMobility"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillAthletics"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_75146ee0b32e5424ab77902bf86f91ee"
+      ]
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillMobility"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillAthletics"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Scimitar"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundShacklesCorsair",
+  "guid": "25fa74e08bcc43c47816fa364f1d48b6",
+  "name": "Shackles Corsair"
+}

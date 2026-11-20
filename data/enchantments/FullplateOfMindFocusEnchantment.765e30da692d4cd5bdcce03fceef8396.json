@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_76e414d0aedc43a69204e802f8cd39ac"
+    }
+  ],
+  "assetName": "FullplateOfMindFocusEnchantment",
+  "guid": "765e30da692d4cd5bdcce03fceef8396"
+}

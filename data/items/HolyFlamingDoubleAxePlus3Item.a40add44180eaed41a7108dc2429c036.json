@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "HolyFlamingDoubleAxePlus3Item",
+  "guid": "a40add44180eaed41a7108dc2429c036",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": "!bp_7924bcdbe0e45974994f4d399ef21fdb",
+  "m_Type": "!bp_87d76c7534506a546a065731ee6a38cd",
+  "name": "Holy Flaming Orc Double Axe +3"
+}

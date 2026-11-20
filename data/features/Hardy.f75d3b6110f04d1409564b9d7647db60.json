@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "Hardy",
+  "guid": "f75d3b6110f04d1409564b9d7647db60",
+  "name": "Hardy"
+}

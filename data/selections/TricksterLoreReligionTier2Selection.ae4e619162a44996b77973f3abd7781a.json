@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "MythicTrick2"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "TricksterLoreReligionTier2Selection",
+  "guid": "ae4e619162a44996b77973f3abd7781a",
+  "m_AllFeatures": [
+    "!bp_3e006bc9bbf0b884a8d8853350bee846"
+  ],
+  "name": "Lore (Religion) 2 Rank (Trickster)"
+}

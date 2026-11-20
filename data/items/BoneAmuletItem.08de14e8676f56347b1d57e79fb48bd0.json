@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "BoneAmuletItem",
+  "guid": "08de14e8676f56347b1d57e79fb48bd0",
+  "m_Enchantments": [
+    "!bp_967676618473df3418515d2ed99bbc7f"
+  ],
+  "name": "Bone Amulet"
+}

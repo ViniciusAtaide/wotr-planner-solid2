@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_389a84901d80ccc43a0ab3858d18acb9"
+    }
+  ],
+  "assetName": "RatcatchersGogglesEnchantment",
+  "guid": "8b32698fa16296a40b3448e196b061af"
+}

@@ -1,0 +1,57 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillMobility",
+    "SkillAthletics",
+    "SkillPersuasion",
+    "SkillThievery",
+    "SkillLoreNature",
+    "SkillPerception",
+    "SkillStealth",
+    "SkillUseMagicDevice",
+    "SkillLoreReligion",
+    "SkillKnowledgeWorld",
+    "SkillKnowledgeArcana"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 4,
+  "assetName": "BardClass",
+  "guid": "772c83a25e2268e448e841dcd548235f",
+  "m_Archetypes": [
+    "!bp_38384e0c1e99c2e42ac6ed70a04aca46",
+    "!bp_3c67fb6458752a1419fb8cd4efaf8eaa",
+    "!bp_e7914f2adcdb8fc46af5b65d1e06c539",
+    "!bp_bed077eaa12834b4495cf481ee721810",
+    "!bp_f128f6cd9c140284caa244da069f250c",
+    "!bp_912b0495d9485124bb2c0e4aa6ac2efd",
+    "!bp_074a9dd227cb43669d5b160c5282e146",
+    "!bp_985e74f9becb4ea492eb27726f5df872"
+  ],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_8127f5ff40f5b484b8be98609358b9d2",
+  "m_ReflexSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_Spellbook": "!bp_bc04fc157a8801d41b877ad0d9af03dd",
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Bard"
+}

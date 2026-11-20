@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ScaledFistDragonSelection",
+  "guid": "f9042eed12dac2745a2eb7a9a936906b",
+  "m_AllFeatures": [
+    "!bp_0f61e0b868fd60b4181c85f37e6dd542",
+    "!bp_6fdf53dc566ba0d4c9be60aab0a3cdc3",
+    "!bp_0a3fadecdc9bb70469503888519d2d11",
+    "!bp_5b4333f6d578d47439931a258c6df9f8",
+    "!bp_55a672e8a1dbaf940991ca54cbd45579",
+    "!bp_d2945f4278becb142917787b89f39c58",
+    "!bp_b978de37326b01440b2d9fd2a739f1ea",
+    "!bp_6bbc4b6a4a6007c429ee7a87dd5e306f",
+    "!bp_80c8d99fb9c1daf4f98cfa7f9e186ce4",
+    "!bp_3506251410c7b2d48a5afc36670e95d0"
+  ],
+  "name": "Draconic Heritage"
+}

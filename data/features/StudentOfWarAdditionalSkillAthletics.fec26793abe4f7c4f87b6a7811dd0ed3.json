@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillAthletics"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "StudentOfWarAdditionalSkillAthletics",
+  "guid": "fec26793abe4f7c4f87b6a7811dd0ed3",
+  "name": "Class Skill — Athletics (Additional Class Skill)"
+}

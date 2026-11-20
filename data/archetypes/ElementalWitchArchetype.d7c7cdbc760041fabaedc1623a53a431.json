@@ -1,0 +1,70 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_3172b6960c774e19ad029c5e4a96d3e4",
+        "!bp_9ec1bf2087874390a9d9be62884a0027"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_edbb5084c34a486fb39d38cc75f2f994"
+      ]
+    },
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_e90ffb20cabd4589a68bcb0a14243211"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_381cf4c890815d049a4420c6f31d063f",
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "ElementalWitchArchetype",
+  "guid": "d7c7cdbc760041fabaedc1623a53a431",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Elemental Witch"
+}

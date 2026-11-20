@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_00b990c8be2117e45ae6514ee4ef561c",
+      "m_CharacterClass": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    }
+  ],
+  "Groups": [
+    "EldritchKnightSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "EldritchKnightSageSorcerer",
+  "guid": "674bce0d93e18b74cabea70784e202de",
+  "m_Spellbook": "!bp_cc2052732997b654e93eac268a39a0a9",
+  "name": "Sage Sorcerer"
+}

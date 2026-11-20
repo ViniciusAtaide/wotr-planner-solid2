@@ -1,0 +1,54 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 4,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_b46bf228d6b2427abd028e2fe7b84600",
+        "!bp_3306f4c6913d4d429358b907cdb4ffd1",
+        "!bp_c610310d31414edabcedf0c8a6fe32c4",
+        "!bp_4c44724ffa8844f4d9bedb5bb27d144a"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Charisma",
+      "Value": 17
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 11,
+      "Not": false,
+      "m_CharacterClass": "!bp_772c83a25e2268e448e841dcd548235f"
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "BaseAttackBonus",
+      "Value": 11
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "StyleFeat",
+    "CombatFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DivaAdvance",
+  "guid": "d05cbf9cca8c4385a76bb6d65f65a717",
+  "name": "Diva Advance"
+}

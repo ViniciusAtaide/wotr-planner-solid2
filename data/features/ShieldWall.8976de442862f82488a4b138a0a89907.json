@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteProficiency",
+      "ArmorProficiencies": [
+        "LightShield",
+        "HeavyShield",
+        "Buckler"
+      ],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": []
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_cc26546e4f73fe142b606b4759b4eb18"
+      ]
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_cc26546e4f73fe142b606b4759b4eb18",
+      "m_Feature": "!bp_cc26546e4f73fe142b606b4759b4eb18"
+    }
+  ],
+  "Groups": [
+    "CombatFeat",
+    "Feat",
+    "TeamworkFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShieldWall",
+  "guid": "8976de442862f82488a4b138a0a89907",
+  "name": "Shield Wall (feature)"
+}

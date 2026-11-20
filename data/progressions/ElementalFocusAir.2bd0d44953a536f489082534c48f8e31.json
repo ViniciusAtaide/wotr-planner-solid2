@@ -1,0 +1,49 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_365b50dba54efb74fa24c07e9b7a838c",
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "KineticElementalFocus"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_49e55e8f24e1ad24e910fefc0258adba",
+        "!bp_5f6197b9fde96d840882b858208d2809"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_bb0de2047c448bd46aff120be3b39b7a"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ElementalFocusAir",
+  "guid": "2bd0d44953a536f489082534c48f8e31",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Air (Elemental Focus)"
+}

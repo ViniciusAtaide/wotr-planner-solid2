@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "Chainshirt2THAgainstDeathPlus3",
+  "guid": "8327c665cb5235f44827c928fd7292a8",
+  "m_Enchantments": [
+    "!bp_9448d3026111d6d49b31fc85e7f3745a",
+    "!bp_45174ce9567d1d64bacaf5abf18c2846"
+  ],
+  "m_Type": "!bp_7467b0ab8641d8f43af7fc46f2108a1a",
+  "name": "Chainshirt of Life"
+}

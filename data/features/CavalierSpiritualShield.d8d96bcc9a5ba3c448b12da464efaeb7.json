@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_3adc3439f98cb534ba98df59838f02c7"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "OnePlusDivStep",
+      "m_StartLevel": 0,
+      "m_StepLevel": 4,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CavalierSpiritualShield",
+  "guid": "d8d96bcc9a5ba3c448b12da464efaeb7",
+  "name": "Spiritual Shield"
+}

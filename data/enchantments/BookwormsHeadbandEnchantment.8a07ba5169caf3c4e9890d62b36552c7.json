@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e536dc0b5dd89e14db611b0f03272a67"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Enhancement",
+      "Stat": "Intelligence",
+      "Value": 2
+    }
+  ],
+  "assetName": "BookwormsHeadbandEnchantment",
+  "guid": "8a07ba5169caf3c4e9890d62b36552c7"
+}

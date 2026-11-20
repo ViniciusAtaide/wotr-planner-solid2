@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [],
+  "Groups": [],
+  "HasNoSuchFeature": false,
+  "HideInUI": true,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "LearnSpell",
+  "Ranks": 20,
+  "RequireProficiency": false,
+  "WeaponSubCategory": "None",
+  "assetName": "MysticTheurgeHunterLevelParametrized6",
+  "guid": "3e77f63396f04664bfde81cb81de6947",
+  "m_Prerequisite": null,
+  "name": "Hunter Spell (6th Level)"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_cc69c00a243bf8c4286cc839aab62640"
+    }
+  ],
+  "assetName": "WallsOfTheSanctuaryShieldEnchant",
+  "guid": "65900d6225083fa42a7082a08f569d71"
+}

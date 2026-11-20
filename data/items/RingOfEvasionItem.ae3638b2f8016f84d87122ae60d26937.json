@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfEvasionItem",
+  "guid": "ae3638b2f8016f84d87122ae60d26937",
+  "m_Enchantments": [
+    "!bp_b359e4aa7c2d01e46bcd827cdec8d5b4"
+  ],
+  "name": "Ring of Evasion"
+}

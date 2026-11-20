@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "IncreaseActivatableAbilityGroupSize",
+      "Group": "Judgment"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ThirdJudgment",
+  "guid": "490c7e92b22cc8a4bb4885a027b355db",
+  "name": "Third Judgment"
+}

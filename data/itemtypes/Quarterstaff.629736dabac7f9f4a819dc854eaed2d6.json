@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Quarterstaff",
+  "Components": [],
+  "assetName": "Quarterstaff",
+  "guid": "629736dabac7f9f4a819dc854eaed2d6",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Double, Monk",
+  "m_IsMonk": true,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": true,
+  "name": "Quarterstaff"
+}

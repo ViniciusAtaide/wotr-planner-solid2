@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "HeavyShieldItemPlusCultist3",
+  "guid": "7ae5e6ce236b4dc3a2b4495653b98adb",
+  "m_ArmorComponent": "!bp_58c05084b6443234e99660f86a781d33",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Heavy Shield +3"
+}

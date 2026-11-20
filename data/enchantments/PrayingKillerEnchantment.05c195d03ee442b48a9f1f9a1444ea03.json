@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_9be4949a4c434972b8fc74baae5d7b48"
+    }
+  ],
+  "assetName": "PrayingKillerEnchantment",
+  "guid": "05c195d03ee442b48a9f1f9a1444ea03"
+}

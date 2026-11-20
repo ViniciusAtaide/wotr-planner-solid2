@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_5c77110cd0414e7eb4c2e485659c9a46",
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "Groups": [
+    "DragonDiscipleSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DragonDiscipleMagicDeceiver",
+  "guid": "832f1a92e5fa49d9ad9b34cc3d6dd251",
+  "m_Spellbook": "!bp_587066af76a74f47a904bb017697ba08",
+  "name": "Arcanist"
+}

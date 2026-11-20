@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "MaskOfAreshkagalBelt_VoidItem",
+  "guid": "2217cd38e0c642c7addfb4e3d7095105",
+  "m_Enchantments": [
+    "!bp_f9278c2ea13c2b34cb56be078428a0bb",
+    "!bp_15008553994dd7e48af2ad1a1426d733",
+    "!bp_4b9573fa2b0e74043a4682740e9ae138",
+    "!bp_4ddcc8ba13274c57b71b7113391a6648"
+  ],
+  "name": "Victims' Madness (belt)"
+}

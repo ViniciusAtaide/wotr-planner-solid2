@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "Pulura_SarcorianDagger_15",
+  "guid": "acdf8e7d0c0d8ab43b01f84cc784dc4a",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_07cc1a7fceaee5b42b3e43da960fe76d",
+  "name": "Funerary Dagger of Kigven Goldenmare"
+}

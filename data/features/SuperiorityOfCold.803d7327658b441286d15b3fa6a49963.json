@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteCasterType",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsArcane": false,
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteCasterType",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsArcane": true,
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SuperiorityOfCold",
+  "guid": "803d7327658b441286d15b3fa6a49963",
+  "name": "Cold Supremacy"
+}

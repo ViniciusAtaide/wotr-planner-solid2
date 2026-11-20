@@ -1,0 +1,207 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "NoSelectionIfAlreadyHasFeature",
+      "AnyFeatureFromSelection": true,
+      "m_Features": [
+        "!bp_17b752be1e0f4a34e8914df52eebeb75",
+        "!bp_562c5e4031d268244a39e01cc4b834bb",
+        "!bp_17ac9d771a944194a92ac15b5ff861c9",
+        "!bp_cf448fafcd8452d4b830bcc9ca074189",
+        "!bp_82f76646a7f96ed4cafa18480adc0b8c",
+        "!bp_c355b8777a3bda7429d863367bda3851",
+        "!bp_468ecbdd58fbd6045a0a1888308031fe",
+        "!bp_2ad98f60b29ae604da0297037054080c",
+        "!bp_63c9d62a56e6921409a58de1ab9a9f9b",
+        "!bp_6de526eeee72852448c5595f7a44a39d",
+        "!bp_d69a7785de1959c4497e4ff1e9490509",
+        "!bp_efabab987569bf54abf23848c250e4d5",
+        "!bp_7572e8c020a6b8a46bde3ab3ad8c6f70",
+        "!bp_940d34be432a1e543b0c0cbecd4ffc1d",
+        "!bp_1c1cdb13caa111d49bd82a7e1f320803",
+        "!bp_b19f95964e4a18f4cb3e4e3101593f22",
+        "!bp_179a53407d1141142a91baace7e43325",
+        "!bp_8e6dcc9095dacd042a644dd8c04ffac0",
+        "!bp_71f9b9d63f3683b4eb57e0025771932e",
+        "!bp_59904bf6cc50a52489ebc648fb35f36f",
+        "!bp_5bc63fdb68b539f4fa500cfb2d0fe0f6",
+        "!bp_7d990675841a7354c957689a6707c6c2",
+        "!bp_8a95d80a3162d274896d50c2f18bb6b1",
+        "!bp_a46d4bd93601427409d034a997673ece"
+      ]
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_17b752be1e0f4a34e8914df52eebeb75",
+      "m_Feature": "!bp_d3a4cb7be97a6694290f0dcfbd147113"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_562c5e4031d268244a39e01cc4b834bb",
+      "m_Feature": "!bp_4d491cf9631f7e9429444f4aed629791"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_7d990675841a7354c957689a6707c6c2",
+      "m_Feature": "!bp_4d491cf9631f7e9429444f4aed629791"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_17ac9d771a944194a92ac15b5ff861c9",
+      "m_Feature": "!bp_aa79c65fa0e11464d9d100b038c50796"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_8a95d80a3162d274896d50c2f18bb6b1",
+      "m_Feature": "!bp_aa79c65fa0e11464d9d100b038c50796"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_cf448fafcd8452d4b830bcc9ca074189",
+      "m_Feature": "!bp_7bd143ead2d6c3a409aad6ee22effe34"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_82f76646a7f96ed4cafa18480adc0b8c",
+      "m_Feature": "!bp_8a7f100c02d0b254d8f5f3affc8ef386"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_c355b8777a3bda7429d863367bda3851",
+      "m_Feature": "!bp_5f9ecbee67db8364985e9d0500eb25f1"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_468ecbdd58fbd6045a0a1888308031fe",
+      "m_Feature": "!bp_7e0f57d8d00464441974e303b84238ac"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_2ad98f60b29ae604da0297037054080c",
+      "m_Feature": "!bp_b522759a265897b4f8f7a1a180a692e4"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_63c9d62a56e6921409a58de1ab9a9f9b",
+      "m_Feature": "!bp_6c67ef823db8d7d45bb0ef82f959743d"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_6de526eeee72852448c5595f7a44a39d",
+      "m_Feature": "!bp_7181be57d1cc3bc40bc4b552e4e4ce24"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_d69a7785de1959c4497e4ff1e9490509",
+      "m_Feature": "!bp_8c6e5b3cf12f71e43949f52c41ae70a8"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_efabab987569bf54abf23848c250e4d5",
+      "m_Feature": "!bp_c7d2f393e6574874bb3fc728a69cc73a"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_7572e8c020a6b8a46bde3ab3ad8c6f70",
+      "m_Feature": "!bp_b0f79497a0d1f4f4b8293e82c8f8fa0c"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_940d34be432a1e543b0c0cbecd4ffc1d",
+      "m_Feature": "!bp_cd788df497c6f10439c7025e87864ee4"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_1c1cdb13caa111d49bd82a7e1f320803",
+      "m_Feature": "!bp_32393034410fb2f4d9c8beaa5c8c8ab7"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_b19f95964e4a18f4cb3e4e3101593f22",
+      "m_Feature": "!bp_17cc794d47408bc4986c55265475c06f"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_8e6dcc9095dacd042a644dd8c04ffac0",
+      "m_Feature": "!bp_e8445256abbdc45488c2d90373f7dae8"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_a46d4bd93601427409d034a997673ece",
+      "m_Feature": "!bp_e8445256abbdc45488c2d90373f7dae8"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_71f9b9d63f3683b4eb57e0025771932e",
+      "m_Feature": "!bp_e76a774cacfb092498177e6ca706064d"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_59904bf6cc50a52489ebc648fb35f36f",
+      "m_Feature": "!bp_739c1e842bf77994baf963f4ad964379"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_5bc63fdb68b539f4fa500cfb2d0fe0f6",
+      "m_Feature": "!bp_a1a8bf61cadaa4143b2d4966f2d1142e"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "BloodLine",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "EldritchScionBloodlineSelection",
+  "guid": "94c29f69cdc34594a6a4677441ed7375",
+  "m_AllFeatures": [
+    "!bp_d3a4cb7be97a6694290f0dcfbd147113",
+    "!bp_4d491cf9631f7e9429444f4aed629791",
+    "!bp_aa79c65fa0e11464d9d100b038c50796",
+    "!bp_7bd143ead2d6c3a409aad6ee22effe34",
+    "!bp_8a7f100c02d0b254d8f5f3affc8ef386",
+    "!bp_5f9ecbee67db8364985e9d0500eb25f1",
+    "!bp_7e0f57d8d00464441974e303b84238ac",
+    "!bp_b522759a265897b4f8f7a1a180a692e4",
+    "!bp_6c67ef823db8d7d45bb0ef82f959743d",
+    "!bp_7181be57d1cc3bc40bc4b552e4e4ce24",
+    "!bp_8c6e5b3cf12f71e43949f52c41ae70a8",
+    "!bp_c7d2f393e6574874bb3fc728a69cc73a",
+    "!bp_b0f79497a0d1f4f4b8293e82c8f8fa0c",
+    "!bp_cd788df497c6f10439c7025e87864ee4",
+    "!bp_32393034410fb2f4d9c8beaa5c8c8ab7",
+    "!bp_17cc794d47408bc4986c55265475c06f",
+    "!bp_7c692e90592257a4e901d12ae6ec1e41",
+    "!bp_e8445256abbdc45488c2d90373f7dae8",
+    "!bp_e76a774cacfb092498177e6ca706064d",
+    "!bp_739c1e842bf77994baf963f4ad964379",
+    "!bp_a1a8bf61cadaa4143b2d4966f2d1142e"
+  ],
+  "name": "Bloodline (Eldritch Scion)"
+}

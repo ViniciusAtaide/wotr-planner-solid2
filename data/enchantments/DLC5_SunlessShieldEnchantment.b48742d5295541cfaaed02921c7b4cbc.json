@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_4473e5c3ff0441c4a389dba03a37eb3b"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_2f6847787102a594da5e947cbc616148"
+    }
+  ],
+  "assetName": "DLC5_SunlessShieldEnchantment",
+  "guid": "b48742d5295541cfaaed02921c7b4cbc"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "LichUniqueAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DeathRushFeature",
+  "guid": "ef847913c29a3cf44825eb30ae6f7c38",
+  "name": "Death Rush"
+}

@@ -1,0 +1,82 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_9093ceeefe9b84746a5993d619d7c86f",
+      "m_Feature": "!bp_3de0359d9480cb549ab6cf1eac51f9dc"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_c920f2cd2244d284aa69a146aeefcb2c",
+      "m_Feature": "!bp_693964e674883e74b8d0005dbf4a4e6b"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_992fd59da1783de49b135ad89142c6d7",
+      "m_Feature": "!bp_9c179de4894c295499822714878f3590"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_b186cea78dce3a04aacff0a81786008c",
+      "m_Feature": "!bp_c7223802e54e8524c8b1e5c71df22f7b"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_422dab7309e1ad343935f33a4d6e9f11",
+      "m_Feature": "!bp_44569e9e95364bf42b1071382a8a89da"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_5662d1b793db90c4b9ba68037fd2a768",
+      "m_Feature": "!bp_731a11dcc952e744f8a88768e07a0542"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_6337b37f2a7c11b4ab0831d6780bce2a",
+      "m_Feature": "!bp_2f5768f642de59f40acd5211a627a237"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_0b707584fc2ea724aa72c396c2230dc7",
+      "m_Feature": "!bp_e5079510480031146992dafde835c3b8"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_1191ef3065e6f8e4f9fbe1b7e3c0f760",
+      "m_Feature": "!bp_953c3dbda63dcdb4aad6c54c1a4590d0"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_8976de442862f82488a4b138a0a89907",
+      "m_Feature": "!bp_cc26546e4f73fe142b606b4759b4eb18"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_d26eb8ab2aabd0e45a4d7eec0340bbce",
+      "m_Feature": "!bp_965ea9716b87f4b46a6a8f50523393bd"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_c4b555225f565bb40a855c1bfeeff07e",
+      "m_Feature": "!bp_a6298b0f87fc7694086cd8eac9d6a2aa"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "CavalierTacticianSupportFeature",
+  "guid": "37c496c0c2f04544b83a8d013409fd47"
+}

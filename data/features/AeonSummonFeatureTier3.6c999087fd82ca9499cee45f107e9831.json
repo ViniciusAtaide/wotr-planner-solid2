@@ -1,0 +1,44 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 4,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_15a85e67b7d69554cab9ed5830d0268e",
+      "m_Feature": "!bp_e142c48964c1bca4c9e7a3dc9c560640"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_0efe2a9ef673ebe4181356748c88fbe9"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_4bd30ab53ce6ee24791fb60f82e7811e"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_62ece3b9b2126a44faa276bbb5bd1014"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_0a4b9114759b20a45af6642964fc56bc"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_506b4aeb2b7bb36448cf3858c943d5bb"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_8963c914c07ccd0489d1d34a8d1a5865"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AeonSummonFeatureTier3",
+  "guid": "6c999087fd82ca9499cee45f107e9831",
+  "name": "Summon Axiomite"
+}

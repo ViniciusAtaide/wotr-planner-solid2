@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HatredReptilian",
+  "guid": "020bd2ae61de90341b7f874b788c160a",
+  "name": "Hatred — Reptilian Humanoids"
+}

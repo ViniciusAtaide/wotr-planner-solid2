@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "ShootDownFeature",
+  "guid": "f5b68204c2155074c9a05fbfe33a76c7"
+}

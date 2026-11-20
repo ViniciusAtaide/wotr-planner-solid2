@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfDexterityConstitution6",
+  "guid": "8cf20c1d0e9e0974e8f0c01bd2f80e3e",
+  "m_Enchantments": [
+    "!bp_f3c17dcbd7a0e554eba4262fffa8f33b",
+    "!bp_177510057a2f71a4c8e61bebabaefa28"
+  ],
+  "name": "Belt of Physical Form +6"
+}

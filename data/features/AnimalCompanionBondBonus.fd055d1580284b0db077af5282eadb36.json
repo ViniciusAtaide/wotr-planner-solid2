@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "AnimalCompanionBondBonus",
+  "guid": "fd055d1580284b0db077af5282eadb36",
+  "name": "Share Favored Enemies (Ranger)"
+}

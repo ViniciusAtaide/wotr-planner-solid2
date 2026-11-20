@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_3f8e38a03f2b44ae8b90b927149aeb23"
+    }
+  ],
+  "assetName": "LeatherMantleOfNightEnchantmentNew",
+  "guid": "b504bf32abc44e1ba2e095a83296db33"
+}

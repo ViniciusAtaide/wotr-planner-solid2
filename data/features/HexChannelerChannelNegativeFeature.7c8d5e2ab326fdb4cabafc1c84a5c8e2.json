@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_b40316f05d4772e4894688e6743602bd"
+      ]
+    },
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "LawfulNeutral, TrueNeutral, ChaoticNeutral, Evil",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HexChannelerChannelNegativeFeature",
+  "guid": "7c8d5e2ab326fdb4cabafc1c84a5c8e2",
+  "name": "Channel Negative Energy (Hex Channeler)"
+}

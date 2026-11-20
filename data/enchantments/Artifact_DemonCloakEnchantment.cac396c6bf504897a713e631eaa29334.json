@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_c988710e76ba44cfbacf3e6b0f78c9e2"
+    }
+  ],
+  "assetName": "Artifact_DemonCloakEnchantment",
+  "guid": "cac396c6bf504897a713e631eaa29334"
+}

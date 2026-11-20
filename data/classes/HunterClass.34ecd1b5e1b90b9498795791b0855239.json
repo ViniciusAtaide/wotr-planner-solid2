@@ -1,0 +1,44 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillKnowledgeWorld",
+    "SkillPersuasion",
+    "SkillPerception",
+    "SkillStealth",
+    "SkillLoreNature"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 4,
+  "assetName": "HunterClass",
+  "guid": "34ecd1b5e1b90b9498795791b0855239",
+  "m_Archetypes": [
+    "!bp_f996f0a18e5d945459e710ee3a6dd485",
+    "!bp_f1341c61c77092643ae63d7cb52f83f8",
+    "!bp_34963fc6d87354c4fa85eb76f122c41c",
+    "!bp_74ee8172df6782f4792ea0f8647dea34",
+    "!bp_0be343c549776574286730b33ae5c676",
+    "!bp_339659f6b09b4136bf8c2b2c3df87c65",
+    "!bp_6d42902b472c4b84b146196fad4bd3c4"
+  ],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_f4943530be50c3c4da841a7b96cfae98",
+  "m_ReflexSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_Spellbook": "!bp_885cd422aa357e2409146b38bb1fec51",
+  "m_WillSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "name": "Hunter"
+}

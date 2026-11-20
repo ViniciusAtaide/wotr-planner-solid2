@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionAlignment",
+      "Alignment": "NeutralGood, ChaoticGood, LawfulNeutral, TrueNeutral, ChaoticNeutral, Evil"
+    }
+  ],
+  "Double": false,
+  "assetName": "DemonicHungerItem",
+  "guid": "3e55085dbfd139c438b9dfb12427adec",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a14a1b224cd173449cb7ffc77d5f65c",
+  "name": "Soulshear"
+}

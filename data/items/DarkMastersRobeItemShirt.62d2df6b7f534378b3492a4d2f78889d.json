@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "DarkMastersRobeItemShirt",
+  "guid": "62d2df6b7f534378b3492a4d2f78889d",
+  "m_Enchantments": [
+    "!bp_bc66f5712a147874aaac6b397b83f874",
+    "!bp_7669e7a9af237314dbb2a22e78e1a0b4",
+    "!bp_4d69aaff9f2137a48ba6c88f947ff47a"
+  ],
+  "name": "Dark Master's Robe (shirt)"
+}

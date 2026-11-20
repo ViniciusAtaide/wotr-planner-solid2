@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_72232a0652a744bca5d281b872dcf359"
+    }
+  ],
+  "assetName": "DLC3_KapaoEnchantment",
+  "guid": "10a6279460384455aec3031827994dea"
+}

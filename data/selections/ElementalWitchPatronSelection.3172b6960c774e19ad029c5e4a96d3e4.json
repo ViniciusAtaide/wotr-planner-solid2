@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ElementalWitchPatronSelection",
+  "guid": "3172b6960c774e19ad029c5e4a96d3e4",
+  "m_AllFeatures": [
+    "!bp_67e85f52b1f020847aaa738d8999d4cd",
+    "!bp_e98d8d9f907c1814aa7376d6cdaac012"
+  ],
+  "name": "Elemental Patron"
+}

@@ -1,0 +1,116 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_9c37279588fd9e34e9c4cb234857492c"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_faa56353e193e5940a305c60b4412ea5"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_faa56353e193e5940a305c60b4412ea5"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_faa56353e193e5940a305c60b4412ea5"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_faa56353e193e5940a305c60b4412ea5"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_faa56353e193e5940a305c60b4412ea5"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_c7ea46f5e1822994ba069c11819844ae"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_b4202533d1748f84484658491d2ff766"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_ff125ecc8b2c1894b879b7bcf34e1b17"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_3c380607706f209499d951b29d3c44f3"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_3c380607706f209499d951b29d3c44f3"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_3c380607706f209499d951b29d3c44f3"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_3c380607706f209499d951b29d3c44f3"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_41c8486641f7d6d4283ca9dae4147a9f"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_41c8486641f7d6d4283ca9dae4147a9f"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_41c8486641f7d6d4283ca9dae4147a9f"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "SwordlordArchetype",
+  "guid": "d80a67a264f206e4b8d2fcf7e560d48f",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Aldori Defender"
+}

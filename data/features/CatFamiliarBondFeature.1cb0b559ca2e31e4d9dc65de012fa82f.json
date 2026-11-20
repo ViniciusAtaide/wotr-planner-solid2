@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "None",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillPerception",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "None",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillStealth",
+      "Value": 3
+    }
+  ],
+  "Groups": [
+    "Familiar"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CatFamiliarBondFeature",
+  "guid": "1cb0b559ca2e31e4d9dc65de012fa82f",
+  "name": "Cat Familiar"
+}

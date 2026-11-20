@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_2530b2677f3a4df6a03fac6456733914"
+    }
+  ],
+  "assetName": "ArmExtendersEnchantment",
+  "guid": "f48815cda43c4b2c85cb22eee94cfa95"
+}

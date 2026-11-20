@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": true,
+  "IsMythic": false,
+  "Spontaneous": false,
+  "assetName": "SwordSaintSpellbook",
+  "guid": "682545e11e5306c45b14ca78bcbe3e62",
+  "m_SpellsPerDay": "!bp_b9fdc0b2d37eb9e4298f9163edf5ca82",
+  "name": "Magus"
+}

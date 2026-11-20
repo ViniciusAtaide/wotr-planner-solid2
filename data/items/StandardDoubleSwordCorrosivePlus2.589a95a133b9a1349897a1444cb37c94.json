@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDoubleSwordCorrosivePlus2",
+  "guid": "589a95a133b9a1349897a1444cb37c94",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": "!bp_e9cebc3d827f6e34cb86125aab6a8d86",
+  "m_Type": "!bp_e95efb85a0912a7489be69d5f03a5308",
+  "name": "Corrosive Two-Bladed Sword +2"
+}

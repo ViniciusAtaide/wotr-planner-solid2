@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_90a4ac31cc72e984aa4b508dda524764"
+    }
+  ],
+  "assetName": "BlackRingWithRunesEnchantment",
+  "guid": "b784fcbc0b0cc1b42945f7a860c81171"
+}

@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_ac8aaf29054f5b74eb18f2af950e752d"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TwoWeaponFightingMythicFeat",
+  "guid": "c6afbb8c1a36a704a8041f35498f41a4",
+  "name": "Two-Weapon Fighting (Mythic)"
+}

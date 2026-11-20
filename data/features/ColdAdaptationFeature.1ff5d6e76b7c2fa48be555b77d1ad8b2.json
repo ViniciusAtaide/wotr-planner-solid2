@@ -1,0 +1,45 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_3d8d3d6678b901444a07984294a1bc24",
+        "!bp_caa7edca64af1914d9e14785beb6a143",
+        "!bp_7ab8947ce2e19c44a9edcf5fd1466686",
+        "!bp_faa5f1233600d864fa998bc0afe351ab",
+        "!bp_56e2fc3abed8f2247a621ac37e75f303",
+        "!bp_86eff374d040404438ad97fedd7218bc",
+        "!bp_d4a2a75d01d1e77489ff692636a538bf",
+        "!bp_5e839c743c6da6649a43cdeb70b6018f"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_1ff5d6e76b7c2fa48be555b77d1ad8b2"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "KineticWildTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ColdAdaptationFeature",
+  "guid": "1ff5d6e76b7c2fa48be555b77d1ad8b2",
+  "name": "Cold Adaptation"
+}

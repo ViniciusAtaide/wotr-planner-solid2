@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3cd86486f747b174c9b43ed6b066dbfc"
+    }
+  ],
+  "assetName": "KnightsEmblemSunsetChainmailEnchantment",
+  "guid": "024746258f526d649850fba4677f3824"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b8607a9fa4f24d0449f094b788ee0f8d"
+    }
+  ],
+  "assetName": "CallToViolenceEnchantment",
+  "guid": "a864da8cc74065e4aad897d24a66e3e1"
+}

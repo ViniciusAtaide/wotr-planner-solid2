@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "rank up",
+  "reason": "The ranger's \"Favored Enemy\" is two selections: the first pick at level 1 (which stays bare as the class's own copy) and the rank-ups at levels 5, 10, 15 and 20. The Sacred Huntsmaster adds the rank-ups at 10, 15 and 20, so the class's level doesn't hold on every route. This is qualified as the rank-up.",
+  "target": "c1be13839472aad46b152cf10cf46179"
+}

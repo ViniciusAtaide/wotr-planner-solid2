@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Falchion",
+  "Components": [],
+  "assetName": "Falchion",
+  "guid": "6ddc9acbbb6e40746a6a1671df1f7b47",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "BladesHeavy",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": true,
+  "name": "Falchion"
+}

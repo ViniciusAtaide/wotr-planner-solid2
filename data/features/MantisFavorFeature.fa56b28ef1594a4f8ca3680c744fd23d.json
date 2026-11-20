@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "MantisFavorFeature",
+  "guid": "fa56b28ef1594a4f8ca3680c744fd23d",
+  "name": "Mantis Favor"
+}

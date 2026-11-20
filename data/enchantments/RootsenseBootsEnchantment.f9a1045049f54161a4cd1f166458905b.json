@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_2a15d837ee1048f8a706bdfb6a486f78"
+    }
+  ],
+  "assetName": "RootsenseBootsEnchantment",
+  "guid": "f9a1045049f54161a4cd1f166458905b"
+}

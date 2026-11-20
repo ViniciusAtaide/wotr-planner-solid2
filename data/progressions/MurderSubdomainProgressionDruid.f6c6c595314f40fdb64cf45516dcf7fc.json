@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": false,
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "BlightDruidDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_b94f3f27224b4421be9d6aaa6f46b088",
+        "!bp_a06d4cb27860421384ae5ea6536b7285"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_f7dbd9bc4b634f0dae18c49cc851bb69"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "MurderSubdomainProgressionDruid",
+  "guid": "f6c6c595314f40fdb64cf45516dcf7fc",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Murder Subdomain (Blight Bond)"
+}

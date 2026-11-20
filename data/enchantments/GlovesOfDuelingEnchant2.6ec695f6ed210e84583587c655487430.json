@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f063942ce72136c49a12d34a3fd88197"
+    }
+  ],
+  "assetName": "GlovesOfDuelingEnchant2",
+  "guid": "6ec695f6ed210e84583587c655487430"
+}

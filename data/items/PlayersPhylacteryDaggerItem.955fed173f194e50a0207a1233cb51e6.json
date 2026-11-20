@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_5d501618a28bdc24c80007a5c937dcb7"
+    }
+  ],
+  "Double": false,
+  "assetName": "PlayersPhylacteryDaggerItem",
+  "guid": "955fed173f194e50a0207a1233cb51e6",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_55eb2f3ecaeb47119d36bcbc3e902f24"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_07cc1a7fceaee5b42b3e43da960fe76d",
+  "name": "Your Phylactery (Dagger)"
+}

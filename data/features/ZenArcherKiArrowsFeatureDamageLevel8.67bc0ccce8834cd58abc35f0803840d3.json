@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ZenArcherKiArrowsFeatureDamageLevel8",
+  "guid": "67bc0ccce8834cd58abc35f0803840d3",
+  "name": "Ki Arrows"
+}

@@ -1,0 +1,37 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 5,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_ed246f1680e667b47b7427d51e651059",
+      "m_Feature": "!bp_60d852d4978584e4d8ed8ed71cde401c"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 5,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_ed246f1680e667b47b7427d51e651059",
+      "m_Feature": "!bp_95443efe59bd63e49892620fc5ef847a"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 5,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_ee6425d6392101843af35f756ce7fefd",
+      "m_Feature": "!bp_95443efe59bd63e49892620fc5ef847a"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "HellKnightOrderOfTheGateFeatureMain1",
+  "guid": "1c9e6e326581fb547889bfbc42308e88"
+}

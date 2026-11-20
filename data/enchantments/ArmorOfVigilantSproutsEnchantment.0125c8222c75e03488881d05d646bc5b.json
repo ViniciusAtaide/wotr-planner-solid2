@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3162d47717f87b14f97dc2459b4f2d98"
+    }
+  ],
+  "assetName": "ArmorOfVigilantSproutsEnchantment",
+  "guid": "0125c8222c75e03488881d05d646bc5b"
+}

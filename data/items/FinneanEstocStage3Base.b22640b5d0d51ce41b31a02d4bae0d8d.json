@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanEstocStage3Base",
+  "guid": "b22640b5d0d51ce41b31a02d4bae0d8d",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d516765b3c2904e4a939749526a52a9a",
+  "name": "Finnean the Talking Weapon (Estoc +5)"
+}

@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "RayCalculateFeature",
+  "guid": "d3e6275cfa6e7a04b9213b7b292a011c"
+}

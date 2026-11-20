@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_ee7dc126939e4d9438357fbd5980d459"
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "WizardFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "GreaterSpellPenetration",
+  "guid": "1978c3f91cfbbc24b9c9b0d017f4beec",
+  "name": "Greater Spell Penetration"
+}

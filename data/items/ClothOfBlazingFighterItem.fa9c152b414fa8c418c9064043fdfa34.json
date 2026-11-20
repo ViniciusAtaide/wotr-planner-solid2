@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "ClothOfBlazingFighterItem",
+  "guid": "fa9c152b414fa8c418c9064043fdfa34",
+  "m_Enchantments": [
+    "!bp_3a775ab2a0df6994eb3743e599b16f44"
+  ],
+  "name": "Shirt of Blazing Fighter"
+}

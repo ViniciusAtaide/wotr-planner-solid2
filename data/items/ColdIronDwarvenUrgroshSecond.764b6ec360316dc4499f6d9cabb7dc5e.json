@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ColdIronDwarvenUrgroshSecond",
+  "guid": "764b6ec360316dc4499f6d9cabb7dc5e",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_c4e95e3c489721e4382fd8514a522f9d",
+  "name": "Cold Iron Dwarven Urgrosh"
+}

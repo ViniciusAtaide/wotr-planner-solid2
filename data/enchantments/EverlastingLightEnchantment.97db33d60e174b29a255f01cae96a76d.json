@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_824df03a2fdf4d5299e1b540adf86583"
+    }
+  ],
+  "assetName": "EverlastingLightEnchantment",
+  "guid": "97db33d60e174b29a255f01cae96a76d"
+}

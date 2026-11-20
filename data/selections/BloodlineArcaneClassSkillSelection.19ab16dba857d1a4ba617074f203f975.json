@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BloodlineArcaneClassSkillSelection",
+  "guid": "19ab16dba857d1a4ba617074f203f975",
+  "m_AllFeatures": [
+    "!bp_3e833ef2e85a82a4395516cfc55113b7",
+    "!bp_d20eeb3f8da1e89489289bf53cc7dd05",
+    "!bp_67bc9641c77ba0f4c8e3456a471c0927"
+  ],
+  "name": "Bloodline Class Skill Selection"
+}

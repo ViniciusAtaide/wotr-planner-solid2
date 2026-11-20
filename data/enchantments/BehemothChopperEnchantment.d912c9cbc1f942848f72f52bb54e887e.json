@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_54efeb34545e435ea18f3cb2ded38443"
+    }
+  ],
+  "assetName": "BehemothChopperEnchantment",
+  "guid": "d912c9cbc1f942848f72f52bb54e887e"
+}

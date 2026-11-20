@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DragonDiscipleBiteFeatureFire",
+  "guid": "a909bb70937f96d4c81e6dcd09962a15",
+  "name": "Dragon Bite"
+}

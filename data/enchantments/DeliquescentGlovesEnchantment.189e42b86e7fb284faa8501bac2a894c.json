@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_4441d87e0c4152e4e8e87933b196e786"
+    }
+  ],
+  "assetName": "DeliquescentGlovesEnchantment",
+  "guid": "189e42b86e7fb284faa8501bac2a894c"
+}

@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_4e8fe10f42f314e4fa7c7918bcfadbd5"
+      ]
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_c99f3405d1ef79049bd90678a666e1d7"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_6ab6c271d1558344cbc746350243d17d"
+    }
+  ],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HumanRaisedHalfOrc",
+  "guid": "289d95c2c26f4e638c1f26d5ea7c594b",
+  "name": "Human-Raised"
+}

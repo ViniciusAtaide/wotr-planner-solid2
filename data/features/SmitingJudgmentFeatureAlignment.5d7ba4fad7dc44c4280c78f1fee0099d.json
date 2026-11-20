@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce",
+      "m_Feature": "!bp_e18fe3750f7695a42ba2dbdc8d8cc7ac"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce",
+      "m_Feature": "!bp_c35eb3e0093960d4998522be47a1bca6"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "SmitingJudgmentFeatureAlignment",
+  "guid": "5d7ba4fad7dc44c4280c78f1fee0099d"
+}

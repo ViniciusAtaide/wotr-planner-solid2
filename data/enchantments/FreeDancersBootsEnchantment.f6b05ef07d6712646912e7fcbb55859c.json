@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b8cf3a526d8744542967d96b7153251a"
+    }
+  ],
+  "assetName": "FreeDancersBootsEnchantment",
+  "guid": "f6b05ef07d6712646912e7fcbb55859c"
+}

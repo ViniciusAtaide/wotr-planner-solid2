@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "HagboundWitchPatronSelection",
+  "guid": "0b9af221d99a91842b3a2afbc6a68a1e",
+  "m_AllFeatures": [
+    "!bp_3a4214e3c2eab3c40bc491d7abea7045",
+    "!bp_850ac8a2bc65d814db9f3fea871c18bb",
+    "!bp_e98d8d9f907c1814aa7376d6cdaac012",
+    "!bp_f48bfffe3618c274dbd42dfff8d0df56"
+  ],
+  "name": "Hagbound Patron"
+}

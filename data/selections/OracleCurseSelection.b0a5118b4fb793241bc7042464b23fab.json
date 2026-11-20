@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_b0a5118b4fb793241bc7042464b23fab"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "OracleCurse",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "OracleCurseSelection",
+  "guid": "b0a5118b4fb793241bc7042464b23fab",
+  "m_AllFeatures": [
+    "!bp_ca1e4627a1ad8fc4f83158f6497d5c54",
+    "!bp_a565a4eb482424548ad2bcc1b6f6ff61",
+    "!bp_9f08f0d1faf141c41a3d8205f1911e96",
+    "!bp_3d319da9614c76a41a095a4467c3233f",
+    "!bp_8be8108c3bdac5d4cbad2e54e581d830",
+    "!bp_88c89ab44a36a67438347e257f70c8fe",
+    "!bp_15631616e56ccf44ab8659e55c36185f",
+    "!bp_1dddfbb862b6857478d13fcdd78911f4",
+    "!bp_e8a1096467696d14288079c6393bb58c"
+  ],
+  "name": "Oracle's Curse"
+}

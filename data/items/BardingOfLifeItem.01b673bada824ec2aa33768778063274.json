@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionHasAnyClassFromList",
+      "Not": false,
+      "m_Classes": [
+        "!bp_26b10d4340839004f960f9816f6109fe",
+        "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+      ]
+    }
+  ],
+  "assetName": "BardingOfLifeItem",
+  "guid": "01b673bada824ec2aa33768778063274",
+  "m_Enchantments": [
+    "!bp_6628f9d77fd07b54c911cd8930c0d531",
+    "!bp_ad59e2b1c14e4159805e642fe0fa2006"
+  ],
+  "m_Type": "!bp_7b9bb0bc92bb7414d8ba44bcdd55ece6",
+  "name": "Barding of Life"
+}

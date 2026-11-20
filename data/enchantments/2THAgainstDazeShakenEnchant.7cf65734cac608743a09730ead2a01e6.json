@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_fa18b85fe1496a943b39d91f5433de7a"
+    }
+  ],
+  "assetName": "2THAgainstDazeShakenEnchant",
+  "guid": "7cf65734cac608743a09730ead2a01e6"
+}

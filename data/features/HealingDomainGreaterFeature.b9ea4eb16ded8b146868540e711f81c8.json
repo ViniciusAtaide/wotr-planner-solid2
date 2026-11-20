@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HealingDomainGreaterFeature",
+  "guid": "b9ea4eb16ded8b146868540e711f81c8",
+  "name": "Healer's Blessing"
+}

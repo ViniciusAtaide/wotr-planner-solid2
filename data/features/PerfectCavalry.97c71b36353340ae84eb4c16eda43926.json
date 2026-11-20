@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PerfectCavalry",
+  "guid": "97c71b36353340ae84eb4c16eda43926",
+  "name": "Perfect Cavalry"
+}

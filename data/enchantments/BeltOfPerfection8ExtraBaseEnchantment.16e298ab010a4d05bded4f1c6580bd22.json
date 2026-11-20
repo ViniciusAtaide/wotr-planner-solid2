@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e1f419f50b5a45158080bb4cb4ff6858"
+    }
+  ],
+  "assetName": "BeltOfPerfection8ExtraBaseEnchantment",
+  "guid": "16e298ab010a4d05bded4f1c6580bd22"
+}

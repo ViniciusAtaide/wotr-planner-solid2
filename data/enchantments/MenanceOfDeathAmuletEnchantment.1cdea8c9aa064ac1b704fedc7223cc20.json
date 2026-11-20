@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_c317350d45ab4d2291fe00134b29bdae"
+    }
+  ],
+  "assetName": "MenanceOfDeathAmuletEnchantment",
+  "guid": "1cdea8c9aa064ac1b704fedc7223cc20"
+}

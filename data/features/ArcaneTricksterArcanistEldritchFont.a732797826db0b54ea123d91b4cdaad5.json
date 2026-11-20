@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_2f35608fc073c04448a9c162a20852ce",
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 2,
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "Groups": [
+    "ArcaneTricksterSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ArcaneTricksterArcanistEldritchFont",
+  "guid": "a732797826db0b54ea123d91b4cdaad5",
+  "m_Spellbook": "!bp_67b574abd845f3e42983ea6eb53a6f90",
+  "name": "Arcanist"
+}

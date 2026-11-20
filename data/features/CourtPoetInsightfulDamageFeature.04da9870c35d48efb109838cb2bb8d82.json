@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 5,
+  "assetName": "CourtPoetInsightfulDamageFeature",
+  "guid": "04da9870c35d48efb109838cb2bb8d82",
+  "name": "Insightful Spell"
+}

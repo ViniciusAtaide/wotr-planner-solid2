@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_72707e6dcef44f4789e2af59f01bb871"
+    }
+  ],
+  "assetName": "Artifact_DemonicHelmetEnchantment",
+  "guid": "55c633ac6777427e9fc8cff956eba091"
+}

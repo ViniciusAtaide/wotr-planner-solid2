@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "WallsOfTheSanctuaryShieldItem",
+  "guid": "26440b63b13c71344a91559da15acf59",
+  "m_ArmorComponent": "!bp_f6f545f27fbaf8943bf4703e5b47dc33",
+  "m_WeaponComponent": null,
+  "name": "Walls of the Sanctuary"
+}

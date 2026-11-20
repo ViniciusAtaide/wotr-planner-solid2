@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SkaldWellVersed",
+  "guid": "17e1dede01c763a439852a1d0d8014c7",
+  "name": "Well-Versed (Skald)"
+}

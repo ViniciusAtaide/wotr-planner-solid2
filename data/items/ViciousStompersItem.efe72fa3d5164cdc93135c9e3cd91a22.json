@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_26b10d4340839004f960f9816f6109fe"
+    }
+  ],
+  "assetName": "ViciousStompersItem",
+  "guid": "efe72fa3d5164cdc93135c9e3cd91a22",
+  "m_Enchantments": [
+    "!bp_2e13b5587599492baf489d444ddb30f4"
+  ],
+  "name": "Vicious Stompers"
+}

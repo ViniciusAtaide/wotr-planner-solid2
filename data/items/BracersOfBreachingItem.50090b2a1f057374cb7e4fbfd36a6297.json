@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "BracersOfBreachingItem",
+  "guid": "50090b2a1f057374cb7e4fbfd36a6297",
+  "m_Enchantments": [
+    "!bp_436d0fdaf05ca644e8198a3519f51487"
+  ],
+  "name": "Bracers of Breaching"
+}

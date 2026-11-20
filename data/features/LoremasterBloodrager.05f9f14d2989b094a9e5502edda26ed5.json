@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_d77e67a814d686842802c9cfd8ef8499"
+    }
+  ],
+  "Groups": [
+    "MythicAdditionalProgressions"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "LoremasterBloodrager",
+  "guid": "05f9f14d2989b094a9e5502edda26ed5",
+  "m_Spellbook": "!bp_e19484252c2f80e4a9439b3681b20f00",
+  "name": "Bloodrager"
+}

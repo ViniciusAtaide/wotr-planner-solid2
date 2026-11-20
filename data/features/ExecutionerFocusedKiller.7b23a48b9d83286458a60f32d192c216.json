@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ExecutionerFocusedKiller",
+  "guid": "7b23a48b9d83286458a60f32d192c216",
+  "name": "Focused Killer"
+}

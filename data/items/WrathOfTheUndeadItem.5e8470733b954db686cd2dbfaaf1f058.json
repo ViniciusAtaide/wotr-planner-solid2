@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "WrathOfTheUndeadItem",
+  "guid": "5e8470733b954db686cd2dbfaaf1f058",
+  "m_Enchantments": [
+    "!bp_1b25a30cadbe421f941b96c066216f5c"
+  ],
+  "name": "Wrath of the Undead"
+}

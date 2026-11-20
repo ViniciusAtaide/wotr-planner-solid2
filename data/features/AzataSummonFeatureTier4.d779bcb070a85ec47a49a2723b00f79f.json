@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 5,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_9a3b2c63afa79744cbca46bea0da9a16",
+      "m_Feature": "!bp_c33a7fbbe423c044aa887638be6b6319"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AzataSummonFeatureTier4",
+  "guid": "d779bcb070a85ec47a49a2723b00f79f",
+  "name": "Summon Movanic Deva (Azata)"
+}

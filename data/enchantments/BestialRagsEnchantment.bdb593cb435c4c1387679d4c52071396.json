@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_dffaa7753c22479080d56e9cab749a49"
+    }
+  ],
+  "assetName": "BestialRagsEnchantment",
+  "guid": "bdb593cb435c4c1387679d4c52071396"
+}

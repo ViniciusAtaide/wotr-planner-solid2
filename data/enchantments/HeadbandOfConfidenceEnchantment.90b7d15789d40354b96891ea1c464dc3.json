@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3df3d3e1e460b4a4c83145f7095c6cd5"
+    }
+  ],
+  "assetName": "HeadbandOfConfidenceEnchantment",
+  "guid": "90b7d15789d40354b96891ea1c464dc3"
+}

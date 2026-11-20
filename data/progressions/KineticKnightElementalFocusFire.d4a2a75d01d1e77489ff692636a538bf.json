@@ -1,0 +1,40 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "KineticElementalFocus"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_e76a453abe7a7304cbde17a8c123ad76",
+        "!bp_fbed3ca8c0d89124ebb3299ccf68c439"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_8ad77685e64842c45a6f5b19f9086c6c"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "KineticKnightElementalFocusFire",
+  "guid": "d4a2a75d01d1e77489ff692636a538bf",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Fire (Kinetic Knight)"
+}

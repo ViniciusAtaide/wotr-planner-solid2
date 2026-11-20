@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfDexterity4",
+  "guid": "20539ffabe4365e419ca7413129ab78a",
+  "m_Enchantments": [
+    "!bp_15008553994dd7e48af2ad1a1426d733"
+  ],
+  "name": "Belt of Incredible Dexterity +4"
+}

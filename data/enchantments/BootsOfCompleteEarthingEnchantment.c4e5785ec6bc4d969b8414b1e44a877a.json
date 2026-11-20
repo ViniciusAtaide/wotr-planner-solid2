@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3c70427bd16d445b96ac929e018bc160"
+    }
+  ],
+  "assetName": "BootsOfCompleteEarthingEnchantment",
+  "guid": "c4e5785ec6bc4d969b8414b1e44a877a"
+}

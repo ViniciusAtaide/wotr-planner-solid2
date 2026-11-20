@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WitchPatronSpellLevel1",
+  "guid": "394a16c90dcbd9242850248195490a7f",
+  "name": "Patron Spells (Elements 2)"
+}

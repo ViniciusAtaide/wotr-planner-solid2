@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_1de483b5584b89d42988cadd487bf052"
+    }
+  ],
+  "assetName": "AmuletOfEpicSongsEnchantment",
+  "guid": "d7f985d0fd4772243be30e06e3e7d400"
+}

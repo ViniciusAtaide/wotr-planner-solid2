@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "DeceiverWay"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "MagicDeceiverWaySelection",
+  "guid": "f0310af68c7142cda950d61244cb0cff",
+  "m_AllFeatures": [
+    "!bp_3a30422ecd00418d857e0fcf30bf504f",
+    "!bp_464ffaf88140474a949618bec7955e78",
+    "!bp_a0c82ce4664a4adf82b676b1603bcf35",
+    "!bp_cd96109ca30b45dcb6d7390945c8487d",
+    "!bp_fc120e8f61a84694adfd5ff5298be820",
+    "!bp_4796db76ba4b4baeb010c52c26ed3be5"
+  ],
+  "name": "Ways of the Deceiver"
+}

@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_deaf46650a9d2dd4f85736ca552f9fb1"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_d030df93ea56d2b468650c4acf608f00"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PyromaniacGnome",
+  "guid": "fc74a68e18a8479a9e8af34e761a70b3",
+  "name": "Pyromaniac"
+}

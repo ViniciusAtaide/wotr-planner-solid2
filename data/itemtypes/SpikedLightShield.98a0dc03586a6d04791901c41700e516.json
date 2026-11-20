@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "SpikedLightShield",
+  "Components": [],
+  "assetName": "SpikedLightShield",
+  "guid": "98a0dc03586a6d04791901c41700e516",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Close",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Spiked Light Shield"
+}

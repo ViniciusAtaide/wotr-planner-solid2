@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfCorrosionItem",
+  "guid": "579abe9a6c5603c4c8a3662e30794f7a",
+  "m_Enchantments": [
+    "!bp_0215c2fdea532674b84c5fef5cb22ffd"
+  ],
+  "name": "Ring of Corrosion"
+}

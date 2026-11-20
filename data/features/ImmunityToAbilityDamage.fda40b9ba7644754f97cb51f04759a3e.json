@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ImmunityToAbilityDamage",
+  "guid": "fda40b9ba7644754f97cb51f04759a3e",
+  "name": "Immunity to Ability Damage"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SteelbloodBloodReflection",
+  "guid": "eece201a2183da4429f6ab39a396770c",
+  "name": "Blood Deflection"
+}

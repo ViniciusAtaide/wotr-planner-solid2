@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "CheerfulWarriorsHelmItem",
+  "guid": "63e3909df7242c24da96e080ba5456ef",
+  "m_Enchantments": [
+    "!bp_0b7cc1b289cb116499b67bf4a68e111a"
+  ],
+  "name": "Cheerful Warrior's Helm"
+}

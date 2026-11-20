@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "ManglingFrenzyItem",
+  "guid": "5d855652aad04a9cad2fb1e70735ac7e",
+  "m_Enchantments": [
+    "!bp_15008553994dd7e48af2ad1a1426d733",
+    "!bp_f9278c2ea13c2b34cb56be078428a0bb",
+    "!bp_4b9573fa2b0e74043a4682740e9ae138",
+    "!bp_a3f6774bf1cb4861899361a2a01cf50c"
+  ],
+  "name": "Mangling Frenzy"
+}

@@ -1,0 +1,129 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_e52f02f983734b91baf66e1c6b9110c9"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_be778d85e96d4c21860a301f4153ba3f"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_e45eab72dba5406db9f4ea3cde8b1a4a",
+        "!bp_93d153ca0d604f3594b167e5b50700bb"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_e45eab72dba5406db9f4ea3cde8b1a4a",
+        "!bp_93d153ca0d604f3594b167e5b50700bb"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_976b8edc3dcc44f497c7ffb2edfd9b0b",
+        "!bp_93d153ca0d604f3594b167e5b50700bb"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_93d153ca0d604f3594b167e5b50700bb"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_93d153ca0d604f3594b167e5b50700bb"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_93d153ca0d604f3594b167e5b50700bb"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_93d153ca0d604f3594b167e5b50700bb"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_93d153ca0d604f3594b167e5b50700bb"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_93d153ca0d604f3594b167e5b50700bb"
+      ]
+    },
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_f4f3d8395db347938237c1bc77820781"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "ChaoticNeutral, NeutralEvil, ChaoticEvil",
+      "ArchetypeAlignment": true,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "RemoveFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_381cf4c890815d049a4420c6f31d063f"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "DarkSisterArchetype",
+  "guid": "411fa458481e44f0855d47a19358874b",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Hag of Gyronna"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FlamewardenBurningRenewalFeature",
+  "guid": "7cf2a6bf35c422e4ea219fcc2eb564f5",
+  "name": "Burning Renewal"
+}

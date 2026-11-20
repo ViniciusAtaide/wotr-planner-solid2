@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintRace",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "SelectableRaceStat": false,
+  "assetName": "AasimarRace",
+  "guid": "b7f02ba92b363064fb873963bec275ee",
+  "m_Features": [
+    "!bp_67aabcbce8f8ae643a9d08a6ca67cabd",
+    "!bp_d3f14f00f675a6341a41d2194186835c",
+    "!bp_679d817b0fe6c394089051a819c05c1c"
+  ],
+  "name": "Aasimar"
+}

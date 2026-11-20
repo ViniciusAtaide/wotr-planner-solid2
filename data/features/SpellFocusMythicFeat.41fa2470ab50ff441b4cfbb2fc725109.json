@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_16fa59cc9a72a6043b566b49184f53fe"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "SpellSchool",
+  "Ranks": 1,
+  "RequireProficiency": false,
+  "WeaponSubCategory": "None",
+  "assetName": "SpellFocusMythicFeat",
+  "guid": "41fa2470ab50ff441b4cfbb2fc725109",
+  "m_Prerequisite": "!bp_16fa59cc9a72a6043b566b49184f53fe",
+  "name": "Spell Focus (Mythic)"
+}

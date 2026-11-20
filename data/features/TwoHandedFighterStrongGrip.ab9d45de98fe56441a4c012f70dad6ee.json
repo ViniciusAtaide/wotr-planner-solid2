@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 5,
+  "assetName": "TwoHandedFighterStrongGrip",
+  "guid": "ab9d45de98fe56441a4c012f70dad6ee",
+  "name": "Strong Grip"
+}

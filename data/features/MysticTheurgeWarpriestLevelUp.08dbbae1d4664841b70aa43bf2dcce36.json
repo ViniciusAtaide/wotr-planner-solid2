@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_7d7d51be2948d2544b3c2e1596fd7603"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "MysticTheurgeWarpriestLevelUp",
+  "guid": "08dbbae1d4664841b70aa43bf2dcce36",
+  "name": "Warpriest"
+}

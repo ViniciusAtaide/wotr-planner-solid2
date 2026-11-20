@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 7,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a5a9fe8f663d701488bd1db8ea40484e",
+      "m_Feature": "!bp_641bf2fa963937a4681f3402a584e1d1"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AngelSummonFeatureTier6",
+  "guid": "e09826de98d995448aeff3b6b0a61851",
+  "name": "Summon Astral Deva (Angel)"
+}

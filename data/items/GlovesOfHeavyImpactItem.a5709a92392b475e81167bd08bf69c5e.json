@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "GlovesOfHeavyImpactItem",
+  "guid": "a5709a92392b475e81167bd08bf69c5e",
+  "m_Enchantments": [
+    "!bp_7fc91a40bac343bea9590afd15fd12a0"
+  ],
+  "name": "Gloves of Heavy Impact"
+}

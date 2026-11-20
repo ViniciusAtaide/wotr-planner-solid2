@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_bbc53c234b304feaac91574bb4b427e1"
+    }
+  ],
+  "assetName": "CastersDreamEnchantment",
+  "guid": "54ca61d175714a048977d450b7a86d77"
+}

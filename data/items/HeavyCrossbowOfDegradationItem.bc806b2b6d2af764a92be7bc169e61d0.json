@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "HeavyCrossbowOfDegradationItem",
+  "guid": "bc806b2b6d2af764a92be7bc169e61d0",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_36d0551b8a28587438a47fcbbf53c083",
+  "name": "Heavy Crossbow of Degradation"
+}

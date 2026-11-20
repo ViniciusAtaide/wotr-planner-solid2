@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_ef6f73328180fa748a393435e8c48e1f"
+    }
+  ],
+  "assetName": "AmuletOfDevourEnchantment",
+  "guid": "c172e797b44649940a51bdad269a31f2"
+}

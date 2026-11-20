@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_cfb372f500ac4cffa9bad68b57ebdba4"
+    }
+  ],
+  "assetName": "FleshTearerEnchantment",
+  "guid": "1bf4d514d33b46fb9ebe5d0cda9918ec"
+}

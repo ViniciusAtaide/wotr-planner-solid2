@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_339b18ee515238c44a85f5d8ca556d73"
+    }
+  ],
+  "assetName": "SpecialistBeltEnchantment",
+  "guid": "ce4706ca9cf1b204bb9a43547f328d62"
+}

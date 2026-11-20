@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 5,
+  "assetName": "MadDogDamageReductionMaster",
+  "guid": "a0d4a3295224b8f4387464a4447c31d5",
+  "name": "Damage Reduction (Mad Dog)"
+}

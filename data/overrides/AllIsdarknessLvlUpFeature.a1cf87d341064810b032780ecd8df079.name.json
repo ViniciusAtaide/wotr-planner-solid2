@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "rank",
+  "reason": "The Tortured Crusader archetype adds TorturedCrusaderAllIsDarknessFeature 2ddbfce6b2844c60bb28ecf33923d2a2 at level 1, and this feature at levels 1, 5, 10, 15 and 20 to raise its rank (Ranks 5, no components of its own). Both share the archetype and level 1, so no source tells them apart; the archetype's feature stays bare.",
+  "target": "a1cf87d341064810b032780ecd8df079"
+}

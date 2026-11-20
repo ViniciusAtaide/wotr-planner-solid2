@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_9faa2c48aa6bdb047a73d754c88a7135"
+    }
+  ],
+  "assetName": "CryptRaidersArmorEnchantment",
+  "guid": "c482520d00b7e334aacc463f37b08626"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_0556a23dd7591fb49a18af3095be631d"
+    }
+  ],
+  "assetName": "BracersOfAnimalFuryEnchantment",
+  "guid": "960338b649a00754c9cd24badefd253d"
+}

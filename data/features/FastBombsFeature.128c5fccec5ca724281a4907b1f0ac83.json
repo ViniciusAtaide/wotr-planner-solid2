@@ -1,0 +1,45 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 8,
+      "Not": false,
+      "m_CharacterClass": "!bp_0937bec61c0dabc468428f496580c721"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_68cbcd9fbf1fb1d489562f829bb97e38",
+      "m_CharacterClass": "!bp_0937bec61c0dabc468428f496580c721"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_ac242ddeaa05af449bfc5230231fab84",
+      "m_CharacterClass": "!bp_0937bec61c0dabc468428f496580c721"
+    }
+  ],
+  "Groups": [
+    "Discovery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FastBombsFeature",
+  "guid": "128c5fccec5ca724281a4907b1f0ac83",
+  "name": "Fast Bombs"
+}

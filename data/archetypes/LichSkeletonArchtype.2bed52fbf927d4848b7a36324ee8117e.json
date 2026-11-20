@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_94fe0ca10f17bf143a7d2bd2ab2acdda"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "LichSkeletonArchtype",
+  "guid": "2bed52fbf927d4848b7a36324ee8117e",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Undead"
+}

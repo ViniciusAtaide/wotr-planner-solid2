@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "InspireScentFeature",
+  "guid": "f0e41e160d475914fb3306d16827ed18",
+  "name": "Inspire Scent"
+}

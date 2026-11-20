@@ -1,0 +1,35 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_5dff09eef981483baffb0de48eb07e02"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "HellKnightOrderOfTheNailProgression",
+  "guid": "e506d5dee7944b50824054c6526c6532",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_ed246f1680e667b47b7427d51e651059"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_ee6425d6392101843af35f756ce7fefd"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Order of the Nail"
+}

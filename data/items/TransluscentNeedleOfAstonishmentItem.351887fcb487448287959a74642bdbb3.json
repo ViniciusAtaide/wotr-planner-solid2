@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "TransluscentNeedleOfAstonishmentItem",
+  "guid": "351887fcb487448287959a74642bdbb3",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_1c2cce1c42484dc2b96dd4195d669031"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_2ece38f30500f454b8569136221e55b0",
+  "name": "Translucent Needle of Astonishment"
+}

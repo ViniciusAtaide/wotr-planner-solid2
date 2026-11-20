@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_841e7cba91534637af885b6904b312a1"
+    }
+  ],
+  "assetName": "BlazingCrownEnchantment",
+  "guid": "66f6fe8776944f8198e22002827c1862"
+}

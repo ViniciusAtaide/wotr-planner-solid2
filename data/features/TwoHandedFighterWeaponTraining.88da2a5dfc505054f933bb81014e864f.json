@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 5,
+      "m_Archetype": "!bp_84643e02a764bff4a9c1aba333a53c89",
+      "m_CharacterClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd"
+    }
+  ],
+  "Groups": [
+    "WeaponTraining"
+  ],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "TwoHandedFighterWeaponTraining",
+  "guid": "88da2a5dfc505054f933bb81014e864f",
+  "name": "Two-Handed Weapon Training"
+}

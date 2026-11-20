@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_a6258f81d02a5fe4fb786fa5b740585f"
+    }
+  ],
+  "assetName": "FullplateOfSpellNullifyEnchantment",
+  "guid": "f4510606925623e44b0a81059e00ada8"
+}

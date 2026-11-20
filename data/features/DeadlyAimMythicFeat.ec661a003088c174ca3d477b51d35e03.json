@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_f47df34d53f8c904f9981a3ee8e84892"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DeadlyAimMythicFeat",
+  "guid": "ec661a003088c174ca3d477b51d35e03",
+  "name": "Deadly Aim (Mythic)"
+}

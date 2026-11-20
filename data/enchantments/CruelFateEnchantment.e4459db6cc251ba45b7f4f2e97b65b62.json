@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_813332093bfb5ca4285bedd2c7f7e3b0"
+    }
+  ],
+  "assetName": "CruelFateEnchantment",
+  "guid": "e4459db6cc251ba45b7f4f2e97b65b62"
+}

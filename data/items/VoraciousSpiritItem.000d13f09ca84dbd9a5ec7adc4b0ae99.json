@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "VoraciousSpiritItem",
+  "guid": "000d13f09ca84dbd9a5ec7adc4b0ae99",
+  "m_Enchantments": [
+    "!bp_08bfd2c4fb394c65a707f8bf20a3422a"
+  ],
+  "name": "Voracious Spirit"
+}

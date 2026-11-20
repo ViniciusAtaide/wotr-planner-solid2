@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 9,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_5d501618a28bdc24c80007a5c937dcb7",
+      "m_Feature": "!bp_2a980a7b1daf44b4b963adc282dd3fd1"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "LichSummonFeatureTier8",
+  "guid": "42efe07b222f84147b745f7178bdf31f",
+  "name": "Summon Nightshade Nightcrawler and Ecorche"
+}

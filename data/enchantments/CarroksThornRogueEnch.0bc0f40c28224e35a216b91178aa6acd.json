@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_284fe025722d4987a8468941dfb96d07"
+    }
+  ],
+  "assetName": "CarroksThornRogueEnch",
+  "guid": "0bc0f40c28224e35a216b91178aa6acd"
+}

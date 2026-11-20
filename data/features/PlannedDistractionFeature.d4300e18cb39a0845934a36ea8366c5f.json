@@ -1,0 +1,42 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_34ecd1b5e1b90b9498795791b0855239"
+      ],
+      "m_CustomProgression": [
+        {
+          "BaseValue": 11,
+          "ProgressionValue": 1
+        },
+        {
+          "BaseValue": 17,
+          "ProgressionValue": 2
+        },
+        {
+          "BaseValue": 100,
+          "ProgressionValue": 3
+        }
+      ],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "Custom",
+      "m_StartLevel": 0,
+      "m_StepLevel": 0,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PlannedDistractionFeature",
+  "guid": "d4300e18cb39a0845934a36ea8366c5f",
+  "name": "Planned Distraction"
+}

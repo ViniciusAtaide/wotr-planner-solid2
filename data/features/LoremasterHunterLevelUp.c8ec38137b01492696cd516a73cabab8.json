@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_885cd422aa357e2409146b38bb1fec51"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "LoremasterHunterLevelUp",
+  "guid": "c8ec38137b01492696cd516a73cabab8",
+  "name": "Ranger"
+}

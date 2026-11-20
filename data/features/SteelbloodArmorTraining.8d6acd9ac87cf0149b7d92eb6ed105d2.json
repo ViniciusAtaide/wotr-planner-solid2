@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SteelbloodArmorTraining",
+  "guid": "8d6acd9ac87cf0149b7d92eb6ed105d2",
+  "name": "Armor Training (Steelblood)"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodPoolFeature",
+  "guid": "11047b71843a4ee2b42d3550a1fd6461",
+  "name": "Blood Pool"
+}

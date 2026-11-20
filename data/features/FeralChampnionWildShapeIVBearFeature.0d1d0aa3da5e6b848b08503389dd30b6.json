@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FeralChampnionWildShapeIVBearFeature",
+  "guid": "0d1d0aa3da5e6b848b08503389dd30b6",
+  "name": "Wild Shape (Bear) (Feral Champion)"
+}

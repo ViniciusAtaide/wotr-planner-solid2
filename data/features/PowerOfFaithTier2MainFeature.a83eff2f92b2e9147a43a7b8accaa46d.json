@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 12,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [
+        "!bp_cc70a9fdcd8781a4ca2f0e594f066964"
+      ],
+      "m_Class": "!bp_bfa11238e7ae3544bbeb4d0b92e897ec",
+      "m_Feature": "!bp_50c957284c8ee5a4da93ecc95df6d37a"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PowerOfFaithTier2MainFeature",
+  "guid": "a83eff2f92b2e9147a43a7b8accaa46d",
+  "name": "Power of Faith (Warrior of the Holy Light 8)"
+}

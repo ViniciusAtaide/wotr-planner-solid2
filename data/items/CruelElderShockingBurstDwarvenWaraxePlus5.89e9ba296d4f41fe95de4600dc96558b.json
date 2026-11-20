@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "CruelElderShockingBurstDwarvenWaraxePlus5",
+  "guid": "89e9ba296d4f41fe95de4600dc96558b",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a6925f5f897801449a648d865637e5a0",
+  "name": "Cruel Elder Shocking Burst Dwarven Waraxe +5"
+}

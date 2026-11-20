@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FastHealing",
+  "guid": "318ce88da1832744c87fd15be5010dc0",
+  "name": "Fast Healing (Grand Discovery)"
+}

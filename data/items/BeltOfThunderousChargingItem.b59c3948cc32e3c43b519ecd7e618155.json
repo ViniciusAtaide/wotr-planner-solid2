@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfThunderousChargingItem",
+  "guid": "b59c3948cc32e3c43b519ecd7e618155",
+  "m_Enchantments": [
+    "!bp_b4cff7cdccb966048aa14d2d01c9209a",
+    "!bp_45053727a438b7945b7cba0d37b23533"
+  ],
+  "name": "Belt of Thunderous Charging"
+}

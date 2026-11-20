@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_256fc27834f44ae280fcec30533ca8de"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MantisZealotRedShroudFreeFeature",
+  "guid": "f8482294f55043a29cc1753ab496b4b7",
+  "name": "Red Shroud (Mantis Zealot 13)"
+}

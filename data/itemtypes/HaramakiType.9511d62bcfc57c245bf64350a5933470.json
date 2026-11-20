@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [
+    {
+      "$type": "IgnoreArmorGroupComponent"
+    }
+  ],
+  "assetName": "HaramakiType",
+  "guid": "9511d62bcfc57c245bf64350a5933470",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "Light",
+  "name": "Light Armor — Haramaki"
+}

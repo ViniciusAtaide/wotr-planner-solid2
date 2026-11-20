@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddParametrizedFeatures",
+      "m_Features": [
+        {
+          "ParamObject": null,
+          "ParamSpellSchool": "None",
+          "ParamWeaponCategory": "Longbow",
+          "Stat": "Unknown",
+          "m_Feature": "!bp_31470b17e8446ae4ea0dacd6c5817d86"
+        }
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ZenArcherWayOfTheBowLongbowSpecialization",
+  "guid": "0d696cb262584ee4b88ccc96a07d6821"
+}

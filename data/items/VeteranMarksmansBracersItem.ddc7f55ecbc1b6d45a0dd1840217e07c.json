@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "VeteranMarksmansBracersItem",
+  "guid": "ddc7f55ecbc1b6d45a0dd1840217e07c",
+  "m_Enchantments": [
+    "!bp_bbdd466eb405dda40a164210caf183ed"
+  ],
+  "name": "Veteran Marksman's Bracers"
+}

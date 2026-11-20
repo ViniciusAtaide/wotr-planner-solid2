@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "FirstAscensionSelection",
+  "guid": "1421e0034a3afac458de08648d06faf0",
+  "m_AllFeatures": [
+    "!bp_46df0532714a9454eb5fbad64ce6c14f",
+    "!bp_b236003be2b9400498b9dd0f07b0c93c",
+    "!bp_132afc1a28bd9d442821385f7cbf1c05",
+    "!bp_8afd697daf0d47a4883759a6bc1aff88",
+    "!bp_a796af14198bf5e45b63f056c32107a2",
+    "!bp_11ba180ac736c894e937602e54f7320c"
+  ],
+  "name": "First Ascension"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDoubleAxeShockPlus1",
+  "guid": "51c4af0393fbcd545ae432c67b1ac3f7",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": "!bp_8024b5c678ce2aa418e9ee89b48675a5",
+  "m_Type": "!bp_87d76c7534506a546a065731ee6a38cd",
+  "name": "Shock Orc Double Axe +1"
+}

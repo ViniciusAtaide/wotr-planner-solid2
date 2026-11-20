@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDoubleSwordAgilePlus1",
+  "guid": "a2d9cbaa5045e1b45bd2be6bc29df04b",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": "!bp_47420601292742b44b74b7b1098dce30",
+  "m_Type": "!bp_e95efb85a0912a7489be69d5f03a5308",
+  "name": "Agile Two-Bladed Sword +1"
+}

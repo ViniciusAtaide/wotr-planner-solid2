@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c27e6d2b0d33d42439f512c6d9a6a601"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArmorFocusHeavyMythicFeatureVar1",
+  "guid": "b28a0e962e3c40ee84411cccef31d4d0",
+  "name": "Mythic Armor Focus (Heavy Armor) — Endurance"
+}

@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_9ae3ba76663a19141a3996c1e3ce95e3"
+      ]
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "ShamanLifeSpiritWanderingBaseBuff",
+  "guid": "cacb6fc18b973f94099c9c95cbd88629"
+}

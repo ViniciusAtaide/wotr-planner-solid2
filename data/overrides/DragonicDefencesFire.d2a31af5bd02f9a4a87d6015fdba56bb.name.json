@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "fire",
+  "reason": "Every draconic bloodline grants the \"Draconic Defenses\" of its dragon's energy type, so each copy has several colours as grantors (acid: black, copper, green; cold: silver, white; electricity: blue, bronze; fire: brass, gold, red), all with the same family name. The copies differ only in their energy, which the asset names DragonicDefencesAcid, Cold, Electricity and Fire state; each is qualified by it.",
+  "target": "d2a31af5bd02f9a4a87d6015fdba56bb"
+}

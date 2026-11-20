@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "MonkNoArmorFeatureUnlock",
+      "m_NewFact": "!bp_ac18d5741dfb2f541b222e3a416c5942"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MonkFastMovementUnlock",
+  "guid": "73ab5b41fa465ee429ad6658368c6629",
+  "name": "Fast Movement (Monk)"
+}

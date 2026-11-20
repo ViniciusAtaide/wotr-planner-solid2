@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DLC2SLightCrossbowItem",
+  "guid": "dcc8dc72046a4032843fd71674e7ce34",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a9a9a907dc704e1ca13f1b7714e3c172",
+  "name": "Sham Crossbow"
+}

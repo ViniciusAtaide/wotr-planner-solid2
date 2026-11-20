@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HeadbandOfIntelligence2",
+  "guid": "22184af355826444087506d7f2f8f0b1",
+  "m_Enchantments": [
+    "!bp_0f157adfc02708441b02725a24e8eb71"
+  ],
+  "name": "Headband of Vast Intelligence +2"
+}

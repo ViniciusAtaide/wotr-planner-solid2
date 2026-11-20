@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "WarpriestChannelEnergySelection",
+  "guid": "1a871294410971745bba12ef11e41f6e",
+  "m_AllFeatures": [
+    "!bp_bd588bc544d2f8547a02bb82ad9f466a",
+    "!bp_e02c8a7336a542f4baffa116b6506950"
+  ],
+  "name": "Channel Energy"
+}

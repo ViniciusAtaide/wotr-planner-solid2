@@ -1,0 +1,40 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 1,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": null,
+      "m_Feature": "!bp_1a4bb1a08e644e77b3140c2e4ff6a9d0"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 8,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": null,
+      "m_Feature": "!bp_4cd9c5a1bba840308424a436c1f7a95f"
+    }
+  ],
+  "ForAllOtherClasses": true,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "Domain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [],
+  "Ranks": 1,
+  "assetName": "MagicDomainProgressionFake",
+  "guid": "a490170187d446d4839038ef774ddc49",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Magic Domain (Razmir's Ring)"
+}

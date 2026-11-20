@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "Camellia",
+  "reason": "Two different amulets are named \"Bone Amulet\": BoneAmuletItem and CameliaAmuletItem, each with its own enchantment (BoneAmuletEnchantment, CameliaAmuletEnchantment). Slot and restrictions are the same, so the second is qualified by the companion its blueprint is named for; the first stays bare.",
+  "target": "94b2b8b9ef254344cbc71663fecf8b99"
+}

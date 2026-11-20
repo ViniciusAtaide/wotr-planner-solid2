@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_0e18699dec05c9a4998082a9f95db274"
+    }
+  ],
+  "assetName": "RabidRippersEnchantment",
+  "guid": "7395098cbff569042a306ea256edbc52"
+}

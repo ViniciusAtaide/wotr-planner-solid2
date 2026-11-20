@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "FortunesSmileItem",
+  "guid": "40df670db56c4f2f8eb5137f958d4273",
+  "m_Enchantments": [
+    "!bp_6926ff24da4f435ba6226866217dc03a"
+  ],
+  "name": "Fortune's Smile"
+}

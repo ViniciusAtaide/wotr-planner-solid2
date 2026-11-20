@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfDeadlySwingItem",
+  "guid": "ed27fa4fb5206bf4ab6d251a3ce1126a",
+  "m_Enchantments": [
+    "!bp_48fbd54e9c5a2154c8917bdcbc2c39e2"
+  ],
+  "name": "Ring of Deadly Swing"
+}

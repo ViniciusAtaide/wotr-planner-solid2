@@ -1,0 +1,52 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "ShamanSpirit"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_5d810adea03fb644582eb74de32c75ec",
+        "!bp_1e3380a7b127725418ebe738979f3a65"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_59550028efc886a4e8ca2c80b680642f"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_2eef2cb6c24fd324196a6ae10739d39b"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_a8c0403a27b6471f85d2bc441db5a993"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ShamanWindSpiritProgression",
+  "guid": "eae7cee2a5da93442a7563dfeda33432",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Wind (progression)"
+}

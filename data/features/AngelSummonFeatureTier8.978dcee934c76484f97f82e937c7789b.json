@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 9,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a5a9fe8f663d701488bd1db8ea40484e",
+      "m_Feature": "!bp_67394c3ac03690242976889d3d1408cb"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AngelSummonFeatureTier8",
+  "guid": "978dcee934c76484f97f82e937c7789b"
+}

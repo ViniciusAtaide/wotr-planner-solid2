@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "WardMastersAmuletItem",
+  "guid": "1bc94bd99a10f7648bd39d8563ca47c9",
+  "m_Enchantments": [
+    "!bp_c1a1beae8b74df344bb46e8bf3e0a8b4"
+  ],
+  "name": "Ward Master's Amulet"
+}

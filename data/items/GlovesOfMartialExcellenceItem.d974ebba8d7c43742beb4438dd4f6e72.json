@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "GlovesOfMartialExcellenceItem",
+  "guid": "d974ebba8d7c43742beb4438dd4f6e72",
+  "m_Enchantments": [
+    "!bp_6a269c91e7613164ba9079faca736445"
+  ],
+  "name": "Gloves of Martial Excellence"
+}

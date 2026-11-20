@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_5662d1b793db90c4b9ba68037fd2a768",
+      "m_Feature": "!bp_5662d1b793db90c4b9ba68037fd2a768"
+    }
+  ],
+  "Stacking": "Prolong",
+  "assetName": "CavalierTacticianPreciseStrikeBuff",
+  "guid": "731a11dcc952e744f8a88768e07a0542",
+  "name": "Precise Strike (buff)"
+}

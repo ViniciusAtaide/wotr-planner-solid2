@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_36fd7a2de4483ce4d9fa61d3d7ba6fe5"
+    }
+  ],
+  "assetName": "AmuletOfJoustingEnchantment",
+  "guid": "30bbe86f50acfb74e9a5b06849dd16bc"
+}

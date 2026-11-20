@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_45a1552f6ccfb0346888f8f9629b80fe"
+    }
+  ],
+  "assetName": "EludingTargetEnchantment",
+  "guid": "072e09c63fb0b21409714934fdac29b8"
+}

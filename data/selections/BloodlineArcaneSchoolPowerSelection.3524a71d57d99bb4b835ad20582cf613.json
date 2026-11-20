@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BloodlineArcaneSchoolPowerSelection",
+  "guid": "3524a71d57d99bb4b835ad20582cf613",
+  "m_AllFeatures": [
+    "!bp_8891303b67eb273428f1691864b08cf8"
+  ],
+  "name": "School Power (selection)"
+}

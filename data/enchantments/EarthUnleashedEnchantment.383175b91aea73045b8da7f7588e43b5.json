@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_f96cfd9ef0997d94b8801180ab9b4698"
+    }
+  ],
+  "assetName": "EarthUnleashedEnchantment",
+  "guid": "383175b91aea73045b8da7f7588e43b5"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "EnliveningLeaderishipItem",
+  "guid": "ce230a619be858d468a5eb14d358d7d5",
+  "m_Enchantments": [
+    "!bp_9b743cbb696a420dbe21465dd59c05eb"
+  ],
+  "name": "Enlivening Leadership"
+}

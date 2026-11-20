@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "ArmorEnhancementBonus",
+      "EnhancementValue": -1
+    }
+  ],
+  "assetName": "HeavyShieldEnhancementRusty",
+  "guid": "5fbb3964ceb9492da80806de8205a491"
+}

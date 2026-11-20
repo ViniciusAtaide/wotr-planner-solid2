@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a52306e22e2848dea0aed985df247463"
+    }
+  ],
+  "assetName": "ImpassableGuardEnchantment",
+  "guid": "02700b211af64db586b86642d9543d55"
+}

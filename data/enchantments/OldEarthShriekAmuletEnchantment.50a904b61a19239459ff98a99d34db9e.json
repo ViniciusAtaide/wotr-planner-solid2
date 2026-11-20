@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_e46f819691478e345b657a5df8f4bb0c"
+    }
+  ],
+  "assetName": "OldEarthShriekAmuletEnchantment",
+  "guid": "50a904b61a19239459ff98a99d34db9e"
+}

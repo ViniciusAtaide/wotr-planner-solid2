@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "GlovesOfResourcefulMagusItem",
+  "guid": "c3b0886a52aa5b849bf74c36f426f4b7",
+  "m_Enchantments": [
+    "!bp_3b5cf78e2bb3f3741a5bafbe28edd5a1"
+  ],
+  "name": "Gloves of Resourceful Magus"
+}

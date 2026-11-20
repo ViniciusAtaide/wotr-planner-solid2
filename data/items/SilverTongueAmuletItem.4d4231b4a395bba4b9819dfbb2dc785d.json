@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "SilverTongueAmuletItem",
+  "guid": "4d4231b4a395bba4b9819dfbb2dc785d",
+  "m_Enchantments": [
+    "!bp_6aaf3a4a1cc55f643b02e690baccd2da"
+  ],
+  "name": "Silver Tongue Amulet"
+}

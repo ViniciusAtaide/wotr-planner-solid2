@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_2ff51e0531ed8e545ab4cb35c32d40f4"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 20,
+  "assetName": "TricksterSpellbookCasterLevelFeature",
+  "guid": "683e0b74ed5528740ba65447ce39718a"
+}

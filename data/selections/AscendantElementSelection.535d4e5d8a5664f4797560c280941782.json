@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "AscendantElementSelection",
+  "guid": "535d4e5d8a5664f4797560c280941782",
+  "m_AllFeatures": [
+    "!bp_d808baf783a063e4d84a1aaadbdd1cb7",
+    "!bp_25f9791fbb5de694a8a3b936d2f30390",
+    "!bp_7bf39f8d76f8c9441896222128f1673a",
+    "!bp_dc9bc78e5ef2ed6459343350fbe883bc",
+    "!bp_d9819d09c703c53438e142a2e2c8a113",
+    "!bp_a81e13751f5ee9b4eac75b1dae801661"
+  ],
+  "name": "Ascendant Element"
+}

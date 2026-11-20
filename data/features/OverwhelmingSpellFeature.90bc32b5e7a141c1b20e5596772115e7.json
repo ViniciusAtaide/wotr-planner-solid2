@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OverwhelmingSpellFeature",
+  "guid": "90bc32b5e7a141c1b20e5596772115e7",
+  "name": "Overwhelming Spell"
+}

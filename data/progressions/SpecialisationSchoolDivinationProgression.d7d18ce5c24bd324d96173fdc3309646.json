@@ -1,0 +1,55 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_09595544116fe5349953f939aeba7611"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "SpecialistSchool"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_54d21b3221ea82a4d90d5a91b7872f3d",
+        "!bp_6c29030e9fea36949877c43a6f94ff31",
+        "!bp_6c29030e9fea36949877c43a6f94ff31"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_ef01f802ebc01a94cbc25c89c365563b"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_a6839f2a709288e43b68d3281b3bbd8f"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "SpecialisationSchoolDivinationProgression",
+  "guid": "d7d18ce5c24bd324d96173fdc3309646",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_ba34257984f4c41408ce1dc2004e342e"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Specialist School — Divination"
+}

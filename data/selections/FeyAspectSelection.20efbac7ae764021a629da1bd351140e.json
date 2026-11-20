@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "FeyAspectSelection",
+  "guid": "20efbac7ae764021a629da1bd351140e",
+  "m_AllFeatures": [
+    "!bp_5eee711de0b149e9aa25cbf72db2af07",
+    "!bp_28861cff75d04622a2d43d8ab6789032",
+    "!bp_36136c931e2d49b1ae77c52f5dc6861a",
+    "!bp_9cf5b2d5cc39466cb4fa2ae3767e2ee8",
+    "!bp_d04153a4fcba47c38e12e9eb5a2f6cb3",
+    "!bp_d664b46470c84390a07311ed17c6cd1c",
+    "!bp_941ac3b6d42146958731058692a3c2c4",
+    "!bp_41250ca8a9ce4d019eea2663415b5a86",
+    "!bp_f3563014b21c4414a5dfd2b81df5aeb6",
+    "!bp_86763af06631409881d9313fae171113"
+  ],
+  "name": "Fey Shifter"
+}

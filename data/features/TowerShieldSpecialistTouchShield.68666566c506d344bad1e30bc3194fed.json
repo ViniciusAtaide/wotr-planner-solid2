@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TowerShieldSpecialistTouchShield",
+  "guid": "68666566c506d344bad1e30bc3194fed",
+  "name": "Tower Shield Defense"
+}

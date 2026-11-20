@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_858a3689c285c844d9e6ce278e686491",
+        "!bp_cdaceaeb927fe69419aa04646b872f08"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "ExtraLayOnHands",
+  "guid": "a2b2f20dfb4d3ed40b9198e22be82030",
+  "name": "Extra Lay On Hands"
+}

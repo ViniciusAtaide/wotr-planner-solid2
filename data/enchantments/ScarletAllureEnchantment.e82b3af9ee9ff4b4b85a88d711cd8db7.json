@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_19d4bdf5cc64c95419577505ad89c3bf"
+    }
+  ],
+  "assetName": "ScarletAllureEnchantment",
+  "guid": "e82b3af9ee9ff4b4b85a88d711cd8db7"
+}

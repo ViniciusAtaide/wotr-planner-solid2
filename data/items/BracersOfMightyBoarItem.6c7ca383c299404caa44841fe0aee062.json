@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "BracersOfMightyBoarItem",
+  "guid": "6c7ca383c299404caa44841fe0aee062",
+  "m_Enchantments": [
+    "!bp_b4cff7cdccb966048aa14d2d01c9209a",
+    "!bp_5286fc8c0d5e43af850c628f6c3db5a3"
+  ],
+  "name": "Bracers of Mighty Boar"
+}

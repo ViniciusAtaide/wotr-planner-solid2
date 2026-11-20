@@ -1,0 +1,49 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 14,
+      "Not": false,
+      "m_CharacterClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8ac59959b1b23c347a0361dc97cc786d"
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 2,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_787e56055e3ef864d9c78a3ec21e56be",
+        "!bp_7c492212d25d8f04fbd43eb99d780b1e",
+        "!bp_4c7205d859a1e114895e798af383d76a",
+        "!bp_055fb8dcaf6be334ca13172bafa9e782",
+        "!bp_12c1b556df3b667458ae200bfb38ccb8"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "IncreaseActivatableAbilityGroupSize",
+      "Group": "CriticalFeat"
+    }
+  ],
+  "Groups": [
+    "CombatFeat",
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CriticalMastery",
+  "guid": "fc85925cd241dd0408ab2f4cb171b7e3",
+  "name": "Critical Mastery"
+}

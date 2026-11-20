@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8c769102f3996684fb6e09a2c4e7e5b9"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WarpriestSpointaneousPositive",
+  "guid": "6310b8ebfdc84aa4eb1d20885d646880",
+  "name": "Spontaneous Cure"
+}

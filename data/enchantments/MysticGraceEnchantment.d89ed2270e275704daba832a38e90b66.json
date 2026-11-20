@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3be9ee73454506149bb5a987c661f1b1"
+    }
+  ],
+  "assetName": "MysticGraceEnchantment",
+  "guid": "d89ed2270e275704daba832a38e90b66"
+}

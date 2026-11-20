@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "FleshTearerShieldItem",
+  "guid": "16db434e487b43f7ac6920356e5d9345",
+  "m_ArmorComponent": "!bp_90cf7393772d43468dab29b58743901c",
+  "m_WeaponComponent": "!bp_81d9023c62df4ca6a6742c230cfc9ac7",
+  "name": "Flesh Tearer"
+}

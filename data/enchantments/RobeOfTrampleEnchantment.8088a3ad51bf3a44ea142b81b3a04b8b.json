@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_e226f017c43430e42b824c29d7aafdfc"
+    }
+  ],
+  "assetName": "RobeOfTrampleEnchantment",
+  "guid": "8088a3ad51bf3a44ea142b81b3a04b8b"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_875217f9da9f41a9be85d1998e309a30"
+    }
+  ],
+  "assetName": "DLC3_StandhardArmorEnchantment",
+  "guid": "d4f5fbfb6ea5460f945146c216681090"
+}

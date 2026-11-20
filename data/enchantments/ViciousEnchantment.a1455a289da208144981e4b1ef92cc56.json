@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_caddd6284425e874d9b67b0046023d45"
+    }
+  ],
+  "assetName": "ViciousEnchantment",
+  "guid": "a1455a289da208144981e4b1ef92cc56"
+}

@@ -1,0 +1,47 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_f327a765a4353d04f872482ef3e48c35"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_1d38a238a88b9aa49917b3a6b7f7f3ba"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_1d38a238a88b9aa49917b3a6b7f7f3ba"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_16fa59cc9a72a6043b566b49184f53fe"
+    },
+    {
+      "$type": "PrerequisiteAnySpellsInSpellbook",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_SpellSpecializationFeat": "!bp_f327a765a4353d04f872482ef3e48c35"
+    }
+  ],
+  "Groups": [],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "SpellSpecialization",
+  "Ranks": 1,
+  "RequireProficiency": false,
+  "WeaponSubCategory": "None",
+  "assetName": "SpellSpecialization14",
+  "guid": "c80f7a789ea11e8419acecfbad430759",
+  "m_Prerequisite": "!bp_16fa59cc9a72a6043b566b49184f53fe",
+  "name": "Spell Specialization (change 14)"
+}

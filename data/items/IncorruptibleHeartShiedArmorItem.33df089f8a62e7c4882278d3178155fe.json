@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "IncorruptibleHeartShiedArmorItem",
+  "guid": "33df089f8a62e7c4882278d3178155fe",
+  "m_Enchantments": [
+    "!bp_a5d27d73859bd19469a6dde3b49750ff",
+    "!bp_62657cd2723e8474ba94a5cc94f0d2ed"
+  ],
+  "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6",
+  "name": "Shield of Incorruptible Heart"
+}

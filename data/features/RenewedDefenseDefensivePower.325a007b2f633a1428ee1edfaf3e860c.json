@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "DefensivePower"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "RenewedDefenseDefensivePower",
+  "guid": "325a007b2f633a1428ee1edfaf3e860c",
+  "name": "Renewed Defense"
+}

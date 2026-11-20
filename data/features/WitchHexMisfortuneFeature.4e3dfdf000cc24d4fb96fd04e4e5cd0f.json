@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "WitchHex"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WitchHexMisfortuneFeature",
+  "guid": "4e3dfdf000cc24d4fb96fd04e4e5cd0f",
+  "name": "Misfortune (witch hex)"
+}

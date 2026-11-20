@@ -1,0 +1,178 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_a406d6ebea5c46bba3160246be03e96f"
+      ],
+      "m_CustomProgression": [
+        {
+          "BaseValue": 10,
+          "ProgressionValue": 4
+        },
+        {
+          "BaseValue": 11,
+          "ProgressionValue": 4
+        },
+        {
+          "BaseValue": 12,
+          "ProgressionValue": 4
+        },
+        {
+          "BaseValue": 13,
+          "ProgressionValue": 4
+        },
+        {
+          "BaseValue": 14,
+          "ProgressionValue": 4
+        },
+        {
+          "BaseValue": 15,
+          "ProgressionValue": 6
+        }
+      ],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 15,
+      "m_Min": 0,
+      "m_Progression": "Custom",
+      "m_StartLevel": 10,
+      "m_StepLevel": 5,
+      "m_Type": "DamageDice",
+      "m_UseMax": true,
+      "m_UseMin": false
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 5,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_e61c86be52ef44b7a95cf81cd2f5da15"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_5c579747add943b7a95b4aa0b12c7b92"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_3aad3a2eaa2b404dbd4ad0655be8c8ed"
+    },
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_a406d6ebea5c46bba3160246be03e96f"
+      ],
+      "m_CustomProgression": [
+        {
+          "BaseValue": 1,
+          "ProgressionValue": 1
+        },
+        {
+          "BaseValue": 2,
+          "ProgressionValue": 1
+        },
+        {
+          "BaseValue": 3,
+          "ProgressionValue": 1
+        },
+        {
+          "BaseValue": 4,
+          "ProgressionValue": 1
+        },
+        {
+          "BaseValue": 5,
+          "ProgressionValue": 2
+        },
+        {
+          "BaseValue": 6,
+          "ProgressionValue": 2
+        },
+        {
+          "BaseValue": 7,
+          "ProgressionValue": 2
+        },
+        {
+          "BaseValue": 8,
+          "ProgressionValue": 2
+        },
+        {
+          "BaseValue": 9,
+          "ProgressionValue": 2
+        },
+        {
+          "BaseValue": 10,
+          "ProgressionValue": 5
+        },
+        {
+          "BaseValue": 11,
+          "ProgressionValue": 5
+        },
+        {
+          "BaseValue": 12,
+          "ProgressionValue": 5
+        },
+        {
+          "BaseValue": 13,
+          "ProgressionValue": 5
+        },
+        {
+          "BaseValue": 14,
+          "ProgressionValue": 5
+        },
+        {
+          "BaseValue": 15,
+          "ProgressionValue": 7
+        },
+        {
+          "BaseValue": 16,
+          "ProgressionValue": 7
+        },
+        {
+          "BaseValue": 17,
+          "ProgressionValue": 7
+        },
+        {
+          "BaseValue": 18,
+          "ProgressionValue": 7
+        },
+        {
+          "BaseValue": 19,
+          "ProgressionValue": 7
+        },
+        {
+          "BaseValue": 20,
+          "ProgressionValue": 10
+        }
+      ],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "Custom",
+      "m_StartLevel": 10,
+      "m_StepLevel": 5,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": false
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "ShifterAspectFeyBuff",
+  "guid": "727381f8a2ee46a19ab96eedfe1d9daa",
+  "name": "Fey Aspect"
+}

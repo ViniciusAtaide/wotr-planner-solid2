@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_772c83a25e2268e448e841dcd548235f"
+    }
+  ],
+  "Groups": [
+    "MythicAdditionalProgressions"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "LoremasterBard",
+  "guid": "8692be2866501634dab99f4b9c5ae002",
+  "m_Spellbook": "!bp_bc04fc157a8801d41b877ad0d9af03dd",
+  "name": "Bard"
+}

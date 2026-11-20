@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "CruelElderCorrosiveHeavyMacePlus5",
+  "guid": "43e3d537e2c640d4bb6887acad615b65",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d5a167f0f0208dd439ec7481e8989e21",
+  "name": "Cruel Elder Corrosive Heavy Mace +5"
+}

@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "TowerShieldItemPlus4",
+  "guid": "b0a27282bc64ca045b0607de36c4d426",
+  "m_ArmorComponent": "!bp_e450e99eaa3c3b246acb843ad45dc15d",
+  "m_WeaponComponent": null,
+  "name": "Tower Shield +4"
+}

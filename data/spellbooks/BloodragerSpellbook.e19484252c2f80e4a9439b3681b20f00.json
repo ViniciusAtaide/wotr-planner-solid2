@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": true,
+  "IsMythic": false,
+  "Spontaneous": true,
+  "assetName": "BloodragerSpellbook",
+  "guid": "e19484252c2f80e4a9439b3681b20f00",
+  "m_SpellsPerDay": "!bp_caf7018942861664ebe87687893ad05d",
+  "name": "Bloodrager"
+}

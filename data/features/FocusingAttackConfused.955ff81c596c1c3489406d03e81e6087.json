@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_24a4fb8991344fd5beb2a1a1a517da87"
+    }
+  ],
+  "Groups": [
+    "RogueTalent",
+    "VivisectionistDiscovery",
+    "SlayerTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FocusingAttackConfused",
+  "guid": "955ff81c596c1c3489406d03e81e6087",
+  "name": "Focusing Attack — Confused"
+}

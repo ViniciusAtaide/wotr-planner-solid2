@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_aa00d945f7cf6c34c909a29a25f2df38",
+      "m_CharacterClass": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    }
+  ],
+  "Groups": [
+    "MythicAdditionalProgressions"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "LoremasterEmpyrealSorcerer",
+  "guid": "21fd403374d27bb4aa452bf92eccd291",
+  "m_Spellbook": "!bp_cb9d75e5cb08572439a6b5cd562297a5",
+  "name": "Empyreal Sorcerer"
+}

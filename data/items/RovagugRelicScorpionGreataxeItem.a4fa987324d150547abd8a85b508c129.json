@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "RovagugRelicScorpionGreataxeItem",
+  "guid": "a4fa987324d150547abd8a85b508c129",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5",
+    "!bp_08dfd84c0a80dfb48924a5f3800bbd2d"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_e8059a8eac62cd74f9171d748a5ae428",
+  "name": "Scorpion's Kiss (Greataxe)"
+}

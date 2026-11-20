@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_75e471cd478242c4bab2a170c1851f46"
+    }
+  ],
+  "assetName": "ProtectionOfColdEnchantment",
+  "guid": "789af679bec72a647afd0e4c956e542a"
+}

@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "EludingTargetItem",
+  "guid": "43659a3401c8b5843b97105150c5f26b",
+  "m_ArmorComponent": "!bp_159653fe2958a204d9af5cdd44b1df8d",
+  "m_WeaponComponent": null,
+  "name": "Eluding Target"
+}

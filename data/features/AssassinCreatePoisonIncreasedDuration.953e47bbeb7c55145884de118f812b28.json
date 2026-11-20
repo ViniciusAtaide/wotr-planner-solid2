@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 5,
+  "assetName": "AssassinCreatePoisonIncreasedDuration",
+  "guid": "953e47bbeb7c55145884de118f812b28",
+  "name": "Poison Use — Increased Duration"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_55cc7eb38145458f8159c13970e5c8ea"
+    }
+  ],
+  "assetName": "RedDragonHelmetEnchantment",
+  "guid": "1ca7f14f0d4f4777a5b4e2e42433619f"
+}

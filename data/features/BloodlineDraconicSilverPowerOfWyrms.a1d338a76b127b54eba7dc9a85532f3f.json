@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_01e7aab638d6a0b43bc4e9d5b49e68d9"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicSilverPowerOfWyrms",
+  "guid": "a1d338a76b127b54eba7dc9a85532f3f",
+  "name": "Power of Wyrms (Silver)"
+}

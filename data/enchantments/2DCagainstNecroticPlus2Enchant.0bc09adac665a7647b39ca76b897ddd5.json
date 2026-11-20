@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_215124551c2eec44a8e573b7810af630"
+    }
+  ],
+  "assetName": "2DCagainstNecroticPlus2Enchant",
+  "guid": "0bc09adac665a7647b39ca76b897ddd5"
+}

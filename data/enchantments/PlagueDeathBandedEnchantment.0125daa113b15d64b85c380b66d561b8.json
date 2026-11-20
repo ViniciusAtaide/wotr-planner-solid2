@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_cf6f4344a6994801a85da56f00bf5505"
+    }
+  ],
+  "assetName": "PlagueDeathBandedEnchantment",
+  "guid": "0125daa113b15d64b85c380b66d561b8"
+}

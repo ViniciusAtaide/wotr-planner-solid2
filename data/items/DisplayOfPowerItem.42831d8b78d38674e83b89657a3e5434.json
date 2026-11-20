@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "DisplayOfPowerItem",
+  "guid": "42831d8b78d38674e83b89657a3e5434",
+  "m_Enchantments": [
+    "!bp_b4cff7cdccb966048aa14d2d01c9209a"
+  ],
+  "name": "Display of Power"
+}

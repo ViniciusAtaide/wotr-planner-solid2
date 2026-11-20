@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HelmOfFearlessVanguardItem",
+  "guid": "1d1c33c50a4414d4db21c632eae60991",
+  "m_Enchantments": [
+    "!bp_1d9f34ceb5324655887579061279f766"
+  ],
+  "name": "Helm of Fearless Vanguard"
+}

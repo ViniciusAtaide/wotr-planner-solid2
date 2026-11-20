@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfGuidingStarItem",
+  "guid": "b1d2843bfc4edd44cb26e4c45375a406",
+  "m_Enchantments": [
+    "!bp_6f6ddcb9c8ae52f44933e802981e907f"
+  ],
+  "name": "Ring of Guiding Star"
+}

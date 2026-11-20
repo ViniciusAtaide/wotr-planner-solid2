@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_b18824fcd0f53ad4d857535717f7e62c"
+    }
+  ],
+  "assetName": "RobeElementalImbuementEnchantment",
+  "guid": "483e0a0f552967b409d25f995d9dcf7f"
+}

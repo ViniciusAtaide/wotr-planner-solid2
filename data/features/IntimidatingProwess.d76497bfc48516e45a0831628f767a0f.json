@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Feat",
+    "CombatFeat",
+    "RogueTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "IntimidatingProwess",
+  "guid": "d76497bfc48516e45a0831628f767a0f",
+  "name": "Intimidating Prowess"
+}

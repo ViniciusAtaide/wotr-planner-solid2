@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_55184ee0ca2ab1641894a150c5fa00ac"
+    }
+  ],
+  "assetName": "BootsOfForestTrackerEnchantment",
+  "guid": "fa9c47d68a49bc64aa680e74fca1bcc2"
+}

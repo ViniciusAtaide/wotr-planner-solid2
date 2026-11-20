@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": false,
+  "IsMythic": false,
+  "Spontaneous": false,
+  "assetName": "AngelfireApostleSpellbook",
+  "guid": "d0313b3110357b14ebd3102c2d4cde20",
+  "m_SpellsPerDay": "!bp_46348fc0157a20a429657aee4df2791d",
+  "name": "Angelfire Apostle"
+}

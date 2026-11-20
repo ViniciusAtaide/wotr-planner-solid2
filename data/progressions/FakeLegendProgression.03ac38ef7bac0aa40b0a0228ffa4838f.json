@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_c62280cbab88eb7458b867ff899cea3e"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_63dbc00439ff894489a624abaa8ba79c",
+        "!bp_cba1120af1fc4b7697e6799b926d0f0b"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "FakeLegendProgression",
+  "guid": "03ac38ef7bac0aa40b0a0228ffa4838f",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_b82f1fbd191e1f2498266ca41f05027f"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null
+}

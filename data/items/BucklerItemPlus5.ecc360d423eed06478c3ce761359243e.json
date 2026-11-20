@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "BucklerItemPlus5",
+  "guid": "ecc360d423eed06478c3ce761359243e",
+  "m_ArmorComponent": "!bp_e74715338d8af5340a68354ffad812d6",
+  "m_WeaponComponent": null,
+  "name": "Buckler +5"
+}

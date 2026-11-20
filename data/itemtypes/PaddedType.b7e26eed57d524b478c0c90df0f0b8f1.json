@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [],
+  "assetName": "PaddedType",
+  "guid": "b7e26eed57d524b478c0c90df0f0b8f1",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "Light",
+  "name": "Light Armor — Padded"
+}

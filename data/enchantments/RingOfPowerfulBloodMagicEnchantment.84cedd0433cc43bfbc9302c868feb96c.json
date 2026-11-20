@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_eb6086c0bd0443cbab7d4a5063228f32"
+    }
+  ],
+  "assetName": "RingOfPowerfulBloodMagicEnchantment",
+  "guid": "84cedd0433cc43bfbc9302c868feb96c"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DruidSpontaneousSummon",
+  "guid": "b296531ffe013c8499ad712f8ae97f6b",
+  "name": "Spontaneous Summoning (Druid)"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfPerfection2",
+  "guid": "7abdce2cab3e3dd43b9e6c41c1b44525",
+  "m_Enchantments": [
+    "!bp_5f25b5f8c89d40c46ba8026bd7b73dcc",
+    "!bp_2042beb64a5e12443be55b413d7ff733",
+    "!bp_b98215ae135fe7144b20a2754e0fbda2"
+  ],
+  "name": "Belt of Physical Perfection +2"
+}

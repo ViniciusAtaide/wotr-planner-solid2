@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_386886690bf04665a67bd5ab5fa9f999"
+    }
+  ],
+  "assetName": "KnightsEmblemEmeraldBeltEnchantment",
+  "guid": "aa214fb9962d4ea7a696e37b9cafd3e5"
+}

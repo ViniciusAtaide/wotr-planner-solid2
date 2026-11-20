@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ChampionOfTheFaithAlignmentSelection",
+  "guid": "4146f0ff2c5e461488b0ace718020670",
+  "m_AllFeatures": [
+    "!bp_4ee098d102ccf574a99f1cf63ee01a05",
+    "!bp_cf6e5f8927653434eab6179cbc76eb04",
+    "!bp_92b34412524dda24fa544c54189792d7",
+    "!bp_980004b88420d6248975b278a7efbdcd"
+  ],
+  "name": "Chosen Alignment"
+}

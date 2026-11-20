@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "TimelyAssistanceItem",
+  "guid": "b76383fb806d61b41bfe93f0651e3964",
+  "m_Enchantments": [
+    "!bp_4b9573fa2b0e74043a4682740e9ae138",
+    "!bp_c3c2a133c0aa12240ade34762c146664",
+    "!bp_888c42733c4d4cd883f983feb3307249"
+  ],
+  "name": "Timely Assistance"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": true,
+  "IsMythic": false,
+  "Spontaneous": true,
+  "assetName": "UnletteredArcanistSpellbook",
+  "guid": "b242f991107095d41ae129f46ed5d97a",
+  "m_SpellsPerDay": "!bp_d1d296ca4bf8449409fc330a54ad58e1",
+  "name": "Arcanist"
+}

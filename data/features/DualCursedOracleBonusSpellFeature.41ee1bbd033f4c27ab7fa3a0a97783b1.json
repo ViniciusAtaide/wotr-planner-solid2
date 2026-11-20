@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DualCursedOracleBonusSpellFeature",
+  "guid": "41ee1bbd033f4c27ab7fa3a0a97783b1",
+  "name": "Dual-Cursed Oracle Bonus Spells"
+}

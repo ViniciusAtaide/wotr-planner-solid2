@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardFlail_Rusty",
+  "guid": "71b85570b21149848ca6394ee3c543b8",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d88579a82e3a40979804472ba6d83e36",
+  "name": "Rusty Flail"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PlaguedCurseNoPenaltyFeatureLevel1",
+  "guid": "db4bef691eb96b24181c27792896f245",
+  "name": "Plagued (Beneficial Curse 1)"
+}

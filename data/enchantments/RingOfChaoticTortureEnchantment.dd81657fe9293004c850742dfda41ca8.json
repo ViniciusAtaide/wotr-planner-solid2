@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_14966346f4900c245867f7131452617a"
+    }
+  ],
+  "assetName": "RingOfChaoticTortureEnchantment",
+  "guid": "dd81657fe9293004c850742dfda41ca8"
+}

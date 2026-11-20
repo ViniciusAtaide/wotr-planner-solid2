@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_be23a0a8258027a429bec891142c013f"
+    }
+  ],
+  "assetName": "FeralChargeEnchantment",
+  "guid": "7ccd077d3db2d3f4fb0452cc0bafa1bc"
+}

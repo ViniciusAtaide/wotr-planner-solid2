@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "SuppressedManyshot"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FlurryOfBlows",
+  "guid": "332362f3bd39ebe46a740a36960fdcb4",
+  "name": "Flurry of Blows"
+}

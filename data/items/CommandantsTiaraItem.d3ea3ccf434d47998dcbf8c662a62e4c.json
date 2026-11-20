@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "CommandantsTiaraItem",
+  "guid": "d3ea3ccf434d47998dcbf8c662a62e4c",
+  "m_Enchantments": [
+    "!bp_c3c2a133c0aa12240ade34762c146664",
+    "!bp_4dcb81fcbfb11714db17ece0c152ed8b",
+    "!bp_4a235cbdeebd2524681870153bab3cba"
+  ],
+  "name": "Warden's Circlet"
+}

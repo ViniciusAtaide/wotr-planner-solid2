@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c27e6d2b0d33d42439f512c6d9a6a601"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArmorFocusHeavyMythicFeatureOffence",
+  "guid": "037c3fde2ad14767a92768c9aa6d6de2",
+  "name": "Mythic Armor Focus (Heavy Armor) — Assault"
+}

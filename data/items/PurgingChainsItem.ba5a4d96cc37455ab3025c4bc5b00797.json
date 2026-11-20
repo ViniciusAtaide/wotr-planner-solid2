@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "PurgingChainsItem",
+  "guid": "ba5a4d96cc37455ab3025c4bc5b00797",
+  "m_Enchantments": [
+    "!bp_5faa3aaee432ac444b101de2b7b0faf7",
+    "!bp_6628f9d77fd07b54c911cd8930c0d531",
+    "!bp_507cb6dcab0e450c87ec3d23388cedca"
+  ],
+  "m_Type": "!bp_7467b0ab8641d8f43af7fc46f2108a1a",
+  "name": "Purging Chains"
+}

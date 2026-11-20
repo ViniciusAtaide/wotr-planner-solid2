@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DarkElementalistElementalOverflowBonusFeature",
+  "guid": "5eaa5e956007ddf45979b4785d9356fd",
+  "name": "Soul Power"
+}

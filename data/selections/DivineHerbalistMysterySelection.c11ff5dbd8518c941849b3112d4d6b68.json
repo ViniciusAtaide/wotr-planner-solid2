@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "DivineHerbalistMystery",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "DivineHerbalistMysterySelection",
+  "guid": "c11ff5dbd8518c941849b3112d4d6b68",
+  "m_AllFeatures": [
+    "!bp_2af1112188727bf469ec50c5575b6c52",
+    "!bp_c880da2dea6b54f4bad7d1f4b79c2d63",
+    "!bp_e083bd3fa7dfc924fb4e6ab371eda368",
+    "!bp_eac5d0fc2b143c247a42f790230eb778",
+    "!bp_45472076126dc154f9386b0bc4d8416c",
+    "!bp_b52fb5bc68d3edc4b9525f4e7414765f",
+    "!bp_09106dcc03321154f955e2d0296a082e",
+    "!bp_d91dcec40f768ea47b45bb4c4b2af40d",
+    "!bp_4fb980ffe85793b4194b11d3adb70d9e"
+  ],
+  "name": "Mystery (Divine Herbalist)"
+}

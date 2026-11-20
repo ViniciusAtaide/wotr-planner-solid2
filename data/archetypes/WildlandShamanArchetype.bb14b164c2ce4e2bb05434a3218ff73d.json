@@ -1,0 +1,48 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_26e81d83d13dbf6448b10019c802612d",
+        "!bp_164c875d6b27483faba479c7f5261915"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_1dc20e195581a804890ddc74218bfd8e"
+    }
+  ],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_d22f319fefac4ca4b90f03ac5cb9c714",
+        "!bp_00c8c566d1825dd4a871250f35285982"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_70e6075a72633ba49804ccb6203fb18c"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "WildlandShamanArchetype",
+  "guid": "bb14b164c2ce4e2bb05434a3218ff73d",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Wildland Shaman"
+}

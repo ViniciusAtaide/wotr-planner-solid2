@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_567801abe990faf4080df566fadcd038"
+    }
+  ],
+  "Groups": [
+    "OppositionSchool"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OppositionSchoolConjuration",
+  "guid": "ca4a0d68c0408d74bb83ade784ebeb0d",
+  "name": "Opposition School — Conjuration"
+}

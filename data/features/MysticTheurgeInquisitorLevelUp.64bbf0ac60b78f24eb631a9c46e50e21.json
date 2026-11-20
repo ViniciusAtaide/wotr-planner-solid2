@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_57fab75111f377248810ece84193a5a5"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "MysticTheurgeInquisitorLevelUp",
+  "guid": "64bbf0ac60b78f24eb631a9c46e50e21",
+  "name": "Inquisitor"
+}

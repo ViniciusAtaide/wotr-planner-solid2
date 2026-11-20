@@ -1,0 +1,57 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteCondition",
+      "CheckInProgression": false,
+      "Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "CompanionInParty",
+              "Not": false
+            },
+            {
+              "$type": "CompanionInParty",
+              "Not": false
+            },
+            {
+              "$type": "CompanionInParty",
+              "Not": false
+            },
+            {
+              "$type": "CompanionInParty",
+              "Not": false
+            },
+            {
+              "$type": "IsCampaign",
+              "Not": false
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": true,
+  "PrestigeClass": false,
+  "SkillPoints": 0,
+  "assetName": "MythicShardsClass",
+  "guid": "53cb5892d19e4c4586c9dd4d6337d943",
+  "m_Archetypes": [],
+  "m_BaseAttackBonus": "!bp_059c61483910c77408d0473b11d1b922",
+  "m_FortitudeSave": "!bp_059c61483910c77408d0473b11d1b922",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_e9e05c95d56e4a809194a7573366fde8",
+  "m_ReflexSave": "!bp_059c61483910c77408d0473b11d1b922",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_059c61483910c77408d0473b11d1b922",
+  "name": "Shard Powers"
+}

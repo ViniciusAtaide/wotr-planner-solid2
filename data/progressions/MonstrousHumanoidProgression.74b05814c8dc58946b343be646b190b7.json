@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_57614b50e8d86b24395931fffc5e409b"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "MonstrousHumanoidProgression",
+  "guid": "74b05814c8dc58946b343be646b190b7",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_8a3c86893f383214da070e9c84c1e95b"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null
+}

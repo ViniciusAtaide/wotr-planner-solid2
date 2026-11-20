@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_23d2f87aa54c89f418e68e790dba11e0"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": true,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "DivineHunterAnimalDomainTypeBonusSelectionFirst",
+  "guid": "cb2d6e74641e4facbd250b53892bafa3",
+  "m_AllFeatures": [
+    "!bp_9d4ed7d3abea49dcb777b8241ed6f848",
+    "!bp_e2a6a229d5154f5ba72308eacf5adb62",
+    "!bp_8231365f87974524bcbd2dd04d461251",
+    "!bp_bdd12ea0c9a34d9f9b311f5b3052d5b2",
+    "!bp_c925d15a4407446da3f7dbcd48db2328",
+    "!bp_c3a5cb12fe8748be93f30976875ea26d"
+  ],
+  "name": "Animal Domain — Companion Ability Score Bonus"
+}

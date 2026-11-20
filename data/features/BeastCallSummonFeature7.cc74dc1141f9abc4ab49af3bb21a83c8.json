@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_772c83a25e2268e448e841dcd548235f",
+      "m_Feature": "!bp_120a1507225cd58459927e7cbcf04910"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BeastCallSummonFeature7",
+  "guid": "cc74dc1141f9abc4ab49af3bb21a83c8",
+  "name": "Summon Nature's Ally VII"
+}

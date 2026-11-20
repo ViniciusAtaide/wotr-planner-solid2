@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "Enlightened Philosopher",
+  "reason": "The oracle's mystery and the Enlightened Philosopher archetype's copy of it are separate blueprints. EnlightenedPhilosopherWindMysteryFeature is offered by the archetype's mystery selection and by the Mythic \"Second Mystery\" selection, so neither the archetype alone nor a family name covers every route. The copy is qualified by the archetype whose mystery list it belongs to; the oracle's own copy stays bare.",
+  "target": "3812dcb2fe59ecd449285391db677edc"
+}

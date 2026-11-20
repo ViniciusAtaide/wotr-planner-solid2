@@ -1,0 +1,59 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillMobility",
+    "SkillLoreNature",
+    "SkillPerception",
+    "SkillPersuasion"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "NeutralGood, TrueNeutral, NeutralEvil, Chaotic",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D12",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 3,
+  "assetName": "BarbarianClass",
+  "guid": "f7d7eb166b3dd594fb330d085df41853",
+  "m_Archetypes": [
+    "!bp_48277b221b6ba6e40affb1e9b49faf36",
+    "!bp_063da4c77fa59454a9828c9ece407ea1",
+    "!bp_a2ccb759dc6f1f94d9aae8061509bf87",
+    "!bp_e791f31b7fd225645ae709958afe2e91",
+    "!bp_3f0a548044dbad04b82535237584772b",
+    "!bp_adffdd8a99094a89823a79292a503ee9",
+    "!bp_85c9d72cb20040a79542289dd5126694"
+  ],
+  "m_BaseAttackBonus": "!bp_b3057560ffff3514299e8b93e7648a9d",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_74ad9fbd930a1d84aaf9a230f29f8f12",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "name": "Barbarian"
+}

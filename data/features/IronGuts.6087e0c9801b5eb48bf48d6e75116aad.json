@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "RogueTalent",
+    "VivisectionistDiscovery",
+    "SlayerTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "IronGuts",
+  "guid": "6087e0c9801b5eb48bf48d6e75116aad",
+  "name": "Iron Guts"
+}

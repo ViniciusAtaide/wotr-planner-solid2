@@ -1,0 +1,76 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_88c89ab44a36a67438347e257f70c8fe"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_2816b2179b0a477197d487cabc5474d2"
+    }
+  ],
+  "ForAllOtherClasses": true,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "OracleCurse"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_8f800ed6ce8c42e8a01fd8f3e990c459",
+        "!bp_e567696843b0da74b8d7e1e7f0649b9e"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_abfd1deaddbf58140b8ba0e0bbb51e46"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_485a18c05792521459c7d06c63128c79"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_afa1f5b0540be6543ae1605da6a1a429"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "PowerlessProphecyCurseProgression",
+  "guid": "88c89ab44a36a67438347e257f70c8fe",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_c5f6e53e71059fb4d802ce81a277a12d"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Powerless Prophecy"
+}

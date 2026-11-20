@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ElvenHeritageSelection",
+  "guid": "5482f879dcfd40f9a3168fdb48bc938c",
+  "m_AllFeatures": [
+    "!bp_8b2da1d0f9504872809e63b39c24c502",
+    "!bp_2a300f4e0c13495bbde59160809fce7f",
+    "!bp_fb69a451e7064015b5dbe512c9122ef8"
+  ],
+  "name": "Racial Heritage (Elf)"
+}

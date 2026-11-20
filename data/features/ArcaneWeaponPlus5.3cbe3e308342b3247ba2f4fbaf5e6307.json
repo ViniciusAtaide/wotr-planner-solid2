@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "IncreaseActivatableAbilityGroupSize",
+      "Group": "ArcaneWeaponProperty"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArcaneWeaponPlus5",
+  "guid": "3cbe3e308342b3247ba2f4fbaf5e6307",
+  "name": "Arcane Weapon (+5)"
+}

@@ -1,0 +1,57 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "SpecialistSchool"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_38aab7423d96de84d8e6ab2cdbccce63"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_541bb8d595532ec419343b7a93cdb449"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_26c7b2e163035254ead73d20fbce8c86"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_c9165b50a298ba346bd1b34f8d9cb9f9"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_5e6fe442c2b4be24f969505cef85f61b"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "SpecialisationSchoolUniversalistProgression",
+  "guid": "0933849149cfc9244ac05d6a5b57fd80",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_ba34257984f4c41408ce1dc2004e342e"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Specialist School — Universalist"
+}

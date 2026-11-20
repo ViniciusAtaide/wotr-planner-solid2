@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "PortalStonePlanarRingItem",
+  "guid": "031e6d000ff5b4849b84f15707a625ec",
+  "m_Enchantments": [
+    "!bp_e48d717a3214c3b418b6ecca0229176a"
+  ],
+  "name": "Planar Navigator (ring)"
+}

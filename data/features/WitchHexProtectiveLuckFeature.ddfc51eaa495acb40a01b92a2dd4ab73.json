@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "WitchHex"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WitchHexProtectiveLuckFeature",
+  "guid": "ddfc51eaa495acb40a01b92a2dd4ab73",
+  "name": "Protective Luck (witch hex)"
+}

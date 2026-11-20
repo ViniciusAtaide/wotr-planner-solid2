@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfRenownArtisanItem",
+  "guid": "5d6100feb15a81d47a99f227247b81e1",
+  "m_Enchantments": [
+    "!bp_c141c861a92bf364580681d10a03f53e"
+  ],
+  "name": "Ring of Renown Artisan"
+}

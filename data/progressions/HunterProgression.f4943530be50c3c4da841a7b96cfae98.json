@@ -1,0 +1,135 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_715ac15eb8bd5e342bc8a0a3c9e3e38f",
+        "!bp_873f1f12bb43cda40bcc7d2878d16bf1",
+        "!bp_443365823b7d6d14b8d12f4e7bce1077",
+        "!bp_85a5e66b176c0aa4c8ed1acdf946321e",
+        "!bp_22f280eeb4abde34bb92b58ec2673dad"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_75e9a5179aeff4140a8235ebdeaf8df7"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_1b9916f7675d6ef4fb427081250d49de",
+        "!bp_01046afc774beee48abde8e35da0f4ba"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": []
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_2efe5983c9064cc6b55f16bc68f0fc33"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_01046afc774beee48abde8e35da0f4ba"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": []
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_cbc90fcdb60809744989d386a98cd21c"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_01046afc774beee48abde8e35da0f4ba"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_27ad1316abbbbb34b8ffb9a87f38c10e"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": []
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_01046afc774beee48abde8e35da0f4ba"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": []
+    },
+    {
+      "Level": 14,
+      "m_Features": []
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_01046afc774beee48abde8e35da0f4ba"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": []
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_c1e0f4ada7c673e4f8e5c57d1eea13d0"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_01046afc774beee48abde8e35da0f4ba"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": []
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_d8a126a3ed3b62943a597c937a4bf840"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "HunterProgression",
+  "guid": "f4943530be50c3c4da841a7b96cfae98",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_34ecd1b5e1b90b9498795791b0855239"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": []
+}

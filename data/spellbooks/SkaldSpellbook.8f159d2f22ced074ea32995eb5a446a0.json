@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": true,
+  "IsMythic": false,
+  "Spontaneous": true,
+  "assetName": "SkaldSpellbook",
+  "guid": "8f159d2f22ced074ea32995eb5a446a0",
+  "m_SpellsPerDay": "!bp_39aeb5d8dafde5a40ba2032dec65db70",
+  "name": "Skald"
+}

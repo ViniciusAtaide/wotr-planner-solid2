@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": -3,
+  "Components": [],
+  "IsArcane": false,
+  "IsMythic": false,
+  "Spontaneous": false,
+  "assetName": "PaladinSpellbookTorturedCrusader",
+  "guid": "6886f046087f4cb68f8cbdfdfedbd3d9",
+  "m_SpellsPerDay": "!bp_9aed4803e424ae8429c392d8fbfb88ff",
+  "name": "Paladin"
+}

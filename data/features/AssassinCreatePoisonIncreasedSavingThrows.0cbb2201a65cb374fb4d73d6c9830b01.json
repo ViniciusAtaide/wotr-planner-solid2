@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 5,
+  "assetName": "AssassinCreatePoisonIncreasedSavingThrows",
+  "guid": "0cbb2201a65cb374fb4d73d6c9830b01",
+  "name": "Poison Use — Increased Successful Saves to Remove"
+}

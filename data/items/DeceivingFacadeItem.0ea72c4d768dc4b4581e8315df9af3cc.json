@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "DeceivingFacadeItem",
+  "guid": "0ea72c4d768dc4b4581e8315df9af3cc",
+  "m_ArmorComponent": "!bp_cfb4dc81f5153ac4db439588864c3394",
+  "m_WeaponComponent": null,
+  "name": "Deceiving Facade"
+}

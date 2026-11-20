@@ -1,0 +1,52 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillPersuasion",
+    "SkillLoreNature",
+    "SkillKnowledgeWorld",
+    "SkillStealth",
+    "SkillPerception",
+    "SkillKnowledgeArcana"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D10",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 4,
+  "assetName": "RangerClass",
+  "guid": "cda0615668a6df14eb36ba19ee881af6",
+  "m_Archetypes": [
+    "!bp_fd8c915590dcc5b41b73b80c3c0da8ee",
+    "!bp_4fd9705f1aebf614f9500bb0e7341179",
+    "!bp_300917c3479d27d47b4b4b52b1762e8d",
+    "!bp_a330c05e484d98748a462acd43654a3a",
+    "!bp_7888187acfd26b7499cf255b0d6dcb0e",
+    "!bp_9f147dbae4a34cda9f0e6091dc1a4a7c",
+    "!bp_475117e837fa461589005a5339f653a0"
+  ],
+  "m_BaseAttackBonus": "!bp_b3057560ffff3514299e8b93e7648a9d",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_97261d609529d834eba4fd4da1bc44dc",
+  "m_ReflexSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_Spellbook": "!bp_762858a4a28eaaf43aa00f50441d7027",
+  "m_WillSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "name": "Ranger"
+}

@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_6afa347d804838b48bda16acb0573dc0"
+    }
+  ],
+  "Groups": [
+    "MythicAdditionalProgressions"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "LoremasterSkald",
+  "guid": "be85d2746a464b49a37193c9bab425ce",
+  "m_Spellbook": "!bp_8f159d2f22ced074ea32995eb5a446a0",
+  "name": "Skald"
+}

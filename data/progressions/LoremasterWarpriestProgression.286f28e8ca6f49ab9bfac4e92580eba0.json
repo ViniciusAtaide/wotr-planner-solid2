@@ -1,0 +1,96 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_30b5e47d47a0e37438cc5a80c96cfb99"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "MythicAdditionalProgressions"
+  ],
+  "HideInUI": true,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_d12e9da50f5a4d2cacdb9418d5c56580"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_d12e9da50f5a4d2cacdb9418d5c56580"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_d12e9da50f5a4d2cacdb9418d5c56580"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_d12e9da50f5a4d2cacdb9418d5c56580"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_d12e9da50f5a4d2cacdb9418d5c56580"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_d12e9da50f5a4d2cacdb9418d5c56580"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_d12e9da50f5a4d2cacdb9418d5c56580"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_d12e9da50f5a4d2cacdb9418d5c56580"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_d12e9da50f5a4d2cacdb9418d5c56580"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_d12e9da50f5a4d2cacdb9418d5c56580"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "LoremasterWarpriestProgression",
+  "guid": "286f28e8ca6f49ab9bfac4e92580eba0",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_4a7c05adfbaf05446a6bf664d28fb103"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Warpriest"
+}

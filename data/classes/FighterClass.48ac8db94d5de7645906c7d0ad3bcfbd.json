@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillKnowledgeWorld",
+    "SkillLoreNature",
+    "SkillPersuasion"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D10",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 2,
+  "assetName": "FighterClass",
+  "guid": "48ac8db94d5de7645906c7d0ad3bcfbd",
+  "m_Archetypes": [
+    "!bp_8dff97413c63c1147be8a5ca229abefc",
+    "!bp_d80a67a264f206e4b8d2fcf7e560d48f",
+    "!bp_a599da9a8a6b9e54083b0a4d2a25db59",
+    "!bp_84643e02a764bff4a9c1aba333a53c89",
+    "!bp_fdee5f25a5d0fe0448d093b462435c0c",
+    "!bp_758e0061a077e54409a3bf0eb51511e5",
+    "!bp_88a9dbb92a674ed995bae800896795f5",
+    "!bp_6c96dc1f5573487399336cd351ef8f2c"
+  ],
+  "m_BaseAttackBonus": "!bp_b3057560ffff3514299e8b93e7648a9d",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_b50e94b57be32f74892f381ae2a8905a",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "name": "Fighter"
+}

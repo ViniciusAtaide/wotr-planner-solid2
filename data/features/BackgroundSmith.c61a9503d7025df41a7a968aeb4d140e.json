@@ -1,0 +1,44 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillAthletics"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_aba1be1d113ea4049b99ea92165e91dc",
+        "!bp_8a43b4c0a59f7bb479d2af66d9a43ac5"
+      ]
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "UntypedStackable",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SaveFortitude",
+      "Value": 1
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillAthletics"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Warhammer"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "LightHammer"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundSmith",
+  "guid": "c61a9503d7025df41a7a968aeb4d140e",
+  "name": "Smith"
+}

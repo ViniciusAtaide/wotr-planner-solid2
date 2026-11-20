@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_e8f21e5b58e0569468e420ebea456124",
+      "m_Feature": "!bp_1673659a96a1d1f4f919048021436bc1"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "MonkStyleStrike",
+  "guid": "7bc6a93f6e48eff49be5b0cde83c9450",
+  "m_AllFeatures": [
+    "!bp_d3d05a1e140ff704496d9c3af411e0d5",
+    "!bp_3e8e80a099fc78e4baf464744f0ba8d2",
+    "!bp_b84f6d2dfaba15d4aa80386ce6824e26",
+    "!bp_ac3aa7a24c682704bb5a45d8c4b19e39"
+  ],
+  "name": "Style Strike"
+}

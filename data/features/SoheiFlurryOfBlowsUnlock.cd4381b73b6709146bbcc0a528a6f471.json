@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 6,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [
+        "!bp_fad7c56737ed12e42aacc330acc86428"
+      ],
+      "m_Class": "!bp_e8f21e5b58e0569468e420ebea456124",
+      "m_Feature": "!bp_7765d440cc6a4c7f83b619474f678914"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 6,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [
+        "!bp_fad7c56737ed12e42aacc330acc86428"
+      ],
+      "m_Class": "!bp_e8f21e5b58e0569468e420ebea456124",
+      "m_Feature": "!bp_8b5e3dbcfdea4911a6621925f7f71898"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SoheiFlurryOfBlowsUnlock",
+  "guid": "cd4381b73b6709146bbcc0a528a6f471",
+  "name": "Flurry of Blows (Sohei)"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_c4b3ec737a134d11917c7ba003a04dd3"
+    }
+  ],
+  "assetName": "IndomitablePunisherEnchantment",
+  "guid": "aae2af9b06b5469c814473a7dd2014e0"
+}

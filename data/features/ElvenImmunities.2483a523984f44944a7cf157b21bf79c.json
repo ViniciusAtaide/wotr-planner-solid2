@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ElvenImmunities",
+  "guid": "2483a523984f44944a7cf157b21bf79c",
+  "name": "Elven Immunities"
+}

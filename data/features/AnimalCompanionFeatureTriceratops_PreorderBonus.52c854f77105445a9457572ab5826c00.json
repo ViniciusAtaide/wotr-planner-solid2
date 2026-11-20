@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddPet",
+      "Type": "AnimalCompanion"
+    },
+    {
+      "$type": "PrerequisitePet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "NoCompanion": true,
+      "Type": "AnimalCompanion"
+    }
+  ],
+  "Groups": [
+    "AnimalCompanion"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "AnimalCompanionFeatureTriceratops_PreorderBonus",
+  "guid": "52c854f77105445a9457572ab5826c00",
+  "name": "Animal Companion — Blue Triceratops"
+}

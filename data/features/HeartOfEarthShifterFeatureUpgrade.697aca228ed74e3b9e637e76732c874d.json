@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [
+        "!bp_c42d338616fa46ab9bcc67c94bca7609"
+      ],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_107e5002a0c842ee85feade6d49bc2ce"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [
+        "!bp_c42d338616fa46ab9bcc67c94bca7609"
+      ],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_4c5f54416f154f9d8b81085fcaa6f1aa"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "HeartOfEarthShifterFeatureUpgrade",
+  "guid": "697aca228ed74e3b9e637e76732c874d"
+}

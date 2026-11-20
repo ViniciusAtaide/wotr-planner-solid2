@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e71d00a5aa1ed8f4591d021056a6dbe7"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": true,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BloodlineInfernalFeatSelection",
+  "guid": "f19d9bfcbc1e3ea42bda754a03c40843",
+  "m_AllFeatures": [
+    "!bp_4e219f5894ad0ea4daa0699e28c37b1d",
+    "!bp_4c44724ffa8844f4d9bedb5bb27d144a",
+    "!bp_f180e72e4a9cbaa4da8be9bc958132ef",
+    "!bp_175d1577bb6c9a04baf88eec99c66334",
+    "!bp_cad1b9175e8c0e64583432a22134d33c",
+    "!bp_ee7dc126939e4d9438357fbd5980d459",
+    "!bp_25bc9c439ac44fd44ac3b1e58890916f",
+    "!bp_231a37321e26551489503e4e1d99e681"
+  ],
+  "name": "Bloodline Feat Selection"
+}

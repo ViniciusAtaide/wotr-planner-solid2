@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e39a74a3ab1942bda27456a6f9b349cd"
+    }
+  ],
+  "assetName": "ChainshirtOfBrightPerformanceEnchantment",
+  "guid": "31cac1cb3a674ca18bd84ce0235ab0df"
+}

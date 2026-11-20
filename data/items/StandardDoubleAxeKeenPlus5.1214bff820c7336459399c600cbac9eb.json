@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDoubleAxeKeenPlus5",
+  "guid": "1214bff820c7336459399c600cbac9eb",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": "!bp_24352e6aa3ceeac41ada61c1b3302dc8",
+  "m_Type": "!bp_87d76c7534506a546a065731ee6a38cd",
+  "name": "Keen Orc Double Axe +5"
+}

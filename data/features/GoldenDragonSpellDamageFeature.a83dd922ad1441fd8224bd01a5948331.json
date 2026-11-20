@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 3,
+  "assetName": "GoldenDragonSpellDamageFeature",
+  "guid": "a83dd922ad1441fd8224bd01a5948331"
+}

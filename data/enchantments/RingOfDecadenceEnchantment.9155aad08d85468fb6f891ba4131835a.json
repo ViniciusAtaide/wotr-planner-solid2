@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_2eef95dfd93e4d658314b700626b7d25"
+    }
+  ],
+  "assetName": "RingOfDecadenceEnchantment",
+  "guid": "9155aad08d85468fb6f891ba4131835a"
+}

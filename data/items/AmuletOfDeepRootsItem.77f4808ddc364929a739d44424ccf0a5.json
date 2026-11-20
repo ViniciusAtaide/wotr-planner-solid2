@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "AmuletOfDeepRootsItem",
+  "guid": "77f4808ddc364929a739d44424ccf0a5",
+  "m_Enchantments": [
+    "!bp_24a50c7a581f493c9644d6e3714fc919"
+  ],
+  "name": "Amulet of Deep Roots"
+}

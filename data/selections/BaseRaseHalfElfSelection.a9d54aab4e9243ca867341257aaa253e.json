@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BaseRaseHalfElfSelection",
+  "guid": "a9d54aab4e9243ca867341257aaa253e",
+  "m_AllFeatures": [
+    "!bp_26a668c5a8c22354bac67bcd42e09a3f"
+  ],
+  "name": "Basic (Half-Elf)"
+}

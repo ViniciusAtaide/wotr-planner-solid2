@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HelmOfDevotionItem",
+  "guid": "a48c2e5cecd2e9d409a1bdd270b58a04",
+  "m_Enchantments": [
+    "!bp_349eb7858a614014eb679fecb8b603ec"
+  ],
+  "name": "Helm of Devotion"
+}

@@ -1,0 +1,40 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_76b4bb8e54f3f5c418f421684c76ef4e"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 10,
+      "Not": false,
+      "m_CharacterClass": "!bp_0937bec61c0dabc468428f496580c721"
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 10,
+      "m_Archetype": "!bp_b4f5741d42c4cb04abf5ab3fe33f6fc5",
+      "m_CharacterClass": "!bp_299aa766dee3cbf4790da4efb8c72484"
+    }
+  ],
+  "Groups": [
+    "Discovery",
+    "VivisectionistDiscovery",
+    "UndergroundChemistDiscovery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "Mummification",
+  "guid": "daf854d84d442e941aa3a2fdc041b37c",
+  "name": "Mummification"
+}

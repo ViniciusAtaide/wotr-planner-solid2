@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "BucklerOfElementalGuardArmorItem",
+  "guid": "7bfc3d8aeec15d3418aa9e12f2e00613",
+  "m_Enchantments": [
+    "!bp_a5d27d73859bd19469a6dde3b49750ff",
+    "!bp_d6af1230d246407a9fff24ee511e74c6"
+  ],
+  "m_Type": "!bp_26fcc43f7d20374498d2e1643381d345"
+}

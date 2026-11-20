@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 9,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [
+        "!bp_c42d338616fa46ab9bcc67c94bca7609"
+      ],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_1dd78b502a7f4ea0802b02385a8a585f"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 9,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [
+        "!bp_c42d338616fa46ab9bcc67c94bca7609"
+      ],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_697aca228ed74e3b9e637e76732c874d"
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "HeartOfEarthShifterBuff",
+  "guid": "c3ad4aca75764e82ab047533a8d5aea6",
+  "name": "Heart of Earth"
+}

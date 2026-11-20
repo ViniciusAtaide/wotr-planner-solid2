@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "LightShieldArmorItemPlus3againstEvocation",
+  "guid": "96f184740ee0af14884a2fde51b159ba",
+  "m_Enchantments": [
+    "!bp_ac2e3a582b5faa74aab66e0a31c935a9",
+    "!bp_1b593e426f557a449877b52c17efe500"
+  ],
+  "m_Type": "!bp_d38e8ea23ce653c4582eb3e002555483",
+  "name": "Shield of Evocation Resilience"
+}

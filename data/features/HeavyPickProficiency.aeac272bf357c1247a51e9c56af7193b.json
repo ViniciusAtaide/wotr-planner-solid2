@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "HeavyPick"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HeavyPickProficiency",
+  "guid": "aeac272bf357c1247a51e9c56af7193b",
+  "name": "Weapon Proficiency (Heavy Pick)"
+}

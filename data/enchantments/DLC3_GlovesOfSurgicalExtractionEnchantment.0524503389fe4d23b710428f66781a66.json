@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f87092b9d039452092b0dc62426cec24"
+    }
+  ],
+  "assetName": "DLC3_GlovesOfSurgicalExtractionEnchantment",
+  "guid": "0524503389fe4d23b710428f66781a66"
+}

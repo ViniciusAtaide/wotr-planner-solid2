@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Discovery",
+    "VivisectionistDiscovery",
+    "UndergroundChemistDiscovery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EnhancePotion",
+  "guid": "2673ccdd6df742d42a8c94977c76a984",
+  "name": "Enhance Potion"
+}

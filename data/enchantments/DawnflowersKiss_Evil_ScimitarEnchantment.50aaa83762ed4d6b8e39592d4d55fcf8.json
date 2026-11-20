@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_671f55b37c554a2e97f6cd1e97f7b858"
+    }
+  ],
+  "assetName": "DawnflowersKiss_Evil_ScimitarEnchantment",
+  "guid": "50aaa83762ed4d6b8e39592d4d55fcf8"
+}

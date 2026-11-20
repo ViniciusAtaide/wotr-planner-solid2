@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDoubleSwordFrostShockPlus1",
+  "guid": "c8d649913e0fd4943a1d5a0b716535dc",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": "!bp_9681298dceba5f8458615f48a059d602",
+  "m_Type": "!bp_e95efb85a0912a7489be69d5f03a5308",
+  "name": "Frost Shock Two-Bladed Sword +1"
+}

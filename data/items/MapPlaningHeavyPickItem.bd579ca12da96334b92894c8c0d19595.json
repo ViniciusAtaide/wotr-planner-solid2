@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "MapPlaningHeavyPickItem",
+  "guid": "bd579ca12da96334b92894c8c0d19595",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b",
+    "!bp_47f2aca64ba035c44bf00b23aa2882ec"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_a492410f3d65f744c892faf09daad84a",
+  "name": "Death's Consonant (Heavy Pick)"
+}

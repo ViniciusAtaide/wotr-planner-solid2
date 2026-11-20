@@ -1,0 +1,104 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 2,
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_da69747aa3dd0044ebff5f3d701cdde3",
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "MysticTheurgeDivineSpellbook"
+  ],
+  "HideInUI": true,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_3afb51e0dc2bd4b42a09054300bd2cc0"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_3afb51e0dc2bd4b42a09054300bd2cc0"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_3afb51e0dc2bd4b42a09054300bd2cc0"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_3afb51e0dc2bd4b42a09054300bd2cc0"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_3afb51e0dc2bd4b42a09054300bd2cc0"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_3afb51e0dc2bd4b42a09054300bd2cc0"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_3afb51e0dc2bd4b42a09054300bd2cc0"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_3afb51e0dc2bd4b42a09054300bd2cc0"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_3afb51e0dc2bd4b42a09054300bd2cc0"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_3afb51e0dc2bd4b42a09054300bd2cc0"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "MysticTheurgeDruidProgression",
+  "guid": "c7dd4b32faf088444b5f83033a1228ea",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_0920ea7e4fd7a404282e3d8b0ac41838"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Druid"
+}

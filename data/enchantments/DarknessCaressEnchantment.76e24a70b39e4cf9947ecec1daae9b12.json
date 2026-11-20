@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_d8849ddaf92c471f84392aad7eb31b45"
+    }
+  ],
+  "assetName": "DarknessCaressEnchantment",
+  "guid": "76e24a70b39e4cf9947ecec1daae9b12"
+}

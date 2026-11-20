@@ -1,0 +1,46 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillMobility",
+    "SkillPerception",
+    "SkillAthletics",
+    "SkillPersuasion",
+    "SkillKnowledgeWorld",
+    "SkillStealth",
+    "SkillLoreNature"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D10",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 3,
+  "assetName": "SlayerClass",
+  "guid": "c75e0971973957d4dbad24bc7957e4fb",
+  "m_Archetypes": [
+    "!bp_67bbc0dcd471ea0428a362f6e94f3a51",
+    "!bp_738c5666f8ef46c45942df9100a0d254",
+    "!bp_f6e304de008939d46960a2ebb075e150",
+    "!bp_8040e66d2724c754f85dd3026a1f0cee",
+    "!bp_598f461cd7885304e8bae040122cb249",
+    "!bp_23a5d0ca607f6094097d509b2b1f4a10",
+    "!bp_5947427f10bc497dbc24f66129b43e5d",
+    "!bp_11e473bfb29c42f580b9a801b6771788"
+  ],
+  "m_BaseAttackBonus": "!bp_b3057560ffff3514299e8b93e7648a9d",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_1f35d11937a06624b8a60db68c7869a1",
+  "m_ReflexSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "name": "Slayer"
+}

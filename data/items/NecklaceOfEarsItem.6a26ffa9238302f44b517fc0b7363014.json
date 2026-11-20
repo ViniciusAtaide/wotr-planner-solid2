@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "NecklaceOfEarsItem",
+  "guid": "6a26ffa9238302f44b517fc0b7363014",
+  "m_Enchantments": [
+    "!bp_bbbb03ff1ce3d2642b152aa2f675b1e5"
+  ],
+  "name": "Ear Necklace"
+}

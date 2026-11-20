@@ -1,0 +1,46 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_fe9220cdc16e5f444a84d85d5fa8e3d5"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_16fa59cc9a72a6043b566b49184f53fe"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_fe9220cdc16e5f444a84d85d5fa8e3d5"
+    },
+    {
+      "$type": "PrerequisiteAnySpellsInSpellbook",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_SpellSpecializationFeat": "!bp_f327a765a4353d04f872482ef3e48c35"
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "WizardFeat"
+  ],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "SpellSpecialization",
+  "Ranks": 1,
+  "RequireProficiency": false,
+  "WeaponSubCategory": "None",
+  "assetName": "SpellSpecializationFirst",
+  "guid": "f327a765a4353d04f872482ef3e48c35",
+  "m_Prerequisite": "!bp_16fa59cc9a72a6043b566b49184f53fe",
+  "name": "Spell Specialization"
+}

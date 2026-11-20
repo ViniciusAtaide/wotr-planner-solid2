@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Enhancement",
+      "Stat": "Constitution",
+      "Value": 2
+    }
+  ],
+  "assetName": "HalfplateOfVigorEnchantment",
+  "guid": "2b5234450dfbd7e4a844820674a20f39"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_117fb584f9cd59344b7ae1c6b33df23e"
+    }
+  ],
+  "assetName": "HelmetOfWeakeningTortureEnchantment",
+  "guid": "fd740ea306b4aff479367e20ac026e84"
+}

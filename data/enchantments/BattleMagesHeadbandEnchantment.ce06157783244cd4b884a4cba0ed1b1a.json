@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_0eb2d001c26e17848b1e0e5c56c42cd0"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Enhancement",
+      "Stat": "Charisma",
+      "Value": 2
+    }
+  ],
+  "assetName": "BattleMagesHeadbandEnchantment",
+  "guid": "ce06157783244cd4b884a4cba0ed1b1a"
+}

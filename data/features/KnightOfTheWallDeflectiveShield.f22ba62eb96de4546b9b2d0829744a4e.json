@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "KnightOfTheWallDeflectiveShield",
+  "guid": "f22ba62eb96de4546b9b2d0829744a4e",
+  "name": "Deflective Shield"
+}

@@ -1,0 +1,295 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFactContextActions",
+      "Activated": {
+        "Actions": [
+          {
+            "$type": "Conditional",
+            "ConditionsChecker": {
+              "Conditions": [
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": true,
+                  "m_Fact": "!bp_af70dce0745f91f4b8aa99a98620e45b"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_d945ac76fc6a06e44b890252824db30a"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_6f1d86ae43adf1049834457ce5264003"
+                }
+              ],
+              "Operation": "And"
+            },
+            "IfFalse": {
+              "Actions": []
+            },
+            "IfTrue": {
+              "Actions": [
+                {
+                  "$type": "ContextActionAddFeature",
+                  "m_PermanentFeature": "!bp_af70dce0745f91f4b8aa99a98620e45b",
+                  "m_SetRankFrom": null
+                }
+              ]
+            }
+          },
+          {
+            "$type": "Conditional",
+            "ConditionsChecker": {
+              "Conditions": [
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": true,
+                  "m_Fact": "!bp_93d8bc401accfe6489ea3797e316e5d9"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_6f1d86ae43adf1049834457ce5264003"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_fbed3ca8c0d89124ebb3299ccf68c439"
+                }
+              ],
+              "Operation": "And"
+            },
+            "IfFalse": {
+              "Actions": []
+            },
+            "IfTrue": {
+              "Actions": [
+                {
+                  "$type": "ContextActionAddFeature",
+                  "m_PermanentFeature": "!bp_93d8bc401accfe6489ea3797e316e5d9",
+                  "m_SetRankFrom": null
+                }
+              ]
+            }
+          },
+          {
+            "$type": "Conditional",
+            "ConditionsChecker": {
+              "Conditions": [
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": true,
+                  "m_Fact": "!bp_52292a32bb5d0ab45a86621bac2c4c9a"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_6f1d86ae43adf1049834457ce5264003"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_dbb1159b0e8137c4ea20434a854ae6a8"
+                }
+              ],
+              "Operation": "And"
+            },
+            "IfFalse": {
+              "Actions": []
+            },
+            "IfTrue": {
+              "Actions": [
+                {
+                  "$type": "ContextActionAddFeature",
+                  "m_PermanentFeature": "!bp_52292a32bb5d0ab45a86621bac2c4c9a",
+                  "m_SetRankFrom": null
+                }
+              ]
+            }
+          },
+          {
+            "$type": "Conditional",
+            "ConditionsChecker": {
+              "Conditions": [
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": true,
+                  "m_Fact": "!bp_9b7bf2754e2012e4dac135fd6c782fac"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_ba7767cb03f7f3949ad08bd3ff8a646f"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_e4027e0fec48e8048a172c6627d4eba9"
+                }
+              ],
+              "Operation": "And"
+            },
+            "IfFalse": {
+              "Actions": []
+            },
+            "IfTrue": {
+              "Actions": [
+                {
+                  "$type": "ContextActionAddFeature",
+                  "m_PermanentFeature": "!bp_9b7bf2754e2012e4dac135fd6c782fac",
+                  "m_SetRankFrom": null
+                }
+              ]
+            }
+          },
+          {
+            "$type": "Conditional",
+            "ConditionsChecker": {
+              "Conditions": [
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": true,
+                  "m_Fact": "!bp_408b25c6d9f223b41b935e6ec550e88d"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_d945ac76fc6a06e44b890252824db30a"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_fbed3ca8c0d89124ebb3299ccf68c439"
+                }
+              ],
+              "Operation": "And"
+            },
+            "IfFalse": {
+              "Actions": []
+            },
+            "IfTrue": {
+              "Actions": [
+                {
+                  "$type": "ContextActionAddFeature",
+                  "m_PermanentFeature": "!bp_408b25c6d9f223b41b935e6ec550e88d",
+                  "m_SetRankFrom": null
+                }
+              ]
+            }
+          },
+          {
+            "$type": "Conditional",
+            "ConditionsChecker": {
+              "Conditions": [
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": true,
+                  "m_Fact": "!bp_6e33cde96209b5a4f9596a6e509de532"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_d945ac76fc6a06e44b890252824db30a"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_e4027e0fec48e8048a172c6627d4eba9"
+                }
+              ],
+              "Operation": "And"
+            },
+            "IfFalse": {
+              "Actions": []
+            },
+            "IfTrue": {
+              "Actions": [
+                {
+                  "$type": "ContextActionAddFeature",
+                  "m_PermanentFeature": "!bp_6e33cde96209b5a4f9596a6e509de532",
+                  "m_SetRankFrom": null
+                }
+              ]
+            }
+          },
+          {
+            "$type": "Conditional",
+            "ConditionsChecker": {
+              "Conditions": [
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": true,
+                  "m_Fact": "!bp_29e4076127a404e4ab1cde7e967e1047"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_fbed3ca8c0d89124ebb3299ccf68c439"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_e4027e0fec48e8048a172c6627d4eba9"
+                }
+              ],
+              "Operation": "And"
+            },
+            "IfFalse": {
+              "Actions": []
+            },
+            "IfTrue": {
+              "Actions": [
+                {
+                  "$type": "ContextActionAddFeature",
+                  "m_PermanentFeature": "!bp_29e4076127a404e4ab1cde7e967e1047",
+                  "m_SetRankFrom": null
+                }
+              ]
+            }
+          },
+          {
+            "$type": "Conditional",
+            "ConditionsChecker": {
+              "Conditions": [
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": true,
+                  "m_Fact": "!bp_9b7bf2754e2012e4dac135fd6c782fac"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_ba7767cb03f7f3949ad08bd3ff8a646f"
+                },
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_535a9c4dbe912924396ae50cc7fba8c4"
+                }
+              ],
+              "Operation": "And"
+            },
+            "IfFalse": {
+              "Actions": []
+            },
+            "IfTrue": {
+              "Actions": [
+                {
+                  "$type": "ContextActionAddFeature",
+                  "m_PermanentFeature": "!bp_9b7bf2754e2012e4dac135fd6c782fac",
+                  "m_SetRankFrom": null
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "CompositeBlastBuff",
+  "guid": "cb30a291c75def84090430fbf2b5c05e"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FleshTearerWeaponItem",
+  "guid": "81d9023c62df4ca6a6742c230cfc9ac7",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_98a0dc03586a6d04791901c41700e516"
+}

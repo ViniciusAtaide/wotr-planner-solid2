@@ -1,0 +1,8 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "HeavyShieldHellknight",
+  "guid": "47c3676497e325b4dbbfc32ad7c2f680",
+  "m_ArmorComponent": "!bp_7a126271f91b82741aa0086463befd1b",
+  "m_WeaponComponent": "!bp_7c8f6712c444cf446a4bd3b8b717cb5c"
+}

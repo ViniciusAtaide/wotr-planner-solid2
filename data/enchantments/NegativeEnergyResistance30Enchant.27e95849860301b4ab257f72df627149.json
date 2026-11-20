@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a77db677646ebfa4792bf6fa0875d5da"
+    }
+  ],
+  "assetName": "NegativeEnergyResistance30Enchant",
+  "guid": "27e95849860301b4ab257f72df627149"
+}

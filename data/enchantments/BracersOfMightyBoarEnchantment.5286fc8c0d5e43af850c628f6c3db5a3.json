@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a2c3ab749ab54adfaf74393c250773fb"
+    }
+  ],
+  "assetName": "BracersOfMightyBoarEnchantment",
+  "guid": "5286fc8c0d5e43af850c628f6c3db5a3"
+}

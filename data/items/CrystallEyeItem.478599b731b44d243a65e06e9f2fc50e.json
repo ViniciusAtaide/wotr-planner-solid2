@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "CrystallEyeItem",
+  "guid": "478599b731b44d243a65e06e9f2fc50e",
+  "m_Enchantments": [
+    "!bp_8aea2864d9a077a4280baaccfb6cd194"
+  ],
+  "name": "Eye Sealed in Crystal"
+}

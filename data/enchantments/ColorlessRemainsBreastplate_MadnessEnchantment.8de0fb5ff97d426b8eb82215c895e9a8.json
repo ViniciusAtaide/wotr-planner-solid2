@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_318c3287eea84b8e8c2cede6988f164c"
+    }
+  ],
+  "assetName": "ColorlessRemainsBreastplate_MadnessEnchantment",
+  "guid": "8de0fb5ff97d426b8eb82215c895e9a8"
+}

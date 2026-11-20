@@ -1,0 +1,54 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillMobility",
+    "SkillAthletics",
+    "SkillPersuasion",
+    "SkillThievery",
+    "SkillKnowledgeWorld",
+    "SkillPerception",
+    "SkillStealth",
+    "SkillUseMagicDevice"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 5,
+  "assetName": "RogueClass",
+  "guid": "299aa766dee3cbf4790da4efb8c72484",
+  "m_Archetypes": [
+    "!bp_57f93dd8423c97c49989501281296c4a",
+    "!bp_9e94d1847e6f331478e5a714659220ce",
+    "!bp_b5f0b25e1519d27479018353b51fd349",
+    "!bp_490394869f666c141bf8647b1a365220",
+    "!bp_b4f5741d42c4cb04abf5ab3fe33f6fc5",
+    "!bp_4dbc4b7f2d5149ce83854bffa72035ce",
+    "!bp_bd4e70bfb89a452b876713d61b9b8eb2",
+    "!bp_33eb002078e5437b8c25db4b80b4a4fe"
+  ],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_b57b2a75a5abcaf47a01cf84672b50e9",
+  "m_ReflexSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "name": "Rogue"
+}

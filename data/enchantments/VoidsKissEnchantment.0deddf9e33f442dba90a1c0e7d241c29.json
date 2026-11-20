@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_2f586d96926646cca8824a732b3a02f4"
+    }
+  ],
+  "assetName": "VoidsKissEnchantment",
+  "guid": "0deddf9e33f442dba90a1c0e7d241c29"
+}

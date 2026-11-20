@@ -1,0 +1,71 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": false,
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_9f835c539f6e4a96a7b64461f4267d06",
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "DruidDomain",
+    "BlightDruidDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_42cc125d570c5334c89c6499b55fc0a3",
+        "!bp_bb87f638c058cd9468e0a0e25fa9a1a9"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_ef5aedb6a97071b46969b61a86a967db"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_ef5aedb6a97071b46969b61a86a967db"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_6c46620d4cab41b42be8dd8cfb1aa9d2"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "FireDomainProgressionDruid",
+  "guid": "562567d7c244fae43ac61df3d55547ca",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Fire Domain (Druid)"
+}

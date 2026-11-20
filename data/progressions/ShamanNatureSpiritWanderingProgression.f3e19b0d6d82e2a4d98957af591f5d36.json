@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_379d33ef16e812146b5517601ab25e66"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_0a7166e9c6ea5874e9fc4984f30f2d8d"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_f54191d614633da4baac7a47a659746b"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_e7f4cfcd7488ac14bbc3e09426b59fd0"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ShamanNatureSpiritWanderingProgression",
+  "guid": "f3e19b0d6d82e2a4d98957af591f5d36",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Nature"
+}

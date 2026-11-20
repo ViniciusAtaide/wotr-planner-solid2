@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddContextStatBonus",
+      "Descriptor": "Racial",
+      "HasMinimal": false,
+      "Minimal": 0,
+      "Multiplier": 1,
+      "Stat": "SkillLoreReligion",
+      "Value": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_9c747d24f6321f744aa1bb4bd343880d"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_6cde66a7da5a2024c906d887db735223"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_f268a00e42618144e86c9db76af7f3e9"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BarrowDwarf",
+  "guid": "8a1a0f9f397144ce9445efe86b7af722",
+  "name": "Barrow Dwarf"
+}

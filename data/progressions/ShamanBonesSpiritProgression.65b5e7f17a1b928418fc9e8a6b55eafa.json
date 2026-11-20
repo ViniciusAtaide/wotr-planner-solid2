@@ -1,0 +1,52 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "ShamanSpirit"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_f556c44606e5eaa47bac31aae9ebc96d",
+        "!bp_772cc2fcc6602874c9b0a828b2e990d9"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_3f8db74aafbcaff40ae3f2cf5192ca4f"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_3ab4bdce51ab27641a7d6ac825d8e0be"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_10bb6847ee6b4cbf86dded2d86b76ab6"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ShamanBonesSpiritProgression",
+  "guid": "65b5e7f17a1b928418fc9e8a6b55eafa",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Bones (progression)"
+}

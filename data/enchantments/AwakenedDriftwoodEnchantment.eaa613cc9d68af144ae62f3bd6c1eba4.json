@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_62b2b39e6b51835448ad230c00708040"
+    }
+  ],
+  "assetName": "AwakenedDriftwoodEnchantment",
+  "guid": "eaa613cc9d68af144ae62f3bd6c1eba4"
+}

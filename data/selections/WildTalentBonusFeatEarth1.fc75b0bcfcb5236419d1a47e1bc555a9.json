@@ -1,0 +1,65 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c6816ad80a3df9c4ea7d3b012b06bacd"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_956b65effbf37e5419c13100ab4385a3"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c43d9c2d23e56fb428a4eb60da9ba1cb"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_79042cb55f030614ea29956177977c52"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_0f15c6f70d8fb2b49aa6cc24239cc5fa"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d2a93ab18fcff8c419b03a2c3d573606"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "KineticWildTalent"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "WildTalentBonusFeatEarth1",
+  "guid": "fc75b0bcfcb5236419d1a47e1bc555a9",
+  "m_AllFeatures": [
+    "!bp_79042cb55f030614ea29956177977c52",
+    "!bp_54ee847996c25cd4ba8773d7b8555174",
+    "!bp_4cc71ae82bdd85b40b3cfe6697bb7949"
+  ],
+  "name": "Kineticist Bonus Feat — Earth (with Trip)"
+}

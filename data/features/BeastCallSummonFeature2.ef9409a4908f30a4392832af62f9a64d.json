@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 5,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_772c83a25e2268e448e841dcd548235f",
+      "m_Feature": "!bp_39cc52b6e4c8b7b4bafc059659dbb646"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BeastCallSummonFeature2",
+  "guid": "ef9409a4908f30a4392832af62f9a64d",
+  "name": "Summon Nature's Ally II"
+}

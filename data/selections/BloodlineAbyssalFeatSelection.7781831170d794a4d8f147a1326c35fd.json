@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_b09b58c7f8efff244a33269489abeac6"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": true,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BloodlineAbyssalFeatSelection",
+  "guid": "7781831170d794a4d8f147a1326c35fd",
+  "m_AllFeatures": [
+    "!bp_38155ca9e4055bb48a89240a2055dcc3",
+    "!bp_d809b6c4ff2aaff4fa70d712a70f7d7b",
+    "!bp_a1de1e4f92195b442adb946f0e2b9d4e",
+    "!bp_79042cb55f030614ea29956177977c52",
+    "!bp_9972f33f977fc724c838e59641b2fca5",
+    "!bp_c541f80af8d0af4498e1abb6025780c7",
+    "!bp_b3614622866fe7046b787a548bbd7f59",
+    "!bp_9719015edcbf142409592e2cbaab7fe1"
+  ],
+  "name": "Bloodline Feat Selection"
+}

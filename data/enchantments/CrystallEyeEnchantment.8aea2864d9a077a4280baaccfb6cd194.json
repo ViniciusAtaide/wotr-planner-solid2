@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_1fe9cd3fb689e2f49b8eafd78864bb9d"
+    }
+  ],
+  "assetName": "CrystallEyeEnchantment",
+  "guid": "8aea2864d9a077a4280baaccfb6cd194"
+}

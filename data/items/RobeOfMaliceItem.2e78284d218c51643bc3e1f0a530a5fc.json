@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionAlignment",
+      "Alignment": "LawfulEvil"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_e8f21e5b58e0569468e420ebea456124"
+    }
+  ],
+  "assetName": "RobeOfMaliceItem",
+  "guid": "2e78284d218c51643bc3e1f0a530a5fc",
+  "m_Enchantments": [],
+  "name": "Robe of Malice"
+}

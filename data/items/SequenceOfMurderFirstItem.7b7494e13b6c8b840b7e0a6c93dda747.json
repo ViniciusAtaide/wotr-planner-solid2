@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "SequenceOfMurderFirstItem",
+  "guid": "7b7494e13b6c8b840b7e0a6c93dda747",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": "!bp_b8a8392cee0442e4e822ddd605f8fcb8",
+  "m_Type": "!bp_87d76c7534506a546a065731ee6a38cd",
+  "name": "Sequence of Murder"
+}

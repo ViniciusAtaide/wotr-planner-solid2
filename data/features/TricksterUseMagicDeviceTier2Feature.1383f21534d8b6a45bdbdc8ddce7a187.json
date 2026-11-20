@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "TricksterUseMagicDeviceUnlimitedWands"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_647c848dd47b93d42bd3000bce93dff6"
+    }
+  ],
+  "Groups": [
+    "MythicTrick2"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterUseMagicDeviceTier2Feature",
+  "guid": "1383f21534d8b6a45bdbdc8ddce7a187",
+  "name": "Reuse Magic Device"
+}

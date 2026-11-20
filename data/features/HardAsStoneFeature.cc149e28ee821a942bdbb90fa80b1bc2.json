@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HardAsStoneFeature",
+  "guid": "cc149e28ee821a942bdbb90fa80b1bc2",
+  "name": "Hard as Stone"
+}

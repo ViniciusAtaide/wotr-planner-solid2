@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_fb3175e49fa347cdb2faffc81e1efc60"
+    }
+  ],
+  "assetName": "UnveilerEnchantment",
+  "guid": "2b3e38a0bd454611b40381d1d1c5aad2"
+}

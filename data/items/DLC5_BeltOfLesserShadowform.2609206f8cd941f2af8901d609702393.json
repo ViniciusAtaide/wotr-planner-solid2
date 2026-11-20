@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "DLC5_BeltOfLesserShadowform",
+  "guid": "2609206f8cd941f2af8901d609702393",
+  "m_Enchantments": [
+    "!bp_2042beb64a5e12443be55b413d7ff733"
+  ],
+  "name": "Belt of Lesser Shadowform"
+}

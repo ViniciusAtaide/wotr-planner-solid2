@@ -1,0 +1,68 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e2ea9d9214674e2382cc140e057e7aaa"
+    }
+  ],
+  "ForAllOtherClasses": true,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "OracleCurse"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_a8fc9415538caac4e9f99c5d2a88b0ca"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_83980a7bc51c0e94aa94d22b4668c48a"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_7997b96cf77de5e40ba11e9e10c46f88"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_b79d17ba29f6a3944826a73e22d72239"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WastingCurseProgression",
+  "guid": "1dddfbb862b6857478d13fcdd78911f4",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_c5f6e53e71059fb4d802ce81a277a12d"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Wasting (Oracle's Curse)"
+}

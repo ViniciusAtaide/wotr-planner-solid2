@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "DLC3_BootsOfUndersumpItem",
+  "guid": "77e8e9ceb50447bfbae19f6c9a850d76",
+  "m_Enchantments": [
+    "!bp_fde4d5f97f834c7a8db4517eed180e68"
+  ],
+  "name": "Offroad Boots"
+}

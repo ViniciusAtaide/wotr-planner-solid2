@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "air",
+  "reason": "Each elemental bloodline grants its own \"Elemental Body\" at level 20 (BloodlineElementalAirProgression and the seeker's copy), and the Mythic Bloodline Ascendance selection offers all four. The four share their grantors' family name, so each is qualified by its element.",
+  "target": "7c3be22702ee39a418a5fba0e85e68de"
+}

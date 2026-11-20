@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "PurgingChainsFeature",
+  "guid": "b487473ce4c54ebca18b78170c1854fa"
+}

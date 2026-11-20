@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "CameliaAmuletItem",
+  "guid": "94b2b8b9ef254344cbc71663fecf8b99",
+  "m_Enchantments": [
+    "!bp_ef2d4aaad665a2144b1bd0355535e2e6"
+  ],
+  "name": "Bone Amulet (Camellia)"
+}

@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "DrunkenKiSelection",
+  "guid": "97da13a43026460f8d4d54e1c69af202",
+  "m_AllFeatures": [
+    "!bp_ba74cb907d0849d6b2afccebe69bef81",
+    "!bp_29e17b65c26b433ab9b05e73b84b230f",
+    "!bp_04441890a76241599e883916d64d12c6",
+    "!bp_30d680b335254fb292c18603bd31e88b",
+    "!bp_9bbbb3a50ff1460f9ff50c46190bad54",
+    "!bp_781dab3705de4915a89a76370594f20e",
+    "!bp_ff1b154a9e044e79a6eda27972997480",
+    "!bp_11e1819a4f524e2ab76a322dd4aba0af",
+    "!bp_ed0a79e7d03b4fea9d78dca2c87e12f9",
+    "!bp_e3dca1403795418aafa1dd9134bd86e7",
+    "!bp_97e677d4fd014240a14758fd6cfbf321",
+    "!bp_24b080d6d7914fd2b358e8449b177c2a"
+  ],
+  "name": "Drunken Ki (Drunken Master 4)"
+}

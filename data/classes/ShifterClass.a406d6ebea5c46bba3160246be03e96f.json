@@ -1,0 +1,53 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillLoreNature",
+    "SkillMobility",
+    "SkillPerception",
+    "SkillStealth"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    },
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "NeutralGood, LawfulNeutral, TrueNeutral, ChaoticNeutral, NeutralEvil",
+      "ArchetypeAlignment": false,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D10",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 3,
+  "assetName": "ShifterClass",
+  "guid": "a406d6ebea5c46bba3160246be03e96f",
+  "m_Archetypes": [
+    "!bp_1a51b5856d3b48d78b3e967dc5f20bd6",
+    "!bp_2d5b06e413a9408cbd5bb999b5a4cc4a",
+    "!bp_1cdfc7d306d1430eac19427539b62091",
+    "!bp_f5d22b6b5a7940d49a4d494f67a91efa",
+    "!bp_41d5b44e421048d09d32623689173e11",
+    "!bp_c42d338616fa46ab9bcc67c94bca7609",
+    "!bp_aed5b306ad734a6da5d5638edcb667c9",
+    "!bp_a30313b4b01a4049ae2f50884917e443"
+  ],
+  "m_BaseAttackBonus": "!bp_b3057560ffff3514299e8b93e7648a9d",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_da560d3be3c943d8b1fa23e77dd7efa4",
+  "m_ReflexSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "name": "Shifter"
+}

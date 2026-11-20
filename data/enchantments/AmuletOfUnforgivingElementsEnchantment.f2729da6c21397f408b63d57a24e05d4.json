@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_2cc9b7e8d7117a9458285333822bf95d"
+    }
+  ],
+  "assetName": "AmuletOfUnforgivingElementsEnchantment",
+  "guid": "f2729da6c21397f408b63d57a24e05d4"
+}

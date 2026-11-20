@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_1e1f627d26ad36f43bbd26cc2bf8ac7e"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "WeaponCategory",
+  "Ranks": 1,
+  "RequireProficiency": true,
+  "WeaponSubCategory": "None",
+  "assetName": "WeaponFocusMythicFeat",
+  "guid": "74eb201774bccb9428ba5ac8440bf990",
+  "m_Prerequisite": "!bp_1e1f627d26ad36f43bbd26cc2bf8ac7e",
+  "name": "Weapon Focus (Mythic)"
+}

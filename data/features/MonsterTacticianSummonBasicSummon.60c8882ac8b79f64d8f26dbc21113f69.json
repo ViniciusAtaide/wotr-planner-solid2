@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MonsterTacticianSummonBasicSummon",
+  "guid": "60c8882ac8b79f64d8f26dbc21113f69",
+  "name": "Summon Monster"
+}

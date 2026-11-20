@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "RobeOfRunes",
+  "guid": "24542aceda6747ad80ed9566ff715ffa",
+  "m_Enchantments": [
+    "!bp_4a235cbdeebd2524681870153bab3cba",
+    "!bp_9c1679810b8b466ea168751f41281ce4"
+  ],
+  "name": "Robe of Runes"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_48b3df47512e23b42a0b64cb57ed800f"
+    }
+  ],
+  "assetName": "RobeOfArcaneAnnihilationEnchant",
+  "guid": "cff0491e9570d5943ba48e8c872f40e4"
+}

@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "ThrowingAxe",
+  "Components": [],
+  "assetName": "ThrowingAxe",
+  "guid": "ca131c71f4fefcb48b30b5991520e01d",
+  "m_AttackType": "Ranged",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Axes, Thrown",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Throwing Axe"
+}

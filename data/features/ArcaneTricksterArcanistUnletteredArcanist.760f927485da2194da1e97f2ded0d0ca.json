@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_44f3ba33839a87f48a66b2b9b2f7c69b",
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 2,
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "Groups": [
+    "ArcaneTricksterSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ArcaneTricksterArcanistUnletteredArcanist",
+  "guid": "760f927485da2194da1e97f2ded0d0ca",
+  "m_Spellbook": "!bp_b242f991107095d41ae129f46ed5d97a",
+  "name": "Arcanist"
+}

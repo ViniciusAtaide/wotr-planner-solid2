@@ -1,0 +1,65 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_61f82ba786fe05643beb3cd3910233a8"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_78177315fc63b474ea3cbb8df38fafcd"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 10,
+      "Not": false,
+      "m_CharacterClass": "!bp_cda0615668a6df14eb36ba19ee881af6"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 10,
+      "Not": false,
+      "m_CharacterClass": "!bp_c75e0971973957d4dbad24bc7957e4fb"
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 10,
+      "m_Archetype": "!bp_19b4a243d9a4bd34887d03c3dea03ced",
+      "m_CharacterClass": "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "RangerStyleSelection10",
+  "guid": "78177315fc63b474ea3cbb8df38fafcd",
+  "m_AllFeatures": [
+    "!bp_7ef950ca681955d47bc4efbe77073e2c",
+    "!bp_7d5bd07830a5e2c478852bf8b860db2c",
+    "!bp_b2e73b554839a314a8c716dbf33fcfc3",
+    "!bp_f96ad7f1fe7e62c4d8f7540d0f4c7313",
+    "!bp_ee907845112b8aa4e907cf326e6142a6",
+    "!bp_c9629ef9eebb88b479b2fbc5e836656a"
+  ],
+  "name": "Combat Style Feat (Ranger 10)"
+}

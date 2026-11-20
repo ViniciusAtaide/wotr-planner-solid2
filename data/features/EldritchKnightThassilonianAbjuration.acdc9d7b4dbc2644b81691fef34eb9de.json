@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_15c681d5a76c1a742abe2760376ddf6d"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_ba34257984f4c41408ce1dc2004e342e"
+    }
+  ],
+  "Groups": [
+    "EldritchKnightSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "EldritchKnightThassilonianAbjuration",
+  "guid": "acdc9d7b4dbc2644b81691fef34eb9de",
+  "m_Spellbook": "!bp_58b15cc36ceda8942a7a29aafa755452",
+  "name": "Thassilonian Specialist — Envy"
+}

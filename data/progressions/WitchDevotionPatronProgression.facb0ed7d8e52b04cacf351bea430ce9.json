@@ -1,0 +1,81 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "WitchPatron"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_b50f42b1ef5334544862c3458d5b06cf"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_98ef9856915d231479c9744b341ce32a"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_240f0fac5f96ded4fb689640818153d3"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_67b193a85d73dd142b1de8eeba2647c6"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_f9ee8eee80b93e640840ae87d9760623"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_1fe59c0c5a60557438e9211e04328068"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_a7844d165e9ab7e4aa1113df7beb4167"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_52e1cff2a17a0a044b1306962ab6f1fd"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_5e1ff08d0d520ec458f4c72d8e396bc1"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WitchDevotionPatronProgression",
+  "guid": "facb0ed7d8e52b04cacf351bea430ce9",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Devotion"
+}

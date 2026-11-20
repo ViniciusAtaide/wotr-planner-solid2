@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "GreaterFocusedRageFeature",
+  "guid": "ce0943a4687f4967966cd4354f12019c",
+  "name": "Greater Focused Rage"
+}

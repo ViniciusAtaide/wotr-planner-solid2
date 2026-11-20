@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_4d107a429575cb344bcba32a5b1a6abe",
+      "m_Feature": "!bp_754bc5933712bab4ea08710a1577cb27"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_4d107a429575cb344bcba32a5b1a6abe",
+      "m_Feature": "!bp_4d107a429575cb344bcba32a5b1a6abe"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicGreenBreathWeaponBaseFeatureDisciple",
+  "guid": "1c65cf4f3301a1648831d5128c969727",
+  "name": "Breath Weapon"
+}

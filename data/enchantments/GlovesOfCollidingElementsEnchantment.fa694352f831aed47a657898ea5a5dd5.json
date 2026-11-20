@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_35f550e08d357d34080daf8e6595604e"
+    }
+  ],
+  "assetName": "GlovesOfCollidingElementsEnchantment",
+  "guid": "fa694352f831aed47a657898ea5a5dd5"
+}

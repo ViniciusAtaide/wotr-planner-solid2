@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "ForewarningShieldFeature",
+  "guid": "f0c2ed741b77d28459100eb7546b2621",
+  "name": "Immunity to critical hits"
+}

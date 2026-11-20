@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "FencersGiftItem",
+  "guid": "7b31959c8bb4d7e48a693c62a714e3be",
+  "m_Enchantments": [
+    "!bp_e67e212b00851824d9769c6fc09f7b75"
+  ],
+  "name": "Fencer's Gift"
+}

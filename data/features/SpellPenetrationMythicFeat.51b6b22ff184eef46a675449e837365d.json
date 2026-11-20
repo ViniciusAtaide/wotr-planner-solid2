@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_ee7dc126939e4d9438357fbd5980d459"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_1978c3f91cfbbc24b9c9b0d017f4beec",
+      "m_Feature": "!bp_73283d50ed8b4385ba5615238a3c79a6"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_1978c3f91cfbbc24b9c9b0d017f4beec",
+      "m_Feature": "!bp_544056cc5aca4d03823e13c5f8873c88"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SpellPenetrationMythicFeat",
+  "guid": "51b6b22ff184eef46a675449e837365d",
+  "name": "Spell Penetration (Mythic)"
+}

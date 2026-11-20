@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "ScaledFistKiPowers",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ScaledFistKiPowerSelection",
+  "guid": "4694f6ac27eaed34abb7d09ab67b4541",
+  "m_AllFeatures": [
+    "!bp_b56f18c437dc324438f0d956fb34a8cd",
+    "!bp_4cebd8d46ab97584384bf974ef56ab20",
+    "!bp_3df55c1210c7d8a49a4d7c006bf0fd20",
+    "!bp_f11f418b6ec75a142b683a10bcb199eb",
+    "!bp_cb8670cbc16bd43428cebe5a3ca9ad62",
+    "!bp_a9be3ca7d5fd145428c35295f693294d",
+    "!bp_fa1e4965fe009be478a1283727e68c65",
+    "!bp_4da8509d040d25346869aa3722532c2c",
+    "!bp_f2a5f1d040ab6144296069b7269c42e4",
+    "!bp_0f20a31e37fdb8240957b5a5c38e8226",
+    "!bp_8059b100625d18141a0f4c7d87105f72",
+    "!bp_ae997f16b38fcee4fb4ad31e0588cd07",
+    "!bp_a8819b70975701b4e874b2f9862aac24",
+    "!bp_01182bcee8cb41640b7fa1b1ad772421"
+  ],
+  "name": "Ki Power (Scaled Fist)"
+}

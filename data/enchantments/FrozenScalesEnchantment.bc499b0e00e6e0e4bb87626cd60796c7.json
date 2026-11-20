@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_fca63954314547f4cb8a3c57961dfcfd"
+    }
+  ],
+  "assetName": "FrozenScalesEnchantment",
+  "guid": "bc499b0e00e6e0e4bb87626cd60796c7"
+}

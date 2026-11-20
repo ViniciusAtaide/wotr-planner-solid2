@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "GlassAmuletOfClarityItem",
+  "guid": "eed92946d09c54e4b8e8defc9588c18d",
+  "m_Enchantments": [
+    "!bp_1d5f4fa7891486c498010e655f6ef1fd"
+  ],
+  "name": "Glass Amulet of Clarity"
+}

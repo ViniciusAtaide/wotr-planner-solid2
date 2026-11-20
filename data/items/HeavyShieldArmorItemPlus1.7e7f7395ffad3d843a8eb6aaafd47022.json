@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "HeavyShieldArmorItemPlus1",
+  "guid": "7e7f7395ffad3d843a8eb6aaafd47022",
+  "m_Enchantments": [
+    "!bp_e90c252e08035294eba39bafce76c119"
+  ],
+  "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6"
+}

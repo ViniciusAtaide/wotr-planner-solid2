@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_15ce31a235a118b4890d8b714c4370ff"
+    }
+  ],
+  "assetName": "SarenraeObliteratingLightScalemailEnchantment",
+  "guid": "9dfd4cd1208d7de4b8671cef95fd0f1b"
+}

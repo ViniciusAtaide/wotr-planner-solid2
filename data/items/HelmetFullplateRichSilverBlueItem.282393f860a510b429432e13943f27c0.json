@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HelmetFullplateRichSilverBlueItem",
+  "guid": "282393f860a510b429432e13943f27c0",
+  "m_Enchantments": [
+    "!bp_743c8d741726ddb44b1ceb0c6d676591"
+  ],
+  "name": "Owlbear Fur Helmet"
+}

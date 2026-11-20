@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_036d7e6bf5c14defa8fd90fd83a15e15"
+    }
+  ],
+  "assetName": "LizardTailEnchantment",
+  "guid": "3435e6af4b927b64e83340b18244a2dd"
+}

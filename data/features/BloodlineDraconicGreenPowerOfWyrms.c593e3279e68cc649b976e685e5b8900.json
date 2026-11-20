@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_49115e2147cd32841baa34c305171daa"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicGreenPowerOfWyrms",
+  "guid": "c593e3279e68cc649b976e685e5b8900",
+  "name": "Power of Wyrms (Green)"
+}

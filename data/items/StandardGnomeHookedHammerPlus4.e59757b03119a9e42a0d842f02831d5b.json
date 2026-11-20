@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardGnomeHookedHammerPlus4",
+  "guid": "e59757b03119a9e42a0d842f02831d5b",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": "!bp_a5bbedb1b6ca31c4b8528c2776b4d0c9",
+  "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3"
+}

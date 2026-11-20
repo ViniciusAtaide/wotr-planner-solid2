@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [],
+  "assetName": "LeatherBardingType",
+  "guid": "503056b4c5a01f44db0ed10ce4c9ef01",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "LightBarding",
+  "name": "Light Armor — Leather Barding"
+}

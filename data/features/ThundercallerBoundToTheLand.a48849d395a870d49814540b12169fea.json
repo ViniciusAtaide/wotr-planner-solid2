@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_772c83a25e2268e448e841dcd548235f"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 1,
+      "m_Progression": "Div2",
+      "m_StartLevel": 0,
+      "m_StepLevel": 0,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": true
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 10,
+  "assetName": "ThundercallerBoundToTheLand",
+  "guid": "a48849d395a870d49814540b12169fea",
+  "name": "Bound to the Land"
+}

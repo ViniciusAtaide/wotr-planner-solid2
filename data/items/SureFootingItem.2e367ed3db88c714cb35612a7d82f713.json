@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "SureFootingItem",
+  "guid": "2e367ed3db88c714cb35612a7d82f713",
+  "m_Enchantments": [
+    "!bp_1502281191399344cb3c72c5b2792f0f"
+  ],
+  "name": "Sure Footing"
+}

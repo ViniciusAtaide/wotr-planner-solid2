@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "BracersOfAnimalFuryItem",
+  "guid": "e845debb19b593d4fa794cb4f2fba9fa",
+  "m_Enchantments": [
+    "!bp_960338b649a00754c9cd24badefd253d"
+  ],
+  "name": "Bracers of Animal Fury"
+}

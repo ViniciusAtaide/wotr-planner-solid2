@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ResistLevelDrainDhampir",
+  "guid": "38570ac838f9e7e48af006800c0fd69c",
+  "name": "Resist Level Drain"
+}

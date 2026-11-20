@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_0f15c6f70d8fb2b49aa6cc24239cc5fa"
+      ]
+    }
+  ],
+  "Groups": [
+    "RogueTalent",
+    "SlayerTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "UnbalancingTrick",
+  "guid": "f3aeaba4f6506824ab393b03d28faa50",
+  "name": "Unbalancing Trick"
+}

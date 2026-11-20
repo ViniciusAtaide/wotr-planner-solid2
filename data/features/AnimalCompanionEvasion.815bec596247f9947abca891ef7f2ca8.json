@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AnimalCompanionEvasion",
+  "guid": "815bec596247f9947abca891ef7f2ca8",
+  "name": "Evasion"
+}

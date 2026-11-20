@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintRace",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "SelectableRaceStat": true,
+  "assetName": "HalfOrcRace",
+  "guid": "1dc20e195581a804890ddc74218bfd8e",
+  "m_Features": [
+    "!bp_885f478dff2e39442a0f64ceea6339c9",
+    "!bp_6ab6c271d1558344cbc746350243d17d",
+    "!bp_c99f3405d1ef79049bd90678a666e1d7",
+    "!bp_9c747d24f6321f744aa1bb4bd343880d",
+    "!bp_8c3244440e0b4d1d9d9b182685cbacbd"
+  ],
+  "name": "Half-Orc"
+}

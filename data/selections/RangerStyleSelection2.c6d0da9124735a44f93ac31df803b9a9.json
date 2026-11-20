@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c6d0da9124735a44f93ac31df803b9a9"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "RangerStyleSelection2",
+  "guid": "c6d0da9124735a44f93ac31df803b9a9",
+  "m_AllFeatures": [
+    "!bp_3cf94df3f1cf9a443a880bc1ae9be3c6",
+    "!bp_1c5988e90e0657645972e7b28ba4ce8b",
+    "!bp_2d54cc761ab82604f93d82b4b358cf7e",
+    "!bp_f489d9f696c588d43907b879d89451be",
+    "!bp_019e68517c95c5447bff125b8a91c73f"
+  ],
+  "name": "Combat Style Feat"
+}

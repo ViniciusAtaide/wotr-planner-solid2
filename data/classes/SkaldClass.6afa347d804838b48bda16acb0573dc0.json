@@ -1,0 +1,47 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillPersuasion",
+    "SkillMobility",
+    "SkillAthletics",
+    "SkillPerception",
+    "SkillKnowledgeWorld",
+    "SkillKnowledgeArcana",
+    "SkillLoreNature",
+    "SkillLoreReligion",
+    "SkillUseMagicDevice"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D8",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 3,
+  "assetName": "SkaldClass",
+  "guid": "6afa347d804838b48bda16acb0573dc0",
+  "m_Archetypes": [
+    "!bp_71d41dd6309ea994886908c34c87ccd9",
+    "!bp_5e63586bebd229649bdafe0fde4caaec",
+    "!bp_9c46c4e4303e5da40b63faa6df18e2c2",
+    "!bp_72fa7b1c7a6ede44eb490080bf4a2f90",
+    "!bp_67daa4f4f2b62f54cb3ec56bdc85dea6",
+    "!bp_db942e7040084ea289c6be2bfeb3d0a8",
+    "!bp_a1f5ab7eb78942f6889304acbd92e945"
+  ],
+  "m_BaseAttackBonus": "!bp_4c936de4249b61e419a3fb775b9f2581",
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_26418fed2bc153245972a5b54204ed75",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": "!bp_8f159d2f22ced074ea32995eb5a446a0",
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Skald"
+}

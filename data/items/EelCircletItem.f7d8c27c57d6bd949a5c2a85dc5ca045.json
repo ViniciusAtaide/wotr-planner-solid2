@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "EelCircletItem",
+  "guid": "f7d8c27c57d6bd949a5c2a85dc5ca045",
+  "m_Enchantments": [
+    "!bp_4a235cbdeebd2524681870153bab3cba"
+  ],
+  "name": "Eel's Circlet"
+}

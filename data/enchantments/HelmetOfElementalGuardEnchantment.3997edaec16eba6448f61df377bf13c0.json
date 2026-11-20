@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_5f00bf129ea429e47b182de0893e78ee"
+    }
+  ],
+  "assetName": "HelmetOfElementalGuardEnchantment",
+  "guid": "3997edaec16eba6448f61df377bf13c0"
+}

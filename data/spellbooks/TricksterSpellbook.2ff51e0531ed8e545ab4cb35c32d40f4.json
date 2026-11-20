@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": true,
+  "IsMythic": true,
+  "Spontaneous": true,
+  "assetName": "TricksterSpellbook",
+  "guid": "2ff51e0531ed8e545ab4cb35c32d40f4",
+  "m_SpellsPerDay": "!bp_9fef715fbd3a87e46aaf57eeccb1e9df",
+  "name": "Trickster"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Shortspear",
+  "Components": [],
+  "assetName": "DLC2_Shortspear_Fake2",
+  "guid": "fafab7412f4847879eb36a292cd93b8e",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Spears, Thrown",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false
+}

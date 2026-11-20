@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_aa84d44512e5ef64aa92f79be5aa8734"
+    }
+  ],
+  "assetName": "GlovesOfNeophyteEnchantment",
+  "guid": "4f2b8d249e78b4b4486a72a6b7e628a3"
+}

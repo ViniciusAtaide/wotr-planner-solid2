@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_bce4989b070ce924b986bf346f59e885"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "MysticTheurgePaladinLevelUp",
+  "guid": "d96bb38e6122d2746818d2bcea2b8193",
+  "name": "Paladin"
+}

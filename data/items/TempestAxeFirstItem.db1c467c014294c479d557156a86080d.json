@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "TempestAxeFirstItem",
+  "guid": "db1c467c014294c479d557156a86080d",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": "!bp_3e635e1b36c3ce14e8e67a047e76af10",
+  "m_Type": "!bp_87d76c7534506a546a065731ee6a38cd",
+  "name": "Tempest"
+}

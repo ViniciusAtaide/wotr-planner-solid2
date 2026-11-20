@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3825c0e3d35beae4e8fd5e83cb240078"
+    }
+  ],
+  "assetName": "StauntonGlaiveMountEnchantment",
+  "guid": "f16382c7f231d424ca4caf3fb1d1bbdd"
+}

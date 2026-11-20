@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_5e33543285d1c3d49b55282cf466bef3"
+    },
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_ba34257984f4c41408ce1dc2004e342e"
+    }
+  ],
+  "Groups": [
+    "HellknightSigniferSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "HellknightSigniferThassilonianEvocation",
+  "guid": "f8ed1800725b3e74ebb86783dbde933a",
+  "m_Spellbook": "!bp_05b105ddee654db4fb1547ba48ffa160",
+  "name": "Thassilonian Specialist — Wrath"
+}

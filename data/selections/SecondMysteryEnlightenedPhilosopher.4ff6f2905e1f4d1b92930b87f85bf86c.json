@@ -1,0 +1,43 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_9d5fdd3b4a6cd4f40beddbc72b2c07a0"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_4ff6f2905e1f4d1b92930b87f85bf86c"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "EnlightenedPhilosopherMystery",
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "OnlyNew",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "SecondMysteryEnlightenedPhilosopher",
+  "guid": "4ff6f2905e1f4d1b92930b87f85bf86c",
+  "m_AllFeatures": [
+    "!bp_36e136a4cc77a434083a12a72678a9ba",
+    "!bp_677fbcaa2a87cf94296138568db117a8",
+    "!bp_511ee1f805f8d1445b64f4c8398ca938",
+    "!bp_804e1560f21c95b43a45a9825336bd19",
+    "!bp_db8b731dfb6c9974b8bf67a19aefe225",
+    "!bp_8b74ff25102c72047bf77e6e3642ee2d",
+    "!bp_2127c37ccc7986e4083665552d6ecd5c",
+    "!bp_1267082c536549c4c86f0725b6eea627",
+    "!bp_3812dcb2fe59ecd449285391db677edc"
+  ],
+  "name": "Second Mystery (Enlightened Philosopher)"
+}

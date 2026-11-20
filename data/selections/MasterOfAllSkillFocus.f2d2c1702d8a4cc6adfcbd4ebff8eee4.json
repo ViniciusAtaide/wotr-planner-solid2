@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "MasterOfAllSkillFocus",
+  "guid": "f2d2c1702d8a4cc6adfcbd4ebff8eee4",
+  "m_AllFeatures": [
+    "!bp_c9629ef9eebb88b479b2fbc5e836656a"
+  ],
+  "name": "Skill Focus (Master of All)"
+}

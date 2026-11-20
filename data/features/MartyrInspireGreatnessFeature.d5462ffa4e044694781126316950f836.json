@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 5,
+  "assetName": "MartyrInspireGreatnessFeature",
+  "guid": "d5462ffa4e044694781126316950f836",
+  "name": "Inspire Greatness (Martyr)"
+}

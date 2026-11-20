@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillStealth"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "StudentOfWarAdditionalSkillStealth",
+  "guid": "01ded78316f908c468cf28ce455c0f47",
+  "name": "Class Skill — Stealth (Additional Class Skill)"
+}

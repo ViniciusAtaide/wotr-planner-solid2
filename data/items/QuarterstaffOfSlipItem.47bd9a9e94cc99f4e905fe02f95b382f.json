@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "QuarterstaffOfSlipItem",
+  "guid": "47bd9a9e94cc99f4e905fe02f95b382f",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4",
+    "!bp_91a2ce7cb7e9fc04ca489c9fe5fecde7"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_629736dabac7f9f4a819dc854eaed2d6",
+  "name": "Quarterstaff of Slip"
+}

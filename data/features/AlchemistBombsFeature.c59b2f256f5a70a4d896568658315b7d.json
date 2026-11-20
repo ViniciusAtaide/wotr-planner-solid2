@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "FactSinglify",
+      "m_NewFacts": [
+        "!bp_28384b1d7e25c8743b8bbfc56211ac8c"
+      ],
+      "m_OldFacts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 20,
+  "assetName": "AlchemistBombsFeature",
+  "guid": "c59b2f256f5a70a4d896568658315b7d",
+  "name": "Bomb"
+}

@@ -1,0 +1,43 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c11ff5dbd8518c941849b3112d4d6b68"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_cff5c53fe99c48bf863a0005d768f75a"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "DivineHerbalistMystery",
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "OnlyNew",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "SecondMysteryHerbalist",
+  "guid": "cff5c53fe99c48bf863a0005d768f75a",
+  "m_AllFeatures": [
+    "!bp_2af1112188727bf469ec50c5575b6c52",
+    "!bp_c880da2dea6b54f4bad7d1f4b79c2d63",
+    "!bp_e083bd3fa7dfc924fb4e6ab371eda368",
+    "!bp_eac5d0fc2b143c247a42f790230eb778",
+    "!bp_45472076126dc154f9386b0bc4d8416c",
+    "!bp_b52fb5bc68d3edc4b9525f4e7414765f",
+    "!bp_09106dcc03321154f955e2d0296a082e",
+    "!bp_d91dcec40f768ea47b45bb4c4b2af40d",
+    "!bp_4fb980ffe85793b4194b11d3adb70d9e"
+  ],
+  "name": "Second Mystery (Divine Herbalist)"
+}

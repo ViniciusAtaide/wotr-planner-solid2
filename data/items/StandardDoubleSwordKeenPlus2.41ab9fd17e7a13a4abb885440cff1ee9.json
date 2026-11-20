@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDoubleSwordKeenPlus2",
+  "guid": "41ab9fd17e7a13a4abb885440cff1ee9",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": "!bp_39a1a4c4265d5db4da0e7178dec433d5",
+  "m_Type": "!bp_e95efb85a0912a7489be69d5f03a5308",
+  "name": "Keen Two-Bladed Sword +2"
+}

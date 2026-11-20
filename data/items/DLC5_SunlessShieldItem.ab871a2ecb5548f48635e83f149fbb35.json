@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "DLC5_SunlessShieldItem",
+  "guid": "ab871a2ecb5548f48635e83f149fbb35",
+  "m_ArmorComponent": "!bp_9de8a1e2aade478da20672e3e80dbb1f",
+  "m_WeaponComponent": "!bp_7c8f6712c444cf446a4bd3b8b717cb5c",
+  "name": "Sunless Shield"
+}

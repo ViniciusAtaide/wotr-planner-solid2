@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b0d0ed812d973224ca2ba1cbb22c94c6"
+    }
+  ],
+  "assetName": "ChainmailOfComraderyEnchantment",
+  "guid": "81d820d2e826eca498739a67c80665c0"
+}

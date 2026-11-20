@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 5,
+  "assetName": "SpellMasterItemBondSpecializationFeature",
+  "guid": "88fe74c940ce41a0ac62b9b22774be3f",
+  "name": "Object Bond Specialization"
+}

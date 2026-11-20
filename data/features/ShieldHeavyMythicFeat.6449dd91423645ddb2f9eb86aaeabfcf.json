@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_ac57069b6bf8c904086171683992a92a"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ShieldHeavyMythicFeat",
+  "guid": "6449dd91423645ddb2f9eb86aaeabfcf",
+  "name": "Mythic Heavy Shield — Aggressive Block"
+}

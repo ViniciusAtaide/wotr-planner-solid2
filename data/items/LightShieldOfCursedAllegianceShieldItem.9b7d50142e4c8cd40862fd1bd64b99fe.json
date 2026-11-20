@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "LightShieldOfCursedAllegianceShieldItem",
+  "guid": "9b7d50142e4c8cd40862fd1bd64b99fe",
+  "m_ArmorComponent": "!bp_c86cf926c8fbaad4594fabea815a4f13",
+  "m_WeaponComponent": "!bp_62c90581f9892e9468f0d8229c7321c4",
+  "name": "Light Shield of Cursed Allegiance"
+}

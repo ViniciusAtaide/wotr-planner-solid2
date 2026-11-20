@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_2fb1a8920e9941e08bffd57f131365cb"
+    }
+  ],
+  "assetName": "DLC5_DarkLifeRingEnchantment",
+  "guid": "67454e07466246ac916e553ccf268fdd"
+}

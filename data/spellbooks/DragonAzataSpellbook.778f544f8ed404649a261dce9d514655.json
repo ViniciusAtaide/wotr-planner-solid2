@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": -15,
+  "Components": [],
+  "IsArcane": false,
+  "IsMythic": false,
+  "Spontaneous": true,
+  "assetName": "DragonAzataSpellbook",
+  "guid": "778f544f8ed404649a261dce9d514655",
+  "m_SpellsPerDay": "!bp_e08bd7b27c783ec4daec74d8042914e0",
+  "name": "Havoc Dragons"
+}

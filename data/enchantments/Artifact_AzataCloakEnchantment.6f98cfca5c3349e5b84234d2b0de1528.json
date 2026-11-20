@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8794515a267c406b83983e8d8c837d13"
+    }
+  ],
+  "assetName": "Artifact_AzataCloakEnchantment",
+  "guid": "6f98cfca5c3349e5b84234d2b0de1528"
+}

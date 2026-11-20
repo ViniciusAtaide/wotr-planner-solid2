@@ -1,0 +1,82 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_65cff8410a336654486c98fd3bacd8c5"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_f2d2c1702d8a4cc6adfcbd4ebff8eee4"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_f2d2c1702d8a4cc6adfcbd4ebff8eee4"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_f2d2c1702d8a4cc6adfcbd4ebff8eee4"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [
+    "SkillKnowledgeArcana",
+    "SkillMobility",
+    "SkillAthletics",
+    "SkillPersuasion",
+    "SkillThievery",
+    "SkillLoreNature",
+    "SkillPerception",
+    "SkillStealth",
+    "SkillUseMagicDevice",
+    "SkillLoreReligion",
+    "SkillKnowledgeWorld"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_b3646842ffbd01643ab4dac7479b20b0"
+    }
+  ],
+  "RemoveFeatures": [
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": true,
+  "assetName": "MasterOfAllArchetype",
+  "guid": "bd4e70bfb89a452b876713d61b9b8eb2",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Master of All"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_985d6dbff8c143e8b1ce5b96161b1ee0"
+    }
+  ],
+  "assetName": "SpellResistance32Enchant",
+  "guid": "3f63e1996ccb48b5b437ac2e8225dd4a"
+}

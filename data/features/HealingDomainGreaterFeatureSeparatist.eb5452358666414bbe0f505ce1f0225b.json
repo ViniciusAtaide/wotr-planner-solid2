@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HealingDomainGreaterFeatureSeparatist",
+  "guid": "eb5452358666414bbe0f505ce1f0225b",
+  "name": "Healer's Blessing (Forbidden Rites)"
+}

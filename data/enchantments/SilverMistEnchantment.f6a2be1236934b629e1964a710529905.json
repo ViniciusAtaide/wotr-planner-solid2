@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_999252131550432a95abfab927317579"
+    }
+  ],
+  "assetName": "SilverMistEnchantment",
+  "guid": "f6a2be1236934b629e1964a710529905"
+}

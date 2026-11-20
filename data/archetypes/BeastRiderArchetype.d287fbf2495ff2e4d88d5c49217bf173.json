@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_f7da602dae8944d499f00074c973c28a",
+        "!bp_801edc0eaf2d36d4983f1fe5c0f79818"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_0605927df6e2fdd42af6ee2424eb89f2",
+        "!bp_0a0f032ccfe411d4d86b298da4657e58"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "BeastRiderArchetype",
+  "guid": "d287fbf2495ff2e4d88d5c49217bf173",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Beast Rider"
+}

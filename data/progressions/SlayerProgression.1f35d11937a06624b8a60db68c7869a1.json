@@ -1,0 +1,152 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_41cd5ff7ad1bc5848906e050b06d02dc",
+        "!bp_09bdd9445ac38044389476689ae8d5a1"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_04430ad24988baa4daa0bcd4f1c7d118"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_04430ad24988baa4daa0bcd4f1c7d118"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_09bdd9445ac38044389476689ae8d5a1"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87",
+        "!bp_43d1b15873e926848be2abf0ea3ad9a8"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_40d4f55a5ac0e4f469d67d36c0dfc40b"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_43d1b15873e926848be2abf0ea3ad9a8"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_913b9cf25c9536949b43a2651b7ffb66",
+        "!bp_09bdd9445ac38044389476689ae8d5a1",
+        "!bp_a33b99f95322d6741af83e9381b2391c"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": []
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87",
+        "!bp_913b9cf25c9536949b43a2651b7ffb66"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_758e04f4568ec3f4c8d1fd83aed06fb9"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_913b9cf25c9536949b43a2651b7ffb66",
+        "!bp_385260ca07d5f1b4e907ba22a02944fc"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87",
+        "!bp_09bdd9445ac38044389476689ae8d5a1"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_913b9cf25c9536949b43a2651b7ffb66"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_f4df3231977753d4ebd2ceb2ef5901ed"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_9b9eac6709e1c084cb18c3a366e0ec87",
+        "!bp_913b9cf25c9536949b43a2651b7ffb66"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_25e009b7e53f86141adee3a1213af5af"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_913b9cf25c9536949b43a2651b7ffb66",
+        "!bp_09bdd9445ac38044389476689ae8d5a1",
+        "!bp_a26c0279a423fc94cabeea898f4d9f8a"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "SlayerProgression",
+  "guid": "1f35d11937a06624b8a60db68c7869a1",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_c75e0971973957d4dbad24bc7957e4fb"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CloakOfDarkestRitesItem",
+  "guid": "ed3e8b648fce4b33b809606cd1c4b933",
+  "m_Enchantments": [
+    "!bp_22a1fe3336a04072a8412751ac60d43c"
+  ],
+  "name": "Cloak of Darkest Rites"
+}

@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionAlignment",
+      "Alignment": "LawfulGood, NeutralGood, LawfulNeutral"
+    }
+  ],
+  "Double": false,
+  "assetName": "BastardSwordOfHopeItem",
+  "guid": "691bd1aefb7f1894fa4b3ebd3f964b6a",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d2fe2c5516b56f04da1d5ea51ae3ddfe",
+  "name": "Bastard Sword of Hope"
+}

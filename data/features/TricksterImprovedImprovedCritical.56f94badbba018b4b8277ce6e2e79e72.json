@@ -1,0 +1,35 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_f4201c85a991369408740c6888362e20"
+    },
+    {
+      "$type": "PrerequisitePlayerHasFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e9298851786c5334dba1398e9635a83d"
+    }
+  ],
+  "Groups": [
+    "TricksterFeat",
+    "CombatFeat"
+  ],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "WeaponCategory",
+  "Ranks": 1,
+  "RequireProficiency": true,
+  "WeaponSubCategory": "None",
+  "assetName": "TricksterImprovedImprovedCritical",
+  "guid": "56f94badbba018b4b8277ce6e2e79e72",
+  "m_Prerequisite": "!bp_f4201c85a991369408740c6888362e20",
+  "name": "Improved Improved Critical"
+}

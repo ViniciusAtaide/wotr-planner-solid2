@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ParagonShape",
+  "guid": "3ac26dec060aa67409171e6e631a2942",
+  "name": "Brutality Incarnate"
+}

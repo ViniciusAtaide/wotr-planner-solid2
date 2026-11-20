@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "GreaterSwordOfHeaven"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AngelSwordOverwhelmingFlamesFeature",
+  "guid": "477fcaa2b00a1964da43472ddbc3c7de",
+  "name": "Overwhelming Flames"
+}

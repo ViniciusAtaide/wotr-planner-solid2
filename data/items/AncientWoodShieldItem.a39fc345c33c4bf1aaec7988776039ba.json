@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "AncientWoodShieldItem",
+  "guid": "a39fc345c33c4bf1aaec7988776039ba",
+  "m_ArmorComponent": "!bp_10aca1295d7746f7b5c4b9cb6de1c286",
+  "m_WeaponComponent": "!bp_62c90581f9892e9468f0d8229c7321c4",
+  "name": "Ancient Wood"
+}

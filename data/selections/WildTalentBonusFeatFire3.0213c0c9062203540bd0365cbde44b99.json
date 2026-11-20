@@ -1,0 +1,72 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_3d8d3d6678b901444a07984294a1bc24"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_caa7edca64af1914d9e14785beb6a143"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_56e2fc3abed8f2247a621ac37e75f303"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_175d1577bb6c9a04baf88eec99c66334"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_bcbd674ec70ff6f4894bb5f07b6f4095"
+    },
+    {
+      "$type": "PrerequisiteSelectionPossible",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_ThisFeature": "!bp_0213c0c9062203540bd0365cbde44b99"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_d4a2a75d01d1e77489ff692636a538bf"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "KineticWildTalent"
+  ],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "WildTalentBonusFeatFire3",
+  "guid": "0213c0c9062203540bd0365cbde44b99",
+  "m_AllFeatures": [
+    "!bp_3ea2215150a1c8a4a9bfed9d9023903e",
+    "!bp_86d93a5891d299d4983bdc6ef3987afd",
+    "!bp_fc37b70e3d064a147a3a99db4a86ee12"
+  ],
+  "name": "Kineticist Bonus Feat — Fire (with Dazzling Display and Iron Will)"
+}

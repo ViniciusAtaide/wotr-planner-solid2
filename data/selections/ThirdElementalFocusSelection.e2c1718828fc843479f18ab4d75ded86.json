@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "OnlyNew",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "ThirdElementalFocusSelection",
+  "guid": "e2c1718828fc843479f18ab4d75ded86",
+  "m_AllFeatures": [
+    "!bp_651570c873e22b84f893f146ce2de502",
+    "!bp_c43d9c2d23e56fb428a4eb60da9ba1cb",
+    "!bp_56e2fc3abed8f2247a621ac37e75f303",
+    "!bp_86eff374d040404438ad97fedd7218bc"
+  ],
+  "name": "Expanded Element (Kineticist 15)"
+}

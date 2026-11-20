@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_239e6519c43045e38694b6a8882876f2"
+    }
+  ],
+  "assetName": "AmuletOfNaturalArmor7ExtraEnchantment",
+  "guid": "7b9af1df333b4003b07d16f164645929"
+}

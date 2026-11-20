@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ReanimatorGreaterReanimationFeature",
+  "guid": "d538d0cfbd3a4f16bd2b1682c57e06f8",
+  "name": "Greater Reanimation"
+}

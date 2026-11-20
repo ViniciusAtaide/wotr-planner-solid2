@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HatredGoblinoidOrc",
+  "guid": "6cde66a7da5a2024c906d887db735223",
+  "name": "Hatred — Orcs and Goblinoids"
+}

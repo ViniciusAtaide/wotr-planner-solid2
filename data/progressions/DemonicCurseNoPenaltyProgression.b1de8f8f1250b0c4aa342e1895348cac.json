@@ -1,0 +1,73 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_a565a4eb482424548ad2bcc1b6f6ff61"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8ee65f750e2c45d99011effdef829e53"
+    }
+  ],
+  "ForAllOtherClasses": true,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_67726c24a56e2584abaeac609bc79de7"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_587198f2d8625364cb01419961087a36"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_518cbe31972614049b92398cdf0b8eff"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_6244370e2465ceb4ea7b15cf45bec624"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "DemonicCurseNoPenaltyProgression",
+  "guid": "b1de8f8f1250b0c4aa342e1895348cac",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_c5f6e53e71059fb4d802ce81a277a12d"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Demonic (Beneficial Curse)"
+}

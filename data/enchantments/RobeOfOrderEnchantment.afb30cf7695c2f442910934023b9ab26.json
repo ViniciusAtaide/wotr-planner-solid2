@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_a369bba1ebd2cbb498814c93f502c07d"
+    }
+  ],
+  "assetName": "RobeOfOrderEnchantment",
+  "guid": "afb30cf7695c2f442910934023b9ab26"
+}

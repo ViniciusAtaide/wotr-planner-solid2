@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_48ac8db94d5de7645906c7d0ad3bcfbd"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "StartPlusDivStep",
+      "m_StartLevel": 2,
+      "m_StepLevel": 4,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": false
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FearfulMightFeature",
+  "guid": "6ba2b2178dfc4331a34cc2a8a2b68d6a",
+  "name": "Fearful Might"
+}

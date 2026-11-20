@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_ca1f3209e578a5042b45a492fe926d77"
+    }
+  ],
+  "assetName": "CloakFromThickPeltEnchantment",
+  "guid": "11dabeee4547c61438cc0044611de449"
+}

@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 10,
+      "m_Archetype": "!bp_bcd758a75fb54651a7f668fe2661a307",
+      "m_CharacterClass": "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_bee6b9ab7b8d433bb438b616ad5476b4"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PlagueHexConstitutionWeakenedFeature",
+  "guid": "04606edc79f44ce591acd22a5783dbd3",
+  "name": "Plague Mutation: Vulnerable Host"
+}

@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_9a3b2c63afa79744cbca46bea0da9a16"
+    }
+  ],
+  "assetName": "Artifact_AzataCloakItem",
+  "guid": "78cd50deada655e4cbe49765c0bbb7e4",
+  "m_Enchantments": [
+    "!bp_6f98cfca5c3349e5b84234d2b0de1528"
+  ],
+  "name": "The Bound of Possibility (Azata)"
+}

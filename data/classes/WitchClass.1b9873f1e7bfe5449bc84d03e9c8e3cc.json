@@ -1,0 +1,44 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillLoreNature",
+    "SkillPersuasion",
+    "SkillKnowledgeWorld",
+    "SkillUseMagicDevice",
+    "SkillKnowledgeArcana"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D6",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 2,
+  "assetName": "WitchClass",
+  "guid": "1b9873f1e7bfe5449bc84d03e9c8e3cc",
+  "m_Archetypes": [
+    "!bp_c5f6e53e71059fb4d802ce81a277a12d",
+    "!bp_96e4c06b6add0a64a8ad8976f9c38c37",
+    "!bp_191b4be2152fde541ac8984c7f36e91d",
+    "!bp_ee92a9813c04b1440a3af3c766b6b02d",
+    "!bp_08045a390a764d71b2150fd122e05e19",
+    "!bp_d7c7cdbc760041fabaedc1623a53a431",
+    "!bp_411fa458481e44f0855d47a19358874b",
+    "!bp_d37f299738894b97bbc0808c1c44e6d2"
+  ],
+  "m_BaseAttackBonus": "!bp_0538081888b2d8c41893d25d098dee99",
+  "m_FortitudeSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_c5e9e2b086a9814409fb6a29a5acdd0f",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": "!bp_dd04f9239f655ea438976742728e4909",
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Witch"
+}

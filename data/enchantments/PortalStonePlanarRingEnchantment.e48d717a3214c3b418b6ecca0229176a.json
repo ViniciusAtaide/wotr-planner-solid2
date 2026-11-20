@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_39964442dccef8944a36d3799e153a8a"
+    }
+  ],
+  "assetName": "PortalStonePlanarRingEnchantment",
+  "guid": "e48d717a3214c3b418b6ecca0229176a"
+}

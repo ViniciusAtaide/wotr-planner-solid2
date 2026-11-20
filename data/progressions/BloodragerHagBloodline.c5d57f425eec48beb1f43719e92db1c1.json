@@ -1,0 +1,106 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_b5b9ca38327c4f53ae718bf0b4f3c480"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_7e203e1a7d3b42bfbd5c1b0dedcdf58f"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_019780ef68324fcdaf58354921a0931e"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_cae8cfa0b8994fc69ab548eccfdb2b89"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_1fd9dff0f378467198092ee95e190155"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_019780ef68324fcdaf58354921a0931e"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_8e4a22a44ebe43c5bfcfcacc78b423cd"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_158cc5887d884b639acb39c9088d8b39",
+        "!bp_019780ef68324fcdaf58354921a0931e"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_6eb5ab759b66468286c1c56e4f69dbfd"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_019780ef68324fcdaf58354921a0931e"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_c4eab356bc484e96a471821ef728c979",
+        "!bp_5382f3342e1d44dfa743fd9f679c10a5",
+        "!bp_b865152306f64169a1862de16ef68ba9"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_019780ef68324fcdaf58354921a0931e"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_2aefef394cb6491f9191a2d67ebb6b86"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "BloodragerHagBloodline",
+  "guid": "c5d57f425eec48beb1f43719e92db1c1",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Hag"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "SarzaksisPayzaItem",
+  "guid": "7a1921b84c2d958489c9f3b70b7f5093",
+  "m_Enchantments": [
+    "!bp_ce7f06430d08f3d4c8e5e9efe2266e21"
+  ],
+  "name": "Sarzaksys Payza"
+}

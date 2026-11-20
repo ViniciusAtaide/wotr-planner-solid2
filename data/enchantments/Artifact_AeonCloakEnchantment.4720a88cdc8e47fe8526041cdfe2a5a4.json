@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_7fc3523de4ab4ed2ac819fe0869fb160"
+    }
+  ],
+  "assetName": "Artifact_AeonCloakEnchantment",
+  "guid": "4720a88cdc8e47fe8526041cdfe2a5a4"
+}

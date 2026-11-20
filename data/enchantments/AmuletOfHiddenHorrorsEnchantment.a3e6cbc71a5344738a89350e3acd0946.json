@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_15a49f2332214b5faa7715c45cd2a97b"
+    }
+  ],
+  "assetName": "AmuletOfHiddenHorrorsEnchantment",
+  "guid": "a3e6cbc71a5344738a89350e3acd0946"
+}

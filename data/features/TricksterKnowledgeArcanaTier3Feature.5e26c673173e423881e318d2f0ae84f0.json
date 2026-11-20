@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_7bbd9f681440a294382b527a554e419d"
+    }
+  ],
+  "Groups": [
+    "MythicTrick3"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterKnowledgeArcanaTier3Feature",
+  "guid": "5e26c673173e423881e318d2f0ae84f0",
+  "name": "Knowledge (Arcana) 3 Rank"
+}

@@ -1,0 +1,105 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 3,
+      "m_CharacterClass": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    },
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "m_Archetype": "!bp_6bfb7e74b530f3749b590286dd2b9b30",
+      "m_CharacterClass": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "MythicAdditionalProgressions"
+  ],
+  "HideInUI": true,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_5e811ca452c1cfc4896e3c8db4e4001c"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_5e811ca452c1cfc4896e3c8db4e4001c"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_5e811ca452c1cfc4896e3c8db4e4001c"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_5e811ca452c1cfc4896e3c8db4e4001c"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_5e811ca452c1cfc4896e3c8db4e4001c"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_5e811ca452c1cfc4896e3c8db4e4001c"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_5e811ca452c1cfc4896e3c8db4e4001c"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_5e811ca452c1cfc4896e3c8db4e4001c"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_5e811ca452c1cfc4896e3c8db4e4001c"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_5e811ca452c1cfc4896e3c8db4e4001c"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "LoremasterCrusaderProgression",
+  "guid": "7993c7102dbcfd445bba54fc1ec6fa2b",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_4a7c05adfbaf05446a6bf664d28fb103"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Crusader"
+}

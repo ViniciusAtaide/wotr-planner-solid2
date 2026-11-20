@@ -1,0 +1,37 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_3de0359d9480cb549ab6cf1eac51f9dc"
+      ]
+    },
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "Intelligence",
+      "Value": 3
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_3de0359d9480cb549ab6cf1eac51f9dc",
+      "m_Feature": "!bp_3de0359d9480cb549ab6cf1eac51f9dc"
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "TeamworkFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AlliedSpellcaster",
+  "guid": "9093ceeefe9b84746a5993d619d7c86f",
+  "name": "Allied Spellcaster (feature)"
+}

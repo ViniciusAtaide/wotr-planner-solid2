@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "CreatureType"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "AnimalType",
+  "guid": "a95311b3dc996964cbaa30ff9965aaf6",
+  "name": "Animal"
+}

@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_9c3e4b49b9f243f080c0432d2a1e5cbf"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "TitanFighterStyleTwoWeaponSelection6",
+  "guid": "855b2b531df740cfa4536d0ba0729fd8",
+  "m_AllFeatures": [
+    "!bp_ac8aaf29054f5b74eb18f2af950e752d",
+    "!bp_121811173a614534e8720d7550aae253",
+    "!bp_8a6a1920019c45d40b4561f05dcb3240",
+    "!bp_9af88f3ed8a017b45a6837eab7437629",
+    "!bp_d09b20029e9abfe4480b356c92095623",
+    "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5",
+    "!bp_175d1577bb6c9a04baf88eec99c66334",
+    "!bp_15e7da6645a7f3d41bdad7c8c4b9de1e",
+    "!bp_79042cb55f030614ea29956177977c52"
+  ],
+  "name": "Massive Attacks (Titan Fighter 6)"
+}

@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "PrimalistLevel8Selection",
+  "guid": "1c7cc7d948c64e549a45d2524c61de35",
+  "m_AllFeatures": [
+    "!bp_c5aaccc685a37ed4b97869398cdd3ebb",
+    "!bp_db2710cd915bbcf4193fa54083e56b27"
+  ],
+  "name": "Primal Choices (level 8)"
+}

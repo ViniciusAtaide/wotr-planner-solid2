@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_3d8d3d6678b901444a07984294a1bc24",
+        "!bp_caa7edca64af1914d9e14785beb6a143",
+        "!bp_56e2fc3abed8f2247a621ac37e75f303",
+        "!bp_d4a2a75d01d1e77489ff692636a538bf"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_14c699ccd0564e04a9587b1845d16014"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 4,
+      "Not": false,
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "Groups": [
+    "KineticWildTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FoxfireFeature",
+  "guid": "14c699ccd0564e04a9587b1845d16014",
+  "name": "Foxfire"
+}

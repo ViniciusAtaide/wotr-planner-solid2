@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "TwistedTemptationItem",
+  "guid": "4b7401550f6c4841ac9246f8fa0e9a2f",
+  "m_Enchantments": [
+    "!bp_6cb2900c681747379db5c912d52298d3"
+  ],
+  "name": "Twisted Temptation"
+}

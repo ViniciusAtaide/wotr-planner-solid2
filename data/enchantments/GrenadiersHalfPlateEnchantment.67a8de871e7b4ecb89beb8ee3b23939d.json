@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_3dc5c9fc70814fecb30812a1f3dee078"
+    }
+  ],
+  "assetName": "GrenadiersHalfPlateEnchantment",
+  "guid": "67a8de871e7b4ecb89beb8ee3b23939d"
+}

@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Trident",
+  "Components": [],
+  "assetName": "Trident",
+  "guid": "6ff66364e0a2c89469c2e52ebb46365e",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Polearms, Spears",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Trident"
+}

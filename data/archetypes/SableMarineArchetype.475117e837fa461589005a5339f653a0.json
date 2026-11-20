@@ -1,0 +1,105 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_50c5c91039a44793b5834319899dae70"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_16cc2c937ea8d714193017780e7d4fc6",
+        "!bp_789cc8928b55485eb0341c86c1867b8c"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_28d5122a7ab544a38577ce96b979d2f8"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_935710889d644a35bce50e86f2bf8ff1"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillPersuasion",
+    "SkillLoreNature",
+    "SkillKnowledgeWorld",
+    "SkillStealth",
+    "SkillPerception",
+    "SkillMobility"
+  ],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_16cc2c937ea8d714193017780e7d4fc6"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_54ee847996c25cd4ba8773d7b8555174",
+        "!bp_a6ea422d7308c0d428a541562faedefd"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_b705c5184a96a84428eeb35ae2517a14"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_a6ea422d7308c0d428a541562faedefd",
+        "!bp_c4de22ecac494c91b3d2f077ec162bbd"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_ff1b5aa8dcc7d7d4d9aa85e1cb3f9e88"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_a6ea422d7308c0d428a541562faedefd",
+        "!bp_c4de22ecac494c91b3d2f077ec162bbd"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_a6ea422d7308c0d428a541562faedefd",
+        "!bp_c4de22ecac494c91b3d2f077ec162bbd"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_9d53ef63441b5d84297587d75f72fc17"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": true,
+  "assetName": "SableMarineArchetype",
+  "guid": "475117e837fa461589005a5339f653a0",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Sable Company Marine"
+}

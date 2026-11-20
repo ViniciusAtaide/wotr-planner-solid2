@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_1e277a600616468aa20476f3f55efd52"
+    }
+  ],
+  "assetName": "RobeOfRunesEnchantment",
+  "guid": "9c1679810b8b466ea168751f41281ce4"
+}

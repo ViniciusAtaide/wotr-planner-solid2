@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSkillPointPerCharacterLevel"
+    }
+  ],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HalfOrcSkilled",
+  "guid": "4e8fe10f42f314e4fa7c7918bcfadbd5",
+  "name": "Skilled (Human-Raised)"
+}

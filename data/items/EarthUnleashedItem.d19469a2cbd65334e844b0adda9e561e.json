@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "EarthUnleashedItem",
+  "guid": "d19469a2cbd65334e844b0adda9e561e",
+  "m_Enchantments": [
+    "!bp_383175b91aea73045b8da7f7588e43b5"
+  ],
+  "name": "Earth Unleashed"
+}

@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionHasAnyClassFromList",
+      "Not": false,
+      "m_Classes": [
+        "!bp_26b10d4340839004f960f9816f6109fe",
+        "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+      ]
+    }
+  ],
+  "assetName": "FullBardingStandartPlus2",
+  "guid": "023e54c350d3f894c961324d50a0fb63",
+  "m_Enchantments": [
+    "!bp_758b77a97640fd747abf149f5bf538d0"
+  ],
+  "m_Type": "!bp_55a6ac3d3ed31fc4d8a7f26f509999a8",
+  "name": "Full Barding +2"
+}

@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_60c99d78a70e0b44f87ba01d02d909a6",
+        "!bp_f02fd748fecb4cc2a4d7d282c6b3de46"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "CrossbloodedArchetype",
+  "guid": "e66a112ab57f69e418f1f11d5d2f3248",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": "!bp_cb0be5988031ebe4c947086a1170eacc",
+  "m_WillSave": null,
+  "name": "Crossblooded"
+}

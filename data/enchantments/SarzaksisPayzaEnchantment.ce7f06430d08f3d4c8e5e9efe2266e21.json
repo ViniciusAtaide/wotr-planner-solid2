@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e4f9b7580856a444fad95884f8547112"
+    }
+  ],
+  "assetName": "SarzaksisPayzaEnchantment",
+  "guid": "ce7f06430d08f3d4c8e5e9efe2266e21"
+}

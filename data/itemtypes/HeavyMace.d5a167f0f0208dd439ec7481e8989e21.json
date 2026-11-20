@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "HeavyMace",
+  "Components": [],
+  "assetName": "HeavyMace",
+  "guid": "d5a167f0f0208dd439ec7481e8989e21",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Hammers",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Heavy Mace"
+}

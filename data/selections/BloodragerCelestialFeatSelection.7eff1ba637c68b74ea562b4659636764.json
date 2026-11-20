@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BloodragerCelestialFeatSelection",
+  "guid": "7eff1ba637c68b74ea562b4659636764",
+  "m_AllFeatures": [
+    "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5",
+    "!bp_797f25d709f559546b29e7bcb181cc74",
+    "!bp_175d1577bb6c9a04baf88eec99c66334",
+    "!bp_2a6091b97ad940943b46262600eaeaeb",
+    "!bp_1e1f627d26ad36f43bbd26cc2bf8ac7e",
+    "!bp_d09b20029e9abfe4480b356c92095623"
+  ],
+  "name": "Bonus Feats (Celestial 12)"
+}

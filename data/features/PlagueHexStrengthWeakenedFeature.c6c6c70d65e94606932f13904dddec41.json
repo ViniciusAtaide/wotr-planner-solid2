@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteArchetypeLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 10,
+      "m_Archetype": "!bp_bcd758a75fb54651a7f668fe2661a307",
+      "m_CharacterClass": "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+    },
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_ed39cb73232b4473934fe932bd7c0d58"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PlagueHexStrengthWeakenedFeature",
+  "guid": "c6c6c70d65e94606932f13904dddec41",
+  "name": "Plague Mutation: Muscle Feebleness"
+}

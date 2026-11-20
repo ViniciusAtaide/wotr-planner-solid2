@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PowerfulShadows",
+  "guid": "6a9448ec047c642408af6debb8536c38",
+  "name": "Powerful Shadows"
+}

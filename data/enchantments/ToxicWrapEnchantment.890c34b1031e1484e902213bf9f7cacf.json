@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_0ccb98faf1b870342850b705c58297ae"
+    }
+  ],
+  "assetName": "ToxicWrapEnchantment",
+  "guid": "890c34b1031e1484e902213bf9f7cacf"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintShieldType",
+  "Components": [],
+  "assetName": "TowerShieldType",
+  "guid": "5f0f4b6e480e7054b8592b5a8b55854a",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "TowerShield",
+  "name": "Tower Shield"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3e088de2df024f23952c4b522a211e2b"
+    }
+  ],
+  "assetName": "DLC3_HelmOfBitterEndEnchantment",
+  "guid": "e0df18fe4db4473b91c92f3c915948c0"
+}

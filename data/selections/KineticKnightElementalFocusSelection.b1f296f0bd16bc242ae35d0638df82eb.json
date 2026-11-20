@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "KineticKnightElementalFocusSelection",
+  "guid": "b1f296f0bd16bc242ae35d0638df82eb",
+  "m_AllFeatures": [
+    "!bp_93bd14dd916cfd1429c11ad66adf5e2b",
+    "!bp_d2a93ab18fcff8c419b03a2c3d573606",
+    "!bp_d4a2a75d01d1e77489ff692636a538bf",
+    "!bp_5e839c743c6da6649a43cdeb70b6018f"
+  ],
+  "name": "Elemental Focus (Kinetic Knight)"
+}

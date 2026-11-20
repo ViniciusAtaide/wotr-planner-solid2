@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "VenomousLimbShieldItem",
+  "guid": "5f7e85634b80177428370151feb2116b",
+  "m_ArmorComponent": "!bp_9d6800e2e5efde04a9f79734b8c1864e",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Bulwark"
+}

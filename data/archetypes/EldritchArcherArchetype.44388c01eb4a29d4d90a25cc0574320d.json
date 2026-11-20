@@ -1,0 +1,56 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_8b68a5b8223beed40b137885116c408f"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_6aa84ca8918ac604685a3d39a13faecc"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [
+    "SkillKnowledgeArcana",
+    "SkillKnowledgeWorld",
+    "SkillPerception",
+    "SkillAthletics",
+    "SkillPersuasion"
+  ],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_2464ba53317c7fc4d88f383fac2b45f9"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_be50f4e97fff8a24ba92561f1694a945"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_cd96b7275c206da4899c69ae127ffda6"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": true,
+  "assetName": "EldritchArcherArchetype",
+  "guid": "44388c01eb4a29d4d90a25cc0574320d",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Eldritch Archer"
+}

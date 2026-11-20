@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintMythicsSettings",
+  "CharcaterLevelRestrictions": [
+    0,
+    6,
+    7,
+    9,
+    11,
+    14,
+    15,
+    16,
+    17,
+    17,
+    19
+  ],
+  "Components": [],
+  "assetName": "MythicsSettings",
+  "guid": "3b8a6729da1e13a4e8e606e9f0fa38d8"
+}

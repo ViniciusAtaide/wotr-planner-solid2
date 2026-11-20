@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MythicBypassEpicDR",
+  "guid": "c60933cc085132b49970cbc4a4b8338f",
+  "name": "Bypass Epic Damage Reduction"
+}

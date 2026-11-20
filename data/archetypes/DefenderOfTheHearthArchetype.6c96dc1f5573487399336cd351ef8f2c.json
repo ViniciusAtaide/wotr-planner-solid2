@@ -1,0 +1,56 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_08ef60cbb8324d13a8524ba552fa579e"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_f7be09207a174faca0a6f438fd5bb25a"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_a7662fc393334b0ca61d26d7715a66f1"
+      ]
+    }
+  ],
+  "AddSkillPoints": 1,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_41c8486641f7d6d4283ca9dae4147a9f"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_b8cecf4e5e464ad41b79d5b42b76b399"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_55f516d7d1fc5294aba352a5a1c92786"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "DefenderOfTheHearthArchetype",
+  "guid": "6c96dc1f5573487399336cd351ef8f2c",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Defender of the Hearth"
+}

@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_65c538dcfd91930489ad3ab18ad9204b"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "UndergroundChemistChemicalWeapons",
+  "guid": "3692ca89490b62e40b7c8994313f10d5",
+  "name": "Chemical Weapons"
+}

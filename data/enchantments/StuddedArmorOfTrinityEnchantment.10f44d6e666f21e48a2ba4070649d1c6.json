@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_79babe38a7306ba4c81f2fa3c88d1bae"
+    }
+  ],
+  "assetName": "StuddedArmorOfTrinityEnchantment",
+  "guid": "10f44d6e666f21e48a2ba4070649d1c6"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a05cd6b2f01240c5943779fef1ccc0d4"
+    }
+  ],
+  "assetName": "PlaguePersistenceQuarterstaffEnchantment",
+  "guid": "748be82ca42748f4adf255d6768d40e7"
+}

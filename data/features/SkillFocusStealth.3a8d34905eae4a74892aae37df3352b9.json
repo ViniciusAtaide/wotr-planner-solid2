@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SkillFocusStealth",
+  "guid": "3a8d34905eae4a74892aae37df3352b9",
+  "name": "Skill Focus — Stealth"
+}

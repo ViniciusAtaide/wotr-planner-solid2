@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": true,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "MysticTheurgeInquisitorLevelSelection6",
+  "guid": "200dec6712442e74c85803a1af72397a",
+  "m_AllFeatures": [
+    "!bp_0495474b37304054eaf016016d0002b4"
+  ],
+  "name": "Inquisitor Spell (6th Level)"
+}

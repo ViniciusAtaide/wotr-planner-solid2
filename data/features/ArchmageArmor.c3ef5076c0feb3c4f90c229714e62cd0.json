@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArchmageArmor",
+  "guid": "c3ef5076c0feb3c4f90c229714e62cd0",
+  "name": "Archmage Armor"
+}

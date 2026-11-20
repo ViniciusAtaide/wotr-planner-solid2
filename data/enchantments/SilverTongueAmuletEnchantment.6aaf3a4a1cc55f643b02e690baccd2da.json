@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_c28a420b59bed6b4ba2e4901ef740cfb"
+    }
+  ],
+  "assetName": "SilverTongueAmuletEnchantment",
+  "guid": "6aaf3a4a1cc55f643b02e690baccd2da"
+}

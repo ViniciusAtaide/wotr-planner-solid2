@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_fdb830f8858974f4b956e5ea2a16828d"
+    }
+  ],
+  "assetName": "RepellingBracersEnchantment",
+  "guid": "49aff3a4d41ffd94288104207296901d"
+}

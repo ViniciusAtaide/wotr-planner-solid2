@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [],
+  "assetName": "HalfplateType",
+  "guid": "a59bf41f441456a4e8b04b09cb889af8",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "Heavy",
+  "name": "Heavy Armor — Half-Plate"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_800f6723072443f88595e131683cd464"
+    }
+  ],
+  "assetName": "DisembowelerEnchantment",
+  "guid": "38970e861eb243ad9ebf95c5ef067d54"
+}

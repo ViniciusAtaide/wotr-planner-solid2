@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c59b2f256f5a70a4d896568658315b7d"
+    }
+  ],
+  "Groups": [
+    "Discovery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "PreciseBomb",
+  "guid": "5c396342f614dd644a48c3af08d79701",
+  "name": "Precise Bomb"
+}

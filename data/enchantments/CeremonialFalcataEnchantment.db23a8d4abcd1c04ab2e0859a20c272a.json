@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_9c010bff09e1ea14880dd8b2975e0aed"
+    }
+  ],
+  "assetName": "CeremonialFalcataEnchantment",
+  "guid": "db23a8d4abcd1c04ab2e0859a20c272a"
+}

@@ -1,0 +1,81 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "WitchPatron"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_87107350a4f8c65458da367c102c610e"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_e3d5551eb4f83dd4fba5f8e383114642"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_e5c954e6c9091c440adabc6be70a4a9e"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_8c168bda09ca64d4c983acdd2f620adb"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_89c3d83e6ccac754cbb07152dd4b19a9"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_b2f582468e52b5c4fbda00215479a818"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_15f01e7b13cd26f48acf521a7f3d937b"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_2f4098d98f92ba1488c58d91fb3df780"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_060f73b067ea43946985530258e53d85"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WitchEndurancePatronProgression",
+  "guid": "8fe0a14c90d3ea94a833d087b8a09bb9",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Endurance (Patron)"
+}

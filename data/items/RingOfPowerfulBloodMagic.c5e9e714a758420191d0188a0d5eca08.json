@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfPowerfulBloodMagic",
+  "guid": "c5e9e714a758420191d0188a0d5eca08",
+  "m_Enchantments": [
+    "!bp_84cedd0433cc43bfbc9302c868feb96c"
+  ],
+  "name": "Ring of Powerful Blood Magic"
+}

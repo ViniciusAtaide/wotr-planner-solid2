@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "MaskOfAreshkagalBelt_TabulaRasaItem",
+  "guid": "c3f88225e63d420492ba111e97cbf64a",
+  "m_Enchantments": [
+    "!bp_f9278c2ea13c2b34cb56be078428a0bb",
+    "!bp_15008553994dd7e48af2ad1a1426d733",
+    "!bp_4b9573fa2b0e74043a4682740e9ae138",
+    "!bp_7897fd94a5624798adfd40b6f655579d"
+  ],
+  "name": "Pristine Mind (belt)"
+}

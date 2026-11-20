@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "MenanceOfDeathAmuletItem",
+  "guid": "8c7525cda7ad79a47a578197dab6c487",
+  "m_Enchantments": [
+    "!bp_1cdea8c9aa064ac1b704fedc7223cc20"
+  ],
+  "name": "Menace of Death"
+}

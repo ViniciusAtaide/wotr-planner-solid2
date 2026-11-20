@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "ZeorisDaggerRing_Betrayal",
+  "guid": "50f28e3830734174aa9b355c737d3e08",
+  "m_Enchantments": [
+    "!bp_0dc4254f731346ce99f981c769b0ec9d"
+  ],
+  "name": "Conthyr's Wisdom (ring)"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_240aeac174ee4422aca3d4dd6eefdf91"
+    }
+  ],
+  "assetName": "LifeDelivererEnchantment",
+  "guid": "9c9f4645812e4dad97ad4ac1633328bb"
+}

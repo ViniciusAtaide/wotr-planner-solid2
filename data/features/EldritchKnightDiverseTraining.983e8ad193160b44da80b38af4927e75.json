@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ClassLevelsForPrerequisites",
+      "Modifier": 1,
+      "Summand": 0,
+      "m_ActualClass": "!bp_de52b73972f0ed74c87f8f6a8e20b542",
+      "m_FakeClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd",
+      "m_ForSelection": "!bp_247a4068296e8be42890143f451b4b45"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EldritchKnightDiverseTraining",
+  "guid": "983e8ad193160b44da80b38af4927e75",
+  "name": "Diverse Training"
+}

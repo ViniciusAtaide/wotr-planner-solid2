@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MonkUnarmedStrike",
+  "guid": "c3fbeb2ffebaaa64aa38ce7a0bb18fb0",
+  "name": "Unarmed Strike"
+}

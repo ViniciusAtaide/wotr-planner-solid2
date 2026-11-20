@@ -1,0 +1,43 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_4ae78c44858bc1942934efe7c149d039"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_4ae78c44858bc1942934efe7c149d039"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_4ae78c44858bc1942934efe7c149d039"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "OrderOfTheNailFavoriteEnemyPlantProgression",
+  "guid": "9e9bda1c015e4c9ea4439375c264326a",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_ed246f1680e667b47b7427d51e651059"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Favored Enemy — Plants (Order of the Nail)"
+}

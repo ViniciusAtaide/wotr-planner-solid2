@@ -1,0 +1,69 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_572848eba7b34f589d8adca9ffcda2d8"
+    }
+  ],
+  "ForAllOtherClasses": true,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "OracleCurse"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_5edc2d4ed4b7c4b499e635fda70adadb",
+        "!bp_0b6eeed955daedd4896ef104cfc2afb9"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_f85139824ffa90a448dc579097ab988c"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_510d3d8e625df844496173fef12ff326"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_4e05304fd4c1aae45a24d73976225697"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "BlackenedCurseProgression",
+  "guid": "ca1e4627a1ad8fc4f83158f6497d5c54",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_c5f6e53e71059fb4d802ce81a277a12d"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Blackened (Oracle's Curse)"
+}

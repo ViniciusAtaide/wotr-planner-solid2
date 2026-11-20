@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "HeavyCrossbowFlamingPlus1",
+  "guid": "22d202c2426406743a06b22f48372d46",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_36d0551b8a28587438a47fcbbf53c083",
+  "name": "Flaming Heavy Crossbow +1"
+}

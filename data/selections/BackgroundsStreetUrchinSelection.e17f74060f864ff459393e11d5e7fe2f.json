@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [
+    "BackgroundSelection"
+  ],
+  "HideInUI": true,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BackgroundsStreetUrchinSelection",
+  "guid": "e17f74060f864ff459393e11d5e7fe2f",
+  "m_AllFeatures": [
+    "!bp_621e1bb8e1d5e114da5a107351f5c7b3",
+    "!bp_88453bd5448456748ab531cddad38721",
+    "!bp_9da9faf5f0ef4904db4a59a22dafbb06"
+  ],
+  "name": "Street Urchin"
+}

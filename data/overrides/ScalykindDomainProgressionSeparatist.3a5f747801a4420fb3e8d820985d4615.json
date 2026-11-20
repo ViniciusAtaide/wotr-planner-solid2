@@ -1,0 +1,11 @@
+{
+  "change": "patch",
+  "ops": [
+    {
+      "op": "remove",
+      "path": "/Components/3"
+    }
+  ],
+  "reason": "Components[3] is a PrerequisiteNoFeature whose m_Feature names 02b4bdf2ef7b4296923219f361caec92, a blueprint the dump doesn't hold. The game resolves it to null, and EntityFactsProcessor.cs HasFact(BlueprintFact) matches no fact against null, so PrerequisiteNoFeature.cs CheckInternal always passes. Removing the component keeps the game's behaviour and lets every reference resolve.",
+  "target": "3a5f747801a4420fb3e8d820985d4615"
+}

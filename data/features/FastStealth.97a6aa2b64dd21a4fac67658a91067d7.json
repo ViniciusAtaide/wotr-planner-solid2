@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "RogueTalent",
+    "VivisectionistDiscovery",
+    "SlayerTalent"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FastStealth",
+  "guid": "97a6aa2b64dd21a4fac67658a91067d7",
+  "name": "Fast Stealth"
+}

@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "electricity",
+  "reason": "Every draconic bloodline grants the \"Draconic Strike\" of its dragon's energy type, so each copy has several colours as grantors (acid: black, copper, green; cold: silver, white; electricity: blue, bronze; fire: brass, gold, red), all with the same family name. The copies differ only in their energy, which the asset names DragonicStrikeAcid, Cold, Electricity and Fire state; each is qualified by it.",
+  "target": "db64de9cdbad45b4cbc8b369cd7a007c"
+}

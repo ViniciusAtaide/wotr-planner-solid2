@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HeadbandOfSubjugatorItem",
+  "guid": "c1c47a8993bf0134bb2feac4ba0f03ea",
+  "m_Enchantments": [
+    "!bp_82ad1b6eeb2be3f4a901d8e685a669a7",
+    "!bp_b63c8c303b673864eb14c13740ae2b63"
+  ],
+  "name": "Headband of Subjugator"
+}

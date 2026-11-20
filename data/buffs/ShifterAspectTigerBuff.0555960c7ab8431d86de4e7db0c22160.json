@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_a406d6ebea5c46bba3160246be03e96f"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "StartPlusDivStep",
+      "m_StartLevel": 1,
+      "m_StepLevel": 7,
+      "m_Type": "DamageDice",
+      "m_UseMax": true,
+      "m_UseMin": false
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "ShifterAspectTigerBuff",
+  "guid": "0555960c7ab8431d86de4e7db0c22160",
+  "name": "Tiger (Shifter 9)"
+}

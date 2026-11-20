@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillKnowledgeWorld"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArmigerStudiousSquireFeature",
+  "guid": "0c5065ffc67c4494cba9a14226714ae6",
+  "name": "Studious Squire"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_20d728c7356647429fd2e5eda3f0106d"
+    }
+  ],
+  "assetName": "ImpendingDemiseEnchantment",
+  "guid": "0b6a0abc29774cffb56170d0f3ae2f8b"
+}

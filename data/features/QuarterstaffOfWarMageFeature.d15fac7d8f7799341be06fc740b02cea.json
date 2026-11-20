@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Competence",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillUseMagicDevice",
+      "Value": 5
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 100,
+  "assetName": "QuarterstaffOfWarMageFeature",
+  "guid": "d15fac7d8f7799341be06fc740b02cea"
+}

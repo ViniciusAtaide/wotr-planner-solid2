@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "FavoriteEnemy"
+  ],
+  "HideInUI": false,
+  "Ranks": 8,
+  "assetName": "FavoriteEnemyMagicalBeasts",
+  "guid": "f807fac786faa86438428c79f5629654",
+  "name": "Favored Enemy — Magical Beasts"
+}

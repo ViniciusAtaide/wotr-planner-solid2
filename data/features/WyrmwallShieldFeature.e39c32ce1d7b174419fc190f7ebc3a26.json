@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "WyrmwallShieldFeature",
+  "guid": "e39c32ce1d7b174419fc190f7ebc3a26"
+}

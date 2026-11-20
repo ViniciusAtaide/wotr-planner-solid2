@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_28710502f46848d48b3f0d6132817c4e",
+        "!bp_28710502f46848d48b3f0d6132817c4e"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "PrimalistSecondBloodlineTakeRagePowers20",
+  "guid": "32525ed3aea0480ebd7ad3654dca96cc",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Change bloodline power for two rage powers (Second Bloodrager Bloodline 20)"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "ShockFlamingCorrisveColdIronKukriPlus3Item",
+  "guid": "332197e85cbb8ac4dbd35578ef41ee9c",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_006ecd4715809b343b7001e859e3ddb2",
+  "name": "Shock Flaming Corrosive Cold Iron Kukri +3"
+}

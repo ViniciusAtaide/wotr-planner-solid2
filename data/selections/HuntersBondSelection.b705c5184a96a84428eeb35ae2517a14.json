@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "RangerBond",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "OnlyNew",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "HuntersBondSelection",
+  "guid": "b705c5184a96a84428eeb35ae2517a14",
+  "m_AllFeatures": [
+    "!bp_ee63330662126374e8785cc901941ac7",
+    "!bp_6dddf5ba2291f41498df2df7f8fa2b35"
+  ],
+  "name": "Hunter's Bond"
+}

@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_2a6091b97ad940943b46262600eaeaeb"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_e67c0c23174b2c046a98643ddfce1ed7"
+      ]
+    },
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_e1c56555ece730440adfe2736e056bfd"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_8ac319e47057e2741b42229210eb43ed"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_226f939b7dfd47b4697ec52f79799012"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "DaredevilArchetype",
+  "guid": "2f3eb33b70e86d14787f62fd584fa4f2",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Daredevil"
+}

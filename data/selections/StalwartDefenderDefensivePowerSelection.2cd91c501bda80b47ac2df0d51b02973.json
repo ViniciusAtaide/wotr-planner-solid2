@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "DefensivePower",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "StalwartDefenderDefensivePowerSelection",
+  "guid": "2cd91c501bda80b47ac2df0d51b02973",
+  "m_AllFeatures": [
+    "!bp_2c13bd43a7ed4844b9f4dcc919fd74f8",
+    "!bp_d10496e92d0799a40bb3930b8f4fda0d",
+    "!bp_727fcc6ef87e568479ab9dc3a8a5dc6c",
+    "!bp_325a007b2f633a1428ee1edfaf3e860c",
+    "!bp_f848ddcf71dd57243958eea7661be6ef",
+    "!bp_7f11936e5c182db40806c8797443a164"
+  ],
+  "name": "Defensive Powers"
+}

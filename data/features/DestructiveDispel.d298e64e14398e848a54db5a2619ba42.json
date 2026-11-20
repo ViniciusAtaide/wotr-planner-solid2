@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Feat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DestructiveDispel",
+  "guid": "d298e64e14398e848a54db5a2619ba42",
+  "name": "Destructive Dispel"
+}

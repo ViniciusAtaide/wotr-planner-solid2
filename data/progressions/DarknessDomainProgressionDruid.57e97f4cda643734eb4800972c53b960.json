@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": false,
+      "m_CharacterClass": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "BlightDruidDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_9dc5863168155854fa8daf4a780f6663",
+        "!bp_6e217aa03b646e747969d8f69835ae2c"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_0653cd3fee730654eb4daa6629e07fad"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "DarknessDomainProgressionDruid",
+  "guid": "57e97f4cda643734eb4800972c53b960",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Darkness Domain (Blight Bond)"
+}

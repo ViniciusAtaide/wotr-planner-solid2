@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "NunchakuPlus5",
+  "guid": "b5a4e6d7b10e893409f5a43c2e76446e",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_4703b4c0922142f4cbe8895c10a47a9f"
+}

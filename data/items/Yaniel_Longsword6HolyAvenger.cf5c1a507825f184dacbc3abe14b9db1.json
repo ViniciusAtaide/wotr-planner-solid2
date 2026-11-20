@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "Yaniel_Longsword6HolyAvenger",
+  "guid": "cf5c1a507825f184dacbc3abe14b9db1",
+  "m_Enchantments": [
+    "!bp_0326d02d2e24d254a9ef626cc7a3850f"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_d56c44bc9eb10204c8b386a02c7eed21",
+  "name": "Radiance (+6)"
+}

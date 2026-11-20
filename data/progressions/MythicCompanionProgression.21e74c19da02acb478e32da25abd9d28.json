@@ -1,0 +1,85 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_ba0e5a900b775be4a99702f1ed08914d",
+        "!bp_c60933cc085132b49970cbc4a4b8338f"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_9ee0f6745f555484299b0a1563b99d81"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_ba0e5a900b775be4a99702f1ed08914d"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_9ee0f6745f555484299b0a1563b99d81"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_ba0e5a900b775be4a99702f1ed08914d"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_9ee0f6745f555484299b0a1563b99d81"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_ba0e5a900b775be4a99702f1ed08914d"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_9ee0f6745f555484299b0a1563b99d81"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_ba0e5a900b775be4a99702f1ed08914d"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_9ee0f6745f555484299b0a1563b99d81"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "MythicCompanionProgression",
+  "guid": "21e74c19da02acb478e32da25abd9d28",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_530b6a79cb691c24ba99e1577b4beb6d"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null
+}

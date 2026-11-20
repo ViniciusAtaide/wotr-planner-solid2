@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_317c20542d97c364f9041608d55224a5"
+    }
+  ],
+  "assetName": "DragonfallEnchantment",
+  "guid": "afcdd71ddf0f090448fefbae0fe12b32"
+}

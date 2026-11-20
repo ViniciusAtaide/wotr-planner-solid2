@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_87c7736449ddc2048a1ef2e2a023cb01"
+    }
+  ],
+  "assetName": "RingOfChaosEnchantment",
+  "guid": "79d0a60428fda2344872cc4fb811ed74"
+}

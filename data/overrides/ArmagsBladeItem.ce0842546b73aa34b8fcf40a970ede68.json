@@ -1,0 +1,5 @@
+{
+  "change": "remove",
+  "reason": "Its m_Type names 1e460a2dc830cf546939b2723aa875e7, a weapon type the dump doesn't hold (the oversized bastard sword that the WeaponFocusBastardSwordOversized feats also name). Without its type the planner can't read its weapon category, so the proficiency check (Items/ItemEntityWeapon.cs CanBeEquippedInternal) can't be applied, and its reference can't resolve. It is the only sourced item that names that type (research: gear-vs-rust-data.md).",
+  "target": "ce0842546b73aa34b8fcf40a970ede68"
+}

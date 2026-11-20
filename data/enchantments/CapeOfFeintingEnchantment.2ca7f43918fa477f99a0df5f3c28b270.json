@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_927905afa09f4ccd9325c5051eddaa40"
+    }
+  ],
+  "assetName": "CapeOfFeintingEnchantment",
+  "guid": "2ca7f43918fa477f99a0df5f3c28b270"
+}

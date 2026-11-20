@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_ed699d64870044b43bb5a7fbe3f29494"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DirtyTrickMythicFeat",
+  "guid": "06816910f76f55c4fbad0d19a0c37bcc",
+  "name": "Dirty Trick (Mythic)"
+}

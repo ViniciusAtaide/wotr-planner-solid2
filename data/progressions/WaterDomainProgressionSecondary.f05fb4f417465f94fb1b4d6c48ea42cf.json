@@ -1,0 +1,101 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_8f49469c40e2c6e4db61296558e08966"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_e63d9133cebf2cf4788e61432a939084"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_f05fb4f417465f94fb1b4d6c48ea42cf"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_2108d8e7019e4c1faa094d2d6725e936"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_09431040db0c4b36af11cdc8834cabfb"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_2192e09ff3334894b4884b7977fd2b4d"
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": true,
+      "m_Feature": "!bp_3988841b91b74f7b990e177abb40403a"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "ClericSecondaryDomain"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_4c21ad24f55f64d4fb722f40720d9ab0"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_8f8d0892cbe15b54ebe10552603349b2"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_8f8d0892cbe15b54ebe10552603349b2"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_6ec8672a9dd06604b93d56c33904aee9"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WaterDomainProgressionSecondary",
+  "guid": "f05fb4f417465f94fb1b4d6c48ea42cf",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_67819271767a9dd4fbfd4ae700befea0"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Water Domain (Domain Selection)"
+}

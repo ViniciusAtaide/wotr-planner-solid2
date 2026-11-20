@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_ea30904d76a703647b314675dec22b9f"
+    }
+  ],
+  "assetName": "DaggerOfLifeEnchantment",
+  "guid": "bf9f64c90a800a9448d83a4ebc74284b"
+}

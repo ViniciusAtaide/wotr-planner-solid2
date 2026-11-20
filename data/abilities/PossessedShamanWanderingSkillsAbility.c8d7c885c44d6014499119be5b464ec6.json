@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintAbility",
+  "Components": [
+    {
+      "$type": "AbilityApplyFact",
+      "m_Facts": [
+        "!bp_e8c505d8efb982d439b5f1408ab36437",
+        "!bp_d4a367f87dab18c4fba193e71d19db75",
+        "!bp_b759917c319f79b46b2040f6901aa5ce",
+        "!bp_b4830b948a0d28d489a6ccd22f4b53be",
+        "!bp_644a1b9551ce0e846befe2f61468c83e",
+        "!bp_0ce0f71b76f54574a96d8a90c3b794d7",
+        "!bp_fd64380ed9e98b748a1aebae42350e09",
+        "!bp_d473ca0c39fe72946b93da3f13738802",
+        "!bp_2ecc0e8da3630594eb47f9ba3d84e221",
+        "!bp_f730e528debeab241ac99d3ea19d6292",
+        "!bp_1668ffb96e94c8e469b01c40d0589eca"
+      ],
+      "m_Restriction": "CasterHasNoFact"
+    }
+  ],
+  "assetName": "PossessedShamanWanderingSkillsAbility",
+  "guid": "c8d7c885c44d6014499119be5b464ec6",
+  "name": "Wandering Spirit (Wandering Skills)"
+}

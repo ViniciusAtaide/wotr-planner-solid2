@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_81701da21df5a3d4a8668a89ce6a1210"
+    }
+  ],
+  "assetName": "Fortification75Enchant",
+  "guid": "9b1538c732e06544bbd955fee570a2be"
+}

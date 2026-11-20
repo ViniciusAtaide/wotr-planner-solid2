@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "DiskOfUnbalanceArmorItem",
+  "guid": "6e5f45b35f064cb78dfe07ae0eefd96e",
+  "m_Enchantments": [
+    "!bp_84d191a748edef84ba30c13b8ab83bd9",
+    "!bp_74a49e6878664b649288868565396492"
+  ],
+  "m_Type": "!bp_26fcc43f7d20374498d2e1643381d345"
+}

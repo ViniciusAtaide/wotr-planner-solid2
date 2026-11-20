@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionAlignment",
+      "Alignment": "LawfulNeutral, TrueNeutral, ChaoticNeutral, Evil"
+    }
+  ],
+  "assetName": "DravensHatItem",
+  "guid": "0160c8eabe704db41b6309af0d26a8e0",
+  "m_Enchantments": [
+    "!bp_b3894ce33c4c0ce4abf0dbcff0d6729f"
+  ],
+  "name": "Draven's Hat"
+}

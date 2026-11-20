@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "PrerequisiteClassSpellLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "RequiredSpellLevel": 1,
+      "m_CharacterClass": "!bp_d77e67a814d686842802c9cfd8ef8499"
+    }
+  ],
+  "Groups": [
+    "DragonDiscipleSpellbook"
+  ],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DragonDiscipleBloodrager",
+  "guid": "4d61f1581befd99419a72a9d0d528242",
+  "m_Spellbook": "!bp_e19484252c2f80e4a9439b3681b20f00",
+  "name": "Bloodrager"
+}

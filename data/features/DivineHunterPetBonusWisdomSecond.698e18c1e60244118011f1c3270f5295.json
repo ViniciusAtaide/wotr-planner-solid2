@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DivineHunterPetBonusWisdomSecond",
+  "guid": "698e18c1e60244118011f1c3270f5295",
+  "name": "Companion Ability Score Bonus — Wisdom (second pick)"
+}

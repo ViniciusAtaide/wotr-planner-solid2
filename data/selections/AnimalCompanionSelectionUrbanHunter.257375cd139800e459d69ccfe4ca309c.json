@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_446fe89490cab7d44957efebeb8cc2b1"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_cb06f0e72ffb5c640a156bd9f8000c1d"
+    },
+    {
+      "$type": "AddFeatureOnApply",
+      "m_Feature": "!bp_65af7290b4efd5f418132141aaa36c1b"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "AnimalCompanion",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "AnimalCompanionSelectionUrbanHunter",
+  "guid": "257375cd139800e459d69ccfe4ca309c",
+  "m_AllFeatures": [
+    "!bp_f894e003d31461f48a02f5caec4e3359",
+    "!bp_9dc58b5901677c942854019d1dd98374",
+    "!bp_bfeb9be0a3c9420b8b2beecc8171029c",
+    "!bp_472091361cf118049a2b4339c4ea836a"
+  ],
+  "name": "Animal Companion (Urban Hunter)"
+}

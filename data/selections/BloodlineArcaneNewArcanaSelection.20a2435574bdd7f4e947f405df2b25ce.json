@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BloodlineArcaneNewArcanaSelection",
+  "guid": "20a2435574bdd7f4e947f405df2b25ce",
+  "m_AllFeatures": [
+    "!bp_4a2e8388c2f0dd3478811d9c947bebfb",
+    "!bp_c66e61dea38f3d8479a54eabec20ac99"
+  ],
+  "name": "New Arcana (selection)"
+}

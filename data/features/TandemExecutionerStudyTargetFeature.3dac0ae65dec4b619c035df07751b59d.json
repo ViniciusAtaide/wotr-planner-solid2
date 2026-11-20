@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 1,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_34ecd1b5e1b90b9498795791b0855239",
+      "m_Feature": "!bp_09bdd9445ac38044389476689ae8d5a1"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TandemExecutionerStudyTargetFeature",
+  "guid": "3dac0ae65dec4b619c035df07751b59d",
+  "name": "Studied Target (Tandem Executioner)"
+}

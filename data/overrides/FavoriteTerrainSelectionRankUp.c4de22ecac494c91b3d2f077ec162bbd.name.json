@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "rank up",
+  "reason": "The ranger's \"Favored Terrain\" is two selections: the first pick at level 3 (which stays bare as the class's own copy) and the rank-ups at levels 8, 13 and 18. The Forester, a hunter archetype, adds the rank-ups at 9, 13 and 17, so the class's level doesn't hold on every route. This is qualified as the rank-up.",
+  "target": "c4de22ecac494c91b3d2f077ec162bbd"
+}

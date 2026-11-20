@@ -1,0 +1,37 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPersuasion"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_9c37279588fd9e34e9c4cb234857492c",
+        "!bp_7c28228ce4eed1543a6b670fd2a88e72"
+      ]
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillPersuasion"
+    },
+    {
+      "$type": "AddBackgroundArmorProficiency",
+      "Proficiency": "Buckler"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "DuelingSword"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundAldoriSwordsman",
+  "guid": "ce0ea6b388ac467408d6da224fab403d",
+  "name": "Aldori Swordsman"
+}

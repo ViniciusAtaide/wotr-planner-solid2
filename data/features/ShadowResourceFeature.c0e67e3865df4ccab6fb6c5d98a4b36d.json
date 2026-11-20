@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ShadowResourceFeature",
+  "guid": "c0e67e3865df4ccab6fb6c5d98a4b36d"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 20,
+  "assetName": "ArmigerArdentFeature",
+  "guid": "fcffd9b743a98784fb9e293c22ee6aff",
+  "name": "Ardent"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SwordlordCounterattack",
+  "guid": "ff125ecc8b2c1894b879b7bcf34e1b17",
+  "name": "Counterattack"
+}

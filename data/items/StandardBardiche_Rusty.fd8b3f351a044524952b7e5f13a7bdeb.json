@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardBardiche_Rusty",
+  "guid": "fd8b3f351a044524952b7e5f13a7bdeb",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_746d652ff6d444239a867f3037fe4f22",
+  "name": "Rusty Bardiche"
+}

@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_e70ecf1ed95ca2f40b754f1adb22bbdd",
+        "!bp_292d51f3d6a331644a8c29be0614f671",
+        "!bp_e8096942d950c8843857c2545f8dc18f",
+        "!bp_9e828934974f0fc4bbf7542eb0446e45",
+        "!bp_6d3728d4e9c9898458fe5e9532951132",
+        "!bp_cb8686e7357a68c42bdd9d4e65334633"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CultLeaderWeaponProficiencies",
+  "guid": "c12afa02355cd8142981980d37a77556",
+  "name": "Weapon and Armor Proficiency (Cult Leader)"
+}

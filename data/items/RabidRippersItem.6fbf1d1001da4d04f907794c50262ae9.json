@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_26b10d4340839004f960f9816f6109fe"
+    }
+  ],
+  "assetName": "RabidRippersItem",
+  "guid": "6fbf1d1001da4d04f907794c50262ae9",
+  "m_Enchantments": [
+    "!bp_7395098cbff569042a306ea256edbc52"
+  ],
+  "name": "Rabid Rippers"
+}

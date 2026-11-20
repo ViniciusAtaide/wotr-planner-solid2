@@ -1,0 +1,50 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillKnowledgeArcana",
+    "SkillKnowledgeWorld",
+    "SkillLoreReligion",
+    "SkillLoreNature",
+    "SkillUseMagicDevice"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteNoClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_CharacterClass": "!bp_4cd1757a0eea7694ba5c933729a53920"
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D6",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 2,
+  "assetName": "ArcanistClass",
+  "guid": "52dbfd8505e22f84fad8d702611f60b7",
+  "m_Archetypes": [
+    "!bp_ce63b2df8c6c12649b02c278e73d8bfa",
+    "!bp_2f35608fc073c04448a9c162a20852ce",
+    "!bp_44f3ba33839a87f48a66b2b9b2f7c69b",
+    "!bp_5f2fa2e0d1cf1ca428af7e24c443d868",
+    "!bp_e9d0ee69305049fe8400a066010dbcd1",
+    "!bp_26185cfb81b34e778ad370407300de9a",
+    "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+  ],
+  "m_BaseAttackBonus": "!bp_0538081888b2d8c41893d25d098dee99",
+  "m_FortitudeSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_974911193b8a8b947a8275f96bb265d6",
+  "m_ReflexSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_Spellbook": "!bp_33903fe5c4abeaa45bc249adb9d98848",
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Arcanist"
+}

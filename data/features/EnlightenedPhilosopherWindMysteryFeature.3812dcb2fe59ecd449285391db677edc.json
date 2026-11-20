@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 2,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_b906380e7a3a8b9459de4ee07f8b9040"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillMobility"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillStealth"
+    }
+  ],
+  "Groups": [
+    "EnlightenedPhilosopherMystery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EnlightenedPhilosopherWindMysteryFeature",
+  "guid": "3812dcb2fe59ecd449285391db677edc",
+  "name": "Wind (Enlightened Philosopher)"
+}

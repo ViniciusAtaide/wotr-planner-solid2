@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "m_Feature": "!bp_f1000000000000000000000000000004"
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "TestCleaveFeature",
+  "guid": "f1000000000000000000000000000005",
+  "name": "Test Cleave"
+}

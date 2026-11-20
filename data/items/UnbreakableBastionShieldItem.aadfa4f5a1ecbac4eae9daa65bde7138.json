@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "UnbreakableBastionShieldItem",
+  "guid": "aadfa4f5a1ecbac4eae9daa65bde7138",
+  "m_ArmorComponent": "!bp_49ce78ad77c5b084f8c751dd0fe922e1",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Unbreakable Bastion"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "EludingTargetArmorItem",
+  "guid": "159653fe2958a204d9af5cdd44b1df8d",
+  "m_Enchantments": [
+    "!bp_7b9f2f78a83577d49927c78be0f7fbc1",
+    "!bp_072e09c63fb0b21409714934fdac29b8"
+  ],
+  "m_Type": "!bp_26fcc43f7d20374498d2e1643381d345"
+}

@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_5648585af75596f4a9fa3ae385127f57",
+      "m_CharacterClass": "!bp_d77e67a814d686842802c9cfd8ef8499"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "BloodragerUndeadFeatSelectionGreenrager",
+  "guid": "d54d36748d84548469653d09dfb312a4",
+  "m_AllFeatures": [
+    "!bp_86669ce8759f9d7478565db69b8c19ad",
+    "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5",
+    "!bp_54ee847996c25cd4ba8773d7b8555174",
+    "!bp_d76497bfc48516e45a0831628f767a0f",
+    "!bp_175d1577bb6c9a04baf88eec99c66334",
+    "!bp_2a6091b97ad940943b46262600eaeaeb",
+    "!bp_d09b20029e9abfe4480b356c92095623"
+  ],
+  "name": "Bonus Feats (Undead 6)"
+}

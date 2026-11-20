@@ -1,0 +1,71 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Dagger",
+        "LightMace",
+        "PunchingDagger",
+        "Sickle",
+        "Club",
+        "HeavyMace",
+        "Shortspear",
+        "Dart",
+        "HeavyCrossbow",
+        "Javelin",
+        "LightCrossbow",
+        "Sling",
+        "Greatclub",
+        "Longspear",
+        "Quarterstaff",
+        "Spear"
+      ],
+      "m_RaceRestriction": null
+    },
+    {
+      "$type": "PrerequisiteNotProficient",
+      "ArmorProficiencies": [],
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "WeaponProficiencies": [
+        "Dagger",
+        "LightMace",
+        "PunchingDagger",
+        "Sickle",
+        "Club",
+        "HeavyMace",
+        "Shortspear",
+        "Dart",
+        "HeavyCrossbow",
+        "Javelin",
+        "LightCrossbow",
+        "Sling",
+        "Greatclub",
+        "Longspear",
+        "Quarterstaff",
+        "Spear"
+      ]
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 1,
+      "Not": true,
+      "m_CharacterClass": "!bp_26b10d4340839004f960f9816f6109fe"
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "CombatFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SimpleWeaponProficiency",
+  "guid": "e70ecf1ed95ca2f40b754f1adb22bbdd",
+  "name": "Simple Weapon Proficiency"
+}

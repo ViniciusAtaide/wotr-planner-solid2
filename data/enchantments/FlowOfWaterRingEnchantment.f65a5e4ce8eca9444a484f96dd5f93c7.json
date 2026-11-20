@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_0c34d0f8dba28b74696fbafa7205c583"
+    }
+  ],
+  "assetName": "FlowOfWaterRingEnchantment",
+  "guid": "f65a5e4ce8eca9444a484f96dd5f93c7"
+}

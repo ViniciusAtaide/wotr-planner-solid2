@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ProtectionDomainGreaterFeatureSeparatist",
+  "guid": "7eb39ba8115a422bb69c702cc20ca58a",
+  "name": "Aura of Protection (Forbidden Rites)"
+}

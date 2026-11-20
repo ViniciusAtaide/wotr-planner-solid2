@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "DoubleAxe",
+  "Components": [],
+  "assetName": "DoubleAxe",
+  "guid": "87d76c7534506a546a065731ee6a38cd",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Axes, Double",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Orc Double Axe"
+}

@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "WarpriestSpontaneousSelection",
+  "guid": "2d26a3364d65c4e4e9fb470172f638a9",
+  "m_AllFeatures": [
+    "!bp_da7be78f753c11544a0264d72a51d831",
+    "!bp_6310b8ebfdc84aa4eb1d20885d646880"
+  ],
+  "name": "Spontaneous Casting"
+}

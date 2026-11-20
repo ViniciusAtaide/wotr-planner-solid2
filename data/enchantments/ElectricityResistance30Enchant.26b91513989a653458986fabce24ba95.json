@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_612d2a7d77b78124ab8d7ec6440b023e"
+    }
+  ],
+  "assetName": "ElectricityResistance30Enchant",
+  "guid": "26b91513989a653458986fabce24ba95"
+}

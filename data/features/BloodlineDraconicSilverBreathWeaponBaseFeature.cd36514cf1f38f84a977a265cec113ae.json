@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_a1cde01a9790834449d8f547ca52fc88",
+      "m_Feature": "!bp_a1cde01a9790834449d8f547ca52fc88"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicSilverBreathWeaponBaseFeature",
+  "guid": "cd36514cf1f38f84a977a265cec113ae",
+  "name": "Breath Weapon (Draconic Bloodline — Silver)"
+}

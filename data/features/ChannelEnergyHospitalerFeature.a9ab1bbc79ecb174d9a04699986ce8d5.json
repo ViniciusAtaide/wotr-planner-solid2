@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ChannelEnergyHospitalerFeature",
+  "guid": "a9ab1bbc79ecb174d9a04699986ce8d5",
+  "name": "Channel Positive Energy (Hospitaler)"
+}

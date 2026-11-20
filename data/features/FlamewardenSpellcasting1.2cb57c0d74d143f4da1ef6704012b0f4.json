@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FlamewardenSpellcasting1",
+  "guid": "2cb57c0d74d143f4da1ef6704012b0f4",
+  "name": "Spellcasting (Flamewarden 4)"
+}

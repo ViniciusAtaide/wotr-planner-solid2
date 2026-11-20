@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "GnomeMagic",
+  "guid": "deaf46650a9d2dd4f85736ca552f9fb1",
+  "name": "Gnome Magic"
+}

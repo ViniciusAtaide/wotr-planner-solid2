@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_c328dc87e222a1748898f177589b8467"
+    }
+  ],
+  "assetName": "RighteousExorcistsBracersEnchantment",
+  "guid": "c86e977ac692af1408e88c3626cbf8da"
+}

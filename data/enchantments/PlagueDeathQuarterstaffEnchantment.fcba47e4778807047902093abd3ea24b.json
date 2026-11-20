@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_357d9df84a28fa949a575e8841c4e75e"
+    }
+  ],
+  "assetName": "PlagueDeathQuarterstaffEnchantment",
+  "guid": "fcba47e4778807047902093abd3ea24b"
+}

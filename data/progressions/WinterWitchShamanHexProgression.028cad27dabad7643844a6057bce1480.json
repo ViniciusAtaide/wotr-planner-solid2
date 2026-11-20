@@ -1,0 +1,54 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_4e760c5034fafb2438993d8a192150b9"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_4e760c5034fafb2438993d8a192150b9"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_4e760c5034fafb2438993d8a192150b9"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_4e760c5034fafb2438993d8a192150b9"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_4e760c5034fafb2438993d8a192150b9"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WinterWitchShamanHexProgression",
+  "guid": "028cad27dabad7643844a6057bce1480",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_eb24ca44debf6714aabe1af1fd905a07"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "BloodlineInfernalHellfireExtraUse",
+  "guid": "e9f105725adbeaa4b9b05e49e8ea21fa",
+  "name": "Hellfire"
+}

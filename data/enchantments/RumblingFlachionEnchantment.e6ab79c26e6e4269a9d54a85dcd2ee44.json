@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_b03c05839bae465e99278fd0378dd8a8"
+    }
+  ],
+  "assetName": "RumblingFlachionEnchantment",
+  "guid": "e6ab79c26e6e4269a9d54a85dcd2ee44"
+}

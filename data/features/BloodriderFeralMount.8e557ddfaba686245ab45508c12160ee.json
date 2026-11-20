@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodriderFeralMount",
+  "guid": "8e557ddfaba686245ab45508c12160ee",
+  "name": "Feral Mount"
+}

@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "DemonMajorAspect",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "DemonMajorAspectSelection",
+  "guid": "5eba1d83a078bdd49a0adc79279e1ffe",
+  "m_AllFeatures": [
+    "!bp_45507637ea8b28948a21c9ecbfa664e4",
+    "!bp_04f5985258e1d594280b5e02916a6326",
+    "!bp_daf030c7563b2664eb1031d91eaae7ab",
+    "!bp_18d0dafd5a1f8c043b5f01539f7b096c",
+    "!bp_3df57316028799448aa1b18cad1ad939",
+    "!bp_0ed608f1a0695cd4cb80bf6d415ab295"
+  ],
+  "name": "Major Demonic Aspect"
+}

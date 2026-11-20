@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StauntonGlaiveHealItem",
+  "guid": "dcad4ba70ad5fcd4c814c7978eaf67bd",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b",
+    "!bp_29a2fb0941e9c0f4389f8cfd9b0e7fbd"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a14a1b224cd173449cb7ffc77d5f65c",
+  "name": "Soulshear (healing)"
+}

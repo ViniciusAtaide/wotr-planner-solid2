@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Sickle",
+  "Components": [],
+  "assetName": "Sickle",
+  "guid": "ec2da496c7936e14c9a28ce616a6b4cd",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "BladesLight",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Sickle"
+}

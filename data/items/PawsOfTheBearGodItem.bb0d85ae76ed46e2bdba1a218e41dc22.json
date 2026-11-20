@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "PawsOfTheBearGodItem",
+  "guid": "bb0d85ae76ed46e2bdba1a218e41dc22",
+  "m_Enchantments": [
+    "!bp_f24383b0c07547d4b5e027e7d16e6b43"
+  ],
+  "name": "Paws of the Bear King"
+}

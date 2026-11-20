@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "DruidBond",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "OnlyNew",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "DruidBondSelection",
+  "guid": "3830f3630a33eba49b60f511b4c8f2a8",
+  "m_AllFeatures": [
+    "!bp_5edfe84c93823d04f8c40ca2b4e0f039",
+    "!bp_571f8434d98560c43935e132df65fe76"
+  ],
+  "name": "Nature Bond"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_615bcf2742f04304d918af4bc8d829bf"
+    }
+  ],
+  "assetName": "RingOfStichesEnchantment",
+  "guid": "abd9a4d01144eb846b9fcbcb95328c72"
+}

@@ -1,0 +1,47 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPersuasion"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_62e27ffd9d53e14479f73da29760f64e",
+        "!bp_292d51f3d6a331644a8c29be0614f671",
+        "!bp_f35e15b1fdff0c54087746c2da80a053",
+        "!bp_7c28228ce4eed1543a6b670fd2a88e72"
+      ]
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillPersuasion"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Rapier"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Longsword"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Greatsword"
+    },
+    {
+      "$type": "AddBackgroundArmorProficiency",
+      "Proficiency": "Buckler"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundLeader",
+  "guid": "c4ec4d736067fa945b512a235b13030b",
+  "name": "Leader"
+}

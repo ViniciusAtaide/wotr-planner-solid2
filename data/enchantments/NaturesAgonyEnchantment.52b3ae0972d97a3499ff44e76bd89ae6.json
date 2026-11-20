@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_51fdb667ce364cb43b341edfe0228d29"
+    }
+  ],
+  "assetName": "NaturesAgonyEnchantment",
+  "guid": "52b3ae0972d97a3499ff44e76bd89ae6"
+}

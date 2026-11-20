@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "ShieldofDivinePowerArmor",
+  "guid": "c5a62aaea18c5b44b9ee9393cacf365d",
+  "m_Enchantments": [
+    "!bp_ac2e3a582b5faa74aab66e0a31c935a9"
+  ],
+  "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6",
+  "name": "Enhancement +1"
+}

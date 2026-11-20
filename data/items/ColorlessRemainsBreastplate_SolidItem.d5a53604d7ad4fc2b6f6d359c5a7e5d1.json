@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "ColorlessRemainsBreastplate_SolidItem",
+  "guid": "d5a53604d7ad4fc2b6f6d359c5a7e5d1",
+  "m_Enchantments": [
+    "!bp_6628f9d77fd07b54c911cd8930c0d531",
+    "!bp_87345c9a8b004ac29a23d56523f2fdce"
+  ],
+  "m_Type": "!bp_d326c3c61a84c6f40977c84fab41503d",
+  "name": "Seal of Jubilex (armor)"
+}

@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintRace",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "SelectableRaceStat": true,
+  "assetName": "HalfElfRace",
+  "guid": "b3646842ffbd01643ab4dac7479b20b0",
+  "m_Features": [
+    "!bp_9c747d24f6321f744aa1bb4bd343880d",
+    "!bp_2483a523984f44944a7cf157b21bf79c",
+    "!bp_9df7b68d60544bcf8e5b56c0a4688e04"
+  ],
+  "name": "Half-Elf"
+}

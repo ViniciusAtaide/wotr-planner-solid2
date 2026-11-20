@@ -1,0 +1,8 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "HeavyShieldMendev",
+  "guid": "70114ba7ac6afc144874293b6b3a8480",
+  "m_ArmorComponent": "!bp_7a126271f91b82741aa0086463befd1b",
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393"
+}

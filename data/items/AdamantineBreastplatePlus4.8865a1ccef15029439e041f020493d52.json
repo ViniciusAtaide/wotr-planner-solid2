@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "AdamantineBreastplatePlus4",
+  "guid": "8865a1ccef15029439e041f020493d52",
+  "m_Enchantments": [
+    "!bp_eaeb89df5be2b784c96181552414ae5a",
+    "!bp_aa25531ab5bb58941945662aa47b73e7"
+  ],
+  "m_Type": "!bp_d326c3c61a84c6f40977c84fab41503d",
+  "name": "Adamantine Breastplate +4"
+}

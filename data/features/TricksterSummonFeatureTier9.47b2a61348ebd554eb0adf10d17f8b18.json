@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 10,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_8df873a8c6e48294abdb78c45834aa0a",
+      "m_Feature": "!bp_355a13017a9833d4688a47f75f1c14d5"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterSummonFeatureTier9",
+  "guid": "47b2a61348ebd554eb0adf10d17f8b18",
+  "name": "Summon Wild Hunt (Trickster 7)"
+}

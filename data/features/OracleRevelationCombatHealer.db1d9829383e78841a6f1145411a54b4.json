@@ -1,0 +1,40 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_6b8e676943cb91648b21b7ca72fbb833",
+        "!bp_677fbcaa2a87cf94296138568db117a8",
+        "!bp_c880da2dea6b54f4bad7d1f4b79c2d63",
+        "!bp_a5458a1c316d1f24e8d9770f4fc179fa"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "CombatHealer"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 7,
+      "Not": false,
+      "m_CharacterClass": "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    }
+  ],
+  "Groups": [
+    "OracleRevelation"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleRevelationCombatHealer",
+  "guid": "db1d9829383e78841a6f1145411a54b4",
+  "name": "Combat Healer"
+}

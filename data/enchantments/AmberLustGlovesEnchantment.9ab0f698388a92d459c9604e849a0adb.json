@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_e75c8e526d8a0de40ab6387025041d4a"
+    }
+  ],
+  "assetName": "AmberLustGlovesEnchantment",
+  "guid": "9ab0f698388a92d459c9604e849a0adb"
+}

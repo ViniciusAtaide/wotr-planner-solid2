@@ -1,0 +1,40 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillThievery"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillMobility"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_579ab5b0c5bbce445a5a9bee1b1fe057"
+      ]
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillThievery"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillMobility"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "ThrowingAxe"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundAcrobat",
+  "guid": "621e1bb8e1d5e114da5a107351f5c7b3",
+  "name": "Acrobat"
+}

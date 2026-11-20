@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    },
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "AsziteChainshirtStandartPlus3",
+  "guid": "bf1928b0e1c64b2d9b447fd4b78eb1ab",
+  "m_Enchantments": [
+    "!bp_9448d3026111d6d49b31fc85e7f3745a",
+    "!bp_b6dff2f7ec3e4a4bbc5090d27752b465"
+  ],
+  "m_Type": "!bp_7467b0ab8641d8f43af7fc46f2108a1a",
+  "name": "Chainshirt +3 (aszite)"
+}

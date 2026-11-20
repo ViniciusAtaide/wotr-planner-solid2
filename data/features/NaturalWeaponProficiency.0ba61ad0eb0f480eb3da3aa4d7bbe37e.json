@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Hoof",
+        "Slam",
+        "Talon",
+        "Tentacle"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "NaturalWeaponProficiency",
+  "guid": "0ba61ad0eb0f480eb3da3aa4d7bbe37e"
+}

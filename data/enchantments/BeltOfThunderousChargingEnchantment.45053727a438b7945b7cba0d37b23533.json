@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_ea017bc3755008c48ace0b6061973ba5"
+    }
+  ],
+  "assetName": "BeltOfThunderousChargingEnchantment",
+  "guid": "45053727a438b7945b7cba0d37b23533"
+}

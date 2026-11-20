@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_7e3f3228be49cce49bda37f7901bf246"
+    }
+  ],
+  "assetName": "BardingOfSteadynessEnchantment",
+  "guid": "866be7ba056a4f4e8fdacff8802d5463"
+}

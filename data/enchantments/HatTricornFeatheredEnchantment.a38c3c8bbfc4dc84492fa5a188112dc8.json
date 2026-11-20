@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Enhancement",
+      "Stat": "Charisma",
+      "Value": 2
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_6f3f2b939b19a3c45ab6c49bc25bc285"
+    }
+  ],
+  "assetName": "HatTricornFeatheredEnchantment",
+  "guid": "a38c3c8bbfc4dc84492fa5a188112dc8"
+}

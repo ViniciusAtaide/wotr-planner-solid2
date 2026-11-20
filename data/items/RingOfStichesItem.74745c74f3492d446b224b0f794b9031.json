@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfStichesItem",
+  "guid": "74745c74f3492d446b224b0f794b9031",
+  "m_Enchantments": [
+    "!bp_abd9a4d01144eb846b9fcbcb95328c72"
+  ],
+  "name": "Ring of Stitches"
+}

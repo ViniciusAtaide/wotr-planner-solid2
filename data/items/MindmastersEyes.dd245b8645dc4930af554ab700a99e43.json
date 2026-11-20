@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "MindmastersEyes",
+  "guid": "dd245b8645dc4930af554ab700a99e43",
+  "m_Enchantments": [
+    "!bp_1f3423ca7f034520bdca73f657395d76"
+  ],
+  "name": "Mindmaster's Eyes"
+}

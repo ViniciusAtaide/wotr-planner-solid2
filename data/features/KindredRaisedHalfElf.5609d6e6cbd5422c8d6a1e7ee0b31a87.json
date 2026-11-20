@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_9c747d24f6321f744aa1bb4bd343880d"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_2483a523984f44944a7cf157b21bf79c"
+    },
+    {
+      "$type": "AddContextStatBonus",
+      "Descriptor": "Racial",
+      "HasMinimal": false,
+      "Minimal": 0,
+      "Multiplier": 1,
+      "Stat": "Charisma",
+      "Value": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "KindredRaisedHalfElf",
+  "guid": "5609d6e6cbd5422c8d6a1e7ee0b31a87",
+  "name": "Kindred-Raised"
+}

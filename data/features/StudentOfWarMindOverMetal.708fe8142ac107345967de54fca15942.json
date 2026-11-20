@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ReplaceStatBaseAttribute",
+      "BaseAttributeReplacement": "Intelligence",
+      "ReplaceIfHigher": true,
+      "TargetStat": "AC"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "StudentOfWarMindOverMetal",
+  "guid": "708fe8142ac107345967de54fca15942",
+  "name": "Mind Over Metal"
+}

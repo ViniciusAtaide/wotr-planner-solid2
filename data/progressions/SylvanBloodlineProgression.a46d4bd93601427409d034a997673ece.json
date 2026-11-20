@@ -1,0 +1,94 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_243f474ce797acb4086c2dbc58660c4a"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_11f4072ea766a5840a46e6660894527d",
+        "!bp_058554b14b5845f4985bb1fc5b85bfff"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_b90d5afdf3f1f8f448474de8d078b67e"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_512923c9bed17fb45abbdf8672caa7b5"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_9d67add74ffa4934aa638c2d9b573336",
+        "!bp_e7aec99942280534ea1a59805218571c"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_dbd31f54340bff5488da32711a58cbe2"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_ee79528fc9614884687738c6dd114869"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_0ad64544a23a9f54abb0917085e35d92",
+        "!bp_a9ffe3e08a080c8478bae321e70c7de6"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_4a9a759a627a62541bea02a75017328a"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_c6d25830bf5c1cc47bd48cf47f363d29"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_6dba3a0ba5a32c645ba07bcc17873682"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "SylvanBloodlineProgression",
+  "guid": "a46d4bd93601427409d034a997673ece",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Sylvan Bloodline"
+}

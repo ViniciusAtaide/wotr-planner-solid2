@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_a24420dcf53ad834783c0945882371d6",
+      "m_Feature": "!bp_436e8e4d16f180a43a45c4e09cbbaf79"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_a24420dcf53ad834783c0945882371d6",
+      "m_Feature": "!bp_a24420dcf53ad834783c0945882371d6"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicWhiteBreathWeaponBaseFeatureDisciple",
+  "guid": "1f2c6a3b9b92db34da7629c99be27139",
+  "name": "Breath Weapon"
+}

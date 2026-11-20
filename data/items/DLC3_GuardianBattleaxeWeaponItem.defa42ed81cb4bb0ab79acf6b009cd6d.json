@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DLC3_GuardianBattleaxeWeaponItem",
+  "guid": "defa42ed81cb4bb0ab79acf6b009cd6d",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b",
+    "!bp_65734781b09647ed92177461a50d92d6"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_2bc77aa47f97de348aefcf03ec8fa43b",
+  "name": "Guardian's Battleaxe"
+}

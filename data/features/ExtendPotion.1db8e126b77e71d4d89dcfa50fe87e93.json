@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "ExtendPotion"
+    }
+  ],
+  "Groups": [
+    "Discovery",
+    "VivisectionistDiscovery",
+    "UndergroundChemistDiscovery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ExtendPotion",
+  "guid": "1db8e126b77e71d4d89dcfa50fe87e93",
+  "name": "Extend Potion"
+}

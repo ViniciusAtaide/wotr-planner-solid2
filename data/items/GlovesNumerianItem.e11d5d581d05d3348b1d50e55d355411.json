@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "GlovesNumerianItem",
+  "guid": "e11d5d581d05d3348b1d50e55d355411",
+  "m_Enchantments": [
+    "!bp_e5bb2c88d6f1f3d45a3975e32017af99"
+  ],
+  "name": "Soaring Fist"
+}

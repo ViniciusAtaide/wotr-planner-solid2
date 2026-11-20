@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_252363458703f144788af49ef04d0803"
+    }
+  ],
+  "Groups": [
+    "OppositionSchool"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OppositionSchoolEnchantment",
+  "guid": "875fff6feb84f5240bf4375cb497e395",
+  "name": "Opposition School — Enchantment"
+}

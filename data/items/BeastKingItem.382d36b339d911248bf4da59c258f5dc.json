@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "BeastKingItem",
+  "guid": "382d36b339d911248bf4da59c258f5dc",
+  "m_Enchantments": [
+    "!bp_39dcb12fc0bb44347ab7eee152c4f612"
+  ],
+  "name": "Ring of the Beast King"
+}

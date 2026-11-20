@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_fc7a7567948768743bcff98ec51d22d5"
+    }
+  ],
+  "assetName": "SavingThrowAgainsBlindnessEnchant",
+  "guid": "db5dad42644baf149b12f418ed78b193"
+}

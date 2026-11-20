@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "FleshTearerArmorItem",
+  "guid": "90cf7393772d43468dab29b58743901c",
+  "m_Enchantments": [
+    "!bp_84d191a748edef84ba30c13b8ab83bd9",
+    "!bp_1bf4d514d33b46fb9ebe5d0cda9918ec"
+  ],
+  "m_Type": "!bp_d38e8ea23ce653c4582eb3e002555483"
+}

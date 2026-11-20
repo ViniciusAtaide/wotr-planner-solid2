@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "ElementalProtectorItem",
+  "guid": "05bef2136b8766049830442a654a98ed",
+  "m_Enchantments": [
+    "!bp_6a6f016ebf16438449a56ae6f29a57f5"
+  ],
+  "name": "Elemental Protector"
+}

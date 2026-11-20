@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 1,
+      "m_Progression": "Div2",
+      "m_StartLevel": 0,
+      "m_StepLevel": 0,
+      "m_Type": "Default",
+      "m_UseMax": false,
+      "m_UseMin": true
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillThievery"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SorcererSeekerTrapfinding",
+  "guid": "b1c4f14bc87534e4da7ecd8e0b0658d2",
+  "name": "Seeker's Trapfinding (Sorcerer)"
+}

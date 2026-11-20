@@ -1,0 +1,26 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_a5458a1c316d1f24e8d9770f4fc179fa",
+        "!bp_db8b731dfb6c9974b8bf67a19aefe225",
+        "!bp_45472076126dc154f9386b0bc4d8416c"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "Groups": [
+    "OracleRevelation"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleRevelationSafeCuring",
+  "guid": "3fa75c1a809882a4697db75daf8803e3",
+  "name": "Safe Curing"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_54555e5673654db44b5e9bdaadba5ae6"
+    }
+  ],
+  "assetName": "HeavyPawsEnchantment",
+  "guid": "9141d814d99fa354083b1939ff6a3835"
+}

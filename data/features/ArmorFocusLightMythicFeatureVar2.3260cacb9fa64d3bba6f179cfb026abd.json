@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_3bc6e1d2b44b5bb4d92e6ba59577cf62"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArmorFocusLightMythicFeatureVar2",
+  "guid": "3260cacb9fa64d3bba6f179cfb026abd",
+  "name": "Mythic Armor Focus (Light Armor) — Endurance"
+}

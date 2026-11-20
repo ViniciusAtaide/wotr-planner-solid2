@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b6abbf2be40434e4c89bda9ff1d11912"
+    }
+  ],
+  "assetName": "DemonicAltarTrypophobiaPaddedEnchantment",
+  "guid": "02900b02ff666744599edb496a28f19b"
+}

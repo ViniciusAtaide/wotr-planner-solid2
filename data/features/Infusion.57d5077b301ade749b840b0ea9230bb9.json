@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "Infusion"
+    }
+  ],
+  "Groups": [
+    "Discovery",
+    "VivisectionistDiscovery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "Infusion",
+  "guid": "57d5077b301ade749b840b0ea9230bb9",
+  "name": "Infusion"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_90c01aafa46c589468e0b5b6fc0ba6d7"
+    }
+  ],
+  "assetName": "Artifact_FeetEnchantment",
+  "guid": "0f22f4c02677e6a4aaf82d7b2942b6fc"
+}

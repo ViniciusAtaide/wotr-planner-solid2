@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "CannotBeFlanked"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ImprovedUncannyDodge",
+  "guid": "485a18c05792521459c7d06c63128c79",
+  "name": "Improved Uncanny Dodge"
+}

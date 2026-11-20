@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [],
+  "Groups": [],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "LearnSpell",
+  "Ranks": 10,
+  "RequireProficiency": false,
+  "WeaponSubCategory": "None",
+  "assetName": "FeyspeakerMagicFeature",
+  "guid": "ea0ce0aeef8c9e04eadc1ed766455178",
+  "m_Prerequisite": null,
+  "name": "Fey Magic (Druid)"
+}

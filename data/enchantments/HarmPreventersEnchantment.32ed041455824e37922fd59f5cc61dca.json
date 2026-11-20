@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_03526ea1a0f7469d911a00138f0650ea"
+    }
+  ],
+  "assetName": "HarmPreventersEnchantment",
+  "guid": "32ed041455824e37922fd59f5cc61dca"
+}

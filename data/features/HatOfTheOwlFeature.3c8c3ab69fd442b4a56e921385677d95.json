@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_46c6e281f0be45a1a270bc8e2c22c137",
+      "m_Feature": "!bp_87772e1b6d1c487d8575dcfe519c22b7"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "HatOfTheOwlFeature",
+  "guid": "3c8c3ab69fd442b4a56e921385677d95",
+  "name": "Owl's Cowl"
+}

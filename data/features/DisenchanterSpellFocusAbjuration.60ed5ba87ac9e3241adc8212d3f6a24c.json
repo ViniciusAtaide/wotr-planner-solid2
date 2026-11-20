@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddParametrizedFeatures",
+      "m_Features": [
+        {
+          "ParamObject": null,
+          "ParamSpellSchool": "Abjuration",
+          "ParamWeaponCategory": "UnarmedStrike",
+          "Stat": "Unknown",
+          "m_Feature": "!bp_16fa59cc9a72a6043b566b49184f53fe"
+        }
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DisenchanterSpellFocusAbjuration",
+  "guid": "60ed5ba87ac9e3241adc8212d3f6a24c",
+  "name": "Spell Focus (Abjuration)"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_fd7fb8585a0d6d4459f8a0f799b67504"
+    },
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_4b8ef852cc70c064cb9ec72951284b7b"
+    }
+  ],
+  "assetName": "ProtectorOfUnjustArmorEnchant",
+  "guid": "52a22c5fe91a70649827ccc883effa99"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_1191ef3065e6f8e4f9fbe1b7e3c0f760",
+      "m_Feature": "!bp_1191ef3065e6f8e4f9fbe1b7e3c0f760"
+    }
+  ],
+  "Stacking": "Prolong",
+  "assetName": "CavalierTacticianSiezeTheMomentBuff",
+  "guid": "953c3dbda63dcdb4aad6c54c1a4590d0",
+  "name": "Seize the Moment (buff)"
+}

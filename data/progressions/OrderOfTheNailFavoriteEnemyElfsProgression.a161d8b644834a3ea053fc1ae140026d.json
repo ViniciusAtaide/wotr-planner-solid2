@@ -1,0 +1,43 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_7ed4cbc226539d6419d6c60320bfd244"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_7ed4cbc226539d6419d6c60320bfd244"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_7ed4cbc226539d6419d6c60320bfd244"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "OrderOfTheNailFavoriteEnemyElfsProgression",
+  "guid": "a161d8b644834a3ea053fc1ae140026d",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_ed246f1680e667b47b7427d51e651059"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Favored Enemy — Elves (Order of the Nail)"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3167f17da6ea4be8aa63918c472007fe"
+    }
+  ],
+  "assetName": "PeriaptOfPlacebosEnchantment",
+  "guid": "ee887a7c946f4b7abf4ffc400b37666f"
+}

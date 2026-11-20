@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_a2da02a51a814e89b3c04bc8fc7fd4c0"
+    }
+  ],
+  "assetName": "MapPlaningBardicheEnchantment",
+  "guid": "47f2aca64ba035c44bf00b23aa2882ec"
+}

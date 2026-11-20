@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "shaman hex",
+  "reason": "The witch's and the shaman's hex of this name are separate blueprints (ShamanHexFortuneFeature is the shaman's). Each is offered by many selections and abilities that share no name: the class's hex selection, Extra Hex, Hex Arcana, Hex Magus, Fey Tricks, the wandering hexes and minor spirits. No grantor or family name tells the two apart, so each is qualified by the class whose hex list it belongs to.",
+  "target": "64ed6d1a539434c469c69011e8df7163"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "GlovesOfArcaneEradicationItem",
+  "guid": "c3a98adb6146cf9469de9bc6d6210141",
+  "m_Enchantments": [
+    "!bp_d0d0afef90a94d70ac7771d4b00e8d24"
+  ],
+  "name": "Gloves of Arcane Eradication"
+}

@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "copper dragon",
+  "reason": "Many blueprints are named \"Wings\". Each draconic bloodline has its own (FeatureWingsDraconicCopper, from the copper bloodline at level 15), which the Dragon Disciple's \"Wings\" (DragonDiscipleFormFeatureWings, level 9) also gives for the matching colour (AddFeatureIfHasFact). No grantor holds on every route, so each is qualified by its dragon's colour.",
+  "target": "0d42c3500717d294886409527b211d3b"
+}

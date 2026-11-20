@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "MonkNoArmorFeatureUnlock",
+      "m_NewFact": "!bp_3929bfd1beeeed243970c9fc0cf333f8"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ScaledFistACBonusUnlock",
+  "guid": "2a8922e28b3eba54fa7a244f7b05bd9e",
+  "name": "AC Bonus (Scaled Fist)"
+}

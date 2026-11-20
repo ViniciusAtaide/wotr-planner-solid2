@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "UnrelentingAssault",
+  "guid": "b0db6bc8548257a40b055c37d7cbc3e0",
+  "name": "Unrelenting Assault"
+}

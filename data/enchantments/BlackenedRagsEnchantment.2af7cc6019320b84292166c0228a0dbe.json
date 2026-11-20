@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3fc009ca325d70f4dbc3c56d73c4873a"
+    }
+  ],
+  "assetName": "BlackenedRagsEnchantment",
+  "guid": "2af7cc6019320b84292166c0228a0dbe"
+}

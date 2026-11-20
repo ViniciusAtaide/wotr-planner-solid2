@@ -1,0 +1,55 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillAthletics"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillKnowledgeArcana"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillKnowledgeWorld"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreNature"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreReligion"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillMobility"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPerception"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPersuasion"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillStealth"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillThievery"
+    },
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillUseMagicDevice"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "GoldenDragonSharedSkillUMD",
+  "guid": "4e0b919e4fbd85142bce959fae129d1a",
+  "name": "Perfect Mind"
+}

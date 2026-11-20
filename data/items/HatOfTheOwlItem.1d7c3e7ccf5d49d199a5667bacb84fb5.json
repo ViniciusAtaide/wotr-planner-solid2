@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HatOfTheOwlItem",
+  "guid": "1d7c3e7ccf5d49d199a5667bacb84fb5",
+  "m_Enchantments": [
+    "!bp_575de3a13d4040c4cb84891036e9e76b",
+    "!bp_3339c7f18a3e4365b93ad8c94251c1d7"
+  ],
+  "name": "Owl's Cowl"
+}

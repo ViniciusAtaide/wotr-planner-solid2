@@ -1,0 +1,128 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_3cf94df3f1cf9a443a880bc1ae9be3c6"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_8686a5e28ae18f7429f37ee6792a63ee"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_6c799d09d5b93f344b9ade0e0c765c2d"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_7ef950ca681955d47bc4efbe77073e2c"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_b3a66c6df05fb974f9286d05d66da481"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_7ef950ca681955d47bc4efbe77073e2c"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_433ae9a7e655a934b8b5c62896c163f4"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_7ef950ca681955d47bc4efbe77073e2c"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_e6a6c05e8e7827e42862478d37fb8fef"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_c6d0da9124735a44f93ac31df803b9a9"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_61f82ba786fe05643beb3cd3910233a8"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_78177315fc63b474ea3cbb8df38fafcd"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_78177315fc63b474ea3cbb8df38fafcd"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_78177315fc63b474ea3cbb8df38fafcd"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_b705c5184a96a84428eeb35ae2517a14"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_385260ca07d5f1b4e907ba22a02944fc"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_ce96af454a6137d47b9c6a1e02e66803"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_25e009b7e53f86141adee3a1213af5af"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "StormwalkerArchetype",
+  "guid": "a330c05e484d98748a462acd43654a3a",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Stormwalker"
+}

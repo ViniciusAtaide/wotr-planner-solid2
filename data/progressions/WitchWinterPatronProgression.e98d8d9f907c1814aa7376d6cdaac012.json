@@ -1,0 +1,85 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "WitchPatron"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_fb5ae7deb7cbfd94a85c986df8f47c20"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_f4b39358356bf4b4d9cef1182dc792a8"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_8a8f1bb088a9a9e4497eea6412180431"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_dabf0576d727f9a4fb40c0b4acf03cf1"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_7c042e2ede1e0b540865c11221d28816"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_1f18168f5112b494ca3e9cbd58956f87"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_86cf4e8935e5f5e43bf31fd6c3c66525"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_a519ac6294927b74fa3abcc451732a2b"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_b148f0d1925de18449bbf22b7cf7a8e3"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WitchWinterPatronProgression",
+  "guid": "e98d8d9f907c1814aa7376d6cdaac012",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    },
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_eb24ca44debf6714aabe1af1fd905a07"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Winter"
+}

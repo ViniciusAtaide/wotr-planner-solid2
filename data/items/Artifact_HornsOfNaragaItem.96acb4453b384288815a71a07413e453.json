@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_5d501618a28bdc24c80007a5c937dcb7"
+    }
+  ],
+  "assetName": "Artifact_HornsOfNaragaItem",
+  "guid": "96acb4453b384288815a71a07413e453",
+  "m_Enchantments": [],
+  "name": "Horns of Naraga"
+}

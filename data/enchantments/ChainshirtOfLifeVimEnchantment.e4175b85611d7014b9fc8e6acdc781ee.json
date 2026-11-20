@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_b38aa5a183c8adb4685a6ddac0115eca"
+    }
+  ],
+  "assetName": "ChainshirtOfLifeVimEnchantment",
+  "guid": "e4175b85611d7014b9fc8e6acdc781ee"
+}

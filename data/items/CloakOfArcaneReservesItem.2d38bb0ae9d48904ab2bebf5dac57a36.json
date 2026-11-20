@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CloakOfArcaneReservesItem",
+  "guid": "2d38bb0ae9d48904ab2bebf5dac57a36",
+  "m_Enchantments": [
+    "!bp_79ab6916d9732a049973d6ebf4ac0c18"
+  ],
+  "name": "Cloak of Arcane Reserves"
+}

@@ -1,0 +1,23 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_73939e14b956b884688a6e1dccf9c043",
+      "m_Feature": "!bp_7459c25b2cc9cdd4d8367cb555f0fe5a"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_73939e14b956b884688a6e1dccf9c043",
+      "m_Feature": "!bp_73939e14b956b884688a6e1dccf9c043"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "BloodlineDraconicBlackBreathWeaponBaseFeatureDisciple",
+  "guid": "4a146ef4c763b2a48af5430abb911664",
+  "name": "Breath Weapon"
+}

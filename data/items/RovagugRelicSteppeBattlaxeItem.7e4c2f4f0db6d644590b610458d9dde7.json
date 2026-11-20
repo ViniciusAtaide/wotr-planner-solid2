@@ -1,0 +1,22 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionHasAnyClassFromList",
+      "Not": true,
+      "m_Classes": [
+        "!bp_0937bec61c0dabc468428f496580c721"
+      ]
+    }
+  ],
+  "Double": false,
+  "assetName": "RovagugRelicSteppeBattlaxeItem",
+  "guid": "7e4c2f4f0db6d644590b610458d9dde7",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5",
+    "!bp_2fa38ebb29f3bb946ba7098ccaa46d2e"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_2bc77aa47f97de348aefcf03ec8fa43b",
+  "name": "Grave Singer (Battleaxe)"
+}

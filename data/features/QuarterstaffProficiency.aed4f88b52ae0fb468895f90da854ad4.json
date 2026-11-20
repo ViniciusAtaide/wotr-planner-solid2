@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Quarterstaff"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "QuarterstaffProficiency",
+  "guid": "aed4f88b52ae0fb468895f90da854ad4",
+  "name": "Weapon Proficiency (Quarterstaff)"
+}

@@ -1,0 +1,61 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": true,
+  "LevelEntries": [
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_5f64f446aef387d499a396b626d5fc51"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_5f64f446aef387d499a396b626d5fc51"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_5f64f446aef387d499a396b626d5fc51"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_5f64f446aef387d499a396b626d5fc51"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_5f64f446aef387d499a396b626d5fc51"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_5f64f446aef387d499a396b626d5fc51"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "InfusionSpecializationProgression",
+  "guid": "1f86ce843fbd2d548a8d88ea1b652452",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Infusion Specialization"
+}

@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "LichSkeletalUpgrade"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "LichSkeletalMagusTierI",
+  "guid": "1192b090d635b74448eceb313435d437",
+  "name": "Skeletal Magus I"
+}

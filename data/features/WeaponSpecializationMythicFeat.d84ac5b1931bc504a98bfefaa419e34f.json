@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_31470b17e8446ae4ea0dacd6c5817d86"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "WeaponCategory",
+  "Ranks": 1,
+  "RequireProficiency": true,
+  "WeaponSubCategory": "None",
+  "assetName": "WeaponSpecializationMythicFeat",
+  "guid": "d84ac5b1931bc504a98bfefaa419e34f",
+  "m_Prerequisite": "!bp_31470b17e8446ae4ea0dacd6c5817d86",
+  "name": "Weapon Specialization (Mythic)"
+}

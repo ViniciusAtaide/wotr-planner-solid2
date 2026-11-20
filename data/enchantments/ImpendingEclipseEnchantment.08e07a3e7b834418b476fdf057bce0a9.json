@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_67f8d0a863664c45a78175475fa3f11b"
+    }
+  ],
+  "assetName": "ImpendingEclipseEnchantment",
+  "guid": "08e07a3e7b834418b476fdf057bce0a9"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_07b49ab29db1b244a82bc81e7d4cd626"
+    }
+  ],
+  "assetName": "AcidResistance15Enchant",
+  "guid": "09e0be00530efec4693a913d6a7efe23"
+}

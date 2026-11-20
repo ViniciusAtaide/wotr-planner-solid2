@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HeadbandOfWisdom2",
+  "guid": "3d33605336c62274483f382f58908f5b",
+  "m_Enchantments": [
+    "!bp_69f5c9eaa39301b4eb99a51f23629af4"
+  ],
+  "name": "Headband of Inspired Wisdom +2"
+}

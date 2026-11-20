@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "QuickenPerformance2"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BardSwiftPerformance",
+  "guid": "fd4ec50bc895a614194df6b9232004b9",
+  "name": "Bardic Performance (Swift Action)"
+}

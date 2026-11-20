@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 5,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_8e19495ea576a8641964102d177e34b7",
+      "m_Feature": "!bp_d46d9e9e0539a294581b1c1b2e0ad5d5"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DemonSummonFeatureTier4",
+  "guid": "f07e6f4321d1ed14e9d3ed39cbbe556d",
+  "name": "Summon Gibrileth"
+}

@@ -1,0 +1,52 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "ShamanSpirit"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_ee5503b51c0c9684cb7300d28e3fc4e1",
+        "!bp_faa12cd1a5ece2c408d3bd00803fe8a1"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_c2a4ce87f8600db41a9a74d33af87c2c"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_c66e1a4780a28d34bb13fc2c492b86d3"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_e508bc6f64d64fc197ace10d66084b6d"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ShamanFlameSpiritProgression",
+  "guid": "50efeb23b314869409365c8061a4082d",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Flame (progression)"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HatTricornFeatheredItem",
+  "guid": "f33dadeeb51cdba45b23bb40a40e5fb3",
+  "m_Enchantments": [
+    "!bp_a38c3c8bbfc4dc84492fa5a188112dc8"
+  ],
+  "name": "Flamboyant Hat"
+}

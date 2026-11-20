@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3943d609dbaa0864e972a5d92ad26561"
+    }
+  ],
+  "assetName": "BackrankAssistanceEnchantment",
+  "guid": "631f982ad339c054b9d2057f60f74055"
+}

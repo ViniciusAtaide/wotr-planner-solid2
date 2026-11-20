@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "RighteousExorcistsBracersItem",
+  "guid": "d68cea6c999eab4459c030c6588c1083",
+  "m_Enchantments": [
+    "!bp_c86e977ac692af1408e88c3626cbf8da"
+  ],
+  "name": "Righteous Exorcist's Bracers"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HeadbandOfCharisma2",
+  "guid": "a3e8e907908ca7a40ac6da78e70bf33d",
+  "m_Enchantments": [
+    "!bp_f945413e1b120294780ba9de26bd2f7a"
+  ],
+  "name": "Headband of Alluring Charisma +2"
+}

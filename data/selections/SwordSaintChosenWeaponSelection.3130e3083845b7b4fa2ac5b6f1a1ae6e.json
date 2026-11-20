@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_e70ecf1ed95ca2f40b754f1adb22bbdd"
+      ]
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "SwordSaintChosenWeaponSelection",
+  "guid": "3130e3083845b7b4fa2ac5b6f1a1ae6e",
+  "m_AllFeatures": [
+    "!bp_c0b4ec0175e3ff940a45fc21f318a39a"
+  ],
+  "name": "Chosen Weapon (Sword Saint)"
+}

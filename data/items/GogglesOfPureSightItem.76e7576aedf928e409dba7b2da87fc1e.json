@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGlasses",
+  "Components": [],
+  "assetName": "GogglesOfPureSightItem",
+  "guid": "76e7576aedf928e409dba7b2da87fc1e",
+  "m_Enchantments": [
+    "!bp_e054c9ec3b9077f499fdb27e841a2919"
+  ],
+  "name": "Goggles of Pure Sight"
+}

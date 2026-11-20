@@ -1,0 +1,60 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_2d1c077a35804e3cbf121655745f8f11"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_e23a77f921214bb5b06d02509aa8d79d"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_47ac3e4aa5054963bf1f521b292d17fc"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_2f3f34f0d1284137b2a7988c6caea274"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_78f885c7718b479195b043e0eeaae919"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "MagicDeceiverWayOfTimeManipulatorProgression",
+  "guid": "4796db76ba4b4baeb010c52c26ed3be5",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Archetype": "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+    }
+  ],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Time Manipulator"
+}

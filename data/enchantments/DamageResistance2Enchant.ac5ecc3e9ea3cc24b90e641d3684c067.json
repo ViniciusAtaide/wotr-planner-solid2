@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8847c22f8f2e39643a7023f5cabdb9d9"
+    }
+  ],
+  "assetName": "DamageResistance2Enchant",
+  "guid": "ac5ecc3e9ea3cc24b90e641d3684c067"
+}

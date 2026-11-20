@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WhiteMageSpontaneousHealing",
+  "guid": "1f90a0504ae3f11408ca0ff54444b9a4",
+  "name": "Spontaneous Healing (White Mage 1)"
+}

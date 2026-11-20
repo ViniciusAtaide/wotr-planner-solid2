@@ -1,0 +1,42 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillPerception"
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_9e828934974f0fc4bbf7542eb0446e45",
+        "!bp_3d96feeabdfb1ff45b63af77b545813f",
+        "!bp_6d3728d4e9c9898458fe5e9532951132"
+      ]
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillPerception"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "Shortsword"
+    },
+    {
+      "$type": "AddBackgroundWeaponProficiency",
+      "Proficiency": "LightCrossbow"
+    },
+    {
+      "$type": "AddBackgroundArmorProficiency",
+      "Proficiency": "Light"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundGuard",
+  "guid": "3a793809b0f11b74f8b79c252067bfe0",
+  "name": "Guard"
+}

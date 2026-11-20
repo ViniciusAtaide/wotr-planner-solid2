@@ -1,0 +1,53 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_26e81d83d13dbf6448b10019c802612d"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": true,
+  "Groups": [
+    "ShamanHex"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_4db9f3d913a59f14f9cc4ffaa73de2f0"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_f18fea9a4f78fc94e842c02e24b1dad3"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_a658b783516e2e84380a86dce6289bf0"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ShamanHexBattleMasterProgression",
+  "guid": "840651aac9b854a4980ec19e2fced74f",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_145f1d3d360a7ad48bd95d392c81b38e"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Battle Master (progression)"
+}

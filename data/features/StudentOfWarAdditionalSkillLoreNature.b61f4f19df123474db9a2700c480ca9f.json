@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillLoreNature"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "StudentOfWarAdditionalSkillLoreNature",
+  "guid": "b61f4f19df123474db9a2700c480ca9f",
+  "name": "Class Skill — Lore (Nature) (Additional Class Skill)"
+}

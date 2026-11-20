@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_c283822a384b4748b33da578bc30ec85"
+    }
+  ],
+  "assetName": "DaredevilBootsEnchantment",
+  "guid": "fbab1327c11a43788e05443690da8654"
+}

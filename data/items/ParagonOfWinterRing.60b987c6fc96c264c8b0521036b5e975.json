@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "ParagonOfWinterRing",
+  "guid": "60b987c6fc96c264c8b0521036b5e975",
+  "m_Enchantments": [
+    "!bp_3918fe3a73922874db95f76dccfc49a1"
+  ],
+  "name": "Paragon of Winter"
+}

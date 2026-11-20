@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": true,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "WarpriestWeaponFocusSelection",
+  "guid": "ac384183dbfbbd7499410a21d749bef1",
+  "m_AllFeatures": [
+    "!bp_1e1f627d26ad36f43bbd26cc2bf8ac7e"
+  ],
+  "name": "Weapon Focus"
+}

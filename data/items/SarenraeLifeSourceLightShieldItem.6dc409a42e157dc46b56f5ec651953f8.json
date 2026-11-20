@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintItemShield",
+  "Components": [],
+  "assetName": "SarenraeLifeSourceLightShieldItem",
+  "guid": "6dc409a42e157dc46b56f5ec651953f8",
+  "m_ArmorComponent": "!bp_45f95003193bd184fbfeafecfbb57e5e",
+  "m_WeaponComponent": "!bp_62c90581f9892e9468f0d8229c7321c4",
+  "name": "Triumphant Noontide (shield)"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CloakOfResistance7Extra",
+  "guid": "0b7a066e7a8f40aa9f58f0da1c65547e",
+  "m_Enchantments": [
+    "!bp_3dda8b22e1124cb8bbd1546636e0e258"
+  ],
+  "name": "Flawless Cloak of Resistance +7"
+}

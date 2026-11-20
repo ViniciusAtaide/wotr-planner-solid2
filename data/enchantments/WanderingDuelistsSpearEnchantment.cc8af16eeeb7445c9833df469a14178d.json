@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b97ca730b45546a993a72e9f6d8677d8"
+    }
+  ],
+  "assetName": "WanderingDuelistsSpearEnchantment",
+  "guid": "cc8af16eeeb7445c9833df469a14178d"
+}

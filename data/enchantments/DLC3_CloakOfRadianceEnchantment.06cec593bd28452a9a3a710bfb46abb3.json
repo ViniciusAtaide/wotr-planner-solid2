@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_624ddddcf048486981064b42ccf5eae7"
+    }
+  ],
+  "assetName": "DLC3_CloakOfRadianceEnchantment",
+  "guid": "06cec593bd28452a9a3a710bfb46abb3"
+}

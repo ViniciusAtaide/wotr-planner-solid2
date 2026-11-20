@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": false,
+  "IsMythic": false,
+  "Spontaneous": false,
+  "assetName": "LivingGrimoireSpellbook",
+  "guid": "8d904686a43f4eaeb451798e9088b9b9",
+  "m_SpellsPerDay": "!bp_83d3e15962e5d6949b90b5c226a2b487",
+  "name": "Inquisitor"
+}

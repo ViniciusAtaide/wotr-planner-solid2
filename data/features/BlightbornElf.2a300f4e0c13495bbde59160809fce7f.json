@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_55edf82380a1c8540af6c6037d34f322"
+    },
+    {
+      "$type": "RemoveFeatureOnApply",
+      "m_Feature": "!bp_2483a523984f44944a7cf157b21bf79c"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BlightbornElf",
+  "guid": "2a300f4e0c13495bbde59160809fce7f",
+  "name": "Blightborn"
+}

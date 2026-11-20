@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_dff21bfaae5d0c74b87104403ffd1d82"
+    }
+  ],
+  "assetName": "HelmetEvilTeethEnchantment",
+  "guid": "7be29621be275754f898c6c35d2f7824"
+}

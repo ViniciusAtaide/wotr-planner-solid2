@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionHasAnyClassFromList",
+      "Not": false,
+      "m_Classes": [
+        "!bp_26b10d4340839004f960f9816f6109fe",
+        "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+      ]
+    }
+  ],
+  "assetName": "BardingOfVengeanceItem",
+  "guid": "65d1437d2b5843e3a820049ed0bf9832",
+  "m_Enchantments": [
+    "!bp_6628f9d77fd07b54c911cd8930c0d531",
+    "!bp_b59cbb4f8d394dd38a4178311085edae"
+  ],
+  "m_Type": "!bp_503056b4c5a01f44db0ed10ce4c9ef01",
+  "name": "Barding of Vengeance"
+}

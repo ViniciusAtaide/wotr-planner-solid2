@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_797f25d709f559546b29e7bcb181cc74"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ImprovedInitiativeMythicFeat",
+  "guid": "25f4cb387ba4ab94d944fdef3da9ab97",
+  "name": "Improved Initiative (Mythic)"
+}

@@ -1,0 +1,56 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_55019449a6a346a5a7a5dea407cd97f3"
+      ]
+    },
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_d26fb54b74d44a45b84ef7150a460348"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_03dfd2326a44434c96d2c05dbcade21e"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_9846043cf51251a4897728ed6e24e76f"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "RayMasterWitchArchetype",
+  "guid": "d37f299738894b97bbc0808c1c44e6d2",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Keen-Eyed Adventurer"
+}

@@ -1,0 +1,94 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillPersuasion",
+    "SkillKnowledgeWorld",
+    "SkillKnowledgeArcana",
+    "SkillLoreNature",
+    "SkillLoreReligion",
+    "SkillUseMagicDevice"
+  ],
+  "Components": [
+    {
+      "$type": "PrerequisiteCasterTypeSpellLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsArcane": false,
+      "IsFeatureSelectionWhiteList": false,
+      "OnlySpontaneous": false,
+      "RequiredSpellLevel": 3
+    },
+    {
+      "$type": "PrerequisiteCasterTypeSpellLevel",
+      "CheckInProgression": false,
+      "Group": "Any",
+      "IsArcane": true,
+      "IsFeatureSelectionWhiteList": false,
+      "OnlySpontaneous": false,
+      "RequiredSpellLevel": 3
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_a1de1e4f92195b442adb946f0e2b9d4e",
+        "!bp_f180e72e4a9cbaa4da8be9bc958132ef",
+        "!bp_2f5d1e705c7967546b72ad8218ccf99c",
+        "!bp_7f2b282626862e345935bbea5e66424b",
+        "!bp_ef7ece7bb5bb66a41b256976b27f424e",
+        "!bp_46fad72f54a33dc4692d3b62eca7bb78",
+        "!bp_cd26b9fa3f734461a0fcedc81cafaaac",
+        "!bp_fbf5d9ce931f47f3a0c818b3f8ef8414",
+        "!bp_85f3340093d144dd944fff9a9adfd2f2",
+        "!bp_094b6278f7b570f42aeaa98379f07cf2"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteIsPet",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Not": true
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_cad1b9175e8c0e64583432a22134d33c",
+        "!bp_611e863120c0f9a4cab2d099f1eb20b4"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteNoArchetype",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Archetype": "!bp_5c77110cd0414e7eb4c2e485659c9a46",
+      "m_CharacterClass": "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    }
+  ],
+  "DontAddCasterLevels": false,
+  "HitDie": "D6",
+  "IsMythic": false,
+  "PrestigeClass": true,
+  "SkillPoints": 3,
+  "assetName": "LoremasterClass",
+  "guid": "4a7c05adfbaf05446a6bf664d28fb103",
+  "m_Archetypes": [],
+  "m_BaseAttackBonus": "!bp_0538081888b2d8c41893d25d098dee99",
+  "m_FortitudeSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_2bcd2330cc2c5a747968a8c782d4fa0a",
+  "m_ReflexSave": "!bp_dc5257e1100ad0d48b8f3b9798421c72",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_1f309006cd2855e4e91a6c3707f3f700",
+  "name": "Loremaster"
+}

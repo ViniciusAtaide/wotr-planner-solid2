@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "DemonicAspect",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "DemonAspectSelection",
+  "guid": "bbfc0d06955db514ba23337c7bf2cca6",
+  "m_AllFeatures": [
+    "!bp_99a34a0fa0c3a154fbc5b11fe2d18009",
+    "!bp_28f08ce20ee81b24abfd49404e4b9577",
+    "!bp_64c6b4e233e718d429dab47eb3a25ac6",
+    "!bp_4f94ea9a5c2779a458263976dfa02340",
+    "!bp_cadc545dd171fb54ab4e62f8f4e0b670",
+    "!bp_90f1347b3f40dc94aa254235cb8bcda2",
+    "!bp_709ae9be4d75f094f84f26bccb07351d",
+    "!bp_38a54d808e7e1d8479d309a7e8b0ab3e"
+  ],
+  "name": "Demonic Aspect"
+}

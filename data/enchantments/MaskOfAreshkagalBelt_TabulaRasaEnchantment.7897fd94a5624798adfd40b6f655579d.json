@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_178eb4206921425499d363dbf12ad184"
+    }
+  ],
+  "assetName": "MaskOfAreshkagalBelt_TabulaRasaEnchantment",
+  "guid": "7897fd94a5624798adfd40b6f655579d"
+}

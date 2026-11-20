@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_2034dbe5b887ccd42bf4b4b111fbf15b"
+    }
+  ],
+  "assetName": "PilgrimClothEnchantment",
+  "guid": "a2ae3618d6cfbcd409fe98ca47da50b1"
+}

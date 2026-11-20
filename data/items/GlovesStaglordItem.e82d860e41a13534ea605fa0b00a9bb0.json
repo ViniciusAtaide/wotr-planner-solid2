@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "GlovesStaglordItem",
+  "guid": "e82d860e41a13534ea605fa0b00a9bb0",
+  "m_Enchantments": [
+    "!bp_e9ca6a90318f10a4480114c7701c3a74"
+  ],
+  "name": "Death From Afar"
+}

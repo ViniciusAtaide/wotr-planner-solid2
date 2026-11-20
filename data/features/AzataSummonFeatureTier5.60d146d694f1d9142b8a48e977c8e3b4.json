@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 6,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_9a3b2c63afa79744cbca46bea0da9a16",
+      "m_Feature": "!bp_27e5499ea2a23774db7ed2bca892962c"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AzataSummonFeatureTier5",
+  "guid": "60d146d694f1d9142b8a48e977c8e3b4",
+  "name": "Summon Azata Ghael"
+}

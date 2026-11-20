@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionAlignment",
+      "Alignment": "ChaoticGood, ChaoticNeutral, Evil"
+    }
+  ],
+  "Double": false,
+  "assetName": "BurningTomentItem",
+  "guid": "2baf044654b00ee46ab91876ae6df5f1",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_54e960775daa4714fa52e0954d8cf862",
+  "name": "Burning Torment"
+}

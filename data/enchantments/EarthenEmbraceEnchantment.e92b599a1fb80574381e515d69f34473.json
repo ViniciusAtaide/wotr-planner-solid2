@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_75adcee4715b4fe419f3740ee4757275"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Enhancement",
+      "Stat": "Constitution",
+      "Value": 2
+    }
+  ],
+  "assetName": "EarthenEmbraceEnchantment",
+  "guid": "e92b599a1fb80574381e515d69f34473"
+}

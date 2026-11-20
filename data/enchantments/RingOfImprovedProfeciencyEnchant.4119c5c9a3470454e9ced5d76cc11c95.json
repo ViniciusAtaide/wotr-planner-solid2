@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_13130297de369354e8b35a60e7546d0f"
+    }
+  ],
+  "assetName": "RingOfImprovedProfeciencyEnchant",
+  "guid": "4119c5c9a3470454e9ced5d76cc11c95"
+}

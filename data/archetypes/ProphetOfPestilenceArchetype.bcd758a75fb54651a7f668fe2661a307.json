@@ -1,0 +1,128 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_557cd05f067b44e8a916d6324c0c6c42"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_16b45f3a50454d4cb7b10e76656bd998",
+        "!bp_68db664d2b5046eab2e6fd267f5d017d"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_c5b69274980942beaaa4c27fa98d5f0f"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_68db664d2b5046eab2e6fd267f5d017d"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_68db664d2b5046eab2e6fd267f5d017d"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_c5b69274980942beaaa4c27fa98d5f0f"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_68db664d2b5046eab2e6fd267f5d017d"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_68db664d2b5046eab2e6fd267f5d017d"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_36052ed3e10f43ccb0a59a9eb2dd4150"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteAlignment",
+      "Alignment": "TrueNeutral, NeutralEvil, ChaoticEvil",
+      "ArchetypeAlignment": true,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IngorePrerequisiteCheck": false,
+      "IsFeatureSelectionWhiteList": false
+    }
+  ],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_00c8c566d1825dd4a871250f35285982",
+        "!bp_d22f319fefac4ca4b90f03ac5cb9c714"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_4223fe18c75d4d14787af196a04e14e7"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_70e6075a72633ba49804ccb6203fb18c"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_2674f98616188814fbba9f8fccf43564"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_4223fe18c75d4d14787af196a04e14e7"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_f15d95a394e950a42b1d6afbb9f781d9"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_4223fe18c75d4d14787af196a04e14e7"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "ProphetOfPestilenceArchetype",
+  "guid": "bcd758a75fb54651a7f668fe2661a307",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Prophet of Pestilence"
+}

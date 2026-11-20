@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfArodenItem",
+  "guid": "fb02b80542194b0d863269f56ce9617d",
+  "m_Enchantments": [
+    "!bp_f7c7cb4636b14197adae70618ba8838c",
+    "!bp_841131231db847aeaf82f9b94f7f44cc",
+    "!bp_4994410159214c189a795def386183f7"
+  ],
+  "name": "Belt of the Last of the First Humans"
+}

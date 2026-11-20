@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 6,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_72051275b1dbb2d42ba9118237794f7c",
+      "m_Feature": "!bp_572329fc0af467a43847d39f8c6162ea"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DragonDiscipleBiteFeatureFirst",
+  "guid": "7e7e4cd3d93984b439799048e6657237",
+  "name": "Dragon Bite (Dragon Disciple 2)"
+}

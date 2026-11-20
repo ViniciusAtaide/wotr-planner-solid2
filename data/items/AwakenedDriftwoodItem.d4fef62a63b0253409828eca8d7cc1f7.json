@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "AwakenedDriftwoodItem",
+  "guid": "d4fef62a63b0253409828eca8d7cc1f7",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b",
+    "!bp_eaa613cc9d68af144ae62f3bd6c1eba4"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_629736dabac7f9f4a819dc854eaed2d6",
+  "name": "Awakened Driftwood"
+}

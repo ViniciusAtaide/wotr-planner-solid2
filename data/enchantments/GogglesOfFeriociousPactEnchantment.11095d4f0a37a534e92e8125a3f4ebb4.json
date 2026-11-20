@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Enhancement",
+      "Stat": "Wisdom",
+      "Value": 2
+    }
+  ],
+  "assetName": "GogglesOfFeriociousPactEnchantment",
+  "guid": "11095d4f0a37a534e92e8125a3f4ebb4"
+}

@@ -1,0 +1,148 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_a406d6ebea5c46bba3160246be03e96f"
+      ],
+      "m_CustomProgression": [
+        {
+          "BaseValue": 1,
+          "ProgressionValue": 2
+        },
+        {
+          "BaseValue": 2,
+          "ProgressionValue": 4
+        },
+        {
+          "BaseValue": 3,
+          "ProgressionValue": 6
+        },
+        {
+          "BaseValue": 4,
+          "ProgressionValue": 8
+        },
+        {
+          "BaseValue": 5,
+          "ProgressionValue": 10
+        },
+        {
+          "BaseValue": 6,
+          "ProgressionValue": 12
+        },
+        {
+          "BaseValue": 7,
+          "ProgressionValue": 14
+        },
+        {
+          "BaseValue": 8,
+          "ProgressionValue": 32
+        },
+        {
+          "BaseValue": 9,
+          "ProgressionValue": 36
+        },
+        {
+          "BaseValue": 10,
+          "ProgressionValue": 40
+        },
+        {
+          "BaseValue": 11,
+          "ProgressionValue": 44
+        },
+        {
+          "BaseValue": 12,
+          "ProgressionValue": 48
+        },
+        {
+          "BaseValue": 13,
+          "ProgressionValue": 52
+        },
+        {
+          "BaseValue": 14,
+          "ProgressionValue": 56
+        },
+        {
+          "BaseValue": 15,
+          "ProgressionValue": 90
+        },
+        {
+          "BaseValue": 16,
+          "ProgressionValue": 96
+        },
+        {
+          "BaseValue": 17,
+          "ProgressionValue": 102
+        },
+        {
+          "BaseValue": 18,
+          "ProgressionValue": 108
+        },
+        {
+          "BaseValue": 19,
+          "ProgressionValue": 114
+        },
+        {
+          "BaseValue": 20,
+          "ProgressionValue": 120
+        }
+      ],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "Custom",
+      "m_StartLevel": 1,
+      "m_StepLevel": 7,
+      "m_Type": "DamageDice",
+      "m_UseMax": false,
+      "m_UseMin": false
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 8,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
+      "m_Feature": "!bp_86669ce8759f9d7478565db69b8c19ad"
+    },
+    {
+      "$type": "AddContextStatBonus",
+      "Descriptor": "Racial",
+      "HasMinimal": false,
+      "Minimal": 0,
+      "Multiplier": 2,
+      "Stat": "Constitution",
+      "Value": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Rank"
+      }
+    },
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_a406d6ebea5c46bba3160246be03e96f"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [],
+      "m_Max": 20,
+      "m_Min": 0,
+      "m_Progression": "StartPlusDivStep",
+      "m_StartLevel": 1,
+      "m_StepLevel": 14,
+      "m_Type": "Default",
+      "m_UseMax": true,
+      "m_UseMin": false
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "ShifterAspectWolverineBuff",
+  "guid": "e0b35a32cf234381ab13c831106937f1",
+  "name": "Wolverine (Shifter 9)"
+}

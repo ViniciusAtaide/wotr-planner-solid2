@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a8bd2b7f07cc44339037519137872a54"
+    }
+  ],
+  "assetName": "SavageUnityEnchantmentNew",
+  "guid": "62f9b356781e4810ba7418259b673799"
+}

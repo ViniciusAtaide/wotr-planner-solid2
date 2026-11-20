@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [],
+  "assetName": "ScaleBardingType",
+  "guid": "abefac7d8f98aeb40a167e0f5978d9c7",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "MediumBarding",
+  "name": "Medium Armor — Scale Barding"
+}

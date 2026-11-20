@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_c409db21fdbd449d956397eb484ea302"
+    }
+  ],
+  "assetName": "HeartbreakerEnchantment",
+  "guid": "95216222c9b14f429a957caf874c1e30"
+}

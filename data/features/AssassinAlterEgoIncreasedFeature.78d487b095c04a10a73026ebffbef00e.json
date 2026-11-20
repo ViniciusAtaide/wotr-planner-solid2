@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 2,
+  "assetName": "AssassinAlterEgoIncreasedFeature",
+  "guid": "78d487b095c04a10a73026ebffbef00e",
+  "name": "Alter Ego"
+}

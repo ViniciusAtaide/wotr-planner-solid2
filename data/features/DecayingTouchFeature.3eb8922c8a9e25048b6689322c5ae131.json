@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "LichUniqueAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DecayingTouchFeature",
+  "guid": "3eb8922c8a9e25048b6689322c5ae131",
+  "name": "Decaying Touch"
+}

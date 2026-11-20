@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardTorch",
+  "guid": "850c86ad8b953c74bb85f9bb1d1148bc",
+  "m_Enchantments": [],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_cf47423b22cbc2641ab5599adc1d1ce7",
+  "name": "Everburning Torch"
+}

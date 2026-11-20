@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "Discovery",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "MutationWarriorDiscoverySelection",
+  "guid": "5d297a1a9a4384e408a1098381721db1",
+  "m_AllFeatures": [
+    "!bp_fd5f7b37ab4301c48a88cc196ee5f0ce",
+    "!bp_78197196e096c6e4eaed5c62fa108b52",
+    "!bp_6f5cb651e26bd97428523061b07ffc85",
+    "!bp_76c61966afdd82048911f3d63c6fe0bc",
+    "!bp_de112af9600e0e446af0c7ef0707e1c8",
+    "!bp_76b4bb8e54f3f5c418f421684c76ef4e",
+    "!bp_2bc1ee626a69667469ab5c1698b99956"
+  ],
+  "name": "Mutagen Discovery"
+}

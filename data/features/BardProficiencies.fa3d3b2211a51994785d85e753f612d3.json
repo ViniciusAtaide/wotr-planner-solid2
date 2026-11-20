@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_6d3728d4e9c9898458fe5e9532951132",
+        "!bp_e70ecf1ed95ca2f40b754f1adb22bbdd",
+        "!bp_cb8686e7357a68c42bdd9d4e65334633"
+      ]
+    },
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Longsword",
+        "Rapier",
+        "Shortbow",
+        "Shortsword"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BardProficiencies",
+  "guid": "fa3d3b2211a51994785d85e753f612d3",
+  "name": "Bard Proficiencies"
+}

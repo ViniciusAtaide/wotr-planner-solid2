@@ -1,0 +1,9 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 5,
+  "assetName": "SoullesCommandFeature",
+  "guid": "e628e68c785a4fa5b5247f148b39dc3c"
+}

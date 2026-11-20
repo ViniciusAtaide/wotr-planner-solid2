@@ -1,0 +1,74 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_1c7cdc1605554954f838d85bbdd22d90"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_c8db0772b7059ec4eabe55b7e0e79824"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_d2f45a2034d4f7643ba1a450bc5c4c06"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_6d73f49b602e29a43a6faa2ea1e4a425"
+      ]
+    },
+    {
+      "Level": 17,
+      "m_Features": [
+        "!bp_f17c3ba33bb44d44782cb3851d823011",
+        "!bp_5a64de5435667da4eae2e4c95ec87917"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_b936ee90c070edb46bd76025dc1c5936"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_5a64de5435667da4eae2e4c95ec87917"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_5a64de5435667da4eae2e4c95ec87917"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WeaponBondProgression",
+  "guid": "e08a817f475c8794aa56fdd904f43a57",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_bfa11238e7ae3544bbeb4d0b92e897ec"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": [],
+  "name": "Divine Weapon Bond"
+}

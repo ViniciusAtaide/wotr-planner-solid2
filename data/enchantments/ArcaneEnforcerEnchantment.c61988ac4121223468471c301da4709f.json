@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b9c68272064747345a0aa0076170dce1"
+    }
+  ],
+  "assetName": "ArcaneEnforcerEnchantment",
+  "guid": "c61988ac4121223468471c301da4709f"
+}

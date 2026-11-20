@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_57b8f7da26a9dd8448b3b8df161efc23"
+    }
+  ],
+  "assetName": "BootsOfStampedeEnchantment",
+  "guid": "9cf06515dfaf8894993872bca399c689"
+}

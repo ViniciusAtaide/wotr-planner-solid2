@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_fe65b4d9191ce494380e3f60f41cec9e"
+    }
+  ],
+  "assetName": "SurefireGlovesEnchantment",
+  "guid": "b0cee12d1cd1d204fbcf5d9de0bc23fd"
+}

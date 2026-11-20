@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_d6f70b73e3434050806f208278723d6a"
+    }
+  ],
+  "assetName": "DLC5_GraveWoundsSithhudEnchantment",
+  "guid": "22d2d95953b1436884515614500ab521"
+}

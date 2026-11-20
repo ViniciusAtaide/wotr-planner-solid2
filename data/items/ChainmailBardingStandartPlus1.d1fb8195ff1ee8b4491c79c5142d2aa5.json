@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionHasAnyClassFromList",
+      "Not": false,
+      "m_Classes": [
+        "!bp_26b10d4340839004f960f9816f6109fe",
+        "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+      ]
+    }
+  ],
+  "assetName": "ChainmailBardingStandartPlus1",
+  "guid": "d1fb8195ff1ee8b4491c79c5142d2aa5",
+  "m_Enchantments": [
+    "!bp_a9ea95c5e02f9b7468447bc1010fe152"
+  ],
+  "m_Type": "!bp_bdcce0ac4c930b84a849f935a4bdd93e",
+  "name": "Chainmail Barding +1"
+}

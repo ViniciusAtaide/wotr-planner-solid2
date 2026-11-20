@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f0c2ed741b77d28459100eb7546b2621"
+    }
+  ],
+  "assetName": "ForewarningShieldEnchant",
+  "guid": "dc5668fb29d64064facf173c30d8f6b7"
+}

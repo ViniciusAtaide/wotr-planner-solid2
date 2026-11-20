@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "IncreaseActivatableAbilityGroupSize",
+      "Group": "AeonGaze"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 3,
+  "assetName": "AeonGazeFeatureExtraGaze2",
+  "guid": "7d827b9679f8427cb9c64bb934252261",
+  "name": "Enforcing Gaze — Extra Gaze (Aeon 8)"
+}

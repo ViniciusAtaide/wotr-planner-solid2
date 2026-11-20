@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CursedSpellResistance",
+  "guid": "03c9e4712fbf4175998d2bc0c9fa2052",
+  "name": "Cursed Spell Resistance"
+}

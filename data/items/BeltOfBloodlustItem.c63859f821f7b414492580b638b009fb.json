@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfBloodlustItem",
+  "guid": "c63859f821f7b414492580b638b009fb",
+  "m_Enchantments": [
+    "!bp_f9278c2ea13c2b34cb56be078428a0bb",
+    "!bp_15008553994dd7e48af2ad1a1426d733",
+    "!bp_5f1d88dbc1847f949ab3f62937e76255"
+  ],
+  "name": "Belt of Bloodlust"
+}

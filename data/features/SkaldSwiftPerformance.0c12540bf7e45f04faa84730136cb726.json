@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "QuickenPerformance2"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SkaldSwiftPerformance",
+  "guid": "0c12540bf7e45f04faa84730136cb726",
+  "name": "Raging Song (Swift Action)"
+}

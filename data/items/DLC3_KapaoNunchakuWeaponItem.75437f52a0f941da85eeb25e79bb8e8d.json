@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "DLC3_KapaoNunchakuWeaponItem",
+  "guid": "75437f52a0f941da85eeb25e79bb8e8d",
+  "m_Enchantments": [
+    "!bp_d42fc23b92c640846ac137dc26e000d4",
+    "!bp_10a6279460384455aec3031827994dea"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_4703b4c0922142f4cbe8895c10a47a9f",
+  "name": "Kapao"
+}

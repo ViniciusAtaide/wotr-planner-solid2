@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_c81182153ad34f8d89581ae91eeb2036"
+    }
+  ],
+  "assetName": "MightyAdvisorEnchantment",
+  "guid": "8002c3ba364c49b3b610a71a1946770e"
+}

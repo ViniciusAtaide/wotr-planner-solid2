@@ -1,0 +1,55 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_c3724cfbe98875f4a9f6d1aabd4011a6"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "SpecialistSchool"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_c46512b796216b64899f26301241e4e6",
+        "!bp_6c29030e9fea36949877c43a6f94ff31",
+        "!bp_6c29030e9fea36949877c43a6f94ff31"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_de877714f4d224949b403205e8582de4"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_f50f2336ee59d004c8a37f9c8665bb98"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "SpecialisationSchoolEvocationProgression",
+  "guid": "f8019b7724d72a241a97157bc37f1c3b",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_ba34257984f4c41408ce1dc2004e342e"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Specialist School — Evocation (Wizard)"
+}

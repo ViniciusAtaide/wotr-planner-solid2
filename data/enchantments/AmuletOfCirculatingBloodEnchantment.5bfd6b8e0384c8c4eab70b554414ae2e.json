@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_3a4fdeb3d6d11cc4ba76f1ffc28c8f25"
+    }
+  ],
+  "assetName": "AmuletOfCirculatingBloodEnchantment",
+  "guid": "5bfd6b8e0384c8c4eab70b554414ae2e"
+}

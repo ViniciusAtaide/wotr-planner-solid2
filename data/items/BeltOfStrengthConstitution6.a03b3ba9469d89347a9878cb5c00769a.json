@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentBelt",
+  "Components": [],
+  "assetName": "BeltOfStrengthConstitution6",
+  "guid": "a03b3ba9469d89347a9878cb5c00769a",
+  "m_Enchantments": [
+    "!bp_b4cff7cdccb966048aa14d2d01c9209a",
+    "!bp_177510057a2f71a4c8e61bebabaefa28"
+  ],
+  "name": "Belt of Physical Might +6"
+}

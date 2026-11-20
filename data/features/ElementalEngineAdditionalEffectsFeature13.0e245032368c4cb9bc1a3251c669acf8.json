@@ -1,0 +1,35 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_3d8d3d6678b901444a07984294a1bc24",
+      "m_Feature": "!bp_ea2d962dcb7343e5b92a4bf680e2fd9c"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_7ab8947ce2e19c44a9edcf5fd1466686",
+      "m_Feature": "!bp_44f5ffdf88e04140abdd77caaf12a635"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_c6816ad80a3df9c4ea7d3b012b06bacd",
+      "m_Feature": "!bp_38d3b79d394640bba73d4c645600370c"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": false,
+      "m_CheckedFact": "!bp_2bd0d44953a536f489082534c48f8e31",
+      "m_Feature": "!bp_edca149197c5462bb6acaf49ec13c7d0"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ElementalEngineAdditionalEffectsFeature13",
+  "guid": "0e245032368c4cb9bc1a3251c669acf8",
+  "name": "Greater Elemental Burnout"
+}

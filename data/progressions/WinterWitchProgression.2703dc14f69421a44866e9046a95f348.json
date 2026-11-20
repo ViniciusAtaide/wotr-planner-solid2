@@ -1,0 +1,74 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_ea20b26d9d0ede540af3c74246dade41",
+        "!bp_9b827777e51ec0540ba6a0cbea6ea84a",
+        "!bp_a593f3f1f8137c74da7569dbdac62949"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": []
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_84e3920082103a34eb54dcca2e7904ae"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": []
+    },
+    {
+      "Level": 5,
+      "m_Features": []
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_b2552d80cdd24e17af922ec8ef669192"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": []
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_d50282428eb0a9b489bff9f687dd208c"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": []
+    },
+    {
+      "Level": 10,
+      "m_Features": []
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WinterWitchProgression",
+  "guid": "2703dc14f69421a44866e9046a95f348",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_eb24ca44debf6714aabe1af1fd905a07"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": []
+}

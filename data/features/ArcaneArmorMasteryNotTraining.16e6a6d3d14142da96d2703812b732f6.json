@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "ArcaneArmorMasteryNotTraining",
+  "guid": "16e6a6d3d14142da96d2703812b732f6",
+  "name": "Arcane Armor Mastery"
+}

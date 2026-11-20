@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_1e66cfb4f351466fb05636082bce50d6"
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 2,
+      "Not": false,
+      "m_CharacterClass": "!bp_daf1235b6217787499c14e4e32142523"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "GoldDragonBreathRejuvinating",
+  "guid": "ef3690c36872422d9bfadeb276b5c3fe",
+  "name": "Rejuvenating Breath"
+}

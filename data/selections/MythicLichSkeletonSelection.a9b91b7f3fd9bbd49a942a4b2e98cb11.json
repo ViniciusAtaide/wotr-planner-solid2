@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "SkeletalChampion",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "MythicLichSkeletonSelection",
+  "guid": "a9b91b7f3fd9bbd49a942a4b2e98cb11",
+  "m_AllFeatures": [
+    "!bp_0cebe3b375b6397438909ac9752d9792",
+    "!bp_d4583662450245446ae3a56e07232e6f",
+    "!bp_048456cce79943f4c9c9eec1aa5ce9a0",
+    "!bp_f984e621943c532478d9df0e79c49a78"
+  ],
+  "name": "Skeletal Champion"
+}

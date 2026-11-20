@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "GrenadierStaggeringBlast",
+  "guid": "60c711f083204f945ae556d7616c38a3",
+  "name": "Staggering Blast"
+}

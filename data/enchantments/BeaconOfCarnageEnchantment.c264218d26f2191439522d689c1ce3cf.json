@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_a8ea2027afa333246a86b8085c23fbfd"
+    }
+  ],
+  "assetName": "BeaconOfCarnageEnchantment",
+  "guid": "c264218d26f2191439522d689c1ce3cf"
+}

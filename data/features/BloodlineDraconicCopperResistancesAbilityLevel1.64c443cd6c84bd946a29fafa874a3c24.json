@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "NaturalArmor",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "AC",
+      "Value": 1
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 2,
+  "assetName": "BloodlineDraconicCopperResistancesAbilityLevel1",
+  "guid": "64c443cd6c84bd946a29fafa874a3c24",
+  "name": "Dragon Resistances (Draconic Bloodline — Copper 3)"
+}

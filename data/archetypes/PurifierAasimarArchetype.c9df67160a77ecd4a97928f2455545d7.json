@@ -1,0 +1,83 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_7dc8d7dede2704640956f7bc4102760a"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_7dc8d7dede2704640956f7bc4102760a",
+        "!bp_c243fb4b07396534ca62dd6d01093631"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_7dc8d7dede2704640956f7bc4102760a"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_7dc8d7dede2704640956f7bc4102760a"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_e7237c71cb830364ba2b3eb0a0a53272"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": true,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_b7f02ba92b363064fb873963bec275ee"
+    }
+  ],
+  "RemoveFeatures": [
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_60008a10ad7ad6543b1f63016741a5d2"
+      ]
+    },
+    {
+      "Level": 11,
+      "m_Features": [
+        "!bp_60008a10ad7ad6543b1f63016741a5d2"
+      ]
+    },
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_2cd080fc181122c4a9c5a705abe8ad47"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_60008a10ad7ad6543b1f63016741a5d2"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "PurifierAasimarArchetype",
+  "guid": "c9df67160a77ecd4a97928f2455545d7",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Purifier"
+}

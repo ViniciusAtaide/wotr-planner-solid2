@@ -1,0 +1,65 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 6,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": null,
+      "m_Feature": "!bp_12b100acb883a5a478560054ceae7f3b"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 9,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": null,
+      "m_Feature": "!bp_4b152a7bc5bab5042b437b955fea46cd"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 12,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": null,
+      "m_Feature": "!bp_f4b3dfedcc150d249be42c0d12302b20"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 15,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": null,
+      "m_Feature": "!bp_1d96c608b7a24b2ca10a0cb1dbf37813"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 18,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": null,
+      "m_Feature": "!bp_ea7c96bad79347318961e12a6642de66"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": null,
+      "m_Feature": "!bp_8c9d59de3fea4536a55d878e8a212138"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "CloakOfMortaFeature",
+  "guid": "7918cbeb4dab42339126e1495f50b492",
+  "name": "Cape of Morta"
+}

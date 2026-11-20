@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddClassSkill",
+      "Skill": "SkillKnowledgeArcana"
+    },
+    {
+      "$type": "AddBackgroundClassSkill",
+      "Skill": "SkillKnowledgeArcana"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BackgroundCheliaxianDiabolist",
+  "guid": "67ab276984c26a645a7472091779d514",
+  "name": "Chelaxian Diabolist"
+}

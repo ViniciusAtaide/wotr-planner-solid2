@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_fa56b28ef1594a4f8ca3680c744fd23d"
+    }
+  ],
+  "assetName": "MantisFavorEnchantment",
+  "guid": "80a4d80748a74bd59ad2034dcaa18e73"
+}

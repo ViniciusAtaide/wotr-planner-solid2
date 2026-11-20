@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Sai",
+  "Components": [],
+  "assetName": "Sai",
+  "guid": "0944f411666c7594aa1398a7476ecf7d",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Monk",
+  "m_IsMonk": true,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Sai"
+}

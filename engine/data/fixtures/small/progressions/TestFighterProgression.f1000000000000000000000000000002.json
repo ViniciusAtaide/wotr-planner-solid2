@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_f1000000000000000000000000000003"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_f1000000000000000000000000000003"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "TestFighterProgression",
+  "guid": "f1000000000000000000000000000002",
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_f1000000000000000000000000000001"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": []
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_dafcc214e47881745b3140cbc7325d94"
+    }
+  ],
+  "assetName": "VeteranMarksmansBracersEnchantment",
+  "guid": "bbdd466eb405dda40a164210caf183ed"
+}

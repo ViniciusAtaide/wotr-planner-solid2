@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentWrist",
+  "Components": [],
+  "assetName": "RepellingBracersItem",
+  "guid": "7932e66d4eaa7ff43a4f8bae6bab13ff",
+  "m_Enchantments": [
+    "!bp_49aff3a4d41ffd94288104207296901d"
+  ],
+  "name": "Repelling Bracers"
+}

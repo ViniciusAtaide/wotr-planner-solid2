@@ -1,0 +1,5 @@
+{
+  "change": "remove",
+  "reason": "Hand-kept item (map ticket 12): the empty hand, the natural weapon a unit fights with when it holds nothing. The sourcing takes it from a companion's m_EmptyHandWeapon, as the research did, but a natural weapon is never looted (Items/ItemEntityWeapon.cs IsLootable), so it is no Gear (research: obtainable-items.md).",
+  "target": "20375b5a0c9243d45966bd72c690ab74"
+}

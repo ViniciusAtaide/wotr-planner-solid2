@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HelmetEvilTeethItem",
+  "guid": "24f5cdf6f8d58064aa843e625616f94c",
+  "m_Enchantments": [
+    "!bp_7be29621be275754f898c6c35d2f7824"
+  ],
+  "name": "Dead Man's Hat"
+}

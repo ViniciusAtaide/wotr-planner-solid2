@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_432c96835aee50341a4ff0b364cdb85a"
+    }
+  ],
+  "Groups": [
+    "GreaterSwordOfHeaven"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AngelSwordHeavenlyHostFeature",
+  "guid": "131fc914b66b62c49b9f9b5f750998f5",
+  "name": "Heavenly Host"
+}

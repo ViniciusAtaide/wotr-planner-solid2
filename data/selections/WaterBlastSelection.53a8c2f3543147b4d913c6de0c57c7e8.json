@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "WaterBlastSelection",
+  "guid": "53a8c2f3543147b4d913c6de0c57c7e8",
+  "m_AllFeatures": [
+    "!bp_dbb1159b0e8137c4ea20434a854ae6a8",
+    "!bp_e4027e0fec48e8048a172c6627d4eba9"
+  ],
+  "name": "Water Blast (Water)"
+}

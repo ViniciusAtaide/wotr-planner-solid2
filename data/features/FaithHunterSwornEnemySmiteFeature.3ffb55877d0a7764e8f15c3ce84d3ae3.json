@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "FaithHunterSwornEnemySmiteFeature",
+  "guid": "3ffb55877d0a7764e8f15c3ce84d3ae3",
+  "name": "Sworn Enemy — Smite (Faith Hunter 6)"
+}

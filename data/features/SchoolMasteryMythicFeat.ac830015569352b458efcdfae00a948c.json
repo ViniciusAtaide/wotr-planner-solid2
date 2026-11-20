@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "SpellSchool",
+  "Ranks": 1,
+  "RequireProficiency": false,
+  "WeaponSubCategory": "None",
+  "assetName": "SchoolMasteryMythicFeat",
+  "guid": "ac830015569352b458efcdfae00a948c",
+  "m_Prerequisite": null,
+  "name": "School Mastery"
+}

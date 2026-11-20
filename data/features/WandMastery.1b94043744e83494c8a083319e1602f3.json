@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "WandMastery"
+    }
+  ],
+  "Groups": [
+    "MagusArcana"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "WandMastery",
+  "guid": "1b94043744e83494c8a083319e1602f3",
+  "name": "Wand Mastery"
+}

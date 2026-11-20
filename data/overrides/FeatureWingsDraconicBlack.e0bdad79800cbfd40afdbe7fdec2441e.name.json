@@ -1,0 +1,6 @@
+{
+  "change": "name",
+  "qualifier": "black dragon",
+  "reason": "Many blueprints are named \"Wings\". Each draconic bloodline has its own (FeatureWingsDraconicBlack, from the black bloodline at level 15), which the Dragon Disciple's \"Wings\" (DragonDiscipleFormFeatureWings, level 9) also gives for the matching colour (AddFeatureIfHasFact). No grantor holds on every route, so each is qualified by its dragon's colour.",
+  "target": "e0bdad79800cbfd40afdbe7fdec2441e"
+}

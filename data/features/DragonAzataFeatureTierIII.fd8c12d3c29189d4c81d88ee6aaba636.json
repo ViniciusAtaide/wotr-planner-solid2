@@ -1,0 +1,51 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_1e813eb8159b67a459b1c975027866e5",
+        "!bp_ef7ece7bb5bb66a41b256976b27f424e",
+        "!bp_c263f44f72df009489409af122b5eefc",
+        "!bp_8ac59959b1b23c347a0361dc97cc786d",
+        "!bp_12c1b556df3b667458ae200bfb38ccb8",
+        "!bp_bb0be011191b77f418d2225399109f0c"
+      ]
+    },
+    {
+      "$type": "ActivateTrigger",
+      "Actions": {
+        "Actions": [
+          {
+            "$type": "AddFact",
+            "Unit": {
+              "$type": "FactOwner"
+            },
+            "m_Fact": "!bp_600c4d652b6e4684a7a4b77946903c30"
+          }
+        ]
+      },
+      "Conditions": {
+        "Conditions": [],
+        "Operation": "And"
+      }
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_aed0b33e17a3b3d44a718852e87305bd"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 1,
+  "assetName": "DragonAzataFeatureTierIII",
+  "guid": "fd8c12d3c29189d4c81d88ee6aaba636"
+}

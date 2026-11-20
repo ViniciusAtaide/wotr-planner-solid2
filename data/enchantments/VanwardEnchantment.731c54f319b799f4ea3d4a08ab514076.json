@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_883237e9dac35ba4fba0cffc2af73fb9"
+    }
+  ],
+  "assetName": "VanwardEnchantment",
+  "guid": "731c54f319b799f4ea3d4a08ab514076"
+}

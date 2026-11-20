@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_badf7f40a19343c683a83f3375192ff1"
+    }
+  ],
+  "assetName": "Artifact_LichCloakEnchantment",
+  "guid": "79a17694ce3944a7b10e6bea48a7688e"
+}

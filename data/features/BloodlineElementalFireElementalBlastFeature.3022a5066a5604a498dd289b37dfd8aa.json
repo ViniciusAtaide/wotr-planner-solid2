@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BloodlineElementalFireElementalBlastFeature",
+  "guid": "3022a5066a5604a498dd289b37dfd8aa",
+  "name": "Elemental Blast (Elemental Bloodline — Fire)"
+}

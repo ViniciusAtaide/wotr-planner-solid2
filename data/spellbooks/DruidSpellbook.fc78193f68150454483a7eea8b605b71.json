@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": false,
+  "IsMythic": false,
+  "Spontaneous": false,
+  "assetName": "DruidSpellbook",
+  "guid": "fc78193f68150454483a7eea8b605b71",
+  "m_SpellsPerDay": "!bp_6a45ad1fb1b9f7240aea942b7c22111d",
+  "name": "Druid"
+}

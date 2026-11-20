@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "AngelMythcHalo"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "HaloBurningBrightFeature",
+  "guid": "1faccd51363ce0c4798e3f74c4fa2d8e",
+  "name": "Burning Bright"
+}

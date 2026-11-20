@@ -1,0 +1,44 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 1,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_9b7bf2754e2012e4dac135fd6c782fac",
+        "!bp_c2c28b6f6f000314eb35fff49bb99920",
+        "!bp_ad20bc4e586278c4996d4a81b2448998",
+        "!bp_93d8bc401accfe6489ea3797e316e5d9",
+        "!bp_295080cf4691df9438f58ff5ce79ee65"
+      ],
+      "m_RestrictIfNot": false
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 4,
+      "Not": false,
+      "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "Groups": [
+    "KineticBlastInfusion"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MagneticInfusionFeature",
+  "guid": "d6b95ac99e3004b499d750835864e053",
+  "name": "Magnetic Infusion"
+}

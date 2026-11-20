@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "StandardGnomehookedHammerSecondThunderingCorrosivePlus2",
+  "guid": "8c708d7f8f2a85343b5b376ed51da4b2",
+  "m_Enchantments": [
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_018ad48ffd3460d47900491656d2ff26",
+  "name": "Corrosive Thundering Gnome Hooked Hammer +2"
+}

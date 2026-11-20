@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8a1ee994146946949ea526003ab00b4f"
+    }
+  ],
+  "assetName": "DiskOfUnbalanceEnchantment",
+  "guid": "74a49e6878664b649288868565396492"
+}

@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddProficiencies",
+      "ArmorProficiencies": [],
+      "WeaponProficiencies": [
+        "Battleaxe"
+      ],
+      "m_RaceRestriction": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BattleaxeProficiency",
+  "guid": "5d1fb7b0c7a8b634b9d7903d9264895d",
+  "name": "Weapon Proficiency (Battleaxe)"
+}

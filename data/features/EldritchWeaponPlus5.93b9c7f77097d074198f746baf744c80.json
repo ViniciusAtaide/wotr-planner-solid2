@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "IncreaseActivatableAbilityGroupSize",
+      "Group": "ArcaneWeaponProperty"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EldritchWeaponPlus5",
+  "guid": "93b9c7f77097d074198f746baf744c80",
+  "name": "Arcane Weapon (+5) (Magus)"
+}

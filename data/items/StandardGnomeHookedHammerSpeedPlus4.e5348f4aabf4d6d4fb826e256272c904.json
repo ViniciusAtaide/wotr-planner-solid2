@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardGnomeHookedHammerSpeedPlus4",
+  "guid": "e5348f4aabf4d6d4fb826e256272c904",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979"
+  ],
+  "m_SecondWeapon": "!bp_eba9be29e38e80648a6c70fd339973f3",
+  "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3",
+  "name": "Speed Gnome Hooked Hammer +4"
+}

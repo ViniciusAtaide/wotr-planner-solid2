@@ -1,0 +1,81 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "WitchPatron"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_2e2f50be52f7ea245a4bc29fa2177cc4"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_dd33b6eb65ada894fbb991eb573092a7"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_040d5d2c03c6fe742834af9ec84bc859"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_53167b837ba41284abd67f8be189e649"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_a6f14ca03face8048904c92518677e89"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_68027fbdb1cdf43439e79f0336c2a4c5"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_c2b9cadeb701a104f8a27852aab98d76"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_799a0b3658f7af24ca125f4d7a2b8a69"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_8fcbe0b311ed75c4eadd4789f0e78f70"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WitchTransformationhPatronProgression",
+  "guid": "23ea5ade326f80b488164f75580c03af",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Transformation (Patron)"
+}

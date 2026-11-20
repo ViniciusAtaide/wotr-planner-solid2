@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_24d5402c0c1de48468b563f6174c6256"
+    }
+  ],
+  "Groups": [
+    "OppositionSchool"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OppositionSchoolIllusion",
+  "guid": "6750ead44c0c034428c6509c68110375",
+  "name": "Opposition School — Illusion"
+}

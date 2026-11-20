@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShoulders",
+  "Components": [],
+  "assetName": "CapeOfDesinsectorItem",
+  "guid": "b7a92cca052b687469ab53ed5d6a36c5",
+  "m_Enchantments": [
+    "!bp_28519dec9c9dcc64c9c6cad53b650826"
+  ],
+  "name": "Cape of Pest Control"
+}

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_701422799dd64e07ad931d2844b00362"
+    }
+  ],
+  "assetName": "SpiritThrasherEnchantment",
+  "guid": "53c3f7ccd4c14155a97800c9a9f1907b"
+}

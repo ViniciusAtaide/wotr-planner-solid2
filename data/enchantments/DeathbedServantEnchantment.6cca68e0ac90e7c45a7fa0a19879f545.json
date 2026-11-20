@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b5540cc5cf7d453191021755d94254b8"
+    }
+  ],
+  "assetName": "DeathbedServantEnchantment",
+  "guid": "6cca68e0ac90e7c45a7fa0a19879f545"
+}

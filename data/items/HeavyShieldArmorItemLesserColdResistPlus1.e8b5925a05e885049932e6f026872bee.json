@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [],
+  "assetName": "HeavyShieldArmorItemLesserColdResistPlus1",
+  "guid": "e8b5925a05e885049932e6f026872bee",
+  "m_Enchantments": [
+    "!bp_e90c252e08035294eba39bafce76c119",
+    "!bp_c872314ecfab32949ad2e0eebd834919"
+  ],
+  "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6"
+}

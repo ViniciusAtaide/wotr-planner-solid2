@@ -1,0 +1,95 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [
+    {
+      "$type": "ActivateTrigger",
+      "Actions": {
+        "Actions": [
+          {
+            "$type": "AddFact",
+            "Unit": {
+              "$type": "FactOwner"
+            },
+            "m_Fact": "!bp_ad20bc4e586278c4996d4a81b2448998"
+          }
+        ]
+      },
+      "Conditions": {
+        "Conditions": [
+          {
+            "$type": "HasFact",
+            "Not": false,
+            "Unit": {
+              "$type": "FactOwner"
+            },
+            "m_Fact": "!bp_c6816ad80a3df9c4ea7d3b012b06bacd"
+          },
+          {
+            "$type": "HasFact",
+            "Not": false,
+            "Unit": {
+              "$type": "FactOwner"
+            },
+            "m_Fact": "!bp_d2a93ab18fcff8c419b03a2c3d573606"
+          }
+        ],
+        "Operation": "Or"
+      }
+    },
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_cb30a291c75def84090430fbf2b5c05e"
+      ]
+    },
+    {
+      "$type": "PrerequisiteNoFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_956b65effbf37e5419c13100ab4385a3"
+    },
+    {
+      "$type": "AddFeatureIfHasFact",
+      "Not": true,
+      "m_CheckedFact": "!bp_7f5f82c1108b961459c9884a0fa0f5c4",
+      "m_Feature": "!bp_7f5f82c1108b961459c9884a0fa0f5c4"
+    }
+  ],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "KineticElementalFocus"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_d945ac76fc6a06e44b890252824db30a"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": []
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "ThirdElementEarth",
+  "guid": "c43d9c2d23e56fb428a4eb60da9ba1cb",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_42a455d9ec1ad924d889272429eb8391"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Earth (Kineticist 15)"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentShirt",
+  "Components": [],
+  "assetName": "TrueSerenityItem",
+  "guid": "2625cd306722421d860b958845774cbc",
+  "m_Enchantments": [
+    "!bp_7a812495bce84ca6a30a0b6405004bf2"
+  ],
+  "name": "True Serenity"
+}

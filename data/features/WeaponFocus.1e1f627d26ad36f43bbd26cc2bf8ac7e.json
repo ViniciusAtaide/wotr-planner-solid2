@@ -1,0 +1,313 @@
+{
+  "$type": "BlueprintParametrizedFeature",
+  "BlueprintParameterVariants": [],
+  "Components": [
+    {
+      "$type": "PrerequisiteStatValue",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Stat": "BaseAttackBonus",
+      "Value": 1
+    },
+    {
+      "$type": "PrerequisiteConditionForWeaponCategory",
+      "m_Condition": {
+        "$type": "ContextConditionCharacterClass",
+        "CheckCaster": false,
+        "MinLevel": 1,
+        "Not": false,
+        "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f"
+      },
+      "m_WeaponCategories": [
+        "Tentacle",
+        "Spike",
+        "Sting",
+        "Tail"
+      ]
+    },
+    {
+      "$type": "PrerequisiteConditionForWeaponCategory",
+      "m_Condition": {
+        "$type": "ContextConditionCharacterClass",
+        "CheckCaster": false,
+        "MinLevel": 1,
+        "Not": true,
+        "m_Class": "!bp_26b10d4340839004f960f9816f6109fe"
+      },
+      "m_WeaponCategories": [
+        "UnarmedStrike",
+        "Ray",
+        "Touch"
+      ]
+    },
+    {
+      "$type": "PrerequisiteConditionForWeaponCategory",
+      "m_Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "ContextConditionIsWeaponEquipped",
+              "BothHandsAreEmpty": false,
+              "Category": "Bite",
+              "CheckOnCaster": true,
+              "CheckSlot": false,
+              "CheckWeaponCategory": true,
+              "CheckWeaponRangeType": false,
+              "JustCheckEmptyHand": false,
+              "Not": false,
+              "RangeType": "Melee",
+              "Slot": "PrimaryHand"
+            },
+            {
+              "$type": "ContextConditionCharacterClass",
+              "CheckCaster": false,
+              "MinLevel": 1,
+              "Not": true,
+              "m_Class": "!bp_26b10d4340839004f960f9816f6109fe"
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "m_WeaponCategories": [
+        "Bite"
+      ]
+    },
+    {
+      "$type": "PrerequisiteConditionForWeaponCategory",
+      "m_Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "ContextConditionIsWeaponEquipped",
+              "BothHandsAreEmpty": false,
+              "Category": "Claw",
+              "CheckOnCaster": true,
+              "CheckSlot": false,
+              "CheckWeaponCategory": true,
+              "CheckWeaponRangeType": false,
+              "JustCheckEmptyHand": false,
+              "Not": false,
+              "RangeType": "Melee",
+              "Slot": "PrimaryHand"
+            },
+            {
+              "$type": "ContextConditionCharacterClass",
+              "CheckCaster": false,
+              "MinLevel": 1,
+              "Not": true,
+              "m_Class": "!bp_26b10d4340839004f960f9816f6109fe"
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "m_WeaponCategories": [
+        "Claw"
+      ]
+    },
+    {
+      "$type": "PrerequisiteConditionForWeaponCategory",
+      "m_Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "ContextConditionIsWeaponEquipped",
+              "BothHandsAreEmpty": false,
+              "Category": "Gore",
+              "CheckOnCaster": true,
+              "CheckSlot": false,
+              "CheckWeaponCategory": true,
+              "CheckWeaponRangeType": false,
+              "JustCheckEmptyHand": false,
+              "Not": false,
+              "RangeType": "Melee",
+              "Slot": "PrimaryHand"
+            },
+            {
+              "$type": "ContextConditionCharacterClass",
+              "CheckCaster": false,
+              "MinLevel": 1,
+              "Not": true,
+              "m_Class": "!bp_26b10d4340839004f960f9816f6109fe"
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "m_WeaponCategories": [
+        "Gore"
+      ]
+    },
+    {
+      "$type": "PrerequisiteConditionForWeaponCategory",
+      "m_Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "ContextConditionCharacterClass",
+              "CheckCaster": true,
+              "MinLevel": 1,
+              "Not": false,
+              "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f"
+            },
+            {
+              "$type": "ContextConditionIsWeaponEquipped",
+              "BothHandsAreEmpty": false,
+              "Category": "Hoof",
+              "CheckOnCaster": true,
+              "CheckSlot": false,
+              "CheckWeaponCategory": true,
+              "CheckWeaponRangeType": false,
+              "JustCheckEmptyHand": false,
+              "Not": false,
+              "RangeType": "Melee",
+              "Slot": "PrimaryHand"
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "m_WeaponCategories": [
+        "Hoof"
+      ]
+    },
+    {
+      "$type": "PrerequisiteConditionForWeaponCategory",
+      "m_Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "ContextConditionIsWeaponEquipped",
+              "BothHandsAreEmpty": false,
+              "Category": "Slam",
+              "CheckOnCaster": true,
+              "CheckSlot": false,
+              "CheckWeaponCategory": true,
+              "CheckWeaponRangeType": false,
+              "JustCheckEmptyHand": false,
+              "Not": false,
+              "RangeType": "Melee",
+              "Slot": "PrimaryHand"
+            },
+            {
+              "$type": "ContextConditionCharacterClass",
+              "CheckCaster": true,
+              "MinLevel": 1,
+              "Not": false,
+              "m_Class": "!bp_610d836f3a3a9ed42a4349b62f002e96"
+            },
+            {
+              "$type": "ContextConditionCharacterClass",
+              "CheckCaster": true,
+              "MinLevel": 1,
+              "Not": false,
+              "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f"
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "m_WeaponCategories": [
+        "Slam"
+      ]
+    },
+    {
+      "$type": "PrerequisiteConditionForWeaponCategory",
+      "m_Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "ContextConditionIsWeaponEquipped",
+              "BothHandsAreEmpty": false,
+              "Category": "Talon",
+              "CheckOnCaster": true,
+              "CheckSlot": false,
+              "CheckWeaponCategory": true,
+              "CheckWeaponRangeType": false,
+              "JustCheckEmptyHand": false,
+              "Not": false,
+              "RangeType": "Melee",
+              "Slot": "PrimaryHand"
+            },
+            {
+              "$type": "ContextConditionCharacterClass",
+              "CheckCaster": true,
+              "MinLevel": 1,
+              "Not": false,
+              "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f"
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "m_WeaponCategories": [
+        "Talon"
+      ]
+    },
+    {
+      "$type": "PrerequisiteConditionForWeaponCategory",
+      "m_Condition": {
+        "$type": "OrAndLogic",
+        "ConditionsChecker": {
+          "Conditions": [
+            {
+              "$type": "ContextConditionIsWeaponEquipped",
+              "BothHandsAreEmpty": false,
+              "Category": "Wing",
+              "CheckOnCaster": true,
+              "CheckSlot": false,
+              "CheckWeaponCategory": true,
+              "CheckWeaponRangeType": false,
+              "JustCheckEmptyHand": false,
+              "Not": false,
+              "RangeType": "Melee",
+              "Slot": "PrimaryHand"
+            },
+            {
+              "$type": "ContextConditionCharacterClass",
+              "CheckCaster": true,
+              "MinLevel": 1,
+              "Not": false,
+              "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f"
+            }
+          ],
+          "Operation": "Or"
+        },
+        "Not": false
+      },
+      "m_WeaponCategories": [
+        "Wing"
+      ]
+    }
+  ],
+  "Groups": [
+    "Feat",
+    "CombatFeat",
+    "RogueTalent"
+  ],
+  "HasNoSuchFeature": false,
+  "HideInUI": false,
+  "IgnoreParameterFeaturePrerequisites": false,
+  "ParameterType": "WeaponCategory",
+  "Ranks": 1,
+  "RequireProficiency": true,
+  "WeaponSubCategory": "None",
+  "assetName": "WeaponFocus",
+  "guid": "1e1f627d26ad36f43bbd26cc2bf8ac7e",
+  "m_Prerequisite": null,
+  "name": "Weapon Focus"
+}

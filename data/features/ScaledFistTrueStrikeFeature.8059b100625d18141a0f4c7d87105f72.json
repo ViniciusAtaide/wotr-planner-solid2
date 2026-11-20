@@ -1,0 +1,29 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "PrerequisiteClassLevel",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "Level": 4,
+      "Not": false,
+      "m_CharacterClass": "!bp_e8f21e5b58e0569468e420ebea456124"
+    }
+  ],
+  "Groups": [
+    "ScaledFistKiPowers"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ScaledFistTrueStrikeFeature",
+  "guid": "8059b100625d18141a0f4c7d87105f72",
+  "name": "Ki Power: True Strike (Scaled Fist)"
+}

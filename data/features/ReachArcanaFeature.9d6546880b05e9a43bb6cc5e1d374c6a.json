@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [
+    "MagusArcana",
+    "EldritchScionArcana"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ReachArcanaFeature",
+  "guid": "9d6546880b05e9a43bb6cc5e1d374c6a",
+  "name": "Reach Magic"
+}

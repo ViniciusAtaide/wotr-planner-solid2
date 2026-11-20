@@ -1,0 +1,39 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_6c29030e9fea36949877c43a6f94ff31",
+        "!bp_6c29030e9fea36949877c43a6f94ff31",
+        "!bp_6c29030e9fea36949877c43a6f94ff31",
+        "!bp_6c29030e9fea36949877c43a6f94ff31",
+        "!bp_0c7a9899e27cae6449ee1fb3049f128d",
+        "!bp_142e7d12c27ea084fb9b7c24631f10f2"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_44d19b62d00179e4bad7afae7684f2e2",
+        "!bp_5f838049069f1ac4d804ce0862ab5110",
+        "!bp_03a1781486ba98043afddaabf6b7d8ff"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "ArcaneBomberArchetype",
+  "guid": "17b26d5302cd3e243a281a0beec6256b",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Arcane Bomber"
+}

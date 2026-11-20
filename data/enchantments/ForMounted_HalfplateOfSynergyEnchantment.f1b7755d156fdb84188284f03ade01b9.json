@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_ff2d26e87b5f2bc4ba1823e242f10890"
+    }
+  ],
+  "assetName": "ForMounted_HalfplateOfSynergyEnchantment",
+  "guid": "f1b7755d156fdb84188284f03ade01b9"
+}

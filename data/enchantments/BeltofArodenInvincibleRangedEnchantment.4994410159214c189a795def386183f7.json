@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_898eb7082dfa41a0ba7f52af05660eb7"
+    }
+  ],
+  "assetName": "BeltofArodenInvincibleRangedEnchantment",
+  "guid": "4994410159214c189a795def386183f7"
+}

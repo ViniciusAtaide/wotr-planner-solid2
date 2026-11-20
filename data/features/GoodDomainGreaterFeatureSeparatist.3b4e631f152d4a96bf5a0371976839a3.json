@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "GoodDomainGreaterFeatureSeparatist",
+  "guid": "3b4e631f152d4a96bf5a0371976839a3",
+  "name": "Holy Lance (Forbidden Rites)"
+}

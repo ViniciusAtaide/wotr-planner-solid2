@@ -1,0 +1,16 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": false,
+      "m_Class": "!bp_26b10d4340839004f960f9816f6109fe"
+    }
+  ],
+  "assetName": "HolyKneePadsItem",
+  "guid": "b598f24088bc49b9af70dd13969e1eee",
+  "m_Enchantments": [
+    "!bp_5be69fc630d24c5787b5e1f79cd11507"
+  ],
+  "name": "Holy Knee Pads"
+}

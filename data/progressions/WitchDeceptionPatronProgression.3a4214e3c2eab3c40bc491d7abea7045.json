@@ -1,0 +1,81 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [
+    "WitchPatron"
+  ],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_ad7f803d19c18fc4f9c5ee65fc12a237"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_d46fd148c1c4f9c42a7734d8476878f8"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_53f733d1f1704a64cb896b984b1c06d5"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_fa7eafc737f43df4db9e896b0cb7a14b"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_57f0558877e728b409b9d11b8a3abb83"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_429a261686c7c5742a610a92b41601d1"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_16fff96e05cd1a24db1e0254894d74e3"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_82f76f119c9bf4045a49ebe981cfe0d0"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_c586b9b7c4b48054bbfb7f67a28b18ad"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "WitchDeceptionPatronProgression",
+  "guid": "3a4214e3c2eab3c40bc491d7abea7045",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Deception"
+}

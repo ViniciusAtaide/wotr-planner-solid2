@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentFeet",
+  "Components": [],
+  "assetName": "BootsOfMagicalWhirlItem",
+  "guid": "a6cc25b421a74ad4a8fb974d74c2a596",
+  "m_Enchantments": [
+    "!bp_25fd94a2fbf34e07bd3d087734b2083c"
+  ],
+  "name": "Boots of Magical Whirl"
+}

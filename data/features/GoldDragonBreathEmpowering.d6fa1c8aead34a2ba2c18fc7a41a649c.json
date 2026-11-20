@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "GoldDragonBreathEmpowering",
+  "guid": "d6fa1c8aead34a2ba2c18fc7a41a649c",
+  "name": "Empowered Breath"
+}

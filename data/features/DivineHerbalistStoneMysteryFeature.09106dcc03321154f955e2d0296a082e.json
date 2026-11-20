@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 20,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_46d347b49df9ac143b32fa9ef1926ee7"
+    },
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": false,
+      "Level": 2,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "m_Feature": "!bp_210fd7d1314eabb45b8b51b41937d315"
+    }
+  ],
+  "Groups": [
+    "DivineHerbalistMystery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DivineHerbalistStoneMysteryFeature",
+  "guid": "09106dcc03321154f955e2d0296a082e",
+  "name": "Stone (Divine Herbalist)"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "MonkNoArmorFeatureUnlock",
+      "m_NewFact": "!bp_e241bdfd6333b9843a7bfd674d607ac4"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "MonkACBonusUnlock",
+  "guid": "2615c5f87b3d72b42ac0e73b56d895e0",
+  "name": "AC Bonus (Monk)"
+}

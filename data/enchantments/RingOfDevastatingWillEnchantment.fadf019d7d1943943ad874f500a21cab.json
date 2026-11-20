@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_8498f37c5a0d3bc46adb49ca82b8e230"
+    }
+  ],
+  "assetName": "RingOfDevastatingWillEnchantment",
+  "guid": "fadf019d7d1943943ad874f500a21cab"
+}

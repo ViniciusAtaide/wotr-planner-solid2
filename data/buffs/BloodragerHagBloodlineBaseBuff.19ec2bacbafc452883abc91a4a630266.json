@@ -1,0 +1,65 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFactContextActions",
+      "Activated": {
+        "Actions": [
+          {
+            "$type": "Conditional",
+            "ConditionsChecker": {
+              "Conditions": [
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_2aefef394cb6491f9191a2d67ebb6b86"
+                }
+              ],
+              "Operation": "And"
+            },
+            "IfFalse": {
+              "Actions": []
+            },
+            "IfTrue": {
+              "Actions": [
+                {
+                  "$type": "ContextActionApplyBuff",
+                  "Permanent": true,
+                  "m_Buff": "!bp_e8473665806543c1a79c7f15725ba5cb"
+                }
+              ]
+            }
+          },
+          {
+            "$type": "Conditional",
+            "ConditionsChecker": {
+              "Conditions": [
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_7e203e1a7d3b42bfbd5c1b0dedcdf58f"
+                }
+              ],
+              "Operation": "And"
+            },
+            "IfFalse": {
+              "Actions": []
+            },
+            "IfTrue": {
+              "Actions": [
+                {
+                  "$type": "ContextActionApplyBuff",
+                  "Permanent": true,
+                  "m_Buff": "!bp_b513e8056e68419ab21b1b45b0af3a5e"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "BloodragerHagBloodlineBaseBuff",
+  "guid": "19ec2bacbafc452883abc91a4a630266"
+}

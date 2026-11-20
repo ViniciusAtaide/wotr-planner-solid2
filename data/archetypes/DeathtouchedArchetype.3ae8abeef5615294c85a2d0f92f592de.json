@@ -1,0 +1,44 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_5f1afe5168be380408b338f4edd5c6b6"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_045b1eef7a1577d44884e6f105f35a09"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_ce96af454a6137d47b9c6a1e02e66803"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_226f939b7dfd47b4697ec52f79799012"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "DeathtouchedArchetype",
+  "guid": "3ae8abeef5615294c85a2d0f92f592de",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Deathtouched"
+}

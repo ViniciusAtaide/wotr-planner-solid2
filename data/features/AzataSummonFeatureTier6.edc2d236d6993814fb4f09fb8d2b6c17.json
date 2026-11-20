@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFeatureOnClassLevel",
+      "BeforeThisLevel": true,
+      "Level": 7,
+      "m_AdditionalClasses": [],
+      "m_Archetypes": [],
+      "m_Class": "!bp_9a3b2c63afa79744cbca46bea0da9a16",
+      "m_Feature": "!bp_380a3566d849fe247b76d0e71d15c49f"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "AzataSummonFeatureTier6",
+  "guid": "edc2d236d6993814fb4f09fb8d2b6c17",
+  "name": "Summon Astral Deva (Azata)"
+}

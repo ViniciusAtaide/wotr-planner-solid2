@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentGloves",
+  "Components": [],
+  "assetName": "GlovesOfDuelingNormalItem",
+  "guid": "c8f949c03b92f714b83edd610f3e9348",
+  "m_Enchantments": [
+    "!bp_6ec695f6ed210e84583587c655487430"
+  ],
+  "name": "Gloves of Dueling"
+}

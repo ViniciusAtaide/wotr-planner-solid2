@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 5,
+  "assetName": "ArmorTraining",
+  "guid": "3c380607706f209499d951b29d3c44f3",
+  "name": "Armor Training"
+}

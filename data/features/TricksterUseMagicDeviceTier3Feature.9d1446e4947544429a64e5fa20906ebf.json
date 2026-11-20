@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_1383f21534d8b6a45bdbdc8ddce7a187"
+    }
+  ],
+  "Groups": [
+    "MythicTrick3"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "TricksterUseMagicDeviceTier3Feature",
+  "guid": "9d1446e4947544429a64e5fa20906ebf",
+  "name": "Use Magic Device 3 Rank"
+}

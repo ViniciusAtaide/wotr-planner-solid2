@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [],
+  "assetName": "BreastplateType",
+  "guid": "d326c3c61a84c6f40977c84fab41503d",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "Medium",
+  "name": "Medium Armor — Breastplate"
+}

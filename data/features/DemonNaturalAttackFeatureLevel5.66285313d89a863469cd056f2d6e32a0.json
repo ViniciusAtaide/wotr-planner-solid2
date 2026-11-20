@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "MythicDemonNaturalAttacksNoSecondary"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DemonNaturalAttackFeatureLevel5",
+  "guid": "66285313d89a863469cd056f2d6e32a0",
+  "name": "Deadly Natural Weapons"
+}

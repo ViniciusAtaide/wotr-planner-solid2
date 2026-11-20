@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8a87cee010d54618a348d4dc0c4752d1"
+    }
+  ],
+  "assetName": "ZeorisDaggerHeadband_BetrayalEnchantment",
+  "guid": "4a1609506eca4c26bcfd6afd6a590a9d"
+}

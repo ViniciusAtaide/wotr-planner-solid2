@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "PaladinDivineBondSelection",
+  "guid": "ad7dc4eba7bf92f4aba23f716d7a9ba6",
+  "m_AllFeatures": [
+    "!bp_e08a817f475c8794aa56fdd904f43a57",
+    "!bp_e2f0e0efc9e155e43ba431984429678e"
+  ],
+  "name": "Divine Bond"
+}

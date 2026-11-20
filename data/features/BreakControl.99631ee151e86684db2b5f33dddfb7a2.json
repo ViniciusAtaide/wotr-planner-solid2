@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "BreakControl",
+  "guid": "99631ee151e86684db2b5f33dddfb7a2",
+  "name": "Rupture Restraints"
+}

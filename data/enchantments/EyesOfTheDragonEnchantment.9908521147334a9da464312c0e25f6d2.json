@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b55afaeb5f6045859617be4e75a96ce3"
+    }
+  ],
+  "assetName": "EyesOfTheDragonEnchantment",
+  "guid": "9908521147334a9da464312c0e25f6d2"
+}

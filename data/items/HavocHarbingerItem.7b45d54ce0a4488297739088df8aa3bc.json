@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "HavocHarbingerItem",
+  "guid": "7b45d54ce0a4488297739088df8aa3bc",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_d78c59cb1ba84bdd8505952a93188f20"
+  ],
+  "m_SecondWeapon": "!bp_a058c3e3a873c614ba0b5bc7c74e6366",
+  "m_Type": "!bp_e95efb85a0912a7489be69d5f03a5308",
+  "name": "Havoc Harbinger"
+}

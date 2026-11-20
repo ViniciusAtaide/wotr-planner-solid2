@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "SlaughteringSilenceItem",
+  "guid": "f5656d9cc48e49a6adc58ebe6c3d88f7",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": "!bp_bb1c7cfcc8db45ceaf21cc2d7fc4f8bf",
+  "m_Type": "!bp_87d76c7534506a546a065731ee6a38cd",
+  "name": "Slaughtering Silence"
+}

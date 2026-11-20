@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintSpellbook",
+  "CasterLevelModifier": 0,
+  "Components": [],
+  "IsArcane": false,
+  "IsMythic": false,
+  "Spontaneous": true,
+  "assetName": "OracleSpellbook",
+  "guid": "6c03364712b415941a98f74522a81273",
+  "m_SpellsPerDay": "!bp_dbff16956df2eda48a1da5c9617cc836",
+  "name": "Oracle"
+}

@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_3bc6e1d2b44b5bb4d92e6ba59577cf62"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ArmorFocusLightMythicFeature",
+  "guid": "40be409a44084b2998eda225dd9c544a",
+  "name": "Mythic Armor Focus (Light Armor) — Avoidance"
+}

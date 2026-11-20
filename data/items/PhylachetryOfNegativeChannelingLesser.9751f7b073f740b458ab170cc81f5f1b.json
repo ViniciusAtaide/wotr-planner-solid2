@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "PhylachetryOfNegativeChannelingLesser",
+  "guid": "9751f7b073f740b458ab170cc81f5f1b",
+  "m_Enchantments": [
+    "!bp_60f06749fa4729c49bc3eb2eb7e3b316"
+  ],
+  "name": "Lesser Phylactery of Negative Channeling"
+}

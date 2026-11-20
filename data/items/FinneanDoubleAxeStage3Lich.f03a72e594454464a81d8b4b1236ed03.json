@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "FinneanDoubleAxeStage3Lich",
+  "guid": "f03a72e594454464a81d8b4b1236ed03",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": "!bp_0437233d61ba7144e9376e11ea9caa37",
+  "m_Type": "!bp_87d76c7534506a546a065731ee6a38cd",
+  "name": "Finnean (Orc Double Axe)"
+}

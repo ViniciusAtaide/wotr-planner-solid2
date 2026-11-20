@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "StormAmberNecklaceItem",
+  "guid": "e3acbfd13b857ed41a1ba8c330824f7d",
+  "m_Enchantments": [
+    "!bp_b9847632dd3d6c241ba42fbf7a4b3799"
+  ],
+  "name": "Eye of the Storm"
+}

@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "Urgrosh",
+  "Components": [],
+  "assetName": "DwarvenUrgrosh",
+  "guid": "0ec97c08fdf87e44f8f16ba87b511743",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Double, Hammers",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Dwarven Urgrosh"
+}

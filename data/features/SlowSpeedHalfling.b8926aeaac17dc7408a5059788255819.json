@@ -1,0 +1,20 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Speed",
+      "Value": -10
+    }
+  ],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SlowSpeedHalfling",
+  "guid": "b8926aeaac17dc7408a5059788255819",
+  "name": "Slow Movement (Halfling)"
+}

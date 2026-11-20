@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "AzataSuperpowerAbilities"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ZippyMagicFeature",
+  "guid": "30b4200f897ba25419ba3a292aed4053",
+  "name": "Zippy Magic"
+}

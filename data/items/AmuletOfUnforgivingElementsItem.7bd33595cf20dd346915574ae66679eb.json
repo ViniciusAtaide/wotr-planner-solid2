@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "AmuletOfUnforgivingElementsItem",
+  "guid": "7bd33595cf20dd346915574ae66679eb",
+  "m_Enchantments": [
+    "!bp_f2729da6c21397f408b63d57a24e05d4"
+  ],
+  "name": "Amulet of Unforgiving Elements"
+}

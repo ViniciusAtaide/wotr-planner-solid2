@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_57fab75111f377248810ece84193a5a5"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "HellknightSigniferInquisitorLevelUp",
+  "guid": "5f3a7450a227ee043aec55fbf63d9ee9",
+  "name": "Inquisitor"
+}

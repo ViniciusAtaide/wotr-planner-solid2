@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentNeck",
+  "Components": [],
+  "assetName": "NahCollar",
+  "guid": "ab3ee90fd2faffb46a00f889a2d226c8",
+  "m_Enchantments": [
+    "!bp_d8edd2db8d534cb189c05ebaa0cab7ee"
+  ],
+  "name": "Nahyndrian League Collar"
+}

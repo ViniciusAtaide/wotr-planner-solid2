@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeature",
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Feature": "!bp_3cf94df3f1cf9a443a880bc1ae9be3c6"
+    }
+  ],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "RangerStyleArcherySelection6",
+  "guid": "6c799d09d5b93f344b9ade0e0c765c2d",
+  "m_AllFeatures": [
+    "!bp_0da0c194d6e1d43419eb8d990b28e0ab",
+    "!bp_8f3d1e6b4be006f4d896081f2f889665",
+    "!bp_9c928dc570bb9e54a9649b3ebfe47a41",
+    "!bp_05a3b543b0a0a0346a5061e90f293f0b",
+    "!bp_adf54af2a681792489826f7fd1b62889",
+    "!bp_46f970a6b9b5d2346b10892673fe6e74",
+    "!bp_d09b20029e9abfe4480b356c92095623",
+    "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5",
+    "!bp_175d1577bb6c9a04baf88eec99c66334",
+    "!bp_15e7da6645a7f3d41bdad7c8c4b9de1e",
+    "!bp_79042cb55f030614ea29956177977c52"
+  ],
+  "name": "Archery (level 6)"
+}

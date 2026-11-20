@@ -1,0 +1,60 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [
+    {
+      "$type": "AddFactContextActions",
+      "Activated": {
+        "Actions": [
+          {
+            "$type": "Conditional",
+            "ConditionsChecker": {
+              "Conditions": [
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_c5d57f425eec48beb1f43719e92db1c1"
+                }
+              ],
+              "Operation": "Or"
+            },
+            "IfFalse": {
+              "Actions": []
+            },
+            "IfTrue": {
+              "Actions": [
+                {
+                  "$type": "ContextActionApplyBuff",
+                  "Permanent": true,
+                  "m_Buff": "!bp_19ec2bacbafc452883abc91a4a630266"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "FeatureList",
+      "m_Class": [],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [
+        "!bp_29fc83f824111bb41829957486752c93",
+        "!bp_6991ee8175d87c04790067515f6fb322"
+      ],
+      "m_Max": 2,
+      "m_Min": 0,
+      "m_Progression": "AsIs",
+      "m_StartLevel": 0,
+      "m_StepLevel": 2,
+      "m_Type": "SpeedBonus",
+      "m_UseMax": true,
+      "m_UseMin": false
+    }
+  ],
+  "Stacking": "Replace",
+  "assetName": "BloodragerStandartRageBuff",
+  "guid": "5eac31e457999334b98f98b60fc73b2f",
+  "name": "Bloodrage"
+}

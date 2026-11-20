@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_72b84bbd30f53ad41a38b608445d9894"
+    }
+  ],
+  "assetName": "AmuletOfApothecaryEnchantment",
+  "guid": "70282ab25bba29a459321cb4262954cf"
+}

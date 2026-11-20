@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "DruidDomain",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "OnlyNew",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "WinterChildDomainSelection",
+  "guid": "79922e274bf4444b93ea77ae0f876bd2",
+  "m_AllFeatures": [
+    "!bp_3aef017b78329db4fa53fe8560069886",
+    "!bp_a75ad4936e099c54881cf553e2110703",
+    "!bp_a3217dc55003b914aa296da7ada029bc",
+    "!bp_562567d7c244fae43ac61df3d55547ca",
+    "!bp_ee77836d10835fd49a8831adb3a14640",
+    "!bp_e48425d6fdafdba449beec54fe158339",
+    "!bp_4a3516fdc4cda764ebd1279b22d10205",
+    "!bp_2ef9e78640ae4d99a7cf2ac1eedde69a"
+  ],
+  "name": "Ice in the Blood"
+}

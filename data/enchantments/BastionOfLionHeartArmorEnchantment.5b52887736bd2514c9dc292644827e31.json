@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_2021993aa5ca7474b96a657c0fb575fc"
+    }
+  ],
+  "assetName": "BastionOfLionHeartArmorEnchantment",
+  "guid": "5b52887736bd2514c9dc292644827e31"
+}

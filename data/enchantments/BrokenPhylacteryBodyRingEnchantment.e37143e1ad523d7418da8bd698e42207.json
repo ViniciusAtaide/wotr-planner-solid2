@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_8ef9b7bb4d774ac1a3280cc3d65862cd"
+    }
+  ],
+  "assetName": "BrokenPhylacteryBodyRingEnchantment",
+  "guid": "e37143e1ad523d7418da8bd698e42207"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "Pounce"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "OracleBattleFinalRevelation",
+  "guid": "9caa8060ec83c0842b127c318571c6d1",
+  "name": "Final Revelation (Battle)"
+}

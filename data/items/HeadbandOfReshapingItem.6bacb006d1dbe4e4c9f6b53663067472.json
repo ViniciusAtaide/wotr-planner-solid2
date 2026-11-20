@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintItemEquipmentHead",
+  "Components": [],
+  "assetName": "HeadbandOfReshapingItem",
+  "guid": "6bacb006d1dbe4e4c9f6b53663067472",
+  "m_Enchantments": [
+    "!bp_575de3a13d4040c4cb84891036e9e76b",
+    "!bp_88836c655303b9c41b699e0c31360f92"
+  ],
+  "name": "Headband of Reshaping"
+}

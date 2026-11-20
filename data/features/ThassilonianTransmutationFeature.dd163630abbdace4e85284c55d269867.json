@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeatureReplaceSpellbook",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_b6a604dab356ac34788abf4ad79449ec",
+        "!bp_c459c8200e666ef4c990873d3e501b91"
+      ]
+    }
+  ],
+  "Groups": [
+    "ThassilonianSpellbook"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ThassilonianTransmutationFeature",
+  "guid": "dd163630abbdace4e85284c55d269867",
+  "m_Spellbook": "!bp_5785f40e7b1bfc94ea078e7156aa9711",
+  "name": "Greed (Transmutation)"
+}

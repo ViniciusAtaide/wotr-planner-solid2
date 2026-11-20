@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_ff37121e4d4d51d4eb49c8ab856f50f2"
+    }
+  ],
+  "assetName": "HelmetFullplateRichSilverBlueEnchantment",
+  "guid": "743c8d741726ddb44b1ceb0c6d676591"
+}

@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "DLC3_BrokenTricksterAlignmentFeature",
+  "guid": "b258aa36b3ab420f95ce5e7f2df9987d",
+  "name": "Hidden Alignment"
+}

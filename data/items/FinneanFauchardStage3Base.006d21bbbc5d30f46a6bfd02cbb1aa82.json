@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "FinneanFauchardStage3Base",
+  "guid": "006d21bbbc5d30f46a6bfd02cbb1aa82",
+  "m_Enchantments": [
+    "!bp_bdba267e951851449af552aa9f9e3992"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_7a40899c4defec94bb9c291bde74f1a8",
+  "name": "Finnean the Talking Weapon (Fauchard +5)"
+}

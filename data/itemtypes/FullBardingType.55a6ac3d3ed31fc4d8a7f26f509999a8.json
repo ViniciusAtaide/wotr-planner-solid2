@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintArmorType",
+  "Components": [],
+  "assetName": "FullBardingType",
+  "guid": "55a6ac3d3ed31fc4d8a7f26f509999a8",
+  "m_Enchantments": [],
+  "m_IsArmor": true,
+  "m_ProficiencyGroup": "HeavyBarding",
+  "name": "Heavy Armor — Full Barding"
+}

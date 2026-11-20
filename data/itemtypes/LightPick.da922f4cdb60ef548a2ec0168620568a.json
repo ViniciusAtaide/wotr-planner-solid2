@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintWeaponType",
+  "Category": "LightPick",
+  "Components": [],
+  "assetName": "LightPick",
+  "guid": "da922f4cdb60ef548a2ec0168620568a",
+  "m_AttackType": "Melee",
+  "m_Enchantments": [],
+  "m_FighterGroupFlags": "Axes",
+  "m_IsMonk": false,
+  "m_IsNatural": false,
+  "m_IsTwoHanded": false,
+  "name": "Light Pick"
+}

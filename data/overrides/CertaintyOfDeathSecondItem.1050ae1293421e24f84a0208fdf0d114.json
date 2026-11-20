@@ -1,0 +1,12 @@
+{
+  "change": "patch",
+  "ops": [
+    {
+      "op": "replace",
+      "path": "/m_DisplayNameText/Shared",
+      "value": null
+    }
+  ],
+  "reason": "The second end of a double weapon. Its m_DisplayNameText points at a shared string that holds an item description, not a name, so writing it would put game text other than a display name into data/ (ADR 0006). Clearing the shared key leaves it nameless, like the other 728 nameless sourced items; it is a part, worn only with its parent weapon (BlueprintItemWeapon.m_SecondWeapon).",
+  "target": "1050ae1293421e24f84a0208fdf0d114"
+}

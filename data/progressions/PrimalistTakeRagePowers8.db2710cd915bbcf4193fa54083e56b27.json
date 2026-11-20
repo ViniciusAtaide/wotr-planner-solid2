@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": true,
+  "LevelEntries": [
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_28710502f46848d48b3f0d6132817c4e",
+        "!bp_28710502f46848d48b3f0d6132817c4e"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "PrimalistTakeRagePowers8",
+  "guid": "db2710cd915bbcf4193fa54083e56b27",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_d77e67a814d686842802c9cfd8ef8499"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null,
+  "name": "Change bloodline power for two rage powers"
+}

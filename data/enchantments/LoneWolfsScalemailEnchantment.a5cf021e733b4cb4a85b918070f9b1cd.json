@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_947dd952c490d0c47b29a62293088479"
+    }
+  ],
+  "assetName": "LoneWolfsScalemailEnchantment",
+  "guid": "a5cf021e733b4cb4a85b918070f9b1cd"
+}

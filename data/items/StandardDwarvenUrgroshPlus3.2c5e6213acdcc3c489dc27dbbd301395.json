@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": true,
+  "assetName": "StandardDwarvenUrgroshPlus3",
+  "guid": "2c5e6213acdcc3c489dc27dbbd301395",
+  "m_Enchantments": [
+    "!bp_80bb8a737579e35498177e1e3c75899b"
+  ],
+  "m_SecondWeapon": "!bp_79cf0021064f0b34486a776f24885e41",
+  "m_Type": "!bp_0ec97c08fdf87e44f8f16ba87b511743"
+}

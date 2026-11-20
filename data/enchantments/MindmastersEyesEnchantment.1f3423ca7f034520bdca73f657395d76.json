@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_34c980469bd24dc4a9d0fab2c4f20444"
+    }
+  ],
+  "assetName": "MindmastersEyesEnchantment",
+  "guid": "1f3423ca7f034520bdca73f657395d76"
+}

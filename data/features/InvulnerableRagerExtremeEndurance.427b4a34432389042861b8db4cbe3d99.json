@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "ContextRankConfig",
+      "m_BaseValueType": "ClassLevel",
+      "m_Class": [
+        "!bp_f7d7eb166b3dd594fb330d085df41853"
+      ],
+      "m_CustomProgression": [],
+      "m_ExceptClasses": false,
+      "m_FeatureList": [
+        "!bp_427b4a34432389042861b8db4cbe3d99",
+        "!bp_ddaee203ee4dcb24c880d633fbd77db6",
+        "!bp_ddaee203ee4dcb24c880d633fbd77db6"
+      ],
+      "m_Max": 6,
+      "m_Min": 1,
+      "m_Progression": "DelayedStartPlusDivStep",
+      "m_StartLevel": 3,
+      "m_StepLevel": 3,
+      "m_Type": "Default",
+      "m_UseMax": true,
+      "m_UseMin": true
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "InvulnerableRagerExtremeEndurance",
+  "guid": "427b4a34432389042861b8db4cbe3d99",
+  "name": "Extreme Endurance"
+}

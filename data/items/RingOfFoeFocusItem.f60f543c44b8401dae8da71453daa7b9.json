@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "RingOfFoeFocusItem",
+  "guid": "f60f543c44b8401dae8da71453daa7b9",
+  "m_Enchantments": [
+    "!bp_833da63d8b48415d8c0467fa049555eb"
+  ],
+  "name": "Ring of the Mad Duelist"
+}

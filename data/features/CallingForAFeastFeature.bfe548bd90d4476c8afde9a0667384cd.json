@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "CallingForAFeastFeature",
+  "guid": "bfe548bd90d4476c8afde9a0667384cd",
+  "name": "Call a Feast"
+}

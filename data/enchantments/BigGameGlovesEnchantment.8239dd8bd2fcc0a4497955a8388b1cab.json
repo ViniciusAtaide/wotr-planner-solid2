@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_1aa57850cbf898a41a44309569d5dc3b"
+    }
+  ],
+  "assetName": "BigGameGlovesEnchantment",
+  "guid": "8239dd8bd2fcc0a4497955a8388b1cab"
+}

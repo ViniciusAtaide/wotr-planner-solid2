@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_85b004415fe31bb41af7ee080300016b"
+    }
+  ],
+  "assetName": "ThickPadsEnchantment",
+  "guid": "dd05aa686beec534d8e6007447df7a4e"
+}

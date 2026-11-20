@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFactEquipment",
+      "m_Blueprint": "!bp_c74e0547e3a844adaf8b21c04cc092ff"
+    }
+  ],
+  "assetName": "HaramakiOfScholarshipEnchantment",
+  "guid": "ff3ccb3bef8c4a5791885dd0b4aac5fc"
+}

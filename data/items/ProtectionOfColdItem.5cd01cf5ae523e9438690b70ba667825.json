@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintItemEquipmentRing",
+  "Components": [],
+  "assetName": "ProtectionOfColdItem",
+  "guid": "5cd01cf5ae523e9438690b70ba667825",
+  "m_Enchantments": [
+    "!bp_789af679bec72a647afd0e4c956e542a"
+  ],
+  "name": "Icy Protector"
+}

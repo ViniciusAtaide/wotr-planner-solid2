@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "UrbanHunterCaptor",
+  "guid": "6a7183b066616464b838b10e92cf7146",
+  "name": "Captor (feature)"
+}

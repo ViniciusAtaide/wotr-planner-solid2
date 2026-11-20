@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "AzataSuperpowerAbilities",
+  "Groups": [],
+  "HideInUI": false,
+  "IgnorePrerequisites": false,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "AzataSuperpowersSelection",
+  "guid": "8a30e92cd04ff5b459ba7cb03584fda0",
+  "m_AllFeatures": [
+    "!bp_f3bc6f9c855b2fb4e9aea364b8163aca",
+    "!bp_afcee6925a6eadf43820d12e0d966ebe",
+    "!bp_eef8d23a7e4acfe4d834a5de844c8c7c",
+    "!bp_cfad18f581584ac4ba066df067956477",
+    "!bp_40c43d4d27ebde647b796f9faf4f0299",
+    "!bp_505456aa17dd18a4e8bd8172811a4fdc",
+    "!bp_30b4200f897ba25419ba3a292aed4053"
+  ],
+  "name": "Superpowers"
+}

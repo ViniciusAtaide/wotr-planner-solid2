@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_9f90725ced857b9468df98df84018ff4"
+    }
+  ],
+  "assetName": "ChaosShardDaggerEnchantment",
+  "guid": "78719a08ce74982499b9550af2819fa3"
+}

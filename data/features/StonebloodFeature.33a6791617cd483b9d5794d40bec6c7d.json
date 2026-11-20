@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "StonebloodFeature",
+  "guid": "33a6791617cd483b9d5794d40bec6c7d",
+  "name": "Stoneblood"
+}

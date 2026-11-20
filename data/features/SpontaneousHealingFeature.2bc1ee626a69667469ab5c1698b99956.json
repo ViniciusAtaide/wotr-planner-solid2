@@ -1,0 +1,54 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": []
+    },
+    {
+      "$type": "AddFactContextActions",
+      "Activated": {
+        "Actions": [
+          {
+            "$type": "Conditional",
+            "ConditionsChecker": {
+              "Conditions": [
+                {
+                  "$type": "ContextConditionHasFact",
+                  "Not": false,
+                  "m_Fact": "!bp_5d297a1a9a4384e408a1098381721db1"
+                }
+              ],
+              "Operation": "And"
+            },
+            "IfFalse": {
+              "Actions": []
+            },
+            "IfTrue": {
+              "Actions": [
+                {
+                  "$type": "ContextActionAddFeature",
+                  "m_PermanentFeature": "!bp_a90c6ade69f94e59b2bb07dca278fed1",
+                  "m_SetRankFrom": null
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "Groups": [
+    "Discovery",
+    "VivisectionistDiscovery",
+    "UndergroundChemistDiscovery"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SpontaneousHealingFeature",
+  "guid": "2bc1ee626a69667469ab5c1698b99956",
+  "name": "Spontaneous Healing"
+}

@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "ScrollMastery"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "ScrollSpecialization",
+  "guid": "3964f0389e60da944aaa2ffd227ae531",
+  "name": "Scroll Specialization"
+}

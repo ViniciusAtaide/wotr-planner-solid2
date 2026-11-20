@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_f2de2a7d6f6040e28739c69588957621"
+    }
+  ],
+  "assetName": "CloakOfDarkestRitesEnchantment",
+  "guid": "22a1fe3336a04072a8412751ac60d43c"
+}

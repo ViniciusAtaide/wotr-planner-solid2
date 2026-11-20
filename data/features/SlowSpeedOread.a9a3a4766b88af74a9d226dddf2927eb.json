@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Speed",
+      "Value": -10
+    },
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "ImmunityToArmorSpeedPenalty"
+    }
+  ],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "SlowSpeedOread",
+  "guid": "a9a3a4766b88af74a9d226dddf2927eb",
+  "name": "Slow Movement (Dwarf Blooded)"
+}

@@ -1,0 +1,14 @@
+{
+  "$type": "BlueprintItemWeapon",
+  "Components": [],
+  "Double": false,
+  "assetName": "PortalStoneStanceSaiItem",
+  "guid": "8aad5b82266bbce4b8c4c952f00e1bfa",
+  "m_Enchantments": [
+    "!bp_783d7d496da6ac44f9511011fc5f1979",
+    "!bp_59cfbb419e008ae489b452e25bfbc175"
+  ],
+  "m_SecondWeapon": null,
+  "m_Type": "!bp_0944f411666c7594aa1398a7476ecf7d",
+  "name": "Ancestral Retribution (weapon)"
+}

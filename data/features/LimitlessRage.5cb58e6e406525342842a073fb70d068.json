@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "PrerequisiteFeaturesFromList",
+      "Amount": 0,
+      "CheckInProgression": false,
+      "Group": "All",
+      "IsFeatureSelectionWhiteList": false,
+      "m_Features": [
+        "!bp_2479395977cfeeb46b482bc3385f4647",
+        "!bp_17b5ab9075c34e24a46ca655406041ea",
+        "!bp_6991ee8175d87c04790067515f6fb322",
+        "!bp_3f6793b722fb4172abcd605cd84c9be7",
+        "!bp_64c5dfe0ba664dd38b7e914ef0912a1c"
+      ],
+      "m_RestrictIfNot": false
+    }
+  ],
+  "Groups": [
+    "MythicAbility"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "LimitlessRage",
+  "guid": "5cb58e6e406525342842a073fb70d068",
+  "name": "Limitless Rage"
+}

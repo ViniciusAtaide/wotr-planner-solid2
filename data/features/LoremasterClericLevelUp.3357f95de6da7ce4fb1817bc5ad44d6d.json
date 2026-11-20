@@ -1,0 +1,15 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddSpellbookLevel",
+      "m_Spellbook": "!bp_4673d19a0cf2fab4f885cc4d1353da33"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "Ranks": 10,
+  "assetName": "LoremasterClericLevelUp",
+  "guid": "3357f95de6da7ce4fb1817bc5ad44d6d",
+  "name": "Cleric"
+}

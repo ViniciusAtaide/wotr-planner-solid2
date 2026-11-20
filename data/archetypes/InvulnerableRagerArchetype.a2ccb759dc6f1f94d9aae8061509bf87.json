@@ -1,0 +1,179 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_e71bd204a2579b1438ebdfbf75aeefae"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_e71bd204a2579b1438ebdfbf75aeefae"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_e71bd204a2579b1438ebdfbf75aeefae",
+        "!bp_427b4a34432389042861b8db4cbe3d99"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_e71bd204a2579b1438ebdfbf75aeefae"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_e71bd204a2579b1438ebdfbf75aeefae"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_e71bd204a2579b1438ebdfbf75aeefae",
+        "!bp_427b4a34432389042861b8db4cbe3d99"
+      ]
+    },
+    {
+      "Level": 14,
+      "m_Features": [
+        "!bp_e71bd204a2579b1438ebdfbf75aeefae"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_e71bd204a2579b1438ebdfbf75aeefae"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_e71bd204a2579b1438ebdfbf75aeefae",
+        "!bp_427b4a34432389042861b8db4cbe3d99"
+      ]
+    },
+    {
+      "Level": 20,
+      "m_Features": [
+        "!bp_e71bd204a2579b1438ebdfbf75aeefae"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_427b4a34432389042861b8db4cbe3d99"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_427b4a34432389042861b8db4cbe3d99"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_427b4a34432389042861b8db4cbe3d99"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_8f800ed6ce8c42e8a01fd8f3e990c459"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_485a18c05792521459c7d06c63128c79"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_fdd591c1fbf1c0b41a359d59756f2888"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_fdd591c1fbf1c0b41a359d59756f2888"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_fdd591c1fbf1c0b41a359d59756f2888"
+      ]
+    },
+    {
+      "Level": 12,
+      "m_Features": [
+        "!bp_fdd591c1fbf1c0b41a359d59756f2888"
+      ]
+    },
+    {
+      "Level": 15,
+      "m_Features": [
+        "!bp_fdd591c1fbf1c0b41a359d59756f2888"
+      ]
+    },
+    {
+      "Level": 18,
+      "m_Features": [
+        "!bp_fdd591c1fbf1c0b41a359d59756f2888"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_cffb5cddefab30140ac133699d52a8f8"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_cffb5cddefab30140ac133699d52a8f8"
+      ]
+    },
+    {
+      "Level": 13,
+      "m_Features": [
+        "!bp_cffb5cddefab30140ac133699d52a8f8"
+      ]
+    },
+    {
+      "Level": 16,
+      "m_Features": [
+        "!bp_cffb5cddefab30140ac133699d52a8f8"
+      ]
+    },
+    {
+      "Level": 19,
+      "m_Features": [
+        "!bp_cffb5cddefab30140ac133699d52a8f8"
+      ]
+    }
+  ],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "InvulnerableRagerArchetype",
+  "guid": "a2ccb759dc6f1f94d9aae8061509bf87",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": null,
+  "m_ReflexSave": null,
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": null,
+  "name": "Invulnerable Rager"
+}

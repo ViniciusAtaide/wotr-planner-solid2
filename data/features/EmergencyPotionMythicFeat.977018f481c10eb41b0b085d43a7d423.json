@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddMechanicsFeature",
+      "m_Feature": "FastPotion"
+    }
+  ],
+  "Groups": [
+    "MythicFeat"
+  ],
+  "HideInUI": false,
+  "Ranks": 1,
+  "assetName": "EmergencyPotionMythicFeat",
+  "guid": "977018f481c10eb41b0b085d43a7d423",
+  "name": "Emergency Potion"
+}

@@ -1,0 +1,17 @@
+{
+  "$type": "BlueprintFeatureSelection",
+  "Components": [],
+  "ExceptWhiteListed": false,
+  "Group": "None",
+  "Groups": [],
+  "HideInUI": true,
+  "IgnorePrerequisites": true,
+  "Mode": "Default",
+  "Obligatory": false,
+  "Ranks": 1,
+  "assetName": "OracleRevelationWeaponMasteryWeaponFocusGreaterSelection",
+  "guid": "01d6bcdf7ad8a2a41a51f8fe8d0a1d99",
+  "m_AllFeatures": [
+    "!bp_09c9e82965fb4334b984a1e9df3bd088"
+  ]
+}

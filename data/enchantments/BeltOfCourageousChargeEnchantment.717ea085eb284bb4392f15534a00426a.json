@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_7c3e657a605876140a5e0da8a75c3b39"
+    }
+  ],
+  "assetName": "BeltOfCourageousChargeEnchantment",
+  "guid": "717ea085eb284bb4392f15534a00426a"
+}

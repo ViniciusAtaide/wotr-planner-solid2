@@ -1,0 +1,85 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_b63a316cb172c7b4e906a318a0621c2c"
+      ]
+    },
+    {
+      "Level": 2,
+      "m_Features": [
+        "!bp_ac8d4d2e375a8c841a19ed46696e5af2"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_c3a3a5e26059cb4419d243f3acf05f5b"
+      ]
+    },
+    {
+      "Level": 4,
+      "m_Features": [
+        "!bp_e01152417a8ac2248b4f69711b819441"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_51f5a63f1a0cb9047acdad77fc437312"
+      ]
+    },
+    {
+      "Level": 6,
+      "m_Features": [
+        "!bp_eee7abd42ef7bac4ea117b2f41f85ec3"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_c3a3a5e26059cb4419d243f3acf05f5b",
+        "!bp_b701196306bb4674bb902c9f1160180f"
+      ]
+    },
+    {
+      "Level": 8,
+      "m_Features": [
+        "!bp_e01152417a8ac2248b4f69711b819441"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_732ad7ec6b1cd1f4885370924d492e87"
+      ]
+    },
+    {
+      "Level": 10,
+      "m_Features": [
+        "!bp_8c52fa6538e9ea6478981dbf42c2782d"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "SwordlordProgression",
+  "guid": "71edc73e46794fc44925259322c146e5",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_90e4d7da3ccd1a8478411e07e91d5750"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": null
+}

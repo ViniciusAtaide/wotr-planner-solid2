@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_b258aa36b3ab420f95ce5e7f2df9987d"
+    }
+  ],
+  "assetName": "DLC3_BrokenTricksterAlignmentEnchantment",
+  "guid": "9f5c5e8205604a018086590829bb5a6c"
+}

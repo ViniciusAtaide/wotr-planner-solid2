@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddUnitFeatureEquipment",
+      "m_Feature": "!bp_77443e3a77c82e44f8397f5d9500a550"
+    }
+  ],
+  "assetName": "ScimitarOfDawnEnchantment",
+  "guid": "49e401c362897e8449645b53d582641d"
+}

@@ -1,0 +1,18 @@
+{
+  "$type": "BlueprintItemArmor",
+  "Components": [
+    {
+      "$type": "EquipmentRestrictionClass",
+      "Not": true,
+      "m_Class": "!bp_01a754e7c1b7c5946ba895a5ff0faffc"
+    }
+  ],
+  "assetName": "StuddedArmorOfTrinityItem",
+  "guid": "a01abf7a4ac15a942b7588a57828b8fb",
+  "m_Enchantments": [
+    "!bp_9448d3026111d6d49b31fc85e7f3745a",
+    "!bp_10f44d6e666f21e48a2ba4070649d1c6"
+  ],
+  "m_Type": "!bp_aae2cb63162d6334b9a9150398124d46",
+  "name": "Studded Armor of Trinity"
+}
