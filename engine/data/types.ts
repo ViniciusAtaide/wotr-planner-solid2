@@ -661,6 +661,132 @@ export interface ImprovedCriticalParametrized extends Component {
   readonly $type: 'ImprovedCriticalParametrized';
 }
 
+export interface Feet {
+  readonly m_Value: number;
+}
+
+export type AreaSetting = 'None' | 'Forest' | 'Highlands' | 'Abyss' | 'Underground' | 'Urban' | 'Desert';
+
+export type SavingThrowType = 'Unknown' | 'Fortitude' | 'Reflex' | 'Will';
+
+export interface Blindsense extends Component {
+  readonly $type: 'Blindsense';
+  readonly Range: Feet;
+  readonly Blindsight: boolean;
+}
+
+export interface BuffMovementSpeed extends Component {
+  readonly $type: 'BuffMovementSpeed';
+  readonly Descriptor: ModifierDescriptor;
+  readonly Value: number;
+  readonly ContextBonus: RankedContextValue;
+  readonly CappedOnMultiplier: boolean;
+  readonly MultiplierCap: number;
+  readonly CappedMinimum: boolean;
+  readonly MinimumCap: number;
+}
+
+export interface FavoredEnemy extends Component {
+  readonly $type: 'FavoredEnemy';
+  readonly m_CheckedFacts: readonly Ref[];
+}
+
+export interface FavoredTerrain extends Component {
+  readonly $type: 'FavoredTerrain';
+  readonly Setting: AreaSetting;
+}
+
+export interface Evasion extends Component {
+  readonly $type: 'Evasion';
+  readonly SavingThrow: SavingThrowType;
+}
+
+export interface ImprovedEvasion extends Component {
+  readonly $type: 'ImprovedEvasion';
+  readonly SavingThrow: SavingThrowType;
+}
+
+export interface BuffAllSavesBonus extends Component {
+  readonly $type: 'BuffAllSavesBonus';
+  readonly Descriptor: ModifierDescriptor;
+  readonly Value: number;
+}
+
+export interface BuffAllSkillsBonus extends Component {
+  readonly $type: 'BuffAllSkillsBonus';
+  readonly Descriptor: ModifierDescriptor;
+  readonly Value: number;
+  readonly Multiplier: RankedContextValue;
+}
+
+export interface ACBonusAgainstAttacks extends Component {
+  readonly $type: 'ACBonusAgainstAttacks';
+  readonly AgainstMeleeOnly: boolean;
+  readonly AgainstRangedOnly: boolean;
+  readonly OnlySneakAttack: boolean;
+  readonly NotTouch: boolean;
+  readonly IsTouch: boolean;
+  readonly OnlyAttacksOfOpportunity: boolean;
+  readonly Value: RankedContextValue;
+  readonly ArmorClassBonus: number;
+  readonly Descriptor: ModifierDescriptor;
+  readonly CheckArmorCategory: boolean;
+  readonly NotArmorCategory: readonly ArmorProficiencyGroup[];
+  readonly NoShield: boolean;
+}
+
+export interface AttackTypeAttackBonus extends Component {
+  readonly $type: 'AttackTypeAttackBonus';
+  readonly Type: WeaponRangeType;
+  readonly AllTypesExcept: boolean;
+  readonly AttackBonus: number;
+  readonly Descriptor: ModifierDescriptor;
+  readonly Value: RankedContextValue;
+  readonly CheckFact: boolean;
+  readonly m_RequiredFact: Ref | null;
+}
+
+export interface CMDBonusAgainstManeuvers extends Component {
+  readonly $type: 'CMDBonusAgainstManeuvers';
+  readonly Descriptor: ModifierDescriptor;
+  readonly Value: RankedContextValue;
+  readonly Maneuvers: readonly CombatManeuver[];
+}
+
+export interface AddImmunityToAbilityScoreDamage extends Component {
+  readonly $type: 'AddImmunityToAbilityScoreDamage';
+  readonly Drain: boolean;
+  readonly StatTypes: readonly StatType[];
+  readonly UseIgnoreRule: boolean;
+  readonly IgnoreDescriptors: SpellDescriptorWrapper;
+  readonly IgnoreCasterFacts: readonly Ref[];
+  readonly IgnoreOnlyIfBothPassed: boolean;
+}
+
+export interface AddImmunityToEnergyDrain extends Component {
+  readonly $type: 'AddImmunityToEnergyDrain';
+}
+
+export interface SavingThrowBonusAgainstFact extends Component {
+  readonly $type: 'SavingThrowBonusAgainstFact';
+  readonly m_CheckedFact: Ref | null;
+  readonly Descriptor: ModifierDescriptor;
+  readonly Value: number;
+  readonly Alignment: AlignmentComponent;
+}
+
+export interface ArcaneSpellFailureIncrease extends Component {
+  readonly $type: 'ArcaneSpellFailureIncrease';
+  readonly Bonus: number;
+  readonly ToShield: boolean;
+  readonly Universal: boolean;
+}
+
+export interface AddEnergyVulnerability extends Component {
+  readonly $type: 'AddEnergyVulnerability';
+  readonly Type: DamageEnergyType;
+}
+
 export interface AddContextStatBonus extends Component {
   readonly $type: 'AddContextStatBonus';
   readonly Descriptor: 'Racial';

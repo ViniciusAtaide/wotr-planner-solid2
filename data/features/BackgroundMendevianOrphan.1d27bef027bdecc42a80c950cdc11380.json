@@ -6,6 +6,13 @@
       "Skill": "SkillLoreReligion"
     },
     {
+      "$type": "SavingThrowBonusAgainstFact",
+      "Alignment": "None",
+      "Descriptor": "UntypedStackable",
+      "Value": 1,
+      "m_CheckedFact": "!bp_dc960a234d365cb4f905bdc5937e623a"
+    },
+    {
       "$type": "AddBackgroundClassSkill",
       "Skill": "SkillLoreReligion"
     }

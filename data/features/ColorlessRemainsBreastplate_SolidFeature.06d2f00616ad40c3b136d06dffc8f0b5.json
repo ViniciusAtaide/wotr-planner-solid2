@@ -28,6 +28,10 @@
         "ValueRank": "Default",
         "ValueType": "Simple"
       }
+    },
+    {
+      "$type": "AddEnergyVulnerability",
+      "Type": "Sonic"
     }
   ],
   "Groups": [],

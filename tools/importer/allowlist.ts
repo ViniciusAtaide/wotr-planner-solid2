@@ -105,6 +105,25 @@ import {
   type IsAlchemistSpellbook,
   type IncreaseActivatableAbilityGroupSize,
   type AddContextStatBonus,
+  type Blindsense,
+  type BuffMovementSpeed,
+  type FavoredEnemy,
+  type FavoredTerrain,
+  type Evasion,
+  type ImprovedEvasion,
+  type BuffAllSavesBonus,
+  type BuffAllSkillsBonus,
+  type ACBonusAgainstAttacks,
+  type AttackTypeAttackBonus,
+  type CMDBonusAgainstManeuvers,
+  type AddImmunityToAbilityScoreDamage,
+  type AddImmunityToEnergyDrain,
+  type SavingThrowBonusAgainstFact,
+  type ArcaneSpellFailureIncrease,
+  type AddEnergyVulnerability,
+  type AreaSetting,
+  type SavingThrowType,
+  type WeaponRangeType,
   type WeaponGroupAttackBonus,
   type WeaponGroupDamageBonus,
   type AttackBonusAgainstFactOwner,
@@ -869,6 +888,23 @@ const combatManeuver: Spec<CombatManeuver> = enumOf(
   'PullToPointSpell',
 );
 
+const feet = struct({ m_Value: int });
+
+const areaSetting: Spec<AreaSetting> = enumOf('None', 'Forest', 'Highlands', 'Abyss', 'Underground', 'Urban', 'Desert');
+
+const savingThrowType: Spec<SavingThrowType> = enumOf('Unknown', 'Fortitude', 'Reflex', 'Will');
+
+const weaponRangeType: Spec<WeaponRangeType> = enumOf(
+  'Melee',
+  'Ranged',
+  'Touch',
+  'Normal',
+  'MeleeNormal',
+  'RangedNormal',
+  'MeleeTouch',
+  'RangedTouch',
+);
+
 const spellSchool = enumOf(
   'None',
   'Abjuration',
@@ -984,16 +1020,7 @@ const condition: Spec<Condition> = poly<Condition>({
       Slot: orDefault(enumOf('PrimaryHand', 'SecondaryHand', 'AdditionalLimbs'), 'PrimaryHand'),
       CheckWeaponRangeType: bool,
       CheckWeaponCategory: bool,
-      RangeType: enumOf(
-        'Melee',
-        'Ranged',
-        'Touch',
-        'Normal',
-        'MeleeNormal',
-        'RangedNormal',
-        'MeleeTouch',
-        'RangedTouch',
-      ),
+      RangeType: weaponRangeType,
       Category: weaponCategory,
       CheckOnCaster: bool,
     },
@@ -2791,6 +2818,148 @@ export const allowlist: readonly AllowEntry[] = [
     type: 'ImprovedCriticalParametrized',
     fields: {},
     cite: ['Designers/Mechanics/Facts/ImprovedCriticalParametrized.cs OnEventAboutToTrigger'],
+  }),
+  component<Blindsense>({
+    type: 'Blindsense',
+    fields: { Range: feet, Blindsight: orDefault(bool, false) },
+    notKept: { Exceptions: SUMMARY_ONLY },
+    cite: ['Designers/Mechanics/Facts/Blindsense.cs OnTurnOn (Range, Blindsight)'],
+  }),
+  component<BuffMovementSpeed>({
+    type: 'BuffMovementSpeed',
+    fields: {
+      Descriptor: modifierDescriptor,
+      Value: orDefault(int, 0),
+      ContextBonus: rankedContextValue,
+      CappedOnMultiplier: orDefault(bool, false),
+      MultiplierCap: orDefault(num, 0),
+      CappedMinimum: orDefault(bool, false),
+      MinimumCap: orDefault(int, 0),
+    },
+    cite: [
+      'Designers/Mechanics/Buffs/BuffMovementSpeed.cs OnTurnOn (Descriptor, Value, ContextBonus, CappedOnMultiplier, MultiplierCap, CappedMinimum, MinimumCap)',
+    ],
+  }),
+  component<FavoredEnemy>({
+    type: 'FavoredEnemy',
+    fields: { m_CheckedFacts: heldRefs(...FACT) },
+    cite: ['UnitLogic/FactLogic/FavoredEnemy.cs OnTurnOn (m_CheckedFacts)'],
+  }),
+  component<FavoredTerrain>({
+    type: 'FavoredTerrain',
+    fields: { Setting: areaSetting },
+    cite: ['UnitLogic/FactLogic/FavoredTerrain.cs OnTurnOn (Setting)'],
+  }),
+  component<Evasion>({
+    type: 'Evasion',
+    fields: { SavingThrow: savingThrowType },
+    cite: ['Designers/Mechanics/Facts/Evasion.cs OnEventAboutToTrigger (SavingThrow)'],
+  }),
+  component<ImprovedEvasion>({
+    type: 'ImprovedEvasion',
+    fields: { SavingThrow: savingThrowType },
+    cite: ['Designers/Mechanics/Facts/ImprovedEvasion.cs OnEventAboutToTrigger (SavingThrow)'],
+  }),
+  component<BuffAllSavesBonus>({
+    type: 'BuffAllSavesBonus',
+    fields: { Descriptor: modifierDescriptor, Value: orDefault(int, 0) },
+    cite: ['Designers/Mechanics/Buffs/BuffAllSavesBonus.cs OnTurnOn (Descriptor, Value)'],
+  }),
+  component<BuffAllSkillsBonus>({
+    type: 'BuffAllSkillsBonus',
+    fields: { Descriptor: modifierDescriptor, Value: orDefault(int, 0), Multiplier: rankedContextValue },
+    cite: ['Designers/Mechanics/Buffs/BuffAllSkillsBonus.cs OnTurnOn (Descriptor, Value, Multiplier)'],
+  }),
+  component<ACBonusAgainstAttacks>({
+    type: 'ACBonusAgainstAttacks',
+    fields: {
+      AgainstMeleeOnly: orDefault(bool, false),
+      AgainstRangedOnly: orDefault(bool, false),
+      OnlySneakAttack: orDefault(bool, false),
+      NotTouch: orDefault(bool, false),
+      IsTouch: orDefault(bool, false),
+      OnlyAttacksOfOpportunity: orDefault(bool, false),
+      Value: rankedContextValue,
+      ArmorClassBonus: orDefault(int, 0),
+      Descriptor: modifierDescriptor,
+      CheckArmorCategory: orDefault(bool, false),
+      NotArmorCategory: orDefault(list(armorProficiencyGroup), []),
+      NoShield: orDefault(bool, false),
+    },
+    notKept: { OneHanded: 'no written blueprint sets it, so every kept bonus applies whatever the grip' },
+    cite: [
+      'Designers/Mechanics/Facts/ACBonusAgainstAttacks.cs Check (AgainstMeleeOnly, AgainstRangedOnly, OnlySneakAttack, NotTouch, IsTouch, OnlyAttacksOfOpportunity, CheckArmorCategory, NotArmorCategory, NoShield)',
+      'Designers/Mechanics/Facts/ACBonusAgainstAttacks.cs OnEventAboutToTrigger (Value, ArmorClassBonus, Descriptor)',
+    ],
+  }),
+  component<AttackTypeAttackBonus>({
+    type: 'AttackTypeAttackBonus',
+    fields: {
+      Type: weaponRangeType,
+      AllTypesExcept: orDefault(bool, false),
+      AttackBonus: orDefault(int, 0),
+      Descriptor: modifierDescriptor,
+      Value: rankedContextValue,
+      CheckFact: orDefault(bool, false),
+      m_RequiredFact: heldRefOrNull(...FACT),
+    },
+    cite: [
+      'Designers/Mechanics/Facts/AttackTypeAttackBonus.cs OnEventAboutToTrigger (Type, AllTypesExcept, AttackBonus, Descriptor, Value, CheckFact, m_RequiredFact)',
+    ],
+  }),
+  component<CMDBonusAgainstManeuvers>({
+    type: 'CMDBonusAgainstManeuvers',
+    fields: {
+      Descriptor: modifierDescriptor,
+      Value: rankedContextValue,
+      Maneuvers: orDefault(list(combatManeuver), []),
+    },
+    cite: [
+      'Designers/Mechanics/Facts/CMDBonusAgainstManeuvers.cs OnEventAboutToTrigger (Descriptor, Value, Maneuvers)',
+    ],
+  }),
+  component<AddImmunityToAbilityScoreDamage>({
+    type: 'AddImmunityToAbilityScoreDamage',
+    fields: {
+      Drain: orDefault(bool, false),
+      StatTypes: orDefault(list(statType), []),
+      UseIgnoreRule: orDefault(bool, false),
+      IgnoreDescriptors: orDefault(spellDescriptor, { m_IntValue: '0' }),
+      IgnoreCasterFacts: orDefault(heldRefs(...FACT), []),
+      IgnoreOnlyIfBothPassed: orDefault(bool, false),
+    },
+    cite: [
+      'UnitLogic/FactLogic/AddImmunityToAbilityScoreDamage.cs OnEventAboutToTrigger (Drain, StatTypes, UseIgnoreRule, IgnoreDescriptors, IgnoreCasterFacts, IgnoreOnlyIfBothPassed)',
+    ],
+  }),
+  component<AddImmunityToEnergyDrain>({
+    type: 'AddImmunityToEnergyDrain',
+    fields: {},
+    cite: ['UnitLogic/FactLogic/AddImmunityToEnergyDrain.cs OnEventAboutToTrigger'],
+  }),
+  component<SavingThrowBonusAgainstFact>({
+    type: 'SavingThrowBonusAgainstFact',
+    fields: {
+      m_CheckedFact: heldRefOrNull(...FACT),
+      Descriptor: modifierDescriptor,
+      Value: orDefault(int, 0),
+      Alignment: alignmentComponent,
+    },
+    cite: [
+      'Designers/Mechanics/Facts/SavingThrowBonusAgainstFact.cs OnEventAboutToTrigger (m_CheckedFact, Descriptor, Value, Alignment)',
+    ],
+  }),
+  component<ArcaneSpellFailureIncrease>({
+    type: 'ArcaneSpellFailureIncrease',
+    fields: { Bonus: orDefault(int, 0), ToShield: orDefault(bool, false), Universal: orDefault(bool, false) },
+    cite: [
+      'Designers/Mechanics/Facts/ArcaneSpellFailureIncrease.cs OnEventAboutToTrigger (Bonus, ToShield, Universal)',
+    ],
+  }),
+  component<AddEnergyVulnerability>({
+    type: 'AddEnergyVulnerability',
+    fields: { Type: damageEnergyType },
+    cite: ['UnitLogic/FactLogic/AddEnergyVulnerability.cs OnEventAboutToTrigger (Type)'],
   }),
   component<AddStatBonus>({
     type: 'AddStatBonus',

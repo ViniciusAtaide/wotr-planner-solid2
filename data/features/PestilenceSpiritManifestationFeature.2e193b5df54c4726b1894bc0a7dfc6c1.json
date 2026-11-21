@@ -25,6 +25,19 @@
       "$type": "AddImmunityToPrecisionDamage"
     },
     {
+      "$type": "AddImmunityToAbilityScoreDamage",
+      "Drain": false,
+      "IgnoreCasterFacts": [
+        "!bp_55c364c3f02e4fdc8a63125b5a4c256c"
+      ],
+      "IgnoreDescriptors": {
+        "m_IntValue": "0"
+      },
+      "IgnoreOnlyIfBothPassed": false,
+      "StatTypes": [],
+      "UseIgnoreRule": false
+    },
+    {
       "$type": "BuffDescriptorImmunity",
       "CheckFact": false,
       "Descriptor": {

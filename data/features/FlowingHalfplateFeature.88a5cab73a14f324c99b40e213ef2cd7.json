@@ -7,6 +7,10 @@
       "ScaleByBasicAttackBonus": false,
       "Stat": "SaveReflex",
       "Value": 5
+    },
+    {
+      "$type": "Evasion",
+      "SavingThrow": "Reflex"
     }
   ],
   "Groups": [],

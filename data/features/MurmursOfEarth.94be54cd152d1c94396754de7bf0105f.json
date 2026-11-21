@@ -30,6 +30,13 @@
       "m_Facts": []
     },
     {
+      "$type": "Blindsense",
+      "Blindsight": true,
+      "Range": {
+        "m_Value": 15
+      }
+    },
+    {
       "$type": "FeatureTagsComponent",
       "FeatureTags": "Defense, Skills"
     }

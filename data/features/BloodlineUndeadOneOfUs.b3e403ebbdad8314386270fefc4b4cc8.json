@@ -33,6 +33,13 @@
       "m_IgnoreFeature": null
     },
     {
+      "$type": "SavingThrowBonusAgainstFact",
+      "Alignment": "None",
+      "Descriptor": "Morale",
+      "Value": 4,
+      "m_CheckedFact": "!bp_734a29b693e9ec346ba2951b27987e33"
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",

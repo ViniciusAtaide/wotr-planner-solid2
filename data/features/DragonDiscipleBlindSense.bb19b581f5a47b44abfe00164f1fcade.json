@@ -1,6 +1,14 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "Blindsense",
+      "Blindsight": false,
+      "Range": {
+        "m_Value": 25
+      }
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

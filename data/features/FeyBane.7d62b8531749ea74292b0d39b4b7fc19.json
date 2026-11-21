@@ -11,6 +11,13 @@
         "ValueType": "Simple"
       },
       "m_RequiredFact": "!bp_018af8005220ac94a9a4f47b3e9c2b4e"
+    },
+    {
+      "$type": "SavingThrowBonusAgainstFact",
+      "Alignment": "None",
+      "Descriptor": "None",
+      "Value": 4,
+      "m_CheckedFact": "!bp_018af8005220ac94a9a4f47b3e9c2b4e"
     }
   ],
   "Groups": [],

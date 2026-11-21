@@ -1,6 +1,13 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "FavoredEnemy",
+      "m_CheckedFacts": [
+        "!bp_734a29b693e9ec346ba2951b27987e33"
+      ]
+    }
+  ],
   "Groups": [
     "FavoriteEnemy"
   ],

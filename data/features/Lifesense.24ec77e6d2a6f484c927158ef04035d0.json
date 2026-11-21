@@ -2,6 +2,13 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "Blindsense",
+      "Blindsight": true,
+      "Range": {
+        "m_Value": 30
+      }
+    },
+    {
       "$type": "SpellImmunityToSpellDescriptor",
       "Descriptor": {
         "m_IntValue": "140737488355328"

@@ -1,6 +1,12 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "BuffAllSavesBonus",
+      "Descriptor": "Sacred",
+      "Value": 4
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

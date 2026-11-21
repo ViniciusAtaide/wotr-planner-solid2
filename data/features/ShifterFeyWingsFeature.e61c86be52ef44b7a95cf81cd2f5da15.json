@@ -2,6 +2,25 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "ACBonusAgainstAttacks",
+      "AgainstMeleeOnly": true,
+      "AgainstRangedOnly": false,
+      "ArmorClassBonus": 3,
+      "CheckArmorCategory": false,
+      "Descriptor": "Dodge",
+      "IsTouch": false,
+      "NoShield": false,
+      "NotArmorCategory": [],
+      "NotTouch": false,
+      "OnlyAttacksOfOpportunity": false,
+      "OnlySneakAttack": false,
+      "Value": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "AddConditionImmunity",
       "Condition": "DifficultTerrain"
     },

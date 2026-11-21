@@ -15,6 +15,20 @@
       "m_Feature": "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5"
     },
     {
+      "$type": "CMDBonusAgainstManeuvers",
+      "Descriptor": "None",
+      "Maneuvers": [
+        "BullRush",
+        "Trip",
+        "Grapple"
+      ],
+      "Value": {
+        "Value": 4,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "PrerequisiteFeaturesFromList",
       "Amount": 1,
       "CheckInProgression": false,

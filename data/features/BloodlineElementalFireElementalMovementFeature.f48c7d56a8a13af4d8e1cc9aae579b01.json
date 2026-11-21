@@ -1,6 +1,21 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "BuffMovementSpeed",
+      "CappedMinimum": false,
+      "CappedOnMultiplier": true,
+      "ContextBonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "Enhancement",
+      "MinimumCap": 0,
+      "MultiplierCap": 2,
+      "Value": 30
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

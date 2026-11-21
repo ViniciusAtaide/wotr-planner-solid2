@@ -25,6 +25,13 @@
       "Condition": "Sleeping"
     },
     {
+      "$type": "SavingThrowBonusAgainstFact",
+      "Alignment": "None",
+      "Descriptor": "Morale",
+      "Value": 4,
+      "m_CheckedFact": "!bp_734a29b693e9ec346ba2951b27987e33"
+    },
+    {
       "$type": "PrerequisiteNoFeature",
       "CheckInProgression": true,
       "Group": "All",

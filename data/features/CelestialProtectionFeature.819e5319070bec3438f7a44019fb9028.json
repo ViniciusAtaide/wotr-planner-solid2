@@ -1,6 +1,14 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "SavingThrowBonusAgainstFact",
+      "Alignment": "None",
+      "Descriptor": "Resistance",
+      "Value": 5,
+      "m_CheckedFact": "!bp_dc960a234d365cb4f905bdc5937e623a"
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

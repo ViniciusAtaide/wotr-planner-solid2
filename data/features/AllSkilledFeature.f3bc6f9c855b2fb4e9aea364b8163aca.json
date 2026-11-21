@@ -2,6 +2,16 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "BuffAllSkillsBonus",
+      "Descriptor": "UntypedStackable",
+      "Multiplier": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Rank"
+      },
+      "Value": 1
+    },
+    {
       "$type": "AddProficiencies",
       "ArmorProficiencies": [
         "Light",

@@ -33,6 +33,20 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_3d319da9614c76a41a095a4467c3233f"
+    },
+    {
+      "$type": "BuffMovementSpeed",
+      "CappedMinimum": false,
+      "CappedOnMultiplier": false,
+      "ContextBonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "None",
+      "MinimumCap": 0,
+      "MultiplierCap": 0,
+      "Value": 10
     }
   ],
   "Groups": [

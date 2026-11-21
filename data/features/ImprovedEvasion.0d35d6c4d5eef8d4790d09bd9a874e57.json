@@ -2,6 +2,14 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "Evasion",
+      "SavingThrow": "Reflex"
+    },
+    {
+      "$type": "ImprovedEvasion",
+      "SavingThrow": "Reflex"
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",

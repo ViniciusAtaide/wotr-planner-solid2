@@ -7,6 +7,13 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_b3f10ef830d9fc44eab628ca1c1ed4fb"
+    },
+    {
+      "$type": "SavingThrowBonusAgainstFact",
+      "Alignment": "None",
+      "Descriptor": "Insight",
+      "Value": 1,
+      "m_CheckedFact": "!bp_dc960a234d365cb4f905bdc5937e623a"
     }
   ],
   "Groups": [

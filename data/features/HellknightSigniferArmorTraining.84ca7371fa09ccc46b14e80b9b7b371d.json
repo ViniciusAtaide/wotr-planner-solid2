@@ -2,6 +2,12 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "ArcaneSpellFailureIncrease",
+      "Bonus": -5,
+      "ToShield": false,
+      "Universal": false
+    },
+    {
       "$type": "AddFacts",
       "HasDifficultyRequirements": false,
       "InvertDifficultyRequirements": false,

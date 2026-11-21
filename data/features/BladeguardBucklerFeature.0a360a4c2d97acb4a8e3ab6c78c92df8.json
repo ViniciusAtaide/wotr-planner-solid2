@@ -1,6 +1,26 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "ACBonusAgainstAttacks",
+      "AgainstMeleeOnly": true,
+      "AgainstRangedOnly": false,
+      "ArmorClassBonus": 0,
+      "CheckArmorCategory": false,
+      "Descriptor": "Dodge",
+      "IsTouch": false,
+      "NoShield": false,
+      "NotArmorCategory": [],
+      "NotTouch": false,
+      "OnlyAttacksOfOpportunity": false,
+      "OnlySneakAttack": false,
+      "Value": {
+        "Value": 3,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

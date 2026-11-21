@@ -31,6 +31,13 @@
       "DamageBonus": 2,
       "Descriptor": "Insight",
       "m_CheckedFact": "!bp_455ac88e22f55804ab87c2467deff1d6"
+    },
+    {
+      "$type": "SavingThrowBonusAgainstFact",
+      "Alignment": "None",
+      "Descriptor": "Insight",
+      "Value": 2,
+      "m_CheckedFact": "!bp_455ac88e22f55804ab87c2467deff1d6"
     }
   ],
   "Groups": [],

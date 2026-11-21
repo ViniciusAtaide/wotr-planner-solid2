@@ -41,6 +41,13 @@
       "m_IgnoreFeature": null
     },
     {
+      "$type": "Blindsense",
+      "Blindsight": false,
+      "Range": {
+        "m_Value": 60
+      }
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",

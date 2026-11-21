@@ -42,6 +42,40 @@
       "m_CasterIgnoreImmunityFact": "!bp_7853143d87baea1429bb409b023edb6b"
     },
     {
+      "$type": "AddImmunityToAbilityScoreDamage",
+      "Drain": true,
+      "IgnoreCasterFacts": [
+        "!bp_55c364c3f02e4fdc8a63125b5a4c256c"
+      ],
+      "IgnoreDescriptors": {
+        "m_IntValue": "16640"
+      },
+      "IgnoreOnlyIfBothPassed": true,
+      "StatTypes": [
+        "Constitution"
+      ],
+      "UseIgnoreRule": false
+    },
+    {
+      "$type": "AddImmunityToAbilityScoreDamage",
+      "Drain": true,
+      "IgnoreCasterFacts": [
+        "!bp_55c364c3f02e4fdc8a63125b5a4c256c"
+      ],
+      "IgnoreDescriptors": {
+        "m_IntValue": "16640"
+      },
+      "IgnoreOnlyIfBothPassed": true,
+      "StatTypes": [
+        "Strength",
+        "Dexterity",
+        "Intelligence",
+        "Wisdom",
+        "Charisma"
+      ],
+      "UseIgnoreRule": true
+    },
+    {
       "$type": "AddFacts",
       "HasDifficultyRequirements": false,
       "InvertDifficultyRequirements": false,
@@ -49,6 +83,9 @@
       "m_Facts": [
         "!bp_d5ee498e19722854198439629c1841a5"
       ]
+    },
+    {
+      "$type": "AddImmunityToEnergyDrain"
     },
     {
       "$type": "AddConditionImmunity",

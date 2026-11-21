@@ -2,6 +2,9 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddImmunityToEnergyDrain"
+    },
+    {
       "$type": "ACBonusAgainstFactOwner",
       "Alignment": "None",
       "Bonus": 2,
@@ -33,11 +36,25 @@
       "m_CheckedFact": "!bp_734a29b693e9ec346ba2951b27987e33"
     },
     {
+      "$type": "SavingThrowBonusAgainstFact",
+      "Alignment": "None",
+      "Descriptor": "None",
+      "Value": 2,
+      "m_CheckedFact": "!bp_734a29b693e9ec346ba2951b27987e33"
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": true,
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_295dff380fb8ed743bd5c76a30a49a46"
+    },
+    {
+      "$type": "SavingThrowBonusAgainstFact",
+      "Alignment": "None",
+      "Descriptor": "None",
+      "Value": 2,
+      "m_CheckedFact": "!bp_5d6c8a31bbc195648af1bf95425b6a54"
     },
     {
       "$type": "DamageBonusAgainstFactOwner",

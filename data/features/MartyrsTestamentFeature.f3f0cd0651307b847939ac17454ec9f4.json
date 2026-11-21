@@ -2,6 +2,10 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddEnergyVulnerability",
+      "Type": "Fire"
+    },
+    {
       "$type": "BuffDescriptorImmunity",
       "CheckFact": false,
       "Descriptor": {

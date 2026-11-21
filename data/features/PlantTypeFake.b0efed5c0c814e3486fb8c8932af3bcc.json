@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "CreatureType"
+  ],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "PlantTypeFake",
+  "guid": "b0efed5c0c814e3486fb8c8932af3bcc",
+  "name": "Plant"
+}

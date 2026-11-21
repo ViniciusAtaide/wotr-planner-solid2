@@ -11,6 +11,13 @@
       "m_CharacterClass": "!bp_42a455d9ec1ad924d889272429eb8391"
     },
     {
+      "$type": "Blindsense",
+      "Blindsight": true,
+      "Range": {
+        "m_Value": 30
+      }
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "Any",

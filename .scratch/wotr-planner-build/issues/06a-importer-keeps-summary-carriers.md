@@ -1,6 +1,6 @@
 # The importer keeps the Summary carriers
 
-Status: in-progress
+Status: done
 Session: ticket-03c-walk-fixes
 Blocked by: none
 Parent: [06](06-after-first-use.md)
@@ -40,7 +40,8 @@ The data document before 06a: raw 2.046 MB, gzip 0.478 MB, brotli 0.380 MB (`enc
 | 1. Resistances and immunities | e0dcd9d0 | `AddDamageResistanceEnergy`, `AddDamageResistancePhysical`, `AddEnergyDamageImmunity`, `AddEnergyImmunity`, `AddSpellResistance`, `AddFortification` (6) | 279 gain the component; nothing else changes | 2.057 MB | 0.481 MB | 0.381 MB |
 | 2. Saves and immunities by descriptor, school and condition | 55048111 | `SavingThrowBonusAgainstDescriptor`, `SavingThrowBonusAgainstSchool`, `BuffDescriptorImmunity`, `SpellImmunityToSpellDescriptor`, `AddConditionImmunity`, `AddImmunityToCriticalHits`, `AddImmunityToPrecisionDamage` (7; 13 in all) | 246 gain components; 2 new referenced facts | 2.070 MB | 0.485 MB | 0.384 MB |
 | 3. Spellcasting | fbb7c006 | `IncreaseSpellDescriptorDC`, `IncreaseSpellSchoolDC`, `IncreaseAllSpellsDC`, `IncreaseSpellDescriptorCasterLevel`, `IncreaseSpellSchoolCasterLevel`, `SpellPenetrationBonus`, `ConcentrationBonus`, `SpellSpecializationParametrized`, `DraconicBloodlineArcana` (9; 22 in all) | 148 gain components (156 in all); 2 new held facts; 4 keep a granted toggle | 2.076 MB | 0.486 MB | 0.386 MB |
-| 4. Weapons, attacks and maneuvers | (this commit) | `WeaponGroupAttackBonus`, `WeaponGroupDamageBonus`, `WeaponTraining`, `WeaponTypeDamageStatReplacement`, `WeaponFocusParametrized`, `WeaponSpecializationParametrized`, `ImprovedCriticalParametrized`, `AttackBonusAgainstFactOwner`, `DamageBonusAgainstFactOwner`, `ACBonusAgainstFactOwner`, `ManeuverBonus`, `ManeuverDefenceBonus` (12; 34 in all) | 123 gain components; 57 new held blueprints, the checked facts and what they name | 2.092 MB | 0.489 MB | 0.387 MB |
+| 4. Weapons, attacks and maneuvers | 5711a9e4 | `WeaponGroupAttackBonus`, `WeaponGroupDamageBonus`, `WeaponTraining`, `WeaponTypeDamageStatReplacement`, `WeaponFocusParametrized`, `WeaponSpecializationParametrized`, `ImprovedCriticalParametrized`, `AttackBonusAgainstFactOwner`, `DamageBonusAgainstFactOwner`, `ACBonusAgainstFactOwner`, `ManeuverBonus`, `ManeuverDefenceBonus` (12; 34 in all) | 123 gain components; 57 new held blueprints, the checked facts and what they name | 2.092 MB | 0.489 MB | 0.387 MB |
+| 5. Movement, senses, defences and the rest | (this commit) | `Blindsense`, `BuffMovementSpeed`, `FavoredEnemy`, `FavoredTerrain`, `Evasion`, `ImprovedEvasion`, `BuffAllSavesBonus`, `BuffAllSkillsBonus`, `ACBonusAgainstAttacks`, `AttackTypeAttackBonus`, `CMDBonusAgainstManeuvers`, `AddImmunityToAbilityScoreDamage`, `AddImmunityToEnergyDrain`, `SavingThrowBonusAgainstFact`, `ArcaneSpellFailureIncrease`, `AddEnergyVulnerability` (16; 50 in all) | 165 gain components; 4 new held facts | 2.102 MB | 0.492 MB | 0.389 MB |
 
 - **Family 1's data changes:** each changed file only gains its kept resistance or immunity components (the diff's removed lines are a `}` becoming `},`). The report's In-play count falls from 376 to 370.
 - **The reader set:** `engine/describe` declares `summaryComponentTypes`, and the allowlist test holds every kept type to one reader set.
@@ -64,3 +65,22 @@ The data document before 06a: raw 2.046 MB, gzip 0.478 MB, brotli 0.380 MB (`enc
   - No existing display name changes. The race and class pickers list only what `ProgressionRoot` offers, so Goblin and the Outsider class don't appear there.
   - `VolleyFireEffectBuff` stacks by rank, so `StackingType` gains `Rank`.
   - The new blueprints bring nine types, now noted in `not-needed.ts`: `SummonedUnitBuff` and `BuffOnEntityCreated` (units), and `AddSpellImmunity`, `AddIncorporealDamageDivisor`, `ConstructHealth`, `GhostCriticalAndPrecisionImmunity`, `IncorporealACBonus`, `RemoveWhenCombatEnded` and `UniqueBuff` (in play).
+- **Family 5's data changes:**
+  - 165 features and buffs gain their kept senses, speed, favored enemy and terrain, evasion, all-saves and all-skills, AC, attack-type, CMD, ability-damage, energy-drain, save-against-a-fact, spell-failure and vulnerability components.
+  - `SavingThrowBonusAgainstFact` and `AttackTypeAttackBonus` name facts through `heldRefOrNull`; four are newly held: `AberrationType`, `PlantType`, `PlantTypeFake` and `ImmunityToPolymorph`.
+  - `FavoredEnemy` keeps its creature types with `heldRefs`, which keeps only facts held anyway; 22 extra subtype references are dropped (References dropped), and every one of the 22 Favored Enemy components keeps at least one type.
+  - Blindsense's exceptions (`Exceptions`, dumped as `HasExceptions` and `m_ExceptionFacts`) aren't kept: a Summary names only the range and whether it is blindsight. `ACBonusAgainstAttacks.OneHanded` is set by no written blueprint, so it is listed as not kept. One Dhampir feature leaves out `AddImmunityToAbilityScoreDamage`'s ignore fields, so they get defaults.
+  - New enums and structs: `Feet` (`m_Value`), `AreaSetting`, `SavingThrowType`; `WeaponRangeType` gains a shared spec.
+
+## Outcome
+
+The importer keeps the 50 Summary carriers below, each with its fields cited (ADR 0005); `engine/describe`'s `summaryComponentTypes` is their reader set.
+
+- **Resistances and immunities (13):** `AddDamageResistanceEnergy`, `AddDamageResistancePhysical`, `AddEnergyDamageImmunity`, `AddEnergyImmunity`, `AddSpellResistance`, `AddFortification`, `SavingThrowBonusAgainstDescriptor`, `SavingThrowBonusAgainstSchool`, `BuffDescriptorImmunity`, `SpellImmunityToSpellDescriptor`, `AddConditionImmunity`, `AddImmunityToCriticalHits`, `AddImmunityToPrecisionDamage`.
+- **Spellcasting (9):** `IncreaseSpellDescriptorDC`, `IncreaseSpellSchoolDC`, `IncreaseAllSpellsDC`, `IncreaseSpellDescriptorCasterLevel`, `IncreaseSpellSchoolCasterLevel`, `SpellPenetrationBonus`, `ConcentrationBonus`, `SpellSpecializationParametrized`, `DraconicBloodlineArcana`.
+- **Weapons, attacks and maneuvers (12):** `WeaponGroupAttackBonus`, `WeaponGroupDamageBonus`, `WeaponTraining`, `WeaponTypeDamageStatReplacement`, `WeaponFocusParametrized`, `WeaponSpecializationParametrized`, `ImprovedCriticalParametrized`, `AttackBonusAgainstFactOwner`, `DamageBonusAgainstFactOwner`, `ACBonusAgainstFactOwner`, `ManeuverBonus`, `ManeuverDefenceBonus`.
+- **Movement, senses, defences and the rest (16):** `Blindsense`, `BuffMovementSpeed`, `FavoredEnemy`, `FavoredTerrain`, `Evasion`, `ImprovedEvasion`, `BuffAllSavesBonus`, `BuffAllSkillsBonus`, `ACBonusAgainstAttacks`, `AttackTypeAttackBonus`, `CMDBonusAgainstManeuvers`, `AddImmunityToAbilityScoreDamage`, `AddImmunityToEnergyDrain`, `SavingThrowBonusAgainstFact`, `ArcaneSpellFailureIncrease`, `AddEnergyVulnerability`.
+
+- **Left out:** `AutoMetamagic` (metamagic flags and spell lists) and `IncreaseSpellDC` (single spells `data/` doesn't hold); `ACBonusAgainstWeaponType` and `IncreaseResourceAmount`, whose targets (weapon types, ability resources) `data/` doesn't hold.
+- **Size:** 2.046 → 2.102 MB raw, 0.478 → 0.492 MB gzip, 0.380 → 0.389 MB brotli (+0.014 MB gzip, far under ADR 0004's budget).
+- **Guardrails:** both gold Builds walk unchanged (their tests), and the picker sweep stays at 0 disagreements (30296 options).

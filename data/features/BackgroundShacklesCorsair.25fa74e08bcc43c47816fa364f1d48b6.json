@@ -19,6 +19,18 @@
       ]
     },
     {
+      "$type": "CMDBonusAgainstManeuvers",
+      "Descriptor": "UntypedStackable",
+      "Maneuvers": [
+        "Trip"
+      ],
+      "Value": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "AddBackgroundClassSkill",
       "Skill": "SkillMobility"
     },

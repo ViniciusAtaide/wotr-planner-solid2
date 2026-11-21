@@ -1,6 +1,21 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AttackTypeAttackBonus",
+      "AllTypesExcept": false,
+      "AttackBonus": 1,
+      "CheckFact": false,
+      "Descriptor": "Competence",
+      "Type": "Melee",
+      "Value": {
+        "Value": 1,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_RequiredFact": null
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

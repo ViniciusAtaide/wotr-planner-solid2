@@ -2,6 +2,19 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddImmunityToAbilityScoreDamage",
+      "Drain": true,
+      "IgnoreCasterFacts": [
+        "!bp_55c364c3f02e4fdc8a63125b5a4c256c"
+      ],
+      "IgnoreDescriptors": {
+        "m_IntValue": "16640"
+      },
+      "IgnoreOnlyIfBothPassed": true,
+      "StatTypes": [],
+      "UseIgnoreRule": true
+    },
+    {
       "$type": "BuffDescriptorImmunity",
       "CheckFact": false,
       "Descriptor": {

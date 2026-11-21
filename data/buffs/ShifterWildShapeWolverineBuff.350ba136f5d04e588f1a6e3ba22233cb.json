@@ -2,6 +2,13 @@
   "$type": "BlueprintBuff",
   "Components": [
     {
+      "$type": "Blindsense",
+      "Blindsight": false,
+      "Range": {
+        "m_Value": 30
+      }
+    },
+    {
       "$type": "ContextRankConfig",
       "m_BaseValueType": "ClassLevel",
       "m_Class": [
@@ -20,6 +27,20 @@
       "m_Type": "Default",
       "m_UseMax": false,
       "m_UseMin": false
+    },
+    {
+      "$type": "BuffMovementSpeed",
+      "CappedMinimum": false,
+      "CappedOnMultiplier": false,
+      "ContextBonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "None",
+      "MinimumCap": 0,
+      "MultiplierCap": 0,
+      "Value": 10
     }
   ],
   "Stacking": "Replace",

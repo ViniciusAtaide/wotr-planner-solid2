@@ -9,6 +9,10 @@
         "ValueRank": "Default",
         "ValueType": "Simple"
       }
+    },
+    {
+      "$type": "AddEnergyVulnerability",
+      "Type": "Fire"
     }
   ],
   "Groups": [],

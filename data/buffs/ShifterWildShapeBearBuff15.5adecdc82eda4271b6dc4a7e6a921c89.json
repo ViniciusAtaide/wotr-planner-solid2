@@ -1,6 +1,28 @@
 {
   "$type": "BlueprintBuff",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "BuffMovementSpeed",
+      "CappedMinimum": false,
+      "CappedOnMultiplier": false,
+      "ContextBonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "None",
+      "MinimumCap": 0,
+      "MultiplierCap": 0,
+      "Value": 10
+    },
+    {
+      "$type": "Blindsense",
+      "Blindsight": false,
+      "Range": {
+        "m_Value": 30
+      }
+    }
+  ],
   "Stacking": "Replace",
   "assetName": "ShifterWildShapeBearBuff15",
   "guid": "5adecdc82eda4271b6dc4a7e6a921c89",

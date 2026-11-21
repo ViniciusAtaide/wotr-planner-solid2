@@ -18,6 +18,20 @@
       "m_Archetypes": [],
       "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
       "m_Feature": "!bp_825f82e6a7d36a1408bd48dd85942848"
+    },
+    {
+      "$type": "BuffMovementSpeed",
+      "CappedMinimum": false,
+      "CappedOnMultiplier": false,
+      "ContextBonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "None",
+      "MinimumCap": 0,
+      "MultiplierCap": 0,
+      "Value": 10
     }
   ],
   "Groups": [],

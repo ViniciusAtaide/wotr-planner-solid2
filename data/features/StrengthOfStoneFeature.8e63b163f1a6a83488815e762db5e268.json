@@ -30,6 +30,19 @@
       "IgnoreFactRank": false,
       "Mythic": false,
       "Type": "Trip"
+    },
+    {
+      "$type": "CMDBonusAgainstManeuvers",
+      "Descriptor": "None",
+      "Maneuvers": [
+        "Trip",
+        "BullRush"
+      ],
+      "Value": {
+        "Value": 1,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
     }
   ],
   "Groups": [],

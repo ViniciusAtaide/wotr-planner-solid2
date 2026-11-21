@@ -11,6 +11,11 @@
         "ValueRank": "Default",
         "ValueType": "Simple"
       }
+    },
+    {
+      "$type": "BuffAllSavesBonus",
+      "Descriptor": "Luck",
+      "Value": 2
     }
   ],
   "Groups": [],

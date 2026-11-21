@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "8589934592"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "8589934592"
+      },
+      "m_CasterIgnoreImmunityFact": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "ImmunityToPolymorph",
+  "guid": "cda78ca174ba99c49b184c3c3448fa92",
+  "name": "Immunity to Polymorph"
+}

@@ -1,6 +1,17 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "BuffAllSkillsBonus",
+      "Descriptor": "Circumstance",
+      "Multiplier": {
+        "Value": 1,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Value": 3
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "CreatureType"
+  ],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "AberrationType",
+  "guid": "3bec99efd9a363242a6c8d9957b75e91",
+  "name": "Aberration"
+}

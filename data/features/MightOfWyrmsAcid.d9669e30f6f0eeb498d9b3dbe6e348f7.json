@@ -18,6 +18,13 @@
       "m_Facts": [
         "!bp_c994f1a0dfce1c54f94420588da61617"
       ]
+    },
+    {
+      "$type": "Blindsense",
+      "Blindsight": false,
+      "Range": {
+        "m_Value": 60
+      }
     }
   ],
   "Groups": [],

@@ -2,6 +2,13 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "SavingThrowBonusAgainstFact",
+      "Alignment": "None",
+      "Descriptor": "None",
+      "Value": 1,
+      "m_CheckedFact": "!bp_3a2c6187f09ef644ea443124c63831df"
+    },
+    {
       "$type": "ACBonusAgainstFactOwner",
       "Alignment": "None",
       "Bonus": 1,

@@ -2,6 +2,13 @@
   "$type": "BlueprintBuff",
   "Components": [
     {
+      "$type": "Blindsense",
+      "Blindsight": false,
+      "Range": {
+        "m_Value": 30
+      }
+    },
+    {
       "$type": "AddStatBonus",
       "Descriptor": "NaturalArmor",
       "ScaleByBasicAttackBonus": false,

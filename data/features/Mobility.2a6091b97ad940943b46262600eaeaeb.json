@@ -17,6 +17,25 @@
       "m_Feature": "!bp_97e216dbb46ae3c4faef90cf6bbe6fd5"
     },
     {
+      "$type": "ACBonusAgainstAttacks",
+      "AgainstMeleeOnly": false,
+      "AgainstRangedOnly": false,
+      "ArmorClassBonus": 0,
+      "CheckArmorCategory": false,
+      "Descriptor": "None",
+      "IsTouch": false,
+      "NoShield": false,
+      "NotArmorCategory": [],
+      "NotTouch": false,
+      "OnlyAttacksOfOpportunity": true,
+      "OnlySneakAttack": false,
+      "Value": {
+        "Value": 4,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "FeatureTagsComponent",
       "FeatureTags": "Defense, Skills"
     }

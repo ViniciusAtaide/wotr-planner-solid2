@@ -2,6 +2,19 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "CMDBonusAgainstManeuvers",
+      "Descriptor": "None",
+      "Maneuvers": [
+        "BullRush",
+        "Trip"
+      ],
+      "Value": {
+        "Value": 4,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "AddFeatureOnClassLevel",
       "BeforeThisLevel": false,
       "Level": 5,

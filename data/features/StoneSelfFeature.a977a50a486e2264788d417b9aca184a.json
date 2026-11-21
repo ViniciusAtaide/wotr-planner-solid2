@@ -12,6 +12,13 @@
       ]
     },
     {
+      "$type": "Blindsense",
+      "Blindsight": true,
+      "Range": {
+        "m_Value": 20
+      }
+    },
+    {
       "$type": "AddDamageResistancePhysical",
       "Alignment": "Chaotic",
       "BypassedByAlignment": true,

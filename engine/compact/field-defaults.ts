@@ -27,6 +27,9 @@ export const FIELD_DEFAULTS: FieldDefaults = {
       m_CharacterMythics: [],
       m_CharacterRaces: [],
     },
+  '{m_Value}': {
+    m_Value: 0,
+  },
   '{ParamObject,ParamSpellSchool,ParamWeaponCategory,Stat,m_Feature}': {
     ParamObject: null,
     ParamSpellSchool: 'None',
@@ -40,6 +43,19 @@ export const FIELD_DEFAULTS: FieldDefaults = {
   },
   AbilityApplyFact: {
     m_Facts: [],
+  },
+  ACBonusAgainstAttacks: {
+    AgainstMeleeOnly: false,
+    AgainstRangedOnly: false,
+    ArmorClassBonus: 0,
+    CheckArmorCategory: false,
+    Descriptor: 'None',
+    IsTouch: false,
+    NoShield: false,
+    NotArmorCategory: [],
+    NotTouch: false,
+    OnlyAttacksOfOpportunity: false,
+    OnlySneakAttack: false,
   },
   ACBonusAgainstFactOwner: {
     Alignment: 'None',
@@ -92,6 +108,16 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     Bonus: 0,
     UseContextValue: false,
   },
+  AddImmunityToAbilityScoreDamage: {
+    Drain: false,
+    IgnoreCasterFacts: [],
+    IgnoreDescriptors: {
+      m_IntValue: '0',
+    },
+    IgnoreOnlyIfBothPassed: false,
+    StatTypes: [],
+    UseIgnoreRule: false,
+  },
   AddParametrizedFeatures: {
     m_Features: [],
   },
@@ -119,6 +145,11 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     m_CheckedFacts: [],
     RequireAllFacts: false,
   },
+  ArcaneSpellFailureIncrease: {
+    Bonus: 0,
+    ToShield: false,
+    Universal: false,
+  },
   ArmorEnhancementBonus: {
     EnhancementValue: 0,
   },
@@ -127,6 +158,16 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     Descriptor: 'None',
     m_CheckedFact: null,
     Not: false,
+  },
+  AttackTypeAttackBonus: {
+    AllTypesExcept: false,
+    AttackBonus: 0,
+    CheckFact: false,
+    Descriptor: 'None',
+    m_RequiredFact: null,
+  },
+  Blindsense: {
+    Blindsight: false,
   },
   BlueprintActivatableAbility: {
     Group: 'None',
@@ -288,6 +329,14 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     m_IsNatural: false,
     m_IsTwoHanded: false,
   },
+  BuffAllSavesBonus: {
+    Descriptor: 'None',
+    Value: 0,
+  },
+  BuffAllSkillsBonus: {
+    Descriptor: 'None',
+    Value: 0,
+  },
   BuffDescriptorImmunity: {
     CheckFact: false,
     m_FactToCheck: null,
@@ -297,10 +346,22 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     m_CheckedBuff: null,
     m_ExceptionFact: null,
   },
+  BuffMovementSpeed: {
+    CappedMinimum: false,
+    CappedOnMultiplier: false,
+    Descriptor: 'None',
+    MinimumCap: 0,
+    MultiplierCap: 0,
+    Value: 0,
+  },
   ClassLevelsForPrerequisites: {
     m_ForSelection: null,
     Modifier: 0,
     Summand: 0,
+  },
+  CMDBonusAgainstManeuvers: {
+    Descriptor: 'None',
+    Maneuvers: [],
   },
   CompanionInParty: {
     Not: false,
@@ -375,6 +436,12 @@ export const FIELD_DEFAULTS: FieldDefaults = {
   FactSinglify: {
     m_NewFacts: [],
     m_OldFacts: [],
+  },
+  FavoredEnemy: {
+    m_CheckedFacts: [],
+  },
+  FavoredTerrain: {
+    Setting: 'None',
   },
   HasArmorFeatureUnlock: {
     FilterByArmorProficiencyGroup: false,
@@ -601,6 +668,12 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     m_DisablingFeature: null,
     ModifierDescriptor: 'None',
     OnlyPositiveValue: false,
+    Value: 0,
+  },
+  SavingThrowBonusAgainstFact: {
+    Alignment: 'None',
+    Descriptor: 'None',
+    m_CheckedFact: null,
     Value: 0,
   },
   SavingThrowBonusAgainstSchool: {

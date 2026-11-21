@@ -2,6 +2,13 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "Blindsense",
+      "Blindsight": false,
+      "Range": {
+        "m_Value": 60
+      }
+    },
+    {
       "$type": "IncreaseSpellSchoolCasterLevel",
       "BonusLevel": 4,
       "Descriptor": "UntypedStackable",
