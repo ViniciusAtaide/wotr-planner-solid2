@@ -31,6 +31,7 @@ export interface TrailState {
   readonly unfolded: ReadonlySet<number>;
   readonly characterOpen: boolean | undefined;
   readonly otherClass: boolean;
+  readonly closedShown: ReadonlySet<string>;
 }
 
 export type TrailAction =
@@ -39,7 +40,8 @@ export type TrailAction =
   | { readonly kind: 'toggleChapter'; readonly chapter: number }
   | { readonly kind: 'levelAdded' }
   | { readonly kind: 'character'; readonly open: boolean }
-  | { readonly kind: 'otherClass'; readonly open: boolean };
+  | { readonly kind: 'otherClass'; readonly open: boolean }
+  | { readonly kind: 'toggleClosed'; readonly list: string };
 
 export const TRAIL_START: TrailState = {
   skillsLeft: new Set(),
@@ -47,6 +49,7 @@ export const TRAIL_START: TrailState = {
   unfolded: new Set(),
   characterOpen: undefined,
   otherClass: false,
+  closedShown: new Set(),
 };
 
 export function reduceTrail(s: TrailState, a: TrailAction): TrailState {
@@ -66,6 +69,11 @@ export function reduceTrail(s: TrailState, a: TrailAction): TrailState {
       return { ...s, characterOpen: a.open };
     case 'otherClass':
       return { ...s, otherClass: a.open };
+    case 'toggleClosed': {
+      const closedShown = new Set(s.closedShown);
+      if (!closedShown.delete(a.list)) closedShown.add(a.list);
+      return { ...s, closedShown };
+    }
   }
 }
 

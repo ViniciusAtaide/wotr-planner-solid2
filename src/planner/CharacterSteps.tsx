@@ -2,7 +2,7 @@ import { createMemo, Show } from 'solid-js';
 
 import { ChoiceList, currentFirst, type ChoiceRow } from './ChoiceList';
 import { backgroundChoices, raceChoices, type FlatChoice } from './flat-choices';
-import type { TrailApi } from './steps';
+import { closedToggle, type TrailApi } from './steps';
 import { backgroundSlot } from './trail-state';
 
 export interface CharacterStepProps {
@@ -30,7 +30,9 @@ export function RaceStep(props: CharacterStepProps) {
   const rows = createMemo(() =>
     rowsOf(props.trail, raceChoices(planner().engine, planner().build(), planner().walked()), (n) => `Race ${n}`),
   );
-  return <ChoiceList label="Filter races and heritages by name" rows={rows()} />;
+  return (
+    <ChoiceList label="Filter races and heritages by name" rows={rows()} closed={closedToggle(props.trail, 'race')} />
+  );
 }
 
 export function BackgroundStep(props: CharacterStepProps) {
@@ -48,7 +50,7 @@ export function BackgroundStep(props: CharacterStepProps) {
   });
   return (
     <Show when={base()} fallback={<p class="trail-note">The background opens at level 1.</p>}>
-      <ChoiceList label="Filter backgrounds by name" rows={rows()} />
+      <ChoiceList label="Filter backgrounds by name" rows={rows()} closed={closedToggle(props.trail, 'background')} />
     </Show>
   );
 }

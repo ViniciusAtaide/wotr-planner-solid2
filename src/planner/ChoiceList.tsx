@@ -1,4 +1,4 @@
-import { createMemo, createSignal, For, onCleanup, onSettled, Show } from 'solid-js';
+import { createEffect, createMemo, createSignal, For, onCleanup, onSettled, Show } from 'solid-js';
 import type { Build } from '~engine/build';
 import type { Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
@@ -132,9 +132,35 @@ export function Filter(props: FilterProps) {
   );
 }
 
+export interface ClosedToggle {
+  readonly shown: boolean;
+  readonly toggle: () => void;
+}
+
 export interface ChoiceListProps {
   readonly label: string;
   readonly rows: readonly ChoiceRow[];
+  readonly closed?: ClosedToggle;
+}
+
+export const SCROLL_STYLE = { 'max-height': 'var(--choice-list-max)', 'overflow-y': 'auto' } as const;
+
+export function createClosedToggle(given: () => ClosedToggle | undefined): ClosedToggle {
+  const [own, setOwn] = createSignal(false);
+  return {
+    get shown() {
+      return given()?.shown ?? own();
+    },
+    toggle: () => {
+      const outer = given();
+      if (outer === undefined) setOwn((v) => !v);
+      else outer.toggle();
+    },
+  };
+}
+
+export function markInView(scroller: HTMLElement | undefined): void {
+  scroller?.querySelector<HTMLElement>('.ww-option--marked')?.scrollIntoView?.({ block: 'nearest' });
 }
 
 const rowReason = (r: ChoiceRow) => r.reasons.join(' ') || 'closed';
@@ -143,13 +169,18 @@ export function ChoiceList(props: ChoiceListProps) {
   const [text, setText] = createSignal('');
   const [mark, setMark] = createSignal(0);
   const [all, setAll] = createSignal(false);
+  let scroller: HTMLDivElement | undefined;
+  const toggle = createClosedToggle(() => props.closed);
   const listed = createMemo(() => props.rows.filter((r) => matches(r.name, text())));
   const open = () => listed().filter((r) => r.open);
   const closed = () => listed().filter((r) => !r.open);
   const reveal = createReveal(CLOSED_SHOWN, () => closed().length);
-  const closedShown = () =>
-    all() ? closed().slice(0, reveal.limit()) : firstPerReason(closed(), rowReason, CLOSED_PER_REASON);
+  const closedShown = () => {
+    if (!toggle.shown) return closed().filter((r) => r.current);
+    return all() ? closed().slice(0, reveal.limit()) : firstPerReason(closed(), rowReason, CLOSED_PER_REASON);
+  };
   const hidden = () => {
+    if (!toggle.shown) return [];
     const shown = new Set(closedShown());
     return byReason(
       closed().filter((r) => !shown.has(r)),
@@ -157,6 +188,10 @@ export function ChoiceList(props: ChoiceListProps) {
     );
   };
   const filtering = () => props.rows.length >= FILTER_FROM;
+  createEffect(
+    () => mark(),
+    () => markInView(scroller),
+  );
   return (
     <div class="trail-choices" onKeyDown={moveThroughOptions}>
       <Show when={filtering()}>
@@ -174,36 +209,57 @@ export function ChoiceList(props: ChoiceListProps) {
       <Show when={text() !== '' && listed().length === 0}>
         <p class="trail-note">No matches for “{text()}”.</p>
       </Show>
-      <OptionList>
-        <For each={open()} keyed={(r) => r.key}>
-          {(r, i) => (
-            <PickerOption
-              name={r().name}
-              status="open"
-              selected={r().current}
-              marked={filtering() && i() === mark()}
-              links={r().note}
-              onPick={() => r().take()}
-            />
-          )}
-        </For>
-        <For each={closedShown()} keyed={(r) => r.key}>
-          {(r) => <PickerOption name={r().name} status="closed" refusal={r().reasons} />}
-        </For>
-        <Show when={hidden().length > 0}>
-          <For each={hidden()}>{([reason, n]) => <ClosedCount text={`${n} more closed: ${reason}`} />}</For>
-          <button
-            type="button"
-            class="trail-link"
-            onClick={() => {
-              setAll(true);
-              reveal.more();
-            }}
-          >
-            Show all closed
-          </button>
-        </Show>
-      </OptionList>
+      <Show when={listed().length > 0 && open().length === 0}>
+        <p class="trail-note">No choices open here.</p>
+      </Show>
+      <div
+        class="trail-scroll"
+        style={SCROLL_STYLE}
+        ref={(el) => {
+          scroller = el;
+        }}
+      >
+        <OptionList>
+          <For each={open()} keyed={(r) => r.key}>
+            {(r, i) => (
+              <PickerOption
+                name={r().name}
+                status="open"
+                selected={r().current}
+                marked={filtering() && i() === mark()}
+                links={r().note}
+                onPick={() => r().take()}
+              />
+            )}
+          </For>
+          <For each={closedShown()} keyed={(r) => r.key}>
+            {(r) => <PickerOption name={r().name} status="closed" selected={r().current} refusal={r().reasons} />}
+          </For>
+          <Show when={hidden().length > 0}>
+            <For each={hidden()}>{([reason, n]) => <ClosedCount text={`${n} more closed: ${reason}`} />}</For>
+            <button
+              type="button"
+              class="trail-link"
+              onClick={() => {
+                setAll(true);
+                reveal.more();
+              }}
+            >
+              Show all closed
+            </button>
+          </Show>
+        </OptionList>
+      </div>
+      <Show when={closed().length > 0}>
+        <button
+          type="button"
+          class="trail-link"
+          aria-pressed={toggle.shown ? 'true' : 'false'}
+          onClick={() => toggle.toggle()}
+        >
+          {toggle.shown ? 'Hide closed' : `Show ${closed().length} closed`}
+        </button>
+      </Show>
     </div>
   );
 }

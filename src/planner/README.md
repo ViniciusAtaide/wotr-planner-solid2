@@ -77,6 +77,16 @@ frame), so the first rows show at once.
 **Focus**: when a new step arrives and focus was lost with the old one (on the page body), it lands on the step's
 first control: the filter under a fine pointer, else its first button, never "Back to the next choice".
 
+**Capped lists, closed choices hidden** (user, 2026-11-21): every choice list (a slot's pick list, the race,
+background, class, archetype and Mythic path lists, and the Gear items) scrolls inside a capped height
+(`trail-scroll`, `SCROLL_STYLE`: `max-height: var(--choice-list-max)`, `overflow-y: auto`), at least six and a half
+rows (`--choice-list-max` is 6.5 × `--choice-row-height`, a two-line row, in `tokens.css`), with the filter and the
+headings outside the scroll. The marked row Enter takes is kept in view (`markInView`), and keyboard focus scrolls
+the row it reaches. Closed choices are hidden by default: "Show N closed" below the list reveals them with their
+grouped reasons, and "Hide closed" hides them again; the choice is remembered per list kind for the session, in the
+trail's state (`closedShown`, `toggleClosed`; `closedToggle` in `steps.tsx`). A list with no open row says "No choices
+open here" and keeps the button. The Build's current pick shows even when it has become closed, marked Current.
+
 **Sub-choices nested in pick lists** (build ticket 08, user 2026-11-21): in a pick list, an option that opens a
 further choice is one parent row that expands its sub-options right under it, indented a step with a rule on the left
 (`trail-sub`), the parent marked ▸ or ▾ (`aria-expanded`). Two kinds, from S's options (`nested-options.ts`,
@@ -237,7 +247,8 @@ dimmed and inert behind "Edit the Second Build".
 - **`trail-state.ts`: the step model (build ticket 07).** Pure functions over a `TrailView` (the data, the Build and
   its walk) and a small `TrailState` with its reducer `reduceTrail`, the page's own memory per Build: the levels whose
   skills were left unspent (`skillsLeft`), the level a Mythic rank was put off at (`mythicLater`), the chapters tapped
-  open (`unfolded`), the character card opened or closed by hand (`characterOpen`) and "Another class…" (`otherClass`).
+  open (`unfolded`), the character card opened or closed by hand (`characterOpen`), "Another class…" (`otherClass`) and
+  the list kinds whose closed choices are shown (`closedShown`).
   `levelAdded` folds every chapter again and closes the class list.
   - `Step` is a `Selection`, a due Mythic rank (`mythic`) or the next level (`nextLevel`); `nextStep` gives the next
     one in the order above, `whereOf` where it opens (the character, the score tiles, a level, a rank, the next stop,

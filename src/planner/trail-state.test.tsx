@@ -236,6 +236,10 @@ describe('chapters and folding (phones only)', () => {
       true,
     );
     expect(reduceTrail(opened, { kind: 'levelAdded' }).unfolded.size).toBe(0);
+    const shown = reduceTrail(TRAIL_START, { kind: 'toggleClosed', list: 'pick' });
+    expect(shown.closedShown.has('pick')).toBe(true);
+    expect(reduceTrail(shown, { kind: 'levelAdded' }).closedShown.has('pick')).toBe(true);
+    expect(reduceTrail(shown, { kind: 'toggleClosed', list: 'pick' }).closedShown.has('pick')).toBe(false);
   });
 
   test('level 1 is done once its every choice is made, not when it is added', () => {
