@@ -1,7 +1,8 @@
 import type { CheckedData } from '../load';
 import { isShown, type Guid } from '../data';
-import { buildGrantIndex, removes, type GrantIndex } from '../grants';
+import { buildGrantIndex, removes, type GrantIndex, type GrantParam } from '../grants';
 import { namedBlueprints, prerequisites } from '../prerequisites';
+import { hasSubCategory } from '../walk';
 
 export interface LinkIndex {
   needs(guid: Guid): readonly Guid[];
@@ -47,4 +48,40 @@ export function linkIndex(data: CheckedData, G: GrantIndex = buildGrantIndex(dat
   };
   cache.set(data, index);
   return index;
+}
+
+function fitsValue(data: CheckedData, dependent: Guid, guid: Guid, param: GrantParam): boolean {
+  const bp = data.blueprints.get(dependent);
+  if (bp === undefined) return false;
+  for (const leaf of prerequisites(bp, data.blueprints)) {
+    const n = leaf.names;
+    if (leaf.polarity !== 'requires' || !('m_Feature' in n) || n.m_Feature !== guid) continue;
+    if (n.kind === 'parametrizedFeature') {
+      if (
+        n.ParameterType === 'WeaponCategory' &&
+        'WeaponCategory' in param &&
+        n.WeaponCategory !== param.WeaponCategory
+      )
+        return false;
+      if (n.ParameterType === 'SpellSchool' && 'SpellSchool' in param && n.SpellSchool !== param.SpellSchool)
+        return false;
+    }
+    if (
+      n.kind === 'weaponSubCategory' &&
+      'WeaponCategory' in param &&
+      !hasSubCategory(param.WeaponCategory, n.SubCategory)
+    )
+      return false;
+  }
+  return true;
+}
+
+export function enablesWith(
+  data: CheckedData,
+  guid: Guid,
+  param: GrantParam | undefined,
+  G: GrantIndex = buildGrantIndex(data),
+): readonly Guid[] {
+  const all = linkIndex(data, G).enables(guid);
+  return param === undefined ? all : all.filter((d) => fitsValue(data, d, guid, param));
 }

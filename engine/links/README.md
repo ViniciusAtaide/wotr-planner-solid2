@@ -8,6 +8,7 @@ Which blueprints build on which. This feature works out the prerequisite-chain k
 - `LinkIndex`: the index it returns, with two lookups:
   - `needs(guid)`: the shown blueprints that `guid`'s prerequisites require.
   - `enables(guid)`: the shown blueprints that require `guid`, or require something `guid` grants.
+- `enablesWith(data, guid, param, G?)`: what a value of a parametrized pick enables. A dependent whose prerequisite fixes another value (Aldori Swordlord: Weapon Focus with a dueling sword), or a weapon subcategory the value's weapon isn't in (Fencing Grace: one-handed piercing), is left out, so Weapon Focus (Bardiche) enables neither (QA pass 4). Without a parameter it is `enables`.
 
 - `topicsOf(data, guid, param?)`, `Topic` and `topicKey`: what a blueprint is about.
   - An ability score its stat bonuses raise (`AddStatBonus`, `AddStatBonusIfHasFact`, `AddContextStatBonus`) or that it replaces (`ReplaceStatBaseAttribute`). A Racial bonus isn't one: a race's or heritage's +2 is no Synergy with every feat that needs the score (QA pass 4).

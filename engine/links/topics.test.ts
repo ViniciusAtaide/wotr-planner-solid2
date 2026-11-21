@@ -4,6 +4,7 @@ import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { buildGrantIndex } from '../grants';
 import { heldIndex, stackable, synergyOf, topicKey, topicsOf, weaponGroupsOf } from './topics';
+import { enablesWith, linkIndex } from './links';
 
 const files = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)));
 const data = loadData(files.files, files.overrides);
@@ -100,5 +101,22 @@ describe('Synergy topics', { timeout: 30_000 }, () => {
     ).toEqual(['group BladesHeavy']);
     const raced = heldIndex(data, [{ blueprint: RAKSHASA_SPAWN }]);
     expect(synergyOf(data, raced, { feature: DODGE }).shared).toEqual([]);
+  });
+
+  it("computes a parametrized value's enables with its parameter (QA pass 4)", () => {
+    const WEAPON_FOCUS = '1e1f627d26ad36f43bbd26cc2bf8ac7e';
+    const named = (param: { WeaponCategory: 'Bardiche' | 'DuelingSword' | 'Rapier' }) =>
+      enablesWith(data, WEAPON_FOCUS, param).map((g) => data.blueprints.get(g)?.name);
+    const any = linkIndex(data)
+      .enables(WEAPON_FOCUS)
+      .map((g) => data.blueprints.get(g)?.name);
+    expect(any).toEqual(expect.arrayContaining(['Aldori Swordlord', 'Fencing Grace', 'Slashing Grace']));
+    const bardiche = named({ WeaponCategory: 'Bardiche' });
+    for (const n of ['Aldori Swordlord', 'Fencing Grace', 'Slashing Grace']) expect(bardiche).not.toContain(n);
+    expect(named({ WeaponCategory: 'DuelingSword' })).toEqual(
+      expect.arrayContaining(['Aldori Swordlord', 'Slashing Grace']),
+    );
+    expect(named({ WeaponCategory: 'Rapier' })).toContain('Fencing Grace');
+    expect(named({ WeaponCategory: 'Rapier' })).not.toContain('Aldori Swordlord');
   });
 });
