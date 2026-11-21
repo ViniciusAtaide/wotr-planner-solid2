@@ -1,4 +1,4 @@
-import { createEffect, createMemo, createSignal, For, onSettled, Show, useContext } from 'solid-js';
+import { createMemo, createSignal, For, onSettled, Show, useContext } from 'solid-js';
 import type { GearPlace } from '~engine/build';
 import { isShown, type Guid } from '~engine/data';
 import type { CheckedData } from '~engine/load';
@@ -7,7 +7,7 @@ import { PLACE_ITEM_TYPES } from '~engine/walk';
 
 import { Button, OptionList, PickerOption } from '../design';
 import { Filter, SCROLL_STYLE } from './ChoiceList';
-import { clashWords, fillClashes, knownClashes } from './gear-clash';
+import { clashWords } from './gear-clash';
 import { OptionDetails, summaryFor, type OptionDetail } from './option-detail';
 import type { TrailApi } from './steps';
 
@@ -49,22 +49,7 @@ export function GearStep(props: GearStepProps) {
       .sort((a, b) => (a.name ?? '').localeCompare(b.name ?? ''));
   });
   const summary = (item: Guid) => summaryFor(data(), planner().engine.G, item);
-  const [clashTick, setClashTick] = createSignal(0);
   const clashes = (item: Guid) => clashWords(planner().engine, planner().build(), place(), item);
-  const badged = (item: Guid) => {
-    clashTick();
-    return (knownClashes(planner().build(), place(), item)?.length ?? 0) > 0;
-  };
-  createEffect(
-    () => ({
-      build: planner().build(),
-      at: place(),
-      shown: items()
-        .slice(0, ITEMS_SHOWN)
-        .map((bp) => bp.guid),
-    }),
-    ({ build, at, shown }) => fillClashes(planner().engine, build, at, shown, () => setClashTick((n) => n + 1)),
-  );
   const hub = useContext(OptionDetails);
   const findDetail = (key: string): OptionDetail | undefined =>
     data().blueprints.has(key)
@@ -157,7 +142,7 @@ export function GearStep(props: GearStepProps) {
                 status="open"
                 selected={gear()[place()] === item().guid}
                 summary={summary(item().guid).text}
-                clash={badged(item().guid)}
+                clash={clashes(item().guid).length > 0}
                 detailKey={item().guid}
                 onPick={() => wear(item().guid)}
               />
