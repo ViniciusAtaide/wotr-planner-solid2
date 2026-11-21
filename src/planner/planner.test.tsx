@@ -2324,3 +2324,78 @@ describe('Gear that won’t stack (ticket 06, engine 4d9b8b50)', () => {
     expect(document.querySelector('.trail-gear__clash')).toBeNull();
   });
 });
+
+describe('a dialog pick never reverts the Build (QA pass 5, severity 4)', () => {
+  afterEach(() => {
+    cleanup();
+    localStorage.clear();
+    history.replaceState(null, '', '/');
+    vi.restoreAllMocks();
+  });
+
+  const settle = async () => {
+    await new Promise((r) => setTimeout(r, 120));
+    flush();
+    await new Promise((r) => setTimeout(r, 60));
+    flush();
+  };
+  const featPick = async () => {
+    const opened = await openHash(e, location.hash);
+    return opened.kind === 'opened'
+      ? opened.build.picks.find((p) => slotKey(p.slot) === slotKey(BONUS_COMBAT_FEAT))?.feature
+      : undefined;
+  };
+  const takeIn = (root: ParentNode, name: string) => {
+    const row = [...root.querySelectorAll<HTMLElement>('button.ww-option')].find(
+      (b) => b.querySelector('.ww-option__name')?.textContent === name,
+    );
+    fireEvent.click(row ?? document.body);
+    flush();
+  };
+  const initiative = () =>
+    [...e.data.blueprints.values()].find((bp) => bp.name === 'Improved Initiative' && bp.$type === 'BlueprintFeature')
+      ?.guid;
+
+  test('a pick in an expanded list keeps the pick in the Build and the link, even when the code is ready before the back lands', async () => {
+    const realBack = history.back.bind(history);
+    vi.spyOn(history, 'back').mockImplementation(() => {
+      setTimeout(realBack, 60);
+    });
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Cleave'));
+    flush();
+    tap('Expand');
+    const box = document.querySelector('.choice-dialog');
+    fireEvent.input(box?.querySelector('[data-picker-filter]') ?? document.body, {
+      target: { value: 'improved initiative' },
+    });
+    flush();
+    takeIn(box ?? document, 'Improved Initiative');
+    await settle();
+    await waitFor(async () => expect(await featPick()).toBe(initiative()));
+    expect(document.querySelector('.planner-undo__what')?.textContent).not.toBe('Opened a link');
+    expect(document.querySelector('.choice-dialog')).toBeNull();
+  });
+
+  test('two chained dialogs, then the back button, keep the pick and open no link', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Cleave'));
+    flush();
+    await waitFor(() => expect(document.querySelector('.choice-dialog')).not.toBeNull());
+    const box = document.querySelector('.choice-dialog');
+    fireEvent.input(box?.querySelector('[data-picker-filter]') ?? document.body, {
+      target: { value: 'improved initiative' },
+    });
+    flush();
+    takeIn(box ?? document, 'Improved Initiative');
+    await settle();
+    openTarget();
+    await waitFor(() => expect(document.querySelector('.choice-dialog')).not.toBeNull());
+    history.back();
+    await settle();
+    expect(document.querySelector('.choice-dialog')).toBeNull();
+    await waitFor(async () => expect(await featPick()).toBe(initiative()));
+    expect(document.querySelector('.planner-undo__what')?.textContent).not.toBe('Opened a link');
+  });
+});

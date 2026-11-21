@@ -1,37 +1,10 @@
 import { Portal, type JSX } from '@solidjs/web';
 import { createSignal, For, onSettled, Show } from 'solid-js';
 
+import { holdDialogEntry, onUserPop, releaseDialogEntry } from './history-moves';
 import { OptionDetails, type DetailHub, type OptionDetail, type OptionSummary } from './option-detail';
 
 const FINE_POINTER = '(pointer: fine)';
-const HASH_WATCH_MS = 250;
-
-let holders = 0;
-
-function ownsEntry(): boolean {
-  return (history.state as { choiceDialog?: boolean } | null)?.choiceDialog === true;
-}
-
-function holdEntry(): void {
-  holders += 1;
-  if (!ownsEntry()) history.pushState({ choiceDialog: true }, '');
-}
-
-function releaseEntry(popped: boolean): void {
-  holders = Math.max(0, holders - 1);
-  if (popped) return;
-  setTimeout(() => {
-    if (holders > 0 || !ownsEntry()) return;
-    const keep = location.hash;
-    const restore = () => {
-      window.removeEventListener('popstate', restore);
-      if (location.hash !== keep) history.replaceState(null, '', keep === '' ? location.pathname : keep);
-    };
-    window.addEventListener('popstate', restore);
-    history.back();
-  }, 0);
-}
-
 export function detailOf(target: EventTarget | null): OptionDetail | undefined {
   const option = target instanceof Element ? target.closest('.ww-option') : null;
   if (option === null) return undefined;
@@ -134,18 +107,12 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
     const opener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const root = document.documentElement;
     root.classList.add('choice-open');
-    holdEntry();
-    let latest = location.hash;
+    holdDialogEntry();
     let popped = false;
-    const watch = setInterval(() => {
-      latest = location.hash;
-    }, HASH_WATCH_MS);
-    const onPop = () => {
+    const stopPop = onUserPop(() => {
       popped = true;
-      if (location.hash !== latest) history.replaceState(null, '', latest === '' ? location.pathname : latest);
       props.onClose();
-    };
-    window.addEventListener('popstate', onPop);
+    });
     const onEscape = (e: KeyboardEvent) => {
       if (e.key !== 'Escape') return;
       e.preventDefault();
@@ -158,11 +125,10 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
     });
     return () => {
       cancelAnimationFrame(frame);
-      clearInterval(watch);
-      window.removeEventListener('popstate', onPop);
+      stopPop();
       document.removeEventListener('keydown', onEscape, true);
       root.classList.remove('choice-open');
-      releaseEntry(popped);
+      releaseDialogEntry(popped);
       const back = opener?.isConnected === true && opener !== document.body ? opener : props.returnTo?.();
       back?.focus({ preventScroll: true });
     };

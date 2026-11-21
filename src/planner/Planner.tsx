@@ -10,6 +10,7 @@ import { walk } from '~engine/walk';
 import { Button, CascadePreview, CompareToggle, Refusal } from '../design';
 import { BuildNameLabel, HEADER_SLOT, pageTitle, renameTitle } from './BuildName';
 import { loadEngine } from './engine';
+import { afterHistorySettles, isOwnHashChange, onHistorySettled } from './history-moves';
 import { keepFocus } from './focus-return';
 import { EMPTY, openHash } from './link';
 import { PlannerMenu, UndoLine } from './Menu';
@@ -227,6 +228,9 @@ function Workspace(props: WorkspaceProps) {
   );
 
   let ownHash = props.initialLink.kind === 'ok' ? openedHash : '';
+  const writeOwnHash = () => {
+    if (ownHash !== '' && location.hash !== ownHash) history.replaceState(null, '', ownHash);
+  };
   let brokenOver: Build | undefined = props.initialLink.kind === 'ok' ? undefined : props.initialBuild;
   createEffect(
     () => ({ code: linkCode(), broken: workspace().link.kind === 'didNotOpen' }),
@@ -236,12 +240,13 @@ function Workspace(props: WorkspaceProps) {
       if (broken && active().latest().present === brokenOver) return;
       brokenOver = undefined;
       ownHash = `#b=${code.code}`;
-      if (location.hash !== ownHash) history.replaceState(null, '', ownHash);
+      afterHistorySettles(writeOwnHash);
     },
   );
 
   let latestHash = 0;
   const onHash = () => {
+    if (isOwnHashChange()) return;
     const hash = location.hash;
     const c = linkCode();
     if (c.kind === 'current' && hash === `#b=${c.code}`) return;
@@ -306,8 +311,10 @@ function Workspace(props: WorkspaceProps) {
     };
     window.addEventListener('focusin', onFocusIn);
     window.addEventListener('hashchange', onHash);
+    const stopSettled = onHistorySettled(writeOwnHash);
     if (location.hash !== openedHash) onHash();
     return () => {
+      stopSettled();
       media.removeEventListener('change', onMedia);
       window.removeEventListener('keydown', onKey);
       window.removeEventListener('focusin', onFocusIn);

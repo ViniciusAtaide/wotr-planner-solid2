@@ -121,10 +121,14 @@ written under try/catch; the page works without storage).
   option) and back to the opener, or to the step's button when the opener is gone; the page behind doesn't scroll
   (`choice-open` on the root). Escape or Back closes it without picking; Escape is caught at the document while it is
   open (capture phase), so one press closes it from anywhere in it, the filter included, whatever is typed, and the
-  page's own Escape (leave the step) skips a key the dialog took. Open dialogs share one history entry
-  (`holdEntry`, `releaseEntry`), so a phone's back closes it, and a dialog that closes as the next one opens no longer
-  pops the newcomer's entry; the entry goes only once no dialog holds it, and the newest `#b=` is put back on the way
-  out, so the planner never reopens an older Build. A pick applies, closes it and the trail moves on; Undo works while
+  page's own Escape (leave the step) skips a key the dialog took. Open dialogs share one history entry, and
+  `history-moves.ts` owns every move the planner makes in history (QA pass 5): a dialog takes the entry when it opens
+  (`holdDialogEntry`) and gives it back exactly once when the last one closes, by a `history.back()` the module counts
+  as its own (`releaseDialogEntry`). Until that back has landed, nothing else moves: a new dialog's push and the
+  Build's `#b=` write wait (`afterHistorySettles`), and once it lands the newest code is written onto the entry it
+  landed on (`onHistorySettled`). The popstate and hashchange that follow a move of its own are never read as a link
+  the user opened (`isOwnHashChange`), so a pick made in a dialog can't come back as "Opened a link" with the Build
+  before it. A phone's back while a dialog is open closes the dialog the same way (`onUserPop`). A pick applies, closes it and the trail moves on; Undo works while
   it is open. Whether it is open is the trail's state, not the dialog's (`TrailState.dialog`, the step key it shows,
   QA pass 3): arriving at a list step or "Open the list" sets it, Back, Escape or the back button clears it. A Cascade
   preview hides it without clearing it, so it is back after Cancel, and a chip of the step whose dialog was closed
