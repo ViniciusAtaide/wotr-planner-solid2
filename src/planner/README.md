@@ -77,6 +77,20 @@ frame), so the first rows show at once.
 **Focus**: when a new step arrives and focus was lost with the old one (on the page body), it lands on the step's
 first control: the filter under a fine pointer, else its first button, never "Back to the next choice".
 
+**Sub-choices nested in pick lists** (build ticket 08, user 2026-11-21): in a pick list, an option that opens a
+further choice is one parent row that expands its sub-options right under it, indented a step with a rule on the left
+(`trail-sub`), the parent marked ▸ or ▾ (`aria-expanded`). Two kinds, from S's options (`nested-options.ts`,
+`pickRows`): a parametrized feat's values, its options sharing a feature with different parameters (Weapon Focus →
+Kukri, Spell Focus → its schools); and an option that is itself a selection (Armor Focus → Light Armor Focus; a
+prestige class's spellbook selection), whose sub-options are S's picker at the slot it opens (`childSlotOf`), asked
+only when it is expanded. One parent is open at a time. Each sub-option shows its own status and R's Refusal; a
+parametrized feat whose every value is closed is one closed row with its reasons. Taking a sub-option makes the whole
+choice as one change, one Undo entry (a value is one pick with its parameter; a nested selection is the parent pick
+and the sub-pick, after clearing the sub-pick of a parent it replaces), then the trail moves on. Keys: Right (or
+Enter, a click) opens a parent, Left closes it and returns to it from a sub-option, Up and Down move through the
+parents and the open sub-options in order. The filter matches a parent by its name or its values' names; Enter on a
+marked parent opens it.
+
 **Flat lists** (user, 2026-11-21): a choice that opens a second choice is listed as one row per pair, the second in
 parentheses, so typing in the filter finds either name, and a row takes both as one change (one Undo entry). Each
 name is S's bare name, and a variation never repeats its group: "Aasimar" and "Scholar (Nature)", not "Aasimar (Aasimar
@@ -209,6 +223,13 @@ dimmed and inert behind "Edit the Second Build".
   `backgroundLabel`; `heritageSlot` (S's `heritageSlotIn`, found with S's `firstLevelWith` before the Build has a
   level), `backgroundChildren`
   and `shownArchetypes` (a class's archetypes the game shows).
+- **`nested-options.ts`: the parent rows of a pick list.** `PickRow` is an `option`, a `params` group (a
+  parametrized feat's values) or a `nested` selection; `pickRows` groups, filters and sorts S's options into them;
+  `rowOpen` and `rowMembers` read a row; `opensSelection` says an option is a selection; `childSlotOf` is the slot it
+  opens; `optionKey` keys an option with its parameter.
+- **`PickStep.tsx`**: a slot's open list (`PickStep`, moved out of `steps.tsx`): S's options as rows, open then
+  closed, a parent row expanding its sub-options in place (`paramLabel` names a value without repeating its feat),
+  the keys above, Synergy links, the filter and its mark, "Show all closed", and "Clear this pick".
 - **`CharacterSteps.tsx`**: `RaceStep` and `BackgroundStep`, the flat race and background lists in place.
 - **`words.ts`: names for the planner's surfaces.** Game names (ADR 0006) and the planner's own words, never the game's
   text. `ordinal` writes "1st", "2nd", "3rd", "4th"…; `optionName` is an option's name: the feature's game name, with

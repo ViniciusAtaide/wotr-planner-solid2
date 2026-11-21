@@ -1108,3 +1108,122 @@ describe('QA pass 1', () => {
     await waitFor(() => expect(closed()).toBe(before + more));
   });
 });
+
+describe('nested sub-choices (ticket 08)', () => {
+  afterEach(() => {
+    cleanup();
+  });
+
+  const fighter1: Build = {
+    scores: abilityScores({ ...SCORES, Dexterity: 13, Intelligence: 13 }),
+    race: DWARF,
+    levels: [{ class: fighter }],
+    picks: [{ slot: DWARF_HERITAGE, feature: BASIC_DWARF }],
+  };
+  const featList = () => {
+    const planner = createPlanner(e, fighter1);
+    render(() => <SlotStep trail={apiOf(planner)} slot={FEAT} />);
+    flush();
+    return planner;
+  };
+  const parent = (name: string): HTMLElement => {
+    const found = [...document.querySelectorAll<HTMLElement>('[data-parent] > .ww-option')].find(
+      (b) => b.querySelector('.ww-option__name')?.textContent === name,
+    );
+    if (found === undefined) throw new Error(`no parent ${name}`);
+    return found;
+  };
+  const child = (name: string): HTMLElement => {
+    const found = [...document.querySelectorAll<HTMLElement>('[data-child-of] .ww-option')].find(
+      (b) => b.querySelector('.ww-option__name')?.textContent === name,
+    );
+    if (found === undefined) throw new Error(`no choice ${name}`);
+    return found;
+  };
+  const click = (el: HTMLElement) => {
+    fireEvent.click(el);
+    flush();
+  };
+
+  test('a parametrized feat is one row that expands into its values and collapses again', () => {
+    featList();
+    const names = [...document.querySelectorAll('.ww-option__name')].map((n) => n.textContent);
+    expect(names.filter((n) => n === 'Weapon Focus')).toHaveLength(1);
+    expect(parent('Weapon Focus')).toHaveAttribute('aria-expanded', 'false');
+    click(parent('Weapon Focus'));
+    expect(parent('Weapon Focus')).toHaveAttribute('aria-expanded', 'true');
+    expect(child('Kukri')).toBeTruthy();
+    click(parent('Weapon Focus'));
+    expect(document.querySelector('[data-child-of]')).toBeNull();
+  });
+
+  test('one parent is open at a time', () => {
+    featList();
+    click(parent('Weapon Focus'));
+    click(parent('Armor Focus'));
+    expect(parent('Weapon Focus')).toHaveAttribute('aria-expanded', 'false');
+    expect(document.querySelectorAll('[data-child-of]')).toHaveLength(1);
+    expect(child('Light Armor Focus')).toBeTruthy();
+  });
+
+  test('a closed sub-option shows its Refusal, and a parent with every value closed shows closed with why', () => {
+    featList();
+    click(parent('Weapon Focus'));
+    const closed = document.querySelectorAll('[data-child-of] .ww-option--closed');
+    expect(closed.length).toBeGreaterThan(0);
+    expect(closed[0]?.textContent).toMatch(/\S/);
+    fireEvent.input(document.querySelector('[data-picker-filter]') ?? document.body, {
+      target: { value: 'fencing grace' },
+    });
+    flush();
+    const fencing = [...document.querySelectorAll('.ww-option--closed')].filter(
+      (r) => r.querySelector('.ww-option__name')?.textContent === 'Fencing Grace',
+    );
+    expect(fencing).toHaveLength(1);
+    expect(
+      fencing[0]?.querySelector('.ww-refusal, [class*="refusal"]')?.textContent ?? fencing[0]?.textContent,
+    ).toMatch(/\S/);
+  });
+
+  test('Weapon Focus → Kukri takes the pick and its value as one Undo step', () => {
+    const planner = featList();
+    click(parent('Weapon Focus'));
+    click(child('Kukri'));
+    const pick = planner.build().picks.find((p) => slotKey(p.slot) === slotKey(FEAT));
+    expect(pick?.param).toEqual({ WeaponCategory: 'Kukri' });
+    expect(planner.state().past).toHaveLength(1);
+    planner.undo();
+    flush();
+    expect(planner.build()).toEqual(fighter1);
+  });
+
+  test('a nested selection takes both picks as one Undo step', () => {
+    const planner = featList();
+    click(parent('Armor Focus'));
+    click(child('Light Armor Focus'));
+    const picks = planner.build().picks.filter((p) => 'level' in p.slot.place && p.slot.place.level === 1);
+    const armor = picks.find((p) => slotKey(p.slot) === slotKey(FEAT));
+    expect(armor).toBeDefined();
+    expect(picks.some((p) => p.slot.selection === armor?.feature)).toBe(true);
+    expect(planner.state().past).toHaveLength(1);
+    expect(planner.change()).toBe('Picked Armor Focus (Light Armor Focus)');
+    planner.undo();
+    flush();
+    expect(planner.build()).toEqual(fighter1);
+  });
+
+  test('Right opens a parent, Down reaches its values, Left closes it and returns to the parent', () => {
+    featList();
+    const wf = parent('Weapon Focus');
+    wf.focus();
+    fireEvent.keyDown(wf, { key: 'ArrowRight' });
+    flush();
+    expect(parent('Weapon Focus')).toHaveAttribute('aria-expanded', 'true');
+    fireEvent.keyDown(parent('Weapon Focus'), { key: 'ArrowDown' });
+    expect(document.activeElement?.closest('[data-child-of]')).not.toBeNull();
+    fireEvent.keyDown(document.activeElement ?? document.body, { key: 'ArrowLeft' });
+    flush();
+    expect(document.querySelector('[data-child-of]')).toBeNull();
+    expect(document.activeElement).toBe(parent('Weapon Focus'));
+  });
+});

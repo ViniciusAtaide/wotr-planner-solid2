@@ -1,27 +1,16 @@
-import { createMemo, createSignal, For, Match, Show, Switch } from 'solid-js';
-import { slotKey, toRankLevel, toSkillRanks, type SlotId } from '~engine/build';
+import { createMemo, For, Match, Show, Switch } from 'solid-js';
+import { toRankLevel, toSkillRanks, type SlotId } from '~engine/build';
 import type { Attribute, StatType } from '~engine/data';
 import { allows, type Edit } from '~engine/edits';
-import { linkIndex } from '~engine/links';
 import { expectedLevel } from '~engine/mcp';
-import { mythicStartingClass, offeredClasses, offeredMythicClasses, picker, type OptionStatus } from '~engine/pickers';
-import { gearNote, nameOf, rankLevelRange, refusal, statName } from '~engine/refusals';
+import { mythicStartingClass, offeredClasses, offeredMythicClasses } from '~engine/pickers';
+import { nameOf, rankLevelRange, statName } from '~engine/refusals';
 import { ATTRIBUTES, SKILL_ATTRIBUTE } from '~engine/walk';
 
-import { Button, ClosedCount, OptionList, PickerOption, Refusal } from '../design';
+import { Button, Refusal } from '../design';
 import { BackgroundStep, RaceStep } from './CharacterSteps';
-import {
-  ChoiceList,
-  clampMark,
-  createReveal,
-  currentFirst,
-  Filter,
-  judge,
-  matches,
-  moveThroughOptions,
-  type ChoiceRow,
-} from './ChoiceList';
-import { featCategory } from './feat-category';
+import { PickStep } from './PickStep';
+import { ChoiceList, currentFirst, judge, type ChoiceRow } from './ChoiceList';
 import { flatName, shownArchetypes } from './flat-choices';
 import { judgeClasses, type ClassJudged, type EditOutcome, type NonEmpty } from './planner-state';
 import type { Planner } from './state';
@@ -35,10 +24,9 @@ import {
   mythicDue,
   sameRanks,
   skillBudget,
-  slotLabel,
 } from './trail-state';
 import type { Selection } from './workspace-state';
-import { bareNameOf, shownName } from './words';
+import { bareNameOf } from './words';
 
 export interface TrailApi {
   readonly planner: Planner;
@@ -51,9 +39,7 @@ export interface TrailApi {
   readonly editAll: (edits: NonEmpty<Edit>, title: string) => EditOutcome;
 }
 
-const CLOSED_SHOWN = 30;
 const SKILLS = Object.keys(SKILL_ATTRIBUTE) as StatType[];
-const optionKey = (o: OptionStatus): string => `${o.feature} ${JSON.stringify(o.param ?? null)}`;
 
 export interface SlotStepProps {
   readonly trail: TrailApi;
@@ -78,140 +64,6 @@ export function SlotStep(props: SlotStepProps) {
         <PickStep trail={props.trail} slot={props.slot} />
       </Match>
     </Switch>
-  );
-}
-
-function PickStep(props: SlotStepProps) {
-  const planner = () => props.trail.planner;
-  const data = () => planner().engine.data;
-  const [text, setText] = createSignal('');
-  const p = createMemo(() => picker(data(), planner().build(), props.slot, planner().engine.G));
-  const current = () =>
-    planner()
-      .build()
-      .picks.find((q) => slotKey(q.slot) === slotKey(props.slot));
-  const name = (o: OptionStatus) =>
-    shownName(
-      data(),
-      o.feature,
-      o.param,
-      o.name === undefined ? undefined : { name: o.name, ...(o.qualifier !== undefined && { qualifier: o.qualifier }) },
-    );
-  const [mark, setMark] = createSignal(0);
-  const listed = createMemo(() => {
-    const t = text();
-    return (p()?.options ?? [])
-      .filter((o) => o.shown)
-      .map((o) => ({ o, n: name(o) }))
-      .filter(({ n }) => matches(n, t))
-      .sort((a, b) => a.n.localeCompare(b.n))
-      .map(({ o }) => o);
-  });
-  const open = () => listed().filter((o) => o.closed === undefined);
-  const closed = () => listed().filter((o) => o.closed !== undefined);
-  const reveal = createReveal(CLOSED_SHOWN, () => closed().length);
-  const closedShown = () => closed().slice(0, reveal.limit());
-  const words = (o: OptionStatus): readonly string[] => {
-    if (o.closed === undefined) return [];
-    const r = refusal({ data: data(), G: planner().engine.G, unit: p()?.unit }, o.closed);
-    return r.unmet.length > 0 ? r.unmet : [r.text];
-  };
-  const byReason = () => {
-    const counts = new Map<string, number>();
-    for (const o of closed().slice(closedShown().length)) {
-      const label = o.closed?.unmet?.length ? 'need a prerequisite' : 'refused by the game';
-      counts.set(label, (counts.get(label) ?? 0) + 1);
-    }
-    return [...counts].map(([label, n]) => `${n} ${label}`).join(', ');
-  };
-  const held = createMemo(() => new Set([...(p()?.unit.facts() ?? [])].map((f) => f.blueprint)));
-  const links = (o: OptionStatus): string | undefined => {
-    const index = linkIndex(data(), planner().engine.G);
-    const on = index.needs(o.feature).filter((g) => held().has(g));
-    const enables = index.enables(o.feature);
-    const parts = [
-      on.length > 0 && `Builds on ${on.map((g) => nameOf(data(), g)).join(', ')}`,
-      enables[0] !== undefined &&
-        `Enables ${nameOf(data(), enables[0])}${enables.length > 1 ? ` → and ${enables.length - 1} more` : ''}`,
-    ].filter((w) => typeof w === 'string');
-    return parts.length > 0 ? parts.join(' · ') : undefined;
-  };
-  const isCurrent = (o: OptionStatus) => {
-    const c = current();
-    return c !== undefined && c.feature === o.feature && JSON.stringify(c.param) === JSON.stringify(o.param);
-  };
-  const take = (o: OptionStatus) =>
-    props.trail.edit(
-      { kind: 'pick', slot: props.slot, pick: { feature: o.feature, ...(o.param && { param: o.param }) } },
-      `Picked ${name(o)}`,
-    );
-  return (
-    <Show when={p()} fallback={<p class="trail-note">This choice doesn't open in the Build any more.</p>}>
-      <div class="trail-step" onKeyDown={moveThroughOptions}>
-        <Filter
-          label={`Filter ${slotLabel(data(), props.slot.selection)} by name`}
-          value={text()}
-          onInput={(t) => {
-            setText(t);
-            setMark(0);
-          }}
-          onMove={(delta) => setMark((m) => clampMark(m, delta, open().length))}
-          onEnter={() => {
-            const marked = open()[mark()];
-            if (marked !== undefined) take(marked);
-          }}
-        />
-        <Show
-          when={text() === '' || listed().length > 0}
-          fallback={<p class="trail-note">No matches for “{text()}”.</p>}
-        >
-          <p class="trail-note">
-            {open().length} open · {closed().length} closed
-          </p>
-        </Show>
-        <OptionList>
-          <For each={open()} keyed={optionKey}>
-            {(o, i) => (
-              <PickerOption
-                name={name(o())}
-                status="open"
-                icon={featCategory(data(), o().feature)}
-                selected={isCurrent(o())}
-                marked={i() === mark()}
-                links={links(o())}
-                gear={o().gearItems === undefined ? undefined : gearNote(data(), o().gearItems ?? [])}
-                onPick={() => take(o())}
-              />
-            )}
-          </For>
-          <For each={closedShown()} keyed={optionKey}>
-            {(o) => (
-              <PickerOption
-                name={name(o())}
-                status="closed"
-                icon={featCategory(data(), o().feature)}
-                links={links(o())}
-                refusal={words(o())}
-              />
-            )}
-          </For>
-          <Show when={closed().length > closedShown().length}>
-            <ClosedCount text={`${closed().length - closedShown().length} more closed: ${byReason()}`} />
-            <Button onClick={() => reveal.more()}>Show all closed</Button>
-          </Show>
-        </OptionList>
-        <Show when={current()}>
-          <Button
-            variant="danger"
-            onClick={() =>
-              props.trail.edit({ kind: 'pick', slot: props.slot }, `Cleared ${slotLabel(data(), props.slot.selection)}`)
-            }
-          >
-            Clear this pick
-          </Button>
-        </Show>
-      </div>
-    </Show>
   );
 }
 
