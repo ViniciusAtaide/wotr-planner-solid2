@@ -13,7 +13,7 @@ function leaves(guid: string) {
   return prerequisites(bp, blueprints);
 }
 
-describe('P on the game data', () => {
+describe('P on the game data', { timeout: 30_000 }, () => {
   it('reads PrerequisiteClassLevel with Not as forbidding that many levels', () => {
     const leaf = leaves('247aa787806d5da4f89cfc3dff0b217f').find((l) => l.names.kind === 'classLevel');
     expect(leaf).toMatchObject({

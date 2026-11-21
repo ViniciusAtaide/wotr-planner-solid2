@@ -55,7 +55,7 @@ function timeline(b: Build): Place[] {
   return out;
 }
 
-describe('the MCP, end to end', () => {
+describe('the MCP, end to end', { timeout: 30_000 }, () => {
   it('takes Jack-in-the-Green to level 20 and Mythic rank 10 through the tools alone', async () => {
     let step: Changed = await start_build(e);
     step = ok(

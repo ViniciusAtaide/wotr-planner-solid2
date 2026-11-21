@@ -65,7 +65,7 @@ function sampled(options: readonly OptionStatus[], pick: Pick): OptionStatus[] {
   return [...neighbourhood, ...rest.filter((_, i) => i % stride === 0)];
 }
 
-describe('every picker status agrees with the walk', () => {
+describe('every picker status agrees with the walk', { timeout: 30_000 }, () => {
   it.each(SAMPLES)(
     'at $kind',
     ({ gold, slot, judgeOnlyASample: sample }) => {

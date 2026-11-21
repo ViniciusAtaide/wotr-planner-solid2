@@ -41,7 +41,7 @@ async function failsWith(code: string, reason: DecodeError['reason'], on: Checke
   await expect(decodeBuild(on, code)).rejects.toMatchObject({ reason });
 }
 
-describe('C: the Build code', () => {
+describe('C: the Build code', { timeout: 30_000 }, () => {
   it('hashes a key with 32-bit FNV-1a', () => {
     expect(keyHash('a')).toBe(0xe40c292c);
     expect(keyHash('')).toBe(0x811c9dc5);

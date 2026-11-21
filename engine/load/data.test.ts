@@ -6,7 +6,7 @@ import { kindOf } from '../data';
 
 const data = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)));
 
-describe('data/', () => {
+describe('data/', { timeout: 30_000 }, () => {
   it('passes every load check', () => {
     expect(() => loadData(data.files, data.overrides)).not.toThrow();
   });

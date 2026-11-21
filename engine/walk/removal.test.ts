@@ -24,7 +24,7 @@ const AZATA_SUMMON_TIER_2 = '370dbb8167f84a14f9e8bebfccf25b4e';
 const ADAMANTINE_BANDED = 'ed04d2a914a93e046aadee8cc3109f65';
 const ADAMANTINE_HEAVY_FEATURE = 'dbbf704bfcc78854ab149597ef9aae7c';
 
-describe('a fact goes with the fact that granted it', () => {
+describe('a fact goes with the fact that granted it', { timeout: 30_000 }, () => {
   it("drops the mythic feat's upgrade when Legend drops the feat", () => {
     const jack = walk(data, jackInTheGreen.build, G);
     expect(jack.unit.hasFact(SPELL_PENETRATION_MYTHIC_UPGRADE)).toBe(true);

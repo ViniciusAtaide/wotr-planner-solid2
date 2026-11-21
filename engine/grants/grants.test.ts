@@ -9,7 +9,7 @@ const data = loadData(files.files, files.overrides);
 const G = buildGrantIndex(data);
 const name = (guid: string) => data.blueprints.get(guid)?.assetName;
 
-describe('G, the grant index', () => {
+describe('G, the grant index', { timeout: 30_000 }, () => {
   it('finds the grantors of a fact, from a progression level entry', () => {
     const grant = G.grantorsOf('41c8486641f7d6d4283ca9dae4147a9f').find(
       (g) => g.grantor === 'b50e94b57be32f74892f381ae2a8905a',

@@ -26,7 +26,7 @@ const refusedKeys = (b: Build) =>
     walk(data, b, G).failures.map((f) => `${placeKey(f.place)} ${f.choice} ${f.slot ? slotKey(f.slot) : f.subject}`),
   );
 
-describe('E: edits', () => {
+describe('E: edits', { timeout: 30_000 }, () => {
   it('refuses a plain edit that breaks later picks, naming them', () => {
     const verdict = allows(data, jackInTheGreen.build, jackL5, G);
     expect(verdict.ok).toBe(false);

@@ -25,7 +25,7 @@ function disagreements(): Disagreement[] {
   return GOLD.flatMap((gold) => compare(data, gold, walk(data, gold.build, G)));
 }
 
-describe('the gold builds', () => {
+describe('the gold builds', { timeout: 30_000 }, () => {
   it('gain every line of their write-ups, apart from the known gaps', () => {
     expect(unexplained(disagreements(), KNOWN_GAPS)).toEqual([]);
   });

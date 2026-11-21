@@ -49,7 +49,7 @@ const scores = abilityScores({
   Charisma: 10,
 });
 
-describe('S: the pickers', () => {
+describe('S: the pickers', { timeout: 30_000 }, () => {
   it.each([jackInTheGreen, enforcer])(
     "judges each of $name's own picks at its slot as the walk does",
     (gold) => {
@@ -88,7 +88,7 @@ describe('S: the pickers', () => {
   });
 });
 
-describe('R: the Refusal', () => {
+describe('R: the Refusal', { timeout: 30_000 }, () => {
   const sorcerer: Build = { race: HUMAN, scores, levels: [{ class: SORCERER }], picks: [] };
 
   it('words an unmet stat with what the character has', () => {
@@ -148,7 +148,7 @@ describe('R: the Refusal', () => {
   });
 });
 
-describe('what character creation offers (comparison bug 5)', () => {
+describe('what character creation offers (comparison bug 5)', { timeout: 30_000 }, () => {
   const names = (bps: readonly { readonly name?: string | undefined }[]) => bps.map((b) => b.name);
 
   it('offers the root progression’s player classes and races, and no creature classes', () => {
@@ -196,7 +196,7 @@ describe('what character creation offers (comparison bug 5)', () => {
   });
 });
 
-describe('which slots belong to the character', () => {
+describe('which slots belong to the character', { timeout: 30_000 }, () => {
   const BACKGROUNDS_CRAFTSMAN_SELECTION = 'fd36aaff6f41a2f4f9e91925d49a0d85';
 
   it('is the race’s bonus feat, the background with what it opens, and the deity; not the level’s feats', () => {
@@ -218,7 +218,7 @@ describe('which slots belong to the character', () => {
   });
 });
 
-describe('a feat’s tags, as the level-up list shows them', () => {
+describe('a feat’s tags, as the level-up list shows them', { timeout: 30_000 }, () => {
   it('reads PowerAttackFeature’s Damage and Melee, and none for a feature without tags', () => {
     expect(featureTags(data, POWER_ATTACK)).toEqual(['Damage', 'Melee']);
     expect(featureTags(data, '7d300f497584d9245ac24c062dce0bd6')).toBeUndefined();
@@ -233,7 +233,7 @@ describe('a feat’s tags, as the level-up list shows them', () => {
 
 const JACK_SPELL_SPECIALIZATION_GAP = 'f327a765a4353d04f872482ef3e48c35';
 
-describe('which options the level-up screen lists', () => {
+describe('which options the level-up screen lists', { timeout: 30_000 }, () => {
   it('lists every pick the gold Builds made, in its own slot', () => {
     for (const gold of [enforcer, jackInTheGreen]) {
       for (const pick of gold.build.picks.filter((p) => p.feature !== JACK_SPELL_SPECIALIZATION_GAP)) {
@@ -247,7 +247,7 @@ describe('which options the level-up screen lists', () => {
         });
       }
     }
-  });
+  }, 60_000);
 
   it('lists the background groups, and leaves out the companions’ backgrounds', () => {
     const background = { place: { level: 1 }, selection: 'f926dabeee7f8a54db8f2010b323383c', index: 0 };

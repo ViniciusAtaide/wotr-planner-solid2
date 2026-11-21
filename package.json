@@ -21,7 +21,8 @@
     "census": "bun tools/importer/census.ts",
     "show": "bun tools/dump/show.mjs",
     "mcp-stdio": "bun src/mcp-server/stdio.ts",
-    "check": "bun run format:check && bun run lint && bun run check:repo && bun run typecheck && bun run import -- --check && vitest run --project engine && vitest run --project client --project server"
+    "check": "sh scripts/check-lock.sh bun run check:all",
+    "check:all": "bun run format:check && bun run lint && bun run check:repo && bun run typecheck && bun run import -- --check && vitest run --project engine && vitest run --project client --project server"
   },
   "license": "MIT",
   "devDependencies": {

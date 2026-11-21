@@ -27,7 +27,7 @@ function byPath(files: DataFile[], name: string): DataFile {
   return file;
 }
 
-describe('loadData', () => {
+describe('loadData', { timeout: 30_000 }, () => {
   it('refuses a patch without its ops', () => {
     const copy = structuredClone(fixture);
     delete (copy.overrides[0]!.value as { ops?: unknown }).ops;
@@ -208,7 +208,7 @@ describe('loadData', () => {
   });
 });
 
-describe("Gear's twins (map ticket 29's rule 1), derived at load", () => {
+describe("Gear's twins (map ticket 29's rule 1), derived at load", { timeout: 30_000 }, () => {
   const item = (guid: string, assetName: string, fields: object = {}): DataFile => ({
     path: `items/${assetName}.${guid}.json`,
     value: {

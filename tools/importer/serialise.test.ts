@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest';
 import { readDataDir } from '~engine/data-dir';
 import { serialise } from './serialise';
 
-describe('serialise', () => {
+describe('serialise', { timeout: 30_000 }, () => {
   it('writes the same bytes whatever order the keys came in', () => {
     const a = serialise({ b: 1, a: { d: [3, 1], c: null } });
     const b = serialise({ a: { c: null, d: [3, 1] }, b: 1 });

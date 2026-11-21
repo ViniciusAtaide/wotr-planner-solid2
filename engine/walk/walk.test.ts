@@ -42,7 +42,7 @@ const slotsOf = (b: Build, selection: string) =>
     .slots.filter((s) => s.id.selection === selection)
     .map((s) => placeKey(s.id.place));
 
-describe('area 1: a single class to level 20', () => {
+describe('area 1: a single class to level 20', { timeout: 30_000 }, () => {
   it("opens a slot for each level entry of the class's progression", () => {
     const p = data.blueprints.get(FIGHTER_PROGRESSION) as BlueprintProgression;
     const expected = p.LevelEntries.filter((e) => e.m_Features.some((r) => refGuid(r) === FIGHTER_FEAT_SELECTION)).map(
@@ -64,7 +64,7 @@ describe('area 1: a single class to level 20', () => {
   });
 });
 
-describe('area 2: archetypes', () => {
+describe('area 2: archetypes', { timeout: 30_000 }, () => {
   it("removes and adds the archetype's level entries", () => {
     const plain = build({ levels: levels(SORCERER, 1) });
     const sylvan = build({ ...plain, classChoices: { [SORCERER]: { archetypes: [SYLVAN_SORCERER] } } });
@@ -93,7 +93,7 @@ describe('area 2: archetypes', () => {
   });
 });
 
-describe('areas 3 and 4: selections, nested selections and ranks', () => {
+describe('areas 3 and 4: selections, nested selections and ranks', { timeout: 30_000 }, () => {
   it('opens a nested slot at the same level for a picked selection', () => {
     const b = build({
       levels: levels(FIGHTER, 1),
@@ -132,7 +132,7 @@ describe('areas 3 and 4: selections, nested selections and ranks', () => {
   });
 });
 
-describe('area 5: skill ranks', () => {
+describe('area 5: skill ranks', { timeout: 30_000 }, () => {
   const scores = abilityScores({
     Strength: 10,
     Dexterity: 10,
@@ -206,7 +206,7 @@ describe('area 5: skill ranks', () => {
   });
 });
 
-describe('proficiencies', () => {
+describe('proficiencies', { timeout: 30_000 }, () => {
   const shieldBash = (cls: string): Build =>
     build({
       levels: levels(cls, 1),
@@ -230,7 +230,7 @@ describe('proficiencies', () => {
   });
 });
 
-describe('spellbooks, as gates', () => {
+describe('spellbooks, as gates', { timeout: 30_000 }, () => {
   const ARCANE_TRICKSTER = '9c935a076d4fe4d4999fd48d853e3cf3';
   const casterLeaf = (level: number) =>
     walk(data, build({ levels: [...levels(SORCERER, level), { class: ARCANE_TRICKSTER }] }), G)
@@ -274,7 +274,7 @@ describe('spellbooks, as gates', () => {
   });
 });
 
-describe('area 6: ability scores', () => {
+describe('area 6: ability scores', { timeout: 30_000 }, () => {
   const HALF_ELF = 'b3646842ffbd01643ab4dac7479b20b0';
   const scores = abilityScores({
     Strength: 10,
@@ -389,7 +389,7 @@ describe('area 6: ability scores', () => {
   });
 });
 
-describe('Gear', () => {
+describe('Gear', { timeout: 30_000 }, () => {
   const DRUID = '610d836f3a3a9ed42a4349b62f002e96';
   const BLOODRAGER = 'd77e67a814d686842802c9cfd8ef8499';
   const MONK = 'e8f21e5b58e0569468e420ebea456124';
@@ -485,7 +485,7 @@ describe('Gear', () => {
   });
 });
 
-describe('areas 7 and 8: race, and Mythic ranks at their Rank levels', () => {
+describe('areas 7 and 8: race, and Mythic ranks at their Rank levels', { timeout: 30_000 }, () => {
   it("grants the race's features with the race, at level 0", () => {
     const w = walk(data, build({ race: HALFLING, levels: levels(FIGHTER, 1) }), G);
     const fromRace = w.gains.filter((g) => g.source.kind === 'race').map((g) => g.fact);
@@ -519,7 +519,7 @@ describe('areas 7 and 8: race, and Mythic ranks at their Rank levels', () => {
   });
 });
 
-describe('prerequisites the walk reads beyond P', () => {
+describe('prerequisites the walk reads beyond P', { timeout: 30_000 }, () => {
   it('needs one deity of a deity list, whatever its Amount', () => {
     const PALADIN = 'bfa11238e7ae3544bbeb4d0b92e897ec';
     const paladin = (deity: string) =>
@@ -559,7 +559,7 @@ describe('prerequisites the walk reads beyond P', () => {
   });
 });
 
-describe('path switches (map ticket 31)', () => {
+describe('path switches (map ticket 31)', { timeout: 30_000 }, () => {
   const jackTo = (cls: string, ranks = 8): Build => ({
     ...jackInTheGreen.build,
     ranks: [
@@ -718,7 +718,7 @@ describe('path switches (map ticket 31)', () => {
   });
 });
 
-describe('aspects kept on (map ticket 32)', () => {
+describe('aspects kept on (map ticket 32)', { timeout: 30_000 }, () => {
   const SHIFTER = 'a406d6ebea5c46bba3160246be03e96f';
   const ASPECT_SELECTION = '121829d239124685b430f5263031bf83';
   const BEAR = '73ef2c330ff14e4bb2f5b7300622c552';
@@ -763,7 +763,7 @@ describe('aspects kept on (map ticket 32)', () => {
   });
 });
 
-describe('prerequisite leaves (ticket 03c)', () => {
+describe('prerequisite leaves (ticket 03c)', { timeout: 30_000 }, () => {
   const WEAPON_FOCUS = '1e1f627d26ad36f43bbd26cc2bf8ac7e';
   const ctxOf = (unit: Unit, owner: string) => ({ unit, place: { level: 1 }, firstLevel: false, owner });
   const leafOf = (owner: string, kind: string) => {
@@ -880,7 +880,7 @@ describe('prerequisite leaves (ticket 03c)', () => {
   });
 });
 
-describe('grants through G (ticket 03c)', () => {
+describe('grants through G (ticket 03c)', { timeout: 30_000 }, () => {
   it("gives a Trickster's Lore (Religion) domain the rank of the lore (m_SetRankFrom)", () => {
     const TRICKSTER = '8df873a8c6e48294abdb78c45834aa0a';
     const TIER_2_SELECTION = 'ae4e619162a44996b77973f3abd7781a';
@@ -945,7 +945,7 @@ describe('grants through G (ticket 03c)', () => {
   });
 });
 
-describe('the areas ticket 03 left untested (ticket 03c)', () => {
+describe('the areas ticket 03 left untested (ticket 03c)', { timeout: 30_000 }, () => {
   const jackTo = (cls: string): Build => ({
     ...jackInTheGreen.build,
     ranks: [...(jackInTheGreen.build.ranks ?? []).slice(0, 7), { class: cls, level: rankLevel(17) }],

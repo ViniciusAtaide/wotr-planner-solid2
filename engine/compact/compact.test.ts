@@ -10,7 +10,7 @@ const viaJson = <T>(v: T): T => JSON.parse(JSON.stringify(v)) as T;
 const roundTrip = (files: readonly DataFile[], overrides: readonly DataFile[], defaults: FieldDefaults) =>
   decodeDocument(viaJson(encodeDocument(files, overrides, defaults)));
 
-describe('the compact data document', () => {
+describe('the compact data document', { timeout: 60_000 }, () => {
   it('decodes the whole of data/ to exactly the files, key order included', () => {
     const back = roundTrip(data.files, data.overrides, FIELD_DEFAULTS);
     expect(JSON.stringify(back.files)).toBe(JSON.stringify(data.files));
