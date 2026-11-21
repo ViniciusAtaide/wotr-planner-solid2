@@ -22,6 +22,7 @@ import {
   set_start,
   sheet,
   start_build,
+  synergies,
   type Changed,
   type ToolRefusal,
 } from './tools';
@@ -329,5 +330,26 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
       refused: true,
       reason: "It doesn't go in this place; it goes in the Belt place.",
     });
+  });
+
+  it('gives each synergies row the slot, place and feature that pick takes, with places spelled as next_slots spells them (MCP QA)', async () => {
+    const open = {
+      ...jackInTheGreen.build,
+      picks: jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place && p.slot.place.rank >= 9)),
+    };
+    const code = await encodeBuild(e.data, open);
+    const rows = ok(await synergies(e, { code }), 'synergies');
+    expect(rows.length).toBeGreaterThan(0);
+    const places = new Set(ok(await next_slots(e, { code }), 'next_slots').map((s) => s.place));
+    for (const row of rows) expect(places.has(row.place)).toBe(true);
+    expect(rows.some((r) => r.place.startsWith('M'))).toBe(true);
+    const row = rows[0]!;
+    const taken = ok(
+      await pick(e, { code, slot: row.slot, feature: row.feature, ...(row.param && { param: row.param }) }),
+      'pick',
+    );
+    expect('build' in taken).toBe(true);
+    if (!('build' in taken)) return;
+    expect(taken.build.picks).toContainEqual(expect.objectContaining({ slot: row.slot, feature: row.feature }));
   });
 });

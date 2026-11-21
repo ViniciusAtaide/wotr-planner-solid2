@@ -437,29 +437,25 @@ export async function equip(
   return withMode(e, build, edit, args.mode ?? 'strict');
 }
 
+export interface SynergyRow {
+  readonly slot: SlotId;
+  readonly place: string;
+  readonly option: string;
+  readonly feature: Guid;
+  readonly param?: GrantParam;
+  readonly buildsOn: readonly string[];
+  readonly shares?: readonly string[];
+  readonly wontStack?: readonly string[];
+}
+
 export async function synergies(
   e: Engine,
   args: { readonly code: string; readonly slot?: SlotId },
-): Promise<
-  | readonly {
-      readonly slot: string;
-      readonly option: string;
-      readonly buildsOn: readonly string[];
-      readonly shares?: readonly string[];
-      readonly wontStack?: readonly string[];
-    }[]
-  | ToolRefusal
-> {
+): Promise<readonly SynergyRow[] | ToolRefusal> {
   const build = await open(e, args.code);
   if (isRefusal(build)) return build;
   const slots = args.slot === undefined ? openSlots(e, build).map((s) => s.slot) : [args.slot];
-  const out: {
-    slot: string;
-    option: string;
-    buildsOn: readonly string[];
-    shares?: readonly string[];
-    wontStack?: readonly string[];
-  }[] = [];
+  const out: SynergyRow[] = [];
   for (const slot of slots) {
     const listed = await options(e, { code: args.code, slot, page: 1 });
     if (isRefusal(listed)) continue;
@@ -467,8 +463,11 @@ export async function synergies(
     for (const o of all)
       if (o.buildsOn.length > 0 || o.shares !== undefined || o.wontStack !== undefined)
         out.push({
-          slot: slotKey(slot),
+          slot,
+          place: placeKey(slot.place),
           option: o.name,
+          feature: o.feature,
+          ...(o.param && { param: o.param }),
           buildsOn: o.buildsOn,
           ...(o.shares && { shares: o.shares }),
           ...(o.wontStack && { wontStack: o.wontStack }),
