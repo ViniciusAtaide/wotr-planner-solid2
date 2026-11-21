@@ -455,7 +455,11 @@ export const cites = {
     'UnitLogic/Class/LevelUp/Actions/SelectRace.cs Apply',
     'Blueprints/Classes/BlueprintRace.cs GetRestrictedByArchetype',
   ],
-  'Walker.restrictsRace': ['Blueprints/Classes/BlueprintRace.cs GetRestrictedByArchetype'],
+  restrictsRace: ['Blueprints/Classes/BlueprintRace.cs GetRestrictedByArchetype'],
+  raceRefusal: [
+    'UnitLogic/Class/LevelUp/Actions/SelectRace.cs Check',
+    'Blueprints/Classes/BlueprintRace.cs GetRestrictedByArchetype',
+  ],
   'Walker.selectClass': [
     'UnitLogic/Class/LevelUp/Actions/SelectClass.cs Check',
     'UnitLogic/Class/LevelUp/Actions/SelectClass.cs Apply',

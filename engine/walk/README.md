@@ -82,7 +82,7 @@ Level-ups:
 
 - `levelUp`: one level-up, band by band, refreshing the conditional grants and applying the band's picks after each, then refusing the picks it never applied, keeping aspects on and recording the slots it opened. It throws `Paused` at the pause slot's band.
 - `selectRace`: `SelectRace.Check` and `Apply`: the race, its fact, and its features at level 0. It refuses a race some chosen archetype rules out (`BlueprintRace.GetRestrictedByArchetype`).
-- `restrictsRace`: `BlueprintRace.GetRestrictedByArchetype`: the archetype requires (a PrerequisiteFeature) a race other than this one.
+- `raceRefusal(data, build, race)`: the race choice's refusal, which `selectRace` records and `engine/pickers`' `racePicker` shows per row: not a race (`SelectRace.Check`), or ruled out by an archetype the Build takes (`restrictsRace`, `BlueprintRace.GetRestrictedByArchetype`: the archetype requires, by a PrerequisiteFeature, a race other than this one).
 - `selectClass`: `SelectClass.Check` and `Apply`, with `UnitProgressionData.AddClassLevel`. A Mythic rank's class must be Mythic and a character level's must not (`SelectClass.Check:IsMythic`). A character level past `maxCharacterLevel` is refused (`UnitProgressionData.MaxCharacterLevel`, via `CanLevelUpNormal`). A refused class still takes its level, so the rest of the Build is judged. A class taken for the first time gets its own spellbook (the ClassData constructor).
 - `maxCharacterLevel`: 40 while a held fact sets LegendaryHero (an AddMechanicsFeature), else 20.
 

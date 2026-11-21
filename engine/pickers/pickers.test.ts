@@ -17,6 +17,8 @@ import {
 } from './offers';
 import { featureTags, tagsOf } from './tags';
 import { classPicker } from './class-picker';
+import { backgroundPicker } from './background-picker';
+import { firstLevelWith, heritageSlotIn, racePicker } from './race-picker';
 import { namesInList } from './option-names';
 import { breaks, opensAt, refusal } from '../refusals';
 import { pauseAt, walk } from '../walk';
@@ -282,6 +284,66 @@ describe('what character creation offers (comparison bug 5)', { timeout: 30_000 
     expect(scion?.shown).toBe(false);
     expect(p?.options.find((o) => o.class === SORCERER)?.shown).toBe(true);
   });
+
+  it('judges every race and heritage row as the walk and the slot picker judge them in the whole Build', () => {
+    let heritages = 0;
+    const differ: string[] = [];
+    for (const gold of [jackInTheGreen, enforcer]) {
+      for (const r of racePicker(data, gold.build, G)) {
+        const raced: Build = { ...firstLevelWith(data, gold.build, r.race), levels: gold.build.levels, picks: [] };
+        const w = walk(data, raced, G);
+        const refused = w.failures.some((f) => f.choice === 'race' && f.subject === r.race);
+        if ((r.closed !== undefined) !== refused) differ.push(`${gold.name} race ${r.race}`);
+        const slot = heritageSlotIn(data, w.slots);
+        if ((slot === undefined) !== (r.heritage === undefined)) differ.push(`${gold.name} heritage slot ${r.race}`);
+        if (slot === undefined || r.heritage === undefined) continue;
+        const whole = picker(data, raced, slot.id, G);
+        for (const o of r.heritage.options) {
+          heritages++;
+          const there = whole?.options.find((x) => x.feature === o.feature);
+          if ((o.closed === undefined) !== (there?.closed === undefined)) differ.push(`${gold.name} ${o.feature}`);
+        }
+      }
+    }
+    expect(heritages).toBeGreaterThan(10);
+    expect(differ).toEqual([]);
+  }, 120_000);
+
+  it("judges every background group's sub-choices as the walk's own child slot does", () => {
+    let judged = 0;
+    const differ: string[] = [];
+    for (const gold of [jackInTheGreen, enforcer]) {
+      const base = walk(data, gold.build, G).slots.find((x) => x.id.selection === BACKGROUNDS_BASE_SELECTION);
+      expect(base).toBeDefined();
+      const bp = backgroundPicker(data, gold.build, base!.id, G);
+      for (const group of bp?.groups ?? []) {
+        const old = gold.build.picks.find((q) => slotKey(q.slot) === slotKey(base!.id))?.feature;
+        const chosen: Build = {
+          ...gold.build,
+          picks: [
+            ...gold.build.picks.filter((q) => slotKey(q.slot) !== slotKey(base!.id) && q.slot.selection !== old),
+            { slot: base!.id, feature: group.option.feature },
+          ],
+        };
+        const children = walk(data, chosen, G).slots.filter((x) => x.parent === slotKey(base!.id));
+        if (children.length !== (group.child === undefined ? 0 : 1))
+          differ.push(`${gold.name} children ${group.option.feature}`);
+        if (group.child === undefined || children[0] === undefined) continue;
+        if (slotKey(children[0].id) !== slotKey(group.child.slot.id))
+          differ.push(`${gold.name} slot ${group.option.feature}`);
+        const whole = picker(data, chosen, children[0].id, G);
+        for (const o of group.child.options) {
+          judged++;
+          const there = whole?.options.find(
+            (x) => x.feature === o.feature && JSON.stringify(x.param) === JSON.stringify(o.param),
+          );
+          if ((o.closed === undefined) !== (there?.closed === undefined)) differ.push(`${gold.name} ${o.feature}`);
+        }
+      }
+    }
+    expect(judged).toBeGreaterThan(10);
+    expect(differ).toEqual([]);
+  }, 120_000);
 
   it('names each option bare, and qualifies it only when another option in the same list shares its name', () => {
     const ALLIED_SPELLCASTER = '9093ceeefe9b84746a5993d619d7c86f';

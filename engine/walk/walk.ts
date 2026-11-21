@@ -306,6 +306,26 @@ function unapplied(c: never): never {
   throw new Error(`the walk lists ${(c as Component).$type} as applied but has no case for it`);
 }
 
+function restrictsRace(data: CheckedData, archetype: Guid, race: Guid): boolean {
+  const bp = data.blueprints.get(archetype);
+  if (bp === undefined) return false;
+  return prerequisites(bp, data.blueprints).some(
+    (l) =>
+      l.names.kind === 'fact' &&
+      l.polarity === 'requires' &&
+      data.blueprints.get(l.names.m_Feature)?.$type === 'BlueprintRace' &&
+      l.names.m_Feature !== race,
+  );
+}
+
+export function raceRefusal(data: CheckedData, build: Build, race: Guid): FailedRule | undefined {
+  if (data.blueprints.get(race)?.$type !== 'BlueprintRace') return { rule: 'SelectRace.Check' };
+  const restricted = Object.values(build.classChoices ?? {}).flatMap((c) =>
+    c.archetypes.filter((a) => restrictsRace(data, a, race)),
+  );
+  return restricted.length > 0 ? { rule: 'BlueprintRace.GetRestrictedByArchetype', found: restricted } : undefined;
+}
+
 export function pathSwitchClasses(data: CheckedData): Guid[] {
   const higher = [...data.blueprints.values()]
     .filter((bp) => bp.$type === 'BlueprintCharacterClass' && bp.m_IsHigherMythic)
@@ -870,31 +890,12 @@ class Walker {
     const guid = this.build.race;
     if (guid === undefined) return;
     const race = this.unit.bp(guid);
-    if (race?.$type !== 'BlueprintRace') {
-      this.fail({ choice: 'race', subject: guid, rule: 'SelectRace.Check' });
-      return;
-    }
-    const restricted = Object.values(this.build.classChoices ?? {}).flatMap((c) =>
-      c.archetypes.filter((a) => this.restrictsRace(a, guid)),
-    );
-    if (restricted.length > 0) {
-      this.fail({ choice: 'race', subject: guid, rule: 'BlueprintRace.GetRestrictedByArchetype', found: restricted });
-    }
+    const refusal = raceRefusal(this.data, this.build, guid);
+    if (refusal !== undefined) this.fail({ choice: 'race', subject: guid, ...refusal });
+    if (race?.$type !== 'BlueprintRace') return;
     this.unit.race = guid;
     this.gain(guid, undefined, { kind: 'race', from: guid });
     this.addFeaturesFromProgression(guids((race as BlueprintRace).m_Features), { kind: 'race', from: guid }, 0);
-  }
-
-  restrictsRace(archetype: Guid, race: Guid): boolean {
-    const bp = this.unit.bp(archetype);
-    if (bp === undefined) return false;
-    return prerequisites(bp, this.unit.data.blueprints).some(
-      (l) =>
-        l.names.kind === 'fact' &&
-        l.polarity === 'requires' &&
-        this.unit.bp(l.names.m_Feature)?.$type === 'BlueprintRace' &&
-        l.names.m_Feature !== race,
-    );
   }
 
   classRefusals(cls: Guid): Omit<Failure, 'place'>[] {

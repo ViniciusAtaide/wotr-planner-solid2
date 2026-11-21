@@ -5,6 +5,14 @@ What each slot can take (guide §4, build ticket 04). S lists a slot's options a
 ## Public entry
 
 - `picker(data, build, slot, G?)` and `Picker`: every option of a slot with its status, judged at the walk paused there; undefined when the Build never opens the slot. A `Picker` holds the opened `slot`, its `options`, and `unit`, the character at the pause, which R words each closed option's Refusal against.
+- `racePicker(data, build, G?)` and `RaceOption`: every race on offer with its status and its heritage rows.
+  - **A race's `closed`** is the walk's own `raceRefusal`: not a race, or ruled out by an archetype the Build takes.
+  - **Heritage rows:** a race with a heritage slot (`heritageSlotIn`: a race's top-level selection in the `Racial` group) carries `heritage`, the slot picker's options at a level-1 Build with that race (`firstLevelWith`).
+  - **`firstLevelWith`** keeps the start, the first level's class and the archetypes, and keeps the +2 only when the race lets you choose it.
+  - **Cost:** the whole list costs about 3 ms where one `allows` per race cost about 170 ms. What a race would break later is worked out only for the row taken.
+- `backgroundPicker(data, build, base, G?)`: the background slot's groups.
+  - **Each group** carries its `option` and, when the group is a selection, its sub-choice `child`. That's the slot picker paused at the slot the group opens (`{ place, selection: group, index: 0 }`), with the old group's sub-choice dropped.
+  - **Cost:** about 1 ms where a walk per group cost about 60 ms.
 - `namesInList(data, guids)`, `bareName(bp)` and `ListName`: names as a list shows them.
   - **Why:** the importer qualifies a shared name across everything a Build can reach, so "Allied Spellcaster" is "Allied Spellcaster (feature)" only because a Cavalier buff has the same name. A list only has to tell its own options apart.
   - **`bareName`** is a blueprint's name without the qualifier the importer added. Use it for a slot's label.
