@@ -11,6 +11,7 @@ export interface Description {
   readonly name: string;
   readonly kind: Kind;
   readonly summary: string;
+  readonly summarySource: SummarySource;
   readonly labels: readonly Label[];
   readonly prerequisites: readonly string[];
   readonly grants: readonly { readonly guid: Guid; readonly name: string; readonly level?: number }[];
@@ -21,8 +22,25 @@ export interface Description {
 
 export const NO_SUMMARY = 'No summary yet.';
 
+export type SummarySource = 'written' | 'labels' | 'none';
+
 export function summaryOf(labels: readonly Label[]): string {
   return labels.length === 0 ? NO_SUMMARY : labels.map((l) => l.text).join(' ');
+}
+
+const writtenByData = new WeakMap<CheckedData, ReadonlyMap<Guid, string>>();
+
+export function writtenSummary(data: CheckedData, guid: Guid): string | undefined {
+  let written = writtenByData.get(data);
+  if (written === undefined) {
+    written = new Map(data.overrides.flatMap((o) => (o.change === 'summary' ? [[o.target, o.text] as const] : [])));
+    writtenByData.set(data, written);
+  }
+  return written.get(guid);
+}
+
+export function summaryText(data: CheckedData, guid: Guid): string {
+  return writtenSummary(data, guid) ?? summaryOf(labelsOf(data, guid));
 }
 
 export function describe(
@@ -39,11 +57,13 @@ export function describe(
   const w = { data, G };
   const links = linkIndex(data, G);
   const labels = labelsOf(data, guid);
+  const written = writtenSummary(data, guid);
   return {
     guid,
     name: nameOf(data, guid),
     kind: kindOf[bp.$type],
-    summary: summaryOf(labels),
+    summary: written ?? summaryOf(labels),
+    summarySource: written !== undefined ? 'written' : labels.length > 0 ? 'labels' : 'none',
     labels,
     prerequisites: prerequisites(bp, data.blueprints).map((leaf) =>
       unmetText(w, { leaf }).replace(/^Needs /, leaf.Group === 'All' ? 'Needs ' : 'Or: needs '),

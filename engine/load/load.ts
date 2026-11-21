@@ -1,5 +1,6 @@
 import {
   deriveTwins,
+  fingerprintOf,
   isPrerequisite,
   isRecord,
   kindOf,
@@ -52,6 +53,10 @@ function readBlueprint(file: DataFile, problems: string[]): Blueprint | undefine
   return value as unknown as Blueprint;
 }
 
+const FINGERPRINT = /^[0-9a-f]{8}$/;
+
+const SUMMARY_KEYS: ReadonlySet<string> = new Set(['change', 'target', 'reason', 'text', 'fingerprint']);
+
 function readOverride(file: DataFile, problems: string[]): Override | undefined {
   const { path, value } = file;
   if (!isRecord(value)) {
@@ -65,9 +70,18 @@ function readOverride(file: DataFile, problems: string[]): Override | undefined 
     problems.push(`${path}: an override needs a target GUID`);
     return undefined;
   }
-  if (!['add', 'remove', 'patch', 'name', 'alias'].includes(value.change as string)) {
-    problems.push(`${path}: an override's change is add, remove, patch, name or alias`);
+  if (!['add', 'remove', 'patch', 'name', 'alias', 'summary'].includes(value.change as string)) {
+    problems.push(`${path}: an override's change is add, remove, patch, name, alias or summary`);
     return undefined;
+  }
+  if (value.change === 'summary') {
+    const before = problems.length;
+    if (typeof value.text !== 'string' || value.text.trim() === '') problems.push(`${path}: a summary needs its text`);
+    if (typeof value.fingerprint !== 'string' || !FINGERPRINT.test(value.fingerprint))
+      problems.push(`${path}: a summary needs the fingerprint of the components it describes`);
+    const extra = Object.keys(value).filter((k) => !SUMMARY_KEYS.has(k));
+    if (extra.length > 0) problems.push(`${path}: a summary holds only its wording, not ${extra.join(', ')}`);
+    if (problems.length > before) return undefined;
   }
   if (value.change === 'patch' && (!Array.isArray(value.ops) || value.ops.length === 0)) {
     problems.push(`${path}: a patch needs its ops`);
@@ -120,8 +134,16 @@ export function loadData(files: readonly DataFile[], overrideFiles: readonly Dat
     if (o.change === 'remove' && held) {
       problems.push(`${file.path}: removes ${o.target}, but the data still holds it`);
     } else if (o.change !== 'remove' && !held) {
-      const verb = { add: 'adds', patch: 'patches', name: 'names', alias: 'aliases' }[o.change];
+      const verb = { add: 'adds', patch: 'patches', name: 'names', alias: 'aliases', summary: 'summarizes' }[o.change];
       problems.push(`${file.path}: ${verb} ${o.target}, but the data doesn't hold it`);
+    }
+    const summarized = o.change === 'summary' ? blueprints.get(o.target) : undefined;
+    if (o.change === 'summary' && summarized !== undefined) {
+      const now = fingerprintOf(summarized.Components);
+      if (o.fingerprint !== now)
+        problems.push(
+          `${file.path}: the components this summary describes changed (fingerprint ${o.fingerprint}, now ${now}); reread them, then update its text and fingerprint`,
+        );
     }
     if (o.change === 'alias' && blueprints.has(o.from)) {
       problems.push(`${file.path}: aliases ${o.from}, which the data still holds`);

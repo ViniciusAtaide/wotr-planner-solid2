@@ -2203,6 +2203,11 @@ export type Override = OverrideBase &
         readonly change: 'alias';
         readonly from: Guid;
       }
+    | {
+        readonly change: 'summary';
+        readonly text: string;
+        readonly fingerprint: string;
+      }
   );
 
 interface OverrideBase {

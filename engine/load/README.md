@@ -19,9 +19,10 @@ The loader and its load-time checks (guide §3 point 8, "When loading"). `loadDa
 - no two files share a GUID;
 - every reference names a blueprint the data holds;
 - every prerequisite component is of a type P reads (`prerequisiteTypes` and `isPrerequisite`, from `engine/data`, so the loader does not depend on P);
-- each override has its reason, a target GUID and a known change (`add`, `remove`, `patch`, `name` or `alias`); a patch has its ops, a name override its qualifier, and an alias the old GUID it is from;
+- each override has its reason, a target GUID and a known change (`add`, `remove`, `patch`, `name`, `alias` or `summary`); a patch has its ops, a name override its qualifier, an alias the old GUID it is from, and a summary its text and the fingerprint of the components it describes, and nothing else (a hand-written summary is wording only and never makes a link, map 09);
 - a removal's target is gone from the data, and every other override's target is held;
-- an alias's old GUID is one the data no longer holds, so a live GUID is never read as another.
+- an alias's old GUID is one the data no longer holds, so a live GUID is never read as another;
+- a summary's fingerprint is its target's components' fingerprint now (`fingerprintOf`). When the components change, the load check names the old and the new fingerprint, so the summary is reread before the data loads (06c, map 10).
 
 `CheckedData.twins` holds Gear's twins (map ticket 29's rule 1, `deriveTwins`): items equal in all but GUID and asset name, each mapped to the one the pickers offer in its place. A Build code naming a twin decodes to that one. They are derived at load, never stored.
 

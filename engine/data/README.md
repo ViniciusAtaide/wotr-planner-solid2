@@ -13,7 +13,7 @@ Every type, field and helper that ports something from the game's decompiled C# 
 - `twins.ts`: Gear's twins (`equippableItems`, `deriveTwins`).
 - `prerequisite-types.ts`: which components are prerequisites (`prerequisiteTypes`, `paramPrerequisiteTypes`, `isPrerequisite`).
 - `data-file.ts`: `DataFile`, one parsed file of `data/`.
-- `util.ts`: `sortKeys` and `byName`, generic helpers the engine and the importer share, with no game rule in them.
+- `util.ts`: `sortKeys`, `byName` and `fingerprintOf`, generic helpers the engine and the importer share, with no game rule in them.
 - `cites.ts`: the citations.
 
 ## Identity and references
@@ -244,6 +244,7 @@ Guide §3 point 5: the root and the Mythic settings the rules read.
 
 - `sortKeys`: a value with its object keys sorted at every depth, so equal values have one JSON text.
 - `byName`: items grouped by the name `nameOf` gives them, in first-seen order, leaving out the items it gives no name.
+- `fingerprintOf`: eight hex digits of a 32-bit FNV-1a hash of a value's key-sorted JSON. A hand-written summary records its blueprint's components' fingerprint (06c).
 - `DataFile`: one parsed file, with its path relative to the data root (`classes/FighterClass.<guid>.json`).
 
 ## Design notes

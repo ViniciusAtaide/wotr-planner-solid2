@@ -2,6 +2,7 @@ import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
 import { loadData, LoadError, type DataFile } from './load';
 import { readDataDir } from '../data-dir';
+import { fingerprintOf } from '../data';
 
 const fixture = readDataDir(fileURLToPath(new URL('./fixtures/small', import.meta.url)));
 const g = (n: number) => `f1${'0'.repeat(29)}${n}`;
@@ -127,11 +128,11 @@ describe('loadData', { timeout: 30_000 }, () => {
     ]);
   });
 
-  it('refuses an override whose change is not add, remove, patch, name or alias', () => {
+  it('refuses an override whose change is not add, remove, patch, name, alias or summary', () => {
     const copy = structuredClone(fixture);
     (copy.overrides[0]!.value as { change: string }).change = 'rename';
     expect(problemsOf(copy.files, copy.overrides)).toEqual([
-      `overrides/TestCleaveFeature.${g(5)}.json: an override's change is add, remove, patch, name or alias`,
+      `overrides/TestCleaveFeature.${g(5)}.json: an override's change is add, remove, patch, name, alias or summary`,
     ]);
   });
 
@@ -164,6 +165,50 @@ describe('loadData', { timeout: 30_000 }, () => {
       reason: 'two share the name',
     };
     expect(problemsOf(copy.files, copy.overrides)).toEqual([]);
+  });
+
+  describe('a hand-written summary (06c)', () => {
+    const cleave = fixture.files.find((f) => f.path.includes('TestCleaveFeature'))!.value as { Components: unknown[] };
+    const fresh = fingerprintOf(cleave.Components);
+    const summary = (fields: Record<string, unknown>, edit: (files: DataFile[]) => DataFile[] = (f) => f) => {
+      const copy = fixtureEdited(edit);
+      (copy.overrides[0] as { value: unknown }).value = {
+        change: 'summary',
+        target: g(5),
+        reason: 'the generated one reads badly',
+        text: 'Hits a second foe.',
+        fingerprint: fresh,
+        ...fields,
+      };
+      return problemsOf(copy.files, copy.overrides);
+    };
+    const at = `overrides/TestCleaveFeature.${g(5)}.json`;
+
+    it('takes one whose fingerprint matches the components it describes', () => {
+      expect(fresh).toMatch(/^[0-9a-f]{8}$/);
+      expect(summary({})).toEqual([]);
+    });
+
+    it('flags one whose components changed since it was written', () => {
+      const edited = (files: DataFile[]) => {
+        const file = byPath(files, 'TestCleaveFeature');
+        (file.value as { Components: { CheckInProgression: boolean }[] }).Components[0]!.CheckInProgression = false;
+        return files;
+      };
+      const now = fingerprintOf([{ ...(cleave.Components[0] as object), CheckInProgression: false }]);
+      expect(summary({}, edited)).toEqual([
+        `${at}: the components this summary describes changed (fingerprint ${fresh}, now ${now}); reread them, then update its text and fingerprint`,
+      ]);
+    });
+
+    it('refuses one without its text or fingerprint, or holding anything but wording', () => {
+      expect(summary({ text: ' ', fingerprint: 'abc' })).toEqual([
+        `${at}: a summary needs its text`,
+        `${at}: a summary needs the fingerprint of the components it describes`,
+      ]);
+      expect(summary({ links: ['ability Strength'] })).toEqual([`${at}: a summary holds only its wording, not links`]);
+      expect(summary({ target: g(9) })).toEqual([`${at}: summarizes ${g(9)}, but the data doesn't hold it`]);
+    });
   });
 
   it('refuses a name override without its qualifier', () => {

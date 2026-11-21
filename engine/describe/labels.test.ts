@@ -260,4 +260,18 @@ suite('Summary labels', { timeout: 30_000 }, () => {
     );
     expect(unlabelled && describe(data, unlabelled.guid, G)?.summary).toBe(NO_SUMMARY);
   });
+
+  it('prefers a hand-written summary (06c), and says where each Summary comes from', () => {
+    const dangerSense = describe(data, '0bcbe9e450b0e7b428f08f66c53c5136', G);
+    expect(dangerSense?.summarySource).toBe('written');
+    expect(dangerSense?.summary).toBe(
+      '+1 dodge bonus to AC and +1 on all saving throws against traps, for each rank of Danger Sense (up to 6).',
+    );
+    expect(dangerSense?.labels.length).toBe(2);
+    expect(describe(data, '06964d468fde1dc4aa71a92ea04d930d', G)?.summarySource).toBe('labels');
+    expect(describe(data, '9972f33f977fc724c838e59641b2fca5', G)).toMatchObject({
+      summarySource: 'none',
+      summary: NO_SUMMARY,
+    });
+  });
 });

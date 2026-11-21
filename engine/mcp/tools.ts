@@ -24,7 +24,7 @@ import {
   type Kind,
   type StatType,
 } from '../data';
-import { describe, descriptorWord, GROUP_WORDS, labelsOf, summaryOf, words, type Description } from '../describe';
+import { describe, descriptorWord, GROUP_WORDS, summaryText, words, type Description } from '../describe';
 import { allows, apply, breaksOf, cascade, type Breaks, type Edit } from '../edits';
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
 import { linkIndex, type SharedTopic, type StackClash, type Topic } from '../links';
@@ -297,7 +297,7 @@ export async function options(
     feature: o.feature,
     ...(o.param && { param: o.param }),
     name: optionName(e, o),
-    summary: summaryOf(labelsOf(e.data, o.feature)),
+    summary: summaryText(e.data, o.feature),
     buildsOn: listNames(
       e.data,
       links.needs(o.feature).filter((g) => held.has(g)),
@@ -497,7 +497,7 @@ export function search(
       guid: bp.guid,
       name: bp.name ?? bp.assetName,
       kind: kindOf[bp.$type],
-      summary: summaryOf(labelsOf(e.data, bp.guid)),
+      summary: summaryText(e.data, bp.guid),
     });
     if (out.length >= 50) break;
   }
