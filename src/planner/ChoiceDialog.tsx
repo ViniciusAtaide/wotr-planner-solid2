@@ -80,6 +80,13 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
       props.onClose();
     };
     window.addEventListener('popstate', onPop);
+    const onEscape = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return;
+      e.preventDefault();
+      e.stopPropagation();
+      props.onClose();
+    };
+    document.addEventListener('keydown', onEscape, true);
     const frame = requestAnimationFrame(() => {
       if (box !== undefined) dialogStart(box, matchMedia(FINE_POINTER).matches)?.focus({ preventScroll: true });
     });
@@ -87,6 +94,7 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
       cancelAnimationFrame(frame);
       clearInterval(watch);
       window.removeEventListener('popstate', onPop);
+      document.removeEventListener('keydown', onEscape, true);
       root.classList.remove('choice-open');
       releaseEntry(popped);
       const back = opener?.isConnected === true && opener !== document.body ? opener : props.returnTo?.();
@@ -104,12 +112,6 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
           role="dialog"
           aria-modal="true"
           aria-label={props.title}
-          onKeyDown={(e) => {
-            if (e.key !== 'Escape') return;
-            e.preventDefault();
-            e.stopPropagation();
-            props.onClose();
-          }}
           onFocusIn={(e) => setDetail(detailOf(e.target) ?? detail())}
           onPointerOver={(e) => setDetail(detailOf(e.target) ?? detail())}
         >

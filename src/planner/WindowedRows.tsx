@@ -2,11 +2,13 @@ import type { JSX } from '@solidjs/web';
 import { createMemo, createSignal, For, onSettled, Show, untrack } from 'solid-js';
 
 export const OVERSCAN = 6;
-const FALLBACK_ROW = 78;
+const FALLBACK_ROW = 44;
 
 export function rowHeightOf(el: HTMLElement): number {
-  const value = Number.parseFloat(getComputedStyle(el).getPropertyValue('--choice-row-height'));
-  return Number.isFinite(value) && value > 0 ? value : FALLBACK_ROW;
+  const style = getComputedStyle(el);
+  const height = Number.parseFloat(style.getPropertyValue('--choice-row-height'));
+  const gap = Number.parseFloat(style.getPropertyValue('--choice-row-gap'));
+  return (Number.isFinite(height) && height > 0 ? height : FALLBACK_ROW) + (Number.isFinite(gap) && gap > 0 ? gap : 0);
 }
 
 export interface RowWindow {

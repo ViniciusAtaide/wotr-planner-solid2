@@ -10,6 +10,7 @@ import { Badge, FeatIcon, type FeatCategory } from '../design';
 import { CharacterCard, ScoresStep, SHORT } from './CharacterCard';
 import { ChoiceDialog } from './ChoiceDialog';
 import { isListStep, type ListMode } from './list-mode';
+import { CollapsedLists } from './list-panel';
 import { RaceStep } from './CharacterSteps';
 import { StepArrived } from './ChoiceList';
 import { featCategory } from './feat-category';
@@ -138,7 +139,14 @@ export function Here(props: HereProps) {
           {modal() ? 'Open the list' : 'Expand'}
         </button>
       </Show>
-      <Show when={dialog() && props.confirming !== true} fallback={<Show when={!modal()}>{props.children}</Show>}>
+      <Show
+        when={dialog() && props.confirming !== true}
+        fallback={
+          <Show when={!modal()}>
+            <CollapsedLists value={true}>{props.children}</CollapsedLists>
+          </Show>
+        }
+      >
         <p class="trail-note">Choosing in the dialog.</p>
         <ChoiceDialog
           title={props.title}

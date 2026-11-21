@@ -1,4 +1,4 @@
-import { createEffect, createMemo, createSignal, For, Show } from 'solid-js';
+import { createEffect, createMemo, createSignal, For, Show, useContext } from 'solid-js';
 import { slotKey, type Build, type Pick, type SlotId } from '~engine/build';
 import type { Edit } from '~engine/edits';
 import { linkIndex } from '~engine/links';
@@ -6,9 +6,10 @@ import { picker, type OptionStatus } from '~engine/pickers';
 import { gearNote, listNames, nameOf, refusal } from '~engine/refusals';
 
 import { Button, OptionList, PickerOption } from '../design';
-import { Filter, moveThroughOptions, SCROLL_STYLE, type ClosedToggle } from './ChoiceList';
+import { Filter, moveThroughOptions, SCROLL_STYLE, StepArrived, type ClosedToggle } from './ChoiceList';
 import { featCategory } from './feat-category';
 import { after } from './flat-choices';
+import { CollapsedLists, createListPanel } from './list-panel';
 import { childSlotOf, pickRows, rowMembers, rowOpen, type PickRow } from './nested-options';
 import type { NonEmpty } from './planner-state';
 import type { TrailApi } from './steps';
@@ -126,8 +127,26 @@ export function PickStep(props: PickStepProps) {
     slot,
     pick: { feature: o.feature, ...(o.param && { param: o.param }) },
   });
-  const apply = (edits: NonEmpty<Edit>, title: string) =>
-    edits.length === 1 ? props.trail.edit(edits[0], title) : props.trail.editAll(edits, title);
+  const collapsing = useContext(CollapsedLists);
+  const arrived = useContext(StepArrived);
+  let box: HTMLDivElement | undefined;
+  const panel = createListPanel(
+    () => collapsing,
+    arrived(),
+    () => box,
+  );
+  const currentName = () => {
+    const c = current();
+    if (c === undefined) return undefined;
+    const own = shownName(data(), c.feature, c.param);
+    const child = pickAt(childSlotOf(props.slot, c.feature));
+    return child === undefined ? own : `${own} (${shownName(data(), child.feature, child.param)})`;
+  };
+  const apply = (edits: NonEmpty<Edit>, title: string) => {
+    panel.hide();
+    if (edits.length === 1) props.trail.edit(edits[0], title);
+    else props.trail.editAll(edits, title);
+  };
   const take = (o: OptionStatus) =>
     apply(after(oldChildClears(o.feature), [pickOf(props.slot, o)]), `Picked ${name(o)}`);
   const nested = createMemo(() => {
@@ -232,121 +251,141 @@ export function PickStep(props: PickStepProps) {
   });
   return (
     <Show when={p()} fallback={<p class="trail-note">This choice doesn't open in the Build any more.</p>}>
-      <div class="trail-step" onKeyDown={onKey}>
+      <div
+        ref={(el) => {
+          box = el;
+        }}
+        class="trail-step"
+        onKeyDown={(e) => {
+          panel.onKeyDown(e);
+          onKey(e);
+        }}
+        onFocusIn={() => panel.onFocusIn()}
+        onFocusOut={(e) => panel.onFocusOut(e)}
+      >
         <Filter
           label={`Filter ${slotLabel(data(), props.slot.selection)} by name`}
           value={text()}
           onInput={(t) => {
             setText(t);
             setMark(0);
+            panel.show();
           }}
           onMove={(delta) => setMark((m) => nextMark(items(), m, delta))}
           onEnter={() => enterItem(items()[mark()])}
         />
-        <Show when={text() === '' || rows().length > 0} fallback={<p class="trail-note">No matches for “{text()}”.</p>}>
-          <p class="trail-note">
-            {open().length} open · {closed().length} closed
-          </p>
+        <Show when={panel.collapsed() && currentName()}>
+          {(n) => <PickerOption name={n()} status="open" selected onPick={() => panel.show()} />}
         </Show>
-        <Show when={rows().length > 0 && open().length === 0}>
-          <p class="trail-note">No choices open here.</p>
-        </Show>
-        <div
-          class="trail-scroll"
-          style={SCROLL_STYLE}
-          ref={(el) => {
-            scroller = el;
-          }}
-        >
-          <OptionList>
-            <WindowedRows items={items()} key={itemKey} scroller={() => scroller}>
-              {(it, at) => {
-                const row = it.row;
-                if (it.kind === 'none') {
-                  return (
-                    <div class="trail-sub-row" data-child-of={row.key}>
-                      <p class="trail-note">Nothing to choose here yet.</p>
-                    </div>
-                  );
-                }
-                if (it.kind === 'child') {
-                  const o = it.option;
-                  return (
-                    <div class="trail-sub-row" data-child-of={row.key}>
-                      <Show
-                        when={o.closed === undefined}
-                        fallback={
+        <Show when={panel.shown()}>
+          <Show
+            when={text() === '' || rows().length > 0}
+            fallback={<p class="trail-note">No matches for “{text()}”.</p>}
+          >
+            <p class="trail-note">
+              {open().length} open · {closed().length} closed
+            </p>
+          </Show>
+          <Show when={rows().length > 0 && open().length === 0}>
+            <p class="trail-note">No choices open here.</p>
+          </Show>
+          <div
+            class="trail-scroll trail-scroll--two-line"
+            style={SCROLL_STYLE}
+            ref={(el) => {
+              scroller = el;
+            }}
+          >
+            <OptionList>
+              <WindowedRows items={items()} key={itemKey} scroller={() => scroller}>
+                {(it, at) => {
+                  const row = it.row;
+                  if (it.kind === 'none') {
+                    return (
+                      <div class="trail-sub-row" data-child-of={row.key}>
+                        <p class="trail-note">Nothing to choose here yet.</p>
+                      </div>
+                    );
+                  }
+                  if (it.kind === 'child') {
+                    const o = it.option;
+                    return (
+                      <div class="trail-sub-row" data-child-of={row.key}>
+                        <Show
+                          when={o.closed === undefined}
+                          fallback={
+                            <PickerOption
+                              name={childName(row, o)}
+                              status="closed"
+                              refusal={words(o, row.kind === 'nested' ? nested()?.picker?.unit : p()?.unit)}
+                            />
+                          }
+                        >
                           <PickerOption
                             name={childName(row, o)}
-                            status="closed"
-                            refusal={words(o, row.kind === 'nested' ? nested()?.picker?.unit : p()?.unit)}
+                            status="open"
+                            selected={childCurrent(row, o)}
+                            marked={at === mark()}
+                            onPick={() => takeChild(row, o)}
                           />
-                        }
-                      >
-                        <PickerOption
-                          name={childName(row, o)}
-                          status="open"
-                          selected={childCurrent(row, o)}
-                          marked={at === mark()}
-                          onPick={() => takeChild(row, o)}
-                        />
-                      </Show>
+                        </Show>
+                      </div>
+                    );
+                  }
+                  if (row.kind === 'option') {
+                    return (
+                      <PickerOption
+                        name={row.name}
+                        status="open"
+                        icon={featCategory(data(), row.option.feature)}
+                        selected={isCurrent(row.option)}
+                        marked={at === mark()}
+                        links={links(row.option)}
+                        gear={gearOf(row.option)}
+                        onPick={() => take(row.option)}
+                      />
+                    );
+                  }
+                  return (
+                    <div class="trail-parent" data-parent={row.key}>
+                      <PickerOption
+                        name={row.name}
+                        status="open"
+                        icon={featCategory(data(), lead(row)?.feature ?? '')}
+                        selected={holdsRow(row)}
+                        marked={at === mark()}
+                        expanded={expanded() === row.key}
+                        links={links(lead(row) as OptionStatus)}
+                        onPick={() => toggle(row.key)}
+                      />
                     </div>
                   );
-                }
-                if (row.kind === 'option') {
-                  return (
-                    <PickerOption
-                      name={row.name}
-                      status="open"
-                      icon={featCategory(data(), row.option.feature)}
-                      selected={isCurrent(row.option)}
-                      marked={at === mark()}
-                      links={links(row.option)}
-                      gear={gearOf(row.option)}
-                      onPick={() => take(row.option)}
-                    />
-                  );
-                }
-                return (
-                  <div class="trail-parent" data-parent={row.key}>
-                    <PickerOption
-                      name={row.name}
-                      status="open"
-                      icon={featCategory(data(), lead(row)?.feature ?? '')}
-                      selected={holdsRow(row)}
-                      marked={at === mark()}
-                      expanded={expanded() === row.key}
-                      links={links(lead(row) as OptionStatus)}
-                      onPick={() => toggle(row.key)}
-                    />
-                  </div>
-                );
-              }}
-            </WindowedRows>
-            <For each={closedShown()} keyed={(r) => r.key}>
-              {(r) => (
-                <PickerOption
-                  name={r().name}
-                  status="closed"
-                  icon={featCategory(data(), lead(r())?.feature ?? '')}
-                  selected={holdsRow(r())}
-                  links={links(lead(r()) as OptionStatus)}
-                  refusal={r().kind === 'params' ? rowWords(r()) : words(lead(r()) as OptionStatus)}
-                />
-              )}
-            </For>
-          </OptionList>
-        </div>
-        <Show when={closed().length > 0}>
-          <button
-            type="button"
-            class="trail-link"
-            aria-pressed={showClosed.shown ? 'true' : 'false'}
-            onClick={() => showClosed.toggle()}
-          >
-            {showClosed.shown ? 'Hide closed' : `Show ${closed().length} closed`}
-          </button>
+                }}
+              </WindowedRows>
+              <For each={closedShown()} keyed={(r) => r.key}>
+                {(r) => (
+                  <PickerOption
+                    name={r().name}
+                    status="closed"
+                    icon={featCategory(data(), lead(r())?.feature ?? '')}
+                    selected={holdsRow(r())}
+                    links={links(lead(r()) as OptionStatus)}
+                    refusal={r().kind === 'params' ? rowWords(r()) : words(lead(r()) as OptionStatus)}
+                  />
+                )}
+              </For>
+            </OptionList>
+          </div>
+          <Show when={closed().length > 0}>
+            <button
+              type="button"
+              class="trail-link"
+              aria-pressed={showClosed.shown ? 'true' : 'false'}
+              onClick={() => showClosed.toggle()}
+            >
+              {showClosed.shown ? 'Hide closed' : `Show ${closed().length} closed`}
+            </button>
+          </Show>
         </Show>
         <Show when={current()}>
           <Button
