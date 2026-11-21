@@ -10,6 +10,7 @@ import { loadEngine } from './engine';
 import { EMPTY, openHash } from './link';
 import { PlannerMenu, UndoLine } from './Menu';
 import { createShareCode, shareLinkOf, type ShareCode } from './share-code';
+import { browserStorage, readListMode, writeListMode, type ListMode } from './list-mode';
 import { buildSheet } from './sheet';
 import { createPlanner, type Planner as PlannerApi } from './state';
 import Trail from './Trail';
@@ -139,6 +140,7 @@ function Workspace(props: WorkspaceProps) {
   const [workspace, setWorkspace] = createSignal(latest);
   const [phone, setPhone] = createSignal(false);
   const [closing, setClosing] = createSignal(false);
+  const [listMode, setListMode] = createSignal<ListMode>(readListMode(browserStorage));
 
   const send = (a: PageAction) => {
     const page = { workspace: latest, first: first.latest(), second: second.latest() };
@@ -310,6 +312,7 @@ function Workspace(props: WorkspaceProps) {
           select={(selection) => send({ kind: 'select', selection, side: s })}
           phone={phone()}
           diff={scoreDiffers(s)}
+          listMode={listMode()}
         />
       </div>
     </section>
@@ -360,6 +363,11 @@ function Workspace(props: WorkspaceProps) {
             )}
           </Show>
           <PlannerMenu
+            listMode={listMode()}
+            onListMode={(mode) => {
+              setListMode(mode);
+              writeListMode(browserStorage, mode);
+            }}
             link={shareLinkOf(linkCode(), location.origin)}
             forked={forked() !== undefined}
             onFork={() => send({ kind: 'fork' })}

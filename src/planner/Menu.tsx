@@ -1,6 +1,7 @@
-import { createEffect, createSignal, onSettled, Show } from 'solid-js';
+import { createEffect, createSignal, For, onSettled, Show } from 'solid-js';
 
 import type { ShareLinkProps } from '../design';
+import type { ListMode } from './list-mode';
 
 export type Copied = 'idle' | 'copied' | 'refused';
 
@@ -14,6 +15,10 @@ export async function copyText(text: string): Promise<Copied> {
 }
 
 const SAID_FOR_MS = 3000;
+const LIST_MODES: readonly (readonly [ListMode, string])[] = [
+  ['inline', 'Inline first'],
+  ['modal', 'Modal first'],
+];
 
 const LINK_WORDS: Readonly<Record<Copied, string>> = {
   idle: 'Copy link',
@@ -31,6 +36,8 @@ export interface PlannerMenuProps {
   readonly forked: boolean;
   readonly onFork: () => void;
   readonly sheet: () => string;
+  readonly listMode: ListMode;
+  readonly onListMode: (mode: ListMode) => void;
 }
 
 export function PlannerMenu(props: PlannerMenuProps) {
@@ -141,6 +148,21 @@ export function PlannerMenu(props: PlannerMenuProps) {
           >
             {SHEET_WORDS[sheet()]}
           </button>
+          <div class="planner-menu__group" role="group" aria-label="Choice lists">
+            <span class="planner-menu__label">Choice lists</span>
+            <For each={LIST_MODES}>
+              {([mode, words]) => (
+                <button
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked={props.listMode === mode ? 'true' : 'false'}
+                  onClick={() => props.onListMode(mode)}
+                >
+                  {words}
+                </button>
+              )}
+            </For>
+          </div>
         </div>
       </Show>
     </div>

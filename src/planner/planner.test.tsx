@@ -1325,3 +1325,99 @@ describe('nested sub-choices (ticket 08)', () => {
     expect(document.activeElement).toBe(parent('Weapon Focus'));
   });
 });
+
+describe('choice lists inline first or modal first (ticket 10)', () => {
+  afterEach(() => {
+    cleanup();
+    localStorage.clear();
+    history.replaceState(null, '', '/');
+  });
+
+  const dialogBox = () => document.querySelector<HTMLElement>('.choice-dialog');
+  const dialogTitle = () => dialogBox()?.querySelector('.choice-dialog__title')?.textContent;
+  const pickFirstIn = (root: ParentNode) => {
+    const option = root.querySelector<HTMLElement>('button.ww-option');
+    fireEvent.click(option ?? document.body);
+    flush();
+  };
+
+  test('the ⋯ menu switches the mode, and it persists', async () => {
+    await openPlanner(cleaver);
+    openMenu();
+    expect(screen.getByRole('menuitemradio', { name: 'Inline first' })).toHaveAttribute('aria-checked', 'true');
+    fireEvent.click(screen.getByRole('menuitemradio', { name: 'Modal first' }));
+    flush();
+    expect(localStorage.getItem('wotr.choiceLists')).toBe('modal');
+    expect(screen.getByRole('menuitemradio', { name: 'Modal first' })).toHaveAttribute('aria-checked', 'true');
+    cleanup();
+    await openPlanner(cleaver);
+    openMenu();
+    expect(screen.getByRole('menuitemradio', { name: 'Modal first' })).toHaveAttribute('aria-checked', 'true');
+  });
+
+  test('modal first: no dialog on load; it opens on request, a pick closes it and the next list step opens in it', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    expect(dialogBox()).toBeNull();
+    expect(document.querySelector('.trail-here button.ww-option')).toBeNull();
+    tap('Open the list');
+    expect(dialogTitle()).toBe(hereTitle());
+    expect(document.documentElement.classList.contains('choice-open')).toBe(true);
+    const first = hereTitle();
+    pickFirstIn(dialogBox() ?? document);
+    await waitFor(() => expect(hereTitle()).not.toBe(first));
+    await waitFor(() => expect(dialogTitle()).toBe(hereTitle()));
+  });
+
+  test('Escape and the back button close the dialog without picking, and focus returns to the step', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    const before = location.hash;
+    tap('Open the list');
+    fireEvent.keyDown(dialogBox() ?? document.body, { key: 'Escape' });
+    flush();
+    expect(dialogBox()).toBeNull();
+    expect(document.documentElement.classList.contains('choice-open')).toBe(false);
+    expect(document.activeElement?.textContent).toBe('Open the list');
+    tap('Open the list');
+    window.dispatchEvent(new PopStateEvent('popstate'));
+    flush();
+    expect(dialogBox()).toBeNull();
+    expect(location.hash).toBe(before);
+  });
+
+  test('a Cascade preview replaces the dialog rather than stacking on it', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    tap('Open the list');
+    expect(dialogBox()).not.toBeNull();
+    tap('Lower Strength');
+    await waitFor(() => expect(dialog()).not.toBeNull());
+    expect(dialogBox()).toBeNull();
+  });
+
+  test('"Show N closed" works inside the dialog', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
+    tap('Open the list');
+    const box = dialogBox();
+    expect(box?.querySelectorAll('.ww-option--closed').length).toBe(0);
+    fireEvent.click(
+      [...(box?.querySelectorAll('button') ?? [])].find((b) => /^Show \d+ closed$/.test(b.textContent ?? '')) ??
+        document.body,
+    );
+    flush();
+    expect(dialogBox()?.querySelectorAll('.ww-option--closed').length).toBeGreaterThan(0);
+  });
+
+  test('inline first: the list sits in the trail, and Expand opens the same list in the dialog', async () => {
+    await openPlanner(cleaver);
+    expect(document.querySelector('.trail-here button.ww-option')).not.toBeNull();
+    expect(dialogBox()).toBeNull();
+    tap('Expand');
+    expect(dialogBox()?.querySelector('button.ww-option')).not.toBeNull();
+    expect(document.querySelector('.trail-here .trail-note')?.textContent).toBe('Choosing in the dialog.');
+  });
+});
