@@ -6,7 +6,9 @@
 #   - builds the merge of <ref> onto the current main in a scratch worktree (a fast-forward when
 #     <ref> already contains main, else a merge commit with the given message);
 #   - runs `bun run check` there, behind the check lock like any other check;
-#   - refuses if main moved while the check ran, so a stale merge never lands;
+#   - waits while another git command holds the main checkout's index lock (a session's commit hook);
+#   - if main moved meanwhile, starts over on the new main (up to three times), so a stale merge never
+#     lands;
 #   - fast-forwards main to the checked merge and pushes it.
 # It never closes the ticket's worktree: scripts/worktree-done.sh does that, once the ticket is over.
 set -eu
@@ -59,7 +61,21 @@ bun run --silent check >"$scratch/check.log" 2>&1 || {
 }
 
 cd "$main"
-[ "$(git rev-parse main)" = "$base" ] || die "main moved while the check ran; run it again"
+lock="$(git rev-parse --path-format=absolute --git-dir)/index.lock"
+waited=0
+while [ -e "$lock" ] && [ $waited -lt 600 ]; do
+  [ $waited -eq 0 ] && echo "Waiting for another git command to release the index lock…"
+  sleep 5
+  waited=$((waited + 5))
+done
+if [ "$(git rev-parse main)" != "$base" ]; then
+  tries=${MERGE_TICKET_TRY:-1}
+  [ "$tries" -lt 3 ] || die "main kept moving during the check; run it again"
+  echo "main moved during the check; starting over on the new main."
+  trap - EXIT
+  cleanup
+  MERGE_TICKET_TRY=$((tries + 1)) exec "$0" "$@"
+fi
 git merge -q --ff-only "$merged" || die "main's working tree blocks the fast-forward; the merge $merged is checked but not applied"
 git push -q origin main
 echo "Merged $ref into main as $merged and pushed."
