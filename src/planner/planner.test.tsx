@@ -1240,6 +1240,7 @@ describe('QA pass 1', () => {
     expect(rule('.trail-stat__steps')).toContain('grid-template-columns: repeat(2, minmax(0, 1fr))');
     expect(rule('.trail-stats')).toContain('minmax(0, 1fr)');
     expect(rule('.trail-stat')).toContain('min-width: 0');
+    expect(rule('.trail-stat')).toContain('padding: var(--space-2) 0;');
   });
 
   test('the page opens with nothing focused or scrolled, and the step takes both once it moves (ticket 11)', async () => {

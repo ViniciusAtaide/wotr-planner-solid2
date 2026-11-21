@@ -309,7 +309,7 @@ html.choice-open .planner-undo:not(:empty) {
   align-items: center;
   gap: var(--space-1);
   min-width: 0;
-  padding: var(--space-2) var(--space-1);
+  padding: var(--space-2) 0;
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-md);
   background: var(--surface-200);
