@@ -80,6 +80,7 @@ function filled(build: Build): Build {
 const human = (levels: number, skills?: SkillRanks): Build => ({
   race: HUMAN,
   scores: SCORES,
+  alignment: 'TrueNeutral',
   levels: Array.from({ length: levels }, () => ({ class: FIGHTER, ...(skills && { skills }) })),
   picks: [],
 });
@@ -94,14 +95,24 @@ describe('auto-advance: each pick opens the next empty one', () => {
     expect(next(scoredOnly)).toEqual({ kind: 'race' });
   });
 
+  test('the trail stops at the alignment before any character choice such as the deity (QA pass 5)', () => {
+    const { alignment: _none, ...unaligned } = human(1);
+    expect(next(unaligned)).toEqual({ kind: 'alignment' });
+    expect(next(human(1))).toEqual({ kind: 'slot', slot: characterSlots(viewOf(human(1)))[0]?.id });
+  });
+
   test('a Build with its race starts on the ability scores, then its first unfinished step after them', () => {
     const unscored: Build = { race: HUMAN, levels: [], picks: [] };
     expect(next(unscored)).toEqual({ kind: 'scores' });
     expect(stepTitle(viewOf(unscored), { kind: 'scores' })).toBe('Your character · set the ability scores');
     expect(whereOf(viewOf(unscored), { kind: 'scores' })).toEqual({ kind: 'scores' });
     const scored: Build = { scores: SCORES, race: HUMAN, levels: [], picks: [] };
-    expect(next(scored)).toEqual({ kind: 'nextLevel' });
-    expect(stepTitle(viewOf(scored), { kind: 'nextLevel' })).toBe('Begin · choose a first class');
+    expect(next(scored)).toEqual({ kind: 'alignment' });
+    expect(stepTitle(viewOf(scored), { kind: 'alignment' })).toBe('Your character · choose an alignment');
+    expect(whereOf(viewOf(scored), { kind: 'alignment' })).toEqual({ kind: 'character' });
+    const aligned: Build = { ...scored, alignment: 'NeutralGood' };
+    expect(next(aligned)).toEqual({ kind: 'nextLevel' });
+    expect(stepTitle(viewOf(aligned), { kind: 'nextLevel' })).toBe('Begin · choose a first class');
     const levelled = human(1);
     expect(next(levelled)).toEqual({ kind: 'slot', slot: characterSlots(viewOf(levelled))[0]?.id });
   });

@@ -40,6 +40,7 @@ export function isListStep(step: Step, levels: number): boolean {
       return true;
     case 'nextLevel':
       return levels === 0;
+    case 'alignment':
     case 'scores':
     case 'increase':
     case 'skills':

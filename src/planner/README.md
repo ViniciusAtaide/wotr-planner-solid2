@@ -50,6 +50,10 @@ to the player in the planner's own words: "Level 5 · choose feat", "Your charac
 2. the ability scores, while the Build has none: the step opens in the character card in the tiles' place, and stays
    open through its edits (+2 and alignment included) until "Done" ("Done · leave N unspent" while points are
    left), which keeps every score at 10 when none was changed. A link opens on its first unfinished step;
+2b. the alignment, while the Build has none (QA pass 5): an unset alignment is unknown, so every pick that asks for one
+   waits for it. The wheel in the character card is its field: outlined in gold with "Choose an alignment" while the
+   trail waits on it, and arriving there scrolls it into view and focuses its first node. It comes before the first
+   class, and so before the deity and every other character choice.
 3. the first empty slot with the character, then the first empty slot on the trail, in the walk's order;
 4. an ability increase the walk offers and the Build hasn't taken;
 5. the last level's skills, until the walk's budget for that level is spent or the player chooses "Done · leave N

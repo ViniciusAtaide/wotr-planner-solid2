@@ -24,6 +24,7 @@ export type Step =
   | Selection
   | { readonly kind: 'mythic'; readonly rank: number; readonly at: number }
   | { readonly kind: 'nextLevel' }
+  | { readonly kind: 'alignment' }
   | { readonly kind: 'complete' };
 
 export type Where =
@@ -252,6 +253,7 @@ export function nextStep(
 ): Step {
   if (t.build.race === undefined) return { kind: 'race' };
   if (t.build.scores === undefined) return { kind: 'scores' };
+  if (t.build.alignment === undefined) return { kind: 'alignment' };
   const empty = (slots: readonly OpenedSlot[]) => slots.find((x) => x.pick === undefined);
   const character = empty(characterSlots(t));
   if (character !== undefined) return { kind: 'slot', slot: character.id };
@@ -293,6 +295,7 @@ export function whereOf(t: TrailView, step: Step): Where {
     case 'scores':
       return { kind: 'scores' };
     case 'race':
+    case 'alignment':
       return { kind: 'character' };
     case 'mythic':
     case 'nextLevel':
@@ -332,6 +335,8 @@ export function stepTitle(t: TrailView, step: Step): string {
       return 'Your character · set the ability scores';
     case 'race':
       return 'Your character · choose a race';
+    case 'alignment':
+      return 'Your character · choose an alignment';
     case 'mythic':
       return `Ascend to Mythic rank ${step.rank}`;
     case 'complete':

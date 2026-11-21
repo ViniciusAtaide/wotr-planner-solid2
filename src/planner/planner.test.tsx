@@ -501,6 +501,11 @@ describe('the levelling trail (build ticket 07)', () => {
     expect(hereTitle()).toBe('Your character · set the ability scores');
     expect(screen.queryByRole('button', { name: 'Back to the next choice' })).toBeNull();
     tap(/^Done/);
+    expect(hereTitle()).toBeUndefined();
+    expect(document.querySelector('.trail-alignment-field--target')).not.toBeNull();
+    expect(document.querySelector('.trail-alignment-name--unset')).not.toBeNull();
+    await waitFor(() => expect(document.activeElement?.closest('.trail-alignment')).not.toBeNull());
+    tap('Lawful Good');
     expect(hereTitle()).toBe('Begin · choose a first class');
   });
 
@@ -534,7 +539,7 @@ describe('the levelling trail (build ticket 07)', () => {
   });
 
   test('the race list holds each race with its heritages, and one row takes both as one change', async () => {
-    await openPlanner({ scores: abilityScores(SCORES), levels: [], picks: [] });
+    await openPlanner({ scores: abilityScores(SCORES), alignment: 'TrueNeutral', levels: [], picks: [] });
     expect(targetField()).toBe('Race');
     filterAndTake('rakshasa');
     expect(hereTitle()).toBe('Begin · choose a first class');
@@ -545,7 +550,7 @@ describe('the levelling trail (build ticket 07)', () => {
   });
 
   test('the class list holds each class with its archetypes, and one row takes both as one change', async () => {
-    await openPlanner({ scores: abilityScores(SCORES), race: DWARF, levels: [], picks: [] });
+    await openPlanner({ scores: abilityScores(SCORES), race: DWARF, alignment: 'TrueNeutral', levels: [], picks: [] });
     filterAndTake('two-handed fighter');
     expect(levelRows()).toBe(1);
     expect(document.querySelector('.planner-undo__what')?.textContent).toBe('Level 1 as Fighter · Two-Handed Fighter');
@@ -587,7 +592,7 @@ describe('the levelling trail (build ticket 07)', () => {
   );
 
   test('a Build whose scores are set opens past them', async () => {
-    await openPlanner({ scores: abilityScores(SCORES), race: DWARF, levels: [], picks: [] });
+    await openPlanner({ scores: abilityScores(SCORES), race: DWARF, alignment: 'TrueNeutral', levels: [], picks: [] });
     expect(hereTitle()).toBe('Begin · choose a first class');
   });
 
