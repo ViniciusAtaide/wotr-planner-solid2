@@ -473,6 +473,7 @@ export const cites = {
     'UnitLogic/ClassData.cs ClassData',
   ],
   'Walker.ascend': ['UnitLogic/UnitProgressionData.cs MaxCharacterLevel'],
+  MAX_MYTHIC_RANK: ['UnitLogic/UnitProgressionData.cs CanLevelUpMythic'],
   'Walker.maxCharacterLevel': ['UnitLogic/UnitProgressionData.cs MaxCharacterLevel'],
   'Walker.keepAspectsOn': [
     'UnitLogic/ActivatableAbilities/ActivatableAbility.cs TryStart',

@@ -15,6 +15,7 @@ export type Rule =
   | 'SelectClass.Check:IsMythic'
   | 'BlueprintCharacterClass.MeetsPrerequisites'
   | 'UnitProgressionData.MaxCharacterLevel'
+  | 'UnitProgressionData.CanLevelUpMythic'
   | 'adr0003.rankOrder'
   | 'map31.legendEndsAscensions'
   | 'map31.devilFrom'

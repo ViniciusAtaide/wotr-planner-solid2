@@ -355,6 +355,8 @@ export function ruleText(w: Wording, f: FailedRule): string {
       return f.unmet?.length ? "The class's prerequisites aren't met." : 'The class is at its highest level.';
     case 'UnitProgressionData.MaxCharacterLevel':
       return `The character level stops at ${v(f.needed)}.`;
+    case 'UnitProgressionData.CanLevelUpMythic':
+      return `Mythic ranks stop at ${v(f.needed)}.`;
     case 'adr0003.rankOrder':
       return `Mythic ranks come in order: this one is taken at level ${v(f.found)}, before the rank before it (level ${v(f.needed)}).`;
     case 'map31.legendEndsAscensions':

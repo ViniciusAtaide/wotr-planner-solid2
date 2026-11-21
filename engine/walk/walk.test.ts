@@ -1168,4 +1168,19 @@ describe('the areas ticket 03 left untested (ticket 03c)', { timeout: 30_000 }, 
     expect(refusedDeity(withDeity(ASMODEUS))).toEqual(['BlueprintFeatureSelection.CanSelect:MeetsPrerequisites']);
     expect(refusedDeity({ ...withDeity(ASMODEUS), alignment: 'LawfulEvil' })).toEqual([]);
   });
+
+  it('refuses an eleventh Mythic rank: the game stops Mythic level-ups at 10 (MCP QA)', () => {
+    const ranks = jackInTheGreen.build.ranks ?? [];
+    expect(ranks.length).toBe(10);
+    const eleven: Build = { ...jackInTheGreen.build, ranks: [...ranks, { ...ranks[9]! }] };
+    expect(walk(data, eleven, G).failures.filter((f) => 'rank' in f.place)).toEqual([
+      expect.objectContaining({
+        place: { rank: 11 },
+        rule: 'UnitProgressionData.CanLevelUpMythic',
+        found: 11,
+        needed: 10,
+      }),
+    ]);
+    expect(walk(data, jackInTheGreen.build, G).failures.filter((f) => 'rank' in f.place)).toEqual([]);
+  });
 });

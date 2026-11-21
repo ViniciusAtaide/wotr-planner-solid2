@@ -219,4 +219,12 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     ]);
     expect(namesIn(e.data, [COORDINATED_FEATURE]).get(COORDINATED_FEATURE)).toBe('Coordinated Maneuvers');
   });
+
+  it("refuses a Mythic rank past 10 in level_up, in R's words (MCP QA)", async () => {
+    const jack = await encodeBuild(e.data, jackInTheGreen.build);
+    const lastRank = jackInTheGreen.build.ranks?.at(-1)?.class ?? '';
+    const r = await level_up(e, { code: jack, class: lastRank });
+    expect(r).toMatchObject({ refused: true });
+    expect(JSON.stringify(r)).toContain('Mythic ranks stop at 10.');
+  });
 });

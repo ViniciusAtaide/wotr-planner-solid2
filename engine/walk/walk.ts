@@ -233,6 +233,8 @@ const AEON_GAZE_SECOND_SELECTION = '7d498e034d18ca94baea19d7edee7403';
 const AEON_GAZE_THIRD_SELECTION = '0bec49f67ecb49a5826fcfefb9408a35';
 const SWITCH_TO: ReadonlySet<Guid> = new Set([DEVIL_MYTHIC_CLASS, LEGEND_CLASS]);
 const SWITCH_RANK = 8;
+
+export const MAX_MYTHIC_RANK = 10;
 const DEVIL_DROPS: readonly Guid[] = [DRAGON_COMPANION, AEON_GAZE_FEATURE, AEON_GAZE_FEATURE_EXTRA_GAZE];
 const DEVIL_DROPPED_SELECTIONS: readonly Guid[] = [
   AEON_GAZE_FIRST_SELECTION,
@@ -940,6 +942,15 @@ class Walker {
         rule: 'UnitProgressionData.MaxCharacterLevel',
         found: this.unit.characterLevel + 1,
         needed: max,
+      });
+    }
+    if (rank !== undefined && rank > MAX_MYTHIC_RANK) {
+      out.push({
+        choice: 'rank',
+        subject: cls,
+        rule: 'UnitProgressionData.CanLevelUpMythic',
+        found: rank,
+        needed: MAX_MYTHIC_RANK,
       });
     }
     if (bp.IsMythic && this.ranksEnded) {
