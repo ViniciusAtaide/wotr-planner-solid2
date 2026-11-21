@@ -21,7 +21,7 @@ import {
   type ToolRefusal,
 } from '~engine/mcp';
 import { picker, type OptionStatus } from '~engine/pickers';
-import { GROUP_WORDS } from '~engine/describe';
+import { GROUP_WORDS, stackWords, topicWords } from '~engine/links';
 import { buildNameLength, linkDidNotOpen, nameOf } from '~engine/refusals';
 import { walk } from '~engine/walk';
 
@@ -34,7 +34,7 @@ import { PickerOption } from '../design';
 import { pageTitle } from './BuildName';
 import { ChoiceDialog } from './ChoiceDialog';
 import { GearStep, placeWords } from './GearStep';
-import { stackWords, summaryFor, topicWords } from './option-detail';
+import { summaryFor } from './option-detail';
 import { LevelEditor, MythicStep, NextLevelStep, RankEditor, SkillsStep, SlotStep, type TrailApi } from './steps';
 import Trail from './Trail';
 import { reduceTrail, TRAIL_START, type TrailState } from './trail-state';

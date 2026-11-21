@@ -1,19 +1,9 @@
 import { createContext } from 'solid-js';
 import type { Guid } from '~engine/data';
-import {
-  descriptorWord,
-  GROUP_WORDS,
-  NO_SUMMARY,
-  summaryLabels,
-  summaryText,
-  words,
-  writtenSummary,
-  type Label,
-} from '~engine/describe';
+import { NO_SUMMARY, summaryLabels, summaryText, writtenSummary, type Label } from '~engine/describe';
 import type { GrantIndex } from '~engine/grants';
-import type { SharedTopic, StackClash, Synergy, Topic } from '~engine/links';
+import { sharedWords, stackWords, type Synergy } from '~engine/links';
 import type { CheckedData } from '~engine/load';
-import { listNames, statName } from '~engine/refusals';
 
 export interface OptionSummary {
   readonly text: string | undefined;
@@ -36,32 +26,6 @@ export function summaryFor(data: CheckedData, G: GrantIndex, guid: Guid): Option
   };
   known.set(guid, made);
   return made;
-}
-
-export function topicWords(t: Topic): string {
-  switch (t.kind) {
-    case 'ability':
-      return statName(t.stat);
-    case 'school':
-      return `${t.school} spells`;
-    case 'weapon':
-      return words(t.category).replace(/^./, (c) => c.toUpperCase());
-    case 'group':
-      return GROUP_WORDS[t.group];
-    case 'energy':
-      return words(t.energy);
-    case 'descriptor':
-      return `${descriptorWord(t.descriptor)} effects`;
-  }
-}
-
-export function sharedWords(data: CheckedData, s: SharedTopic): string {
-  return `Shares ${topicWords(s.topic)} with ${listNames(data, s.with).join(', ')}`;
-}
-
-export function stackWords(data: CheckedData, c: StackClash): string {
-  const kind = words(c.descriptor);
-  return `Its ${kind} bonus to ${statName(c.stat)} won't stack with ${listNames(data, c.with).join(', ')}`;
 }
 
 export function synergyLines(data: CheckedData, synergy: Synergy | undefined): readonly string[] {
