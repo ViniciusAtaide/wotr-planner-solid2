@@ -77,6 +77,12 @@ frame), so the first rows show at once.
 **Focus**: when a new step arrives and focus was lost with the old one (on the page body), it lands on the step's
 first control: the filter under a fine pointer, else its first button, never "Back to the next choice".
 
+**First draw** (build ticket 11): the page opens at the top with nothing focused, so the first Tab reaches the top
+bar. The step region's scroll into view and focus, and a filter's own focus, wait until the step has changed since the
+page loaded (`StepArrived`, a context `Trail` provides; sticky once true), and the browser's scroll restoration is
+manual, so a reload starts at the top too. The scroll and focus run in the next animation frame, after paint. A
+list's marked row is kept in view by scrolling the list box only (`markInView`), never the page.
+
 **Capped lists, closed choices hidden** (user, 2026-11-21): every choice list (a slot's pick list, the race,
 background, class, archetype and Mythic path lists, and the Gear items) scrolls inside a capped height
 (`trail-scroll`, `SCROLL_STYLE`: `max-height: var(--choice-list-max)`, `overflow-y: auto`), at least six and a half

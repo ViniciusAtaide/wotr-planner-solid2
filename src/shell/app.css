@@ -25,6 +25,20 @@ body {
   text-decoration: none;
 }
 
+.app-header__short {
+  display: none;
+}
+
+@media (max-width: 599px) {
+  .app-header__full {
+    display: none;
+  }
+
+  .app-header__short {
+    display: inline;
+  }
+}
+
 .app-main {
   min-height: 100vh;
   padding: 0;

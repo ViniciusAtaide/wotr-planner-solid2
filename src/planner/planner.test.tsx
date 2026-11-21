@@ -1165,6 +1165,23 @@ describe('QA pass 1', () => {
     expect(rule('.trail-stat')).toContain('min-width: 0');
   });
 
+  test('the page opens with nothing focused or scrolled, and the step takes both once it moves (ticket 11)', async () => {
+    const scrolled = vi.fn();
+    Element.prototype.scrollIntoView = scrolled;
+    try {
+      await openPlanner(cleaver);
+      expect(document.activeElement).toBe(document.body);
+      expect(scrolled).not.toHaveBeenCalled();
+      const option = document.querySelector<HTMLElement>('.trail-here button.ww-option');
+      fireEvent.click(option ?? document.body);
+      flush();
+      await waitFor(() => expect(scrolled).toHaveBeenCalled());
+      expect(document.activeElement?.closest('.trail-here')).not.toBeNull();
+    } finally {
+      Reflect.deleteProperty(Element.prototype, 'scrollIntoView');
+    }
+  });
+
   test('Gear places read as words with their number', () => {
     expect(placeWords('Ring1')).toBe('Ring 1');
     expect(placeWords('MainHand')).toBe('Main Hand');
