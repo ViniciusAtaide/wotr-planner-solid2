@@ -70,6 +70,12 @@ once confirmed, the page lands on the first pick it cleared.
 
 **Icons**: a feat's chip and its row in a pick list carry its category's icon (`feat-category.ts`).
 
+**A feat held for a spell** (map 22, QA pass 4): spells aren't in the planner yet, so a feat whose parameter is a spell
+(`SpellSpecialization`, `LearnSpell`) can only be held without one, as the gold Build holds Spell Specialization at
+level 11. The walk doesn't count such a pick, so the trail credits it itself (`spellPick`, filled in by `shownSlots`):
+the slot is no open step, its chip and the sheet name the feat, and the chip and the slot's list say the spell isn't in
+the planner yet (`SPELL_NOT_MODELLED`).
+
 **Lists**: a pick list is open, sorted by name, with a filter above it that takes focus only under a fine pointer (so a
 phone keeps its keyboard down); the filter matches each typed word on its own (`matches`: "tiefling rak" finds
 Rakshasa-Spawn) and says "No matches for …" when nothing does. In the filter, Up and Down move a mark over the open rows

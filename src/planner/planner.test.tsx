@@ -37,7 +37,7 @@ import { GearStep, placeWords } from './GearStep';
 import { summaryFor } from './option-detail';
 import { LevelEditor, MythicStep, NextLevelStep, RankEditor, SkillsStep, SlotStep, type TrailApi } from './steps';
 import Trail from './Trail';
-import { reduceTrail, TRAIL_START, type TrailState } from './trail-state';
+import { nextStep, reduceTrail, SPELL_NOT_MODELLED, spellPick, TRAIL_START, type TrailState } from './trail-state';
 import type { Selection } from './workspace-state';
 import { optionName } from './words';
 
@@ -1822,6 +1822,22 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
     await new Promise((r) => setTimeout(r, 30));
     flush();
     expect(dialogBox()).toBeNull();
+  });
+
+  test('a feat held for a spell shows as held, with map 22’s note, and is no open step (QA pass 4)', () => {
+    const build = jackInTheGreen.build;
+    const slot = build.picks.find((p) => 'level' in p.slot.place && p.slot.place.level === 11)?.slot;
+    if (slot === undefined) throw new Error('no level 11 pick');
+    const view = { data: e.data, build, walk: walk(e.data, build, e.G) };
+    expect(spellPick(view, slot)?.param).toBeUndefined();
+    expect(nextStep(view, { skillsLeft: new Set(), mythicLater: undefined })).not.toEqual({ kind: 'slot', slot });
+    const shown = trailOf(build);
+    const chip = [...shown.querySelectorAll<HTMLElement>('.trail-chip')].find((c) =>
+      c.textContent?.includes('Spell Specialization'),
+    );
+    expect(chip?.textContent).toContain('Spell not in the planner yet');
+    expect(chip?.getAttribute('title')).toBe(SPELL_NOT_MODELLED);
+    expect(chip?.classList.contains('trail-chip--empty')).toBe(false);
   });
 
   test('a choice row is one compact line, 44 px, or 60 px in a list whose rows carry a second line', () => {

@@ -569,6 +569,12 @@ html.choice-open .planner-undo:not(:empty) {
   color: var(--ink-subtle);
 }
 
+.trail-chip__note {
+  color: var(--ink-muted);
+  font-size: 11px;
+  line-height: 14px;
+}
+
 .trail-chip--empty {
   border-style: dashed;
   color: var(--ink-muted);

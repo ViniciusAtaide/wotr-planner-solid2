@@ -1,4 +1,13 @@
-import { placeKey, slotKey, type Alignment, type Build, type Place, type SkillRanks, type SlotId } from '~engine/build';
+import {
+  placeKey,
+  slotKey,
+  type Alignment,
+  type Build,
+  type Pick as BuildPick,
+  type Place,
+  type SkillRanks,
+  type SlotId,
+} from '~engine/build';
 import type { CheckedData } from '~engine/load';
 import { expectedLevel } from '~engine/mcp';
 import { BACKGROUNDS_BASE_SELECTION, characterWideSlots, heritageSlotIn, namesInList } from '~engine/pickers';
@@ -100,8 +109,29 @@ export interface TrailView {
   readonly walk: Walk;
 }
 
+export const SPELL_NOT_MODELLED = 'Its spell isn’t in the planner yet (map 22).';
+
+export function isSpellFeat(data: CheckedData, feature: string): boolean {
+  const bp = data.blueprints.get(feature);
+  return (
+    bp?.$type === 'BlueprintParametrizedFeature' &&
+    (bp.ParameterType === 'SpellSpecialization' || bp.ParameterType === 'LearnSpell')
+  );
+}
+
+export function spellPick(t: TrailView, slot: SlotId): BuildPick | undefined {
+  const pick = t.build.picks.find((p) => slotKey(p.slot) === slotKey(slot));
+  return pick !== undefined && pick.param === undefined && isSpellFeat(t.data, pick.feature) ? pick : undefined;
+}
+
 export function shownSlots(t: TrailView): readonly OpenedSlot[] {
-  return t.walk.slots.filter((s) => t.data.blueprints.get(s.id.selection)?.$type !== 'BlueprintParametrizedFeature');
+  return t.walk.slots
+    .filter((s) => t.data.blueprints.get(s.id.selection)?.$type !== 'BlueprintParametrizedFeature')
+    .map((s) => {
+      if (s.pick !== undefined) return s;
+      const held = spellPick(t, s.id);
+      return held === undefined ? s : { ...s, pick: held };
+    });
 }
 
 export function characterSlots(t: TrailView): readonly OpenedSlot[] {

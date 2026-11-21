@@ -15,7 +15,7 @@ import { clashLines, OptionDetails, summaryFor, synergyLines, type OptionDetail 
 import { childSlotOf, pickRows, rowMembers, rowOpen, type PickRow } from './nested-options';
 import type { NonEmpty } from './planner-state';
 import type { TrailApi } from './steps';
-import { slotLabel } from './trail-state';
+import { isSpellFeat, slotLabel, SPELL_NOT_MODELLED } from './trail-state';
 import { scrollToIndex, WindowedRows } from './WindowedRows';
 import { shownName } from './words';
 
@@ -359,6 +359,15 @@ export function PickStep(props: PickStepProps) {
           open={panel.shown()}
           onArrive={() => panel.show()}
         />
+        <Show
+          when={
+            current() !== undefined && current()?.param === undefined && isSpellFeat(data(), current()?.feature ?? '')
+          }
+        >
+          <p class="trail-note">
+            {currentName()} is held. {SPELL_NOT_MODELLED}
+          </p>
+        </Show>
         <Show when={props.field === undefined && panel.collapsed() && currentName()}>
           {(n) => <PickerOption name={n()} status="open" selected onPick={() => panel.show()} />}
         </Show>
