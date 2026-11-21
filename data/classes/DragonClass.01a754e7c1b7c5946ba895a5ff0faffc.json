@@ -12,6 +12,8 @@
   ],
   "Components": [],
   "DontAddCasterLevels": false,
+  "HideIfRestricted": false,
+  "HideInUI": false,
   "HitDie": "D12",
   "IsMythic": false,
   "PrestigeClass": false,

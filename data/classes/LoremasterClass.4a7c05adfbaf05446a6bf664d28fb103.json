@@ -76,6 +76,8 @@
     }
   ],
   "DontAddCasterLevels": false,
+  "HideIfRestricted": false,
+  "HideInUI": false,
   "HitDie": "D6",
   "IsMythic": false,
   "PrestigeClass": true,

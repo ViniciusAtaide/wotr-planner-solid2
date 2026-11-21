@@ -91,6 +91,8 @@
     }
   ],
   "DontAddCasterLevels": false,
+  "HideIfRestricted": false,
+  "HideInUI": false,
   "HitDie": "D8",
   "IsMythic": true,
   "PrestigeClass": false,

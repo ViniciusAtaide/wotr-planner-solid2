@@ -228,6 +228,61 @@ describe('what character creation offers (comparison bug 5)', { timeout: 30_000 
     expect(laterOnly).toBeGreaterThan(0);
   }, 120_000);
 
+  it("judges each archetype at the class's paused walk, as the walk judges it taken with the class there", () => {
+    const short: Build = {
+      ...jackInTheGreen.build,
+      levels: jackInTheGreen.build.levels.slice(0, 10),
+      ranks: (jackInTheGreen.build.ranks ?? []).filter((r) => r.level <= 10),
+      picks: jackInTheGreen.build.picks.filter((p) =>
+        'level' in p.slot.place ? p.slot.place.level <= 10 : p.slot.place.rank <= 4,
+      ),
+    };
+    const cases: [string, Build, Place][] = [
+      ['Jack', jackInTheGreen.build, { level: 3 }],
+      ['Enforcer', enforcer.build, { level: 3 }],
+      ['Jack to 10', short, { level: 11 }],
+    ];
+    const differ: string[] = [];
+    let judged = 0;
+    for (const [who, b, place] of cases) {
+      const p = classPicker(data, b, place, G);
+      for (const o of p?.options ?? []) {
+        if (o.closed !== undefined || (p?.unit.classLevel(o.class) ?? 0) > 0) continue;
+        for (const a of o.archetypes) {
+          const level = (place as { level: number }).level;
+          const placed: Build = {
+            ...b,
+            levels:
+              level > b.levels.length
+                ? [...b.levels, { class: o.class }]
+                : b.levels.map((l, i) => (i === level - 1 ? { ...l, class: o.class } : l)),
+            classChoices: { ...b.classChoices, [o.class]: { archetypes: [a.archetype] } },
+          };
+          const here = walk(data, placed, G).failures.filter(
+            (f) => f.choice === 'archetype' && f.subject === a.archetype && placeKey(f.place) === placeKey(place),
+          );
+          judged++;
+          if ((a.closed !== undefined) !== here.length > 0) differ.push(`${who} ${placeKey(place)} ${a.archetype}`);
+        }
+      }
+    }
+    expect(judged).toBeGreaterThan(50);
+    expect(differ).toEqual([]);
+  }, 120_000);
+
+  it("closes an archetype the Enforcer's race can't take, and hides a class the game shows only when its prerequisites hold", () => {
+    const SORCERER = 'b3a505fb61437dc4097f43c3f8f9a4cf';
+    const NINE_TAILED_HEIR = '65a630aa291f65047b90a2af5df75d83';
+    const ELDRITCH_SCION_CLASS = 'f5b8c63b141b2f44cbb8c2d7579c34f5';
+    const p = classPicker(data, enforcer.build, { level: 3 }, G);
+    const heir = p?.options.find((o) => o.class === SORCERER)?.archetypes.find((a) => a.archetype === NINE_TAILED_HEIR);
+    expect(heir?.closed?.rule).toBe('BlueprintArchetype.MeetsPrerequisites');
+    const scion = p?.options.find((o) => o.class === ELDRITCH_SCION_CLASS);
+    expect(scion?.closed?.rule).toBe('BlueprintCharacterClass.MeetsPrerequisites');
+    expect(scion?.shown).toBe(false);
+    expect(p?.options.find((o) => o.class === SORCERER)?.shown).toBe(true);
+  });
+
   it('names each option bare, and qualifies it only when another option in the same list shares its name', () => {
     const ALLIED_SPELLCASTER = '9093ceeefe9b84746a5993d619d7c86f';
     const ALLIED_SPELLCASTER_BUFF = '3de0359d9480cb549ab6cf1eac51f9dc';

@@ -122,6 +122,8 @@ export const FIELD_DEFAULTS: FieldDefaults = {
   BlueprintCharacterClass: {
     ClassSkills: [],
     DontAddCasterLevels: false,
+    HideIfRestricted: false,
+    HideInUI: false,
     IsMythic: false,
     m_Archetypes: [],
     m_IsHigherMythic: false,

@@ -25,6 +25,8 @@
     }
   ],
   "DontAddCasterLevels": false,
+  "HideIfRestricted": false,
+  "HideInUI": false,
   "HitDie": "D10",
   "IsMythic": false,
   "PrestigeClass": false,

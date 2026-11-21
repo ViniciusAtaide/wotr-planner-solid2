@@ -333,6 +333,7 @@ export interface PausedClassChoice {
   readonly place: Place;
   readonly unit: Unit;
   judge(cls: Guid): readonly FailedRule[];
+  judgeArchetype(cls: Guid, archetype: Guid): FailedRule | undefined;
 }
 
 interface ClassPause {
@@ -799,7 +800,18 @@ class Walker {
           break;
         case 'Class':
           if (this.classPause !== undefined && placeKey(this.classPause.place) === placeKey(place)) {
-            throw new ClassPaused({ place, unit: this.unit, judge: (cls) => this.classRefusals(cls) });
+            throw new ClassPaused({
+              place,
+              unit: this.unit,
+              judge: (cls) => this.classRefusals(cls),
+              judgeArchetype: (cls, archetype) =>
+                this.archetypeRefusal(
+                  cls,
+                  archetype,
+                  this.unit.classLevel(cls) + 1,
+                  this.unit.classData(cls)?.archetypes ?? [],
+                ),
+            });
           }
           this.selectClass(choice.class);
           break;
@@ -1141,6 +1153,30 @@ class Walker {
     return j.ok ? undefined : { rule: 'BlueprintCharacterClass.MeetsPrerequisites', unmet: j.unmet };
   }
 
+  archetypeRefusal(cls: Guid, archetype: Guid, classLevel: number, held: readonly Guid[]): FailedRule | undefined {
+    const bp = this.unit.bp(cls);
+    const a = this.unit.bp(archetype);
+    if (
+      bp?.$type !== 'BlueprintCharacterClass' ||
+      a?.$type !== 'BlueprintArchetype' ||
+      !bp.m_Archetypes.some((r) => refGuid(r) === archetype)
+    ) {
+      return { rule: 'AddArchetype.Check' };
+    }
+    const progression = this.unit.progression(refGuid(bp.m_Progression) ?? '');
+    if (progression === undefined) return { rule: 'AddArchetype.Check' };
+    if (classLevel > minFeatureLevel(a) || !canAddArchetype(this.unit, progression, held, archetype)) {
+      return { rule: 'UnitProgressionData.CanAddArchetype' };
+    }
+    return this.archetypePrerequisites(archetype);
+  }
+
+  archetypePrerequisites(archetype: Guid): FailedRule | undefined {
+    const a = this.unit.bp(archetype) as BlueprintArchetype;
+    const j = archetypeMeetsPrerequisites(a, this.context(undefined, archetype));
+    return j.ok ? undefined : { rule: 'BlueprintArchetype.MeetsPrerequisites', unmet: j.unmet };
+  }
+
   addArchetypes(): void {
     const state = this.level;
     const cls = state.selectedClass;
@@ -1150,27 +1186,17 @@ class Walker {
     const data = this.unit.classData(cls);
     if (progression === undefined || data === undefined) return;
     for (const archetype of this.build.classChoices?.[cls]?.archetypes ?? []) {
-      const a = this.unit.bp(archetype) as BlueprintArchetype | undefined;
-      const refuse = (refusal: FailedRule) => this.fail({ choice: 'archetype', subject: archetype, ...refusal });
-      if (a?.$type !== 'BlueprintArchetype' || !bp.m_Archetypes.some((r) => refGuid(r) === archetype)) {
-        refuse({ rule: 'AddArchetype.Check' });
-        continue;
-      }
-      if (data.level > minFeatureLevel(a) || !canAddArchetype(this.unit, progression, data.archetypes, archetype)) {
-        refuse({ rule: 'UnitProgressionData.CanAddArchetype' });
-        continue;
-      }
-      const judged = (): FailedRule | undefined => {
-        const j = archetypeMeetsPrerequisites(a, this.context(undefined, archetype));
-        return j.ok ? undefined : { rule: 'BlueprintArchetype.MeetsPrerequisites', unmet: j.unmet };
-      };
       const reads = this.unit.gearReads;
-      const refusal = judged();
+      const refusal = this.archetypeRefusal(cls, archetype, data.level, data.archetypes);
       if (refusal !== undefined) {
-        refuse(refusal);
+        this.fail({ choice: 'archetype', subject: archetype, ...refusal });
         continue;
       }
-      this.markGearDependent({ choice: 'archetype', subject: archetype }, judged, reads);
+      this.markGearDependent(
+        { choice: 'archetype', subject: archetype },
+        () => this.archetypePrerequisites(archetype),
+        reads,
+      );
       data.archetypes.push(archetype);
       data.spellbook = classSpellbook(this.unit, cls, data.archetypes);
       this.unit.progressionData(progression.guid).archetypes.push(archetype);

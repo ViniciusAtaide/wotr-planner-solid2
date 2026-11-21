@@ -1363,6 +1363,8 @@ export interface BlueprintCharacterClass extends BlueprintBase {
   readonly IsMythic: boolean;
   readonly DontAddCasterLevels: boolean;
   readonly m_IsHigherMythic: boolean;
+  readonly HideIfRestricted: boolean;
+  readonly HideInUI: boolean;
   readonly m_BaseAttackBonus: Ref;
   readonly m_FortitudeSave: Ref;
   readonly m_ReflexSave: Ref;

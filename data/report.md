@@ -3643,6 +3643,7 @@ Fields some blueprints omit, given their C# initializer (`orDefault` in the allo
 - AddContextStatBonus.HasMinimal: 6 of 12
 - AddContextStatBonus.Minimal: 6 of 12
 - BlueprintCharacterClass.DontAddCasterLevels: 40 of 59
+- BlueprintCharacterClass.HideInUI: 20 of 59
 - BlueprintCharacterClass.m_IsHigherMythic: 12 of 59
 - BlueprintFeatureSelection.ExceptWhiteListed: 284 of 443
 - BlueprintParametrizedFeature.IgnoreParameterFeaturePrerequisites: 18 of 122
