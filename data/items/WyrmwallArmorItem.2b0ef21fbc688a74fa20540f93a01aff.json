@@ -7,5 +7,7 @@
     "!bp_84d191a748edef84ba30c13b8ab83bd9",
     "!bp_92bf74444378fa0439b55932a89fd914"
   ],
-  "m_Type": "!bp_5f0f4b6e480e7054b8592b5a8b55854a"
+  "m_Type": "!bp_5f0f4b6e480e7054b8592b5a8b55854a",
+  "name": "Tower Shield (armor)",
+  "qualifier": "armor"
 }

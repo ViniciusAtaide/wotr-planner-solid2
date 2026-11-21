@@ -6,5 +6,6 @@
   "guid": "e7d3a58b4eb3d7e419ab4cc40f283a32",
   "m_Enchantments": [],
   "m_SecondWeapon": null,
-  "m_Type": "!bp_a492410f3d65f744c892faf09daad84a"
+  "m_Type": "!bp_a492410f3d65f744c892faf09daad84a",
+  "name": "Heavy Pick"
 }

@@ -82,7 +82,7 @@ describe('data/', { timeout: 30_000 }, () => {
     });
 
     it('writes no description as a name', () => {
-      expect(blueprints.get('1050ae1293421e24f84a0208fdf0d114')?.name).toBeUndefined();
+      expect(blueprints.get('1050ae1293421e24f84a0208fdf0d114')?.name).toBe('Holy Dwarven Urgrosh +3');
       expect(items.filter((b) => b.name !== undefined && /[{}]/.test(b.name))).toEqual([]);
     });
   });

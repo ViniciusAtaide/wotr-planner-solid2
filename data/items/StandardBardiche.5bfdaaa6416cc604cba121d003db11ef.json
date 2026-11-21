@@ -6,5 +6,6 @@
   "guid": "5bfdaaa6416cc604cba121d003db11ef",
   "m_Enchantments": [],
   "m_SecondWeapon": null,
-  "m_Type": "!bp_b1cbf457fd471d148b39ae56667f405a"
+  "m_Type": "!bp_b1cbf457fd471d148b39ae56667f405a",
+  "name": "Bardiche"
 }

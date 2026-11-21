@@ -557,6 +557,8 @@ describe('which options the level-up screen lists', { timeout: 30_000 }, () => {
     const offHand = gearOptions(data, 'OffHand').map((bp) => bp.name);
     expect(offHand.filter((n) => n === 'Masterwork Spiked Heavy Shield')).toHaveLength(1);
     expect(offHand.filter((n) => n === 'Masterwork Gnome Hooked Hammer')).toHaveLength(1);
+    expect(gearOptions(data, 'MainHand').map((bp) => bp.name)).toContain('Longsword');
+    expect(gearOptions(data, 'Armor').map((bp) => bp.name)).toContain('Chainshirt');
   });
 
   it('refuses a part of another item worn on its own, as no Gear (QA pass 5)', () => {

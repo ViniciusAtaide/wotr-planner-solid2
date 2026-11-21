@@ -21,6 +21,16 @@ export const cites = {
   conditionsChecker: ['ElementsSystem/ConditionsChecker.cs Check (Operation, Conditions)'],
   levelEntries: ['Blueprints/Classes/LevelEntry.cs LevelEntry'],
   WORN_SLOT: ['Blueprints/Items/BlueprintItem.cs CollectEnchantments'],
+  composedItemName: [
+    'Blueprints/Items/Weapons/BlueprintItemWeapon.cs Name',
+    'Blueprints/Items/Weapons/BlueprintItemWeapon.cs GetEnchantmentPrefixes',
+    'Blueprints/Items/Weapons/BlueprintItemWeapon.cs GetEnchantmentSuffixes',
+    'Blueprints/Items/Armors/BlueprintItemArmor.cs Name',
+    'Blueprints/Items/Shields/BlueprintItemShield.cs Name',
+    'Blueprints/Items/Weapons/BlueprintWeaponType.cs DefaultName (m_DefaultNameText)',
+    'Blueprints/Items/Armors/BlueprintArmorType.cs DefaultName (m_DefaultNameText)',
+    'Blueprints/Items/Ecnchantments/BlueprintItemEnchantment.cs Prefix (m_Prefix)',
+  ],
   ARMOR_TYPE_FIELDS: [
     'Blueprints/Items/Weapons/BlueprintWeaponType.cs Enchantments (m_Enchantments)',
     'Blueprints/Items/Armors/BlueprintArmorType.cs Enchantments (m_Enchantments)',

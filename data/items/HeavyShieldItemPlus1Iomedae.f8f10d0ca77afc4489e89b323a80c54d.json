@@ -4,5 +4,7 @@
   "assetName": "HeavyShieldItemPlus1Iomedae",
   "guid": "f8f10d0ca77afc4489e89b323a80c54d",
   "m_ArmorComponent": "!bp_7e7f7395ffad3d843a8eb6aaafd47022",
-  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393"
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Heavy Shield (+1)",
+  "qualifier": "+1"
 }

@@ -4,5 +4,6 @@
   "assetName": "HeavyShield",
   "guid": "f4cef3ba1a15b0f4fa7fd66b602ff32b",
   "m_ArmorComponent": "!bp_7a126271f91b82741aa0086463befd1b",
-  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393"
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Heavy Shield"
 }

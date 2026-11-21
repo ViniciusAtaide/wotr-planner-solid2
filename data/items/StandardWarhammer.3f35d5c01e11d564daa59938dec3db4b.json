@@ -6,5 +6,6 @@
   "guid": "3f35d5c01e11d564daa59938dec3db4b",
   "m_Enchantments": [],
   "m_SecondWeapon": null,
-  "m_Type": "!bp_fac41e149f49cba4a8e06ce39b41a6fa"
+  "m_Type": "!bp_fac41e149f49cba4a8e06ce39b41a6fa",
+  "name": "Warhammer"
 }

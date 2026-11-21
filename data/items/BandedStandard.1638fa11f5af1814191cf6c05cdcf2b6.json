@@ -15,5 +15,6 @@
   "assetName": "BandedStandard",
   "guid": "1638fa11f5af1814191cf6c05cdcf2b6",
   "m_Enchantments": [],
-  "m_Type": "!bp_da1b160cd13f16a429499b96636f6ed9"
+  "m_Type": "!bp_da1b160cd13f16a429499b96636f6ed9",
+  "name": "Banded Mail"
 }

@@ -10,5 +10,6 @@
   "assetName": "HideStandard",
   "guid": "385be51e5706a55418384f70d8341371",
   "m_Enchantments": [],
-  "m_Type": "!bp_7a01292cef39bf2408f7fae7a9f47594"
+  "m_Type": "!bp_7a01292cef39bf2408f7fae7a9f47594",
+  "name": "Hide Armor"
 }

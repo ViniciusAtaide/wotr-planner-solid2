@@ -10,6 +10,7 @@ import { noGrantorProblems } from './no-grantor';
 import { unreachableProblems } from './unreachable';
 import { notNeeded, notNeededFamilies } from './not-needed';
 import { displayName, neutralName, sharedKeyCollector } from './names';
+import { composedItemName } from './item-names';
 import { applyPatch } from './overrides';
 import { qualifyGear, type GearNames } from './gear-names';
 import { qualifyNames, type Qualified } from './qualify';
@@ -271,6 +272,10 @@ function makeFilter(
       const entry = entries.get(type)!;
       if (/[/\\]/.test(assetName)) into.problems.push(`${assetName} ${guid}: the asset name can't be a file name`);
       let name = entry.name === null ? undefined : displayName(json[entry.name], text, sharedKeys);
+      name ??= composedItemName(type, json, {
+        json: (g) => (g === undefined ? undefined : parsed.get(g)?.json),
+        text: (field) => displayName(field, text, sharedKeys),
+      });
       const neutral = name === undefined ? undefined : neutralName(name);
       if (neutral !== undefined) {
         templates.push(`${assetName} ${guid}: "${name}" → "${neutral}"`);

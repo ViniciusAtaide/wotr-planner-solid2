@@ -4,5 +4,6 @@
   "assetName": "HeavyShieldArmorItem",
   "guid": "7a126271f91b82741aa0086463befd1b",
   "m_Enchantments": [],
-  "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6"
+  "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6",
+  "name": "Heavy Shield"
 }

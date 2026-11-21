@@ -6,5 +6,6 @@
   "guid": "ada85dae8d12eda4bbe6747bb8b5883c",
   "m_Enchantments": [],
   "m_SecondWeapon": null,
-  "m_Type": "!bp_629736dabac7f9f4a819dc854eaed2d6"
+  "m_Type": "!bp_629736dabac7f9f4a819dc854eaed2d6",
+  "name": "Quarterstaff"
 }

@@ -19,3 +19,7 @@ On the build's data, 708 names are shared among reachable blueprints. The three 
 
 One blueprint in a group may stay bare when the other labels are distinct. See [map ticket 27](../../.scratch/wotr-planner/issues/27-qualifying-shared-names-per-blueprint.md).
 
+
+## Note 2026-11-21: names the game composes from display names are display names
+
+An item whose own display name is empty is named by the game from other display strings: a weapon from its type's default name with its enchantments' prefixes and suffixes ("Cold Iron Longsword +1"), an armour from its type's default name, a shield from its armour half. The importer ports those `Name` getters (`BlueprintItemWeapon`, `BlueprintItemArmor`, `BlueprintItemShield`) and commits the result as `name`, like any display name. It only joins strings the game itself joins, so it never invents text. Coordinator, on the user's standing instruction; build ticket 12.

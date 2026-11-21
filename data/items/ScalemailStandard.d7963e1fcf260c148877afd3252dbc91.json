@@ -15,5 +15,6 @@
   "assetName": "ScalemailStandard",
   "guid": "d7963e1fcf260c148877afd3252dbc91",
   "m_Enchantments": [],
-  "m_Type": "!bp_f95c21c70a5677346b75e447c7225ba6"
+  "m_Type": "!bp_f95c21c70a5677346b75e447c7225ba6",
+  "name": "Scalemail"
 }

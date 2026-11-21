@@ -4,5 +4,6 @@
   "assetName": "HeavyShieldIomedae",
   "guid": "bcd7eb161e664ff46b8b262a8f9810e0",
   "m_ArmorComponent": "!bp_7a126271f91b82741aa0086463befd1b",
-  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393"
+  "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
+  "name": "Heavy Shield"
 }

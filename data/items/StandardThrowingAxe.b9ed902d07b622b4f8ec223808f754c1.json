@@ -6,5 +6,6 @@
   "guid": "b9ed902d07b622b4f8ec223808f754c1",
   "m_Enchantments": [],
   "m_SecondWeapon": null,
-  "m_Type": "!bp_ca131c71f4fefcb48b30b5991520e01d"
+  "m_Type": "!bp_ca131c71f4fefcb48b30b5991520e01d",
+  "name": "Throwing Axe"
 }

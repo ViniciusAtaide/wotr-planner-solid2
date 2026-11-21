@@ -15,5 +15,6 @@
   "assetName": "FullplateStandard",
   "guid": "559b0b6f194656c428c403a000ceee78",
   "m_Enchantments": [],
-  "m_Type": "!bp_afd9065539b3ac5499eddca923654c4b"
+  "m_Type": "!bp_afd9065539b3ac5499eddca923654c4b",
+  "name": "Full Plate"
 }

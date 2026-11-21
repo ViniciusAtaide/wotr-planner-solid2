@@ -175,6 +175,11 @@ The importer resolves each kept blueprint's English display name from the dump's
   - `sharedKeyCollector` gathers those keys in `indexDump`'s pass over the dump. An asset whose references disagree on the key gives none, so nothing is named from a guess.
   - `GoldenDragonClass` is named this way, from `GoldDragonSpellbook`'s reference to the same asset.
 - `neutralName`: a display name with the game's runtime template tokens in a neutral form (ADR 0006): `{Name}` (the character's name) and the comma after it go, and a word holding `{mf|<male>|<female>}` is written both ways (`L{mf|ord|ady}` → `Lord/Lady`). It returns nothing for a name with no token, and throws on a token it doesn't know.
+- `composedItemName` (`item-names.ts`): the name the game shows for an item whose own display name is empty, ported from the `Name` getters (ADR 0006's note of 2026-11-21, build ticket 12, `cites.ts`):
+  - a weapon: each of its own enchantments' prefix and a space, its type's default name, then a space and each enchantment's suffix ("Cold Iron Longsword +1"); when all of those are empty, the type's name;
+  - an armour: its type's default name, with no enchantment words ("Chainshirt");
+  - a shield: its armour half's name, its own or composed.
+  It joins only display strings the game itself joins. 546 items take such a name, so a plain Longsword or Chainshirt is Gear; map 29's twins and qualifiers then tell the composed names apart like any other.
 
 ## Shared names (`qualify.ts`, `name-groups.ts`, `shared-names.ts`)
 

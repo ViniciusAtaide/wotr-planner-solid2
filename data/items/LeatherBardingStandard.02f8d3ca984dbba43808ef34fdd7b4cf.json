@@ -13,5 +13,6 @@
   "assetName": "LeatherBardingStandard",
   "guid": "02f8d3ca984dbba43808ef34fdd7b4cf",
   "m_Enchantments": [],
-  "m_Type": "!bp_503056b4c5a01f44db0ed10ce4c9ef01"
+  "m_Type": "!bp_503056b4c5a01f44db0ed10ce4c9ef01",
+  "name": "Leather Barding"
 }

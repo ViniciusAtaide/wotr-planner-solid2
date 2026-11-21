@@ -6,5 +6,6 @@
   "guid": "0f0e6834458d01049a408cd304053b1b",
   "m_Enchantments": [],
   "m_SecondWeapon": null,
-  "m_Type": "!bp_6ddc9acbbb6e40746a6a1671df1f7b47"
+  "m_Type": "!bp_6ddc9acbbb6e40746a6a1671df1f7b47",
+  "name": "Falchion"
 }

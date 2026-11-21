@@ -15,5 +15,6 @@
   "assetName": "ChainshirtStandard",
   "guid": "c65f6fc979d5556489b20e478189cbdd",
   "m_Enchantments": [],
-  "m_Type": "!bp_7467b0ab8641d8f43af7fc46f2108a1a"
+  "m_Type": "!bp_7467b0ab8641d8f43af7fc46f2108a1a",
+  "name": "Chainshirt"
 }

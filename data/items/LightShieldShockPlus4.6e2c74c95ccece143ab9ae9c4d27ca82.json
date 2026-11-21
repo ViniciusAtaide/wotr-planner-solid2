@@ -4,5 +4,7 @@
   "assetName": "LightShieldShockPlus4",
   "guid": "6e2c74c95ccece143ab9ae9c4d27ca82",
   "m_ArmorComponent": "!bp_7f5be55fc115e694f97ab2fafb2cffdd",
-  "m_WeaponComponent": null
+  "m_WeaponComponent": null,
+  "name": "Light Shield (+4)",
+  "qualifier": "+4"
 }

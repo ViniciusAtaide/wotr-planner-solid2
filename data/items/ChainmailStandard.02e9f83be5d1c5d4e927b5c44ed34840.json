@@ -15,5 +15,6 @@
   "assetName": "ChainmailStandard",
   "guid": "02e9f83be5d1c5d4e927b5c44ed34840",
   "m_Enchantments": [],
-  "m_Type": "!bp_cd4a47c5bacbff3498e960eec3a83485"
+  "m_Type": "!bp_cd4a47c5bacbff3498e960eec3a83485",
+  "name": "Chainmail"
 }

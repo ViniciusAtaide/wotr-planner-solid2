@@ -10,5 +10,6 @@
   "assetName": "PaddedStandard",
   "guid": "598540b85673d984a8d45effcadda93f",
   "m_Enchantments": [],
-  "m_Type": "!bp_b7e26eed57d524b478c0c90df0f0b8f1"
+  "m_Type": "!bp_b7e26eed57d524b478c0c90df0f0b8f1",
+  "name": "Padded Armor"
 }

@@ -6,5 +6,6 @@
   "guid": "c926ffbdccc4d124c8e8dedfe2e6f499",
   "m_Enchantments": [],
   "m_SecondWeapon": null,
-  "m_Type": "!bp_1b8c24cd1f9358c48839bb39266468c3"
+  "m_Type": "!bp_1b8c24cd1f9358c48839bb39266468c3",
+  "name": "Greatclub"
 }

@@ -13,5 +13,6 @@
   "assetName": "FullBardingStandard",
   "guid": "102cda1cf4b6d9e4289b538bde6dba0d",
   "m_Enchantments": [],
-  "m_Type": "!bp_55a6ac3d3ed31fc4d8a7f26f509999a8"
+  "m_Type": "!bp_55a6ac3d3ed31fc4d8a7f26f509999a8",
+  "name": "Full Barding"
 }

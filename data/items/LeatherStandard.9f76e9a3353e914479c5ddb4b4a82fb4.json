@@ -10,5 +10,6 @@
   "assetName": "LeatherStandard",
   "guid": "9f76e9a3353e914479c5ddb4b4a82fb4",
   "m_Enchantments": [],
-  "m_Type": "!bp_c850ba40ed3a61b489b438a5ffa71de9"
+  "m_Type": "!bp_c850ba40ed3a61b489b438a5ffa71de9",
+  "name": "Leather Armor"
 }

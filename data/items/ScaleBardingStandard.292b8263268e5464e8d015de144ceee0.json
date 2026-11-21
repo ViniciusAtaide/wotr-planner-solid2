@@ -13,5 +13,6 @@
   "assetName": "ScaleBardingStandard",
   "guid": "292b8263268e5464e8d015de144ceee0",
   "m_Enchantments": [],
-  "m_Type": "!bp_abefac7d8f98aeb40a167e0f5978d9c7"
+  "m_Type": "!bp_abefac7d8f98aeb40a167e0f5978d9c7",
+  "name": "Scale Barding"
 }

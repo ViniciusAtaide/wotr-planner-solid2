@@ -44,6 +44,7 @@ The full-stack planner and its MCP server, as the design map specifies ([map](..
 | 09 | [QA pass 1 fixes](issues/09-qa-pass-1-fixes.md) | none | 6, 7, 10 |
 | 10 | [Choice lists: inline first or modal first](issues/10-choice-list-mode.md) | the capped choice lists change | 10 |
 | 11 | [The top bar: the Build's name, first focus, and "WP" on phones](issues/11-top-bar-build-name.md) | none | 7, 10 |
+| 12 | [Items the game names from their type: composed Gear names](issues/12-composed-item-names.md) | none | 4 |
 | 06 | [After first use: summaries, more links, the published site](issues/06-after-first-use.md) | 05 | none |
 | 06a | [The importer keeps the Summary carriers](issues/06a-importer-keeps-summary-carriers.md) | none (parent 06) | 4 |
 | 06b | [Summary labels and templates](issues/06b-summary-labels.md) | 06a | none |

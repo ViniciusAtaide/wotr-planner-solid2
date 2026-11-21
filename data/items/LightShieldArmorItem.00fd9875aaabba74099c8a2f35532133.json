@@ -4,5 +4,6 @@
   "assetName": "LightShieldArmorItem",
   "guid": "00fd9875aaabba74099c8a2f35532133",
   "m_Enchantments": [],
-  "m_Type": "!bp_d38e8ea23ce653c4582eb3e002555483"
+  "m_Type": "!bp_d38e8ea23ce653c4582eb3e002555483",
+  "name": "Light Shield"
 }

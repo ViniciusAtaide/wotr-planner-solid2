@@ -3039,18 +3039,18 @@ Each blueprint with the source that settled it and its written name.
 
 ## Shared Gear names
 
-111 display names are shared by 473 items a Build can equip. Twins collapse into
+138 display names are shared by 539 items a Build can equip. Twins collapse into
 one choice (the loader derives them: `CheckedData.twins`); each other item is qualified by the first rule that
 tells it apart (map ticket 29); one in a group may stay bare. Items settled, by rule:
 
-- twin: 39
+- twin: 68
 - restriction: 10
-- slot: 76
-- type: 90
-- enhancement: 6
+- slot: 80
+- type: 91
+- enhancement: 13
 - type and enhancement: 159
 - override: 33
-- bare: 60
+- bare: 85
 - open: 0
 
 ### Every group
@@ -3069,6 +3069,9 @@ Each item with the rule that settled it and its written name; a twin names the i
 - "Adamantine Full Plate +4" (2)
   - AdamantineFullplateStandartPlus4_UseThisOne 0dab0f3855529264aa53e748735cdd0a: bare, "Adamantine Full Plate +4"
   - AdamantineFullplateStandartPlus4_Hellknight 29174f14508c40b9bbbf8fc1fe1730c6: twin, "Adamantine Full Plate +4", offered as AdamantineFullplateStandartPlus4_UseThisOne 0dab0f3855529264aa53e748735cdd0a
+- "Agile Shortsword +2" (2)
+  - ShortswordAgilePlus2 1c53aa8480c572c4a916b70f619fe1e5: bare, "Agile Shortsword +2"
+  - DruchiteShortswordAgilePlus2 4ab5312f11b748b6a4492cb8bb4c0cfd: twin, "Agile Shortsword +2", offered as ShortswordAgilePlus2 1c53aa8480c572c4a916b70f619fe1e5
 - "Ancestral Retribution" (3)
   - PortalStoneStanceRingItem 0603e6ed25543054c995b516ad75de51: slot, "Ancestral Retribution (ring)"
   - PortalStoneStanceHeadbandItem 37f12d7427858f5428f4143402b81279: slot, "Ancestral Retribution (head)"
@@ -3085,12 +3088,24 @@ Each item with the rule that settled it and its written name; a twin names the i
 - "Bane of Spirit" (2)
   - BrokenPhylacterySoulRingItem 29c12c43b02e5ad41895388d47bf4efb: slot, "Bane of Spirit (ring)"
   - BrokenPhylacterySoulScytheItem 37b04b03f5e49bf48b4d012e04194801: slot, "Bane of Spirit (weapon)"
+- "Bastard Sword +1" (2)
+  - BastardSwordPlus1 517ba772f7eec2e43999eac2014c3ab8: bare, "Bastard Sword +1"
+  - BastardSwordPlus1 adbc18abae2534740a7f162ae33a86fc: twin, "Bastard Sword +1", offered as BastardSwordPlus1 517ba772f7eec2e43999eac2014c3ab8
+- "Bastard Sword +3" (2)
+  - BastardSwordPlus3 1cf115afab1777245b035ffe8012c281: bare, "Bastard Sword +3"
+  - BastardSwordAxiomaticPlus1 ec2ac6c4c20f48d494b2485c702514d3: twin, "Bastard Sword +3", offered as BastardSwordPlus3 1cf115afab1777245b035ffe8012c281
 - "Bellowing Howl" (2)
   - GowrowSonicSpikedLightShieldItem 67bf27804a830c84ca0b592c38759cfd: slot, "Bellowing Howl (shield)"
   - GowrowSonicShortspearItem e0fee8a84167be042993acc1a35761de: slot, "Bellowing Howl (weapon)"
 - "Bone Amulet" (2)
   - BoneAmuletItem 08de14e8676f56347b1d57e79fb48bd0: bare, "Bone Amulet"
   - CameliaAmuletItem 94b2b8b9ef254344cbc71663fecf8b99: override, "Bone Amulet (Camellia)"
+- "Breastplate" (5)
+  - BreastplateStandartPlus5__HellknightArmiger 12773248b0df486e81a016af101ede6c: enhancement, "Breastplate (+5)"
+  - BreastplateStandartPlus5__HellknightArmiger1 3b66cf01de6c4e7392f58979e841a117: twin, "Breastplate (+5)", offered as BreastplateStandartPlus5__HellknightArmiger 12773248b0df486e81a016af101ede6c
+  - BreastplateStandard 9809987cc12d94545a64ff20e6fdb216: bare, "Breastplate"
+  - BreastplateStandartPlus2_HellknightArmiger a044c309231241088e65819b6a21273c: enhancement, "Breastplate (+2)"
+  - BreastplateStandartPlus4_HellknightArmiger cca428b1469d4519836948067ebe5a28: enhancement, "Breastplate (+4)"
 - "Breastplate +1" (2)
   - BreastplateStandartPlus1 5041415db3e6c394a8b2173c39fd4ec4: bare, "Breastplate +1"
   - BreastplateStandartPlus1_HellknightArmiger 7dfdb9b2655b4b35b0eb6578104844d4: twin, "Breastplate +1", offered as BreastplateStandartPlus1 5041415db3e6c394a8b2173c39fd4ec4
@@ -3101,6 +3116,9 @@ Each item with the rule that settled it and its written name; a twin names the i
 - "Breastplate +4" (2)
   - AsziteBreastplateStandartPlus4 84a2cc4aa928493087dcfa158b3f9d98: override, "Breastplate +4 (aszite)"
   - BreastplateStandartPlus4 a2e198d62e0285a4abe5085b3c8bdf46: bare, "Breastplate +4"
+- "Brilliant Energy Scythe +5" (2)
+  - BrilliantEnergyScythePlus5Item 8643a451e47d43f080f47716bc07c0c5: bare, "Brilliant Energy Scythe +5"
+  - FinneanScytheStage3Base be1424d5f0c82a843b593c9a5c8a696d: twin, "Brilliant Energy Scythe +5", offered as BrilliantEnergyScythePlus5Item 8643a451e47d43f080f47716bc07c0c5
 - "Buckler +3" (2)
   - AsziteBucklerItemPlus3 48c1a9cbd64944ee9474f6581ba01eb0: bare, "Buckler +3"
   - BucklerItemPlus3 9552d3843ff7b4140a8cf04b753848eb: twin, "Buckler +3", offered as AsziteBucklerItemPlus3 48c1a9cbd64944ee9474f6581ba01eb0
@@ -3151,6 +3169,9 @@ Each item with the rule that settled it and its written name; a twin names the i
 - "Coldbite" (2)
   - GowrowAquaticSpikedLightShieldItem 3e8133cca215cd14ab36efc71c7ec2e6: slot, "Coldbite (shield)"
   - GowrowAquaticShortspearItem e5b2c8653720368479f026b002158e17: slot, "Coldbite (weapon)"
+- "Composite Longbow" (2)
+  - CompositeLongbow 7998cd1409fe1194583b64180df4f216: bare, "Composite Longbow"
+  - StandardCompositeLongbow d23f6f5d3cbf715488b1f73e130dca99: twin, "Composite Longbow", offered as CompositeLongbow 7998cd1409fe1194583b64180df4f216
 - "Conthyr's Wisdom" (2)
   - ZeorisDaggerHeadband_BetrayalItem 23c2b6daf43d40afbd3ed2f25509a36d: slot, "Conthyr's Wisdom (head)"
   - ZeorisDaggerRing_Betrayal 50f28e3830734174aa9b355c737d3e08: slot, "Conthyr's Wisdom (ring)"
@@ -3160,6 +3181,12 @@ Each item with the rule that settled it and its written name; a twin names the i
 - "Craving Maw" (2)
   - ChimeraRoughPowerFlailItem 472ac0ac346ea604a8207372710af1d7: type, "Craving Maw (Flail)"
   - ChimeraRoughPowerClubItem 54a610357a883654c9046156de001abe: type, "Craving Maw (Club)"
+- "Dagger" (2)
+  - StandardDagger aa514dbf4c3d61f4e9c0738bd4d373cb: bare, "Dagger"
+  - StandardDaggerLotsCritsTest d7db4bf7fc2700245a2f0dcb4f6491f3: twin, "Dagger", offered as StandardDagger aa514dbf4c3d61f4e9c0738bd4d373cb
+- "Dagger +5" (2)
+  - DaggerPlus6 7d88fb635e054783aab93ee8af382866: bare, "Dagger +5"
+  - DaggerPlus5 801183fdc4e6d524f84cb209abb6e2f8: twin, "Dagger +5", offered as DaggerPlus6 7d88fb635e054783aab93ee8af382866
 - "Dark Master's Robe" (2)
   - DarkMastersRobeItemShirt 62d2df6b7f534378b3492a4d2f78889d: slot, "Dark Master's Robe (shirt)"
   - DarkMastersRobeItem 987c0cf4f89acd64eb984e29a383d630: slot, "Dark Master's Robe (armor)"
@@ -3184,6 +3211,9 @@ Each item with the rule that settled it and its written name; a twin names the i
   - RovagugRelicGrasshopperGreataxeItem 0a002cb050a084a4da9d2c83ecb62847: type, "Executioner of Evil (Greataxe)"
   - RovagugRelicGrasshopperHandaxeItem 87f84ad210f27264fa7b7465e43e0348: type, "Executioner of Evil (Handaxe)"
   - RovagugRelicGrasshopperBattlaxeItem 8fa0e2f75519e36429b045c19f56d43c: type, "Executioner of Evil (Battleaxe)"
+- "Falchion +4" (2)
+  - FalchionPlus4 5c5b3894358bbcc4bb8daad106dfcf68: bare, "Falchion +4"
+  - FalchionPlus4 efd42251146fd9847b9f480007e4dae0: twin, "Falchion +4", offered as FalchionPlus4 5c5b3894358bbcc4bb8daad106dfcf68
 - "Finger of the Heiress" (2)
   - MapFormationBardicheItem 559088bb334d8d141ba00b2268115d95: type, "Finger of the Heiress (Bardiche)"
   - MapFormationHeavyPickItem 934941fdd98438c41a50675e447910a6: type, "Finger of the Heiress (Heavy Pick)"
@@ -3427,6 +3457,9 @@ Each item with the rule that settled it and its written name; a twin names the i
 - "Flaming Two-Bladed Sword +2" (2)
   - StandardDoubleSwordFlamingPlus2 d20e5282daf4aeb4582fb690eae0ab5d: bare, "Flaming Two-Bladed Sword +2"
   - FlamingDoubleSwordPlus2Item f7f1de11c5666e24da6ba1aadd66cf2c: twin, "Flaming Two-Bladed Sword +2", offered as StandardDoubleSwordFlamingPlus2 d20e5282daf4aeb4582fb690eae0ab5d
+- "Frost Nunchaku +1" (2)
+  - NunchakuFrostPlus2 4cc3ebae23d1d904cb68d2a4c10ea331: bare, "Frost Nunchaku +1"
+  - NunchakuFrostPlus1 5f2f32b1908efad458913684a6523f0f: twin, "Frost Nunchaku +1", offered as NunchakuFrostPlus2 4cc3ebae23d1d904cb68d2a4c10ea331
 - "Frost Rapier +1" (2)
   - FrostRapierPlus1 3817c9fd86a745c42a602acf0f35bd7c: bare, "Frost Rapier +1"
   - RapierFrostPlus1 d2f9e450c6b370344a92a21a30d86202: twin, "Frost Rapier +1", offered as FrostRapierPlus1 3817c9fd86a745c42a602acf0f35bd7c
@@ -3436,6 +3469,10 @@ Each item with the rule that settled it and its written name; a twin names the i
 - "Full Barding +4" (2)
   - FullBardingStandartPlus4 88e39c7e591199042964cc44979b78b5: bare, "Full Barding +4"
   - AsziteFullBardingStandartPlus4 ab64798aacb94e879e7ed2484154ac14: override, "Full Barding +4 (aszite)"
+- "Full Plate" (3)
+  - FullplateStandard 559b0b6f194656c428c403a000ceee78: bare, "Full Plate"
+  - AdamantineFullplateStandartPlus4 615de12de63abcb42a606686354459cc: enhancement, "Full Plate (+4)"
+  - FullplateStandard_Hellknight bd1bc5ff80ff7804e97b6cc3defc6814: twin, "Full Plate", offered as FullplateStandard 559b0b6f194656c428c403a000ceee78
 - "Full Plate +1" (3)
   - FullplateStandartPlus1_PitaxGuard 5db137db6719b55418cb7dfe75b6a10c: bare, "Full Plate +1"
   - FullplateStandartPlus1 ba780a9c1e5b0304892bd2bc0c22fe4d: twin, "Full Plate +1", offered as FullplateStandartPlus1_PitaxGuard 5db137db6719b55418cb7dfe75b6a10c
@@ -3459,6 +3496,9 @@ Each item with the rule that settled it and its written name; a twin names the i
   - RovagugRelicSteppeHandaxeItem 499ed99cf350dba4aa6785cb6346f5b6: type, "Grave Singer (Handaxe)"
   - RovagugRelicSteppeGreataxeItem 5c40d8d5ba41d7c4799ad622b431b1bc: type, "Grave Singer (Greataxe)"
   - RovagugRelicSteppeBattlaxeItem 7e4c2f4f0db6d644590b610458d9dde7: type, "Grave Singer (Battleaxe)"
+- "Greatclub +2" (2)
+  - HugeGreatclubPlus2 329c02a1ece0fe8459e846852eb21182: bare, "Greatclub +2"
+  - GreatclubPlus2 b58b29d0dce442542859ed7599d38c28: twin, "Greatclub +2", offered as HugeGreatclubPlus2 329c02a1ece0fe8459e846852eb21182
 - "Half-Plate +3" (2)
   - AsziteHalfplateStandardPlus3 559fdfe9241a4000925535760dcbca88: override, "Half-Plate +3 (aszite)"
   - HalfplateStandartPlus3 76e68c81dd261e64789d5f2bdc77302b: bare, "Half-Plate +3"
@@ -3471,6 +3511,17 @@ Each item with the rule that settled it and its written name; a twin names the i
 - "Haramaki +4" (2)
   - AsziteHaramakiStandardPlus4 980ed8dc52e545d4aca16b28185e9c31: override, "Haramaki +4 (aszite)"
   - HaramakiStandartPlus4 bc0cbc0747713184da5d8f8ecb38d3fe: bare, "Haramaki +4"
+- "Heavy Shield" (10)
+  - HeavyShieldItemPlus1Mendev 3c7c72383d2cfdd4087d8d09d176f322: enhancement, "Heavy Shield (+1)"
+  - HeavyWoodenShieldItemPlus3 449758ce8ce45df4c9cd3297747d28d6: enhancement, "Heavy Shield (+3)"
+  - HeavyShieldHellknight 47c3676497e325b4dbbfc32ad7c2f680: type, "Heavy Shield (Spiked Heavy Shield)"
+  - HeavyShieldMendev 70114ba7ac6afc144874293b6b3a8480: bare, "Heavy Shield"
+  - HeavyShieldRedWhite a5a5b77267afc3d4bb037d519c79bd96: twin, "Heavy Shield", offered as HeavyShieldMendev 70114ba7ac6afc144874293b6b3a8480
+  - HeavyShieldSarenrae a76cb1559cdc4d0f8fe953bac0629855: twin, "Heavy Shield", offered as HeavyShieldMendev 70114ba7ac6afc144874293b6b3a8480
+  - HeavyShieldIomedae bcd7eb161e664ff46b8b262a8f9810e0: twin, "Heavy Shield", offered as HeavyShieldMendev 70114ba7ac6afc144874293b6b3a8480
+  - HeavyShieldItemFiendishPlus3 f4be34f359984edc83e4a4b2f204b7e2: twin, "Heavy Shield (+3)", offered as HeavyWoodenShieldItemPlus3 449758ce8ce45df4c9cd3297747d28d6
+  - HeavyShield f4cef3ba1a15b0f4fa7fd66b602ff32b: twin, "Heavy Shield", offered as HeavyShieldMendev 70114ba7ac6afc144874293b6b3a8480
+  - HeavyShieldItemPlus1Iomedae f8f10d0ca77afc4489e89b323a80c54d: twin, "Heavy Shield (+1)", offered as HeavyShieldItemPlus1Mendev 3c7c72383d2cfdd4087d8d09d176f322
 - "Heavy Shield +1" (3)
   - HeavyShieldItemPlus1RedWhite 2076055c75387664a9a3dbf1799c1964: bare, "Heavy Shield +1"
   - HeavyShieldItemPlus1 5c7b898a1bfb6cb4f8c14a0ebc143abe: twin, "Heavy Shield +1", offered as HeavyShieldItemPlus1RedWhite 2076055c75387664a9a3dbf1799c1964
@@ -3488,6 +3539,9 @@ Each item with the rule that settled it and its written name; a twin names the i
 - "Indomitable Life" (2)
   - PlagueDeathQuarterstaffItem 052fc0b447f7a90448f322a2db0a2a03: slot, "Indomitable Life (weapon)"
   - PlagueDeathBandedItem 80d23345b57ffac478ca7e33be545a7e: slot, "Indomitable Life (armor)"
+- "Keen Glaive +1" (2)
+  - GlaiveUnholyKeenPlus1 208eab20e3694122b96479fde22b1eaa: bare, "Keen Glaive +1"
+  - GlaiveKeenPlus1 c46047cf4bd22aa4da18628b99a8fe2e: twin, "Keen Glaive +1", offered as GlaiveUnholyKeenPlus1 208eab20e3694122b96479fde22b1eaa
 - "Keen Rapier +1" (2)
   - RapierKeenPlus1 017ba87ce662d0e4aab4249f169e6977: bare, "Keen Rapier +1"
   - KeenRapierPlus1 a0f13997114379b4a8278780c1dc1628: twin, "Keen Rapier +1", offered as RapierKeenPlus1 017ba87ce662d0e4aab4249f169e6977
@@ -3497,12 +3551,18 @@ Each item with the rule that settled it and its written name; a twin names the i
 - "Lenses of Prolonged Gaze" (2)
   - LensesOfProlonguedGazeItem 335d50d92efde4f4e91747bfe3c06d6e: slot, "Lenses of Prolonged Gaze (head)"
   - LensesOfProlonguedGaze_CorrectItem 50f803b35e824b618132750c06dcb1fb: slot, "Lenses of Prolonged Gaze (glasses)"
+- "Light Shield" (2)
+  - LightShieldShockPlus4 6e2c74c95ccece143ab9ae9c4d27ca82: enhancement, "Light Shield (+4)"
+  - LightShield a85d51d0fb905f940b951eec60388bac: bare, "Light Shield"
 - "Light Shield +3" (2)
   - AsziteLightShieldItemPlus3 397412c3132d40429f7a5cb15b7e60d7: bare, "Light Shield +3"
   - LightShieldItemPlus3 3b3f25ba61ba5f346b4d546e702732cb: twin, "Light Shield +3", offered as AsziteLightShieldItemPlus3 397412c3132d40429f7a5cb15b7e60d7
 - "Light Shield +4" (2)
   - LightShieldItemPlus4 38455bc9dc12b6b4895d49e27e559f51: bare, "Light Shield +4"
   - AsziteLightShieldItemPlus4 d1266897c40f4843a23fc85c42528f06: override, "Light Shield +4 (aszite)"
+- "Longbow" (2)
+  - StandardLongbow 201f6150321e09048bd59e9b7f558cb0: bare, "Longbow"
+  - LongbowMedium 9c46d77430705854d9698048e015813f: twin, "Longbow", offered as StandardLongbow 201f6150321e09048bd59e9b7f558cb0
 - "Mallander's Insult" (3)
   - KnightsEmblemSunsetShortswordItem 0b650c5561c1a5644806a0317d694ca4: slot, "Mallander's Insult (weapon)"
   - KnightsEmblemSunsetChainmailItem 5f367e27b872836449447bc2bb8018ab: slot, "Mallander's Insult (armor)"
@@ -3511,6 +3571,12 @@ Each item with the rule that settled it and its written name; a twin names the i
   - KnightsEmblemEmeraldShortswordItem 699d16a646c91884daddab70a42aec8a: slot, "Mallander's Penance (weapon)"
   - KnightsEmblemEmeraldBeltItem bf6579e0e434d0e4ea65da6bbad09645: slot, "Mallander's Penance (belt)"
   - KnightsEmblemEmeraldChainmailItem fde498ce6b3542042a7dbb71efe62370: slot, "Mallander's Penance (armor)"
+- "Masterwork Falchion" (2)
+  - MasterworkAdamantineFalchion 5f98e93b2b53499b9329ce9fd798141c: bare, "Masterwork Falchion"
+  - MasterworkFalchion 796540e56dc43194289e18d13d1c2bbf: twin, "Masterwork Falchion", offered as MasterworkAdamantineFalchion 5f98e93b2b53499b9329ce9fd798141c
+- "Masterwork Longsword" (2)
+  - MasterworkAdamantineLongsword 45d26e88988f491baf1b95d90f292651: bare, "Masterwork Longsword"
+  - MasterworkLongsword 571c56d11dafbb04094cbaae659974b5: twin, "Masterwork Longsword", offered as MasterworkAdamantineLongsword 45d26e88988f491baf1b95d90f292651
 - "Passion's Sweet Poison" (2)
   - AmberLoveLightCrossbowItem 2cdc803d9f3e17f4abcef6916f962c60: slot, "Passion's Sweet Poison (weapon)"
   - AmberLoveGlovesItem 4ed720cb649b9874b8a0f509c8741dc1: slot, "Passion's Sweet Poison (gloves)"
@@ -3532,6 +3598,15 @@ Each item with the rule that settled it and its written name; a twin names the i
   - Yaniel_Longsword6BaneLiving bff8a4bb7f24a2c499db0781b5750133: enhancement, "Radiance (+6)"
   - Yaniel_Longsword6HolyAvenger cf5c1a507825f184dacbc3abe14b9db1: twin, "Radiance (+6)", offered as Yaniel_Longsword6BaneLiving bff8a4bb7f24a2c499db0781b5750133
   - RadiancePlus1ITem de1fc233ad934a0a93a17ebed3ec0cfb: enhancement, "Radiance (+1)"
+- "Rapier" (2)
+  - StandardRapier 1546a05eb151d424eb9132832d5511bb: bare, "Rapier"
+  - Rapier c83ff52bb6f90c3469660e0da575c9f8: twin, "Rapier", offered as StandardRapier 1546a05eb151d424eb9132832d5511bb
+- "Rapier +1" (2)
+  - RapierPlus1 390c6a76f872f0e499d0d1310d430279: bare, "Rapier +1"
+  - RapierPlus1 9d23d26b2fdbe484b89867667aabeebe: twin, "Rapier +1", offered as RapierPlus1 390c6a76f872f0e499d0d1310d430279
+- "Rapier +2" (2)
+  - RapierPlus2 7fa680fbf69c09e4790b5e4b78a989e4: bare, "Rapier +2"
+  - RapierPlus2 d713662146582ac48a38692aa6f7ec07: twin, "Rapier +2", offered as RapierPlus2 7fa680fbf69c09e4790b5e4b78a989e4
 - "Robe of Air" (2)
   - RobeOfAir_CorrectItem 75f2d4bf94a14398ad1ca9db8e3a579f: slot, "Robe of Air (shirt)"
   - RobeOfAirItem b5a204f4311dafe42ab06d1d8ee7c1b9: slot, "Robe of Air (armor)"
@@ -3581,10 +3656,19 @@ Each item with the rule that settled it and its written name; a twin names the i
 - "Shroud of the Eternal Hunger" (2)
   - DemonicAltarTrypophobiaPaddedItem 6ca286a34cec62040b165974570d38cf: slot, "Shroud of the Eternal Hunger (armor)"
   - DemonicAltarTrypophobiaClothItem c3311fb9253b3b94bb640961a189910b: slot, "Shroud of the Eternal Hunger (shirt)"
+- "Sickle +4" (2)
+  - SicklePlus4Areshkagal 9cb0cb58ef7e4c8ba4bf9c77385022b1: bare, "Sickle +4"
+  - SicklePlus4 f42f2b52bbc482d498534aae9b98884f: twin, "Sickle +4", offered as SicklePlus4Areshkagal 9cb0cb58ef7e4c8ba4bf9c77385022b1
 - "Soulshear" (3)
   - StauntonGlaiveMountItem 31ec8f4002c14a3409779e66d3664898: override, "Soulshear (mounted)"
   - DemonicHungerItem 3e55085dbfd139c438b9dfb12427adec: bare, "Soulshear"
   - StauntonGlaiveHealItem dcad4ba70ad5fcd4c814c7978eaf67bd: override, "Soulshear (healing)"
+- "Spear +1" (2)
+  - SpearPlus1 b9e9b3748ea549740b9638f4482440a6: bare, "Spear +1"
+  - ColdIronSpearPlus1 c0be389e978a7604f941fa459594779e: twin, "Spear +1", offered as SpearPlus1 b9e9b3748ea549740b9638f4482440a6
+- "Spiked Heavy Shield +3" (2)
+  - HeavyShieldItemPlus3IHellknight d1584204df7c459bbb941d3512d4c9f4: slot, "Spiked Heavy Shield +3 (shield)"
+  - SpikedHeavyShieldPlus3 d983ce5741ba30e4cac8e8067914577e: slot, "Spiked Heavy Shield +3 (weapon)"
 - "Steel Helm" (2)
   - SteelHelm_Hellknight 2db24f8127080d243adfc4fac3939357: bare, "Steel Helm"
   - SteelHelm 7bf221661e9c5bf4bb6269627d5abd92: twin, "Steel Helm", offered as SteelHelm_Hellknight 2db24f8127080d243adfc4fac3939357
@@ -3599,6 +3683,9 @@ Each item with the rule that settled it and its written name; a twin names the i
   - Artifact_DemonCloakItem cdc95a3c4a74a874a895b3be61369564: restriction, "The Bound of Possibility (Demon)"
   - Artifact_LegendCloakItem ceaf9f93f42d40f468fc89ba6c32ea9d: restriction, "The Bound of Possibility (Legend)"
   - Artifact_DevilCloakItem d7a89e21497bcd94a8f8c0e278574b5b: restriction, "The Bound of Possibility (Devil)"
+- "Tower Shield" (2)
+  - WyrmwallArmorItem 2b0ef21fbc688a74fa20540f93a01aff: slot, "Tower Shield (armor)"
+  - TowerShield 6a1a429f023e5134fb16a4962cb79257: slot, "Tower Shield (shield)"
 - "Tower Shield +3" (2)
   - TowerShieldItemPlus3 4c7ca318e6754f542a7f9a685f375f4b: bare, "Tower Shield +3"
   - AsziteTowerShieldItemPlus3 fbde60368d444717b6f67bb0844b2985: override, "Tower Shield +3 (aszite)"
@@ -3608,6 +3695,12 @@ Each item with the rule that settled it and its written name; a twin names the i
 - "Treacherous Flame" (2)
   - BaphometFireCloth_BurningCunningItem 1d48edb7478d41b9897b54542d169ca8: slot, "Treacherous Flame (shirt)"
   - BaphometFireGloves_BurningCunningItem 6c4605b63da845b8975fe6ee18eb36f6: slot, "Treacherous Flame (gloves)"
+- "Trident +1" (2)
+  - TridentPlus1 3163e4240ffcbc04da05a718c8151fe3: bare, "Trident +1"
+  - TridentUnholyPlus1 6a45af0954a5c334e99c091e96777917: twin, "Trident +1", offered as TridentPlus1 3163e4240ffcbc04da05a718c8151fe3
+- "Trident +2" (2)
+  - LizardKingTrident 2ccd5aef5d47a954dac78a98de13d591: bare, "Trident +2"
+  - TridentPlus2 b5aa08a04f4ade64eb3cf10ed23daaee: twin, "Trident +2", offered as LizardKingTrident 2ccd5aef5d47a954dac78a98de13d591
 - "Triumphant Noontide" (3)
   - SarenraeLifeSourceHeavyFlailtem 6638256bc200ec64383ebbecd69f5787: slot, "Triumphant Noontide (weapon)"
   - SarenraeLifeSourceLightShieldItem 6dc409a42e157dc46b56f5ec651953f8: slot, "Triumphant Noontide (shield)"

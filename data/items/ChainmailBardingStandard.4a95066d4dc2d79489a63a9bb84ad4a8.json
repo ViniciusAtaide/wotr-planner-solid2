@@ -13,5 +13,6 @@
   "assetName": "ChainmailBardingStandard",
   "guid": "4a95066d4dc2d79489a63a9bb84ad4a8",
   "m_Enchantments": [],
-  "m_Type": "!bp_bdcce0ac4c930b84a849f935a4bdd93e"
+  "m_Type": "!bp_bdcce0ac4c930b84a849f935a4bdd93e",
+  "name": "Chainmail Barding"
 }

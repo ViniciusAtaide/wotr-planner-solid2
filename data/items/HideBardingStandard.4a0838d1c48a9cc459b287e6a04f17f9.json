@@ -13,5 +13,6 @@
   "assetName": "HideBardingStandard",
   "guid": "4a0838d1c48a9cc459b287e6a04f17f9",
   "m_Enchantments": [],
-  "m_Type": "!bp_bcb6205a498355c47a972558565c7783"
+  "m_Type": "!bp_bcb6205a498355c47a972558565c7783",
+  "name": "Hide Barding"
 }

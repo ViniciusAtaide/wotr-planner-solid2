@@ -4,5 +4,7 @@
   "assetName": "TowerShield",
   "guid": "6a1a429f023e5134fb16a4962cb79257",
   "m_ArmorComponent": "!bp_ace792b9dfff1ce4fa4a823aa58f2e91",
-  "m_WeaponComponent": null
+  "m_WeaponComponent": null,
+  "name": "Tower Shield (shield)",
+  "qualifier": "shield"
 }

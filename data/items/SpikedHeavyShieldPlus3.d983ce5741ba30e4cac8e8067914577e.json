@@ -8,5 +8,7 @@
     "!bp_80bb8a737579e35498177e1e3c75899b"
   ],
   "m_SecondWeapon": null,
-  "m_Type": "!bp_a1b85d048fb5003438f34356df938a9f"
+  "m_Type": "!bp_a1b85d048fb5003438f34356df938a9f",
+  "name": "Spiked Heavy Shield +3 (weapon)",
+  "qualifier": "weapon"
 }

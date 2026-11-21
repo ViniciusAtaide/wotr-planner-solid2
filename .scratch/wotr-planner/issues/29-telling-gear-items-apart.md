@@ -64,3 +64,7 @@ User, 2026-11-20 ("Fix all first"), on the review's findings. Build ticket [02g]
 - **Twins:** 145 → 39.
 - **Yaniel's Radiance:** the Holy Avenger and Bane Living pairs at +4 and +6 stay twins, because what tells them apart isn't kept. They're different items in play, so build ticket 06 splits them.
 - **Cost:** `deriveTwins` takes about 2 ms at load.
+
+## Amendment 2026-11-21: items named from their type
+
+Coordinator, on the user's standing instruction (build ticket [12](../../wotr-planner-build/issues/12-composed-item-names.md)). 548 wearable items have no display name of their own, so they were never shown and Gear couldn't offer a plain Longsword or Chainshirt. The game names them from their type and enchantments (ADR 0006's note of 2026-11-21), and the importer now writes those composed names. They join this ticket's groups like any name: twins collapse first, then the qualifiers apply.

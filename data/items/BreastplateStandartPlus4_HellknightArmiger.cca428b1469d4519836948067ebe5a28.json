@@ -17,5 +17,7 @@
   "m_Enchantments": [
     "!bp_eaeb89df5be2b784c96181552414ae5a"
   ],
-  "m_Type": "!bp_d326c3c61a84c6f40977c84fab41503d"
+  "m_Type": "!bp_d326c3c61a84c6f40977c84fab41503d",
+  "name": "Breastplate (+4)",
+  "qualifier": "+4"
 }
