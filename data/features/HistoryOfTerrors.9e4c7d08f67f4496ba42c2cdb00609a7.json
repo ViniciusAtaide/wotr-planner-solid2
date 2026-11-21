@@ -7,6 +7,36 @@
       "Group": "Any",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_0a5d473ead98b0646b94495af250fdc4"
+    },
+    {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "None",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "16"
+      },
+      "Value": 2,
+      "m_DisablingFeature": null
+    },
+    {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "None",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "32"
+      },
+      "Value": 2,
+      "m_DisablingFeature": null
     }
   ],
   "Groups": [

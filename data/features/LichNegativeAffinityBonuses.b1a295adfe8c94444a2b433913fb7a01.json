@@ -7,6 +7,21 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_295dff380fb8ed743bd5c76a30a49a46"
+    },
+    {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 4,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "None",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "536870912"
+      },
+      "Value": 0,
+      "m_DisablingFeature": null
     }
   ],
   "Groups": [],

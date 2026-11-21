@@ -275,6 +275,11 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     m_IsNatural: false,
     m_IsTwoHanded: false,
   },
+  BuffDescriptorImmunity: {
+    CheckFact: false,
+    m_FactToCheck: null,
+    m_IgnoreFeature: null,
+  },
   BuffExtraEffects: {
     m_CheckedBuff: null,
     m_ExceptionFact: null,
@@ -530,8 +535,22 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     m_CharacterClass: null,
     SpecificNumber: 0,
   },
+  SavingThrowBonusAgainstDescriptor: {
+    m_DisablingFeature: null,
+    ModifierDescriptor: 'None',
+    OnlyPositiveValue: false,
+    Value: 0,
+  },
+  SavingThrowBonusAgainstSchool: {
+    ModifierDescriptor: 'None',
+    School: 'None',
+    Value: 0,
+  },
   SkipLevelsForSpellProgression: {
     Levels: [],
+  },
+  SpellImmunityToSpellDescriptor: {
+    m_CasterIgnoreImmunityFact: null,
   },
   UnitClass: {
     LimitMaxLevel: false,

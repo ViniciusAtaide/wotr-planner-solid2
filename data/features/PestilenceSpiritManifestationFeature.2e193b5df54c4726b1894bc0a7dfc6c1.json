@@ -1,6 +1,39 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Confusion"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Exhausted"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Fatigued"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Shaken"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Staggered"
+    },
+    {
+      "$type": "AddImmunityToPrecisionDamage"
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "4611686018504720384"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

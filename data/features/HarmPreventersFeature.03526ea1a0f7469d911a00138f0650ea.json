@@ -2,6 +2,21 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 4,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "Competence",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "268435712"
+      },
+      "Value": 0,
+      "m_DisablingFeature": null
+    },
+    {
       "$type": "AddStatBonus",
       "Descriptor": "Competence",
       "ScaleByBasicAttackBonus": false,

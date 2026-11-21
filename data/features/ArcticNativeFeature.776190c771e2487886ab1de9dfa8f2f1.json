@@ -9,6 +9,10 @@
         "ValueRank": "Default",
         "ValueType": "Rank"
       }
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Dazzled"
     }
   ],
   "Groups": [],

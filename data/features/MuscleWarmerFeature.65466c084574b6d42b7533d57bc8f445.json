@@ -2,6 +2,21 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "Competence",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "562949953421312"
+      },
+      "Value": 2,
+      "m_DisablingFeature": null
+    },
+    {
       "$type": "AddDamageResistanceEnergy",
       "Type": "Cold",
       "Value": {

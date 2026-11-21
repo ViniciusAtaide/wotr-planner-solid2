@@ -9,6 +9,21 @@
         "ValueRank": "Default",
         "ValueType": "Simple"
       }
+    },
+    {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "UntypedStackable",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "1073741824"
+      },
+      "Value": 0,
+      "m_DisablingFeature": null
     }
   ],
   "Groups": [],

@@ -1,6 +1,28 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 4,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "Insight",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "1125899906842624"
+      },
+      "Value": 0,
+      "m_DisablingFeature": null
+    },
+    {
+      "$type": "SavingThrowBonusAgainstSchool",
+      "ModifierDescriptor": "Insight",
+      "School": "Necromancy",
+      "Value": 4
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

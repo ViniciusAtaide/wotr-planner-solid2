@@ -372,6 +372,113 @@ export interface AddFortification extends Component {
   readonly Value: RankedContextValue;
 }
 
+export type UnitCondition =
+  | 'Blindness'
+  | 'Nauseated'
+  | 'Fatigued'
+  | 'Paralyzed'
+  | 'DeathDoor'
+  | 'Staggered'
+  | 'Invisible'
+  | 'Petrified'
+  | 'Dazed'
+  | 'Slowed'
+  | 'Entangled'
+  | 'DifficultTerrain'
+  | 'Frightened'
+  | 'Prone'
+  | 'Sickened'
+  | 'Sleeping'
+  | 'SeeInvisibility'
+  | 'TrueSeeing'
+  | 'CantMove'
+  | 'Shaken'
+  | 'LoseDexterityToAC'
+  | 'Dazzled'
+  | 'Stunned'
+  | 'Helpless'
+  | 'Confusion'
+  | 'SpellCastingIsDifficult'
+  | 'ForceMove'
+  | 'CantAct'
+  | 'DisableAttacksOfOpportunity'
+  | 'AttackNearest'
+  | 'Unconscious'
+  | 'CanNotAttack'
+  | 'Unlootable'
+  | 'PartialConcealmentOnAttacks'
+  | 'ImmuneToAttackOfOpportunity'
+  | 'UseMobilityToNegateAttackOfOpportunity'
+  | 'ImmuneToCombatManeuvers'
+  | 'MovementBan'
+  | 'AttackOfOpportunityBeforeInitiative'
+  | 'StealthForbidden'
+  | 'Cowering'
+  | 'Exhausted'
+  | 'BarbarianRage'
+  | 'SuppressedEnergyResistance'
+  | 'SuppressedEnergyImmunity'
+  | 'UseAbilityForbidden'
+  | 'WalkingDead'
+  | 'DisableMountRiding'
+  | 'SpellCastingIsVeryDifficult'
+  | 'DevouredBySwarm'
+  | 'SpellcastingForbidden'
+  | 'MagicItemsForbidden'
+  | 'ExAndSuAbilitiesForbidden'
+  | 'GreaterInvisibility'
+  | 'CantUseStandardActions'
+  | 'UseMobilityToNegateDefensivelyFail'
+  | 'NegatedSpellblight';
+
+export interface SpellDescriptorWrapper {
+  readonly m_IntValue: string;
+}
+
+export interface SavingThrowBonusAgainstDescriptor extends Component {
+  readonly $type: 'SavingThrowBonusAgainstDescriptor';
+  readonly SpellDescriptor: SpellDescriptorWrapper;
+  readonly ModifierDescriptor: ModifierDescriptor;
+  readonly Value: number;
+  readonly Bonus: RankedContextValue;
+  readonly OnlyPositiveValue: boolean;
+  readonly m_DisablingFeature: Ref | null;
+}
+
+export interface SavingThrowBonusAgainstSchool extends Component {
+  readonly $type: 'SavingThrowBonusAgainstSchool';
+  readonly School: SpellSchool;
+  readonly ModifierDescriptor: ModifierDescriptor;
+  readonly Value: number;
+}
+
+export interface BuffDescriptorImmunity extends Component {
+  readonly $type: 'BuffDescriptorImmunity';
+  readonly Descriptor: SpellDescriptorWrapper;
+  readonly CheckFact: boolean;
+  readonly m_IgnoreFeature: Ref | null;
+  readonly m_FactToCheck: Ref | null;
+}
+
+export interface SpellImmunityToSpellDescriptor extends Component {
+  readonly $type: 'SpellImmunityToSpellDescriptor';
+  readonly Descriptor: SpellDescriptorWrapper;
+  readonly m_CasterIgnoreImmunityFact: Ref | null;
+}
+
+export interface AddConditionImmunity extends Component {
+  readonly $type: 'AddConditionImmunity';
+  readonly Condition: UnitCondition;
+}
+
+export interface AddImmunityToCriticalHits extends Component {
+  readonly $type: 'AddImmunityToCriticalHits';
+}
+
+export interface AddImmunityToPrecisionDamage extends Component {
+  readonly $type: 'AddImmunityToPrecisionDamage';
+}
+
 export interface AddContextStatBonus extends Component {
   readonly $type: 'AddContextStatBonus';
   readonly Descriptor: 'Racial';

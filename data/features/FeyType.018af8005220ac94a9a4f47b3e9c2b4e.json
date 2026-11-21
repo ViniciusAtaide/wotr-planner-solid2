@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "CreatureType"
+  ],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "FeyType",
+  "guid": "018af8005220ac94a9a4f47b3e9c2b4e",
+  "name": "Fey"
+}

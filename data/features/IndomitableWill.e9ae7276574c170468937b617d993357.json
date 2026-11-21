@@ -1,6 +1,13 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "SavingThrowBonusAgainstSchool",
+      "ModifierDescriptor": "None",
+      "School": "Enchantment",
+      "Value": 4
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

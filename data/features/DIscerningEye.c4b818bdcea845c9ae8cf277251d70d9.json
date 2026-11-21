@@ -14,6 +14,12 @@
       "Group": "Any",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_b3646842ffbd01643ab4dac7479b20b0"
+    },
+    {
+      "$type": "SavingThrowBonusAgainstSchool",
+      "ModifierDescriptor": "None",
+      "School": "Illusion",
+      "Value": 2
     }
   ],
   "Groups": [

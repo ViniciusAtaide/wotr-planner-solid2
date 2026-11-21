@@ -1,6 +1,20 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "131072"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Sickened"
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

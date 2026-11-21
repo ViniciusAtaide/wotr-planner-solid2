@@ -199,6 +199,10 @@ function holdReachable(
 
 type Parsed = ReadonlyMap<Guid, { readonly assetName: string; readonly json: Record<string, unknown> }>;
 
+export function exactWideInts(text: string): string {
+  return text.replace(/"m_IntValue":\s*(-?\d+)/g, '"m_IntValue":"$1"');
+}
+
 async function parseWanted(
   dumpPath: string,
   wanted: (guid: Guid) => boolean,
@@ -208,7 +212,7 @@ async function parseWanted(
   const parsed = new Map<Guid, { assetName: string; json: Record<string, unknown> }>();
   const td = new TextDecoder();
   for await (const r of blueprints(dumpPath, { want: (r) => wanted(r.guid) })) {
-    let json = JSON.parse(td.decode(r.json)) as Record<string, unknown>;
+    let json = JSON.parse(exactWideInts(td.decode(r.json))) as Record<string, unknown>;
     const patch = patches.get(r.guid);
     if (patch !== undefined) json = applyPatch(json, patch.ops, `${r.name} ${r.guid}`, problems);
     parsed.set(r.guid, { assetName: r.name, json });

@@ -2,6 +2,22 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "562949953421312"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "562949953421312"
+      },
+      "m_CasterIgnoreImmunityFact": null
+    },
+    {
       "$type": "AddDamageResistancePhysical",
       "Alignment": "Good",
       "BypassedByAlignment": false,

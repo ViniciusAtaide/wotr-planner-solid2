@@ -6,6 +6,19 @@
       "Type": "Electricity"
     },
     {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "4294967296"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Paralyzed"
+    },
+    {
       "$type": "AddDamageResistanceEnergy",
       "Type": "Fire",
       "Value": {

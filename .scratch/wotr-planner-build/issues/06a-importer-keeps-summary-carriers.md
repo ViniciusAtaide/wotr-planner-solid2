@@ -37,8 +37,14 @@ The data document before 06a: raw 2.046 MB, gzip 0.478 MB, brotli 0.380 MB (`enc
 | Family | Commit | Carriers | `data/` files | Raw | gzip | brotli |
 | --- | --- | --- | --- | --- | --- | --- |
 | Baseline | — | — | — | 2.046 MB | 0.478 MB | 0.380 MB |
-| 1. Resistances and immunities | (this commit) | `AddDamageResistanceEnergy`, `AddDamageResistancePhysical`, `AddEnergyDamageImmunity`, `AddEnergyImmunity`, `AddSpellResistance`, `AddFortification` (6) | 279 gain the component; nothing else changes | 2.057 MB | 0.481 MB | 0.381 MB |
+| 1. Resistances and immunities | e0dcd9d0 | `AddDamageResistanceEnergy`, `AddDamageResistancePhysical`, `AddEnergyDamageImmunity`, `AddEnergyImmunity`, `AddSpellResistance`, `AddFortification` (6) | 279 gain the component; nothing else changes | 2.057 MB | 0.481 MB | 0.381 MB |
+| 2. Saves and immunities by descriptor, school and condition | (this commit) | `SavingThrowBonusAgainstDescriptor`, `SavingThrowBonusAgainstSchool`, `BuffDescriptorImmunity`, `SpellImmunityToSpellDescriptor`, `AddConditionImmunity`, `AddImmunityToCriticalHits`, `AddImmunityToPrecisionDamage` (7; 13 in all) | 246 gain components; 2 new referenced facts | 2.070 MB | 0.485 MB | 0.384 MB |
 
 - **Family 1's data changes:** each changed file only gains its kept resistance or immunity components (the diff's removed lines are a `}` becoming `},`). The report's In-play count falls from 376 to 370.
 - **The reader set:** `engine/describe` declares `summaryComponentTypes`, and the allowlist test holds every kept type to one reader set.
 - **Not kept:** `not-needed.ts` drops the six types. The physical resistance keeps its material, form, magic, alignment and epic bypasses; it lists its reality, weapon-type and melee bypasses as not kept, because a Summary doesn't name them.
+- **Family 2's data changes:**
+  - 246 files gain their kept save bonuses and immunities.
+  - Two facts are newly held because the kept immunities name them: `FeyType` (a buff immunity's fact to check) and `IgnoreImmunityToFear` (a caster fact that ignores fear immunity).
+- **Exact descriptor values:** a spell descriptor is a 64-bit flag set (`SpellDescriptorWrapper.m_IntValue`) with bits up to 63. A JSON number would lose those bits, so the importer reads the value as an exact decimal string (`exactWideInts`) and the engine decodes it with BigInt.
+- **Kept, not dropped:** the "this field doesn't matter" guard caught three references that do. Bravery's save bonus has a disabling feature, several spell immunities name a caster fact that ignores them, and buff immunities name an ignore feature and a fact to check. All three are kept as references.

@@ -66,4 +66,11 @@ export const summaryComponentTypes: readonly string[] = [
   'AddEnergyImmunity',
   'AddSpellResistance',
   'AddFortification',
+  'SavingThrowBonusAgainstDescriptor',
+  'SavingThrowBonusAgainstSchool',
+  'BuffDescriptorImmunity',
+  'SpellImmunityToSpellDescriptor',
+  'AddConditionImmunity',
+  'AddImmunityToCriticalHits',
+  'AddImmunityToPrecisionDamage',
 ];

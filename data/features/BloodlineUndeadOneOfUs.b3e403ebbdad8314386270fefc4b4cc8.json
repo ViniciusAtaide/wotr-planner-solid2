@@ -24,6 +24,15 @@
       "EnergyType": "Cold"
     },
     {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "4328521732"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",

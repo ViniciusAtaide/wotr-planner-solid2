@@ -1,6 +1,39 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Nauseated"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Sickened"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Fatigued"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Exhausted"
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "4611692616045166592"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "4611692616045166592"
+      },
+      "m_CasterIgnoreImmunityFact": null
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

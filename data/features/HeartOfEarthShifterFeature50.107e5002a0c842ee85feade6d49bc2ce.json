@@ -10,6 +10,26 @@
         "ValueRank": "Default",
         "ValueType": "Simple"
       }
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Petrified"
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "35184372088832"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "35184372088832"
+      },
+      "m_CasterIgnoreImmunityFact": null
     }
   ],
   "Groups": [],

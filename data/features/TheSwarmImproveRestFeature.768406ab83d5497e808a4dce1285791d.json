@@ -1,6 +1,15 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Fatigued"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Exhausted"
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

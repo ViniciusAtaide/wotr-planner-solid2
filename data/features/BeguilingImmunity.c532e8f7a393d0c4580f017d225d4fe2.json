@@ -1,6 +1,16 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": true,
+      "Descriptor": {
+        "m_IntValue": "16"
+      },
+      "m_FactToCheck": "!bp_018af8005220ac94a9a4f47b3e9c2b4e",
+      "m_IgnoreFeature": null
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

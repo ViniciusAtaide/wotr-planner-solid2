@@ -9,6 +9,21 @@
       "Value": 3
     },
     {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "Racial",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "256"
+      },
+      "Value": 4,
+      "m_DisablingFeature": null
+    },
+    {
       "$type": "AddStatBonus",
       "Descriptor": "None",
       "ScaleByBasicAttackBonus": false,

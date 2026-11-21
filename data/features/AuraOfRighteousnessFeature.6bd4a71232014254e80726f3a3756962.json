@@ -2,6 +2,15 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "64"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    },
+    {
       "$type": "AddDamageResistancePhysical",
       "Alignment": "Evil",
       "BypassedByAlignment": true,
@@ -18,6 +27,13 @@
         "ValueRank": "Default",
         "ValueType": "Simple"
       }
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "64"
+      },
+      "m_CasterIgnoreImmunityFact": null
     }
   ],
   "Groups": [],

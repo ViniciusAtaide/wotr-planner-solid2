@@ -2,6 +2,46 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddConditionImmunity",
+      "Condition": "Nauseated"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Sickened"
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "4611727800450809856"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "4383408368"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": "!bp_7853143d87baea1429bb409b023edb6b"
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "4611727800450809856"
+      },
+      "m_CasterIgnoreImmunityFact": null
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "70373127586032"
+      },
+      "m_CasterIgnoreImmunityFact": "!bp_7853143d87baea1429bb409b023edb6b"
+    },
+    {
       "$type": "AddFacts",
       "HasDifficultyRequirements": false,
       "InvertDifficultyRequirements": false,
@@ -9,6 +49,34 @@
       "m_Facts": [
         "!bp_d5ee498e19722854198439629c1841a5"
       ]
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Exhausted"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Fatigued"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Paralyzed"
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "16640"
+      },
+      "m_CasterIgnoreImmunityFact": "!bp_55c364c3f02e4fdc8a63125b5a4c256c"
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "16640"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": "!bp_55c364c3f02e4fdc8a63125b5a4c256c"
     }
   ],
   "Groups": [],

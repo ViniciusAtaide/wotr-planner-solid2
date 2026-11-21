@@ -6,6 +6,15 @@
       "EnergyType": "Electricity"
     },
     {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "256"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": "!bp_55c364c3f02e4fdc8a63125b5a4c256c"
+    },
+    {
       "$type": "AddDamageResistanceEnergy",
       "Type": "Acid",
       "Value": {

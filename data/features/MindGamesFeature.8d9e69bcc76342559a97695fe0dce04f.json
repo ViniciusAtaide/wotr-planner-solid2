@@ -2,6 +2,21 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Rank"
+      },
+      "ModifierDescriptor": "Circumstance",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "240"
+      },
+      "Value": 0,
+      "m_DisablingFeature": null
+    },
+    {
       "$type": "ContextRankConfig",
       "m_BaseValueType": "ClassLevel",
       "m_Class": [

@@ -1,6 +1,13 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "SavingThrowBonusAgainstSchool",
+      "ModifierDescriptor": "None",
+      "School": "Conjuration",
+      "Value": 3
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

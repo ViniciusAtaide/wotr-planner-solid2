@@ -28,6 +28,22 @@
         "ValueRank": "Default",
         "ValueType": "Simple"
       }
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "140737488355328"
+      },
+      "m_CasterIgnoreImmunityFact": null
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "140737488355328"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
     }
   ],
   "Groups": [],

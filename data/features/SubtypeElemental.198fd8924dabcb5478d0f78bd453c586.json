@@ -18,6 +18,9 @@
     {
       "$type": "AddMechanicsFeature",
       "m_Feature": "CannotBeFlanked"
+    },
+    {
+      "$type": "AddImmunityToPrecisionDamage"
     }
   ],
   "Groups": [],

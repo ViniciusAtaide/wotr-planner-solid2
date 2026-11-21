@@ -14,6 +14,21 @@
       "ScaleByBasicAttackBonus": false,
       "Stat": "AdditionalCMB",
       "Value": 1
+    },
+    {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "None",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "17179869184"
+      },
+      "Value": 1,
+      "m_DisablingFeature": null
     }
   ],
   "Groups": [],

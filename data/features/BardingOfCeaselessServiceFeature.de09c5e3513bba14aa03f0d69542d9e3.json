@@ -7,6 +7,14 @@
       "ScaleByBasicAttackBonus": false,
       "Stat": "Constitution",
       "Value": 2
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Fatigued"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Exhausted"
     }
   ],
   "Groups": [],

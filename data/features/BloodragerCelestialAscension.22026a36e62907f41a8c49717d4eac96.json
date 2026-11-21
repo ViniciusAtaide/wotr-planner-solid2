@@ -10,6 +10,22 @@
       "Type": "Acid"
     },
     {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "35184372088832"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "35184372088832"
+      },
+      "m_CasterIgnoreImmunityFact": null
+    },
+    {
       "$type": "AddDamageResistanceEnergy",
       "Type": "Fire",
       "Value": {
@@ -26,6 +42,21 @@
         "ValueRank": "Default",
         "ValueType": "Simple"
       }
+    },
+    {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "Racial",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "256"
+      },
+      "Value": 4,
+      "m_DisablingFeature": null
     },
     {
       "$type": "PrerequisiteNoFeature",

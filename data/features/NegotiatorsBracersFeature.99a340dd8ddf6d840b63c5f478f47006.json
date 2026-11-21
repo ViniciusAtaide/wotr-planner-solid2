@@ -1,6 +1,22 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "None",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "16"
+      },
+      "Value": 4,
+      "m_DisablingFeature": null
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

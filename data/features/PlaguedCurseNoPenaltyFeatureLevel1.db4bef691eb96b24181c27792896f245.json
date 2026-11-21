@@ -1,6 +1,31 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": -1,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "Penalty",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "16384"
+      },
+      "Value": 0,
+      "m_DisablingFeature": null
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "131072"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

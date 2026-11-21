@@ -37,6 +37,22 @@
       "Group": "Any",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_d2a93ab18fcff8c419b03a2c3d573606"
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "140737488355328"
+      },
+      "m_CasterIgnoreImmunityFact": null
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "140737488355328"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
     }
   ],
   "Groups": [

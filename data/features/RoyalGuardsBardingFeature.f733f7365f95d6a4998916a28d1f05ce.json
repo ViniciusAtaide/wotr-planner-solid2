@@ -1,6 +1,15 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Staggered"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Stunned"
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

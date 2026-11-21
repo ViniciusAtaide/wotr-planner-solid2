@@ -4,6 +4,30 @@
     {
       "$type": "AddEnergyDamageImmunity",
       "EnergyType": "Electricity"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Stunned"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Staggered"
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "17825800"
+      },
+      "m_CasterIgnoreImmunityFact": null
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "17825800"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
     }
   ],
   "Groups": [],

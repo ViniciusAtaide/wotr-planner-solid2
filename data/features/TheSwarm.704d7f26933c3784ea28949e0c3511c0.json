@@ -2,6 +2,13 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "842231275569648"
+      },
+      "m_CasterIgnoreImmunityFact": null
+    },
+    {
       "$type": "AddSpellResistance",
       "AddBonusToResistance": false,
       "AddCR": false,

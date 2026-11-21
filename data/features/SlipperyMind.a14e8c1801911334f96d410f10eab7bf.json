@@ -2,6 +2,21 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Rank"
+      },
+      "ModifierDescriptor": "UntypedStackable",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "16"
+      },
+      "Value": 0,
+      "m_DisablingFeature": null
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",

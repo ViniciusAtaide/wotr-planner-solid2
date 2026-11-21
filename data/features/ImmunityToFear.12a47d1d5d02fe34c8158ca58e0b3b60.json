@@ -1,6 +1,27 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Frightened"
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "4456480"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": "!bp_9a3cf19a05984d688849a012738c1d87"
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "4456480"
+      },
+      "m_CasterIgnoreImmunityFact": "!bp_9a3cf19a05984d688849a012738c1d87"
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

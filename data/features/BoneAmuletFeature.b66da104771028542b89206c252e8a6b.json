@@ -1,6 +1,13 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "SavingThrowBonusAgainstSchool",
+      "ModifierDescriptor": "UntypedStackable",
+      "School": "Illusion",
+      "Value": 4
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": true,

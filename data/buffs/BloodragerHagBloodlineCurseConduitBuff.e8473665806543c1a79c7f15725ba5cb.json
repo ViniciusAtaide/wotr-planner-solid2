@@ -13,6 +13,22 @@
     {
       "$type": "AddEnergyDamageImmunity",
       "EnergyType": "NegativeEnergy"
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "72057594306363392"
+      },
+      "m_CasterIgnoreImmunityFact": null
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "72057594306363392"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
     }
   ],
   "Stacking": "Replace",

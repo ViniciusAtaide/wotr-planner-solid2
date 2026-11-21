@@ -2,6 +2,15 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "32"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": "!bp_9a3cf19a05984d688849a012738c1d87"
+    },
+    {
       "$type": "AddFacts",
       "HasDifficultyRequirements": false,
       "InvertDifficultyRequirements": false,

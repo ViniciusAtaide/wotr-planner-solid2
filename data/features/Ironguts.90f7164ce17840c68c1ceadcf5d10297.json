@@ -14,6 +14,21 @@
       "Group": "Any",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_1dc20e195581a804890ddc74218bfd8e"
+    },
+    {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "Racial",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "2228480"
+      },
+      "Value": 2,
+      "m_DisablingFeature": null
     }
   ],
   "Groups": [

@@ -16,11 +16,29 @@
       ]
     },
     {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "33554432"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_233d0e5bdd25a7f44a56c09c8b5041e7"
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "256"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": "!bp_55c364c3f02e4fdc8a63125b5a4c256c"
     }
   ],
   "Groups": [],

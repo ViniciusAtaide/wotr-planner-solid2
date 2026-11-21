@@ -37,6 +37,12 @@
       "m_Facts": []
     },
     {
+      "$type": "SavingThrowBonusAgainstSchool",
+      "ModifierDescriptor": "Racial",
+      "School": "Enchantment",
+      "Value": 2
+    },
+    {
       "$type": "AddStatBonusIfHasFact",
       "Descriptor": "Racial",
       "InvertCondition": true,

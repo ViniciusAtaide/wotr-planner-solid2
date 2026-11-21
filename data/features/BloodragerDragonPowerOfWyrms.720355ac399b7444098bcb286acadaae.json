@@ -2,6 +2,14 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddConditionImmunity",
+      "Condition": "Paralyzed"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Sleeping"
+    },
+    {
       "$type": "AddFactContextActions",
       "Activated": {
         "Actions": [

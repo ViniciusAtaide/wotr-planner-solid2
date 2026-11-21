@@ -187,6 +187,21 @@
       "m_Type": "Default",
       "m_UseMax": false,
       "m_UseMin": false
+    },
+    {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "DamageDice",
+        "ValueType": "Rank"
+      },
+      "ModifierDescriptor": "Inherent",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "16"
+      },
+      "Value": 0,
+      "m_DisablingFeature": null
     }
   ],
   "Stacking": "Replace",

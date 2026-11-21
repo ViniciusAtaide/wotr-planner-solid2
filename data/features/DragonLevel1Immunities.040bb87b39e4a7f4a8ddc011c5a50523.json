@@ -2,6 +2,38 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "4395630592"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "4395630592"
+      },
+      "m_CasterIgnoreImmunityFact": null
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "16640"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": "!bp_55c364c3f02e4fdc8a63125b5a4c256c"
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "16640"
+      },
+      "m_CasterIgnoreImmunityFact": "!bp_55c364c3f02e4fdc8a63125b5a4c256c"
+    },
+    {
       "$type": "AddDamageResistanceEnergy",
       "Type": "Fire",
       "Value": {
@@ -36,6 +68,22 @@
         "ValueRank": "Default",
         "ValueType": "Shared"
       }
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "4456480"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": "!bp_9a3cf19a05984d688849a012738c1d87"
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "4456480"
+      },
+      "m_CasterIgnoreImmunityFact": "!bp_9a3cf19a05984d688849a012738c1d87"
     }
   ],
   "Groups": [],

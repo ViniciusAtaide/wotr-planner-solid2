@@ -8,6 +8,27 @@
     {
       "$type": "RemoveFeatureOnApply",
       "m_Feature": "!bp_2483a523984f44944a7cf157b21bf79c"
+    },
+    {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "Racial",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "268435456"
+      },
+      "Value": 0,
+      "m_DisablingFeature": null
+    },
+    {
+      "$type": "SavingThrowBonusAgainstSchool",
+      "ModifierDescriptor": "Racial",
+      "School": "Necromancy",
+      "Value": 2
     }
   ],
   "Groups": [],

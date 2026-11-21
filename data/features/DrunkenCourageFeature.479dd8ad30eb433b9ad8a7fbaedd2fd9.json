@@ -2,6 +2,10 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddConditionImmunity",
+      "Condition": "Frightened"
+    },
+    {
       "$type": "AddFacts",
       "HasDifficultyRequirements": false,
       "InvertDifficultyRequirements": false,

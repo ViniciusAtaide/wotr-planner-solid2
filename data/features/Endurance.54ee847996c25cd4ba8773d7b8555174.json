@@ -9,6 +9,21 @@
       "Value": 2
     },
     {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "None",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "8912896"
+      },
+      "Value": 4,
+      "m_DisablingFeature": null
+    },
+    {
       "$type": "AddMechanicsFeature",
       "m_Feature": "Endurance"
     },

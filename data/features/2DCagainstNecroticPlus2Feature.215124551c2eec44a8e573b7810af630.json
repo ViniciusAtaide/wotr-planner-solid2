@@ -1,6 +1,13 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "SavingThrowBonusAgainstSchool",
+      "ModifierDescriptor": "None",
+      "School": "Necromancy",
+      "Value": 2
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

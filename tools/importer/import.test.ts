@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { ComponentEntry, BlueprintEntry } from './allowlist';
-import { reachable } from './import';
+import { reachable, exactWideInts } from './import';
 import { keptSet } from './keep-rule';
 import { keepBlueprint, shortType, type FilterContext } from './filter';
 import { displayName, neutralName, sharedKeyCollector } from './names';
@@ -303,6 +303,16 @@ describe('displayName', () => {
     shared.add(reference('k2'));
     expect(shared.keys().has(ASSET)).toBe(false);
     expect(displayName(lostKey, strings, shared.keys())).toBeUndefined();
+  });
+});
+
+describe('exactWideInts', () => {
+  it("reads a spell descriptor's 64-bit flags as an exact decimal string", () => {
+    const parsed = JSON.parse(exactWideInts('{"Descriptor": {"m_IntValue": 4611686018427387952}}')) as {
+      Descriptor: { m_IntValue: string };
+    };
+    expect(parsed.Descriptor.m_IntValue).toBe('4611686018427387952');
+    expect(BigInt(parsed.Descriptor.m_IntValue) & 0x20n).toBe(0x20n);
   });
 });
 

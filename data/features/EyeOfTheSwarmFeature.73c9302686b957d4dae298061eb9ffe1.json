@@ -1,6 +1,54 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "615726708310272"
+      },
+      "m_CasterIgnoreImmunityFact": null
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Prone"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Paralyzed"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Fatigued"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Sickened"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Staggered"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Nauseated"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Exhausted"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Stunned"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Blindness"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Petrified"
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

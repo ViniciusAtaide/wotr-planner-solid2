@@ -17,6 +17,14 @@
       "Type": "Cold"
     },
     {
+      "$type": "AddConditionImmunity",
+      "Condition": "Paralyzed"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Sleeping"
+    },
+    {
       "$type": "PrerequisiteNoFeature",
       "CheckInProgression": true,
       "Group": "All",

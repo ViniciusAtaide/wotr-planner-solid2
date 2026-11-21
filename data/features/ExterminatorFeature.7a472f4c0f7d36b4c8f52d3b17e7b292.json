@@ -2,6 +2,12 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "SavingThrowBonusAgainstSchool",
+      "ModifierDescriptor": "UntypedStackable",
+      "School": "Necromancy",
+      "Value": 5
+    },
+    {
       "$type": "AddStatBonus",
       "Descriptor": "Penalty",
       "ScaleByBasicAttackBonus": false,

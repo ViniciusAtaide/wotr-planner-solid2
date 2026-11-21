@@ -6,6 +6,15 @@
       "Type": "Cold"
     },
     {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "4328521728"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": "!bp_1a5e7191279e7cd479b17a6ca438498c"
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",

@@ -1,6 +1,23 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Slowed"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Entangled"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "DifficultTerrain"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "CantMove"
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

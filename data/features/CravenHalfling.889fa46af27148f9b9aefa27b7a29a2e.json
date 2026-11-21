@@ -8,6 +8,21 @@
     {
       "$type": "RemoveFeatureOnApply",
       "m_Feature": "!bp_84ffa66048d26b14c800a425199f9886"
+    },
+    {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "Racial",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "32"
+      },
+      "Value": -2,
+      "m_DisablingFeature": null
     }
   ],
   "Groups": [],

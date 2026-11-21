@@ -1,6 +1,15 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Sickened"
+    },
+    {
+      "$type": "AddConditionImmunity",
+      "Condition": "Nauseated"
+    }
+  ],
   "Groups": [
     "DefensivePower"
   ],

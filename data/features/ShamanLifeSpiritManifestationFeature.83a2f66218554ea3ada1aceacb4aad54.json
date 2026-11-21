@@ -2,8 +2,24 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "2199571267584"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    },
+    {
       "$type": "AddEnergyDamageImmunity",
       "EnergyType": "NegativeEnergy"
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "2199571267584"
+      },
+      "m_CasterIgnoreImmunityFact": null
     }
   ],
   "Groups": [],

@@ -2,6 +2,12 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddImmunityToCriticalHits"
+    },
+    {
+      "$type": "AddImmunityToPrecisionDamage"
+    },
+    {
       "$type": "AddEnergyImmunity",
       "Type": "Fire"
     },

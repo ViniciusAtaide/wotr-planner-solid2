@@ -2,6 +2,13 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "256"
+      },
+      "m_CasterIgnoreImmunityFact": null
+    },
+    {
       "$type": "AddFacts",
       "HasDifficultyRequirements": false,
       "InvertDifficultyRequirements": false,
@@ -19,6 +26,31 @@
         "ValueRank": "Default",
         "ValueType": "Simple"
       }
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "50331648"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "50331904"
+      },
+      "m_CasterIgnoreImmunityFact": "!bp_55c364c3f02e4fdc8a63125b5a4c256c"
+    },
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "256"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": "!bp_55c364c3f02e4fdc8a63125b5a4c256c"
     }
   ],
   "Groups": [],

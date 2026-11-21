@@ -1,6 +1,13 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "SavingThrowBonusAgainstSchool",
+      "ModifierDescriptor": "UntypedStackable",
+      "School": "Enchantment",
+      "Value": 2
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

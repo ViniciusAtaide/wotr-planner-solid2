@@ -6,6 +6,12 @@
       "EnergyType": "Acid"
     },
     {
+      "$type": "AddImmunityToCriticalHits"
+    },
+    {
+      "$type": "AddImmunityToPrecisionDamage"
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",
