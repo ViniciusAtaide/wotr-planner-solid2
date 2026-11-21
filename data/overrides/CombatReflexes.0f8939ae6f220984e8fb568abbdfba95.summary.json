@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "f7b41402",
+  "reason": "DerivativeStatBonus and AddCondition are in play, so data/ keeps no component a label could word.",
+  "target": "0f8939ae6f220984e8fb568abbdfba95",
+  "text": "Extra attacks of opportunity each round equal to the Dexterity modifier, and attacks of opportunity even before acting in a fight."
+}

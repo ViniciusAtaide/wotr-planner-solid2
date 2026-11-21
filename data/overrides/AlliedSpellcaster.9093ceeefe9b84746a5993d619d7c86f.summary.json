@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "da5f7684",
+  "reason": "The AlliedSpellcaster component is in play, so data/ keeps no component a label could word.",
+  "target": "9093ceeefe9b84746a5993d619d7c86f",
+  "text": "+2 on concentration checks and +2 to overcome spell resistance while an ally with this feat is within 5 feet."
+}

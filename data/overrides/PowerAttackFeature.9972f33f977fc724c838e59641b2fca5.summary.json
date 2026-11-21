@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "e2b26486",
+  "reason": "Its numbers sit on the toggle's effect buff (WeaponParametersAttackBonus and WeaponParametersDamageBonus with PowerAttackScaling), which data/ doesn't keep.",
+  "target": "9972f33f977fc724c838e59641b2fca5",
+  "text": "While on: -1 on melee attack rolls and +2 on melee damage, each multiplied by 1 + base attack bonus / 4. The damage is half again with a weapon held in two hands, and half on off-hand attacks."
+}

@@ -193,7 +193,7 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(explain(e, { guid: '9972f33f977fc724c838e59641b2fca5' })).toMatchObject({
       name: 'Power Attack',
       prerequisites: ['Needs Strength 13.'],
-      summary: 'No summary yet.',
+      summary: expect.stringMatching(/^While on: -1 on melee attack rolls/),
     });
     expect(explain(e, { guid: '06964d468fde1dc4aa71a92ea04d930d' })).toMatchObject({
       name: 'Combat Casting',

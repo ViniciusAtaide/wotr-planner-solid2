@@ -271,7 +271,7 @@ suite('Summary labels', { timeout: 30_000 }, () => {
     );
     expect(dangerSense?.labels.length).toBe(2);
     expect(describe(data, '06964d468fde1dc4aa71a92ea04d930d', G)?.summarySource).toBe('labels');
-    expect(describe(data, '9972f33f977fc724c838e59641b2fca5', G)).toMatchObject({
+    expect(describe(data, 'e55e2c96ae974bc9ac9fda8b3a56e432', G)).toMatchObject({
       summarySource: 'none',
       summary: NO_SUMMARY,
     });
@@ -344,5 +344,28 @@ suite('Summary labels', { timeout: 30_000 }, () => {
     expect(summaryText(data, '97e216dbb46ae3c4faef90cf6bbe6fd5', G)).toBe('+1 dodge bonus to AC.');
     expect(summaryText(data, '175d1577bb6c9a04baf88eec99c66334', G)).toBe('+2 to Will saves.');
     expect(summaryText(data, '797f25d709f559546b29e7bcb181cc74', G)).toBe('+4 to Initiative.');
+  });
+
+  it("gives the core feats whose point isn't in a kept component a hand-written summary (QA pass 4)", () => {
+    const written = [
+      '9972f33f977fc724c838e59641b2fca5',
+      'f47df34d53f8c904f9981a3ee8e84892',
+      '4c44724ffa8844f4d9bedb5bb27d144a',
+      '9c928dc570bb9e54a9649b3ebfe47a41',
+      'd09b20029e9abfe4480b356c92095623',
+      '0f8939ae6f220984e8fb568abbdfba95',
+      '0da0c194d6e1d43419eb8d990b28e0ab',
+      '8f3d1e6b4be006f4d896081f2f889665',
+      'ac8aaf29054f5b74eb18f2af950e752d',
+      '90e54424d682d104ab36436bd527af09',
+      'd809b6c4ff2aaff4fa70d712a70f7d7b',
+      '1c04fe9a13a22bc499ffac03e6f79153',
+      '9093ceeefe9b84746a5993d619d7c86f',
+      '4e219f5894ad0ea4daa0699e28c37b1d',
+    ];
+    for (const guid of written) expect(describe(data, guid, G)?.summarySource).toBe('written');
+    expect(describe(data, '4e219f5894ad0ea4daa0699e28c37b1d', G)?.summary).toMatch(
+      /^Rerolls a failed concealment roll/,
+    );
   });
 });

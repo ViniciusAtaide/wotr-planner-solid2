@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "e45e9d03",
+  "reason": "The labels see only its gaze immunity; the concealment reroll and flat-footed rules (RerollConcealment, FlatFootedIgnore, BlindnessACCompensation) are in play components data/ doesn't keep.",
+  "target": "4e219f5894ad0ea4daa0699e28c37b1d",
+  "text": "Rerolls a failed concealment roll on a melee attack and keeps the better one. Concealment doesn't leave it flat-footed against melee attacks, blindness costs it no AC, and gaze attacks don't affect it."
+}

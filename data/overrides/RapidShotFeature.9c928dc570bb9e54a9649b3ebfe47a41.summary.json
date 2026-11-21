@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "0e9dc0c0",
+  "reason": "Its effect sits on the toggle's buff (BuffExtraAttackWeaponSpecific, WeaponParametersAttackBonus), which data/ doesn't keep.",
+  "target": "9c928dc570bb9e54a9649b3ebfe47a41",
+  "text": "While on, a full attack with a ranged weapon gains one extra attack, and its attacks take -2."
+}

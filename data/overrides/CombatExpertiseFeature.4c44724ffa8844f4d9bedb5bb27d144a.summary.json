@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "d66f2305",
+  "reason": "Its numbers sit on the toggle's buff (AddStatBonus scaled by base attack, and the attack penalty property), which data/ doesn't keep.",
+  "target": "4c44724ffa8844f4d9bedb5bb27d144a",
+  "text": "While on: a +1 dodge bonus to AC and -1 on attack rolls, each multiplied by 1 + base attack bonus / 4."
+}

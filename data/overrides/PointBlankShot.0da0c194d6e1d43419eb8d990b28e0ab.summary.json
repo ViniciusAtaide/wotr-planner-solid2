@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "cee69514",
+  "reason": "DistanceAttackBonus and DistanceDamageBonus are in play, so data/ keeps no component a label could word.",
+  "target": "0da0c194d6e1d43419eb8d990b28e0ab",
+  "text": "+1 on attack and damage rolls with ranged attacks against targets within 30 feet."
+}

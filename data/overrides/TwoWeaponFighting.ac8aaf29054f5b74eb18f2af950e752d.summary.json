@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "b06cbacf",
+  "reason": "Its numbers sit on the granted TwoWeaponFightingBasicMechanics (TwoWeaponFightingAttackPenalty), which data/ doesn't keep.",
+  "target": "ac8aaf29054f5b74eb18f2af950e752d",
+  "text": "Fighting with two weapons, the attack penalties are -2 on each hand instead of -4 and -8, with another -2 when the off-hand weapon isn't light."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "b23eb809",
+  "reason": "The PreciseShot component is in play, so data/ keeps no component a label could word.",
+  "target": "8f3d1e6b4be006f4d896081f2f889665",
+  "text": "No penalty for a ranged attack on a target that is fighting in melee."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "bdfd90c6",
+  "reason": "ToughnessLogic is in play, so data/ keeps no component a label could word.",
+  "target": "d09b20029e9abfe4480b356c92095623",
+  "text": "Extra hit points equal to the character level, at least 3."
+}

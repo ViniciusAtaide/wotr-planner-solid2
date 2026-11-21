@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "f853faec",
+  "reason": "AttackStatReplacement is in play, so data/ keeps no component a label could word.",
+  "target": "90e54424d682d104ab36436bd527af09",
+  "text": "Uses Dexterity instead of Strength on attack rolls with light and natural weapons, when Dexterity is the higher."
+}

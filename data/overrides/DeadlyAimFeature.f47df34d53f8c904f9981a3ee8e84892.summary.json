@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "afd43b5b",
+  "reason": "Its numbers sit on the toggle's effect buff (WeaponParametersAttackBonus and WeaponParametersDamageBonus), which data/ doesn't keep.",
+  "target": "f47df34d53f8c904f9981a3ee8e84892",
+  "text": "While on: -1 on ranged attack rolls and +2 on ranged damage, each multiplied by 1 + base attack bonus / 4."
+}

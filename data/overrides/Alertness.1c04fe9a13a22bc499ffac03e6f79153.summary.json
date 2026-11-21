@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "f0899908",
+  "reason": "Its bonus is an AddContextStatBonus with a rank table that data/ doesn't keep (only Racial ones are kept).",
+  "target": "1c04fe9a13a22bc499ffac03e6f79153",
+  "text": "+2 on Perception checks, +4 once Perception has 10 ranks."
+}
