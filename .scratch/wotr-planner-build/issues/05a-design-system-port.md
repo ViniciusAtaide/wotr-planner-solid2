@@ -47,6 +47,7 @@ The UI that ticket 05 builds gets its look from one place: the "Worldwound Plann
 - `src/styles/tokens.css` holds the published `tokens.css` with its values unchanged, under a header comment. It is the only file under `src/` that writes a color: `src/styles/colors.test.tsx` fails on any hex, `rgb(`, `hsl(` or `oklch(` elsewhere, and a planted literal of each kind is caught.
 - `src/styles/components.css` holds `bundle.css` unchanged, with its `ww-` classes and the Google Fonts import.
 - `src/styles/app.css` is the page around the components (the ground, the header, the gallery's grid, links), written in tokens only.
+- **Superseded (ticket 05, the user's call):** the planner is dark only; Parchment, `ThemeToggle.tsx` and `public/theme.js` were removed, and the design system and its copy here are dark only too. What follows describes 05a as first built.
 - **Themes:** `<html data-theme="dark">`. A header toggle (`src/components/ThemeToggle.tsx`) switches between "Worldwound" and "Parchment" and remembers the choice in `localStorage` under try/catch. `public/theme.js` applies the remembered theme before the first paint.
 - **The 12 components** in `src/components/design/`:
   - `LevelRow` (with `Timeline` and `PickChips`) and `RankMarker`;

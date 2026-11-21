@@ -1,4 +1,4 @@
-The look of the Wrath of the Righteous build planner: a dense tool for trying Builds quickly, dressed in the game's dark fantasy. Iron-dark grounds, warm bone text, one brass accent, and Mythic power in orchid. Dark is the first theme (Worldwound); Parchment is its light twin.
+The look of the Wrath of the Righteous build planner: a dense tool for trying Builds quickly, dressed in the game's dark fantasy. Iron-dark grounds, warm bone text, one brass accent, and Mythic power in orchid. The planner is dark only: one theme, Worldwound (user, 2026-11-20).
 
 ## Content fundamentals
 
@@ -19,7 +19,7 @@ The look of the Wrath of the Righteous build planner: a dense tool for trying Bu
 - `mythic` marks Mythic only: rank markers, Mythic class names, Mythic picks. Nothing else is orchid.
 - Status has its own three colors, never the accent: `open`, `closed` and `gear`. Each always carries its mark and word (✓ Open, ✕ Closed, ◈ Gear), so color is never the only signal. `open` and `closed` differ in lightness as well as hue.
 - Hairlines are `line`. The edge of anything you can operate (inputs, buttons, options) is `line-strong`, which holds 3:1 on its surfaces.
-- Every text pair above holds at least 4.5:1 in both themes.
+- Every text pair above holds at least 4.5:1.
 
 ### Type
 
