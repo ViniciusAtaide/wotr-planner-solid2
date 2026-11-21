@@ -238,10 +238,12 @@ export function ChoiceList(props: ChoiceListProps) {
   onSettled(() => hub?.resolve(findDetail));
   createEffect(
     () => mark(),
-    (at) => {
-      scrollToIndex(scroller, at);
-      const r = open()[at];
-      if (r !== undefined && filtering()) hub?.point(r.key);
+    (at) => scrollToIndex(scroller, at),
+  );
+  createEffect(
+    () => (filtering() ? open()[mark()]?.key : undefined),
+    (key) => {
+      if (key !== undefined) hub?.point(key);
     },
   );
   return (
@@ -265,6 +267,7 @@ export function ChoiceList(props: ChoiceListProps) {
             setText(t);
             setMark(0);
             panel.show();
+            if (scroller !== undefined) scroller.scrollTop = 0;
           }}
           onMove={(delta) => setMark((m) => clampMark(m, delta, open().length))}
           onEnter={() => take(open()[mark()])}
