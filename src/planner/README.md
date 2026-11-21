@@ -341,9 +341,9 @@ dimmed and inert behind "Edit the Second Build".
   the keys above, Synergy links, the filter and its mark, "Show N closed", and "Clear this pick".
 - **Gear that won't stack** (`gear-clash.ts`): E's `gearClashes` names the bonuses an item would give in a place that
   won't stack with what the Build holds or wears elsewhere, worded by `stackWords`. A worn item that clashes says so
-  under it; in the item list a row carries a "Won't stack" badge and the dialog's pane the sentence. Each call walks
-  the Build, so the list's badges are filled after paint, one item per task, cached per Build, place and item
-  (`fillClashes`), and appear as they come; the worn item and the pane ask for theirs directly.
+  under it; in the item list a row carries a "Won't stack" badge and the dialog's pane the sentence. E's
+  `gearClashIndex` walks the Build once per place, and the planner keeps that index and each item's words per Build and
+  place, so the whole list's badges cost one walk.
 - **A step's filter text** lives in `Here` (`StepFilter`, `createFilterMemory` in `list-panel.ts`), not in the list, so
   Expand and the dialog's return after a Cascade Cancel keep what was typed.
 - **The address bar** takes a Build's code only when the code is the active Build's own (`ShareCode`'s `of`), so a
