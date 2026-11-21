@@ -157,7 +157,7 @@ function against(data: CheckedData, ref: Ref | null, not = false, unnamed = 'cer
   return not ? `foes without ${name}` : name;
 }
 
-const stat = (s: StatType) => statName(s);
+const stat = (s: StatType) => (s.startsWith('Save') ? `${statName(s)} saves` : statName(s));
 
 function physical(c: AddDamageResistancePhysical): string {
   const flags = (v: string | number) => (typeof v === 'string' ? v.split(', ').filter((x) => x !== '') : []);
@@ -206,6 +206,12 @@ function rangeAttack(c: AttackTypeAttackBonus, data: CheckedData): string {
   return `${bonus} on ${rolls}${whileHolding(data, c.CheckFact, c.m_RequiredFact)}.`;
 }
 
+export const STAT_LABELLED: ReadonlySet<string> = new Set([
+  'AddStatBonus',
+  'AddStatBonusIfHasFact',
+  'AddContextStatBonus',
+]);
+
 export const EQUIPMENT_LABELLED: ReadonlySet<string> = new Set([
   'AddStatBonusEquipment',
   'IncreaseStatEquipment',
@@ -215,6 +221,7 @@ export const EQUIPMENT_LABELLED: ReadonlySet<string> = new Set([
 ]);
 
 export const RANK_SCALED: ReadonlySet<string> = new Set([
+  'AddStatBonus',
   'ACBonusAgainstFactOwner',
   'AttackBonusAgainstFactOwner',
   'DamageBonusAgainstFactOwner',
@@ -505,6 +512,42 @@ function rawLabel(data: CheckedData, c: Component): Label | undefined {
         role: 'bonus',
         text: `${signed(x.Bonus)}% arcane spell failure ${x.Universal ? 'from any source' : what}.`,
       };
+    }
+    case 'AddStatBonus': {
+      const x = c as Component & {
+        readonly Descriptor: ModifierDescriptor;
+        readonly Stat: StatType;
+        readonly Value: number;
+        readonly ScaleByBasicAttackBonus: boolean;
+      };
+      const bab = x.ScaleByBasicAttackBonus
+        ? `, and ${signed(x.Value)} more for every 4 points of base attack bonus`
+        : '';
+      return { role: 'bonus', text: `${typed(signed(x.Value), x.Descriptor)} to ${stat(x.Stat)}${bab}.` };
+    }
+    case 'AddStatBonusIfHasFact': {
+      const x = c as Component & {
+        readonly Descriptor: ModifierDescriptor;
+        readonly Stat: StatType;
+        readonly Value: RankedContextValue;
+        readonly InvertCondition: boolean;
+        readonly RequireAllFacts: boolean;
+        readonly m_CheckedFacts: readonly Ref[];
+      };
+      const facts = x.m_CheckedFacts.map((r) => factName(data, r)).filter((n): n is string => n !== undefined);
+      const which = facts.length === 0 ? undefined : x.RequireAllFacts ? andList(facts) : orList(facts);
+      const when = which === undefined ? '' : ` ${x.InvertCondition ? 'without' : 'with'} ${which}`;
+      return { role: 'bonus', text: `${typed(bonusOf(0, x.Value), x.Descriptor)} to ${stat(x.Stat)}${when}.` };
+    }
+    case 'AddContextStatBonus': {
+      const x = c as Component & {
+        readonly Descriptor: ModifierDescriptor;
+        readonly Stat: StatType;
+        readonly Multiplier: number;
+        readonly Value: RankedContextValue;
+      };
+      const n = x.Value.ValueType === 'Simple' ? signed(x.Value.Value * x.Multiplier) : 'a bonus that grows with level';
+      return { role: 'bonus', text: `${typed(n, x.Descriptor)} to ${stat(x.Stat)}.` };
     }
     case 'AddStatBonusEquipment':
     case 'IncreaseStatEquipment': {

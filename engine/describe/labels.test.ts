@@ -4,7 +4,7 @@ import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { buildGrantIndex } from '../grants';
 import { describe, NO_SUMMARY, summaryComponentTypes, summaryLabels, summaryText } from './describe';
-import { EQUIPMENT_LABELLED, labelOf, labelsOf, type Role } from './labels';
+import { EQUIPMENT_LABELLED, labelOf, labelsOf, STAT_LABELLED, type Role } from './labels';
 import { spellDescriptors } from '../links';
 
 const files = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)));
@@ -237,7 +237,8 @@ suite('Summary labels', { timeout: 30_000 }, () => {
     for (const bp of data.blueprints.values())
       for (const c of bp.Components) {
         const label = labelOf(data, c);
-        if (!summaryComponentTypes.includes(c.$type) && !EQUIPMENT_LABELLED.has(c.$type)) expect(label).toBeUndefined();
+        if (!summaryComponentTypes.includes(c.$type) && !EQUIPMENT_LABELLED.has(c.$type) && !STAT_LABELLED.has(c.$type))
+          expect(label).toBeUndefined();
         if (label !== undefined)
           expect(label.text).not.toMatch(
             /\(internal\)|undefined|NaN|\b[A-Z][a-z]+[A-Z]\w*(Bonus|Immunity|Resistance)\b/,
@@ -337,5 +338,11 @@ suite('Summary labels', { timeout: 30_000 }, () => {
     expect(twoHanded?.forClass?.name).toBe('Fighter');
     expect(twoHanded?.replaces?.length).toBeGreaterThan(0);
     expect(twoHanded?.replaces?.map((r) => r.name)).toContain('Bravery');
+  });
+
+  it('words the stat bonuses the walk keeps, so Dodge, Iron Will and Improved Initiative read right (QA pass 4)', () => {
+    expect(summaryText(data, '97e216dbb46ae3c4faef90cf6bbe6fd5', G)).toBe('+1 dodge bonus to AC.');
+    expect(summaryText(data, '175d1577bb6c9a04baf88eec99c66334', G)).toBe('+2 to Will saves.');
+    expect(summaryText(data, '797f25d709f559546b29e7bcb181cc74', G)).toBe('+4 to Initiative.');
   });
 });

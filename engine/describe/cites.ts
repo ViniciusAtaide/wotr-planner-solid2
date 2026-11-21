@@ -1,6 +1,10 @@
 import type { Cites } from '../cite';
 
 export const cites = {
+  STAT_LABELLED: [
+    'UnitLogic/FactLogic/AddStatBonus.cs OnTurnOn (Descriptor, Stat, Value, ScaleByBasicAttackBonus)',
+    'Designers/Mechanics/Buffs/AddStatBonusIfHasFact.cs ShouldApplyBonus (InvertCondition, RequireAllFacts, m_CheckedFacts)',
+  ],
   RANK_SCALED: [
     'Designers/Mechanics/Facts/ACBonusAgainstFactOwner.cs OnEventAboutToTrigger (Bonus)',
     'Designers/Mechanics/Facts/SavingThrowBonusAgainstFact.cs OnEventAboutToTrigger (Value)',
