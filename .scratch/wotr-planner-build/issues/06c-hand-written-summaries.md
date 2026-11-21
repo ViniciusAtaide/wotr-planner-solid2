@@ -26,4 +26,4 @@ Some generated Summaries read badly. For those, a hand-written summary in our ow
 - **describe** prefers a hand-written summary (`summarySource: 'written'`) and keeps the generated `labels`. `summaryText` gives the MCP's `search` and `options` the same text.
 - **The first one:** Danger Sense (Rogue). Its generated summary couldn't name traps (the trap marker fact is never shown), and it didn't say the bonuses grow with each rank.
 - **Tests:** a fresh summary loads, a changed component is flagged with both fingerprints, malformed or link-carrying summaries are refused (`load.test.ts`), and describe prefers the written text (`labels.test.ts`).
-- **Follow-up:** generated labels word a rank-scaled bonus at rank 1. Components that multiply by the fact's rank (Danger Sense, Weapon Training…) could say "per rank" when the blueprint has more than one rank.
+- **QA fix:** generated labels worded a rank-scaled bonus at rank 1. Now the carriers the game multiplies by the fact's rank say "per rank (up to N)" on a blueprint of more than one rank (`RANK_SCALED`, cited).

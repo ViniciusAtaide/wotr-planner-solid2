@@ -274,4 +274,14 @@ suite('Summary labels', { timeout: 30_000 }, () => {
       summary: NO_SUMMARY,
     });
   });
+
+  it("says a bonus grows per rank when the game multiplies it by the fact's rank", () => {
+    expect(labelsOf(data, '0bcbe9e450b0e7b428f08f66c53c5136').map((l) => l.text)).toEqual([
+      '+1 on saves against certain sources, per rank (up to 6).',
+      '+1 dodge bonus to AC against certain foes, per rank (up to 6).',
+    ]);
+    expect(labelsOf(data, '06964d468fde1dc4aa71a92ea04d930d').map((l) => l.text)).toEqual([
+      '+4 on concentration checks.',
+    ]);
+  });
 });

@@ -245,9 +245,32 @@ function rangeAttack(c: AttackTypeAttackBonus, data: CheckedData): string {
   return `${bonus} on ${rolls}${whileHolding(data, c.CheckFact, c.m_RequiredFact)}.`;
 }
 
-export function labelOf(data: CheckedData, c: Component): Label | undefined {
+export const RANK_SCALED: ReadonlySet<string> = new Set([
+  'ACBonusAgainstFactOwner',
+  'AttackBonusAgainstFactOwner',
+  'DamageBonusAgainstFactOwner',
+  'SavingThrowBonusAgainstFact',
+  'SavingThrowBonusAgainstDescriptor',
+  'WeaponGroupAttackBonus',
+  'WeaponGroupDamageBonus',
+  'ManeuverDefenceBonus',
+  'ArcaneSpellFailureIncrease',
+  'Blindsense',
+  'BuffAllSavesBonus',
+  'AttackTypeAttackBonus',
+  'AddDamageResistanceEnergy',
+]);
+
+function scalesWithRank(c: Component): boolean {
+  if (c.$type === 'ManeuverBonus') return !(c as ManeuverBonus).IgnoreFactRank && !(c as ManeuverBonus).Mythic;
+  return RANK_SCALED.has(c.$type);
+}
+
+export function labelOf(data: CheckedData, c: Component, ranks = 1): Label | undefined {
   const label = rawLabel(data, c);
-  return label === undefined ? undefined : { role: label.role, text: sentence(label.text) };
+  if (label === undefined) return undefined;
+  const text = ranks > 1 && scalesWithRank(c) ? label.text.replace(/\.$/, `, per rank (up to ${ranks}).`) : label.text;
+  return { role: label.role, text: sentence(text) };
 }
 
 function rawLabel(data: CheckedData, c: Component): Label | undefined {
@@ -522,9 +545,10 @@ function rawLabel(data: CheckedData, c: Component): Label | undefined {
 
 export function labelsOf(data: CheckedData, guid: Guid): Label[] {
   const bp = data.blueprints.get(guid);
+  const ranks = bp !== undefined && 'Ranks' in bp && typeof bp.Ranks === 'number' ? bp.Ranks : 1;
   const seen = new Set<string>();
   return (bp?.Components ?? []).flatMap((c) => {
-    const label = labelOf(data, c);
+    const label = labelOf(data, c, ranks);
     if (label === undefined || seen.has(label.text)) return [];
     seen.add(label.text);
     return [label];
