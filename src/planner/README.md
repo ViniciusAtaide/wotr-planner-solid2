@@ -51,7 +51,7 @@ to the player in the planner's own words: "Level 5 · choose feat", "Your charac
    (and each archetype of a class the Build hasn't taken, below) with its status, the previous class first, then the
    open ones, then the closed ones with their reasons. At the level cap (`Walk.maxCharacterLevel`, `atLevelCap`) no
    next level is offered: a due Mythic rank still is, even after "Not now" (which the cap hides), and otherwise the
-   trail ends on "Level N · the Build is complete" (`complete`).
+   trail simply ends on the cap level's stop, with no closing card (user, 2026-11-21; `complete`, where `end`).
 
 Each pick goes back to the next step. Tapping any chip (or a stop's title, for its class, archetype and removal, or a
 rank's, for its path and Rank level) opens that choice in place with "Back to the next choice"; the ability scores,
@@ -337,7 +337,7 @@ dimmed and inert behind "Edit the Second Build".
 
 - `planner.css` styles the page phone first: the bar and menu, the trail's card, stops, chips, steps and folded
   rows, and the Undo line. Every value is a token from `tokens.css`; component looks stay in the design system's
-  `components.css`. Every target is at least 44 px. `planner-behind` wraps the page behind the overlay with
+  `components.css`. Every target is at least 44 px. A tile's controls (the score steppers and +2) fill their track (`width: 100%`, `min-width: 0`, `border-box`, the stepper pair a two-column `minmax(0, 1fr)` grid) and keep their 44 px height, so nothing spills past a tile however narrow its column; checked in the browser at 375, 768, 920 and 1280 px and with the grid squeezed to 80 px tiles. `planner-behind` wraps the page behind the overlay with
   `display: contents`, so making it inert changes no layout. The arrival (`trail-arrive`) runs only under
   `prefers-reduced-motion: no-preference`.
 - Focus:

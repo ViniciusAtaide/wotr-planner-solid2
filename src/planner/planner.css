@@ -290,10 +290,12 @@
 }
 
 .trail-stat {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-1);
+  min-width: 0;
   padding: var(--space-2) var(--space-1);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-md);
@@ -325,12 +327,16 @@
 }
 
 .trail-stat__steps {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-1);
+  width: 100%;
 }
 
 .trail-stepper {
-  min-width: 44px;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
   min-height: 44px;
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-md);
@@ -347,7 +353,9 @@
 }
 
 .trail-plus2 {
-  min-width: 92px;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
   min-height: 44px;
   border: 1px dashed var(--line-strong);
   border-radius: var(--radius-md);

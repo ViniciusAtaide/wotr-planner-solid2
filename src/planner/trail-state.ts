@@ -23,7 +23,8 @@ export type Where =
   | { readonly kind: 'level'; readonly level: number }
   | { readonly kind: 'rank'; readonly rank: number }
   | { readonly kind: 'next' }
-  | { readonly kind: 'gear' };
+  | { readonly kind: 'gear' }
+  | { readonly kind: 'end' };
 
 export interface TrailState {
   readonly skillsLeft: ReadonlySet<number>;
@@ -215,8 +216,9 @@ export function whereOf(t: TrailView, step: Step): Where {
       return { kind: 'character' };
     case 'mythic':
     case 'nextLevel':
-    case 'complete':
       return { kind: 'next' };
+    case 'complete':
+      return { kind: 'end' };
   }
 }
 
@@ -253,7 +255,7 @@ export function stepTitle(t: TrailView, step: Step): string {
     case 'mythic':
       return `Ascend to Mythic rank ${step.rank}`;
     case 'complete':
-      return `Level ${t.build.levels.length} · the Build is complete`;
+      return `Level ${t.build.levels.length}`;
     case 'nextLevel':
       return t.build.levels.length === 0
         ? 'Begin · choose a first class'
@@ -276,6 +278,8 @@ export function hereLevel(t: TrailView, where: Where): number {
     case 'next':
     case 'gear':
       return t.build.levels.length + 1;
+    case 'end':
+      return t.build.levels.length;
   }
 }
 

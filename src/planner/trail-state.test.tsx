@@ -327,7 +327,7 @@ describe('QA pass 1', () => {
     const finished = filled(jackInTheGreen.build);
     const done = next(finished, { skillsLeft: new Set([20]), mythicLater: undefined });
     expect(done).toEqual({ kind: 'complete' });
-    expect(stepTitle(viewOf(finished), done)).toBe('Level 20 · the Build is complete');
+    expect(whereOf(viewOf(finished), done)).toEqual({ kind: 'end' });
   });
 
   test('a folded chapter counts its levels per class so they do not read as a class level', () => {
