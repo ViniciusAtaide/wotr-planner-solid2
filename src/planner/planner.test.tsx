@@ -29,7 +29,7 @@ import { EMPTY, openHash } from './link';
 import Planner, { RefusalNotice } from './Planner';
 import { buildSheet } from './sheet';
 import { createPlanner, type Planner as PlannerApi } from './state';
-import { ChoiceList } from './ChoiceList';
+import { ChoiceList, matchRank, ranked } from './ChoiceList';
 import { PickerOption } from '../design';
 import { pageTitle } from './BuildName';
 import { isListStep } from './list-mode';
@@ -547,6 +547,20 @@ describe('the levelling trail (build ticket 07)', () => {
       'Race Tiefling · Beastbrood (Rakshasa-Spawn)',
     );
     expect(fieldValue('Race')).toBe('Tiefling · Beastbrood (Rakshasa-Spawn)');
+  });
+
+  test('a filter ranks a name that starts with the text, then a word that does, then the rest (QA pass 5)', async () => {
+    expect(matchRank('Human', 'human')).toBe(0);
+    expect(matchRank('Half-Orc · Human-Raised', 'human')).toBe(1);
+    expect(matchRank('Inhuman Grace', 'human')).toBe(2);
+    expect(ranked(['Half-Orc · Human-Raised', 'Inhuman Grace', 'Human'], (n) => n, 'human')).toEqual([
+      'Human',
+      'Half-Orc · Human-Raised',
+      'Inhuman Grace',
+    ]);
+    await openPlanner(undefined);
+    filterAndTake('human');
+    expect(fieldValue('Race')).toBe('Human');
   });
 
   test('the class list holds each class with its archetypes, and one row takes both as one change', async () => {
