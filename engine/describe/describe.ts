@@ -4,12 +4,14 @@ import { buildGrantIndex, removes, type GrantIndex } from '../grants';
 import { linkIndex } from '../links';
 import { prerequisites } from '../prerequisites';
 import { nameOf, unmetText } from '../refusals';
+import { labelsOf, type Label } from './labels';
 
 export interface Description {
   readonly guid: Guid;
   readonly name: string;
   readonly kind: Kind;
   readonly summary: string;
+  readonly labels: readonly Label[];
   readonly prerequisites: readonly string[];
   readonly grants: readonly { readonly guid: Guid; readonly name: string; readonly level?: number }[];
   readonly pickedIn: readonly { readonly guid: Guid; readonly name: string }[];
@@ -18,6 +20,10 @@ export interface Description {
 }
 
 export const NO_SUMMARY = 'No summary yet.';
+
+export function summaryOf(labels: readonly Label[]): string {
+  return labels.length === 0 ? NO_SUMMARY : labels.map((l) => l.text).join(' ');
+}
 
 export function describe(
   data: CheckedData,
@@ -32,11 +38,13 @@ export function describe(
   };
   const w = { data, G };
   const links = linkIndex(data, G);
+  const labels = labelsOf(data, guid);
   return {
     guid,
     name: nameOf(data, guid),
     kind: kindOf[bp.$type],
-    summary: NO_SUMMARY,
+    summary: summaryOf(labels),
+    labels,
     prerequisites: prerequisites(bp, data.blueprints).map((leaf) =>
       unmetText(w, { leaf }).replace(/^Needs /, leaf.Group === 'All' ? 'Needs ' : 'Or: needs '),
     ),

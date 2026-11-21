@@ -1,18 +1,25 @@
 # Summaries
 
-What the planner says about one blueprint. Until ticket 06 writes the Summaries, this feature gives the basic description of build ticket 05: what the data says of a blueprint, in our own words. That is its name, its prerequisites (worded by R), what it grants, where it can be picked, and its chain links. It never holds game text (ADR 0001, ADR 0006).
+What the planner says about one blueprint: its Summary (ticket 06b), and the basic description of build ticket 05: its name, its prerequisites (worded by R), what it grants, where it can be picked, and its chain links. All in our own words; it never holds game text (ADR 0001, ADR 0006).
 
 ## Public entry
 
 - `describe(data, guid, G?)`: a blueprint's basic description, or undefined when the data doesn't hold the blueprint or the game never shows it (map 19).
 - `Description`: one blueprint, described.
   - `guid`, `name`, `kind`: which blueprint it is; the name is R's `nameOf`.
-  - `summary`: the Summary, once ticket 06 writes it; `NO_SUMMARY` until then.
+  - `summary`: the Summary, the labelled components' sentences joined (`summaryOf`), or `NO_SUMMARY` when nothing on the blueprint is labelled.
+  - `labels`: the same sentences, each with its `Role`, for a UI that groups or marks them.
   - `prerequisites`: each prerequisite, worded by R.
   - `grants`: the shown facts it grants, each with the level it grants it at when the grant says so.
   - `pickedIn`: where it can be picked, that is the shown selections that list it.
   - `needs`, `enables`: its prerequisite-chain links (map 09), from engine/links.
-- `NO_SUMMARY`: the placeholder text until a Summary is written.
+- `NO_SUMMARY`: "No summary yet.", the Summary of a blueprint with nothing labelled (map 10). Never a guess or a raw component name.
+- `summaryOf(labels)`: the Summary text of a list of labels.
+- `labelOf(data, component)` and `labelsOf(data, guid)`: a component's `Label` (06b), or undefined for a component no label covers; and a blueprint's labels, in component order, each distinct sentence once.
+- `Label`: `role` and `text`. `Role` is one of `bonus`, `save`, `immunity`, `resistance`, `weakness`, `requirement` and `trigger` (map 10's roles, with `weakness` for a vulnerability).
+- `spellDescriptors(wrapper)`: the names of the spell descriptor flags a 64-bit `SpellDescriptorWrapper` sets, read as an unsigned 64-bit number so the sign bit (`AnomalyDistortion`) counts.
+- `summaryComponentTypes`: the 50 carriers 06a keeps for the Summaries, the importer's reader set for them.
+- `cites`: the game methods whose mechanics a sentence states.
 
 ## Rules
 
@@ -20,8 +27,15 @@ What the planner says about one blueprint. Until ticket 06 writes the Summaries,
 - **Grants.** G's grants of the blueprint, less removals, less facts the game never shows, and less the grants that are really list membership (a selection's options, a class's archetypes): those are not what it grants but what can be picked in it.
 - **Picked in.** The shown selections that list the blueprint among their options, each once.
 
-None of these ports a game method, so this feature has no citations.
+- **Labels** (06b). Each of the 50 carriers has one sentence template, written in our own words from what the component's kept fields say:
+  - **Values.** A plain value reads as a signed number ("+4"). A value the game computes from a rank or another property reads as "a bonus that grows with level", not a guess at the number.
+  - **Bonus types.** A typed bonus names its type ("+2 dodge bonus"); an untyped one (`None`, `UntypedStackable`) names none.
+  - **Facts.** A fact a component names reads as its bare name ("against Reptilian Humanoid"). A fact the game never names reads as "certain foes" (or "certain sources" for a save), never an asset name.
+  - **Descriptors and lists.** Spell descriptors, energies, conditions, maneuvers and weapon groups read as plain words, listed with "or".
+  - **Mechanics.** Where a sentence states what the game does (an arcana's +1 per die, Spell Specialization's +2 caster level, a mythic Weapon Focus's +2, a vulnerability's half again as much damage, the doubled threat range of Improved Critical), it cites the method (`cites`).
+  - A component that names nothing a sentence can say (a descriptor immunity with no descriptor) gets no label.
+- **The Summary** is the blueprint's labels in component order, each distinct sentence once.
 
 ## Design notes
 
-- The MCP's `explain` tool and its `search` and `options` results carry this description and its `NO_SUMMARY` placeholder.
+- The MCP's `explain` tool carries this description, and its `search` and `options` results carry the Summary.

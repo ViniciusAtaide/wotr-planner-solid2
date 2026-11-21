@@ -177,6 +177,11 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
       prerequisites: ['Needs Strength 13.'],
       summary: 'No summary yet.',
     });
+    expect(explain(e, { guid: '06964d468fde1dc4aa71a92ea04d930d' })).toMatchObject({
+      name: 'Combat Casting',
+      summary: '+4 on concentration checks.',
+      labels: [{ role: 'bonus', text: '+4 on concentration checks.' }],
+    });
     const code = (await start_build(e)).code;
     const fighter = ok(await level_up(e, { code, class: '48ac8db94d5de7645906c7d0ad3bcfbd' }), 'level_up');
     expect(ok(await sheet(e, { code: fighter.code }), 'sheet')).toMatchObject({ level: 1, baseAttackBonus: 1 });

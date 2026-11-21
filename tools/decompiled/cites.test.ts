@@ -11,6 +11,7 @@ import { cites as build } from '~engine/build';
 import { cites as gold } from '~engine/gold';
 import { cites as walk } from '~engine/walk';
 import { cites as pickers } from '~engine/pickers';
+import { cites as describeCites } from '~engine/describe';
 import { cites as links } from '~engine/links';
 import { cites as mcp } from '~engine/mcp';
 import { citeFormatProblems, citeSourceProblems, featureText } from './cites';
@@ -28,6 +29,7 @@ const registries = new Map<string, Cites>([
   ['engine/gold', gold],
   ['engine/walk', walk],
   ['engine/pickers', pickers],
+  ['engine/describe', describeCites],
   ['engine/links', links],
   ['engine/mcp', mcp],
 ]);

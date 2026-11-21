@@ -1,6 +1,7 @@
 # Summary labels and templates
 
-Status: open
+Status: done
+Session: ticket-03c-walk-fixes
 Blocked by: 06a
 Parent: [06](06-after-first-use.md)
 Plan: [plan](../plan.md)
@@ -13,3 +14,12 @@ Give each of 06a's 50 carriers a label ([map 10](../../wotr-planner/issues/10-ge
 
 - Each of the 50 carriers has a label, and a test produces its sentence from a real blueprint that carries it.
 - `describe` and the MCP's `explain` carry the Summary. The UI session has its shape.
+
+## Outcome
+
+- **Labels:** `engine/describe/labels.ts` gives each of 06a's 50 carriers a `Label` (`role` and `text`), in our own words. Roles: `bonus`, `save`, `immunity`, `resistance`, `weakness` (vulnerability), `requirement`, `trigger`. A computed value reads "grows with level", never a guessed number. A fact the game never names reads "certain foes" or "certain sources". The mechanics a sentence states are cited (`engine/describe/cites.ts`, checked against `decompiled/`).
+- **The Summary:** `describe` carries `summary` (the labels' sentences, or "No summary yet.") and `labels`. The MCP's `explain` returns both, and `search` and `options` carry the Summary.
+- **Spell descriptors:** `spellDescriptors` reads the 64-bit flags as unsigned, so the sign bit counts.
+- **Tests:** one real blueprint per carrier with its exact sentence (`labels.test.ts`); no label anywhere holds an asset name, `undefined` or a component name; describe's Summary and the placeholder; the MCP's `explain`.
+- **Coverage:** 554 of 8053 shown blueprints have a Summary (524 features, 30 buffs).
+- **Follow-up:** items show no Summary yet. Their effects sit on the features their enchantments grant, so an item's Summary could gather its granted facts' labels. That's for 06c or a new ticket.

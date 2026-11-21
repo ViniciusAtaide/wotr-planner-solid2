@@ -24,7 +24,7 @@ import {
   type Kind,
   type StatType,
 } from '../data';
-import { describe, NO_SUMMARY, type Description } from '../describe';
+import { describe, labelsOf, summaryOf, type Description } from '../describe';
 import { allows, apply, breaksOf, cascade, type Breaks, type Edit } from '../edits';
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
 import { linkIndex, type SharedTopic, type StackClash, type Topic } from '../links';
@@ -297,7 +297,7 @@ export async function options(
     feature: o.feature,
     ...(o.param && { param: o.param }),
     name: optionName(e, o),
-    summary: NO_SUMMARY,
+    summary: summaryOf(labelsOf(e.data, o.feature)),
     buildsOn: listNames(
       e.data,
       links.needs(o.feature).filter((g) => held.has(g)),
@@ -482,7 +482,12 @@ export function search(
   for (const bp of e.data.blueprints.values()) {
     if (!isShown(bp) || (args.kind !== undefined && kindOf[bp.$type] !== args.kind)) continue;
     if (!(bp.name ?? '').toLowerCase().includes(text)) continue;
-    out.push({ guid: bp.guid, name: bp.name ?? bp.assetName, kind: kindOf[bp.$type], summary: NO_SUMMARY });
+    out.push({
+      guid: bp.guid,
+      name: bp.name ?? bp.assetName,
+      kind: kindOf[bp.$type],
+      summary: summaryOf(labelsOf(e.data, bp.guid)),
+    });
     if (out.length >= 50) break;
   }
   return out;

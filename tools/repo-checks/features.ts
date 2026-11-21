@@ -42,7 +42,7 @@ export const FEATURES: readonly Feature[] = [
   engine('codec', 'build', 'data', 'load', 'grants', 'walk', 'gold', 'data-dir'),
   engine('compact', 'data', 'data-dir', 'load'),
   engine('links', 'data', 'load', 'grants', 'prerequisites', 'cite', 'data-dir'),
-  engine('describe', 'data', 'load', 'grants', 'links', 'prerequisites', 'refusals'),
+  engine('describe', 'cite', 'data', 'data-dir', 'load', 'grants', 'links', 'prerequisites', 'refusals'),
   engine(
     'mcp',
     'build',
@@ -74,6 +74,7 @@ export const FEATURES: readonly Feature[] = [
       'engine/gold',
       'engine/walk',
       'engine/links',
+      'engine/describe',
       'engine/pickers',
       'engine/mcp',
     ],
