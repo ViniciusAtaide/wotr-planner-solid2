@@ -2019,6 +2019,33 @@ describe('Summaries and Synergy in the lists (ticket 06)', () => {
     expect(enablesOf('Rapier')).toContain('Fencing Grace');
   });
 
+  test('links name each linked feat once, by its bare name (QA pass 4, engine linkNames)', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
+    await waitFor(() => expect(document.querySelector('.choice-dialog')).not.toBeNull());
+    fireEvent.input(document.querySelector('.choice-dialog [data-picker-filter]') ?? document.body, {
+      target: { value: 'dodge' },
+    });
+    flush();
+    fireEvent.click(screen.getByRole('button', { name: /^Show \d+ closed$/ }));
+    flush();
+    const dodge = [...document.querySelectorAll<HTMLElement>('.choice-dialog .ww-option')].find(
+      (r) => r.querySelector('.ww-option__name')?.textContent === 'Dodge',
+    );
+    fireEvent.pointerOver(dodge ?? document.body);
+    flush();
+    const enables =
+      [...document.querySelectorAll('.choice-dialog__links li')]
+        .map((li) => li.textContent ?? '')
+        .find((line) => line.startsWith('Enables ')) ?? '';
+    expect(enables).not.toBe('');
+    expect(enables).not.toMatch(/\(with /);
+    const names = enables.replace(/^Enables /, '').split(', ');
+    expect(new Set(names).size).toBe(names.length);
+  });
+
   test('the next level is a list step only before level 1, so Modal first keeps "Continue as …" inline (QA pass 4)', () => {
     expect(isListStep({ kind: 'nextLevel' }, 0)).toBe(true);
     expect(isListStep({ kind: 'nextLevel' }, 1)).toBe(false);

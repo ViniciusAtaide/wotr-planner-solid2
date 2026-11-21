@@ -2,9 +2,9 @@ import { createEffect, createMemo, createSignal, For, onSettled, Show, untrack, 
 import { slotKey, type Build, type Pick, type SlotId } from '~engine/build';
 import type { Guid } from '~engine/data';
 import type { Edit } from '~engine/edits';
-import { enablesWith, linkIndex } from '~engine/links';
+import { enablesWith, linkIndex, linkNames } from '~engine/links';
 import { picker, type OptionStatus } from '~engine/pickers';
-import { gearNote, listNames, nameOf, refusal } from '~engine/refusals';
+import { gearNote, refusal } from '~engine/refusals';
 
 import { Button, OptionList, PickerOption } from '../design';
 import { Filter, moveThroughOptions, SCROLL_STYLE, StepArrived, type ClosedToggle, type FieldMode } from './ChoiceList';
@@ -132,11 +132,11 @@ export function PickStep(props: PickStepProps) {
   const links = (o: OptionStatus): string | undefined => {
     const index = linkIndex(data(), planner().engine.G);
     const on = index.needs(o.feature).filter((g) => held().has(g));
-    const enables = enablesWith(data(), o.feature, o.param, planner().engine.G);
+    const enables = sorted(linkNames(data(), enablesWith(data(), o.feature, o.param, planner().engine.G)));
     const parts = [
-      on.length > 0 && `Builds on ${listNames(data(), on).join(', ')}`,
+      on.length > 0 && `Builds on ${sorted(linkNames(data(), on)).join(', ')}`,
       enables[0] !== undefined &&
-        `Enables ${listNames(data(), enables)[0] ?? nameOf(data(), enables[0])}${enables.length > 1 ? ` → and ${enables.length - 1} more` : ''}`,
+        `Enables ${enables[0]}${enables.length > 1 ? ` → and ${enables.length - 1} more` : ''}`,
     ].filter((w) => typeof w === 'string');
     return parts.length > 0 ? parts.join(' · ') : undefined;
   };
@@ -153,9 +153,9 @@ export function PickStep(props: PickStepProps) {
     const on = buildsOn(o);
     const enables = enablesWith(data(), o.feature, o.param, planner().engine.G);
     return [
-      ...(on.length > 0 ? [`Builds on ${sorted(listNames(data(), on)).join(', ')}`] : []),
+      ...(on.length > 0 ? [`Builds on ${sorted(linkNames(data(), on)).join(', ')}`] : []),
       ...synergyLines(data(), o.synergy),
-      ...(enables.length > 0 ? [`Enables ${sorted(listNames(data(), enables)).join(', ')}`] : []),
+      ...(enables.length > 0 ? [`Enables ${sorted(linkNames(data(), enables)).join(', ')}`] : []),
     ];
   };
   const detailOf = (row: PickRow, o: OptionStatus, child: boolean): OptionDetail => {
