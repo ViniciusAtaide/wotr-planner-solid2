@@ -327,4 +327,15 @@ suite('Summary labels', { timeout: 30_000 }, () => {
     expect(summaryText(data, '209960f8d60e23a4c8e75d14e2261263', G)).toBe('+1 natural armor enhancement bonus to AC.');
     expect(summaryText(data, '4aea6773c1da01c42bd382c1b7c384bc', G)).toBe('+1 resistance bonus on all saving throws.');
   });
+
+  it("shows a class's progression and archetypes, and an archetype's class and what it replaces (MCP QA)", () => {
+    const fighter = describe(data, '48ac8db94d5de7645906c7d0ad3bcfbd', G);
+    expect(fighter?.progression).toContainEqual(expect.objectContaining({ level: 2, name: 'Bravery' }));
+    expect(fighter?.progression?.[0]?.level).toBe(1);
+    expect(fighter?.archetypes?.map((a) => a.name)).toContain('Two-Handed Fighter');
+    const twoHanded = describe(data, '84643e02a764bff4a9c1aba333a53c89', G);
+    expect(twoHanded?.forClass?.name).toBe('Fighter');
+    expect(twoHanded?.replaces?.length).toBeGreaterThan(0);
+    expect(twoHanded?.replaces?.map((r) => r.name)).toContain('Bravery');
+  });
 });

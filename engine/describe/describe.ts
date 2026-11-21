@@ -41,6 +41,14 @@ export interface Description {
   readonly pickedIn: readonly { readonly guid: Guid; readonly name: string }[];
   readonly needs: readonly NamedLink[];
   readonly enables: readonly NamedLink[];
+  readonly progression?: readonly LevelLink[];
+  readonly archetypes?: readonly NamedLink[];
+  readonly forClass?: NamedLink;
+  readonly replaces?: readonly LevelLink[];
+}
+
+export interface LevelLink extends NamedLink {
+  readonly level: number;
 }
 
 export const NO_SUMMARY = 'No summary yet.';
@@ -152,6 +160,33 @@ function named(data: CheckedData, guids: readonly Guid[]): NamedLink[] {
   return guids.map((guid) => ({ guid, name: names.get(guid) ?? guid }));
 }
 
+function classParts(data: CheckedData, bp: Blueprint, G: GrantIndex): Partial<Description> {
+  const link = (guid: Guid): NamedLink => ({ guid, name: nameOf(data, guid) });
+  const leveled = (g: Grant): LevelLink[] =>
+    g.level === undefined || data.blueprints.get(g.granted)?.name === undefined
+      ? []
+      : [{ ...link(g.granted), level: g.level }];
+  if (bp.$type === 'BlueprintCharacterClass') {
+    const own = G.grantsOf(bp.guid);
+    const progression = own
+      .filter((g) => g.kind === 'classProgression')
+      .flatMap((g) => G.grantsOf(g.granted).filter((e) => e.kind === 'levelEntry'))
+      .flatMap(leveled)
+      .sort((a, b) => a.level - b.level);
+    const archetypes = own.filter((g) => g.kind === 'classArchetype').map((g) => link(g.granted));
+    return { progression, ...(archetypes.length > 0 && { archetypes }) };
+  }
+  if (bp.$type === 'BlueprintArchetype') {
+    const cls = G.grantorsOf(bp.guid).find((g) => g.kind === 'classArchetype');
+    const replaces = G.grantsOf(bp.guid)
+      .filter((g) => g.kind === 'archetypeRemove')
+      .flatMap(leveled)
+      .sort((a, b) => a.level - b.level);
+    return { ...(cls !== undefined && { forClass: link(cls.grantor) }), replaces };
+  }
+  return {};
+}
+
 export function describe(
   data: CheckedData,
   guid: Guid,
@@ -202,6 +237,7 @@ export function describe(
     ],
     needs: named(data, links.needs(guid)),
     enables: named(data, links.enables(guid)),
+    ...classParts(data, bp, G),
   };
 }
 

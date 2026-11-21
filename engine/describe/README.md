@@ -13,6 +13,8 @@ What the planner says about one blueprint: its Summary (ticket 06b), and the bas
   - `prerequisites`: each prerequisite, worded by R.
   - `grants`: the shown facts it grants, each with the level it grants it at when the grant says so, and `when`, the condition of a conditional grant: "at Cleric, Inquisitor or Warpriest level 1" (`AddFeatureOnClassLevel`), "with Weapon Focus" (`AddFeatureIfHasFact`), "while the alignment is Good" (`AddFeatureOnAlignment`). Desna's starknife proficiency is a cleric's, not every worshipper's (MCP QA).
   - `pickedIn`: where it can be picked, that is the shown selections that list it.
+  - `progression` and `archetypes`, for a class: what its progression gives at each level (`LevelLink`: `level`, `guid`, `name`), and its archetypes. A class grants only its progression, so `grants` alone was empty (MCP QA).
+  - `forClass` and `replaces`, for an archetype: its class, and what it takes away at each level.
   - `needs`, `enables`: its prerequisite-chain links (map 09), from engine/links, each a `NamedLink` (`guid` and the name R's `namesIn` gives it in that list).
 - `NO_SUMMARY`: "No summary yet.", the Summary of a blueprint with nothing labelled (map 10). Never a guess or a raw component name.
 - `summaryOf(labels)`: the Summary text of a list of labels.
