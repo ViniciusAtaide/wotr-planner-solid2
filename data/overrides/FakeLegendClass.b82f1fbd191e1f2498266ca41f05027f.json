@@ -1,0 +1,13 @@
+{
+  "change": "patch",
+  "ops": [
+    {
+      "op": "replace",
+      "path": "/LocalizedName/Shared",
+      "value": null
+    }
+  ],
+  "reason": "ProgressionRoot.m_MythicLegenFake: the class the game's level-up offers at the summit to choose the Legend path. Taking it only marks the path chosen (UnitLogic/Class/LevelUp/LevelUpController.cs Commit ensures UnitPartLegendPathSelected), and its only gates are story state (PrerequisiteEtude GoddessesSummit playing and LegendSelectedSummit not playing; MythicClassLockComponent LegendUnlocked, read by DialogSystem/Blueprints/BlueprintMythicsSettings.cs IsMythicClassUnlocked). A Build expresses the switch as LegendClass 3d420403f3e7340499931324640efe96 at its rank (map ticket 31), so this class is never a Build's class (map ticket 34, amended; the walk's map34.legendChoiceClass). Clearing its name keeps it out of every list and out of LegendClass's name group, so LegendClass reads 'Legend'."
+  ,
+  "target": "b82f1fbd191e1f2498266ca41f05027f"
+}

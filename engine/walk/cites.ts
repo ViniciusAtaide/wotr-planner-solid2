@@ -357,6 +357,7 @@ export const cites = {
   'LevelState.nextClassLevel': ['UnitLogic/Class/LevelUp/LevelUpState.cs LevelUpState (NextClassLevel)'],
   'LevelState.attributePoints': ['UnitLogic/Class/LevelUp/LevelUpState.cs LevelUpState (AttributePoints)'],
   SWITCH_TO: ['Blueprints/Classes/BlueprintCharacterClass.cs IsHigherMythic'],
+  pathSwitchClasses: ['Blueprints/Classes/BlueprintCharacterClass.cs IsHigherMythic'],
   appliedFieldGrants: ['Blueprints/Items/Shields/BlueprintItemShield.cs CollectEnchantments'],
   'PausedWalk.band': ['UnitLogic/Class/LevelUp/Actions/SelectFeature.cs CalculatePriority'],
   'PausedWalk.judge': ['UnitLogic/Class/LevelUp/Actions/SelectFeature.cs Check'],

@@ -23,7 +23,11 @@ What each slot can take (guide §4, build ticket 04). S lists a slot's options a
   - `offeredClasses` is the root progression's `m_CharacterClasses` (`ProgressionRoot.AvailableCharacterClasses`);
   - `offeredRaces` is `m_CharacterRaces` (`CharacterRaces`);
   - `mythicStartingClass` is `m_MythicStartingClass` (`MythicStartingClass`), the Mythic class a character starts on;
-  - `offeredMythicClasses` is `m_CharacterMythics` (`AvailableCharacterMythics`), minus `NOT_MAIN_CHARACTER_MYTHICS`: the companions' Mythic class and Shard Powers, a planner rule from map ticket 34.
+  - `offeredMythicClasses` is `m_CharacterMythics` (`AvailableCharacterMythics`) plus the walk's `pathSwitchClasses`, so every switch the walk takes is on offer (Gold Dragon isn't in the root's list), minus two planner rules from map ticket 34:
+    - `NOT_MAIN_CHARACTER_MYTHICS`: the companions' Mythic class and Shard Powers;
+    - the root's `m_MythicLegenFake`: the class the story's level-up takes to choose the Legend path (`LevelUpController.Commit`). A Build takes Legend itself (map ticket 31), so this class is never a rank of its own.
+
+    The walk then judges each class at the rank: a switch is open from rank 8.
 
   Each list is kept to shown blueprints and sorted by name. The game's DLC filter is not ported, because every DLC's data is present.
 

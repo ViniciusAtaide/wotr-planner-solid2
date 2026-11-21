@@ -224,6 +224,7 @@ const AEON_GAZE_FIRST_SELECTION = '7e468a5266235454e9dcefee315ee6d5';
 const AEON_GAZE_SECOND_SELECTION = '7d498e034d18ca94baea19d7edee7403';
 const AEON_GAZE_THIRD_SELECTION = '0bec49f67ecb49a5826fcfefb9408a35';
 const SWITCH_TO: ReadonlySet<Guid> = new Set([DEVIL_MYTHIC_CLASS, LEGEND_CLASS]);
+const LEGEND_FIRST_RANK = 8;
 const DEVIL_DROPS: readonly Guid[] = [DRAGON_COMPANION, AEON_GAZE_FEATURE, AEON_GAZE_FEATURE_EXTRA_GAZE];
 const DEVIL_DROPPED_SELECTIONS: readonly Guid[] = [
   AEON_GAZE_FIRST_SELECTION,
@@ -301,6 +302,13 @@ function conditionalGrants(bp: Blueprint | undefined): readonly (readonly [numbe
 
 function unapplied(c: never): never {
   throw new Error(`the walk lists ${(c as Component).$type} as applied but has no case for it`);
+}
+
+export function pathSwitchClasses(data: CheckedData): Guid[] {
+  const higher = [...data.blueprints.values()]
+    .filter((bp) => bp.$type === 'BlueprintCharacterClass' && bp.m_IsHigherMythic)
+    .map((bp) => bp.guid);
+  return [...higher, ...SWITCH_TO];
 }
 
 export function walk(data: CheckedData, build: Build, G: GrantIndex = buildGrantIndex(data)): Walk {
@@ -876,6 +884,24 @@ class Walker {
   }
 
   ascend(rank: number, ascension: Ascension): void {
+    if (ascension.class === refGuid(this.root.Progression.m_MythicLegenFake)) {
+      this.failures.push({
+        place: { rank },
+        choice: 'class',
+        subject: ascension.class,
+        rule: 'map34.legendChoiceClass',
+      });
+    }
+    if (ascension.class === LEGEND_CLASS && rank < LEGEND_FIRST_RANK) {
+      this.failures.push({
+        place: { rank },
+        choice: 'class',
+        subject: ascension.class,
+        rule: 'map31.legendFromRank8',
+        found: rank,
+        needed: LEGEND_FIRST_RANK,
+      });
+    }
     const max = this.maxCharacterLevel();
     if (ascension.level > max) {
       this.failures.push({

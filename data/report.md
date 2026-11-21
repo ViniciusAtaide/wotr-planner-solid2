@@ -133,19 +133,19 @@ Names the game fills in at runtime, written in a neutral form (ADR 0006).
 
 ## Shared names
 
-605 display names are shared by 2249 blueprints a Build can reach and a player
+605 display names are shared by 2248 blueprints a Build can reach and a player
 sees, features only Gear gives among them. Each is qualified from the first source that tells it apart (map
 tickets 27, 29 and 30); one in a group may stay bare. A grantor or level qualifies only when every route to the
 blueprint passes through it, and no label names one grantor among several. Blueprints settled, by source:
 
 - item: 6
-- grantor: 1020
-- level: 576
-- kind: 57
-- prerequisite: 21
+- grantor: 1021
+- level: 577
+- kind: 58
+- prerequisite: 20
 - class: 5
 - family: 9
-- override: 208
+- override: 205
 - bare: 347
 - open: 0
 
@@ -1821,14 +1821,13 @@ Each blueprint with the source that settled it and its written name.
   - LawDomainProgressionSecondary 0d9749df9d68ded438ecdf8527085963: grantor, "Law Domain (Domain Selection)"
   - LawDomainProgressionSeparatist 94ea125ce3cd42a19bb804e267ab127c: grantor, "Law Domain (Forbidden Rites)"
   - TricksterLoreReligionLawDomainFeature 4feb91f2318449e9ad5eaf20e0661cca: grantor, "Law Domain (Lore (Religion) 2 Rank)"
-- "Legend" (4)
-  - FakeLegendClass b82f1fbd191e1f2498266ca41f05027f: kind, "Legend"
-  - FakeLegendFeature 63dbc00439ff894489a624abaa8ba79c: override, "Legend (path choice)"
-  - LegendClass 3d420403f3e7340499931324640efe96: prerequisite, "Legend (Mythic Hero)"
-  - LegendFeature 7f99961610390044391f300c7ef5e0c8: override, "Legend (Legend class)"
+- "Legend" (3)
+  - FakeLegendFeature 63dbc00439ff894489a624abaa8ba79c: kind, "Legend (feature)"
+  - LegendClass 3d420403f3e7340499931324640efe96: kind, "Legend"
+  - LegendFeature 7f99961610390044391f300c7ef5e0c8: level, "Legend (level 1)"
 - "Legend's Corruption Resistance" (2)
-  - FakeLegend_UniqueRestFeature cba1120af1fc4b7697e6799b926d0f0b: override, "Legend's Corruption Resistance (path choice)"
-  - Legend_UniqueRestFeature 27327f8954cd4f91ab3deaebf1f8cfa7: bare, "Legend's Corruption Resistance"
+  - FakeLegend_UniqueRestFeature cba1120af1fc4b7697e6799b926d0f0b: bare, "Legend's Corruption Resistance"
+  - Legend_UniqueRestFeature 27327f8954cd4f91ab3deaebf1f8cfa7: grantor, "Legend's Corruption Resistance (Legend)"
 - "Liberation Domain" (6)
   - LiberationDomainBaseFeature 7cc934aa505172a40b4a10c14c7681c4: level, "Liberation Domain (level 1)"
   - LiberationDomainBaseFeatureSeparatist a10a7a8e62ee4ec8a78d617273df1e49: grantor, "Liberation Domain (Separatist)"
@@ -3038,13 +3037,13 @@ one choice (the loader derives them: `CheckedData.twins`); each other item is qu
 tells it apart (map ticket 29); one in a group may stay bare. Items settled, by rule:
 
 - twin: 39
-- restriction: 9
+- restriction: 10
 - slot: 76
 - type: 90
 - enhancement: 6
 - type and enhancement: 159
 - override: 33
-- bare: 61
+- bare: 60
 - open: 0
 
 ### Every group
@@ -3585,7 +3584,7 @@ Each item with the rule that settled it and its written name; a twin names the i
 - "The Bound of Possibility" (10)
   - Artifact_LichCloakItem 1622ceba1d7829b4f9ee709b71bd6baf: restriction, "The Bound of Possibility (Lich)"
   - Artifact_LocustCloakItem 217ca79948e2c7a4698b4944b1ed9bf3: restriction, "The Bound of Possibility (Swarm That Walks)"
-  - Artifact_DragonCloakItem 2c0129fc1485da149a68a1b0584cad91: bare, "The Bound of Possibility"
+  - Artifact_DragonCloakItem 2c0129fc1485da149a68a1b0584cad91: restriction, "The Bound of Possibility (Gold Dragon)"
   - Artifact_AngelCloakItem 2f45a11adb74b5a4a81f857a9886c5bd: restriction, "The Bound of Possibility (Angel)"
   - Artifact_TricksterCloakItem 50b398d4630d9f244a5db288124ff181: restriction, "The Bound of Possibility (Trickster)"
   - Artifact_AzataCloakItem 78cd50deada655e4cbe49765c0bbb7e4: restriction, "The Bound of Possibility (Azata)"
@@ -3729,7 +3728,6 @@ A Refusal words these by a readable asset name, marked as internal (map ticket 1
 - WoljifPregenTestFeatureList 4bf1e3da22a4fe44f8a516cc24e6ef79, named by TieflingHeritageBaphomet 48b6d747d3310724ba4d76c8aabae2de
 - MythicTestFeature aa846143662cea944b0cc4aa87fcb894, named by AeonMythicClass 15a85e67b7d69554cab9ed5830d0268e "Aeon"; LichMythicClass 5d501618a28bdc24c80007a5c937dcb7 "Lich"; TricksterMythicClass 8df873a8c6e48294abdb78c45834aa0a "Trickster"; AzataMythicClass 9a3b2c63afa79744cbca46bea0da9a16 "Azata"
 - ForbiddenDeityFeature c4403567ea9e5fe478ca38e3052fadc2, named by LichDeityFeature b4153b422d02d4f48b3f8f0ceb6a10eb "Lord/Lady of Death"; BaphometFeature bd72ca8ffcfec5745899ac56c93f12c5 "Baphomet"; AreshkagalFeature d714ecb5d5bb89a42957de0304e459c9 "Areshkagal"; DeskariFeature ddf913858bdf43b4da3b731e082fbcc0 "Deskari"; PuluraFeature ebb0b46f95dbac74681c78aae895dbd0 "Pulura"; KabririFeature f12c1ccc9d600c04f8887cd28a8f45a5 "Kabriri"
-- GoldenDragonClass daf1235b6217787499c14e4e32142523, named by GoldDragonBreathEnlighting 0351c6c95adc48b3b39073167094cd19 "Enlightening Breath"; AeonMythicClass 15a85e67b7d69554cab9ed5830d0268e "Aeon"; DevilMythicClass 211f49705f478b3468db6daa802452a2 "Devil"; LegendClass 3d420403f3e7340499931324640efe96 "Legend (Mythic Hero)"; LichMythicClass 5d501618a28bdc24c80007a5c937dcb7 "Lich"; TricksterMythicClass 8df873a8c6e48294abdb78c45834aa0a "Trickster"; DemonMythicClass 8e19495ea576a8641964102d177e34b7 "Demon"; AzataMythicClass 9a3b2c63afa79744cbca46bea0da9a16 "Azata"; AngelMythicClass a5a9fe8f663d701488bd1db8ea40484e "Angel"; GoldDragonBreathDecaying c606a6897125480ebde14b63bb8fb18e "Decaying Breath"; GoldDragonBreathAnnihilating e8b9aad5295c49539f1bbf901d314964 "Annihilating Breath"; GoldDragonBreathRejuvinating ef3690c36872422d9bfadeb276b5c3fe "Rejuvenating Breath"
 - BlizzardServantLockEquipmentFeature daf893d14cc54e98a319fb121d7ac4d9, named by WeaponFinesse 90e54424d682d104ab36436bd527af09 "Weapon Finesse"
 
 ## Feats whose parameter is a spell

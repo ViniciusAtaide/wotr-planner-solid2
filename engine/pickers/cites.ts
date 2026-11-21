@@ -16,7 +16,11 @@ export const cites = {
     'UI/MVVM/_VM/CharGen/Phases/FeatureSelector/CharGenFeatureSelectorPhaseVM.cs GetFeaturePriority',
   ],
   offeredClasses: ['Blueprints/Root/ProgressionRoot.cs AvailableCharacterClasses'],
-  offeredMythicClasses: ['Blueprints/Root/ProgressionRoot.cs AvailableCharacterMythics'],
+  offeredMythicClasses: [
+    'Blueprints/Root/ProgressionRoot.cs AvailableCharacterMythics',
+    'Blueprints/Root/ProgressionRoot.cs MythicLegenFake',
+    'UnitLogic/Class/LevelUp/LevelUpController.cs Commit',
+  ],
   mythicStartingClass: ['Blueprints/Root/ProgressionRoot.cs MythicStartingClass'],
   offeredRaces: ['Blueprints/Root/ProgressionRoot.cs CharacterRaces'],
   characterWideSlots: [

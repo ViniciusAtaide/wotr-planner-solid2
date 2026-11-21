@@ -1,7 +1,7 @@
 import { slotKey } from '../build';
 import type { CheckedData } from '../load';
 import { isShown, refGuid, type Blueprint, type Guid, type Ref } from '../data';
-import type { OpenedSlot } from '../walk';
+import { pathSwitchClasses, type OpenedSlot } from '../walk';
 
 export const NOT_MAIN_CHARACTER_MYTHICS: readonly Guid[] = [
   '530b6a79cb691c24ba99e1577b4beb6d',
@@ -15,22 +15,31 @@ function progressionRoot(data: CheckedData) {
   return undefined;
 }
 
-function offered(data: CheckedData, refs: readonly Ref[], leaveOut: readonly Guid[] = []): Blueprint[] {
+function guidsOf(refs: readonly Ref[] | undefined): Guid[] {
+  return (refs ?? []).map(refGuid).filter((g): g is Guid => g !== undefined);
+}
+
+function offered(data: CheckedData, guids: readonly Guid[], leaveOut: readonly Guid[] = []): Blueprint[] {
   const out: Blueprint[] = [];
-  for (const ref of refs) {
-    const guid = refGuid(ref);
-    const bp = guid === undefined ? undefined : data.blueprints.get(guid);
+  for (const guid of new Set(guids)) {
+    const bp = data.blueprints.get(guid);
     if (bp !== undefined && isShown(bp) && !leaveOut.includes(bp.guid)) out.push(bp);
   }
   return out.sort((a, b) => (a.name ?? '').localeCompare(b.name ?? ''));
 }
 
 export function offeredClasses(data: CheckedData): Blueprint[] {
-  return offered(data, progressionRoot(data)?.m_CharacterClasses ?? []);
+  return offered(data, guidsOf(progressionRoot(data)?.m_CharacterClasses));
 }
 
 export function offeredMythicClasses(data: CheckedData): Blueprint[] {
-  return offered(data, progressionRoot(data)?.m_CharacterMythics ?? [], NOT_MAIN_CHARACTER_MYTHICS);
+  const root = progressionRoot(data);
+  const legendChoice = guidsOf(root === undefined ? [] : [root.m_MythicLegenFake]);
+  return offered(
+    data,
+    [...guidsOf(root?.m_CharacterMythics), ...pathSwitchClasses(data)],
+    [...NOT_MAIN_CHARACTER_MYTHICS, ...legendChoice],
+  );
 }
 
 export function mythicStartingClass(data: CheckedData): Guid | undefined {
@@ -38,7 +47,7 @@ export function mythicStartingClass(data: CheckedData): Guid | undefined {
 }
 
 export function offeredRaces(data: CheckedData): Blueprint[] {
-  return offered(data, progressionRoot(data)?.m_CharacterRaces ?? []);
+  return offered(data, guidsOf(progressionRoot(data)?.m_CharacterRaces));
 }
 
 export function characterWideSlots(data: CheckedData, slots: readonly OpenedSlot[]): ReadonlySet<string> {

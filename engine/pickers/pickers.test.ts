@@ -166,6 +166,31 @@ describe('what character creation offers (comparison bug 5)', () => {
     expect(mythics).not.toContain('Shard Powers');
   });
 
+  it('offers every path switch the walk takes, Legend by its own name, and not the story’s Legend choice', () => {
+    const GOLD_DRAGON = 'daf1235b6217787499c14e4e32142523';
+    const LEGEND = '3d420403f3e7340499931324640efe96';
+    const offer = offeredMythicClasses(data);
+    const guids = offer.map((c) => c.guid);
+    for (const cls of [GOLD_DRAGON, '5295b8e13c2303f4c88bdb3d7760a757', '211f49705f478b3468db6daa802452a2', LEGEND])
+      expect(guids).toContain(cls);
+    expect(guids).not.toContain('b82f1fbd191e1f2498266ca41f05027f');
+    expect(offer.find((c) => c.guid === LEGEND)?.name).toBe('Legend');
+    expect(offer.find((c) => c.guid === GOLD_DRAGON)?.name).toBe('Gold Dragon');
+    const ranks = jackInTheGreen.build.ranks ?? [];
+    const goldAt = (rank: number) =>
+      walk(
+        data,
+        {
+          ...jackInTheGreen.build,
+          ranks: [...ranks.slice(0, rank - 1), { class: GOLD_DRAGON, level: ranks[rank - 1]!.level }],
+          picks: jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place) || p.slot.place.rank < rank),
+        },
+        G,
+      ).failures.filter((f) => f.subject === GOLD_DRAGON);
+    expect(goldAt(7)).not.toEqual([]);
+    expect(goldAt(8)).toEqual([]);
+  });
+
   it('starts a character on Mythic Hero', () => {
     expect(mythicStartingClass(data)).toBe('247aa787806d5da4f89cfc3dff0b217f');
   });

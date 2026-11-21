@@ -273,6 +273,10 @@ export function ruleText(w: Wording, f: FailedRule): string {
       return 'After Legend, no Mythic rank follows.';
     case 'map31.devilFrom':
       return 'Devil is open only from the Aeon or the Azata.';
+    case 'map31.legendFromRank8':
+      return `Legend is taken at Mythic rank ${v(f.needed)} or later, after a path: this is rank ${v(f.found)}.`;
+    case 'map34.legendChoiceClass':
+      return 'The class that picks the Legend path in the story is never a Mythic rank of its own; a Build takes Legend itself.';
     case 'AddArchetype.Check':
       return 'Not an archetype of this class.';
     case 'UnitProgressionData.CanAddArchetype':

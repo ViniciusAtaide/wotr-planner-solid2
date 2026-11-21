@@ -618,6 +618,47 @@ describe('path switches (map ticket 31)', () => {
     expect(level21(jackInTheGreen.build)).toHaveLength(1);
   });
 
+  const switchAt = (cls: string, rank: number): Build => {
+    const ranks = jackInTheGreen.build.ranks ?? [];
+    return {
+      ...jackInTheGreen.build,
+      ranks: [...ranks.slice(0, rank - 1), { class: cls, level: ranks[rank - 1]?.level ?? rankLevel(19) }],
+      picks: jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place) || p.slot.place.rank < rank),
+    };
+  };
+  const rankFailures = (b: Build, rank: number) =>
+    walk(data, b, G).failures.filter((f) => f.choice !== 'pick' && 'rank' in f.place && f.place.rank === rank);
+
+  it('takes Legend at rank 8, like the other switches, and refuses it before', () => {
+    const legend = '3d420403f3e7340499931324640efe96';
+    for (const rank of [3, 7]) {
+      expect(rankFailures(switchAt(legend, rank), rank)).toEqual([
+        expect.objectContaining({ subject: legend, rule: 'map31.legendFromRank8', found: rank, needed: 8 }),
+      ]);
+    }
+    expect(rankFailures(switchAt(legend, 8), 8)).toEqual([]);
+  });
+
+  it('refuses the class that picks the Legend path in the story, at any rank (map ticket 34)', () => {
+    const choice = 'b82f1fbd191e1f2498266ca41f05027f';
+    for (const rank of [1, 8]) {
+      expect(rankFailures(switchAt(choice, rank), rank)).toContainEqual(
+        expect.objectContaining({ subject: choice, rule: 'map34.legendChoiceClass' }),
+      );
+    }
+  });
+
+  it('opens Gold Dragon, Swarm That Walks and Devil at rank 8, not at rank 7', () => {
+    for (const cls of [
+      'daf1235b6217787499c14e4e32142523',
+      '5295b8e13c2303f4c88bdb3d7760a757',
+      '211f49705f478b3468db6daa802452a2',
+    ]) {
+      expect(rankFailures(switchAt(cls, 7), 7)).not.toEqual([]);
+      expect(rankFailures(switchAt(cls, 8), 8)).toEqual([]);
+    }
+  });
+
   it('refuses a Mythic rank placed above the level cap: 21 under the usual cap, 41 under Legend', () => {
     const capOf = (b: Build) =>
       walk(data, b, G).failures.filter(

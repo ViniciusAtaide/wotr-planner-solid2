@@ -39,7 +39,7 @@ Community wikis are not sources. What these say:
    | --- | --- | --- | --- |
    | Gold Dragon | 7 | 2 | yes |
    | Swarm That Walks | 7 | 2 | yes |
-   | Legend | 2 | 2 | no: the rank stays 3 |
+   | Legend | 2 | 2 | no: the character holds rank 3 afterwards |
    | Devil | 7 | 7 | yes |
 
    Picks a switch takes away still count until the switch.
@@ -78,3 +78,9 @@ Community wikis are not sources. What these say:
 - **Legend 2 / 2, ending the ascensions:** GameFAQs "Playing a Legend" and `legend.ron`. The level cap of 40 is the data's: `LegendClass`'s progression grants a feature that sets `LegendaryHero`, which `UnitProgressionData.MaxCharacterLevel` reads.
 - **The Trickster's Perception 2 feats survive Legend:** they are picks in character-level slots, which no switch touches.
 - **Spellbooks:** GameFAQs `mythic-paths.txt` for losing the Mythic spellbook (Gold Dragon, Swarm, Legend). The data gives Gold Dragon its own spellbook (`GoldenDragonClass.m_Spellbook`), and Devil's class has none, so a kept Mythic spellbook stops advancing.
+
+## Note: when Legend is taken (coordinator, 2026-11-21, on build ticket 05e)
+
+- **Legend is taken at rank 8, like the other three switches,** and the walk refuses it before (`map31.legendFromRank8`). The sources are the Rust planner's GLOSSARY "Path switch" ("at MR 8") and GameFAQs `other-mythic-paths.txt` "Playing a Legend" (a path followed to rank 8 first).
+- **"Rank 3" describes the character afterwards:** Legend keeps ranks 1–2, so the character holds rank 3. It doesn't say when Legend is taken.
+- **The data alone would allow rank 3 on:** `LegendClass` asks only for Mythic Hero level 2. The rank is the story's.

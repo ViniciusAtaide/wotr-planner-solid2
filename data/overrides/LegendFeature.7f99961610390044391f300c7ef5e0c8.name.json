@@ -1,6 +1,0 @@
-{
-  "change": "name",
-  "qualifier": "Legend class",
-  "reason": "FakeLegendClass b82f1fbd191e1f2498266ca41f05027f is the class a Build takes to choose the Legend path (ProgressionRoot.m_MythicLegenFake; UnitLogic/Class/LevelUp/LevelUpController.cs Commit marks the path chosen when it is taken), and LegendClass 3d420403f3e7340499931324640efe96 the Legend class itself. Their progressions both grant this name at level 1, and both classes are named 'Legend', so no grantor, level or prerequisite tells the two copies apart. This is LegendProgression's copy; FakeLegendFeature gets 'path choice', and FakeLegendClass stays bare.",
-  "target": "7f99961610390044391f300c7ef5e0c8"
-}
