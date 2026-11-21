@@ -90,10 +90,12 @@ name is S's bare name, and a variation never repeats its group: "Aasimar" and "S
 - the class with its archetype, "Fighter (Two-Handed Fighter)", in the class list for a class the Build hasn't taken
   (an archetype belongs to a class's first level).
 
-The race chip and the background chip name the pair; the heritage and the variation have no chip of their own. Judging
-every pair would cost a walk each (three seconds for the class list on a level-19 Build), so a row shares its group's
-status (the race's or class's judged edit, the heritage's or variation's own status in its slot), and the edits are
-checked as a whole when the row is taken: they apply, wait on the Cascade preview, or are refused.
+The race chip and the background chip name the pair; the heritage and the variation have no chip of their own. Each
+list's statuses come from S at one walk: `racePicker` (each race's own refusal and its heritage options),
+`backgroundPicker` (each group with its variations' picker) and `classPicker` (each class at the place, the classes the
+game hides left out, and each archetype's own status). A row is open when its group and its variation are; what it
+would break later is found when it is taken: the edits apply, wait on the Cascade preview, or are refused. The race
+list opens in about 55 ms and the first class list, 236 rows with the archetypes, in about 160 ms.
 
 **Skills**: a budget line ("3 of 4 skill points spent") on the last level, "Same as level N−1" (only when it would
 change the level, `sameRanks`), and − and + steppers; a + is disabled when the walk refuses that rank (`allows` on the
@@ -203,8 +205,9 @@ dimmed and inert behind "Edit the Second Build".
 - **`unreachable.ts`**: `unreachable(x: never)`, the default of a switch that names every case.
 - **`flat-choices.ts`: the flat lists.** `FlatChoice` is a row: its name, the edits it takes as one change, whether it
   is the Build's, and its status. `flatName` writes "Group (Variation)"; `after` puts clearing edits first.
-  `raceChoices`, `backgroundChoices` and the labels `raceLabel` and `backgroundLabel`; `isHeritageSelection`,
-  `heritageSlotIn` and `heritageSlot` (found with a stand-in first level before the Build has one), `backgroundChildren`
+  `raceChoices` (on S's `racePicker`), `backgroundChoices` (on S's `backgroundPicker`) and the labels `raceLabel` and
+  `backgroundLabel`; `heritageSlot` (S's `heritageSlotIn`, found with S's `firstLevelWith` before the Build has a
+  level), `backgroundChildren`
   and `shownArchetypes` (a class's archetypes the game shows).
 - **`CharacterSteps.tsx`**: `RaceStep` and `BackgroundStep`, the flat race and background lists in place.
 - **`words.ts`: names for the planner's surfaces.** Game names (ADR 0006) and the planner's own words, never the game's
