@@ -13,6 +13,8 @@
   ],
   "assetName": "RobeOfMaliceItem",
   "guid": "2e78284d218c51643bc3e1f0a530a5fc",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_71ceb4ca8e9d4a74c8c11b0de623a6de"
+  ],
   "name": "Robe of Malice"
 }

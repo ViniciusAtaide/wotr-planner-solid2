@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "GlovesOfUseMagiDevicesItem",
   "guid": "b1b4dbff499ceb541a148d70ef17046e",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_1bcd1e825a205224ea89997c71c4ad10"
+  ],
   "name": "Master Hand"
 }

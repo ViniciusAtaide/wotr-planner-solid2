@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AllSavesBonusEquipment",
+      "Descriptor": "Luck",
+      "Value": 1
+    }
+  ],
+  "assetName": "LuckSaves1",
+  "guid": "197fa90c67ed31743a85a6c48f7b1993"
+}

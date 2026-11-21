@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "WindMasterHelmetItem",
   "guid": "07979e1b3309aa543af22e34012fe9f5",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_6405ba8d4a589354bb16af7cebe864d7"
+  ],
   "name": "Wind Master Helmet"
 }

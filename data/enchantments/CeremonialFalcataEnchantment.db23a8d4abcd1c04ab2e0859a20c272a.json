@@ -2,6 +2,12 @@
   "$type": "BlueprintWeaponEnchantment",
   "Components": [
     {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Morale",
+      "Stat": "SkillPersuasion",
+      "Value": 5
+    },
+    {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_9c010bff09e1ea14880dd8b2975e0aed"
     }

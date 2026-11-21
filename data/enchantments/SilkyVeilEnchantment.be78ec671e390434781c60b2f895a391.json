@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Dodge",
+      "Stat": "AC",
+      "Value": 1
+    }
+  ],
+  "assetName": "SilkyVeilEnchantment",
+  "guid": "be78ec671e390434781c60b2f895a391"
+}

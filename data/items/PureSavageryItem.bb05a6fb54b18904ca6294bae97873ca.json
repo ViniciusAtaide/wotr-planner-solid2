@@ -5,7 +5,8 @@
   "assetName": "PureSavageryItem",
   "guid": "bb05a6fb54b18904ca6294bae97873ca",
   "m_Enchantments": [
-    "!bp_80bb8a737579e35498177e1e3c75899b"
+    "!bp_80bb8a737579e35498177e1e3c75899b",
+    "!bp_aaf9cdbdeeea57542bbf9ea7b7b5d09a"
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_8fefb7e0da38b06408f185e29372c703",

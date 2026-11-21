@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "EqualityBeltItem",
   "guid": "b01ed89b10d0da14bbbe1432ed4ca168",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_10245fc2706185b47bc749f301c0a013"
+  ],
   "name": "Windfall"
 }

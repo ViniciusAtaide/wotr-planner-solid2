@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "DLC3_BracersOfBraveryItem",
   "guid": "cb7f21a7624e4697827698f0ba629e68",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_338dbdb19b584050a99e82d705fd8a66"
+  ],
   "name": "Bracers of Bravery"
 }

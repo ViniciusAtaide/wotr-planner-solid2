@@ -458,6 +458,10 @@ function rawLabel(data: CheckedData, c: Component): Label | undefined {
         role: 'save',
         text: `Improved evasion: half damage from an effect that allows a ${save((c as ImprovedEvasion).SavingThrow)} save for half, even when the save fails.`,
       };
+    case 'AllSavesBonusEquipment': {
+      const x = c as Component & { readonly Descriptor: ModifierDescriptor; readonly Value: number };
+      return { role: 'save', text: `${typed(signed(x.Value), x.Descriptor)} on all saving throws.` };
+    }
     case 'BuffAllSavesBonus': {
       const x = c as BuffAllSavesBonus;
       return { role: 'save', text: `${typed(signed(x.Value), x.Descriptor)} on all saving throws.` };

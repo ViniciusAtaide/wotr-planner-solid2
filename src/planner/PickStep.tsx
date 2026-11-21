@@ -60,6 +60,8 @@ function sameItem(a: Item, b: Item): boolean {
   return true;
 }
 
+const sorted = (names: readonly string[]): string[] => names.toSorted((a, b) => a.localeCompare(b));
+
 export function paramLabel(full: string, group: string): string {
   if (!full.startsWith(`${group} (`) || !full.endsWith(')')) return full;
   return full.slice(group.length + 2, -1);
@@ -110,11 +112,7 @@ export function PickStep(props: PickStepProps) {
   let scroller: HTMLDivElement | undefined;
   createEffect(
     () => mark(),
-    (at) => {
-      scrollToIndex(scroller, at);
-      const it = items()[at];
-      if (it !== undefined) hub?.point(itemKey(it));
-    },
+    (at) => scrollToIndex(scroller, at),
   );
   const closedShown = () => (showClosed.shown ? closed() : closed().filter((r) => holdsRow(r)));
   const words = (o: OptionStatus, unit = p()?.unit): readonly string[] => {
@@ -150,9 +148,9 @@ export function PickStep(props: PickStepProps) {
     const on = buildsOn(o);
     const enables = linkIndex(data(), planner().engine.G).enables(o.feature);
     return [
-      ...(on.length > 0 ? [`Builds on ${listNames(data(), on).join(', ')}`] : []),
+      ...(on.length > 0 ? [`Builds on ${sorted(listNames(data(), on)).join(', ')}`] : []),
       ...synergyLines(data(), o.synergy),
-      ...(enables.length > 0 ? [`Enables ${listNames(data(), enables).join(', ')}`] : []),
+      ...(enables.length > 0 ? [`Enables ${sorted(listNames(data(), enables)).join(', ')}`] : []),
     ];
   };
   const detailOf = (row: PickRow, o: OptionStatus, child: boolean): OptionDetail => {
@@ -174,7 +172,7 @@ export function PickStep(props: PickStepProps) {
     return detailOne(row, o, child);
   };
   const detailOne = (row: PickRow, o: OptionStatus, child: boolean): OptionDetail => ({
-    name: child ? childName(row, o) : row.name,
+    name: !child ? row.name : row.kind === 'nested' ? `${row.name} (${name(o)})` : name(o),
     closed: o.closed === undefined ? false : true,
     current: child ? childCurrent(row, o) : row.kind === 'option' ? isCurrent(o) : holdsRow(row),
     summary: summaryFor(data(), planner().engine.G, o.feature),
@@ -328,6 +326,15 @@ export function PickStep(props: PickStepProps) {
     lastItems = kept;
     return out;
   });
+  createEffect(
+    () => {
+      const it = items()[mark()];
+      return it === undefined ? undefined : itemKey(it);
+    },
+    (key) => {
+      if (key !== undefined) hub?.point(key);
+    },
+  );
   return (
     <Show
       when={props.field !== undefined || p()}
@@ -352,6 +359,7 @@ export function PickStep(props: PickStepProps) {
             setText(t);
             setMark(0);
             panel.show();
+            if (scroller !== undefined) scroller.scrollTop = 0;
           }}
           onMove={(delta) => setMark((m) => nextMark(items(), m, delta))}
           onEnter={() => enterItem(items()[mark()])}

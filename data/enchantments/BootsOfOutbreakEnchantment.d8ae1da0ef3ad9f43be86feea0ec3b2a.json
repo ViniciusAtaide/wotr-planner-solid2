@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "Speed",
+      "Value": 20
+    }
+  ],
+  "assetName": "BootsOfOutbreakEnchantment",
+  "guid": "d8ae1da0ef3ad9f43be86feea0ec3b2a"
+}

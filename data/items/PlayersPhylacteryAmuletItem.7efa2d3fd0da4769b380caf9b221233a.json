@@ -10,7 +10,8 @@
   "assetName": "PlayersPhylacteryAmuletItem",
   "guid": "7efa2d3fd0da4769b380caf9b221233a",
   "m_Enchantments": [
-    "!bp_b3ec7d3700324a7181ec5f327665f5de"
+    "!bp_b3ec7d3700324a7181ec5f327665f5de",
+    "!bp_118a7c904f54a6148840c4ae0309fe44"
   ],
   "name": "Your Phylactery (neck)",
   "qualifier": "neck"

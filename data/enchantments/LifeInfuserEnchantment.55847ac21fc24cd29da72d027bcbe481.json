@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Armor",
+      "Stat": "Constitution",
+      "Value": 8
+    }
+  ],
+  "assetName": "LifeInfuserEnchantment",
+  "guid": "55847ac21fc24cd29da72d027bcbe481"
+}

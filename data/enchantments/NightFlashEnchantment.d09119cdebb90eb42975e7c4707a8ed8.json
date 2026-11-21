@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "Initiative",
+      "Value": 5
+    }
+  ],
+  "assetName": "NightFlashEnchantment",
+  "guid": "d09119cdebb90eb42975e7c4707a8ed8"
+}

@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillMobility",
+      "Value": 5
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "AdditionalCMB",
+      "Value": 3
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "AdditionalCMD",
+      "Value": 3
+    }
+  ],
+  "assetName": "PaddedArmorOfRefinedManeuverEnchantment",
+  "guid": "80a5a7530b5251d4ea76969fd7c53896"
+}

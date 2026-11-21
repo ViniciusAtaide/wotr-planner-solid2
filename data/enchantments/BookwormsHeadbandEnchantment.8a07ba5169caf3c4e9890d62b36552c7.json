@@ -10,6 +10,18 @@
       "Descriptor": "Enhancement",
       "Stat": "Intelligence",
       "Value": 2
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Penalty",
+      "Stat": "Charisma",
+      "Value": -2
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Penalty",
+      "Stat": "SkillPersuasion",
+      "Value": -3
     }
   ],
   "assetName": "BookwormsHeadbandEnchantment",

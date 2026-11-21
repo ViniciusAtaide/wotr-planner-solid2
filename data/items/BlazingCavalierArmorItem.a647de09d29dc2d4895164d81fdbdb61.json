@@ -4,7 +4,8 @@
   "assetName": "BlazingCavalierArmorItem",
   "guid": "a647de09d29dc2d4895164d81fdbdb61",
   "m_Enchantments": [
-    "!bp_ac2e3a582b5faa74aab66e0a31c935a9"
+    "!bp_ac2e3a582b5faa74aab66e0a31c935a9",
+    "!bp_f4a3154ad58272a4788c9671bdc9cd9d"
   ],
   "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6"
 }

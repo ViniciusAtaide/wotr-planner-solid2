@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "GlovesOfFirmGripItem",
   "guid": "d5480772bdd29e545b627415186de20e",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_53b01d6a009f74646bd2da0c746ad6fb"
+  ],
   "name": "Athlete's Gloves"
 }

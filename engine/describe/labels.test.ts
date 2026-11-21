@@ -176,6 +176,7 @@ const CARRIERS: readonly (readonly [string, string, Role, string])[] = [
     'bonus',
     'Doubles the critical threat range of the chosen weapon.',
   ],
+  ['AllSavesBonusEquipment', '197fa90c67ed31743a85a6c48f7b1993', 'save', '+1 luck bonus on all saving throws.'],
   ['Blindsense', '0b15a8dce67746e1979dfc597f13827f', 'bonus', 'Blindsense 30 ft.'],
   ['BuffMovementSpeed', '077dd0c839f5dfd498cb2e34835fb06d', 'bonus', '-10 ft. speed.'],
   ['FavoredEnemy', '04314be4be2b7f444883ca8caf78a8a8', 'bonus', 'Favored enemy: Gnome.'],
@@ -220,7 +221,7 @@ const CARRIERS: readonly (readonly [string, string, Role, string])[] = [
 ];
 
 suite('Summary labels', { timeout: 30_000 }, () => {
-  it('labels each of the 50 carriers', () => {
+  it('labels each Summary carrier', () => {
     expect(CARRIERS.map(([type]) => type)).toEqual(summaryComponentTypes);
   });
 
@@ -319,5 +320,11 @@ suite('Summary labels', { timeout: 30_000 }, () => {
       level: 1,
       when: 'at Cleric, Inquisitor or Warpriest level 1',
     });
+  });
+
+  it('reads the bonuses of core items: protection, natural armor and resistance (MCP QA)', () => {
+    expect(summaryText(data, 'f333bf86cd122974792162cbcd27c9ed', G)).toBe('+1 deflection bonus to AC.');
+    expect(summaryText(data, '209960f8d60e23a4c8e75d14e2261263', G)).toBe('+1 natural armor enhancement bonus to AC.');
+    expect(summaryText(data, '4aea6773c1da01c42bd382c1b7c384bc', G)).toBe('+1 resistance bonus on all saving throws.');
   });
 });

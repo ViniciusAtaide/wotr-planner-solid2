@@ -2,6 +2,12 @@
   "$type": "BlueprintEquipmentEnchantment",
   "Components": [
     {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Deflection",
+      "Stat": "AC",
+      "Value": 2
+    },
+    {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_913b9166a8511c041a0ee1d8ff8f6998"
     }

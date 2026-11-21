@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "TrapspringerGloves",
   "guid": "0dc9944c49e3ae343b8802a2da33973c",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_14fa6313da3c81b439ae57401d58063b"
+  ],
   "name": "Trapspringer's Gloves"
 }

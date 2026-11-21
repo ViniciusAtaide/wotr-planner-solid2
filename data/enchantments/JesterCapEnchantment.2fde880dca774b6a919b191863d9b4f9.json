@@ -2,6 +2,12 @@
   "$type": "BlueprintEquipmentEnchantment",
   "Components": [
     {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "CheckBluff",
+      "Value": 5
+    },
+    {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_65473b1285d74bbf8f74aaf0f94de9ed"
     }

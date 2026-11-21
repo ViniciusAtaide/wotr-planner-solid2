@@ -10,7 +10,8 @@
   "assetName": "PaddedFortitudePlus1",
   "guid": "e9ef5bb1e56e31b43bdd85e12fcba72f",
   "m_Enchantments": [
-    "!bp_a9ea95c5e02f9b7468447bc1010fe152"
+    "!bp_a9ea95c5e02f9b7468447bc1010fe152",
+    "!bp_bdf029b3d7f6a4e4bb00c1393ee3de64"
   ],
   "m_Type": "!bp_b7e26eed57d524b478c0c90df0f0b8f1",
   "name": "Padded Armor of Fortitude"

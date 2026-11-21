@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_86baea5d6bde19d4b9845c5c33eeec1b"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillMobility",
+      "Value": 5
     }
   ],
   "assetName": "MarksmansSteadyHandEnchantment",

@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_782027e68010df048af8289ceb6f3c31"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillPerception",
+      "Value": 10
     }
   ],
   "assetName": "GogglesOfMalocchioEnchantment",

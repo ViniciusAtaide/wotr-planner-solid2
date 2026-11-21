@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Resistance",
+      "Stat": "SaveWill",
+      "Value": 3
+    }
+  ],
+  "assetName": "Will3",
+  "guid": "8e19a6dde2e4bd94eba2bb2fc6cb1cf5"
+}

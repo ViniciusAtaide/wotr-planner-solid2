@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillPerception",
+      "Value": 10
+    }
+  ],
+  "assetName": "TrailblazersArmorEnchantment",
+  "guid": "18a2cf7f9c3aac84681ee728197c6a2a"
+}

@@ -4,6 +4,24 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_624ddddcf048486981064b42ccf5eae7"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Resistance",
+      "Stat": "SaveFortitude",
+      "Value": 5
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Resistance",
+      "Stat": "SaveReflex",
+      "Value": 5
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Resistance",
+      "Stat": "SaveWill",
+      "Value": 5
     }
   ],
   "assetName": "DLC3_CloakOfRadianceEnchantment",

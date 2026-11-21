@@ -4,6 +4,7 @@
   "assetName": "UnveilerItem",
   "guid": "4d8a8d4e40e34236be50712217180a73",
   "m_Enchantments": [
+    "!bp_6e287c9bbb6b4726841566a2d2083c5a",
     "!bp_2b3e38a0bd454611b40381d1d1c5aad2"
   ],
   "name": "The Unveiler"

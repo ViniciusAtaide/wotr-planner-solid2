@@ -16,7 +16,9 @@
   "guid": "e5d3c2148c854b5ba5d56390f8fcc72c",
   "m_Enchantments": [
     "!bp_6628f9d77fd07b54c911cd8930c0d531",
-    "!bp_62ec0b22425fb424c82fd52d7f4c02a5"
+    "!bp_55847ac21fc24cd29da72d027bcbe481",
+    "!bp_62ec0b22425fb424c82fd52d7f4c02a5",
+    "!bp_4f3d0f9ef6864e49b9dfbbc9a7924b2d"
   ],
   "m_Type": "!bp_d326c3c61a84c6f40977c84fab41503d",
   "name": "Life Infuser"

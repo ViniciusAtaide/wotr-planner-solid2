@@ -2,6 +2,12 @@
   "$type": "BlueprintEquipmentEnchantment",
   "Components": [
     {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillPersuasion",
+      "Value": 10
+    },
+    {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_946b597ee9e74ce4eaacdafc73d2ec3c"
     }

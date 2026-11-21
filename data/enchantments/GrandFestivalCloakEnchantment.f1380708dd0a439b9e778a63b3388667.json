@@ -1,0 +1,24 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Circumstance",
+      "Stat": "Charisma",
+      "Value": 2
+    },
+    {
+      "$type": "AllSavesBonusEquipment",
+      "Descriptor": "Resistance",
+      "Value": 7
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Circumstance",
+      "Stat": "CheckBluff",
+      "Value": 5
+    }
+  ],
+  "assetName": "GrandFestivalCloakEnchantment",
+  "guid": "f1380708dd0a439b9e778a63b3388667"
+}

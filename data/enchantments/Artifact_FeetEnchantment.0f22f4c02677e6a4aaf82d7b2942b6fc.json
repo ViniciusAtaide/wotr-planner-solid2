@@ -4,6 +4,18 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_90c01aafa46c589468e0b5b6fc0ba6d7"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "SkillMobility",
+      "Value": 10
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "SkillAthletics",
+      "Value": 10
     }
   ],
   "assetName": "Artifact_FeetEnchantment",

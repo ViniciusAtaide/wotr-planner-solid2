@@ -2,6 +2,12 @@
   "$type": "BlueprintArmorEnchantment",
   "Components": [
     {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 10
+    },
+    {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_3fc009ca325d70f4dbc3c56d73c4873a"
     }

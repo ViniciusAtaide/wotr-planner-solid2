@@ -4,6 +4,7 @@
   "assetName": "CloakOfDisguiseItem",
   "guid": "dfcc9dc3411234d4a902960a7e00d669",
   "m_Enchantments": [
+    "!bp_5d72c31d28d049a48800d8b9b47cf690",
     "!bp_a222d78bd600dbc45bf42b79844cf7ee"
   ],
   "name": "Cloak of Disguise"

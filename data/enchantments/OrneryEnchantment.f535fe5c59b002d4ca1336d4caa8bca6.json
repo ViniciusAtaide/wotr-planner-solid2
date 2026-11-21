@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillMobility",
+      "Value": 5
+    }
+  ],
+  "assetName": "OrneryEnchantment",
+  "guid": "f535fe5c59b002d4ca1336d4caa8bca6"
+}

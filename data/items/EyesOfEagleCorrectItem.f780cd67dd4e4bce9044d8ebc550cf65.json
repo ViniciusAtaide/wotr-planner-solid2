@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "EyesOfEagleCorrectItem",
   "guid": "f780cd67dd4e4bce9044d8ebc550cf65",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_ff00a771afd43774aa340848c367016a"
+  ],
   "name": "Eyes of the Eagle"
 }

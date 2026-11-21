@@ -4,7 +4,8 @@
   "assetName": "MistyCoverItem",
   "guid": "e51033a3aad5c524ba73e851f3f3e0a1",
   "m_Enchantments": [
-    "!bp_7d8507e1d3b97cf428c23fae9cd45769"
+    "!bp_7d8507e1d3b97cf428c23fae9cd45769",
+    "!bp_cdba7ef2a02a2b9499059bd558e5354d"
   ],
   "name": "Misty Cover"
 }

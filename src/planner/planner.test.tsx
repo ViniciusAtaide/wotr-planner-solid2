@@ -32,6 +32,7 @@ import { createPlanner, type Planner as PlannerApi } from './state';
 import { ChoiceList } from './ChoiceList';
 import { PickerOption } from '../design';
 import { pageTitle } from './BuildName';
+import { isListStep } from './list-mode';
 import { ChoiceDialog } from './ChoiceDialog';
 import { GearStep, placeWords } from './GearStep';
 import { summaryFor } from './option-detail';
@@ -1941,6 +1942,46 @@ describe('Summaries and Synergy in the lists (ticket 06)', () => {
     const marked = document.querySelector('.choice-dialog .ww-option--marked .ww-option__name')?.textContent;
     expect(marked).toBeTruthy();
     expect(pane()?.querySelector('.choice-dialog__name')?.textContent).toBe(marked);
+  });
+
+  test('the pane follows the mark after typing, names a value with its feat, and sorts its links (QA pass 4)', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
+    await waitFor(() => expect(document.querySelector('.choice-dialog')).not.toBeNull());
+    const pane = () => document.querySelector('.choice-dialog__detail');
+    const filter = document.querySelector<HTMLInputElement>('.choice-dialog [data-picker-filter]');
+    fireEvent.input(filter ?? document.body, { target: { value: 'toughness' } });
+    flush();
+    await waitFor(() => expect(pane()?.querySelector('.choice-dialog__name')?.textContent).toBe('Toughness'));
+    fireEvent.input(filter ?? document.body, { target: { value: 'power attack' } });
+    flush();
+    await waitFor(() => expect(pane()?.querySelector('.choice-dialog__name')?.textContent).toBe('Power Attack'));
+    const enables = [...(pane()?.querySelectorAll('.choice-dialog__links li') ?? [])]
+      .map((li) => li.textContent ?? '')
+      .find((line) => line.startsWith('Enables '));
+    const names = enables?.replace(/^Enables /, '').split(', ') ?? [];
+    expect(names.length).toBeGreaterThan(1);
+    expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b)));
+    fireEvent.input(filter ?? document.body, { target: { value: 'weapon focus' } });
+    flush();
+    const parentRow = [...document.querySelectorAll<HTMLElement>('.choice-dialog [data-parent] > .ww-option')].find(
+      (b) => b.querySelector('.ww-option__name')?.textContent === 'Weapon Focus',
+    );
+    fireEvent.click(parentRow ?? document.body);
+    flush();
+    const bardiche = [...document.querySelectorAll<HTMLElement>('.choice-dialog [data-child-of] .ww-option')].find(
+      (b) => b.querySelector('.ww-option__name')?.textContent === 'Bardiche',
+    );
+    fireEvent.pointerOver(bardiche ?? document.body);
+    flush();
+    expect(pane()?.querySelector('.choice-dialog__name')?.textContent).toBe('Weapon Focus (Bardiche)');
+  });
+
+  test('the next level is a list step only before level 1, so Modal first keeps "Continue as …" inline (QA pass 4)', () => {
+    expect(isListStep({ kind: 'nextLevel' }, 0)).toBe(true);
+    expect(isListStep({ kind: 'nextLevel' }, 1)).toBe(false);
   });
 
   test('Synergy words name every link kind, and a clash reads as a warning', () => {

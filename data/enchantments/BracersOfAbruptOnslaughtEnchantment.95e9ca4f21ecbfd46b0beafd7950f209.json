@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_da90fa4a0f6784241919ee191cc41be9"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillThievery",
+      "Value": 5
     }
   ],
   "assetName": "BracersOfAbruptOnslaughtEnchantment",

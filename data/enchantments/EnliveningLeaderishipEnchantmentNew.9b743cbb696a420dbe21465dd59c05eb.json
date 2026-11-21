@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFactEquipment",
       "m_Blueprint": "!bp_23d10c328c70a4842a1a1a20fbd35979"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillPersuasion",
+      "Value": 5
     }
   ],
   "assetName": "EnliveningLeaderishipEnchantmentNew",

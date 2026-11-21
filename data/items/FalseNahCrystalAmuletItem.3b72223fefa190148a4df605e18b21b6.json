@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "FalseNahCrystalAmuletItem",
   "guid": "3b72223fefa190148a4df605e18b21b6",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_a2d25fe1ad639e348bb46198f8964978"
+  ],
   "name": "\"Nahyndrian\" Crystal"
 }

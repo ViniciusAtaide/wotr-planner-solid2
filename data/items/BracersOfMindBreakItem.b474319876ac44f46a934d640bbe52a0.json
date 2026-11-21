@@ -4,6 +4,7 @@
   "assetName": "BracersOfMindBreakItem",
   "guid": "b474319876ac44f46a934d640bbe52a0",
   "m_Enchantments": [
+    "!bp_7ee8802804a2b05478b19042fc3ddcf8",
     "!bp_939bc65002a19b944862633446a17293"
   ],
   "name": "Bracers of Mind Break"

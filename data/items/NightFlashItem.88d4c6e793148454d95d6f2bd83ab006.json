@@ -5,7 +5,8 @@
   "assetName": "NightFlashItem",
   "guid": "88d4c6e793148454d95d6f2bd83ab006",
   "m_Enchantments": [
-    "!bp_bdba267e951851449af552aa9f9e3992"
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_d09119cdebb90eb42975e7c4707a8ed8"
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_d516765b3c2904e4a939749526a52a9a",

@@ -5,7 +5,8 @@
   "assetName": "LethalConductorItem",
   "guid": "dda495b9b24ec334588d31c56ddea8b8",
   "m_Enchantments": [
-    "!bp_bdba267e951851449af552aa9f9e3992"
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_77b4aea38f4bb874396d6c6c2cc9c4cf"
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_07cc1a7fceaee5b42b3e43da960fe76d",

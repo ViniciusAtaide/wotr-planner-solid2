@@ -2,6 +2,18 @@
   "$type": "BlueprintArmorEnchantment",
   "Components": [
     {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillThievery",
+      "Value": 10
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillAthletics",
+      "Value": 10
+    },
+    {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_2c57de6ce15bbf54a82f41077e7baaa5"
     }

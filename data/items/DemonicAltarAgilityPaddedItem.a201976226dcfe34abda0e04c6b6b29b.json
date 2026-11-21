@@ -10,7 +10,8 @@
   "assetName": "DemonicAltarAgilityPaddedItem",
   "guid": "a201976226dcfe34abda0e04c6b6b29b",
   "m_Enchantments": [
-    "!bp_9448d3026111d6d49b31fc85e7f3745a"
+    "!bp_9448d3026111d6d49b31fc85e7f3745a",
+    "!bp_21b3d8805b4ce814b8d4124c1921e9e1"
   ],
   "m_Type": "!bp_b7e26eed57d524b478c0c90df0f0b8f1",
   "name": "Web Strider (armor)",

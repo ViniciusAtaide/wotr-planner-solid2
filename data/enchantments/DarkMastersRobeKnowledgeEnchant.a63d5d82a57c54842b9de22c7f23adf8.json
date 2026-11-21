@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 10
+    }
+  ],
+  "assetName": "DarkMastersRobeKnowledgeEnchant",
+  "guid": "a63d5d82a57c54842b9de22c7f23adf8"
+}

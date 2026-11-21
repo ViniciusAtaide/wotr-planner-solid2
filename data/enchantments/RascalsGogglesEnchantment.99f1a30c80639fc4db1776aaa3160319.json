@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillPerception",
+      "Value": 10
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillThievery",
+      "Value": 10
+    }
+  ],
+  "assetName": "RascalsGogglesEnchantment",
+  "guid": "99f1a30c80639fc4db1776aaa3160319"
+}

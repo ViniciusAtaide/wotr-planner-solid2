@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 5
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillUseMagicDevice",
+      "Value": 5
+    }
+  ],
+  "assetName": "BracersOfEldritchScholarEnchantment",
+  "guid": "dbf45cd03d94dfc43ad73d24416bbef1"
+}

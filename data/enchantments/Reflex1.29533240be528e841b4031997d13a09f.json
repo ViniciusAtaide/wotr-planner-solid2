@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Resistance",
+      "Stat": "SaveReflex",
+      "Value": 1
+    }
+  ],
+  "assetName": "Reflex1",
+  "guid": "29533240be528e841b4031997d13a09f"
+}

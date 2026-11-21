@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillLoreNature",
+      "Value": 3
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillKnowledgeWorld",
+      "Value": 3
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillLoreReligion",
+      "Value": 3
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 3
+    }
+  ],
+  "assetName": "RobeOfTheWiseEnchant",
+  "guid": "72c2f73bdba34cf4c8f8d3d2cf046c09"
+}

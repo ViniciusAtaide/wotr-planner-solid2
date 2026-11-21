@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Sacred",
+      "Stat": "SaveFortitude",
+      "Value": 2
+    }
+  ],
+  "assetName": "KnightsEmblemEmeraldChainmailEnchantment",
+  "guid": "5bc26eacb8acd6840b0c5818d8bebc8c"
+}

@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_ee9c88d50e6bed145a0032b3778d5707"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillAthletics",
+      "Value": 5
     }
   ],
   "assetName": "ClothOfBlazingFighterEnchantment",

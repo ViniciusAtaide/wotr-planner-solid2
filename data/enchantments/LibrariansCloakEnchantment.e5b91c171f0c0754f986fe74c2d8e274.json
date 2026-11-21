@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_29c3befb0c416f44083ac0a68f041e70"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillUseMagicDevice",
+      "Value": 10
     }
   ],
   "assetName": "LibrariansCloakEnchantment",

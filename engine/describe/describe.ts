@@ -240,6 +240,7 @@ export const summaryComponentTypes: readonly string[] = [
   'WeaponFocusParametrized',
   'WeaponSpecializationParametrized',
   'ImprovedCriticalParametrized',
+  'AllSavesBonusEquipment',
   'Blindsense',
   'BuffMovementSpeed',
   'FavoredEnemy',

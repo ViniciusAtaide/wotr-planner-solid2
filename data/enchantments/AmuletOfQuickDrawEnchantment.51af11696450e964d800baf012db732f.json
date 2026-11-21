@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_60c9144d13674a445aa303fa272aae0a"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "Initiative",
+      "Value": 4
     }
   ],
   "assetName": "AmuletOfQuickDrawEnchantment",

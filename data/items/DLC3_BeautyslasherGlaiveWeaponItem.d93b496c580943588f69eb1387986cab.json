@@ -5,6 +5,7 @@
   "assetName": "DLC3_BeautyslasherGlaiveWeaponItem",
   "guid": "d93b496c580943588f69eb1387986cab",
   "m_Enchantments": [
+    "!bp_38cd022c3d19436586d5e4b4d56f6ea5",
     "!bp_bdba267e951851449af552aa9f9e3992"
   ],
   "m_SecondWeapon": null,

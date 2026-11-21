@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 3
+    }
+  ],
+  "assetName": "BracersOfWizardEnchantment",
+  "guid": "0b7d87791c3e160448c5b05b0823ce7f"
+}

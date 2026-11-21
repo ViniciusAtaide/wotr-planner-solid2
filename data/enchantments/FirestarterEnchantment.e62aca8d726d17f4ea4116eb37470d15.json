@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "None",
+      "Stat": "Initiative",
+      "Value": 4
+    }
+  ],
+  "assetName": "FirestarterEnchantment",
+  "guid": "e62aca8d726d17f4ea4116eb37470d15"
+}

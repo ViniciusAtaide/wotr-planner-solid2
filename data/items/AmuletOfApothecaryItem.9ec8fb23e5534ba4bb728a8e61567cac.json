@@ -4,7 +4,8 @@
   "assetName": "AmuletOfApothecaryItem",
   "guid": "9ec8fb23e5534ba4bb728a8e61567cac",
   "m_Enchantments": [
-    "!bp_70282ab25bba29a459321cb4262954cf"
+    "!bp_70282ab25bba29a459321cb4262954cf",
+    "!bp_ddd14e2135af128418f4e562c55876b8"
   ],
   "name": "Amulet of Apothecary"
 }

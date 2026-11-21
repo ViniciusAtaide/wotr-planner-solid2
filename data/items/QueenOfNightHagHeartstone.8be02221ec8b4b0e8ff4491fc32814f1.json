@@ -4,7 +4,8 @@
   "assetName": "QueenOfNightHagHeartstone",
   "guid": "8be02221ec8b4b0e8ff4491fc32814f1",
   "m_Enchantments": [
-    "!bp_8da1070dc0d24082afc4e6c09ec77f04"
+    "!bp_8da1070dc0d24082afc4e6c09ec77f04",
+    "!bp_4fbb8a3d64c44c89ae6b3afb9112966d"
   ],
   "name": "Heartstone of the Night Hag Queen"
 }

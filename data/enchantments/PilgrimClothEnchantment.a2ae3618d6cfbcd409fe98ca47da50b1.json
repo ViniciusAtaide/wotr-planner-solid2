@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_2034dbe5b887ccd42bf4b4b111fbf15b"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillLoreNature",
+      "Value": 5
     }
   ],
   "assetName": "PilgrimClothEnchantment",

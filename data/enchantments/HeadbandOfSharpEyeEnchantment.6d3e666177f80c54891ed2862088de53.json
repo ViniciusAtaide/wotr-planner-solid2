@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillPerception",
+      "Value": 6
+    }
+  ],
+  "assetName": "HeadbandOfSharpEyeEnchantment",
+  "guid": "6d3e666177f80c54891ed2862088de53"
+}

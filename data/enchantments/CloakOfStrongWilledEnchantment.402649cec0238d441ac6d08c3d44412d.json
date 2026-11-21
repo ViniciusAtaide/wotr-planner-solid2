@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Resistance",
+      "Stat": "SaveWill",
+      "Value": 3
+    }
+  ],
+  "assetName": "CloakOfStrongWilledEnchantment",
+  "guid": "402649cec0238d441ac6d08c3d44412d"
+}

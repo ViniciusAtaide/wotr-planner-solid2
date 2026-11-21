@@ -14,6 +14,8 @@
   ],
   "assetName": "RobeOfTheWiseItemCorrect",
   "guid": "009c8ed2e4fe4b62b1df9b577b5d4e29",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_72c2f73bdba34cf4c8f8d3d2cf046c09"
+  ],
   "name": "Robe of the Wise"
 }

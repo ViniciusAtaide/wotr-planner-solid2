@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_f3f0cd0651307b847939ac17454ec9f4"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "SaveWill",
+      "Value": 4
     }
   ],
   "assetName": "MartyrsTestamentEnchantment",

@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "VellexiasMagnifyingAmuletItem",
   "guid": "91702df4fe0246a3b435c7fcf9fa019e",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_118a7c904f54a6148840c4ae0309fe44"
+  ],
   "name": "Vellexia's Magnifying Amulet"
 }

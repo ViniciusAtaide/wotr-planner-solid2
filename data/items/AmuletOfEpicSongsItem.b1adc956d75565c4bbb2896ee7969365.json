@@ -4,7 +4,8 @@
   "assetName": "AmuletOfEpicSongsItem",
   "guid": "b1adc956d75565c4bbb2896ee7969365",
   "m_Enchantments": [
-    "!bp_d7f985d0fd4772243be30e06e3e7d400"
+    "!bp_d7f985d0fd4772243be30e06e3e7d400",
+    "!bp_a7889237edf4001428ed8855c562fb16"
   ],
   "name": "Amulet of Epic Songs"
 }

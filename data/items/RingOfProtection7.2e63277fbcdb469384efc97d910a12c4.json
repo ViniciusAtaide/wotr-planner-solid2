@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "RingOfProtection7",
   "guid": "2e63277fbcdb469384efc97d910a12c4",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_6e287c9bbb6b4726841566a2d2083c5a"
+  ],
   "name": "Ring of Protection +7"
 }

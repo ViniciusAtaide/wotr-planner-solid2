@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_df75fd7059c9fd94198852be7544c8b0"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillStealth",
+      "Value": 10
     }
   ],
   "assetName": "BootsOfWaryStepsEnchantment",

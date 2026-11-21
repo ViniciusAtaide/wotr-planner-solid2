@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "AdditionalCMD",
+      "Value": 3
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "AdditionalCMB",
+      "Value": 3
+    }
+  ],
+  "assetName": "PerfectedManeuverEnchantment",
+  "guid": "42b59277ed97cc546a9e242b4f51f624"
+}

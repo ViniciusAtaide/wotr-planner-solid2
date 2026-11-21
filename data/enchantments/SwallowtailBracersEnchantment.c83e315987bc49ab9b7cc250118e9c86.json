@@ -2,6 +2,11 @@
   "$type": "BlueprintEquipmentEnchantment",
   "Components": [
     {
+      "$type": "AllSavesBonusEquipment",
+      "Descriptor": "Luck",
+      "Value": 2
+    },
+    {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_8a8aaa66c13940fba0b49de64a28f028"
     }

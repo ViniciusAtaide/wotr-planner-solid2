@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillLoreReligion",
+      "Value": 12
+    }
+  ],
+  "assetName": "EdgeOfExpulsionEnchantment",
+  "guid": "c532a411ec4741ebaa7db391ac2a36ef"
+}

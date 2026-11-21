@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AllSavesBonusEquipment",
+      "Descriptor": "Resistance",
+      "Value": 6
+    }
+  ],
+  "assetName": "Resistance6",
+  "guid": "c67c2306707c3284db43c1ea35a03715"
+}

@@ -4,6 +4,18 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_3b41a9ab5628bb64face7d19afa9dbd4"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillLoreNature",
+      "Value": 5
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "SaveFortitude",
+      "Value": 6
     }
   ],
   "assetName": "HermitsCloakEnchantment",

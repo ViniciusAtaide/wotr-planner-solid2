@@ -4,6 +4,18 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_99439c9f1239c574dbcb3ea5f8509769"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "AdditionalCMB",
+      "Value": 5
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "AdditionalCMD",
+      "Value": 5
     }
   ],
   "assetName": "BracersOfBalanceEnchantment",

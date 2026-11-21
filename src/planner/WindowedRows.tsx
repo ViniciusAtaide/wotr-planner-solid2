@@ -1,5 +1,5 @@
 import type { JSX } from '@solidjs/web';
-import { createMemo, createSignal, For, onSettled, Show, untrack } from 'solid-js';
+import { createEffect, createMemo, createSignal, For, onSettled, Show, untrack } from 'solid-js';
 
 export const OVERSCAN = 6;
 const FALLBACK_ROW = 44;
@@ -19,8 +19,8 @@ export interface RowWindow {
 
 export function windowOf(top: number, height: number, row: number, count: number, overscan = OVERSCAN): RowWindow {
   if (height <= 0 || row <= 0) return { start: 0, end: count, row: 0 };
-  const start = Math.max(0, Math.floor(top / row) - overscan);
-  const end = Math.min(count, Math.ceil((top + height) / row) + overscan);
+  const start = Math.min(count, Math.max(0, Math.floor(top / row) - overscan));
+  const end = Math.max(start, Math.min(count, Math.ceil((top + height) / row) + overscan));
   return { start, end, row };
 }
 
@@ -47,10 +47,18 @@ export interface WindowedRowsProps<T> {
 
 export function WindowedRows<T>(props: WindowedRowsProps<T>) {
   const [view, setView] = createSignal({ top: 0, height: 0, row: 0 });
+  let remeasure: (() => void) | undefined;
+  createEffect(
+    () => props.items,
+    () => {
+      if (remeasure !== undefined) requestAnimationFrame(remeasure);
+    },
+  );
   onSettled(() => {
     const el = props.scroller();
     if (el === undefined) return;
     const measure = () => setView({ top: el.scrollTop, height: el.clientHeight, row: rowHeightOf(el) });
+    remeasure = measure;
     measure();
     el.addEventListener('scroll', measure, { passive: true });
     const resized = typeof ResizeObserver === 'undefined' ? undefined : new ResizeObserver(measure);

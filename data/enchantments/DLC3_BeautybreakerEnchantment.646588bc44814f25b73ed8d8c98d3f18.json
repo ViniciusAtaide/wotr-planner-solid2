@@ -2,6 +2,12 @@
   "$type": "BlueprintWeaponEnchantment",
   "Components": [
     {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Rage",
+      "Stat": "Charisma",
+      "Value": -6
+    },
+    {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_8a627b385786402e8503206fdeff7b5e"
     }

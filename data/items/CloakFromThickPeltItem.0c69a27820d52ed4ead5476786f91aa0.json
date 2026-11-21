@@ -4,7 +4,8 @@
   "assetName": "CloakFromThickPeltItem",
   "guid": "0c69a27820d52ed4ead5476786f91aa0",
   "m_Enchantments": [
-    "!bp_11dabeee4547c61438cc0044611de449"
+    "!bp_11dabeee4547c61438cc0044611de449",
+    "!bp_59a36d69ac57b674bb38f77335228e55"
   ],
   "name": "Thick Pelt Cloak"
 }

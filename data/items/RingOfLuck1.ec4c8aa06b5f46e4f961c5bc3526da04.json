@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "RingOfLuck1",
   "guid": "ec4c8aa06b5f46e4f961c5bc3526da04",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_197fa90c67ed31743a85a6c48f7b1993"
+  ],
   "name": "Ring of Luck"
 }

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillUseMagicDevice",
+      "Value": 5
+    }
+  ],
+  "assetName": "GlovesOfUseMagiDevicesEnchant",
+  "guid": "1bcd1e825a205224ea89997c71c4ad10"
+}

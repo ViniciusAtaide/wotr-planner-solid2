@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Deflection",
+      "Stat": "AC",
+      "Value": 1
+    }
+  ],
+  "assetName": "Deflection1",
+  "guid": "990dcac8a5af75340916324383deac53"
+}

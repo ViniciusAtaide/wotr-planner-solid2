@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "DLC3_AmuletOfCombatAwarenessItem",
   "guid": "c6b28bf6b42b4650bc3363f141c89bb6",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_54cfff4515384a38804ca0e45207c480"
+  ],
   "name": "Amulet of Combat Awareness"
 }

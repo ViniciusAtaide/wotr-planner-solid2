@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Dodge",
+      "Stat": "AC",
+      "Value": 3
+    }
+  ],
+  "assetName": "ArcaneProtectorEnchant",
+  "guid": "d3118dd2796883645a56c888880ecfba"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillMobility",
+      "Value": 10
+    }
+  ],
+  "assetName": "BeltOfImprovedProtectionEnchantment",
+  "guid": "c4297d32933869c41af33e323c85dbb9"
+}

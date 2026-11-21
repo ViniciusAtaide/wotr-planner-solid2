@@ -10,7 +10,8 @@
   "assetName": "TrailblazersArmorItem",
   "guid": "089412f4051a9a3448b4b153732cc091",
   "m_Enchantments": [
-    "!bp_eaeb89df5be2b784c96181552414ae5a"
+    "!bp_eaeb89df5be2b784c96181552414ae5a",
+    "!bp_18a2cf7f9c3aac84681ee728197c6a2a"
   ],
   "m_Type": "!bp_c850ba40ed3a61b489b438a5ffa71de9",
   "name": "Trailblazer's Armor"

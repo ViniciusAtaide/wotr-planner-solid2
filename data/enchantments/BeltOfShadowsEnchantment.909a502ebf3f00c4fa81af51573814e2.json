@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillStealth",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillThievery",
+      "Value": 2
+    }
+  ],
+  "assetName": "BeltOfShadowsEnchantment",
+  "guid": "909a502ebf3f00c4fa81af51573814e2"
+}

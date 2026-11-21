@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "GrandFestivalCloak",
   "guid": "12836afa5ce54260895c4f54d8a3bb4d",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_f1380708dd0a439b9e778a63b3388667"
+  ],
   "name": "Grand Festival Cloak"
 }

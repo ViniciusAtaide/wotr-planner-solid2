@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "CheckIntimidate",
+      "Value": 4
+    }
+  ],
+  "assetName": "PureSavagerylEnchantment",
+  "guid": "aaf9cdbdeeea57542bbf9ea7b7b5d09a"
+}

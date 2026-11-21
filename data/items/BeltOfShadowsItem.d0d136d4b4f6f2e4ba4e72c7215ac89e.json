@@ -4,7 +4,8 @@
   "assetName": "BeltOfShadowsItem",
   "guid": "d0d136d4b4f6f2e4ba4e72c7215ac89e",
   "m_Enchantments": [
-    "!bp_15008553994dd7e48af2ad1a1426d733"
+    "!bp_15008553994dd7e48af2ad1a1426d733",
+    "!bp_909a502ebf3f00c4fa81af51573814e2"
   ],
   "name": "Belt of Shadows"
 }

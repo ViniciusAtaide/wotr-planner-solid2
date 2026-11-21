@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "HelmetFullplateMithralArcaneItem",
   "guid": "ac63e05cee46fba4c93785c2eb0009ff",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_ee6e4212d5edd3e4c8adfb40c4b7b69d"
+  ],
   "name": "Shiny Helmet"
 }

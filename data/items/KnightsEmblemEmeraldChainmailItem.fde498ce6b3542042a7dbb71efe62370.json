@@ -15,7 +15,8 @@
   "assetName": "KnightsEmblemEmeraldChainmailItem",
   "guid": "fde498ce6b3542042a7dbb71efe62370",
   "m_Enchantments": [
-    "!bp_758b77a97640fd747abf149f5bf538d0"
+    "!bp_758b77a97640fd747abf149f5bf538d0",
+    "!bp_5bc26eacb8acd6840b0c5818d8bebc8c"
   ],
   "m_Type": "!bp_cd4a47c5bacbff3498e960eec3a83485",
   "name": "Mallander's Penance (armor)",

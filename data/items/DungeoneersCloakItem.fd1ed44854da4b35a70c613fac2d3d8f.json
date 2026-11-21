@@ -4,7 +4,8 @@
   "assetName": "DungeoneersCloakItem",
   "guid": "fd1ed44854da4b35a70c613fac2d3d8f",
   "m_Enchantments": [
-    "!bp_37d433202f984b869a91fd21a6a4b56e"
+    "!bp_37d433202f984b869a91fd21a6a4b56e",
+    "!bp_86748e27c9e3b414a97330ea74858994"
   ],
   "name": "Dungeoneer's Cloak"
 }

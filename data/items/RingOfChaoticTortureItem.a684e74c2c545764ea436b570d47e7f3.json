@@ -4,7 +4,8 @@
   "assetName": "RingOfChaoticTortureItem",
   "guid": "a684e74c2c545764ea436b570d47e7f3",
   "m_Enchantments": [
-    "!bp_dd81657fe9293004c850742dfda41ca8"
+    "!bp_dd81657fe9293004c850742dfda41ca8",
+    "!bp_9205b68509ff1db41915bb4f3aba3a04"
   ],
   "name": "Ring of Chaotic Fascination"
 }

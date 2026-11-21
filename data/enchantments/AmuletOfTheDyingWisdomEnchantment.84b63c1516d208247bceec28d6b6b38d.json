@@ -1,0 +1,43 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Profane",
+      "Stat": "Strength",
+      "Value": -3
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Profane",
+      "Stat": "Dexterity",
+      "Value": -3
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Profane",
+      "Stat": "Constitution",
+      "Value": -3
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Profane",
+      "Stat": "Intelligence",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Profane",
+      "Stat": "Wisdom",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Profane",
+      "Stat": "Charisma",
+      "Value": 2
+    }
+  ],
+  "assetName": "AmuletOfTheDyingWisdomEnchantment",
+  "guid": "84b63c1516d208247bceec28d6b6b38d"
+}

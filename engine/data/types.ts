@@ -1388,14 +1388,20 @@ export interface BlueprintArmorEnchantment extends BlueprintBase {
 
 export interface AddStatBonusEquipment extends Component {
   readonly $type: 'AddStatBonusEquipment';
-  readonly Descriptor: 'Enhancement';
+  readonly Descriptor: ModifierDescriptor;
   readonly Stat: StatType;
+  readonly Value: number;
+}
+
+export interface AllSavesBonusEquipment extends Component {
+  readonly $type: 'AllSavesBonusEquipment';
+  readonly Descriptor: ModifierDescriptor;
   readonly Value: number;
 }
 
 export interface IncreaseStatEquipment extends Component {
   readonly $type: 'IncreaseStatEquipment';
-  readonly Descriptor: 'Enhancement';
+  readonly Descriptor: ModifierDescriptor;
   readonly Stat: StatType;
   readonly Value: number;
 }
