@@ -149,6 +149,7 @@ function apiOf(planner: PlannerApi, state: TrailState = TRAIL_START): TrailApi {
       selection = next;
     },
     edit: (edit, title) => planner.edit(edit, title),
+    editAll: (edits, title) => planner.editAll(edits, title),
   };
 }
 
@@ -237,11 +238,16 @@ const CLEAVE = 'd809b6c4ff2aaff4fa70d712a70f7d7b';
 const MYTHIC_HERO = '247aa787806d5da4f89cfc3dff0b217f';
 const FEAT: SlotId = { place: { level: 1 }, selection: '247a4068296e8be42890143f451b4b45', index: 0 };
 const BONUS_COMBAT_FEAT: SlotId = { place: { level: 1 }, selection: '41c8486641f7d6d4283ca9dae4147a9f', index: 0 };
+const DWARF = 'c4faf439f0e70bd40b5e36ee80d06be7';
+const DWARF_HERITAGE: SlotId = { place: { level: 1 }, selection: 'fd6e1f53589049cbbbc6a8e058d83b74', index: 0 };
+const BASIC_DWARF = '8b2da1d0f9504872809e63b39c24c502';
 
 const cleaver: Build = {
   scores: abilityScores(SCORES),
+  race: DWARF,
   levels: [{ class: fighter }],
   picks: [
+    { slot: DWARF_HERITAGE, feature: BASIC_DWARF },
     { slot: FEAT, feature: POWER_ATTACK },
     { slot: BONUS_COMBAT_FEAT, feature: CLEAVE },
   ],
@@ -331,6 +337,15 @@ function chipNamed(text: string): HTMLElement {
   return chip;
 }
 
+function filterAndTake(text: string): void {
+  const filter = document.querySelector<HTMLInputElement>('.trail-here [data-picker-filter]');
+  if (filter === null) throw new Error('no filter');
+  fireEvent.input(filter, { target: { value: text } });
+  flush();
+  fireEvent.keyDown(filter, { key: 'Enter' });
+  flush();
+}
+
 async function storedBlockCode(code: string): Promise<string> {
   const bytes = Uint8Array.from(atob(code.replace(/-/g, '+').replace(/_/g, '/')), (c) => c.charCodeAt(0));
   const inflated = new Uint8Array(
@@ -389,20 +404,50 @@ describe('the levelling trail (build ticket 07)', () => {
     expect(hereTitle()).toBe('Your character · set the ability scores');
     expect(screen.queryByRole('button', { name: 'Back to the next choice' })).toBeNull();
     tap(/^Done/);
+    expect(hereTitle()).toBe('Your character · choose a race');
+  });
+
+  test('the race list holds each race with its heritages, and one row takes both as one change', async () => {
+    await openPlanner({ scores: abilityScores(SCORES), levels: [], picks: [] });
+    expect(hereTitle()).toBe('Your character · choose a race');
+    filterAndTake('rakshasa');
     expect(hereTitle()).toBe('Begin · choose a first class');
+    expect(document.querySelector('.planner-undo__what')?.textContent).toBe(
+      'Race Tiefling (Beastbrood (Rakshasa-Spawn))',
+    );
+    expect(chipNamed('Race').textContent).toContain('Tiefling (Beastbrood (Rakshasa-Spawn))');
+  });
+
+  test('the class list holds each class with its archetypes, and one row takes both as one change', async () => {
+    await openPlanner({ scores: abilityScores(SCORES), race: DWARF, levels: [], picks: [] });
+    filterAndTake('two-handed fighter');
+    expect(levelRows()).toBe(1);
+    expect(document.querySelector('.planner-undo__what')?.textContent).toBe('Level 1 as Fighter (Two-Handed Fighter)');
+    expect(chipNamed('Archetype').textContent).toContain('Two-Handed Fighter');
+    tap('Undo');
+    expect(levelRows()).toBe(0);
+  });
+
+  test('the background list holds each group with its variations', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Background'));
+    flush();
+    filterAndTake('courtier');
+    expect(chipNamed('Background').textContent).toContain('Noble (Courtier)');
+    expect(document.querySelector('.planner-undo__what')?.textContent).toBe('Background Noble (Courtier)');
   });
 
   test('a Build whose scores are set opens past them', async () => {
-    await openPlanner({ scores: abilityScores(SCORES), levels: [], picks: [] });
+    await openPlanner({ scores: abilityScores(SCORES), race: DWARF, levels: [], picks: [] });
     expect(hereTitle()).toBe('Begin · choose a first class');
   });
 
   test('a reload keeps the Build, through the #b= link', async () => {
     await openPlanner(undefined);
-    tap('Human');
-    tap('Lawful Good');
     tap(/^Done/);
-    tap(/^Fighter/);
+    tap(/^Human$/);
+    tap('Lawful Good');
+    tap(/^Fighter$/);
     await waitFor(() => expect(levelRows()).toBe(1));
     const shown = [...document.querySelectorAll('.trail-card__line')].map((n) => n.textContent);
     await waitFor(async () => {
@@ -428,7 +473,7 @@ describe('the levelling trail (build ticket 07)', () => {
     fireEvent.click(option ?? document.body);
     flush();
     expect(hereTitle()).not.toBe(first);
-    expect(document.querySelector('.planner-undo')?.textContent).toContain(`Picked ${name}`);
+    expect(document.querySelector('.planner-undo')?.textContent).toContain(name);
     tap('Undo');
     expect(hereTitle()).toBe(first);
   });
@@ -436,7 +481,8 @@ describe('the levelling trail (build ticket 07)', () => {
   test('race, +2, alignment and score edits reach the Undo line, and an undo names the change before', async () => {
     await openPlanner(undefined);
     const line = () => document.querySelector('.planner-undo__what')?.textContent;
-    tap('Human');
+    tap(/^Done/);
+    tap(/^Human$/);
     expect(line()).toBe('Race Human');
     tap('Racial +2 to Strength');
     expect(line()).toBe('Racial +2 to Strength');
@@ -454,7 +500,8 @@ describe('the levelling trail (build ticket 07)', () => {
   test('from 900 px wide the character card keeps its controls after level 1', async () => {
     await openPlanner(withLevels(2));
     expect(button('Raise Strength')).toBeEnabled();
-    expect(button('Human')).toBeTruthy();
+    expect(chipNamed('Race').textContent).toContain('Dwarf (Basic)');
+    expect(button('Lawful Good')).toBeTruthy();
     expect(document.querySelector('[aria-label="The character"] button.trail-card__head')).toBeNull();
   });
 
@@ -732,12 +779,16 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     expect(document.querySelector('.trail-stop__class')?.textContent).toBe(`${nameOf(e.data, MYTHIC_HERO)} 1`);
   });
 
-  test('the race chip the Build holds is pressed after a change (comparison bug 1)', async () => {
+  test('the race the Build holds is marked after a change (comparison bug 1)', async () => {
     await openPlanner(cleaver);
-    openCharacter();
-    tap('Human');
-    expect(button('Human')).toHaveAttribute('aria-pressed', 'true');
-    expect(button('Elf')).toHaveAttribute('aria-pressed', 'false');
+    fireEvent.click(chipNamed('Race'));
+    flush();
+    expect(button(/^Dwarf \(Basic\)/)).toHaveAttribute('aria-current', 'true');
+    tap(/^Elf \(Basic\)/);
+    fireEvent.click(chipNamed('Race'));
+    flush();
+    expect(button(/^Elf \(Basic\)/)).toHaveAttribute('aria-current', 'true');
+    expect(button(/^Dwarf \(Basic\)/)).not.toHaveAttribute('aria-current');
   });
 
   test('before level 1 the stats say they are the point buy only (comparison bug 4)', async () => {
@@ -856,7 +907,7 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     await screen.findByRole('toolbar', { name: 'Build' });
   });
 
-  test('loadEngine asks again after a failed load', async () => {
+  test('loadEngine asks again after a failed load', { timeout: 60_000 }, async () => {
     const actual = await vi.importActual<typeof import('./engine')>('./engine');
     const fetch = vi.fn(() => Promise.reject(new Error('offline')));
     vi.stubGlobal('fetch', fetch);

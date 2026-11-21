@@ -14,7 +14,7 @@ Everything else (which Builds show, which one is edited, the selection's target)
 
 A Build reads as the character's path, phone first. From top to bottom the page shows:
 
-- **The character card**: the race as one-tap buttons, the alignment as a wheel (as the game and the Rust planner
+- **The character card**: the alignment as a wheel (as the game and the Rust planner
   draw it: Neutral Good at the top, the other eight around the ring, True Neutral in the middle; good tinted blue across
   the top, neutral at the sides, evil red across the bottom; the name of the alignment under the pointer or focus, else
   the chosen one, above it), the six ability scores as tiles
@@ -38,15 +38,17 @@ to the player in the planner's own words: "Level 5 · choose feat", "Your charac
    open through its edits (race, +2 and alignment included) until "Done" ("Done · leave N unspent" while points are
    left), which keeps every score at 10 when none was changed. So a fresh Build opens here, and a link opens on its
    first unfinished step;
-2. the first empty slot with the character, then the first empty slot on the trail, in the walk's order;
-3. an ability increase the walk offers and the Build hasn't taken;
-4. the last level's skills, until the walk's budget for that level is spent or the player chooses "Done · leave N
+2. the race, while the Build has none (below, "Flat lists");
+3. the first empty slot with the character, then the first empty slot on the trail, in the walk's order;
+4. an ability increase the walk offers and the Build hasn't taken;
+5. the last level's skills, until the walk's budget for that level is spent or the player chooses "Done · leave N
    unspent";
-5. a Mythic rank whose Expected level (ADR 0003) the Build has reached, offered as the Mythic paths with their status,
+6. a Mythic rank whose Expected level (ADR 0003) the Build has reached, offered as the Mythic paths with their status,
    the current path first (before any rank, the game's starting Mythic class, S's `mythicStartingClass`);
    "Not now" puts it off until the next level;
-6. the next level: "Continue as <previous class> → level N" in one tap, or "Another class…", which lists every class
-   with its status, the previous class first, then the open ones, then the closed ones with their reasons.
+7. the next level: "Continue as <previous class> → level N" in one tap, or "Another class…", which lists every class
+   (and each archetype of a class the Build hasn't taken, below) with its status, the previous class first, then the
+   open ones, then the closed ones with their reasons.
 
 Each pick goes back to the next step. Tapping any chip (or a stop's title, for its class, archetype and removal, or a
 rank's, for its path and Rank level) opens that choice in place with "Back to the next choice"; the ability scores,
@@ -57,8 +59,24 @@ picks goes through the Cascade preview as before; once confirmed, the page lands
 
 **Lists**: a pick list is open, sorted by name, with a filter above it that takes focus only under a fine pointer (so a
 phone keeps its keyboard down); Enter takes the first open row; the current pick is marked; closed rows show R's
-reasons. A small set (race, +2, alignment, the six ability increases, the last one marked "as before") is a row of
-buttons. A class or path list gets the filter from 13 rows up.
+reasons; an open row carries no badge, since a row you can tap is open. A small set (+2, the six ability increases,
+the last one marked "as before") is a row of buttons. A class or path list gets the filter from 13 rows up.
+
+**Flat lists** (user, 2026-11-21): a choice that opens a second choice is listed as one row per pair, the second in
+parentheses, so typing in the filter finds either name, and a row takes both as one change (one Undo entry):
+
+- the race with its heritage, "Tiefling (Beastbrood (Rakshasa-Spawn))", or the race alone when it opens none (a
+  Human's bonus feat stays a pick of its own). The heritage is the race's own selection in the game's Racial feature
+  group. A row works before level 1: the heritage pick waits in the Build for the slot level 1 opens. Changing the
+  race clears the old heritage first, so the old pick never lingers;
+- the background group with its variation, "Noble (Courtier)", or the group alone;
+- the class with its archetype, "Fighter (Two-Handed Fighter)", in the class list for a class the Build hasn't taken
+  (an archetype belongs to a class's first level).
+
+The race chip and the background chip name the pair; the heritage and the variation have no chip of their own. Judging
+every pair would cost a walk each (three seconds for the class list on a level-19 Build), so a row shares its group's
+status (the race's or class's judged edit, the heritage's or variation's own status in its slot), and the edits are
+checked as a whole when the row is taken: they apply, wait on the Cascade preview, or are refused.
 
 **Skills**: a budget line ("3 of 4 skill points spent") on the last level, "Same as level N−1", and − and + steppers.
 A past level shows its ranks without a budget. The budget is the walk's (`Walk.skillPoints`), never the page's.
@@ -102,6 +120,9 @@ dimmed and inert behind "Edit the Second Build".
     choice with R's reason (`brokenWords`). From `refused` the result replaces the refusal; while `confirming` it does
     nothing, since the background is inert. `outcomeOf` reads the result as an `EditOutcome`: `applied`, `confirming`
     or `refused`.
+  - `edits` is the same for several edits as one change, one history entry under one title: `verdictOfAll` folds
+    `verdictOf` over them, adding up what each clears, and stops at the first that breaks. `judgeAll` words that
+    verdict for a list row (open, open with "Clears N later picks", or closed with `brokenWords`).
   - `refuse` shows lines a panel's constructor refused (a value no Build holds), except while confirming.
   - `confirm` commits the pending Build, `cancel` drops it, `dismiss` clears a refusal.
   - `undo` and `redo` walk the history and clear a refusal; while confirming, `undo` (⌘Z) cancels instead and `redo`
@@ -121,13 +142,13 @@ dimmed and inert behind "Edit the Second Build".
   every action through `reducePlanner`. `latest` is the state after the last action, for handlers that send several
   actions in one tick (signal reads lag writes); `restore` puts a whole state back (Close). The rest is what the
   components read: `build`, `walked`, `session`, `change`, `pending`, `notice`, `canUndo`, `canRedo`, and the
-  actions; `edit` returns the `EditOutcome`.
+  actions; `edit` and `editAll` return the `EditOutcome`.
 - **`workspace-state.ts`: the page (map 13).** `WorkspaceState` is the `View` (one Build, `single`, or a fork,
   `forked`, with its `layout`, `one` or `both`, and the edited `side`), the `Selection`, and the
   `LinkStatus` (`ok`, or `didNotOpen` on `load` or on `paste`, with its `LinkReason`). The `Selection` is the choice
   the player tapped open on the trail: a slot, a level's class (`level`), its ability increase (`increase`) or skills
-  (`skills`), a rank, Gear, or the ability scores (`scores`, which the trail selects at their first edit to keep the
-  step open); undefined follows the next step. `reduceWorkspace(state,
+  (`skills`), a rank, Gear, the ability scores (`scores`, which the trail selects at their first edit to keep the
+  step open) or the race (`race`); undefined follows the next step. `reduceWorkspace(state,
   action, editing)`:
   - `fork` only from `single`, to `forked`, `both`, `second`;
   - `show` only when forked; the toggle's segments map onto it through a `Record`;
@@ -153,6 +174,12 @@ dimmed and inert behind "Edit the Second Build".
   `failed`. `shareLinkOf` maps it onto the design system's `ShareLink` props: "Making the link…" with Copy off while
   encoding (user), the URL when current, the reason when failed.
 - **`unreachable.ts`**: `unreachable(x: never)`, the default of a switch that names every case.
+- **`flat-choices.ts`: the flat lists.** `FlatChoice` is a row: its name, the edits it takes as one change, whether it
+  is the Build's, and its status. `flatName` writes "Group (Variation)"; `after` puts clearing edits first.
+  `raceChoices`, `backgroundChoices` and the labels `raceLabel` and `backgroundLabel`; `isHeritageSelection`,
+  `heritageSlotIn` and `heritageSlot` (found with a stand-in first level before the Build has one), `backgroundChildren`
+  and `shownArchetypes` (a class's archetypes the game shows).
+- **`CharacterSteps.tsx`**: `RaceStep` and `BackgroundStep`, the flat race and background lists in place.
 - **`words.ts`: names for the planner's surfaces.** Game names (ADR 0006) and the planner's own words, never the game's
   text. `ordinal` writes "1st", "2nd", "3rd", "4th"…; `optionName` is an option's name: the feature's game name, with
   its parameter's when it takes one.
@@ -182,7 +209,7 @@ dimmed and inert behind "Edit the Second Build".
   contents. Its `edit` sends the edit to the planner and, once it applies, goes back to the next step unless the
   choice stays open (`keepsSelection`), and folds the chapters again after a new level. `ChapterRow` is a folded
   chapter.
-- **`CharacterCard.tsx`**: the card, `RaceChips`, `AlignmentWheel` (`ALIGNMENT_WHEEL`, each alignment's place on the
+- **`CharacterCard.tsx`**: the card, `AlignmentWheel` (`ALIGNMENT_WHEEL`, each alignment's place on the
   ring and its tint), `ScoresStep` (the scores step:
   the tiles with their controls and "Done") and `StatTiles`, whose steppers
   stop at the scores a Build can hold (`MIN_SCORE`, `MAX_SCORE`) and send a point buy the walk refuses to the notice
@@ -306,7 +333,7 @@ dimmed and inert behind "Edit the Second Build".
     leaving the preview and the inert background; focus on Cancel and back on the control; side by side after
     narrowing to a phone; two hash decodes out of order; a failed paste; the link notice that never cleared; the page's
     own Build re-applied as an undo entry (`storedBlockCode` writes the same Build as another code); a hash pasted
-    while loading; "Making the link…" while encoding; a class the list doesn't offer; the race chip pressed after a
+    while loading; "Making the link…" while encoding; a class the list doesn't offer; the race marked after a
     change; the +2 row's place; the floating refusal; the score steppers' bounds; Close keeping the edited Build and
     asking first; Retry; and `loadEngine` asking again. A Cascade confirmed lands on the first pick it cleared.
   - The page renders whole with the engine module mocked (`gate.load`), C wrapped so a test can hold a decode or an

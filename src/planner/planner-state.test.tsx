@@ -104,6 +104,28 @@ describe('PlannerState: one test per table cell', () => {
       },
     ],
     ['edit', 'confirming', (s, n) => expect(n).toBe(s)],
+    [
+      'edits',
+      'idle',
+      (s, n) => {
+        expect(n.present.levels).toHaveLength(4);
+        expect(n.past).toEqual([...s.past, s.present]);
+        expect(n.future).toEqual([]);
+        expect(n.session.kind).toBe('idle');
+        expect(n.change).toBe('Add levels 3 and 4');
+        expect(n.pastChanges).toEqual([undefined, 'Level 2']);
+      },
+    ],
+    [
+      'edits',
+      'refused',
+      (s, n) => {
+        expect(n.present.levels).toHaveLength(4);
+        expect(n.past).toEqual([...s.past, s.present]);
+        expect(n.session.kind).toBe('idle');
+      },
+    ],
+    ['edits', 'confirming', (s, n) => expect(n).toBe(s)],
     ['refuse', 'idle', (s, n) => expect(n).toEqual({ ...s, session: { kind: 'refused', lines: ['Again.'] } })],
     ['refuse', 'refused', (s, n) => expect(n).toEqual({ ...s, session: { kind: 'refused', lines: ['Again.'] } })],
     ['refuse', 'confirming', (s, n) => expect(n).toBe(s)],
@@ -235,6 +257,7 @@ describe('PlannerState: one test per table cell', () => {
   ];
   const actions: Readonly<Record<PlannerAction['kind'], PlannerAction>> = {
     edit: { kind: 'edit', edit: ADD_LEVEL, title: 'Add level 3' },
+    edits: { kind: 'edits', edits: [ADD_LEVEL, ADD_LEVEL], title: 'Add levels 3 and 4' },
     refuse: { kind: 'refuse', lines: ['Again.'] },
     confirm: { kind: 'confirm' },
     cancel: { kind: 'cancel' },

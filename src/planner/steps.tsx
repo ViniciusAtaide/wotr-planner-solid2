@@ -1,6 +1,6 @@
-import { createMemo, createSignal, For, Show } from 'solid-js';
+import { createMemo, createSignal, For, Match, Show, Switch } from 'solid-js';
 import { slotKey, toRankLevel, toSkillRanks, type SlotId } from '~engine/build';
-import { isShown, refGuid, type Attribute, type Guid, type StatType } from '~engine/data';
+import type { Attribute, StatType } from '~engine/data';
 import type { Edit } from '~engine/edits';
 import { linkIndex } from '~engine/links';
 import { expectedLevel } from '~engine/mcp';
@@ -9,12 +9,22 @@ import { gearNote, nameOf, rankLevelRange, refusal, statName } from '~engine/ref
 import { ATTRIBUTES, SKILL_ATTRIBUTE } from '~engine/walk';
 
 import { Button, ClosedCount, OptionList, PickerOption, Refusal } from '../design';
+import { BackgroundStep, RaceStep } from './CharacterSteps';
 import { ChoiceList, currentFirst, Filter, judge, type ChoiceRow } from './ChoiceList';
 import { featCategory } from './feat-category';
-import type { EditOutcome } from './planner-state';
+import { flatName, shownArchetypes } from './flat-choices';
+import type { EditOutcome, NonEmpty } from './planner-state';
 import type { Planner } from './state';
 import type { TrailAction, TrailState, TrailView } from './trail-state';
-import { classLevelAt, isFirstLevelOfClass, mythicDue, skillBudget, slotLabel } from './trail-state';
+import {
+  classLevelAt,
+  isBackgroundSlot,
+  isFirstLevelOfClass,
+  isHeritageSlot,
+  mythicDue,
+  skillBudget,
+  slotLabel,
+} from './trail-state';
 import type { Selection } from './workspace-state';
 import { optionName } from './words';
 
@@ -26,6 +36,7 @@ export interface TrailApi {
   readonly selection: () => Selection | undefined;
   readonly select: (s: Selection | undefined) => void;
   readonly edit: (e: Edit, title: string) => EditOutcome;
+  readonly editAll: (edits: NonEmpty<Edit>, title: string) => EditOutcome;
 }
 
 const CLOSED_SHOWN = 30;
@@ -38,6 +49,27 @@ export interface SlotStepProps {
 }
 
 export function SlotStep(props: SlotStepProps) {
+  const kind = () => {
+    const view = props.trail.view();
+    if (isHeritageSlot(view, props.slot)) return 'race';
+    return isBackgroundSlot(view, props.slot) ? 'background' : 'pick';
+  };
+  return (
+    <Switch>
+      <Match when={kind() === 'race'}>
+        <RaceStep trail={props.trail} />
+      </Match>
+      <Match when={kind() === 'background'}>
+        <BackgroundStep trail={props.trail} />
+      </Match>
+      <Match when={kind() === 'pick'}>
+        <PickStep trail={props.trail} slot={props.slot} />
+      </Match>
+    </Switch>
+  );
+}
+
+function PickStep(props: SlotStepProps) {
   const planner = () => props.trail.planner;
   const data = () => planner().engine.data;
   const [text, setText] = createSignal('');
@@ -295,19 +327,42 @@ function ClassList(props: TrailStepProps) {
     const data = planner().engine.data;
     const previous = b.levels.at(-1)?.class;
     return currentFirst(
-      offeredClasses(data).map((c) => {
+      offeredClasses(data).flatMap((c): ChoiceRow[] => {
         const name = c.name ?? c.assetName;
-        return {
+        const judged = judge(planner().engine, b, { kind: 'addLevel', class: c.guid });
+        const level = b.levels.length + 1;
+        const plain: ChoiceRow = {
           key: c.guid,
           name,
-          ...judge(planner().engine, b, { kind: 'addLevel', class: c.guid }),
+          ...judged,
           current: c.guid === previous,
-          take: () => props.trail.edit({ kind: 'addLevel', class: c.guid }, `Level ${b.levels.length + 1} as ${name}`),
+          take: () => props.trail.edit({ kind: 'addLevel', class: c.guid }, `Level ${level} as ${name}`),
         };
+        if (b.levels.some((l) => l.class === c.guid)) return [plain];
+        return [
+          plain,
+          ...shownArchetypes(data, c.guid).map((a) => {
+            const flat = flatName(name, nameOf(data, a));
+            return {
+              key: `${c.guid} ${a}`,
+              name: flat,
+              ...judged,
+              current: false,
+              take: () =>
+                props.trail.editAll(
+                  [
+                    { kind: 'addLevel', class: c.guid },
+                    { kind: 'archetypes', class: c.guid, archetypes: [a] },
+                  ],
+                  `Level ${level} as ${flat}`,
+                ),
+            };
+          }),
+        ];
       }),
     );
   });
-  return <ChoiceList label="Filter classes by name" rows={rows()} />;
+  return <ChoiceList label="Filter classes and archetypes by name" rows={rows()} />;
 }
 
 export function NextLevelStep(props: TrailStepProps) {
@@ -424,22 +479,12 @@ export function LevelEditor(props: LevelStepProps) {
       }),
     );
   });
-  const archetypes = (cls: Guid): readonly Guid[] => {
-    const bp = data().blueprints.get(cls);
-    if (bp?.$type !== 'BlueprintCharacterClass') return [];
-    return bp.m_Archetypes
-      .map((r) => refGuid(r) ?? '')
-      .filter((g) => {
-        const a = data().blueprints.get(g);
-        return a !== undefined && isShown(a);
-      });
-  };
   const archetypeRows = createMemo((): ChoiceRow[] => {
     const cls = level()?.class;
     if (cls === undefined || !isFirstLevelOfClass(planner().build(), props.level)) return [];
     const b = planner().build();
     const held = b.classChoices?.[cls]?.archetypes[0];
-    const options = archetypes(cls);
+    const options = shownArchetypes(data(), cls);
     if (options.length === 0) return [];
     const none: ChoiceRow = {
       key: 'none',

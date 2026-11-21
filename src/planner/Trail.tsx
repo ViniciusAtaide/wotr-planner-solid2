@@ -8,9 +8,11 @@ import type { OpenedSlot } from '~engine/walk';
 
 import { FeatIcon, type FeatCategory } from '../design';
 import { CharacterCard, ScoresStep } from './CharacterCard';
+import { RaceStep } from './CharacterSteps';
 import { featCategory } from './feat-category';
+import { backgroundLabel, raceLabel } from './flat-choices';
 import { GearStep, wornLine } from './GearStep';
-import type { EditOutcome } from './planner-state';
+import type { EditOutcome, NonEmpty } from './planner-state';
 import type { Planner } from './state';
 import {
   IncreaseStep,
@@ -28,11 +30,12 @@ import {
   chapterSummary,
   characterEditing,
   characterFolded,
-  characterSlots,
+  characterChipSlots,
   classLevelAt,
   folded,
   hereLevel,
   increaseOffered,
+  isBackgroundSlot,
   isFirstLevelOfClass,
   keepsSelection,
   levelOneDone,
@@ -109,16 +112,19 @@ export default function Trail(props: TrailProps) {
   const step = createMemo((): Step => props.selection ?? nextStep(view(), props.state), {
     equals: (a, b) => stepKey(a) === stepKey(b),
   });
-  const edit = (e: Edit, title: string): EditOutcome => {
-    const outcome = props.planner.edit(e, title);
+  const applied = (edits: NonEmpty<Edit>, outcome: EditOutcome): EditOutcome => {
     if (outcome === 'applied') {
-      if (e.kind === 'addLevel') props.send({ kind: 'levelAdded' });
+      if (edits.some((e) => e.kind === 'addLevel')) props.send({ kind: 'levelAdded' });
       if (!keepsSelection(props.selection)) {
-        props.select(e.kind === 'scores' && step().kind === 'scores' ? { kind: 'scores' } : undefined);
+        const scores = edits.length === 1 && edits[0].kind === 'scores' && step().kind === 'scores';
+        props.select(scores ? { kind: 'scores' } : undefined);
       }
     }
     return outcome;
   };
+  const edit = (e: Edit, title: string): EditOutcome => applied([e], props.planner.edit(e, title));
+  const editAll = (edits: NonEmpty<Edit>, title: string): EditOutcome =>
+    applied(edits, props.planner.editAll(edits, title));
   const api: TrailApi = {
     get planner() {
       return props.planner;
@@ -129,6 +135,7 @@ export default function Trail(props: TrailProps) {
     selection: () => props.selection,
     select: (s) => props.select(s),
     edit,
+    editAll,
   };
   const where = createMemo(() => whereOf(view(), step()), {
     equals: (a, b) => JSON.stringify(a) === JSON.stringify(b),
@@ -175,14 +182,20 @@ export default function Trail(props: TrailProps) {
       </span>
     </button>
   );
-  const slotChip = (s: OpenedSlot) =>
-    chip(
+  const slotChip = (s: OpenedSlot) => {
+    const background = isBackgroundSlot(view(), s.id);
+    return chip(
       slotLabel(data(), s.id.selection),
-      s.pick === undefined ? undefined : optionName(data(), s.pick.feature, s.pick.param),
+      s.pick === undefined
+        ? undefined
+        : background
+          ? backgroundLabel(props.planner.engine, build(), props.planner.walked(), s.id)
+          : optionName(data(), s.pick.feature, s.pick.param),
       { kind: 'slot', slot: s.id },
-      s.pick === undefined ? undefined : featCategory(data(), s.pick.feature),
+      s.pick === undefined || background ? undefined : featCategory(data(), s.pick.feature),
     );
-  const slotChips = (place: Place) => <For each={slotsAt(view(), place)}>{(s) => slotChip(s)}</For>;
+  };
+  const slotChips = (place: Place) => <For each={slotsAt(view(), place)}>{(s) => <>{slotChip(s)}</>}</For>;
   const hasArchetypes = (level: number) => {
     const cls = data().blueprints.get(build().levels[level - 1]?.class ?? '');
     return (
@@ -299,11 +312,10 @@ export default function Trail(props: TrailProps) {
         onToggle={() => props.send({ kind: 'character', open: cardFolded() ? true : !characterOpen() })}
         {...(props.diff && { diff: props.diff })}
         chips={
-          <Show when={characterSlots(view()).length > 0}>
-            <div class="trail-chips">
-              <For each={characterSlots(view())}>{(s) => slotChip(s)}</For>
-            </div>
-          </Show>
+          <div class="trail-chips">
+            {chip('Race', raceLabel(props.planner.engine, build(), props.planner.walked()), { kind: 'race' })}
+            <For each={characterChipSlots(view())}>{(s) => <>{slotChip(s)}</>}</For>
+          </div>
         }
         scoresStep={where().kind === 'scores'}
         here={<Show when={hereIsCharacter()}>{here()}</Show>}
@@ -409,6 +421,9 @@ export function StepBody(props: StepBodyProps) {
       </Match>
       <Match when={props.step.kind === 'scores'}>
         <ScoresStep trail={props.trail} {...(props.diff && { diff: props.diff })} />
+      </Match>
+      <Match when={props.step.kind === 'race'}>
+        <RaceStep trail={props.trail} />
       </Match>
       <Match when={props.step.kind === 'mythic'}>
         <MythicStep trail={props.trail} />
