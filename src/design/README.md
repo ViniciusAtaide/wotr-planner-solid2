@@ -87,6 +87,8 @@ props types and helper types:
 
 ## Design notes
 
+- `CascadePreview` never grows past the screen: the dialog is capped at the viewport's height, its list of cleared picks scrolls, and the actions stay pinned below it.
+
 - `tokens.css` is the only file under `src/` that writes a color; everything else uses its custom properties
   (a convention, checked in review). It sets `color-scheme: dark`, so native controls (selects, scrollbars, date
   pickers) draw dark too.

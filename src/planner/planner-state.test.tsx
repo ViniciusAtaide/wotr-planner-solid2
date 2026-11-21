@@ -187,12 +187,21 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
   test('an edit nothing mends is refused in R’s words, and a later applied edit replaces the refusal', () => {
     const n = run(plannerAt(cleaver), { kind: 'edit', edit: EARLY_INCREASE, title: 'Increase Strength' });
     expect(outcomeOf(n)).toBe('refused');
-    expect(n.session.kind === 'refused' && n.session.lines[0]).toBe(
-      'That change breaks choices clearing picks can’t mend:',
-    );
+    expect(n.session.kind === 'refused' && n.session.lines[0]).toBe('That change can’t be made. It would break:');
     const applied = run(n, { kind: 'edit', edit: ADD_LEVEL, title: 'Add level 2' });
     expect(outcomeOf(applied)).toBe('applied');
     expect(applied.session.kind).toBe('idle');
+  });
+
+  test('a refused class names the prerequisites it misses (audit)', () => {
+    const n = run(plannerAt(cleaver), {
+      kind: 'edit',
+      edit: { kind: 'class', level: 1, class: '9c935a076d4fe4d4999fd48d853e3cf3' },
+      title: 'Level 1 as Arcane Trickster',
+    });
+    expect(outcomeOf(n)).toBe('refused');
+    const line = n.session.kind === 'refused' ? n.session.lines.find((l) => l.startsWith('Level 1:')) : undefined;
+    expect(line).toMatch(/^Level 1: The class's prerequisites aren't met: .*Needs /);
   });
 
   test('undo and redo with nothing to walk leave the state as it is', () => {

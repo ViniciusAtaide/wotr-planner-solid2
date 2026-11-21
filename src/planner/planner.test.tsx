@@ -2,7 +2,7 @@ import { join } from 'node:path';
 import { cleanup, fireEvent, render, screen, waitFor } from '@solidjs/testing-library';
 import { flush } from 'solid-js';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
-import { abilityScores, slotKey, type Build, type SlotId } from '~engine/build';
+import { abilityScores, skillRanks, slotKey, type Build, type SlotId } from '~engine/build';
 import { encodeBuild } from '~engine/codec';
 import { loadData } from '~engine/load';
 import { readDataDir } from '~engine/data-dir';
@@ -22,7 +22,7 @@ import {
 import { abilityScoreRange, linkDidNotOpen, nameOf } from '~engine/refusals';
 
 import { EMPTY, openHash } from './link';
-import { AddPanel, LevelPanel, StartPanel } from './panels';
+import { AddPanel, LevelPanel, SlotPicker, StartPanel } from './panels';
 import Planner from './Planner';
 import { createPlanner } from './state';
 import Timeline from './Timeline';
@@ -553,6 +553,63 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     expect(mythic).not.toContain('Shard Powers');
   });
 
+  const slotNamed = (build: Build, assetName: string): SlotId => {
+    const slot = createPlanner(e, build)
+      .walked()
+      .slots.find((x) => e.data.blueprints.get(x.id.selection)?.assetName === assetName);
+    if (slot === undefined) throw new Error(`no ${assetName} slot`);
+    return slot.id;
+  };
+
+  test('picker lists are in name order (audit: deities and Weapon Focus out of order)', () => {
+    const planner = createPlanner(e, cleaver);
+    render(() => <SlotPicker planner={planner} slot={slotNamed(cleaver, 'DeitySelection')} />);
+    flush();
+    const names = [...document.querySelectorAll('.ww-option .ww-option__name')].map((n) => n.textContent ?? '');
+    expect(names.length).toBeGreaterThan(5);
+    expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b)));
+  });
+
+  test('the closed summary names each reason once (audit)', () => {
+    const planner = createPlanner(e, cleaver);
+    render(() => <SlotPicker planner={planner} slot={slotNamed(cleaver, 'BasicFeatSelection')} />);
+    flush();
+    const summary = document.querySelector('.ww-count')?.textContent ?? '';
+    const labels = summary
+      .replace(/^\d+ more closed: /, '')
+      .split(', ')
+      .map((part) => part.replace(/^\d+ /, ''));
+    expect(labels.length).toBeGreaterThan(0);
+    expect(new Set(labels).size).toBe(labels.length);
+  });
+
+  test('the Racial +2 row keeps its place for a race whose bonuses are fixed (audit: layout shift)', () => {
+    const elf = [...e.data.blueprints.values()].find((b) => b.$type === 'BlueprintRace' && b.name === 'Elf');
+    if (elf === undefined) throw new Error('no Elf');
+    render(() => <StartPanel planner={createPlanner(e, { ...cleaver, race: elf.guid })} />);
+    flush();
+    expect(screen.getByText('Racial +2')).toBeTruthy();
+    expect(screen.getByText('Set by the race')).toBeTruthy();
+  });
+
+  test('a refusal shows in the floating notice area, not in the page flow (audit: layout shift)', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(button('Start'));
+    flush();
+    changeInput('Strength', '6');
+    await waitFor(() => expect(document.querySelector('.planner-notices [role="alert"]')).not.toBeNull());
+  });
+
+  test('the Level chip says what the level holds (audit)', () => {
+    const withSkills: Build = {
+      ...cleaver,
+      levels: cleaver.levels.map((l, i) => (i === 0 ? { ...l, skills: skillRanks({ SkillAthletics: 1 }) } : l)),
+    };
+    render(() => <Timeline planner={createPlanner(e, withSkills)} selected={undefined} onSelect={() => {}} />);
+    flush();
+    expect(screen.getByText('1 skill rank')).toBeTruthy();
+  });
+
   test('an ability score of 6 or 12.5 is refused, worded with the number typed', () => {
     let planner!: ReturnType<typeof createPlanner>;
     render(() => {
@@ -577,9 +634,25 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     fireEvent.click(button('Add level 2'));
     flush();
     expect(levelRows()).toBe(3);
-    fireEvent.click(button('Close the fork'));
+    fireEvent.click(button(/^Close the fork/));
+    flush();
+    fireEvent.click(button('Keep Second'));
     flush();
     expect(levelRows()).toBe(2);
+  });
+
+  test('Close the fork asks before dropping the other Build, and Cancel keeps both (audit)', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(button('Fork this Build'));
+    flush();
+    fireEvent.click(button(/^Close the fork/));
+    flush();
+    expect(document.querySelectorAll('section.planner-build').length).toBe(2);
+    expect(screen.getByText(/drop the First Build\?/)).toBeTruthy();
+    fireEvent.click(button('Cancel'));
+    flush();
+    expect(document.querySelectorAll('section.planner-build').length).toBe(2);
+    expect(screen.queryByText(/drop the First Build\?/)).toBeNull();
   });
 
   test('Retry loads the game data again after it failed', async () => {

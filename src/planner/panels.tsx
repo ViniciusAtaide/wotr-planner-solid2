@@ -133,7 +133,11 @@ export function SlotPicker(props: SlotPickerProps) {
   const name = (o: OptionStatus) => optionName(data(), o.feature, o.param);
   const listed = createMemo(() => {
     const t = text().toLowerCase();
-    return (p()?.options ?? []).filter((o) => o.shown && (t === '' || name(o).toLowerCase().includes(t)));
+    const named = (p()?.options ?? [])
+      .filter((o) => o.shown)
+      .map((o) => ({ o, n: name(o) }))
+      .filter(({ n }) => t === '' || n.toLowerCase().includes(t));
+    return named.sort((a, b) => a.n.localeCompare(b.n)).map(({ o }) => o);
   });
   const open = () => listed().filter((o) => o.closed === undefined);
   const closed = () => listed().filter((o) => o.closed !== undefined);
@@ -147,10 +151,10 @@ export function SlotPicker(props: SlotPickerProps) {
   const byReason = () => {
     const counts = new Map<string, number>();
     for (const o of closed().slice(CLOSED_SHOWN)) {
-      const key = o.closed?.unmet?.length ? 'need a prerequisite' : (o.closed?.rule ?? '');
-      counts.set(key, (counts.get(key) ?? 0) + 1);
+      const label = o.closed?.unmet?.length ? 'need a prerequisite' : 'refused by the game';
+      counts.set(label, (counts.get(label) ?? 0) + 1);
     }
-    return [...counts].map(([k, n]) => `${n} ${k.includes('.') ? 'refused by the game' : k}`).join(', ');
+    return [...counts].map(([label, n]) => `${n} ${label}`).join(', ');
   };
   const heldFeatures = createMemo(() => new Set([...(p()?.unit.facts() ?? [])].map((f) => f.blueprint)));
   const links = (o: OptionStatus): string | undefined => {
@@ -427,7 +431,15 @@ export function StartPanel(props: StartPanelProps) {
           )
         }
       />
-      <Show when={race()?.$type === 'BlueprintRace' && (race() as { SelectableRaceStat?: boolean }).SelectableRaceStat}>
+      <Show
+        when={race()?.$type === 'BlueprintRace' && (race() as { SelectableRaceStat?: boolean }).SelectableRaceStat}
+        fallback={
+          <div class="planner-field">
+            <span class="planner-field__label">Racial +2</span>
+            <span class="planner-field__fixed">{race() === undefined ? 'Choose a race first' : 'Set by the race'}</span>
+          </div>
+        }
+      >
         <Choice
           label="Racial +2"
           value={b().raceStat ?? ''}

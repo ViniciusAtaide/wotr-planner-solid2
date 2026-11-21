@@ -335,6 +335,8 @@
   flex-direction: column;
   gap: var(--space-3);
   max-width: 440px;
+  max-height: calc(100dvh - 2 * var(--space-4));
+  min-height: 0;
   padding: var(--space-4);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-lg);
@@ -355,6 +357,9 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
   border-top: 1px solid var(--line);
 }
 .ww-cascade li {
@@ -370,6 +375,7 @@
   white-space: nowrap;
 }
 .ww-cascade__actions {
+  flex: none;
   display: flex;
   justify-content: flex-end;
   gap: var(--space-2);

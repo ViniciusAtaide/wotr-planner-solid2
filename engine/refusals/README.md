@@ -19,6 +19,8 @@ Why the game refuses a choice, worded true for this Build (guide §4, GLOSSARY.m
 - `breaks(data, build, pick, G?)`: the later picks taking a pick would break.
 - `opensAt(data, build, slot, option, G?)`: the first later place where a closed option opens.
 
+- `refusalWords(w, failed)`: the rule's sentence followed by its unmet needs, on one line. The planner's notice and the MCP's breakage words use it, so a refused class says which prerequisites fail.
+
 ## Rules
 
 - **`refusal`** words a walk Failure or a picker's closed option. The unmet leaves of group All are a line each. The others (Any, ForcedTrue), of which one would do, share one line: "One of these: …", or the leaf alone when there is only one.

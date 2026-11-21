@@ -1,7 +1,7 @@
-import { placeKey, sameBuild, type Build, type Pick } from '~engine/build';
+import { sameBuild, type Build, type Pick } from '~engine/build';
 import { allows, cascade, type Breaks, type Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
-import { nameOf, refusal } from '~engine/refusals';
+import { nameOf, refusalWords } from '~engine/refusals';
 import { walk } from '~engine/walk';
 
 export type NonEmpty<T> = readonly [T, ...T[]];
@@ -67,7 +67,7 @@ function brokenWords(engine: Engine, build: Build, b: Breaks): string[] {
   const unit = walk(engine.data, build, engine.G).unit;
   return [
     ...b.picks.map((p) => `${nameOf(engine.data, p.feature)} (${placeWords(p.slot.place)})`),
-    ...b.others.map((f) => `${placeKey(f.place)}: ${refusal({ data: engine.data, G: engine.G, unit }, f).text}`),
+    ...b.others.map((f) => `${placeWords(f.place)}: ${refusalWords({ data: engine.data, G: engine.G, unit }, f)}`),
   ];
 }
 
@@ -81,7 +81,7 @@ function edited(engine: Engine, s: PlannerState, edit: Edit, title: string): Pla
       ...s,
       session: {
         kind: 'refused',
-        lines: ['That change breaks choices clearing picks can’t mend:', ...brokenWords(engine, now, c)],
+        lines: ['That change can’t be made. It would break:', ...brokenWords(engine, now, c)],
       },
     };
   }

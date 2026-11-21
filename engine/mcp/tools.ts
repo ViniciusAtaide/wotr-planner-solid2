@@ -35,6 +35,7 @@ import {
   nameOf,
   rankLevelRange,
   refusal,
+  refusalWords,
   skillRankRange,
   statName,
   type Refusal,
@@ -87,7 +88,7 @@ function breaksInWords(e: Engine, b: Breaks, unitOf?: () => Parameters<typeof re
   const w = { data: e.data, G: e.G, unit: unitOf?.() };
   return [
     ...b.picks.map((p) => pickInWords(e, p)),
-    ...b.others.map((f: Failure) => `${placeKey(f.place)} ${f.choice}: ${refusal(w, f).text}`),
+    ...b.others.map((f: Failure) => `${placeKey(f.place)} ${f.choice}: ${refusalWords(w, f)}`),
   ];
 }
 

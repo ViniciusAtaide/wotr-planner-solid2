@@ -37,6 +37,11 @@ export function refusal(w: Wording, failed: FailedRule): Refusal {
   return { rule: failed.rule, text: ruleText(w, failed), unmet: [...all, ...either] };
 }
 
+export function refusalWords(w: Wording, failed: FailedRule): string {
+  const r = refusal(w, failed);
+  return r.unmet.length === 0 ? r.text : `${r.text.replace(/\.$/, ':')} ${r.unmet.join(' ')}`;
+}
+
 export function rankLevelRange(found: unknown): string {
   return `A Rank level is a whole number from 1 to ${MAX_BYTE}, not ${JSON.stringify(found)}.`;
 }

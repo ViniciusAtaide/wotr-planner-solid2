@@ -142,6 +142,11 @@ Everything else (which Builds show, which one is edited, the selection's target)
   - "Clear this pick" sits after the options, so Tab from the filter reaches an option first.
 - Before level 1 the stat block shows the point buy only. The walk applies race and its +2 at level 1, as the game's character creation does, so the page says so under the stats rather than computing race early.
 - The class, Mythic class and race lists are S's `offeredClasses`, `offeredMythicClasses` and `offeredRaces` (map ticket 34).
+- Refusals and the link notice float in `planner-notices`, a fixed area at the top right, so showing one never moves the page. The Start panel's Racial +2 row always keeps its place: for a race with fixed bonuses it reads "Set by the race".
+- "Close the fork…" asks first ("Keep the Second Build and drop the First Build?"), sits at least 24 px from the toggle, and only "Keep Second" drops a Build.
+- Picker lists are sorted by name, and the closed summary counts each reason once ("need a prerequisite", "refused by the game").
+- The Level chip says what its level holds ("4 skill ranks · Strength +1"), and looks empty only while nothing is set.
+- A refusal names its place in words ("Level 2: …") and, through R's `refusalWords`, the unmet needs after the rule's sentence.
 - The runtime checks that stay: `resolve`, `Choice`'s missing option, the constructors where values come in, the
   walk's rules across fields (point buy, an increase every 4th level, skill totals, the rank cap), the workspace's
   guard while confirming (backed by the inert background), the `latest` tokens, the `sameBuild` skip, `ShareCode`'s

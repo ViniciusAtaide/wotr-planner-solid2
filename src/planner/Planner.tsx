@@ -57,6 +57,9 @@ type Boot =
       readonly hash: string;
     };
 
+const SIDE_NAME: Readonly<Record<Side, string>> = { first: 'First', second: 'Second' };
+const other = (side: Side): Side => (side === 'first' ? 'second' : 'first');
+
 export default function Planner() {
   const [boot, setBoot] = createSignal<Boot>({ kind: 'loading' });
   const start = () => {
@@ -146,6 +149,7 @@ function Workspace(props: WorkspaceProps) {
   let latest = workspaceAt(props.initialBuild, props.initialLink);
   const [workspace, setWorkspace] = createSignal(latest);
   const [phone, setPhone] = createSignal(false);
+  const [closing, setClosing] = createSignal(false);
 
   const send = (a: PageAction) => {
     const page = { workspace: latest, first: first.latest(), second: second.latest() };
@@ -391,9 +395,32 @@ function Workspace(props: WorkspaceProps) {
                     send({ kind: 'show', layout: to.layout, side: to.side ?? v().side });
                   }}
                 />
-                <Button variant="ghost" onClick={() => send({ kind: 'close' })}>
-                  Close the fork
-                </Button>
+                <span class="planner-bar__close">
+                  <Show
+                    when={closing()}
+                    fallback={
+                      <Button variant="ghost" onClick={() => setClosing(true)}>
+                        Close the fork…
+                      </Button>
+                    }
+                  >
+                    <span class="planner-bar__ask">
+                      Keep the {SIDE_NAME[v().side]} Build and drop the {SIDE_NAME[other(v().side)]} Build?
+                    </span>
+                    <Button
+                      variant="danger"
+                      onClick={() => {
+                        setClosing(false);
+                        send({ kind: 'close' });
+                      }}
+                    >
+                      Keep {SIDE_NAME[v().side]}
+                    </Button>
+                    <Button variant="ghost" onClick={() => setClosing(false)}>
+                      Cancel
+                    </Button>
+                  </Show>
+                </span>
               </>
             )}
           </Show>
@@ -401,29 +428,31 @@ function Workspace(props: WorkspaceProps) {
         <div class="planner-share">
           <ShareLink {...shareLinkOf(linkCode(), location.origin)} />
         </div>
-        <Show when={linkNotice()}>
-          {(words) => (
-            <div class="planner-notice" role="status">
-              <Refusal lines={[words()]} />
-              <Button variant="ghost" onClick={() => send({ kind: 'dismissLink' })}>
-                Dismiss
-              </Button>
-            </div>
-          )}
-        </Show>
-        <Show when={active().notice()}>
-          {(lines) => (
-            <div class="planner-notice" role="alert">
-              <div>
-                <p>{lines()[0]}</p>
-                <Refusal lines={lines().slice(1)} />
+        <div class="planner-notices">
+          <Show when={linkNotice()}>
+            {(words) => (
+              <div class="planner-notice" role="status">
+                <Refusal lines={[words()]} />
+                <Button variant="ghost" onClick={() => send({ kind: 'dismissLink' })}>
+                  Dismiss
+                </Button>
               </div>
-              <Button variant="ghost" onClick={() => send({ kind: 'planner', action: { kind: 'dismiss' } })}>
-                Dismiss
-              </Button>
-            </div>
-          )}
-        </Show>
+            )}
+          </Show>
+          <Show when={active().notice()}>
+            {(lines) => (
+              <div class="planner-notice" role="alert">
+                <div>
+                  <p>{lines()[0]}</p>
+                  <Refusal lines={lines().slice(1)} />
+                </div>
+                <Button variant="ghost" onClick={() => send({ kind: 'planner', action: { kind: 'dismiss' } })}>
+                  Dismiss
+                </Button>
+              </div>
+            )}
+          </Show>
+        </div>
         <Show when={diverge()}>
           {(at) => (
             <p class="planner-diverge">

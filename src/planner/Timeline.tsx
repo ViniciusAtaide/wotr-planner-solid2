@@ -54,6 +54,14 @@ export default function Timeline(props: TimelineProps) {
     if (s.kind === 'rank') return 'rank' in place && place.rank === s.rank;
     return false;
   };
+  const levelChoices = (level: number): string | undefined => {
+    const l = props.planner.build().levels[level - 1];
+    if (l === undefined) return undefined;
+    const ranks = Object.values(l.skills ?? {}).reduce((n, r) => n + (r ?? 0), 0);
+    const parts = [ranks > 0 && `${ranks} skill ${ranks === 1 ? 'rank' : 'ranks'}`, l.increase && `${l.increase} +1`];
+    const words = parts.filter((x): x is string => typeof x === 'string');
+    return words.length === 0 ? undefined : words.join(' · ');
+  };
   const levelDetail = (level: number) => {
     const b = props.planner.build();
     const l = b.levels[level - 1];
@@ -83,8 +91,8 @@ export default function Timeline(props: TimelineProps) {
                 picks={[
                   {
                     slot: 'Level',
-                    text: 'Class, skills and increase',
-                    empty: true,
+                    text: levelChoices(place.level) ?? 'Class, skills and increase',
+                    empty: levelChoices(place.level) === undefined,
                     onSelect: () => props.onSelect({ kind: 'level', level: place.level }),
                   },
                   ...chips(place),
