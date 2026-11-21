@@ -86,6 +86,8 @@ export function skillPointsAvailable(unit: Unit): number {
 function skills(host: StatsHost, level: LevelUp): void {
   const { unit } = host;
   let left = skillPointsAvailable(unit);
+  const budget = left;
+  const asked = Object.values(level.skills ?? {}).reduce((n, r) => n + (r ?? 0), 0);
   for (const [skill, ranks] of Object.entries(level.skills ?? {}) as [StatType, number][]) {
     for (let i = 0; i < ranks; i++) {
       const now = unit.base.get(skill) ?? 0;
@@ -94,7 +96,7 @@ function skills(host: StatsHost, level: LevelUp): void {
         : now >= unit.characterLevel
           ? { rule: 'SpendSkillPoint.Check:ranks', found: now + 1, needed: unit.characterLevel }
           : left <= 0
-            ? { rule: 'SpendSkillPoint.Check:points', found: 0, needed: 1 }
+            ? { rule: 'SpendSkillPoint.Check:points', found: budget, needed: asked }
             : undefined;
       if (refused !== undefined) {
         host.fail({ choice: 'skills', subject: skill, ...refused });

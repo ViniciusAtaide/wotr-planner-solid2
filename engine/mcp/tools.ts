@@ -241,12 +241,19 @@ export async function level_up(
   return { ...r, slots: openSlots(e, r.build, place) };
 }
 
-export async function next_slots(
-  e: Engine,
-  args: { readonly code: string },
-): Promise<readonly SlotView[] | ToolRefusal> {
+export interface NextSlots {
+  readonly slots: readonly SlotView[];
+  readonly skillPointsLeft?: { readonly level: number; readonly points: number };
+}
+
+export async function next_slots(e: Engine, args: { readonly code: string }): Promise<NextSlots | ToolRefusal> {
   const build = await open(e, args.code);
-  return isRefusal(build) ? build : openSlots(e, build);
+  if (isRefusal(build)) return build;
+  const w = walk(e.data, build, e.G);
+  const level = build.levels.length;
+  const spent = Object.values(build.levels.at(-1)?.skills ?? {}).reduce((n, r) => n + (r ?? 0), 0);
+  const points = (w.skillPoints.at(-1) ?? 0) - spent;
+  return { slots: openSlots(e, build), ...(level > 0 && points > 0 && { skillPointsLeft: { level, points } }) };
 }
 
 export interface OptionView {

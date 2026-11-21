@@ -236,7 +236,7 @@ Ability scores and skill ranks (guide §7 "Ability scores", "Skill ranks"): the 
 - `increase`: `SelectClass.Apply` grants the attribute point (every fourth character level); `SpendAttributePoint.Check` and `Apply` spend it.
 - `intelligencePoints`: `LevelUpHelper.GetIntelligenceSkillPoints`: half the Intelligence modifier per level, read without enhancement, rounded up on odd levels and down on even ones (toward zero, keeping the sign).
 - `skillPointsAvailable`: `ApplySkillPoints.Apply` with `LevelUpHelper.GetTotalSkillPoints`: every non-Mythic class's points per level (its archetypes' AddSkillPoints included, `ClassData.CalcSkillPoints`) and the Intelligence points of each level so far, at least one per level; plus each held AddSkillPointPerCharacterLevel's extra (its `HandleUnitCalculateSkillPointsOnLevelup` adds the next character level, one point per level so far); less what is already spent, and at least 1.
-- `skills`: `SpendSkillPoint.Check` and `Apply`, one rank at a time: a skill, a point left, and ranks up to the character level.
+- `skills`: `SpendSkillPoint.Check` and `Apply`, one rank at a time: a skill, a point left, and ranks up to the character level. A refusal for points carries the level's budget (`found`) and the ranks asked (`needed`), so R can say both.
 
 ### Spellbooks (`spellbooks.ts`)
 

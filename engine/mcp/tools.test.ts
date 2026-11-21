@@ -120,7 +120,7 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(step.build.levels).toHaveLength(20);
     expect(step.build.ranks).toHaveLength(10);
     expect(walk(e.data, step.build, e.G).failures).toEqual([]);
-    expect(ok(await next_slots(e, { code: step.code }), 'next_slots').map((s) => s.place)).toContain('L11');
+    expect(ok(await next_slots(e, { code: step.code }), 'next_slots').slots.map((s) => s.place)).toContain('L11');
   }, 120_000);
 
   it('lists open options first, 25 a page, closed ones by reason, and refuses a closed pick with R’s words', async () => {
@@ -340,7 +340,7 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     const code = await encodeBuild(e.data, open);
     const rows = ok(await synergies(e, { code }), 'synergies');
     expect(rows.length).toBeGreaterThan(0);
-    const places = new Set(ok(await next_slots(e, { code }), 'next_slots').map((s) => s.place));
+    const places = new Set(ok(await next_slots(e, { code }), 'next_slots').slots.map((s) => s.place));
     for (const row of rows) expect(places.has(row.place)).toBe(true);
     expect(rows.some((r) => r.place.startsWith('M'))).toBe(true);
     const row = rows[0]!;
@@ -351,5 +351,40 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect('build' in taken).toBe(true);
     if (!('build' in taken)) return;
     expect(taken.build.picks).toContainEqual(expect.objectContaining({ slot: row.slot, feature: row.feature }));
+  });
+
+  it('gives the skill budget when ranks go over it, and says when the last level still has points to spend (MCP QA)', async () => {
+    const fighter = ok(
+      await level_up(e, { code: (await start_build(e)).code, class: '48ac8db94d5de7645906c7d0ad3bcfbd' }),
+      'level_up',
+    );
+    const left = ok(await next_slots(e, { code: fighter.code }), 'next_slots').skillPointsLeft;
+    expect(left?.level).toBe(1);
+    const budget = left?.points ?? 0;
+    expect(budget).toBeGreaterThan(0);
+    const all = [
+      'Athletics',
+      'Mobility',
+      'Perception',
+      'Persuasion',
+      'Stealth',
+      'Thievery',
+      'Lore (Nature)',
+      'Use Magic Device',
+    ];
+    const over = Object.fromEntries(all.slice(0, budget + 1).map((s) => [s, 1]));
+    expect(await set_skills(e, { code: fighter.code, level: 1, ranks: over })).toEqual({
+      refused: true,
+      reason: `No skill points left at this level: it has ${budget} to spend, and these ranks take ${budget + 1}.`,
+    });
+    const spent = ok(
+      await set_skills(e, {
+        code: fighter.code,
+        level: 1,
+        ranks: Object.fromEntries(all.slice(0, budget).map((s) => [s, 1])),
+      }),
+      'set_skills',
+    );
+    expect(ok(await next_slots(e, { code: spent.code }), 'next_slots').skillPointsLeft).toBeUndefined();
   });
 });

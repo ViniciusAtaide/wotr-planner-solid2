@@ -102,7 +102,8 @@ export const TOOLS: readonly ToolDef[] = [
   },
   {
     name: 'next_slots',
-    description: 'The open slots, in walk order: place, band and selection.',
+    description:
+      'The open slots, in walk order: place, band and selection; and skillPointsLeft when the last character level still has skill points to spend (set_skills). A Build is finished when both are empty.',
     inputSchema: object({ code }, ['code']),
     run: (e, a) => tools.next_slots(e, a as Parameters<typeof tools.next_slots>[1]),
   },

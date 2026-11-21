@@ -370,7 +370,7 @@ export function ruleText(w: Wording, f: FailedRule): string {
     case 'SpendSkillPoint.Check:ranks':
       return `A skill holds at most one rank per character level (${v(f.needed)} here).`;
     case 'SpendSkillPoint.Check:points':
-      return 'No skill points left at this level.';
+      return `No skill points left at this level: it has ${v(f.found)} to spend, and these ranks take ${v(f.needed)}.`;
     case 'SelectClass.Check:IsMythic':
       return f.needed === true ? 'A Mythic rank takes a Mythic class.' : 'A character level takes a non-Mythic class.';
     case 'BlueprintCharacterClass.MeetsPrerequisites':
