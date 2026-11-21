@@ -158,7 +158,7 @@ P says what each leaf asks; this module answers whether the character has it, po
   - `archetypeLevel`: `PrerequisiteArchetypeLevel.GetArchetypeLevel`; PrerequisiteNoArchetype.
   - `stat`: `PrerequisiteStatValue.CheckUnit`; PrerequisiteFullStatValue reads the full value, which for a Build's permanent stats is the same.
   - `characterLevel` and `mythicLevel`: UnitProgressionData's CharacterLevel and MythicLevel.
-  - `alignment`: PrerequisiteAlignment. At the first level the alignment is picked in the level-up's last band, so a Build's chosen alignment stands in for it; an unchosen one leaves the Build incomplete, not impossible.
+  - `alignment`: PrerequisiteAlignment. At the first level the alignment is picked in the level-up's last band, so a Build's chosen alignment stands in for it; an unchosen one leaves the Build incomplete, not impossible. A deity's prerequisite passes at the first level whatever the alignment (`IngorePrerequisiteCheck`), but taking the deity restricts the alignment that band offers to its mask (`RestrictInternal`, `IsAlignmentRestricted`), so the Build's chosen alignment must still be in it: Asmodeus is closed to a chaotic good Build (MCP QA).
   - `proficiency`: PrerequisiteProficiency is proficient with any listed item; PrerequisiteNotProficient is not proficient with some listed item, so its requiring form is "proficient with all of them".
   - `casterType`: PrerequisiteCasterType; PrerequisiteCasterTypeSpellLevel, where no spellbook of the type (null) never reaches the level.
   - `classSpellLevel`: PrerequisiteClassSpellLevel.

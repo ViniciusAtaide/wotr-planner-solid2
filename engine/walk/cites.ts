@@ -87,7 +87,11 @@ export const cites = {
     'Blueprints/Classes/Prerequisites/PrerequisiteMythicLevel.cs CheckInternal',
     'UnitLogic/UnitProgressionData.cs MythicLevel',
   ],
-  'judgeLeaf.alignment': ['Blueprints/Classes/Prerequisites/PrerequisiteAlignment.cs CheckInternal'],
+  'judgeLeaf.alignment': [
+    'Blueprints/Classes/Prerequisites/PrerequisiteAlignment.cs CheckInternal',
+    'Blueprints/Classes/Prerequisites/PrerequisiteAlignment.cs RestrictInternal (Alignment)',
+    'UnitLogic/Class/LevelUp/LevelUpState.cs IsAlignmentRestricted',
+  ],
   'judgeLeaf.proficiency': [
     'Blueprints/Classes/Prerequisites/PrerequisiteProficiency.cs CheckInternal',
     'Blueprints/Classes/Prerequisites/PrerequisiteNotProficient.cs CheckInternal',

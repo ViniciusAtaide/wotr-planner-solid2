@@ -300,7 +300,6 @@ export function judgeLeaf(leaf: PrerequisiteLeaf, ctx: Context): LeafVerdict {
       case 'mythicLevel':
         return atLeast(unit.mythicLevel, names.Level);
       case 'alignment':
-        if (names.IngorePrerequisiteCheck && ctx.firstLevel) return { has: true };
         return { has: unit.alignment === undefined || inMask(unit.alignment, names.Alignment) };
       case 'proficiency':
         return {

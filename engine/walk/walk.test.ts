@@ -1150,4 +1150,22 @@ describe('the areas ticket 03 left untested (ticket 03c)', { timeout: 30_000 }, 
     expect(walk(data, b, buildGrantIndex(data))).not.toBe(first);
     expect(walk(data, b, buildGrantIndex(data)).failures).toEqual(first.failures);
   });
+
+  it("closes a deity whose alignment the Build's chosen alignment is outside, though the game skips that check at the first level (MCP QA)", () => {
+    const DEITY_SELECTION = '59e7a76987fe3b547b9cce045f4db3e4';
+    const ASMODEUS = 'a3a5ccc9c670e6f4ca4a686d23b89900';
+    const deity = jackInTheGreen.build.picks.find((p) => p.slot.selection === DEITY_SELECTION)!;
+    const withDeity = (feature: string): Build => ({
+      ...jackInTheGreen.build,
+      picks: jackInTheGreen.build.picks.map((p) => (p === deity ? { ...p, feature } : p)),
+    });
+    const refusedDeity = (b: Build) =>
+      walk(data, b, G)
+        .failures.filter((f) => f.slot?.selection === DEITY_SELECTION)
+        .map((f) => f.rule);
+    expect(jackInTheGreen.build.alignment).toBe('ChaoticGood');
+    expect(refusedDeity(jackInTheGreen.build)).toEqual([]);
+    expect(refusedDeity(withDeity(ASMODEUS))).toEqual(['BlueprintFeatureSelection.CanSelect:MeetsPrerequisites']);
+    expect(refusedDeity({ ...withDeity(ASMODEUS), alignment: 'LawfulEvil' })).toEqual([]);
+  });
 });
