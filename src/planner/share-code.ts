@@ -7,7 +7,7 @@ import type { ShareLinkProps } from '../design';
 
 export type ShareCode =
   | { readonly kind: 'encoding' }
-  | { readonly kind: 'current'; readonly code: string }
+  | { readonly kind: 'current'; readonly code: string; readonly of?: Build }
   | { readonly kind: 'failed'; readonly reason: string };
 
 const ENCODING: ShareCode = { kind: 'encoding' };
@@ -22,7 +22,7 @@ export function createShareCode(engine: Engine, build: () => Build): () => Share
       setCode(ENCODING);
       encodeBuild(engine.data, b).then(
         (c) => {
-          if (n === latest) setCode({ kind: 'current', code: c });
+          if (n === latest) setCode({ kind: 'current', code: c, of: b });
         },
         (e: unknown) => {
           if (n === latest) setCode({ kind: 'failed', reason: e instanceof Error ? e.message : String(e) });

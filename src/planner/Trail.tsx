@@ -10,7 +10,7 @@ import { Badge, FeatIcon, type FeatCategory } from '../design';
 import { CharacterCard, ScoresStep, SHORT } from './CharacterCard';
 import { ChoiceDialog } from './ChoiceDialog';
 import { isListStep, type ListMode } from './list-mode';
-import { CollapsedLists } from './list-panel';
+import { CollapsedLists, createFilterMemory, StepFilter } from './list-panel';
 import { CharacterField } from './CharacterField';
 import { BackgroundStep, RaceStep } from './CharacterSteps';
 import { PickStep } from './PickStep';
@@ -97,6 +97,7 @@ export function Here(props: HereProps) {
   let el: HTMLDivElement | undefined;
   const arrived = useContext(StepArrived);
   let expand: HTMLButtonElement | undefined;
+  const memory = createFilterMemory();
   const modal = () => props.list === true && props.mode === 'modal';
   const setDialog = (open: boolean) => props.onDialog?.(open);
   const dialog = () => props.dialogOpen === true;
@@ -145,7 +146,9 @@ export function Here(props: HereProps) {
         when={dialog() && props.confirming !== true}
         fallback={
           <Show when={!modal()}>
-            <CollapsedLists value={true}>{props.children}</CollapsedLists>
+            <StepFilter value={memory}>
+              <CollapsedLists value={true}>{props.children}</CollapsedLists>
+            </StepFilter>
           </Show>
         }
       >
@@ -156,7 +159,7 @@ export function Here(props: HereProps) {
           onClose={() => setDialog(false)}
           returnTo={() => expand}
         >
-          {props.children}
+          <StepFilter value={memory}>{props.children}</StepFilter>
         </ChoiceDialog>
       </Show>
     </div>

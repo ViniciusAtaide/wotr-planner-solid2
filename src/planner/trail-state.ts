@@ -445,6 +445,11 @@ export function chipSlots(slots: readonly OpenedSlot[]): readonly OpenedSlot[] {
   return slots.filter((s) => s.pick === undefined || nestedParent(slots, s) === undefined);
 }
 
+export function nestedLabel(parent: string, child: string): string {
+  const inner = child.startsWith(`${parent} (`) && child.endsWith(')') ? child.slice(parent.length + 2, -1) : child;
+  return `${parent.replace(/ selection$/i, '')} (${inner})`;
+}
+
 export function pickLabels(data: CheckedData, slots: readonly OpenedSlot[]): ReadonlyMap<string, string> {
   const names = namesInList(
     data,
@@ -463,7 +468,7 @@ export function pickLabels(data: CheckedData, slots: readonly OpenedSlot[]): Rea
     const parentLabel = parent && own.get(slotKey(parent.id));
     const childLabel = own.get(slotKey(child.id));
     if (parent !== undefined && parentLabel !== undefined && childLabel !== undefined) {
-      labels.set(slotKey(parent.id), `${parentLabel} (${childLabel})`);
+      labels.set(slotKey(parent.id), nestedLabel(parentLabel, childLabel));
     }
   }
   return labels;

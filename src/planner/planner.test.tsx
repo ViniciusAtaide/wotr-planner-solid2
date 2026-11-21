@@ -38,7 +38,15 @@ import { GearStep, placeWords } from './GearStep';
 import { summaryFor } from './option-detail';
 import { LevelEditor, MythicStep, NextLevelStep, RankEditor, SkillsStep, SlotStep, type TrailApi } from './steps';
 import Trail from './Trail';
-import { nextStep, reduceTrail, SPELL_NOT_MODELLED, spellPick, TRAIL_START, type TrailState } from './trail-state';
+import {
+  nestedLabel,
+  nextStep,
+  reduceTrail,
+  SPELL_NOT_MODELLED,
+  spellPick,
+  TRAIL_START,
+  type TrailState,
+} from './trail-state';
 import type { Selection } from './workspace-state';
 import { optionName } from './words';
 
@@ -2080,5 +2088,127 @@ describe('the Build-name label (ticket 11)', () => {
   test('the page title carries the name', () => {
     expect(pageTitle(undefined)).toBe('Worldwound Planner');
     expect(pageTitle('Grey Warden')).toBe('Grey Warden · Worldwound Planner');
+  });
+});
+
+describe('QA pass 4, severity 1', () => {
+  afterEach(() => {
+    cleanup();
+    localStorage.clear();
+    history.replaceState(null, '', '/');
+    vi.restoreAllMocks();
+  });
+
+  const css = (file: string) => readFileSync(join(process.cwd(), file), 'utf8');
+  const rule = (text: string, selector: string) => {
+    const at = text.indexOf(`${selector} {`);
+    expect(at).toBeGreaterThanOrEqual(0);
+    return text.slice(at, text.indexOf('}', at));
+  };
+
+  test('a nested pick names its value once, with its parent', () => {
+    expect(nestedLabel('Ascendant Element', 'Ascendant Element (Electricity)')).toBe('Ascendant Element (Electricity)');
+    expect(nestedLabel('Bloodline Feat Selection', 'Improved Initiative')).toBe('Bloodline Feat (Improved Initiative)');
+    expect(nestedLabel('Armor Focus', 'Light Armor Focus')).toBe('Armor Focus (Light Armor Focus)');
+  });
+
+  test('the name refusal floats under the field and describes it, so the top bar keeps its height', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(document.querySelector('.build-name__label') ?? document.body);
+    flush();
+    const input = await waitFor(() => {
+      const found = document.querySelector<HTMLInputElement>('.build-name__input');
+      expect(found).not.toBeNull();
+      return found;
+    });
+    fireEvent.input(input ?? document.body, { target: { value: 'x'.repeat(61) } });
+    fireEvent.keyDown(input ?? document.body, { key: 'Enter' });
+    flush();
+    const refused = document.getElementById('build-name-refused');
+    expect(refused?.getAttribute('role')).toBe('alert');
+    expect(input?.getAttribute('aria-describedby')).toBe('build-name-refused');
+    expect(rule(css('src/planner/planner.css'), '.build-name__refused')).toContain('position: absolute');
+  });
+
+  test('rows size their border box, so closed rows fit the dialog list', () => {
+    const option = rule(css('src/design/components.css'), '.ww-option');
+    expect(option).toContain('box-sizing: border-box');
+    expect(option).toContain('min-width: 0');
+  });
+
+  test('an unset field’s placeholder takes the accent colour', () => {
+    expect(rule(css('src/planner/planner.css'), '.trail-field--unset .trail-field__input::placeholder')).toContain(
+      'color: var(--gold)',
+    );
+  });
+
+  test('the Build name may use the top bar’s room', () => {
+    expect(rule(css('src/shell/app.css'), '.app-header')).toContain(
+      'grid-template-columns: minmax(max-content, 1fr) minmax(0, auto) minmax(0, 1fr)',
+    );
+    expect(rule(css('src/planner/planner.css'), '.build-name')).toContain('max-width: 100%');
+  });
+
+  test('Expand keeps the typed filter', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
+    fireEvent.input(document.querySelector('.trail-here [data-picker-filter]') ?? document.body, {
+      target: { value: 'toughness' },
+    });
+    flush();
+    tap('Expand');
+    expect(document.querySelector<HTMLInputElement>('.choice-dialog [data-picker-filter]')?.value).toBe('toughness');
+  });
+
+  test('a Cascade Cancel brings the dialog back with its typed filter', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
+    await waitFor(() => expect(document.querySelector('.choice-dialog')).not.toBeNull());
+    fireEvent.input(document.querySelector('.choice-dialog [data-picker-filter]') ?? document.body, {
+      target: { value: 'toughness' },
+    });
+    flush();
+    tap('Lower Strength');
+    await waitFor(() => expect(document.querySelector('[role="dialog"]:not(.choice-dialog)')).not.toBeNull());
+    tap(/^Cancel/);
+    await waitFor(() => expect(document.querySelector('.choice-dialog')).not.toBeNull());
+    expect(document.querySelector<HTMLInputElement>('.choice-dialog [data-picker-filter]')?.value).toBe('toughness');
+  });
+
+  test('Fork never writes the empty Build’s code to the address bar', async () => {
+    await openPlanner(cleaver);
+    const empty = `#b=${await encodeBuild(e.data, EMPTY)}`;
+    const written: string[] = [];
+    const real = history.replaceState.bind(history);
+    vi.spyOn(history, 'replaceState').mockImplementation((data, unused, url) => {
+      if (typeof url === 'string') written.push(url);
+      real(data, unused, url);
+    });
+    openMenu();
+    menuItem('Fork this Build');
+    await new Promise((r) => setTimeout(r, 50));
+    flush();
+    expect(written).not.toContain(empty);
+  });
+
+  test('the ⋯ menu moves with the arrow keys, Home and End', async () => {
+    await openPlanner(cleaver);
+    const items = () => [...document.querySelectorAll<HTMLElement>('[role^="menuitem"]:not(:disabled)')];
+    openMenu();
+    await waitFor(() => expect(document.activeElement?.closest('[role="menu"]')).not.toBeNull());
+    await waitFor(() => expect(screen.getByRole('menuitem', { name: 'Copy link' })).toBeEnabled());
+    items()[0]?.focus();
+    const list = screen.getByRole('menu');
+    fireEvent.keyDown(list, { key: 'ArrowDown' });
+    expect(document.activeElement).toBe(items()[1]);
+    fireEvent.keyDown(list, { key: 'End' });
+    expect(document.activeElement).toBe(items().at(-1));
+    fireEvent.keyDown(list, { key: 'ArrowDown' });
+    expect(document.activeElement).toBe(items()[0]);
+    fireEvent.keyDown(list, { key: 'ArrowUp' });
+    expect(document.activeElement).toBe(items().at(-1));
   });
 });

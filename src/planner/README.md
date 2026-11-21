@@ -339,6 +339,10 @@ dimmed and inert behind "Edit the Second Build".
 - **`PickStep.tsx`**: a slot's open list (`PickStep`, moved out of `steps.tsx`): S's options as rows, open then
   closed, a parent row expanding its sub-options in place (`paramLabel` names a value without repeating its feat),
   the keys above, Synergy links, the filter and its mark, "Show N closed", and "Clear this pick".
+- **A step's filter text** lives in `Here` (`StepFilter`, `createFilterMemory` in `list-panel.ts`), not in the list, so
+  Expand and the dialog's return after a Cascade Cancel keep what was typed.
+- **The address bar** takes a Build's code only when the code is the active Build's own (`ShareCode`'s `of`), so a
+  Fork never writes the empty second Build's code while its own code is still being made.
 - **`list-mode.ts`**: `ListMode`, `readListMode`/`writeListMode` (try/catch around `localStorage`, `browserStorage`)
   and `isListStep`. **`ChoiceDialog.tsx`**: the modal frame (`ChoiceDialog`, `detailOf`, `dialogStart`).
 - **`option-detail.ts`**: what an option says beyond its name (ticket 06's UI side). `summaryFor` is S's Summary of a
@@ -420,12 +424,15 @@ dimmed and inert behind "Edit the Second Build".
   undefined when the game gives it no tags.
 - **`Menu.tsx`**: `PlannerMenu`, the ⋯ menu (`copyText` reports whether the clipboard took the text), and `UndoLine`.
   The menu closes after any item, on Escape, on a tap outside and when the page's link changes (`hashchange`), handing
-  focus back to its button. While a choice dialog is open the Undo bar is fixed above it (`html.choice-open`), and on a
+  focus back to its button. Opening it focuses its first item; Up, Down, Home and End move between its items
+  (`moveInMenu`), wrapping at the ends. While a choice dialog is open the Undo bar is fixed above it (`html.choice-open`), and on a
   phone the full-screen dialog stops short of it (`--undo-bar-height`), so Undo stays in reach.
 - **`sheet.ts`**: `buildSheet`, the plain-text build sheet Export copies: the character line, the scores, the
   character's picks, one line per level with its class, archetype, picks and skills, one per Mythic rank, and the Gear.
   A nested pick is one entry, as it is one chip on the trail: "Armor Focus (Light Armor Focus)" (`nestedParent`,
-  `chipSlots` and `pickLabels` in `trail-state.ts`). A value not yet chosen keeps its own chip, so the step stays in
+  `chipSlots` and `pickLabels` in `trail-state.ts`). `nestedLabel` names the value once: a value whose name already
+  repeats its parent keeps only its own part ("Ascendant Element (Electricity)"), and a parent named "… Selection"
+  drops the word ("Bloodline Feat (Improved Initiative)"). A value not yet chosen keeps its own chip, so the step stays in
   reach.
 - **`Planner.tsx`: the page.**
   - `Boot` is `loading`, `failed` (with Retry, which loads again) or `ready` with the engine, the linked Build, the

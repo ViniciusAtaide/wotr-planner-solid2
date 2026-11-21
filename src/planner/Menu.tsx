@@ -41,6 +41,36 @@ export interface PlannerMenuProps {
   readonly onListMode: (mode: ListMode) => void;
 }
 
+function menuItems(list: HTMLElement): HTMLElement[] {
+  return [...list.querySelectorAll<HTMLElement>('[role^="menuitem"]:not(:disabled)')];
+}
+
+export function moveInMenu(e: KeyboardEvent): void {
+  const list = e.currentTarget;
+  if (!(list instanceof HTMLElement)) return;
+  const items = menuItems(list);
+  if (items.length === 0) return;
+  const at = items.indexOf(document.activeElement as HTMLElement);
+  const last = items.length - 1;
+  const to =
+    e.key === 'ArrowDown'
+      ? at < 0 || at === last
+        ? 0
+        : at + 1
+      : e.key === 'ArrowUp'
+        ? at <= 0
+          ? last
+          : at - 1
+        : e.key === 'Home'
+          ? 0
+          : e.key === 'End'
+            ? last
+            : undefined;
+  if (to === undefined) return;
+  e.preventDefault();
+  items[to]?.focus();
+}
+
 export function PlannerMenu(props: PlannerMenuProps) {
   const [open, setOpen] = createSignal(false);
   const [said, setSaid] = createSignal<string | undefined>(undefined);
@@ -111,7 +141,15 @@ export function PlannerMenu(props: PlannerMenuProps) {
         {said()}
       </span>
       <Show when={open()}>
-        <div class="planner-menu__list" role="menu" aria-label="Build">
+        <div
+          ref={(el) => {
+            queueMicrotask(() => menuItems(el)[0]?.focus());
+          }}
+          class="planner-menu__list"
+          role="menu"
+          aria-label="Build"
+          onKeyDown={(e) => moveInMenu(e)}
+        >
           <button
             type="button"
             role="menuitem"

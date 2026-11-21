@@ -232,6 +232,7 @@ function Workspace(props: WorkspaceProps) {
     () => ({ code: linkCode(), broken: workspace().link.kind === 'didNotOpen' }),
     ({ code, broken }) => {
       if (code.kind !== 'current') return;
+      if (code.of !== undefined && code.of !== active().build()) return;
       if (broken && active().latest().present === brokenOver) return;
       brokenOver = undefined;
       ownHash = `#b=${code.code}`;

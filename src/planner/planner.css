@@ -602,7 +602,7 @@ html.choice-open .planner-undo:not(:empty) {
 }
 
 .trail-field--unset .trail-field__input::placeholder {
-  color: var(--ink);
+  color: var(--gold);
 }
 
 .trail-field--target .trail-field__input {
@@ -1135,11 +1135,12 @@ html.choice-open {
 }
 
 .build-name {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 0;
-  max-width: min(60vw, 420px);
+  max-width: 100%;
 }
 
 .build-name__label {
@@ -1167,7 +1168,8 @@ html.choice-open {
 
 .build-name__input {
   box-sizing: border-box;
-  width: min(60vw, 420px);
+  width: clamp(200px, 50vw, 640px);
+  max-width: 100%;
   min-height: 44px;
   padding: 0 var(--space-3);
   border: 1px solid var(--gold);
@@ -1179,11 +1181,23 @@ html.choice-open {
 }
 
 .build-name__refused {
-  margin: var(--space-1) 0 0;
+  position: absolute;
+  top: calc(100% + var(--space-1));
+  left: 50%;
+  z-index: 20;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: min(90vw, 420px);
+  margin: 0;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--closed);
+  border-radius: var(--radius-md);
+  background: var(--surface-200);
   color: var(--closed);
   font-size: 13px;
   line-height: 18px;
   text-align: center;
+  transform: translateX(-50%);
 }
 
 .planner-bar__name {
