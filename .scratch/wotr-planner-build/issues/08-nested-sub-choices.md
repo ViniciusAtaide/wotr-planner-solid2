@@ -1,6 +1,7 @@
 # Sub-choices nested under their parent in pick lists
 
-Status: open
+Status: done
+Session: trail-start-step
 Blocked by: the flat choice lists work (worktree `flat-choice-lists`), whose planner `edits` action (several edits as one Undo step) this reuses
 Plan: [plan](../plan.md)
 
@@ -32,3 +33,35 @@ In a pick list, an option that opens a follow-up choice expands its own options 
 - Checked in the browser at 375 px and 1280 px.
 - `bun run check` passes; one commit through the hook with `scripts/commit-paths.sh`, in its own worktree; not pushed.
 - `Status: done` and an `## Outcome`.
+
+## Outcome
+
+Built on `ticket/ticket-08-nested`, in `src/planner/` only; no engine change was needed.
+
+- **Parent rows:** `nested-options.ts` (`pickRows`) groups S's options into plain options, parametrized feats (the
+  options sharing a feature with different parameters) and options that are themselves selections. In a level-1
+  Fighter's feat list that is 174 rows instead of 947, since 690 options were 10 feats' parameter values.
+- **Expansion:** `PickStep.tsx` (moved out of `steps.tsx`) shows a parent with ▸/▾ and `aria-expanded`, and its
+  sub-options under it, indented one `space-3` step with a rule on the left. One parent is open at a time. A nested
+  selection's sub-options come from S's `picker` at the slot it opens (`childSlotOf`: same place, the option's own
+  selection, index 0), asked only when expanded.
+- **Statuses:** each sub-option has its own status and Refusal; a parametrized feat with every value closed is one
+  closed row with up to three distinct reasons.
+- **Picking:** a value is one pick with its parameter; a nested selection is the parent pick plus the sub-pick through
+  the planner's `edits` action, after clearing the sub-pick of a parent it replaces. Either is one Undo entry, and the
+  trail moves on ("Picked Armor Focus (Light Armor Focus)").
+- **Keys:** Right or Enter opens a parent, Left closes it (returning focus from a sub-option), Up/Down/J/K move
+  through parents and open sub-options; Enter on a marked parent in the filter opens it.
+- **Spellbooks:** the data's spellbook selections (prestige classes' "Arcane Spellcasting", Loremaster's "Spellbook
+  Selection") are selections, so they expand by the nested rule; their options replace a spellbook and open nothing
+  further.
+- **Tests** (`planner.test.tsx`, "nested sub-choices (ticket 08)"): expand and collapse, one open at a time, a closed
+  sub-option with its Refusal, a parametrized feat with every value closed, Weapon Focus → Kukri and Armor Focus →
+  Light Armor Focus each as one Undo entry, and Right/Down/Left.
+- **Browser:** checked at 375 px (Weapon Focus's 84 values indented, no horizontal scroll) and 1280 px (Armor Focus
+  expanding while Weapon Focus closes, then both picks taken and the trail on to the bonus combat feat).
+
+**Left for later:** the nested pick still shows as two chips ("Feat: Armor Focus" and "Armor Focus: Light Armor
+Focus"); merging them like the background chip would be a small follow-up. Solid's devtools flag the step's focus
+and scroll effect at 8.4 ms against an 8 ms budget on a 174-row list.
+

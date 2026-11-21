@@ -39,6 +39,7 @@ export interface PickerOptionProps {
   readonly status: OptionStatus;
   readonly selected?: boolean;
   readonly marked?: boolean;
+  readonly expanded?: boolean | undefined;
   readonly mythic?: boolean;
   readonly icon?: FeatCategory | undefined;
   readonly links?: string | undefined;
@@ -52,6 +53,11 @@ export default function PickerOption(props: PickerOptionProps) {
     <span class="ww-option__badges">
       <Show when={props.selected === true}>
         <span class="ww-option__current">Current</span>
+      </Show>
+      <Show when={props.expanded !== undefined}>
+        <span class="ww-option__expand" aria-hidden="true">
+          {props.expanded ? '▾' : '▸'}
+        </span>
       </Show>
       <Show when={props.mythic}>
         <Badge kind="mythic" />
@@ -86,6 +92,7 @@ export default function PickerOption(props: PickerOptionProps) {
           { 'ww-option--selected': props.selected === true, 'ww-option--marked': props.marked === true },
         ]}
         aria-current={props.selected === true ? 'true' : undefined}
+        aria-expanded={props.expanded === undefined ? undefined : props.expanded ? 'true' : 'false'}
         onClick={() => props.onPick?.()}
       >
         <span class="ww-option__name">
