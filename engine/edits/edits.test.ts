@@ -77,6 +77,16 @@ describe('E: edits', { timeout: 30_000 }, () => {
     expect([...refusedKeys(build)].filter((k) => !before.has(k))).toEqual([]);
   });
 
+  it('leaves out of a refused Cascade the skill budgets it would clear (QA pass 2)', () => {
+    const DRAGON_DISCIPLE = '72051275b1dbb2d42ba9118237794f7c';
+    const edit: Edit = { kind: 'class', level: 1, class: DRAGON_DISCIPLE };
+    const strict = allows(data, enforcer.build, edit, G);
+    expect(strict.ok ? [] : strict.others.map((f) => f.rule)).toContain('SpendSkillPoint.Check:points');
+    const c = cascade(data, enforcer.build, edit, G);
+    expect(c.ok).toBe(false);
+    expect(c.ok ? [] : c.others.map((f) => f.rule)).toEqual(['BlueprintCharacterClass.MeetsPrerequisites']);
+  });
+
   it('refuses an over-budget point buy on a Build with no levels yet (ticket 05d)', () => {
     const empty: Build = { levels: [], picks: [] };
     const allEighteen = abilityScores({

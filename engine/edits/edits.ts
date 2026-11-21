@@ -252,17 +252,22 @@ export function cascade(data: CheckedData, build: Build, edit: Edit, G: GrantInd
   const clearedRanks: number[] = [];
   for (;;) {
     const broken = breaksOf(data, build, after, G);
-    const refuse = { ok: false as const, ...broken };
-    const edited = edit.kind === 'pick' ? broken.picks.find((p) => slotKey(p.slot) === slotKey(edit.slot)) : undefined;
-    if (edited !== undefined) return refuse;
     const skills = broken.others.filter((f) => f.choice === 'skills' && levelOf(f) !== undefined);
+    const ownSkills = editedSkillsLevel(edit);
+    const clearable = (f: Failure) =>
+      skills.includes(f) &&
+      levelOf(f) !== ownSkills &&
+      Object.keys(after.levels[(levelOf(f) as number) - 1]?.skills ?? {}).length > 0;
+    const refuse = { ok: false as const, picks: broken.picks, others: broken.others };
+    const refuseElsewhere = { ...refuse, others: broken.others.filter((f) => !clearable(f)) };
+    const edited = edit.kind === 'pick' ? broken.picks.find((p) => slotKey(p.slot) === slotKey(edit.slot)) : undefined;
+    if (edited !== undefined) return refuseElsewhere;
     const ranks = broken.others.filter((f) => (f.choice === 'class' || f.choice === 'rank') && rankOf(f) !== undefined);
-    if (broken.others.length > skills.length + ranks.length) return refuse;
+    if (broken.others.length > skills.length + ranks.length) return refuseElsewhere;
     const skillLevels = [...new Set(skills.map((f) => levelOf(f) as number))].filter(
       (l) => Object.keys(after.levels[l - 1]?.skills ?? {}).length > 0,
     );
     const firstRank = ranks.length === 0 ? undefined : Math.min(...ranks.map((f) => rankOf(f) as number));
-    const ownSkills = editedSkillsLevel(edit);
     const ownRank = editedRank(build, edit);
     if (skills.length > 0 && (skillLevels.length === 0 || (ownSkills !== undefined && skillLevels.includes(ownSkills))))
       return refuse;
@@ -270,7 +275,7 @@ export function cascade(data: CheckedData, build: Build, edit: Edit, G: GrantInd
       firstRank !== undefined &&
       (firstRank > (after.ranks?.length ?? 0) || (ownRank !== undefined && firstRank <= ownRank))
     )
-      return refuse;
+      return refuseElsewhere;
     if (broken.picks.length === 0 && skillLevels.length === 0 && firstRank === undefined)
       return { ok: true, cleared, clearedSkills: [...clearedSkills].sort((a, b) => a - b), clearedRanks, build: after };
     cleared.push(...broken.picks);
