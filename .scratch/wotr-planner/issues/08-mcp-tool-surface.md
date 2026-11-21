@@ -56,3 +56,7 @@ Coordinator, 2026-11-20, on ticket 05's questions and the user's standing instru
 - **`search`** is case-insensitive over shown names (map 19), with an optional kind from the data's `kindOf`. Each hit gives its GUID, name and the basic description's first line.
 - **Transport:** the official `@modelcontextprotocol/sdk` serves `/mcp` (streamable HTTP) and the stdio wrapper. The tools are plain engine functions.
 - **`level_up` takes an optional `increase`:** the ability score raised at levels 4, 8, 12… No other tool in the table could set it (build ticket 05).
+
+## Amendment: Builds have names again (user, 2026-11-21)
+
+The user wants to name a Build from the planner's top bar, so a Build gains an optional `name` (plain text, at most 60 characters) and the Build code carries it as an optional last field of version 1. Codes without it still open, nameless. `start_build` takes an optional `name` again. Build ticket 11.

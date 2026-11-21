@@ -33,3 +33,7 @@ Coordinator, 2026-11-20, on ticket 04's question and the user's standing instruc
 - **Structure:** our Build's fields in order: race, race stat, alignment, scores, levels (class, increase, skills), ranks (class, Rank level), class choices, and picks sorted by slot, each with its parameter tagged weapon, school, stat or blueprint. Then Gear by place, the Gear opt-in and the aspects kept on. There are no trailing tagged sections, since no older links exist.
 - **Aliases:** an override kind `{ change: 'alias', target: <live GUID>, from: <old GUID>, reason }` in `data/overrides/`, like any correction (ADR 0005). Its hash counts in the collision test, and an opened code moves an old GUID to its heir, as Rust's `heirs` does. It is tested on a hand-built alias, since no real one exists yet.
 - **Hash width: 32 bits** (coordinator, 2026-11-20, on ticket 04's collision test). At 24 bits, the data has 4 collisions within a kind: 2 among the 6,031 features and 2 among the items. At 32 bits it has none. The answer above says a collision makes the hash wider. No code has shipped, so this planner's version 1 uses the full 32-bit FNV-1a (4 bytes). The collision test stays.
+
+## Amendment: Builds have names again (user, 2026-11-21)
+
+The user wants to name a Build from the planner's top bar, so a Build gains an optional `name` (plain text, at most 60 characters) and the Build code carries it as an optional last field of version 1. Codes without it still open, nameless. `start_build` takes an optional `name` again. Build ticket 11.
