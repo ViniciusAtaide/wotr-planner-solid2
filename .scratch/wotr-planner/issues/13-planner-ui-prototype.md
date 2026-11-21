@@ -47,3 +47,7 @@ The UI built by ticket 05 was reviewed twice (a Rust UI comparison and a pristin
 - **On phones,** the character card and finished chapters of four levels fold by themselves. From 900 px wide nothing folds.
 
 This replaces the Timeline-plus-side-picker shape and its full-screen phone sheet. Refusals in lists, instant picks, the Cascade preview, undo, and fork and compare stay. Undo becomes a single line naming the last change, plus the keyboard. Fork, Share link and Export move into a menu. Built by build ticket 07.
+
+## Amendment: inline or modal choice lists (user, 2026-11-21)
+
+The trail keeps its choices inline by default. A ⋯ menu setting switches to "Modal first", where each choice opens in a large dialog (full screen on a phone) with a detail pane. The user hasn't chosen a default beyond inline yet, and wants both to try; build ticket 10 builds the setting and measures both modes.
