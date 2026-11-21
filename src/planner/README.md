@@ -14,7 +14,10 @@ Everything else (which Builds show, which one is edited, the selection's target)
 
 A Build reads as the character's path, phone first. From top to bottom the page shows:
 
-- **The character card**: the race as one-tap buttons, the alignment as a 3×3 grid, the six ability scores as tiles
+- **The character card**: the race as one-tap buttons, the alignment as a wheel (as the game and the Rust planner
+  draw it: Neutral Good at the top, the other eight around the ring, True Neutral in the middle; good tinted blue across
+  the top, neutral at the sides, evil red across the bottom; the name of the alignment under the pointer or focus, else
+  the chosen one, above it), the six ability scores as tiles
   with − and + steppers and a +2 button under each (disabled, in the same place, when the race sets its bonuses), the
   points left, and the character's own picks as chips: what the race grants (a Human's bonus feat), the background and
   what it opens, and the deity. Which slots those are is S's answer (`characterWideSlots`), so nothing character-wide
@@ -179,7 +182,8 @@ dimmed and inert behind "Edit the Second Build".
   contents. Its `edit` sends the edit to the planner and, once it applies, goes back to the next step unless the
   choice stays open (`keepsSelection`), and folds the chapters again after a new level. `ChapterRow` is a folded
   chapter.
-- **`CharacterCard.tsx`**: the card, `RaceChips`, `AlignmentGrid` (`ALIGNMENT_GRID`), `ScoresStep` (the scores step:
+- **`CharacterCard.tsx`**: the card, `RaceChips`, `AlignmentWheel` (`ALIGNMENT_WHEEL`, each alignment's place on the
+  ring and its tint), `ScoresStep` (the scores step:
   the tiles with their controls and "Done") and `StatTiles`, whose steppers
   stop at the scores a Build can hold (`MIN_SCORE`, `MAX_SCORE`) and send a point buy the walk refuses to the notice
   area.

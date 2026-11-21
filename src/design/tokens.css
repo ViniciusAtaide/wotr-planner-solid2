@@ -15,6 +15,11 @@
   --open: #86b98f;
   --closed: #e0805f;
   --gear: #73b4cb;
+  --good: #1c2846;
+  --neutral: #262338;
+  --evil: #3a1b2a;
+  --good-ink: #9fc0ff;
+  --evil-ink: #ff9c95;
   --focus: #f2d27e;
   --shadow-sheet: 0 12px 32px rgba(0, 0, 0, 0.55);
 }

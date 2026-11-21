@@ -1,5 +1,5 @@
 import type { JSX } from '@solidjs/web';
-import { For, Show } from 'solid-js';
+import { createSignal, For, Show } from 'solid-js';
 import {
   abilityScores,
   MAX_SCORE,
@@ -17,16 +17,26 @@ import { Button } from '../design';
 import type { TrailApi } from './steps';
 import { alignmentWords, characterLine, characterPicksLine } from './trail-state';
 
-export const ALIGNMENT_GRID: readonly (readonly [Alignment, string])[] = [
-  ['LawfulGood', 'LG'],
-  ['NeutralGood', 'NG'],
-  ['ChaoticGood', 'CG'],
-  ['LawfulNeutral', 'LN'],
-  ['TrueNeutral', 'N'],
-  ['ChaoticNeutral', 'CN'],
-  ['LawfulEvil', 'LE'],
-  ['NeutralEvil', 'NE'],
-  ['ChaoticEvil', 'CE'],
+export type WheelPlace = 'n' | 'ne' | 'e' | 'se' | 's' | 'sw' | 'w' | 'nw' | 'middle';
+export type Moral = 'good' | 'neutral' | 'evil';
+
+export interface WheelNode {
+  readonly alignment: Alignment;
+  readonly short: string;
+  readonly place: WheelPlace;
+  readonly moral: Moral;
+}
+
+export const ALIGNMENT_WHEEL: readonly WheelNode[] = [
+  { alignment: 'LawfulGood', short: 'LG', place: 'nw', moral: 'good' },
+  { alignment: 'NeutralGood', short: 'NG', place: 'n', moral: 'good' },
+  { alignment: 'ChaoticGood', short: 'CG', place: 'ne', moral: 'good' },
+  { alignment: 'LawfulNeutral', short: 'LN', place: 'w', moral: 'neutral' },
+  { alignment: 'TrueNeutral', short: 'N', place: 'middle', moral: 'neutral' },
+  { alignment: 'ChaoticNeutral', short: 'CN', place: 'e', moral: 'neutral' },
+  { alignment: 'LawfulEvil', short: 'LE', place: 'sw', moral: 'evil' },
+  { alignment: 'NeutralEvil', short: 'NE', place: 's', moral: 'evil' },
+  { alignment: 'ChaoticEvil', short: 'CE', place: 'se', moral: 'evil' },
 ];
 
 export const SHORT: Readonly<Record<Attribute, string>> = {
@@ -97,7 +107,7 @@ export function CharacterCard(props: CharacterCardProps) {
           <h4 class="trail-subhead">Race</h4>
           <RaceChips trail={props.trail} />
           <h4 class="trail-subhead">Alignment</h4>
-          <AlignmentGrid trail={props.trail} />
+          <AlignmentWheel trail={props.trail} />
         </Show>
         {props.chips}
       </Show>
@@ -161,24 +171,48 @@ export function RaceChips(props: CardPartProps) {
   );
 }
 
-export function AlignmentGrid(props: CardPartProps) {
+export function AlignmentWheel(props: CardPartProps) {
   const now = () => props.trail.planner.build().alignment;
+  const [pointed, setPointed] = createSignal<Alignment | undefined>(undefined);
+  const shownName = () => {
+    const a = pointed() ?? now();
+    return a === undefined ? 'Choose an alignment' : alignmentWords(a);
+  };
   return (
-    <div class="trail-alignment" role="group" aria-label="Alignment">
-      <For each={ALIGNMENT_GRID}>
-        {([a, short]) => (
-          <button
-            type="button"
-            class={['trail-button', { 'trail-button--on': now() === a }]}
-            aria-pressed={now() === a ? 'true' : 'false'}
-            aria-label={alignmentWords(a)}
-            title={alignmentWords(a)}
-            onClick={() => props.trail.edit({ kind: 'alignment', alignment: a }, `Alignment ${alignmentWords(a)}`)}
-          >
-            {short}
-          </button>
-        )}
-      </For>
+    <div class="trail-alignment-wrap">
+      <p class="trail-alignment-name" aria-hidden="true">
+        {shownName()}
+      </p>
+      <div class="trail-alignment" role="group" aria-label="Alignment">
+        <For each={ALIGNMENT_WHEEL}>
+          {(node) => (
+            <button
+              type="button"
+              class={[
+                'trail-alignment__node',
+                `trail-alignment__node--${node.place}`,
+                `trail-alignment__node--${node.moral}`,
+                { 'trail-alignment__node--on': now() === node.alignment },
+              ]}
+              aria-pressed={now() === node.alignment ? 'true' : 'false'}
+              aria-label={alignmentWords(node.alignment)}
+              title={alignmentWords(node.alignment)}
+              onPointerEnter={() => setPointed(node.alignment)}
+              onPointerLeave={() => setPointed(undefined)}
+              onFocus={() => setPointed(node.alignment)}
+              onBlur={() => setPointed(undefined)}
+              onClick={() =>
+                props.trail.edit(
+                  { kind: 'alignment', alignment: node.alignment },
+                  `Alignment ${alignmentWords(node.alignment)}`,
+                )
+              }
+            >
+              {node.short}
+            </button>
+          )}
+        </For>
+      </div>
     </div>
   );
 }

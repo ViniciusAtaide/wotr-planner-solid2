@@ -768,6 +768,25 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     expect(new Set(labels).size).toBe(labels.length);
   });
 
+  test('the alignment wheel names the alignment under focus, else the chosen one, and marks it', async () => {
+    await openPlanner(undefined);
+    const name = () => document.querySelector('.trail-alignment-name')?.textContent;
+    expect(name()).toBe('Choose an alignment');
+    const evil = button('Chaotic Evil');
+    expect(evil.className).toContain('trail-alignment__node--se');
+    expect(evil.className).toContain('trail-alignment__node--evil');
+    fireEvent.focus(evil);
+    flush();
+    expect(name()).toBe('Chaotic Evil');
+    fireEvent.blur(evil);
+    flush();
+    expect(name()).toBe('Choose an alignment');
+    tap('Neutral Good');
+    expect(name()).toBe('Neutral Good');
+    expect(button('Neutral Good')).toHaveAttribute('aria-pressed', 'true');
+    expect(button('Neutral Good').className).toContain('trail-alignment__node--on');
+  });
+
   test('the +2 row keeps its place for a race whose bonuses are fixed (audit: layout shift)', async () => {
     const elf = [...e.data.blueprints.values()].find((b) => b.$type === 'BlueprintRace' && b.name === 'Elf');
     if (elf === undefined) throw new Error('no Elf');
