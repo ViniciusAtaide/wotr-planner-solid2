@@ -18,7 +18,7 @@ function dump(blueprints: Record<number, Record<string, unknown>>) {
       [...JSON.stringify(bp).matchAll(/!bp_([0-9a-f]{32})/g)].flatMap((m) => m[1] ?? []),
     );
   }
-  const index: DumpIndex = { types, refs, roots: [], settings: [] };
+  const index: DumpIndex = { types, refs, roots: [], settings: [], sharedKeys: new Map() };
   return { index, json };
 }
 

@@ -133,14 +133,14 @@ Names the game fills in at runtime, written in a neutral form (ADR 0006).
 
 ## Shared names
 
-605 display names are shared by 2248 blueprints a Build can reach and a player
+605 display names are shared by 2249 blueprints a Build can reach and a player
 sees, features only Gear gives among them. Each is qualified from the first source that tells it apart (map
 tickets 27, 29 and 30); one in a group may stay bare. A grantor or level qualifies only when every route to the
 blueprint passes through it, and no label names one grantor among several. Blueprints settled, by source:
 
 - item: 6
-- grantor: 1021
-- level: 577
+- grantor: 1020
+- level: 579
 - kind: 58
 - prerequisite: 20
 - class: 5
@@ -2654,8 +2654,9 @@ Each blueprint with the source that settled it and its written name.
 - "Summon Astral Deva" (2)
   - AngelSummonFeatureTier6 e09826de98d995448aeff3b6b0a61851: grantor, "Summon Astral Deva (Angel)"
   - AzataSummonFeatureTier6 edc2d236d6993814fb4f09fb8d2b6c17: grantor, "Summon Astral Deva (Azata)"
-- "Summon Astral Devas" (2)
-  - AngelSummonFeatureTier7 7e374dcfb85d51f4a94acda1b59582a4: grantor, "Summon Astral Devas (Angel)"
+- "Summon Astral Devas" (3)
+  - AngelSummonFeatureTier7 7e374dcfb85d51f4a94acda1b59582a4: level, "Summon Astral Devas (Angel 5)"
+  - AngelSummonFeatureTier8 978dcee934c76484f97f82e937c7789b: level, "Summon Astral Devas (Angel 6)"
   - AzataSummonFeatureTier7 ab8e798732dc2284eb7ae2b1c48b09c6: grantor, "Summon Astral Devas (Azata)"
 - "Summon Hamadryad" (2)
   - AzataSummonFeatureTier9 8403a6cec131de949b42cfa329963736: grantor, "Summon Hamadryad (Azata)"

@@ -9,7 +9,7 @@ import { checkSourcedCount, itemSourcing, naturalWeapons, type ItemSource } from
 import { noGrantorProblems } from './no-grantor';
 import { unreachableProblems } from './unreachable';
 import { notNeeded, notNeededFamilies } from './not-needed';
-import { displayName, neutralName } from './names';
+import { displayName, neutralName, sharedKeyCollector } from './names';
 import { applyPatch } from './overrides';
 import { qualifyGear, type GearNames } from './gear-names';
 import { qualifyNames, type Qualified } from './qualify';
@@ -28,11 +28,13 @@ export interface DumpIndex {
   readonly refs: ReadonlyMap<Guid, readonly Guid[]>;
   readonly roots: readonly Guid[];
   readonly settings: readonly Guid[];
+  readonly sharedKeys: ReadonlyMap<string, string>;
 }
 
 export async function indexDump(dumpPath: string): Promise<DumpIndex> {
   const types = new Map<Guid, string>();
   const refs = new Map<Guid, Guid[]>();
+  const shared = sharedKeyCollector();
   let root: { guid: Guid; json: Record<string, unknown> } | undefined;
   const td = new TextDecoder();
   for await (const r of blueprints(dumpPath)) {
@@ -40,6 +42,7 @@ export async function indexDump(dumpPath: string): Promise<DumpIndex> {
     const text = td.decode(r.json);
     types.set(r.guid, type);
     refs.set(r.guid, [...new Set(Array.from(text.matchAll(REF), (m) => m[1]).filter((g) => g !== undefined))]);
+    shared.add(text);
     if (type === 'BlueprintRoot') root = { guid: r.guid, json: JSON.parse(text) as Record<string, unknown> };
   }
   if (root === undefined) throw new Error(`${dumpPath} has no BlueprintRoot`);
@@ -56,7 +59,7 @@ export async function indexDump(dumpPath: string): Promise<DumpIndex> {
   if (mythicsSettings === undefined) throw new Error('BlueprintRoot names no Mythic settings');
   const playerCharacter = refGuid(root.json.m_DefaultPlayerCharacter);
   if (playerCharacter === undefined) throw new Error('BlueprintRoot names no default player character');
-  return { types, refs, roots, settings: [root.guid, mythicsSettings, playerCharacter] };
+  return { types, refs, roots, settings: [root.guid, mythicsSettings, playerCharacter], sharedKeys: shared.keys() };
 }
 
 export function reachable(roots: readonly Guid[], refs: ReadonlyMap<Guid, readonly Guid[]>): Set<Guid> {
@@ -117,7 +120,7 @@ export async function runImport(dumpPath: string, overrideFiles: readonly DataFi
   const wanted = (guid: Guid) => held.has(guid) || sourcing.want.has(guid) || itemKind(guid) !== undefined;
   const parsed = await parseWanted(dumpPath, wanted, patches, problems);
   const sourced = holdItems(held, parsed, sourcing, index, itemKind, removals, patches, problems);
-  const filter = makeFilter(parsed, entries, components, await strings(dumpPath));
+  const filter = makeFilter(parsed, entries, components, await strings(dumpPath), index.sharedKeys);
 
   let keep: KeepSummary | undefined;
   let files = new Map<string, string>();
@@ -254,6 +257,7 @@ function makeFilter(
   entries: ReadonlyMap<string, BlueprintEntry>,
   components: ReadonlyMap<string, ComponentEntry>,
   text: ReadonlyMap<string, string>,
+  sharedKeys: ReadonlyMap<string, string>,
 ): Filter {
   return (holding, into, templates, names) => {
     const out = new Map<string, string>();
@@ -262,7 +266,7 @@ function makeFilter(
       const type = shortType(json.$type);
       const entry = entries.get(type)!;
       if (/[/\\]/.test(assetName)) into.problems.push(`${assetName} ${guid}: the asset name can't be a file name`);
-      let name = entry.name === null ? undefined : displayName(json[entry.name], text);
+      let name = entry.name === null ? undefined : displayName(json[entry.name], text, sharedKeys);
       const neutral = name === undefined ? undefined : neutralName(name);
       if (neutral !== undefined) {
         templates.push(`${assetName} ${guid}: "${name}" → "${neutral}"`);

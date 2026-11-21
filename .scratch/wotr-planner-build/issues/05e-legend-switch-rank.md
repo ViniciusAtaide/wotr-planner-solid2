@@ -103,3 +103,20 @@ Ticket 07's trail offered "Legend" as the first Mythic rank and at every rank af
   - Gold Dragon, Swarm and Devil continuing at 9 and 10 after rank 8;
   - Legend at 9 and 10 still ending the ranks.
 - **Map 31** is amended.
+
+## Follow-up: shared names resolved in the importer (coordinator, 2026-11-21)
+
+- **The cause, fixed in the importer:** `GoldenDragonClass`'s name was lost because its reference to the shared name asset had an empty key. `indexDump` now gathers each shared asset's key from every reference in the dump (`sharedKeyCollector`). `displayName` uses that key when a field's own `Shared.stringkey` is empty.
+- **The agree-on-one-key rule:** an asset whose references disagree on the key gives no key, so nothing is named from a guess. A test covers that case.
+- **Gold Dragon's patch override is gone:** the class reads "Gold Dragon" from the importer now.
+- **Newly named** (11 blueprints that were nameless):
+  - `AeonSummonFeatureTier7` "Summon Gold Golems" and `AeonSummonFeatureTier9` "Summon Adamantine Golems";
+  - `AngelSummonFeatureTier8` "Summon Astral Devas";
+  - `AngelSummonFeatureTier9` "Summon Spirit Guardian" and `AngelSummonTier10` "Summon Spirit Guardians";
+  - `MysticTheurgeHunterLevelSelection2`–`6`, "Hunter Spell (2nd Level)" through "(6th Level)". The 1st Level selection and the Inquisitor and Oracle siblings already read this way.
+- **Requalified:**
+  - `AngelSummonFeatureTier7`, from "Summon Astral Devas (Angel)" to "(Angel 5)";
+  - `AngelSummonFeatureTier8`, as "(Angel 6)".
+
+  Tier 8 now shares the name, so the two are told apart by level.
+- **Checked against the Rust planner:** six of the eight summon and spell names agree with its own files. Tier 8 takes the game's text where the Rust planner has its own label ("Astral Devas x4").

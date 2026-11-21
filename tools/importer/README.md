@@ -168,7 +168,11 @@ The sourced items (map ticket 12) are the equipment blueprints the dump traces t
 
 The importer resolves each kept blueprint's English display name from the dump's strings and writes it as `name` (ADR 0006, map ticket 19). It is the only game text `data/` holds; descriptions are never read here.
 
-- `displayName`: the English text of a localised-string field, or nothing when the blueprint has none. A field holds either its own key (`m_Key`) or a shared string's key (`Shared.stringkey`).
+- `displayName`: the English text of a localised-string field, or nothing when the blueprint has none.
+  - A field holds either its own key (`m_Key`) or a shared string's key (`Shared.stringkey`).
+  - Some shared references keep the asset (`Shared.assetguid`) but lose the key. Such a field takes the key that every other reference to the same asset gives.
+  - `sharedKeyCollector` gathers those keys in `indexDump`'s pass over the dump. An asset whose references disagree on the key gives none, so nothing is named from a guess.
+  - `GoldenDragonClass` is named this way, from `GoldDragonSpellbook`'s reference to the same asset.
 - `neutralName`: a display name with the game's runtime template tokens in a neutral form (ADR 0006): `{Name}` (the character's name) and the comma after it go, and a word holding `{mf|<male>|<female>}` is written both ways (`L{mf|ord|ady}` → `Lord/Lady`). It returns nothing for a name with no token, and throws on a token it doesn't know.
 
 ## Shared names (`qualify.ts`, `name-groups.ts`, `shared-names.ts`)

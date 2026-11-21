@@ -3,7 +3,7 @@ import type { ComponentEntry, BlueprintEntry } from './allowlist';
 import { reachable } from './import';
 import { keptSet } from './keep-rule';
 import { keepBlueprint, shortType, type FilterContext } from './filter';
-import { displayName, neutralName } from './names';
+import { displayName, neutralName, sharedKeyCollector } from './names';
 import { applyPatch } from './overrides';
 import { bool, enumOf, heldRefs, int, list, orDefault, orNull, ref } from './spec';
 
@@ -282,6 +282,27 @@ describe('displayName', () => {
     expect(displayName({ m_Key: '', Shared: null }, strings)).toBeUndefined();
     expect(displayName({ m_Key: 'k3', Shared: null }, strings)).toBeUndefined();
     expect(displayName(undefined, strings)).toBeUndefined();
+  });
+
+  const ASSET = '57a22bffe5504154dac129a31bb00f64';
+  const reference = (key: string) =>
+    JSON.stringify({ LocalizedName: { m_Key: '', Shared: { assetguid: ASSET, stringkey: key } } }, null, 2);
+  const lostKey = { m_Key: '', Shared: { assetguid: ASSET, stringkey: '' } };
+
+  it('names a field whose shared reference lost its key by the key every other reference to that asset gives', () => {
+    const shared = sharedKeyCollector();
+    shared.add(reference('k2'));
+    shared.add(reference('k2'));
+    shared.add(reference(''));
+    expect(displayName(lostKey, strings, shared.keys())).toBe('Fighter');
+  });
+
+  it('names nothing from an asset whose references disagree on its key', () => {
+    const shared = sharedKeyCollector();
+    shared.add(reference('k1'));
+    shared.add(reference('k2'));
+    expect(shared.keys().has(ASSET)).toBe(false);
+    expect(displayName(lostKey, strings, shared.keys())).toBeUndefined();
   });
 });
 
