@@ -109,7 +109,7 @@ export const TOOLS: readonly ToolDef[] = [
   {
     name: 'options',
     description:
-      "A slot's options: open ones first, 25 a page, each with its summary and what the Build holds that it builds on; closed ones as counts by reason, listed with include_closed.",
+      "A slot's options: open ones first, 25 a page, each with its summary and what the Build holds that it builds on; closed ones as counts by reason, and with include_closed listed 25 a page too. pages says how many pages there are.",
     inputSchema: object(
       {
         code,

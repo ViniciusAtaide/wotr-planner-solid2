@@ -132,6 +132,13 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(listed.openTotal).toBeGreaterThan(25);
     expect(Object.values(listed.closedByReason).reduce((a, b) => a + b, 0)).toBeGreaterThan(0);
     expect(listed.closed).toBeUndefined();
+    expect(listed.pages).toBe(Math.ceil(listed.openTotal / 25));
+    const closed1 = ok(await options(e, { code: fighter.code, slot, include_closed: true }), 'options');
+    const closed2 = ok(await options(e, { code: fighter.code, slot, include_closed: true, page: 2 }), 'options');
+    expect(closed1.closedTotal).toBeGreaterThan(25);
+    expect(closed1.closed?.length).toBe(25);
+    expect(closed2.closed?.map((o) => o.feature)).not.toEqual(closed1.closed?.map((o) => o.feature));
+    expect(closed1.pages).toBe(Math.max(Math.ceil(closed1.openTotal / 25), Math.ceil(closed1.closedTotal / 25)));
     const refused = await pick(e, { code: fighter.code, slot, feature: '9972f33f977fc724c838e59641b2fca5' });
     expect(refused).toEqual({
       refused: true,

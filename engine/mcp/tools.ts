@@ -276,7 +276,9 @@ export async function options(
   | {
       readonly open: readonly OptionView[];
       readonly openTotal: number;
+      readonly closedTotal: number;
       readonly page: number;
+      readonly pages: number;
       readonly closedByReason: Readonly<Record<string, number>>;
       readonly closed?: readonly OptionView[];
     }
@@ -316,12 +318,16 @@ export async function options(
     const text = refusal({ data: e.data, G: e.G, unit }, o.closed as NonNullable<OptionStatus['closed']>).text;
     closedByReason[text] = (closedByReason[text] ?? 0) + 1;
   }
+  const onPage = <T>(list: readonly T[]) => list.slice((page - 1) * OPTIONS_PER_PAGE, page * OPTIONS_PER_PAGE);
+  const pagesOf = (n: number) => Math.max(1, Math.ceil(n / OPTIONS_PER_PAGE));
   return {
-    open: openOnes.slice((page - 1) * OPTIONS_PER_PAGE, page * OPTIONS_PER_PAGE).map(view),
+    open: onPage(openOnes).map(view),
     openTotal: openOnes.length,
+    closedTotal: closedOnes.length,
     page,
+    pages: Math.max(pagesOf(openOnes.length), args.include_closed ? pagesOf(closedOnes.length) : 1),
     closedByReason,
-    ...(args.include_closed && { closed: closedOnes.map(view) }),
+    ...(args.include_closed && { closed: onPage(closedOnes).map(view) }),
   };
 }
 
