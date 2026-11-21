@@ -633,7 +633,7 @@ describe('path switches (map ticket 31)', () => {
     const legend = '3d420403f3e7340499931324640efe96';
     for (const rank of [3, 7]) {
       expect(rankFailures(switchAt(legend, rank), rank)).toEqual([
-        expect.objectContaining({ subject: legend, rule: 'map31.legendFromRank8', found: rank, needed: 8 }),
+        expect.objectContaining({ subject: legend, rule: 'map31.switchAtRank8', found: rank, needed: 8 }),
       ]);
     }
     expect(rankFailures(switchAt(legend, 8), 8)).toEqual([]);
@@ -656,6 +656,42 @@ describe('path switches (map ticket 31)', () => {
     ]) {
       expect(rankFailures(switchAt(cls, 7), 7)).not.toEqual([]);
       expect(rankFailures(switchAt(cls, 8), 8)).toEqual([]);
+    }
+  });
+
+  const SWITCHES = [
+    'daf1235b6217787499c14e4e32142523',
+    '5295b8e13c2303f4c88bdb3d7760a757',
+    '211f49705f478b3468db6daa802452a2',
+    '3d420403f3e7340499931324640efe96',
+  ];
+
+  it('refuses every switch at ranks 9 and 10 after a path through rank 8 or 9', () => {
+    for (const cls of SWITCHES) {
+      for (const rank of [9, 10]) {
+        expect(rankFailures(switchAt(cls, rank), rank)).toContainEqual(
+          expect.objectContaining({ subject: cls, rule: 'map31.switchAtRank8', found: rank, needed: 8 }),
+        );
+      }
+    }
+  });
+
+  it('continues Gold Dragon, Swarm That Walks and Devil at ranks 9 and 10 after rank 8, and ends the ranks at Legend', () => {
+    const ranks = jackInTheGreen.build.ranks ?? [];
+    const from8 = (cls: string): Build => ({
+      ...jackInTheGreen.build,
+      ranks: ranks.map((r, i) => (i >= 7 ? { ...r, class: cls } : r)),
+      picks: jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place) || p.slot.place.rank <= 7),
+    });
+    expect(ranks).toHaveLength(10);
+    for (const cls of SWITCHES.slice(0, 3)) {
+      for (const rank of [9, 10]) expect(rankFailures(from8(cls), rank)).toEqual([]);
+    }
+    const legend = SWITCHES[3]!;
+    for (const rank of [9, 10]) {
+      expect(rankFailures(from8(legend), rank)).toContainEqual(
+        expect.objectContaining({ subject: legend, rule: 'map31.legendEndsAscensions' }),
+      );
     }
   });
 

@@ -224,7 +224,7 @@ const AEON_GAZE_FIRST_SELECTION = '7e468a5266235454e9dcefee315ee6d5';
 const AEON_GAZE_SECOND_SELECTION = '7d498e034d18ca94baea19d7edee7403';
 const AEON_GAZE_THIRD_SELECTION = '0bec49f67ecb49a5826fcfefb9408a35';
 const SWITCH_TO: ReadonlySet<Guid> = new Set([DEVIL_MYTHIC_CLASS, LEGEND_CLASS]);
-const LEGEND_FIRST_RANK = 8;
+const SWITCH_RANK = 8;
 const DEVIL_DROPS: readonly Guid[] = [DRAGON_COMPANION, AEON_GAZE_FEATURE, AEON_GAZE_FEATURE_EXTRA_GAZE];
 const DEVIL_DROPPED_SELECTIONS: readonly Guid[] = [
   AEON_GAZE_FIRST_SELECTION,
@@ -892,14 +892,17 @@ class Walker {
         rule: 'map34.legendChoiceClass',
       });
     }
-    if (ascension.class === LEGEND_CLASS && rank < LEGEND_FIRST_RANK) {
+    const switchClass =
+      SWITCH_TO.has(ascension.class) ||
+      (this.unit.bp(ascension.class) as BlueprintCharacterClass | undefined)?.m_IsHigherMythic === true;
+    if (switchClass && rank !== SWITCH_RANK && this.build.ranks?.[rank - 2]?.class !== ascension.class) {
       this.failures.push({
         place: { rank },
         choice: 'class',
         subject: ascension.class,
-        rule: 'map31.legendFromRank8',
+        rule: 'map31.switchAtRank8',
         found: rank,
-        needed: LEGEND_FIRST_RANK,
+        needed: SWITCH_RANK,
       });
     }
     const max = this.maxCharacterLevel();

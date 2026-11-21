@@ -18,7 +18,7 @@ export type Rule =
   | 'adr0003.rankOrder'
   | 'map31.legendEndsAscensions'
   | 'map31.devilFrom'
-  | 'map31.legendFromRank8'
+  | 'map31.switchAtRank8'
   | 'map34.legendChoiceClass'
   | 'AddArchetype.Check'
   | 'UnitProgressionData.CanAddArchetype'

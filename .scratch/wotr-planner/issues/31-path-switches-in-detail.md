@@ -84,3 +84,11 @@ Community wikis are not sources. What these say:
 - **Legend is taken at rank 8, like the other three switches,** and the walk refuses it before (`map31.legendFromRank8`). The sources are the Rust planner's GLOSSARY "Path switch" ("at MR 8") and GameFAQs `other-mythic-paths.txt` "Playing a Legend" (a path followed to rank 8 first).
 - **"Rank 3" describes the character afterwards:** Legend keeps ranks 1–2, so the character holds rank 3. It doesn't say when Legend is taken.
 - **The data alone would allow rank 3 on:** `LegendClass` asks only for Mythic Hero level 2. The rank is the story's.
+
+## Amendment: a switch only at rank 8, or right after itself (coordinator, 2026-11-21, on the user's standing instruction)
+
+The rank-8 note above covered Legend only. An independent investigation found that Devil and Swarm That Walks were still open at rank 10 after a path through rank 9, and Legend from rank 3.
+
+- **The rule:** a rank's class may be a switch class (Gold Dragon, Swarm That Walks, Devil, Legend) only at rank 8, or when the previous rank is that same switch class (`map31.switchAtRank8`, which replaces `map31.legendFromRank8`).
+- **Legend still ends the ranks** (`map31.legendEndsAscensions`).
+- **Sources:** GameFAQs `other-mythic-paths.txt` and `mythic-paths.txt`, the Rust planner's GLOSSARY "Path switch" and `legend.ron`, and the data's own branch for Legend (the path class at level 5, the rank-8 level-up). All three agree.

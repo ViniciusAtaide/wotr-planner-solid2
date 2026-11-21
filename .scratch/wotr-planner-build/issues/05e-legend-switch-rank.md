@@ -94,3 +94,12 @@ Ticket 07's trail offered "Legend" as the first Mythic rank and at every rank af
 
   Both gold builds pass unchanged. `bun run check`: 985 engine and 125 client tests.
 - **Map:** 34 amended; 31 has a note, and its table now says the character holds rank 3 afterwards.
+
+## Follow-up (coordinator, 2026-11-21)
+
+- **The rule now covers every switch:** `map31.legendFromRank8` became `map31.switchAtRank8`. A switch class (Gold Dragon, Swarm That Walks, Devil, Legend) is taken only at rank 8, or right after the same switch. Devil and Swarm were still open at rank 10 after a path through rank 9.
+- **Tests:**
+  - every switch refused at ranks 9 and 10 after a path;
+  - Gold Dragon, Swarm and Devil continuing at 9 and 10 after rank 8;
+  - Legend at 9 and 10 still ending the ranks.
+- **Map 31** is amended.
