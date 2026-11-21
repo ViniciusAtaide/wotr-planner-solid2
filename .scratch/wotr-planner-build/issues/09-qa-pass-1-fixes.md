@@ -1,6 +1,6 @@
 # QA pass 1 fixes
 
-Status: in-progress
+Status: done
 Session: ticket-03c-walk-fixes (engine), trail-start-step (UI)
 Blocked by: none
 Plan: [plan](../plan.md)
@@ -81,3 +81,11 @@ Fix every finding of the first QA pass on the planner (run on `e77c4d7e`, 2026-1
   - **For the UI:**
     - Labels like "Scholar — Nature (Background Selection)" and "Enforcing Gaze (Selection)" are selection names, so the UI uses `bareName` for slot labels.
     - "Expanded Arsenal (Magic School)" is the game's own display name and stays whole. The UI adds "(Abjuration)" for the chosen school.
+
+## Outcome
+
+2026-11-21, coordinator. Every QA pass 1 finding is fixed or recorded as not a bug (the Etude branches and the "(yours: 3)" count, in "Engine progress"). QA pass 2 (on `4b791923`) rechecked them all fixed and found one new severity-3 bug, the phone Refusal running off the screen, fixed in `c3e88e03`. QA pass 3 (on `c3e88e03`) rechecked QA pass 2's list and found nothing at severity 3 or 4, which is this ticket's bar.
+
+- Engine: `850f81d1`, `0f3503c1`, `105429bd`, `7d4eb3ba`, `02a99b37`, `1bf23bb3`, and after QA pass 2 `29208a78`, `76aeca9a`, `49487211`.
+- UI: `80d370a5`, `06e467dd`, `93bc007c` (merged `b1a3fde4`, `4b791923`), and after QA pass 2 `ee777c28` (merged `c3e88e03`).
+- QA pass 3's severity 2 and 1 findings (speed, focus, the modal's two-click state, sub-option keyboard, doubled parentheses, and small items) went to the Planner UI session's queue with ticket 06's UI side.
