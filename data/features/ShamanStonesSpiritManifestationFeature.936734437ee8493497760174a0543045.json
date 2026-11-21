@@ -7,6 +7,15 @@
       "InvertDifficultyRequirements": false,
       "MinDifficulty": "Story",
       "m_Facts": []
+    },
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Acid",
+      "Value": {
+        "Value": 30,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
     }
   ],
   "Groups": [],

@@ -2,6 +2,10 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddEnergyImmunity",
+      "Type": "Acid"
+    },
+    {
       "$type": "PrerequisiteNoFeature",
       "CheckInProgression": true,
       "Group": "All",

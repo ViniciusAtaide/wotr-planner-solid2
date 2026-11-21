@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 import { readerProblems, walkAreas } from '~engine/walk';
 import { grantTypes } from '~engine/grants';
 import { pickerComponentTypes } from '~engine/pickers';
+import { summaryComponentTypes } from '~engine/describe';
 import { isPrerequisite, paramPrerequisiteTypes, prerequisiteTypes } from '~engine/prerequisites';
 import { allowlist, type AllowEntry } from './allowlist';
 import { gearNameTypes } from './gear-names';
@@ -89,6 +90,7 @@ describe('allowlist', () => {
       ['P', [...prerequisiteTypes, ...paramPrerequisiteTypes]],
       ['G', grantTypes],
       ['S', pickerComponentTypes],
+      ['Summaries', summaryComponentTypes],
       ...walkAreas,
       ['Gear names', gearNameTypes],
     ]);

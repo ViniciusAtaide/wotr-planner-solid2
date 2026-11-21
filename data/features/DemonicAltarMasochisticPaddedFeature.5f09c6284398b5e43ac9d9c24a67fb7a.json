@@ -9,6 +9,15 @@
       "Value": -2
     },
     {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Electricity",
+      "Value": {
+        "Value": 30,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "AddStatBonus",
       "Descriptor": "Penalty",
       "ScaleByBasicAttackBonus": false,

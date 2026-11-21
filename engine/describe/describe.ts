@@ -58,3 +58,12 @@ export function describe(
     enables: links.enables(guid),
   };
 }
+
+export const summaryComponentTypes: readonly string[] = [
+  'AddDamageResistanceEnergy',
+  'AddDamageResistancePhysical',
+  'AddEnergyDamageImmunity',
+  'AddEnergyImmunity',
+  'AddSpellResistance',
+  'AddFortification',
+];

@@ -82,6 +82,7 @@ export const FEATURES: readonly Feature[] = [
     path: 'tools/importer',
     layer: 'tools',
     deps: [
+      'engine/describe',
       'engine/cite',
       'engine/data',
       'engine/data-dir',

@@ -9,6 +9,16 @@
       "m_Facts": [
         "!bp_ced0f4e5d02d5914a9f9ff74acacf26d"
       ]
+    },
+    {
+      "$type": "AddFortification",
+      "Bonus": 100,
+      "UseContextValue": false,
+      "Value": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
     }
   ],
   "Groups": [],

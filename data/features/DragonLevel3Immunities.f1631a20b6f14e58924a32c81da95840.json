@@ -13,6 +13,10 @@
         "!bp_cd1e5ab641a833c49994aff99db98952",
         "!bp_efe0344bca1290244a277ed5c45d9ff2"
       ]
+    },
+    {
+      "$type": "AddEnergyImmunity",
+      "Type": "NegativeEnergy"
     }
   ],
   "Groups": [],

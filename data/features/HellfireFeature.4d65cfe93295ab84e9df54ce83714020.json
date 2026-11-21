@@ -9,6 +9,24 @@
       "m_Facts": [
         "!bp_11ac3433adfa74642a93111624376070"
       ]
+    },
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Cold",
+      "Value": {
+        "Value": 10,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Acid",
+      "Value": {
+        "Value": 10,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
     }
   ],
   "Groups": [],

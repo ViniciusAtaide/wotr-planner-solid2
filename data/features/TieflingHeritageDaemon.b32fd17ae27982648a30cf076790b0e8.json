@@ -37,6 +37,15 @@
       "m_Facts": []
     },
     {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Acid",
+      "Value": {
+        "Value": 5,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "AddStatBonusIfHasFact",
       "Descriptor": "Racial",
       "InvertCondition": true,

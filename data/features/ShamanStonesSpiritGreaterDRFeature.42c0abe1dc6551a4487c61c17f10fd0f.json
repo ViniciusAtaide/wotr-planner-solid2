@@ -2,6 +2,24 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddDamageResistancePhysical",
+      "Alignment": "Good",
+      "BypassedByAlignment": false,
+      "BypassedByEpic": false,
+      "BypassedByForm": false,
+      "BypassedByMagic": false,
+      "BypassedByMaterial": true,
+      "Form": 0,
+      "Material": "Adamantite",
+      "MinEnhancementBonus": 1,
+      "Or": false,
+      "Value": {
+        "Value": 5,
+        "ValueRank": "Default",
+        "ValueType": "Rank"
+      }
+    },
+    {
       "$type": "ContextRankConfig",
       "m_BaseValueType": "ClassLevel",
       "m_Class": [

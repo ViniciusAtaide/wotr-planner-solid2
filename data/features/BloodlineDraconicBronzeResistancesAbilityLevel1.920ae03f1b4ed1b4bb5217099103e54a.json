@@ -2,6 +2,15 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Electricity",
+      "Value": {
+        "Value": 5,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "AddStatBonus",
       "Descriptor": "NaturalArmor",
       "ScaleByBasicAttackBonus": false,

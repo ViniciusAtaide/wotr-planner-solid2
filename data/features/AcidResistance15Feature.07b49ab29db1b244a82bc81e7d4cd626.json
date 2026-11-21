@@ -1,6 +1,16 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Acid",
+      "Value": {
+        "Value": 15,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

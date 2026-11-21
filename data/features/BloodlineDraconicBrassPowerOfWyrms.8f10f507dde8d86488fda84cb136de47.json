@@ -2,6 +2,10 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddEnergyDamageImmunity",
+      "EnergyType": "Fire"
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",

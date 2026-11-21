@@ -17,6 +17,15 @@
       ]
     },
     {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Cold",
+      "Value": {
+        "Value": 5,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "AddBackgroundClassSkill",
       "Skill": "SkillMobility"
     },

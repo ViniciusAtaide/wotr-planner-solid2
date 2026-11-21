@@ -7,6 +7,10 @@
       "InvertDifficultyRequirements": false,
       "MinDifficulty": "Story",
       "m_Facts": []
+    },
+    {
+      "$type": "AddEnergyDamageImmunity",
+      "EnergyType": "Cold"
     }
   ],
   "Groups": [],

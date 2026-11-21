@@ -15,6 +15,15 @@
       "m_RestrictIfNot": false
     },
     {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Acid",
+      "Value": {
+        "Value": 5,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "AddFeatureOnClassLevel",
       "BeforeThisLevel": false,
       "Level": 5,

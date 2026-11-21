@@ -7,6 +7,15 @@
       "ScaleByBasicAttackBonus": false,
       "Stat": "AC",
       "Value": 4
+    },
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Fire",
+      "Value": {
+        "Value": 10,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
     }
   ],
   "Groups": [],

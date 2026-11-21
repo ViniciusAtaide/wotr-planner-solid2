@@ -15,6 +15,16 @@
       ]
     },
     {
+      "$type": "AddFortification",
+      "Bonus": 100,
+      "UseContextValue": false,
+      "Value": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "PrerequisiteCondition",
       "CheckInProgression": false,
       "Condition": {

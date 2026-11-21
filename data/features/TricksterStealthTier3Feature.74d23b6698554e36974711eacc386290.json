@@ -7,6 +7,17 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_0d1071f085c5c4f408cd2bf1ec4f6adc"
+    },
+    {
+      "$type": "AddSpellResistance",
+      "AddBonusToResistance": false,
+      "AddCR": false,
+      "AllSpellResistancePenaltyDoNotUse": false,
+      "Value": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Rank"
+      }
     }
   ],
   "Groups": [

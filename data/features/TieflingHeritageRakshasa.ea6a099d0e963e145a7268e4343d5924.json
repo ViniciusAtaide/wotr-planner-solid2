@@ -37,6 +37,24 @@
       "m_Facts": []
     },
     {
+      "$type": "AddDamageResistancePhysical",
+      "Alignment": 0,
+      "BypassedByAlignment": false,
+      "BypassedByEpic": false,
+      "BypassedByForm": true,
+      "BypassedByMagic": false,
+      "BypassedByMaterial": false,
+      "Form": "Piercing",
+      "Material": "Adamantite",
+      "MinEnhancementBonus": 1,
+      "Or": false,
+      "Value": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "AddStatBonusIfHasFact",
       "Descriptor": "Racial",
       "InvertCondition": true,

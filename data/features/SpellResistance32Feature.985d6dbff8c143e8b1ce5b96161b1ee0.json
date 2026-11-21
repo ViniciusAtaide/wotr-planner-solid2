@@ -1,6 +1,18 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddSpellResistance",
+      "AddBonusToResistance": false,
+      "AddCR": false,
+      "AllSpellResistancePenaltyDoNotUse": false,
+      "Value": {
+        "Value": 32,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

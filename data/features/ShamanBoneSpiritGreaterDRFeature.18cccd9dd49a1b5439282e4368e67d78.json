@@ -18,6 +18,24 @@
       "m_Type": "Default",
       "m_UseMax": false,
       "m_UseMin": false
+    },
+    {
+      "$type": "AddDamageResistancePhysical",
+      "Alignment": "Good",
+      "BypassedByAlignment": false,
+      "BypassedByEpic": false,
+      "BypassedByForm": false,
+      "BypassedByMagic": true,
+      "BypassedByMaterial": false,
+      "Form": 0,
+      "Material": "Adamantite",
+      "MinEnhancementBonus": 1,
+      "Or": false,
+      "Value": {
+        "Value": 5,
+        "ValueRank": "Default",
+        "ValueType": "Rank"
+      }
     }
   ],
   "Groups": [],

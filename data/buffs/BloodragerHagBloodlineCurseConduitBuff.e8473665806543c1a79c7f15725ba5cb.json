@@ -9,6 +9,10 @@
       "m_Facts": [
         "!bp_59fea514ade4b474d8f6e8e618ff123e"
       ]
+    },
+    {
+      "$type": "AddEnergyDamageImmunity",
+      "EnergyType": "NegativeEnergy"
     }
   ],
   "Stacking": "Replace",

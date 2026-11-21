@@ -1,6 +1,17 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddFortification",
+      "Bonus": 75,
+      "UseContextValue": false,
+      "Value": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": true,

@@ -1,6 +1,43 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Fire",
+      "Value": {
+        "Value": 5,
+        "ValueRank": "Default",
+        "ValueType": "Shared"
+      }
+    },
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Acid",
+      "Value": {
+        "Value": 5,
+        "ValueRank": "Default",
+        "ValueType": "Shared"
+      }
+    },
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Cold",
+      "Value": {
+        "Value": 5,
+        "ValueRank": "Default",
+        "ValueType": "Shared"
+      }
+    },
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Electricity",
+      "Value": {
+        "Value": 5,
+        "ValueRank": "Default",
+        "ValueType": "Shared"
+      }
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

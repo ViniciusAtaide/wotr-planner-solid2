@@ -2,6 +2,10 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddEnergyImmunity",
+      "Type": "Electricity"
+    },
+    {
       "$type": "PrerequisiteNoFeature",
       "CheckInProgression": true,
       "Group": "All",

@@ -1,6 +1,11 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddEnergyDamageImmunity",
+      "EnergyType": "Fire"
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

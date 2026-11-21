@@ -8,6 +8,15 @@
     {
       "$type": "RemoveFeatureOnApply",
       "m_Feature": "!bp_d030df93ea56d2b468650c4acf608f00"
+    },
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Fire",
+      "Value": {
+        "Value": 5,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
     }
   ],
   "Groups": [],

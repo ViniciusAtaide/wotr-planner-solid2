@@ -1,6 +1,34 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Acid",
+      "Value": {
+        "Value": 5,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Cold",
+      "Value": {
+        "Value": 5,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Electricity",
+      "Value": {
+        "Value": 5,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    }
+  ],
   "Groups": [
     "Racial"
   ],

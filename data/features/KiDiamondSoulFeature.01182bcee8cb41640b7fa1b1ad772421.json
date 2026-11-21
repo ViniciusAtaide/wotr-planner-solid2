@@ -11,6 +11,17 @@
       "m_CharacterClass": "!bp_e8f21e5b58e0569468e420ebea456124"
     },
     {
+      "$type": "AddSpellResistance",
+      "AddBonusToResistance": false,
+      "AddCR": false,
+      "AllSpellResistancePenaltyDoNotUse": false,
+      "Value": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Rank"
+      }
+    },
+    {
       "$type": "ContextRankConfig",
       "m_BaseValueType": "ClassLevel",
       "m_Class": [

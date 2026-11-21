@@ -2,6 +2,15 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Electricity",
+      "Value": {
+        "Value": 5,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "AddFeatureOnClassLevel",
       "BeforeThisLevel": false,
       "Level": 5,

@@ -1,6 +1,25 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddDamageResistancePhysical",
+      "Alignment": "Good",
+      "BypassedByAlignment": true,
+      "BypassedByEpic": false,
+      "BypassedByForm": false,
+      "BypassedByMagic": false,
+      "BypassedByMaterial": true,
+      "Form": 0,
+      "Material": "ColdIron",
+      "MinEnhancementBonus": 1,
+      "Or": false,
+      "Value": {
+        "Value": 10,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

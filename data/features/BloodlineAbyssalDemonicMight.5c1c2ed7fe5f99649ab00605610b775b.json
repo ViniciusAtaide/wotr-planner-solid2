@@ -2,6 +2,37 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddEnergyDamageImmunity",
+      "EnergyType": "Electricity"
+    },
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Acid",
+      "Value": {
+        "Value": 10,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Cold",
+      "Value": {
+        "Value": 10,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Fire",
+      "Value": {
+        "Value": 10,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",

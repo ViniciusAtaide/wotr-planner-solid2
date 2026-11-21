@@ -11,6 +11,17 @@
         "!bp_c0845a4e242a9f04d9368fe03ac3e431",
         "!bp_12a47d1d5d02fe34c8158ca58e0b3b60"
       ]
+    },
+    {
+      "$type": "AddSpellResistance",
+      "AddBonusToResistance": false,
+      "AddCR": false,
+      "AllSpellResistancePenaltyDoNotUse": false,
+      "Value": {
+        "Value": 31,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
     }
   ],
   "Groups": [],

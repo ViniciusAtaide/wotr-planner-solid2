@@ -1,6 +1,11 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddEnergyImmunity",
+      "Type": "Electricity"
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

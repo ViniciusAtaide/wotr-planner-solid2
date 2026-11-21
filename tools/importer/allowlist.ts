@@ -105,6 +105,12 @@ import {
   type IsAlchemistSpellbook,
   type IncreaseActivatableAbilityGroupSize,
   type AddContextStatBonus,
+  type AddDamageResistanceEnergy,
+  type AddDamageResistancePhysical,
+  type AddEnergyDamageImmunity,
+  type AddEnergyImmunity,
+  type AddFortification,
+  type AddSpellResistance,
   type ContextRankConfig,
   type ReplaceStatBaseAttribute,
   type AddStatBonus,
@@ -346,6 +352,22 @@ const contextValueType = enumOf(
 );
 
 const contextValue: Spec<ContextValue> = struct({ ValueType: contextValueType, Value: int });
+
+const damageEnergyType = enumOf(
+  'Fire',
+  'Cold',
+  'Sonic',
+  'Electricity',
+  'Acid',
+  'NegativeEnergy',
+  'PositiveEnergy',
+  'Holy',
+  'Unholy',
+  'Divine',
+  'Magic',
+);
+
+const SUMMARY_ONLY = 'a Summary names only what it reads; the walk never applies this in-play component';
 
 function otherValueTypes(at: string, fields: readonly string[]): Record<string, NotKept> {
   const reason = 'ContextValue.Calculate reads it only for a ValueType other than Simple and Rank';
@@ -2331,6 +2353,70 @@ export const allowlist: readonly AllowEntry[] = [
       ),
     },
     cite: ['UnitLogic/FactLogic/AddMechanicsFeature.cs OnTurnOn (m_Feature)'],
+  }),
+  component<AddDamageResistanceEnergy>({
+    type: 'AddDamageResistanceEnergy',
+    fields: { Type: damageEnergyType, Value: rankedContextValue },
+    cite: [
+      'UnitLogic/FactLogic/AddDamageResistanceEnergy.cs Bypassed (Type)',
+      'UnitLogic/FactLogic/AddDamageResistanceBase.cs CalculateValue (Value)',
+    ],
+  }),
+  component<AddDamageResistancePhysical>({
+    type: 'AddDamageResistancePhysical',
+    fields: {
+      Value: rankedContextValue,
+      Or: orDefault(bool, false),
+      BypassedByMaterial: orDefault(bool, false),
+      Material: flagsOf('ColdIron', 'Silver', 'Adamantite'),
+      BypassedByForm: orDefault(bool, false),
+      Form: flagsOf('Bludgeoning', 'Piercing', 'Slashing'),
+      BypassedByMagic: orDefault(bool, false),
+      MinEnhancementBonus: orDefault(int, 1),
+      BypassedByAlignment: orDefault(bool, false),
+      Alignment: flagsOf('Good', 'Evil', 'Chaotic', 'Lawful'),
+      BypassedByEpic: orDefault(bool, false),
+    },
+    notKept: {
+      BypassedByReality: SUMMARY_ONLY,
+      Reality: SUMMARY_ONLY,
+      BypassedByWeaponType: SUMMARY_ONLY,
+      BypassedByMeleeWeapon: SUMMARY_ONLY,
+      m_WeaponType: SUMMARY_ONLY,
+    },
+    cite: [
+      'UnitLogic/FactLogic/AddDamageResistancePhysical.cs Hit (Or, BypassedByMaterial, BypassedByForm, Form, BypassedByMagic, MinEnhancementBonus, BypassedByAlignment, BypassedByEpic)',
+      'UnitLogic/FactLogic/AddDamageResistancePhysical.cs CheckBypassedByMaterial (Material)',
+      'UnitLogic/FactLogic/AddDamageResistancePhysical.cs CheckBypassedByAlignment (Alignment)',
+      'UnitLogic/FactLogic/AddDamageResistanceBase.cs CalculateValue (Value)',
+    ],
+  }),
+  component<AddEnergyDamageImmunity>({
+    type: 'AddEnergyDamageImmunity',
+    fields: { EnergyType: damageEnergyType },
+    cite: ['UnitLogic/FactLogic/AddEnergyDamageImmunity.cs OnEventAboutToTrigger (EnergyType)'],
+  }),
+  component<AddEnergyImmunity>({
+    type: 'AddEnergyImmunity',
+    fields: { Type: damageEnergyType },
+    cite: ['UnitLogic/FactLogic/AddEnergyImmunity.cs OnEventAboutToTrigger (Type)'],
+  }),
+  component<AddSpellResistance>({
+    type: 'AddSpellResistance',
+    fields: {
+      Value: rankedContextValue,
+      AddCR: orDefault(bool, false),
+      AddBonusToResistance: orDefault(bool, false),
+      AllSpellResistancePenaltyDoNotUse: orDefault(bool, false),
+    },
+    cite: [
+      'UnitLogic/FactLogic/AddSpellResistance.cs OnTurnOn (Value, AddCR, AddBonusToResistance, AllSpellResistancePenaltyDoNotUse)',
+    ],
+  }),
+  component<AddFortification>({
+    type: 'AddFortification',
+    fields: { UseContextValue: orDefault(bool, false), Bonus: orDefault(int, 0), Value: rankedContextValue },
+    cite: ['UnitLogic/FactLogic/AddFortification.cs CalculateValue (UseContextValue, Bonus, Value)'],
   }),
   component<AddStatBonus>({
     type: 'AddStatBonus',

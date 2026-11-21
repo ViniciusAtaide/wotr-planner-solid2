@@ -7,6 +7,15 @@
       "ScaleByBasicAttackBonus": false,
       "Stat": "SkillMobility",
       "Value": -5
+    },
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Electricity",
+      "Value": {
+        "Value": 30,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
     }
   ],
   "Groups": [],

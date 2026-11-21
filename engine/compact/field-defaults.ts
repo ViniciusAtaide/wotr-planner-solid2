@@ -49,6 +49,15 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     Minimal: 0,
     Multiplier: 0,
   },
+  AddDamageResistancePhysical: {
+    BypassedByAlignment: false,
+    BypassedByEpic: false,
+    BypassedByForm: false,
+    BypassedByMagic: false,
+    BypassedByMaterial: false,
+    MinEnhancementBonus: 1,
+    Or: false,
+  },
   AddFacts: {
     HasDifficultyRequirements: false,
     InvertDifficultyRequirements: false,
@@ -72,6 +81,10 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     m_Facts: [],
     MinimalStat: 0,
   },
+  AddFortification: {
+    Bonus: 0,
+    UseContextValue: false,
+  },
   AddParametrizedFeatures: {
     m_Features: [],
   },
@@ -79,6 +92,11 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     ArmorProficiencies: null,
     m_RaceRestriction: null,
     WeaponProficiencies: null,
+  },
+  AddSpellResistance: {
+    AddBonusToResistance: false,
+    AddCR: false,
+    AllSpellResistancePenaltyDoNotUse: false,
   },
   AddStatBonus: {
     Descriptor: 'None',

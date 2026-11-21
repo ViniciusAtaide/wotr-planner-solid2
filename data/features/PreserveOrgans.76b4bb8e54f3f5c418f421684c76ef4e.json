@@ -2,6 +2,16 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddFortification",
+      "Bonus": 25,
+      "UseContextValue": false,
+      "Value": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "PrerequisiteNoArchetype",
       "CheckInProgression": false,
       "Group": "All",

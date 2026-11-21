@@ -13,6 +13,10 @@
       ]
     },
     {
+      "$type": "AddEnergyImmunity",
+      "Type": "Cold"
+    },
+    {
       "$type": "PrerequisiteNoFeature",
       "CheckInProgression": true,
       "Group": "All",

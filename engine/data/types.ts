@@ -313,6 +313,65 @@ export type AbilityRankType =
   | 'StatBonus'
   | 'SpeedBonus';
 
+export type DamageEnergyType =
+  | 'Fire'
+  | 'Cold'
+  | 'Sonic'
+  | 'Electricity'
+  | 'Acid'
+  | 'NegativeEnergy'
+  | 'PositiveEnergy'
+  | 'Holy'
+  | 'Unholy'
+  | 'Divine'
+  | 'Magic';
+
+export interface AddDamageResistanceEnergy extends Component {
+  readonly $type: 'AddDamageResistanceEnergy';
+  readonly Type: DamageEnergyType;
+  readonly Value: RankedContextValue;
+}
+
+export interface AddDamageResistancePhysical extends Component {
+  readonly $type: 'AddDamageResistancePhysical';
+  readonly Value: RankedContextValue;
+  readonly Or: boolean;
+  readonly BypassedByMaterial: boolean;
+  readonly Material: string | number;
+  readonly BypassedByForm: boolean;
+  readonly Form: string | number;
+  readonly BypassedByMagic: boolean;
+  readonly MinEnhancementBonus: number;
+  readonly BypassedByAlignment: boolean;
+  readonly Alignment: string | number;
+  readonly BypassedByEpic: boolean;
+}
+
+export interface AddEnergyDamageImmunity extends Component {
+  readonly $type: 'AddEnergyDamageImmunity';
+  readonly EnergyType: DamageEnergyType;
+}
+
+export interface AddEnergyImmunity extends Component {
+  readonly $type: 'AddEnergyImmunity';
+  readonly Type: DamageEnergyType;
+}
+
+export interface AddSpellResistance extends Component {
+  readonly $type: 'AddSpellResistance';
+  readonly Value: RankedContextValue;
+  readonly AddCR: boolean;
+  readonly AddBonusToResistance: boolean;
+  readonly AllSpellResistancePenaltyDoNotUse: boolean;
+}
+
+export interface AddFortification extends Component {
+  readonly $type: 'AddFortification';
+  readonly UseContextValue: boolean;
+  readonly Bonus: number;
+  readonly Value: RankedContextValue;
+}
+
 export interface AddContextStatBonus extends Component {
   readonly $type: 'AddContextStatBonus';
   readonly Descriptor: 'Racial';

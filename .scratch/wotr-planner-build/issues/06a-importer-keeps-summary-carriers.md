@@ -31,3 +31,14 @@ The data document before 06a: raw 2.046 MB, gzip 0.478 MB, brotli 0.380 MB (`enc
 - The 50 carriers are kept, each with cited fields.
 - Each family's commit records its size measurement.
 - The checks pass, and the Outcome lists the 50 and the sizes.
+
+## Progress
+
+| Family | Commit | Carriers | `data/` files | Raw | gzip | brotli |
+| --- | --- | --- | --- | --- | --- | --- |
+| Baseline | — | — | — | 2.046 MB | 0.478 MB | 0.380 MB |
+| 1. Resistances and immunities | (this commit) | `AddDamageResistanceEnergy`, `AddDamageResistancePhysical`, `AddEnergyDamageImmunity`, `AddEnergyImmunity`, `AddSpellResistance`, `AddFortification` (6) | 279 gain the component; nothing else changes | 2.057 MB | 0.481 MB | 0.381 MB |
+
+- **Family 1's data changes:** each changed file only gains its kept resistance or immunity components (the diff's removed lines are a `}` becoming `},`). The report's In-play count falls from 376 to 370.
+- **The reader set:** `engine/describe` declares `summaryComponentTypes`, and the allowlist test holds every kept type to one reader set.
+- **Not kept:** `not-needed.ts` drops the six types. The physical resistance keeps its material, form, magic, alignment and epic bypasses; it lists its reality, weapon-type and melee bypasses as not kept, because a Summary doesn't name them.
