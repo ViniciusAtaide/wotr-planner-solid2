@@ -7,7 +7,15 @@ import type { Blueprint } from '../data';
 import { enforcer, jackInTheGreen } from '../gold';
 import { buildGrantIndex } from '../grants';
 import { candidates, picker, shownInSelection } from './pickers';
-import { offeredClasses, offeredMythicClasses, offeredRaces } from './offers';
+import {
+  BACKGROUNDS_BASE_SELECTION,
+  characterWideSlots,
+  mythicStartingClass,
+  offeredClasses,
+  offeredMythicClasses,
+  offeredRaces,
+} from './offers';
+import { featureTags, tagsOf } from './tags';
 import { breaks, opensAt, refusal } from '../refusals';
 import { pauseAt, walk } from '../walk';
 
@@ -156,6 +164,45 @@ describe('what character creation offers (comparison bug 5)', () => {
     for (const path of ['Mythic Hero', 'Aeon', 'Azata', 'Legend']) expect(mythics).toContain(path);
     expect(mythics).not.toContain('Mythic Companion');
     expect(mythics).not.toContain('Shard Powers');
+  });
+
+  it('starts a character on Mythic Hero', () => {
+    expect(mythicStartingClass(data)).toBe('247aa787806d5da4f89cfc3dff0b217f');
+  });
+});
+
+describe('which slots belong to the character', () => {
+  const BACKGROUNDS_CRAFTSMAN_SELECTION = 'fd36aaff6f41a2f4f9e91925d49a0d85';
+
+  it('is the race’s bonus feat, the background with what it opens, and the deity; not the level’s feats', () => {
+    const background: SlotId = { place: { level: 1 }, selection: BACKGROUNDS_BASE_SELECTION, index: 0 };
+    const human: Build = {
+      race: HUMAN,
+      levels: [{ class: FIGHTER }],
+      picks: [{ slot: background, feature: BACKGROUNDS_CRAFTSMAN_SELECTION }],
+    };
+    const slots = walk(data, human, G).slots;
+    const wide = characterWideSlots(data, slots);
+    const named = (selection: string, index = 0) => `L1/${selection}#${index}`;
+    expect([...wide].sort()).toEqual(
+      [named(BASIC, 0), slotKey(background), named(DEITY_SELECTION), named(BACKGROUNDS_CRAFTSMAN_SELECTION)].sort(),
+    );
+    expect(slots.find((s) => slotKey(s.id) === named(BASIC, 0))?.source.kind).toBe('race');
+    expect(wide.has(named(BASIC, 1))).toBe(false);
+    expect(wide.has(named(FIGHTER_FEAT))).toBe(false);
+  });
+});
+
+describe('a feat’s tags, as the level-up list shows them', () => {
+  it('reads PowerAttackFeature’s Damage and Melee, and none for a feature without tags', () => {
+    expect(featureTags(data, POWER_ATTACK)).toEqual(['Damage', 'Melee']);
+    expect(featureTags(data, '7d300f497584d9245ac24c062dce0bd6')).toBeUndefined();
+  });
+
+  it('reads tags as names or as the enum’s bits', () => {
+    expect(tagsOf('Damage, Melee')).toEqual(['Damage', 'Melee']);
+    expect(tagsOf(0x4 | 0x8)).toEqual(['Damage', 'Melee']);
+    expect(tagsOf('None')).toEqual([]);
   });
 });
 

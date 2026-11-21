@@ -22,6 +22,10 @@
       "IsFeatureSelectionWhiteList": false,
       "Stat": "BaseAttackBonus",
       "Value": 13
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Critical"
     }
   ],
   "Groups": [

@@ -33,6 +33,10 @@
       "IsFeatureSelectionWhiteList": false,
       "Stat": "BaseAttackBonus",
       "Value": 11
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Damage, Melee, Defense"
     }
   ],
   "Groups": [

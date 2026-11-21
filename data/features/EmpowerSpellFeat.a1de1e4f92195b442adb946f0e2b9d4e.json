@@ -8,6 +8,10 @@
       "IsFeatureSelectionWhiteList": false,
       "Stat": "Intelligence",
       "Value": 3
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Magic, Metamagic"
     }
   ],
   "Groups": [

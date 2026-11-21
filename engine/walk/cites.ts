@@ -349,6 +349,8 @@ export const cites = {
   bandOf: ['UnitLogic/Class/LevelUp/Actions/SelectFeature.cs CalculatePriority'],
   OpenedSlot: ['UnitLogic/Class/LevelUp/LevelUpState.cs AddSelection'],
   'OpenedSlot.level': ['UnitLogic/Class/LevelUp/FeatureSelectionState.cs FeatureSelectionState (Level)'],
+  'Walk.attributePoints': ['UnitLogic/Class/LevelUp/Actions/SelectClass.cs Apply'],
+  'Walk.skillPoints': ['UnitLogic/Class/LevelUp/Actions/ApplySkillPoints.cs Apply (TotalSkillPoints)'],
   SlotState: ['UnitLogic/Class/LevelUp/FeatureSelectionState.cs FeatureSelectionState'],
   LevelState: ['UnitLogic/Class/LevelUp/LevelUpState.cs LevelUpState'],
   'LevelState.firstLevel': ['UnitLogic/Class/LevelUp/LevelUpState.cs IsFirstCharacterLevel'],

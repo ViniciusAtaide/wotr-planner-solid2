@@ -19,6 +19,10 @@
       "Value": 3
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Magic, Defense, Teamwork"
+    },
+    {
       "$type": "AddFeatureIfHasFact",
       "Not": true,
       "m_CheckedFact": "!bp_e5079510480031146992dafde835c3b8",

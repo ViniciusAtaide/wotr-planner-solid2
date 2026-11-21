@@ -14,6 +14,10 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_79042cb55f030614ea29956177977c52"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Defense, SavingThrows"
     }
   ],
   "Groups": [

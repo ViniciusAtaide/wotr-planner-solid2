@@ -7,6 +7,10 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_a9ab1bbc79ecb174d9a04699986ce8d5"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "ClassSpecific"
     }
   ],
   "Groups": [

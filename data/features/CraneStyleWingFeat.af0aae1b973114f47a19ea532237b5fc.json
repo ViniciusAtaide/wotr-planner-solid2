@@ -38,6 +38,10 @@
       "IsFeatureSelectionWhiteList": false,
       "Stat": "BaseAttackBonus",
       "Value": 5
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Defense, Style"
     }
   ],
   "Groups": [

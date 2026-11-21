@@ -17,6 +17,10 @@
       "Value": 10
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Melee"
+    },
+    {
       "$type": "AddMechanicsFeature",
       "m_Feature": "Pounce"
     }

@@ -38,6 +38,10 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_7812ad3672a4b9a4fb894ea402095167"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Style, CombatManeuver"
     }
   ],
   "Groups": [

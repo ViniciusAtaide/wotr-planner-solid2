@@ -975,6 +975,11 @@ export interface EquipmentRestrictionMainPlayer extends Component {
   readonly $type: 'EquipmentRestrictionMainPlayer';
 }
 
+export interface FeatureTagsComponent extends Component {
+  readonly $type: 'FeatureTagsComponent';
+  readonly FeatureTags: string | number;
+}
+
 export type PrerequisiteGroup = 'All' | 'Any' | 'ForcedTrue';
 
 interface PrerequisiteBase extends Component {

@@ -27,6 +27,10 @@
       "m_Feature": "!bp_6d3728d4e9c9898458fe5e9532951132"
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Defense"
+    },
+    {
       "$type": "PrerequisiteClassLevel",
       "CheckInProgression": false,
       "Group": "Any",

@@ -18,12 +18,19 @@ export type Session =
   | { readonly kind: 'confirming'; readonly pending: Pending }
   | { readonly kind: 'refused'; readonly lines: NonEmpty<string> };
 
+export type Change = string | undefined;
+
 export interface PlannerState {
   readonly past: readonly Build[];
   readonly present: Build;
   readonly future: readonly Build[];
   readonly session: Session;
+  readonly change: Change;
+  readonly pastChanges: readonly Change[];
+  readonly futureChanges: readonly Change[];
 }
+
+export const OPENED_A_LINK = 'Opened a link';
 
 export type PlannerAction =
   | { readonly kind: 'edit'; readonly edit: Edit; readonly title: string }
@@ -45,7 +52,15 @@ export function placeWords(p: Pick['slot']['place']): string {
 }
 
 export function plannerAt(build: Build): PlannerState {
-  return { past: [], present: build, future: [], session: IDLE };
+  return {
+    past: [],
+    present: build,
+    future: [],
+    session: IDLE,
+    change: undefined,
+    pastChanges: [],
+    futureChanges: [],
+  };
 }
 
 export function outcomeOf(s: PlannerState): EditOutcome {
@@ -59,11 +74,19 @@ export function outcomeOf(s: PlannerState): EditOutcome {
   }
 }
 
-function commit(s: PlannerState, next: Build): PlannerState {
-  return { past: [...s.past, s.present], present: next, future: [], session: IDLE };
+function commit(s: PlannerState, next: Build, change: string): PlannerState {
+  return {
+    past: [...s.past, s.present],
+    present: next,
+    future: [],
+    session: IDLE,
+    change,
+    pastChanges: [...s.pastChanges, s.change],
+    futureChanges: [],
+  };
 }
 
-function brokenWords(engine: Engine, build: Build, b: Breaks): string[] {
+export function brokenWords(engine: Engine, build: Build, b: Breaks): string[] {
   const unit = walk(engine.data, build, engine.G).unit;
   return [
     ...b.picks.map((p) => `${nameOf(engine.data, p.feature)} (${placeWords(p.slot.place)})`),
@@ -71,45 +94,78 @@ function brokenWords(engine: Engine, build: Build, b: Breaks): string[] {
   ];
 }
 
+export type Verdict =
+  | { readonly kind: 'applies'; readonly build: Build }
+  | { readonly kind: 'clears'; readonly build: Build; readonly cleared: readonly Pick[] }
+  | { readonly kind: 'breaks'; readonly breaks: Breaks };
+
+export function verdictOf(engine: Engine, build: Build, edit: Edit): Verdict {
+  const allowed = allows(engine.data, build, edit, engine.G);
+  if (allowed.ok) return { kind: 'applies', build: allowed.build };
+  const c = cascade(engine.data, build, edit, engine.G);
+  return c.ok ? { kind: 'clears', build: c.build, cleared: c.cleared } : { kind: 'breaks', breaks: c };
+}
+
+export function laterPicks(n: number): string {
+  return `${n} later ${n === 1 ? 'pick' : 'picks'}`;
+}
+
 function edited(engine: Engine, s: PlannerState, edit: Edit, title: string): PlannerState {
-  const now = s.present;
-  const verdict = allows(engine.data, now, edit, engine.G);
-  if (verdict.ok) return commit(s, verdict.build);
-  const c = cascade(engine.data, now, edit, engine.G);
-  if (!c.ok) {
-    return {
-      ...s,
-      session: {
-        kind: 'refused',
-        lines: ['That change can’t be made. It would break:', ...brokenWords(engine, now, c)],
-      },
-    };
+  const v = verdictOf(engine, s.present, edit);
+  switch (v.kind) {
+    case 'applies':
+      return commit(s, v.build, title);
+    case 'breaks':
+      return {
+        ...s,
+        session: {
+          kind: 'refused',
+          lines: ['That change can’t be made. It would break:', ...brokenWords(engine, s.present, v.breaks)],
+        },
+      };
+    case 'clears':
+      return {
+        ...s,
+        session: {
+          kind: 'confirming',
+          pending: {
+            title,
+            summary: `This breaks ${laterPicks(v.cleared.length)}. They'll be cleared, not moved.`,
+            clears: v.cleared.map((p) => ({ name: nameOf(engine.data, p.feature), place: placeWords(p.slot.place) })),
+            build: v.build,
+          },
+        },
+      };
   }
-  const n = c.cleared.length;
-  return {
-    ...s,
-    session: {
-      kind: 'confirming',
-      pending: {
-        title,
-        summary: `This breaks ${n} later ${n === 1 ? 'pick' : 'picks'}. They'll be cleared, not moved.`,
-        clears: c.cleared.map((p) => ({ name: nameOf(engine.data, p.feature), place: placeWords(p.slot.place) })),
-        build: c.build,
-      },
-    },
-  };
 }
 
 function undone(s: PlannerState): PlannerState {
   const last = s.past.at(-1);
   if (last === undefined) return s;
-  return { past: s.past.slice(0, -1), present: last, future: [s.present, ...s.future], session: IDLE };
+  return {
+    past: s.past.slice(0, -1),
+    present: last,
+    future: [s.present, ...s.future],
+    session: IDLE,
+    change: s.pastChanges.at(-1),
+    pastChanges: s.pastChanges.slice(0, -1),
+    futureChanges: [s.change, ...s.futureChanges],
+  };
 }
 
 function redone(s: PlannerState): PlannerState {
   const [next, ...rest] = s.future;
   if (next === undefined) return s;
-  return { past: [...s.past, s.present], present: next, future: rest, session: IDLE };
+  const [change, ...later] = s.futureChanges;
+  return {
+    past: [...s.past, s.present],
+    present: next,
+    future: rest,
+    session: IDLE,
+    change,
+    pastChanges: [...s.pastChanges, s.change],
+    futureChanges: later,
+  };
 }
 
 export function reducePlanner(engine: Engine, s: PlannerState, a: PlannerAction): PlannerState {
@@ -120,7 +176,7 @@ export function reducePlanner(engine: Engine, s: PlannerState, a: PlannerAction)
     case 'refuse':
       return confirming ? s : { ...s, session: { kind: 'refused', lines: a.lines } };
     case 'confirm':
-      return s.session.kind === 'confirming' ? commit(s, s.session.pending.build) : s;
+      return s.session.kind === 'confirming' ? commit(s, s.session.pending.build, s.session.pending.title) : s;
     case 'cancel':
       return confirming ? { ...s, session: IDLE } : s;
     case 'dismiss':
@@ -130,7 +186,7 @@ export function reducePlanner(engine: Engine, s: PlannerState, a: PlannerAction)
     case 'redo':
       return confirming ? s : redone(s);
     case 'replace':
-      return sameBuild(s.present, a.build) ? s : commit(s, a.build);
+      return sameBuild(s.present, a.build) ? s : commit(s, a.build, OPENED_A_LINK);
     case 'reset':
       return plannerAt(a.build);
   }

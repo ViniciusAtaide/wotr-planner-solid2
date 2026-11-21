@@ -36,6 +36,7 @@ export function createPlanner(engine: Engine, initial: Build) {
     restore,
     build,
     session,
+    change: () => state().change,
     walked,
     pending: () => {
       const s = session();

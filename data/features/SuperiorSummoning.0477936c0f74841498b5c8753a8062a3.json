@@ -7,6 +7,10 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_38155ca9e4055bb48a89240a2055dcc3"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Magic"
     }
   ],
   "Groups": [

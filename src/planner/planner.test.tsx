@@ -2,7 +2,7 @@ import { join } from 'node:path';
 import { cleanup, fireEvent, render, screen, waitFor } from '@solidjs/testing-library';
 import { flush } from 'solid-js';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
-import { abilityScores, skillRanks, slotKey, type Build, type SlotId } from '~engine/build';
+import { abilityScores, rankLevel, skillRanks, slotKey, type Build, type SlotId } from '~engine/build';
 import { encodeBuild } from '~engine/codec';
 import { loadData } from '~engine/load';
 import { readDataDir } from '~engine/data-dir';
@@ -19,13 +19,16 @@ import {
   type OptionView,
   type ToolRefusal,
 } from '~engine/mcp';
-import { abilityScoreRange, linkDidNotOpen, nameOf } from '~engine/refusals';
+import { picker } from '~engine/pickers';
+import { linkDidNotOpen, nameOf } from '~engine/refusals';
 
 import { EMPTY, openHash } from './link';
-import { AddPanel, LevelPanel, SlotPicker, StartPanel } from './panels';
 import Planner from './Planner';
-import { createPlanner } from './state';
-import Timeline from './Timeline';
+import { createPlanner, type Planner as PlannerApi } from './state';
+import { MythicStep, NextLevelStep, RankEditor, SlotStep, type TrailApi } from './steps';
+import Trail from './Trail';
+import { reduceTrail, TRAIL_START, type TrailState } from './trail-state';
+import type { Selection } from './workspace-state';
 import { optionName } from './words';
 
 const gate = vi.hoisted(() => ({
@@ -114,13 +117,39 @@ const ordered = (b: Build): Build => ({
   picks: [...b.picks].sort((x, y) => slotKey(x.slot).localeCompare(slotKey(y.slot))),
 });
 
-function timelineOf(build: Build) {
-  const planner = render(() => {
-    const p = createPlanner(e, build);
-    return <Timeline planner={p} selected={undefined} onSelect={() => {}} />;
-  });
+function trailOf(build: Build) {
+  const shown = render(() => (
+    <Trail
+      planner={createPlanner(e, build)}
+      state={TRAIL_START}
+      send={() => {}}
+      selection={undefined}
+      select={() => {}}
+      phone={false}
+    />
+  ));
   flush();
-  return planner.container;
+  return shown.container;
+}
+
+const LEVEL_STOPS = '.trail-stop:not(.trail-stop--mythic):not(.trail-stop--next):not(.trail-stop--chapter)';
+
+function apiOf(planner: PlannerApi, state: TrailState = TRAIL_START): TrailApi {
+  let s = state;
+  let selection: Selection | undefined;
+  return {
+    planner,
+    view: () => ({ data: e.data, build: planner.build(), walk: planner.walked() }),
+    state: () => s,
+    send: (a) => {
+      s = reduceTrail(s, a);
+    },
+    selection: () => selection,
+    select: (next) => {
+      selection = next;
+    },
+    edit: (edit, title) => planner.edit(edit, title),
+  };
 }
 
 describe('a Build code from the MCP opens the same Build in the UI', () => {
@@ -131,8 +160,8 @@ describe('a Build code from the MCP opens the same Build in the UI', () => {
       const opened = await openedBuild(`#b=${step.code}`);
       expect(ordered(opened)).toEqual(ordered(step.build));
       expect(await encodeBuild(e.data, opened)).toBe(step.code);
-      const shown = timelineOf(opened);
-      expect(shown.querySelectorAll('.ww-level').length).toBe(Math.max(1, opened.levels.length));
+      const shown = trailOf(opened);
+      expect(shown.querySelectorAll(LEVEL_STOPS).length).toBe(opened.levels.length);
       for (const p of opened.picks) {
         expect(shown.textContent).toContain(optionName(e.data, p.feature, p.param));
       }
@@ -143,9 +172,9 @@ describe('a Build code from the MCP opens the same Build in the UI', () => {
     const code = await encodeBuild(e.data, jackInTheGreen.build);
     const opened = await openedBuild(`#b=${code}`);
     expect(opened).toEqual(await (await import('~engine/codec')).decodeBuild(e.data, code));
-    const shown = timelineOf(opened);
-    expect(shown.querySelectorAll('.ww-level').length).toBe(opened.levels.length);
-    expect(shown.querySelectorAll('.ww-rank').length).toBe(opened.ranks?.length ?? 0);
+    const shown = trailOf(opened);
+    expect(shown.querySelectorAll(LEVEL_STOPS).length).toBe(opened.levels.length);
+    expect(shown.querySelectorAll('.trail-stop--mythic').length).toBe(opened.ranks?.length ?? 0);
   });
 
   test('a link that does not open says so and starts empty', async () => {
@@ -154,8 +183,8 @@ describe('a Build code from the MCP opens the same Build in the UI', () => {
     gate.load = () => Promise.resolve(e);
     const { container } = render(() => <Planner />);
     await screen.findByText(linkDidNotOpen('load', 'notACode'));
-    expect(container.querySelectorAll('.ww-level').length).toBe(1);
-    expect(container.querySelector('.ww-level')?.textContent).toContain('No levels yet');
+    expect(container.querySelectorAll(LEVEL_STOPS).length).toBe(0);
+    expect(container.querySelector('.trail-here__title')?.textContent).toBe('Begin · choose a first class');
     cleanup();
     history.replaceState(null, '', '/');
   });
@@ -224,7 +253,7 @@ const withLevels = (n: number): Build => ({
 
 class FakeMediaQueryList extends EventTarget implements MediaQueryList {
   matches = false;
-  readonly media = '(max-width: 767px)';
+  readonly media = '(max-width: 899px)';
   onchange = null;
   addListener(): void {}
   removeListener(): void {}
@@ -259,25 +288,47 @@ async function openPlanner(build: Build | undefined, phone = false): Promise<str
   render(() => <Planner />);
   await screen.findByRole('toolbar', { name: 'Build' });
   flush();
-  await waitFor(() => expect(screen.getByRole('button', { name: /Copy link/ })).toBeEnabled());
+  await waitFor(() => expect(location.hash).toMatch(/^#b=./));
   if (code !== undefined) expect(location.hash).toBe(`#b=${code}`);
   return code;
 }
 
-const levelRows = () => document.querySelectorAll('.ww-level').length;
+const levelRows = () => document.querySelectorAll(LEVEL_STOPS).length;
 const button = (name: string | RegExp) => screen.getByRole('button', { name });
 const dialog = () => document.querySelector('[role="dialog"]');
+const hereTitle = () => document.querySelector('.trail-here__title')?.textContent;
 
-function changeInput(label: string, value: string): void {
-  fireEvent.change(screen.getByLabelText(label), { target: { value } });
+function tap(name: string | RegExp): void {
+  fireEvent.click(button(name));
+  flush();
+}
+
+function openMenu(): void {
+  tap('Build menu');
+}
+
+function menuItem(name: string): void {
+  fireEvent.click(screen.getByRole('menuitem', { name }));
+  flush();
+}
+
+function openCharacter(): void {
+  const head = document.querySelector<HTMLElement>('.trail-card__head');
+  if (head === null) throw new Error('no character card');
+  fireEvent.click(head);
   flush();
 }
 
 async function openPreview(): Promise<void> {
-  fireEvent.click(button('Start'));
-  flush();
-  changeInput('Strength', '10');
+  openCharacter();
+  tap('Lower Strength');
   await waitFor(() => expect(dialog()).not.toBeNull());
+}
+
+function chipNamed(text: string): HTMLElement {
+  const chip = [...document.querySelectorAll<HTMLElement>('.trail-chip')].find((c) => c.textContent?.includes(text));
+  if (chip === undefined) throw new Error(`no chip with ${text}`);
+  return chip;
 }
 
 async function storedBlockCode(code: string): Promise<string> {
@@ -294,6 +345,179 @@ async function storedBlockCode(code: string): Promise<string> {
     .replace(/\//g, '_')
     .replace(/=+$/, '');
 }
+
+function everyChoiceMade(build: Build): Build {
+  let b = build;
+  for (;;) {
+    const empty = createPlanner(e, b)
+      .walked()
+      .slots.find((s) => s.pick === undefined);
+    if (empty === undefined) return b;
+    const option = picker(e.data, b, empty.id, e.G)?.options.find((o) => o.shown && o.closed === undefined);
+    if (option === undefined) throw new Error(`nothing open at ${slotKey(empty.id)}`);
+    b = {
+      ...b,
+      picks: [...b.picks, { slot: empty.id, feature: option.feature, ...(option.param && { param: option.param }) }],
+    };
+  }
+}
+
+const slotNamed = (build: Build, assetName: string): SlotId => {
+  const slot = createPlanner(e, build)
+    .walked()
+    .slots.find((x) => e.data.blueprints.get(x.id.selection)?.assetName === assetName);
+  if (slot === undefined) throw new Error(`no ${assetName} slot`);
+  return slot.id;
+};
+
+describe('the levelling trail (build ticket 07)', () => {
+  beforeEach(() => {
+    gate.decodeHolds.clear();
+    gate.decodeStarted.clear();
+    gate.encodeHold = undefined;
+    media.matches = false;
+  });
+  afterEach(() => {
+    cleanup();
+    history.replaceState(null, '', '/');
+  });
+
+  test('a reload keeps the Build, through the #b= link', async () => {
+    await openPlanner(undefined);
+    tap('Human');
+    tap('Lawful Good');
+    tap(/^Fighter/);
+    await waitFor(() => expect(levelRows()).toBe(1));
+    const shown = [...document.querySelectorAll('.trail-card__line')].map((n) => n.textContent);
+    await waitFor(async () => {
+      const opened = await openHash(e, location.hash);
+      expect(opened.kind === 'opened' && opened.build.levels.length).toBe(1);
+    });
+    const reloaded = location.hash;
+    cleanup();
+    history.replaceState(null, '', `/${reloaded}`);
+    render(() => <Planner />);
+    await screen.findByRole('toolbar', { name: 'Build' });
+    await waitFor(() => expect(levelRows()).toBe(1));
+    expect([...document.querySelectorAll('.trail-card__line')].map((n) => n.textContent)).toEqual(shown);
+    expect(shown[0]).toContain('Human · Lawful Good');
+  });
+
+  test('a pick opens the next empty choice in place, and the Undo line names it', async () => {
+    await openPlanner(cleaver);
+    const first = hereTitle();
+    expect(first).toMatch(/^Your character · choose /);
+    const option = document.querySelector<HTMLElement>('.trail-here button.ww-option');
+    const name = option?.querySelector('.ww-option__name')?.textContent ?? '';
+    fireEvent.click(option ?? document.body);
+    flush();
+    expect(hereTitle()).not.toBe(first);
+    expect(document.querySelector('.planner-undo')?.textContent).toContain(`Picked ${name}`);
+    tap('Undo');
+    expect(hereTitle()).toBe(first);
+  });
+
+  test('race, +2, alignment and score edits reach the Undo line, and an undo names the change before', async () => {
+    await openPlanner(undefined);
+    const line = () => document.querySelector('.planner-undo__what')?.textContent;
+    tap('Human');
+    expect(line()).toBe('Race Human');
+    tap('Racial +2 to Strength');
+    expect(line()).toBe('Racial +2 to Strength');
+    tap('Lawful Good');
+    expect(line()).toBe('Alignment Lawful Good');
+    tap('Raise Dexterity');
+    expect(line()).toBe('Dexterity 11');
+    tap('Undo');
+    expect(line()).toBe('Alignment Lawful Good');
+    fireEvent.keyDown(window, { key: 'z', metaKey: true, shiftKey: true });
+    flush();
+    expect(line()).toBe('Dexterity 11');
+  });
+
+  test('from 900 px wide the character card keeps its controls after level 1', async () => {
+    await openPlanner(withLevels(2));
+    expect(button('Raise Strength')).toBeEnabled();
+    expect(button('Human')).toBeTruthy();
+    expect(document.querySelector('[aria-label="The character"] button.trail-card__head')).toBeNull();
+  });
+
+  test('on a phone the card stays open until level 1 is done, then shrinks to one line', async () => {
+    await openPlanner({ ...cleaver, picks: [] }, true);
+    expect(screen.queryByRole('button', { name: 'Raise Strength' })).not.toBeNull();
+    cleanup();
+    await openPlanner(everyChoiceMade(withLevels(2)), true);
+    expect(screen.queryByRole('button', { name: 'Raise Strength' })).toBeNull();
+    expect(document.querySelector('.trail-card--folded')).not.toBeNull();
+  });
+
+  test('a tapped chip opens its pick in place, with a way back to the next choice', async () => {
+    await openPlanner(cleaver);
+    const next = hereTitle();
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
+    expect(hereTitle()).toBe('Level 1 · choose feat');
+    tap('Back to the next choice');
+    expect(hereTitle()).toBe(next);
+  });
+
+  test('Continue as the previous class adds the next level in one tap', () => {
+    const planner = createPlanner(e, cleaver);
+    render(() => <NextLevelStep trail={apiOf(planner)} />);
+    flush();
+    tap(/^Continue as Fighter/);
+    expect(planner.build().levels.map((l) => l.class)).toEqual([fighter, fighter]);
+  });
+
+  test('the class list waits for Another class…, and offers player classes only (comparison bug 5)', () => {
+    const planner = createPlanner(e, cleaver);
+    const api = apiOf(planner);
+    const { unmount } = render(() => <NextLevelStep trail={api} />);
+    flush();
+    expect(document.querySelectorAll('.ww-option').length).toBe(0);
+    unmount();
+    render(() => <NextLevelStep trail={apiOf(planner, { ...TRAIL_START, otherClass: true })} />);
+    flush();
+    const names = [...document.querySelectorAll('.ww-option__name')].map((n) => n.textContent);
+    expect(names[0]).toBe('Fighter');
+    for (const creature of ['Animal', 'Dragon', 'Monstrous Humanoid']) expect(names).not.toContain(creature);
+  });
+
+  test('the Mythic path list leaves out the companions’ class and Shard Powers (comparison bug 5)', () => {
+    const ranked: Build = { ...cleaver, ranks: [{ class: MYTHIC_HERO, level: rankLevel(1) }] };
+    render(() => <RankEditor trail={apiOf(createPlanner(e, ranked))} rank={1} />);
+    flush();
+    const names = [...document.querySelectorAll('.ww-option__name')].map((n) => n.textContent);
+    expect(names).toContain('Aeon');
+    expect(names).not.toContain('Mythic Companion');
+    expect(names).not.toContain('Shard Powers');
+  });
+
+  test('a due Mythic rank lists the paths with their status', () => {
+    const levels = Array.from({ length: 10 }, () => ({ class: fighter }));
+    render(() => <MythicStep trail={apiOf(createPlanner(e, { ...cleaver, levels }))} />);
+    flush();
+    expect(document.querySelectorAll('button.ww-option').length).toBeGreaterThan(0);
+    expect(screen.getByText(/^Your story grants Mythic rank 1 at level/)).toBeTruthy();
+  });
+
+  test('the menu copies the link and exports the build sheet', async () => {
+    const written: string[] = [];
+    Object.defineProperty(navigator, 'clipboard', {
+      configurable: true,
+      value: { writeText: (text: string) => Promise.resolve(void written.push(text)) },
+    });
+    await openPlanner(cleaver);
+    openMenu();
+    await waitFor(() => expect(screen.getByRole('menuitem', { name: 'Copy link' })).toBeEnabled());
+    menuItem('Copy link');
+    await screen.findByRole('menuitem', { name: 'Link copied.' });
+    expect(written[0]).toBe(`${location.origin}/${location.hash}`);
+    menuItem('Export as text');
+    await screen.findByRole('menuitem', { name: 'Build sheet copied.' });
+    expect(written[1]).toContain('Level 1: Fighter 1 · Power Attack');
+  });
+});
 
 describe('render regressions (ticket 05d), each failing before its fix', () => {
   beforeEach(() => {
@@ -325,33 +549,33 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
 
   test('⌘Z in the Cascade preview cancels it, keeping the history', async () => {
     await openPlanner(cleaver);
-    fireEvent.click(button('Start'));
-    flush();
-    changeInput('Dexterity', '11');
-    await openPreview();
+    openCharacter();
+    tap('Raise Dexterity');
+    tap('Lower Strength');
+    await waitFor(() => expect(dialog()).not.toBeNull());
     fireEvent.keyDown(dialog() ?? window, { key: 'z', metaKey: true });
     flush();
     expect(dialog()).toBeNull();
-    expect(screen.getByLabelText('Dexterity')).toHaveValue(11);
-    expect(screen.getByLabelText('Strength')).toHaveValue(13);
-    expect(document.querySelector('[inert]')).toBeNull();
-    expect(button(/Undo/)).toBeEnabled();
+    const values = [...document.querySelectorAll('.trail-stat__value')].map((v) => v.textContent);
+    expect(values.slice(0, 2)).toEqual(['13', '11']);
+    expect(document.querySelector('[inert]:not(.planner-build__trail)')).toBeNull();
+    expect(button('Undo')).toBeEnabled();
   });
 
-  test('the phone sheet stays open on a pick that waits on the Cascade preview', async () => {
+  test('a chip’s pick that waits on the Cascade preview keeps its step open, also after Cancel', async () => {
     await openPlanner(cleaver, true);
-    const chip = [...document.querySelectorAll('.ww-pick')].find((c) => c.textContent?.includes('Power Attack'));
-    fireEvent.click(chip ?? document.body);
+    fireEvent.click(chipNamed('Power Attack'));
     flush();
-    expect(document.querySelector('.planner-sheet')).not.toBeNull();
-    const toughness = [...document.querySelectorAll('button.ww-option')].find((o) =>
+    const toughness = [...document.querySelectorAll('.trail-here button.ww-option')].find((o) =>
       o.textContent?.includes('Toughness'),
     );
     expect(toughness).toBeDefined();
     fireEvent.click(toughness ?? document.body);
     flush();
     await waitFor(() => expect(dialog()).not.toBeNull());
-    expect(document.querySelector('.planner-sheet')).not.toBeNull();
+    expect(hereTitle()).toBe('Level 1 · choose feat');
+    tap(/^Cancel/);
+    expect(hereTitle()).toBe('Level 1 · choose feat');
   });
 
   test('Tab stays inside the Cascade preview, and the page behind it is inert', async () => {
@@ -375,41 +599,38 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
 
   test('focus goes back to the control that opened the preview (comparison bug 3)', async () => {
     await openPlanner(cleaver);
-    fireEvent.click(button('Start'));
-    flush();
-    const strength = screen.getByLabelText('Strength');
-    strength.focus();
-    fireEvent.change(strength, { target: { value: '10' } });
+    openCharacter();
+    const lower = button('Lower Strength');
+    lower.focus();
+    fireEvent.click(lower);
     flush();
     await waitFor(() => expect(dialog()).not.toBeNull());
-    fireEvent.click(button(/^Cancel/));
-    flush();
-    await waitFor(() => expect(document.activeElement).toBe(screen.getByLabelText('Strength')));
+    tap(/^Cancel/);
+    await waitFor(() => expect(document.activeElement).toBe(button('Lower Strength')));
   });
 
-  test('a picked option keeps focus, and Clear this pick comes after the options (comparison bug 3)', async () => {
+  test('a Cascade confirmed lands on the first pick it cleared', async () => {
     await openPlanner(cleaver);
-    const empty = [...document.querySelectorAll<HTMLElement>('.ww-pick--empty')].find((c) =>
-      /deity/i.test(c.textContent ?? ''),
-    );
-    if (empty === undefined) throw new Error('no empty deity chip');
-    fireEvent.click(empty);
+    await openPreview();
+    tap(/^Clear 2 picks/);
+    expect(dialog()).toBeNull();
+    expect(hereTitle()).toBe('Level 1 · choose feat');
+    expect(document.querySelector('.planner-undo')?.textContent).toContain('Strength 12');
+  });
+
+  test('Clear this pick comes after the options (comparison bug 3)', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Power Attack'));
     flush();
-    const option = document.querySelector<HTMLElement>('button.ww-option');
-    if (option === null) throw new Error('no open option');
-    option.focus();
-    fireEvent.click(option);
-    flush();
-    await waitFor(() => expect(document.activeElement).toBe(option));
-    expect(option.isConnected).toBe(true);
+    const option = document.querySelector<HTMLElement>('.trail-here button.ww-option');
     const clear = button('Clear this pick');
-    expect(option.compareDocumentPosition(clear) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(option !== null && option.compareDocumentPosition(clear) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   });
 
   test('side by side becomes one Build, its segment pressed, after narrowing to phone width', async () => {
     await openPlanner(cleaver);
-    fireEvent.click(button('Fork this Build'));
-    flush();
+    openMenu();
+    menuItem('Fork this Build');
     expect(document.querySelectorAll('section.planner-build').length).toBe(2);
     setPhone(true);
     expect(document.querySelectorAll('section.planner-build').length).toBe(1);
@@ -451,13 +672,13 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
 
   test('the page’s own Build, pasted as another code, adds no undo entry', async () => {
     const code = await openPlanner(cleaver);
-    expect(button(/Undo/)).toBeDisabled();
+    expect(screen.queryByRole('button', { name: 'Undo' })).toBeNull();
     const before = gate.decoded;
     pasteHash(`#b=${await storedBlockCode(code ?? '')}`);
     await waitFor(() => expect(gate.decoded).toBeGreaterThan(before));
     await new Promise((r) => setTimeout(r, 20));
     flush();
-    expect(button(/Undo/)).toBeDisabled();
+    expect(screen.queryByRole('button', { name: 'Undo' })).toBeNull();
   });
 
   test('a link pasted while the game data loads opens once the planner is ready', async () => {
@@ -483,55 +704,24 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     render(() => <Planner />);
     await screen.findByRole('toolbar', { name: 'Build' });
     flush();
-    expect(screen.queryByDisplayValue(/#b=$/)).toBeNull();
-    expect(screen.getByDisplayValue('Making the link…')).toBeInTheDocument();
-    expect(button(/Copy link/)).toBeDisabled();
+    openMenu();
+    expect(screen.getByRole('menuitem', { name: 'Making the link…' })).toBeDisabled();
+    expect(location.hash).not.toMatch(/#b=$/);
     held.release();
-    await waitFor(() => expect(button(/Copy link/)).toBeEnabled());
+    await waitFor(() => expect(screen.getByRole('menuitem', { name: 'Copy link' })).toBeEnabled());
   });
 
-  test('a select names a Build value its options don’t list', () => {
-    render(() => <LevelPanel planner={createPlanner(e, { levels: [{ class: MYTHIC_HERO }], picks: [] })} level={1} />);
-    flush();
-    const select = screen.getByLabelText('Class');
-    expect(select instanceof HTMLSelectElement && select.selectedOptions[0]?.textContent).toBe(
-      nameOf(e.data, MYTHIC_HERO),
-    );
+  test('a stop names a class the class list doesn’t offer', () => {
+    trailOf({ levels: [{ class: MYTHIC_HERO }], picks: [] });
+    expect(document.querySelector('.trail-stop__class')?.textContent).toBe(`${nameOf(e.data, MYTHIC_HERO)} 1`);
   });
 
-  test('the Race select shows the race the Build holds after a change (comparison bug 1)', () => {
-    let planner!: ReturnType<typeof createPlanner>;
-    render(() => {
-      planner = createPlanner(e, cleaver);
-      return <StartPanel planner={planner} />;
-    });
-    flush();
-    const select = screen.getByLabelText('Race');
-    if (!(select instanceof HTMLSelectElement)) throw new Error('no Race select');
-    const human = [...select.options].find((o) => o.text === 'Human');
-    if (human === undefined) throw new Error('no Human option');
-    fireEvent.change(select, { target: { value: human.value } });
-    flush();
-    expect(planner.build().race).toBe(human.value);
-    expect(select.selectedOptions[0]?.textContent).toBe('Human');
-  });
-
-  test('the Add panel keeps showing the class it will add (comparison bug 2)', () => {
-    let planner!: ReturnType<typeof createPlanner>;
-    render(() => {
-      planner = createPlanner(e, cleaver);
-      return <AddPanel planner={planner} />;
-    });
-    flush();
-    const select = screen.getByLabelText(/^Level /);
-    if (!(select instanceof HTMLSelectElement)) throw new Error('no class select');
-    const fighter = [...select.options].find((o) => o.text === 'Fighter');
-    if (fighter === undefined) throw new Error('no Fighter option');
-    fireEvent.change(select, { target: { value: fighter.value } });
-    flush();
-    fireEvent.click(screen.getByRole('button', { name: /^Add level/ }));
-    flush();
-    expect(select.selectedOptions[0]?.textContent).toBe('Fighter');
+  test('the race chip the Build holds is pressed after a change (comparison bug 1)', async () => {
+    await openPlanner(cleaver);
+    openCharacter();
+    tap('Human');
+    expect(button('Human')).toHaveAttribute('aria-pressed', 'true');
+    expect(button('Elf')).toHaveAttribute('aria-pressed', 'false');
   });
 
   test('before level 1 the stats say they are the point buy only (comparison bug 4)', async () => {
@@ -542,28 +732,8 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     expect(screen.queryByText(/Point buy only/)).toBeNull();
   });
 
-  test('the Add panel offers player classes only (comparison bug 5)', () => {
-    render(() => <AddPanel planner={createPlanner(e, cleaver)} />);
-    flush();
-    const texts = [...(screen.getByLabelText(/^Level /) as HTMLSelectElement).options].map((o) => o.text);
-    expect(texts).toContain('Fighter');
-    for (const creature of ['Animal', 'Dragon', 'Monstrous Humanoid']) expect(texts).not.toContain(creature);
-    const mythic = [...(screen.getByLabelText(/^Mythic rank /) as HTMLSelectElement).options].map((o) => o.text);
-    expect(mythic).not.toContain('Mythic Companion');
-    expect(mythic).not.toContain('Shard Powers');
-  });
-
-  const slotNamed = (build: Build, assetName: string): SlotId => {
-    const slot = createPlanner(e, build)
-      .walked()
-      .slots.find((x) => e.data.blueprints.get(x.id.selection)?.assetName === assetName);
-    if (slot === undefined) throw new Error(`no ${assetName} slot`);
-    return slot.id;
-  };
-
   test('picker lists are in name order (audit: deities and Weapon Focus out of order)', () => {
-    const planner = createPlanner(e, cleaver);
-    render(() => <SlotPicker planner={planner} slot={slotNamed(cleaver, 'DeitySelection')} />);
+    render(() => <SlotStep trail={apiOf(createPlanner(e, cleaver))} slot={slotNamed(cleaver, 'DeitySelection')} />);
     flush();
     const names = [...document.querySelectorAll('.ww-option .ww-option__name')].map((n) => n.textContent ?? '');
     expect(names.length).toBeGreaterThan(5);
@@ -571,8 +741,7 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
   });
 
   test('the closed summary names each reason once (audit)', () => {
-    const planner = createPlanner(e, cleaver);
-    render(() => <SlotPicker planner={planner} slot={slotNamed(cleaver, 'BasicFeatSelection')} />);
+    render(() => <SlotStep trail={apiOf(createPlanner(e, cleaver))} slot={slotNamed(cleaver, 'BasicFeatSelection')} />);
     flush();
     const summary = document.querySelector('.ww-count')?.textContent ?? '';
     const labels = summary
@@ -583,74 +752,61 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     expect(new Set(labels).size).toBe(labels.length);
   });
 
-  test('the Racial +2 row keeps its place for a race whose bonuses are fixed (audit: layout shift)', () => {
+  test('the +2 row keeps its place for a race whose bonuses are fixed (audit: layout shift)', async () => {
     const elf = [...e.data.blueprints.values()].find((b) => b.$type === 'BlueprintRace' && b.name === 'Elf');
     if (elf === undefined) throw new Error('no Elf');
-    render(() => <StartPanel planner={createPlanner(e, { ...cleaver, race: elf.guid })} />);
-    flush();
-    expect(screen.getByText('Racial +2')).toBeTruthy();
-    expect(screen.getByText('Set by the race')).toBeTruthy();
+    await openPlanner({ ...cleaver, race: elf.guid });
+    openCharacter();
+    expect(button('Racial +2 to Strength')).toBeDisabled();
+    expect(screen.getByText(/Elf sets its bonuses/)).toBeTruthy();
   });
 
   test('a refusal shows in the floating notice area, not in the page flow (audit: layout shift)', async () => {
     await openPlanner(cleaver);
-    fireEvent.click(button('Start'));
-    flush();
-    changeInput('Strength', '6');
+    openCharacter();
+    for (let i = 0; i < 5; i++) tap('Raise Strength');
+    for (let i = 0; i < 6; i++) tap('Raise Dexterity');
     await waitFor(() => expect(document.querySelector('.planner-notices [role="alert"]')).not.toBeNull());
   });
 
-  test('the Level chip says what the level holds (audit)', () => {
-    const withSkills: Build = {
+  test('the Skills chip says what the level holds (audit)', () => {
+    trailOf({
       ...cleaver,
       levels: cleaver.levels.map((l, i) => (i === 0 ? { ...l, skills: skillRanks({ SkillAthletics: 1 }) } : l)),
-    };
-    render(() => <Timeline planner={createPlanner(e, withSkills)} selected={undefined} onSelect={() => {}} />);
-    flush();
-    expect(screen.getByText('1 skill rank')).toBeTruthy();
+    });
+    expect(chipNamed('Skills').textContent).toMatch(/1 (rank|of)/);
   });
 
-  test('an ability score of 6 or 12.5 is refused, worded with the number typed', () => {
-    let planner!: ReturnType<typeof createPlanner>;
-    render(() => {
-      planner = createPlanner(e, cleaver);
-      return <StartPanel planner={planner} />;
-    });
-    flush();
-    for (const typed of [6, 12.5]) {
-      changeInput('Strength', String(typed));
-      expect(planner.notice()).toEqual([abilityScoreRange(typed)]);
-      expect(planner.build()).toBe(cleaver);
-    }
+  test('a score steps no lower than 7 and no higher than 18', async () => {
+    await openPlanner({ ...cleaver, scores: abilityScores({ ...SCORES, Strength: 7, Dexterity: 18 }) });
+    openCharacter();
+    expect(button('Lower Strength')).toBeDisabled();
+    expect(button('Raise Dexterity')).toBeDisabled();
   });
 
   test('Close keeps the Build being edited, the second one', async () => {
     await openPlanner(cleaver);
-    fireEvent.click(button('Fork this Build'));
+    openMenu();
+    menuItem('Fork this Build');
+    const second = document.querySelectorAll('section.planner-build')[1];
+    const title = second?.querySelector<HTMLElement>('.trail-stop__class');
+    fireEvent.click(title ?? document.body);
     flush();
-    fireEvent.click(screen.getAllByRole('button', { name: 'Add a level or rank' }).at(-1) ?? document.body);
-    flush();
-    changeInput('Level 2', fighter);
-    fireEvent.click(button('Add level 2'));
-    flush();
-    expect(levelRows()).toBe(3);
-    fireEvent.click(button(/^Close the fork/));
-    flush();
-    fireEvent.click(button('Keep Second'));
-    flush();
-    expect(levelRows()).toBe(2);
+    tap('Remove level 1');
+    expect(levelRows()).toBe(1);
+    tap(/^Close the fork/);
+    tap('Keep Second');
+    expect(levelRows()).toBe(0);
   });
 
   test('Close the fork asks before dropping the other Build, and Cancel keeps both (audit)', async () => {
     await openPlanner(cleaver);
-    fireEvent.click(button('Fork this Build'));
-    flush();
-    fireEvent.click(button(/^Close the fork/));
-    flush();
+    openMenu();
+    menuItem('Fork this Build');
+    tap(/^Close the fork/);
     expect(document.querySelectorAll('section.planner-build').length).toBe(2);
     expect(screen.getByText(/drop the First Build\?/)).toBeTruthy();
-    fireEvent.click(button('Cancel'));
-    flush();
+    tap('Cancel');
     expect(document.querySelectorAll('section.planner-build').length).toBe(2);
     expect(screen.queryByText(/drop the First Build\?/)).toBeNull();
   });

@@ -23,6 +23,10 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_70a139f0a4c6c534eaa34feea0d08622"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Melee, Ranged, ClassSpecific"
     }
   ],
   "ExceptWhiteListed": false,

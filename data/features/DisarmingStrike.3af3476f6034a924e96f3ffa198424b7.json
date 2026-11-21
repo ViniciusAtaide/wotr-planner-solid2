@@ -30,6 +30,10 @@
       "IsFeatureSelectionWhiteList": false,
       "Stat": "BaseAttackBonus",
       "Value": 9
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, CombatManeuver"
     }
   ],
   "Groups": [

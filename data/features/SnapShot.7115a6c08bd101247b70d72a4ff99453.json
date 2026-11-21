@@ -26,6 +26,10 @@
     {
       "$type": "AddMechanicsFeature",
       "m_Feature": "SnapShot"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Ranged, Defense"
     }
   ],
   "Groups": [

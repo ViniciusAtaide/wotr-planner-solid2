@@ -14,6 +14,10 @@
       "InvertDifficultyRequirements": false,
       "MinDifficulty": "Story",
       "m_Facts": []
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Skills"
     }
   ],
   "Groups": [

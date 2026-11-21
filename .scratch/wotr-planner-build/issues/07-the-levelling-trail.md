@@ -1,6 +1,7 @@
 # The levelling trail (UI remake, part 1)
 
-Status: open
+Status: done
+Session: ticket-07-trail
 Blocked by: none
 Plan: [plan](../plan.md)
 
@@ -109,6 +110,8 @@ Build each as the prototype does, so it's easy to change, and record the answers
 3. Should adding a level also add its Mythic rank at the Expected level, as one edit?
 4. Should step titles use cleaned names ("choose discovery", not "choose discovery (alchemist)")?
 
+Built as the prototype does, each in one place so it's easy to change (`src/planner/README.md`, "Questions built the prototype's way"): 1, a character chip; 2, a list each time, with the current path first and marked; 3, no; 4, raw names. **Answers: not yet given.**
+
 ## Done when
 
 - The page matches the decisions above at 375×812 and 1280×800, checked in the browser. The handover lists screenshots of both, folded and unfolded.
@@ -123,3 +126,75 @@ Build each as the prototype does, so it's easy to change, and record the answers
 - The feature's `README.md` describes the flow in our own words.
 - `bun run check` passes. The work stays uncommitted in its worktree for review, then becomes one commit by path through the hook. Don't push.
 - `Status: done` and an `## Outcome`.
+
+## Outcome
+
+Built on `ticket/levelling-trail`. The planner page is the levelling trail: the character card, one stop per level with its picks as chips, each Mythic rank its own stop, milestones in gold, the next step open in place with auto-advance, the one-tap next level, the lazy class list, Mythic ranks offered at their Expected level, skills with a budget and "Same as", tap-to-edit chips with "Back to the next choice", the Cascade landing on the first cleared pick, the Undo line with ⌘Z and ⇧⌘Z, folding under 900 px, the ⋯ menu (Copy link, Fork this Build, Export as text), and fork and compare as before. `Timeline.tsx` and `panels.tsx` are gone; their tests moved onto the trail.
+
+**Engine:**
+- `Walk.skillPoints` and `Walk.attributePoints`: each level's skill budget (`ApplySkillPoints.Apply`'s `TotalSkillPoints`) and ability increase, from the walk.
+- S's `characterWideSlots`, naming `BACKGROUNDS_BASE_SELECTION` with a cite (`CharGenFeatureSelectorPhaseVM.GetFeaturePriority`).
+- S's `mythicStartingClass`, so a first Mythic rank lists Mythic Hero first.
+- S's `featureTags`: the importer now keeps `FeatureTagsComponent` (243 data files changed). `tools/importer` depends on `engine/pickers` for the reader check, recorded in `features.ts` and ADR 0008's list.
+
+**The step model** is `src/planner/trail-state.ts`, a pure module with `TrailState` and `reduceTrail`, tested in `trail-state.test.tsx`: the auto-advance order, skills closing on the budget or on Done, folding, a Cascade landing on the first cleared pick, and Mythic due. A reload keeping the Build is tested in `planner.test.tsx`. `PlannerState` keeps the last change's title (`change`) for the Undo line.
+
+**Feat icons (user, 2026-11-21, asked mid-ticket):** the Rust planner's twelve feat-category drawings, copied unchanged into the design system as `FeatIcon`. Each sits on a feat's chip and on its row in a pick list. The category comes from the game's own feat tags, the ones its level-up list shows (`FeatureTagsComponent`), sorted onto the twelve drawings by `src/planner/feat-category.ts`. The game has no racial tag, so the Racial drawing is unused. **Answer (user, 2026-11-21, relayed by the coordinating session):** keep the feat tags ("it's the feat tags my bad I mistook it with feature groups"), with the importer change and ADR 0008's note.
+
+**Questions the ticket didn't settle**, sent to the coordinator. The user's answers (2026-11-21) kept the defaults as built:
+- **A. Gear:** a Gear card after the trail, one line listing what's worn; a tap opens the Gear editor in place.
+- **B. Editing a level or rank:** tapping the stop's title opens its editor in place; an archetype also shows as a chip at the class's first level, not part of auto-advance.
+- **C. Export:** it copies a plain-text build sheet to the clipboard: a character line, then one line per level and rank with its picks.
+
+### Measured against the baseline
+
+The same profile as `ui-interaction-comparison.md`'s level-20 Build: Human, +2 Strength, Lawful Good, Abadar, point buy 17/14/14/10/12/10; Fighter 1–2 (Two-Handed Fighter), Rogue 3–10 (Knife Master), Fighter 11–20; Toughness, Power Attack and Cleave at level 1, then the first open option in every slot; an increase at every 4th level; every skill point spent ("Same as" when it fits, else steppers); 10 Mythic ranks (Mythic Hero, then a path at rank 3); 12 Gear items. 56 picks in all.
+
+The run was driven in the built-in browser by an injected harness (`ticket-07-shots/harness.js`). It clicks the real elements and records each target's centre and size. Travel is the straight-line distance between consecutive targets. A scroll is counted when a target was outside the viewport (bottom 56 px reserved for the Undo line), and the travel is measured after that scroll. It took the mouse-only path at both widths. The baseline is today's planner at 1280×800, modelled from measured unit costs; this is one real end-to-end run.
+
+| | Baseline (old page, 1280) | Trail at 375×812 | Trail at 1280×800 |
+| --- | --- | --- | --- |
+| Clicks | 438 | **170** (−61%) | **170** (−61%) |
+| Keystrokes | 492 | 0 | 0 |
+| Pointer travel | 205,859 px | **27,445 px** (−87%) | **34,837 px** (−83%) |
+| Scrolls to reach a target | 29 | 22 | 11 |
+| Smallest target | 20 px (select rows) | 44×44 | 44×44 |
+
+| Clicks by action | Baseline | 375 | 1280 |
+| --- | --- | --- | --- |
+| Slot picks (incl. character and Mythic) | 143 | 56 | 56 |
+| Skill ranks | 100 | 29 | 29 |
+| Adding levels | 80 | 22 | 22 |
+| Mythic ranks | 40 | 10 | 10 |
+| Gear | 49 | 24 | 24 |
+| Start, archetypes, increases | 26 | 29 | 29 |
+
+- **Where the start got dearer:** the point buy is 17 stepper clicks (the ticket's steppers) where the old page took 4 clicks and 16 keys.
+- **Where travel goes:** at 1280 the next step sits in a centred column but further down, so per-click travel is higher than on a phone.
+- **Phone scrolls:** most are a picked option below the fold in a long open list. Typing the filter avoids them, but the mouse-only path doesn't.
+- Raw data: `ticket-07-shots/measure-375.json` and `measure-1280.json`.
+
+### Code review (`/mattpocock-skills:code-review`, before the commit)
+
+**Fixed:**
+- From 900 px the character card keeps its controls.
+- On a phone the card folds only once level 1 is done (`levelOneDone`).
+- The Undo line keeps each change's name through undo, redo and a pasted link.
+- New tests:
+  - race, +2, alignment and score edits reach the Undo line;
+  - the card rules at both widths;
+  - a tighter Mythic-due assertion.
+- One `verdictOf` answers what an edit does, for the reducer and the class and path rows.
+- The Gear line lists what's worn, as answer A says.
+- The README now matches the code.
+
+**Left for later:**
+- The four open questions need a map ticket once the user answers.
+- Archetypes are listed by the page, not by S.
+- The closed list's summary words its reasons itself ("need a prerequisite"); this was carried over from the old picker.
+- "Build sheet" uses a word the glossary avoids. The user's answer C used it, so it stays until someone decides.
+- Small duplications: the stat short names, the camel-case splitter, `name ?? assetName`.
+
+### Found along the way, not fixed here
+- Legend was open as the first Mythic rank and for all ten (the first harness run took it ten times). It looks like a walk question for the engine.
+- The design system's `LevelRow`, `Timeline`, `RankMarker`, `PickerSheet`, `StatBlock` and `ShareLink` are no longer used by the planner; only the `/design` gallery shows them.

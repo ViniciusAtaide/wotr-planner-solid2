@@ -26,6 +26,10 @@
       "Value": 3
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Teamwork, CombatManeuver"
+    },
+    {
       "$type": "AddFeatureIfHasFact",
       "Not": true,
       "m_CheckedFact": "!bp_965ea9716b87f4b46a6a8f50523393bd",

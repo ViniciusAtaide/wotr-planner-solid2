@@ -2,6 +2,7 @@ import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
 import { readerProblems, walkAreas } from '~engine/walk';
 import { grantTypes } from '~engine/grants';
+import { pickerComponentTypes } from '~engine/pickers';
 import { isPrerequisite, paramPrerequisiteTypes, prerequisiteTypes } from '~engine/prerequisites';
 import { allowlist, type AllowEntry } from './allowlist';
 import { gearNameTypes } from './gear-names';
@@ -82,11 +83,12 @@ describe('allowlist', () => {
     expect(new Set(kept.map((e) => e.type))).toEqual(prerequisiteTypes);
   });
 
-  describe('every allowlisted component type is read once: by P, by G, by a landed area or by the Gear names', () => {
+  describe('every allowlisted component type is read once: by P, by G, by S, by a landed area or by the Gear names', () => {
     const components = allowlist.filter((e) => e.role === 'component').map((e) => e.type);
     const readers = new Map<string, Iterable<string>>([
       ['P', [...prerequisiteTypes, ...paramPrerequisiteTypes]],
       ['G', grantTypes],
+      ['S', pickerComponentTypes],
       ...walkAreas,
       ['Gear names', gearNameTypes],
     ]);

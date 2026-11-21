@@ -35,6 +35,10 @@
       "Value": 3
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Melee, Teamwork"
+    },
+    {
       "$type": "AddFeatureIfHasFact",
       "Not": true,
       "m_CheckedFact": "!bp_731a11dcc952e744f8a88768e07a0542",

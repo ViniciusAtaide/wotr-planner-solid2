@@ -8,6 +8,10 @@
       "IsFeatureSelectionWhiteList": false,
       "Stat": "BaseAttackBonus",
       "Value": 6
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Damage, Melee, Ranged"
     }
   ],
   "Groups": [

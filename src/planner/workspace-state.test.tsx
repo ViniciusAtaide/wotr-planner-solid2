@@ -100,6 +100,9 @@ describe('WorkspaceState', () => {
       present: levelled(3),
       future: [levelled(4)],
       session: { kind: 'idle' },
+      change: 'Level 3',
+      pastChanges: [undefined, 'Level 2'],
+      futureChanges: ['Level 4'],
     };
     const closed = reducePage(e, page(ws(forkedView('second')), plannerAt(cleaver), second), { kind: 'close' });
     expect(closed.workspace.view).toEqual({ kind: 'single' });
@@ -107,9 +110,11 @@ describe('WorkspaceState', () => {
   });
 
   test('a side switch, fork and close are refused while the edited Build waits on the preview', () => {
-    const s = ws(forkedView('second', 'one'), { kind: 'start' });
+    const s = ws(forkedView('second', 'one'), { kind: 'gear' });
     expect(reduceWorkspace(s, { kind: 'show', layout: 'one', side: 'first' }, 'confirming')).toBe(s);
-    expect(reduceWorkspace(s, { kind: 'select', selection: { kind: 'add' }, side: 'first' }, 'confirming')).toBe(s);
+    expect(
+      reduceWorkspace(s, { kind: 'select', selection: { kind: 'skills', level: 1 }, side: 'first' }, 'confirming'),
+    ).toBe(s);
     expect(reduceWorkspace(s, { kind: 'close' }, 'confirming')).toBe(s);
     const single = ws({ kind: 'single' });
     expect(reduceWorkspace(single, { kind: 'fork' }, 'confirming')).toBe(single);
@@ -242,9 +247,9 @@ const EDITS: readonly Edit[] = [
 ];
 const SELECTIONS: readonly (Selection | undefined)[] = [
   undefined,
-  { kind: 'start' },
-  { kind: 'add' },
   { kind: 'gear' },
+  { kind: 'increase', level: 1 },
+  { kind: 'skills', level: 2 },
   { kind: 'level', level: 1 },
   { kind: 'level', level: 3 },
   { kind: 'rank', rank: 1 },
@@ -282,11 +287,11 @@ function exists(selection: Selection, build: Build): boolean {
     case 'slot':
       return picker(e.data, build, selection.slot, e.G) !== undefined;
     case 'level':
+    case 'increase':
+    case 'skills':
       return build.levels[selection.level - 1] !== undefined;
     case 'rank':
       return build.ranks?.[selection.rank - 1] !== undefined;
-    case 'start':
-    case 'add':
     case 'gear':
       return true;
   }

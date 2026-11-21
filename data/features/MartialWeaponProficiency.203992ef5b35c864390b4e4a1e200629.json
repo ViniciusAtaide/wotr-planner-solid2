@@ -116,6 +116,10 @@
       "Level": 1,
       "Not": true,
       "m_CharacterClass": "!bp_26b10d4340839004f960f9816f6109fe"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Melee, Ranged, Defense"
     }
   ],
   "Groups": [

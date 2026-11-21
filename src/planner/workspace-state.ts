@@ -9,9 +9,9 @@ export type { LinkReason };
 export type Selection =
   | { readonly kind: 'slot'; readonly slot: SlotId }
   | { readonly kind: 'level'; readonly level: number }
+  | { readonly kind: 'increase'; readonly level: number }
+  | { readonly kind: 'skills'; readonly level: number }
   | { readonly kind: 'rank'; readonly rank: number }
-  | { readonly kind: 'start' }
-  | { readonly kind: 'add' }
   | { readonly kind: 'gear' };
 
 export type Side = 'first' | 'second';
@@ -46,7 +46,7 @@ export const SINGLE: View = { kind: 'single' };
 export const LINK_OK: LinkStatus = { kind: 'ok' };
 
 export function workspaceAt(build: Build, link: LinkStatus): WorkspaceState {
-  return { view: SINGLE, selection: build.levels.length === 0 ? { kind: 'start' } : undefined, link };
+  return { view: SINGLE, selection: undefined, link };
 }
 
 export function edited(view: View): Side {
@@ -64,11 +64,11 @@ export function sameSelection(a: Selection | undefined, b: Selection | undefined
     case 'slot':
       return b.kind === 'slot' && slotKey(a.slot) === slotKey(b.slot);
     case 'level':
-      return b.kind === 'level' && a.level === b.level;
+    case 'increase':
+    case 'skills':
+      return b.kind === a.kind && a.level === b.level;
     case 'rank':
       return b.kind === 'rank' && a.rank === b.rank;
-    case 'start':
-    case 'add':
     case 'gear':
       return a.kind === b.kind;
   }
@@ -86,11 +86,11 @@ export function resolve(
       return slots.some((s) => slotKey(s) === key) ? selection : undefined;
     }
     case 'level':
+    case 'increase':
+    case 'skills':
       return selection.level >= 1 && selection.level <= build.levels.length ? selection : undefined;
     case 'rank':
       return selection.rank >= 1 && selection.rank <= (build.ranks?.length ?? 0) ? selection : undefined;
-    case 'start':
-    case 'add':
     case 'gear':
       return selection;
   }

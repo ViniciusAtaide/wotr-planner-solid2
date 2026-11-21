@@ -1,6 +1,11 @@
 {
   "$type": "BlueprintFeatureSelection",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Skills"
+    }
+  ],
   "ExceptWhiteListed": false,
   "Group": "None",
   "Groups": [

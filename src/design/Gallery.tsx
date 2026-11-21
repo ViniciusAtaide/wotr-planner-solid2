@@ -1,11 +1,12 @@
 import { Title } from '@solidjs/meta';
 import type { JSX } from '@solidjs/web';
-import { createSignal } from 'solid-js';
+import { createSignal, For } from 'solid-js';
 
 import Badge from './Badge';
 import Button from './Button';
 import CascadePreview from './CascadePreview';
 import CompareToggle from './CompareToggle';
+import FeatIcon, { FEAT_CATEGORY_NAMES, type FeatCategory } from './FeatIcon';
 import Kbd from './Kbd';
 import LevelRow, { Timeline } from './LevelRow';
 import PickerOption, { ClosedCount, OptionList, PickerHead } from './PickerOption';
@@ -121,6 +122,19 @@ export function Gallery() {
             <Badge kind="mythic" />
             <Badge kind="link">→ enables 3</Badge>
             <Badge kind="link">← needs Power Attack</Badge>
+          </div>
+        </Card>
+
+        <Card name="FeatIcon" about="A feat's category, one line drawing each, in the text's color.">
+          <div class="gallery__row">
+            <For each={Object.keys(FEAT_CATEGORY_NAMES) as FeatCategory[]}>
+              {(c) => (
+                <span>
+                  <FeatIcon category={c} />
+                  {FEAT_CATEGORY_NAMES[c]}
+                </span>
+              )}
+            </For>
           </div>
         </Card>
 

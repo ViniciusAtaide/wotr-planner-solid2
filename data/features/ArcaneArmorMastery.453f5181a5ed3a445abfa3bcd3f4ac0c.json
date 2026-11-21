@@ -17,6 +17,10 @@
       "Value": 3
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Magic, Defense"
+    },
+    {
       "$type": "AddFeatureIfHasFact",
       "Not": true,
       "m_CheckedFact": "!bp_1a0298abacb6e0f45b7e28553e99e76c",

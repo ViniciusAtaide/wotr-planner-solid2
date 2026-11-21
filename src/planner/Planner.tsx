@@ -1,50 +1,34 @@
 import { createEffect, createMemo, createSignal, For, Match, onSettled, Show, Switch } from 'solid-js';
 import type { Build } from '~engine/build';
+import type { Attribute } from '~engine/data';
 import { divergence, type Engine } from '~engine/mcp';
-import { linkDidNotOpen, nameOf } from '~engine/refusals';
-import { ATTRIBUTES } from '~engine/walk';
+import { linkDidNotOpen } from '~engine/refusals';
+import { walk } from '~engine/walk';
 
-import {
-  Button,
-  CascadePreview,
-  CompareToggle,
-  PickerSheet,
-  Refusal,
-  ShareLink,
-  StatBlock,
-  type Stat,
-} from '../design';
+import { Button, CascadePreview, CompareToggle, Refusal } from '../design';
 import { loadEngine } from './engine';
 import { EMPTY, openHash } from './link';
-import { AddPanel, GearPanel, LevelPanel, RankPanel, SlotPicker, StartPanel } from './panels';
+import { PlannerMenu, UndoLine } from './Menu';
 import { createShareCode, shareLinkOf, type ShareCode } from './share-code';
-import { createPlanner, placeWords, type Planner as PlannerApi } from './state';
-import Timeline from './Timeline';
+import { buildSheet } from './sheet';
+import { createPlanner, type Planner as PlannerApi } from './state';
+import Trail from './Trail';
+import { firstCleared, reduceTrail, TRAIL_START, type TrailAction, type TrailState } from './trail-state';
 import { unreachable } from './unreachable';
 import {
   edited,
   reducePage,
   resolve,
-  sameSelection,
   shown,
   workspaceAt,
   type Layout,
   type LinkStatus,
   type PageAction,
-  type Selection,
   type Side,
   type View,
 } from './workspace-state';
 
-const PHONE_WIDTH_QUERY = '(max-width: 767px)';
-const ATTRIBUTE_ABBREVIATIONS: Readonly<Record<string, string>> = {
-  Strength: 'STR',
-  Dexterity: 'DEX',
-  Constitution: 'CON',
-  Intelligence: 'INT',
-  Wisdom: 'WIS',
-  Charisma: 'CHA',
-};
+export const PHONE_WIDTH_QUERY = '(max-width: 899px)';
 
 type Boot =
   | { readonly kind: 'loading' }
@@ -146,6 +130,11 @@ function Workspace(props: WorkspaceProps) {
     first: createShareCode(engine, first.build),
     second: createShareCode(engine, second.build),
   };
+  const [firstTrail, setFirstTrail] = createSignal<TrailState>(TRAIL_START);
+  const [secondTrail, setSecondTrail] = createSignal<TrailState>(TRAIL_START);
+  const trails: Readonly<Record<Side, () => TrailState>> = { first: firstTrail, second: secondTrail };
+  const sendTrail = (side: Side, a: TrailAction) =>
+    (side === 'first' ? setFirstTrail : setSecondTrail)((s) => reduceTrail(s, a));
   let latest = workspaceAt(props.initialBuild, props.initialLink);
   const [workspace, setWorkspace] = createSignal(latest);
   const [phone, setPhone] = createSignal(false);
@@ -189,9 +178,6 @@ function Workspace(props: WorkspaceProps) {
         .slots.map((s) => s.id),
     ),
   );
-  const focus = createMemo(() => ({ side: editedSide(), selection: resolved() }), {
-    equals: (a, b) => a.side === b.side && sameSelection(a.selection, b.selection),
-  });
 
   let ownHash = props.initialLink.kind === 'ok' ? openedHash : '';
   createEffect(
@@ -242,7 +228,9 @@ function Workspace(props: WorkspaceProps) {
             e.preventDefault();
             filter.focus();
           }
-        } else if (e.key === 'Escape' && phone()) send({ kind: 'select', selection: undefined });
+        } else if (e.key === 'Escape' && workspace().selection !== undefined) {
+          send({ kind: 'select', selection: undefined });
+        }
         return;
       }
       default:
@@ -272,88 +260,50 @@ function Workspace(props: WorkspaceProps) {
     };
   });
 
-  const lastLevelScores = (p: PlannerApi, other: PlannerApi): Stat[] =>
-    ATTRIBUTES.map((a) => {
-      const value = p.walked().unit.permanent(a);
-      return {
-        name: ATTRIBUTE_ABBREVIATIONS[a] ?? a,
-        value,
-        ...(forked() && { diff: other.walked().unit.permanent(a) !== value }),
-      };
-    });
+  const confirm = () => {
+    const before = active().latest().present;
+    send({ kind: 'planner', action: { kind: 'confirm' } });
+    const after = active().latest().present;
+    if (after === before) return;
+    const slot = firstCleared(before, { data: engine.data, build: after, walk: walk(engine.data, after, engine.G) });
+    send({ kind: 'select', selection: slot === undefined ? undefined : { kind: 'slot', slot } });
+  };
+
+  const scoreDiffers = (s: Side) => (a: Attribute) => {
+    const rival = planners[other(s)];
+    return forked() !== undefined && planners[s].walked().unit.permanent(a) !== rival.walked().unit.permanent(a);
+  };
   const diverge = createMemo(() => (forked() ? divergence([first.build(), second.build()]).divergeAt : undefined));
   const linkNotice = () => {
     const l = workspace().link;
     return l.kind === 'didNotOpen' ? linkDidNotOpen(l.on, l.reason) : undefined;
   };
 
-  const title = (s: Selection | undefined): string => {
-    if (s === undefined) return '';
-    switch (s.kind) {
-      case 'slot':
-        return `${nameOf(engine.data, s.slot.selection)} · ${placeWords(s.slot.place)}`;
-      case 'level':
-        return `Level ${s.level}`;
-      case 'rank':
-        return `Mythic Rank ${s.rank}`;
-      case 'start':
-        return 'Start';
-      case 'add':
-        return 'Add a level or rank';
-      case 'gear':
-        return 'Gear';
-    }
-  };
-  const panelOf = (side: Side, sel: Selection | undefined) => {
-    const p = planners[side];
-    switch (sel?.kind) {
-      case 'slot':
-        return (
-          <SlotPicker
-            planner={p}
-            slot={sel.slot}
-            onPicked={(outcome) => {
-              if (outcome === 'applied' && phone()) send({ kind: 'select', selection: undefined });
-            }}
-          />
-        );
-      case 'level':
-        return <LevelPanel planner={p} level={sel.level} />;
-      case 'rank':
-        return <RankPanel planner={p} rank={sel.rank} />;
-      case 'start':
-        return <StartPanel planner={p} />;
-      case 'gear':
-        return <GearPanel planner={p} />;
-      case 'add':
-      case undefined:
-        return <AddPanel planner={p} />;
-    }
-  };
-  const panel = () => (
-    <Show when={focus()} keyed>
-      {(f) => panelOf(f.side, f.selection)}
-    </Show>
-  );
-
   const column = (s: Side) => (
-    <section class="planner-build" aria-label={SIDE_TITLE[s]}>
+    <section
+      class={['planner-build', { 'planner-build--other': forked() !== undefined && editedSide() !== s }]}
+      aria-label={SIDE_TITLE[s]}
+    >
       <Show when={forked()}>
-        <h2 class="planner-build__title">{SIDE_TITLE[s]}</h2>
+        <div class="planner-build__head">
+          <h2 class="planner-build__title">{SIDE_TITLE[s]}</h2>
+          <Show when={editedSide() !== s}>
+            <Button onClick={() => send({ kind: 'select', selection: undefined, side: s })}>
+              Edit the {SIDE_TITLE[s]}
+            </Button>
+          </Show>
+        </div>
       </Show>
-      <StatBlock stats={lastLevelScores(planners[s], planners[s === 'first' ? 'second' : 'first'])} />
-      <Show when={planners[s].build().levels.length === 0}>
-        <p class="planner-stats-note">Point buy only: the race and its +2 count from level 1.</p>
-      </Show>
-      <Timeline
-        planner={planners[s]}
-        selected={editedSide() === s ? resolved() : undefined}
-        onSelect={(selection) => send({ kind: 'select', selection, side: s })}
-      />
-      <div class="planner-build__more">
-        <Button onClick={() => send({ kind: 'select', selection: { kind: 'add' }, side: s })}>
-          Add a level or rank
-        </Button>
+      <div class="planner-build__trail" inert={forked() !== undefined && editedSide() !== s}>
+        <Trail
+          planner={planners[s]}
+          state={trails[s]()}
+          send={(a) => sendTrail(s, a)}
+          selection={editedSide() === s ? resolved() : undefined}
+          select={(selection) => send({ kind: 'select', selection, side: s })}
+          phone={phone()}
+          diff={scoreDiffers(s)}
+        />
       </div>
     </section>
   );
@@ -362,29 +312,7 @@ function Workspace(props: WorkspaceProps) {
     <main class="planner">
       <div class="planner-behind" inert={confirming()}>
         <div class="planner-bar" role="toolbar" aria-label="Build">
-          <Button
-            variant="ghost"
-            kbd="⌘Z"
-            disabled={!active().canUndo()}
-            onClick={() => send({ kind: 'planner', action: { kind: 'undo' } })}
-          >
-            Undo
-          </Button>
-          <Button
-            variant="ghost"
-            kbd="⇧⌘Z"
-            disabled={!active().canRedo()}
-            onClick={() => send({ kind: 'planner', action: { kind: 'redo' } })}
-          >
-            Redo
-          </Button>
-          <Button variant="ghost" onClick={() => send({ kind: 'select', selection: { kind: 'start' } })}>
-            Start
-          </Button>
-          <Button variant="ghost" onClick={() => send({ kind: 'select', selection: { kind: 'gear' } })}>
-            Gear
-          </Button>
-          <Show when={forked()} fallback={<Button onClick={() => send({ kind: 'fork' })}>Fork this Build</Button>}>
+          <Show when={forked()}>
             {(v) => (
               <>
                 <CompareToggle
@@ -424,9 +352,12 @@ function Workspace(props: WorkspaceProps) {
               </>
             )}
           </Show>
-        </div>
-        <div class="planner-share">
-          <ShareLink {...shareLinkOf(linkCode(), location.origin)} />
+          <PlannerMenu
+            link={shareLinkOf(linkCode(), location.origin)}
+            forked={forked() !== undefined}
+            onFork={() => send({ kind: 'fork' })}
+            sheet={() => buildSheet({ data: engine.data, build: active().build(), walk: active().walked() })}
+          />
         </div>
         <div class="planner-notices">
           <Show when={linkNotice()}>
@@ -460,29 +391,14 @@ function Workspace(props: WorkspaceProps) {
             </p>
           )}
         </Show>
-        <div class={['planner-body', { 'planner-body--compare': shown(view(), phone()).length > 1 }]}>
-          <div class="planner-builds">
-            <For each={shown(view(), phone())}>{(s) => column(s)}</For>
-          </div>
-          <Show
-            when={phone()}
-            fallback={
-              <aside class="planner-side" aria-label="Side panel">
-                {panel()}
-              </aside>
-            }
-          >
-            <Show when={resolved()}>
-              {(s) => (
-                <div class="planner-sheet">
-                  <PickerSheet title={title(s())} onBack={() => send({ kind: 'select', selection: undefined })}>
-                    {panel()}
-                  </PickerSheet>
-                </div>
-              )}
-            </Show>
-          </Show>
+        <div class={['planner-builds', { 'planner-builds--compare': shown(view(), phone()).length > 1 }]}>
+          <For each={shown(view(), phone())}>{(s) => column(s)}</For>
         </div>
+        <UndoLine
+          change={active().change()}
+          canUndo={active().canUndo()}
+          onUndo={() => send({ kind: 'planner', action: { kind: 'undo' } })}
+        />
       </div>
       <Show when={active().pending()}>
         {(p) => (
@@ -492,7 +408,7 @@ function Workspace(props: WorkspaceProps) {
               summary={p().summary}
               clears={p().clears}
               onCancel={() => send({ kind: 'planner', action: { kind: 'cancel' } })}
-              onConfirm={() => send({ kind: 'planner', action: { kind: 'confirm' } })}
+              onConfirm={confirm}
             />
           </div>
         )}

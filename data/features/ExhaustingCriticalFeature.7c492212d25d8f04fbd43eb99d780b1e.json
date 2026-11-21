@@ -29,6 +29,10 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_12c1b556df3b667458ae200bfb38ccb8"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Critical"
     }
   ],
   "Groups": [

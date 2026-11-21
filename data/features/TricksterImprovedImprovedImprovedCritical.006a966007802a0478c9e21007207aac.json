@@ -23,6 +23,10 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_e9298851786c5334dba1398e9635a83d"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Melee, Ranged, Critical"
     }
   ],
   "Groups": [

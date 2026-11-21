@@ -10,6 +10,10 @@
       "SpellSchool": "Conjuration",
       "WeaponCategory": "UnarmedStrike",
       "m_Feature": "!bp_16fa59cc9a72a6043b566b49184f53fe"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Magic"
     }
   ],
   "Groups": [

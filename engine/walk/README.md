@@ -6,7 +6,7 @@ Every rule here ports one decompiled C# method. `cites.ts` holds the citations, 
 
 ## Public entry
 
-- **The walk** (`walk.ts`): `walk(data, build, G?)` returns a `Walk`: its `gains`, `failures`, opened `slots`, `gearDependent` choices, path-switch `dropped` facts, and the finished `unit`. `pauseAt(data, build, slot, G?)` returns a `PausedWalk` (build ticket 04). Also `BANDS` and `Band`, `bandOf`, the result types `Gain`, `OpenedSlot`, `GearDependent`, `Dropped`, and `appliedGrantTypes` and `appliedFieldGrants` for the coverage check.
+- **The walk** (`walk.ts`): `walk(data, build, G?)` returns a `Walk`: its `gains`, `failures`, opened `slots`, `gearDependent` choices, path-switch `dropped` facts, each level's `attributePoints` and `skillPoints`, and the finished `unit`. `pauseAt(data, build, slot, G?)` returns a `PausedWalk` (build ticket 04). Also `BANDS` and `Band`, `bandOf`, the result types `Gain`, `OpenedSlot`, `GearDependent`, `Dropped`, and `appliedGrantTypes` and `appliedFieldGrants` for the coverage check.
 - **The character** (`unit.ts`): `Unit`, `Fact`, `Source`, `ClassData`, `ProgressionData`, the parameter helpers `paramKey`, `paramBlueprint`, `paramValue`, `isParamType` and `ParamType`, `ATTRIBUTES`, `SKILL_ATTRIBUTE`, `isAttribute`, `isSkill`, `stackingOf` and `applyProgression`.
 - **Failures** (`failure.ts`, re-exported by `walk.ts`): `Rule`, `Value`, `Unmet`, `FailedRule`, `Failure`.
 - **Stats** (`stats.ts`): `POINT_BUY`, `attributeBonus`, `pointBuyCost`, `skillPointsAvailable`, `applyStats`, `StatsHost`.
@@ -28,6 +28,8 @@ Not exported from `index.ts` but imported directly by other modules and tests: `
 - `OpenedSlot`: a slot the walk opened (`LevelUpState.AddSelection`) with what fills it. `level` is the granting progression's level (`FeatureSelectionState.Level`); `parent` is the slot it is nested in.
 - `GearDependent`: a choice allowed only because the Build's Gear counts (ADR 0002's opt-in): a pick, a class level or an archetype whose prerequisites fail without the worn Gear's Enhancement bonuses, or that rests on such a pick. `subject` is the picked feature, the class or the archetype. Its `items` are the worn ones whose bonus it needs: each raises a score a failing stat prerequisite reads, or is an item of the gear-dependent pick it rests on.
 - `Dropped`: a fact a path switch took away (map ticket 31). It counted from `gainedAt` until the switch at `place`.
+- `Walk.attributePoints`: the ability increases each character level offers, in level order: 1 at every 4th character level, else 0 (`SelectClass.Apply`), read as the level reaches its AddAttribute band. Mythic ranks add no entry.
+- `Walk.skillPoints`: the skill points each character level offers, in level order (`ApplySkillPoints.Apply`'s `TotalSkillPoints`, the budget the game's level-up screen shows): `skillPointsAvailable` read as the level reaches its Skills band, before its own ranks are spent. It counts points left unspent at earlier levels, and is never below 1. Mythic ranks offer none and add no entry.
 - `Walk.unit`: the character after the whole Build, who holds what and from where (G's Build-aware half).
 - `SlotState`: a slot during its level-up (`FeatureSelectionState`). `LevelState`: one level-up's counters and open slots (`LevelUpState`): whether it is the first character level, the next class level and the attribute points.
 - `Owner`: what applies facts and takes them away when it goes (`Walker.applied`): a held fact, a Gear place, or a toggle.
@@ -315,13 +317,13 @@ The component types each area of the walk reads, besides the prerequisites (P) a
 
 Who reads each allowlisted component type, and who applies each grant (build ticket 02d). Two checks keep the allowlist and the modules in step, as the prerequisite check keeps the allowlist and P:
 
-- every allowlisted component type is read by exactly one of P, G, a landed area, or the Gear names (`tools/importer/allowlist.test.ts`);
+- every allowlisted component type is read by exactly one of P, G, S, a landed area, or the Gear names (`tools/importer/allowlist.test.ts`);
 - every grant type G reads, and every kind of grant G reads off a blueprint's own fields, is applied by the walk (`appliedGrantTypes`, `appliedFieldGrants`) or listed in `grantsAppliedElsewhere` (`coverage.test.ts`).
 
 This is not `tools/importer/not-needed.ts`, which lists the types the allowlist leaves out.
 
 - `grantsAppliedElsewhere`: each grant type G reads that the walk doesn't apply, with the module that applies it and why. An entry leaves when the walk applies the type.
-- `readerProblems`: what is wrong with who reads the allowlisted component types: a type no reader set holds, a type two hold, or a type a set holds that the allowlist doesn't keep. Its `readers` maps each reader (P, G, an area, the Gear names) to its types.
+- `readerProblems`: what is wrong with who reads the allowlisted component types: a type no reader set holds, a type two hold, or a type a set holds that the allowlist doesn't keep. Its `readers` maps each reader (P, G, S, an area, the Gear names) to its types.
 - `grantCoverageProblems`: what is wrong with who applies the grants G reads (component types and field-grant kinds alike): one the walk doesn't apply that `elsewhere` doesn't list, or a listing that G doesn't read or the walk applies.
 
 ## Design notes

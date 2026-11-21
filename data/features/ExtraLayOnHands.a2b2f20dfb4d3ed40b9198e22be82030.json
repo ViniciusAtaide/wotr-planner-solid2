@@ -12,6 +12,10 @@
         "!bp_cdaceaeb927fe69419aa04646b872f08"
       ],
       "m_RestrictIfNot": false
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "ClassSpecific"
     }
   ],
   "Groups": [

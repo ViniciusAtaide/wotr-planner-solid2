@@ -27,6 +27,7 @@ import {
   type EquipmentRestrictionClass,
   type EquipmentRestrictionHasAnyClassFromList,
   type EquipmentRestrictionMainPlayer,
+  type FeatureTagsComponent,
   type IgnoreArmorGroupComponent,
   type IncreaseStatEquipment,
   type MithralEnchantment,
@@ -1181,6 +1182,32 @@ const itemEntries: readonly AllowEntry[] = [
     type: 'EquipmentRestrictionMainPlayer',
     fields: {},
     cite: ['Blueprints/Items/Components/EquipmentRestrictionMainPlayer.cs CanBeEquippedBy'],
+  }),
+  component<FeatureTagsComponent>({
+    type: 'FeatureTagsComponent',
+    fields: {
+      FeatureTags: flagsOf(
+        'None',
+        'Attack',
+        'Damage',
+        'Melee',
+        'Ranged',
+        'Magic',
+        'Mounted',
+        'Defense',
+        'SavingThrows',
+        'Critical',
+        'Skills',
+        'Metamagic',
+        'Teamwork',
+        'ClassSpecific',
+        'Style',
+        'CombatManeuver',
+      ),
+    },
+    cite: [
+      'UI/MVVM/_VM/CharGen/Phases/FeatureSelector/CharGenFeatureSelectorItemVM.cs CharGenFeatureSelectorItemVM (FeatureTags)',
+    ],
   }),
 ];
 

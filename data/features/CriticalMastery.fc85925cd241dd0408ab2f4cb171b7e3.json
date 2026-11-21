@@ -35,6 +35,10 @@
     {
       "$type": "IncreaseActivatableAbilityGroupSize",
       "Group": "CriticalFeat"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Critical"
     }
   ],
   "Groups": [

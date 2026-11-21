@@ -37,6 +37,10 @@
       "IsFeatureSelectionWhiteList": false,
       "OnlySpontaneous": false,
       "RequiredSpellLevel": 1
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Magic, Defense"
     }
   ],
   "Groups": [

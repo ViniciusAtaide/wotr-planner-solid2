@@ -35,6 +35,10 @@
       "Value": 1
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Melee, Ranged"
+    },
+    {
       "$type": "PrerequisiteClassLevel",
       "CheckInProgression": false,
       "Group": "Any",

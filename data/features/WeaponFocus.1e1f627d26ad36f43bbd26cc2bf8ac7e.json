@@ -11,6 +11,10 @@
       "Value": 1
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Melee"
+    },
+    {
       "$type": "PrerequisiteConditionForWeaponCategory",
       "m_Condition": {
         "$type": "ContextConditionCharacterClass",

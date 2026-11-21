@@ -10,6 +10,8 @@ export * from './CascadePreview';
 export { default as CascadePreview } from './CascadePreview';
 export * from './CompareToggle';
 export { default as CompareToggle } from './CompareToggle';
+export * from './FeatIcon';
+export { default as FeatIcon } from './FeatIcon';
 export { Gallery } from './Gallery';
 export * from './Kbd';
 export { default as Kbd } from './Kbd';

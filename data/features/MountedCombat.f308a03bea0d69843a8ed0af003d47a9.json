@@ -18,6 +18,10 @@
       "Value": 3
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Mounted, Defense"
+    },
+    {
       "$type": "PrerequisiteNoClassLevel",
       "CheckInProgression": false,
       "Group": "All",

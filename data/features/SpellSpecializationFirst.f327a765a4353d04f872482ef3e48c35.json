@@ -21,6 +21,10 @@
       "m_Feature": "!bp_fe9220cdc16e5f444a84d85d5fa8e3d5"
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Magic"
+    },
+    {
       "$type": "PrerequisiteAnySpellsInSpellbook",
       "CheckInProgression": false,
       "Group": "All",

@@ -11,6 +11,10 @@
       "Value": 8
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Critical"
+    },
+    {
       "$type": "PrerequisiteConditionForWeaponCategory",
       "m_Condition": {
         "$type": "ContextConditionCharacterClass",

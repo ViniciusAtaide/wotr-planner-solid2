@@ -28,6 +28,10 @@
       "IsFeatureSelectionWhiteList": false,
       "Stat": "Intelligence",
       "Value": 3
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Defense"
     }
   ],
   "ExceptWhiteListed": false,

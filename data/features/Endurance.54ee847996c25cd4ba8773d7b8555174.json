@@ -11,6 +11,10 @@
     {
       "$type": "AddMechanicsFeature",
       "m_Feature": "Endurance"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Defense"
     }
   ],
   "Groups": [

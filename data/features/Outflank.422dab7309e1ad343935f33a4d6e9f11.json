@@ -27,6 +27,10 @@
       "Value": 3
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Melee, Ranged, Teamwork"
+    },
+    {
       "$type": "PrerequisiteNoFeature",
       "CheckInProgression": false,
       "Group": "All",

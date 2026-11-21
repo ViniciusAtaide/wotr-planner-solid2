@@ -28,6 +28,10 @@
       "Group": "Any",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_13bdf8d542811ac4ca228a53aa108145"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Magic"
     }
   ],
   "ExceptWhiteListed": false,

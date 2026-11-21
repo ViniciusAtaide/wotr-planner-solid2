@@ -161,6 +161,19 @@ describe('area 5: skill ranks', () => {
     );
   });
 
+  it('offers an ability increase at every 4th character level', () => {
+    expect(walk(data, build({ scores, levels: levels(FIGHTER, 8) }), G).attributePoints).toEqual([
+      0, 0, 0, 1, 0, 0, 0, 1,
+    ]);
+  });
+
+  it('offers each level its skill points, with points left unspent carried to the next', () => {
+    const halfling = (l: LevelUp[]) => build({ race: HALFLING, scores, levels: l });
+    expect(walk(data, halfling(levels(SORCERER, 2)), G).skillPoints).toEqual([3, 5]);
+    const two = skillRanks({ SkillMobility: 1, SkillPersuasion: 1 });
+    expect(walk(data, halfling(levels(SORCERER, 2, { skills: two })), G).skillPoints).toEqual([3, 3]);
+  });
+
   it("adds the Human's extra point per level", () => {
     const three = { SkillMobility: 1, SkillPersuasion: 1, SkillUseMagicDevice: 1 };
     const w = walk(data, build({ scores, levels: levels(SORCERER, 2, { skills: skillRanks(three) }) }), G);

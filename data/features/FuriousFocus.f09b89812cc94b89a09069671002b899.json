@@ -25,6 +25,10 @@
       "Value": 13
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Melee"
+    },
+    {
       "$type": "PrerequisiteNoClassLevel",
       "CheckInProgression": false,
       "Group": "All",

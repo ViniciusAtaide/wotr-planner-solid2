@@ -7,6 +7,10 @@
       "ScaleByBasicAttackBonus": false,
       "Stat": "Initiative",
       "Value": 4
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack"
     }
   ],
   "Groups": [
