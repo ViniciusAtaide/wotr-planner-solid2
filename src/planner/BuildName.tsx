@@ -71,6 +71,7 @@ export function BuildNameLabel(props: BuildNameLabelProps) {
           type="text"
           aria-label="Build name"
           aria-invalid={refused() === undefined ? undefined : 'true'}
+          aria-describedby={refused() === undefined ? undefined : 'build-name-refused'}
           placeholder={UNTITLED}
           onInput={() => setRefused(undefined)}
           onKeyDown={(e) => {
@@ -89,7 +90,7 @@ export function BuildNameLabel(props: BuildNameLabelProps) {
         />
         <Show when={refused()}>
           {(words) => (
-            <p class="build-name__refused" role="alert">
+            <p id="build-name-refused" class="build-name__refused" role="alert">
               {words()}
             </p>
           )}

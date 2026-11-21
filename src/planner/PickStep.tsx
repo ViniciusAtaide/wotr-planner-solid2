@@ -10,12 +10,12 @@ import { Button, OptionList, PickerOption } from '../design';
 import { Filter, moveThroughOptions, SCROLL_STYLE, StepArrived, type ClosedToggle, type FieldMode } from './ChoiceList';
 import { featCategory } from './feat-category';
 import { after } from './flat-choices';
-import { CollapsedLists, createListPanel } from './list-panel';
+import { CollapsedLists, createListPanel, StepFilter } from './list-panel';
 import { clashLines, OptionDetails, summaryFor, synergyLines, type OptionDetail } from './option-detail';
 import { childSlotOf, pickRows, rowMembers, rowOpen, type PickRow } from './nested-options';
 import type { NonEmpty } from './planner-state';
 import type { TrailApi } from './steps';
-import { isSpellFeat, slotLabel, SPELL_NOT_MODELLED } from './trail-state';
+import { isSpellFeat, nestedLabel, slotLabel, SPELL_NOT_MODELLED } from './trail-state';
 import { scrollToIndex, WindowedRows } from './WindowedRows';
 import { shownName } from './words';
 
@@ -70,7 +70,12 @@ export function paramLabel(full: string, group: string): string {
 export function PickStep(props: PickStepProps) {
   const planner = () => props.trail.planner;
   const data = () => planner().engine.data;
-  const [text, setText] = createSignal('');
+  const remembered = useContext(StepFilter);
+  const [text, setOwnText] = createSignal(untrack(() => remembered?.text() ?? ''));
+  const setText = (t: string) => {
+    setOwnText(t);
+    remembered?.set(t);
+  };
   const [mark, setMark] = createSignal(0);
   const [expanded, setExpanded] = createSignal<string | undefined>(undefined);
   const collapsing = useContext(CollapsedLists);
@@ -172,7 +177,7 @@ export function PickStep(props: PickStepProps) {
     return detailOne(row, o, child);
   };
   const detailOne = (row: PickRow, o: OptionStatus, child: boolean): OptionDetail => ({
-    name: !child ? row.name : row.kind === 'nested' ? `${row.name} (${name(o)})` : name(o),
+    name: !child ? row.name : row.kind === 'nested' ? nestedLabel(row.name, name(o)) : name(o),
     closed: o.closed === undefined ? false : true,
     current: child ? childCurrent(row, o) : row.kind === 'option' ? isCurrent(o) : holdsRow(row),
     summary: summaryFor(data(), planner().engine.G, o.feature),
@@ -217,7 +222,7 @@ export function PickStep(props: PickStepProps) {
     if (c === undefined) return undefined;
     const own = shownName(data(), c.feature, c.param);
     const child = pickAt(childSlotOf(props.slot, c.feature));
-    return child === undefined ? own : `${own} (${shownName(data(), child.feature, child.param)})`;
+    return child === undefined ? own : nestedLabel(own, shownName(data(), child.feature, child.param));
   };
   const apply = (edits: NonEmpty<Edit>, title: string) => {
     panel.hide();
@@ -250,7 +255,7 @@ export function PickStep(props: PickStepProps) {
         pickOf(props.slot, row.option),
         pickOf(childSlotOf(props.slot, row.option.feature), child),
       ]),
-      `Picked ${row.name} (${name(child)})`,
+      `Picked ${nestedLabel(row.name, name(child))}`,
     );
   const toggle = (key: string) => setExpanded((now) => (now === key ? undefined : key));
   const enterRow = (row: PickRow | undefined) => {

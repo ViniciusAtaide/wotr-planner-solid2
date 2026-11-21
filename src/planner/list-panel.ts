@@ -2,6 +2,18 @@ import { createContext, createSignal, onSettled } from 'solid-js';
 
 export const CollapsedLists = createContext<boolean>(false);
 
+export interface FilterMemory {
+  readonly text: () => string;
+  readonly set: (text: string) => void;
+}
+
+export const StepFilter = createContext<FilterMemory | null>(null);
+
+export function createFilterMemory(): FilterMemory {
+  const [text, set] = createSignal('');
+  return { text, set: (t) => set(t) };
+}
+
 export interface ListPanel {
   readonly shown: () => boolean;
   readonly collapsed: () => boolean;

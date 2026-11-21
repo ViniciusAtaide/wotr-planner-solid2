@@ -14,7 +14,7 @@ import type { Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
 
 import { OptionList, PickerOption } from '../design';
-import { CollapsedLists, createListPanel } from './list-panel';
+import { CollapsedLists, createListPanel, StepFilter } from './list-panel';
 import { OptionDetails, type OptionDetail } from './option-detail';
 import { judgeAll, type Judged } from './planner-state';
 import { scrollToIndex, WindowedRows } from './WindowedRows';
@@ -187,7 +187,12 @@ export function createClosedToggle(given: () => ClosedToggle | undefined): Close
 }
 
 export function ChoiceList(props: ChoiceListProps) {
-  const [text, setText] = createSignal('');
+  const remembered = useContext(StepFilter);
+  const [text, setOwnText] = createSignal(untrack(() => remembered?.text() ?? ''));
+  const setText = (t: string) => {
+    setOwnText(t);
+    remembered?.set(t);
+  };
   const [mark, setMark] = createSignal(0);
   let scroller: HTMLDivElement | undefined;
   const toggle = createClosedToggle(() => props.closed);
