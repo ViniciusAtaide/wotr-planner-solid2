@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "65ddb132",
+  "reason": "Its effect is read by AbilityCustomCleave on the CleaveAction, which data/ doesn't keep.",
+  "target": "cc9c862ef2e03af4f89be5088851ea35",
+  "text": "Cleave keeps going: after each hit, attack the next enemy within reach, nearest to the first target first, until an attack misses."
+}

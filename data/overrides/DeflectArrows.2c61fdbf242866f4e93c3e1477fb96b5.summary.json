@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "6b823546",
+  "reason": "Its effect sits on the DeflectArrows component and the combat state's deflect check, which data/ doesn't keep.",
+  "target": "2c61fdbf242866f4e93c3e1477fb96b5",
+  "text": "Once per round, with a hand free, a ranged weapon attack that hits is deflected and deals no damage. Natural attacks don't count, and it doesn't work while flat-footed against the attacker."
+}

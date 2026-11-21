@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "ab43ba0b",
+  "reason": "Its effect sits on the ShieldFocus component, which data/ doesn't keep.",
+  "target": "ac57069b6bf8c904086171683992a92a",
+  "text": "+1 to AC while holding a shield in the off hand."
+}

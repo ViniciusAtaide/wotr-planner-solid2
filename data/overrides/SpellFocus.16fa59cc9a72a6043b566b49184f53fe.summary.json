@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "9df70520",
+  "reason": "Its effect sits on the SpellFocusParametrized component (BonusDC 1, doubled by its mythic focus), which data/ doesn't keep.",
+  "target": "16fa59cc9a72a6043b566b49184f53fe",
+  "text": "Pick a spell school: +1 to the DC of your spells and abilities of that school, +2 with the mythic Spell Focus for the same school."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "0b48acf3",
+  "reason": "Its effect sits on the granted LungeToggleAbility's buff (AddStatBonus to Reach and AC), which data/ doesn't keep.",
+  "target": "d41d5bd9a775d7245929256d58a3e03e",
+  "text": "While on: +5 feet of reach and -2 to AC."
+}

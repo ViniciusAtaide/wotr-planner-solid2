@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "5b117c77",
+  "reason": "Its effect sits on AddAbilityResources, the granted StunningFistAbility and its buff, and MonkReplaceAbilityDC, which data/ doesn't keep.",
+  "target": "a29a582c3daa4c24bb0e991c596ccb28",
+  "text": "Uses per day: monk level + 1/4 of other character levels. Free action: the next unarmed hit forces a Fortitude save (DC 10 + half the character level + Wisdom modifier) or the target is stunned for 1 round; a miss still spends the use."
+}

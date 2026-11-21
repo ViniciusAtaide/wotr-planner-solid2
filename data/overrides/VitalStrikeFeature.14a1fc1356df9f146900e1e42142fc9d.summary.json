@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "dc8f5a9f",
+  "reason": "Its effect sits on the granted VitalStrikeAbility (AbilityCustomVitalStrike, VitalStrikeMod 2), which data/ doesn't keep.",
+  "target": "14a1fc1356df9f146900e1e42142fc9d",
+  "text": "Standard action: one attack that rolls the weapon's damage dice twice. The extra dice aren't multiplied on a critical hit."
+}

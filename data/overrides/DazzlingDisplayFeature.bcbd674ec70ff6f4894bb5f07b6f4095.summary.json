@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "d45b57b9",
+  "reason": "Its effect sits on the DazzlingDisplayAction it grants (Demoralize over the enemies around, AbilityCasterHasChosenWeapon), which data/ doesn't keep.",
+  "target": "bcbd674ec70ff6f4894bb5f07b6f4095",
+  "text": "Full-round action with a weapon you have Weapon Focus in: an Intimidate check against each enemy within 30 feet (DC 10 + its character level + its Wisdom modifier). Each one beaten is shaken for 1 round, +1 round per 5 points over the DC."
+}

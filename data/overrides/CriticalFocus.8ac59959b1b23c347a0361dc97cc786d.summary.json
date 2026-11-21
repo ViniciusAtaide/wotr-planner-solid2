@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "cb47d261",
+  "reason": "Its effect sits on the CriticalConfirmationBonus component, which data/ doesn't keep.",
+  "target": "8ac59959b1b23c347a0361dc97cc786d",
+  "text": "+4 on attack rolls to confirm critical hits."
+}

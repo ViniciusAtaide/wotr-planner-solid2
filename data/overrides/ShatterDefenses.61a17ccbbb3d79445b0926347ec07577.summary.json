@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "697964ea",
+  "reason": "Its effect sits on AddInitiatorAttackWithWeaponTrigger components and the ShatterDefensesHitBuff and ShatterDefensesFlatBuff they apply, which data/ doesn't keep.",
+  "target": "61a17ccbbb3d79445b0926347ec07577",
+  "text": "After you hit a shaken or frightened enemy, for 1 round it loses its Dexterity bonus to AC against your attacks."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "d46703e9",
+  "reason": "Its effect is the rank it adds to TwoWeaponFightingBasicMechanics, which TwoWeaponFightingAttacks reads; data/ doesn't keep either.",
+  "target": "9af88f3ed8a017b45a6837eab7437629",
+  "text": "Fighting with two weapons, a full attack gains a second off-hand attack at -5."
+}

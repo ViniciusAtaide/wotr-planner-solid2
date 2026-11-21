@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "f0899908",
+  "reason": "Each option's bonus is an AddContextStatBonus with a rank table on the skill's ranks, which data/ doesn't keep.",
+  "target": "c9629ef9eebb88b479b2fbc5e836656a",
+  "text": "Pick a skill: +3 on it, +6 once it has 10 or more ranks."
+}

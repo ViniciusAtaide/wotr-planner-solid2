@@ -369,6 +369,28 @@ suite('Summary labels', { timeout: 30_000 }, () => {
     );
   });
 
+  it('gives the feats QA pass 5 found without a Summary a hand-written one', () => {
+    const written = [
+      '16fa59cc9a72a6043b566b49184f53fe',
+      'c9629ef9eebb88b479b2fbc5e836656a',
+      '14a1fc1356df9f146900e1e42142fc9d',
+      'ac57069b6bf8c904086171683992a92a',
+      'bcbd674ec70ff6f4894bb5f07b6f4095',
+      '61a17ccbbb3d79445b0926347ec07577',
+      '7812ad3672a4b9a4fb894ea402095167',
+      'a29a582c3daa4c24bb0e991c596ccb28',
+      'cc9c862ef2e03af4f89be5088851ea35',
+      '8ac59959b1b23c347a0361dc97cc786d',
+      '2c61fdbf242866f4e93c3e1477fb96b5',
+      'd41d5bd9a775d7245929256d58a3e03e',
+      '9af88f3ed8a017b45a6837eab7437629',
+    ];
+    for (const guid of written) expect(describe(data, guid, G)?.summarySource).toBe('written');
+    expect(summaryText(data, '8ac59959b1b23c347a0361dc97cc786d', G)).toBe(
+      '+4 on attack rolls to confirm critical hits.',
+    );
+  });
+
   it('names links bare: a selection\'s internal "with X" qualifier never shows (QA pass 4)', () => {
     const dodge = describe(data, '97e216dbb46ae3c4faef90cf6bbe6fd5', G);
     const names = (dodge?.enables ?? []).map((l) => l.name);
