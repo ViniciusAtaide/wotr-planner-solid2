@@ -301,6 +301,11 @@ export interface OptionView {
 
 const OPTIONS_PER_PAGE = 25;
 
+const PER_VALUE_REASONS: Readonly<Partial<Record<string, string>>> = {
+  'BlueprintParametrizedFeature.CanSelect:RequireProficiency': 'Needs proficiency with its weapon.',
+  'BlueprintParametrizedFeature.CanSelect:Disabled': "The game doesn't offer that choice for this feat.",
+};
+
 export async function options(
   e: Engine,
   args: {
@@ -353,7 +358,8 @@ export async function options(
   const page = Math.max(1, args.page ?? 1);
   const closedByReason: Record<string, number> = {};
   for (const o of closedOnes) {
-    const text = refusal({ data: e.data, G: e.G, unit }, o.closed as NonNullable<OptionStatus['closed']>).text;
+    const closed = o.closed as NonNullable<OptionStatus['closed']>;
+    const text = PER_VALUE_REASONS[closed.rule] ?? refusal({ data: e.data, G: e.G, unit }, closed).text;
     closedByReason[text] = (closedByReason[text] ?? 0) + 1;
   }
   const onPage = <T>(list: readonly T[]) => list.slice((page - 1) * OPTIONS_PER_PAGE, page * OPTIONS_PER_PAGE);

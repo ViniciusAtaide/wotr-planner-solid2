@@ -436,4 +436,29 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     const plain = ok(await sheet(e, { code: await encodeBuild(e.data, jackInTheGreen.build) }), 'sheet');
     expect(plain.scoresWithGear).toBeUndefined();
   });
+
+  it('counts closed options by one reason per rule, not one per weapon, while each listed option keeps its own reason (MCP QA)', async () => {
+    const code = await encodeBuild(e.data, jackInTheGreen.build);
+    const slot = jackInTheGreen.build.picks.find(
+      (p) =>
+        p.slot.selection === '247a4068296e8be42890143f451b4b45' && 'level' in p.slot.place && p.slot.place.level >= 7,
+    )!.slot;
+    const listed = ok(await options(e, { code, slot, include_closed: true }), 'options');
+    const reasons = Object.keys(listed.closedByReason);
+    expect(reasons).toContain('Needs proficiency with its weapon.');
+    expect(
+      reasons.filter((r) => r.startsWith('Needs proficiency with ') && r !== 'Needs proficiency with its weapon.'),
+    ).toEqual([]);
+    expect(reasons.length).toBeLessThan(10);
+    const all = [
+      listed,
+      ...(await Promise.all(
+        Array.from({ length: listed.pages - 1 }, (_, i) =>
+          options(e, { code, slot, include_closed: true, page: i + 2 }),
+        ),
+      )),
+    ];
+    const texts = all.flatMap((l) => (isRefusal(l) ? [] : (l.closed ?? []))).map((o) => o.refusal?.text ?? '');
+    expect(texts.some((t) => /^Needs proficiency with (?!its weapon)/.test(t))).toBe(true);
+  });
 });
