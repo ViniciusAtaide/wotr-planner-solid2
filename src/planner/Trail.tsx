@@ -1,5 +1,5 @@
 import type { JSX } from '@solidjs/web';
-import { createMemo, For, Match, onSettled, Show, Switch, useContext } from 'solid-js';
+import { createMemo, For, Match, onSettled, Show, Switch, untrack, useContext } from 'solid-js';
 import { slotKey, type Place } from '~engine/build';
 import { isShown, refGuid, type Attribute } from '~engine/data';
 import type { Edit } from '~engine/edits';
@@ -11,7 +11,9 @@ import { CharacterCard, ScoresStep, SHORT } from './CharacterCard';
 import { ChoiceDialog } from './ChoiceDialog';
 import { isListStep, type ListMode } from './list-mode';
 import { CollapsedLists } from './list-panel';
-import { RaceStep } from './CharacterSteps';
+import { CharacterField } from './CharacterField';
+import { BackgroundStep, RaceStep } from './CharacterSteps';
+import { PickStep } from './PickStep';
 import { StepArrived } from './ChoiceList';
 import { featCategory } from './feat-category';
 import { backgroundLabel, raceLabel } from './flat-choices';
@@ -50,7 +52,9 @@ import {
   rankNumbersAt,
   skillBudget,
   slotLabel,
+  slotWords,
   slotsAt,
+  stepKey,
   stepTitle,
   whereOf,
   type Step,
@@ -71,10 +75,6 @@ export function firstControl(el: HTMLElement, fine: boolean): HTMLElement | null
 
 function lost(active: Element | null): boolean {
   return active === null || active === document.body || !active.isConnected;
-}
-
-export function stepKey(step: Step): string {
-  return step.kind === 'slot' ? `slot ${slotKey(step.slot)}` : JSON.stringify(step);
 }
 
 export interface HereProps {
@@ -222,7 +222,7 @@ export default function Trail(props: TrailProps) {
         <Here
           step={key}
           title={stepTitle(view(), step())}
-          editing={editing() && step().kind !== 'scores'}
+          editing={editing() && step().kind !== 'scores' && stepKey(step()) !== stepKey(next())}
           onBack={() => props.select(undefined)}
           list={isListStep(step())}
           mode={props.listMode ?? 'inline'}
@@ -274,6 +274,34 @@ export default function Trail(props: TrailProps) {
       </span>
     </button>
   );
+  const slotField = (s: OpenedSlot) => {
+    const background = () => isBackgroundSlot(view(), s.id);
+    const step: Step = { kind: 'slot', slot: s.id };
+    const value = () => {
+      const now = characterChipSlots(view()).find((x) => slotKey(x.id) === slotKey(s.id));
+      if (now?.pick === undefined) return undefined;
+      return background()
+        ? backgroundLabel(props.planner.engine, build(), props.planner.walked(), s.id)
+        : pickLabels(data(), characterChipSlots(view())).get(slotKey(s.id));
+    };
+    return (
+      <CharacterField
+        trail={api}
+        step={step}
+        title={stepTitle(view(), step)}
+        modal={props.listMode === 'modal'}
+        field={{
+          label: slotLabel(data(), s.id.selection),
+          value: value(),
+          placeholder: `Choose your ${slotWords(data(), s.id.selection)}`,
+          target: isTarget({ kind: 'slot', slot: s.id }),
+        }}
+        list={(f) =>
+          background() ? <BackgroundStep trail={api} field={f} /> : <PickStep trail={api} slot={s.id} field={f} />
+        }
+      />
+    );
+  };
   const slotChip = (s: OpenedSlot, labels: ReadonlyMap<string, string>) => {
     const background = isBackgroundSlot(view(), s.id);
     return chip(
@@ -409,24 +437,30 @@ export default function Trail(props: TrailProps) {
           editing={characterOpen()}
           onToggle={() => props.send({ kind: 'character', open: cardFolded() ? true : !characterOpen() })}
           {...(props.diff && { diff: props.diff })}
-          race={chip(
-            'Race',
-            raceLabel(props.planner.engine, build(), props.planner.walked()),
-            { kind: 'race' },
-            undefined,
-            false,
-            'Choose your race',
-          )}
-          raceStep={step().kind === 'race'}
+          race={
+            <CharacterField
+              trail={api}
+              step={{ kind: 'race' }}
+              title={stepTitle(view(), { kind: 'race' })}
+              modal={props.listMode === 'modal'}
+              field={{
+                label: 'Race',
+                value: raceLabel(props.planner.engine, build(), props.planner.walked()),
+                placeholder: 'Choose your race',
+                target: isTarget({ kind: 'race' }),
+              }}
+              list={(f) => <RaceStep trail={api} field={f} />}
+            />
+          }
           chips={
-            <div class="trail-chips">
-              <For each={characterChipSlots(view())}>
-                {(s) => <>{slotChip(s, pickLabels(data(), characterChipSlots(view())))}</>}
+            <div class="trail-fields">
+              <For each={characterChipSlots(view())} keyed={(s) => slotKey(s.id)}>
+                {(s) => untrack(() => slotField(s()))}
               </For>
             </div>
           }
           scoresStep={where().kind === 'scores'}
-          here={<Show when={hereIsCharacter()}>{here()}</Show>}
+          here={<Show when={where().kind === 'scores'}>{here()}</Show>}
         />
         <ol class="trail-path" aria-label="Levels">
           <For each={chapters(build().levels.length)}>

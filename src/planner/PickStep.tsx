@@ -1,4 +1,4 @@
-import { createEffect, createMemo, createSignal, For, onSettled, Show, useContext } from 'solid-js';
+import { createEffect, createMemo, createSignal, For, onSettled, Show, untrack, useContext } from 'solid-js';
 import { slotKey, type Build, type Pick, type SlotId } from '~engine/build';
 import type { Guid } from '~engine/data';
 import type { Edit } from '~engine/edits';
@@ -7,7 +7,7 @@ import { picker, type OptionStatus } from '~engine/pickers';
 import { gearNote, listNames, nameOf, refusal } from '~engine/refusals';
 
 import { Button, OptionList, PickerOption } from '../design';
-import { Filter, moveThroughOptions, SCROLL_STYLE, StepArrived, type ClosedToggle } from './ChoiceList';
+import { Filter, moveThroughOptions, SCROLL_STYLE, StepArrived, type ClosedToggle, type FieldMode } from './ChoiceList';
 import { featCategory } from './feat-category';
 import { after } from './flat-choices';
 import { CollapsedLists, createListPanel } from './list-panel';
@@ -24,6 +24,7 @@ const GROUP_REASONS = 3;
 export interface PickStepProps {
   readonly trail: TrailApi;
   readonly slot: SlotId;
+  readonly field?: FieldMode | undefined;
 }
 
 const listedOf = (o: OptionStatus) =>
@@ -70,7 +71,26 @@ export function PickStep(props: PickStepProps) {
   const [text, setText] = createSignal('');
   const [mark, setMark] = createSignal(0);
   const [expanded, setExpanded] = createSignal<string | undefined>(undefined);
-  const p = createMemo(() => picker(data(), planner().build(), props.slot, planner().engine.G));
+  const collapsing = useContext(CollapsedLists);
+  const arrived = useContext(StepArrived);
+  let box: HTMLDivElement | undefined;
+  const panel = createListPanel(
+    () => props.field !== undefined || collapsing,
+    untrack(() => props.field === undefined && arrived()),
+    () => box,
+  );
+  const idle = () => props.field !== undefined && !panel.shown();
+  const p = createMemo(() => (idle() ? undefined : picker(data(), planner().build(), props.slot, planner().engine.G)));
+  createEffect(
+    () => panel.shown(),
+    (shown) => {
+      if (!shown && props.field !== undefined) {
+        setText('');
+        setMark(0);
+        setExpanded(undefined);
+      }
+    },
+  );
   const pickAt = (slot: SlotId): Pick | undefined =>
     planner()
       .build()
@@ -194,14 +214,6 @@ export function PickStep(props: PickStepProps) {
     slot,
     pick: { feature: o.feature, ...(o.param && { param: o.param }) },
   });
-  const collapsing = useContext(CollapsedLists);
-  const arrived = useContext(StepArrived);
-  let box: HTMLDivElement | undefined;
-  const panel = createListPanel(
-    () => collapsing,
-    arrived(),
-    () => box,
-  );
   const currentName = () => {
     const c = current();
     if (c === undefined) return undefined;
@@ -317,7 +329,10 @@ export function PickStep(props: PickStepProps) {
     return out;
   });
   return (
-    <Show when={p()} fallback={<p class="trail-note">This choice doesn't open in the Build any more.</p>}>
+    <Show
+      when={props.field !== undefined || p()}
+      fallback={<p class="trail-note">This choice doesn't open in the Build any more.</p>}
+    >
       <div
         ref={(el) => {
           box = el;
@@ -340,8 +355,11 @@ export function PickStep(props: PickStepProps) {
           }}
           onMove={(delta) => setMark((m) => nextMark(items(), m, delta))}
           onEnter={() => enterItem(items()[mark()])}
+          field={props.field}
+          open={panel.shown()}
+          onArrive={() => panel.show()}
         />
-        <Show when={panel.collapsed() && currentName()}>
+        <Show when={props.field === undefined && panel.collapsed() && currentName()}>
           {(n) => <PickerOption name={n()} status="open" selected onPick={() => panel.show()} />}
         </Show>
         <Show when={panel.shown()}>
@@ -467,7 +485,7 @@ export function PickStep(props: PickStepProps) {
             </button>
           </Show>
         </Show>
-        <Show when={current()}>
+        <Show when={current() && !idle()}>
           <Button
             variant="danger"
             onClick={() =>

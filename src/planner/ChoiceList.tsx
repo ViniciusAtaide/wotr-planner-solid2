@@ -1,4 +1,14 @@
-import { createContext, createEffect, createMemo, createSignal, For, onSettled, Show, useContext } from 'solid-js';
+import {
+  createContext,
+  createEffect,
+  createMemo,
+  createSignal,
+  For,
+  onSettled,
+  Show,
+  untrack,
+  useContext,
+} from 'solid-js';
 import type { Build } from '~engine/build';
 import type { Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
@@ -62,31 +72,64 @@ export function focusFilter(el: HTMLInputElement | undefined): void {
   if (el !== undefined && matchMedia('(pointer: fine)').matches) el.focus({ preventScroll: true });
 }
 
+export interface FieldMode {
+  readonly label: string;
+  readonly value: string | undefined;
+  readonly placeholder: string;
+  readonly target: boolean;
+}
+
 export interface FilterProps {
   readonly label: string;
   readonly value: string;
   readonly onInput: (text: string) => void;
   readonly onEnter: () => void;
   readonly onMove?: (delta: number) => void;
+  readonly field?: FieldMode | undefined;
+  readonly open?: boolean;
+  readonly onArrive?: () => void;
 }
 
 export function Filter(props: FilterProps) {
   let input: HTMLInputElement | undefined;
   const arrived = useContext(StepArrived);
   onSettled(() => {
-    if (arrived()) focusFilter(input);
+    if (props.field === undefined && arrived()) focusFilter(input);
   });
-  return (
+  createEffect(
+    () => props.field?.target === true && arrived(),
+    (due) => {
+      if (!due) return;
+      props.onArrive?.();
+      const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      input?.scrollIntoView?.({ block: 'center', behavior: still ? 'auto' : 'smooth' });
+      focusFilter(input);
+      requestAnimationFrame(() => {
+        const now = document.activeElement;
+        if (now !== null && now !== document.body && now.isConnected) return;
+        input?.closest('.trail-choices, .trail-step')?.querySelector<HTMLElement>('button.ww-option')?.focus({
+          preventScroll: true,
+        });
+      });
+    },
+  );
+  const box = () => (
     <input
       ref={(el) => {
         input = el;
       }}
-      class="trail-filter"
+      class={['trail-filter', { 'trail-field__input': props.field !== undefined }]}
       type="search"
-      placeholder="Type to filter, Enter takes the first ( / )"
-      aria-label={props.label}
+      placeholder={
+        props.field === undefined
+          ? 'Type to filter, Enter takes the first ( / )'
+          : props.open === true
+            ? (props.field.value ?? props.field.placeholder)
+            : props.field.placeholder
+      }
+      aria-label={props.field === undefined ? props.label : undefined}
       data-picker-filter
-      value={props.value}
+      value={props.field === undefined || props.open === true ? props.value : (props.field.value ?? '')}
       onInput={(e) => props.onInput(e.currentTarget.value)}
       onKeyDown={(e) => {
         const delta = e.key === 'ArrowDown' ? 1 : e.key === 'ArrowUp' ? -1 : 0;
@@ -101,6 +144,18 @@ export function Filter(props: FilterProps) {
       }}
     />
   );
+  return (
+    <Show when={props.field} fallback={box()}>
+      {(f) => (
+        <label
+          class={['trail-field', { 'trail-field--unset': f().value === undefined, 'trail-field--target': f().target }]}
+        >
+          <span class="trail-field__label">{f().label}</span>
+          {box()}
+        </label>
+      )}
+    </Show>
+  );
 }
 
 export interface ClosedToggle {
@@ -112,6 +167,7 @@ export interface ChoiceListProps {
   readonly label: string;
   readonly rows: readonly ChoiceRow[];
   readonly closed?: ClosedToggle;
+  readonly field?: FieldMode | undefined;
 }
 
 export const SCROLL_STYLE = { 'max-height': 'var(--choice-list-max)', 'overflow-y': 'auto' } as const;
@@ -135,20 +191,30 @@ export function ChoiceList(props: ChoiceListProps) {
   const [mark, setMark] = createSignal(0);
   let scroller: HTMLDivElement | undefined;
   const toggle = createClosedToggle(() => props.closed);
-  const listed = createMemo(() => props.rows.filter((r) => matches(r.name, text())));
-  const open = () => listed().filter((r) => r.open);
-  const closed = () => listed().filter((r) => !r.open);
-  const closedShown = () => (toggle.shown ? closed() : closed().filter((r) => r.current));
-  const filtering = () => props.rows.length >= FILTER_FROM;
+  const filtering = () => props.field !== undefined || props.rows.length >= FILTER_FROM;
   const collapsing = useContext(CollapsedLists);
   const arrived = useContext(StepArrived);
   let box: HTMLDivElement | undefined;
   const panel = createListPanel(
-    () => collapsing && filtering(),
-    arrived(),
+    () => props.field !== undefined || (collapsing && filtering()),
+    untrack(() => props.field === undefined && arrived()),
     () => box,
   );
-  const current = () => props.rows.find((r) => r.current);
+  const all = createMemo((): readonly ChoiceRow[] => (props.field !== undefined && !panel.shown() ? [] : props.rows));
+  const listed = createMemo(() => all().filter((r) => matches(r.name, text())));
+  const open = () => listed().filter((r) => r.open);
+  const closed = () => listed().filter((r) => !r.open);
+  const closedShown = () => (toggle.shown ? closed() : closed().filter((r) => r.current));
+  createEffect(
+    () => panel.shown(),
+    (shown) => {
+      if (!shown && props.field !== undefined) {
+        setText('');
+        setMark(0);
+      }
+    },
+  );
+  const current = () => all().find((r) => r.current);
   const take = (r: ChoiceRow | undefined) => {
     if (r === undefined) return;
     panel.hide();
@@ -156,7 +222,7 @@ export function ChoiceList(props: ChoiceListProps) {
   };
   const hub = useContext(OptionDetails);
   const findDetail = (key: string): OptionDetail | undefined => {
-    const r = props.rows.find((row) => row.key === key);
+    const r = all().find((row) => row.key === key);
     return r === undefined
       ? undefined
       : {
@@ -202,9 +268,12 @@ export function ChoiceList(props: ChoiceListProps) {
           }}
           onMove={(delta) => setMark((m) => clampMark(m, delta, open().length))}
           onEnter={() => take(open()[mark()])}
+          field={props.field}
+          open={panel.shown()}
+          onArrive={() => panel.show()}
         />
       </Show>
-      <Show when={panel.collapsed() && current()}>
+      <Show when={props.field === undefined && panel.collapsed() && current()}>
         {(r) => <PickerOption name={r().name} status="open" selected onPick={() => panel.show()} />}
       </Show>
       <Show when={panel.shown()}>
@@ -215,7 +284,7 @@ export function ChoiceList(props: ChoiceListProps) {
           <p class="trail-note">No choices open here.</p>
         </Show>
         <div
-          class={['trail-scroll', { 'trail-scroll--two-line': props.rows.some((r) => r.note !== undefined) }]}
+          class={['trail-scroll', { 'trail-scroll--two-line': all().some((r) => r.note !== undefined) }]}
           style={SCROLL_STYLE}
           ref={(el) => {
             scroller = el;
