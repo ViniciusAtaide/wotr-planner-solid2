@@ -1,5 +1,16 @@
 import type { JSX } from '@solidjs/web';
-import { createMemo, For, Match, onSettled, Show, Switch, untrack, useContext } from 'solid-js';
+import {
+  createEffect,
+  createMemo,
+  createSignal,
+  For,
+  Match,
+  onSettled,
+  Show,
+  Switch,
+  untrack,
+  useContext,
+} from 'solid-js';
 import { slotKey, type Place } from '~engine/build';
 import { isShown, refGuid, type Attribute } from '~engine/data';
 import type { Edit } from '~engine/edits';
@@ -37,6 +48,8 @@ import {
   characterEditing,
   characterFolded,
   characterChipSlots,
+  characterSlots,
+  isCharacterSlot,
   classLevelAt,
   folded,
   gearDependentSlots,
@@ -306,6 +319,7 @@ export default function Trail(props: TrailProps) {
           value: value(),
           placeholder: `Choose your ${slotWords(data(), s.id.selection)}`,
           target: isTarget({ kind: 'slot', slot: s.id }),
+          arrive: arriving() === stepKey(step),
         }}
         list={(f) =>
           background() ? <BackgroundStep trail={api} field={f} /> : <PickStep trail={api} slot={s.id} field={f} />
@@ -372,6 +386,30 @@ export default function Trail(props: TrailProps) {
   const next = createMemo((): Step => nextStep(view(), props.state), {
     equals: (a, b) => stepKey(a) === stepKey(b),
   });
+  const [arriving, setArriving] = createSignal<string | undefined>(undefined);
+  const fieldKey = (st: Step) =>
+    st.kind === 'race' || (st.kind === 'slot' && isCharacterSlot(view(), st.slot)) ? stepKey(st) : undefined;
+  const isFieldKey = (key: string) =>
+    key === stepKey({ kind: 'race' }) ||
+    characterSlots(view()).some((x) => stepKey({ kind: 'slot', slot: x.id }) === key);
+  let lastNext = untrack(() => stepKey(next()));
+  createEffect(
+    () => ({ built: build(), now: next() }),
+    ({ now }) => {
+      const open = props.state.dialog;
+      if (open !== undefined && isFieldKey(open)) props.send({ kind: 'dialog', step: undefined });
+      const key = stepKey(now);
+      if (key === lastNext) return;
+      lastNext = key;
+      const arrivingKey = fieldKey(now);
+      if (arrivingKey === undefined || !arrived()) {
+        setArriving(undefined);
+        return;
+      }
+      if (props.listMode === 'modal') props.send({ kind: 'dialog', step: arrivingKey });
+      else setArriving(arrivingKey);
+    },
+  );
   const cardView = () => ({
     phone: props.phone,
     levelOneDone: levelOneDone(view(), next()),
@@ -461,6 +499,7 @@ export default function Trail(props: TrailProps) {
                 value: raceLabel(props.planner.engine, build(), props.planner.walked()),
                 placeholder: 'Choose your race',
                 target: isTarget({ kind: 'race' }),
+                arrive: arriving() === stepKey({ kind: 'race' }),
               }}
               list={(f) => <RaceStep trail={api} field={f} />}
             />

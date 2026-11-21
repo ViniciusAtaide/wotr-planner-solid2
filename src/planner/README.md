@@ -27,8 +27,11 @@ A Build reads as the character's path, phone first. From top to bottom the page 
   field mode, `FieldMode` on `ChoiceList` and `PickStep`: the same cap, windowing, closed rows and keys), and a pick
   closes it and moves the trail on, with no step heading, Back or Expand around it. While closed, a field computes
   nothing (its rows and picker load only while its list is open). Modal first, focusing or clicking it opens the
-  dialog instead, and a pick closes that dialog. A field whose step arrives through auto-advance opens itself (and
-  takes focus under a fine pointer; on touch its first option does), never on first load.
+  dialog instead. A field whose step arrives through auto-advance opens itself (and takes focus under a fine pointer;
+  on touch its first option does), never on first load. Both are the trail's call, not the field's (QA pass 5): a
+  field arrives only when the trail's next step becomes it (`arriving` in `Trail.tsx`), so a pick made elsewhere
+  never opens a waiting field, and any change to the Build closes an open field's dialog. A click on a focused
+  field reopens its list.
 - **The trail**: one stop per character level, titled with its class and class level, with its picks as chips: each
   slot the walk opens there, an Archetype chip at a class's first level when it has archetypes, the ability increase
   when the walk offers one, and the skills ("4 ranks"). Each Mythic rank is its own stop after the level it is taken at,
