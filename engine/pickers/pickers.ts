@@ -4,6 +4,7 @@ import { refGuid, type Blueprint, type BlueprintParametrizedFeature, type Guid, 
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
 import type { FailedRule, Unit } from '../walk';
 import { SKILL_ATTRIBUTE, pauseAt, walk, type OpenedSlot, type PausedWalk, WEAPON_CATEGORIES } from '../walk';
+import { heldIndex, synergyOf, type HeldIndex, type Synergy } from '../links';
 import { namesInList } from './option-names';
 
 export interface OptionStatus {
@@ -14,6 +15,7 @@ export interface OptionStatus {
   readonly gearItems?: readonly Guid[];
   readonly name?: string;
   readonly qualifier?: string;
+  readonly synergy?: Synergy;
 }
 
 export interface Picker {
@@ -77,8 +79,17 @@ export function picker(
 ): Picker | undefined {
   const paused = pauseAt(data, build, slot, G);
   if (paused === undefined) return undefined;
+  const held = heldIndex(data, [...paused.unit.facts()]);
   const options = candidates(data, slot.selection).map((o) => status(data, paused, o));
-  return { slot: paused.slot, options: withListNames(data, options), unit: paused.unit };
+  return { slot: paused.slot, options: withSynergy(data, held, withListNames(data, options)), unit: paused.unit };
+}
+
+function withSynergy(data: CheckedData, held: HeldIndex, options: readonly OptionStatus[]): OptionStatus[] {
+  return options.map((o) => {
+    if (!o.shown) return o;
+    const synergy = synergyOf(data, held, o);
+    return synergy.shared.length === 0 && synergy.wontStack.length === 0 ? o : { ...o, synergy };
+  });
 }
 
 function withListNames(data: CheckedData, options: readonly OptionStatus[]): OptionStatus[] {

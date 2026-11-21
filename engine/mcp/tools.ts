@@ -26,7 +26,7 @@ import {
 import { describe, NO_SUMMARY, type Description } from '../describe';
 import { allows, apply, breaksOf, cascade, type Breaks, type Edit } from '../edits';
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
-import { linkIndex } from '../links';
+import { linkIndex, type SharedTopic, type StackClash, type Topic } from '../links';
 import { picker, type OptionStatus } from '../pickers';
 import {
   abilityScoreRange,
@@ -236,6 +236,8 @@ export interface OptionView {
   readonly name: string;
   readonly summary: string;
   readonly buildsOn: readonly string[];
+  readonly shares?: readonly string[];
+  readonly wontStack?: readonly string[];
   readonly gear?: string;
   readonly refusal?: Refusal;
 }
@@ -281,6 +283,8 @@ export async function options(
       .needs(o.feature)
       .filter((g) => held.has(g))
       .map((g) => nameOf(e.data, g)),
+    ...(o.synergy && o.synergy.shared.length > 0 && { shares: o.synergy.shared.map((s) => sharedWords(e, s)) }),
+    ...(o.synergy && o.synergy.wontStack.length > 0 && { wontStack: o.synergy.wontStack.map((c) => stackWords(e, c)) }),
     ...(o.gearItems && { gear: gearNote(e.data, o.gearItems) }),
     ...(o.closed && { refusal: refusal({ data: e.data, G: e.G, unit }, o.closed) }),
   });
@@ -299,6 +303,22 @@ export async function options(
     closedByReason,
     ...(args.include_closed && { closed: closedOnes.map(view) }),
   };
+}
+
+function topicWords(t: Topic): string {
+  if (t.kind === 'ability') return t.stat;
+  if (t.kind === 'school') return `${t.school} spells`;
+  return t.category.replace(/([a-z])([A-Z])/g, '$1 $2');
+}
+
+function sharedWords(e: Engine, s: SharedTopic): string {
+  return `${topicWords(s.topic)}, like ${s.with.map((g) => nameOf(e.data, g)).join(', ')}`;
+}
+
+function stackWords(e: Engine, c: StackClash): string {
+  const stat = statName(c.stat);
+  const kind = c.descriptor.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase();
+  return `Its ${kind} bonus to ${stat} won't stack with ${c.with.map((g) => nameOf(e.data, g)).join(', ')}.`;
 }
 
 function optionName(e: Engine, o: { readonly feature: Guid; readonly param?: GrantParam }): string {
@@ -389,18 +409,38 @@ export async function synergies(
   e: Engine,
   args: { readonly code: string; readonly slot?: SlotId },
 ): Promise<
-  readonly { readonly slot: string; readonly option: string; readonly buildsOn: readonly string[] }[] | ToolRefusal
+  | readonly {
+      readonly slot: string;
+      readonly option: string;
+      readonly buildsOn: readonly string[];
+      readonly shares?: readonly string[];
+      readonly wontStack?: readonly string[];
+    }[]
+  | ToolRefusal
 > {
   const build = await open(e, args.code);
   if (isRefusal(build)) return build;
   const slots = args.slot === undefined ? openSlots(e, build).map((s) => s.slot) : [args.slot];
-  const out: { slot: string; option: string; buildsOn: readonly string[] }[] = [];
+  const out: {
+    slot: string;
+    option: string;
+    buildsOn: readonly string[];
+    shares?: readonly string[];
+    wontStack?: readonly string[];
+  }[] = [];
   for (const slot of slots) {
     const listed = await options(e, { code: args.code, slot, page: 1 });
     if (isRefusal(listed)) continue;
     const all = await allOpen(e, args.code, slot, listed.openTotal);
     for (const o of all)
-      if (o.buildsOn.length > 0) out.push({ slot: slotKey(slot), option: o.name, buildsOn: o.buildsOn });
+      if (o.buildsOn.length > 0 || o.shares !== undefined || o.wontStack !== undefined)
+        out.push({
+          slot: slotKey(slot),
+          option: o.name,
+          buildsOn: o.buildsOn,
+          ...(o.shares && { shares: o.shares }),
+          ...(o.wontStack && { wontStack: o.wontStack }),
+        });
   }
   return out;
 }

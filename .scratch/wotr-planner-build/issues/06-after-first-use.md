@@ -1,6 +1,7 @@
 # After first use: summaries, more links, the published site
 
-Status: open
+Status: in-progress
+Session: ticket-03c-walk-fixes (engine: summaries and links; the static site waits for the user)
 Blocked by: 05
 Plan: [plan](../plan.md)
 
@@ -30,3 +31,12 @@ The polish that waits until the planner is in use. Split this ticket up when it 
 - Each of the top 50 component types has a label, and a test produces its sentence from a real blueprint.
 - Links of every listed kind appear on the gold builds where the data supports them.
 - The static build works from GitHub Pages with no server, Share links included, and shows the OGL notice.
+
+## Progress (ticket-03c-walk-fixes)
+
+- **The data gap:** `data/` keeps only the 69 component types the walk needs. The components a Summary would describe (bonuses, saves, immunities, resistances, triggers) are dropped as "In play" (`data/report.md`). Labelling the top 50 needs the importer to keep those 50 carriers first, with their fields, enums and cites (ADR 0005). A split has been proposed to the coordinator: 06a importer, 06b labels, 06c hand-written summaries, 06d links.
+- **Links from kept data** (engine/links `topics.ts`, S's `synergy`, the MCP's `shares` and `wontStack`):
+  - ability score, weapon category and spell school, including a parametrized pick's chosen weapon or school;
+  - the "won't stack" warning, a port of `ModifierDescriptorHelper.IsStackable`.
+
+  Tested on real data and on both gold Builds' pickers. Energy type and the descriptor list wait for 06a.
