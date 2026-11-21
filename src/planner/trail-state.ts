@@ -5,7 +5,7 @@ import { BACKGROUNDS_BASE_SELECTION, characterWideSlots, heritageSlotIn, namesIn
 import { nameOf } from '~engine/refusals';
 import type { OpenedSlot, Walk } from '~engine/walk';
 
-import { backgroundChildren } from './flat-choices';
+import { backgroundChildren, flatName } from './flat-choices';
 import type { Selection } from './workspace-state';
 import { bareNameOf, shownName } from './words';
 
@@ -33,6 +33,7 @@ export interface TrailState {
   readonly characterOpen: boolean | undefined;
   readonly otherClass: boolean;
   readonly closedShown: ReadonlySet<string>;
+  readonly skillsCleared: ReadonlySet<number>;
 }
 
 export type TrailAction =
@@ -42,7 +43,8 @@ export type TrailAction =
   | { readonly kind: 'levelAdded' }
   | { readonly kind: 'character'; readonly open: boolean }
   | { readonly kind: 'otherClass'; readonly open: boolean }
-  | { readonly kind: 'toggleClosed'; readonly list: string };
+  | { readonly kind: 'toggleClosed'; readonly list: string }
+  | { readonly kind: 'skillsCleared'; readonly levels: readonly number[] };
 
 export const TRAIL_START: TrailState = {
   skillsLeft: new Set(),
@@ -51,6 +53,7 @@ export const TRAIL_START: TrailState = {
   characterOpen: undefined,
   otherClass: false,
   closedShown: new Set(),
+  skillsCleared: new Set(),
 };
 
 export function reduceTrail(s: TrailState, a: TrailAction): TrailState {
@@ -70,6 +73,14 @@ export function reduceTrail(s: TrailState, a: TrailAction): TrailState {
       return { ...s, characterOpen: a.open };
     case 'otherClass':
       return { ...s, otherClass: a.open };
+    case 'skillsCleared':
+      return a.levels.length === 0
+        ? s
+        : {
+            ...s,
+            skillsCleared: new Set([...s.skillsCleared, ...a.levels]),
+            skillsLeft: new Set([...s.skillsLeft].filter((l) => !a.levels.includes(l))),
+          };
     case 'toggleClosed': {
       const closedShown = new Set(s.closedShown);
       if (!closedShown.delete(a.list)) closedShown.add(a.list);
@@ -180,7 +191,24 @@ export function mythicDue(t: TrailView, later: number | undefined): MythicDue | 
   return at > 0 && at <= levels ? { rank, at } : undefined;
 }
 
-export function nextStep(t: TrailView, s: Pick<TrailState, 'skillsLeft' | 'mythicLater'>): Step {
+export function clearedSkillsDue(
+  t: TrailView,
+  cleared: ReadonlySet<number> | undefined,
+  left: ReadonlySet<number>,
+): number | undefined {
+  return [...(cleared ?? [])]
+    .sort((a, b) => a - b)
+    .find((level) => {
+      if (level > t.build.levels.length || left.has(level)) return false;
+      const b = skillBudget(t, level);
+      return b.spent < b.available;
+    });
+}
+
+export function nextStep(
+  t: TrailView,
+  s: Pick<TrailState, 'skillsLeft' | 'mythicLater'> & Partial<Pick<TrailState, 'skillsCleared'>>,
+): Step {
   if (t.build.scores === undefined) return { kind: 'scores' };
   if (t.build.race === undefined) return { kind: 'race' };
   const empty = (slots: readonly OpenedSlot[]) => slots.find((x) => x.pick === undefined);
@@ -188,6 +216,8 @@ export function nextStep(t: TrailView, s: Pick<TrailState, 'skillsLeft' | 'mythi
   if (slot !== undefined) return { kind: 'slot', slot: slot.id };
   const increase = increaseDue(t);
   if (increase !== undefined) return { kind: 'increase', level: increase };
+  const redo = clearedSkillsDue(t, s.skillsCleared, s.skillsLeft);
+  if (redo !== undefined) return { kind: 'skills', level: redo };
   const skills = skillsDue(t, s.skillsLeft);
   if (skills !== undefined) return { kind: 'skills', level: skills };
   const due = mythicDue(t, s.mythicLater);
@@ -379,7 +409,24 @@ function pickNames(t: TrailView, slots: readonly OpenedSlot[]): string[] {
 }
 
 export function characterPicksLine(t: TrailView): string {
-  return pickNames(t, characterSlots(t)).join(' · ');
+  const heritage = heritageSlotIn(t.data, t.walk.slots)?.pick;
+  const race =
+    t.build.race === undefined
+      ? []
+      : [flatName(bareNameOf(t.data, t.build.race), heritage && shownName(t.data, heritage.feature, heritage.param))];
+  const base = backgroundSlot(t);
+  const child =
+    base === undefined ? undefined : backgroundChildren(t.walk.slots, base.id).find((s) => s.pick !== undefined)?.pick;
+  const slots = characterChipSlots(t);
+  const names = pickNames(t, slots);
+  const picked = slots.filter((s) => s.pick !== undefined);
+  const rest = picked.map((s, i) => {
+    const name = names[i] ?? '';
+    return base !== undefined && slotKey(s.id) === slotKey(base.id)
+      ? flatName(name, child && shownName(t.data, child.feature, child.param))
+      : name;
+  });
+  return [...race, ...rest].join(' · ');
 }
 
 export function rankNumbersAt(build: Build, level: number): readonly number[] {

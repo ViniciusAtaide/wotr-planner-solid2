@@ -35,6 +35,7 @@
   --radius-lg: 8px;
   --choice-row-height: 78px;
   --choice-list-max: calc(6.5 * var(--choice-row-height));
+  --notice-max-height: 50vh;
   --font-display: 'Grenze', 'Palatino Linotype', Palatino, Georgia, serif;
   --font-body: 'Alegreya Sans', 'Gill Sans', 'Segoe UI', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;

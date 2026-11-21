@@ -174,6 +174,22 @@ dimmed and inert behind "Edit the Second Build".
 
 `index.ts` imports `planner.css` and exports `Planner`, the page.
 
+**QA pass 2** (2026-11-21):
+- A refusal names its reasons before the picks it would break (`brokenWords`), shows the first `NOTICE_LINES` and
+  folds the rest into "…and N more" (`RefusalNotice`); the notice area is capped (`--notice-max-height`) and scrolls,
+  so its lines are reachable on a phone.
+- The Cascade preview gives one count of what it clears ("This breaks 14 later choices: …", "Clear 14 choices"),
+  its rows in walk order, levels and ranks interleaved by where they fall (`clearsList`).
+- Levels whose skill ranks a confirmed Cascade cleared (`Pending.clearedSkills`) come back as a trail step until spent
+  or left (`skillsCleared`, `clearedSkillsDue`), with the budget line and "Done · leave N unspent".
+- "Same as level N−1" shows only when the walk allows it; the skills step's checks (the + steppers and "Same as") run
+  once per Build change, just after the edit paints (`skillChecks`).
+- The folded card line and Export name the race and background as their flat pairs (`characterPicksLine`).
+- A refused copy keeps its menu label and says why in the status beside ⋯.
+- A broken link says it came from a newer planner only when its version byte is higher and its body still inflates
+  (`looksNewer`); otherwise it isn't a planner link.
+- The level editor sorts archetypes by name, the current one first; "Builds on" and "Enables" use R's bare names.
+
 ## Modules
 
 - **`engine.ts`: the engine in the browser (ADR 0004).** `loadEngine` fetches the data document once, with the same

@@ -3,7 +3,7 @@ import { slotKey, type Build, type Pick, type SlotId } from '~engine/build';
 import type { Edit } from '~engine/edits';
 import { linkIndex } from '~engine/links';
 import { picker, type OptionStatus } from '~engine/pickers';
-import { gearNote, nameOf, refusal } from '~engine/refusals';
+import { gearNote, listNames, nameOf, refusal } from '~engine/refusals';
 
 import { Button, ClosedCount, OptionList, PickerOption } from '../design';
 import {
@@ -91,9 +91,9 @@ export function PickStep(props: PickStepProps) {
     const on = index.needs(o.feature).filter((g) => held().has(g));
     const enables = index.enables(o.feature);
     const parts = [
-      on.length > 0 && `Builds on ${on.map((g) => nameOf(data(), g)).join(', ')}`,
+      on.length > 0 && `Builds on ${listNames(data(), on).join(', ')}`,
       enables[0] !== undefined &&
-        `Enables ${nameOf(data(), enables[0])}${enables.length > 1 ? ` → and ${enables.length - 1} more` : ''}`,
+        `Enables ${listNames(data(), enables)[0] ?? nameOf(data(), enables[0])}${enables.length > 1 ? ` → and ${enables.length - 1} more` : ''}`,
     ].filter((w) => typeof w === 'string');
     return parts.length > 0 ? parts.join(' · ') : undefined;
   };

@@ -1,8 +1,8 @@
-import { createMemo, For, Match, Show, Switch } from 'solid-js';
-import { toRankLevel, toSkillRanks, type SlotId } from '~engine/build';
+import { createEffect, createMemo, createSignal, For, Match, Show, Switch } from 'solid-js';
+import { toRankLevel, toSkillRanks, type Build, type SkillRanks, type SlotId } from '~engine/build';
 import type { Attribute, StatType } from '~engine/data';
 import { allows, type Edit } from '~engine/edits';
-import { expectedLevel } from '~engine/mcp';
+import { expectedLevel, type Engine } from '~engine/mcp';
 import { mythicStartingClass, offeredClasses, offeredMythicClasses } from '~engine/pickers';
 import { nameOf, rankLevelRange, statName } from '~engine/refusals';
 import { ATTRIBUTES, SKILL_ATTRIBUTE } from '~engine/walk';
@@ -111,29 +111,42 @@ export function IncreaseStep(props: LevelStepProps) {
   );
 }
 
+export interface SkillChecks {
+  readonly raisable: ReadonlySet<StatType>;
+  readonly same: boolean;
+}
+
+export function skillChecks(engine: Engine, b: Build, level: number): SkillChecks {
+  const now = b.levels[level - 1]?.skills ?? {};
+  const before = b.levels[level - 2]?.skills;
+  const fits = (skills: SkillRanks | undefined) =>
+    skills !== undefined && allows(engine.data, b, { kind: 'skills', level, skills }, engine.G).ok;
+  return {
+    raisable: new Set(SKILLS.filter((skill) => fits(toSkillRanks({ ...now, [skill]: (now[skill] ?? 0) + 1 })))),
+    same: before !== undefined && fits(before),
+  };
+}
+
 export function SkillsStep(props: LevelStepProps) {
   const build = () => props.trail.planner.build();
   const ranks = () => build().levels[props.level - 1]?.skills ?? {};
   const budget = () => skillBudget(props.trail.view(), props.level);
   const last = () => props.level === build().levels.length;
+  const budgeted = () => last() || props.trail.state().skillsCleared.has(props.level);
   const left = () => budget().available - budget().spent;
+  const [checked, setChecked] = createSignal<SkillChecks | undefined>(undefined);
+  createEffect(
+    () => ({ b: build(), level: props.level }),
+    ({ b, level }) => {
+      const timer = setTimeout(() => setChecked(skillChecks(props.trail.planner.engine, b, level)), 0);
+      return () => clearTimeout(timer);
+    },
+  );
+  const raisable = (skill: StatType) => checked()?.raisable.has(skill) ?? true;
   const previous = () => {
     const before = build().levels[props.level - 2]?.skills;
-    return before === undefined || sameRanks(before, ranks()) ? undefined : before;
+    return before === undefined || sameRanks(before, ranks()) || checked()?.same !== true ? undefined : before;
   };
-  const raisable = createMemo(() => {
-    const engine = props.trail.planner.engine;
-    const b = build();
-    const now = ranks();
-    return new Set(
-      SKILLS.filter((skill) => {
-        const skills = toSkillRanks({ ...now, [skill]: (now[skill] ?? 0) + 1 });
-        return (
-          skills !== undefined && allows(engine.data, b, { kind: 'skills', level: props.level, skills }, engine.G).ok
-        );
-      }),
-    );
-  });
   const set = (skill: StatType, delta: number) => {
     const wanted: Record<string, number> = { ...ranks() };
     const n = Math.max(0, (wanted[skill] ?? 0) + delta);
@@ -150,7 +163,7 @@ export function SkillsStep(props: LevelStepProps) {
     <div class="trail-step">
       <div class="trail-skills__head">
         <span class="trail-budget">
-          <Show when={last()} fallback={<>{budget().spent} ranks at this level</>}>
+          <Show when={budgeted()} fallback={<>{budget().spent} ranks at this level</>}>
             {budget().spent} of {budget().available} skill points spent
           </Show>
         </span>
@@ -171,7 +184,7 @@ export function SkillsStep(props: LevelStepProps) {
           )}
         </Show>
       </div>
-      <Show when={last() && left() > 0}>
+      <Show when={budgeted() && left() > 0}>
         <button
           type="button"
           class="trail-link"
@@ -202,7 +215,7 @@ export function SkillsStep(props: LevelStepProps) {
                 type="button"
                 class="trail-stepper"
                 aria-label={`More ${statName(skill)} ranks`}
-                disabled={!raisable().has(skill)}
+                disabled={!raisable(skill)}
                 onClick={() => set(skill, 1)}
               >
                 +
@@ -450,7 +463,7 @@ export function LevelEditor(props: LevelStepProps) {
       current: held === undefined,
       take: () => props.trail.edit({ kind: 'archetypes', class: cls, archetypes: [] }, 'No archetype'),
     };
-    return [
+    return currentFirst([
       none,
       ...options.map((a) => {
         const own = judged?.get(a);
@@ -467,7 +480,7 @@ export function LevelEditor(props: LevelStepProps) {
           take: () => props.trail.edit({ kind: 'archetypes', class: cls, archetypes: [a] }, `Took ${name}`),
         };
       }),
-    ];
+    ]);
   });
   return (
     <Show when={level()}>

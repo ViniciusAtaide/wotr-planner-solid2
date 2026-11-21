@@ -1,4 +1,4 @@
-import { createEffect, createSignal, For, onSettled, Show } from 'solid-js';
+import { createSignal, For, onSettled, Show } from 'solid-js';
 
 import type { ShareLinkProps } from '../design';
 import type { ListMode } from './list-mode';
@@ -42,8 +42,6 @@ export interface PlannerMenuProps {
 
 export function PlannerMenu(props: PlannerMenuProps) {
   const [open, setOpen] = createSignal(false);
-  const [link, setLink] = createSignal<Copied>('idle');
-  const [sheet, setSheet] = createSignal<Copied>('idle');
   const [said, setSaid] = createSignal<string | undefined>(undefined);
   const copied = (words: string) => {
     setOpen(false);
@@ -53,12 +51,6 @@ export function PlannerMenu(props: PlannerMenuProps) {
     }, SAID_FOR_MS);
   };
   let root: HTMLDivElement | undefined;
-  createEffect(
-    () => (props.link.state === 'ready' ? props.link.url : props.link.state),
-    () => {
-      setLink('idle');
-    },
-  );
   onSettled(() => {
     const away = (e: Event) => {
       if (root !== undefined && e.target instanceof Node && !root.contains(e.target)) setOpen(false);
@@ -80,7 +72,7 @@ export function PlannerMenu(props: PlannerMenuProps) {
       case 'failed':
         return `No link: ${props.link.reason}`;
       case 'ready':
-        return LINK_WORDS[link()];
+        return LINK_WORDS.idle;
     }
   };
   return (
@@ -97,8 +89,6 @@ export function PlannerMenu(props: PlannerMenuProps) {
         aria-haspopup="menu"
         aria-expanded={open() ? 'true' : 'false'}
         onClick={() => {
-          setSheet('idle');
-          setLink('idle');
           setSaid(undefined);
           setOpen(!open());
         }}
@@ -117,8 +107,8 @@ export function PlannerMenu(props: PlannerMenuProps) {
             onClick={() => {
               if (props.link.state !== 'ready') return;
               void copyText(props.link.url).then((c) => {
-                setLink(c);
                 if (c === 'copied') copied(LINK_WORDS.copied);
+                else setSaid(LINK_WORDS.refused);
               });
             }}
           >
@@ -141,12 +131,12 @@ export function PlannerMenu(props: PlannerMenuProps) {
             role="menuitem"
             onClick={() =>
               void copyText(props.sheet()).then((c) => {
-                setSheet(c);
                 if (c === 'copied') copied(SHEET_WORDS.copied);
+                else setSaid(SHEET_WORDS.refused);
               })
             }
           >
-            {SHEET_WORDS[sheet()]}
+            {SHEET_WORDS.idle}
           </button>
           <div class="planner-menu__group" role="group" aria-label="Choice lists">
             <span class="planner-menu__label">Choice lists</span>
