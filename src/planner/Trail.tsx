@@ -53,6 +53,8 @@ import {
   skillBudget,
   slotLabel,
   slotWords,
+  SPELL_NOT_MODELLED,
+  spellPick,
   slotsAt,
   stepKey,
   stepTitle,
@@ -253,9 +255,11 @@ export default function Trail(props: TrailProps) {
     icon?: FeatCategory,
     gear = false,
     empty = 'Choose',
+    note?: string,
   ) => (
     <button
       type="button"
+      title={note}
       class={['trail-chip', { 'trail-chip--empty': value === undefined, 'trail-chip--target': isTarget(target) }]}
       aria-pressed={isTarget(target) ? 'true' : 'false'}
       onClick={() => {
@@ -273,6 +277,9 @@ export default function Trail(props: TrailProps) {
           </span>
         </Show>
       </span>
+      <Show when={note}>
+        <small class="trail-chip__note">Spell not in the planner yet</small>
+      </Show>
     </button>
   );
   const slotField = (s: OpenedSlot) => {
@@ -315,6 +322,8 @@ export default function Trail(props: TrailProps) {
       { kind: 'slot', slot: s.id },
       s.pick === undefined || background ? undefined : featCategory(data(), s.pick.feature),
       s.pick !== undefined && gearDependentSlots(view()).has(slotKey(s.id)),
+      'Choose',
+      spellPick(view(), s.id) === undefined ? undefined : SPELL_NOT_MODELLED,
     );
   };
   const slotChips = (place: Place) => (
