@@ -16,6 +16,7 @@ export const cites = {
     'UI/MVVM/_VM/CharGen/Phases/FeatureSelector/CharGenFeatureSelectorPhaseVM.cs GetFeaturePriority',
   ],
   offeredClasses: ['Blueprints/Root/ProgressionRoot.cs AvailableCharacterClasses'],
+  classPicker: ['UnitLogic/Class/LevelUp/Actions/SelectClass.cs Check'],
   offeredMythicClasses: [
     'Blueprints/Root/ProgressionRoot.cs AvailableCharacterMythics',
     'Blueprints/Root/ProgressionRoot.cs MythicLegenFake',

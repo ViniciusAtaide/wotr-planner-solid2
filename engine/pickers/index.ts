@@ -1,4 +1,5 @@
 export * from './pickers';
 export * from './offers';
+export * from './class-picker';
 export * from './tags';
 export { cites } from './cites';

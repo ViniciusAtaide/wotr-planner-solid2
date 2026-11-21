@@ -487,6 +487,11 @@ export const cites = {
     'UnitLogic/UnitProgressionData.cs GetMythicSelectionsData',
     'UnitLogic/UnitProgressionData.cs AddFakeLevel',
   ],
+  'Walker.classRefusals': [
+    'UnitLogic/Class/LevelUp/Actions/SelectClass.cs Check',
+    'Blueprints/Classes/BlueprintCharacterClass.cs MeetsPrerequisites',
+    'UnitLogic/UnitProgressionData.cs MaxCharacterLevel',
+  ],
   'Walker.judgeClass': [
     'UnitLogic/Class/LevelUp/Actions/SelectClass.cs Check',
     'Blueprints/Classes/BlueprintArchetype.cs MeetsPrerequisites',

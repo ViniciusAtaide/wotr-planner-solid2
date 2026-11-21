@@ -5,6 +5,10 @@ What each slot can take (guide §4, build ticket 04). S lists a slot's options a
 ## Public entry
 
 - `picker(data, build, slot, G?)` and `Picker`: every option of a slot with its status, judged at the walk paused there; undefined when the Build never opens the slot. A `Picker` holds the opened `slot`, its `options`, and `unit`, the character at the pause, which R words each closed option's Refusal against.
+- `classPicker(data, build, place, G?, rankLevel?)` and `ClassPicker`: every class on offer at a level (`offeredClasses`) or a Mythic rank (`offeredMythicClasses`), with its status, judged at one walk paused at that place's class choice (`pauseAtClass`). An existing level or rank pauses where the walk reaches it, and a new level (`levels.length + 1`) pauses after the last level. A new rank (`ranks.length + 1`) needs its `rankLevel` and pauses where the walk would ascend it.
+  - An option's `closed` is the first refusal the walk gives that class there: wrong kind of class, prerequisites, the level cap, a path switch off rank 8, ranks ended, Devil's origin.
+  - Status means legal at this place. What a class would break later is worked out only for the class the user takes, by E's `allows` and `cascade`, as for slot pickers.
+  - A class list costs about 1–7 ms where 40 `allows` cost about 600 ms.
 - `OptionStatus`: one option of a slot, with its status at the paused walk.
   - `feature`: the option.
   - `param`: the parameter, for a parametrized feat (one option per parameter) or a Mythic spellbook.

@@ -60,3 +60,17 @@ Fix every finding of the first QA pass on the planner (run on `e77c4d7e`, 2026-1
     | A Cascade | 21–22 ms | 14 ms |
 
   - **Checkpoints:** whether to add per-level checkpoints on top of this is with the coordinator.
+- **4, the fix the coordinator chose:** class lists are judged at one paused walk, as ticket 04 settled for slot pickers. Breakage stays lazy, worked out by `allows` and `cascade` for the chosen class only.
+  - **New:** `pauseAtClass` in the walk, built on one `classRefusals` method that the walk itself records, and `classPicker` in S.
+  - **Agreement test:** at levels 3, 9 and 15 of both gold Builds, Jack's ranks 3 and 8, and a new level 11, every class's paused status equals the walk's verdict for that class put there. Some open classes break later picks, which is the lazy part.
+  - **Measured in one run on Jack:**
+
+    | | Before | After |
+    | --- | --- | --- |
+    | Class list at level 3 | 603 ms | 1 ms |
+    | Class list at level 15 | 599 ms | 5 ms |
+    | Mythic list at rank 8 | 182 ms | 7 ms |
+    | Scores "Done" (one `allows`) | 16 ms | 8 ms |
+    | Cascade preview | 23 ms | 16 ms |
+
+  - **Next for the UI:** it switches the class editor and steps to `classPicker`.

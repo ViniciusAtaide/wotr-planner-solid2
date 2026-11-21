@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { abilityScores, slotKey, type Build, type SlotId } from '../build';
+import { abilityScores, placeKey, slotKey, type Build, type Place, type SlotId } from '../build';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import type { Blueprint } from '../data';
@@ -16,6 +16,7 @@ import {
   offeredRaces,
 } from './offers';
 import { featureTags, tagsOf } from './tags';
+import { classPicker } from './class-picker';
 import { breaks, opensAt, refusal } from '../refusals';
 import { pauseAt, walk } from '../walk';
 
@@ -183,6 +184,48 @@ describe('what character creation offers (comparison bug 5)', { timeout: 30_000 
     expect(twice.unmet).toEqual(once.unmet);
     expect(once.unmet.join(' ')).not.toMatch(/Angel level/);
   });
+
+  it("judges a level's or rank's classes at one paused walk, as the walk judges each class put there", () => {
+    const placed = (b: Build, place: Place, cls: string): Build =>
+      'level' in place
+        ? place.level > b.levels.length
+          ? { ...b, levels: [...b.levels, { class: cls }] }
+          : { ...b, levels: b.levels.map((l, i) => (i === place.level - 1 ? { ...l, class: cls } : l)) }
+        : { ...b, ranks: (b.ranks ?? []).map((r, i) => (i === place.rank - 1 ? { ...r, class: cls } : r)) };
+    const short: Build = {
+      ...jackInTheGreen.build,
+      levels: jackInTheGreen.build.levels.slice(0, 10),
+      ranks: (jackInTheGreen.build.ranks ?? []).filter((r) => r.level <= 10),
+      picks: jackInTheGreen.build.picks.filter((p) =>
+        'level' in p.slot.place ? p.slot.place.level <= 10 : p.slot.place.rank <= 4,
+      ),
+    };
+    const cases: [string, Build, Place][] = [
+      ...[3, 9, 15].flatMap((level): [string, Build, Place][] => [
+        ['Jack', jackInTheGreen.build, { level }],
+        ['Enforcer', enforcer.build, { level }],
+      ]),
+      ['Jack', jackInTheGreen.build, { rank: 3 }],
+      ['Jack', jackInTheGreen.build, { rank: 8 }],
+      ['Jack to 10', short, { level: 11 }],
+    ];
+    const differ: string[] = [];
+    let laterOnly = 0;
+    for (const [who, b, place] of cases) {
+      const p = classPicker(data, b, place, G);
+      expect(p?.options.length ?? 0).toBeGreaterThan(10);
+      for (const o of p?.options ?? []) {
+        const failures = walk(data, placed(b, place, o.class), G).failures;
+        const here = failures.filter(
+          (f) => placeKey(f.place) === placeKey(place) && f.subject === o.class && f.choice !== 'pick',
+        );
+        if ((o.closed !== undefined) !== here.length > 0) differ.push(`${who} ${placeKey(place)} ${o.class}`);
+        if (o.closed === undefined && failures.length > walk(data, b, G).failures.length) laterOnly++;
+      }
+    }
+    expect(differ).toEqual([]);
+    expect(laterOnly).toBeGreaterThan(0);
+  }, 120_000);
 
   it('offers every path switch the walk takes, Legend by its own name, and not the story’s Legend choice', () => {
     const GOLD_DRAGON = 'daf1235b6217787499c14e4e32142523';

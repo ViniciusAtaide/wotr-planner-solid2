@@ -329,6 +329,37 @@ class Paused {
   constructor(readonly paused: PausedWalk) {}
 }
 
+export interface PausedClassChoice {
+  readonly place: Place;
+  readonly unit: Unit;
+  judge(cls: Guid): readonly FailedRule[];
+}
+
+interface ClassPause {
+  readonly place: Place;
+  readonly rankLevel: number | undefined;
+}
+
+class ClassPaused {
+  constructor(readonly paused: PausedClassChoice) {}
+}
+
+export function pauseAtClass(
+  data: CheckedData,
+  build: Build,
+  place: Place,
+  G: GrantIndex = buildGrantIndex(data),
+  rankLevel?: number,
+): PausedClassChoice | undefined {
+  try {
+    new Walker(data, build, G, undefined, { place, rankLevel }).run();
+    return undefined;
+  } catch (e) {
+    if (e instanceof ClassPaused) return e.paused;
+    throw e;
+  }
+}
+
 export function pauseAt(
   data: CheckedData,
   build: Build,
@@ -370,6 +401,7 @@ class Walker {
     readonly build: Build,
     readonly G: GrantIndex,
     readonly pause?: SlotId,
+    readonly classPause?: ClassPause,
   ) {
     this.unit = new Unit(data, (bp) => conditionalGrants(bp).length > 0);
     this.unit.alignment = build.alignment;
@@ -409,8 +441,11 @@ class Walker {
         this.ascend(rank + 1, ranks[rank] as Ascension);
         rank++;
       }
+      if (rank === ranks.length) this.pauseAtNewRank(rank + 1, i + 1);
     }
+    this.pauseAtNewLevel(this.build.levels.length + 1);
     for (; rank < ranks.length; rank++) this.ascend(rank + 1, ranks[rank] as Ascension);
+    this.pauseAtNewRank(ranks.length + 1, Infinity);
     this.refuseUnworn();
     for (const toggle of this.build.aspects ?? []) {
       if (!this.unit.hasFact(toggle) && !this.refusedAspects.has(toggle)) {
@@ -763,6 +798,9 @@ class Walker {
           if (firstLevel) this.selectRace();
           break;
         case 'Class':
+          if (this.classPause !== undefined && placeKey(this.classPause.place) === placeKey(place)) {
+            throw new ClassPaused({ place, unit: this.unit, judge: (cls) => this.classRefusals(cls) });
+          }
           this.selectClass(choice.class);
           break;
         case 'RaceStat':
@@ -847,27 +885,61 @@ class Walker {
     );
   }
 
-  selectClass(cls: Guid): void {
+  classRefusals(cls: Guid): Omit<Failure, 'place'>[] {
     const state = this.level;
     const bp = this.unit.bp(cls);
     if (bp?.$type !== 'BlueprintCharacterClass' || bp.IsMythic !== state.mythic) {
       const found = bp?.$type === 'BlueprintCharacterClass' ? bp.IsMythic : 'not a class';
-      this.fail({ choice: 'class', subject: cls, rule: 'SelectClass.Check:IsMythic', found, needed: state.mythic });
-      return;
+      return [{ choice: 'class', subject: cls, rule: 'SelectClass.Check:IsMythic', found, needed: state.mythic }];
     }
-    const reads = this.unit.gearReads;
+    const out: Omit<Failure, 'place'>[] = [];
+    const rank = 'rank' in state.place ? state.place.rank : undefined;
+    if (rank !== undefined) {
+      if (cls === refGuid(this.root.Progression.m_MythicLegenFake)) {
+        out.push({ choice: 'class', subject: cls, rule: 'map34.legendChoiceClass' });
+      }
+      const switchClass = SWITCH_TO.has(cls) || bp.m_IsHigherMythic;
+      if (switchClass && rank !== SWITCH_RANK && this.build.ranks?.[rank - 2]?.class !== cls) {
+        out.push({ choice: 'class', subject: cls, rule: 'map31.switchAtRank8', found: rank, needed: SWITCH_RANK });
+      }
+    }
     const refusal = this.judgeClass(cls);
-    if (refusal !== undefined) this.fail({ choice: 'class', subject: cls, ...refusal });
-    else this.markGearDependent({ choice: 'class', subject: cls }, () => this.judgeClass(cls), reads);
+    if (refusal !== undefined) out.push({ choice: 'class', subject: cls, ...refusal });
     const max = this.maxCharacterLevel();
     if (!bp.IsMythic && this.unit.characterLevel + 1 > max) {
-      this.fail({
+      out.push({
         choice: 'class',
         subject: cls,
         rule: 'UnitProgressionData.MaxCharacterLevel',
         found: this.unit.characterLevel + 1,
         needed: max,
       });
+    }
+    if (bp.IsMythic && this.ranksEnded) {
+      out.push({ choice: 'rank', subject: cls, rule: 'map31.legendEndsAscensions' });
+    } else if (
+      cls === DEVIL_MYTHIC_CLASS &&
+      !this.unit.classes.some((c) => c.class === AEON_MYTHIC_CLASS || c.class === AZATA_MYTHIC_CLASS)
+    ) {
+      out.push({
+        choice: 'class',
+        subject: cls,
+        rule: 'map31.devilFrom',
+        needed: [AEON_MYTHIC_CLASS, AZATA_MYTHIC_CLASS],
+      });
+    }
+    return out;
+  }
+
+  selectClass(cls: Guid): void {
+    const bp = this.unit.bp(cls);
+    const state = this.level;
+    const reads = this.unit.gearReads;
+    const refusals = this.classRefusals(cls);
+    for (const r of refusals) this.fail(r);
+    if (bp?.$type !== 'BlueprintCharacterClass' || refusals[0]?.rule === 'SelectClass.Check:IsMythic') return;
+    if (!refusals.some((r) => r.rule === 'BlueprintCharacterClass.MeetsPrerequisites')) {
+      this.markGearDependent({ choice: 'class', subject: cls }, () => this.judgeClass(cls), reads);
     }
     if (bp.IsMythic) this.pathSwitch(cls);
     let data = this.unit.classData(cls);
@@ -887,28 +959,20 @@ class Walker {
     if (progression !== undefined) this.gain(progression, undefined, { kind: 'class', from: cls });
   }
 
+  pauseAtNewLevel(level: number): void {
+    const p = this.classPause;
+    if (p === undefined || !('level' in p.place) || p.place.level !== level) return;
+    this.levelUp({ level }, { class: '' } as LevelUp, false);
+  }
+
+  pauseAtNewRank(rank: number, reachedLevel: number): void {
+    const p = this.classPause;
+    if (p === undefined || !('rank' in p.place) || p.place.rank !== rank) return;
+    if (p.rankLevel === undefined || p.rankLevel > reachedLevel) return;
+    this.ascend(rank, { class: '', level: p.rankLevel } as Ascension);
+  }
+
   ascend(rank: number, ascension: Ascension): void {
-    if (ascension.class === refGuid(this.root.Progression.m_MythicLegenFake)) {
-      this.failures.push({
-        place: { rank },
-        choice: 'class',
-        subject: ascension.class,
-        rule: 'map34.legendChoiceClass',
-      });
-    }
-    const switchClass =
-      SWITCH_TO.has(ascension.class) ||
-      (this.unit.bp(ascension.class) as BlueprintCharacterClass | undefined)?.m_IsHigherMythic === true;
-    if (switchClass && rank !== SWITCH_RANK && this.build.ranks?.[rank - 2]?.class !== ascension.class) {
-      this.failures.push({
-        place: { rank },
-        choice: 'class',
-        subject: ascension.class,
-        rule: 'map31.switchAtRank8',
-        found: rank,
-        needed: SWITCH_RANK,
-      });
-    }
     const max = this.maxCharacterLevel();
     if (ascension.level > max) {
       this.failures.push({
@@ -985,23 +1049,12 @@ class Walker {
       const b = u.bp(c) as BlueprintCharacterClass | undefined;
       return b?.IsMythic === true && c !== starting && !b.m_IsHigherMythic && !SWITCH_TO.has(c);
     };
-    if (this.ranksEnded) {
-      this.fail({ choice: 'rank', subject: cls, rule: 'map31.legendEndsAscensions' });
-      return;
-    }
+    if (this.ranksEnded) return;
     const path = u.classes.find((c) => isPath(c.class));
     if (bp.m_IsHigherMythic && path !== undefined && u.classLevel(starting) >= 2) {
       this.dropRanks({ keepGeneral: true, startingLevel: u.mythicLevel });
       this.loseMythicSpellbooks();
     } else if (cls === DEVIL_MYTHIC_CLASS) {
-      if (!u.classes.some((c) => c.class === AEON_MYTHIC_CLASS || c.class === AZATA_MYTHIC_CLASS)) {
-        this.fail({
-          choice: 'class',
-          subject: cls,
-          rule: 'map31.devilFrom',
-          needed: [AEON_MYTHIC_CLASS, AZATA_MYTHIC_CLASS],
-        });
-      }
       this.dropNamed(DEVIL_DROPS, DEVIL_DROPPED_SELECTIONS);
     } else if (cls === LEGEND_CLASS) {
       this.dropRanks({ keepGeneral: false, startingLevel: 2 });
