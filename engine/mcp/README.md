@@ -53,7 +53,7 @@ Citations for these live in `cites.ts`.
 - **`pick`** refuses a closed option with R's words; otherwise `mode` decides, as above.
 - **`set_skills`** and **`equip`** first refuse with R's words what the walk refuses at that level or for that item. Then `set_skills` makes a plain edit, and `equip` goes through its `mode`.
 - **`place_rank`** notes when the rank is off its Expected level (ADR 0003).
-- **Sheets.** A sheet at a character level walks the Build cut to that level (`buildUpToLevel`): its levels to there, and the Mythic ranks and picks placed at or before it.
+- **Sheets.** A sheet at a character level walks the Build cut to that level (`buildUpToLevel`): its levels to there, and the Mythic ranks and picks placed at or before it. `scores` are the permanent scores prerequisites read; `scoresWithGear` adds worn Gear's enhancement (the walk's `wornEnhancement`) when the Gear isn't already counted. Each save is `base` (the class tables), `ability` (its ability modifier) and `withAbility`; the walk doesn't sum feats', Gear's or other bonuses to saves, so the sheet doesn't claim a total (MCP QA).
 - **`compare`** counts, for each Build, the chain links among the facts it holds. `divergence` gives the first place where the Builds' choices differ: a level's class or picks, then the ranks, in Build order.
 
 ## Tests

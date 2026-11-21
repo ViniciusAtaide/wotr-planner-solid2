@@ -560,12 +560,19 @@ export function explain(e: Engine, args: { readonly guid: Guid }): Description |
   return describe(e.data, args.guid, e.G) ?? refused('Not a blueprint the game shows.');
 }
 
+export interface SaveNumbers {
+  readonly base: number;
+  readonly ability: number;
+  readonly withAbility: number;
+}
+
 export interface Sheet {
   readonly name?: string;
   readonly level: number;
   readonly scores: Readonly<Record<Attribute, number>>;
+  readonly scoresWithGear?: Readonly<Record<Attribute, number>>;
   readonly baseAttackBonus: number;
-  readonly saves: { readonly fortitude: number; readonly reflex: number; readonly will: number };
+  readonly saves: { readonly fortitude: SaveNumbers; readonly reflex: SaveNumbers; readonly will: SaveNumbers };
   readonly skills: Readonly<Record<string, { readonly ranks: number; readonly value: number }>>;
   readonly spellbooks: readonly {
     readonly name: string;
@@ -584,6 +591,8 @@ function buildUpToLevel(build: Build, level: number): Build {
   };
 }
 
+const saveNumbers = (base: number, ability: number): SaveNumbers => ({ base, ability, withAbility: base + ability });
+
 function sheetOf(e: Engine, build: Build, level: number): Sheet {
   const unit = walk(e.data, buildUpToLevel(build, level), e.G).unit;
   const skills: Record<string, { ranks: number; value: number }> = {};
@@ -594,11 +603,17 @@ function sheetOf(e: Engine, build: Build, level: number): Sheet {
     ...(build.name !== undefined && { name: build.name }),
     level: Math.min(level, build.levels.length),
     scores: Object.fromEntries(ATTRIBUTES.map((a) => [a, unit.permanent(a)])) as Record<Attribute, number>,
+    ...(!unit.countGear &&
+      ATTRIBUTES.some((a) => (unit.wornEnhancement.get(a) ?? 0) !== 0) && {
+        scoresWithGear: Object.fromEntries(
+          ATTRIBUTES.map((a) => [a, unit.permanent(a) + (unit.wornEnhancement.get(a) ?? 0)]),
+        ) as Record<Attribute, number>,
+      }),
     baseAttackBonus: unit.tableStat('m_BaseAttackBonus'),
     saves: {
-      fortitude: unit.tableStat('m_FortitudeSave'),
-      reflex: unit.tableStat('m_ReflexSave'),
-      will: unit.tableStat('m_WillSave'),
+      fortitude: saveNumbers(unit.tableStat('m_FortitudeSave'), unit.modifier('Constitution')),
+      reflex: saveNumbers(unit.tableStat('m_ReflexSave'), unit.modifier('Dexterity')),
+      will: saveNumbers(unit.tableStat('m_WillSave'), unit.modifier('Wisdom')),
     },
     skills,
     spellbooks: [...unit.spellbooks].map(([g, s]) => ({

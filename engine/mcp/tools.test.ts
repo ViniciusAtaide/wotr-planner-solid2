@@ -421,4 +421,19 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(JSON.stringify(r)).not.toContain('would break other choices');
     expect(JSON.stringify(r)).toContain('Mythic Hero');
   });
+
+  it("splits each save into its base and ability modifier, and adds Gear's enhancement in scoresWithGear (MCP QA)", async () => {
+    const belted = await encodeBuild(e.data, {
+      ...jackInTheGreen.build,
+      gear: { Belt: 'c354de364a714ee4dbe2cfee628df267' },
+    });
+    const s = ok(await sheet(e, { code: belted }), 'sheet');
+    expect(s.scoresWithGear?.Strength).toBe(s.scores.Strength + 2);
+    expect(s.scoresWithGear?.Dexterity).toBe(s.scores.Dexterity);
+    const fort = s.saves.fortitude;
+    expect(fort.ability).toBe(Math.floor(s.scores.Constitution / 2) - 5);
+    expect(fort.withAbility).toBe(fort.base + fort.ability);
+    const plain = ok(await sheet(e, { code: await encodeBuild(e.data, jackInTheGreen.build) }), 'sheet');
+    expect(plain.scoresWithGear).toBeUndefined();
+  });
 });
