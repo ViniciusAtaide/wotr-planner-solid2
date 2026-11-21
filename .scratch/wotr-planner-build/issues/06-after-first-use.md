@@ -34,6 +34,8 @@ The polish that waits until the planner is in use. Split this ticket up when it 
 
 ## Progress (ticket-03c-walk-fixes)
 
+- **Split (coordinator, 2026-11-21):** [06a](06a-importer-keeps-summary-carriers.md) the importer keeps the carriers, [06b](06b-summary-labels.md) labels, [06c](06c-hand-written-summaries.md) hand-written summaries, [06d](06d-synergy-link-kinds.md) links. The static site stays here, open for the user.
+
 - **The data gap:** `data/` keeps only the 69 component types the walk needs. The components a Summary would describe (bonuses, saves, immunities, resistances, triggers) are dropped as "In play" (`data/report.md`). Labelling the top 50 needs the importer to keep those 50 carriers first, with their fields, enums and cites (ADR 0005). A split has been proposed to the coordinator: 06a importer, 06b labels, 06c hand-written summaries, 06d links.
 - **Links from kept data** (engine/links `topics.ts`, S's `synergy`, the MCP's `shares` and `wontStack`):
   - ability score, weapon category and spell school, including a parametrized pick's chosen weapon or school;
