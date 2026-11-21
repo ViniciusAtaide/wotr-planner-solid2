@@ -19,6 +19,8 @@ Which blueprints build on which. This feature works out the prerequisite-chain k
   - An energy type its resistances, immunities and vulnerability name, or that its spell descriptors name (fire, cold, acid, electricity, sonic: an Elemental Focus, a draconic arcana).
   - A descriptor from the short hand-picked list (`LINKED_DESCRIPTORS`, map 09: fear, mind-affecting, compulsion, charm, emotion, poison, disease, death, sleep, paralysis and curse) that its saves, immunities, DCs, caster levels or arcana name. Other descriptors aren't links.
 - `weaponGroupsOf(data, category)`: the fighter groups of a weapon category, gathered from the weapon types the data holds.
+- `topicWords(topic)`, `sharedWords(data, shared)` and `stackWords(data, clash)`: the Synergy words, one source for the planner and the MCP: "Shares fire with Elemental Focus", "Its insight bonus to Strength won't stack with …". Names come from R's `listNames`.
+- `words`, `GROUP_WORDS` and `descriptorWord`: the plain words for identifiers, weapon groups and spell descriptors that the Synergy words and describe's labels share.
 - `spellDescriptors(wrapper)` and `SPELL_DESCRIPTORS`: the names of the spell descriptor flags a 64-bit `SpellDescriptorWrapper` sets, read as an unsigned 64-bit number so the sign bit (`AnomalyDistortion`) counts.
 - `bonusesOf(data, guid)` and `StatBonus`: its stat bonuses, by stat and bonus type.
 - `stackable(descriptor)` and `STACKING_DESCRIPTORS`: whether bonuses of that type stack. This ports the game's `ModifierDescriptorHelper.IsStackable` (`cites.ts`). Any other type counts once per stat, the highest.

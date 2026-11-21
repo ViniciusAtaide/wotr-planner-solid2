@@ -30,7 +30,7 @@ The 14 tools, in map 08's order:
 - `set_skills`: a character level's skill ranks, replacing that level's.
 - `place_rank`: a Mythic rank's character level (ADR 0003).
 - `equip`: an item in a Gear place, or none to take it off, with `pick`'s modes.
-- `synergies`: at a slot, or at every open slot, the open options that link to what the Build holds: `buildsOn` (the chain kind), `shares` (an ability score, weapon or spell school it shares with held facts, "Dexterity, like Two-Weapon Fighting") and `wontStack` (a bonus of a type already given to the same stat). `options` carries `shares` and `wontStack` on each option too.
+- `synergies`: at a slot, or at every open slot, the open options that link to what the Build holds: `buildsOn` (the chain kind), `shares` (an ability score, weapon or group, spell school, energy or descriptor it shares with held facts, "Shares Dexterity with Two-Weapon Fighting") and `wontStack` (a bonus of a type already given to the same stat). `options` carries `shares` and `wontStack` on each option too.
 - `search`: the shown blueprints whose name holds the text, of one kind when asked, at most 50.
 - `explain`: a blueprint's description (engine/describe): its Summary and `labels` (06b), prerequisites, grants, where it can be picked and its chain links. `search` hits and `options` carry the Summary too.
 - `sheet`: the Build's name, if it has one, and the numbers at a character level, the Build's last by default.
@@ -45,6 +45,7 @@ Citations for these live in `cites.ts`.
 
 ## Design notes
 
+- **Synergy words** are engine/links' `sharedWords` and `stackWords`, the same the planner shows.
 - **Names in lists.** What a change breaks or clears, `buildsOn`, `shares` and `wontStack` name blueprints bare, keeping a qualifier only where two names in the same list would read the same (R's `namesIn`), so "Seize the Moment", not "Seize the Moment (feature)" (QA pass 2). An option's own name stays the full display name.
 - **Plain edits.** `plainEdit` applies one edit through E's `allows`: the new code, or a refusal naming what it breaks. `plainEdits` treats several edits (as `set_start` and `level_up` make) as one plain edit, refused when the Build after all of them breaks anything. `pick` and `equip` go through their `mode` instead.
 - **What breaks, in words.** `breaksInWords` lists what an edit breaks, each line R's: a pick reads as `pickInWords` gives it (`L3 Feat: Power Attack`), and another choice as its place, its kind and R's reason.

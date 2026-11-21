@@ -24,10 +24,10 @@ import {
   type Kind,
   type StatType,
 } from '../data';
-import { describe, descriptorWord, GROUP_WORDS, summaryText, words, type Description } from '../describe';
+import { describe, summaryText, type Description } from '../describe';
 import { allows, apply, breaksOf, cascade, type Breaks, type Edit } from '../edits';
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
-import { linkIndex, type SharedTopic, type StackClash, type Topic } from '../links';
+import { linkIndex, sharedWords, stackWords } from '../links';
 import { picker, type OptionStatus } from '../pickers';
 import {
   abilityScoreRange,
@@ -302,8 +302,9 @@ export async function options(
       e.data,
       links.needs(o.feature).filter((g) => held.has(g)),
     ),
-    ...(o.synergy && o.synergy.shared.length > 0 && { shares: o.synergy.shared.map((s) => sharedWords(e, s)) }),
-    ...(o.synergy && o.synergy.wontStack.length > 0 && { wontStack: o.synergy.wontStack.map((c) => stackWords(e, c)) }),
+    ...(o.synergy && o.synergy.shared.length > 0 && { shares: o.synergy.shared.map((s) => sharedWords(e.data, s)) }),
+    ...(o.synergy &&
+      o.synergy.wontStack.length > 0 && { wontStack: o.synergy.wontStack.map((c) => stackWords(e.data, c)) }),
     ...(o.gearItems && { gear: gearNote(e.data, o.gearItems) }),
     ...(o.closed && { refusal: refusal({ data: e.data, G: e.G, unit }, o.closed) }),
   });
@@ -322,33 +323,6 @@ export async function options(
     closedByReason,
     ...(args.include_closed && { closed: closedOnes.map(view) }),
   };
-}
-
-function topicWords(t: Topic): string {
-  switch (t.kind) {
-    case 'ability':
-      return t.stat;
-    case 'school':
-      return `${t.school} spells`;
-    case 'weapon':
-      return t.category.replace(/([a-z])([A-Z])/g, '$1 $2');
-    case 'group':
-      return GROUP_WORDS[t.group];
-    case 'energy':
-      return words(t.energy);
-    case 'descriptor':
-      return `${descriptorWord(t.descriptor)} effects`;
-  }
-}
-
-function sharedWords(e: Engine, s: SharedTopic): string {
-  return `${topicWords(s.topic)}, like ${listNames(e.data, s.with).join(', ')}`;
-}
-
-function stackWords(e: Engine, c: StackClash): string {
-  const stat = statName(c.stat);
-  const kind = c.descriptor.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase();
-  return `Its ${kind} bonus to ${stat} won't stack with ${listNames(e.data, c.with).join(', ')}.`;
 }
 
 function optionName(e: Engine, o: { readonly feature: Guid; readonly param?: GrantParam }): string {

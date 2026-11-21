@@ -41,7 +41,7 @@ export const FEATURES: readonly Feature[] = [
   engine('edits', 'build', 'data', 'grants', 'walk', 'load', 'gold', 'data-dir'),
   engine('codec', 'build', 'data', 'load', 'grants', 'walk', 'gold', 'data-dir'),
   engine('compact', 'data', 'data-dir', 'load'),
-  engine('links', 'data', 'load', 'grants', 'prerequisites', 'cite', 'data-dir'),
+  engine('links', 'data', 'load', 'grants', 'prerequisites', 'refusals', 'cite', 'data-dir'),
   engine('describe', 'cite', 'data', 'data-dir', 'load', 'grants', 'links', 'prerequisites', 'refusals'),
   engine(
     'mcp',

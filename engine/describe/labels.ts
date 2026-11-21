@@ -53,14 +53,13 @@ import {
   type SpellPenetrationBonus,
   type StatType,
   type UnitCondition,
-  type WeaponFighterGroup,
   type WeaponGroupAttackBonus,
   type WeaponGroupDamageBonus,
   type WeaponRangeType,
   type WeaponSpecializationParametrized,
   type WeaponTypeDamageStatReplacement,
 } from '../data';
-import { spellDescriptors } from '../links';
+import { descriptorWord, GROUP_WORDS, spellDescriptors, words } from '../links';
 import { bareNameOf, statName } from '../refusals';
 
 export type Role = 'bonus' | 'save' | 'immunity' | 'resistance' | 'weakness' | 'requirement' | 'trigger';
@@ -69,40 +68,6 @@ export interface Label {
   readonly role: Role;
   readonly text: string;
 }
-
-const SPELL_DESCRIPTOR_WORDS: Readonly<Record<string, string>> = {
-  MindAffecting: 'mind-affecting',
-  StatDebuff: 'ability-lowering',
-  RestoreHP: 'healing',
-  TemporaryHP: 'temporary hit point',
-  VilderavnBleed: 'bleed',
-  SightBased: 'sight-based',
-  NegativeEmotion: 'negative emotion',
-  FearImmunity: 'fear-immunity',
-  ChannelPositiveHeal: 'positive channel',
-  ChannelNegativeHeal: 'negative channel',
-  ChannelPositiveHarm: 'positive channel',
-  ChannelNegativeHarm: 'negative channel',
-  AnomalyDistortion: 'anomaly',
-};
-
-export const GROUP_WORDS: Readonly<Record<WeaponFighterGroup, string>> = {
-  None: 'no weapon group',
-  Axes: 'axes',
-  BladesHeavy: 'heavy blades',
-  BladesLight: 'light blades',
-  Bows: 'bows',
-  Crossbows: 'crossbows',
-  Double: 'double weapons',
-  Flails: 'flails',
-  Hammers: 'hammers',
-  Monk: 'monk weapons',
-  Natural: 'natural weapons',
-  Polearms: 'polearms',
-  Spears: 'spears',
-  Thrown: 'thrown weapons',
-  Close: 'close weapons',
-};
 
 const RANGE_WORDS: Readonly<Record<WeaponRangeType, string>> = {
   Melee: 'melee',
@@ -126,8 +91,6 @@ const ALIGNMENT_WORDS: Readonly<Record<AlignmentComponent, string>> = {
 
 const UNTYPED: ReadonlySet<ModifierDescriptor> = new Set(['None', 'UntypedStackable']);
 
-export const words = (s: string): string => s.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase();
-
 export function orList(items: readonly string[]): string {
   const unique = [...new Set(items)];
   if (unique.length <= 1) return unique[0] ?? '';
@@ -139,8 +102,6 @@ function andList(items: readonly string[]): string {
   if (unique.length <= 1) return unique[0] ?? '';
   return `${unique.slice(0, -1).join(', ')} and ${unique.at(-1)}`;
 }
-
-export const descriptorWord = (d: string): string => SPELL_DESCRIPTOR_WORDS[d] ?? words(d);
 
 function descriptorWords(wrapper: SpellDescriptorWrapper): string {
   return orList(spellDescriptors(wrapper).map(descriptorWord));
