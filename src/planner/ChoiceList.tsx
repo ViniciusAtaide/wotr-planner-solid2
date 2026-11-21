@@ -77,6 +77,7 @@ export interface FieldMode {
   readonly value: string | undefined;
   readonly placeholder: string;
   readonly target: boolean;
+  readonly arrive: boolean;
 }
 
 export interface FilterProps {
@@ -88,6 +89,7 @@ export interface FilterProps {
   readonly field?: FieldMode | undefined;
   readonly open?: boolean;
   readonly onArrive?: () => void;
+  readonly onOpen?: () => void;
 }
 
 export function Filter(props: FilterProps) {
@@ -97,7 +99,7 @@ export function Filter(props: FilterProps) {
     if (props.field === undefined && arrived()) focusFilter(input);
   });
   createEffect(
-    () => props.field?.target === true && arrived(),
+    () => props.field?.arrive === true,
     (due) => {
       if (!due) return;
       props.onArrive?.();
@@ -131,6 +133,7 @@ export function Filter(props: FilterProps) {
       data-picker-filter
       value={props.field === undefined || props.open === true ? props.value : (props.field.value ?? '')}
       onInput={(e) => props.onInput(e.currentTarget.value)}
+      onClick={() => props.onOpen?.()}
       onKeyDown={(e) => {
         const delta = e.key === 'ArrowDown' ? 1 : e.key === 'ArrowUp' ? -1 : 0;
         if (delta !== 0 && props.onMove !== undefined) {
@@ -279,6 +282,7 @@ export function ChoiceList(props: ChoiceListProps) {
           field={props.field}
           open={panel.shown()}
           onArrive={() => panel.show()}
+          onOpen={() => panel.show()}
         />
       </Show>
       <Show when={props.field === undefined && panel.collapsed() && current()}>

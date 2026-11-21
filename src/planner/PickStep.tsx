@@ -371,6 +371,7 @@ export function PickStep(props: PickStepProps) {
           field={props.field}
           open={panel.shown()}
           onArrive={() => panel.show()}
+          onOpen={() => panel.show()}
         />
         <Show
           when={

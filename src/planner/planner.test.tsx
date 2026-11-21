@@ -359,7 +359,9 @@ function fieldValue(label: string): string {
 }
 
 function openField(label: string): void {
-  field(label).querySelector<HTMLInputElement>('input')?.focus();
+  const input = field(label).querySelector<HTMLInputElement>('input');
+  input?.focus();
+  fireEvent.click(input ?? document.body);
   flush();
 }
 
@@ -1754,6 +1756,51 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
     flush();
     expect(dialogBox()).not.toBeNull();
     expect(dialogTitle()).toBe(next);
+  });
+
+  test('modal: a character field’s dialog closes after its pick (QA pass 5)', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(undefined);
+    openField('Race');
+    await waitFor(() => expect(dialogBox()).not.toBeNull());
+    expect(dialogTitle()).toBe('Your character · choose a race');
+    const human = [...(dialogBox()?.querySelectorAll<HTMLElement>('button.ww-option') ?? [])].find(
+      (b) => b.querySelector('.ww-option__name')?.textContent === 'Human',
+    );
+    fireEvent.click(human ?? document.body);
+    flush();
+    await new Promise((r) => setTimeout(r, 30));
+    flush();
+    expect(fieldValue('Race')).toBe('Human');
+    expect(dialogBox()).toBeNull();
+  });
+
+  test('modal: after the background, the next dialog is never the race list (QA pass 5)', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    openField('Background');
+    await waitFor(() => expect(dialogTitle()).toBe('Your character · choose background'));
+    pickFirstIn(dialogBox() ?? document);
+    await new Promise((r) => setTimeout(r, 30));
+    flush();
+    expect(fieldValue('Background')).not.toBe('');
+    expect(dialogTitle()).toBe('Your character · choose deity');
+  });
+
+  test('modal: a trail pick opens no waiting field’s dialog (QA pass 5)', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Cleave'));
+    flush();
+    await waitFor(() => expect(dialogTitle()).toBe('Level 1 · choose bonus combat feat'));
+    const row = [...(dialogBox()?.querySelectorAll<HTMLElement>('button.ww-option') ?? [])].find(
+      (b) => b.querySelector('.ww-option__name')?.textContent === 'Improved Initiative',
+    );
+    fireEvent.click(row ?? document.body);
+    flush();
+    await new Promise((r) => setTimeout(r, 30));
+    flush();
+    expect(dialogBox()).toBeNull();
   });
 
   test('"Show N closed" works inside the dialog', async () => {

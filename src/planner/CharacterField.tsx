@@ -1,8 +1,8 @@
 import type { JSX } from '@solidjs/web';
-import { createEffect, Show, untrack, useContext } from 'solid-js';
+import { Show } from 'solid-js';
 
 import { ChoiceDialog } from './ChoiceDialog';
-import { StepArrived, type FieldMode } from './ChoiceList';
+import type { FieldMode } from './ChoiceList';
 import type { TrailApi } from './steps';
 import { stepKey, type Step } from './trail-state';
 
@@ -17,29 +17,30 @@ export interface CharacterFieldProps {
 
 export function CharacterField(props: CharacterFieldProps) {
   const key = () => stepKey(props.step);
-  const arrived = useContext(StepArrived);
+  const live: FieldMode = {
+    get label() {
+      return props.field.label;
+    },
+    get value() {
+      return props.field.value;
+    },
+    get placeholder() {
+      return props.field.placeholder;
+    },
+    get target() {
+      return props.field.target;
+    },
+    get arrive() {
+      return props.field.arrive;
+    },
+  };
   const shown = () => props.trail.state().dialog === key() && props.trail.planner.session().kind !== 'confirming';
   let returning = false;
   const openDialog = () => {
     if (!returning) props.trail.send({ kind: 'dialog', step: key() });
   };
-  let last = untrack(() => props.field.value);
-  createEffect(
-    () => props.field.value,
-    (value) => {
-      if (value === last) return;
-      last = value;
-      if (props.trail.state().dialog === key()) props.trail.send({ kind: 'dialog', step: undefined });
-    },
-  );
-  createEffect(
-    () => props.modal && props.field.target && arrived(),
-    (due) => {
-      if (due) openDialog();
-    },
-  );
   return (
-    <Show when={props.modal} fallback={props.list(props.field)}>
+    <Show when={props.modal} fallback={props.list(live)}>
       <label
         class={[
           'trail-field',
