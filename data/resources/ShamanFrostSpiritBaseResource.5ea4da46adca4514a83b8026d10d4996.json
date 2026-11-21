@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "ShamanFrostSpiritBaseResource",
+  "guid": "5ea4da46adca4514a83b8026d10d4996",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 3,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": true,
+    "LevelIncrease": 0,
+    "LevelStep": 0,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 0,
+    "ResourceBonusStat": "Charisma",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [],
+    "m_ClassDiv": []
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

@@ -11,6 +11,12 @@
       "m_Feature": "!bp_c2a6ff6c60b564c45bdbbffba680f3c1"
     },
     {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_994e3febb0dc9a742bb840d9adde97ba"
+    },
+    {
       "$type": "AddFacts",
       "HasDifficultyRequirements": false,
       "InvertDifficultyRequirements": false,

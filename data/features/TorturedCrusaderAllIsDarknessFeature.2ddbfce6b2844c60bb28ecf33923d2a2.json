@@ -2,11 +2,23 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_7b5115b376fd4987b2c070da20ba91ea"
+    },
+    {
       "$type": "AddFacts",
       "HasDifficultyRequirements": false,
       "InvertDifficultyRequirements": false,
       "MinDifficulty": "Story",
       "m_Facts": []
+    },
+    {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_9dedf41d995ff4446a181f143c3db98c"
     }
   ],
   "Groups": [],

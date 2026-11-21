@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": true,
+  "assetName": "AirDomainBaseResourceSeparatist",
+  "guid": "ba6a2268728e45d2bd547407436dedb1",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 2,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": true,
+    "LevelIncrease": 0,
+    "LevelStep": 0,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 0,
+    "ResourceBonusStat": "Wisdom",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      null
+    ],
+    "m_ClassDiv": [
+      null
+    ]
+  },
+  "m_Min": 1,
+  "m_UseMax": false
+}

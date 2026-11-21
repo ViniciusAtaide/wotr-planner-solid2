@@ -9,6 +9,18 @@
       "m_Facts": []
     },
     {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_80923bd575dc48f5813c2343517414cf"
+    },
+    {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_72e7ec0822604f7da75c3dd32e93d5ea"
+    },
+    {
       "$type": "PrerequisiteAlignment",
       "Alignment": "NeutralGood",
       "ArchetypeAlignment": false,

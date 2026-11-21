@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "OracleRevelationSpiritWalkResource",
+  "guid": "f2f4cd3185be358469c73f3b7853dac2",
+  "m_Max": 2,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 0,
+    "LevelStep": 4,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Charisma",
+    "StartingIncrease": 1,
+    "StartingLevel": 11,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    ],
+    "m_ClassDiv": [
+      "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": true
+}

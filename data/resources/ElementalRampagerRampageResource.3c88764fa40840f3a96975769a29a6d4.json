@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "ElementalRampagerRampageResource",
+  "guid": "3c88764fa40840f3a96975769a29a6d4",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 4,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": true,
+    "LevelIncrease": 2,
+    "LevelStep": 0,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 0,
+    "ResourceBonusStat": "Constitution",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_610d836f3a3a9ed42a4349b62f002e96"
+    ],
+    "m_ClassDiv": []
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

@@ -30,6 +30,9 @@ export const cites = {
     'Items/ItemEntityArmor.cs ArmorType',
   ],
   labelOf: [
+    'Blueprints/BlueprintAbilityResource.cs GetMaxAmount (m_MaxAmount, m_Min)',
+    'Blueprints/BlueprintAbilityResource.cs ApplyMinMax (m_UseMax, m_Max)',
+    'UnitLogic/UnitAbilityResource.cs GetMaxAmount (UseThisAsResource, Amount)',
     'Designers/Mechanics/Facts/DraconicBloodlineArcana.cs OnEventAboutToTrigger (SpellDescriptor, SpellsOnly, UseContextBonus, Value)',
     'Designers/Mechanics/Facts/SpellSpecializationParametrized.cs OnEventAboutToTrigger',
     'Designers/Mechanics/Facts/WeaponFocusParametrized.cs OnEventAboutToTrigger (m_MythicFocus)',

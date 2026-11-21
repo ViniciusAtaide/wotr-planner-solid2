@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "SpellMasterFocusedSpellsResource",
+  "guid": "32947324b3054fdea55092735de9c82c",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 1,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 8,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 1,
+    "StartingLevel": 8,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_ba34257984f4c41408ce1dc2004e342e"
+    ],
+    "m_ClassDiv": [
+      "!bp_ba34257984f4c41408ce1dc2004e342e"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "BloodlineCelestialHeavenlyFireResource",
+  "guid": "f43c7ca866d53d740acf2652dea0145e",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 3,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 0,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 0,
+    "ResourceBonusStat": "Charisma",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_b3a505fb61437dc4097f43c3f8f9a4cf"
+    ],
+    "m_ClassDiv": [
+      null
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

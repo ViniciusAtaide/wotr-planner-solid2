@@ -11,6 +11,12 @@
       ]
     },
     {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_707f3cc2e103a8d40ab79ff49664b2bf"
+    },
+    {
       "$type": "PrerequisiteAlignment",
       "Alignment": "Good, LawfulNeutral, TrueNeutral, ChaoticNeutral",
       "ArchetypeAlignment": false,

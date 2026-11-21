@@ -1,7 +1,9 @@
-import type { CheckedData } from '../load';
+import { blueprintRoot, type CheckedData } from '../load';
 import {
   refGuid,
   type ACBonusAgainstAttacks,
+  type AddAbilityResources,
+  type ResourceAmount,
   type AddBackgroundClassSkill,
   type AddClassSkill,
   type AddPet,
@@ -271,6 +273,68 @@ function proficiencies(data: CheckedData, c: AddProficiencies): string | undefin
   if (parts.length === 0) return undefined;
   const race = refGuid(c.m_RaceRestriction);
   return `Proficient with ${parts.join('; and with ')}${race === undefined ? '' : ` (as ${bareNameOf(data, race)})`}.`;
+}
+
+const playerClassSets = new WeakMap<CheckedData, ReadonlySet<Guid>>();
+
+function playerClasses(data: CheckedData): ReadonlySet<Guid> {
+  let set = playerClassSets.get(data);
+  if (set === undefined) {
+    const root = blueprintRoot(data)?.Progression;
+    set = new Set(
+      [...(root?.m_CharacterClasses ?? []), ...(root?.m_CharacterMythics ?? [])].flatMap((r) => refGuid(r) ?? []),
+    );
+    playerClassSets.set(data, set);
+  }
+  return set;
+}
+
+function classNames(data: CheckedData, refs: readonly (Ref | null)[], archetypes: readonly (Ref | null)[]): string[] {
+  const deciding = refGuid(archetypes.at(-1) ?? null);
+  return refs.flatMap((r) => {
+    const guid = refGuid(r);
+    if (guid === undefined || !playerClasses(data).has(guid)) return [];
+    const cls = data.blueprints.get(guid);
+    const offers =
+      deciding !== undefined &&
+      cls?.$type === 'BlueprintCharacterClass' &&
+      cls.m_Archetypes.some((a) => refGuid(a) === deciding);
+    return [offers ? `${bareNameOf(data, guid)} (only as ${bareNameOf(data, deciding)})` : bareNameOf(data, guid)];
+  });
+}
+
+const FRACTION_WORDS: Readonly<Record<number, string>> = { 0.25: 'a quarter', 0.5: 'half' };
+
+function stepWords(data: CheckedData, a: ResourceAmount): string {
+  const classes = classNames(data, a.m_ClassDiv, a.m_ArchetypesDiv);
+  const levelOf = classes.length > 0 ? `${orList(classes)} level` : 'character level';
+  const others =
+    classes.length > 0 && a.OtherClassesModifier > 0
+      ? `; other classes' levels count ${FRACTION_WORDS[a.OtherClassesModifier] ?? `× ${a.OtherClassesModifier}`}`
+      : '';
+  const per = a.LevelStep === 1 ? 'level' : `${a.LevelStep} levels`;
+  const growth = a.PerStepIncrease === 0 ? '' : `, ${signed(a.PerStepIncrease)} per ${per} after`;
+  const least = a.MinClassLevelIncrease > a.StartingIncrease ? ` (at least ${a.MinClassLevelIncrease})` : '';
+  if (a.StartingIncrease === 0 && a.StartingLevel === 0 && a.PerStepIncrease !== 0)
+    return `${a.PerStepIncrease} per ${a.LevelStep === 1 ? '' : `${a.LevelStep} `}${levelOf}${a.LevelStep === 1 ? '' : 's'}${others}`;
+  return `${a.StartingIncrease}${least} from ${levelOf} ${a.StartingLevel}${growth}${others}`;
+}
+
+function poolWords(data: CheckedData, c: AddAbilityResources): string | undefined {
+  if (c.UseThisAsResource) return `Uses per day: ${c.Amount}.`;
+  const resource = data.blueprints.get(refGuid(c.m_Resource) ?? '');
+  if (resource?.$type !== 'BlueprintAbilityResource') return undefined;
+  const a = resource.m_MaxAmount;
+  const parts: string[] = [];
+  const classes = classNames(data, a.m_Class, a.m_Archetypes);
+  if (a.IncreasedByLevel && a.LevelIncrease !== 0 && classes.length > 0)
+    parts.push(`${a.LevelIncrease} per ${orList(classes)} level`);
+  if (a.IncreasedByStat) parts.push(`${statName(a.ResourceBonusStat)} modifier`);
+  if (a.IncreasedByLevelStartPlusDivStep) parts.push(stepWords(data, a));
+  if (a.BaseValue !== 0 || parts.length === 0) parts.unshift(`${a.BaseValue}`);
+  const most = resource.m_UseMax ? `, at most ${resource.m_Max}` : '';
+  const least = resource.m_Min > 0 ? `, at least ${resource.m_Min}` : '';
+  return `Uses per day: ${parts.join(' + ')}${most}${least}.`;
 }
 
 export const RANK_SCALED: ReadonlySet<string> = new Set([
@@ -632,6 +696,10 @@ function rawLabel(data: CheckedData, c: Component): Label | undefined {
         role: 'weakness',
         text: `Vulnerable to ${energy((c as AddEnergyVulnerability).Type)}: takes half again as much damage from it.`,
       };
+    case 'AddAbilityResources': {
+      const text = poolWords(data, c as AddAbilityResources);
+      return text === undefined ? undefined : { role: 'bonus', text };
+    }
     case 'AddClassSkill':
       return {
         role: 'bonus',

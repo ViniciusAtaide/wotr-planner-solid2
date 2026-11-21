@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "DemonRageResource",
+  "guid": "f3bf174f0f86b4f45a823e9ed6ccc7a5",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 3,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 0,
+    "LevelStep": 3,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 1,
+    "StartingLevel": 4,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [],
+    "m_ClassDiv": [
+      "!bp_8e19495ea576a8641964102d177e34b7"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

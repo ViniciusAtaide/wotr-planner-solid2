@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "LayOnHandsResource",
+  "guid": "9dedf41d995ff4446a181f143c3db98c",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 1,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": true,
+    "LevelIncrease": 0,
+    "LevelStep": 2,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Charisma",
+    "StartingIncrease": 0,
+    "StartingLevel": 2,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      null
+    ],
+    "m_ClassDiv": [
+      "!bp_bfa11238e7ae3544bbeb4d0b92e897ec"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

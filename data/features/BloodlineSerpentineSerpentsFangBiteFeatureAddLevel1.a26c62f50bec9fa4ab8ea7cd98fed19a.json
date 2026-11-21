@@ -13,6 +13,12 @@
       ],
       "m_Class": "!bp_b3a505fb61437dc4097f43c3f8f9a4cf",
       "m_Feature": "!bp_b04f2983f024ec446ac2928f5ad52b99"
+    },
+    {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_899a038d352de3749adfe4d1e4a74d3c"
     }
   ],
   "Groups": [],

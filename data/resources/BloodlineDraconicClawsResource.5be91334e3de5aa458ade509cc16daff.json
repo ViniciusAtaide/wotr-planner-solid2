@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "BloodlineDraconicClawsResource",
+  "guid": "5be91334e3de5aa458ade509cc16daff",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 3,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": true,
+    "LevelIncrease": 1,
+    "LevelStep": 0,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 0,
+    "ResourceBonusStat": "Charisma",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce"
+    ],
+    "m_ClassDiv": [
+      null
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

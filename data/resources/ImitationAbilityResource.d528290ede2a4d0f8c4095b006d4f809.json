@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "ImitationAbilityResource",
+  "guid": "d528290ede2a4d0f8c4095b006d4f809",
+  "m_Max": 1,
+  "m_MaxAmount": {
+    "BaseValue": 1,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": true,
+    "LevelIncrease": 0,
+    "LevelStep": 2,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Intelligence",
+    "StartingIncrease": 0,
+    "StartingLevel": 2,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [],
+    "m_ClassDiv": [
+      "!bp_c75e0971973957d4dbad24bc7957e4fb"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

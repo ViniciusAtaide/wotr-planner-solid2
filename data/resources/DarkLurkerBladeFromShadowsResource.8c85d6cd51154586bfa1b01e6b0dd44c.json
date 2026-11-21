@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "DarkLurkerBladeFromShadowsResource",
+  "guid": "8c85d6cd51154586bfa1b01e6b0dd44c",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 3,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 1,
+    "StartingLevel": 2,
+    "m_Archetypes": [
+      "!bp_33eb002078e5437b8c25db4b80b4a4fe"
+    ],
+    "m_ArchetypesDiv": [
+      "!bp_33eb002078e5437b8c25db4b80b4a4fe"
+    ],
+    "m_Class": [
+      "!bp_299aa766dee3cbf4790da4efb8c72484"
+    ],
+    "m_ClassDiv": [
+      "!bp_299aa766dee3cbf4790da4efb8c72484"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

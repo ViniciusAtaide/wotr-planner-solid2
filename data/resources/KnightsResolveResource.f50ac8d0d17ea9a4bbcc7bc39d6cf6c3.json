@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "KnightsResolveResource",
+  "guid": "f50ac8d0d17ea9a4bbcc7bc39d6cf6c3",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 1,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 0,
+    "LevelStep": 2,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 1,
+    "StartingLevel": 5,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [],
+    "m_ClassDiv": [
+      "!bp_42a455d9ec1ad924d889272429eb8391"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

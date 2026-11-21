@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "IncenseFogResource",
+  "guid": "d03d97aac38e798479b81dfa9eda55c6",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 3,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": true,
+    "LevelIncrease": 1,
+    "LevelStep": 2,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Intelligence",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_0937bec61c0dabc468428f496580c721"
+    ],
+    "m_ClassDiv": [
+      "!bp_0937bec61c0dabc468428f496580c721"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

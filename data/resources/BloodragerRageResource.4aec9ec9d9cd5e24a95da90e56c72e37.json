@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "BloodragerRageResource",
+  "guid": "4aec9ec9d9cd5e24a95da90e56c72e37",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 2,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": true,
+    "LevelIncrease": 2,
+    "LevelStep": 0,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 0,
+    "ResourceBonusStat": "Constitution",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_d77e67a814d686842802c9cfd8ef8499"
+    ],
+    "m_ClassDiv": [
+      null
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

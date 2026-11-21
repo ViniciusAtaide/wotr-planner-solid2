@@ -9,6 +9,12 @@
       "m_Facts": []
     },
     {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_19196d84c81b4a979f361dda1ddf1a58"
+    },
+    {
       "$type": "AddFeatureOnClassLevel",
       "BeforeThisLevel": false,
       "Level": 1,

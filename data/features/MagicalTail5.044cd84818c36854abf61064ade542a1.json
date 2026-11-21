@@ -23,6 +23,12 @@
       "m_Feature": "!bp_342b6aed6b2eaab4786de243f0bcbcb8"
     },
     {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_78937c3583ef93d4db833a5da8dd0859"
+    },
+    {
       "$type": "FeatureTagsComponent",
       "FeatureTags": "Magic"
     }

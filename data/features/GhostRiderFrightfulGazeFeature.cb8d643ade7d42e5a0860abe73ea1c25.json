@@ -9,6 +9,12 @@
       "m_Archetypes": [],
       "m_Class": "!bp_3adc3439f98cb534ba98df59838f02c7",
       "m_Feature": "!bp_d91e2275d193423d880ee0a86af81ac4"
+    },
+    {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_229e518d2ada44d8af440591fd130264"
     }
   ],
   "Groups": [],

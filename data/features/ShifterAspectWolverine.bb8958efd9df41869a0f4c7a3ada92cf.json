@@ -9,6 +9,12 @@
       "m_Facts": [
         "!bp_28471f7cdf854170a1bdd8facbb2f054"
       ]
+    },
+    {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_1b096f343ea54ae0a4e3b6cf404bf62d"
     }
   ],
   "Groups": [],

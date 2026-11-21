@@ -1,0 +1,35 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "WitchHexAuraOfPurityResource",
+  "guid": "d7b6b2797253a5c478c957ba30bede47",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 0,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 0,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [
+      "!bp_490394869f666c141bf8647b1a365220",
+      "!bp_79ccf7a306a5d5547bebd97299f6fc89"
+    ],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_1b9873f1e7bfe5449bc84d03e9c8e3cc",
+      "!bp_299aa766dee3cbf4790da4efb8c72484",
+      "!bp_45a4607686d96a1498891b3286121780"
+    ],
+    "m_ClassDiv": []
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

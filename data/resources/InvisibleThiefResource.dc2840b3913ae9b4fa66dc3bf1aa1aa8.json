@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "InvisibleThiefResource",
+  "guid": "dc2840b3913ae9b4fa66dc3bf1aa1aa8",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 0,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 0,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_9c935a076d4fe4d4999fd48d853e3cf3"
+    ],
+    "m_ClassDiv": [
+      null
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

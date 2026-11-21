@@ -292,4 +292,5 @@ export const summaryComponentTypes: readonly string[] = [
   'SavingThrowBonusAgainstFact',
   'ArcaneSpellFailureIncrease',
   'AddEnergyVulnerability',
+  'AddAbilityResources',
 ];

@@ -16,6 +16,12 @@
       "m_RestrictIfNot": false
     },
     {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_6467269767a2685419641102925b1849"
+    },
+    {
       "$type": "AddMechanicsFeature",
       "m_Feature": "CombatHealer"
     },

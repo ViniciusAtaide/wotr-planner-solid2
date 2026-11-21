@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "BloodragerElementalFireStrikesResource",
+  "guid": "e831b61ebc58b594c961b0604fca24c9",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 3,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 0,
+    "LevelStep": 20,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 0,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 2,
+    "StartingLevel": 8,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [],
+    "m_ClassDiv": [
+      "!bp_d77e67a814d686842802c9cfd8ef8499"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

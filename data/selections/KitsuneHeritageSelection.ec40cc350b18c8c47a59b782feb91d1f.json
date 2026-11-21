@@ -1,6 +1,13 @@
 {
   "$type": "BlueprintFeatureSelection",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_a890101426b605042b63c5eac7ed9415"
+    }
+  ],
   "ExceptWhiteListed": false,
   "Group": "KitsuneHeritage",
   "Groups": [

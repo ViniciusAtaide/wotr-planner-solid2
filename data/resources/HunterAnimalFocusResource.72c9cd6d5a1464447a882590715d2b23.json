@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "HunterAnimalFocusResource",
+  "guid": "72c9cd6d5a1464447a882590715d2b23",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 0,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 0,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_34ecd1b5e1b90b9498795791b0855239"
+    ],
+    "m_ClassDiv": []
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

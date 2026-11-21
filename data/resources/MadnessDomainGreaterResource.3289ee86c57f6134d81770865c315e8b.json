@@ -1,0 +1,35 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": true,
+  "assetName": "MadnessDomainGreaterResource",
+  "guid": "3289ee86c57f6134d81770865c315e8b",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 1,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": false,
+    "LevelIncrease": 0,
+    "LevelStep": 4,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Wisdom",
+    "StartingIncrease": 1,
+    "StartingLevel": 8,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      null,
+      null,
+      null
+    ],
+    "m_ClassDiv": [
+      "!bp_67819271767a9dd4fbfd4ae700befea0",
+      "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

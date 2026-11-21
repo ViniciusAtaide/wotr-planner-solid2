@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": true,
+  "assetName": "MagicDomainGreaterResourceFake",
+  "guid": "bcc183f07f074bd7949d25b20d7ffd27",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 0,
+    "LevelStep": 4,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 1,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Wisdom",
+    "StartingIncrease": 1,
+    "StartingLevel": 8,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      null
+    ],
+    "m_ClassDiv": []
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

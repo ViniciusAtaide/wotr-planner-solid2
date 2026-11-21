@@ -23,6 +23,16 @@ describe('data/', { timeout: 30_000 }, () => {
     expect(settings).toMatchObject({ CharcaterLevelRestrictions: [0, 6, 7, 9, 11, 14, 15, 16, 17, 17, 19] });
   });
 
+  it("holds a class pool's uses-per-day formula as a resource", () => {
+    const { blueprints } = loadData(data.files, data.overrides);
+    expect(kindOf.BlueprintAbilityResource).toBe('resources');
+    expect(blueprints.get('e190ba276831b5c4fa28737e5e49e6a6')).toMatchObject({
+      $type: 'BlueprintAbilityResource',
+      m_MaxAmount: { BaseValue: 0, IncreasedByLevel: true, LevelIncrease: 1, IncreasedByStat: false },
+      m_UseMax: false,
+    });
+  });
+
   describe('items (map ticket 12)', () => {
     const { blueprints } = loadData(data.files, data.overrides);
     const items = [...blueprints.values()].filter((b) => kindOf[b.$type] === 'items');

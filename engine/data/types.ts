@@ -18,7 +18,8 @@ export type Kind =
   | 'items'
   | 'itemtypes'
   | 'enchantments'
-  | 'units';
+  | 'units'
+  | 'resources';
 
 export interface BlueprintBase {
   readonly $type: string;
@@ -250,6 +251,13 @@ export interface FactSinglify extends Component {
 export interface KensaiChosenWeapon extends Component {
   readonly $type: 'KensaiChosenWeapon';
   readonly m_Focus: Ref;
+}
+
+export interface AddAbilityResources extends Component {
+  readonly $type: 'AddAbilityResources';
+  readonly UseThisAsResource: boolean;
+  readonly m_Resource: Ref | null;
+  readonly Amount: number;
 }
 
 export interface AddClassSkill extends Component {
@@ -1870,6 +1878,34 @@ export interface BlueprintArchetype extends BlueprintBase {
   readonly AddSkillPoints: number;
 }
 
+export interface ResourceAmount {
+  readonly BaseValue: number;
+  readonly IncreasedByLevel: boolean;
+  readonly m_Class: readonly (Ref | null)[];
+  readonly m_Archetypes: readonly (Ref | null)[];
+  readonly LevelIncrease: number;
+  readonly IncreasedByLevelStartPlusDivStep: boolean;
+  readonly StartingLevel: number;
+  readonly StartingIncrease: number;
+  readonly LevelStep: number;
+  readonly PerStepIncrease: number;
+  readonly MinClassLevelIncrease: number;
+  readonly m_ClassDiv: readonly (Ref | null)[];
+  readonly m_ArchetypesDiv: readonly (Ref | null)[];
+  readonly OtherClassesModifier: number;
+  readonly IncreasedByStat: boolean;
+  readonly ResourceBonusStat: StatType;
+}
+
+export interface BlueprintAbilityResource extends BlueprintBase {
+  readonly $type: 'BlueprintAbilityResource';
+  readonly m_MaxAmount: ResourceAmount;
+  readonly m_UseMax: boolean;
+  readonly m_Max: number;
+  readonly m_Min: number;
+  readonly IsDomainAbility: boolean;
+}
+
 export interface BlueprintStatProgression extends BlueprintBase {
   readonly $type: 'BlueprintStatProgression';
   readonly Bonuses: readonly number[];
@@ -2098,7 +2134,8 @@ export type Blueprint =
   | BlueprintEquipmentEnchantment
   | BlueprintWeaponEnchantment
   | BlueprintArmorEnchantment
-  | BlueprintUnit;
+  | BlueprintUnit
+  | BlueprintAbilityResource;
 
 export const kindOf: Readonly<Record<Blueprint['$type'], Kind>> = {
   BlueprintCharacterClass: 'classes',
@@ -2138,6 +2175,7 @@ export const kindOf: Readonly<Record<Blueprint['$type'], Kind>> = {
   BlueprintWeaponEnchantment: 'enchantments',
   BlueprintArmorEnchantment: 'enchantments',
   BlueprintUnit: 'units',
+  BlueprintAbilityResource: 'resources',
 };
 
 const REF = /^!bp_([0-9a-f]{32})$/;

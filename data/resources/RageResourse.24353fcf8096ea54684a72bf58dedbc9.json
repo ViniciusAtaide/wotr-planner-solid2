@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "RageResourse",
+  "guid": "24353fcf8096ea54684a72bf58dedbc9",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 2,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": true,
+    "LevelIncrease": 2,
+    "LevelStep": 0,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 0,
+    "ResourceBonusStat": "Constitution",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [
+      "!bp_2bed52fbf927d4848b7a36324ee8117e"
+    ],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_f7d7eb166b3dd594fb330d085df41853",
+      "!bp_19a2d9e58d916d04db4cd7ad2c7a3ee2",
+      "!bp_a406d6ebea5c46bba3160246be03e96f"
+    ],
+    "m_ClassDiv": [
+      null
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

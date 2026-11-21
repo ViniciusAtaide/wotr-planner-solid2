@@ -7,6 +7,24 @@ export const FIELD_DEFAULTS: FieldDefaults = {
   '{AdditionalLevel,m_Class}': {
     AdditionalLevel: 0,
   },
+  '{BaseValue,IncreasedByLevel,IncreasedByLevelStartPlusDivStep,IncreasedByStat,LevelIncrease,LevelStep,MinClassLevelIncrease,OtherClassesModifier,PerStepIncrease,ResourceBonusStat,StartingIncrease,StartingLevel,m_Archetypes,m_ArchetypesDiv,m_Class,m_ClassDiv}':
+    {
+      BaseValue: 0,
+      IncreasedByLevel: false,
+      IncreasedByLevelStartPlusDivStep: false,
+      IncreasedByStat: false,
+      LevelIncrease: 0,
+      LevelStep: 0,
+      m_Archetypes: [],
+      m_ArchetypesDiv: [],
+      m_Class: [],
+      m_ClassDiv: [],
+      MinClassLevelIncrease: 0,
+      OtherClassesModifier: 0,
+      PerStepIncrease: 0,
+      StartingIncrease: 0,
+      StartingLevel: 0,
+    },
   '{BaseValue,ProgressionValue}': {
     BaseValue: 0,
     ProgressionValue: 0,
@@ -63,6 +81,11 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     Descriptor: 'None',
     m_CheckedFact: null,
     NoFact: false,
+  },
+  AddAbilityResources: {
+    Amount: 0,
+    m_Resource: null,
+    UseThisAsResource: false,
   },
   AddBackgroundArmorProficiency: {
     Proficiency: 'None',
@@ -173,6 +196,12 @@ export const FIELD_DEFAULTS: FieldDefaults = {
   },
   Blindsense: {
     Blindsight: false,
+  },
+  BlueprintAbilityResource: {
+    IsDomainAbility: false,
+    m_Max: 0,
+    m_Min: 0,
+    m_UseMax: false,
   },
   BlueprintActivatableAbility: {
     Group: 'None',

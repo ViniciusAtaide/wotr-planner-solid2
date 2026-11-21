@@ -9,6 +9,12 @@
       "m_Facts": []
     },
     {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_0b417a7292b2e924782ef2aab9451816"
+    },
+    {
       "$type": "AddFactContextActions",
       "Activated": {
         "Actions": [

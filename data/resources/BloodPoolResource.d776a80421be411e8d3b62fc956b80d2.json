@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "BloodPoolResource",
+  "guid": "d776a80421be411e8d3b62fc956b80d2",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 3,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 2,
+    "ResourceBonusStat": "Intelligence",
+    "StartingIncrease": 2,
+    "StartingLevel": 1,
+    "m_Archetypes": [
+      "!bp_11e473bfb29c42f580b9a801b6771788"
+    ],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_c75e0971973957d4dbad24bc7957e4fb"
+    ],
+    "m_ClassDiv": []
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "WindWhispererHasteResource",
+  "guid": "1e222665df1f471f9e2e461c3cde67ad",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 1,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 0,
+    "LevelStep": 6,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 1,
+    "StartingLevel": 6,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    ],
+    "m_ClassDiv": [
+      "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

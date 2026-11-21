@@ -1,0 +1,33 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "DeathOfElementsConsumingElementsResource",
+  "guid": "7a558d186755620439e35817f174f749",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 2,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 1,
+    "StartingLevel": 1,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_5d501618a28bdc24c80007a5c937dcb7"
+    ],
+    "m_ClassDiv": [
+      "!bp_247aa787806d5da4f89cfc3dff0b217f",
+      "!bp_5d501618a28bdc24c80007a5c937dcb7"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

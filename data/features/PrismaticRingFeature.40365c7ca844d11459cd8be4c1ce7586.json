@@ -7,6 +7,12 @@
       "InvertDifficultyRequirements": false,
       "MinDifficulty": "Story",
       "m_Facts": []
+    },
+    {
+      "$type": "AddAbilityResources",
+      "Amount": 9,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_88ea6120a08158d4b82426188bb9c7cb"
     }
   ],
   "Groups": [],

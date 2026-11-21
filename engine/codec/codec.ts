@@ -61,6 +61,7 @@ const KINDS: readonly Kind[] = [
   'itemtypes',
   'enchantments',
   'units',
+  'resources',
 ];
 
 const ALIGNMENTS: readonly Alignment[] = [

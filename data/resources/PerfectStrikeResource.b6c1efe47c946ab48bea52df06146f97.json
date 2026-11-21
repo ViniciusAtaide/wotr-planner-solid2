@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "PerfectStrikeResource",
+  "guid": "b6c1efe47c946ab48bea52df06146f97",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 1,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0.25,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 1,
+    "StartingLevel": 1,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [],
+    "m_ClassDiv": [
+      "!bp_e8f21e5b58e0569468e420ebea456124"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

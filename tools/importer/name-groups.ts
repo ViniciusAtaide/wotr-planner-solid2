@@ -197,6 +197,7 @@ export const kindWords: { readonly [K in Blueprint['$type']]: string } = {
   BlueprintActivatableAbility: 'toggle',
   BlueprintUnit: 'unit',
   BlueprintStatProgression: 'table',
+  BlueprintAbilityResource: 'resource',
   BlueprintSpellsTable: 'table',
   BlueprintSpellbook: 'spellbook',
   BlueprintMythicsSettings: 'settings',

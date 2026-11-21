@@ -1,0 +1,35 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "ArcanistArcaneReservoirResource",
+  "guid": "cac948cbbe79b55459459dd6a8fe44ce",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 3,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 0,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 0,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [
+      "!bp_6d2027b4eec590c41adb5caeb7bb026d",
+      "!bp_23a5d0ca607f6094097d509b2b1f4a10"
+    ],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_52dbfd8505e22f84fad8d702611f60b7",
+      "!bp_ba34257984f4c41408ce1dc2004e342e",
+      "!bp_c75e0971973957d4dbad24bc7957e4fb"
+    ],
+    "m_ClassDiv": []
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

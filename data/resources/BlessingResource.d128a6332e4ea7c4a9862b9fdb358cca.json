@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "BlessingResource",
+  "guid": "d128a6332e4ea7c4a9862b9fdb358cca",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 3,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 0,
+    "LevelStep": 2,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 1,
+    "StartingLevel": 2,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_30b5e47d47a0e37438cc5a80c96cfb99"
+    ],
+    "m_ClassDiv": [
+      "!bp_30b5e47d47a0e37438cc5a80c96cfb99"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

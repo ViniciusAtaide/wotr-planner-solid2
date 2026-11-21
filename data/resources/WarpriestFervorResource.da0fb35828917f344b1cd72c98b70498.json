@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "WarpriestFervorResource",
+  "guid": "da0fb35828917f344b1cd72c98b70498",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": true,
+    "LevelIncrease": 0,
+    "LevelStep": 2,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Wisdom",
+    "StartingIncrease": 1,
+    "StartingLevel": 2,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [],
+    "m_ClassDiv": [
+      "!bp_30b5e47d47a0e37438cc5a80c96cfb99"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

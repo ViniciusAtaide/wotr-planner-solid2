@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "SacredArmorEnchantResource",
+  "guid": "04af200173fafb94381b33e8fe3146e7",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 2,
+    "MinClassLevelIncrease": 1,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Intelligence",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_30b5e47d47a0e37438cc5a80c96cfb99"
+    ],
+    "m_ClassDiv": [
+      "!bp_30b5e47d47a0e37438cc5a80c96cfb99"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

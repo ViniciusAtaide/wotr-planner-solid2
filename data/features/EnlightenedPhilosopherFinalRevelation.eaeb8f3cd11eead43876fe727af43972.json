@@ -2,6 +2,12 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_d19c2e7ec505b734a973ce8d0986f4d6"
+    },
+    {
       "$type": "AddConditionImmunity",
       "Condition": "Nauseated"
     },

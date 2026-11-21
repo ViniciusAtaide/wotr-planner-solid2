@@ -1,0 +1,35 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "OracleRevelationSpiritShieldResource",
+  "guid": "4e2643951e18e1d43868ba7451690657",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 5,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Charisma",
+    "StartingIncrease": 1,
+    "StartingLevel": 5,
+    "m_Archetypes": [
+      "!bp_5c77110cd0414e7eb4c2e485659c9a46"
+    ],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_20ce9bf8af32bee4c8557a045ab499b1",
+      "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    ],
+    "m_ClassDiv": [
+      "!bp_20ce9bf8af32bee4c8557a045ab499b1"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

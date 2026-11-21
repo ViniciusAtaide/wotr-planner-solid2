@@ -178,6 +178,7 @@ const blueprintReaders: { readonly [K in Exclude<Blueprint['$type'], WornItemTyp
   BlueprintWeaponEnchantment: nothing,
   BlueprintArmorEnchantment: nothing,
   BlueprintStatProgression: nothing,
+  BlueprintAbilityResource: nothing,
   BlueprintSpellsTable: nothing,
   BlueprintSpellbook: nothing,
   BlueprintMythicsSettings: nothing,

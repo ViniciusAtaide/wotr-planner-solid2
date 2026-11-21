@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "LivingGrimoireSacredWordResource",
+  "guid": "7306d5c84435403abc068ceb8f8e5c90",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": true,
+    "LevelIncrease": 1,
+    "LevelStep": 2,
+    "MinClassLevelIncrease": 1,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Intelligence",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce"
+    ],
+    "m_ClassDiv": [
+      "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

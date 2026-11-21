@@ -18,6 +18,12 @@
       "m_Archetypes": [],
       "m_Class": "!bp_a406d6ebea5c46bba3160246be03e96f",
       "m_Feature": "!bp_dca4ded269a349a590b773b591f9689e"
+    },
+    {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_2210cea8cc94431a911dc5d4b6d72cbd"
     }
   ],
   "Groups": [],

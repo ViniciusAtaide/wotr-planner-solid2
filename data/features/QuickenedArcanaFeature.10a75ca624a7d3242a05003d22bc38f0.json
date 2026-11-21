@@ -9,6 +9,12 @@
       "m_Facts": []
     },
     {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_a5db146451aec514a98ec06002144867"
+    },
+    {
       "$type": "PrerequisiteClassLevel",
       "CheckInProgression": false,
       "Group": "All",

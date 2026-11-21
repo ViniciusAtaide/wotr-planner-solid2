@@ -20,6 +20,12 @@
         "!bp_a5458a1c316d1f24e8d9770f4fc179fa"
       ],
       "m_RestrictIfNot": false
+    },
+    {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_5f624fa5d4cd4882b9368e4d123306bd"
     }
   ],
   "Groups": [

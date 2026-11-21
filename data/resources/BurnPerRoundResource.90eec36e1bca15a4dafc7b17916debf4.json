@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "BurnPerRoundResource",
+  "guid": "90eec36e1bca15a4dafc7b17916debf4",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 1,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 0,
+    "LevelStep": 3,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Constitution",
+    "StartingIncrease": 1,
+    "StartingLevel": 6,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_42a455d9ec1ad924d889272429eb8391"
+    ],
+    "m_ClassDiv": [
+      "!bp_42a455d9ec1ad924d889272429eb8391"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

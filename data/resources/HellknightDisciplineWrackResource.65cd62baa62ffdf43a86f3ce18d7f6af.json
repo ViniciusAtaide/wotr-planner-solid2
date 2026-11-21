@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "HellknightDisciplineWrackResource",
+  "guid": "65cd62baa62ffdf43a86f3ce18d7f6af",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 0,
+    "LevelStep": 3,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 1,
+    "StartingLevel": 3,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_ed246f1680e667b47b7427d51e651059"
+    ],
+    "m_ClassDiv": [
+      "!bp_ed246f1680e667b47b7427d51e651059"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

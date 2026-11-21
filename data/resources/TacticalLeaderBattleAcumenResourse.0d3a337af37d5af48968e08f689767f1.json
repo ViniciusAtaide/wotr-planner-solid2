@@ -1,0 +1,30 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "TacticalLeaderBattleAcumenResourse",
+  "guid": "0d3a337af37d5af48968e08f689767f1",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": true,
+    "LevelIncrease": 1,
+    "LevelStep": 3,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Wisdom",
+    "StartingIncrease": 0,
+    "StartingLevel": 3,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [],
+    "m_ClassDiv": [
+      "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

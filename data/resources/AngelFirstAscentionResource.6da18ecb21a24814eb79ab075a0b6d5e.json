@@ -1,0 +1,36 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "AngelFirstAscentionResource",
+  "guid": "6da18ecb21a24814eb79ab075a0b6d5e",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 3,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 0,
+    "LevelStep": 1,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 1,
+    "StartingLevel": 2,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [],
+    "m_ClassDiv": [
+      "!bp_a5a9fe8f663d701488bd1db8ea40484e",
+      "!bp_247aa787806d5da4f89cfc3dff0b217f",
+      "!bp_15a85e67b7d69554cab9ed5830d0268e",
+      "!bp_9a3b2c63afa79744cbca46bea0da9a16",
+      "!bp_8e19495ea576a8641964102d177e34b7",
+      "!bp_5d501618a28bdc24c80007a5c937dcb7",
+      "!bp_8df873a8c6e48294abdb78c45834aa0a"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

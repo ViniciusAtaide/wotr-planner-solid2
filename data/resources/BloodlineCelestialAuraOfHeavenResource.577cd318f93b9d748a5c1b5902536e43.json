@@ -1,0 +1,35 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "BloodlineCelestialAuraOfHeavenResource",
+  "guid": "577cd318f93b9d748a5c1b5902536e43",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 0,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 0,
+    "ResourceBonusStat": "Charisma",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [
+      "!bp_d078b2ef073f2814c9e338a789d97b73"
+    ],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_b3a505fb61437dc4097f43c3f8f9a4cf",
+      "!bp_45a4607686d96a1498891b3286121780"
+    ],
+    "m_ClassDiv": [
+      null
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

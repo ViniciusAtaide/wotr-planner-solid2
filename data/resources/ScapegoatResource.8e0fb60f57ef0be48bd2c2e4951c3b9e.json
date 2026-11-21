@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "ScapegoatResource",
+  "guid": "8e0fb60f57ef0be48bd2c2e4951c3b9e",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 3,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Wisdom",
+    "StartingIncrease": 0,
+    "StartingLevel": 3,
+    "m_Archetypes": [
+      "!bp_34963fc6d87354c4fa85eb76f122c41c"
+    ],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_34ecd1b5e1b90b9498795791b0855239"
+    ],
+    "m_ClassDiv": [
+      "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

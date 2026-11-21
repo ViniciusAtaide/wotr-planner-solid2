@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "SpontaneousHealingResource",
+  "guid": "0b417a7292b2e924782ef2aab9451816",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 2,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Intelligence",
+    "StartingIncrease": 1,
+    "StartingLevel": 2,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      null,
+      null,
+      null
+    ],
+    "m_ClassDiv": [
+      "!bp_0937bec61c0dabc468428f496580c721"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

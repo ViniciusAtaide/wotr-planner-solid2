@@ -60,12 +60,12 @@ describe('loadData', { timeout: 30_000 }, () => {
 
   it('refuses a $type the engine does not read, leaving the references to it unresolved', () => {
     const { files, overrides } = fixtureEdited((fs) => {
-      (byPath(fs, 'TestDodgeFeature').value as { $type: string }).$type = 'BlueprintAbilityResource';
+      (byPath(fs, 'TestDodgeFeature').value as { $type: string }).$type = 'BlueprintAbilityAreaEffect';
       return fs;
     });
     const problems = problemsOf(files, overrides);
     expect(problems).toContain(
-      `features/TestDodgeFeature.${g(6)}.json: $type BlueprintAbilityResource is not one the engine reads`,
+      `features/TestDodgeFeature.${g(6)}.json: $type BlueprintAbilityAreaEffect is not one the engine reads`,
     );
     expect(problems).toContain(
       `features/TestMobilityFeature.${g(7)}.json: Components[0].m_Feature names ${g(6)}, which the data doesn't hold`,

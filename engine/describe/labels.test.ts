@@ -218,6 +218,7 @@ const CARRIERS: readonly (readonly [string, string, Role, string])[] = [
     'weakness',
     'Vulnerable to sonic: takes half again as much damage from it.',
   ],
+  ['AddAbilityResources', 'a9ab1bbc79ecb174d9a04699986ce8d5', 'bonus', 'Uses per day: 3 + Charisma modifier.'],
 ];
 
 suite('Summary labels', { timeout: 30_000 }, () => {
@@ -278,6 +279,19 @@ suite('Summary labels', { timeout: 30_000 }, () => {
     const component = data.blueprints.get(guid)?.Components.find((c) => c.$type === type);
     expect(component).toBeDefined();
     expect(labelOf(data, component!)).toEqual({ role: 'bonus', text });
+  });
+
+  it.each([
+    ['e9590244effb4be4f830b1e3fffced13', 'Uses per day: Wisdom modifier + 1 per 2 Monk levels.'],
+    ['b92bfc201c6a79e49afd0b5cfbfc269f', 'Uses per day: 1 per Bard level.'],
+    [
+      'a29a582c3daa4c24bb0e991c596ccb28',
+      "Uses per day: 1 from Monk level 1, +1 per level after; other classes' levels count a quarter.",
+    ],
+  ])("words a pool's uses per day from the game's formula (%s)", (guid, text) => {
+    const component = data.blueprints.get(guid)?.Components.find((c) => c.$type === 'AddAbilityResources');
+    expect(component).toBeDefined();
+    expect(labelOf(data, component!)?.text).toBe(text);
   });
 
   it('reads all 64 spell descriptor bits, the sign bit included', () => {

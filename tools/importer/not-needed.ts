@@ -195,7 +195,6 @@ export const notNeededFamilies: readonly NotNeededFamily[] = [
       'ActivatableAbilityRestrictionByEquipmentSet',
       'ActivatableAbilityRestrictionByWeapon',
       'AddAbilityResourceTrigger',
-      'AddAbilityResources',
       'AddAbilityUseTargetTrigger',
       'AddAbilityUseTrigger',
       'AddAdditionalLimb',

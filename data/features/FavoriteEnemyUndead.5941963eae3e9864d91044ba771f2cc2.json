@@ -6,6 +6,12 @@
       "m_CheckedFacts": [
         "!bp_734a29b693e9ec346ba2951b27987e33"
       ]
+    },
+    {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_adcb33317de549d7b503c14fdb7a7779"
     }
   ],
   "Groups": [

@@ -2,6 +2,12 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_0151bcd6b3ae4090ab93ce36766fcb5d"
+    },
+    {
       "$type": "AddFeatureOnClassLevel",
       "BeforeThisLevel": true,
       "Level": 14,

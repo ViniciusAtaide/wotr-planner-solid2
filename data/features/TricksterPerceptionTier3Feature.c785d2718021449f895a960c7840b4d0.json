@@ -9,6 +9,18 @@
       "m_Feature": "!bp_e9298851786c5334dba1398e9635a83d"
     },
     {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_05f7c80542314ce4803ebd579b3770eb"
+    },
+    {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_9f76fa7651e74112a1ffe83d86ab7cce"
+    },
+    {
       "$type": "AddFacts",
       "HasDifficultyRequirements": false,
       "InvertDifficultyRequirements": false,

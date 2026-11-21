@@ -35,6 +35,12 @@
       "Group": "Any",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_b4f2dc3830fbe6147b701872fbdb87c4"
+    },
+    {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_1f4eeef738e694c44aad070a0b3d64a2"
     }
   ],
   "Groups": [],

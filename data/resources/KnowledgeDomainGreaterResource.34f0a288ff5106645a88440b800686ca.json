@@ -1,0 +1,35 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": true,
+  "assetName": "KnowledgeDomainGreaterResource",
+  "guid": "34f0a288ff5106645a88440b800686ca",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 1,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": false,
+    "LevelIncrease": 0,
+    "LevelStep": 4,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Wisdom",
+    "StartingIncrease": 0,
+    "StartingLevel": 8,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      null
+    ],
+    "m_ClassDiv": [
+      "!bp_67819271767a9dd4fbfd4ae700befea0",
+      "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce",
+      "!bp_34ecd1b5e1b90b9498795791b0855239",
+      "!bp_52dbfd8505e22f84fad8d702611f60b7"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

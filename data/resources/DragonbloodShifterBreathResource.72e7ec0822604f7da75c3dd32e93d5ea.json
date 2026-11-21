@@ -1,0 +1,32 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "DragonbloodShifterBreathResource",
+  "guid": "72e7ec0822604f7da75c3dd32e93d5ea",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": true,
+    "LevelIncrease": 1,
+    "LevelStep": 2,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Wisdom",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_a406d6ebea5c46bba3160246be03e96f"
+    ],
+    "m_ClassDiv": [
+      "!bp_a406d6ebea5c46bba3160246be03e96f"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

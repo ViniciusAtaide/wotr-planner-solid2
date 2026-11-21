@@ -7,6 +7,12 @@
         "!bp_25a5878d125338244896ebd3238226c8",
         "!bp_b3646842ffbd01643ab4dac7479b20b0"
       ]
+    },
+    {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_2bd91a9493344cffb84e0911762ca2b1"
     }
   ],
   "Groups": [

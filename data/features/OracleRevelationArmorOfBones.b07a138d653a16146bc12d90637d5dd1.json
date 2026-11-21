@@ -39,6 +39,12 @@
       ],
       "m_Class": "!bp_20ce9bf8af32bee4c8557a045ab499b1",
       "m_Feature": "!bp_79f63f3473f64af292be413b147b2a42"
+    },
+    {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_b6b9157eca8c6c24f9e5651f7be23273"
     }
   ],
   "Groups": [

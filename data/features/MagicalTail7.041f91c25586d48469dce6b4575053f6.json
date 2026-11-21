@@ -21,6 +21,12 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_053e37697a0d20547b06c3dbd8b71702"
+    },
+    {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_1008092e869931943a7bc45c5dfadd05"
     }
   ],
   "Groups": [],

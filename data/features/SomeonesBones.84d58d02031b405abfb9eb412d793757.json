@@ -9,6 +9,12 @@
       "m_Facts": []
     },
     {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_9a172f952a7a4ea9a73e6419526fce92"
+    },
+    {
       "$type": "PrerequisiteCondition",
       "CheckInProgression": false,
       "Condition": {

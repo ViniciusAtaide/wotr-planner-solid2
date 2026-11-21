@@ -15,6 +15,12 @@
       "m_RestrictIfNot": false
     },
     {
+      "$type": "AddAbilityResources",
+      "Amount": 0,
+      "UseThisAsResource": false,
+      "m_Resource": "!bp_8eb43ae66258f5a408b1e780e0fbd1f1"
+    },
+    {
       "$type": "AddFacts",
       "HasDifficultyRequirements": false,
       "InvertDifficultyRequirements": false,

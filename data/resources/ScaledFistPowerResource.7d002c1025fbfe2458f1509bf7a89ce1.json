@@ -1,0 +1,34 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "ScaledFistPowerResource",
+  "guid": "7d002c1025fbfe2458f1509bf7a89ce1",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": false,
+    "IncreasedByLevelStartPlusDivStep": true,
+    "IncreasedByStat": true,
+    "LevelIncrease": 1,
+    "LevelStep": 2,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 1,
+    "ResourceBonusStat": "Charisma",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      null,
+      null,
+      null
+    ],
+    "m_ClassDiv": [
+      "!bp_e8f21e5b58e0569468e420ebea456124"
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}

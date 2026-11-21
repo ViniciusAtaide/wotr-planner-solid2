@@ -1,0 +1,35 @@
+{
+  "$type": "BlueprintAbilityResource",
+  "Components": [],
+  "IsDomainAbility": false,
+  "assetName": "InquisitorBaneResource",
+  "guid": "a708945b17c56fa4196e8d20f8af1b0d",
+  "m_Max": 10,
+  "m_MaxAmount": {
+    "BaseValue": 0,
+    "IncreasedByLevel": true,
+    "IncreasedByLevelStartPlusDivStep": false,
+    "IncreasedByStat": false,
+    "LevelIncrease": 1,
+    "LevelStep": 0,
+    "MinClassLevelIncrease": 0,
+    "OtherClassesModifier": 0,
+    "PerStepIncrease": 0,
+    "ResourceBonusStat": "Unknown",
+    "StartingIncrease": 0,
+    "StartingLevel": 0,
+    "m_Archetypes": [
+      "!bp_2bed52fbf927d4848b7a36324ee8117e"
+    ],
+    "m_ArchetypesDiv": [],
+    "m_Class": [
+      "!bp_f1a70d9e1b0b41e49874e1fa9052a1ce",
+      "!bp_19a2d9e58d916d04db4cd7ad2c7a3ee2"
+    ],
+    "m_ClassDiv": [
+      null
+    ]
+  },
+  "m_Min": 0,
+  "m_UseMax": false
+}
