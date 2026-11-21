@@ -130,7 +130,8 @@ export const TOOLS: readonly ToolDef[] = [
   },
   {
     name: 'set_skills',
-    description: "A character level's skill ranks, replacing that level's.",
+    description:
+      'A character level\'s skill ranks, replacing that level\'s. Name each skill as sheet shows it ("Mobility", "Knowledge (Arcana)") or by its game key ("SkillMobility").',
     inputSchema: object(
       {
         code,

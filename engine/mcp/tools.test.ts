@@ -245,4 +245,24 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(r).toMatchObject({ refused: true });
     expect(JSON.stringify(r)).toContain('This feat is taken for one weapon; pick it with that choice.');
   });
+
+  it('takes skills by the names the sheet shows or by their game keys, and names the skills when one is unknown (MCP QA)', async () => {
+    const fighter = ok(
+      await level_up(e, { code: (await start_build(e)).code, class: '48ac8db94d5de7645906c7d0ad3bcfbd' }),
+      'level_up',
+    );
+    const shown = ok(
+      await set_skills(e, { code: fighter.code, level: 1, ranks: { Athletics: 1, 'knowledge (world)': 1 } }),
+      'set_skills',
+    );
+    expect(shown.build.levels[0]?.skills).toEqual({ SkillAthletics: 1, SkillKnowledgeWorld: 1 });
+    const keyed = ok(await set_skills(e, { code: fighter.code, level: 1, ranks: { SkillAthletics: 1 } }), 'set_skills');
+    expect(keyed.build.levels[0]?.skills).toEqual({ SkillAthletics: 1 });
+    const unknown = await set_skills(e, { code: fighter.code, level: 1, ranks: { Climb: 1 } });
+    expect(unknown).toEqual({
+      refused: true,
+      reason:
+        'Not a skill: "Climb". The skills are Mobility, Perception, Thievery, Athletics, Persuasion, Lore (Nature), Knowledge (Arcana), Lore (Religion), Knowledge (World), Stealth, Use Magic Device.',
+    });
+  });
 });

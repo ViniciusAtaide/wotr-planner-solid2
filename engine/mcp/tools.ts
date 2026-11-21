@@ -367,14 +367,36 @@ export async function pick(
   return withMode(e, build, edit, args.mode ?? 'strict');
 }
 
+const SKILL_NAMES: ReadonlyMap<string, StatType> = new Map(
+  (Object.keys(SKILL_ATTRIBUTE) as StatType[]).flatMap((skill) => [
+    [skill.toLowerCase(), skill],
+    [statName(skill).toLowerCase(), skill],
+  ]),
+);
+
+function skillKeys(ranks: Readonly<Record<string, number>>): Partial<Record<StatType, number>> | string {
+  const out: Partial<Record<StatType, number>> = {};
+  for (const [name, n] of Object.entries(ranks)) {
+    const skill = SKILL_NAMES.get(name.trim().toLowerCase());
+    if (skill === undefined) {
+      const known = (Object.keys(SKILL_ATTRIBUTE) as StatType[]).map(statName).join(', ');
+      return `Not a skill: ${JSON.stringify(name)}. The skills are ${known}.`;
+    }
+    out[skill] = n;
+  }
+  return out;
+}
+
 export async function set_skills(
   e: Engine,
-  args: { readonly code: string; readonly level: number; readonly ranks: Readonly<Partial<Record<StatType, number>>> },
+  args: { readonly code: string; readonly level: number; readonly ranks: Readonly<Record<string, number>> },
 ): Promise<Changed | ToolRefusal> {
   const build = await open(e, args.code);
   if (isRefusal(build)) return build;
   if (args.level < 1 || args.level > build.levels.length) return refused('The Build has no such level.');
-  const skills = toSkillRanks(args.ranks);
+  const ranks = skillKeys(args.ranks);
+  if (typeof ranks === 'string') return refused(ranks);
+  const skills = toSkillRanks(ranks);
   if (skills === undefined) return refused(skillRankRange(args.ranks));
   const after = apply(build, { kind: 'skills', level: args.level, skills });
   const own = walk(e.data, after, e.G).failures.find(
