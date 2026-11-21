@@ -6,7 +6,7 @@ import { nameOf } from '~engine/refusals';
 import { PLACE_ITEM_TYPES } from '~engine/walk';
 
 import { Button, OptionList, PickerOption } from '../design';
-import { Filter } from './ChoiceList';
+import { Filter, SCROLL_STYLE } from './ChoiceList';
 import type { TrailApi } from './steps';
 
 export const PLACES = Object.keys(PLACE_ITEM_TYPES) as GearPlace[];
@@ -101,21 +101,23 @@ export function GearStep(props: GearStepProps) {
           if (first !== undefined) wear(first.guid);
         }}
       />
-      <OptionList>
-        <For each={items().slice(0, ITEMS_SHOWN)} keyed={(bp) => bp.guid}>
-          {(item) => (
-            <PickerOption
-              name={item().name ?? item().assetName}
-              status="open"
-              selected={gear()[place()] === item().guid}
-              onPick={() => wear(item().guid)}
-            />
-          )}
-        </For>
-        <Show when={items().length > ITEMS_SHOWN}>
-          <p class="trail-note">{items().length - ITEMS_SHOWN} more: type to narrow the list.</p>
-        </Show>
-      </OptionList>
+      <div class="trail-scroll" style={SCROLL_STYLE}>
+        <OptionList>
+          <For each={items().slice(0, ITEMS_SHOWN)} keyed={(bp) => bp.guid}>
+            {(item) => (
+              <PickerOption
+                name={item().name ?? item().assetName}
+                status="open"
+                selected={gear()[place()] === item().guid}
+                onPick={() => wear(item().guid)}
+              />
+            )}
+          </For>
+          <Show when={items().length > ITEMS_SHOWN}>
+            <p class="trail-note">{items().length - ITEMS_SHOWN} more: type to narrow the list.</p>
+          </Show>
+        </OptionList>
+      </div>
     </div>
   );
 }

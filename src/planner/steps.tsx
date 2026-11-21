@@ -10,7 +10,7 @@ import { ATTRIBUTES, SKILL_ATTRIBUTE } from '~engine/walk';
 import { Button, Refusal } from '../design';
 import { BackgroundStep, RaceStep } from './CharacterSteps';
 import { PickStep } from './PickStep';
-import { ChoiceList, currentFirst, judge, type ChoiceRow } from './ChoiceList';
+import { ChoiceList, currentFirst, judge, type ChoiceRow, type ClosedToggle } from './ChoiceList';
 import { flatName, shownArchetypes } from './flat-choices';
 import { judgeClasses, type ClassJudged, type EditOutcome, type NonEmpty } from './planner-state';
 import type { Planner } from './state';
@@ -27,6 +27,15 @@ import {
 } from './trail-state';
 import type { Selection } from './workspace-state';
 import { bareNameOf } from './words';
+
+export function closedToggle(trail: TrailApi, list: string): ClosedToggle {
+  return {
+    get shown() {
+      return trail.state().closedShown.has(list);
+    },
+    toggle: () => trail.send({ kind: 'toggleClosed', list }),
+  };
+}
 
 export interface TrailApi {
   readonly planner: Planner;
@@ -266,7 +275,13 @@ function ClassList(props: TrailStepProps) {
       }),
     );
   });
-  return <ChoiceList label="Filter classes and archetypes by name" rows={rows()} />;
+  return (
+    <ChoiceList
+      label="Filter classes and archetypes by name"
+      rows={rows()}
+      closed={closedToggle(props.trail, 'class')}
+    />
+  );
 }
 
 export function startingWith(key: string | undefined, rows: ChoiceRow[]): ChoiceRow[] {
@@ -362,7 +377,7 @@ export function MythicStep(props: TrailStepProps) {
           <p class="trail-note">
             Your story grants Mythic rank {d().rank} at level {d().at}.
           </p>
-          <ChoiceList label="Filter Mythic paths by name" rows={rows()} />
+          <ChoiceList label="Filter Mythic paths by name" rows={rows()} closed={closedToggle(props.trail, 'path')} />
           <Show when={!atLevelCap(props.trail.view())}>
             <button
               type="button"
@@ -459,12 +474,16 @@ export function LevelEditor(props: LevelStepProps) {
       <div class="trail-step">
         <Show when={archetypeRows().length > 0}>
           <h4 class="trail-subhead">Archetype</h4>
-          <ChoiceList label="Filter archetypes by name" rows={archetypeRows()} />
+          <ChoiceList
+            label="Filter archetypes by name"
+            rows={archetypeRows()}
+            closed={closedToggle(props.trail, 'archetype')}
+          />
         </Show>
         <h4 class="trail-subhead">
           Class at level {props.level} · {classLevelAt(planner().build(), props.level)} in its class
         </h4>
-        <ChoiceList label="Filter classes by name" rows={classRows()} />
+        <ChoiceList label="Filter classes by name" rows={classRows()} closed={closedToggle(props.trail, 'class')} />
         <Show when={props.level === planner().build().levels.length}>
           <Button
             variant="danger"
@@ -550,7 +569,7 @@ export function RankEditor(props: RankStepProps) {
             <span class="trail-note">Expected at level {expectedLevel(data(), props.rank)}</span>
           </div>
           <h4 class="trail-subhead">Mythic path</h4>
-          <ChoiceList label="Filter Mythic paths by name" rows={rows()} />
+          <ChoiceList label="Filter Mythic paths by name" rows={rows()} closed={closedToggle(props.trail, 'path')} />
           <Show when={props.rank === (planner().build().ranks?.length ?? 0)}>
             <Button
               variant="danger"

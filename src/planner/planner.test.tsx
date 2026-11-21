@@ -1,6 +1,6 @@
 import { join } from 'node:path';
 import { cleanup, fireEvent, render, screen, waitFor } from '@solidjs/testing-library';
-import { flush } from 'solid-js';
+import { createSignal, flush } from 'solid-js';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 import { abilityScores, rankLevel, skillRanks, slotKey, type Build, type SlotId } from '~engine/build';
 import { encodeBuild } from '~engine/codec';
@@ -137,14 +137,14 @@ function trailOf(build: Build) {
 const LEVEL_STOPS = '.trail-stop:not(.trail-stop--mythic):not(.trail-stop--next):not(.trail-stop--chapter)';
 
 function apiOf(planner: PlannerApi, state: TrailState = TRAIL_START): TrailApi {
-  let s = state;
+  const [s, setS] = createSignal(state);
   let selection: Selection | undefined;
   return {
     planner,
     view: () => ({ data: e.data, build: planner.build(), walk: planner.walked() }),
-    state: () => s,
+    state: () => s(),
     send: (a) => {
-      s = reduceTrail(s, a);
+      setS((now) => reduceTrail(now, a));
     },
     selection: () => selection,
     select: (next) => {
@@ -559,8 +559,10 @@ describe('the levelling trail (build ticket 07)', () => {
 
   test('the Mythic path list leaves out the companions’ class and Shard Powers (comparison bug 5)', () => {
     const ranked: Build = { ...cleaver, ranks: [{ class: MYTHIC_HERO, level: rankLevel(1) }] };
-    render(() => <RankEditor trail={apiOf(createPlanner(e, ranked))} rank={1} />);
+    const api = apiOf(createPlanner(e, ranked));
+    render(() => <RankEditor trail={api} rank={1} />);
     flush();
+    tap(/^Show \d+ closed$/);
     const names = [...document.querySelectorAll('.ww-option__name')].map((n) => n.textContent);
     expect(names).toContain('Aeon');
     expect(names).not.toContain('Mythic Companion');
@@ -1043,8 +1045,38 @@ describe('QA pass 1', () => {
     }));
     render(() => <ChoiceList label="Filter" rows={rows} />);
     flush();
+    expect(document.querySelectorAll('.ww-option--closed').length).toBe(0);
+    expect(screen.getByText('No choices open here.')).toBeTruthy();
+    tap('Show 10 closed');
     expect(document.querySelectorAll('.ww-option--closed').length).toBe(3);
     expect(screen.getByText('7 more closed: Needs a level 1 Build.')).toBeTruthy();
+    tap('Hide closed');
+    expect(document.querySelectorAll('.ww-option--closed').length).toBe(0);
+    expect(button('Show 10 closed')).toBeTruthy();
+  });
+
+  test('a choice list scrolls inside a capped height, and keeps the current pick when it is closed', () => {
+    const rows = [
+      { key: 'held', name: 'Held', open: false, reasons: ['No longer fits.'], current: true, take: () => {} },
+      ...Array.from({ length: 12 }, (_, i) => ({
+        key: `o${i}`,
+        name: `Open ${i}`,
+        open: true,
+        reasons: [],
+        current: false,
+        take: () => {},
+      })),
+    ];
+    render(() => <ChoiceList label="Filter" rows={rows} />);
+    flush();
+    const scroll = document.querySelector<HTMLElement>('.trail-scroll');
+    expect(scroll?.getAttribute('style')).toContain('max-height: var(--choice-list-max)');
+    expect(scroll?.getAttribute('style')).toContain('overflow-y: auto');
+    expect(scroll?.querySelector('.trail-filter')).toBeNull();
+    const held = [...document.querySelectorAll('.ww-option--closed')];
+    expect(held.map((r) => r.querySelector('.ww-option__name')?.textContent)).toEqual(['Held']);
+    expect(held[0]?.textContent).toContain('Current');
+    expect(button('Show 1 closed')).toBeTruthy();
   });
 
   test('the class list names each class and archetype once, without the classes the game hides', () => {
@@ -1097,6 +1129,8 @@ describe('QA pass 1', () => {
     await openPlanner(cleaver);
     fireEvent.click(chipNamed('Power Attack'));
     flush();
+    expect(document.querySelectorAll('.trail-here .ww-option--closed').length).toBe(0);
+    tap(/^Show \d+ closed$/);
     const closed = () => document.querySelectorAll('.trail-here .ww-option--closed').length;
     const before = closed();
     const more = Number(
@@ -1122,7 +1156,8 @@ describe('nested sub-choices (ticket 08)', () => {
   };
   const featList = () => {
     const planner = createPlanner(e, fighter1);
-    render(() => <SlotStep trail={apiOf(planner)} slot={FEAT} />);
+    const api = apiOf(planner);
+    render(() => <SlotStep trail={api} slot={FEAT} />);
     flush();
     return planner;
   };
@@ -1176,6 +1211,7 @@ describe('nested sub-choices (ticket 08)', () => {
       target: { value: 'fencing grace' },
     });
     flush();
+    tap(/^Show \d+ closed$/);
     const fencing = [...document.querySelectorAll('.ww-option--closed')].filter(
       (r) => r.querySelector('.ww-option__name')?.textContent === 'Fencing Grace',
     );
