@@ -18,7 +18,7 @@ import {
   type FlatChoice,
 } from './flat-choices';
 import { verdictOfAll } from './planner-state';
-import { backgroundSlot } from './trail-state';
+import { backgroundSlot, characterPicksLine } from './trail-state';
 
 const files = readDataDir(join(process.cwd(), 'data'));
 const e = engineOf(loadData(files.files, files.overrides));
@@ -136,6 +136,21 @@ describe('backgrounds with their variations', () => {
     const warrior = taken(noble, guard);
     expect(backgroundLabel(e, warrior, walked(warrior), base())).toBe('Warrior (Guard)');
     expect(warrior.picks).toHaveLength(2);
+  });
+});
+
+describe('the character’s picks line', () => {
+  test('names the race and the background as their flat pairs (QA pass 2)', () => {
+    const fresh: Build = { scores: SCORES, levels: [{ class: FIGHTER }], picks: [] };
+    const raced = taken(fresh, named(raceChoices(e, fresh, walked(fresh)), 'Tiefling (Beastbrood (Rakshasa-Spawn))'));
+    const base = backgroundSlot({ data: e.data, build: raced, walk: walked(raced) });
+    if (base === undefined) throw new Error('no background slot');
+    const done = taken(raced, named(backgroundChoices(e, raced, walked(raced), base.id), 'Scholar (Nature)'));
+    const line = characterPicksLine({ data: e.data, build: done, walk: walked(done) });
+    expect(line.startsWith('Tiefling (Beastbrood (Rakshasa-Spawn)) · ')).toBe(true);
+    expect(line).toContain('Scholar (Nature)');
+    expect(line).not.toContain('Scholar — Nature');
+    expect(line).not.toContain('· Beastbrood');
   });
 });
 

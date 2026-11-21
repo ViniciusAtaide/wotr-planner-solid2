@@ -24,11 +24,11 @@ import { picker } from '~engine/pickers';
 import { linkDidNotOpen, nameOf } from '~engine/refusals';
 
 import { EMPTY, openHash } from './link';
-import Planner from './Planner';
+import Planner, { RefusalNotice } from './Planner';
 import { createPlanner, type Planner as PlannerApi } from './state';
 import { ChoiceList } from './ChoiceList';
 import { placeWords } from './GearStep';
-import { MythicStep, NextLevelStep, RankEditor, SkillsStep, SlotStep, type TrailApi } from './steps';
+import { LevelEditor, MythicStep, NextLevelStep, RankEditor, SkillsStep, SlotStep, type TrailApi } from './steps';
 import Trail from './Trail';
 import { reduceTrail, TRAIL_START, type TrailState } from './trail-state';
 import type { Selection } from './workspace-state';
@@ -725,7 +725,7 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
   test('a Cascade confirmed lands on the first pick it cleared', async () => {
     await openPlanner(cleaver);
     await openPreview();
-    tap(/^Clear 2 picks/);
+    tap(/^Clear 2 choices/);
     expect(dialog()).toBeNull();
     expect(hereTitle()).toBe('Level 1 · choose feat');
     expect(document.querySelector('.planner-undo')?.textContent).toContain('Strength 12');
@@ -989,25 +989,36 @@ describe('QA pass 1', () => {
     ],
   });
 
-  test('"Same as level N−1" shows only when it would change the level', () => {
+  test('"Same as level N−1" shows only when it would change the level', async () => {
     const differ = createPlanner(e, skilled({ SkillAthletics: 1 }, { SkillMobility: 1 }));
     const { unmount } = render(() => <SkillsStep trail={apiOf(differ)} level={2} />);
     flush();
-    expect(button('Same as level 1')).toBeTruthy();
+    await waitFor(() => expect(button('Same as level 1')).toBeTruthy());
     tap('Same as level 1');
     expect(differ.build().levels[1]?.skills).toEqual({ SkillAthletics: 1 });
     expect(screen.queryByRole('button', { name: 'Same as level 1' })).toBeNull();
     unmount();
   });
 
-  test('the + skill stepper is disabled at the rank cap, as the score steppers are', () => {
+  test('"Same as level N−1" stays hidden when the walk refuses it (QA pass 2)', async () => {
+    const planner = createPlanner(e, {
+      ...withLevels(3),
+      levels: [{ class: fighter }, { class: fighter, skills: skillRanks({ SkillAthletics: 2 }) }, { class: fighter }],
+    });
+    render(() => <SkillsStep trail={apiOf(planner)} level={3} />);
+    flush();
+    await waitFor(() => expect(button(/^More Mobility/)).toBeEnabled());
+    expect(screen.queryByRole('button', { name: 'Same as level 2' })).toBeNull();
+  });
+
+  test('the + skill stepper is disabled at the rank cap, as the score steppers are', async () => {
     const planner = createPlanner(e, {
       ...withLevels(1),
       levels: [{ class: fighter, skills: skillRanks({ SkillAthletics: 1 }) }],
     });
     render(() => <SkillsStep trail={apiOf(planner)} level={1} />);
     flush();
-    expect(button(/^More Athletics/)).toBeDisabled();
+    await waitFor(() => expect(button(/^More Athletics/)).toBeDisabled());
     expect(button(/^More Mobility/)).toBeEnabled();
   });
 
@@ -1180,6 +1191,69 @@ describe('QA pass 1', () => {
     } finally {
       Reflect.deleteProperty(Element.prototype, 'scrollIntoView');
     }
+  });
+
+  test('a long refusal puts its first lines in a capped area and folds the rest into "…and N more" (QA pass 2)', () => {
+    const lines = [
+      'That change can’t be made. It would break:',
+      ...Array.from({ length: 12 }, (_, i) => `Line ${i + 1}.`),
+    ] as const;
+    render(() => <RefusalNotice lines={lines} onDismiss={() => {}} />);
+    flush();
+    const shown = () => [...document.querySelectorAll('.ww-refusal li')].map((li) => li.textContent);
+    expect(shown()).toEqual(['Line 1.', 'Line 2.', 'Line 3.', 'Line 4.', 'Line 5.']);
+    tap('…and 7 more');
+    expect(shown()).toHaveLength(12);
+    const css = readFileSync(join(process.cwd(), 'src/planner/planner.css'), 'utf8');
+    const at = css.indexOf('.planner-notices {');
+    const rule = css.slice(at, css.indexOf('}', at));
+    expect(rule).toContain('max-height: var(--notice-max-height)');
+    expect(rule).toContain('overflow-y: auto');
+  });
+
+  test('a refused copy keeps the menu label and says why in the status (QA pass 2)', async () => {
+    Object.defineProperty(navigator, 'clipboard', {
+      configurable: true,
+      value: { writeText: () => Promise.reject(new Error('denied')) },
+    });
+    await openPlanner(cleaver);
+    openMenu();
+    menuItem('Export as text');
+    await waitFor(() =>
+      expect(document.querySelector('.planner-menu__said')?.textContent).toBe('Copy refused by the browser'),
+    );
+    expect(screen.getByRole('menuitem', { name: 'Export as text' })).toBeTruthy();
+  });
+
+  test('a broken pasted link says it is not a planner link unless it reads as a newer one (QA pass 2)', async () => {
+    expect(await openHash(e, '#b=not-a-build-code')).toEqual({ kind: 'didNotOpen', reason: 'notACode' });
+    const code = await encodeBuild(e.data, cleaver);
+    const bytes = Uint8Array.from(
+      atob(code.replace(/-/g, '+').replace(/_/g, '/') + '='.repeat((4 - (code.length % 4)) % 4)),
+      (c) => c.charCodeAt(0),
+    );
+    bytes[0] = 2;
+    const newer = btoa(String.fromCharCode(...bytes))
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=+$/, '');
+    expect(await openHash(e, `#b=${newer}`)).toEqual({ kind: 'didNotOpen', reason: 'newerPlanner' });
+  });
+
+  test('the level editor lists archetypes by name, the current one first (QA pass 2)', () => {
+    const planner = createPlanner(e, cleaver);
+    const api = apiOf(planner);
+    render(() => <LevelEditor trail={api} level={1} />);
+    flush();
+    const list = [...document.querySelectorAll('.trail-subhead')].find(
+      (h) => h.textContent === 'Archetype',
+    )?.nextElementSibling;
+    const names = [...(list?.querySelectorAll('button.ww-option .ww-option__name') ?? [])].map(
+      (n) => n.textContent ?? '',
+    );
+    expect(names[0]).toBe('No archetype');
+    const rest = names.slice(1);
+    expect(rest).toEqual([...rest].sort((a, b) => a.localeCompare(b)));
   });
 
   test('Gear places read as words with their number', () => {

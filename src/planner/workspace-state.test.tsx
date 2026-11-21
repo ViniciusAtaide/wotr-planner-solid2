@@ -59,7 +59,7 @@ const ADD_LEVEL: Edit = { kind: 'addLevel', class: FIGHTER };
 const WEAKER: Edit = { kind: 'scores', scores: abilityScores({ ...SCORES, Strength: 10 }) };
 const CONFIRMING: Session = {
   kind: 'confirming',
-  pending: { title: 'Weaker', summary: 'Clears picks.', clears: [], build: EMPTY },
+  pending: { title: 'Weaker', summary: 'Clears picks.', clears: [], clearedSkills: [], build: EMPTY },
 };
 
 const slotsOf = (b: Build): readonly SlotId[] => walk(e.data, b, e.G).slots.map((s) => s.id);

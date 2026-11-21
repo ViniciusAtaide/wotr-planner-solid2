@@ -65,7 +65,7 @@ export default function CascadePreview(props: CascadePreviewProps) {
           Cancel
         </Button>
         <Button variant="primary" onClick={() => props.onConfirm()}>
-          Clear {count()} {count() === 1 ? 'pick' : 'picks'} and apply
+          Clear {count()} {count() === 1 ? 'choice' : 'choices'} and apply
         </Button>
       </div>
     </div>

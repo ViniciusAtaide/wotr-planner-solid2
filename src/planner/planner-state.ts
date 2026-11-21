@@ -4,7 +4,7 @@ import { classPicker } from '~engine/pickers';
 import type { FailedRule } from '~engine/walk';
 import { allows, cascade, type Breaks, type Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
-import { nameOf, refusal, refusalWords } from '~engine/refusals';
+import { bareNameOf, nameOf, namesIn, refusal, refusalWords } from '~engine/refusals';
 import { walk } from '~engine/walk';
 
 export type NonEmpty<T> = readonly [T, ...T[]];
@@ -13,6 +13,7 @@ export interface Pending {
   readonly title: string;
   readonly summary: string;
   readonly clears: readonly { readonly name: string; readonly place: string }[];
+  readonly clearedSkills: readonly number[];
   readonly build: Build;
 }
 
@@ -92,9 +93,13 @@ function commit(s: PlannerState, next: Build, change: string): PlannerState {
 
 export function brokenWords(engine: Engine, build: Build, b: Breaks): string[] {
   const unit = walk(engine.data, build, engine.G).unit;
+  const names = namesIn(
+    engine.data,
+    b.picks.map((p) => p.feature),
+  );
   return [
-    ...b.picks.map((p) => `${nameOf(engine.data, p.feature)} (${placeWords(p.slot.place)})`),
     ...b.others.map((f) => `${placeWords(f.place)}: ${refusalWords({ data: engine.data, G: engine.G, unit }, f)}`),
+    ...b.picks.map((p) => `${names.get(p.feature) ?? nameOf(engine.data, p.feature)} (${placeWords(p.slot.place)})`),
   ];
 }
 
@@ -164,24 +169,45 @@ function numbers(word: string, ns: readonly number[]): string {
 }
 
 export function clearsSummary(v: Clears): string {
+  const n = clearedCount(v);
   const parts = [
     v.cleared.length > 0 ? laterPicks(v.cleared.length) : undefined,
     v.clearedSkills.length > 0 ? `the skill ranks of ${numbers('level', v.clearedSkills)}` : undefined,
     v.clearedRanks.length > 0 ? numbers('Mythic rank', v.clearedRanks) : undefined,
   ].filter((p) => p !== undefined);
   const list = parts.length < 2 ? parts.join('') : `${parts.slice(0, -1).join(', ')} and ${parts.at(-1) ?? ''}`;
-  return `This breaks ${list}. ${clearedCount(v) === 1 ? 'It' : 'They'}'ll be cleared, not moved.`;
+  const lead = parts.length < 2 ? `This breaks ${list}` : `This breaks ${laterChoices(n)}: ${list}`;
+  return `${lead}. ${n === 1 ? 'It' : 'They'}'ll be cleared, not moved.`;
+}
+
+function whereIn(before: Build, place: Pick['slot']['place']): number {
+  if ('level' in place) return place.level;
+  return (before.ranks?.[place.rank - 1]?.level ?? before.levels.length) + place.rank / 100;
 }
 
 export function clearsList(engine: Engine, before: Build, v: Clears): Pending['clears'] {
-  return [
-    ...v.cleared.map((p) => ({ name: nameOf(engine.data, p.feature), place: placeWords(p.slot.place) })),
-    ...v.clearedSkills.map((level) => ({ name: 'Skill ranks', place: `Level ${level}` })),
+  const names = namesIn(
+    engine.data,
+    v.cleared.map((p) => p.feature),
+  );
+  const rows = [
+    ...v.cleared.map((p) => ({
+      at: whereIn(before, p.slot.place),
+      row: { name: names.get(p.feature) ?? nameOf(engine.data, p.feature), place: placeWords(p.slot.place) },
+    })),
+    ...v.clearedSkills.map((level) => ({
+      at: level + 0.001,
+      row: { name: 'Skill ranks', place: `Level ${level}` },
+    })),
     ...v.clearedRanks.map((rank) => {
       const cls = before.ranks?.[rank - 1]?.class;
-      return { name: cls === undefined ? 'Mythic rank' : nameOf(engine.data, cls), place: `Rank ${rank}` };
+      return {
+        at: whereIn(before, { rank }) - 0.001,
+        row: { name: cls === undefined ? 'Mythic rank' : bareNameOf(engine.data, cls), place: `Rank ${rank}` },
+      };
     }),
   ];
+  return rows.sort((a, b) => a.at - b.at).map((r) => r.row);
 }
 
 export interface Judged {
@@ -273,6 +299,7 @@ function edited(engine: Engine, s: PlannerState, edits: NonEmpty<Edit>, title: s
             title,
             summary: clearsSummary(v),
             clears: clearsList(engine, s.present, v),
+            clearedSkills: v.clearedSkills,
             build: v.build,
           },
         },

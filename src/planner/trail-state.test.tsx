@@ -330,6 +330,17 @@ describe('QA pass 1', () => {
     expect(whereOf(viewOf(finished), done)).toEqual({ kind: 'end' });
   });
 
+  test('a Cascade’s cleared skill ranks get a trail step until spent or left (QA pass 2)', () => {
+    const two = filled(human(2, skillRanks({ SkillAthletics: 1 })));
+    const cleared: Build = { ...two, levels: two.levels.map((l, i) => (i === 0 ? { class: l.class } : l)) };
+    const s = reduceTrail(TRAIL_START, { kind: 'skillsCleared', levels: [1] });
+    expect(nextStep(viewOf(cleared), { ...s, skillsLeft: new Set([2]) })).toEqual({ kind: 'skills', level: 1 });
+    const left = reduceTrail(s, { kind: 'leaveSkills', level: 1 });
+    expect(nextStep(viewOf(cleared), { ...left, skillsLeft: new Set([...left.skillsLeft, 2]) }).kind).not.toBe(
+      'skills',
+    );
+  });
+
   test('a folded chapter counts its levels per class so they do not read as a class level', () => {
     expect(chapterSummary(viewOf(human(4)), 1).classes).toBe('Fighter ×4');
   });

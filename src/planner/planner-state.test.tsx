@@ -23,6 +23,7 @@ import { engineOf } from '~engine/mcp';
 import { nameOf } from '~engine/refusals';
 
 import {
+  brokenWords,
   clearsSummary,
   OPENED_A_LINK,
   outcomeOf,
@@ -66,7 +67,7 @@ const previewed = levelled(4);
 const REFUSED: Session = { kind: 'refused', lines: ['Refused.'] };
 const CONFIRMING: Session = {
   kind: 'confirming',
-  pending: { title: 'Weaker', summary: 'Clears picks.', clears: [], build: previewed },
+  pending: { title: 'Weaker', summary: 'Clears picks.', clears: [], clearedSkills: [], build: previewed },
 };
 const at = (session: Session): PlannerState => ({
   past: [before],
@@ -310,6 +311,22 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
     });
   });
 
+  test('a refusal names its reasons before the picks it would break (QA pass 2)', () => {
+    const lines = brokenWords(e, cleaver, {
+      picks: cleaver.picks,
+      others: [
+        {
+          place: { level: 1 },
+          choice: 'class',
+          subject: cleaver.levels[0]?.class ?? '',
+          rule: 'BlueprintCharacterClass.MeetsPrerequisites',
+        },
+      ],
+    });
+    expect(lines[0]).toMatch(/^Level 1: /);
+    expect(lines.slice(1).every((l) => l.endsWith(' (Level 1)'))).toBe(true);
+  });
+
   test('a preview words cleared picks, skill ranks and Mythic ranks together', () => {
     const clears = (cleared: number, clearedSkills: number[], clearedRanks: number[]) =>
       clearsSummary({
@@ -320,7 +337,7 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
         clearedRanks,
       });
     expect(clears(1, [3], [9, 10])).toBe(
-      "This breaks 1 later pick, the skill ranks of level 3 and Mythic ranks 9, 10. They'll be cleared, not moved.",
+      "This breaks 4 later choices: 1 later pick, the skill ranks of level 3 and Mythic ranks 9, 10. They'll be cleared, not moved.",
     );
     expect(clears(0, [3], [])).toBe("This breaks the skill ranks of level 3. It'll be cleared, not moved.");
     expect(clears(0, [], [9])).toBe("This breaks Mythic rank 9. It'll be cleared, not moved.");
@@ -349,6 +366,13 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
       ]),
     );
     expect(n.session.pending.summary).toContain('Mythic ranks 9, 10');
+    const at = (place: string) => {
+      const [word, num] = place.split(' ');
+      const k = Number(num);
+      return word === 'Level' ? k : (gold.ranks?.[k - 1]?.level ?? 20) + k / 100;
+    };
+    const order = n.session.pending.clears.map((c) => at(c.place));
+    expect(order).toEqual([...order].sort((a, b) => a - b));
   });
 
   test('a preview that clears one pick says so in the singular (QA pass 1)', () => {

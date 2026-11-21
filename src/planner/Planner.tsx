@@ -11,6 +11,7 @@ import { EMPTY, openHash } from './link';
 import { PlannerMenu, UndoLine } from './Menu';
 import { createShareCode, shareLinkOf, type ShareCode } from './share-code';
 import { browserStorage, readListMode, writeListMode, type ListMode } from './list-mode';
+import type { NonEmpty } from './planner-state';
 import { buildSheet } from './sheet';
 import { createPlanner, type Planner as PlannerApi } from './state';
 import Trail from './Trail';
@@ -30,6 +31,7 @@ import {
 } from './workspace-state';
 
 export const PHONE_WIDTH_QUERY = '(max-width: 899px)';
+export const NOTICE_LINES = 5;
 
 type Boot =
   | { readonly kind: 'loading' }
@@ -94,6 +96,38 @@ export default function Planner() {
         <main class="app-page">Loading the game data…</main>
       </Match>
     </Switch>
+  );
+}
+
+export interface RefusalNoticeProps {
+  readonly lines: NonEmpty<string>;
+  readonly onDismiss: () => void;
+}
+
+export function RefusalNotice(props: RefusalNoticeProps) {
+  const [all, setAll] = createSignal(false);
+  createEffect(
+    () => props.lines,
+    () => {
+      setAll(false);
+    },
+  );
+  const reasons = () => props.lines.slice(1);
+  return (
+    <div class="planner-notice" role="alert">
+      <div>
+        <p>{props.lines[0]}</p>
+        <Refusal lines={all() ? reasons() : reasons().slice(0, NOTICE_LINES)} />
+        <Show when={!all() && reasons().length > NOTICE_LINES}>
+          <button type="button" class="trail-link" onClick={() => setAll(true)}>
+            …and {reasons().length - NOTICE_LINES} more
+          </button>
+        </Show>
+      </div>
+      <Button variant="ghost" onClick={() => props.onDismiss()}>
+        Dismiss
+      </Button>
+    </div>
   );
 }
 
@@ -271,9 +305,13 @@ function Workspace(props: WorkspaceProps) {
 
   const confirm = () => {
     const before = active().latest().present;
+    const pending = active().latest().session;
     send({ kind: 'planner', action: { kind: 'confirm' } });
     const after = active().latest().present;
     if (after === before) return;
+    if (pending.kind === 'confirming') {
+      sendTrail(editedSide(), { kind: 'skillsCleared', levels: pending.pending.clearedSkills });
+    }
     const slot = firstCleared(before, { data: engine.data, build: after, walk: walk(engine.data, after, engine.G) });
     send({ kind: 'select', selection: slot === undefined ? undefined : { kind: 'slot', slot } });
   };
@@ -387,15 +425,7 @@ function Workspace(props: WorkspaceProps) {
           </Show>
           <Show when={active().notice()}>
             {(lines) => (
-              <div class="planner-notice" role="alert">
-                <div>
-                  <p>{lines()[0]}</p>
-                  <Refusal lines={lines().slice(1)} />
-                </div>
-                <Button variant="ghost" onClick={() => send({ kind: 'planner', action: { kind: 'dismiss' } })}>
-                  Dismiss
-                </Button>
-              </div>
+              <RefusalNotice lines={lines()} onDismiss={() => send({ kind: 'planner', action: { kind: 'dismiss' } })} />
             )}
           </Show>
         </div>
