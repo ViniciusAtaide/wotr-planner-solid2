@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_acb7138cdeaa637458d20918695f7aaf"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "Dexterity",
+      "Value": 2
     }
   ],
   "assetName": "ExquisiteChainBardingEnchantment",

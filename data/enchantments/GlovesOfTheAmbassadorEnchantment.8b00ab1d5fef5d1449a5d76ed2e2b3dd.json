@@ -3,6 +3,18 @@
   "Components": [
     {
       "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillKnowledgeWorld",
+      "Value": 5
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillPersuasion",
+      "Value": 5
+    },
+    {
+      "$type": "AddStatBonusEquipment",
       "Descriptor": "Enhancement",
       "Stat": "Charisma",
       "Value": 2

@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "AmuletOfNaturalArmor2",
   "guid": "becc4c1d40a77814f98c0b175e92d17c",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_a7889237edf4001428ed8855c562fb16"
+  ],
   "name": "Amulet of Natural Armor +2"
 }

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Penalty",
+      "Stat": "Charisma",
+      "Value": -3
+    }
+  ],
+  "assetName": "DLC3_BeautyslasherEnchantment",
+  "guid": "38cd022c3d19436586d5e4b4d56f6ea5"
+}

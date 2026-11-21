@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "ExpeditionBootsItem",
   "guid": "35f1391907ebb3948bbac3ccb9ccd4c5",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_161290b71e19e0044855da7535018486"
+  ],
   "name": "Expedition Boots"
 }

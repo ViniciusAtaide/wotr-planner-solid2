@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "ConmansRingItem",
   "guid": "b18f6311af7d32545882e1901f75e0b9",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_e9955fdb6e592f948b1ef4135c25fc1a"
+  ],
   "name": "Conman's Ring"
 }

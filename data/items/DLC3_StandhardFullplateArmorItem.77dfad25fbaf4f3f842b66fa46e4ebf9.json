@@ -4,6 +4,7 @@
   "assetName": "DLC3_StandhardFullplateArmorItem",
   "guid": "77dfad25fbaf4f3f842b66fa46e4ebf9",
   "m_Enchantments": [
+    "!bp_761cb57f05e40e04281f6b930175f290",
     "!bp_933456ff83c454146a8bf434e39b1f93",
     "!bp_d4f5fbfb6ea5460f945146c216681090"
   ],

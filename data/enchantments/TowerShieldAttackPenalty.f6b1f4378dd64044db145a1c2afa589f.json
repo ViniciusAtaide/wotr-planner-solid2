@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Shield",
+      "Stat": "AdditionalAttackBonus",
+      "Value": -2
+    }
+  ],
+  "assetName": "TowerShieldAttackPenalty",
+  "guid": "f6b1f4378dd64044db145a1c2afa589f"
+}

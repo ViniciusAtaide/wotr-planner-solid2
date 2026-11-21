@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "NaturalArmor",
+      "Stat": "AC",
+      "Value": 2
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillMobility",
+      "Value": 4
+    }
+  ],
+  "assetName": "WarKiltOfSarenraeEnchantment",
+  "guid": "9f1a1a93f78347adbed4ffeb6a95ba01"
+}

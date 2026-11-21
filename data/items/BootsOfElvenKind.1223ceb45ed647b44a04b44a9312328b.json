@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "BootsOfElvenKind",
   "guid": "1223ceb45ed647b44a04b44a9312328b",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_fc81088f58c109f49a9ff3fb3f8f83a5"
+  ],
   "name": "Boots of Elvenkind"
 }

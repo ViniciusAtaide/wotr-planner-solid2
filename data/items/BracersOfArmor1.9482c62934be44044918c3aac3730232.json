@@ -4,6 +4,7 @@
   "assetName": "BracersOfArmor1",
   "guid": "9482c62934be44044918c3aac3730232",
   "m_Enchantments": [
+    "!bp_183e268ab1ba71a47b548b9408e34ae0",
     "!bp_d1420feff4707244fb10d46ef3eb2a5c"
   ],
   "name": "Bracers of Armor +1"

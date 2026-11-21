@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Insight",
+      "Stat": "AC",
+      "Value": 1
+    }
+  ],
+  "assetName": "HelmetOfDurableCavalierEnchantment",
+  "guid": "32be3b787ae9bd74ab040c5ea0dc5905"
+}

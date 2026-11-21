@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "AmuletOfNatureCalling_Item",
   "guid": "1c257c00832d48a6a97340a15cc18d7e",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_f43ed95b286f9f74689066a9bf677a5f"
+  ],
   "name": "Amulet of Nature's Summons"
 }

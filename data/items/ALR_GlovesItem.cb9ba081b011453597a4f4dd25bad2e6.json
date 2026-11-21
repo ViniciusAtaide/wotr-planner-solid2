@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "ALR_GlovesItem",
   "guid": "cb9ba081b011453597a4f4dd25bad2e6",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_2b6a3d0a74d740faa06a2e0ad266b4a9"
+  ],
   "name": "Embroidered Gloves"
 }

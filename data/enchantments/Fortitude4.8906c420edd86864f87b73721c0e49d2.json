@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Resistance",
+      "Stat": "SaveFortitude",
+      "Value": 4
+    }
+  ],
+  "assetName": "Fortitude4",
+  "guid": "8906c420edd86864f87b73721c0e49d2"
+}

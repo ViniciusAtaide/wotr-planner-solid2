@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "CloakOfResistance6",
   "guid": "37090c79c13262f45821d91071efc138",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_c67c2306707c3284db43c1ea35a03715"
+  ],
   "name": "Cloak of Resistance +6"
 }

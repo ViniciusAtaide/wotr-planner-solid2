@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "RinfOfHintsItem",
   "guid": "4f98129ba5e3bc74c88390d29858877c",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_5c63bbc2f6b0d144bbe3751e416167cc"
+  ],
   "name": "Ring of Hints"
 }

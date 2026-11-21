@@ -5,7 +5,8 @@
   "assetName": "EdgeOfExpulsionItem",
   "guid": "7ad7d22e53e34ff9b8bafc00a18db016",
   "m_Enchantments": [
-    "!bp_bdba267e951851449af552aa9f9e3992"
+    "!bp_bdba267e951851449af552aa9f9e3992",
+    "!bp_c532a411ec4741ebaa7db391ac2a36ef"
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_f5872eb0deb3a1b48a36549f8d92c19e",

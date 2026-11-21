@@ -4,7 +4,8 @@
   "assetName": "CallToViolenceItem",
   "guid": "25b37490da95d9541b73972837354eff",
   "m_Enchantments": [
-    "!bp_a864da8cc74065e4aad897d24a66e3e1"
+    "!bp_a864da8cc74065e4aad897d24a66e3e1",
+    "!bp_cdba7ef2a02a2b9499059bd558e5354d"
   ],
   "name": "Call to Violence"
 }

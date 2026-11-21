@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "RascalsGogglesItem",
   "guid": "0cea5c218f759bc44a24ac626706a35e",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_99f1a30c80639fc4db1776aaa3160319"
+  ],
   "name": "Rascal's Goggles"
 }

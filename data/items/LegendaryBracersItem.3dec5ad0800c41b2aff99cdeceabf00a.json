@@ -8,12 +8,15 @@
   "assetName": "LegendaryBracersItem",
   "guid": "3dec5ad0800c41b2aff99cdeceabf00a",
   "m_Enchantments": [
+    "!bp_d86770714ac85d64793b264f755b1764",
+    "!bp_86748e27c9e3b414a97330ea74858994",
     "!bp_85c75c68eb10f6f459bab5ade8ec0abe",
     "!bp_82ad1b6eeb2be3f4a901d8e685a669a7",
     "!bp_575de3a13d4040c4cb84891036e9e76b",
     "!bp_b4cff7cdccb966048aa14d2d01c9209a",
     "!bp_f3c17dcbd7a0e554eba4262fffa8f33b",
-    "!bp_177510057a2f71a4c8e61bebabaefa28"
+    "!bp_177510057a2f71a4c8e61bebabaefa28",
+    "!bp_118a7c904f54a6148840c4ae0309fe44"
   ],
   "name": "Legendary Bracers"
 }

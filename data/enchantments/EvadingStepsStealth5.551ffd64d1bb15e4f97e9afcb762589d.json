@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillStealth",
+      "Value": 5
+    }
+  ],
+  "assetName": "EvadingStepsStealth5",
+  "guid": "551ffd64d1bb15e4f97e9afcb762589d"
+}

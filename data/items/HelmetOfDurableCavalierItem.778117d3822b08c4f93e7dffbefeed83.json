@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "HelmetOfDurableCavalierItem",
   "guid": "778117d3822b08c4f93e7dffbefeed83",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_32be3b787ae9bd74ab040c5ea0dc5905"
+  ],
   "name": "Helmet of the Stalwart Cavalier"
 }

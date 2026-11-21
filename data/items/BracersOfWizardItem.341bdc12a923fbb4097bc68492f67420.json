@@ -3,6 +3,9 @@
   "Components": [],
   "assetName": "BracersOfWizardItem",
   "guid": "341bdc12a923fbb4097bc68492f67420",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_761cb57f05e40e04281f6b930175f290",
+    "!bp_0b7d87791c3e160448c5b05b0823ce7f"
+  ],
   "name": "Bracers of the Wizard"
 }

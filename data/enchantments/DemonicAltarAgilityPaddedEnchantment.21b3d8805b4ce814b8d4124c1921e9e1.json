@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Morale",
+      "Stat": "Dexterity",
+      "Value": 2
+    }
+  ],
+  "assetName": "DemonicAltarAgilityPaddedEnchantment",
+  "guid": "21b3d8805b4ce814b8d4124c1921e9e1"
+}

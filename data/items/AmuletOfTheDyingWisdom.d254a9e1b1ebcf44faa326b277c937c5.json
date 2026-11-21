@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "AmuletOfTheDyingWisdom",
   "guid": "d254a9e1b1ebcf44faa326b277c937c5",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_84b63c1516d208247bceec28d6b6b38d"
+  ],
   "name": "Amulet of the Dying Wisdom"
 }

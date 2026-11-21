@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "CloakOfStrongWilledItem",
   "guid": "f0623bbb6fedd54489e7ebbfe2dc4b48",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_402649cec0238d441ac6d08c3d44412d"
+  ],
   "name": "Cloak of Unbending Will"
 }

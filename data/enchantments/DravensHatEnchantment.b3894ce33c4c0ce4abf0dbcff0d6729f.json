@@ -2,6 +2,12 @@
   "$type": "BlueprintEquipmentEnchantment",
   "Components": [
     {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Profane",
+      "Stat": "Intelligence",
+      "Value": 2
+    },
+    {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_21007755b76402743bec22faacfb5d02"
     }

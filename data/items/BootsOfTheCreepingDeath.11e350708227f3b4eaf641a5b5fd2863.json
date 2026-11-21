@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "BootsOfTheCreepingDeath",
   "guid": "11e350708227f3b4eaf641a5b5fd2863",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_e643d996dcbf83949a50abff4d5f90e9"
+  ],
   "name": "Boots of the Creeping Death"
 }

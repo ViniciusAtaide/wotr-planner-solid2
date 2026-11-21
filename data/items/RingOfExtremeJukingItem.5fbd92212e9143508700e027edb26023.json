@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "RingOfExtremeJukingItem",
   "guid": "5fbd92212e9143508700e027edb26023",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_be195c1cea964e745a198ddadecbaec5"
+  ],
   "name": "Ring of Extreme Feints"
 }

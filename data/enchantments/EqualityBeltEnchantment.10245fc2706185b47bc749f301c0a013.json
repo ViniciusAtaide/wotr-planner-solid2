@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Luck",
+      "Stat": "AdditionalAttackBonus",
+      "Value": 1
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Luck",
+      "Stat": "SaveWill",
+      "Value": 1
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Luck",
+      "Stat": "SaveFortitude",
+      "Value": 1
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Luck",
+      "Stat": "SaveReflex",
+      "Value": 1
+    }
+  ],
+  "assetName": "EqualityBeltEnchantment",
+  "guid": "10245fc2706185b47bc749f301c0a013"
+}

@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_3071409660b56cc46b9476385b181ac2"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillAthletics",
+      "Value": 10
     }
   ],
   "assetName": "GlovesOfMartialExcellenceEnchantment",

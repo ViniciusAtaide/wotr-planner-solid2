@@ -3,7 +3,9 @@
   "Components": [],
   "assetName": "TowerShieldType",
   "guid": "5f0f4b6e480e7054b8592b5a8b55854a",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_f6b1f4378dd64044db145a1c2afa589f"
+  ],
   "m_IsArmor": true,
   "m_ProficiencyGroup": "TowerShield",
   "name": "Tower Shield"

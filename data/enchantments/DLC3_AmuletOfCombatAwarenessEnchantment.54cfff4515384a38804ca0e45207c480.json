@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "Initiative",
+      "Value": 3
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SaveReflex",
+      "Value": 3
+    }
+  ],
+  "assetName": "DLC3_AmuletOfCombatAwarenessEnchantment",
+  "guid": "54cfff4515384a38804ca0e45207c480"
+}

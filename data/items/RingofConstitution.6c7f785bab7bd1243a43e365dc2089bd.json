@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "RingofConstitution",
   "guid": "6c7f785bab7bd1243a43e365dc2089bd",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_34a8b36ad42e01744bc12feaf1f8ed5e"
+  ],
   "name": "Colossus Ring"
 }

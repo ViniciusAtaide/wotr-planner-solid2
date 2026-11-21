@@ -6,6 +6,12 @@
       "Descriptor": "Enhancement",
       "Stat": "Strength",
       "Value": 4
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Morale",
+      "Stat": "AC",
+      "Value": 2
     }
   ],
   "assetName": "BracersSpikedHodagEnchantment",

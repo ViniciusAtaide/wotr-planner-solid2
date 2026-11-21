@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Morale",
+      "Stat": "SaveWill",
+      "Value": 2
+    }
+  ],
+  "assetName": "DLC3_BracersOfBraveryEnchantment",
+  "guid": "338dbdb19b584050a99e82d705fd8a66"
+}

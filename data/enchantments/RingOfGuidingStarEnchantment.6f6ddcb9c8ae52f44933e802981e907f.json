@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFactEquipment",
       "m_Blueprint": "!bp_93b80ce01d90e8c48ade6c3ae8f22975"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "None",
+      "Stat": "Initiative",
+      "Value": 4
     }
   ],
   "assetName": "RingOfGuidingStarEnchantment",

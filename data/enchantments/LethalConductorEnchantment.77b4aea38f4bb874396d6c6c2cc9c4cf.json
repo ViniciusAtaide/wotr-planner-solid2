@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillUseMagicDevice",
+      "Value": 5
+    }
+  ],
+  "assetName": "LethalConductorEnchantment",
+  "guid": "77b4aea38f4bb874396d6c6c2cc9c4cf"
+}

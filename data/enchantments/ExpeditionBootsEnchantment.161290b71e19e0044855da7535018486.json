@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillAthletics",
+      "Value": 10
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillMobility",
+      "Value": 5
+    }
+  ],
+  "assetName": "ExpeditionBootsEnchantment",
+  "guid": "161290b71e19e0044855da7535018486"
+}

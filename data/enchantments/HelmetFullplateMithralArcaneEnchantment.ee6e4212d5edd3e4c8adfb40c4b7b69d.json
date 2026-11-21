@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Insight",
+      "Stat": "AC",
+      "Value": 2
+    }
+  ],
+  "assetName": "HelmetFullplateMithralArcaneEnchantment",
+  "guid": "ee6e4212d5edd3e4c8adfb40c4b7b69d"
+}

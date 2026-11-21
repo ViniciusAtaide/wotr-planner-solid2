@@ -105,6 +105,7 @@ import {
   type IsAlchemistSpellbook,
   type IncreaseActivatableAbilityGroupSize,
   type AddContextStatBonus,
+  type AllSavesBonusEquipment,
   type Blindsense,
   type BuffMovementSpeed,
   type FavoredEnemy,
@@ -1298,17 +1299,20 @@ const itemEntries: readonly AllowEntry[] = [
   }),
   component<AddStatBonusEquipment>({
     type: 'AddStatBonusEquipment',
-    fields: { Descriptor: enumOf('Enhancement'), Stat: statType, Value: int },
-    preFilter: notEnhancement,
+    fields: { Descriptor: modifierDescriptor, Stat: statType, Value: int },
     cite: [
       'Designers/Mechanics/EquipmentEnchants/AddStatBonusEquipment.cs OnTurnOn (Descriptor, Stat, Value)',
       'EntitySystem/Stats/ModifiableValue.cs IsPermanent',
     ],
   }),
+  component<AllSavesBonusEquipment>({
+    type: 'AllSavesBonusEquipment',
+    fields: { Descriptor: modifierDescriptor, Value: orDefault(int, 0) },
+    cite: ['Designers/Mechanics/EquipmentEnchants/AllSavesBonusEquipment.cs OnTurnOn (Descriptor, Value)'],
+  }),
   component<IncreaseStatEquipment>({
     type: 'IncreaseStatEquipment',
-    fields: { Descriptor: enumOf('Enhancement'), Stat: statType, Value: int },
-    preFilter: notEnhancement,
+    fields: { Descriptor: modifierDescriptor, Stat: statType, Value: int },
     cite: ['Designers/Mechanics/EquipmentEnchants/IncreaseStatEquipment.cs OnTurnOn (Descriptor, Stat, Value)'],
   }),
   component<AddUnitFeatureEquipment>({
@@ -1390,10 +1394,6 @@ const itemEntries: readonly AllowEntry[] = [
     ],
   }),
 ];
-
-function notEnhancement(raw: Record<string, unknown>): string | undefined {
-  return raw.Descriptor === 'Enhancement' ? undefined : `${shortType(raw.$type)} (not Enhancement)`;
-}
 
 export const allowlist: readonly AllowEntry[] = [
   blueprint<BlueprintCharacterClass>({

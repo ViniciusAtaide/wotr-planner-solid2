@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillStealth",
+      "Value": 5
+    }
+  ],
+  "assetName": "BootsOfTheCreepingDeathEnchantment",
+  "guid": "e643d996dcbf83949a50abff4d5f90e9"
+}

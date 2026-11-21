@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_819e5319070bec3438f7a44019fb9028"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillLoreReligion",
+      "Value": 5
     }
   ],
   "assetName": "CelestialProtectionEnchantment",

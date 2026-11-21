@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_9dcd9dabe32c4a298c3c3582263358b7"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Profane",
+      "Stat": "Initiative",
+      "Value": 2
     }
   ],
   "assetName": "DLC3_GlassesOfundeniableTruthEnchantment",

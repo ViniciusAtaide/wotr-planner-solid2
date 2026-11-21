@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_15708517d202af745b1078cca8a32269"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 5
     }
   ],
   "assetName": "VestShirtBogeymanEnchantment",

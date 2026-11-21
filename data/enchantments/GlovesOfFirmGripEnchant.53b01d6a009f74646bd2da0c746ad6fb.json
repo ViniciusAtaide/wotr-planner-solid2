@@ -1,0 +1,19 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillMobility",
+      "Value": 3
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillAthletics",
+      "Value": 3
+    }
+  ],
+  "assetName": "GlovesOfFirmGripEnchant",
+  "guid": "53b01d6a009f74646bd2da0c746ad6fb"
+}

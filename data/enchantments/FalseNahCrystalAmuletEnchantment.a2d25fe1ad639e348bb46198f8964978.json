@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillKnowledgeWorld",
+      "Value": 1
+    }
+  ],
+  "assetName": "FalseNahCrystalAmuletEnchantment",
+  "guid": "a2d25fe1ad639e348bb46198f8964978"
+}

@@ -10,6 +10,12 @@
       "Descriptor": "Enhancement",
       "Stat": "Constitution",
       "Value": 2
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillLoreNature",
+      "Value": 4
     }
   ],
   "assetName": "EarthenEmbraceEnchantment",

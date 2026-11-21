@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Luck",
+      "Stat": "AC",
+      "Value": 3
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Luck",
+      "Stat": "SaveReflex",
+      "Value": 3
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Luck",
+      "Stat": "SaveWill",
+      "Value": 3
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Luck",
+      "Stat": "SaveFortitude",
+      "Value": 3
+    }
+  ],
+  "assetName": "ALR_GlovesEnchantment",
+  "guid": "2b6a3d0a74d740faa06a2e0ad266b4a9"
+}

@@ -2,6 +2,18 @@
   "$type": "BlueprintArmorEnchantment",
   "Components": [
     {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "None",
+      "Stat": "Speed",
+      "Value": 20
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Profane",
+      "Stat": "Dexterity",
+      "Value": 4
+    },
+    {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_c994f1a0dfce1c54f94420588da61617"
     }

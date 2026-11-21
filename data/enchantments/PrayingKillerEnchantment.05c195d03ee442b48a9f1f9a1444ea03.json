@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_9be4949a4c434972b8fc74baae5d7b48"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "AdditionalAttackBonus",
+      "Value": 2
     }
   ],
   "assetName": "PrayingKillerEnchantment",

@@ -3,6 +3,9 @@
   "Components": [],
   "assetName": "BracersOfEldritchScholarItem",
   "guid": "c08a6bfecf66b3341828b7d454077c6e",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_f4088bbd8c450ae4498c056f932d1c8e",
+    "!bp_dbf45cd03d94dfc43ad73d24416bbef1"
+  ],
   "name": "Bracers of Eldritch Scholar"
 }

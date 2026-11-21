@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "HeadbandOfSharpEye",
   "guid": "f286eaf3897455147be99fbcde210774",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_6d3e666177f80c54891ed2862088de53"
+  ],
   "name": "Sharp Eye"
 }

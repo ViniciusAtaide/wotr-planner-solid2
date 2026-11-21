@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "None",
+      "Stat": "AdditionalCMB",
+      "Value": 3
+    }
+  ],
+  "assetName": "HeavyShieldOfInnateTrustArmorEnchantment",
+  "guid": "fe35635b7b6ac2f49a8f39cf718ebb3a"
+}

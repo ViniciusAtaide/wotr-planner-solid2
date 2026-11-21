@@ -4,7 +4,8 @@
   "assetName": "HeavyShieldOfInnateTrustArmorItem",
   "guid": "b85148d484b74cb4cafabe4297eaabf1",
   "m_Enchantments": [
-    "!bp_ac2e3a582b5faa74aab66e0a31c935a9"
+    "!bp_ac2e3a582b5faa74aab66e0a31c935a9",
+    "!bp_fe35635b7b6ac2f49a8f39cf718ebb3a"
   ],
   "m_Type": "!bp_d1b05b901bab9524388ebfa0435902a6"
 }

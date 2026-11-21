@@ -4,7 +4,8 @@
   "assetName": "GraveShiveringItem",
   "guid": "fa95fadb2b774f61b8ea1edbec79ab5d",
   "m_Enchantments": [
-    "!bp_f1d70140b91f4c4d9842be58c36196a4"
+    "!bp_f1d70140b91f4c4d9842be58c36196a4",
+    "!bp_d676ddee41bb4bf091e735a02dbdb8d4"
   ],
   "name": "Grave Shivering"
 }

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Dodge",
+      "Stat": "AC",
+      "Value": 1
+    }
+  ],
+  "assetName": "DefenseByOffenceEnchantment",
+  "guid": "fb21ff79639d6c742bc44775a2c3da7b"
+}

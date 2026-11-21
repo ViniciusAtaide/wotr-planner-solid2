@@ -3,6 +3,8 @@
   "Components": [],
   "assetName": "PerfectedManeuverItem",
   "guid": "651b49a7774ea704195f3c7dc98b69c9",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_42b59277ed97cc546a9e242b4f51f624"
+  ],
   "name": "Perfected Maneuver"
 }

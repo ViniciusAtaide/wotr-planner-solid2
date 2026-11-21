@@ -15,7 +15,10 @@
   "assetName": "ScalemailSavingThrows1Plus1",
   "guid": "5a308776d2dc47d4297f2245ccbedb87",
   "m_Enchantments": [
-    "!bp_a9ea95c5e02f9b7468447bc1010fe152"
+    "!bp_a9ea95c5e02f9b7468447bc1010fe152",
+    "!bp_29533240be528e841b4031997d13a09f",
+    "!bp_595793f8180626a4192dc41285f03503",
+    "!bp_fcad2b8eea321e14eaf9a0b73185af39"
   ],
   "m_Type": "!bp_f95c21c70a5677346b75e447c7225ba6",
   "name": "Scalemail of Resistance +1"

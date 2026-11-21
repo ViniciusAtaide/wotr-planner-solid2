@@ -9,6 +9,8 @@
   ],
   "assetName": "SilkyVeilItem",
   "guid": "32fd0a44742ca084aad9d599794f1355",
-  "m_Enchantments": [],
+  "m_Enchantments": [
+    "!bp_be78ec671e390434781c60b2f895a391"
+  ],
   "name": "Silky Veil"
 }

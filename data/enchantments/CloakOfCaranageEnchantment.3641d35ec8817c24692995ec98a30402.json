@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_153fe103b10d70846a9fe54c8688e09d"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillKnowledgeArcana",
+      "Value": 5
     }
   ],
   "assetName": "CloakOfCaranageEnchantment",

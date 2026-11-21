@@ -4,7 +4,11 @@
   "assetName": "UbreakableBastionArmorItem",
   "guid": "49ce78ad77c5b084f8c751dd0fe922e1",
   "m_Enchantments": [
-    "!bp_a5d27d73859bd19469a6dde3b49750ff"
+    "!bp_a5d27d73859bd19469a6dde3b49750ff",
+    "!bp_8906c420edd86864f87b73721c0e49d2",
+    "!bp_be195c1cea964e745a198ddadecbaec5",
+    "!bp_ae53cca4e2184c64f87b5c05c464f8bc",
+    "!bp_9877142638b54bc4483dbaa86f38cbc5"
   ],
   "m_Type": "!bp_5f0f4b6e480e7054b8592b5a8b55854a"
 }

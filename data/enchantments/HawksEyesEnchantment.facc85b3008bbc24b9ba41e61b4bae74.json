@@ -2,6 +2,18 @@
   "$type": "BlueprintEquipmentEnchantment",
   "Components": [
     {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillPerception",
+      "Value": 5
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillThievery",
+      "Value": 5
+    },
+    {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_b8a670ba3d1346345bb8ad118ba8f1c3"
     }

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Luck",
+      "Stat": "Constitution",
+      "Value": 2
+    }
+  ],
+  "assetName": "RingofConstitutionEnchantment",
+  "guid": "34a8b36ad42e01744bc12feaf1f8ed5e"
+}

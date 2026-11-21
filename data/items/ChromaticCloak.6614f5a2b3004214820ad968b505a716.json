@@ -4,6 +4,7 @@
   "assetName": "ChromaticCloak",
   "guid": "6614f5a2b3004214820ad968b505a716",
   "m_Enchantments": [
+    "!bp_d676ddee41bb4bf091e735a02dbdb8d4",
     "!bp_ec0263c52a994c33a23f6f09e1a692e5"
   ],
   "name": "Cloak of Reflections"

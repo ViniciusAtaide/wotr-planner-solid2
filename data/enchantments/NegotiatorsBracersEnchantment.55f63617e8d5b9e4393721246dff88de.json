@@ -4,6 +4,12 @@
     {
       "$type": "AddUnitFeatureEquipment",
       "m_Feature": "!bp_99a340dd8ddf6d840b63c5f478f47006"
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "CheckDiplomacy",
+      "Value": 10
     }
   ],
   "assetName": "NegotiatorsBracersEnchantment",

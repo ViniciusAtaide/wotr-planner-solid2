@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Dodge",
+      "Stat": "AC",
+      "Value": 3
+    }
+  ],
+  "assetName": "RobeOfMaliceEnchant",
+  "guid": "71ceb4ca8e9d4a74c8c11b0de623a6de"
+}

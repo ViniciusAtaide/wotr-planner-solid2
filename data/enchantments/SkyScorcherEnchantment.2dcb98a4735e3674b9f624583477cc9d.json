@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintWeaponEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillMobility",
+      "Value": 5
+    }
+  ],
+  "assetName": "SkyScorcherEnchantment",
+  "guid": "2dcb98a4735e3674b9f624583477cc9d"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintArmorEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillPerception",
+      "Value": 5
+    }
+  ],
+  "assetName": "VenomousLimbShieldEnchant",
+  "guid": "48c09cd683b8f9849a11223c51715b27"
+}

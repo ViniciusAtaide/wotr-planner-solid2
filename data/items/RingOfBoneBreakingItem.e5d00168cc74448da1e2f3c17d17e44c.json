@@ -4,6 +4,7 @@
   "assetName": "RingOfBoneBreakingItem",
   "guid": "e5d00168cc74448da1e2f3c17d17e44c",
   "m_Enchantments": [
+    "!bp_a26b708426c4e764896da00aa3ae533c",
     "!bp_524c94674ecf4ba69d7709b54c54d9c6"
   ],
   "name": "Bonebreaker's Ring"

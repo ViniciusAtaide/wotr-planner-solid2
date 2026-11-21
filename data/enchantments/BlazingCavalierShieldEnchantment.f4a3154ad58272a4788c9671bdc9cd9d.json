@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "None",
+      "Stat": "Speed",
+      "Value": 10
+    }
+  ],
+  "assetName": "BlazingCavalierShieldEnchantment",
+  "guid": "f4a3154ad58272a4788c9671bdc9cd9d"
+}

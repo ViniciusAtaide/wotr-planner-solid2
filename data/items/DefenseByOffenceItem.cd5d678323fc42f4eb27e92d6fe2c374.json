@@ -5,7 +5,8 @@
   "assetName": "DefenseByOffenceItem",
   "guid": "cd5d678323fc42f4eb27e92d6fe2c374",
   "m_Enchantments": [
-    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5"
+    "!bp_eb2faccc4c9487d43b3575d7e77ff3f5",
+    "!bp_fb21ff79639d6c742bc44775a2c3da7b"
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_f5872eb0deb3a1b48a36549f8d92c19e",

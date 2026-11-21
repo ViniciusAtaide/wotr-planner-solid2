@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "None",
+      "Stat": "Initiative",
+      "Value": 4
+    }
+  ],
+  "assetName": "WindMasterHelmetEnchantment",
+  "guid": "6405ba8d4a589354bb16af7cebe864d7"
+}

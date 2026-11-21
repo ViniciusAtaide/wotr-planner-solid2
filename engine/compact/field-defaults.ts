@@ -137,6 +137,7 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     Value: 0,
   },
   AddStatBonusEquipment: {
+    Descriptor: 'None',
     Value: 0,
   },
   AddStatBonusIfHasFact: {
@@ -144,6 +145,10 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     InvertCondition: false,
     m_CheckedFacts: [],
     RequireAllFacts: false,
+  },
+  AllSavesBonusEquipment: {
+    Descriptor: 'None',
+    Value: 0,
   },
   ArcaneSpellFailureIncrease: {
     Bonus: 0,
@@ -481,6 +486,7 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     School: 'None',
   },
   IncreaseStatEquipment: {
+    Descriptor: 'None',
     Value: 0,
   },
   IntConstant: {

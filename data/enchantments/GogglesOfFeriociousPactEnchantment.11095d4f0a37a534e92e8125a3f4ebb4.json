@@ -3,6 +3,36 @@
   "Components": [
     {
       "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "AC",
+      "Value": -2
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "SkillPersuasion",
+      "Value": -5
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "SaveFortitude",
+      "Value": -2
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "AdditionalDamage",
+      "Value": 4
+    },
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "UntypedStackable",
+      "Stat": "SaveWill",
+      "Value": 3
+    },
+    {
+      "$type": "AddStatBonusEquipment",
       "Descriptor": "Enhancement",
       "Stat": "Wisdom",
       "Value": 2

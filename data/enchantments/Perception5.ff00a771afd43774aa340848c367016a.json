@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintEquipmentEnchantment",
+  "Components": [
+    {
+      "$type": "AddStatBonusEquipment",
+      "Descriptor": "Competence",
+      "Stat": "SkillPerception",
+      "Value": 5
+    }
+  ],
+  "assetName": "Perception5",
+  "guid": "ff00a771afd43774aa340848c367016a"
+}
