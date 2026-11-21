@@ -190,6 +190,8 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(classes.pages).toBe(Math.ceil(classes.total / 50));
     const rest = search(e, { text: '', kind: 'classes', page: 2 });
     expect([...classes.hits, ...rest.hits].map((h) => h.name)).toContain('Wizard');
+    const shields = search(e, { text: 'Masterwork Spiked Heavy Shield', kind: 'items' }).hits.map((h) => h.name);
+    expect(shields.filter((n) => n === 'Masterwork Spiked Heavy Shield')).toHaveLength(1);
     expect(explain(e, { guid: '9972f33f977fc724c838e59641b2fca5' })).toMatchObject({
       name: 'Power Attack',
       prerequisites: ['Needs Strength 13.'],

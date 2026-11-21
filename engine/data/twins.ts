@@ -3,9 +3,19 @@ import { PART_FIELDS, partsOf } from './items';
 import { isShown, kindOf, refGuid, type Blueprint, type Guid } from './types';
 
 export function equippableItems(blueprints: ReadonlyMap<Guid, Blueprint>): Blueprint[] {
-  const items = [...blueprints.values()].filter((b) => kindOf[b.$type] === 'items');
-  const parts = new Set(items.flatMap(partsOf));
-  return items.filter((b) => isShown(b) && !parts.has(b.guid));
+  const parts = itemPartSet(blueprints);
+  return [...blueprints.values()].filter((b) => kindOf[b.$type] === 'items' && isShown(b) && !parts.has(b.guid));
+}
+
+const partSets = new WeakMap<ReadonlyMap<Guid, Blueprint>, ReadonlySet<Guid>>();
+
+export function itemPartSet(blueprints: ReadonlyMap<Guid, Blueprint>): ReadonlySet<Guid> {
+  let set = partSets.get(blueprints);
+  if (set === undefined) {
+    set = new Set([...blueprints.values()].filter((b) => kindOf[b.$type] === 'items').flatMap(partsOf));
+    partSets.set(blueprints, set);
+  }
+  return set;
 }
 
 export function deriveTwins(blueprints: ReadonlyMap<Guid, Blueprint>): Map<Guid, Guid> {

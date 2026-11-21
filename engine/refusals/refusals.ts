@@ -442,6 +442,8 @@ export function ruleText(w: Wording, f: FailedRule): string {
       return `${name(f.found)} can't take Mythic spells here.`;
     case 'data.unknownItem':
       return 'Not an item the planner holds.';
+    case 'map12.notGear':
+      return "It's part of another item, so it isn't worn on its own.";
     case 'ItemEntity.CanBeEquippedBy':
       return "The character can't wear it.";
     case 'EquipmentSlot.IsItemSupported':

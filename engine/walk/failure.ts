@@ -46,6 +46,7 @@ export type Rule =
   | 'BlueprintFeatureSelectMythicSpellbook.CanSelect:spellbook'
   | 'BlueprintFeatureSelectMythicSpellbook.CanSelect:m_AllowedSpellbooks'
   | 'data.unknownItem'
+  | 'map12.notGear'
   | 'ItemEntity.CanBeEquippedBy'
   | 'EquipmentSlot.IsItemSupported'
   | 'ArmorSlot.IsItemSupported'
