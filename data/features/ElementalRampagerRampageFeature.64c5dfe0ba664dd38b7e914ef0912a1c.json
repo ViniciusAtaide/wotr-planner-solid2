@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalRampagerRampageFeature",
   "guid": "64c5dfe0ba664dd38b7e914ef0912a1c",

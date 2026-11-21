@@ -13,6 +13,7 @@
     "OppositionSchool"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OppositionSchoolIllusion",
   "guid": "6750ead44c0c034428c6509c68110375",

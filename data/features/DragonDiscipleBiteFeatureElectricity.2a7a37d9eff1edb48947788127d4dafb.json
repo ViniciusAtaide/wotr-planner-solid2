@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonDiscipleBiteFeatureElectricity",
   "guid": "2a7a37d9eff1edb48947788127d4dafb",

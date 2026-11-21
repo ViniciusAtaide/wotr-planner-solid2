@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DeathBlessingMajorFeature",
   "guid": "751fddfe9096fdd41b2104b0cd2a68de",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BardicPerformanceResourceFact_Penta",
   "guid": "2b338db602044e91b1591e7f82332512",

@@ -64,6 +64,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "IgnorePrerequisites": false,
   "Mode": "Default",
   "Obligatory": false,

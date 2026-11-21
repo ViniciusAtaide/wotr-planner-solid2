@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UndeadBloodlineRequisiteFeature",
   "guid": "8a59e4af9f32950418260034c8b477fa",

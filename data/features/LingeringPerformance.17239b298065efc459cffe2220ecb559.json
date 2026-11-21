@@ -46,6 +46,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LingeringPerformance",
   "guid": "17239b298065efc459cffe2220ecb559",

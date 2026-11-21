@@ -21,6 +21,7 @@
     "MysticTheurgeArcaneSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "MysticTheurgeThassilonianTransmutation",
   "guid": "b5b932ae768551140b69c6db2c725778",

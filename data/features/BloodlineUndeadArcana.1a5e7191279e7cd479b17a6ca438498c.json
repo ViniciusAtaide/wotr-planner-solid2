@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineUndeadArcana",
   "guid": "1a5e7191279e7cd479b17a6ca438498c",

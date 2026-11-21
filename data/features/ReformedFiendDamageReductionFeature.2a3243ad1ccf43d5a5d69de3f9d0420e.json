@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ReformedFiendDamageReductionFeature",
   "guid": "2a3243ad1ccf43d5a5d69de3f9d0420e",

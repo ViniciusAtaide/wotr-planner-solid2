@@ -13,6 +13,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DefensiveStudy",
   "guid": "ec041312142ba1f48a0044521f68fc0a",

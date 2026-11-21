@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StudentOfWarAdditionalSkillAthletics",
   "guid": "fec26793abe4f7c4f87b6a7811dd0ed3",

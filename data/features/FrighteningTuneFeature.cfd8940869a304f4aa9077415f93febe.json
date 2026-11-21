@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FrighteningTuneFeature",
   "guid": "cfd8940869a304f4aa9077415f93febe",

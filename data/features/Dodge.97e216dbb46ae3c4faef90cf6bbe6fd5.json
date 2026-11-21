@@ -22,6 +22,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Dodge",
   "guid": "97e216dbb46ae3c4faef90cf6bbe6fd5",

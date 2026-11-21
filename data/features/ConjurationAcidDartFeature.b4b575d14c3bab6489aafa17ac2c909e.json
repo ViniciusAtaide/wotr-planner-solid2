@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ConjurationAcidDartFeature",
   "guid": "b4b575d14c3bab6489aafa17ac2c909e",

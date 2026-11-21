@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerInfernalHellfireStrike",
   "guid": "a08e08cf5ed4f0a4d87caf17ed6ef659",

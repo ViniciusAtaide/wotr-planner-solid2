@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PointBlankShotMythicFeat",
   "guid": "b651baa5f6faba646b7e3082929dfaf5",

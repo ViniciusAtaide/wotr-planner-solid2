@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 20,
   "assetName": "HellknightDisciplinePentamicFaithFeature",
   "guid": "3758edaa5cc54cb88b0d87a9f4a34df1"

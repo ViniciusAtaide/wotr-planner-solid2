@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FeralTransformationIIIFeature",
   "guid": "ec49896461bd75148847023347cb318d",

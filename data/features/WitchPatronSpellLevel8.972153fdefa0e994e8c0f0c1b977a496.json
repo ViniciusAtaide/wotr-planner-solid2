@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchPatronSpellLevel8",
   "guid": "972153fdefa0e994e8c0f0c1b977a496",

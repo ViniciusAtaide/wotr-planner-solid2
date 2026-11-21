@@ -15,6 +15,7 @@
     "WizardFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CombatCasting",
   "guid": "06964d468fde1dc4aa71a92ea04d930d",

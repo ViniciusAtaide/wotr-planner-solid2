@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TridentProficiency",
   "guid": "f9565a97342ac594e9b6a495368c1a57",

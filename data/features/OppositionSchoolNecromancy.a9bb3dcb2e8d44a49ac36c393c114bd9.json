@@ -13,6 +13,7 @@
     "OppositionSchool"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OppositionSchoolNecromancy",
   "guid": "a9bb3dcb2e8d44a49ac36c393c114bd9",

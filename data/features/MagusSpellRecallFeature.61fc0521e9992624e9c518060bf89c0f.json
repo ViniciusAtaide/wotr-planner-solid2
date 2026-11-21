@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MagusSpellRecallFeature",
   "guid": "61fc0521e9992624e9c518060bf89c0f",

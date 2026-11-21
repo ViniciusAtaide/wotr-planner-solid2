@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineArcaneSpellLevel2",
   "guid": "de0d31a008840754a9e13f0b130ffc54",

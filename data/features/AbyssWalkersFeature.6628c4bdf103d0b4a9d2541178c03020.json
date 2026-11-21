@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "AbyssWalkersFeature",
   "guid": "6628c4bdf103d0b4a9d2541178c03020"

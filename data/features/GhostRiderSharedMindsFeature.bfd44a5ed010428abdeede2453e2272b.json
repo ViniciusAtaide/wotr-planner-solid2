@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GhostRiderSharedMindsFeature",
   "guid": "bfd44a5ed010428abdeede2453e2272b",

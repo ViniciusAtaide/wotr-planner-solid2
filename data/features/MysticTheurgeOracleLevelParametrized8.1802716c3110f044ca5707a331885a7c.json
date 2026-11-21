@@ -5,6 +5,7 @@
   "Groups": [],
   "HasNoSuchFeature": false,
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "IgnoreParameterFeaturePrerequisites": false,
   "ParameterType": "LearnSpell",
   "Ranks": 20,

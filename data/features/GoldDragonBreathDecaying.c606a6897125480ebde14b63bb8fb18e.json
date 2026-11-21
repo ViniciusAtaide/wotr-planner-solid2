@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GoldDragonBreathDecaying",
   "guid": "c606a6897125480ebde14b63bb8fb18e",

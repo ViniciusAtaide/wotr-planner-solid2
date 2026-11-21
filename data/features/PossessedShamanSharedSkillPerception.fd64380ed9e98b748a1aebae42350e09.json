@@ -29,6 +29,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PossessedShamanSharedSkillPerception",
   "guid": "fd64380ed9e98b748a1aebae42350e09",

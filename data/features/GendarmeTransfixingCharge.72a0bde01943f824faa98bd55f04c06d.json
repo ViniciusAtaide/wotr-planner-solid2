@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GendarmeTransfixingCharge",
   "guid": "72a0bde01943f824faa98bd55f04c06d",

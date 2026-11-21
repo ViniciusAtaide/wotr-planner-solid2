@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StudentOfWarAdditionalSkillLoreNature",
   "guid": "b61f4f19df123474db9a2700c480ca9f",

@@ -279,6 +279,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MagicalTailArchetypeFeature5",
   "guid": "51bee12541f1145449eb019948d0ba14",

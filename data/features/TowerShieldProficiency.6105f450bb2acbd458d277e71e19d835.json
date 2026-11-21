@@ -41,6 +41,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TowerShieldProficiency",
   "guid": "6105f450bb2acbd458d277e71e19d835",

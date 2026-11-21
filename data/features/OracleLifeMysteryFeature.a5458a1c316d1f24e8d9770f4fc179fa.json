@@ -32,6 +32,7 @@
     "OracleMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleLifeMysteryFeature",
   "guid": "a5458a1c316d1f24e8d9770f4fc179fa",

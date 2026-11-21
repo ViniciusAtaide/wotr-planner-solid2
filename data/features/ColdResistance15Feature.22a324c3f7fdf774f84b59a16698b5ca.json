@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "ColdResistance15Feature",
   "guid": "22a324c3f7fdf774f84b59a16698b5ca"

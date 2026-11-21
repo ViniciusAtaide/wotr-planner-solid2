@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LuckBlessingMajorFeature",
   "guid": "0b59acd4d1fffa34da9fc91da05dd398",

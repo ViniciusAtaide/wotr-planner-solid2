@@ -76,6 +76,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierTacticianSupportFeature",
   "guid": "37c496c0c2f04544b83a8d013409fd47"

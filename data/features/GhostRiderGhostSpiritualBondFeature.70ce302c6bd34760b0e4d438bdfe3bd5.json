@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GhostRiderGhostSpiritualBondFeature",
   "guid": "70ce302c6bd34760b0e4d438bdfe3bd5",

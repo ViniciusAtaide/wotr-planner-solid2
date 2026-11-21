@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChangeableFormFeature",
   "guid": "c5a84c4f60364c5e827222c46fc173f5",

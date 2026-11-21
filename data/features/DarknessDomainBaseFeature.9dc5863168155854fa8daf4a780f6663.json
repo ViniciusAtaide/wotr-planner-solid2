@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DarknessDomainBaseFeature",
   "guid": "9dc5863168155854fa8daf4a780f6663",

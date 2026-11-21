@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "BigGameGlovesFeature",
   "guid": "1aa57850cbf898a41a44309569d5dc3b"

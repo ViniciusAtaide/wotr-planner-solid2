@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpellEatingFeature",
   "guid": "79538f61d6773334d8c56caa3523ae06",

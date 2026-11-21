@@ -30,6 +30,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterMagus",
   "guid": "757ec5d433988624f8f288e3615100fc",

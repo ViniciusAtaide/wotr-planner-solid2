@@ -45,6 +45,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexStoneStabilityFeature",
   "guid": "05b6b99b0f394284899eccd4728031b7",

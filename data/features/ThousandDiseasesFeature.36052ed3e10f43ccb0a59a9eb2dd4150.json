@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ThousandDiseasesFeature",
   "guid": "36052ed3e10f43ccb0a59a9eb2dd4150",

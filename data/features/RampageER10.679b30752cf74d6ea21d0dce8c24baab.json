@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RampageER10",
   "guid": "679b30752cf74d6ea21d0dce8c24baab",

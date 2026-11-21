@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InspireTranquilityBlindsenseFeature",
   "guid": "65dfe37150104e744b4a2e93090a46cc",

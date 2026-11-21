@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SinmageStaffFeature",
   "guid": "a37d1e737e21433392b8292e2810906c"

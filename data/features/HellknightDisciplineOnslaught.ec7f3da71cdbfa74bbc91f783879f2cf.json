@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellknightDisciplineOnslaught",
   "guid": "ec7f3da71cdbfa74bbc91f783879f2cf",

@@ -13,6 +13,7 @@
     "ChannelEnergy"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "OracleRevelationChannelFeature",
   "guid": "4bf9a9afadca5304e89bf52f2ac2d236",

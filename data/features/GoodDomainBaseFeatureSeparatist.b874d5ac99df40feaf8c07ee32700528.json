@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GoodDomainBaseFeatureSeparatist",
   "guid": "b874d5ac99df40feaf8c07ee32700528",

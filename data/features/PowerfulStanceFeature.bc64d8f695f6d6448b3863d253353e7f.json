@@ -13,6 +13,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PowerfulStanceFeature",
   "guid": "bc64d8f695f6d6448b3863d253353e7f",

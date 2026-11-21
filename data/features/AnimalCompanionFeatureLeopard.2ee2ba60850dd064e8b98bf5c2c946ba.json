@@ -18,6 +18,7 @@
     "AnimalCompanion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalCompanionFeatureLeopard",
   "guid": "2ee2ba60850dd064e8b98bf5c2c946ba",

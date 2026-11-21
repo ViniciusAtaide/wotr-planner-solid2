@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KiStrikeLawful",
   "guid": "34439e527a8f5fb4588024e71960dd42",

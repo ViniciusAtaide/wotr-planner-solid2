@@ -24,6 +24,7 @@
     "ExoticWeaponProficiency"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BastardSwordProficiency",
   "guid": "57299a78b2256604dadf1ab9a42e2873",

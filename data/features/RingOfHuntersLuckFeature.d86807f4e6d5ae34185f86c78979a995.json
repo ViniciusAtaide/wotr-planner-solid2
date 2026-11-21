@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "RingOfHuntersLuckFeature",
   "guid": "d86807f4e6d5ae34185f86c78979a995",

@@ -24,6 +24,7 @@
     "ExoticWeaponProficiency"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FauchardProficiency",
   "guid": "b3f41cd91571ba54e8c3b0c5da4a7071",

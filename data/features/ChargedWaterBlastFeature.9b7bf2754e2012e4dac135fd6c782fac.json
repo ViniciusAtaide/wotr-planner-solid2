@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "ChargedWaterBlastFeature",
   "guid": "9b7bf2754e2012e4dac135fd6c782fac",

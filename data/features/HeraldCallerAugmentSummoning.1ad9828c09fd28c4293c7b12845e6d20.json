@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HeraldCallerAugmentSummoning",
   "guid": "1ad9828c09fd28c4293c7b12845e6d20",

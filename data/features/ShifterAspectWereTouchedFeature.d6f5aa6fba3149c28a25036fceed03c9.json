@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterAspectWereTouchedFeature",
   "guid": "d6f5aa6fba3149c28a25036fceed03c9",

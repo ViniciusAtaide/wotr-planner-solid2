@@ -23,6 +23,7 @@
     "EldritchScionArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "QuickenedArcanaFeature",
   "guid": "10a75ca624a7d3242a05003d22bc38f0",

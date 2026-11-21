@@ -23,6 +23,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterWitchLeyLineGuardian",
   "guid": "d14c2843c637eac4b8927b4e7492189c",

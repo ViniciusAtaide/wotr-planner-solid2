@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KineticSharpshooterMainFeature",
   "guid": "b6092295c3164f848256302280668189",

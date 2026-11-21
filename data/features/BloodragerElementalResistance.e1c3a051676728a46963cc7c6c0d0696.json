@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalResistance",
   "guid": "e1c3a051676728a46963cc7c6c0d0696",

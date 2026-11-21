@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerDragonFormOfTheDragonBlack",
   "guid": "c718420085ffa0640916ec1e28a55566",

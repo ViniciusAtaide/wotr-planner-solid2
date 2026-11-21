@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "WinterWitchShamanLevelUp",
   "guid": "2076161c9131d3f4ca76a0d5f5fde8d6",

@@ -32,6 +32,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineDraconicWhiteClawsFeatureAddLevel3",
   "guid": "f2862bd12b1f461488bff5512c098d2b"

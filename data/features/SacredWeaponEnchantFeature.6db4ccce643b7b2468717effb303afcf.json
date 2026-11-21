@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SacredWeaponEnchantFeature",
   "guid": "6db4ccce643b7b2468717effb303afcf",

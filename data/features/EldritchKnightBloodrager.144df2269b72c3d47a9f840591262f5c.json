@@ -14,6 +14,7 @@
     "EldritchKnightSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "EldritchKnightBloodrager",
   "guid": "144df2269b72c3d47a9f840591262f5c",

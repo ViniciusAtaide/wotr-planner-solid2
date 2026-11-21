@@ -23,6 +23,7 @@
     "MysticTheurgeArcaneSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "MysticTheurgeCrossblooded",
   "guid": "12f2d6be6ab0ed04abcf26e50f820729",

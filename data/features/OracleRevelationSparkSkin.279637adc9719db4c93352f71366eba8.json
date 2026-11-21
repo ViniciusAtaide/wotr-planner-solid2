@@ -58,6 +58,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationSparkSkin",
   "guid": "279637adc9719db4c93352f71366eba8",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SmiteChaosFeature",
   "guid": "67d08ed4892de3441a43aae91a7dd7c9",

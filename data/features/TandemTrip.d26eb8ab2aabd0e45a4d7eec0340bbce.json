@@ -38,6 +38,7 @@
     "TeamworkFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TandemTrip",
   "guid": "d26eb8ab2aabd0e45a4d7eec0340bbce",

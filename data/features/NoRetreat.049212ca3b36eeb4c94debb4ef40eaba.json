@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NoRetreat",
   "guid": "049212ca3b36eeb4c94debb4ef40eaba",

@@ -13,6 +13,7 @@
     "GreaterSwordOfHeaven"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelSwordHeavenlyHostFeature",
   "guid": "131fc914b66b62c49b9f9b5f750998f5",

@@ -21,6 +21,7 @@
     "HellknightSigniferSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HellknightSigniferThassilonianEvocation",
   "guid": "f8ed1800725b3e74ebb86783dbde933a",

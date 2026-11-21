@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImprovedCantripsFeature",
   "guid": "d26fb54b74d44a45b84ef7150a460348",

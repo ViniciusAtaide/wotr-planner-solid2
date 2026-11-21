@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineAbyssalSpellLevel9",
   "guid": "49bc246d795aa2d4da23a61f3c36c902",

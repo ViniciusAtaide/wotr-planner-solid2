@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerDragonSilverBreath",
   "guid": "76148c4ea58ea40419a649b0f66ba5c9",

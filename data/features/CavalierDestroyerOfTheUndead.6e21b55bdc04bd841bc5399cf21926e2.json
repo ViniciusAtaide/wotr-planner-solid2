@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierDestroyerOfTheUndead",
   "guid": "6e21b55bdc04bd841bc5399cf21926e2",

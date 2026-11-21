@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterAspectWolfScentUpgrade",
   "guid": "33684fea43334119b2b3ad5343955a0a"

@@ -21,6 +21,7 @@
     "ArcaneTricksterSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "ArcaneTricksterThassilonianAbjuration",
   "guid": "4f1c84009308ca645b7e4a44d7861e49",

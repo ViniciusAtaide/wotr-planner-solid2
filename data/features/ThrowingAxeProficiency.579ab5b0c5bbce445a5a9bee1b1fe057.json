@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ThrowingAxeProficiency",
   "guid": "579ab5b0c5bbce445a5a9bee1b1fe057",

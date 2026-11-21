@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "MysticTheurgeClericLevelUp",
   "guid": "d4ec3d89122b3764f88edc65c4618923",

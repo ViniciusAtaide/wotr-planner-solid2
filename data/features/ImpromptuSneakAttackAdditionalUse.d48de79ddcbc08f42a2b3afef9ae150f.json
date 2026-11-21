@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "ImpromptuSneakAttackAdditionalUse",
   "guid": "d48de79ddcbc08f42a2b3afef9ae150f",

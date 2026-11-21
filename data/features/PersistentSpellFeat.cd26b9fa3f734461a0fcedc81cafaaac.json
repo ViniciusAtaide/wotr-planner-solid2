@@ -15,6 +15,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PersistentSpellFeat",
   "guid": "cd26b9fa3f734461a0fcedc81cafaaac",

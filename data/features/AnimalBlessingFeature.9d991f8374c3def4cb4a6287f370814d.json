@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalBlessingFeature",
   "guid": "9d991f8374c3def4cb4a6287f370814d",

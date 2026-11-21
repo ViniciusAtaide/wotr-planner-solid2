@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SongOfHeroicResolveFeature",
   "guid": "90185ba04ff485845bbac7512e2c3c73",

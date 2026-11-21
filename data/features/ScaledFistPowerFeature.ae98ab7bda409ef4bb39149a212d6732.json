@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScaledFistPowerFeature",
   "guid": "ae98ab7bda409ef4bb39149a212d6732",

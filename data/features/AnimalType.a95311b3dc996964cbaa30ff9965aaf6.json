@@ -5,6 +5,7 @@
     "CreatureType"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalType",
   "guid": "a95311b3dc996964cbaa30ff9965aaf6",

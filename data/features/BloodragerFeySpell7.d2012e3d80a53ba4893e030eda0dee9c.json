@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerFeySpell7",
   "guid": "d2012e3d80a53ba4893e030eda0dee9c",

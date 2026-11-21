@@ -23,6 +23,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterArcanistNatureMage",
   "guid": "db337066f14a443d9c60ff5a842d45c7",

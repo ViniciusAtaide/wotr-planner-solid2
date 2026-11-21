@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TransmutationSchoolChangeShapeFeatureAdd",
   "guid": "aeb56418768235640a3ee858d5ee05e8",

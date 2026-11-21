@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SongOfTheFallen",
   "guid": "9fc5d126524dbc84a90b1856707e2d87",

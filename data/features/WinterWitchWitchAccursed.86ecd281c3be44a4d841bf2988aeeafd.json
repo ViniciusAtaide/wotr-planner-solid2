@@ -30,6 +30,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "WinterWitchWitchAccursed",
   "guid": "86ecd281c3be44a4d841bf2988aeeafd",

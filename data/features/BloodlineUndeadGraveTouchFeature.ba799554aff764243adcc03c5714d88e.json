@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineUndeadGraveTouchFeature",
   "guid": "ba799554aff764243adcc03c5714d88e",

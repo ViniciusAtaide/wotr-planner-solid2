@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcaneHeavyArmor",
   "guid": "447ca91389e5c9246acb2c640d63f4da",

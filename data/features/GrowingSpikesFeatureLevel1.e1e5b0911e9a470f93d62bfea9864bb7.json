@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GrowingSpikesFeatureLevel1",
   "guid": "e1e5b0911e9a470f93d62bfea9864bb7"

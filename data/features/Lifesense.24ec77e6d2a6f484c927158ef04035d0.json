@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Lifesense",
   "guid": "24ec77e6d2a6f484c927158ef04035d0"

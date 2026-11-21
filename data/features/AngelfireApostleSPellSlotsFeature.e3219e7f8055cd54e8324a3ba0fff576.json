@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelfireApostleSPellSlotsFeature",
   "guid": "e3219e7f8055cd54e8324a3ba0fff576",

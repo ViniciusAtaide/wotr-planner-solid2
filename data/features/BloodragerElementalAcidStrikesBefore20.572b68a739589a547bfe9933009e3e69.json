@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalAcidStrikesBefore20",
   "guid": "572b68a739589a547bfe9933009e3e69",

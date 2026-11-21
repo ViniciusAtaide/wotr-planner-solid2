@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MagicDomainGreaterFeature",
   "guid": "cf47e96abd88c9f418f8e67f5a14381f",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterStatFocusSpeed",
   "guid": "4aeb3279e7b0a384bb1f294dc2a6811a",

@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PaladinProficiencies",
   "guid": "b10ff88c03308b649b50c31611c2fefb",

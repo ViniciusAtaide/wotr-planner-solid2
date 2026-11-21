@@ -24,6 +24,7 @@
     "DivineHerbalistMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivineHerbalistLifeMysteryFeature",
   "guid": "45472076126dc154f9386b0bc4d8416c",

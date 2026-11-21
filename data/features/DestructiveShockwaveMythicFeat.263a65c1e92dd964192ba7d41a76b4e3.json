@@ -5,6 +5,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DestructiveShockwaveMythicFeat",
   "guid": "263a65c1e92dd964192ba7d41a76b4e3",

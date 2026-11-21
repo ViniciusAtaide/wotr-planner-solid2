@@ -67,6 +67,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalElectricityWanderingFeature11",
   "guid": "ae12d00da24d46d2a5b013846a3217d7",

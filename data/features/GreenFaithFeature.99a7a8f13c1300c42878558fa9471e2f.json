@@ -130,6 +130,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "GreenFaithFeature",
   "guid": "99a7a8f13c1300c42878558fa9471e2f",

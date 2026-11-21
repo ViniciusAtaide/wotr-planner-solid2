@@ -24,6 +24,7 @@
     "DefensivePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FearlessDefenseDefensivePower",
   "guid": "2c13bd43a7ed4844b9f4dcc919fd74f8",

@@ -22,6 +22,7 @@
     "ScaledFistKiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScaledFistSpitVenomFeature",
   "guid": "f2a5f1d040ab6144296069b7269c42e4",

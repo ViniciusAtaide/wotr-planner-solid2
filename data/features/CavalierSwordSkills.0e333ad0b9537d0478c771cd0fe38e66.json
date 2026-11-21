@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierSwordSkills",
   "guid": "0e333ad0b9537d0478c771cd0fe38e66",

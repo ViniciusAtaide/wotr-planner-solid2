@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterACBonus",
   "guid": "c07b95dcb8164fb6ad8847ff6df91ba3"

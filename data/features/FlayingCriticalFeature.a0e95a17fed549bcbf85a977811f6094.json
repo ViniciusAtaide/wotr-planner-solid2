@@ -29,6 +29,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FlayingCriticalFeature",
   "guid": "a0e95a17fed549bcbf85a977811f6094",

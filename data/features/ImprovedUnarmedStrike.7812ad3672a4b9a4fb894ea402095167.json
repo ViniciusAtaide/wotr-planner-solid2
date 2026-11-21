@@ -19,6 +19,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImprovedUnarmedStrike",
   "guid": "7812ad3672a4b9a4fb894ea402095167",

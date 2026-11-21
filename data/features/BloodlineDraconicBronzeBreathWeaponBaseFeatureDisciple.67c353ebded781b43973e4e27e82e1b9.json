@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineDraconicBronzeBreathWeaponBaseFeatureDisciple",
   "guid": "67c353ebded781b43973e4e27e82e1b9",

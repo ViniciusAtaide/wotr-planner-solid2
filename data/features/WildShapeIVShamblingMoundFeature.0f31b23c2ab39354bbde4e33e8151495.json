@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WildShapeIVShamblingMoundFeature",
   "guid": "0f31b23c2ab39354bbde4e33e8151495",

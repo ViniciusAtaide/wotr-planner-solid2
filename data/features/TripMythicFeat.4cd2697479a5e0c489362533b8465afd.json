@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TripMythicFeat",
   "guid": "4cd2697479a5e0c489362533b8465afd",

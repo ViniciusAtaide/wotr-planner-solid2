@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ZeorisDaggerHeadband_GoverningFeature",
   "guid": "6394dd865317492684e371878e216d8c"

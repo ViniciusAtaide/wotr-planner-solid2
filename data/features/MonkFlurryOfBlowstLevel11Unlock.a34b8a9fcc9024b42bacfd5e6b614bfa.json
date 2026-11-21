@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MonkFlurryOfBlowstLevel11Unlock",
   "guid": "a34b8a9fcc9024b42bacfd5e6b614bfa"

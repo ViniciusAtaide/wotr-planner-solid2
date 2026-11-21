@@ -40,6 +40,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "HellknightSigniferArmorTraining",
   "guid": "84ca7371fa09ccc46b14e80b9b7b371d",

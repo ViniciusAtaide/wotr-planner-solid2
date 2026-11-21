@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShieldTowerMythicFeat",
   "guid": "f69f36e4a9bc410c8219094b18856e53",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "AggressorBleedingStrike",
   "guid": "37f3ca7f3e584a5b9edb2cad88cf5ba7",

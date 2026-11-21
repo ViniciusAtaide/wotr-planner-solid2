@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterStatFocusInitiative",
   "guid": "5138e24fbeca1594db6c5455301cf977",

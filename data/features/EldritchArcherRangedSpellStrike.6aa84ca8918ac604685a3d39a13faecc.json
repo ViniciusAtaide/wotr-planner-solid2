@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchArcherRangedSpellStrike",
   "guid": "6aa84ca8918ac604685a3d39a13faecc",

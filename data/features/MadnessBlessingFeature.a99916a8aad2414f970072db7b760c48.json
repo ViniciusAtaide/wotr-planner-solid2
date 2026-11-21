@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MadnessBlessingFeature",
   "guid": "a99916a8aad2414f970072db7b760c48",

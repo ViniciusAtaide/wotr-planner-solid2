@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScaledFistACBonusUnlock",
   "guid": "2a8922e28b3eba54fa7a244f7b05bd9e",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MartyrMartyrsMercyFeature",
   "guid": "09b9de15bc9a7844f8a55eee4a81ddaf",

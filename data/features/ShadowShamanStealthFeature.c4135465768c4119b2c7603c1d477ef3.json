@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShadowShamanStealthFeature",
   "guid": "c4135465768c4119b2c7603c1d477ef3",

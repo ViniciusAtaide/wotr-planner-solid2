@@ -20,6 +20,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DIscerningEye",
   "guid": "c4b818bdcea845c9ae8cf277251d70d9",

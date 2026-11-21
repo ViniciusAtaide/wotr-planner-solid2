@@ -44,6 +44,7 @@
     "FinesseTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinesseTrainingClaw",
   "guid": "6b2dee734f5db0043b15ed3d0f49d32d",

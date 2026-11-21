@@ -22,6 +22,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KiWholenessOfBodyFeature",
   "guid": "e9c8117e70e168345b3f4c01538936e5",

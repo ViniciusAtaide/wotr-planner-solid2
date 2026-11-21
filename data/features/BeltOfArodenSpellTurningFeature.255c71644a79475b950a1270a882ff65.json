@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BeltOfArodenSpellTurningFeature",
   "guid": "255c71644a79475b950a1270a882ff65",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BodyOfStoneFeature",
   "guid": "64c2f599a29756041a98b2134fdfeeb4",

@@ -43,6 +43,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 4,
   "assetName": "MindGamesFeature",
   "guid": "8d9e69bcc76342559a97695fe0dce04f",

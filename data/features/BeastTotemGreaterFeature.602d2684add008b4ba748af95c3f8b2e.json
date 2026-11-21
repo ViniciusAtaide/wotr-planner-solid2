@@ -49,6 +49,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BeastTotemGreaterFeature",
   "guid": "602d2684add008b4ba748af95c3f8b2e",

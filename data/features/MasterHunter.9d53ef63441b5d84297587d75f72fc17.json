@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MasterHunter",
   "guid": "9d53ef63441b5d84297587d75f72fc17",

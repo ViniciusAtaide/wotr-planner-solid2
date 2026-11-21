@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "JudgeSentenceFeature",
   "guid": "2c1ec26195ed4fc695166ee1b55584e0",

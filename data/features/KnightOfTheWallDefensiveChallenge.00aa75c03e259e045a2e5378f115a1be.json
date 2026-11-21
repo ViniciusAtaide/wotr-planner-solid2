@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KnightOfTheWallDefensiveChallenge",
   "guid": "00aa75c03e259e045a2e5378f115a1be",

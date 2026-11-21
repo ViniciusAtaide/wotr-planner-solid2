@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchWeaponPlus5",
   "guid": "93b9c7f77097d074198f746baf744c80",

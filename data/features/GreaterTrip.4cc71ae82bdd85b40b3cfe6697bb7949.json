@@ -44,6 +44,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreaterTrip",
   "guid": "4cc71ae82bdd85b40b3cfe6697bb7949",

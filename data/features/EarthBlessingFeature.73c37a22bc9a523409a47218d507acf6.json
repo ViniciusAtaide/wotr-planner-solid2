@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EarthBlessingFeature",
   "guid": "73c37a22bc9a523409a47218d507acf6",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MajorFormWerewolfFeature",
   "guid": "937e68e1f8d84e4ba45d3e7472abf6ee",

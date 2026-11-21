@@ -23,6 +23,7 @@
     "MysticTheurgeArcaneSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "MysticTheurgeEldritchScoundrel",
   "guid": "6b8d451c0978ddd4cbcf8ddd600353da",

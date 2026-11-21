@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DiscipleOfThePikeBiggerTheyAre",
   "guid": "a42d67b00e0bd4744bf47b3618955b09",

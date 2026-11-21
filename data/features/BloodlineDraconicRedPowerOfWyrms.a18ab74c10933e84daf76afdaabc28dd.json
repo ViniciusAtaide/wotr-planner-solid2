@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineDraconicRedPowerOfWyrms",
   "guid": "a18ab74c10933e84daf76afdaabc28dd",

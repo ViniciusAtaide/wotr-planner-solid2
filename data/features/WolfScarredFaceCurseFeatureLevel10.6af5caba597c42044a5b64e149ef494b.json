@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WolfScarredFaceCurseFeatureLevel10",
   "guid": "6af5caba597c42044a5b64e149ef494b"

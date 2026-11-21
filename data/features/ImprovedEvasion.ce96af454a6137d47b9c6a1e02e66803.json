@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImprovedEvasion",
   "guid": "ce96af454a6137d47b9c6a1e02e66803",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlagueHexAreaFeature",
   "guid": "738a731ca6be428c9d49f0335da36312",

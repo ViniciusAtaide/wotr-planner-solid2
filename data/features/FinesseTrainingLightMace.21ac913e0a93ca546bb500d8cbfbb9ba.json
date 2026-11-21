@@ -16,6 +16,7 @@
     "FinesseTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinesseTrainingLightMace",
   "guid": "21ac913e0a93ca546bb500d8cbfbb9ba",

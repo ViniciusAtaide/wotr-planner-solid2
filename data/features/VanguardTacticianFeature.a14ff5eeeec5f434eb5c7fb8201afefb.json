@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "VanguardTacticianFeature",
   "guid": "a14ff5eeeec5f434eb5c7fb8201afefb",

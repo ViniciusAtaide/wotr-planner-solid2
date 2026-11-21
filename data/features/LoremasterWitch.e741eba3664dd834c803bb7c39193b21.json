@@ -30,6 +30,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterWitch",
   "guid": "e741eba3664dd834c803bb7c39193b21",

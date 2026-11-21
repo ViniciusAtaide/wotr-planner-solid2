@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MantisZealotFadingFeature",
   "guid": "724a017c96d643729f65d2d1eac54673",

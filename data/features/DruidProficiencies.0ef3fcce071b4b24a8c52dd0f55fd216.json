@@ -34,6 +34,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DruidProficiencies",
   "guid": "0ef3fcce071b4b24a8c52dd0f55fd216",

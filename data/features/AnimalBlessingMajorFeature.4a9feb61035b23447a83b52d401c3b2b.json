@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalBlessingMajorFeature",
   "guid": "4a9feb61035b23447a83b52d401c3b2b",

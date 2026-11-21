@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellknightSigniferDiscernLies",
   "guid": "7dfba844cb70620488faa56dc068d1cb",

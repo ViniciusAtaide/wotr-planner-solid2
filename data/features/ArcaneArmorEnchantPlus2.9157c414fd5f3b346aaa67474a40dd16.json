@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcaneArmorEnchantPlus2",
   "guid": "9157c414fd5f3b346aaa67474a40dd16",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonFormFeature",
   "guid": "2ef40c078a0a4e829ce53781c4089299",

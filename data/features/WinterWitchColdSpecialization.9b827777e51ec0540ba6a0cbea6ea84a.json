@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WinterWitchColdSpecialization",
   "guid": "9b827777e51ec0540ba6a0cbea6ea84a",

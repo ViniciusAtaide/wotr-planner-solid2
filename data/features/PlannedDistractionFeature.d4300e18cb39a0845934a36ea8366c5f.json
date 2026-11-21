@@ -35,6 +35,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlannedDistractionFeature",
   "guid": "d4300e18cb39a0845934a36ea8366c5f",

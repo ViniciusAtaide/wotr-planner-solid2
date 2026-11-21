@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MantisZealotMantisSwarmFeature",
   "guid": "aba4b42c3cad4bcdaaf79b1a52778591",

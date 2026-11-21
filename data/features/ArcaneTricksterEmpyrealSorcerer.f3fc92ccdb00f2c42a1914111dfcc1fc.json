@@ -23,6 +23,7 @@
     "ArcaneTricksterSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "ArcaneTricksterEmpyrealSorcerer",
   "guid": "f3fc92ccdb00f2c42a1914111dfcc1fc",

@@ -50,6 +50,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanBattleSpiritWanderingFeature",
   "guid": "82ec7a49f3ab65a44bbf4177dfdfe469",

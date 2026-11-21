@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalDomainBaseFeature",
   "guid": "d577aba79b5727a4ab74627c4c6ba23c",

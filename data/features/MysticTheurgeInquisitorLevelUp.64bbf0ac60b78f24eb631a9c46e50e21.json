@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "MysticTheurgeInquisitorLevelUp",
   "guid": "64bbf0ac60b78f24eb631a9c46e50e21",

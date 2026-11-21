@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MonkWeaponProficiency",
   "guid": "c7d6f5244c617734a8a76b6785a752b4",

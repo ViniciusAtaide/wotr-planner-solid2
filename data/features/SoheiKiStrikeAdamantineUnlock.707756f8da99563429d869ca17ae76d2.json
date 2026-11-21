@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SoheiKiStrikeAdamantineUnlock",
   "guid": "707756f8da99563429d869ca17ae76d2",

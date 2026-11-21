@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HostFeature",
   "guid": "4cb605c6099397d41ab91ad6dd43a5e7",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AbjurationResistanceFeature",
   "guid": "1abe070e7a00ddd48b8a141d71f79e70",

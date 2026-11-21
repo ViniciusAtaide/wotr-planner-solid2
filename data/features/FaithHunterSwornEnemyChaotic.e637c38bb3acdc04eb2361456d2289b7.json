@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FaithHunterSwornEnemyChaotic",
   "guid": "e637c38bb3acdc04eb2361456d2289b7",

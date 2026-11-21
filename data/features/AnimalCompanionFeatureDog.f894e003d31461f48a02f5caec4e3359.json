@@ -18,6 +18,7 @@
     "AnimalCompanion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalCompanionFeatureDog",
   "guid": "f894e003d31461f48a02f5caec4e3359",

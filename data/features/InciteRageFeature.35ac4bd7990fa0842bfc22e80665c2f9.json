@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InciteRageFeature",
   "guid": "35ac4bd7990fa0842bfc22e80665c2f9",

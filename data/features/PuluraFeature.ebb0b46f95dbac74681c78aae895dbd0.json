@@ -153,6 +153,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "PuluraFeature",
   "guid": "ebb0b46f95dbac74681c78aae895dbd0",

@@ -5,6 +5,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RangingShots",
   "guid": "2b558167862b05d47b8472d176257f82",

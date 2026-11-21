@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ClericOrisonsFeature",
   "guid": "e62f392949c24eb4b8fb2bc9db4345e3",

@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "MysticTheurgeCrusaderLevelUp",
   "guid": "14bdf99c1d33ec1479c77ba7e3e27133",

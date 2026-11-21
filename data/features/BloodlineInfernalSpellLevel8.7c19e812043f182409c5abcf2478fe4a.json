@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineInfernalSpellLevel8",
   "guid": "7c19e812043f182409c5abcf2478fe4a",

@@ -14,6 +14,7 @@
     "TeamworkFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpellChain",
   "guid": "d8d641edc9a74a64809f56feff9495b6",

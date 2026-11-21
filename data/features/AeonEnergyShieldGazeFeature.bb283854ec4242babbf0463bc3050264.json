@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonEnergyShieldGazeFeature",
   "guid": "bb283854ec4242babbf0463bc3050264",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ProclaimerZoneOfSanctification15FeetFeatureLimit",
   "guid": "723a3c89c44901c4191a92f6e1693a8b",

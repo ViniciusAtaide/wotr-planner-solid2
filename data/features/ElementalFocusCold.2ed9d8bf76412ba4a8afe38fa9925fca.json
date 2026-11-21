@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalFocusCold",
   "guid": "2ed9d8bf76412ba4a8afe38fa9925fca",

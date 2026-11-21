@@ -30,6 +30,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "WinterWitchWitchLeyLineGuardian",
   "guid": "56adf819599827f4695395924a060996",

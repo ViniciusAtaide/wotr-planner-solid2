@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FeralChampionBlessing",
   "guid": "6c52c34b462be9047b83ae7f2a3b5822",

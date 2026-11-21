@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WarBlessingMajorFeature",
   "guid": "595b077c3b1f435495739ce496e852f0",

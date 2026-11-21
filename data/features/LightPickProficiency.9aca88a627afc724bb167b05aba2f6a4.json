@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LightPickProficiency",
   "guid": "9aca88a627afc724bb167b05aba2f6a4",

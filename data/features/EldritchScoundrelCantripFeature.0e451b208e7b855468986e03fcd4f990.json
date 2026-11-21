@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchScoundrelCantripFeature",
   "guid": "0e451b208e7b855468986e03fcd4f990",

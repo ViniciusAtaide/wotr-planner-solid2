@@ -42,6 +42,7 @@
     "AasimarHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PeriHeritage",
   "guid": "4ce39942e203de74198e3d2fd0608b96",

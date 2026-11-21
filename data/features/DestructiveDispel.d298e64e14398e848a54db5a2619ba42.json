@@ -5,6 +5,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DestructiveDispel",
   "guid": "d298e64e14398e848a54db5a2619ba42",

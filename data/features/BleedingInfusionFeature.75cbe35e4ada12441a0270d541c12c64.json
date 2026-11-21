@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BleedingInfusionFeature",
   "guid": "75cbe35e4ada12441a0270d541c12c64",

@@ -23,6 +23,7 @@
     "ArcaneTricksterSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "ArcaneTricksterArcanistEldritchFont",
   "guid": "a732797826db0b54ea123d91b4cdaad5",

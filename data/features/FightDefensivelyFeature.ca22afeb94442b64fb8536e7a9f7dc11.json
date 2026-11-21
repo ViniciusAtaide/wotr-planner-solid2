@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FightDefensivelyFeature",
   "guid": "ca22afeb94442b64fb8536e7a9f7dc11",

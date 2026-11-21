@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "DragonDiscipleBlindSense",
   "guid": "bb19b581f5a47b44abfe00164f1fcade",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "QuarterstaffMasterDamageBonus4",
   "guid": "11ce78cdcbe6427a8a4dd9dd1e36c914",

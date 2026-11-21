@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeHorseFeature",
   "guid": "0ba661bf40b3451d9046b91e13fc1d35",

@@ -10,6 +10,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FlawlessAttacks",
   "guid": "d1683a4035c05c64b9e42993f19be24b",

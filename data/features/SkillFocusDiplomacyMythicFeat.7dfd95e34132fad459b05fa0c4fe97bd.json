@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkillFocusDiplomacyMythicFeat",
   "guid": "7dfd95e34132fad459b05fa0c4fe97bd",

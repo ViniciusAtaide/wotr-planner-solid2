@@ -5,6 +5,7 @@
     "WeaponTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "WeaponTrainingHeavyBlades",
   "guid": "2a0ce0186af38ed419f47fce16f93c2a",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "BeltOfVeneratedChampionFeature",
   "guid": "49fb12e9d6cac0041b6de3507049e7d0"

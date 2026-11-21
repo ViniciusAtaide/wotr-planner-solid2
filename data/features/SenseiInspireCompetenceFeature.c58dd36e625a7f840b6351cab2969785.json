@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "SenseiInspireCompetenceFeature",
   "guid": "c58dd36e625a7f840b6351cab2969785",

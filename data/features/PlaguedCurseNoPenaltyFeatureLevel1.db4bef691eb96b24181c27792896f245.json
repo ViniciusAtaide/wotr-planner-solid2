@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlaguedCurseNoPenaltyFeatureLevel1",
   "guid": "db4bef691eb96b24181c27792896f245",

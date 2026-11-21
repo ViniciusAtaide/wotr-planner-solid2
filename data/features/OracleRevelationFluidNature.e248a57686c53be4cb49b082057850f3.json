@@ -32,6 +32,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationFluidNature",
   "guid": "e248a57686c53be4cb49b082057850f3",

@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanNatureSpiritBaseFeature",
   "guid": "0a7166e9c6ea5874e9fc4984f30f2d8d",

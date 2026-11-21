@@ -69,6 +69,7 @@
     "LichSkeletalUpgrade"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "LevelEntries": [
     {
       "Level": 6,

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BardicPerformanceResourceFact",
   "guid": "b92bfc201c6a79e49afd0b5cfbfc269f",

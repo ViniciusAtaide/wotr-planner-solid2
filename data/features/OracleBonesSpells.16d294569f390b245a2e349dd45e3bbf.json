@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleBonesSpells",
   "guid": "16d294569f390b245a2e349dd45e3bbf"

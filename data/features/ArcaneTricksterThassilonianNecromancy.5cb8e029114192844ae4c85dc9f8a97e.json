@@ -21,6 +21,7 @@
     "ArcaneTricksterSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "ArcaneTricksterThassilonianNecromancy",
   "guid": "5cb8e029114192844ae4c85dc9f8a97e",

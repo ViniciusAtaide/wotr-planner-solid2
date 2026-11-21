@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DextrousDuelist",
   "guid": "b701196306bb4674bb902c9f1160180f",

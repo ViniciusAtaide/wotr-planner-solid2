@@ -10,6 +10,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HatOfTheOwlFeature",
   "guid": "3c8c3ab69fd442b4a56e921385677d95",

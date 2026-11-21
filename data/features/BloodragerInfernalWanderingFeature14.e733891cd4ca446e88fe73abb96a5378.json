@@ -58,6 +58,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerInfernalWanderingFeature14",
   "guid": "e733891cd4ca446e88fe73abb96a5378",

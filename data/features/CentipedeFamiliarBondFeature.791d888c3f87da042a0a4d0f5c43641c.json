@@ -27,6 +27,7 @@
     "Familiar"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CentipedeFamiliarBondFeature",
   "guid": "791d888c3f87da042a0a4d0f5c43641c",

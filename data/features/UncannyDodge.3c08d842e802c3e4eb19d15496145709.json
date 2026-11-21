@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UncannyDodge",
   "guid": "3c08d842e802c3e4eb19d15496145709",

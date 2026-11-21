@@ -34,6 +34,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BeastTotemLesserFeature",
   "guid": "d99dfc9238a8a6646b32be09057c1729",

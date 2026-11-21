@@ -47,6 +47,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ComeAndGetMeFeature",
   "guid": "032402bde3fb47e39e6ebb6724ae9c22",

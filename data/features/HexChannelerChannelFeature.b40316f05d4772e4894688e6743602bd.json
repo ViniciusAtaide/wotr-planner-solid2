@@ -15,6 +15,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "Ranks": 20,
   "assetName": "HexChannelerChannelFeature",
   "guid": "b40316f05d4772e4894688e6743602bd",

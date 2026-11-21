@@ -64,6 +64,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SimpleWeaponProficiency",
   "guid": "e70ecf1ed95ca2f40b754f1adb22bbdd",

@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WaterBlessingFeature",
   "guid": "0f457943bb99f9b48b709c90bfc0467e",

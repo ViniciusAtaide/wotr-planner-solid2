@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FavoriteMetamagicQuicken",
   "guid": "4ecf1a86ddc45d04c8b2df3a1c318e78",

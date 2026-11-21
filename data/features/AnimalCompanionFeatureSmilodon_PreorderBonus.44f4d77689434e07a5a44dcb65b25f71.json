@@ -18,6 +18,7 @@
     "AnimalCompanion"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalCompanionFeatureSmilodon_PreorderBonus",
   "guid": "44f4d77689434e07a5a44dcb65b25f71",

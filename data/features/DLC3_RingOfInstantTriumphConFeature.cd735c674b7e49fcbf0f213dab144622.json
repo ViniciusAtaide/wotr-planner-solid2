@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DLC3_RingOfInstantTriumphConFeature",
   "guid": "cd735c674b7e49fcbf0f213dab144622"

@@ -5,6 +5,7 @@
     "ImprovedSwordOfHeaven"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelSwordAntiUndeadFeature",
   "guid": "317c795278362f84581f7cf35023a19f",

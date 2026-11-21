@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "AssassinCreatePoisonIncreasedDuration",
   "guid": "953e47bbeb7c55145884de118f812b28",

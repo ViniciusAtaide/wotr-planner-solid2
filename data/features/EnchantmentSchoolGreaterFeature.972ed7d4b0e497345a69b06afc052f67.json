@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnchantmentSchoolGreaterFeature",
   "guid": "972ed7d4b0e497345a69b06afc052f67",

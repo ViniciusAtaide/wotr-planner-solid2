@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ReposeBlessingFeature",
   "guid": "64a416082927673409deb330af04d6d2",

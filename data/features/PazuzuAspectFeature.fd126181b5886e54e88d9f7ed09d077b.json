@@ -5,6 +5,7 @@
     "DemonLordAspect"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PazuzuAspectFeature",
   "guid": "fd126181b5886e54e88d9f7ed09d077b",

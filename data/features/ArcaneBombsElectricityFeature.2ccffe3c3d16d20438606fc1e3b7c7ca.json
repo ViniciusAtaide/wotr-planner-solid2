@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcaneBombsElectricityFeature",
   "guid": "2ccffe3c3d16d20438606fc1e3b7c7ca",

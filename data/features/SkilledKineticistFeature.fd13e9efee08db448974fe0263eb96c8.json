@@ -20,6 +20,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkilledKineticistFeature",
   "guid": "fd13e9efee08db448974fe0263eb96c8",

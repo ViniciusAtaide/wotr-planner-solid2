@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ProclaimerCleanserOfEvil10FeetFeature",
   "guid": "716226306ae3a6d40b82455e2efa8033",

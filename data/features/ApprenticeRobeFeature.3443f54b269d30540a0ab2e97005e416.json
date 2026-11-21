@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "ApprenticeRobeFeature",
   "guid": "3443f54b269d30540a0ab2e97005e416"

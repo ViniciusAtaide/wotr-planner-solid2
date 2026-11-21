@@ -27,6 +27,7 @@
     "Familiar"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChickenFamiliarBondFeature",
   "guid": "1bbca102706408b4cb97281c984be5d5",

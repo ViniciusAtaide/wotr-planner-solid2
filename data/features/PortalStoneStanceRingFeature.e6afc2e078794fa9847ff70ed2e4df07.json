@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PortalStoneStanceRingFeature",
   "guid": "e6afc2e078794fa9847ff70ed2e4df07"

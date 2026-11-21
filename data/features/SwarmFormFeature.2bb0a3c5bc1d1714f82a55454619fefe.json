@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SwarmFormFeature",
   "guid": "2bb0a3c5bc1d1714f82a55454619fefe",

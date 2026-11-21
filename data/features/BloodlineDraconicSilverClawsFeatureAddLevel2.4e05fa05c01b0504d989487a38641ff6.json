@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineDraconicSilverClawsFeatureAddLevel2",
   "guid": "4e05fa05c01b0504d989487a38641ff6"

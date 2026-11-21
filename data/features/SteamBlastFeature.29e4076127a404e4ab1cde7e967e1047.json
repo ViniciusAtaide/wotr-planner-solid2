@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "SteamBlastFeature",
   "guid": "29e4076127a404e4ab1cde7e967e1047",

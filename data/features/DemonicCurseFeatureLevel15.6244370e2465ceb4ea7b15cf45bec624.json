@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonicCurseFeatureLevel15",
   "guid": "6244370e2465ceb4ea7b15cf45bec624"

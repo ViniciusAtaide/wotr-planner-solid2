@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellknightSigniferArmorPenaltyRemove",
   "guid": "3f77ef6cd3b241d3bfbeed458a0d1603"

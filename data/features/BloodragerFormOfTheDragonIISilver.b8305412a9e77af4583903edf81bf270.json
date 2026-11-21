@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerFormOfTheDragonIISilver",
   "guid": "b8305412a9e77af4583903edf81bf270",

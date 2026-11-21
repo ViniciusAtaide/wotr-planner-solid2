@@ -42,6 +42,7 @@
     "OracleMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleBonesMysteryFeature",
   "guid": "067b175d3df0d1a408efd7eee2b36b9b",

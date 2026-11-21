@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellknightDisciplineCensor",
   "guid": "b4f4cfaaad1ea9d4d95fbf2ca135f654",

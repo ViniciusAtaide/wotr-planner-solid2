@@ -30,6 +30,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundAldoriSwordsman",
   "guid": "ce0ea6b388ac467408d6da224fab403d",

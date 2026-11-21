@@ -35,6 +35,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationSoulSiphon",
   "guid": "226c053a75fd7c34cab1b493f5847787",

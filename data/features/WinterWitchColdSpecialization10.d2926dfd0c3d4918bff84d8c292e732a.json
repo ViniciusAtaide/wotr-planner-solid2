@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "WinterWitchColdSpecialization10",
   "guid": "d2926dfd0c3d4918bff84d8c292e732a"

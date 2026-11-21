@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LegSweepFeature",
   "guid": "b84f6d2dfaba15d4aa80386ce6824e26",

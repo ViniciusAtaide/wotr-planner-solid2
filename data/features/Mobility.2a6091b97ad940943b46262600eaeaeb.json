@@ -22,6 +22,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Mobility",
   "guid": "2a6091b97ad940943b46262600eaeaeb",

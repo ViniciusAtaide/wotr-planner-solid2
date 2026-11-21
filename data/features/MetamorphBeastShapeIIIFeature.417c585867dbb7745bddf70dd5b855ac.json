@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MetamorphBeastShapeIIIFeature",
   "guid": "417c585867dbb7745bddf70dd5b855ac",

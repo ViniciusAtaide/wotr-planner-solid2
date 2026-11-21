@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundCheliaxianDiabolist",
   "guid": "67ab276984c26a645a7472091779d514",

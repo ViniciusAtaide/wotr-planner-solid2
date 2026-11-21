@@ -16,6 +16,7 @@
     "UndergroundChemistDiscovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "PreserveOrgans",
   "guid": "76b4bb8e54f3f5c418f421684c76ef4e",

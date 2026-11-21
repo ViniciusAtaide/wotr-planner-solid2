@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkaldCantripsFeature",
   "guid": "aea30d43abf590142a750e72db08df7b"

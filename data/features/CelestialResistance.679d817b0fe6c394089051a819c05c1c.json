@@ -5,6 +5,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CelestialResistance",
   "guid": "679d817b0fe6c394089051a819c05c1c",

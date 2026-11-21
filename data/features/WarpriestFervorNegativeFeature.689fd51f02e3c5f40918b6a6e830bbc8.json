@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WarpriestFervorNegativeFeature",
   "guid": "689fd51f02e3c5f40918b6a6e830bbc8",

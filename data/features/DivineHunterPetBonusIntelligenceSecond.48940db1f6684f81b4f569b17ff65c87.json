@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivineHunterPetBonusIntelligenceSecond",
   "guid": "48940db1f6684f81b4f569b17ff65c87",

@@ -112,6 +112,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerDragonBlueWanderingFeature",
   "guid": "fc28af77a2cc425f8efffcf19423ca36",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrunkenResilienceFeature",
   "guid": "4db82a5a352543b3842f63e2583a85f1",

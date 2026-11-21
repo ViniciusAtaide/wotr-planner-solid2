@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BlightbornElf",
   "guid": "2a300f4e0c13495bbde59160809fce7f",

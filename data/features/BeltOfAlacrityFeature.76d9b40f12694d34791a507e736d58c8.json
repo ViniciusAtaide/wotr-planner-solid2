@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "BeltOfAlacrityFeature",
   "guid": "76d9b40f12694d34791a507e736d58c8"

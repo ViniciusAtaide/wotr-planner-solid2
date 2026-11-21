@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GriffonheartShifterGriffonShapeFakeFeature",
   "guid": "1d3656c3090e48f59888d86ff7014acc",

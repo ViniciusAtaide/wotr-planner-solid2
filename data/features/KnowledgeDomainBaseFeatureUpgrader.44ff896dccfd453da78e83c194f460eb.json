@@ -38,6 +38,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KnowledgeDomainBaseFeatureUpgrader",
   "guid": "44ff896dccfd453da78e83c194f460eb",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanFlameSpiritBaseFlamingFeature",
   "guid": "6e2943709ff678b4db386b1a8e2018c2"

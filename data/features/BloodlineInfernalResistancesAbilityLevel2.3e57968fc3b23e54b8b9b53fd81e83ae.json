@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineInfernalResistancesAbilityLevel2",
   "guid": "3e57968fc3b23e54b8b9b53fd81e83ae",

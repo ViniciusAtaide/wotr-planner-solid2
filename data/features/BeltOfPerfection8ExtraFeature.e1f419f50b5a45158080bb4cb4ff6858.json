@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BeltOfPerfection8ExtraFeature",
   "guid": "e1f419f50b5a45158080bb4cb4ff6858"

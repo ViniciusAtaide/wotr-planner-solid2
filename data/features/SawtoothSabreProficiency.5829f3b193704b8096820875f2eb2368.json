@@ -24,6 +24,7 @@
     "ExoticWeaponProficiency"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SawtoothSabreProficiency",
   "guid": "5829f3b193704b8096820875f2eb2368",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 0,
   "assetName": "RingOfPyromaniaFeature",
   "guid": "3789253d5e8af5c42a22cd97ef4d9e65"

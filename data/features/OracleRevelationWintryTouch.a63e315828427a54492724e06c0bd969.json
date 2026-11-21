@@ -39,6 +39,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationWintryTouch",
   "guid": "a63e315828427a54492724e06c0bd969",

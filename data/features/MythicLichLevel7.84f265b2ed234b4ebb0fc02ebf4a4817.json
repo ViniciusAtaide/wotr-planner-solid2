@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "MythicLichLevel7",
   "guid": "84f265b2ed234b4ebb0fc02ebf4a4817"

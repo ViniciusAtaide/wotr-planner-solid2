@@ -16,6 +16,7 @@
     "ScaledFistKiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KiDiamondBodyFeature",
   "guid": "a8819b70975701b4e874b2f9862aac24",

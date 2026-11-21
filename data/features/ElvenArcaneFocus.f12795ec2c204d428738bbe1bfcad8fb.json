@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElvenArcaneFocus",
   "guid": "f12795ec2c204d428738bbe1bfcad8fb",

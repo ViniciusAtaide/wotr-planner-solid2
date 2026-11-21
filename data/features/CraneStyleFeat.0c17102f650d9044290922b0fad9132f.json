@@ -54,6 +54,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CraneStyleFeat",
   "guid": "0c17102f650d9044290922b0fad9132f",

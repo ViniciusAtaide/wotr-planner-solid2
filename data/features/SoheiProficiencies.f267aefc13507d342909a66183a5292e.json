@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SoheiProficiencies",
   "guid": "f267aefc13507d342909a66183a5292e",

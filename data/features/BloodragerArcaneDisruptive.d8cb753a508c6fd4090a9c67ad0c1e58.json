@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerArcaneDisruptive",
   "guid": "d8cb753a508c6fd4090a9c67ad0c1e58",

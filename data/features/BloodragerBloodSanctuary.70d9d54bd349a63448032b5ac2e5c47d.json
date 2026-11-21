@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerBloodSanctuary",
   "guid": "70d9d54bd349a63448032b5ac2e5c47d",

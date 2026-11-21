@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LivingGrimoireSacredWordPlus5",
   "guid": "2b590a953e544acf94c7a9a1e2b90b64",

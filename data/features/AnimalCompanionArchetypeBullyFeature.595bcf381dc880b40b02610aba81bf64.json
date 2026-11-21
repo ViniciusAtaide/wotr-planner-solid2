@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalCompanionArchetypeBullyFeature",
   "guid": "595bcf381dc880b40b02610aba81bf64"

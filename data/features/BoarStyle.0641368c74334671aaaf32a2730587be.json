@@ -29,6 +29,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BoarStyle",
   "guid": "0641368c74334671aaaf32a2730587be",

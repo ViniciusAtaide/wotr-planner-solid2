@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UniversalistSchoolQuickenFeature",
   "guid": "5e6fe442c2b4be24f969505cef85f61b",

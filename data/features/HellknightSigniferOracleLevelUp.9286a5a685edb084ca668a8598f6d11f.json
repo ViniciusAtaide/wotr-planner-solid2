@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "HellknightSigniferOracleLevelUp",
   "guid": "9286a5a685edb084ca668a8598f6d11f",

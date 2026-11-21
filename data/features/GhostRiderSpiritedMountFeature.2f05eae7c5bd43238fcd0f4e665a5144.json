@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GhostRiderSpiritedMountFeature",
   "guid": "2f05eae7c5bd43238fcd0f4e665a5144",

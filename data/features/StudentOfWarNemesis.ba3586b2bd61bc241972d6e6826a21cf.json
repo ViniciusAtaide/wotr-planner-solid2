@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StudentOfWarNemesis",
   "guid": "ba3586b2bd61bc241972d6e6826a21cf",

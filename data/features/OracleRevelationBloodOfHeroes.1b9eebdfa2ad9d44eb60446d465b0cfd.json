@@ -26,6 +26,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationBloodOfHeroes",
   "guid": "1b9eebdfa2ad9d44eb60446d465b0cfd",

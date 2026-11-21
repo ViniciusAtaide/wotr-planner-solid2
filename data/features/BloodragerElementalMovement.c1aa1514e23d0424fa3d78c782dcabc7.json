@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalMovement",
   "guid": "c1aa1514e23d0424fa3d78c782dcabc7",

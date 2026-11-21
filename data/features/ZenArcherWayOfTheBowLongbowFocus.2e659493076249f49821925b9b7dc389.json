@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ZenArcherWayOfTheBowLongbowFocus",
   "guid": "2e659493076249f49821925b9b7dc389",

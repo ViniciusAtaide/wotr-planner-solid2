@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DarknessBlessingMajorFeature",
   "guid": "13f4b8e669dd1934dab447480f1b8e48",

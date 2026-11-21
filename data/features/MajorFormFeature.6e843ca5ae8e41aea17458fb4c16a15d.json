@@ -64,6 +64,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MajorFormFeature",
   "guid": "6e843ca5ae8e41aea17458fb4c16a15d",

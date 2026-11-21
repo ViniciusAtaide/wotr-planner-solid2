@@ -29,6 +29,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImprovedDirtyTrick",
   "guid": "ed699d64870044b43bb5a7fbe3f29494",

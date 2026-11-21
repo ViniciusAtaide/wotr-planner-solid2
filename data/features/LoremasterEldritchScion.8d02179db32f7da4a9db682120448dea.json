@@ -23,6 +23,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterEldritchScion",
   "guid": "8d02179db32f7da4a9db682120448dea",

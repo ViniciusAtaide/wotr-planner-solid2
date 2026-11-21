@@ -24,6 +24,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RestlessSpirit",
   "guid": "3ca8c020bd814bc08b497b3d08067f6a",

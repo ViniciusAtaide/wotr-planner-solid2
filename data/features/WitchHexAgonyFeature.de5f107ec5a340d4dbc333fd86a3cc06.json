@@ -20,6 +20,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexAgonyFeature",
   "guid": "de5f107ec5a340d4dbc333fd86a3cc06",

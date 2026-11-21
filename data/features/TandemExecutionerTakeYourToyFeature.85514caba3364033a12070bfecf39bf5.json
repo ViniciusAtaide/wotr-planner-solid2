@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TandemExecutionerTakeYourToyFeature",
   "guid": "85514caba3364033a12070bfecf39bf5",

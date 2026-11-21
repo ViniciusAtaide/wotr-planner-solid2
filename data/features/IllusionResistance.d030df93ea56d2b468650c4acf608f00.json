@@ -5,6 +5,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "IllusionResistance",
   "guid": "d030df93ea56d2b468650c4acf608f00",

@@ -5,6 +5,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SorcerousReflexMythicFeat",
   "guid": "f6f9f99993f9a92438bd4ffbfbb71837",

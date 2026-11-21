@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TandemExecutionerTidbitFeature",
   "guid": "6b8eb3870131434da4391533a99c149d",

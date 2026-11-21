@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArtificeDomainBaseFeature",
   "guid": "01025d876ac28d349ac42d69ba462059",

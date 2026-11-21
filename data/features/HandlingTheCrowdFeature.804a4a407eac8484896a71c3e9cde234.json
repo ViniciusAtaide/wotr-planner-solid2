@@ -29,6 +29,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HandlingTheCrowdFeature",
   "guid": "804a4a407eac8484896a71c3e9cde234",

@@ -18,6 +18,7 @@
     "AnimalCompanion"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalCompanionFeatureTriceratops_PreorderBonus",
   "guid": "52c854f77105445a9457572ab5826c00",

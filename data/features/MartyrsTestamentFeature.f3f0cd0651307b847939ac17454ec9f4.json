@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "MartyrsTestamentFeature",
   "guid": "f3f0cd0651307b847939ac17454ec9f4"

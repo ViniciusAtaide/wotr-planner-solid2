@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BonesOfStoneFeature",
   "guid": "5d0b1fc437130424da8eb69f6913dadc",

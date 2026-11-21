@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellknightDisciplineFearsomeness",
   "guid": "57625b7729cf4244b977c84496e81cd7",

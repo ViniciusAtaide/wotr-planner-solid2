@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalEngineBurnoutFeature",
   "guid": "f7c534123e334f3a99c7683962936075",

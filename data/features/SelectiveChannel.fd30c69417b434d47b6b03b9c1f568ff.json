@@ -91,6 +91,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SelectiveChannel",
   "guid": "fd30c69417b434d47b6b03b9c1f568ff",

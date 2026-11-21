@@ -29,6 +29,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CleavingFinish",
   "guid": "59bd93899149fa44687ff4121389b3a9",

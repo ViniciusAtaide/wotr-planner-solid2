@@ -77,6 +77,7 @@
     "AzataSuperpowerAbilities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AllSkilledFeature",
   "guid": "f3bc6f9c855b2fb4e9aea364b8163aca",

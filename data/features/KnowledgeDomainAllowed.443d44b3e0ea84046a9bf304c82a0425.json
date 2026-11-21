@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KnowledgeDomainAllowed",
   "guid": "443d44b3e0ea84046a9bf304c82a0425"

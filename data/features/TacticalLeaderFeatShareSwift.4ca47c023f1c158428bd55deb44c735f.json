@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TacticalLeaderFeatShareSwift",
   "guid": "4ca47c023f1c158428bd55deb44c735f",

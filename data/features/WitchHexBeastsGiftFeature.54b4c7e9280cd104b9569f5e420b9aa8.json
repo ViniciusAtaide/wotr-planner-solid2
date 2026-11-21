@@ -20,6 +20,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexBeastsGiftFeature",
   "guid": "54b4c7e9280cd104b9569f5e420b9aa8",

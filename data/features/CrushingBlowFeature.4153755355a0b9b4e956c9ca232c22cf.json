@@ -36,6 +36,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CrushingBlowFeature",
   "guid": "4153755355a0b9b4e956c9ca232c22cf",

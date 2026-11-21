@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AuraOfFaithFeature",
   "guid": "0437f4af5ad49b544bccf48aa7a51319",

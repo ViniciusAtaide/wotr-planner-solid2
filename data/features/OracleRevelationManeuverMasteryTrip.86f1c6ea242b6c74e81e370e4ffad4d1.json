@@ -37,6 +37,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationManeuverMasteryTrip",
   "guid": "86f1c6ea242b6c74e81e370e4ffad4d1",

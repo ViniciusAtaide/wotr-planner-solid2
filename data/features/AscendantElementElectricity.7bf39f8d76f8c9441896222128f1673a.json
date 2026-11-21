@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AscendantElementElectricity",
   "guid": "7bf39f8d76f8c9441896222128f1673a",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TransmutationPhysicalEnhancementFeature",
   "guid": "93919f8ce64dc5a4cbf058a486a44a1b",

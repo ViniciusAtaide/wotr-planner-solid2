@@ -25,6 +25,7 @@
     "MysticTheurgeDivineSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "LevelEntries": [
     {
       "Level": 1,

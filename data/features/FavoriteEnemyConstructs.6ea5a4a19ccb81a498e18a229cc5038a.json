@@ -5,6 +5,7 @@
     "FavoriteEnemy"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 8,
   "assetName": "FavoriteEnemyConstructs",
   "guid": "6ea5a4a19ccb81a498e18a229cc5038a",

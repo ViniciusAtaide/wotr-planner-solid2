@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AzataSummonTier5",
   "guid": "27e5499ea2a23774db7ed2bca892962c"

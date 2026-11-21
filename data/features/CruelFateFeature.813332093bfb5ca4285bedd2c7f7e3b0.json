@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 100,
   "assetName": "CruelFateFeature",
   "guid": "813332093bfb5ca4285bedd2c7f7e3b0"

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MightOfWyrmsElectricity",
   "guid": "ed321c33edae32c4f8cfb20046eb593b",

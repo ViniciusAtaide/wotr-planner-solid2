@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWoodlandGraceFeature",
   "guid": "0217aaa0c3f74dc39643c3e841636625",

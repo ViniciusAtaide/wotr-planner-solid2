@@ -34,6 +34,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlagueHexStrengthImpairedFeature",
   "guid": "a24615f1002f4dd78cc1ae8bc4087a45",

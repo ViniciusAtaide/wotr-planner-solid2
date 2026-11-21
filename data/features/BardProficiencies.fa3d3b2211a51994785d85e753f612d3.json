@@ -26,6 +26,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BardProficiencies",
   "guid": "fa3d3b2211a51994785d85e753f612d3",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "ArmoredBattlemageArmorTraining",
   "guid": "7be523d531bb17449bdba98df0e197ff",

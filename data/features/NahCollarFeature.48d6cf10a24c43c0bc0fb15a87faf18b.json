@@ -25,6 +25,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NahCollarFeature",
   "guid": "48d6cf10a24c43c0bc0fb15a87faf18b"

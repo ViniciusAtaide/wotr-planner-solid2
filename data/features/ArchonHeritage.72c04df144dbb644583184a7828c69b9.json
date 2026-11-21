@@ -42,6 +42,7 @@
     "AasimarHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArchonHeritage",
   "guid": "72c04df144dbb644583184a7828c69b9",

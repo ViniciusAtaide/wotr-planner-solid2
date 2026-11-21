@@ -23,6 +23,7 @@
     "HellknightSigniferSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HellknightSigniferWitchLeyLineGuardian",
   "guid": "fa000bb03393ad34db8bb20f8d09d3b5",

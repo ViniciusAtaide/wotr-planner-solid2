@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "YouAreWhatYouEatFeature",
   "guid": "67c9f0fa694b475b8332e17d0c1fb6d1",

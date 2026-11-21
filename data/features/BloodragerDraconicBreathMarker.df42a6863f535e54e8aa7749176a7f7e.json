@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "BloodragerDraconicBreathMarker",
   "guid": "df42a6863f535e54e8aa7749176a7f7e"

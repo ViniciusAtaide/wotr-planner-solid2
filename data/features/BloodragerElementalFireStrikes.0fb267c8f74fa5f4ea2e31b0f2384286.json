@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalFireStrikes",
   "guid": "0fb267c8f74fa5f4ea2e31b0f2384286",

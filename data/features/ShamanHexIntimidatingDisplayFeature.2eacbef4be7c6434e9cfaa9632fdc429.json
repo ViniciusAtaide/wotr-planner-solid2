@@ -23,6 +23,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexIntimidatingDisplayFeature",
   "guid": "2eacbef4be7c6434e9cfaa9632fdc429",

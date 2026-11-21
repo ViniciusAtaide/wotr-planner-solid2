@@ -53,6 +53,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PerfectStrikeFeature",
   "guid": "7477e2e0b72f4ce4fb674f4b21d5e81d",

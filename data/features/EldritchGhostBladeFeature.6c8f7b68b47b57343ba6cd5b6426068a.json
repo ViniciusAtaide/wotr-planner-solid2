@@ -22,6 +22,7 @@
     "EldritchScionArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchGhostBladeFeature",
   "guid": "6c8f7b68b47b57343ba6cd5b6426068a",

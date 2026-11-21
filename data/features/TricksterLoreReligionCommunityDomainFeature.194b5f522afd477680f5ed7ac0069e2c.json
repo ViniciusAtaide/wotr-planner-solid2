@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterLoreReligionCommunityDomainFeature",
   "guid": "194b5f522afd477680f5ed7ac0069e2c",

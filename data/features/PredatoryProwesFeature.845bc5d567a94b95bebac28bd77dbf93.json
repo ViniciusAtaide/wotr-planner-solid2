@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PredatoryProwesFeature",
   "guid": "845bc5d567a94b95bebac28bd77dbf93",

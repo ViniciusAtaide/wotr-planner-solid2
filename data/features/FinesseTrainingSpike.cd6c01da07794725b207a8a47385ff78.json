@@ -44,6 +44,7 @@
     "FinesseTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinesseTrainingSpike",
   "guid": "cd6c01da07794725b207a8a47385ff78",

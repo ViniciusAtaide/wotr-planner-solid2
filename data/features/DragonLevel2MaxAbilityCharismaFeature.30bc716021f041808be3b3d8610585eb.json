@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonLevel2MaxAbilityCharismaFeature",
   "guid": "30bc716021f041808be3b3d8610585eb"

@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkillFocusLoreNatureMythicFeat",
   "guid": "1ca4a55c495cc2348a903cd11beffef3",

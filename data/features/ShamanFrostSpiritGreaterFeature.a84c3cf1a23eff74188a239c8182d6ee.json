@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanFrostSpiritGreaterFeature",
   "guid": "a84c3cf1a23eff74188a239c8182d6ee",

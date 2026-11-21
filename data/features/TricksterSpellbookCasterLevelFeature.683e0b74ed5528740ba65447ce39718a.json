@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "TricksterSpellbookCasterLevelFeature",
   "guid": "683e0b74ed5528740ba65447ce39718a"

@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "MysticTheurgeShamanLevelUp",
   "guid": "5454910ae7ca9234cba35df073ed5116",

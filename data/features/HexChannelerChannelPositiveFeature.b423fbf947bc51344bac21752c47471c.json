@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HexChannelerChannelPositiveFeature",
   "guid": "b423fbf947bc51344bac21752c47471c",

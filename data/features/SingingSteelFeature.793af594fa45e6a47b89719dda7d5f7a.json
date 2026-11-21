@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SingingSteelFeature",
   "guid": "793af594fa45e6a47b89719dda7d5f7a"

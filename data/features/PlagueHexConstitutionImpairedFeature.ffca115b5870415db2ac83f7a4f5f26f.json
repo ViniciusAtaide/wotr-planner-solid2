@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlagueHexConstitutionImpairedFeature",
   "guid": "ffca115b5870415db2ac83f7a4f5f26f",

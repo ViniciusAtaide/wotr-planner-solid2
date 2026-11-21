@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SoheiDevotedGuardianFeature",
   "guid": "dddd4b0d41839fc4d9af3848c67ffbe0",

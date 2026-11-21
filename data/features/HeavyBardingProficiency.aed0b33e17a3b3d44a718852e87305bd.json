@@ -57,6 +57,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HeavyBardingProficiency",
   "guid": "aed0b33e17a3b3d44a718852e87305bd",

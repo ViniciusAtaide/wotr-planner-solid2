@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "ShieldOfChastiseFeature",
   "guid": "21ed093c157846c59792166a0becab50"

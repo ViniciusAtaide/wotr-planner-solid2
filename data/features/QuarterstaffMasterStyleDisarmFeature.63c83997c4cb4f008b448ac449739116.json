@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "QuarterstaffMasterStyleDisarmFeature",
   "guid": "63c83997c4cb4f008b448ac449739116",

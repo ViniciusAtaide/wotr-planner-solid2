@@ -14,6 +14,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SlipperyMind",
   "guid": "a14e8c1801911334f96d410f10eab7bf",

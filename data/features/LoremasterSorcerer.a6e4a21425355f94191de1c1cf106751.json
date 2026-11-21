@@ -38,6 +38,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterSorcerer",
   "guid": "a6e4a21425355f94191de1c1cf106751",

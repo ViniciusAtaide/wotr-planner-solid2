@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DaredevilMobilityBOnus",
   "guid": "e1c56555ece730440adfe2736e056bfd",

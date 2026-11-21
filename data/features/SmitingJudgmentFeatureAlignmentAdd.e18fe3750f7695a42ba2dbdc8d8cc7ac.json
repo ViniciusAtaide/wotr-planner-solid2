@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SmitingJudgmentFeatureAlignmentAdd",
   "guid": "e18fe3750f7695a42ba2dbdc8d8cc7ac"

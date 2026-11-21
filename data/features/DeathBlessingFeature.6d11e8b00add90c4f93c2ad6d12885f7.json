@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DeathBlessingFeature",
   "guid": "6d11e8b00add90c4f93c2ad6d12885f7",

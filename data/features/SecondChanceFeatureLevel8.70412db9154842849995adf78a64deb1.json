@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SecondChanceFeatureLevel8",
   "guid": "70412db9154842849995adf78a64deb1",

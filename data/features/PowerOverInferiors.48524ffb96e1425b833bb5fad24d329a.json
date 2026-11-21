@@ -31,6 +31,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PowerOverInferiors",
   "guid": "48524ffb96e1425b833bb5fad24d329a",

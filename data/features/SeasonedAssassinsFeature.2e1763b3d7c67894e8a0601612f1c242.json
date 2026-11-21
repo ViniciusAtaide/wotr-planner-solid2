@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SeasonedAssassinsFeature",
   "guid": "2e1763b3d7c67894e8a0601612f1c242"

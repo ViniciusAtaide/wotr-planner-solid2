@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanFrostSpiritGreaterResistanceFeature",
   "guid": "475d3adba7b726f4e9a91c0af15444af"

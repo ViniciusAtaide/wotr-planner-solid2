@@ -23,6 +23,7 @@
     "EldritchKnightSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "EldritchKnightArcanistNatureMage",
   "guid": "7fb0b603d7d1470ab843dc3d4299732f",

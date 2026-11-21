@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SableMarineSableStrikeFeature",
   "guid": "935710889d644a35bce50e86f2bf8ff1",

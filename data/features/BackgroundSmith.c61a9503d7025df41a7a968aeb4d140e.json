@@ -37,6 +37,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundSmith",
   "guid": "c61a9503d7025df41a7a968aeb4d140e",

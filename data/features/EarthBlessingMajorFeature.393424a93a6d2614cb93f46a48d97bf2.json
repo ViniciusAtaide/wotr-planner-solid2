@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EarthBlessingMajorFeature",
   "guid": "393424a93a6d2614cb93f46a48d97bf2",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BlackenedCurseFeatureLevel1",
   "guid": "0b6eeed955daedd4896ef104cfc2afb9",

@@ -20,6 +20,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpellBane",
   "guid": "d2d1b1f27bdf4ddfa5bf8b7244786ff9",

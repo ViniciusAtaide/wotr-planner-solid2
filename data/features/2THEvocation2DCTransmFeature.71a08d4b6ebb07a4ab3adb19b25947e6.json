@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "2THEvocation2DCTransmFeature",
   "guid": "71a08d4b6ebb07a4ab3adb19b25947e6"

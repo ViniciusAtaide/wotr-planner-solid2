@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineCelestialSpellLevel3",
   "guid": "2daeecf78fb226243ac695e158971d04",

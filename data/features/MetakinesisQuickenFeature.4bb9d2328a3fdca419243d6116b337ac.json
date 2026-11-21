@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MetakinesisQuickenFeature",
   "guid": "4bb9d2328a3fdca419243d6116b337ac",

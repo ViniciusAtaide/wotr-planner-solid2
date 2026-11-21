@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DLC3_BrokenTricksterPoisonImmunityFeature",
   "guid": "fc678e0a5d014cd7b221e0a17df8b4e6",

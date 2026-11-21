@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MasterSlayerFeature",
   "guid": "a26c0279a423fc94cabeea898f4d9f8a",

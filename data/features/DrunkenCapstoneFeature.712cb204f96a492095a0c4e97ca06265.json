@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrunkenCapstoneFeature",
   "guid": "712cb204f96a492095a0c4e97ca06265",

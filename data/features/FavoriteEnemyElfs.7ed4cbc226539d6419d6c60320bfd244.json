@@ -5,6 +5,7 @@
     "FavoriteEnemy"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 8,
   "assetName": "FavoriteEnemyElfs",
   "guid": "7ed4cbc226539d6419d6c60320bfd244",

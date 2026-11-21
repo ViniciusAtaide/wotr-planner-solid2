@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalEarthResistanceAbilityLevel2",
   "guid": "11df2f786d8b3a748a372866a380190a",

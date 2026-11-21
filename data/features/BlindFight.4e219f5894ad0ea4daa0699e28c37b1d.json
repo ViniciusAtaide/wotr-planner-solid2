@@ -6,6 +6,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BlindFight",
   "guid": "4e219f5894ad0ea4daa0699e28c37b1d",

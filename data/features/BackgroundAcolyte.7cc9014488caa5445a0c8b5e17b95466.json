@@ -26,6 +26,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundAcolyte",
   "guid": "7cc9014488caa5445a0c8b5e17b95466",

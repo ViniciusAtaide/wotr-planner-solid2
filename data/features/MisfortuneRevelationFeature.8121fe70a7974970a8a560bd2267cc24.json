@@ -22,6 +22,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MisfortuneRevelationFeature",
   "guid": "8121fe70a7974970a8a560bd2267cc24",

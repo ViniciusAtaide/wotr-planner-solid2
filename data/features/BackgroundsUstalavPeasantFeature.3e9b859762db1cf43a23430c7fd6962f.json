@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundsUstalavPeasantFeature",
   "guid": "3e9b859762db1cf43a23430c7fd6962f"

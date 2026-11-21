@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeGriffonFeatureLevelUp1",
   "guid": "1f99fbb3b1b445d6bfbaf3588af171cf"

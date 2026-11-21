@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "DelameresArmorFeature",
   "guid": "933f10f4306b6204ea2a8c98b92a568f"

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TheGreatestTrickFeature",
   "guid": "bee1756152e94437820bb409d616700c",

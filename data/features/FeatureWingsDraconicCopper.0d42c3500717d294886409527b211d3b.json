@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FeatureWingsDraconicCopper",
   "guid": "0d42c3500717d294886409527b211d3b",

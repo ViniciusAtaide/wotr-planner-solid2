@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellboundCurseFeatureLevel1",
   "guid": "0ff5141fe79c43345a1c8ff72b75923d",

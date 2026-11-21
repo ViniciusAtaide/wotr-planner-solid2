@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalColdStrikes",
   "guid": "3e87f0f796a4eeb409a6998eedc1a5ef",

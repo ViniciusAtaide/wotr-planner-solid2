@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "MysticTheurgePaladinLevelUp",
   "guid": "d96bb38e6122d2746818d2bcea2b8193",

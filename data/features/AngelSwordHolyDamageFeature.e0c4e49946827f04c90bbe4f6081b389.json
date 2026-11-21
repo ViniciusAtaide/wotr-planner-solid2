@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelSwordHolyDamageFeature",
   "guid": "e0c4e49946827f04c90bbe4f6081b389",

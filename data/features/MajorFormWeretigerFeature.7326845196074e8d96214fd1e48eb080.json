@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MajorFormWeretigerFeature",
   "guid": "7326845196074e8d96214fd1e48eb080",

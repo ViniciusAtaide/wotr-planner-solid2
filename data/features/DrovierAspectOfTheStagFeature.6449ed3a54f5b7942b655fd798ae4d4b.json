@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrovierAspectOfTheStagFeature",
   "guid": "6449ed3a54f5b7942b655fd798ae4d4b",

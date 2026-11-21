@@ -30,6 +30,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "BloodlineElementalAirResistanceAbilityAdd",
   "guid": "6472c51065d734e4b99ac56694925920",

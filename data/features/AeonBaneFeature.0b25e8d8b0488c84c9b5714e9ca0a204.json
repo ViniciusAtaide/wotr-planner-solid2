@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonBaneFeature",
   "guid": "0b25e8d8b0488c84c9b5714e9ca0a204",

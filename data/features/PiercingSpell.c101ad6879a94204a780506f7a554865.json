@@ -15,6 +15,7 @@
     "WizardFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PiercingSpell",
   "guid": "c101ad6879a94204a780506f7a554865",

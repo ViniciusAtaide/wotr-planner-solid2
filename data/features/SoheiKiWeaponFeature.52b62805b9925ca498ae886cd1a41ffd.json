@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SoheiKiWeaponFeature",
   "guid": "52b62805b9925ca498ae886cd1a41ffd",

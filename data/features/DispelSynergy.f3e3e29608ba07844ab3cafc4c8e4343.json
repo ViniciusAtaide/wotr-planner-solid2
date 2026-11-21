@@ -5,6 +5,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DispelSynergy",
   "guid": "f3e3e29608ba07844ab3cafc4c8e4343",

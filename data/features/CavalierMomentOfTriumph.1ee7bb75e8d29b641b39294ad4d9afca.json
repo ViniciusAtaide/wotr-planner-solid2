@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierMomentOfTriumph",
   "guid": "1ee7bb75e8d29b641b39294ad4d9afca",

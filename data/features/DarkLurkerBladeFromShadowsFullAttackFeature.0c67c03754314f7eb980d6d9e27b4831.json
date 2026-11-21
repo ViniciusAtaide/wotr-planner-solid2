@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DarkLurkerBladeFromShadowsFullAttackFeature",
   "guid": "0c67c03754314f7eb980d6d9e27b4831",

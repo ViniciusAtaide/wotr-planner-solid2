@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TwoHandedFighterBackswing",
   "guid": "1bbda0dab2f8dc540a647bdc5f0e59ce",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SunDomainBaseFeature",
   "guid": "3d8e38c9ed54931469281ab0cec506e9",

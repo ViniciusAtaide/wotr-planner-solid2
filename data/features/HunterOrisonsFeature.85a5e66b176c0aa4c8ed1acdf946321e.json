@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HunterOrisonsFeature",
   "guid": "85a5e66b176c0aa4c8ed1acdf946321e",

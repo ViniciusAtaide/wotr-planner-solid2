@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MythicStartingClassFinished",
   "guid": "bef12729fa3f9b34488634f61751e295",

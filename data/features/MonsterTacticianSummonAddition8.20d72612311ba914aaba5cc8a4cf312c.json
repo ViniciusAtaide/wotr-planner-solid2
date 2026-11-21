@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MonsterTacticianSummonAddition8",
   "guid": "20d72612311ba914aaba5cc8a4cf312c"

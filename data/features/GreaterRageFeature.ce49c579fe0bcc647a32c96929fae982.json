@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreaterRageFeature",
   "guid": "ce49c579fe0bcc647a32c96929fae982",

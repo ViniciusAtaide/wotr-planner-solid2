@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StudentOfWarAdditionalSkillKnowledgeArcane",
   "guid": "384e5e17b80f409459ae855c8702e9a4",

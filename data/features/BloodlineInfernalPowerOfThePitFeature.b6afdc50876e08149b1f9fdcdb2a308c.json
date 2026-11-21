@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineInfernalPowerOfThePitFeature",
   "guid": "b6afdc50876e08149b1f9fdcdb2a308c",

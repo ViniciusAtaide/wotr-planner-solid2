@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkillFocusLoreReligion",
   "guid": "c541f80af8d0af4498e1abb6025780c7",

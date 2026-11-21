@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerArcaneTrueSpellFeature",
   "guid": "1d5079fa59fe01a4d8b822b790876e4d",

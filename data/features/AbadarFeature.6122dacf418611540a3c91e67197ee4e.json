@@ -135,6 +135,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AbadarFeature",
   "guid": "6122dacf418611540a3c91e67197ee4e",

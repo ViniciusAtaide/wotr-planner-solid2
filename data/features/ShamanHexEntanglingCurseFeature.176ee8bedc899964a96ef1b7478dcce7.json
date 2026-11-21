@@ -34,6 +34,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexEntanglingCurseFeature",
   "guid": "176ee8bedc899964a96ef1b7478dcce7",

@@ -29,6 +29,7 @@
     "TeamworkFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "VolleyFireFeature",
   "guid": "c4b555225f565bb40a855c1bfeeff07e",

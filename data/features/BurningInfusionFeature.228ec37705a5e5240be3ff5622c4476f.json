@@ -27,6 +27,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BurningInfusionFeature",
   "guid": "228ec37705a5e5240be3ff5622c4476f",

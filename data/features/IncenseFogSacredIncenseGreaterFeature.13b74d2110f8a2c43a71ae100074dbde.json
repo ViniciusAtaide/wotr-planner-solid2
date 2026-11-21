@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "IncenseFogSacredIncenseGreaterFeature",
   "guid": "13b74d2110f8a2c43a71ae100074dbde",

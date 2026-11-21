@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HelmOfFearlessVanguardFeature",
   "guid": "37e5ceb76a8e44768e2eaeaed2c0d0df"

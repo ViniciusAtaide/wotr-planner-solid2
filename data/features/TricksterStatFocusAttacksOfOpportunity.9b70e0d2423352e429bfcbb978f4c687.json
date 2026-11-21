@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterStatFocusAttacksOfOpportunity",
   "guid": "9b70e0d2423352e429bfcbb978f4c687",

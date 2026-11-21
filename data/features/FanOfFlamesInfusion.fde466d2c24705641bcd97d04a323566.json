@@ -25,6 +25,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FanOfFlamesInfusion",
   "guid": "fde466d2c24705641bcd97d04a323566",

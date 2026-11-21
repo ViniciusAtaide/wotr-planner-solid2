@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CloakOfLoneWolfFeature",
   "guid": "68ae7033fa554d0cbf8e34101676bd28"

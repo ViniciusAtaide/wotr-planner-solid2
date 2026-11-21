@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlagueHexDexterityWeakenedFeature",
   "guid": "3cd072db976f468b85de017dd3c832be",

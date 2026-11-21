@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MartyrAuraMasteryFeature",
   "guid": "1b7118c3857bea643882335a0fd29e67",

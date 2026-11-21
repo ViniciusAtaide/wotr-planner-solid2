@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ZenArcherKiArrowsFeatureLevel8",
   "guid": "fe8f6067014cc7c4db0606c348aed049",

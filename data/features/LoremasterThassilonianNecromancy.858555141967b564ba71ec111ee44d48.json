@@ -21,6 +21,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterThassilonianNecromancy",
   "guid": "858555141967b564ba71ec111ee44d48",

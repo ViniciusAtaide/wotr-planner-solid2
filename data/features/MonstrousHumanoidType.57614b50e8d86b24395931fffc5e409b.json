@@ -5,6 +5,7 @@
     "CreatureType"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MonstrousHumanoidType",
   "guid": "57614b50e8d86b24395931fffc5e409b",

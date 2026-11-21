@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FlailProficiency",
   "guid": "6d273f46bce2e0f47a0958810dc4c7d9",

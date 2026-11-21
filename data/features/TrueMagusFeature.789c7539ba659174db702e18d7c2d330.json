@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TrueMagusFeature",
   "guid": "789c7539ba659174db702e18d7c2d330",

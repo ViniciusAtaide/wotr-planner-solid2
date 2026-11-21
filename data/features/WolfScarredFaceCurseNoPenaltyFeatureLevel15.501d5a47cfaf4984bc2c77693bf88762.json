@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WolfScarredFaceCurseNoPenaltyFeatureLevel15",
   "guid": "501d5a47cfaf4984bc2c77693bf88762"

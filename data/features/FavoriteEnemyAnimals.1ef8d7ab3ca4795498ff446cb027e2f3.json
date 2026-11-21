@@ -5,6 +5,7 @@
     "FavoriteEnemy"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 8,
   "assetName": "FavoriteEnemyAnimals",
   "guid": "1ef8d7ab3ca4795498ff446cb027e2f3",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Artifact_RingOfSummonsFeature",
   "guid": "1df2e928482541f7bd60274a1938d34e"

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MadnessDomainBaseFeature",
   "guid": "84bf46e8086dbdc438bac875ab0e5c2f",

@@ -41,6 +41,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FoxfireInfusionFeature",
   "guid": "ae21c5369252ec74aa1fee89f1bc1b21",

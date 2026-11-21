@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MagicDomainBaseFeature",
   "guid": "90f939eb611ac3743b5de3dd00135e22",

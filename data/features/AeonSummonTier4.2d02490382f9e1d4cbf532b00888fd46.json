@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonSummonTier4",
   "guid": "2d02490382f9e1d4cbf532b00888fd46"

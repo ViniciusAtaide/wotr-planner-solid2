@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RobeOfMephistophelesFeature",
   "guid": "c8a8f96377db44c193e9d6f77d3aea2a"

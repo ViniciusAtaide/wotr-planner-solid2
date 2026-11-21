@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StandardBearerBannerOfSolaceFeature",
   "guid": "859ec9d911cecf5438dc93ca3f88fa5d",

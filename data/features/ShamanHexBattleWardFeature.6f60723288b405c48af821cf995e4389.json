@@ -34,6 +34,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexBattleWardFeature",
   "guid": "6f60723288b405c48af821cf995e4389",

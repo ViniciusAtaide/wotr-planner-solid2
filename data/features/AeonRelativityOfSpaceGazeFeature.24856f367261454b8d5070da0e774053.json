@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonRelativityOfSpaceGazeFeature",
   "guid": "24856f367261454b8d5070da0e774053",

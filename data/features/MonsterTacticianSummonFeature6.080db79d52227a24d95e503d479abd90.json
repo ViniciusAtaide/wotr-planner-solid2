@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MonsterTacticianSummonFeature6",
   "guid": "080db79d52227a24d95e503d479abd90",

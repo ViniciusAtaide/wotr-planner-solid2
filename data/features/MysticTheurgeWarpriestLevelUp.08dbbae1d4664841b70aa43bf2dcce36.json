@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "MysticTheurgeWarpriestLevelUp",
   "guid": "08dbbae1d4664841b70aa43bf2dcce36",

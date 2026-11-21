@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationFormOfFlame4",
   "guid": "bcb10dd685bd6774f87dfdb8aacdb257"

@@ -15,6 +15,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ExtendSpellFeat",
   "guid": "f180e72e4a9cbaa4da8be9bc958132ef",

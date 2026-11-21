@@ -5,6 +5,7 @@
     "KineticBlast"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "WaterBlastFeature",
   "guid": "560887b5187098b428364de03e628b53",

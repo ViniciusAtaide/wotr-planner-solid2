@@ -58,6 +58,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShieldBashFeature",
   "guid": "121811173a614534e8720d7550aae253",

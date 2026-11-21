@@ -15,6 +15,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HeightenSpellFeat",
   "guid": "2f5d1e705c7967546b72ad8218ccf99c",

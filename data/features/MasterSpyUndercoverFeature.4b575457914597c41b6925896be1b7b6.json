@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MasterSpyUndercoverFeature",
   "guid": "4b575457914597c41b6925896be1b7b6",

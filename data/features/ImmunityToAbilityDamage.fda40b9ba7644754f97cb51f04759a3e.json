@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImmunityToAbilityDamage",
   "guid": "fda40b9ba7644754f97cb51f04759a3e",

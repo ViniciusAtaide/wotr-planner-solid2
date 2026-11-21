@@ -50,6 +50,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UnswornShamanFlameSpiritWanderingFeature 1",
   "guid": "19cc6629ba73f634d8f74a46fb24041f",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PrimalDruidEnlargeFeature",
   "guid": "9b18d052ac2040f9a68f0c36bf390ce4",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TacticalLeaderBattleAcumenFeature",
   "guid": "959a8bdc83b0a3948a3902f9882c522a",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WildShapeElementalFeatureAddLarge",
   "guid": "e66154511a6f9fc49a9de644bd8922db",

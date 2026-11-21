@@ -44,6 +44,7 @@
     "KitsuneHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KitsuneHeritageKeen",
   "guid": "d6bc49651fbaa2944bba6e2e5a1720ff",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MightOfWyrmsAcid",
   "guid": "d9669e30f6f0eeb498d9b3dbe6e348f7",

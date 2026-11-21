@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerArcaneSpell10",
   "guid": "8a9d4cfc80b4bf441b61b25c69a5a539",

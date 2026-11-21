@@ -5,6 +5,7 @@
     "LichSkeletalUpgrade"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LichSkeletalClericTierI",
   "guid": "4033008a4c7fc814aad708e80cf50c37",

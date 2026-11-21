@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrunkenCourageFeature",
   "guid": "479dd8ad30eb433b9ad8a7fbaedd2fd9",

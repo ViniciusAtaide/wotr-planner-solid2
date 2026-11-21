@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "AnimalCompanionBondBonus",
   "guid": "fd055d1580284b0db077af5282eadb36",

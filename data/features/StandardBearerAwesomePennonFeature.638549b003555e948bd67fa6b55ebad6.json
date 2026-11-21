@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StandardBearerAwesomePennonFeature",
   "guid": "638549b003555e948bd67fa6b55ebad6",

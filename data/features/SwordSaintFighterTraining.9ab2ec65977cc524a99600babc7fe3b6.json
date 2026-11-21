@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SwordSaintFighterTraining",
   "guid": "9ab2ec65977cc524a99600babc7fe3b6",

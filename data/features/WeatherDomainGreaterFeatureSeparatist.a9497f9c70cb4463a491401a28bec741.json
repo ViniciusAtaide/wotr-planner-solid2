@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WeatherDomainGreaterFeatureSeparatist",
   "guid": "a9497f9c70cb4463a491401a28bec741",

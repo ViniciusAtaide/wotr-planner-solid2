@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LightCrossbowProficiency",
   "guid": "3d96feeabdfb1ff45b63af77b545813f",

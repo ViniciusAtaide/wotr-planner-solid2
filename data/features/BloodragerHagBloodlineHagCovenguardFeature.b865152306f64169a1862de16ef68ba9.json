@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerHagBloodlineHagCovenguardFeature",
   "guid": "b865152306f64169a1862de16ef68ba9",

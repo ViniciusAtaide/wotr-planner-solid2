@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "BlizzardBlastFeature",
   "guid": "52292a32bb5d0ab45a86621bac2c4c9a",

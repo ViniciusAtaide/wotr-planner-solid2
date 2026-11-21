@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonClawsFeature",
   "guid": "59d3a1066fc5b794f912cb168ba7bf76",

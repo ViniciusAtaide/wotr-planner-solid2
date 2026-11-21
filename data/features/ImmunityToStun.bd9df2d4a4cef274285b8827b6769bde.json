@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImmunityToStun",
   "guid": "bd9df2d4a4cef274285b8827b6769bde",

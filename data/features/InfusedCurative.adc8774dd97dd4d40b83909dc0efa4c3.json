@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InfusedCurative",
   "guid": "adc8774dd97dd4d40b83909dc0efa4c3",

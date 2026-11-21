@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SunderMythicFeat",
   "guid": "3b19ac096f4de324daf40590e274102a",

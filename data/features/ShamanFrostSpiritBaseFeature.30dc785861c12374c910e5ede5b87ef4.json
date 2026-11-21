@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanFrostSpiritBaseFeature",
   "guid": "30dc785861c12374c910e5ede5b87ef4",

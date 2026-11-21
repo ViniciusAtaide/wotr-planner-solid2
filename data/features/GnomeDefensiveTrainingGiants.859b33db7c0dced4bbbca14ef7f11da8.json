@@ -5,6 +5,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GnomeDefensiveTrainingGiants",
   "guid": "859b33db7c0dced4bbbca14ef7f11da8",

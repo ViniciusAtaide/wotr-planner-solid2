@@ -18,6 +18,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WeaponFinesse",
   "guid": "90e54424d682d104ab36436bd527af09",

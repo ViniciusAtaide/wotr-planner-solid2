@@ -13,6 +13,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChangeShapeKitsune",
   "guid": "88063b0ec1cbc8b499e313cde36a8519",

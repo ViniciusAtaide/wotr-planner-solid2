@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "GlovesOfCollidingElementsFeature",
   "guid": "35f550e08d357d34080daf8e6595604e"

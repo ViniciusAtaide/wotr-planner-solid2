@@ -47,6 +47,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BashingFinish",
   "guid": "0b442a7b4aa598d4e912a4ecee0500ff",

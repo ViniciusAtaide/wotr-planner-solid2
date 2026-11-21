@@ -44,6 +44,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpiritWardenRestlessMagic",
   "guid": "60ee27f8a3e105b45a8c674a6433817e",

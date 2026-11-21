@@ -23,6 +23,7 @@
     "MysticTheurgeArcaneSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "MysticTheurgeEmpyrealSorcerer",
   "guid": "fb1da68e5b7e2794c84f64c5b7e5980e",

@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SacredWeaponEnchantPlus5",
   "guid": "5fffe6a74adb1b742a8ebf64b8bb90fb",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DeathbedServantFeature",
   "guid": "b5540cc5cf7d453191021755d94254b8"

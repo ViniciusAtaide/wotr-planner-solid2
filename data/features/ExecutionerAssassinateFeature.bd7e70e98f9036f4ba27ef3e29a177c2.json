@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ExecutionerAssassinateFeature",
   "guid": "bd7e70e98f9036f4ba27ef3e29a177c2",

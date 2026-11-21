@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HeavyFlailProficiency",
   "guid": "a22e30bd35fbb704cab2d7e3c00717c1",

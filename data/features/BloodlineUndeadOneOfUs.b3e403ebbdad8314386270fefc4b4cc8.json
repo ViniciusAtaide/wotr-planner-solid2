@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "BloodlineUndeadOneOfUs",
   "guid": "b3e403ebbdad8314386270fefc4b4cc8",

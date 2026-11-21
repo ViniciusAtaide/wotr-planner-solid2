@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InsightfulContemplationSongFeature",
   "guid": "7549a18f454afe24c8f3b3ec7efffee2",

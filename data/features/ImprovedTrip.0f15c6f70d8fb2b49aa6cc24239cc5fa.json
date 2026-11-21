@@ -29,6 +29,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImprovedTrip",
   "guid": "0f15c6f70d8fb2b49aa6cc24239cc5fa",

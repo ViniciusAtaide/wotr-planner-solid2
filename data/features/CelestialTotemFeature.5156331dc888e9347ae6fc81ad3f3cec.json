@@ -49,6 +49,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CelestialTotemFeature",
   "guid": "5156331dc888e9347ae6fc81ad3f3cec",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "ImprovedReaction",
   "guid": "d1b7dd3736ca41446aaff9f253768d1d",

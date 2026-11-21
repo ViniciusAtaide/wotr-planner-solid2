@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WeatherDomainBaseFeature",
   "guid": "1c37869ee06ca33459f16f23f4969e7d",

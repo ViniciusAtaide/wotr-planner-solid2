@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EvilDomainBaseFeatureSeparatist",
   "guid": "10e46db6c6994f43a497ee264f206afd",

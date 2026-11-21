@@ -14,6 +14,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FurysFall",
   "guid": "0fc1ed8532168f74a9441bd17ad59e66",

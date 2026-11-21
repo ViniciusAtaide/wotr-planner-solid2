@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "GatherPowerFeature",
   "guid": "0601925a028b788469365d5f8f39e14a",

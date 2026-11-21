@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DiscipleOfThePikeMonsterHunter",
   "guid": "9dbbd23461fbfa64fb7317c430a6feff",

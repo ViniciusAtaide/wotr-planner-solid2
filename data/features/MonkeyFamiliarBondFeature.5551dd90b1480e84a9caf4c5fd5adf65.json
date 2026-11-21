@@ -27,6 +27,7 @@
     "Familiar"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MonkeyFamiliarBondFeature",
   "guid": "5551dd90b1480e84a9caf4c5fd5adf65",

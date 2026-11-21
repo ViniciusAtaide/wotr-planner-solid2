@@ -10,6 +10,7 @@
     "MagusArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WandMastery",
   "guid": "1b94043744e83494c8a083319e1602f3",

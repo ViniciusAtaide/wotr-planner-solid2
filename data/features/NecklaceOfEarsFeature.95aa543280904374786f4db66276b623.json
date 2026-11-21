@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 5,
   "assetName": "NecklaceOfEarsFeature",
   "guid": "95aa543280904374786f4db66276b623"

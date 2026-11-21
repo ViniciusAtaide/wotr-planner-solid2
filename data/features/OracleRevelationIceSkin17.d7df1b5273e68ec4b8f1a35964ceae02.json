@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationIceSkin17",
   "guid": "d7df1b5273e68ec4b8f1a35964ceae02"

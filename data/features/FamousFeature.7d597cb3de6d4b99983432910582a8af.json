@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FamousFeature",
   "guid": "7d597cb3de6d4b99983432910582a8af",

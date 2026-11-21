@@ -30,6 +30,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationResistLifeFeatureUpgrade1",
   "guid": "742c9651e88d4b3387a8692a6227ed7d"

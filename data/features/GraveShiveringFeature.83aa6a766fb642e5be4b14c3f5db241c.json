@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GraveShiveringFeature",
   "guid": "83aa6a766fb642e5be4b14c3f5db241c"

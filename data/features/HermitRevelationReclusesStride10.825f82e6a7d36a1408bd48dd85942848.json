@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HermitRevelationReclusesStride10",
   "guid": "825f82e6a7d36a1408bd48dd85942848"

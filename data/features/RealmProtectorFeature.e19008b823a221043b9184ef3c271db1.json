@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RealmProtectorFeature",
   "guid": "e19008b823a221043b9184ef3c271db1",

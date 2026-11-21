@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "LoremasterClericLevelUp",
   "guid": "3357f95de6da7ce4fb1817bc5ad44d6d",

@@ -25,6 +25,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MagicalTail5",
   "guid": "044cd84818c36854abf61064ade542a1",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnhancedMobility",
   "guid": "3202d0c7f84303c43935df57a1f804af",

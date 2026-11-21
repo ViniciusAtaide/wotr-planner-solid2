@@ -68,6 +68,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShaitanEarthblastFeature",
   "guid": "204a749f60f443e29fbb9e8f6da0a14d",

@@ -23,6 +23,7 @@
     "EldritchKnightSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "EldritchKnightWitchLeyLineGuardian",
   "guid": "7185f1d5ef9b85e4ca0a46690acb9621",

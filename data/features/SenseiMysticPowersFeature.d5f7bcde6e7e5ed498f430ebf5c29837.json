@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SenseiMysticPowersFeature",
   "guid": "d5f7bcde6e7e5ed498f430ebf5c29837",

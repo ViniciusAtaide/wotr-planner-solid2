@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellsDecreeFeature",
   "guid": "442e199eca0ab2f4dbdcf7147fa2c399",

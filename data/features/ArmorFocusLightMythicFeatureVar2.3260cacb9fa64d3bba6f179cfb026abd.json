@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArmorFocusLightMythicFeatureVar2",
   "guid": "3260cacb9fa64d3bba6f179cfb026abd",

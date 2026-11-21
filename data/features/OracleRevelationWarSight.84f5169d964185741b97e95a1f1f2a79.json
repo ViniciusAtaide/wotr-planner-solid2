@@ -58,6 +58,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationWarSight",
   "guid": "84f5169d964185741b97e95a1f1f2a79",

@@ -64,6 +64,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonDiscipleBiteFeatureSecond",
   "guid": "01971351119121d429ecf62c2ab94de3",

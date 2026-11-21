@@ -13,6 +13,7 @@
     "DefensivePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RenewedDefenseDefensivePower",
   "guid": "325a007b2f633a1428ee1edfaf3e860c",

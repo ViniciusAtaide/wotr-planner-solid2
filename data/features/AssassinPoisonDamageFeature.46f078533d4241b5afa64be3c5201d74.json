@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AssassinPoisonDamageFeature",
   "guid": "46f078533d4241b5afa64be3c5201d74",

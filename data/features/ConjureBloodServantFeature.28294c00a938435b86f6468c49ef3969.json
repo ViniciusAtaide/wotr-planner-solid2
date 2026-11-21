@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ConjureBloodServantFeature",
   "guid": "28294c00a938435b86f6468c49ef3969",

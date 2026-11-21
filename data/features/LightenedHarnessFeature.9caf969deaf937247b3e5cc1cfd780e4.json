@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LightenedHarnessFeature",
   "guid": "9caf969deaf937247b3e5cc1cfd780e4"

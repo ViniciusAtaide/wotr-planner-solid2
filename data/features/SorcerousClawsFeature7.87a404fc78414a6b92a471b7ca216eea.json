@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SorcerousClawsFeature7",
   "guid": "87a404fc78414a6b92a471b7ca216eea"

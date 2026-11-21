@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpecializationSchoolEvocation",
   "guid": "c46512b796216b64899f26301241e4e6",

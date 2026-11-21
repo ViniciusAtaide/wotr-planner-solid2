@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonSummonFeatureTier6",
   "guid": "246f83789576bc8409cc5a956797c5d4",

@@ -30,6 +30,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "BloodlineElementalWaterResistanceAbilityAdd",
   "guid": "30ba5298a6246184cb034aa7ef0c6b12",

@@ -20,6 +20,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SureFooted",
   "guid": "0fe5db70b50cd894c849fc764c80bbb9",

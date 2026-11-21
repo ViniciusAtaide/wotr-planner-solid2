@@ -47,6 +47,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivaAdvance",
   "guid": "d05cbf9cca8c4385a76bb6d65f65a717",

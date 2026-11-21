@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellKnightOrderOfTheScourgeFeatureMain1",
   "guid": "8c5974ab11a8a0c4b8ee93d98b2473d7"

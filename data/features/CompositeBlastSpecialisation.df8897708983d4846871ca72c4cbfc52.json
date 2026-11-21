@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CompositeBlastSpecialisation",
   "guid": "df8897708983d4846871ca72c4cbfc52",

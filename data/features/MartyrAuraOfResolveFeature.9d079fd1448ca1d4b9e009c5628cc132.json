@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MartyrAuraOfResolveFeature",
   "guid": "9d079fd1448ca1d4b9e009c5628cc132",

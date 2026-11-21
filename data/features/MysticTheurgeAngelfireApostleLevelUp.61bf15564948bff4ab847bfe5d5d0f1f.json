@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "MysticTheurgeAngelfireApostleLevelUp",
   "guid": "61bf15564948bff4ab847bfe5d5d0f1f",

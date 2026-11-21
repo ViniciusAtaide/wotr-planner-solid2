@@ -26,6 +26,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationLifeLink",
   "guid": "ef97c9bcc1c54ea7993ef8b2489c908a",

@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "PackRagerRagingTacticianGroupSizeFeature",
   "guid": "e25ab87d62b468543ba14a1f424c3786"

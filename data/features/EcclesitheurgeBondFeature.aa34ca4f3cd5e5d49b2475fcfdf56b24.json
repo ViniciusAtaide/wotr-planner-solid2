@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EcclesitheurgeBondFeature",
   "guid": "aa34ca4f3cd5e5d49b2475fcfdf56b24",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CursedElementalResistance",
   "guid": "2a6e1287ddd54162b5b7926e5893d348",

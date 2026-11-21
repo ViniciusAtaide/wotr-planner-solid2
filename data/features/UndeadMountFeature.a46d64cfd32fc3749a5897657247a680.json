@@ -5,6 +5,7 @@
     "LichUniqueAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UndeadMountFeature",
   "guid": "a46d64cfd32fc3749a5897657247a680",

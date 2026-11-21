@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "DragonDiscipleNaturalArmor",
   "guid": "aa4f9fd22a07ddb49982500deaed88f9",

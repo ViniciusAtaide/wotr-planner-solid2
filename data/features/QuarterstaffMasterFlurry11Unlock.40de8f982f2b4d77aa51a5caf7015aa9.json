@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "QuarterstaffMasterFlurry11Unlock",
   "guid": "40de8f982f2b4d77aa51a5caf7015aa9"

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScaledFistDraconicFuryElectricityFeature",
   "guid": "8b3e960f7a734b24caac7f3ca494244b",

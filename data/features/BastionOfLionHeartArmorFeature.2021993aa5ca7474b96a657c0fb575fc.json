@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "BastionOfLionHeartArmorFeature",
   "guid": "2021993aa5ca7474b96a657c0fb575fc"

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlantDomainGreaterFeatureSeparatist",
   "guid": "d9077523b71643c39f6e3a5209e6ee5a",

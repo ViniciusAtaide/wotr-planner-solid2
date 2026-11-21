@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonLevel1StrengthOverride",
   "guid": "b7524715218c4c14ea4f75881797fc6c",

@@ -45,6 +45,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationFreezingSpells",
   "guid": "bc2f6769fe042834db7120e3c8a50b47",

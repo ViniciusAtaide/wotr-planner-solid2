@@ -7,6 +7,7 @@
     "BackgroundSelection"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "IgnorePrerequisites": false,
   "Mode": "Default",
   "Obligatory": false,

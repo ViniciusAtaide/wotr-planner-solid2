@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundVarisianExplorer",
   "guid": "881e63a01d79ee445b96e888368b015d",

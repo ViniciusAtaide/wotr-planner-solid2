@@ -5,6 +5,7 @@
     "WeaponTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "WeaponTrainingPolearms",
   "guid": "c062c6d16aecddc4ab67d9c783b2ad46",

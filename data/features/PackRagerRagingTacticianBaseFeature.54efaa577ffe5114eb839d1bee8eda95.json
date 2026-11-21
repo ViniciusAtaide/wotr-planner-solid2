@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PackRagerRagingTacticianBaseFeature",
   "guid": "54efaa577ffe5114eb839d1bee8eda95",

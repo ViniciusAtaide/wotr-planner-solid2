@@ -29,6 +29,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BlindingCriticalFeature",
   "guid": "787e56055e3ef864d9c78a3ec21e56be",

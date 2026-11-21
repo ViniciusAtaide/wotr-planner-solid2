@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierBannerGreater",
   "guid": "457a2fcd5c27c504caeb6a61e6060702",

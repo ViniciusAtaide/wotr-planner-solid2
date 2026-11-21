@@ -5,6 +5,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BestJokes",
   "guid": "ec739ff2292290f43b20689ff32de112",

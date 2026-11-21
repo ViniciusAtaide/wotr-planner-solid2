@@ -43,6 +43,7 @@
   "Group": "CombatFeat",
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "IgnorePrerequisites": true,
   "Mode": "Default",
   "Obligatory": false,

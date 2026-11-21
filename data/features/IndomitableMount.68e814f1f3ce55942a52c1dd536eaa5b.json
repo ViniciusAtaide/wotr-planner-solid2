@@ -38,6 +38,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "IndomitableMount",
   "guid": "68e814f1f3ce55942a52c1dd536eaa5b",

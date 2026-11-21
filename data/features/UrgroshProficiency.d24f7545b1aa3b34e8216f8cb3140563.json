@@ -24,6 +24,7 @@
     "ExoticWeaponProficiency"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UrgroshProficiency",
   "guid": "d24f7545b1aa3b34e8216f8cb3140563",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DLC5_GraveWoundsSithhudFeature",
   "guid": "d6f70b73e3434050806f208278723d6a",

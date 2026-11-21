@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AmuletofArodenFeature",
   "guid": "7f7c95672aac4454a2918fbb11f1743a"

@@ -127,6 +127,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PharasmaFeature",
   "guid": "458750bc214ab2e44abdeae404ab22e9",

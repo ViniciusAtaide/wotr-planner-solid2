@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanNatureSpiritGreaterFastHealing1Feature",
   "guid": "a27c6182e2938054f8e512416e5d4e99"

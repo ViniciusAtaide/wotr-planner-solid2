@@ -5,6 +5,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HatredGoblinoidOrc",
   "guid": "6cde66a7da5a2024c906d887db735223",

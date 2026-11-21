@@ -13,6 +13,7 @@
     "MythicTrick3"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterMobilityTier3Feature",
   "guid": "6db3651d9af54f28b5a3a5570f49f349",

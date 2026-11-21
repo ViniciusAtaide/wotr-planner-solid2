@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineArcaneCombatCastingAdeptFeatureAddLevel1",
   "guid": "7aa83ee3526a946419561d8d1aa09e75",

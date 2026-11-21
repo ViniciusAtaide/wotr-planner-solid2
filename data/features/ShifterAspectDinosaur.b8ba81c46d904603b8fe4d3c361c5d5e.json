@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterAspectDinosaur",
   "guid": "b8ba81c46d904603b8fe4d3c361c5d5e",

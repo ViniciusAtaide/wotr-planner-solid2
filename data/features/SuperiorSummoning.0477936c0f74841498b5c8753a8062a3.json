@@ -14,6 +14,7 @@
     "WizardFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SuperiorSummoning",
   "guid": "0477936c0f74841498b5c8753a8062a3",

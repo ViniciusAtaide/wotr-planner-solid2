@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UndergroundChemistProficiency",
   "guid": "317d9c669cda41b18cc8eb9737106f89"

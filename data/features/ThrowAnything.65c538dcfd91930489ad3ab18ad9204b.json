@@ -14,6 +14,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ThrowAnything",
   "guid": "65c538dcfd91930489ad3ab18ad9204b",

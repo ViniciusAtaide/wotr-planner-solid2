@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SavingSlashGreater",
   "guid": "732ad7ec6b1cd1f4885370924d492e87",

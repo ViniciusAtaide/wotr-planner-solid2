@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MutatingStrainFeature",
   "guid": "c5b69274980942beaaa4c27fa98d5f0f",

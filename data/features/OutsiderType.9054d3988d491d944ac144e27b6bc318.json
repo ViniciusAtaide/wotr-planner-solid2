@@ -5,6 +5,7 @@
     "CreatureType"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OutsiderType",
   "guid": "9054d3988d491d944ac144e27b6bc318",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonicStrikeFire",
   "guid": "42aee53be1b64334caa5c73d34d10fad",

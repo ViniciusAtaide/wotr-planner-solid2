@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanFlameSpiritGreaterFeature",
   "guid": "c2a4ce87f8600db41a9a74d33af87c2c",

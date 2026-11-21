@@ -27,6 +27,7 @@
     "Familiar"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DogFamiliarBondFeature",
   "guid": "f111037444d5b6243bbbeb7fc9056ed3",

@@ -28,6 +28,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivineHerbalistMasterHerbalist",
   "guid": "63dfe35f00609514fa2c59ebf299ab1e",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeFeyFeature15",
   "guid": "89a6811b68bd41d69341ab82c30d87cc",

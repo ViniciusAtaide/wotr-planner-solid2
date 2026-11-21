@@ -14,6 +14,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScribingScrolls",
   "guid": "a8a385bf53ee3454593ce9054375a2ec",

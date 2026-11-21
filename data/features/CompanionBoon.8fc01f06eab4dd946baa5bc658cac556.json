@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CompanionBoon",
   "guid": "8fc01f06eab4dd946baa5bc658cac556",

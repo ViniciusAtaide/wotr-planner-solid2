@@ -5,6 +5,7 @@
     "DefensivePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InternalFortitudeDefensivePower",
   "guid": "727fcc6ef87e568479ab9dc3a8a5dc6c",

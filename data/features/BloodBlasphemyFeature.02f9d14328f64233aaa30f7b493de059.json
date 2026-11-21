@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodBlasphemyFeature",
   "guid": "02f9d14328f64233aaa30f7b493de059",

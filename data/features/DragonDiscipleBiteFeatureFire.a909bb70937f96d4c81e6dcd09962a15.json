@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonDiscipleBiteFeatureFire",
   "guid": "a909bb70937f96d4c81e6dcd09962a15",

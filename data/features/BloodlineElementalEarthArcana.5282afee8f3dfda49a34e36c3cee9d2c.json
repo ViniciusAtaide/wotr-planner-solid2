@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalEarthArcana",
   "guid": "5282afee8f3dfda49a34e36c3cee9d2c",

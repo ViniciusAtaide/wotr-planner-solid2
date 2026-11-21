@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "LoremasterRangerLevelUp",
   "guid": "d6700ad6b9c4cab4b8b2ee58796da270",

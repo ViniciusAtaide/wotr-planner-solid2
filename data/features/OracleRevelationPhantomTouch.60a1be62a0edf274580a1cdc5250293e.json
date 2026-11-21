@@ -26,6 +26,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationPhantomTouch",
   "guid": "60a1be62a0edf274580a1cdc5250293e",

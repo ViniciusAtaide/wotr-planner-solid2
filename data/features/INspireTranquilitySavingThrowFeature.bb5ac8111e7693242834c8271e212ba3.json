@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "INspireTranquilitySavingThrowFeature",
   "guid": "bb5ac8111e7693242834c8271e212ba3",

@@ -35,6 +35,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PossessedShamanSharedSkillPersuasion",
   "guid": "d473ca0c39fe72946b93da3f13738802",

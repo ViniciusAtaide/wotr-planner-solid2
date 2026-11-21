@@ -15,6 +15,7 @@
     "CreatureType"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UndeadType",
   "guid": "734a29b693e9ec346ba2951b27987e33",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodKineticistGutWrenchingFeature",
   "guid": "c50f50ca3a079f84682da8e91baa9e87",

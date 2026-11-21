@@ -29,6 +29,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcaneStrikeFeature",
   "guid": "0ab2f21a922feee4dab116238e3150b4",

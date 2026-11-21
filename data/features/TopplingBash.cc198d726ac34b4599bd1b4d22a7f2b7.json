@@ -45,6 +45,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TopplingBash",
   "guid": "cc198d726ac34b4599bd1b4d22a7f2b7",

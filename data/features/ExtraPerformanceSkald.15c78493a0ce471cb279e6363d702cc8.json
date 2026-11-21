@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ExtraPerformanceSkald",
   "guid": "15c78493a0ce471cb279e6363d702cc8",

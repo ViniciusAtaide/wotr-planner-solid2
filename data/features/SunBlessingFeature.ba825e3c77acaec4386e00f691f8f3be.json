@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SunBlessingFeature",
   "guid": "ba825e3c77acaec4386e00f691f8f3be",

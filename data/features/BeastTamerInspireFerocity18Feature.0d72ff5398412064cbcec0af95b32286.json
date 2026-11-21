@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BeastTamerInspireFerocity18Feature",
   "guid": "0d72ff5398412064cbcec0af95b32286",

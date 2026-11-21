@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElaborateDefense",
   "guid": "648a0c95ede2e7147a9b319eac86844e",

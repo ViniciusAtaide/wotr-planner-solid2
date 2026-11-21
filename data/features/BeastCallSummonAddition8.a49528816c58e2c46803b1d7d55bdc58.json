@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BeastCallSummonAddition8",
   "guid": "a49528816c58e2c46803b1d7d55bdc58"

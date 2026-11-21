@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StudentOfWarAdditionalSkillLoreReligion",
   "guid": "30eeba164c872624dbae94717febf6da",

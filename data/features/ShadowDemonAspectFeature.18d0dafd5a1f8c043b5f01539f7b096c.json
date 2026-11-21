@@ -13,6 +13,7 @@
     "DemonMajorAspect"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShadowDemonAspectFeature",
   "guid": "18d0dafd5a1f8c043b5f01539f7b096c",

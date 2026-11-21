@@ -49,6 +49,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LethalAccuracyFeature",
   "guid": "bb79cb9706379934c9460e46fe8cd04e",

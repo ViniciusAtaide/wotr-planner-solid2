@@ -13,6 +13,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexNailsFeature",
   "guid": "e87b3db81ab2e344fbe35a00a450d2d7",

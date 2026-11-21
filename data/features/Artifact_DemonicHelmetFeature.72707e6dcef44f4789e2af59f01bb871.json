@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "Artifact_DemonicHelmetFeature",
   "guid": "72707e6dcef44f4789e2af59f01bb871"

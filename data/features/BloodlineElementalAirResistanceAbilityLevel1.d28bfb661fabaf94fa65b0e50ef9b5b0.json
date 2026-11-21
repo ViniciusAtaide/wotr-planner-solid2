@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalAirResistanceAbilityLevel1",
   "guid": "d28bfb661fabaf94fa65b0e50ef9b5b0",

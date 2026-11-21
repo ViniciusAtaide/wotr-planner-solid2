@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BeastRiderProficiencies",
   "guid": "801edc0eaf2d36d4983f1fe5c0f79818",

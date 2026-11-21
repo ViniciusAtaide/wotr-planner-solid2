@@ -46,6 +46,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CursedMight",
   "guid": "5cedc05cee0e40a6be5521b61c2b9ae7",

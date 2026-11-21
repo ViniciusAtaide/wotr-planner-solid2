@@ -45,6 +45,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexVortexSpellsFeature",
   "guid": "d54e52f0e3d086f468ede43222e053e9",

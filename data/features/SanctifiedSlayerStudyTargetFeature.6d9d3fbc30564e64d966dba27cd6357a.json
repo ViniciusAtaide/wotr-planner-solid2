@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SanctifiedSlayerStudyTargetFeature",
   "guid": "6d9d3fbc30564e64d966dba27cd6357a",

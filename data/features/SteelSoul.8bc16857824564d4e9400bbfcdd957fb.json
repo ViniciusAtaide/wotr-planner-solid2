@@ -20,6 +20,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SteelSoul",
   "guid": "8bc16857824564d4e9400bbfcdd957fb",

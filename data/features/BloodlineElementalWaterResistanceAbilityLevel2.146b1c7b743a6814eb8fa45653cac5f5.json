@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalWaterResistanceAbilityLevel2",
   "guid": "146b1c7b743a6814eb8fa45653cac5f5",

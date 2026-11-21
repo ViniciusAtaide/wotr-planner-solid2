@@ -13,6 +13,7 @@
     "AzataSuperpowerAbilities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "IncredibleMightFeature",
   "guid": "eef8d23a7e4acfe4d834a5de844c8c7c",

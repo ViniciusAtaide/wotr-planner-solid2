@@ -16,6 +16,7 @@
     "FinesseTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinesseTrainingSawtoothSabre",
   "guid": "9143942781ef437a9ab0243d9b667aa1",

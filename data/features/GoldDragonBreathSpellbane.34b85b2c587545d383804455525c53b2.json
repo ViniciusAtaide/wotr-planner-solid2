@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GoldDragonBreathSpellbane",
   "guid": "34b85b2c587545d383804455525c53b2",

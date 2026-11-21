@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonDemythicationUpgrade2",
   "guid": "0352a91d533acc64c936a3555d8d2a7b",

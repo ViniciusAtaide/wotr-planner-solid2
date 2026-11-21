@@ -5,6 +5,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalBarrage",
   "guid": "da56a1b21032a374783fdf46e1a92adb",

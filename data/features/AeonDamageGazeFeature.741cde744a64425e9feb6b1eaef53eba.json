@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonDamageGazeFeature",
   "guid": "741cde744a64425e9feb6b1eaef53eba",

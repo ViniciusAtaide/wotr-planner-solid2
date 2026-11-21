@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BeastCallBasicSummon",
   "guid": "db328d2d7b6443d4a8c783395c9820cd",

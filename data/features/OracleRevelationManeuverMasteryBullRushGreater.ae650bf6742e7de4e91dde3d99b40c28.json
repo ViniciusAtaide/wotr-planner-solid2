@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationManeuverMasteryBullRushGreater",
   "guid": "ae650bf6742e7de4e91dde3d99b40c28"

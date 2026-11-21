@@ -31,6 +31,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PummelingCharge",
   "guid": "c5a39c8f1a2d6824ca565e6c1e4075a5",

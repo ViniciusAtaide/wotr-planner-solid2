@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonbloodShifterAspectFeatureEvil",
   "guid": "d8cd18b343834b7097dd364b75e0c800",

@@ -37,6 +37,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BladeWhirlwindInfusion",
   "guid": "80fdf049d396c33408a805d9e21a42e1",

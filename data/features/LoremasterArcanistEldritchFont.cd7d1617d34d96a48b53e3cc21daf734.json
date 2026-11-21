@@ -23,6 +23,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterArcanistEldritchFont",
   "guid": "cd7d1617d34d96a48b53e3cc21daf734",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WinterWitchFreezingColdUpgradeFeature",
   "guid": "b2552d80cdd24e17af922ec8ef669192",

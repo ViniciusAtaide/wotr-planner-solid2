@@ -27,6 +27,7 @@
     "Familiar"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "JerboaFamiliarBondFeature",
   "guid": "952f342f26e2a27468a7826da426f3e7",

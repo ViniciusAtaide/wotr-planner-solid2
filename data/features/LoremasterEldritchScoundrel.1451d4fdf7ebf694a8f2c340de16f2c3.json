@@ -23,6 +23,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterEldritchScoundrel",
   "guid": "1451d4fdf7ebf694a8f2c340de16f2c3",

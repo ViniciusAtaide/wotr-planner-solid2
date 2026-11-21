@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleWavesSpells",
   "guid": "9a70e449c1f5c7548ab210a40c5f1890"

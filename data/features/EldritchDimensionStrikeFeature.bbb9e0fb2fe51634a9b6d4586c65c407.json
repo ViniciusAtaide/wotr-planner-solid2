@@ -22,6 +22,7 @@
     "EldritchScionArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchDimensionStrikeFeature",
   "guid": "bbb9e0fb2fe51634a9b6d4586c65c407",

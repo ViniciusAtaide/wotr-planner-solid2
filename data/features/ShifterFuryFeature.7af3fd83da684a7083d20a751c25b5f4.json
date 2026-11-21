@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterFuryFeature",
   "guid": "7af3fd83da684a7083d20a751c25b5f4",

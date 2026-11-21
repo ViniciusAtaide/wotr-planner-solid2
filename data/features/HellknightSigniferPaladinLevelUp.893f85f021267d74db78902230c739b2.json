@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "HellknightSigniferPaladinLevelUp",
   "guid": "893f85f021267d74db78902230c739b2",

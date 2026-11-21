@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpellStrikeFeature",
   "guid": "be50f4e97fff8a24ba92561f1694a945",

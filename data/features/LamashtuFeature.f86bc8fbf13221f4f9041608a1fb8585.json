@@ -164,6 +164,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LamashtuFeature",
   "guid": "f86bc8fbf13221f4f9041608a1fb8585",

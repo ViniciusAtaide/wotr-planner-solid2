@@ -152,6 +152,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "BaphometFeature",
   "guid": "bd72ca8ffcfec5745899ac56c93f12c5",

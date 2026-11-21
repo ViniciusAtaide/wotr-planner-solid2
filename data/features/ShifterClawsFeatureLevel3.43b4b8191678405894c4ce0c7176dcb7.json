@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterClawsFeatureLevel3",
   "guid": "43b4b8191678405894c4ce0c7176dcb7",

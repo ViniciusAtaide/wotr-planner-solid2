@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MagicDomainBaseFeatureSeparatist",
   "guid": "e04e3432601140808d6f58d7d1087894",

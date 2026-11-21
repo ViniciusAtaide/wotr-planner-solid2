@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LichSummonBaseFeature",
   "guid": "506b4aeb2b7bb36448cf3858c943d5bb",

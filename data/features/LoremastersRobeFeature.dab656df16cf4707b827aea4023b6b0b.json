@@ -39,6 +39,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LoremastersRobeFeature",
   "guid": "dab656df16cf4707b827aea4023b6b0b"

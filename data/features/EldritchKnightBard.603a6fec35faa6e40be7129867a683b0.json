@@ -14,6 +14,7 @@
     "EldritchKnightSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "EldritchKnightBard",
   "guid": "603a6fec35faa6e40be7129867a683b0",

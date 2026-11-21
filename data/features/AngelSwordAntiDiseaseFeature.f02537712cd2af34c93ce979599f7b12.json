@@ -5,6 +5,7 @@
     "ImprovedSwordOfHeaven"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelSwordAntiDiseaseFeature",
   "guid": "f02537712cd2af34c93ce979599f7b12",

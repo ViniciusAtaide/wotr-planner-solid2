@@ -41,6 +41,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DomainMastery",
   "guid": "2de64f6a1f2baee4f9b7e52e3f046ec5",

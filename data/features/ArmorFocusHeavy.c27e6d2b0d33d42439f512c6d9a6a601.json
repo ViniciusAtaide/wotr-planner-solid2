@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArmorFocusHeavy",
   "guid": "c27e6d2b0d33d42439f512c6d9a6a601",

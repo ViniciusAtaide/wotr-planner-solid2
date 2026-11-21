@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RobeSourceOfDividingPowerFeature",
   "guid": "ec66027e2f5d2404f9f846bbc9dc2ec0"

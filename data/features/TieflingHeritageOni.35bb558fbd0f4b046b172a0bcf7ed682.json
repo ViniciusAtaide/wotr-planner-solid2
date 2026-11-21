@@ -64,6 +64,7 @@
     "TieflingHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TieflingHeritageOni",
   "guid": "35bb558fbd0f4b046b172a0bcf7ed682",

@@ -82,6 +82,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LichDeityFeature",
   "guid": "b4153b422d02d4f48b3f8f0ceb6a10eb",

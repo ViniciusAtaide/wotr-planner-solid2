@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchFontOfPower",
   "guid": "8b359846202ec6c4fa8f0ad5e998ff0f",

@@ -15,6 +15,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RagePurityOfBodyFeature",
   "guid": "a4418aa778cb4ebd965d78af19becced",

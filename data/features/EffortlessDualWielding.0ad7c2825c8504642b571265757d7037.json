@@ -19,6 +19,7 @@
     "WeaponTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EffortlessDualWielding",
   "guid": "0ad7c2825c8504642b571265757d7037",

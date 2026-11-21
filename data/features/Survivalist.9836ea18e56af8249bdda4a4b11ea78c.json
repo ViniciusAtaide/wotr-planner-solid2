@@ -27,6 +27,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Survivalist",
   "guid": "9836ea18e56af8249bdda4a4b11ea78c",

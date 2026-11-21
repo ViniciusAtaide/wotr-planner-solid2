@@ -36,6 +36,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ExhaustingCriticalFeature",
   "guid": "7c492212d25d8f04fbd43eb99d780b1e",

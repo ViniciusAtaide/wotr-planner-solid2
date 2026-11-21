@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TorturedCrusaderLayOnHandsFeature",
   "guid": "cba74c6e15294a0d8b308af81d792122",

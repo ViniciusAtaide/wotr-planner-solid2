@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcanistProficiencies",
   "guid": "83eef6899ec903a438d03d0356dab8a8",

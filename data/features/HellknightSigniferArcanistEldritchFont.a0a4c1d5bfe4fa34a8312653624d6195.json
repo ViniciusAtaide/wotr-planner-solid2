@@ -23,6 +23,7 @@
     "HellknightSigniferSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HellknightSigniferArcanistEldritchFont",
   "guid": "a0a4c1d5bfe4fa34a8312653624d6195",

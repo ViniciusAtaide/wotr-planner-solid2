@@ -37,6 +37,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FrozenInsides",
   "guid": "4ebfa04ba46349dab38374bae69e18df",

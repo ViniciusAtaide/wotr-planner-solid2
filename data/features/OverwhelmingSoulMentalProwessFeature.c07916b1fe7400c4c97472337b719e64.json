@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OverwhelmingSoulMentalProwessFeature",
   "guid": "c07916b1fe7400c4c97472337b719e64",

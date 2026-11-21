@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "AcidResistance10Feature",
   "guid": "4087b1da59fbd884caa213a554fe6c03"

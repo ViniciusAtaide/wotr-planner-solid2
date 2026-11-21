@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImprovedInitiativeMythicFeat",
   "guid": "25f4cb387ba4ab94d944fdef3da9ab97",

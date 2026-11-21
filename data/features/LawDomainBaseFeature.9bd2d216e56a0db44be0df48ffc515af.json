@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LawDomainBaseFeature",
   "guid": "9bd2d216e56a0db44be0df48ffc515af",

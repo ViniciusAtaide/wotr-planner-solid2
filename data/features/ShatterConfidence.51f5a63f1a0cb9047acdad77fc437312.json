@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShatterConfidence",
   "guid": "51f5a63f1a0cb9047acdad77fc437312",

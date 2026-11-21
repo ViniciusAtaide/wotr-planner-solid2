@@ -46,6 +46,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CraneStyleWingFeat",
   "guid": "af0aae1b973114f47a19ea532237b5fc",

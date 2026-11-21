@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BiteOftheVampireFeature",
   "guid": "ea6a7bffdf2c43ddbf0ff7cc1bec5b06",

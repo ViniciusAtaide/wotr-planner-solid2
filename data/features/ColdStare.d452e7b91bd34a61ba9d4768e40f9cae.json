@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ColdStare",
   "guid": "d452e7b91bd34a61ba9d4768e40f9cae",

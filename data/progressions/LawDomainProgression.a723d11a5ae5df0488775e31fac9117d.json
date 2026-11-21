@@ -39,6 +39,7 @@
     "Domain"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "LevelEntries": [
     {
       "Level": 1,

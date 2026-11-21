@@ -5,6 +5,7 @@
     "AngelMythcHalo"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HaloBlindingLightFeature",
   "guid": "67b80136595b60245b787d688f47b346",

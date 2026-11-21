@@ -44,6 +44,7 @@
     "FinesseTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinesseTrainingBite",
   "guid": "bcebc021271be1e45b012729f22dadcc",

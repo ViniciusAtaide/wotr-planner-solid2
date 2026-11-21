@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonPrimordialMagicGazeFeature",
   "guid": "da5cbbd3b9a14a86b90555e7d3ed4451",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlaguedCurseFeatureLevel5",
   "guid": "5e4a00d5bb3f7374888806c2324228de"

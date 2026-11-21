@@ -15,6 +15,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OrcWeaponFamiliarity",
   "guid": "6ab6c271d1558344cbc746350243d17d",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GoldDragonBreathDisrupting",
   "guid": "eb26e9df19a54ae2a634828f1cb7a708",

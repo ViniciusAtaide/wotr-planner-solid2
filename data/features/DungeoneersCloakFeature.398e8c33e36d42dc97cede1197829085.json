@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DungeoneersCloakFeature",
   "guid": "398e8c33e36d42dc97cede1197829085"

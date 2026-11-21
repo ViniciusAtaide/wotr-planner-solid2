@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeElephantFeature8",
   "guid": "7ef0f70745a145999ec51c6ae11f43d1",

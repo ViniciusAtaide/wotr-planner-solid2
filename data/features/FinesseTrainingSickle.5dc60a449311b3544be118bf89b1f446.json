@@ -16,6 +16,7 @@
     "FinesseTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinesseTrainingSickle",
   "guid": "5dc60a449311b3544be118bf89b1f446",

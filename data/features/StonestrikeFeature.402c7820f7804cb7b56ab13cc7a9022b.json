@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "StonestrikeFeature",
   "guid": "402c7820f7804cb7b56ab13cc7a9022b",

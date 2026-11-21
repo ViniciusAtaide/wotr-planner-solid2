@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LivingFlameFeature",
   "guid": "01276815beaf1c44bbfb842bc1bcb899"

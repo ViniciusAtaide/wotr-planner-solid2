@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChannelEnergyPaladinFeature",
   "guid": "cb6d55dda5ab906459d18a435994a760",

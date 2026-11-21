@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CommunityBlessingMajorFeature",
   "guid": "31f5d4a87863eb9459be56205d1087fc",

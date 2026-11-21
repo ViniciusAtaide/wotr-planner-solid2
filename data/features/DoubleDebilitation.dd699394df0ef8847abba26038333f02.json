@@ -25,6 +25,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DoubleDebilitation",
   "guid": "dd699394df0ef8847abba26038333f02",

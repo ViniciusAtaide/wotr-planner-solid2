@@ -24,6 +24,7 @@
     "DivineHerbalistMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivineHerbalistStoneMysteryFeature",
   "guid": "09106dcc03321154f955e2d0296a082e",

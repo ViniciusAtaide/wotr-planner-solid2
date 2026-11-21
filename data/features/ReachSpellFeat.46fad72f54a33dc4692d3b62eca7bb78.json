@@ -15,6 +15,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ReachSpellFeat",
   "guid": "46fad72f54a33dc4692d3b62eca7bb78",

@@ -244,6 +244,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HeartOfEarthShifterFeature",
   "guid": "0b09ce94b5fe48dfa81b9a6f9d55a351",

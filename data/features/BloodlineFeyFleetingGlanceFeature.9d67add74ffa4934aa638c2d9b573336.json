@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineFeyFleetingGlanceFeature",
   "guid": "9d67add74ffa4934aa638c2d9b573336",

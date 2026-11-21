@@ -5,6 +5,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnergyResistanceOread",
   "guid": "6e60bfd48a63c8542a3552c2a05b3283",

@@ -16,6 +16,7 @@
     "FinesseTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinesseTrainingSai",
   "guid": "72724581b38799a42904f6a6db745dd6",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KnightsEmblemSunsetChainmailFeature",
   "guid": "3cd86486f747b174c9b43ed6b066dbfc"

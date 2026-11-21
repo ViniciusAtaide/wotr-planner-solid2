@@ -143,6 +143,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "IroriFeature",
   "guid": "23a77a5985de08349820429ce1b5a234",

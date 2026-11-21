@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelfireApostleVersatileChannel9",
   "guid": "bcb6a8b561d55c0469a453cb07d0bc09",

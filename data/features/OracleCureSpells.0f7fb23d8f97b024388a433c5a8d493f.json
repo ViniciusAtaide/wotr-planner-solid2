@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleCureSpells",
   "guid": "0f7fb23d8f97b024388a433c5a8d493f",

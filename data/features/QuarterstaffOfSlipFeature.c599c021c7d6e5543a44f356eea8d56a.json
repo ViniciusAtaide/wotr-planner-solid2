@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 100,
   "assetName": "QuarterstaffOfSlipFeature",
   "guid": "c599c021c7d6e5543a44f356eea8d56a"

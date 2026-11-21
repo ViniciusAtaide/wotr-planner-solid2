@@ -21,6 +21,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterThassilonianConjuration",
   "guid": "7879450728a324b4f89151686c7d056f",

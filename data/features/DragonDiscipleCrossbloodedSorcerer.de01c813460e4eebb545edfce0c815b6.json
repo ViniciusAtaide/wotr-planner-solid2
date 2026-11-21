@@ -35,6 +35,7 @@
     "DragonDiscipleSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonDiscipleCrossbloodedSorcerer",
   "guid": "de01c813460e4eebb545edfce0c815b6",

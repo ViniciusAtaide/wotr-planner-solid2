@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalFireSpellLevel2",
   "guid": "e8f0a50b4549a764eb0264ed6b181ce6",

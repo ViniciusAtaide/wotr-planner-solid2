@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "IncenseFogNeutralizingIncenseFeature",
   "guid": "6dd6caccd12ff6a4d9c12d36980e1906",

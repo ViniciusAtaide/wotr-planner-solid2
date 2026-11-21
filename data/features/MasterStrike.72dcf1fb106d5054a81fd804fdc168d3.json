@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MasterStrike",
   "guid": "72dcf1fb106d5054a81fd804fdc168d3",

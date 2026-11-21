@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LichFirstAscension",
   "guid": "4457101b8eca5a546a5a0bdb651bd003",

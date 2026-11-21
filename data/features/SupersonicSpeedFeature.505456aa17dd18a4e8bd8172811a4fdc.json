@@ -5,6 +5,7 @@
     "AzataSuperpowerAbilities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SupersonicSpeedFeature",
   "guid": "505456aa17dd18a4e8bd8172811a4fdc",

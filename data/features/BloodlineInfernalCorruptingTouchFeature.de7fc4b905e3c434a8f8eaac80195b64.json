@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineInfernalCorruptingTouchFeature",
   "guid": "de7fc4b905e3c434a8f8eaac80195b64",

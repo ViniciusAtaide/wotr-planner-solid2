@@ -35,6 +35,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationStormOfSouls",
   "guid": "0edd5395810cf3441a093ca49efb858f",

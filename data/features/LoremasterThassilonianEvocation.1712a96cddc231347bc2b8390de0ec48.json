@@ -21,6 +21,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterThassilonianEvocation",
   "guid": "1712a96cddc231347bc2b8390de0ec48",

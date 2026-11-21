@@ -43,6 +43,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundMugger",
   "guid": "88453bd5448456748ab531cddad38721",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KiPowerDrunkenFeature",
   "guid": "814ddce615b84e488fb7a196acebd408",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterFeyWingsFeature",
   "guid": "e61c86be52ef44b7a95cf81cd2f5da15",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterStatFocusAC",
   "guid": "d4f51beb3daf64748badf5e9e2d91666",

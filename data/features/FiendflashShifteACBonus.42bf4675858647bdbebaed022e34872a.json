@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FiendflashShifteACBonus",
   "guid": "42bf4675858647bdbebaed022e34872a"

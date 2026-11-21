@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FireDomainBaseFeatureSeparatist",
   "guid": "211c2b6cbb144ccd9535c960feb8a4c3",

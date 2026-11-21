@@ -49,6 +49,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RollingDodgeFeature",
   "guid": "abfaa9ad598093f45ac6ac1db58f9a40",

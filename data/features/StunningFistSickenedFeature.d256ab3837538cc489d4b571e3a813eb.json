@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StunningFistSickenedFeature",
   "guid": "d256ab3837538cc489d4b571e3a813eb",

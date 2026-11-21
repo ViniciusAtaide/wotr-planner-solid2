@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KiStrikeMagic",
   "guid": "1188005ee3160f84f8bed8b19a7d46cf",

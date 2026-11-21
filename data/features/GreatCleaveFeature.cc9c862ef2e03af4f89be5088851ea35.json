@@ -22,6 +22,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreatCleaveFeature",
   "guid": "cc9c862ef2e03af4f89be5088851ea35",

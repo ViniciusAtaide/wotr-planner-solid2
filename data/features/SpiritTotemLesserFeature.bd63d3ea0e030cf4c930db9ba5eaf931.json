@@ -32,6 +32,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpiritTotemLesserFeature",
   "guid": "bd63d3ea0e030cf4c930db9ba5eaf931",

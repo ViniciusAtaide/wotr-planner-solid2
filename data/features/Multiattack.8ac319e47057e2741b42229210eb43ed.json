@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Multiattack",
   "guid": "8ac319e47057e2741b42229210eb43ed",

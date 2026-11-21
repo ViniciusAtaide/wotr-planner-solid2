@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShadowSpellsFeatureShadowEvocation",
   "guid": "7ac1e00b57c24928a0cc8e0fb58252f4",

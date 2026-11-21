@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcaneBombsFireFeature",
   "guid": "456a15ecac9dcaa4499b85eede4cb7b1",

@@ -17,6 +17,7 @@
     "WizardFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AugmentSummoning",
   "guid": "38155ca9e4055bb48a89240a2055dcc3",

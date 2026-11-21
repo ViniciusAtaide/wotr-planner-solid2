@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineSerpentineSpellLevel1",
   "guid": "b75633182403fd7438c342e2181beb8f",

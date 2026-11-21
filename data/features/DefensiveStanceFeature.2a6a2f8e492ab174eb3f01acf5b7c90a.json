@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DefensiveStanceFeature",
   "guid": "2a6a2f8e492ab174eb3f01acf5b7c90a",

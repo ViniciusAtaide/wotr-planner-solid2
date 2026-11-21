@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InsultFeature",
   "guid": "0f0a404c0b7a4b678d31ed8986adbd39",

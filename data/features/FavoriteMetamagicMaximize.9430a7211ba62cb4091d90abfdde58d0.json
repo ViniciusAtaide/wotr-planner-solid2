@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FavoriteMetamagicMaximize",
   "guid": "9430a7211ba62cb4091d90abfdde58d0",

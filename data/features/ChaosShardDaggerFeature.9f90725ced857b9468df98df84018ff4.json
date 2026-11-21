@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "ChaosShardDaggerFeature",
   "guid": "9f90725ced857b9468df98df84018ff4"

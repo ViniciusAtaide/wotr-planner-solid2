@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NaturalWeaponProficiency",
   "guid": "0ba61ad0eb0f480eb3da3aa4d7bbe37e"

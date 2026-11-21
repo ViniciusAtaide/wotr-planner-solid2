@@ -5,6 +5,7 @@
     "ImprovedSwordOfHeaven"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelSwordExtendFeature",
   "guid": "0b082785884d35c4c8f252d93b8f3616",

@@ -103,6 +103,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerDragonGoldWanderingFeature4",
   "guid": "bbde63928d9147219a601892d18175a6",

@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CravenHalfling",
   "guid": "889fa46af27148f9b9aefa27b7a29a2e",

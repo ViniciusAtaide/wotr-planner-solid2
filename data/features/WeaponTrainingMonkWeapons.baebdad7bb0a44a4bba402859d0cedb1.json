@@ -5,6 +5,7 @@
     "WeaponTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "WeaponTrainingMonkWeapons",
   "guid": "baebdad7bb0a44a4bba402859d0cedb1",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 4,
   "assetName": "InspireCourageFeature",
   "guid": "acb4df34b25ca9043a6aba1a4c92bc69",

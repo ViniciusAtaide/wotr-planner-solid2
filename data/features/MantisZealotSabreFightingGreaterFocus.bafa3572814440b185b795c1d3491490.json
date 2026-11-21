@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MantisZealotSabreFightingGreaterFocus",
   "guid": "bafa3572814440b185b795c1d3491490",

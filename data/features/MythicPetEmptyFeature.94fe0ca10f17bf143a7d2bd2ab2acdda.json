@@ -28,6 +28,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "MythicPetEmptyFeature",
   "guid": "94fe0ca10f17bf143a7d2bd2ab2acdda"

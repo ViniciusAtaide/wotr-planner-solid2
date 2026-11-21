@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MaskOfNothingFeature",
   "guid": "f717b703aa4a4bb99c12e32a9eab17f3"

@@ -26,6 +26,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationSacredCouncil",
   "guid": "a8ae26103124a1c409279392b8f56238",

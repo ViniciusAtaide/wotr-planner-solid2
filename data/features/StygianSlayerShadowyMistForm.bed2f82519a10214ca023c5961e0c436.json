@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StygianSlayerShadowyMistForm",
   "guid": "bed2f82519a10214ca023c5961e0c436",

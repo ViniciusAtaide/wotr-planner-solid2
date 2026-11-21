@@ -5,6 +5,7 @@
     "DemonLordAspect"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AreshkagalAspectFeature",
   "guid": "a4e7223c6d8a7b941b9464ae73b59bcc",

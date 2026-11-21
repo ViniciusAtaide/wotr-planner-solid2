@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalWitchAcidRayFeature",
   "guid": "8006c9d043724f34b2745b3e5a5c2ef1",

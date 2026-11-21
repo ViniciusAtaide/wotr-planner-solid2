@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MantisZealotRedShroudFeature",
   "guid": "f36cb1250cec4c028a6229727f5e87cf",

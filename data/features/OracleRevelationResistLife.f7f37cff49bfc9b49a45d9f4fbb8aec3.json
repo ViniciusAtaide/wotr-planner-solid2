@@ -41,6 +41,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationResistLife",
   "guid": "f7f37cff49bfc9b49a45d9f4fbb8aec3",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalElectricitySpell13",
   "guid": "b7ca4d5a105e4cb418601e1cf652b32f",

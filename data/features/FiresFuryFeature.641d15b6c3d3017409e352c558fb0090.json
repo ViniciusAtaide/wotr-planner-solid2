@@ -13,6 +13,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FiresFuryFeature",
   "guid": "641d15b6c3d3017409e352c558fb0090",

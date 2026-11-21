@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerCelestialAngelicAttacks",
   "guid": "40ed9b51a37d1714e92ece6700ddfaf4",

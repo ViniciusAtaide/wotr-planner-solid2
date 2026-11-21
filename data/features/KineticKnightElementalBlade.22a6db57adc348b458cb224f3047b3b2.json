@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KineticKnightElementalBlade",
   "guid": "22a6db57adc348b458cb224f3047b3b2",

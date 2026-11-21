@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "AllIsdarknessLvlUpFeature",
   "guid": "a1cf87d341064810b032780ecd8df079",

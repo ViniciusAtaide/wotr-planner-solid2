@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierByMyHonorGoodReflex",
   "guid": "249202a255f6e13468ca885b7169345d",

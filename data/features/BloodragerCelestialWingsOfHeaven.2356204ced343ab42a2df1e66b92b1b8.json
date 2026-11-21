@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerCelestialWingsOfHeaven",
   "guid": "2356204ced343ab42a2df1e66b92b1b8",

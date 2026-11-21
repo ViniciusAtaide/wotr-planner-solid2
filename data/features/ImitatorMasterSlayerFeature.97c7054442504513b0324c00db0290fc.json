@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImitatorMasterSlayerFeature",
   "guid": "97c7054442504513b0324c00db0290fc",

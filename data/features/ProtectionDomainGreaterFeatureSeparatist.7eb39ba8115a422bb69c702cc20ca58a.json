@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ProtectionDomainGreaterFeatureSeparatist",
   "guid": "7eb39ba8115a422bb69c702cc20ca58a",

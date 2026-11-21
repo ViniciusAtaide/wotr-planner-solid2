@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ZenArcherKiArrowsFeatureDamageLevel20",
   "guid": "cadc753cf1354d3d9f63277d7397dce4",

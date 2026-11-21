@@ -16,6 +16,7 @@
   ],
   "HasNoSuchFeature": false,
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "IgnoreParameterFeaturePrerequisites": false,
   "ParameterType": "SpellSchool",
   "Ranks": 1,

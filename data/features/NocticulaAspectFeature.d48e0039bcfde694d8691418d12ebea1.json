@@ -13,6 +13,7 @@
     "DemonLordAspect"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NocticulaAspectFeature",
   "guid": "d48e0039bcfde694d8691418d12ebea1",

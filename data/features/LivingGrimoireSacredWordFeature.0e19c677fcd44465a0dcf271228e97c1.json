@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LivingGrimoireSacredWordFeature",
   "guid": "0e19c677fcd44465a0dcf271228e97c1",

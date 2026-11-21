@@ -26,6 +26,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlagueHexMentalBefuddledFeature",
   "guid": "c49f6f28f7e44b45b954784cbe7be738",

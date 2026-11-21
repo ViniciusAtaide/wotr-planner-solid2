@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SwordSaintPerfectStrikeFeature",
   "guid": "9ff65b68c09567e48af9b33848b23323",

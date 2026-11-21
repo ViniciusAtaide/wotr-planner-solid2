@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "MysticTheurgeOracleLevelUp",
   "guid": "3eaf8a57a407e3d4aa477f802f0a5bb4",

@@ -13,6 +13,7 @@
     "RogueTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WeaponSnatcher",
   "guid": "ffced614e1f95e34d99df77debbc4207",

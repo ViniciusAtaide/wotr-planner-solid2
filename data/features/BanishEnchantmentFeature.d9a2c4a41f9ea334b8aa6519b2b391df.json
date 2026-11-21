@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BanishEnchantmentFeature",
   "guid": "d9a2c4a41f9ea334b8aa6519b2b391df",

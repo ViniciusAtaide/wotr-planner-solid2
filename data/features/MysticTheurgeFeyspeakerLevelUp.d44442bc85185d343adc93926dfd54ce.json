@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "MysticTheurgeFeyspeakerLevelUp",
   "guid": "d44442bc85185d343adc93926dfd54ce",

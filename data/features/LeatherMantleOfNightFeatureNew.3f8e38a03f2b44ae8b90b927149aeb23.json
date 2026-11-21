@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LeatherMantleOfNightFeatureNew",
   "guid": "3f8e38a03f2b44ae8b90b927149aeb23"

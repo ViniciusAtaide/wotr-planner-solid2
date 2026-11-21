@@ -159,6 +159,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "KabririFeature",
   "guid": "f12c1ccc9d600c04f8887cd28a8f45a5",

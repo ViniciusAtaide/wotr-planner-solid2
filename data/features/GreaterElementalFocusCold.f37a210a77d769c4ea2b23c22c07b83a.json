@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreaterElementalFocusCold",
   "guid": "f37a210a77d769c4ea2b23c22c07b83a",

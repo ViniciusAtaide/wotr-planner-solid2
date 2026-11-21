@@ -17,6 +17,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElvenWeaponFamiliarity",
   "guid": "03fd1e043fc678a4baf73fe67c3780ce",

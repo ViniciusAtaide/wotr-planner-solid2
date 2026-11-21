@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TravelBlessingMajorFeature",
   "guid": "c52e9a35c5332204aa257352643de1ce"

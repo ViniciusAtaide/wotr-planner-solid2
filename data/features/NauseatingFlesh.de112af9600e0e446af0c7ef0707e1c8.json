@@ -35,6 +35,7 @@
     "UndergroundChemistDiscovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NauseatingFlesh",
   "guid": "de112af9600e0e446af0c7ef0707e1c8",

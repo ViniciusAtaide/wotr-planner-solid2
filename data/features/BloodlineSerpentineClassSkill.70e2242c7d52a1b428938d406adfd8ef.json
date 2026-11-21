@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineSerpentineClassSkill",
   "guid": "70e2242c7d52a1b428938d406adfd8ef",

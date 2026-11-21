@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "Evasion",
   "guid": "576933720c440aa4d8d42b0c54b77e80",

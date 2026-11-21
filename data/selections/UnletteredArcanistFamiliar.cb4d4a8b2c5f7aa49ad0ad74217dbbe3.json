@@ -5,6 +5,7 @@
   "Group": "Familiar",
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "IgnorePrerequisites": false,
   "Mode": "Default",
   "Obligatory": false,

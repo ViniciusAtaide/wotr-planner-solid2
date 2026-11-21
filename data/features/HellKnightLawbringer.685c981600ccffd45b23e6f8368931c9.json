@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellKnightLawbringer",
   "guid": "685c981600ccffd45b23e6f8368931c9",

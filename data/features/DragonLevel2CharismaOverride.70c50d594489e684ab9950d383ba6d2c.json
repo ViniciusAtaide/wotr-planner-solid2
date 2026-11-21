@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonLevel2CharismaOverride",
   "guid": "70c50d594489e684ab9950d383ba6d2c",

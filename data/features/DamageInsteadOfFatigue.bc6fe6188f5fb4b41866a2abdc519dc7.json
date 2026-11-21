@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DamageInsteadOfFatigue",
   "guid": "bc6fe6188f5fb4b41866a2abdc519dc7"

@@ -40,6 +40,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KineticRevificationFeature",
   "guid": "0377fcf4c10871f4187809d273af7f5d",

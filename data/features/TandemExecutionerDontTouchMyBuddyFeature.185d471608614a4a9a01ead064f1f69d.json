@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TandemExecutionerDontTouchMyBuddyFeature",
   "guid": "185d471608614a4a9a01ead064f1f69d",

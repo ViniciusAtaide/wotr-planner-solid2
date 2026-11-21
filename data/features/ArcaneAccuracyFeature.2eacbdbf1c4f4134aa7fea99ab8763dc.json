@@ -13,6 +13,7 @@
     "MagusArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcaneAccuracyFeature",
   "guid": "2eacbdbf1c4f4134aa7fea99ab8763dc",

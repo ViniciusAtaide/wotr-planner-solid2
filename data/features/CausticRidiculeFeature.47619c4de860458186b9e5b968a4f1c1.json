@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CausticRidiculeFeature",
   "guid": "47619c4de860458186b9e5b968a4f1c1",

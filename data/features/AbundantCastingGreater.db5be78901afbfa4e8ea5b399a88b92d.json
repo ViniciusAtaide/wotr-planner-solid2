@@ -13,6 +13,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AbundantCastingGreater",
   "guid": "db5be78901afbfa4e8ea5b399a88b92d",

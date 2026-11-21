@@ -13,6 +13,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexFuryFeature",
   "guid": "f562d3e6445a1cc4796435c356e677d3",

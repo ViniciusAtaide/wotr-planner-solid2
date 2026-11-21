@@ -35,6 +35,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChillingInfusionFeature",
   "guid": "6ac87a3af9ccf014787c49745df75e6a",

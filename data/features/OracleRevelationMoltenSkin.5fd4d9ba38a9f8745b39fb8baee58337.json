@@ -58,6 +58,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationMoltenSkin",
   "guid": "5fd4d9ba38a9f8745b39fb8baee58337",

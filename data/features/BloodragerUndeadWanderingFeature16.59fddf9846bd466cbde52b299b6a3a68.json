@@ -58,6 +58,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerUndeadWanderingFeature16",
   "guid": "59fddf9846bd466cbde52b299b6a3a68",

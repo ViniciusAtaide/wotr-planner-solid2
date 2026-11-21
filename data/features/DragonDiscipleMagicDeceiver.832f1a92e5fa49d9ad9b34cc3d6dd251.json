@@ -15,6 +15,7 @@
     "DragonDiscipleSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonDiscipleMagicDeceiver",
   "guid": "832f1a92e5fa49d9ad9b34cc3d6dd251",

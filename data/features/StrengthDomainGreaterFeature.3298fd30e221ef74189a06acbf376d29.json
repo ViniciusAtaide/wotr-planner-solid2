@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StrengthDomainGreaterFeature",
   "guid": "3298fd30e221ef74189a06acbf376d29",

@@ -44,6 +44,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreaterDisarm",
   "guid": "63d8e3a9ab4d72e4081a7862d7246a79",

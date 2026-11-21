@@ -10,6 +10,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellknightSigniferArcaneArmorExpertise",
   "guid": "afe6484d93092734a8acbdf1982cce6e",

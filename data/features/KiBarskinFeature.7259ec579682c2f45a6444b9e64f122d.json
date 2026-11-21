@@ -22,6 +22,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KiBarskinFeature",
   "guid": "7259ec579682c2f45a6444b9e64f122d",

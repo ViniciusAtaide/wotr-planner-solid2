@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerInfernalDarkWings",
   "guid": "56372c7f8e8f92548bd4c2534558e3e9",

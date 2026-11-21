@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GoldDragonBreathBurning",
   "guid": "0cc6e15e961b4bb9b4328002cbc57388",

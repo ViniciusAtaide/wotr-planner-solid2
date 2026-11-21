@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "FullplateOfSpellNullifyFeature",
   "guid": "a6258f81d02a5fe4fb786fa5b740585f"

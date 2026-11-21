@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerSerpentineForm16",
   "guid": "d433705eb8dec9c419e245e593c4d2e1",

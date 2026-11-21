@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MantisZealotRedShroudSwiftFeature",
   "guid": "256fc27834f44ae280fcec30533ca8de",

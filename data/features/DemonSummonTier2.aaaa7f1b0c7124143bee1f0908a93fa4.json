@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonSummonTier2",
   "guid": "aaaa7f1b0c7124143bee1f0908a93fa4"

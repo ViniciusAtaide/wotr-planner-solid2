@@ -49,6 +49,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DhampirHeritageClassic",
   "guid": "213e132588cfe9743ab0ddc446992eb6",

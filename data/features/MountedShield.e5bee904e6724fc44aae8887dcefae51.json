@@ -29,6 +29,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MountedShield",
   "guid": "e5bee904e6724fc44aae8887dcefae51",

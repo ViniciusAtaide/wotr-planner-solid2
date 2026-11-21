@@ -5,6 +5,7 @@
     "LichSkeletalUpgrade"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LichSkeletalMagusTierI",
   "guid": "1192b090d635b74448eceb313435d437",

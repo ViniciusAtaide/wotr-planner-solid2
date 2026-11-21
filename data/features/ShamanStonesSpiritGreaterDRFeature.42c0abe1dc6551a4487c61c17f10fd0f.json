@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanStonesSpiritGreaterDRFeature",
   "guid": "42c0abe1dc6551a4487c61c17f10fd0f"

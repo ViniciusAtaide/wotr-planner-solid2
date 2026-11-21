@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonSummonGazeFeature",
   "guid": "22b8e9508bce5474588e34168089ad69",

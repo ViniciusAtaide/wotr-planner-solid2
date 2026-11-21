@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "BlueFlameBlastFeature",
   "guid": "89dfce413170db049b0386fff333e9e1",

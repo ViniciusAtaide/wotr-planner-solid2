@@ -10,6 +10,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EmergencyPotionMythicFeat",
   "guid": "977018f481c10eb41b0b085d43a7d423",

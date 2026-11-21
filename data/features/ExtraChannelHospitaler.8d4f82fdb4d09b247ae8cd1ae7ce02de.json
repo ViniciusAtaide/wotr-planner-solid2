@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ExtraChannelHospitaler",
   "guid": "8d4f82fdb4d09b247ae8cd1ae7ce02de",

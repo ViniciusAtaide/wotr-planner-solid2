@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SongOfDefianceFeature",
   "guid": "c2be02bc2014d4c4cbaf7c442a7f076f",

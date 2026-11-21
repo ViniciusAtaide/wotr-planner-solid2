@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EchoesOfStone",
   "guid": "70d3ac68dad02074791f58c8ba09d42f",

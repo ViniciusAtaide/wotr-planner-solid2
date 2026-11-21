@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RazmiryMaskFeatureSilver",
   "guid": "fea87be2552a4f3e8cf456b624be25fc"

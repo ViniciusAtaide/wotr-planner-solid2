@@ -37,6 +37,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreaterBullRush",
   "guid": "72ba6ad46d94ecd41bad8e64739ea392",

@@ -28,6 +28,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalEngineAdditionalEffectsFeature7",
   "guid": "fd30841e0ede46769708367be0c01a49",

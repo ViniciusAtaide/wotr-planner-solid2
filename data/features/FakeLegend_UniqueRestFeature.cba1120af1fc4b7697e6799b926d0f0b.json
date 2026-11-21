@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FakeLegend_UniqueRestFeature",
   "guid": "cba1120af1fc4b7697e6799b926d0f0b",

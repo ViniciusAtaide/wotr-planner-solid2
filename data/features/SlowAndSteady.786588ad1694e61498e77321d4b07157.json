@@ -17,6 +17,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SlowAndSteady",
   "guid": "786588ad1694e61498e77321d4b07157",

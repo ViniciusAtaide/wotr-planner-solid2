@@ -24,6 +24,7 @@
     "ExoticWeaponProficiency"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KamaProficiency",
   "guid": "403740e8112651141a12f0d73d793dbc",

@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MonkFastMovementUnlock",
   "guid": "73ab5b41fa465ee429ad6658368c6629",

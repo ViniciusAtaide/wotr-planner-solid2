@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineFeyLaughingTouchFeature",
   "guid": "847d74c49c08f2a4ea1c540528d5e1d2",

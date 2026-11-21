@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelSummonFeatureTier7",
   "guid": "7e374dcfb85d51f4a94acda1b59582a4",

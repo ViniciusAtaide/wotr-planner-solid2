@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivineGrace",
   "guid": "8a5b5e272e5c34e41aa8b4facbb746d3",

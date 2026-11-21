@@ -28,6 +28,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TrickeryDomainBaseFeature",
   "guid": "cd1f4a784e0820647a34fe9bd5ffa770",

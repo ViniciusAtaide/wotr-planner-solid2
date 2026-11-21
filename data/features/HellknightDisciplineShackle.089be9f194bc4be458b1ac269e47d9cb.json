@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellknightDisciplineShackle",
   "guid": "089be9f194bc4be458b1ac269e47d9cb",

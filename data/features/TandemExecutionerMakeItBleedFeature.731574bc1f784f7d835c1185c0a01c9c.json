@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TandemExecutionerMakeItBleedFeature",
   "guid": "731574bc1f784f7d835c1185c0a01c9c",

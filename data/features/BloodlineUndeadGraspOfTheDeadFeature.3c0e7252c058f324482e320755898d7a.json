@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineUndeadGraspOfTheDeadFeature",
   "guid": "3c0e7252c058f324482e320755898d7a",

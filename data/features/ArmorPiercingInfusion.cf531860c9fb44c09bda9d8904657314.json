@@ -31,6 +31,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArmorPiercingInfusion",
   "guid": "cf531860c9fb44c09bda9d8904657314",

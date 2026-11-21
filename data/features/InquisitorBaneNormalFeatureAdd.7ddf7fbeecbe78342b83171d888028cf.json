@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InquisitorBaneNormalFeatureAdd",
   "guid": "7ddf7fbeecbe78342b83171d888028cf",

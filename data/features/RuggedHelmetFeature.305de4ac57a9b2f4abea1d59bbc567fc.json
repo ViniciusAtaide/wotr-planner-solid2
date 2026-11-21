@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "RuggedHelmetFeature",
   "guid": "305de4ac57a9b2f4abea1d59bbc567fc"

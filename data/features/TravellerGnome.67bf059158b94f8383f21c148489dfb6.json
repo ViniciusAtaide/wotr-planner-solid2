@@ -33,6 +33,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TravellerGnome",
   "guid": "67bf059158b94f8383f21c148489dfb6",

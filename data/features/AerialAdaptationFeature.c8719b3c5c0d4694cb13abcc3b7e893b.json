@@ -34,6 +34,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AerialAdaptationFeature",
   "guid": "c8719b3c5c0d4694cb13abcc3b7e893b",

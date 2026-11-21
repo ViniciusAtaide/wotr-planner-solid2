@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChannelResistance6",
   "guid": "99fbca8fc766b4841b2ae1ce7d974332",

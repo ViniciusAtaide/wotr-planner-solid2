@@ -27,6 +27,7 @@
     "Familiar"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RavenFamiliarBondFeature",
   "guid": "c33eb6f9b46321d47ba6095b9b105c65",

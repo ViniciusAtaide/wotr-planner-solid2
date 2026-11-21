@@ -29,6 +29,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationSkillAtArms",
   "guid": "ba63899cf42ba8a459742078a526e7ec",

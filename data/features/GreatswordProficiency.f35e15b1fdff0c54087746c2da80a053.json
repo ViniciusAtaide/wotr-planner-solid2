@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreatswordProficiency",
   "guid": "f35e15b1fdff0c54087746c2da80a053",

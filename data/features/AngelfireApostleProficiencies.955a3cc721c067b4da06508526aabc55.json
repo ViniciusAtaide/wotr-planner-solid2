@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelfireApostleProficiencies",
   "guid": "955a3cc721c067b4da06508526aabc55",

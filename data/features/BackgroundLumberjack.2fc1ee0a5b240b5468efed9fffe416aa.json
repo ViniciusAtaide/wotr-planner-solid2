@@ -42,6 +42,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundLumberjack",
   "guid": "2fc1ee0a5b240b5468efed9fffe416aa",

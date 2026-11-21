@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GoodDomainGreaterFeature",
   "guid": "c90f8979927db4b4fbf6159297e01af8",

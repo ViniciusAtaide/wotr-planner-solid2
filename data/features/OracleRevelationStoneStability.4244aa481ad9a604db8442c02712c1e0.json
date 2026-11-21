@@ -45,6 +45,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationStoneStability",
   "guid": "4244aa481ad9a604db8442c02712c1e0",

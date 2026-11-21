@@ -37,6 +37,7 @@
   "Groups": [],
   "HasNoSuchFeature": false,
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "IgnoreParameterFeaturePrerequisites": false,
   "ParameterType": "FeatureSelection",
   "Ranks": 1,

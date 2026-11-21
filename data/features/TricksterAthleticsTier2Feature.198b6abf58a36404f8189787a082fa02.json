@@ -17,6 +17,7 @@
     "MythicTrick2"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterAthleticsTier2Feature",
   "guid": "198b6abf58a36404f8189787a082fa02",

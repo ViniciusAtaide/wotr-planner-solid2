@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleProficiency",
   "guid": "9b45ccedba40f364fbc427b4e9c7b560",

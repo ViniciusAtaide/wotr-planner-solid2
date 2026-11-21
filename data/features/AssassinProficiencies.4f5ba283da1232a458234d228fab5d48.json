@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AssassinProficiencies",
   "guid": "4f5ba283da1232a458234d228fab5d48",

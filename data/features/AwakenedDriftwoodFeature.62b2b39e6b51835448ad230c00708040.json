@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 100,
   "assetName": "AwakenedDriftwoodFeature",
   "guid": "62b2b39e6b51835448ad230c00708040"

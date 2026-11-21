@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "Penta_Numerian_Background",
   "guid": "0eb9884373934d5980c7aad03e710778",

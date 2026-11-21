@@ -27,6 +27,7 @@
     "EnlightenedPhilosopherMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnlightenedPhilosopherBattleMysteryFeature",
   "guid": "677fbcaa2a87cf94296138568db117a8",

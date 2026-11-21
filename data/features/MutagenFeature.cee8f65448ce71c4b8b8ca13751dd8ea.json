@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MutagenFeature",
   "guid": "cee8f65448ce71c4b8b8ca13751dd8ea",

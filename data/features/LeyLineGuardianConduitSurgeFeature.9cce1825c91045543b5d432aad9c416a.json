@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "LeyLineGuardianConduitSurgeFeature",
   "guid": "9cce1825c91045543b5d432aad9c416a",

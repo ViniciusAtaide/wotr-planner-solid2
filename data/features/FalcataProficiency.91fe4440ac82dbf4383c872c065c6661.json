@@ -24,6 +24,7 @@
     "ExoticWeaponProficiency"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FalcataProficiency",
   "guid": "91fe4440ac82dbf4383c872c065c6661",

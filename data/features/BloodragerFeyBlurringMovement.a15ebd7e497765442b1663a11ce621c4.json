@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerFeyBlurringMovement",
   "guid": "a15ebd7e497765442b1663a11ce621c4",

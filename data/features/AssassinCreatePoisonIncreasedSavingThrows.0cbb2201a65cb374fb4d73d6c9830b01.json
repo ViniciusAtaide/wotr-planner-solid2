@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "AssassinCreatePoisonIncreasedSavingThrows",
   "guid": "0cbb2201a65cb374fb4d73d6c9830b01",

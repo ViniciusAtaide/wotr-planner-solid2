@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PerilousShadeFeature",
   "guid": "8adda5efd907f124a8874e833b04d1c7"

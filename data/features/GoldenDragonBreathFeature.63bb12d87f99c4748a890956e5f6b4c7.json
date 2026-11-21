@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GoldenDragonBreathFeature",
   "guid": "63bb12d87f99c4748a890956e5f6b4c7",

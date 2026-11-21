@@ -147,6 +147,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ToragFeature",
   "guid": "d2d5c5a58885a6b489727467e13c3337",

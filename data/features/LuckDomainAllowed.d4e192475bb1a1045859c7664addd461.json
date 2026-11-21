@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LuckDomainAllowed",
   "guid": "d4e192475bb1a1045859c7664addd461"

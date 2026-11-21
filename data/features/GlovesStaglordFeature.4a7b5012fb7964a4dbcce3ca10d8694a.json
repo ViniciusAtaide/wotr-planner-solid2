@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "GlovesStaglordFeature",
   "guid": "4a7b5012fb7964a4dbcce3ca10d8694a",

@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DevilbanePriestDemonicKnowledge",
   "guid": "18998dbda2503154ea83886fc54414de",

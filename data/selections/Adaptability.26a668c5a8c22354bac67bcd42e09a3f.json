@@ -22,6 +22,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "IgnorePrerequisites": false,
   "Mode": "Default",
   "Obligatory": false,

@@ -21,6 +21,7 @@
     "EldritchKnightSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "EldritchKnightThassilonianTransmutation",
   "guid": "099a1dc2b15a8f54cb13af76abda5703",

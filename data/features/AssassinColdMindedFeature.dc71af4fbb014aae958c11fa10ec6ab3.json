@@ -39,6 +39,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "AssassinColdMindedFeature",
   "guid": "dc71af4fbb014aae958c11fa10ec6ab3",

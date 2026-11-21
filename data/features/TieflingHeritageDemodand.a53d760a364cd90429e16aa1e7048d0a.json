@@ -57,6 +57,7 @@
     "TieflingHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TieflingHeritageDemodand",
   "guid": "a53d760a364cd90429e16aa1e7048d0a",

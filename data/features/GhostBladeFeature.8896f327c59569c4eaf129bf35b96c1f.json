@@ -30,6 +30,7 @@
     "MagusArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GhostBladeFeature",
   "guid": "8896f327c59569c4eaf129bf35b96c1f",

@@ -30,6 +30,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpiritedCharge",
   "guid": "95ef0ff14771f2549897f300ce62c95c",

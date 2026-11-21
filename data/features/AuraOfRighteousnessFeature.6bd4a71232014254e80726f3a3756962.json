@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AuraOfRighteousnessFeature",
   "guid": "6bd4a71232014254e80726f3a3756962",

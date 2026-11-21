@@ -21,6 +21,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BucklerProficiency",
   "guid": "7c28228ce4eed1543a6b670fd2a88e72",

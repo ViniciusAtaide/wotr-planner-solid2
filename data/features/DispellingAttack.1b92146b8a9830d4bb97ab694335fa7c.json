@@ -27,6 +27,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DispellingAttack",
   "guid": "1b92146b8a9830d4bb97ab694335fa7c",

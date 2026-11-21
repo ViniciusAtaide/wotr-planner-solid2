@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpellDanceFeature",
   "guid": "330d055badafd5e45a5f5624dd005756",

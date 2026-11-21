@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 4,
   "assetName": "PurifierCelestialArmorFeature",
   "guid": "7dc8d7dede2704640956f7bc4102760a",

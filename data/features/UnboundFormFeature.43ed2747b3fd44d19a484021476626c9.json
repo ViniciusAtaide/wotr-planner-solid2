@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UnboundFormFeature",
   "guid": "43ed2747b3fd44d19a484021476626c9",

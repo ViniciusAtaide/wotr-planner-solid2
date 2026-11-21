@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PsychokineticistBurnFeature",
   "guid": "2fa48527ba627254ba9bf4556330a4d4",

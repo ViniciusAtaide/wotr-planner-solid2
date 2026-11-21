@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RegenerationFeature",
   "guid": "613a8f55cd2e4570a45cbac3b0feb912",

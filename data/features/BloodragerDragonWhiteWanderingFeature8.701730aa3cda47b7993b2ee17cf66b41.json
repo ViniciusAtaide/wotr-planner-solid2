@@ -103,6 +103,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerDragonWhiteWanderingFeature8",
   "guid": "701730aa3cda47b7993b2ee17cf66b41",

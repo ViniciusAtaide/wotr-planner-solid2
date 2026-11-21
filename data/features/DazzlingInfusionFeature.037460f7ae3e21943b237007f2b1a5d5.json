@@ -26,6 +26,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DazzlingInfusionFeature",
   "guid": "037460f7ae3e21943b237007f2b1a5d5",

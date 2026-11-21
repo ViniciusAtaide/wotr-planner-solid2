@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BaphometFireGloves_AnimalisticFireFeature",
   "guid": "b5095bd2c3bc4615bffecb6ead9982b3"

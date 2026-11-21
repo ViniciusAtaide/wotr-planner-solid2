@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundPickpocket",
   "guid": "9da9faf5f0ef4904db4a59a22dafbb06",

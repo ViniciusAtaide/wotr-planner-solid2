@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BardicKnowledge",
   "guid": "65cff8410a336654486c98fd3bacd8c5",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonConcentrationGazeFeature",
   "guid": "2eae9b2c25a969641a2cf230acdca478",

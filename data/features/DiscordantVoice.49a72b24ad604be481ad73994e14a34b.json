@@ -20,6 +20,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DiscordantVoice",
   "guid": "49a72b24ad604be481ad73994e14a34b",

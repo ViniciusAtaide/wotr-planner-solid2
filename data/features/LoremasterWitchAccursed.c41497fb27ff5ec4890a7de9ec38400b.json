@@ -23,6 +23,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterWitchAccursed",
   "guid": "c41497fb27ff5ec4890a7de9ec38400b",

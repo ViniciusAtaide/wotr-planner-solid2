@@ -20,6 +20,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexAnimalSkinFeature",
   "guid": "b8aab24af64e78a42970f476ecf86d4a",

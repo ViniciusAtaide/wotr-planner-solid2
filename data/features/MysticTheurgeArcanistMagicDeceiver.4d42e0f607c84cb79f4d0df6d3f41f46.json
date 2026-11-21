@@ -23,6 +23,7 @@
     "MysticTheurgeArcaneSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "MysticTheurgeArcanistMagicDeceiver",
   "guid": "4d42e0f607c84cb79f4d0df6d3f41f46",

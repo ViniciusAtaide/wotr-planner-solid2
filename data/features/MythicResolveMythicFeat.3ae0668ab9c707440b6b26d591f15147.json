@@ -27,6 +27,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MythicResolveMythicFeat",
   "guid": "3ae0668ab9c707440b6b26d591f15147",

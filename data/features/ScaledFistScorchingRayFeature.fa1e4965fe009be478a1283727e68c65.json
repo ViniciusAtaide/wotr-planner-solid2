@@ -22,6 +22,7 @@
     "ScaledFistKiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScaledFistScorchingRayFeature",
   "guid": "fa1e4965fe009be478a1283727e68c65",

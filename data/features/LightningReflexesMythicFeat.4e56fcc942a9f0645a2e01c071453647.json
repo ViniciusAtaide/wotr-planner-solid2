@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LightningReflexesMythicFeat",
   "guid": "4e56fcc942a9f0645a2e01c071453647",

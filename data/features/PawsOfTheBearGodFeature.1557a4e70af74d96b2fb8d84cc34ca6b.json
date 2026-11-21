@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PawsOfTheBearGodFeature",
   "guid": "1557a4e70af74d96b2fb8d84cc34ca6b",

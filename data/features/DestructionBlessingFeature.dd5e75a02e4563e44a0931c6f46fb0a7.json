@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DestructionBlessingFeature",
   "guid": "dd5e75a02e4563e44a0931c6f46fb0a7",

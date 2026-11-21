@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DraconicBrassBloodlineRequisiteFeature",
   "guid": "12bb1056a5f3f9f4b9facdb78b8d8914",

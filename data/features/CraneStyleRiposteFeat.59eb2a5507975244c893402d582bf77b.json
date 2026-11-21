@@ -53,6 +53,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CraneStyleRiposteFeat",
   "guid": "59eb2a5507975244c893402d582bf77b",

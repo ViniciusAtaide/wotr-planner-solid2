@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImmunityToParalysis",
   "guid": "4b152a7bc5bab5042b437b955fea46cd",

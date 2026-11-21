@@ -13,6 +13,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SchoolTolerance",
   "guid": "e8209281e6c44451af98ada20d3b7cbe",

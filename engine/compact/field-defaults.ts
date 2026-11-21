@@ -132,11 +132,13 @@ export const FIELD_DEFAULTS: FieldDefaults = {
   BlueprintFeature: {
     Groups: [],
     HideInUI: false,
+    HideNotAvailibleInUI: false,
     Ranks: 0,
   },
   BlueprintFeatureReplaceSpellbook: {
     Groups: [],
     HideInUI: false,
+    HideNotAvailibleInUI: false,
     Ranks: 0,
   },
   BlueprintFeatureSelection: {
@@ -144,6 +146,7 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     Group: 'None',
     Groups: [],
     HideInUI: false,
+    HideNotAvailibleInUI: false,
     IgnorePrerequisites: false,
     m_AllFeatures: [],
     Obligatory: false,
@@ -152,6 +155,7 @@ export const FIELD_DEFAULTS: FieldDefaults = {
   BlueprintFeatureSelectMythicSpellbook: {
     Groups: [],
     HideInUI: false,
+    HideNotAvailibleInUI: false,
     m_AllowedSpellbooks: [],
     Ranks: 0,
   },
@@ -204,6 +208,7 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     Groups: [],
     HasNoSuchFeature: false,
     HideInUI: false,
+    HideNotAvailibleInUI: false,
     IgnoreParameterFeaturePrerequisites: false,
     m_Prerequisite: null,
     Ranks: 0,
@@ -215,6 +220,7 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     GiveFeaturesForPreviousLevels: false,
     Groups: [],
     HideInUI: false,
+    HideNotAvailibleInUI: false,
     LevelEntries: [],
     m_AlternateProgressionClasses: [],
     m_Archetypes: [],
@@ -226,6 +232,7 @@ export const FIELD_DEFAULTS: FieldDefaults = {
   BlueprintRace: {
     Groups: [],
     HideInUI: false,
+    HideNotAvailibleInUI: false,
     m_Features: [],
     Ranks: 0,
     SelectableRaceStat: false,

@@ -15,6 +15,7 @@
     "WeaponTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CombatManeuverDefense",
   "guid": "318ae316d7aed5143b7a8cbd25fd8e77",

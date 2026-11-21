@@ -16,6 +16,7 @@
     "FinesseTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinesseTrainingSpikedLightShield",
   "guid": "d5729de76e4e4b8380d5aa1d39b1ad11",

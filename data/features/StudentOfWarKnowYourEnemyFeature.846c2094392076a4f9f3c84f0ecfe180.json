@@ -29,6 +29,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "StudentOfWarKnowYourEnemyFeature",
   "guid": "846c2094392076a4f9f3c84f0ecfe180",

@@ -44,6 +44,7 @@
     "FinesseTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinesseTrainingSlam",
   "guid": "3411b8c822dc4e148f4725a391e714df",

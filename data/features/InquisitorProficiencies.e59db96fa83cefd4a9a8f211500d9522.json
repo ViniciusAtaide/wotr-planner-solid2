@@ -25,6 +25,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InquisitorProficiencies",
   "guid": "e59db96fa83cefd4a9a8f211500d9522",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "JudgmentAdditionalUse",
   "guid": "ee50875819478774b8968701893b52f5",

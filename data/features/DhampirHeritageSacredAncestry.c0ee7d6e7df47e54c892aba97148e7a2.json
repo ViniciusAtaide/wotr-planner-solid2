@@ -49,6 +49,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DhampirHeritageSacredAncestry",
   "guid": "c0ee7d6e7df47e54c892aba97148e7a2",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "SmiteChaosAdditionalUse",
   "guid": "fb43a20f3a70f15448e42085bfc4ff2a"

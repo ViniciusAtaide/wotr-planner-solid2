@@ -37,6 +37,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FuriousFocus",
   "guid": "f09b89812cc94b89a09069671002b899",

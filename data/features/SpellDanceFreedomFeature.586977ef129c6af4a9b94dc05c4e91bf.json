@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpellDanceFreedomFeature",
   "guid": "586977ef129c6af4a9b94dc05c4e91bf"

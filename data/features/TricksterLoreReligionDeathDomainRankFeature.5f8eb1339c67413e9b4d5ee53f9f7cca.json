@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 20,
   "assetName": "TricksterLoreReligionDeathDomainRankFeature",
   "guid": "5f8eb1339c67413e9b4d5ee53f9f7cca"

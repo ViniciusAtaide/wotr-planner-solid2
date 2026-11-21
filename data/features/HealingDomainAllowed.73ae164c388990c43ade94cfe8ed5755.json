@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HealingDomainAllowed",
   "guid": "73ae164c388990c43ade94cfe8ed5755"

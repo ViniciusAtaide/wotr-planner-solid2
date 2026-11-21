@@ -8,6 +8,7 @@
     "WitchPatron"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "LevelEntries": [
     {
       "Level": 2,

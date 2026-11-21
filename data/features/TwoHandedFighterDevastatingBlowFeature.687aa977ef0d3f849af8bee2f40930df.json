@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TwoHandedFighterDevastatingBlowFeature",
   "guid": "687aa977ef0d3f849af8bee2f40930df",

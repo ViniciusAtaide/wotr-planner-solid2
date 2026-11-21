@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RootsenseBootsFeature",
   "guid": "2a15d837ee1048f8a706bdfb6a486f78"

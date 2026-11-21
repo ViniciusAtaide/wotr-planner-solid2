@@ -22,6 +22,7 @@
     "WeaponTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArmedBravery",
   "guid": "40437224e8606d644a1986311981c1eb",

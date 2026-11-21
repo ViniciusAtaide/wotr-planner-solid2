@@ -38,6 +38,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StumblingBash",
   "guid": "1fc8c07a82d749a1a35b6992ad359788",

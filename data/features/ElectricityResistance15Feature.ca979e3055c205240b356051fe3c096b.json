@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "ElectricityResistance15Feature",
   "guid": "ca979e3055c205240b356051fe3c096b"

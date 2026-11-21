@@ -44,6 +44,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinalFeint",
   "guid": "32429740d6a5470aaaa02f20d61e43d3",

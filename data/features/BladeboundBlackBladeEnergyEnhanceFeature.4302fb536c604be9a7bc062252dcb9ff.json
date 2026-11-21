@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BladeboundBlackBladeEnergyEnhanceFeature",
   "guid": "4302fb536c604be9a7bc062252dcb9ff",

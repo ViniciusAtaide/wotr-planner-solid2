@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DiscipleOfThePikeAgileCharge",
   "guid": "75b009c09ba39094b9cdad634e7a7cb7",

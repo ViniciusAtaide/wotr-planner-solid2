@@ -23,6 +23,7 @@
     "HellknightSigniferSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HellknightSigniferSwordSaint",
   "guid": "7f7acf3e53b7b6240a93c634b2c02926",

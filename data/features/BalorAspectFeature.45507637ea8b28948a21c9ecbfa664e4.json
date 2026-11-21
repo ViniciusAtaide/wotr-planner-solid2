@@ -13,6 +13,7 @@
     "DemonMajorAspect"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BalorAspectFeature",
   "guid": "45507637ea8b28948a21c9ecbfa664e4",

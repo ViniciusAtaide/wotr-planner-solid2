@@ -22,6 +22,7 @@
     "ScaledFistKiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScaledFistWholenessOfBodyFeature",
   "guid": "ae997f16b38fcee4fb4ad31e0588cd07",

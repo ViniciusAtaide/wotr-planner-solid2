@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GrenadierDirectedBlastFeature",
   "guid": "e39991a116cbbf74c9c75926b25988eb",

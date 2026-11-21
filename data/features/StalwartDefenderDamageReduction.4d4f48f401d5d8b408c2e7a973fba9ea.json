@@ -19,6 +19,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "StalwartDefenderDamageReduction",
   "guid": "4d4f48f401d5d8b408c2e7a973fba9ea",

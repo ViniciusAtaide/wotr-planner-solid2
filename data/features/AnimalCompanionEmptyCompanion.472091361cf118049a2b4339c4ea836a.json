@@ -14,6 +14,7 @@
     "AnimalCompanion"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 10,
   "assetName": "AnimalCompanionEmptyCompanion",
   "guid": "472091361cf118049a2b4339c4ea836a",

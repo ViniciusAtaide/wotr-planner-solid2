@@ -29,6 +29,7 @@
     "Discovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HolyBombsFeature",
   "guid": "1747eefb19e4e6649be836c5ae4ccc60",

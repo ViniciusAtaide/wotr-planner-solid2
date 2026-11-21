@@ -32,6 +32,7 @@
     "VivisectionistDiscovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FeralWings",
   "guid": "78197196e096c6e4eaed5c62fa108b52",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineCelestialResistancesAbilityLevel1",
   "guid": "bf1429cc15c22f045b19e11d6bffeefb",

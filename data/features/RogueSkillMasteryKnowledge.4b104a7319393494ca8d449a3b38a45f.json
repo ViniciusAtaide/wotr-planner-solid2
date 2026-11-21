@@ -21,6 +21,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RogueSkillMasteryKnowledge",
   "guid": "4b104a7319393494ca8d449a3b38a45f",

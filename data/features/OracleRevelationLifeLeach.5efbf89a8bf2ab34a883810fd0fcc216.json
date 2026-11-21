@@ -35,6 +35,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationLifeLeach",
   "guid": "5efbf89a8bf2ab34a883810fd0fcc216",

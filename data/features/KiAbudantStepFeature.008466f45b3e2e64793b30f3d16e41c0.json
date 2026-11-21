@@ -22,6 +22,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KiAbudantStepFeature",
   "guid": "008466f45b3e2e64793b30f3d16e41c0",

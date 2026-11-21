@@ -14,6 +14,7 @@
     "HellknightSigniferSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HellknightSigniferBloodrager",
   "guid": "a4a7032f4d893fb469e9feb9c91e36e4",

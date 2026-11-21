@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrunkenTechniqueFirewaterBreathFeature",
   "guid": "5accb22c1d0945a39b07fb6024fdfb93",

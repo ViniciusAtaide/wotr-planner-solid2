@@ -22,6 +22,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FortuneRevelationFeature",
   "guid": "16935c4660ee4c7da976b5f6cafb43dd",

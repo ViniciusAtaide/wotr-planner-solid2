@@ -38,6 +38,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundEmissary",
   "guid": "2aca424b9a5e1b1408078ac0a4ed7bc3",

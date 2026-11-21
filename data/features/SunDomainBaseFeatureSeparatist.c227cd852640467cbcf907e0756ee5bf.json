@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SunDomainBaseFeatureSeparatist",
   "guid": "c227cd852640467cbcf907e0756ee5bf",

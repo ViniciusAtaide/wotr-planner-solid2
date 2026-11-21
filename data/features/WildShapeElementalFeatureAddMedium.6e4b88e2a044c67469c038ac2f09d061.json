@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WildShapeElementalFeatureAddMedium",
   "guid": "6e4b88e2a044c67469c038ac2f09d061",

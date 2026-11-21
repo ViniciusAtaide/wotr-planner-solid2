@@ -150,6 +150,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DeskariFeature",
   "guid": "ddf913858bdf43b4da3b731e082fbcc0",

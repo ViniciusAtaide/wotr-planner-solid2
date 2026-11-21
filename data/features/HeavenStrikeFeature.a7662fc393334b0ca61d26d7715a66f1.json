@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HeavenStrikeFeature",
   "guid": "a7662fc393334b0ca61d26d7715a66f1",

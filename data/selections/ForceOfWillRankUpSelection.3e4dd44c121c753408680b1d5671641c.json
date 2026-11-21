@@ -5,6 +5,7 @@
   "Group": "None",
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "IgnorePrerequisites": false,
   "Mode": "OnlyRankUp",
   "Obligatory": false,

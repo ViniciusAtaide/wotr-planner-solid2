@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OtherworldlyCompanionFiendish",
   "guid": "4d7607a0155af7d43b49b785f2051e21",

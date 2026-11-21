@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DuelistGrace",
   "guid": "03d207de4011f4f4fb871d2dcce8fd56",

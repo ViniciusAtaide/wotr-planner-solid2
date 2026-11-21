@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellfireFeature",
   "guid": "4d65cfe93295ab84e9df54ce83714020",

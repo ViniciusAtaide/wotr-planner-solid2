@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GloryDomainBaseFeatureSeparatist",
   "guid": "dd5582108f2a4c0a981fc2423e8b3a59",

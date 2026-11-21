@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "ClearPurposeFeature",
   "guid": "2fee198fe87807d49950dd1ef73cb026"

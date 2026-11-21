@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StrengthOfStoneFeature",
   "guid": "8e63b163f1a6a83488815e762db5e268",

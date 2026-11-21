@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LichChannelNegativeFeature",
   "guid": "295dff380fb8ed743bd5c76a30a49a46",

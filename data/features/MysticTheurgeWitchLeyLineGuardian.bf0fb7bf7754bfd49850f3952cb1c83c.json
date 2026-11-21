@@ -23,6 +23,7 @@
     "MysticTheurgeArcaneSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "MysticTheurgeWitchLeyLineGuardian",
   "guid": "bf0fb7bf7754bfd49850f3952cb1c83c",

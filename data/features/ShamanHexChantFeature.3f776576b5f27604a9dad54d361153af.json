@@ -13,6 +13,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexChantFeature",
   "guid": "3f776576b5f27604a9dad54d361153af",

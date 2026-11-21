@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LifeDominantSoul",
   "guid": "8f58b4029511b5345981ffaf1da5ea2e",

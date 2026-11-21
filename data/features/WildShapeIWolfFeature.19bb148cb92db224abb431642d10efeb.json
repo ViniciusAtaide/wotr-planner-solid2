@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WildShapeIWolfFeature",
   "guid": "19bb148cb92db224abb431642d10efeb",

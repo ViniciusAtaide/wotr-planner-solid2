@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StudentOfWarAdditionalSkillStealth",
   "guid": "01ded78316f908c468cf28ce455c0f47",

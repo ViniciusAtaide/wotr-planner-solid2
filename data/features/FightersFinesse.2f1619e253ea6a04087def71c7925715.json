@@ -28,6 +28,7 @@
     "WeaponTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FightersFinesse",
   "guid": "2f1619e253ea6a04087def71c7925715",

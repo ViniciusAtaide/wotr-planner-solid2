@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GrenadierAlchemicalWeaponMove",
   "guid": "89ce4b08969952e44bd256f481837e63"

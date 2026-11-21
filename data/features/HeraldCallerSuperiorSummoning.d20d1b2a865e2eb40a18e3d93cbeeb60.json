@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HeraldCallerSuperiorSummoning",
   "guid": "d20d1b2a865e2eb40a18e3d93cbeeb60",

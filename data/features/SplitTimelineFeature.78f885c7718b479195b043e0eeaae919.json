@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SplitTimelineFeature",
   "guid": "78f885c7718b479195b043e0eeaae919",

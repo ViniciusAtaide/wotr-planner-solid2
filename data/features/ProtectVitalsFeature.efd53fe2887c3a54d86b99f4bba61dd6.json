@@ -40,6 +40,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ProtectVitalsFeature",
   "guid": "efd53fe2887c3a54d86b99f4bba61dd6",

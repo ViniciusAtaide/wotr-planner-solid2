@@ -5,6 +5,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TheBiggerTheyAre",
   "guid": "91a3a658f82ee5044a7c1eaaf756aa50",

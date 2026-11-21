@@ -29,6 +29,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StaggeringCriticalFeature",
   "guid": "055fb8dcaf6be334ca13172bafa9e782",

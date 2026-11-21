@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DirgeBardDanceOfTheDeadFeature",
   "guid": "88550ccfc7811884bb859c35fcf0b109",

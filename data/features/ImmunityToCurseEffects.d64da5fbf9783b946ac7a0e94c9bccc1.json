@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImmunityToCurseEffects",
   "guid": "d64da5fbf9783b946ac7a0e94c9bccc1",

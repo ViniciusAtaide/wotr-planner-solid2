@@ -41,6 +41,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SlayersFeint",
   "guid": "39425a13df904e3cb0e3f6debfe65cab",

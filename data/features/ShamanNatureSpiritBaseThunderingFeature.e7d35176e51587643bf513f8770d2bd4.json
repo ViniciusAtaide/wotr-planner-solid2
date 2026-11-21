@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanNatureSpiritBaseThunderingFeature",
   "guid": "e7d35176e51587643bf513f8770d2bd4"

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ProtectiveWardFeature",
   "guid": "4e63d38f5f48a474eaf1ce0521bb7e87",

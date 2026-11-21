@@ -26,6 +26,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InvulnerableRagerExtremeEndurance",
   "guid": "427b4a34432389042861b8db4cbe3d99",

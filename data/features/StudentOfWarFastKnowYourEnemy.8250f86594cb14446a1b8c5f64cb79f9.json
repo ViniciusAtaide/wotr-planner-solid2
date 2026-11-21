@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StudentOfWarFastKnowYourEnemy",
   "guid": "8250f86594cb14446a1b8c5f64cb79f9",

@@ -26,6 +26,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WearyingStrike",
   "guid": "b4befb0a9b58e0e4687942661c55198d",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "EarthDomainGreaterFeatureSeparatist",
   "guid": "b0b94804c93349c9ace535faf7c6381e",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArmoredBattlemageArcaneHeavyArmor",
   "guid": "64e83bc639626a34181edb6f6648e90b",

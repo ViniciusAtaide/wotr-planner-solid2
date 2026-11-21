@@ -57,6 +57,7 @@
     "TieflingHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TieflingHeritageQlippoth",
   "guid": "9fcf9688effb01343aa44124e000f7ed",

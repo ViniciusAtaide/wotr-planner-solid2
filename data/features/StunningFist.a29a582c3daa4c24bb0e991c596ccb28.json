@@ -29,6 +29,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StunningFist",
   "guid": "a29a582c3daa4c24bb0e991c596ccb28",

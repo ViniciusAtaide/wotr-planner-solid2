@@ -146,6 +146,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AchaekekFeature",
   "guid": "a3189d5b7c4d4d91beaa8bfffac3e38e",

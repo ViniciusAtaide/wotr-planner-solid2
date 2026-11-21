@@ -10,6 +10,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PrimalistRagePowersFeature",
   "guid": "c846fed2d31e1734ebad07a64f72df2f"

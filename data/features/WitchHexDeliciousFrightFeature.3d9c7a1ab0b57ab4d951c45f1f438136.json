@@ -20,6 +20,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexDeliciousFrightFeature",
   "guid": "3d9c7a1ab0b57ab4d951c45f1f438136",

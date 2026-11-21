@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpellblastBombsFeature",
   "guid": "142e7d12c27ea084fb9b7c24631f10f2",

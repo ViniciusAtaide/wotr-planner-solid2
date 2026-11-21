@@ -50,6 +50,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanFrostSpiritWanderingFeature",
   "guid": "6aeab860502ca2643affcbf1a83187e0",

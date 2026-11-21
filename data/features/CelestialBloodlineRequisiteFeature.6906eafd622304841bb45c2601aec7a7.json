@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CelestialBloodlineRequisiteFeature",
   "guid": "6906eafd622304841bb45c2601aec7a7",

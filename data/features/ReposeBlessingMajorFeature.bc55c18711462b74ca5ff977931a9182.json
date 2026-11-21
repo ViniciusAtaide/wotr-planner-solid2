@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ReposeBlessingMajorFeature",
   "guid": "bc55c18711462b74ca5ff977931a9182",

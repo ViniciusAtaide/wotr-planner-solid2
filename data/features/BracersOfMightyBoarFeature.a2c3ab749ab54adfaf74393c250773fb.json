@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BracersOfMightyBoarFeature",
   "guid": "a2c3ab749ab54adfaf74393c250773fb"

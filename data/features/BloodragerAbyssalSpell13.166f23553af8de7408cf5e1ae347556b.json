@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerAbyssalSpell13",
   "guid": "166f23553af8de7408cf5e1ae347556b",

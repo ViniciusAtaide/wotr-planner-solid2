@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MadDogFerociousFetch",
   "guid": "700aa068f7c0a2b41a8ef8a0fccbfffd",

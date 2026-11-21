@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StorytellerAreshkaMaskFeature",
   "guid": "57ccf2db05b1459fb4b2d1e78a286599"

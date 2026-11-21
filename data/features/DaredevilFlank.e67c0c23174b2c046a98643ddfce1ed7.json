@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DaredevilFlank",
   "guid": "e67c0c23174b2c046a98643ddfce1ed7",

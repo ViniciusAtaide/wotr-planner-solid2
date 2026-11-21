@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LegendFeature",
   "guid": "7f99961610390044391f300c7ef5e0c8",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UnletteredArcanistWitchSpells",
   "guid": "f1e7496d89d79c7479932b2476fd0b30",

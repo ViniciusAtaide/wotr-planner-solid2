@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImmunityToBleed",
   "guid": "52f8ef060a751a247964adae7fcb7e64",

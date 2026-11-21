@@ -58,6 +58,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellKnightOrderOfTheRack",
   "guid": "9ff89287e89287c4498d551d88221447",

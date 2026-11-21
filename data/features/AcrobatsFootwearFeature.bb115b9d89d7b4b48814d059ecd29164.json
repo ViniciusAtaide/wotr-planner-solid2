@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "AcrobatsFootwearFeature",
   "guid": "bb115b9d89d7b4b48814d059ecd29164"

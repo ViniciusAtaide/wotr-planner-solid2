@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnchantmentFoolFeature",
   "guid": "c7175145c78542bdbd3ee22f99f19b7c",

@@ -49,6 +49,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DeadlyAccuracyFeature",
   "guid": "c841ffa13d39ce442a408f57feb3cb8e",

@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ToughnessMythicFeat",
   "guid": "d8df8f8ad7149824e8e60dd3453557d2",

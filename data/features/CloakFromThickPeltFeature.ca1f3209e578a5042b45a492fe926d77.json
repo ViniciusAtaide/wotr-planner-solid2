@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CloakFromThickPeltFeature",
   "guid": "ca1f3209e578a5042b45a492fe926d77"

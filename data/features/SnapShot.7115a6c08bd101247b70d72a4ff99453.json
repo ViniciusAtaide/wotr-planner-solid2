@@ -33,6 +33,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SnapShot",
   "guid": "7115a6c08bd101247b70d72a4ff99453",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AloneInTheDarkFeatureDescription",
   "guid": "ecbfbffc97544ef1892e37514ec6643f",

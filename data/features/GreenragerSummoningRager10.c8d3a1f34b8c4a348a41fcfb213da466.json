@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreenragerSummoningRager10",
   "guid": "c8d3a1f34b8c4a348a41fcfb213da466",

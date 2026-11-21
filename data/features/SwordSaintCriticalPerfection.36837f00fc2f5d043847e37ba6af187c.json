@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SwordSaintCriticalPerfection",
   "guid": "36837f00fc2f5d043847e37ba6af187c",

@@ -30,6 +30,7 @@
     "VivisectionistDiscovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GrandCognatogenFeature",
   "guid": "af4a320648eb5724889d6ff6255090b2",

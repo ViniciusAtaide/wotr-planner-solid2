@@ -74,6 +74,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RakingClawsFeature",
   "guid": "a1b262d2b1ef478994113fc941fa3a32",

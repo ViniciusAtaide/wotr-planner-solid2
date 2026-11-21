@@ -14,6 +14,7 @@
     "DragonDiscipleSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonDiscipleBloodrager",
   "guid": "4d61f1581befd99419a72a9d0d528242",

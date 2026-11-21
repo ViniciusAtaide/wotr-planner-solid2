@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "BracersOfSlaughterFeature",
   "guid": "8037f7fbb9b048fea2d9f5ff0b1516ac",

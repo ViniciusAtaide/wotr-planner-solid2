@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonSummonFeatureTier6",
   "guid": "27d9e29842518c34f9c404d9d2bbd0c3",

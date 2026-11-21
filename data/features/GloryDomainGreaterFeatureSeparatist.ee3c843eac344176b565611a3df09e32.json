@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GloryDomainGreaterFeatureSeparatist",
   "guid": "ee3c843eac344176b565611a3df09e32",

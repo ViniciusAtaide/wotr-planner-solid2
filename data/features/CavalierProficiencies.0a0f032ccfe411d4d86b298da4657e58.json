@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierProficiencies",
   "guid": "0a0f032ccfe411d4d86b298da4657e58",

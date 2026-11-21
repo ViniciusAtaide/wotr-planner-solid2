@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KukriProficiency",
   "guid": "a7e822a8507e44b0a981ca55586dfad9",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MountTargetFeature",
   "guid": "cb06f0e72ffb5c640a156bd9f8000c1d",

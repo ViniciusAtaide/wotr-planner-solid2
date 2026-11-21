@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CrushAndTearFeatureLevelUp11",
   "guid": "79f037b186e74f98840f3dc2acb9a58f"

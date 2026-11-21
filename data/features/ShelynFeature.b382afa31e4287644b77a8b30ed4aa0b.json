@@ -146,6 +146,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShelynFeature",
   "guid": "b382afa31e4287644b77a8b30ed4aa0b",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InspiredRage",
   "guid": "1a639eadc2c3ed546bc4bb236864cd0c",

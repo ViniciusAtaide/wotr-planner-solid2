@@ -58,6 +58,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonAzataFeatureTierII",
   "guid": "fc2aeb954e13811488d38dc1af72ef9c"

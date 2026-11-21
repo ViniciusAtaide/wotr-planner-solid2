@@ -13,6 +13,7 @@
     "ChannelEnergy"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ShamanLifeSpiritChannelEnergyFeature",
   "guid": "b8ec9dccc0e7ef74fb4072b0679c2aec",

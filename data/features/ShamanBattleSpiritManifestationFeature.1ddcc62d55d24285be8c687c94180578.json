@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanBattleSpiritManifestationFeature",
   "guid": "1ddcc62d55d24285be8c687c94180578",

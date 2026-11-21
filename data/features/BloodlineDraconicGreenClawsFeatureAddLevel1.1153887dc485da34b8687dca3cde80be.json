@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineDraconicGreenClawsFeatureAddLevel1",
   "guid": "1153887dc485da34b8687dca3cde80be",

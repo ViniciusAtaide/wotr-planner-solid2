@@ -50,6 +50,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanStonesSpiritWanderingFeature",
   "guid": "e6468a6fac9e1074897b2487a0659e96",

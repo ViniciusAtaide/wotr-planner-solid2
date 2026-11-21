@@ -10,6 +10,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineDraconicCopperBreathWeaponBaseFeature",
   "guid": "8e339ab3898fdd14b879753eaaae933d",

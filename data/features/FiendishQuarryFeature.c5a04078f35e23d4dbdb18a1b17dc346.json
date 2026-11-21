@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FiendishQuarryFeature",
   "guid": "c5a04078f35e23d4dbdb18a1b17dc346",

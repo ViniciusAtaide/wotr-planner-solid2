@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HeraldCallerSpontaneousSummon",
   "guid": "f6c112a579a81c0439c597f9ee222243",

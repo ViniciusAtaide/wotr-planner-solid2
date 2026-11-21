@@ -57,6 +57,7 @@
     "TieflingHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TieflingHeritageAsura",
   "guid": "9f377814338e7264bbd499b099e6ef86",

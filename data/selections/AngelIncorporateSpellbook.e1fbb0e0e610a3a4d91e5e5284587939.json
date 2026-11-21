@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelIncorporateSpellbook",
   "guid": "e1fbb0e0e610a3a4d91e5e5284587939",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreaterElementalFocusFire",
   "guid": "7a722c3e782aa5349a867c3516a2a4cf",

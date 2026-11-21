@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScalykindBlessingFeature",
   "guid": "606ca13281f4404a9c224aa7ce8a802e",

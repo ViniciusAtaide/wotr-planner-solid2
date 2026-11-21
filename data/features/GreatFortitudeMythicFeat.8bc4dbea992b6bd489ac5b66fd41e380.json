@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreatFortitudeMythicFeat",
   "guid": "8bc4dbea992b6bd489ac5b66fd41e380",

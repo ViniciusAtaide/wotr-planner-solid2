@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerIndomitableWill",
   "guid": "80c27aae29b793a49b4023dc82a3a69e",

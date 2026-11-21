@@ -5,6 +5,7 @@
     "ImprovedSwordOfHeaven"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelSwordAntiCompulsionFeature",
   "guid": "ebcda8f579e7d494a8befda94279968f",

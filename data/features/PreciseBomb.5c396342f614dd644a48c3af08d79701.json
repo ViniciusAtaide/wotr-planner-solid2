@@ -13,6 +13,7 @@
     "Discovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PreciseBomb",
   "guid": "5c396342f614dd644a48c3af08d79701",

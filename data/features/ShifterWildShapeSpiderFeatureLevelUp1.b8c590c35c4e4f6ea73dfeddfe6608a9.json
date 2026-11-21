@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeSpiderFeatureLevelUp1",
   "guid": "b8c590c35c4e4f6ea73dfeddfe6608a9",

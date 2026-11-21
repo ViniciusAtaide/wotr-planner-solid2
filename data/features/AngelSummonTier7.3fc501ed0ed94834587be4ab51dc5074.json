@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelSummonTier7",
   "guid": "3fc501ed0ed94834587be4ab51dc5074"

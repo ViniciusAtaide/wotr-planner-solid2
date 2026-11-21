@@ -112,6 +112,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerDragonSilverWanderingFeature7",
   "guid": "5b97952aab2f441eb2a7db1e71888f64",

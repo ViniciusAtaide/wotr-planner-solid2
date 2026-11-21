@@ -13,6 +13,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MagicalNullification",
   "guid": "3b17eb0294898cf409dc6afdb3d278cf",

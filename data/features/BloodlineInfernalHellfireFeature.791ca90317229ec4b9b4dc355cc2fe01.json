@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineInfernalHellfireFeature",
   "guid": "791ca90317229ec4b9b4dc355cc2fe01",

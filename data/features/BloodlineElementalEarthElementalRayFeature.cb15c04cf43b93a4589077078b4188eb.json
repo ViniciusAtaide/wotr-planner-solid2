@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalEarthElementalRayFeature",
   "guid": "cb15c04cf43b93a4589077078b4188eb",

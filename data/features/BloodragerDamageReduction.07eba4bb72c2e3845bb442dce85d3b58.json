@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "BloodragerDamageReduction",
   "guid": "07eba4bb72c2e3845bb442dce85d3b58",

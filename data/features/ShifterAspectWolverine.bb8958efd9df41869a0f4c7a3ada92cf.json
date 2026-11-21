@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterAspectWolverine",
   "guid": "bb8958efd9df41869a0f4c7a3ada92cf",

@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterLoreReligionLiberationDomainFeature",
   "guid": "9598994665b0426cbe5188ccc5ba5119",

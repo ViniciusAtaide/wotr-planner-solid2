@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FeatureWingsDraconicBrass",
   "guid": "f3f88c3dbf45d8c43ae82ed85e9a430e",

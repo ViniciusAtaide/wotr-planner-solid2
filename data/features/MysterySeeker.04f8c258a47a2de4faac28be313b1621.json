@@ -19,6 +19,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MysterySeeker",
   "guid": "04f8c258a47a2de4faac28be313b1621",

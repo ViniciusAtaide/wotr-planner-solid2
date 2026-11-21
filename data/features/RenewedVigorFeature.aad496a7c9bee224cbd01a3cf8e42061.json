@@ -49,6 +49,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RenewedVigorFeature",
   "guid": "aad496a7c9bee224cbd01a3cf8e42061",

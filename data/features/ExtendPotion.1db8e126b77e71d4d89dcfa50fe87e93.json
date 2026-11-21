@@ -12,6 +12,7 @@
     "UndergroundChemistDiscovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ExtendPotion",
   "guid": "1db8e126b77e71d4d89dcfa50fe87e93",

@@ -13,6 +13,7 @@
     "TerrainDominance"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TerrainExpertiseAbyss",
   "guid": "c0fdbea534083554ab79f5654e4d2032",

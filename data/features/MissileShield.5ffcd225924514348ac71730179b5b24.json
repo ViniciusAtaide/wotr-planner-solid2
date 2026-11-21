@@ -22,6 +22,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MissileShield",
   "guid": "5ffcd225924514348ac71730179b5b24",

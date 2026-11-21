@@ -24,6 +24,7 @@
     "ExoticWeaponProficiency"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DwarvenWaraxeProficiency",
   "guid": "bd0d7feca087d2247b12965c1467790c",

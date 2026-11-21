@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchDarkPactPatronSpellLevel1",
   "guid": "cf4a9c0244c64a75a09f0793080ee69e",

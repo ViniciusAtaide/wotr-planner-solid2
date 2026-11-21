@@ -123,6 +123,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MartialWeaponProficiency",
   "guid": "203992ef5b35c864390b4e4a1e200629",

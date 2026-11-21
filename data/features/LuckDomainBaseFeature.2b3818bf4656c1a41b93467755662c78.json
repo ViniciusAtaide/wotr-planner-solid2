@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LuckDomainBaseFeature",
   "guid": "2b3818bf4656c1a41b93467755662c78",

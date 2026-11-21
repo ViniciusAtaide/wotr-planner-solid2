@@ -58,6 +58,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationIceSkin",
   "guid": "cdeba08f8137cb141a9aa2f6fe55f99c",

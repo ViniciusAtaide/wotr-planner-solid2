@@ -14,6 +14,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Persuasive",
   "guid": "86d93a5891d299d4983bdc6ef3987afd",

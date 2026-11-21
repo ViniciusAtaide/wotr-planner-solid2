@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerCelestialAscension",
   "guid": "22026a36e62907f41a8c49717d4eac96",

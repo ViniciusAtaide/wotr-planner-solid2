@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShieldBucklerMythicFeat",
   "guid": "874cd4a453cb44e595c6ee34e97feafd",

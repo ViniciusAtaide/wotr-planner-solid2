@@ -15,6 +15,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FrighteningAmbush",
   "guid": "805fd6181a104bf0aca9ae79ef220c16",

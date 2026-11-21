@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "IceBlastFeature",
   "guid": "a8cc34ca1a5e55a4e8aa5394efe2678e",

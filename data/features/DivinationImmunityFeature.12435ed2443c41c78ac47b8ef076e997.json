@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivinationImmunityFeature",
   "guid": "12435ed2443c41c78ac47b8ef076e997",

@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MythicChannelMythicFeat",
   "guid": "0e8d5acbc4a937f4a9566001df959bea",

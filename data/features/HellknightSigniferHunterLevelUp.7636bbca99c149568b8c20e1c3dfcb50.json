@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "HellknightSigniferHunterLevelUp",
   "guid": "7636bbca99c149568b8c20e1c3dfcb50",

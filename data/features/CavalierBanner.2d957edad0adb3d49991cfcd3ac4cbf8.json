@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierBanner",
   "guid": "2d957edad0adb3d49991cfcd3ac4cbf8",

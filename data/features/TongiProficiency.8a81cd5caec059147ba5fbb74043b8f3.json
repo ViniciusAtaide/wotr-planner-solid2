@@ -24,6 +24,7 @@
     "ExoticWeaponProficiency"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TongiProficiency",
   "guid": "8a81cd5caec059147ba5fbb74043b8f3",

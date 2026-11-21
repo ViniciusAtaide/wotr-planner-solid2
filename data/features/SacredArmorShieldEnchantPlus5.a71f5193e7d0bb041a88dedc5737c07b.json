@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SacredArmorShieldEnchantPlus5",
   "guid": "a71f5193e7d0bb041a88dedc5737c07b",

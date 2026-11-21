@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KiPowerFeature",
   "guid": "e9590244effb4be4f830b1e3fffced13",

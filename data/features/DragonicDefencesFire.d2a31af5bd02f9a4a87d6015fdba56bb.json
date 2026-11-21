@@ -53,6 +53,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonicDefencesFire",
   "guid": "d2a31af5bd02f9a4a87d6015fdba56bb",

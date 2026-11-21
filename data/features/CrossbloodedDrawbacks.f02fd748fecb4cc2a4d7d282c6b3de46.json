@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CrossbloodedDrawbacks",
   "guid": "f02fd748fecb4cc2a4d7d282c6b3de46",

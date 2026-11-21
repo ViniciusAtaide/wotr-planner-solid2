@@ -24,6 +24,7 @@
     "ExoticWeaponProficiency"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SaiProficiency",
   "guid": "a9a692792f6668d4dbe32c9c4f023800",

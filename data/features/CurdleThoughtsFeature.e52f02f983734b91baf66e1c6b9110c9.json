@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CurdleThoughtsFeature",
   "guid": "e52f02f983734b91baf66e1c6b9110c9",

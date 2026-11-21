@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanWeaponPlus4",
   "guid": "c47b2861f8e84504bbb25a413de98923",

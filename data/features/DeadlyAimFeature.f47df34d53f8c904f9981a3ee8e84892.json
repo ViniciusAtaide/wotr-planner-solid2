@@ -38,6 +38,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DeadlyAimFeature",
   "guid": "f47df34d53f8c904f9981a3ee8e84892",

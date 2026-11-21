@@ -19,6 +19,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundNexianScholar",
   "guid": "1206bb79daa23564a9d20021ca8674e5",

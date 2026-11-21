@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SecondBloodlineEmptyFeature",
   "guid": "31e1c4c926d64e258c75e21968edac2d"

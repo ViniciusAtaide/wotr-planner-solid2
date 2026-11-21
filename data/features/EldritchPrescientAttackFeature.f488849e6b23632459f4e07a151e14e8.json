@@ -22,6 +22,7 @@
     "EldritchScionArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchPrescientAttackFeature",
   "guid": "f488849e6b23632459f4e07a151e14e8",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "RobeOfWaterFeature",
   "guid": "1d5af3a605a85994c9aac90ccd3a47cd"

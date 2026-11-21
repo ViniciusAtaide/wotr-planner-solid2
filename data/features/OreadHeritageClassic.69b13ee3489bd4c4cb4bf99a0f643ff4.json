@@ -43,6 +43,7 @@
     "OreadHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OreadHeritageClassic",
   "guid": "69b13ee3489bd4c4cb4bf99a0f643ff4",

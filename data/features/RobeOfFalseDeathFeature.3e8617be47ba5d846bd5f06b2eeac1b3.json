@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "RobeOfFalseDeathFeature",
   "guid": "3e8617be47ba5d846bd5f06b2eeac1b3",

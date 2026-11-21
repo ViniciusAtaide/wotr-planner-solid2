@@ -26,6 +26,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationMightyPebble",
   "guid": "b29d13f63f371664e9ae25bd65e5c463",

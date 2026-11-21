@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineFeyClassSkill",
   "guid": "243f474ce797acb4086c2dbc58660c4a",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivineGuardianHandsFeature",
   "guid": "ba9fa17a17e5a494a93cd181b5615198",

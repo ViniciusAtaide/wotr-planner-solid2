@@ -20,6 +20,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreatFortitudeImproved",
   "guid": "f5db1cc7ad48d794f85252fa4a64157b",

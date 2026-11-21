@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DaggerOfFateFirstFeature",
   "guid": "961461148d554914a7e530fba39bda18"

@@ -37,6 +37,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundMiner",
   "guid": "e4e06f443e158e646a495fce6e024546",

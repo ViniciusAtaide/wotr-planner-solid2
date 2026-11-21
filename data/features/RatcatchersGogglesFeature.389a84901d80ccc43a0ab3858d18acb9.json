@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "RatcatchersGogglesFeature",
   "guid": "389a84901d80ccc43a0ab3858d18acb9"

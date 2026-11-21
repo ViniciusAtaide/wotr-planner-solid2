@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LiberationDomainGreaterFeature",
   "guid": "25636a46d4e7a484d903946ef4a6f6db",

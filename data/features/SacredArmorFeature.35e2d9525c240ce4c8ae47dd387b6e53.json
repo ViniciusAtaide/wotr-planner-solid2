@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SacredArmorFeature",
   "guid": "35e2d9525c240ce4c8ae47dd387b6e53",

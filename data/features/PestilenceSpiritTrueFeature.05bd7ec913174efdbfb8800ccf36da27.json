@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PestilenceSpiritTrueFeature",
   "guid": "05bd7ec913174efdbfb8800ccf36da27",

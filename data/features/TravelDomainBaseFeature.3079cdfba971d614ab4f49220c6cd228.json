@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TravelDomainBaseFeature",
   "guid": "3079cdfba971d614ab4f49220c6cd228",

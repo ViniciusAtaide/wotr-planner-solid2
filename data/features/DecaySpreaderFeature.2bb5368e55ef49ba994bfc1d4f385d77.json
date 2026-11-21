@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DecaySpreaderFeature",
   "guid": "2bb5368e55ef49ba994bfc1d4f385d77"

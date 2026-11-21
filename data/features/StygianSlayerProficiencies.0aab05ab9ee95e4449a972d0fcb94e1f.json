@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StygianSlayerProficiencies",
   "guid": "0aab05ab9ee95e4449a972d0fcb94e1f",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkillFocusAcrobatics",
   "guid": "52dd89af385466c499338b7297896ded",

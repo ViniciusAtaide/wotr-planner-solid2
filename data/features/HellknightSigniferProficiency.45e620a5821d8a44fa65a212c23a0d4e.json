@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellknightSigniferProficiency",
   "guid": "45e620a5821d8a44fa65a212c23a0d4e",

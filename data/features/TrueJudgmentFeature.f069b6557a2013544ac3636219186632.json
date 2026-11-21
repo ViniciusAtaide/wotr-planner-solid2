@@ -25,6 +25,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TrueJudgmentFeature",
   "guid": "f069b6557a2013544ac3636219186632",

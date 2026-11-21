@@ -47,6 +47,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EruptionInfusion",
   "guid": "00f8e4b846c367141afcd133f4a1c816",

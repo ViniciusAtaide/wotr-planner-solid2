@@ -20,6 +20,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ExtraChannel",
   "guid": "cd9f19775bd9d3343a31a065e93f0c47",

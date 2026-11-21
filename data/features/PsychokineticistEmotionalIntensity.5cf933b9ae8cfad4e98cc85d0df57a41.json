@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PsychokineticistEmotionalIntensity",
   "guid": "5cf933b9ae8cfad4e98cc85d0df57a41",

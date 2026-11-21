@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DeathtouchedNegativeAffinityFeature",
   "guid": "5f1afe5168be380408b338f4edd5c6b6",

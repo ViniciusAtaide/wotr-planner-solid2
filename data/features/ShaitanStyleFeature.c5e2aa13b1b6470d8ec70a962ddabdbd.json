@@ -61,6 +61,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShaitanStyleFeature",
   "guid": "c5e2aa13b1b6470d8ec70a962ddabdbd",

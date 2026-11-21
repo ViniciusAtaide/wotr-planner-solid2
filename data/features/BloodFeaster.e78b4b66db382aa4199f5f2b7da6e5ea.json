@@ -20,6 +20,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodFeaster",
   "guid": "e78b4b66db382aa4199f5f2b7da6e5ea",

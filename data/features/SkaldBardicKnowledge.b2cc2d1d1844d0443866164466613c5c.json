@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkaldBardicKnowledge",
   "guid": "b2cc2d1d1844d0443866164466613c5c",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DarkElementalistBurnFeature",
   "guid": "42c5a9a8661db2f47aedf87fb8b27aaf",

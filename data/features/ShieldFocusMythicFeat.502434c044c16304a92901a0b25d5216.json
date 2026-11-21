@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShieldFocusMythicFeat",
   "guid": "502434c044c16304a92901a0b25d5216",

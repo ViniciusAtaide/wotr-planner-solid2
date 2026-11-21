@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerUndeadFrightfulCharger",
   "guid": "d8f8074791a627a489d19169da8c01af",

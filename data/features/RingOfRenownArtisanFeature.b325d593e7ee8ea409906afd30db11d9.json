@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "RingOfRenownArtisanFeature",
   "guid": "b325d593e7ee8ea409906afd30db11d9"

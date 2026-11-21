@@ -20,6 +20,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexAnimalServantFeature",
   "guid": "876ad8aecd1098243bbfbbe04567d0d5",

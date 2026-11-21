@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MetakinesisMasterEmpower",
   "guid": "5b910d6c2b0a8384a996502d64051e4c",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FerventReflexesFeature",
   "guid": "3af5abbe6053461db4dc8cde7139a220",

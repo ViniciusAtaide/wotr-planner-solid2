@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreatclubProficiency",
   "guid": "28ccd31b222f6954490f4c19c5c5576b",

@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SubtypeElemental",
   "guid": "198fd8924dabcb5478d0f78bd453c586",

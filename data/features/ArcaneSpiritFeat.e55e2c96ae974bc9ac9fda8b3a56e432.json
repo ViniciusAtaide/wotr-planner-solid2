@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcaneSpiritFeat",
   "guid": "e55e2c96ae974bc9ac9fda8b3a56e432",

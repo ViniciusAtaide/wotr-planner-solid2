@@ -20,6 +20,7 @@
     "TerrainDominance"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TerrainExpertiseUrban",
   "guid": "6e21a09a954950745a7691f6a42ec355",

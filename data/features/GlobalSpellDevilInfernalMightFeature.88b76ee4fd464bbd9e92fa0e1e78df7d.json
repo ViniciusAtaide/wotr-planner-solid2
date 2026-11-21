@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GlobalSpellDevilInfernalMightFeature",
   "guid": "88b76ee4fd464bbd9e92fa0e1e78df7d"

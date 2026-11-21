@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "JesterCupFeature",
   "guid": "65473b1285d74bbf8f74aaf0f94de9ed"

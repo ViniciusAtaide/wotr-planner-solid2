@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BattleSingerSecondVerseFeature",
   "guid": "4ccc0a5cc51c4a7ba0202312eedbda5d",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerCelestialSpell10",
   "guid": "a7861893a017dce4fa8bc0cfba78a251",

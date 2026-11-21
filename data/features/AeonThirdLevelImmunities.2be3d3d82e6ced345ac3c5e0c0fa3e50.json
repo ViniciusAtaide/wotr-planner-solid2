@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonThirdLevelImmunities",
   "guid": "2be3d3d82e6ced345ac3c5e0c0fa3e50",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TrickMagicFeature",
   "guid": "e23a77f921214bb5b06d02509aa8d79d",

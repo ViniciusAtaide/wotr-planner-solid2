@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 6,
   "assetName": "DrunkenPowerFeature",
   "guid": "e57194a032e14c978eca489f80bc374d",

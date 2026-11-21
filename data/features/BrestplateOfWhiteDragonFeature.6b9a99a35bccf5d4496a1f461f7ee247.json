@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BrestplateOfWhiteDragonFeature",
   "guid": "6b9a99a35bccf5d4496a1f461f7ee247"

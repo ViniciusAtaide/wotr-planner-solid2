@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PowerOfFaithTier2Feature",
   "guid": "50c957284c8ee5a4da93ecc95df6d37a",

@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GloryDomainBaseFeature",
   "guid": "17e891b3964492f43aae44f994b5d454",

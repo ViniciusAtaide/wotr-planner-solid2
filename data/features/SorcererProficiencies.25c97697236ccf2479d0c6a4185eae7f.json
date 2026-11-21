@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SorcererProficiencies",
   "guid": "25c97697236ccf2479d0c6a4185eae7f",

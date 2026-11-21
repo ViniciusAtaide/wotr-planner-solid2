@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CursedLineageAligmentChannel",
   "guid": "fa76a48428b0460c940a423a79fab0ba",

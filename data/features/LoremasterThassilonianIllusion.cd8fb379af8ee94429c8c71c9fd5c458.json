@@ -21,6 +21,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterThassilonianIllusion",
   "guid": "cd8fb379af8ee94429c8c71c9fd5c458",

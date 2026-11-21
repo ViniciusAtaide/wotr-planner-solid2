@@ -27,6 +27,7 @@
     "Familiar"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LizardFamiliarBondFeature",
   "guid": "61aeb92c176193e48b0c9c50294ab290",

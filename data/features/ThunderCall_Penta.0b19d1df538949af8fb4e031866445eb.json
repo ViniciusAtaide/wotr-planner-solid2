@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "ThunderCall_Penta",
   "guid": "0b19d1df538949af8fb4e031866445eb",

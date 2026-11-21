@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodWrackingRayFeature",
   "guid": "96089a505a5c4a0fb3ad0a88c9cc1d0a",

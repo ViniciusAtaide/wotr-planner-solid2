@@ -147,6 +147,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SarenraeFeature",
   "guid": "c1c4f7f64842e7e48849e5e67be11a1b",

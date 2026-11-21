@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpiritWardenLaughAtDeath",
   "guid": "6c59dbd856a2f834880da58d07a868ee",

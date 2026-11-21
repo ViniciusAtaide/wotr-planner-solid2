@@ -19,6 +19,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WarpriestSpointaneousNegative",
   "guid": "da7be78f753c11544a0264d72a51d831",

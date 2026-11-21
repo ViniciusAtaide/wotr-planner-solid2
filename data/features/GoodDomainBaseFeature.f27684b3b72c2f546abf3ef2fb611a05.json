@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GoodDomainBaseFeature",
   "guid": "f27684b3b72c2f546abf3ef2fb611a05",

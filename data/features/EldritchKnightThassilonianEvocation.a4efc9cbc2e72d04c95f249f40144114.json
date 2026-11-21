@@ -21,6 +21,7 @@
     "EldritchKnightSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "EldritchKnightThassilonianEvocation",
   "guid": "a4efc9cbc2e72d04c95f249f40144114",

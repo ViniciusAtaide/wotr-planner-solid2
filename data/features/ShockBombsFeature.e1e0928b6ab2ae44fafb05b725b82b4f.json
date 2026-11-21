@@ -20,6 +20,7 @@
     "Discovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShockBombsFeature",
   "guid": "e1e0928b6ab2ae44fafb05b725b82b4f",

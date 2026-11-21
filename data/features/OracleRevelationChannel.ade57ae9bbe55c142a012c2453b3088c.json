@@ -28,6 +28,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationChannel",
   "guid": "ade57ae9bbe55c142a012c2453b3088c",

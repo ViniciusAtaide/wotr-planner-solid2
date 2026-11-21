@@ -5,6 +5,7 @@
     "GreaterSwordOfHeaven"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelSwordSpeedOfLightFeature",
   "guid": "826e402bae1aca242bfe9919da8d94d7",

@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HunterProficiencies",
   "guid": "873f1f12bb43cda40bcc7d2878d16bf1",

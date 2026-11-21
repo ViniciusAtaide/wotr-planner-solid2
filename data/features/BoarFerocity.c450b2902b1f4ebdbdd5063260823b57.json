@@ -29,6 +29,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BoarFerocity",
   "guid": "c450b2902b1f4ebdbdd5063260823b57",

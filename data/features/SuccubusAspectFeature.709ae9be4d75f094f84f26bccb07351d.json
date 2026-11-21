@@ -13,6 +13,7 @@
     "DemonicAspect"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SuccubusAspectFeature",
   "guid": "709ae9be4d75f094f84f26bccb07351d",

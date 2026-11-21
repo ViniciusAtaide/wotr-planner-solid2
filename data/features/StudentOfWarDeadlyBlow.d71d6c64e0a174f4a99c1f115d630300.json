@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StudentOfWarDeadlyBlow",
   "guid": "d71d6c64e0a174f4a99c1f115d630300",

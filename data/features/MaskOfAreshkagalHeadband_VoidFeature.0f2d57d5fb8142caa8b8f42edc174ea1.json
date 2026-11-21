@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MaskOfAreshkagalHeadband_VoidFeature",
   "guid": "0f2d57d5fb8142caa8b8f42edc174ea1"

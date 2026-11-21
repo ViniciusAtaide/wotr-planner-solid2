@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanBattleSpiritGreaterFeature",
   "guid": "cc6b293550ac66c48a0c787b5e986a34",

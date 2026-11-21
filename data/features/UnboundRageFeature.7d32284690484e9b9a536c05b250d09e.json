@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UnboundRageFeature",
   "guid": "7d32284690484e9b9a536c05b250d09e",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BeastCallSummonFeature2",
   "guid": "ef9409a4908f30a4392832af62f9a64d",

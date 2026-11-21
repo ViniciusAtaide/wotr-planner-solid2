@@ -20,6 +20,7 @@
     "Discovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FrostBombsFeature",
   "guid": "92cfb5ab50e2d9948b0577ba94b56bb2",

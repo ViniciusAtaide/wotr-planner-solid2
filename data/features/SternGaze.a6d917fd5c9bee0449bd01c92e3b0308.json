@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SternGaze",
   "guid": "a6d917fd5c9bee0449bd01c92e3b0308",

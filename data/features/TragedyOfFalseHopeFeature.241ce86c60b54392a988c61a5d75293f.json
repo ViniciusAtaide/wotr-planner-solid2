@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TragedyOfFalseHopeFeature",
   "guid": "241ce86c60b54392a988c61a5d75293f",

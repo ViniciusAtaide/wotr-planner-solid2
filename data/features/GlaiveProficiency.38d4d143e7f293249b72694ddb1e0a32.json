@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GlaiveProficiency",
   "guid": "38d4d143e7f293249b72694ddb1e0a32",

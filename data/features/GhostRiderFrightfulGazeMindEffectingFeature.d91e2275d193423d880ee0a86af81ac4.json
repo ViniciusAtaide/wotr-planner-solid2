@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GhostRiderFrightfulGazeMindEffectingFeature",
   "guid": "d91e2275d193423d880ee0a86af81ac4",

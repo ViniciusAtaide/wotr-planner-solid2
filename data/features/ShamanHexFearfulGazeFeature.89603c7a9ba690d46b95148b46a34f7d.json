@@ -34,6 +34,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexFearfulGazeFeature",
   "guid": "89603c7a9ba690d46b95148b46a34f7d",

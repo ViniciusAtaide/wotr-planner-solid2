@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "WeaponBondAdditionalUse",
   "guid": "5a64de5435667da4eae2e4c95ec87917",

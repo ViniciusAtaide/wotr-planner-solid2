@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 4,
   "assetName": "OverwhelmingPenetrationFeature",
   "guid": "2814b1a6e97046abb2fe81215dccf241",

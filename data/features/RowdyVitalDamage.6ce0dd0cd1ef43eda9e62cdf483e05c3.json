@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RowdyVitalDamage",
   "guid": "6ce0dd0cd1ef43eda9e62cdf483e05c3",

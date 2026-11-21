@@ -29,6 +29,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "VitalStrikeFeatureGreater",
   "guid": "e2d1fa11f6b095e4fb2fd1dcf5e36eb3",

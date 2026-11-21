@@ -5,6 +5,7 @@
     "FavoriteEnemy"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 8,
   "assetName": "FavoriteEnemyDwarfs",
   "guid": "8bf97ce6a52d7274197a6c1911378b27",

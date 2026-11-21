@@ -35,6 +35,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PossessedShamanSharedSkillAthletics",
   "guid": "e8c505d8efb982d439b5f1408ab36437",

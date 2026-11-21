@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "DivineHunterBondAdditionalUseFeature",
   "guid": "1a6931f2e87a4ce9a8edaf20ac23b95d",

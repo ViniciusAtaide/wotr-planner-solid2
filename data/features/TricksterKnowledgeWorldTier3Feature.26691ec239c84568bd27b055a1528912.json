@@ -17,6 +17,7 @@
     "MythicTrick3"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterKnowledgeWorldTier3Feature",
   "guid": "26691ec239c84568bd27b055a1528912",

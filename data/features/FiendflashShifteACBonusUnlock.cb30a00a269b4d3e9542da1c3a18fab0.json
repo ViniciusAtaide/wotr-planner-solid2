@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FiendflashShifteACBonusUnlock",
   "guid": "cb30a00a269b4d3e9542da1c3a18fab0",

@@ -22,6 +22,7 @@
     "EldritchScionArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchEnduringBladeFeature",
   "guid": "3a44bc91586b6304fa60cd5172a3679f",

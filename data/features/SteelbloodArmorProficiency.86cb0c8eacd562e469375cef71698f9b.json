@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SteelbloodArmorProficiency",
   "guid": "86cb0c8eacd562e469375cef71698f9b",

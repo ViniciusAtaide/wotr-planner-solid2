@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "MysticTheurgeRangerLevelUp",
   "guid": "94c6bcbe081e3c34998ce0e5d372169c",

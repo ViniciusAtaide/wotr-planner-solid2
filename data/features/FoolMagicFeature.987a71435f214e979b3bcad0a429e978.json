@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FoolMagicFeature",
   "guid": "987a71435f214e979b3bcad0a429e978",

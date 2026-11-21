@@ -27,6 +27,7 @@
     "Familiar"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ViperFamiliarBondFeature",
   "guid": "3c0b706c526e0654b8af90ded235a089",

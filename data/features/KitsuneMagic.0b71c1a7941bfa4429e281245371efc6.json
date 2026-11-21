@@ -5,6 +5,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KitsuneMagic",
   "guid": "0b71c1a7941bfa4429e281245371efc6",

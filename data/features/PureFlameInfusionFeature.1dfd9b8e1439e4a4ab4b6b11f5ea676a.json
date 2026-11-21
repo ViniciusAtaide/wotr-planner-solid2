@@ -33,6 +33,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PureFlameInfusionFeature",
   "guid": "1dfd9b8e1439e4a4ab4b6b11f5ea676a",

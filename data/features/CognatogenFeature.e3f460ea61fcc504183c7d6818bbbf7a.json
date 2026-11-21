@@ -22,6 +22,7 @@
     "VivisectionistDiscovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CognatogenFeature",
   "guid": "e3f460ea61fcc504183c7d6818bbbf7a",

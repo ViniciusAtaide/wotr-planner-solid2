@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DeathDomainGreaterFeatureSeparatist",
   "guid": "518a6ce2c1d141b78f54521f6b0075b1",

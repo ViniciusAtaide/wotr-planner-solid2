@@ -35,6 +35,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PossessedShamanSharedSkillLoreReligion",
   "guid": "644a1b9551ce0e846befe2f61468c83e",

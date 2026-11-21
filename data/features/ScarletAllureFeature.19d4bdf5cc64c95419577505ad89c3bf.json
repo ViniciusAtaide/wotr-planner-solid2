@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScarletAllureFeature",
   "guid": "19d4bdf5cc64c95419577505ad89c3bf"

@@ -57,6 +57,7 @@
     "TieflingHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TieflingHeritageDaemon",
   "guid": "b32fd17ae27982648a30cf076790b0e8",

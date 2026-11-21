@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AzataITierTierVisualFeature",
   "guid": "526f2f4a13e94874e984ecd48adb7cfa"

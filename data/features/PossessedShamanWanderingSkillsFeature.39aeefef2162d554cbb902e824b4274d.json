@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PossessedShamanWanderingSkillsFeature",
   "guid": "39aeefef2162d554cbb902e824b4274d",

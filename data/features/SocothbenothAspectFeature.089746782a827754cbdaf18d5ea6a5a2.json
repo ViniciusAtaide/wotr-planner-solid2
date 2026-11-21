@@ -5,6 +5,7 @@
     "DemonLordAspect"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SocothbenothAspectFeature",
   "guid": "089746782a827754cbdaf18d5ea6a5a2",

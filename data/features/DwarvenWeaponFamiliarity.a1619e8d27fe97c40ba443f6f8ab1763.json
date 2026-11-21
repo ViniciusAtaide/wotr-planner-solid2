@@ -16,6 +16,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DwarvenWeaponFamiliarity",
   "guid": "a1619e8d27fe97c40ba443f6f8ab1763",

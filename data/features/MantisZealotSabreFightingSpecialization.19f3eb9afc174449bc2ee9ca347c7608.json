@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MantisZealotSabreFightingSpecialization",
   "guid": "19f3eb9afc174449bc2ee9ca347c7608",

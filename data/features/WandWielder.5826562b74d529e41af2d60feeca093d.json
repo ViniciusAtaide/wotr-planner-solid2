@@ -5,6 +5,7 @@
     "MagusArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WandWielder",
   "guid": "5826562b74d529e41af2d60feeca093d",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "OverwhelmingSoulOverwhelmingPowerFeature",
   "guid": "6c24bf7cc2266f24f9b0c652799f1d91",

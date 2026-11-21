@@ -30,6 +30,7 @@
     "TeamworkFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShakeItOff",
   "guid": "6337b37f2a7c11b4ab0831d6780bce2a",

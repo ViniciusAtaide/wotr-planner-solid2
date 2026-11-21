@@ -13,6 +13,7 @@
     "OppositionSchool"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OppositionSchoolEnchantment",
   "guid": "875fff6feb84f5240bf4375cb497e395",

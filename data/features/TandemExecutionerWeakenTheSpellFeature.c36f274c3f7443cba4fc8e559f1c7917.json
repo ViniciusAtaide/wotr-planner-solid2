@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TandemExecutionerWeakenTheSpellFeature",
   "guid": "c36f274c3f7443cba4fc8e559f1c7917",

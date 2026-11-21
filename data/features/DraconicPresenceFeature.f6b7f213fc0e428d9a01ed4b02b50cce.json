@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DraconicPresenceFeature",
   "guid": "f6b7f213fc0e428d9a01ed4b02b50cce",

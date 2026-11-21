@@ -15,6 +15,7 @@
     "DragonDiscipleSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonDiscipleEldritch Font",
   "guid": "404785fe7e3c4e40afbfd2b75007b041",

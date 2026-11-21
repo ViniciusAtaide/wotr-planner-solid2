@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UniversalistSchoolExtendReachFeature",
   "guid": "541bb8d595532ec419343b7a93cdb449",

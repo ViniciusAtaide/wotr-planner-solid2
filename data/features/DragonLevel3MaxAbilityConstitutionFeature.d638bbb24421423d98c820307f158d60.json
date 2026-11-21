@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonLevel3MaxAbilityConstitutionFeature",
   "guid": "d638bbb24421423d98c820307f158d60"

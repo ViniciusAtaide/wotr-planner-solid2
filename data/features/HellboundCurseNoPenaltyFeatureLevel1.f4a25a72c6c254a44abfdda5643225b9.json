@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellboundCurseNoPenaltyFeatureLevel1",
   "guid": "f4a25a72c6c254a44abfdda5643225b9",

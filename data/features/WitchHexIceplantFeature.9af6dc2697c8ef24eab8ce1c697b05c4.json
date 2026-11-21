@@ -13,6 +13,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexIceplantFeature",
   "guid": "9af6dc2697c8ef24eab8ce1c697b05c4",

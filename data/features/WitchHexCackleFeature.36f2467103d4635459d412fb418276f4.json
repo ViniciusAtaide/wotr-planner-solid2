@@ -13,6 +13,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexCackleFeature",
   "guid": "36f2467103d4635459d412fb418276f4",

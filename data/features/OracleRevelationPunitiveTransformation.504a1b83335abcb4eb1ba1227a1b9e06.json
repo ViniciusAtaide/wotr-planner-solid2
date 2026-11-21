@@ -35,6 +35,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationPunitiveTransformation",
   "guid": "504a1b83335abcb4eb1ba1227a1b9e06",

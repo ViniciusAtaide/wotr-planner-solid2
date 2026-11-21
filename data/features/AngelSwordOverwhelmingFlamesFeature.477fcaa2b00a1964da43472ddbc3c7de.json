@@ -5,6 +5,7 @@
     "GreaterSwordOfHeaven"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelSwordOverwhelmingFlamesFeature",
   "guid": "477fcaa2b00a1964da43472ddbc3c7de",

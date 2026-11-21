@@ -22,6 +22,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WallInfusion",
   "guid": "c684335918896ce4ab13e96cec929796",

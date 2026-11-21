@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FiendflashShifterInfernalClawsFeature",
   "guid": "2c8a19a9d84847e988d46882fd7bb0af",

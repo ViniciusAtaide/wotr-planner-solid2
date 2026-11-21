@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "GauntletsOfMightySwipeFeature",
   "guid": "82a53af552a3e3945ab76c51bddef637"

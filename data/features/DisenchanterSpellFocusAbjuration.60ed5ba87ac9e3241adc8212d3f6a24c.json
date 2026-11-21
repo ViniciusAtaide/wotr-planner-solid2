@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DisenchanterSpellFocusAbjuration",
   "guid": "60ed5ba87ac9e3241adc8212d3f6a24c",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RuneBlessingMajorFeature",
   "guid": "d63fb4c72d2d492e9c947b58ffdd5769",

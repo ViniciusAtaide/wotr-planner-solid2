@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElectricityImmunity",
   "guid": "cd1e5ab641a833c49994aff99db98952",

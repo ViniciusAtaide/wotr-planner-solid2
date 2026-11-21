@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeDinosaurFeature",
   "guid": "45a86067433d4b3eb6e20c614a97d3b8",

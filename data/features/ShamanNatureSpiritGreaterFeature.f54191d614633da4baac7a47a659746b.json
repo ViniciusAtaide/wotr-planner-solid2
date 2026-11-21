@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanNatureSpiritGreaterFeature",
   "guid": "f54191d614633da4baac7a47a659746b",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalCompanionArchetypeBodyguardFeature",
   "guid": "9e410b20eb73409458148bddf8dea64b"

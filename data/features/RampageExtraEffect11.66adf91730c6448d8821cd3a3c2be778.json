@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RampageExtraEffect11",
   "guid": "66adf91730c6448d8821cd3a3c2be778",

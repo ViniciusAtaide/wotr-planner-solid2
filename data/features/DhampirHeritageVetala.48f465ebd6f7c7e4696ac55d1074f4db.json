@@ -49,6 +49,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DhampirHeritageVetala",
   "guid": "48f465ebd6f7c7e4696ac55d1074f4db",

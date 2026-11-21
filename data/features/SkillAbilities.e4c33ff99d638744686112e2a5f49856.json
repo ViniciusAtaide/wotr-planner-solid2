@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "SkillAbilities",
   "guid": "e4c33ff99d638744686112e2a5f49856"

@@ -26,6 +26,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlagueHexPhysicalImpairedFeature",
   "guid": "811e379c217b4caa9b229fed765c977d",

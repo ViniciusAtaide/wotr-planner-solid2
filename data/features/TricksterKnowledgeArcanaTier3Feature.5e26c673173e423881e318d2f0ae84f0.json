@@ -13,6 +13,7 @@
     "MythicTrick3"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterKnowledgeArcanaTier3Feature",
   "guid": "5e26c673173e423881e318d2f0ae84f0",

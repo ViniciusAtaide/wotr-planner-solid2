@@ -27,6 +27,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ExtraArcanePool",
   "guid": "42f96fc8d6c80784194262e51b0a1d25",

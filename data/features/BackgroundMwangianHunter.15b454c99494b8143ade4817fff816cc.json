@@ -43,6 +43,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundMwangianHunter",
   "guid": "15b454c99494b8143ade4817fff816cc",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrovierAspectResourcePrerequisite",
   "guid": "9501466293e9f614e9f6c3736f8fe1ad"

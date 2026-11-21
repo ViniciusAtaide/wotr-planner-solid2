@@ -20,6 +20,7 @@
     "Discovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TanglefootBombsFeature",
   "guid": "b3c99d01b29d836498595c1cfadc07aa",

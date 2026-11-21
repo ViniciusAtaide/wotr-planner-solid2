@@ -21,6 +21,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LimitlessRage",
   "guid": "5cb58e6e406525342842a073fb70d068",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "TowerShieldTraining",
   "guid": "d2dbc71b45efa8749bd9c1924534b2bb",

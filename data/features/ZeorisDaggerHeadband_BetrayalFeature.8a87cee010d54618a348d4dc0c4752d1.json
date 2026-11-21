@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ZeorisDaggerHeadband_BetrayalFeature",
   "guid": "8a87cee010d54618a348d4dc0c4752d1"

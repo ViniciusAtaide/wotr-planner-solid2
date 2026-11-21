@@ -22,6 +22,7 @@
     "ScaledFistKiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScaledFistRestorationFeature",
   "guid": "a9be3ca7d5fd145428c35295f693294d",

@@ -23,6 +23,7 @@
   ],
   "HasNoSuchFeature": false,
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "IgnoreParameterFeaturePrerequisites": false,
   "ParameterType": "WeaponCategory",
   "Ranks": 1,

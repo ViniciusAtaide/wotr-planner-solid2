@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MonkUnarmedStrikeLevel12",
   "guid": "b3889f445dbe42948b8bb1ba02e6d949"

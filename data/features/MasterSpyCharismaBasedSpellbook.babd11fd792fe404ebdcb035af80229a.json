@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MasterSpyCharismaBasedSpellbook",
   "guid": "babd11fd792fe404ebdcb035af80229a",

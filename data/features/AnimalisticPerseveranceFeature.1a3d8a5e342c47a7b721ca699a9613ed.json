@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalisticPerseveranceFeature",
   "guid": "1a3d8a5e342c47a7b721ca699a9613ed"

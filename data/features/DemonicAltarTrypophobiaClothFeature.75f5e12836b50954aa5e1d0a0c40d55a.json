@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonicAltarTrypophobiaClothFeature",
   "guid": "75f5e12836b50954aa5e1d0a0c40d55a"

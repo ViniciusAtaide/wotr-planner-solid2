@@ -32,6 +32,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "IgnorePrerequisites": true,
   "Mode": "Default",
   "Obligatory": false,

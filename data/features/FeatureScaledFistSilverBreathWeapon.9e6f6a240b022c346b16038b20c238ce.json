@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FeatureScaledFistSilverBreathWeapon",
   "guid": "9e6f6a240b022c346b16038b20c238ce",

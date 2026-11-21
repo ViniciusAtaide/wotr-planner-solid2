@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScaledFistDraconicMettle",
   "guid": "6bcef8b77901a8f4eb6015f0a3f2dc63",

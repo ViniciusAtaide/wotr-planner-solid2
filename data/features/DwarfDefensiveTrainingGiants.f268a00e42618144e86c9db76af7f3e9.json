@@ -5,6 +5,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DwarfDefensiveTrainingGiants",
   "guid": "f268a00e42618144e86c9db76af7f3e9",

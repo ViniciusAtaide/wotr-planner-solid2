@@ -5,6 +5,7 @@
     "FavoriteTerrain"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 4,
   "assetName": "FavoriteTerrainHighlands",
   "guid": "8dc89bc3543a8724895477cd1472f591",

@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BladeboundLifeDrinkerFeature",
   "guid": "3fc2666011fd4f128b235b040d9818af",

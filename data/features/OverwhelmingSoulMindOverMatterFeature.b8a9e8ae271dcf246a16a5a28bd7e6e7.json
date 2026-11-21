@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OverwhelmingSoulMindOverMatterFeature",
   "guid": "b8a9e8ae271dcf246a16a5a28bd7e6e7",

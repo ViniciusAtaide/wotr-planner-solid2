@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreaterDimensionalRideFeature",
   "guid": "d7ad915605954b35846cd2f0a4207fc8",

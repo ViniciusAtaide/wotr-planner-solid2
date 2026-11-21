@@ -34,6 +34,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UnravelingInfusionFeature",
   "guid": "79339d57d491d824ba0aa4ed0c114b2f",

@@ -19,6 +19,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationNatureWhispers",
   "guid": "3d2cd23869f0d98458169b88738f3c32",

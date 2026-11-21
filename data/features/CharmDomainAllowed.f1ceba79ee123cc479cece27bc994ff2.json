@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CharmDomainAllowed",
   "guid": "f1ceba79ee123cc479cece27bc994ff2"

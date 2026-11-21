@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DestructionDomainGreaterFeature",
   "guid": "b047e72c88cbdfe409ea0aaea3dfddf6",

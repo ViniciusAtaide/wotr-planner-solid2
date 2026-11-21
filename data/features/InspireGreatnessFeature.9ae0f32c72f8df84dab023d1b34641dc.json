@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "InspireGreatnessFeature",
   "guid": "9ae0f32c72f8df84dab023d1b34641dc",

@@ -41,6 +41,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HeavyArmorProficiency",
   "guid": "1b0f68188dcc435429fb87a022239681",

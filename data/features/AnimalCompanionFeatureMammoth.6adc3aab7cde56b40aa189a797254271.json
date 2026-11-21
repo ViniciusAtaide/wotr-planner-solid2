@@ -18,6 +18,7 @@
     "AnimalCompanion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalCompanionFeatureMammoth",
   "guid": "6adc3aab7cde56b40aa189a797254271",

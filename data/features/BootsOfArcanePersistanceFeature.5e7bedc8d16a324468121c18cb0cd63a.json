@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "BootsOfArcanePersistanceFeature",
   "guid": "5e7bedc8d16a324468121c18cb0cd63a"

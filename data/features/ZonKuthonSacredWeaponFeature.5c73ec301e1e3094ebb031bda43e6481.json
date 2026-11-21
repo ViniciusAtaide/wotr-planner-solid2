@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ZonKuthonSacredWeaponFeature",
   "guid": "5c73ec301e1e3094ebb031bda43e6481"

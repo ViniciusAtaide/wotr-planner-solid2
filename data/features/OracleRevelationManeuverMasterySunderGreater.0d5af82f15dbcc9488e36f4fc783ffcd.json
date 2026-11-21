@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationManeuverMasterySunderGreater",
   "guid": "0d5af82f15dbcc9488e36f4fc783ffcd"

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "BladeguardBucklerFeature",
   "guid": "0a360a4c2d97acb4a8e3ab6c78c92df8"

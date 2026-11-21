@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierShieldOfTheLiege",
   "guid": "f38e798096d298e408d0544606b07092",

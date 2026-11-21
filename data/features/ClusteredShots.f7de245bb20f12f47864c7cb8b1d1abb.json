@@ -29,6 +29,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ClusteredShots",
   "guid": "f7de245bb20f12f47864c7cb8b1d1abb",

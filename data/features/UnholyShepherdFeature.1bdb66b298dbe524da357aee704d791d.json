@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UnholyShepherdFeature",
   "guid": "1bdb66b298dbe524da357aee704d791d"

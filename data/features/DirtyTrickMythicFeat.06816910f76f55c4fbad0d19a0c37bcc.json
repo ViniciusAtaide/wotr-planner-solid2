@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DirtyTrickMythicFeat",
   "guid": "06816910f76f55c4fbad0d19a0c37bcc",

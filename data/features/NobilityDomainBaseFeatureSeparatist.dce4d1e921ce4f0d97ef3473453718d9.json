@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NobilityDomainBaseFeatureSeparatist",
   "guid": "dce4d1e921ce4f0d97ef3473453718d9",

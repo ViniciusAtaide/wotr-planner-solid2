@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodHasteFeature",
   "guid": "b2d8de6d91e1426a9cac33e1091f53c0",

@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShortbowProficiency",
   "guid": "e8096942d950c8843857c2545f8dc18f",

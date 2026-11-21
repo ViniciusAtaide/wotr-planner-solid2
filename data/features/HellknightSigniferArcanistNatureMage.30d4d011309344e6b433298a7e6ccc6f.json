@@ -23,6 +23,7 @@
     "HellknightSigniferSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HellknightSigniferArcanistNatureMage",
   "guid": "30d4d011309344e6b433298a7e6ccc6f",

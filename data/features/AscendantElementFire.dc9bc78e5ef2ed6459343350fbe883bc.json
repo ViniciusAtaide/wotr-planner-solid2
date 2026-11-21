@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AscendantElementFire",
   "guid": "dc9bc78e5ef2ed6459343350fbe883bc",

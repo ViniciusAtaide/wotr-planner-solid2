@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ExtraRage",
   "guid": "1a54bbbafab728348a015cf9ffcf50a7",

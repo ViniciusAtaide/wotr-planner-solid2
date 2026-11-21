@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SongOfTheSensesFeature",
   "guid": "311b342049e69ec45a4f47e4150f0008",

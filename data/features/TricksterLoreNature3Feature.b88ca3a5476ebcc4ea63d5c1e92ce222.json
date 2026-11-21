@@ -13,6 +13,7 @@
     "MythicTrick3"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterLoreNature3Feature",
   "guid": "b88ca3a5476ebcc4ea63d5c1e92ce222",

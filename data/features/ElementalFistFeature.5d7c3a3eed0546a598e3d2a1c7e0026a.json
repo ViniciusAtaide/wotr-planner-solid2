@@ -45,6 +45,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalFistFeature",
   "guid": "5d7c3a3eed0546a598e3d2a1c7e0026a",

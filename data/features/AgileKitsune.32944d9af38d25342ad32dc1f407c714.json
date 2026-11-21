@@ -13,6 +13,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AgileKitsune",
   "guid": "32944d9af38d25342ad32dc1f407c714",

@@ -27,6 +27,7 @@
     "Familiar"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CatFamiliarBondFeature",
   "guid": "1cb0b559ca2e31e4d9dc65de012fa82f",

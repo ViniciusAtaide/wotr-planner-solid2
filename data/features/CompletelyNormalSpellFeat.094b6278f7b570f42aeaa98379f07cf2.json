@@ -13,6 +13,7 @@
     "TricksterFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CompletelyNormalSpellFeat",
   "guid": "094b6278f7b570f42aeaa98379f07cf2",

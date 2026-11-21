@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EvilDomainGreaterFeature",
   "guid": "3784df3083cb6404fbce7a585be24bcf",

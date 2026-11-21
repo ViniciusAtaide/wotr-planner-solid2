@@ -5,6 +5,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalFuryFeature",
   "guid": "25954b1652bebc2409f9cb9d5728bceb",

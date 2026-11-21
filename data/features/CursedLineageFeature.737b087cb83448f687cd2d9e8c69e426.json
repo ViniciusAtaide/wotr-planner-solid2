@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CursedLineageFeature",
   "guid": "737b087cb83448f687cd2d9e8c69e426",

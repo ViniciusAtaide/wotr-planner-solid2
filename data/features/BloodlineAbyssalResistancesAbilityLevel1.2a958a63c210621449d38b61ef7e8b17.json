@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "BloodlineAbyssalResistancesAbilityLevel1",
   "guid": "2a958a63c210621449d38b61ef7e8b17",

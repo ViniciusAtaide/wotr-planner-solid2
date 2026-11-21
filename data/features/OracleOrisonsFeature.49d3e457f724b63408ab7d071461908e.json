@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleOrisonsFeature",
   "guid": "49d3e457f724b63408ab7d071461908e",

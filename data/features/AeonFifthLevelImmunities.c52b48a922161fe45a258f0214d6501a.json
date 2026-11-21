@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonFifthLevelImmunities",
   "guid": "c52b48a922161fe45a258f0214d6501a",

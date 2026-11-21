@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalElectricityStrikes",
   "guid": "8e1cbcd869e27b44c9af52adc384921b",

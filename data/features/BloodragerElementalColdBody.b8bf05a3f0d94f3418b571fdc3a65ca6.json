@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalColdBody",
   "guid": "b8bf05a3f0d94f3418b571fdc3a65ca6",

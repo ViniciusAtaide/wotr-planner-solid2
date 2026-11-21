@@ -52,6 +52,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BeltOfPrimalForceFeature",
   "guid": "a13ceec9c40842a9a37812ba96ba24fc",

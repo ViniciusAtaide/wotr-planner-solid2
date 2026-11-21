@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackstabberFeature",
   "guid": "f1ca6cf566e473e47bb0f3aee435ded0",

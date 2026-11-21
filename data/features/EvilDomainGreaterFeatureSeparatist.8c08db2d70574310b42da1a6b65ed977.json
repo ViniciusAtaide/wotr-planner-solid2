@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EvilDomainGreaterFeatureSeparatist",
   "guid": "8c08db2d70574310b42da1a6b65ed977",

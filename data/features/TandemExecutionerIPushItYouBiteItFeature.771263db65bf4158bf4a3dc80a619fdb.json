@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TandemExecutionerIPushItYouBiteItFeature",
   "guid": "771263db65bf4158bf4a3dc80a619fdb",

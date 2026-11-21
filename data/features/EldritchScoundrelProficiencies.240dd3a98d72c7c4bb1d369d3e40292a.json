@@ -24,6 +24,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchScoundrelProficiencies",
   "guid": "240dd3a98d72c7c4bb1d369d3e40292a",

@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CunningElusionUnlockFeature",
   "guid": "91c8b2e3abdb4e2e807fddb668b619f8",

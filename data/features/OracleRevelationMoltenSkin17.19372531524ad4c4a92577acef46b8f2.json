@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationMoltenSkin17",
   "guid": "19372531524ad4c4a92577acef46b8f2"

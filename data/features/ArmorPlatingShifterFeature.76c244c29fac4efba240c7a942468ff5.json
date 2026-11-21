@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArmorPlatingShifterFeature",
   "guid": "76c244c29fac4efba240c7a942468ff5",

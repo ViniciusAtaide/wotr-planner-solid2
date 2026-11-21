@@ -15,6 +15,7 @@
     "WeaponTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FightersReflexes",
   "guid": "8140fe21fd91da3439bf5ed017ca9f90",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonAzataSpecialAbilityTierIII",
   "guid": "bb0be011191b77f418d2225399109f0c",

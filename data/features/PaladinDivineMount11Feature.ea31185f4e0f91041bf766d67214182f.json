@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PaladinDivineMount11Feature",
   "guid": "ea31185f4e0f91041bf766d67214182f",

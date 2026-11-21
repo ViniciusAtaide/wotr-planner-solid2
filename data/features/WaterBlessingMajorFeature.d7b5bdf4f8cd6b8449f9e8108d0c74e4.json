@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WaterBlessingMajorFeature",
   "guid": "d7b5bdf4f8cd6b8449f9e8108d0c74e4",

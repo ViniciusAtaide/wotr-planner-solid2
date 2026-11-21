@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WarpriestFervorQuickenCast",
   "guid": "866236a323bdf634abf0cc54dd30ad3b"

@@ -39,6 +39,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationIceArmor",
   "guid": "a1cd9835c6699534ca124fab239fdf1c",

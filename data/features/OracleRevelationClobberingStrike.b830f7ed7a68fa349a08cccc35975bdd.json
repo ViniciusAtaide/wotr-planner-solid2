@@ -19,6 +19,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationClobberingStrike",
   "guid": "b830f7ed7a68fa349a08cccc35975bdd",

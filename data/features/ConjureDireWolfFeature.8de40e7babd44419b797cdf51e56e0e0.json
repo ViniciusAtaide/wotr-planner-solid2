@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ConjureDireWolfFeature",
   "guid": "8de40e7babd44419b797cdf51e56e0e0",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ResistanceBackgroundsFeature",
   "guid": "5f94b6d19093f60499f7532f1b084b06",

@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "HeartstoneFeature",
   "guid": "91756d59020b478b9539f4f14de6c445",

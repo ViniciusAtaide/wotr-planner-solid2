@@ -29,6 +29,7 @@
     "Discovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ForceBombsFeature",
   "guid": "bfbaa0dd74b9909459e462cd8b091177",

@@ -13,6 +13,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SlowSpeedHalfling",
   "guid": "b8926aeaac17dc7408a5059788255819",

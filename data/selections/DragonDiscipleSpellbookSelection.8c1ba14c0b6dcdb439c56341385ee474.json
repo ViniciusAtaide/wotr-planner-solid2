@@ -5,6 +5,7 @@
   "Group": "DragonDiscipleSpellbook",
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "IgnorePrerequisites": false,
   "Mode": "Default",
   "Obligatory": true,

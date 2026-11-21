@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KineticQuiverFeature",
   "guid": "e41305eb63584a60ae726af61c318fa9",

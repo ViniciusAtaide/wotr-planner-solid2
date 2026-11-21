@@ -40,6 +40,7 @@
     "OracleMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleStoneMysteryFeature",
   "guid": "7bb4bb3e7fd26f34e8ca035a27e03e85",

@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HornCallFeature",
   "guid": "7ab19a006c4abb0489d6d1a99e54fb99",

@@ -22,6 +22,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LungeFeature",
   "guid": "d41d5bd9a775d7245929256d58a3e03e",

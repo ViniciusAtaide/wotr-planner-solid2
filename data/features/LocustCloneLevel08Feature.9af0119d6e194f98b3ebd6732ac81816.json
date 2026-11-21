@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LocustCloneLevel08Feature",
   "guid": "9af0119d6e194f98b3ebd6732ac81816",

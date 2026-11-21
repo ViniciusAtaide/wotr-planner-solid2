@@ -23,6 +23,7 @@
     "MagusArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DevotedBladeFeature",
   "guid": "4be0bb10e110a35419e406da767bd1e3",

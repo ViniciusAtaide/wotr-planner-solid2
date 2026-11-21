@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonNaturalAttackFeatureLevel5",
   "guid": "66285313d89a863469cd056f2d6e32a0",

@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LongSpearProficiency",
   "guid": "9c7b33404dc0ac1449ee2732657b722a",

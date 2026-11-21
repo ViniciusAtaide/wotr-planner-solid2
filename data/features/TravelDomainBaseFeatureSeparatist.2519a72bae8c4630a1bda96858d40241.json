@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TravelDomainBaseFeatureSeparatist",
   "guid": "2519a72bae8c4630a1bda96858d40241",

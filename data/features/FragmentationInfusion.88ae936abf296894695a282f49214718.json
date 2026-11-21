@@ -46,6 +46,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FragmentationInfusion",
   "guid": "88ae936abf296894695a282f49214718",

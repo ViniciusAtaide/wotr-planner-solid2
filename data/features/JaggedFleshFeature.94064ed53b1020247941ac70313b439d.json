@@ -29,6 +29,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "JaggedFleshFeature",
   "guid": "94064ed53b1020247941ac70313b439d",

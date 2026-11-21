@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "OldEarthShriekBeltFeature",
   "guid": "de40ae95fcf001046b4253c20bc536ce"

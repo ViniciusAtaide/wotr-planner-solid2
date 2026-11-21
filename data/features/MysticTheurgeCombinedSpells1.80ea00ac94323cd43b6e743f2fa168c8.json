@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MysticTheurgeCombinedSpells1",
   "guid": "80ea00ac94323cd43b6e743f2fa168c8",

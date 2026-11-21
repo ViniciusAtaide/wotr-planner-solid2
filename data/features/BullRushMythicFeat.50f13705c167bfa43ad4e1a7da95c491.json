@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BullRushMythicFeat",
   "guid": "50f13705c167bfa43ad4e1a7da95c491",

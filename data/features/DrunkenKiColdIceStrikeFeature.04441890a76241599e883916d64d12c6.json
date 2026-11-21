@@ -22,6 +22,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrunkenKiColdIceStrikeFeature",
   "guid": "04441890a76241599e883916d64d12c6",

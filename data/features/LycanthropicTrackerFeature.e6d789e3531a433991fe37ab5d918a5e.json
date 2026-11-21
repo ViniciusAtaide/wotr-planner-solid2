@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LycanthropicTrackerFeature",
   "guid": "e6d789e3531a433991fe37ab5d918a5e",

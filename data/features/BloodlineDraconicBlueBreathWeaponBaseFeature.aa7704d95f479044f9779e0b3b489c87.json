@@ -10,6 +10,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineDraconicBlueBreathWeaponBaseFeature",
   "guid": "aa7704d95f479044f9779e0b3b489c87",

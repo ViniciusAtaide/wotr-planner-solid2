@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GrenadierAlchemicalWeaponFeature2",
   "guid": "ab3dd75baf960264cbbb73ea27b09f89",

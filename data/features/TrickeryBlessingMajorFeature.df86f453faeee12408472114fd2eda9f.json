@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TrickeryBlessingMajorFeature",
   "guid": "df86f453faeee12408472114fd2eda9f",

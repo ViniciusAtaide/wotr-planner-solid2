@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StonyStep",
   "guid": "c542b083d72f19944a4c6bdf640fc099",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MagicBlessingMajorFeature",
   "guid": "7381f6ea613383041a50f715c96bd644",

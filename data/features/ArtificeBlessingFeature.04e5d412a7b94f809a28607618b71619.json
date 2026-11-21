@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArtificeBlessingFeature",
   "guid": "04e5d412a7b94f809a28607618b71619",

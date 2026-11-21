@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterAspectHorse",
   "guid": "e8c3d7a903a6433bbcfb3d70c97451ce",

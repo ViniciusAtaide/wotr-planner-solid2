@@ -23,6 +23,7 @@
     "HellknightSigniferSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HellknightSigniferWitchAccursed",
   "guid": "0976a70d3460be74d865f05c6f276109",

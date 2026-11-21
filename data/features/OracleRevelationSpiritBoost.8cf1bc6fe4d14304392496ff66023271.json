@@ -19,6 +19,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationSpiritBoost",
   "guid": "8cf1bc6fe4d14304392496ff66023271",

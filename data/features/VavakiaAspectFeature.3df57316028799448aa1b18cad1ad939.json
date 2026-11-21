@@ -13,6 +13,7 @@
     "DemonMajorAspect"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "VavakiaAspectFeature",
   "guid": "3df57316028799448aa1b18cad1ad939",

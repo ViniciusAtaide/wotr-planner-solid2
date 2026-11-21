@@ -67,6 +67,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalColdWanderingFeature10",
   "guid": "dd896dde55954d2f8885b79f33d2ecf1",

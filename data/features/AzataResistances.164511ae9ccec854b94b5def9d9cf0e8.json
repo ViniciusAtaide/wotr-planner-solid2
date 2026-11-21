@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AzataResistances",
   "guid": "164511ae9ccec854b94b5def9d9cf0e8",

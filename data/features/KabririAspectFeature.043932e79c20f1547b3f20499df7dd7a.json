@@ -5,6 +5,7 @@
     "DemonLordAspect"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KabririAspectFeature",
   "guid": "043932e79c20f1547b3f20499df7dd7a",

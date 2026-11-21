@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "TripImmunityFeature",
   "guid": "e0ac733ba38f74d46a1712c95b9874f2"

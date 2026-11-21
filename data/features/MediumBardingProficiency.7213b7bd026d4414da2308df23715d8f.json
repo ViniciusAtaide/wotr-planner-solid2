@@ -57,6 +57,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MediumBardingProficiency",
   "guid": "7213b7bd026d4414da2308df23715d8f",

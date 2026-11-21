@@ -40,6 +40,7 @@
     "OracleMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleFlameMysteryFeature",
   "guid": "3b68909df737cd4458509d7f3a9c3706",

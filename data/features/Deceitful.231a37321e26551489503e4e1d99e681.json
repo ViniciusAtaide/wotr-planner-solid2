@@ -14,6 +14,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Deceitful",
   "guid": "231a37321e26551489503e4e1d99e681",

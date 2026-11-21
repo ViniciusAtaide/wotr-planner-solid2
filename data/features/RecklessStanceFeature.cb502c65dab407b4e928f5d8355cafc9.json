@@ -13,6 +13,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RecklessStanceFeature",
   "guid": "cb502c65dab407b4e928f5d8355cafc9",

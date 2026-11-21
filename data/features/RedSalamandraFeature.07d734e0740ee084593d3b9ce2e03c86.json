@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RedSalamandraFeature",
   "guid": "07d734e0740ee084593d3b9ce2e03c86"

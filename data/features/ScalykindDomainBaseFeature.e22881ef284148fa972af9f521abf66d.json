@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScalykindDomainBaseFeature",
   "guid": "e22881ef284148fa972af9f521abf66d",

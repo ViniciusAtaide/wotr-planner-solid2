@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EmpyrealBloodlineArcana",
   "guid": "d9c68634b6f3aad47a03a24984b93520",

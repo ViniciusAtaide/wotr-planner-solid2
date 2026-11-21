@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonDiscipleFormFeatureUltimate",
   "guid": "717699191d106eb46a7d820a872ed24d",

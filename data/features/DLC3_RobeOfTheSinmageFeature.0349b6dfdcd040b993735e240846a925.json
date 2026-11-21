@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DLC3_RobeOfTheSinmageFeature",
   "guid": "0349b6dfdcd040b993735e240846a925",

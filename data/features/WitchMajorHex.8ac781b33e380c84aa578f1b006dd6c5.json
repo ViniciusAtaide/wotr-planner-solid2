@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchMajorHex",
   "guid": "8ac781b33e380c84aa578f1b006dd6c5",

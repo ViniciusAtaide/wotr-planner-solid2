@@ -23,6 +23,7 @@
     "HellknightSigniferSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HellknightSigniferEmpyrealSorcerer",
   "guid": "bc0327a7d2ca6cd498a5f23ac4b47d4b",

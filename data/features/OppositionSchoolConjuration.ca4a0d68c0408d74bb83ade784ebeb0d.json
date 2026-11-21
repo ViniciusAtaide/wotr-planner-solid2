@@ -13,6 +13,7 @@
     "OppositionSchool"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OppositionSchoolConjuration",
   "guid": "ca4a0d68c0408d74bb83ade784ebeb0d",

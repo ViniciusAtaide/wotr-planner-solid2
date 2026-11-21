@@ -5,6 +5,7 @@
     "MythicTrick1"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterLoreReligionTier1Feature",
   "guid": "04177c4ddec20ae4ca04388f9cf23518",

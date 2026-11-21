@@ -16,6 +16,7 @@
     "FinesseTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinesseTrainingPunchingDagger",
   "guid": "a591ea5d2af6a9c4eac84ddeac0e204e",

@@ -58,6 +58,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerArcaneWanderingFeature",
   "guid": "58209b99b239467fbe6c5b4151bb2afe",

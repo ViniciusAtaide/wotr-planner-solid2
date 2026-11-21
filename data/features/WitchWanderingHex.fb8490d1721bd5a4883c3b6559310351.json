@@ -42,6 +42,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchWanderingHex",
   "guid": "fb8490d1721bd5a4883c3b6559310351",

@@ -47,6 +47,7 @@
     "RogueTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImprovedUncannyDodgeTalent",
   "guid": "e821c61b2711cea4cb993725b910e7e8",

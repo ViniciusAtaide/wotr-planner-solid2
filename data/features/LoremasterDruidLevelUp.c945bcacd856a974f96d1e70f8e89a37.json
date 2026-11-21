@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "LoremasterDruidLevelUp",
   "guid": "c945bcacd856a974f96d1e70f8e89a37",

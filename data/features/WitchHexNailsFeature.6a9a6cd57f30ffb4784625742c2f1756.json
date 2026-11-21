@@ -13,6 +13,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexNailsFeature",
   "guid": "6a9a6cd57f30ffb4784625742c2f1756",

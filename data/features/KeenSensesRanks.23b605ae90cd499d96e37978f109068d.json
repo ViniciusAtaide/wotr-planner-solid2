@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "KeenSensesRanks",
   "guid": "23b605ae90cd499d96e37978f109068d",

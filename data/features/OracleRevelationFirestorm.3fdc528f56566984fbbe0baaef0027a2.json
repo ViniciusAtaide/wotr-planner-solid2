@@ -35,6 +35,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationFirestorm",
   "guid": "3fdc528f56566984fbbe0baaef0027a2",

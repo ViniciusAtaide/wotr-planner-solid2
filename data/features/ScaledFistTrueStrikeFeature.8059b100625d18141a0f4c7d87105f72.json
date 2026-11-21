@@ -22,6 +22,7 @@
     "ScaledFistKiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScaledFistTrueStrikeFeature",
   "guid": "8059b100625d18141a0f4c7d87105f72",

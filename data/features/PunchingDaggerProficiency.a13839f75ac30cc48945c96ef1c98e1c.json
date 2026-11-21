@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PunchingDaggerProficiency",
   "guid": "a13839f75ac30cc48945c96ef1c98e1c",

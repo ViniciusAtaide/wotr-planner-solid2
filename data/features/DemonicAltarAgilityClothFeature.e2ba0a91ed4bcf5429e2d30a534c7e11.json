@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonicAltarAgilityClothFeature",
   "guid": "e2ba0a91ed4bcf5429e2d30a534c7e11"

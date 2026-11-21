@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrunkenCombatFeature",
   "guid": "8ba5c2349af94fbdaaf491a51d71e77b",

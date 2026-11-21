@@ -27,6 +27,7 @@
     "EnlightenedPhilosopherMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnlightenedPhilosopherFlameMysteryFeature",
   "guid": "804e1560f21c95b43a45a9825336bd19",

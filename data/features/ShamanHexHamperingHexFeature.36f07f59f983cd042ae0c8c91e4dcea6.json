@@ -34,6 +34,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexHamperingHexFeature",
   "guid": "36f07f59f983cd042ae0c8c91e4dcea6",

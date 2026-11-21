@@ -29,6 +29,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TiringCriticalFeature",
   "guid": "12c1b556df3b667458ae200bfb38ccb8",

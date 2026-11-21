@@ -39,6 +39,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationCinderDance",
   "guid": "6e67eae3081853544b191943f5ed4534",

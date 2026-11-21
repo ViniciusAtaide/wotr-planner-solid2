@@ -26,6 +26,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SeekerTrapfinding",
   "guid": "cb3abfaa682b67c48953dfa200aab325",

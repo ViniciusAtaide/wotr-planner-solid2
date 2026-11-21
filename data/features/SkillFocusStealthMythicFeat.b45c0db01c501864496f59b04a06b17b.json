@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkillFocusStealthMythicFeat",
   "guid": "b45c0db01c501864496f59b04a06b17b",

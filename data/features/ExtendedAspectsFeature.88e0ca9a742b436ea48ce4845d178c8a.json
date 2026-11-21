@@ -56,6 +56,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ExtendedAspectsFeature",
   "guid": "88e0ca9a742b436ea48ce4845d178c8a",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 5,
   "assetName": "PitchTunerFeature",
   "guid": "36819dfb2fb34364f824821cf0170853"

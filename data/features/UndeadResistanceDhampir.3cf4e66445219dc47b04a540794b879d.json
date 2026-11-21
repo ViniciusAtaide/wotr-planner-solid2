@@ -5,6 +5,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UndeadResistanceDhampir",
   "guid": "3cf4e66445219dc47b04a540794b879d",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FascinateFeature_Penta",
   "guid": "1c763def5b8e411bba494776f699b70e",

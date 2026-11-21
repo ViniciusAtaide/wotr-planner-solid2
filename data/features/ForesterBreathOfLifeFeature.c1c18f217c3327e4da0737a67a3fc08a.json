@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ForesterBreathOfLifeFeature",
   "guid": "c1c18f217c3327e4da0737a67a3fc08a",

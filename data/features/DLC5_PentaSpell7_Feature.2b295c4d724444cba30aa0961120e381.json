@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DLC5_PentaSpell7_Feature",
   "guid": "2b295c4d724444cba30aa0961120e381",

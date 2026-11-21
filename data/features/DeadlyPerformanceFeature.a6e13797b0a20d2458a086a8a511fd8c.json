@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DeadlyPerformanceFeature",
   "guid": "a6e13797b0a20d2458a086a8a511fd8c",

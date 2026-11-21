@@ -36,6 +36,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KnowledgeDomainBaseFeature",
   "guid": "5335f015063776d429a0b5eab97eb060",

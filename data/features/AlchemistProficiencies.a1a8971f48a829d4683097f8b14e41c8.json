@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AlchemistProficiencies",
   "guid": "a1a8971f48a829d4683097f8b14e41c8",

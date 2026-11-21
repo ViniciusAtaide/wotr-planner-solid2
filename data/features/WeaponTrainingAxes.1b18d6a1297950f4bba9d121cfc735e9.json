@@ -5,6 +5,7 @@
     "WeaponTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "WeaponTrainingAxes",
   "guid": "1b18d6a1297950f4bba9d121cfc735e9",

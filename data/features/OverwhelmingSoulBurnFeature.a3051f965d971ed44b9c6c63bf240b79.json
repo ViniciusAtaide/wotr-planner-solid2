@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OverwhelmingSoulBurnFeature",
   "guid": "a3051f965d971ed44b9c6c63bf240b79",

@@ -19,6 +19,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FighterProficiencies",
   "guid": "a23591cc77086494ba20880f87e73970",

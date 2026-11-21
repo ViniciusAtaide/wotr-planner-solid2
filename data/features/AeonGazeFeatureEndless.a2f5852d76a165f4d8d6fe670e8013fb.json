@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonGazeFeatureEndless",
   "guid": "a2f5852d76a165f4d8d6fe670e8013fb",

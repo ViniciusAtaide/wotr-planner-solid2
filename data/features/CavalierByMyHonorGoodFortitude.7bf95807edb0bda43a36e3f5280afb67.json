@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierByMyHonorGoodFortitude",
   "guid": "7bf95807edb0bda43a36e3f5280afb67",

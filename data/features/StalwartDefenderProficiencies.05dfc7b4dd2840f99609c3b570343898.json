@@ -19,6 +19,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StalwartDefenderProficiencies",
   "guid": "05dfc7b4dd2840f99609c3b570343898"

@@ -5,6 +5,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CasterOnslaught",
   "guid": "a4d2dc95084d4769b2f9dfa90d0f4297",

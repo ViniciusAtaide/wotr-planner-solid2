@@ -44,6 +44,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PummelingStyle",
   "guid": "c36562b8e7ae12d408487ba8b532d966",

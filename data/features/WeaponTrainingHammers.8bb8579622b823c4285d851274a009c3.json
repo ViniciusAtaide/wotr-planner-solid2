@@ -5,6 +5,7 @@
     "WeaponTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "WeaponTrainingHammers",
   "guid": "8bb8579622b823c4285d851274a009c3",

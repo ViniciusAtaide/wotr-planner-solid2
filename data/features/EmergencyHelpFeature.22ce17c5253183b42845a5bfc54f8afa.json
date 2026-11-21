@@ -13,6 +13,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EmergencyHelpFeature",
   "guid": "22ce17c5253183b42845a5bfc54f8afa",

@@ -16,6 +16,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UnbalancingTrick",
   "guid": "f3aeaba4f6506824ab393b03d28faa50",

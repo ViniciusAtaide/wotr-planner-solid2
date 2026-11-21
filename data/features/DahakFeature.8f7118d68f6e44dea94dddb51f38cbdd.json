@@ -150,6 +150,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DahakFeature",
   "guid": "8f7118d68f6e44dea94dddb51f38cbdd",

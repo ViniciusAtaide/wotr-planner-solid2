@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerAbyssalBloodrage",
   "guid": "29fc83f824111bb41829957486752c93",

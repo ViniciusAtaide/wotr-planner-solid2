@@ -19,6 +19,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationEnhancedCures",
   "guid": "973a22b02c793ca49b48652e3d70ae80",

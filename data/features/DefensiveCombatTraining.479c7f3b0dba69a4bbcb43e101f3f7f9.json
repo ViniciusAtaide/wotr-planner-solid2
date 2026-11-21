@@ -6,6 +6,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DefensiveCombatTraining",
   "guid": "479c7f3b0dba69a4bbcb43e101f3f7f9",

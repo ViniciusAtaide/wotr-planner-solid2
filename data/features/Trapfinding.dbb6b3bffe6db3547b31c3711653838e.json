@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "Trapfinding",
   "guid": "dbb6b3bffe6db3547b31c3711653838e",

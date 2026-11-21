@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 100,
   "assetName": "RovagugRelicScorpionFeature",
   "guid": "32b1fc1226177c349bb747b776a19473"

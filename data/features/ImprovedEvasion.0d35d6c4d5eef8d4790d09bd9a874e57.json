@@ -21,6 +21,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImprovedEvasion",
   "guid": "0d35d6c4d5eef8d4790d09bd9a874e57",

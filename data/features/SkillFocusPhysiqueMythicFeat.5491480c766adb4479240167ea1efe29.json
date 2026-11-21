@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkillFocusPhysiqueMythicFeat",
   "guid": "5491480c766adb4479240167ea1efe29",

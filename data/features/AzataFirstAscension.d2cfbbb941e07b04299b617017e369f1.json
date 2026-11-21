@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AzataFirstAscension",
   "guid": "d2cfbbb941e07b04299b617017e369f1",

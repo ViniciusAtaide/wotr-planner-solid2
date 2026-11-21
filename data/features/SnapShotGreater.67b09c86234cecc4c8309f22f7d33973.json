@@ -41,6 +41,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SnapShotGreater",
   "guid": "67b09c86234cecc4c8309f22f7d33973",

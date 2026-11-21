@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineDraconicGreenArcana",
   "guid": "caebe2fa3b5a94d4bbc19ccca86d1d6f",

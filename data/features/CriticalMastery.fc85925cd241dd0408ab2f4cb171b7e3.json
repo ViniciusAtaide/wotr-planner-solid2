@@ -42,6 +42,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CriticalMastery",
   "guid": "fc85925cd241dd0408ab2f4cb171b7e3",

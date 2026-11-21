@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnergyAbsorptionFeature",
   "guid": "e0a0f1ec8dd1fb94d99f824c6f032c64",

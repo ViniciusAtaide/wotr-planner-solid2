@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "TwistedTemptationFeature",
   "guid": "de2439aaded74882934ab3fd5c0d5a39"

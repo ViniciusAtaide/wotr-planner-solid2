@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalWitchElectricityRayFeature",
   "guid": "1c630250f9dd41a784ec0da1f1361615",

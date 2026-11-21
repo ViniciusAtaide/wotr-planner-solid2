@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanBoneSpiritGreaterFeature",
   "guid": "3f8db74aafbcaff40ae3f2cf5192ca4f",

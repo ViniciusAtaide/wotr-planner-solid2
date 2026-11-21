@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerUndeadDeathsGift",
   "guid": "50a660c13e507584f8da6eb9c0d923a0",

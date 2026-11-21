@@ -14,6 +14,7 @@
     "HellknightSigniferSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HellknightSigniferSkald",
   "guid": "af80b189fcbc46ac9b63523e16f27f51",

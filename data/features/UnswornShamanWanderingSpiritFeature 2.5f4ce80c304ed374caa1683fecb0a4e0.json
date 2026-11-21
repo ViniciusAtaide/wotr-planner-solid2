@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UnswornShamanWanderingSpiritFeature 2",
   "guid": "5f4ce80c304ed374caa1683fecb0a4e0",

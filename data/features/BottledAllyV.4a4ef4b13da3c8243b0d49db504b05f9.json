@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BottledAllyV",
   "guid": "4a4ef4b13da3c8243b0d49db504b05f9",

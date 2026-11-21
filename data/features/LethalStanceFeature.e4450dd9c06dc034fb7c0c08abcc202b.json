@@ -13,6 +13,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LethalStanceFeature",
   "guid": "e4450dd9c06dc034fb7c0c08abcc202b",

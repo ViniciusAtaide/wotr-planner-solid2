@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CommunityDomainBaseFeatureSeparatist",
   "guid": "4b21b19a676f4373bd0a97f4bb49dc27",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SlayersAdvanceFeature",
   "guid": "758e04f4568ec3f4c8d1fd83aed06fb9",

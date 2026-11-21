@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineDraconicSpellLevel2",
   "guid": "1d3fcbb51257dd6448a48db489cdd3ad",

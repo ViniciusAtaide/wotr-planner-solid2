@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerMightyBloodrage",
   "guid": "a6cd3eca05ee24840ab159ca47b4cd88",

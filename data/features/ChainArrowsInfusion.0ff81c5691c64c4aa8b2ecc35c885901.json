@@ -31,6 +31,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChainArrowsInfusion",
   "guid": "0ff81c5691c64c4aa8b2ecc35c885901",

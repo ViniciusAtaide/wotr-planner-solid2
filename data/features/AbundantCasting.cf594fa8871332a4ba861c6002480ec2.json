@@ -5,6 +5,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AbundantCasting",
   "guid": "cf594fa8871332a4ba861c6002480ec2",

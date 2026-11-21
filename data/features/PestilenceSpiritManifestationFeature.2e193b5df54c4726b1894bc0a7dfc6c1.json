@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PestilenceSpiritManifestationFeature",
   "guid": "2e193b5df54c4726b1894bc0a7dfc6c1",

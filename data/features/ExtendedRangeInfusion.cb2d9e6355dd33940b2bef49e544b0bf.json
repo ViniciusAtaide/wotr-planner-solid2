@@ -21,6 +21,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ExtendedRangeInfusion",
   "guid": "cb2d9e6355dd33940b2bef49e544b0bf",

@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonLevel2IntelligenceOverride",
   "guid": "5fad208ba0909544fb5b2403253f07d3",

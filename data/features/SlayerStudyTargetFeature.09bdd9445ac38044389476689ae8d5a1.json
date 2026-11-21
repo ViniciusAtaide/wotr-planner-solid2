@@ -10,6 +10,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "SlayerStudyTargetFeature",
   "guid": "09bdd9445ac38044389476689ae8d5a1",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArdentGuardFeature",
   "guid": "5a9951052ad244b99934c9b1f733f98c"

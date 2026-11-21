@@ -35,6 +35,7 @@
     "DragonDiscipleSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonDiscipleAccursedWitch",
   "guid": "5882acbd4e264bfc96a12bc2dc8993ec",

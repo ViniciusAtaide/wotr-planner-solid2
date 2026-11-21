@@ -27,6 +27,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BrewPotions",
   "guid": "c0f8c4e513eb493408b8070a1de93fc0",

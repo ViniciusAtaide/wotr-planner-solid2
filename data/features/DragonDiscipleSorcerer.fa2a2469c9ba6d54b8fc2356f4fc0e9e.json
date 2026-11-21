@@ -58,6 +58,7 @@
     "DragonDiscipleSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonDiscipleSorcerer",
   "guid": "fa2a2469c9ba6d54b8fc2356f4fc0e9e",

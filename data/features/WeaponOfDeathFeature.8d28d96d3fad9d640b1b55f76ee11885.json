@@ -13,6 +13,7 @@
     "LichUniqueAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WeaponOfDeathFeature",
   "guid": "8d28d96d3fad9d640b1b55f76ee11885",

@@ -5,6 +5,7 @@
     "Mercy"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MercyShaken",
   "guid": "c4732ca5b0af7214a98f9b4dafe87da9",

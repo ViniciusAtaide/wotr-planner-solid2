@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PyromaniacGnome",
   "guid": "fc74a68e18a8479a9e8af34e761a70b3",

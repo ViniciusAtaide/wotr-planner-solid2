@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FeatureWingsDraconicSilver",
   "guid": "0080e2cf464f67143809ed0f96ddd1f7",

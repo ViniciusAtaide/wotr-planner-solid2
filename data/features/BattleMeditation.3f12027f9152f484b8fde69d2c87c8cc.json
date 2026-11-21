@@ -13,6 +13,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BattleMeditation",
   "guid": "3f12027f9152f484b8fde69d2c87c8cc",

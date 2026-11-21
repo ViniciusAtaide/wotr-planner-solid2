@@ -14,6 +14,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonAzataFeatureTierIV",
   "guid": "ee1bac8c71df3f9408bad5ca3a19eb23"

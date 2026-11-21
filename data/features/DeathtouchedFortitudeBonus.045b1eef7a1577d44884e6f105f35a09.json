@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DeathtouchedFortitudeBonus",
   "guid": "045b1eef7a1577d44884e6f105f35a09",

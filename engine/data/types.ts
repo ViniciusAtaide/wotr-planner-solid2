@@ -1222,6 +1222,7 @@ export interface BlueprintFeature extends BlueprintBase {
   readonly $type: 'BlueprintFeature';
   readonly Ranks: number;
   readonly HideInUI: boolean;
+  readonly HideNotAvailibleInUI: boolean;
   readonly Groups: readonly FeatureGroup[];
 }
 
@@ -1257,6 +1258,7 @@ export interface BlueprintParametrizedFeature extends BlueprintBase {
   readonly $type: 'BlueprintParametrizedFeature';
   readonly Ranks: number;
   readonly HideInUI: boolean;
+  readonly HideNotAvailibleInUI: boolean;
   readonly Groups: readonly FeatureGroup[];
   readonly ParameterType: FeatureParameterType;
   readonly WeaponSubCategory: WeaponSubCategory;
@@ -1271,6 +1273,7 @@ export interface BlueprintFeatureReplaceSpellbook extends BlueprintBase {
   readonly $type: 'BlueprintFeatureReplaceSpellbook';
   readonly Ranks: number;
   readonly HideInUI: boolean;
+  readonly HideNotAvailibleInUI: boolean;
   readonly Groups: readonly FeatureGroup[];
   readonly m_Spellbook: Ref;
 }
@@ -1279,6 +1282,7 @@ export interface BlueprintFeatureSelectMythicSpellbook extends BlueprintBase {
   readonly $type: 'BlueprintFeatureSelectMythicSpellbook';
   readonly Ranks: number;
   readonly HideInUI: boolean;
+  readonly HideNotAvailibleInUI: boolean;
   readonly Groups: readonly FeatureGroup[];
   readonly m_AllowedSpellbooks: readonly Ref[];
 }
@@ -1293,6 +1297,7 @@ export interface BlueprintRace extends BlueprintBase {
   readonly $type: 'BlueprintRace';
   readonly Ranks: number;
   readonly HideInUI: boolean;
+  readonly HideNotAvailibleInUI: boolean;
   readonly Groups: readonly FeatureGroup[];
   readonly m_Features: readonly Ref[];
   readonly SelectableRaceStat: boolean;
@@ -1302,6 +1307,7 @@ export interface BlueprintFeatureSelection extends BlueprintBase {
   readonly $type: 'BlueprintFeatureSelection';
   readonly Ranks: number;
   readonly HideInUI: boolean;
+  readonly HideNotAvailibleInUI: boolean;
   readonly Groups: readonly FeatureGroup[];
   readonly m_AllFeatures: readonly Ref[];
   readonly Mode: 'Default' | 'OnlyNew' | 'OnlyRankUp';
@@ -1330,6 +1336,7 @@ export interface BlueprintProgression extends BlueprintBase {
   readonly $type: 'BlueprintProgression';
   readonly Ranks: number;
   readonly HideInUI: boolean;
+  readonly HideNotAvailibleInUI: boolean;
   readonly Groups: readonly FeatureGroup[];
   readonly LevelEntries: readonly LevelEntry[];
   readonly m_Classes: readonly ClassWithLevel[];

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ClutchOfCorruptionFeature",
   "guid": "701e546112174d1eb15f49ad81308f10"

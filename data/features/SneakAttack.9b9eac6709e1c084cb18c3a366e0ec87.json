@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "SneakAttack",
   "guid": "9b9eac6709e1c084cb18c3a366e0ec87",

@@ -29,6 +29,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SickeningCriticalFeature",
   "guid": "4c7205d859a1e114895e798af383d76a",

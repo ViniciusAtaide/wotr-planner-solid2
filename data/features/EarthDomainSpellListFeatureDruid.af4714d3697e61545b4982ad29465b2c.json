@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EarthDomainSpellListFeatureDruid",
   "guid": "af4714d3697e61545b4982ad29465b2c"

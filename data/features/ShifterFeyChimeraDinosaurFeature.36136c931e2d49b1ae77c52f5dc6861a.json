@@ -10,6 +10,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterFeyChimeraDinosaurFeature",
   "guid": "36136c931e2d49b1ae77c52f5dc6861a",

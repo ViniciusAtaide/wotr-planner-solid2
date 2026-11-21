@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "LoremasterWarpriestLevelUp",
   "guid": "d12e9da50f5a4d2cacdb9418d5c56580",

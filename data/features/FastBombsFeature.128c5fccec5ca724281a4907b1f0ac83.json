@@ -38,6 +38,7 @@
     "Discovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FastBombsFeature",
   "guid": "128c5fccec5ca724281a4907b1f0ac83",

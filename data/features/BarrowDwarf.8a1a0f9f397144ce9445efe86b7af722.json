@@ -29,6 +29,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BarrowDwarf",
   "guid": "8a1a0f9f397144ce9445efe86b7af722",

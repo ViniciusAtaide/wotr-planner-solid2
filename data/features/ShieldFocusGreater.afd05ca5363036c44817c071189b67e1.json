@@ -44,6 +44,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShieldFocusGreater",
   "guid": "afd05ca5363036c44817c071189b67e1",

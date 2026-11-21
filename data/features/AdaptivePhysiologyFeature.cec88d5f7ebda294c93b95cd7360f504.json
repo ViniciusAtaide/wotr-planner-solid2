@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "AdaptivePhysiologyFeature",
   "guid": "cec88d5f7ebda294c93b95cd7360f504",

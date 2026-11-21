@@ -23,6 +23,7 @@
     "ArcaneTricksterSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "ArcaneTricksterArcanistNatureMage",
   "guid": "7cb23fae66c54c6eb698c151aba54c0c",

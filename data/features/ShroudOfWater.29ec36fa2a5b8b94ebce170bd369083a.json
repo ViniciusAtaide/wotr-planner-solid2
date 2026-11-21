@@ -39,6 +39,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShroudOfWater",
   "guid": "29ec36fa2a5b8b94ebce170bd369083a",

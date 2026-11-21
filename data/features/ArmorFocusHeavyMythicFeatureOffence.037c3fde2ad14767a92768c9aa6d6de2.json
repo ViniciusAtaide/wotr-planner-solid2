@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArmorFocusHeavyMythicFeatureOffence",
   "guid": "037c3fde2ad14767a92768c9aa6d6de2",

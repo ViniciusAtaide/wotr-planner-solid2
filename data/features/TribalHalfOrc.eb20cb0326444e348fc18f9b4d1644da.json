@@ -25,6 +25,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TribalHalfOrc",
   "guid": "eb20cb0326444e348fc18f9b4d1644da",

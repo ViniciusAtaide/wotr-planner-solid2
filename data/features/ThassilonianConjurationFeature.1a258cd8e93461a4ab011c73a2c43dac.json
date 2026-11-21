@@ -16,6 +16,7 @@
     "ThassilonianSpellbook"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ThassilonianConjurationFeature",
   "guid": "1a258cd8e93461a4ab011c73a2c43dac",

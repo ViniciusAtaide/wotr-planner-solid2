@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EarthClassSkills",
   "guid": "5c0916592017fbd419856df54db630f7",

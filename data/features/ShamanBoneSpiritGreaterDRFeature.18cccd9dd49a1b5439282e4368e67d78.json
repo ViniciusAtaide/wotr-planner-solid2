@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanBoneSpiritGreaterDRFeature",
   "guid": "18cccd9dd49a1b5439282e4368e67d78"

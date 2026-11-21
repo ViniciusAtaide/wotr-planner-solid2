@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "RingOfChaosFeature",
   "guid": "87c7736449ddc2048a1ef2e2a023cb01"

@@ -15,6 +15,7 @@
     "Mercy"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MercyParalyzed",
   "guid": "62582b4636218d74db34606f872c9c05",

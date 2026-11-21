@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TacticalLeaderFeatShareFeature",
   "guid": "93e78cad499b1b54c859a970cbe4f585",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DuelistDeflectArrows",
   "guid": "c44158612f496fc4b863a0a7691401e3",

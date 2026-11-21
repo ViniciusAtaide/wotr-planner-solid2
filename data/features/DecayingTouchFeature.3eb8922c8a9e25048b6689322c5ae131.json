@@ -5,6 +5,7 @@
     "LichUniqueAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DecayingTouchFeature",
   "guid": "3eb8922c8a9e25048b6689322c5ae131",

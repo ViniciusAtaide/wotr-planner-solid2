@@ -35,6 +35,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnduringEarthFeature",
   "guid": "14359e9c35a42ee48b8c31b4424a8d3f",

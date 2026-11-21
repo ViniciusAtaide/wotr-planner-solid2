@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 4,
   "assetName": "PlagueHexIncreaseDamageStepFeature",
   "guid": "505648df95f5489fa13ddbd1af9473fd",

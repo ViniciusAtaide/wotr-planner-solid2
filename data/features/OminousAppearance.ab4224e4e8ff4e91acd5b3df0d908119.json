@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OminousAppearance",
   "guid": "ab4224e4e8ff4e91acd5b3df0d908119",

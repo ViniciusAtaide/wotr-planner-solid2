@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineFeySpellLevel2",
   "guid": "b90d5afdf3f1f8f448474de8d078b67e",

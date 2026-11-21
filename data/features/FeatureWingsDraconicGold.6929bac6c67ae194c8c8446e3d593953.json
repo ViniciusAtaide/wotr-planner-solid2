@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FeatureWingsDraconicGold",
   "guid": "6929bac6c67ae194c8c8446e3d593953",

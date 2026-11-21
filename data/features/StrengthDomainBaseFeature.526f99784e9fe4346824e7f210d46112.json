@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StrengthDomainBaseFeature",
   "guid": "526f99784e9fe4346824e7f210d46112",

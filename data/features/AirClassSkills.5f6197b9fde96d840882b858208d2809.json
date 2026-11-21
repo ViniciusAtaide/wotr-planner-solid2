@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AirClassSkills",
   "guid": "5f6197b9fde96d840882b858208d2809",

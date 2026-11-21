@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FleshOfStoneFeature",
   "guid": "a275b35f282601944a97e694f6bc79f8",

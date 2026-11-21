@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GiantWeaponWielderFeature",
   "guid": "38323bb032d740ab9045f1086705b0c7",

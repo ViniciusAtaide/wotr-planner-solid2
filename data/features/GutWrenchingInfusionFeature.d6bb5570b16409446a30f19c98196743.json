@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GutWrenchingInfusionFeature",
   "guid": "d6bb5570b16409446a30f19c98196743",

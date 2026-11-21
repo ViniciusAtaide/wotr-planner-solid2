@@ -29,6 +29,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BleedingCriticalFeature",
   "guid": "42be7d465db94213baf0578c721803ff",

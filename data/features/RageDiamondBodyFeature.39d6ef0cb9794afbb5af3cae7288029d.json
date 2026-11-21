@@ -15,6 +15,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RageDiamondBodyFeature",
   "guid": "39d6ef0cb9794afbb5af3cae7288029d",

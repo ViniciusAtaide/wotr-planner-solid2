@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonAreaEffectsGazeFeature",
   "guid": "39d8ae51c0034adbb8394210c51901e2",

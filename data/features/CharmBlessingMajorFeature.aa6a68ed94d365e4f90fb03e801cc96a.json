@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CharmBlessingMajorFeature",
   "guid": "aa6a68ed94d365e4f90fb03e801cc96a",

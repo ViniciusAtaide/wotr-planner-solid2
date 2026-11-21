@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WarpriestOrisonsFeature",
   "guid": "e22188669b8357f4e9e27c63cd5a9d08",

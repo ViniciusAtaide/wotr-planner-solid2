@@ -30,6 +30,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImprovedSunder",
   "guid": "9719015edcbf142409592e2cbaab7fe1",

@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TranquilWhispererApotheosis",
   "guid": "a543999ab3659ee468d5b74a182af4b0",

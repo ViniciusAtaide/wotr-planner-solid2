@@ -13,6 +13,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexSlumberFeature",
   "guid": "894ef7374b805dd43b97603371b7ef10",

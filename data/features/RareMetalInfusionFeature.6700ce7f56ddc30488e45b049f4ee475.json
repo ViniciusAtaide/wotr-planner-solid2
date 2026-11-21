@@ -33,6 +33,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RareMetalInfusionFeature",
   "guid": "6700ce7f56ddc30488e45b049f4ee475",

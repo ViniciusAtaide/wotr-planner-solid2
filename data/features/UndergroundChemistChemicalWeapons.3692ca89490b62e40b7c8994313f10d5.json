@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UndergroundChemistChemicalWeapons",
   "guid": "3692ca89490b62e40b7c8994313f10d5",

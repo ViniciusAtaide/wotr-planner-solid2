@@ -49,6 +49,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DaemonTotemGreaterFeature",
   "guid": "9a2f0ffe517d221459640a4ad85710d7",

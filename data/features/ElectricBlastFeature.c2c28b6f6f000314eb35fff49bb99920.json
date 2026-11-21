@@ -5,6 +5,7 @@
     "KineticBlast"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "ElectricBlastFeature",
   "guid": "c2c28b6f6f000314eb35fff49bb99920",

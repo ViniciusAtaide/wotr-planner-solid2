@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PiranhaStrikeMythicFeat",
   "guid": "0d7884d730fa20a40a9d41bbba1ea4b5",

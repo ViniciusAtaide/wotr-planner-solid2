@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BladeboundTrueBondFeature",
   "guid": "fc7d5f4108a84caf84d3574558ede229",

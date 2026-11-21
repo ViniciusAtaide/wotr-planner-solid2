@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NotADemonFeature",
   "guid": "e2986f96fa1cd3b4f8d9dfd8a9907731",

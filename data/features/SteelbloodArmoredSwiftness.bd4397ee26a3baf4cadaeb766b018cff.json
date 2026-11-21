@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SteelbloodArmoredSwiftness",
   "guid": "bd4397ee26a3baf4cadaeb766b018cff",

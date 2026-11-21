@@ -20,6 +20,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BombAbilityFocus",
   "guid": "f864101ab0cdb4b418c7d62d2b24eee5",

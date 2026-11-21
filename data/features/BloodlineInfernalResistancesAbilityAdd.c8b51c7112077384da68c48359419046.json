@@ -30,6 +30,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "BloodlineInfernalResistancesAbilityAdd",
   "guid": "c8b51c7112077384da68c48359419046",

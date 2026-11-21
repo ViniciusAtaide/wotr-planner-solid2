@@ -34,6 +34,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KineticHealerFeature",
   "guid": "3ef666973adfa8f40af6c0679bd98ba5",

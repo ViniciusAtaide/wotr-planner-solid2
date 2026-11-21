@@ -20,6 +20,7 @@
     "LichUniqueAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FearControlFeature",
   "guid": "16c499797605dd244a365fc73f475e11",

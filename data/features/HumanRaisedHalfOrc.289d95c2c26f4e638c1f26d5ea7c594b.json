@@ -23,6 +23,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HumanRaisedHalfOrc",
   "guid": "289d95c2c26f4e638c1f26d5ea7c594b",

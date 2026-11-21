@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LichSummonFeatureTier6",
   "guid": "67a89bc88735c2140b905a28753e0b9a",

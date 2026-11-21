@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "TwoWeaponFightingBasicMechanics",
   "guid": "6948b379c0562714d9f6d58ccbfa8faa",

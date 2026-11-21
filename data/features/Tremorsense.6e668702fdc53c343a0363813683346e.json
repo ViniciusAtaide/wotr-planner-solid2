@@ -43,6 +43,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Tremorsense",
   "guid": "6e668702fdc53c343a0363813683346e",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CannyDefense",
   "guid": "9a0a447e161207d46829ce2bd8b3cc6f",

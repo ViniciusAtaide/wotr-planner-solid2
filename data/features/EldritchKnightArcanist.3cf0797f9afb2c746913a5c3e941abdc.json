@@ -46,6 +46,7 @@
     "EldritchKnightSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "EldritchKnightArcanist",
   "guid": "3cf0797f9afb2c746913a5c3e941abdc",

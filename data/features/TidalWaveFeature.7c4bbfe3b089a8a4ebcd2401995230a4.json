@@ -43,6 +43,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TidalWaveFeature",
   "guid": "7c4bbfe3b089a8a4ebcd2401995230a4",

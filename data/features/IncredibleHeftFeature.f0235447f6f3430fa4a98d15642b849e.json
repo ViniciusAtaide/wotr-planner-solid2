@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "IncredibleHeftFeature",
   "guid": "f0235447f6f3430fa4a98d15642b849e",

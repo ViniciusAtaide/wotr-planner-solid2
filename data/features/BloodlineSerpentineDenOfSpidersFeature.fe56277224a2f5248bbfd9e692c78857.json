@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineSerpentineDenOfSpidersFeature",
   "guid": "fe56277224a2f5248bbfd9e692c78857",

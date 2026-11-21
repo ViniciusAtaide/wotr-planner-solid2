@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "EarthDomainCapstone",
   "guid": "3b8ca19cd6826324ca9b2e3120628268",

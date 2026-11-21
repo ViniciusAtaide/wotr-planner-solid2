@@ -13,6 +13,7 @@
     "MythicTrick1"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterTrickeryTier1Feature",
   "guid": "90bc71f1d8482184a9ede0bda4773d94",

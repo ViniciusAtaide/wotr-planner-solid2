@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterSummonFeatureTier5",
   "guid": "f9b6ab05321dd7c41b8f575d3e56fc2a",

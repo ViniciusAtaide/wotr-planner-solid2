@@ -19,6 +19,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MultiattackShifter",
   "guid": "b5d998bd85a74b708516e24fa198874e",

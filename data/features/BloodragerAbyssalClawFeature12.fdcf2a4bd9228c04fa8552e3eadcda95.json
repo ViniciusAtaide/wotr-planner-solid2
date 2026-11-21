@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerAbyssalClawFeature12",
   "guid": "fdcf2a4bd9228c04fa8552e3eadcda95",

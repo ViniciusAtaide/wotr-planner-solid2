@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MurderDomainBaseFeatureSeparatist",
   "guid": "f41a97edb97f445fa6e9fc68cd711d0e",

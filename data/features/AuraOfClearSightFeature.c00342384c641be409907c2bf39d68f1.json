@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AuraOfClearSightFeature",
   "guid": "c00342384c641be409907c2bf39d68f1",

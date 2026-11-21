@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StoneclawStrikeShifterFeature",
   "guid": "08bdc67f8ca245cb9ef8bccaaa54497f",

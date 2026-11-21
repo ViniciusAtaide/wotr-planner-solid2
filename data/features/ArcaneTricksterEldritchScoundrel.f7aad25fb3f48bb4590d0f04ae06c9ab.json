@@ -23,6 +23,7 @@
     "ArcaneTricksterSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "ArcaneTricksterEldritchScoundrel",
   "guid": "f7aad25fb3f48bb4590d0f04ae06c9ab",

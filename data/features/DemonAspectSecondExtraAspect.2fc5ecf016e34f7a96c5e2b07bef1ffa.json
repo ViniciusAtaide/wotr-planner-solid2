@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonAspectSecondExtraAspect",
   "guid": "2fc5ecf016e34f7a96c5e2b07bef1ffa"

@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerAbyssalDemonicAura",
   "guid": "677171968b9a22f459c7391d8302dd36",

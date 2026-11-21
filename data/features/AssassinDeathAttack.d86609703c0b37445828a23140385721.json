@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AssassinDeathAttack",
   "guid": "d86609703c0b37445828a23140385721"

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MadnessBlessingMajorFeature",
   "guid": "fd4e07ed255348858fea4f5195b49768",

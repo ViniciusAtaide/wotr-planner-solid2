@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ThugFrightening",
   "guid": "5476fa6ac147a584aa886f1c232b8a87",

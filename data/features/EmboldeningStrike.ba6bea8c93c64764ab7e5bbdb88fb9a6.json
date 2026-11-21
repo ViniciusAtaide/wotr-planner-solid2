@@ -27,6 +27,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EmboldeningStrike",
   "guid": "ba6bea8c93c64764ab7e5bbdb88fb9a6",

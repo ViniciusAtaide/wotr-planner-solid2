@@ -20,6 +20,7 @@
     "Discovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AcidBombsFeature",
   "guid": "1ee30ffd28843b84282b04e5d4e8bc7b",

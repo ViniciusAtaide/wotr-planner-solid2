@@ -27,6 +27,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SlayerCamouflage",
   "guid": "fd374a48fd0f5e94a841cc3bf408c432",

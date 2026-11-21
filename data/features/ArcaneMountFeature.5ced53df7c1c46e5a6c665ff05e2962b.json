@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcaneMountFeature",
   "guid": "5ced53df7c1c46e5a6c665ff05e2962b",

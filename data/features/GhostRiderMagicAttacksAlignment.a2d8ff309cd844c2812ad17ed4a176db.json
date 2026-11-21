@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GhostRiderMagicAttacksAlignment",
   "guid": "a2d8ff309cd844c2812ad17ed4a176db",

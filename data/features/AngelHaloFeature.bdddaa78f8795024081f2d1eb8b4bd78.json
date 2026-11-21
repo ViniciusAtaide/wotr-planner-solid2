@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelHaloFeature",
   "guid": "bdddaa78f8795024081f2d1eb8b4bd78",

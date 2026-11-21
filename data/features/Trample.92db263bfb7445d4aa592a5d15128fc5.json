@@ -30,6 +30,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Trample",
   "guid": "92db263bfb7445d4aa592a5d15128fc5",

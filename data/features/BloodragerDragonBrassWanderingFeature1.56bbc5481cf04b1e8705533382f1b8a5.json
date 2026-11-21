@@ -103,6 +103,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerDragonBrassWanderingFeature1",
   "guid": "56bbc5481cf04b1e8705533382f1b8a5",

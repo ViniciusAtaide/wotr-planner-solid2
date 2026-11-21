@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterAspectManticore",
   "guid": "50b0bb6a4c824a06adc5e56c079a0a1d",

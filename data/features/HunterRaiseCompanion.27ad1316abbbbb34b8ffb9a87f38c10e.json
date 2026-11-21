@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HunterRaiseCompanion",
   "guid": "27ad1316abbbbb34b8ffb9a87f38c10e",

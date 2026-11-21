@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Fortification25Feature",
   "guid": "165b74db9493ded40ac05b3521aab427"

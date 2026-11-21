@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterLoreReligionWaterDomainFeature",
   "guid": "ada9e60ddd4a40e9a73a03034482b84f",

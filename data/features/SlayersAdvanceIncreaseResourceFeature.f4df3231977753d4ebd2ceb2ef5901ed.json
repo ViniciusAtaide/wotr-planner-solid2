@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SlayersAdvanceIncreaseResourceFeature",
   "guid": "f4df3231977753d4ebd2ceb2ef5901ed",

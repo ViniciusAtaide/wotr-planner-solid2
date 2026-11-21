@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WeatherBlessingFeature",
   "guid": "4172d92c598de1d47aa2c0dd51c05e24",

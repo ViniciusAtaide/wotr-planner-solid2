@@ -46,6 +46,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterArcanist",
   "guid": "39d9362873634e24c8f7a1932e425340",

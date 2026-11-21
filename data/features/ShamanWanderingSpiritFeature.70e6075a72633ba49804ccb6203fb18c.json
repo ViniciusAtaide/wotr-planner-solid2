@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanWanderingSpiritFeature",
   "guid": "70e6075a72633ba49804ccb6203fb18c",

@@ -34,6 +34,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexFlameCurseFeature",
   "guid": "dec5607ab6ea68d4aac0772049e80be7",

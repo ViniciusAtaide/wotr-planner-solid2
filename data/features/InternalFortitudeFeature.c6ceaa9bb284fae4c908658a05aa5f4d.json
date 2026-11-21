@@ -42,6 +42,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InternalFortitudeFeature",
   "guid": "c6ceaa9bb284fae4c908658a05aa5f4d",

@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalWitchFireRayFeature",
   "guid": "97e4fe7723b749849f182186764c23a4",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FeatureScaledFistCopperBreathWeapon",
   "guid": "7497d32115317b643a7e76cfa9caf264",

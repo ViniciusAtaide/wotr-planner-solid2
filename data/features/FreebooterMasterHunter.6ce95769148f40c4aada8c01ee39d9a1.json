@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FreebooterMasterHunter",
   "guid": "6ce95769148f40c4aada8c01ee39d9a1",

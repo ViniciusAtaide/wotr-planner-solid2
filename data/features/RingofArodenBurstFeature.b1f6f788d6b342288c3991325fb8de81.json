@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RingofArodenBurstFeature",
   "guid": "b1f6f788d6b342288c3991325fb8de81"

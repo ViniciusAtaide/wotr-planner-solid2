@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GloryBlessingMajorFeature",
   "guid": "bda93cca59474496b6864cd4e2063f18",

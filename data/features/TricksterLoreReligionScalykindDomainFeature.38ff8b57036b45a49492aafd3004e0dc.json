@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterLoreReligionScalykindDomainFeature",
   "guid": "38ff8b57036b45a49492aafd3004e0dc",

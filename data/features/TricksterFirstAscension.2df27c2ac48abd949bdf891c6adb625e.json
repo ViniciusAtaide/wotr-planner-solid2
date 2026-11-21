@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterFirstAscension",
   "guid": "2df27c2ac48abd949bdf891c6adb625e",

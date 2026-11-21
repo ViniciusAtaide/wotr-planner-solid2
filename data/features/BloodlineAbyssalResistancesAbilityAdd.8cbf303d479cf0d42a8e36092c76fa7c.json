@@ -30,6 +30,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "BloodlineAbyssalResistancesAbilityAdd",
   "guid": "8cbf303d479cf0d42a8e36092c76fa7c",

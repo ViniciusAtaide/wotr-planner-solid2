@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ExtraChannelEmpyrealSorcerer",
   "guid": "347e8d794c9598e4abed70adda868ccd",

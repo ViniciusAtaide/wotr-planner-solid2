@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShareTransmutation",
   "guid": "c4ed8d1a90c93754eacea361653a7d56",

@@ -41,6 +41,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "IncreasedDamageReductionFeature",
   "guid": "ddaee203ee4dcb24c880d633fbd77db6",

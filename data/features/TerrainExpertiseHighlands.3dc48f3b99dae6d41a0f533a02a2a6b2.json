@@ -20,6 +20,7 @@
     "TerrainDominance"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TerrainExpertiseHighlands",
   "guid": "3dc48f3b99dae6d41a0f533a02a2a6b2",

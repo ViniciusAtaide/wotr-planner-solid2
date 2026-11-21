@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChannelEnergyHospitalerFeature",
   "guid": "a9ab1bbc79ecb174d9a04699986ce8d5",

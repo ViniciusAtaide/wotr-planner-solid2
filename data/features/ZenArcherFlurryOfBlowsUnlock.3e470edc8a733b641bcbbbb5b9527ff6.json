@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ZenArcherFlurryOfBlowsUnlock",
   "guid": "3e470edc8a733b641bcbbbb5b9527ff6",

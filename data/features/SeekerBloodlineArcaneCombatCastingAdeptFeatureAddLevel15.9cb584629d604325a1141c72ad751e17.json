@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SeekerBloodlineArcaneCombatCastingAdeptFeatureAddLevel15",
   "guid": "9cb584629d604325a1141c72ad751e17"

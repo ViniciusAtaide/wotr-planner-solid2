@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "MuscleWarmerFeature",
   "guid": "65466c084574b6d42b7533d57bc8f445"

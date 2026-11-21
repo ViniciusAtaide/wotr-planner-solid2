@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterAspectGreaterChimericFiend",
   "guid": "5c5cb651ceaf4657a48bb388456acb06",

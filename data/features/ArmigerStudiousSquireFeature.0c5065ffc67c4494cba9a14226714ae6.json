@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArmigerStudiousSquireFeature",
   "guid": "0c5065ffc67c4494cba9a14226714ae6",

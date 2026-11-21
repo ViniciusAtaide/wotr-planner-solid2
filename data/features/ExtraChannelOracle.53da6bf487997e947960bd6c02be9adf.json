@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ExtraChannelOracle",
   "guid": "53da6bf487997e947960bd6c02be9adf",

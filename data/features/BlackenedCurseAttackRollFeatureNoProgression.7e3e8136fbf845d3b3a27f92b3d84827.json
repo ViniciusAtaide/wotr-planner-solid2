@@ -19,6 +19,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BlackenedCurseAttackRollFeatureNoProgression",
   "guid": "7e3e8136fbf845d3b3a27f92b3d84827",

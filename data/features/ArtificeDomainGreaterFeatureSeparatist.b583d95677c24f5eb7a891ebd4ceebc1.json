@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArtificeDomainGreaterFeatureSeparatist",
   "guid": "b583d95677c24f5eb7a891ebd4ceebc1",

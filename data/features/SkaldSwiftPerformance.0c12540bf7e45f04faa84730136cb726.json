@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkaldSwiftPerformance",
   "guid": "0c12540bf7e45f04faa84730136cb726",

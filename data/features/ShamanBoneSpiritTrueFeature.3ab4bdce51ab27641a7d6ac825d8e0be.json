@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanBoneSpiritTrueFeature",
   "guid": "3ab4bdce51ab27641a7d6ac825d8e0be",

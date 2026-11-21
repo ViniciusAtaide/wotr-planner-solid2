@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "IncenseFogRallyingIncenseFeature",
   "guid": "c5f14b5981ec3994c80def79b6f5a77a",

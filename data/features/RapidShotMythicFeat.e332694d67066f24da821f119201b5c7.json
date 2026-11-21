@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RapidShotMythicFeat",
   "guid": "e332694d67066f24da821f119201b5c7",

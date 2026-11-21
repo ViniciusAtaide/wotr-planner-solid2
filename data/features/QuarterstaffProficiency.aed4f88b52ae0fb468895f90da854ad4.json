@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "QuarterstaffProficiency",
   "guid": "aed4f88b52ae0fb468895f90da854ad4",

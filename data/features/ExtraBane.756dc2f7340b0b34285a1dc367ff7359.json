@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ExtraBane",
   "guid": "756dc2f7340b0b34285a1dc367ff7359",

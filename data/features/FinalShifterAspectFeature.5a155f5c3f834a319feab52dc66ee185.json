@@ -21,6 +21,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinalShifterAspectFeature",
   "guid": "5a155f5c3f834a319feab52dc66ee185",

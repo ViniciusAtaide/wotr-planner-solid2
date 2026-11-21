@@ -24,6 +24,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EveryoneIsMortal",
   "guid": "11dbdcadc7d74dc09e70ef386931a14f",

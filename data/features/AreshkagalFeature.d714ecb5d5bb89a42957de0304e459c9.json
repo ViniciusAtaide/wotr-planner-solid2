@@ -158,6 +158,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "AreshkagalFeature",
   "guid": "d714ecb5d5bb89a42957de0304e459c9",

@@ -22,6 +22,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KiScorchingRayFeature",
   "guid": "16612cc8d88ef83458d05fd063709af7",

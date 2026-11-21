@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreaterElementalFocusAcid",
   "guid": "49926dc94aca16145b6a608277b6f31c",

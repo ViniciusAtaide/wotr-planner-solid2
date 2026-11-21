@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchPoolFeature",
   "guid": "95e04a9e86aa9e64dad7122625b79c62",

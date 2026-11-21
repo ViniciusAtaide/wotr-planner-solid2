@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WaterDomainBaseFeature",
   "guid": "4c21ad24f55f64d4fb722f40720d9ab0",

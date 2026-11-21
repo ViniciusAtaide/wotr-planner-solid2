@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DaggerProficiency",
   "guid": "b776c19291928cf4184d4dc65f09f3a6",

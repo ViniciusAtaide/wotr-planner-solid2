@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkillFocusKnowledgeArcanaMythicFeat",
   "guid": "35fca26cfdb2ab34fac51cd068a1f7e7",

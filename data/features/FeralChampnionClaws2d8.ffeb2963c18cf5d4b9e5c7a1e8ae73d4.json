@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FeralChampnionClaws2d8",
   "guid": "ffeb2963c18cf5d4b9e5c7a1e8ae73d4"

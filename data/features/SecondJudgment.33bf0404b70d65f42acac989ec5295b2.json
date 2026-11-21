@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SecondJudgment",
   "guid": "33bf0404b70d65f42acac989ec5295b2",

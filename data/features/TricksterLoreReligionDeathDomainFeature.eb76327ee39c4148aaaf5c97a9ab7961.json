@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterLoreReligionDeathDomainFeature",
   "guid": "eb76327ee39c4148aaaf5c97a9ab7961",

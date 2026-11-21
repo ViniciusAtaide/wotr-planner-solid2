@@ -22,6 +22,7 @@
     "ScaledFistKiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScaledFistQuiveringPalmFeature",
   "guid": "cb8670cbc16bd43428cebe5a3ca9ad62",

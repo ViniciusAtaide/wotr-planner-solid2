@@ -44,6 +44,7 @@
     "OracleMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleAncestorsMysteryFeature",
   "guid": "9936554e9372dab4a874c1dd165fb6f8",

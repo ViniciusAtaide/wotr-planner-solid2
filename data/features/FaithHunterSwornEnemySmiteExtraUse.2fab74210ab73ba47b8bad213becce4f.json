@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "FaithHunterSwornEnemySmiteExtraUse",
   "guid": "2fab74210ab73ba47b8bad213becce4f",

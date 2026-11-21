@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchFontBottomlessWell",
   "guid": "8edcfd5e80898e34cb6c09a850b76083",

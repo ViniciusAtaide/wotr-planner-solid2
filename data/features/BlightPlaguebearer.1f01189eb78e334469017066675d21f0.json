@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BlightPlaguebearer",
   "guid": "1f01189eb78e334469017066675d21f0",

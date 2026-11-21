@@ -14,6 +14,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CannyObserver",
   "guid": "68a23a419b330de45b4c3789649b5b41",

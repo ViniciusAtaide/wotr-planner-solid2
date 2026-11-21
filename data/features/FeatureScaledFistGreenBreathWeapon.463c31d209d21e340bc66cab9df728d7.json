@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FeatureScaledFistGreenBreathWeapon",
   "guid": "463c31d209d21e340bc66cab9df728d7",

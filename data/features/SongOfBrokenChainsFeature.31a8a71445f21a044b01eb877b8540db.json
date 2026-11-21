@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SongOfBrokenChainsFeature",
   "guid": "31a8a71445f21a044b01eb877b8540db",

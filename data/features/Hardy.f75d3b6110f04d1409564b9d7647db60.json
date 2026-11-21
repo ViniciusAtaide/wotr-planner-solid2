@@ -5,6 +5,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Hardy",
   "guid": "f75d3b6110f04d1409564b9d7647db60",

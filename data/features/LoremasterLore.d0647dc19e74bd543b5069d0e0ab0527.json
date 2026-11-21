@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LoremasterLore",
   "guid": "d0647dc19e74bd543b5069d0e0ab0527",

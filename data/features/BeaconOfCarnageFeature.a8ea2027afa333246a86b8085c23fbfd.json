@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BeaconOfCarnageFeature",
   "guid": "a8ea2027afa333246a86b8085c23fbfd"

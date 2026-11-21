@@ -47,6 +47,7 @@
     "UndergroundChemistDiscovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpontaneousHealingFeature",
   "guid": "2bc1ee626a69667469ab5c1698b99956",

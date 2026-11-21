@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "BloodlineAbyssalStrengthAbilityLevel1",
   "guid": "d3ccd7c74caab594485c20f694aca91d",

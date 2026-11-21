@@ -45,6 +45,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Disruptive",
   "guid": "f3ef866a9da642c4b9f7dcd76c3567fe",

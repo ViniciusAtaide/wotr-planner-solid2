@@ -5,6 +5,7 @@
     "FavoriteEnemy"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 8,
   "assetName": "FavoriteEnemyAberrations",
   "guid": "7081934ab5f8573429dbd26522adcc39",

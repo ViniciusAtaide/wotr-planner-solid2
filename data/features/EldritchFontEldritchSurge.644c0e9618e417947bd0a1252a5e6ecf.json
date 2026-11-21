@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchFontEldritchSurge",
   "guid": "644c0e9618e417947bd0a1252a5e6ecf",

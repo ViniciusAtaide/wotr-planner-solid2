@@ -49,6 +49,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ReflexiveDodgeFeature",
   "guid": "6a9319f42f742024680af38af54f5d6f",

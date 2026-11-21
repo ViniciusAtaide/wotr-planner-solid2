@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonImprovedImmunities",
   "guid": "13a1b5e9054343ba9ab56f2cf596d518",

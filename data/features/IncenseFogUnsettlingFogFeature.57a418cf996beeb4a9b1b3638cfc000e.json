@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "IncenseFogUnsettlingFogFeature",
   "guid": "57a418cf996beeb4a9b1b3638cfc000e",

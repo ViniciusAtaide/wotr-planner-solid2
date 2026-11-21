@@ -20,6 +20,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "ExtraReservoir",
   "guid": "29afc53efa4d469b9476760fa09576de",

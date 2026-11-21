@@ -15,6 +15,7 @@
     "EldritchScionArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchDevotedBladeFeature",
   "guid": "e1fdb05451a073647a0f483299db8c4b",

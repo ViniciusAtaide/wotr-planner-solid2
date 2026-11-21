@@ -22,6 +22,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "IgnorePrerequisites": false,
   "Mode": "OnlyNew",
   "Obligatory": false,

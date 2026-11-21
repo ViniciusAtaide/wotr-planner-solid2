@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WildShapeIVBearFeature",
   "guid": "1368c7ce69702444893af5ffd3226e19",

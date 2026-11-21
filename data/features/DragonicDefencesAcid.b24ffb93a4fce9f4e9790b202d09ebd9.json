@@ -53,6 +53,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonicDefencesAcid",
   "guid": "b24ffb93a4fce9f4e9790b202d09ebd9",

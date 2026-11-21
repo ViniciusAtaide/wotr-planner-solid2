@@ -31,6 +31,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChampionOfTheFaithLawFeature",
   "guid": "980004b88420d6248975b278a7efbdcd",

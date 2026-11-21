@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonLevel2MaxAbilityDexterityFeature",
   "guid": "8872513a42974ab7bd30a5e2b4ce848d"

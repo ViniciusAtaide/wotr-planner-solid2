@@ -5,6 +5,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DispelFocus",
   "guid": "c39576f8842e4505b14aa918b3a36a0a",

@@ -191,6 +191,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GodclawFeature",
   "guid": "583a26e88031d0a4a94c8180105692a5",

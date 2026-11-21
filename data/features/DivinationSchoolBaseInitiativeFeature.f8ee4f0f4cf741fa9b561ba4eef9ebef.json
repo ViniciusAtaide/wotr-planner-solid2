@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivinationSchoolBaseInitiativeFeature",
   "guid": "f8ee4f0f4cf741fa9b561ba4eef9ebef"

@@ -35,6 +35,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PossessedShamanSharedSkillThievery",
   "guid": "f730e528debeab241ac99d3ea19d6292",

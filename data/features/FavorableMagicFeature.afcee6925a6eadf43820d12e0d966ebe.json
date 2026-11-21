@@ -5,6 +5,7 @@
     "AzataSuperpowerAbilities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FavorableMagicFeature",
   "guid": "afcee6925a6eadf43820d12e0d966ebe",

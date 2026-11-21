@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UndeadImmunities",
   "guid": "8a75eb16bfff86949a4ddcb3dd2f83ae",

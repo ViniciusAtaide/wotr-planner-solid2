@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "MagnificentPlumeHatFeature",
   "guid": "a699aa4b8eeb71344be5be24405da3b8"

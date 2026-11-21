@@ -5,6 +5,7 @@
     "ImprovedSwordOfHeaven"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelSwordDepersonalizeFeature",
   "guid": "432c96835aee50341a4ff0b364cdb85a",

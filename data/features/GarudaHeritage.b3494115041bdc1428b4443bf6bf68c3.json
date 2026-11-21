@@ -42,6 +42,7 @@
     "AasimarHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GarudaHeritage",
   "guid": "b3494115041bdc1428b4443bf6bf68c3",

@@ -22,6 +22,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpindleInfusion",
   "guid": "c4f4a62a325f7c14dbcace3ce34782b5",

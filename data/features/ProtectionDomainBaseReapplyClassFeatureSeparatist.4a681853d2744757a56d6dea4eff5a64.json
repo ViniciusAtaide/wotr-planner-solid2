@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ProtectionDomainBaseReapplyClassFeatureSeparatist",
   "guid": "4a681853d2744757a56d6dea4eff5a64"

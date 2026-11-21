@@ -59,6 +59,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ZenArcherKiArrowsFeature",
   "guid": "604a24b659bb69a4796ddb9fbf957504",

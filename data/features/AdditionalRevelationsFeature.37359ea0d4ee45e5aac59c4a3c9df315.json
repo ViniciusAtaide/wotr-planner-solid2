@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AdditionalRevelationsFeature",
   "guid": "37359ea0d4ee45e5aac59c4a3c9df315",

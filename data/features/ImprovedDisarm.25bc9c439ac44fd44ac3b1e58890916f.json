@@ -29,6 +29,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImprovedDisarm",
   "guid": "25bc9c439ac44fd44ac3b1e58890916f",

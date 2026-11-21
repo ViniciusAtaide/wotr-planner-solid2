@@ -45,6 +45,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PummelingBully",
   "guid": "bdf58317985383540920c723db07aa3b",

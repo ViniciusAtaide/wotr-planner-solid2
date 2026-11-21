@@ -9,6 +9,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HalfOrcSkilled",
   "guid": "4e8fe10f42f314e4fa7c7918bcfadbd5",

@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WarhammerProficiency",
   "guid": "aba1be1d113ea4049b99ea92165e91dc",

@@ -64,6 +64,7 @@
     "SlayerTalent"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UncannyDodgeTalent",
   "guid": "ca5274d057152fa45b7527cad0927840",

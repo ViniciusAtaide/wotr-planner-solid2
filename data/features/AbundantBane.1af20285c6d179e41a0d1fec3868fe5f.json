@@ -20,6 +20,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AbundantBane",
   "guid": "1af20285c6d179e41a0d1fec3868fe5f",

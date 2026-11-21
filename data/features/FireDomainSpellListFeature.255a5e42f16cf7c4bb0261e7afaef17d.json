@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FireDomainSpellListFeature",
   "guid": "255a5e42f16cf7c4bb0261e7afaef17d"

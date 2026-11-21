@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TorturedCrusaderLayOnHandsFeatureDescription",
   "guid": "dad3bd49a6bb4c5f871a8c6888201452",

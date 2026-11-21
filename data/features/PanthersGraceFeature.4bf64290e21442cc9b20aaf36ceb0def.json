@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "PanthersGraceFeature",
   "guid": "4bf64290e21442cc9b20aaf36ceb0def"

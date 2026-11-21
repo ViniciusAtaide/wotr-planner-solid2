@@ -27,6 +27,7 @@
     "Familiar"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RatFamiliarBondFeature",
   "guid": "4d48365690ea9a746a74d19c31562788",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ResistNaturesLure",
   "guid": "ad6a5b0e1a65c3540986cf9a7b006388",

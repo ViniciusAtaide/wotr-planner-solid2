@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AzataSummonFeatureTier4",
   "guid": "d779bcb070a85ec47a49a2723b00f79f",

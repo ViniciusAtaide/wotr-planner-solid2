@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WeaponBondPlus2",
   "guid": "c8db0772b7059ec4eabe55b7e0e79824",

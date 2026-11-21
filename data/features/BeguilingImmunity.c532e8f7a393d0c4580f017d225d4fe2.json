@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BeguilingImmunity",
   "guid": "c532e8f7a393d0c4580f017d225d4fe2",

@@ -22,6 +22,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KiRestorationFeature",
   "guid": "64dea39d32b9400469ef84a8fb4b171d",

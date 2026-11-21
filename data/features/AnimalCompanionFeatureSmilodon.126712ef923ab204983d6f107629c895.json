@@ -18,6 +18,7 @@
     "AnimalCompanion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalCompanionFeatureSmilodon",
   "guid": "126712ef923ab204983d6f107629c895",

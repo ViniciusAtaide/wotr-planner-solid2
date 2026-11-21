@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DarkLurkerBlindFightImproved",
   "guid": "feff67b620244f09a78d76aba1479814",

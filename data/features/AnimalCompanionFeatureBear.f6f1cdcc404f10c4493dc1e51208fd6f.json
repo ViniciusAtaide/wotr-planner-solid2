@@ -18,6 +18,7 @@
     "AnimalCompanion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalCompanionFeatureBear",
   "guid": "f6f1cdcc404f10c4493dc1e51208fd6f",

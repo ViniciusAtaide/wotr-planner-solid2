@@ -41,6 +41,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MediumArmorProficiency",
   "guid": "46f4fb320f35704488ba3d513397789d",

@@ -21,6 +21,7 @@
     "EldritchKnightSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "EldritchKnightThassilonianNecromancy",
   "guid": "1be478deb25983f4eb26a887beef6f87",

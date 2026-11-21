@@ -31,6 +31,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MountedCombat",
   "guid": "f308a03bea0d69843a8ed0af003d47a9",

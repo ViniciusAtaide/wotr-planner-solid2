@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ArchaeologistCleverExplorer",
   "guid": "1322e50d2b36aba45ab5405db43c53a3",

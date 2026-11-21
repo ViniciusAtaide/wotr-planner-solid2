@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BardSwiftPerformance",
   "guid": "fd4ec50bc895a614194df6b9232004b9",

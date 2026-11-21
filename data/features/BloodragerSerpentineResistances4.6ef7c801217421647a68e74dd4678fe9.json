@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerSerpentineResistances4",
   "guid": "6ef7c801217421647a68e74dd4678fe9",

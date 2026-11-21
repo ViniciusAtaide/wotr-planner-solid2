@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "ExquisiteChainBardingFeature",
   "guid": "acb7138cdeaa637458d20918695f7aaf"

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TerribleSlamFeatureAddLevel3",
   "guid": "f50f79b2933a49119a79a469dcf119c4",

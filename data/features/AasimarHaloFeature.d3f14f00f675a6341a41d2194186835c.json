@@ -13,6 +13,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "AasimarHaloFeature",
   "guid": "d3f14f00f675a6341a41d2194186835c",

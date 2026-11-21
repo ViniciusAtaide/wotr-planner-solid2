@@ -27,6 +27,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexRestlessSlumberFeature",
   "guid": "0a31b4aba2b3bc24c85636cb8bdba1d9",

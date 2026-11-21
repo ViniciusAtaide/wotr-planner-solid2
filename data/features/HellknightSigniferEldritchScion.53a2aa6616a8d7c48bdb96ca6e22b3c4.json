@@ -23,6 +23,7 @@
     "HellknightSigniferSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HellknightSigniferEldritchScion",
   "guid": "53a2aa6616a8d7c48bdb96ca6e22b3c4",

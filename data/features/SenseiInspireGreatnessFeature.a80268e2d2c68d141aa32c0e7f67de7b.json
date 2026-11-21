@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "SenseiInspireGreatnessFeature",
   "guid": "a80268e2d2c68d141aa32c0e7f67de7b",

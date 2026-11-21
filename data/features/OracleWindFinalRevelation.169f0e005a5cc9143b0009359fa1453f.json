@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleWindFinalRevelation",
   "guid": "169f0e005a5cc9143b0009359fa1453f",

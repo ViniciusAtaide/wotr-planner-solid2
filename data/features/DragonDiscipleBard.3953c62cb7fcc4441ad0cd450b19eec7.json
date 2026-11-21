@@ -14,6 +14,7 @@
     "DragonDiscipleSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonDiscipleBard",
   "guid": "3953c62cb7fcc4441ad0cd450b19eec7",

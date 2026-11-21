@@ -21,6 +21,7 @@
     "ArcaneTricksterSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "ArcaneTricksterThassilonianTransmutation",
   "guid": "2099c35e94cf0aa41b62603791e7be73",

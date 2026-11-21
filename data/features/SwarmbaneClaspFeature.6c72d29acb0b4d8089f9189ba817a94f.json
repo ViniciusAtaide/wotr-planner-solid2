@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SwarmbaneClaspFeature",
   "guid": "6c72d29acb0b4d8089f9189ba817a94f"

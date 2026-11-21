@@ -22,6 +22,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SlowReactions",
   "guid": "7787030571e87704d9177401c595408e",

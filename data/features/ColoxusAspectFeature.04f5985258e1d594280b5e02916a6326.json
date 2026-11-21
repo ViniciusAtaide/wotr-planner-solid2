@@ -13,6 +13,7 @@
     "DemonMajorAspect"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ColoxusAspectFeature",
   "guid": "04f5985258e1d594280b5e02916a6326",

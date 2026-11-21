@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "QuarterstaffMasterStyleSunderFeature",
   "guid": "a85bb778d9434c3683f543e1d7329781",

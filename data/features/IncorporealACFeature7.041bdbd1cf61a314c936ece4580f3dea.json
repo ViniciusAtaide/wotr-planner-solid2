@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "IncorporealACFeature7",
   "guid": "041bdbd1cf61a314c936ece4580f3dea"

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CoupDeGraceFeature",
   "guid": "3fbd5466fcc609d40bb2dfc3e502f4c4",

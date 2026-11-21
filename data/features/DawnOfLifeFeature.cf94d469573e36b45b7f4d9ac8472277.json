@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DawnOfLifeFeature",
   "guid": "cf94d469573e36b45b7f4d9ac8472277"

@@ -50,6 +50,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonRoarFeature",
   "guid": "3fca938ad6a5b8348a8523794127c5bc",

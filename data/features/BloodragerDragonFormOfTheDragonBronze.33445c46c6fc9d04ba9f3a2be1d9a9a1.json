@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerDragonFormOfTheDragonBronze",
   "guid": "33445c46c6fc9d04ba9f3a2be1d9a9a1",

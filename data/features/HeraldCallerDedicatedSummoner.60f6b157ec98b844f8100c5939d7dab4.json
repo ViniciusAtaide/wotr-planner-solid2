@@ -14,6 +14,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HeraldCallerDedicatedSummoner",
   "guid": "60f6b157ec98b844f8100c5939d7dab4",

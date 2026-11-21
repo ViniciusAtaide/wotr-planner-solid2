@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "BlazingCrownFeature",
   "guid": "841e7cba91534637af885b6904b312a1"

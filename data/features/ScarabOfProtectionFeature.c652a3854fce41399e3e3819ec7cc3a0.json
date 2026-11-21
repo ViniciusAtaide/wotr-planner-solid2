@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScarabOfProtectionFeature",
   "guid": "c652a3854fce41399e3e3819ec7cc3a0"

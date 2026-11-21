@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalFireElementalRayFeature",
   "guid": "ce0889b5c1b392e48baf1e004d1efd67",

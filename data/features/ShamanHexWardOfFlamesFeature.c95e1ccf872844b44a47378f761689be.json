@@ -34,6 +34,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexWardOfFlamesFeature",
   "guid": "c95e1ccf872844b44a47378f761689be",

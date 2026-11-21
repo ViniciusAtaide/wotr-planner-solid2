@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "LoremasterAngelfireApostleLevelUp",
   "guid": "254f87fe208d4f64ca5848a66e61a57b",

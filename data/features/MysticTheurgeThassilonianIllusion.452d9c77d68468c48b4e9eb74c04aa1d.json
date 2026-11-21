@@ -21,6 +21,7 @@
     "MysticTheurgeArcaneSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "MysticTheurgeThassilonianIllusion",
   "guid": "452d9c77d68468c48b4e9eb74c04aa1d",

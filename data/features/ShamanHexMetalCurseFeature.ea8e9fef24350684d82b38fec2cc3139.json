@@ -34,6 +34,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexMetalCurseFeature",
   "guid": "ea8e9fef24350684d82b38fec2cc3139",

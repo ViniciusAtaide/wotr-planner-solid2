@@ -24,6 +24,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KineticOvercharge",
   "guid": "4236ca275c6fa9b4a9945b2645262616",

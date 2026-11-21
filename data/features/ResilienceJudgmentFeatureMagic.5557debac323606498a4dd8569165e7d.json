@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ResilienceJudgmentFeatureMagic",
   "guid": "5557debac323606498a4dd8569165e7d"

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalFireResistanceAbilityLevel2",
   "guid": "bcfbd2e30b6df7d4eab9414dd0f2c6e4",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierDemandingChallenge",
   "guid": "3fca19d3f3886ee47be4b4019908d223",

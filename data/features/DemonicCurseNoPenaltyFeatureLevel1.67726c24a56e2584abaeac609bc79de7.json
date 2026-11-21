@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonicCurseNoPenaltyFeatureLevel1",
   "guid": "67726c24a56e2584abaeac609bc79de7",

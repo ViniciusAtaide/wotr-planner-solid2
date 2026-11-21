@@ -5,6 +5,7 @@
     "BackgroundSelection"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundNone",
   "guid": "7d300f497584d9245ac24c062dce0bd6",

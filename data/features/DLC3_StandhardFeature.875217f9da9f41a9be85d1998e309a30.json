@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DLC3_StandhardFeature",
   "guid": "875217f9da9f41a9be85d1998e309a30",

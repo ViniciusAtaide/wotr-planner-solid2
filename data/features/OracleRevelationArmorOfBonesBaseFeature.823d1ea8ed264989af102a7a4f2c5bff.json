@@ -13,6 +13,7 @@
     "OracleRevelation"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationArmorOfBonesBaseFeature",
   "guid": "823d1ea8ed264989af102a7a4f2c5bff",

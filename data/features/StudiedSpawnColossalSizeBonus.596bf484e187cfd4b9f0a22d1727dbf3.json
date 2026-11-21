@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StudiedSpawnColossalSizeBonus",
   "guid": "596bf484e187cfd4b9f0a22d1727dbf3",

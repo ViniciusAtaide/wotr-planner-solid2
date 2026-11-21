@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalAirSpellLevel2",
   "guid": "568acabc0e0598a4baa40b8237089df3",

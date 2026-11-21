@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterTrackFeature",
   "guid": "1fd8085a71c94a2a94266cbeba71a562",

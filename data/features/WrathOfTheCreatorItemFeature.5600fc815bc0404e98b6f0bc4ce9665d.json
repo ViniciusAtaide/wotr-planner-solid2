@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WrathOfTheCreatorItemFeature",
   "guid": "5600fc815bc0404e98b6f0bc4ce9665d"

@@ -15,6 +15,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NegativeEnergyAffinityDhampir",
   "guid": "c7b13c8ac6d9acd4bba02ceb648e9a35",

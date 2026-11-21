@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GatherPowerAbilitiesFeature",
   "guid": "71f526b1d4b50b94582b0b9cbe12b0e0",

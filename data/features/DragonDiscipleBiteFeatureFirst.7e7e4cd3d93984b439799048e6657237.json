@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonDiscipleBiteFeatureFirst",
   "guid": "7e7e4cd3d93984b439799048e6657237",

@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeTigerFeatureLevelUp1",
   "guid": "89e3ee6a9c0f4321b3145dff7f1c6fe7",

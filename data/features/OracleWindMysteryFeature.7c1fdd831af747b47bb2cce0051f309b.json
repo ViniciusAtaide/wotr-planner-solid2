@@ -36,6 +36,7 @@
     "OracleMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleWindMysteryFeature",
   "guid": "7c1fdd831af747b47bb2cce0051f309b",

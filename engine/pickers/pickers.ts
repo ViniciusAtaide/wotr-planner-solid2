@@ -1,6 +1,6 @@
 import { slotKey, withPick, type Build, type SlotId } from '../build';
 import type { CheckedData } from '../load';
-import { isShown, refGuid, type BlueprintParametrizedFeature, type Guid, type SpellSchool } from '../data';
+import { refGuid, type Blueprint, type BlueprintParametrizedFeature, type Guid, type SpellSchool } from '../data';
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
 import type { FailedRule, Unit } from '../walk';
 import { SKILL_ATTRIBUTE, pauseAt, walk, type OpenedSlot, type PausedWalk, WEAPON_CATEGORIES } from '../walk';
@@ -81,6 +81,11 @@ export function picker(
   };
 }
 
+export function shownInSelection(bp: Blueprint, unavailable: boolean): boolean {
+  if (bp.name === undefined) return false;
+  return !(unavailable && 'HideNotAvailibleInUI' in bp && bp.HideNotAvailibleInUI);
+}
+
 function status(data: CheckedData, paused: PausedWalk, o: { feature: Guid; param?: GrantParam }): OptionStatus {
   const bp = data.blueprints.get(o.feature);
   const closed = paused.judge(o.feature, o.param);
@@ -88,7 +93,7 @@ function status(data: CheckedData, paused: PausedWalk, o: { feature: Guid; param
   return {
     feature: o.feature,
     ...(o.param && { param: o.param }),
-    shown: bp !== undefined && isShown(bp),
+    shown: bp !== undefined && shownInSelection(bp, closed !== undefined),
     ...(closed && { closed }),
     ...(gearItems && { gearItems }),
   };

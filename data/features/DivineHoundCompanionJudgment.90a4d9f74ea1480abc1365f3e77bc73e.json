@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivineHoundCompanionJudgment",
   "guid": "90a4d9f74ea1480abc1365f3e77bc73e",

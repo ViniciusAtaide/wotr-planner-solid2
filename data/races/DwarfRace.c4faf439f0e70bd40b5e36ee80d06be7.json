@@ -33,6 +33,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "SelectableRaceStat": false,
   "assetName": "DwarfRace",

@@ -23,6 +23,7 @@
     "EldritchKnightSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "EldritchKnightArcanistEldritchFont",
   "guid": "769e7592c25304a4a9ee8d37e8e4d49c",

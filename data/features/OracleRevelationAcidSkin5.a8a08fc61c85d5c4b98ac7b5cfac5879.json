@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationAcidSkin5",
   "guid": "a8a08fc61c85d5c4b98ac7b5cfac5879"

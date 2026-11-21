@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FlowingHalfplateFeature",
   "guid": "88a5cab73a14f324c99b40e213ef2cd7"

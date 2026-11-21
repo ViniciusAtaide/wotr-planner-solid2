@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NumerianGreatswordFeature",
   "guid": "dde8a3d301a84215bb918dc9a6d61330"

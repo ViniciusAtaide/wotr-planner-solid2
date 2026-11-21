@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "MysticTheurgeDruidLevelUp",
   "guid": "3afb51e0dc2bd4b42a09054300bd2cc0",

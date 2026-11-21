@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WarpriestAspectOfWar",
   "guid": "65cc7abc21826a344aa156e2a40dcecc",

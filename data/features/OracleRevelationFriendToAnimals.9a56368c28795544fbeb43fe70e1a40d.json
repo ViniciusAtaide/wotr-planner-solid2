@@ -26,6 +26,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationFriendToAnimals",
   "guid": "9a56368c28795544fbeb43fe70e1a40d",

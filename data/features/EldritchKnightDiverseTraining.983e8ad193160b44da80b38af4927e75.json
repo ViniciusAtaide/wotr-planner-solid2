@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchKnightDiverseTraining",
   "guid": "983e8ad193160b44da80b38af4927e75",

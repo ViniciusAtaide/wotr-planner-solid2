@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TandemExecutionerStudyTargetFeature",
   "guid": "3dac0ae65dec4b619c035df07751b59d",

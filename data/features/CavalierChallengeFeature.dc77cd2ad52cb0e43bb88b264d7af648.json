@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierChallengeFeature",
   "guid": "dc77cd2ad52cb0e43bb88b264d7af648",

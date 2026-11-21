@@ -26,6 +26,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationShardExplosion",
   "guid": "650b9b5efa60c5d4ea25faad3d346fcf",

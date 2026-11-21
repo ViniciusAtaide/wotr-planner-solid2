@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChampionOfTheFaithSacredAlignment",
   "guid": "bbb2e9d744af9b347a7bd7249d5b298d",

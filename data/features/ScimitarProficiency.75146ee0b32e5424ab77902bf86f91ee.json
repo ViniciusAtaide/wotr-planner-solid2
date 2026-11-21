@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScimitarProficiency",
   "guid": "75146ee0b32e5424ab77902bf86f91ee",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "PossessedOracleTwoMindsFeature",
   "guid": "430e0c84bb41cad49a46a151d770de68",

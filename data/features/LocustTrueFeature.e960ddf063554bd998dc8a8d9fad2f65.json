@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LocustTrueFeature",
   "guid": "e960ddf063554bd998dc8a8d9fad2f65"

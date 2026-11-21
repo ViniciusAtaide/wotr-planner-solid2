@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlantBlessingMajorFeature",
   "guid": "26602734a3744815bd00f04abd7b86d2",

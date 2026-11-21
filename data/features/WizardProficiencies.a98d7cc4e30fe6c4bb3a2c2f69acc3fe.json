@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WizardProficiencies",
   "guid": "a98d7cc4e30fe6c4bb3a2c2f69acc3fe",

@@ -15,6 +15,7 @@
     "Mercy"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MercyBlinded",
   "guid": "23c3fb906c6346440b4e7d92fc25319b",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FlamewardenPhoenixBlast",
   "guid": "9a1fc45d57567e946a20926f891453ed",

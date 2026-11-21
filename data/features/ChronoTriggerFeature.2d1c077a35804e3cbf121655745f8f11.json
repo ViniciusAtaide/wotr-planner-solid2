@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChronoTriggerFeature",
   "guid": "2d1c077a35804e3cbf121655745f8f11",

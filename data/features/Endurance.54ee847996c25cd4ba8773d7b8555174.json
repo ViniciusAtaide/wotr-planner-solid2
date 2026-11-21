@@ -18,6 +18,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Endurance",
   "guid": "54ee847996c25cd4ba8773d7b8555174",

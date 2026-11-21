@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelHaloArchonsAuraFeature",
   "guid": "682842f73285df1439f1741f00e98d1b",

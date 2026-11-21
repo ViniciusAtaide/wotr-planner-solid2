@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalFireBloodlineRequisiteFeature",
   "guid": "363737ca96b4a084b852688fd7430fa5",

@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineUndeadSpellLevel8",
   "guid": "ac5bf30c6b7e76248a2507047bd5703d",

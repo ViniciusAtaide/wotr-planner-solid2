@@ -217,6 +217,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CaydenCaileanFeature",
   "guid": "300e212868bca984687c92bcb66d381b",

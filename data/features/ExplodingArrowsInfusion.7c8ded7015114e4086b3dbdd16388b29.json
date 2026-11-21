@@ -31,6 +31,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ExplodingArrowsInfusion",
   "guid": "7c8ded7015114e4086b3dbdd16388b29",

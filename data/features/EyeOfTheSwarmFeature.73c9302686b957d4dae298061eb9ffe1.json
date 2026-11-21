@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EyeOfTheSwarmFeature",
   "guid": "73c9302686b957d4dae298061eb9ffe1",

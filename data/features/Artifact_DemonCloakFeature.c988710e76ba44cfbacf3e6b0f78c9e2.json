@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Artifact_DemonCloakFeature",
   "guid": "c988710e76ba44cfbacf3e6b0f78c9e2"

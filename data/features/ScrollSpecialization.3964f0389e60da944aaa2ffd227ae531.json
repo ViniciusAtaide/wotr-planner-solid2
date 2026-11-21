@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScrollSpecialization",
   "guid": "3964f0389e60da944aaa2ffd227ae531",

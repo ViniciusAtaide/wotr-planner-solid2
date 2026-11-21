@@ -23,6 +23,7 @@
     "MysticTheurgeArcaneSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "MysticTheurgeArcanistNatureMage",
   "guid": "4f120cb78c4545e6a82e3a2ed9f182c3",

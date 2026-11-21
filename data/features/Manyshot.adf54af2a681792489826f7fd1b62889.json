@@ -26,6 +26,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Manyshot",
   "guid": "adf54af2a681792489826f7fd1b62889",

@@ -58,6 +58,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerFeyWanderingFeature13",
   "guid": "92a036c2ca5e4a9383e942f1647c80c5",

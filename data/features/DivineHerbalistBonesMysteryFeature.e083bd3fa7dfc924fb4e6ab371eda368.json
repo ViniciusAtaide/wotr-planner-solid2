@@ -24,6 +24,7 @@
     "DivineHerbalistMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivineHerbalistBonesMysteryFeature",
   "guid": "e083bd3fa7dfc924fb4e6ab371eda368",

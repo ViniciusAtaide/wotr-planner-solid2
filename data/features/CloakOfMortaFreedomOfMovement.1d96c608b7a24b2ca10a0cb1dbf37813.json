@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CloakOfMortaFreedomOfMovement",
   "guid": "1d96c608b7a24b2ca10a0cb1dbf37813",

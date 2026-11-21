@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LifeBondingFriendshipFeature",
   "guid": "5b63a6690ebbaa4459df3e04fe094cbd",

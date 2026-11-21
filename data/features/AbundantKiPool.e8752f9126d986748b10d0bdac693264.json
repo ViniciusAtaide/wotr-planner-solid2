@@ -27,6 +27,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AbundantKiPool",
   "guid": "e8752f9126d986748b10d0bdac693264",

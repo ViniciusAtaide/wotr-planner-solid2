@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SneakyTricksFeature",
   "guid": "4e1dfa97892645988937cfdcf7253c5e",

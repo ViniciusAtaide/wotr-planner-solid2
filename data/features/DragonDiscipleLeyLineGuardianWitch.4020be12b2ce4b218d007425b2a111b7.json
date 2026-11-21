@@ -35,6 +35,7 @@
     "DragonDiscipleSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonDiscipleLeyLineGuardianWitch",
   "guid": "4020be12b2ce4b218d007425b2a111b7",

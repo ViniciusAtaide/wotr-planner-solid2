@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalSpellLevel9",
   "guid": "1ed7c112f89d1024ea6c4e862f1d28d7",

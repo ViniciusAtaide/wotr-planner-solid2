@@ -103,6 +103,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerDragonCopperWanderingFeature3",
   "guid": "eea5ad02aed443b2a54de10b45b8f8cd",

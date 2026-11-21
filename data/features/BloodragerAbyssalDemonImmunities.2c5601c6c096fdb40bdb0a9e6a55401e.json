@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "BloodragerAbyssalDemonImmunities",
   "guid": "2c5601c6c096fdb40bdb0a9e6a55401e",

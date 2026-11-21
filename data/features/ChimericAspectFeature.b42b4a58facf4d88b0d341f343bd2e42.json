@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChimericAspectFeature",
   "guid": "b42b4a58facf4d88b0d341f343bd2e42",

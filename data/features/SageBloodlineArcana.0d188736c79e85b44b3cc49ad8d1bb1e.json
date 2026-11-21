@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SageBloodlineArcana",
   "guid": "0d188736c79e85b44b3cc49ad8d1bb1e",

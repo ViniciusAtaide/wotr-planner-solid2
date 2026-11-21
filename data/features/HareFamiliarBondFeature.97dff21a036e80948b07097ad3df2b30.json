@@ -27,6 +27,7 @@
     "Familiar"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HareFamiliarBondFeature",
   "guid": "97dff21a036e80948b07097ad3df2b30",

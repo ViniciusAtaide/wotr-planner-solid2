@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GlobalSpellReplenishFeature",
   "guid": "5886fe604f5e4206a92983dd23b179b8"

@@ -163,6 +163,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GroetusFeature",
   "guid": "c3e4d5681906d5246ab8b0637b98cbfe",

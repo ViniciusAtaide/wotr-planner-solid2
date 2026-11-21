@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MagicalTail1IncreaseResource",
   "guid": "9d646a5ca3ae01940aa484e76a538590"

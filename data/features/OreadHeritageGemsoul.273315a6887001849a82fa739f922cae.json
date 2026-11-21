@@ -43,6 +43,7 @@
     "OreadHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OreadHeritageGemsoul",
   "guid": "273315a6887001849a82fa739f922cae",

@@ -20,6 +20,7 @@
     "TerrainDominance"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TerrainExpertiseForest",
   "guid": "ef710ae526973d240921f35437da7ca0",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EmpyrealSorcererCantripsFeature",
   "guid": "6acb21fbc1bb76c4c9d65ba94c9f15ac",

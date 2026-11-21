@@ -47,6 +47,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "JudgmentFaithHunterFeature",
   "guid": "19a36bd554ff4fd492d7458d4f922be4",

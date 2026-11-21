@@ -46,6 +46,7 @@
     "ArcaneTricksterSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "ArcaneTricksterArcanist",
   "guid": "7cab956d45dc51c4ea9e71bba366a250",

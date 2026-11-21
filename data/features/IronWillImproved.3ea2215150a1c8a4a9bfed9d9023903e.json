@@ -20,6 +20,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "IronWillImproved",
   "guid": "3ea2215150a1c8a4a9bfed9d9023903e",

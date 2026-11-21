@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterStatFocusSaveFortitude",
   "guid": "e7a401dc332dafb4eb4878b0217e0430",

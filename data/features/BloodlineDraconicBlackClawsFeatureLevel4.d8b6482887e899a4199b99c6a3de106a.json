@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineDraconicBlackClawsFeatureLevel4",
   "guid": "d8b6482887e899a4199b99c6a3de106a"

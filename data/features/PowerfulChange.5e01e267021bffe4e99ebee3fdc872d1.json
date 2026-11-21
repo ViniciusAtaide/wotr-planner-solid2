@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PowerfulChange",
   "guid": "5e01e267021bffe4e99ebee3fdc872d1",

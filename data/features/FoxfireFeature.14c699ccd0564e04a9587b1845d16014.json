@@ -43,6 +43,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FoxfireFeature",
   "guid": "14c699ccd0564e04a9587b1845d16014",

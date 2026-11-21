@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HagRivenClawsFeatureAddLevel2",
   "guid": "f349d26212084f4980a731c2e04bd811",

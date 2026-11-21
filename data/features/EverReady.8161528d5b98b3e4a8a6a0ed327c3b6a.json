@@ -13,6 +13,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EverReady",
   "guid": "8161528d5b98b3e4a8a6a0ed327c3b6a",

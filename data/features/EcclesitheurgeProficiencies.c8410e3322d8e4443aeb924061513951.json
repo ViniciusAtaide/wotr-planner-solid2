@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EcclesitheurgeProficiencies",
   "guid": "c8410e3322d8e4443aeb924061513951",

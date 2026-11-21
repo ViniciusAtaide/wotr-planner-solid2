@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonslayerExpandedSpellList",
   "guid": "6536c42a01f37624dae358153f107027",

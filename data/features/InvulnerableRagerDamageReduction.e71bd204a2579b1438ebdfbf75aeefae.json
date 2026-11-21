@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "InvulnerableRagerDamageReduction",
   "guid": "e71bd204a2579b1438ebdfbf75aeefae",

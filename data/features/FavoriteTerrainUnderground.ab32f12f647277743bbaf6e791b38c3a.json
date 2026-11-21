@@ -5,6 +5,7 @@
     "FavoriteTerrain"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 4,
   "assetName": "FavoriteTerrainUnderground",
   "guid": "ab32f12f647277743bbaf6e791b38c3a",

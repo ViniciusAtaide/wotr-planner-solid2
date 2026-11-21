@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StormwalkerWeaponFeature",
   "guid": "8686a5e28ae18f7429f37ee6792a63ee",

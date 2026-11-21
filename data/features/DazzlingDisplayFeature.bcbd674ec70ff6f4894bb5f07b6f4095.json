@@ -21,6 +21,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DazzlingDisplayFeature",
   "guid": "bcbd674ec70ff6f4894bb5f07b6f4095",

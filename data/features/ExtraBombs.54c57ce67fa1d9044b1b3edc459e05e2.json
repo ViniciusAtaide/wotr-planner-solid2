@@ -18,6 +18,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ExtraBombs",
   "guid": "54c57ce67fa1d9044b1b3edc459e05e2",

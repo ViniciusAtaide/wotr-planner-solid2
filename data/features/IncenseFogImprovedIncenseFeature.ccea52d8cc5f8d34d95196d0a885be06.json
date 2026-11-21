@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "IncenseFogImprovedIncenseFeature",
   "guid": "ccea52d8cc5f8d34d95196d0a885be06",

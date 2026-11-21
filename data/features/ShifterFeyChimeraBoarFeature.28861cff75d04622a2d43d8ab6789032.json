@@ -10,6 +10,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterFeyChimeraBoarFeature",
   "guid": "28861cff75d04622a2d43d8ab6789032",

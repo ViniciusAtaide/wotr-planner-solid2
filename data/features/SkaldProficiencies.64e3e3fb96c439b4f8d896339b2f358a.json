@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkaldProficiencies",
   "guid": "64e3e3fb96c439b4f8d896339b2f358a",

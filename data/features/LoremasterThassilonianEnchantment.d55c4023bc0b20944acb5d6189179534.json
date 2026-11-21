@@ -21,6 +21,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterThassilonianEnchantment",
   "guid": "d55c4023bc0b20944acb5d6189179534",

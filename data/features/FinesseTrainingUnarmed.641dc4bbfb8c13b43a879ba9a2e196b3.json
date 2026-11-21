@@ -16,6 +16,7 @@
     "FinesseTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinesseTrainingUnarmed",
   "guid": "641dc4bbfb8c13b43a879ba9a2e196b3",

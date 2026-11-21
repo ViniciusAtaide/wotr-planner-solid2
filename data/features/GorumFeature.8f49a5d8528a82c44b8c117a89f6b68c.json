@@ -154,6 +154,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GorumFeature",
   "guid": "8f49a5d8528a82c44b8c117a89f6b68c",

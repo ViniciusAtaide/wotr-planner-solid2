@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RoyalMessengersChainshirtFeature",
   "guid": "c0d2067068f97434ab0d79b563aa7938"

@@ -20,6 +20,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EverlastingJudgement",
   "guid": "4a6dc772c9a7fe742a65820007107f03",

@@ -35,6 +35,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundWarriorOfTheLinnormKings",
   "guid": "494c972a8e7626749aeda25582e2e88f",

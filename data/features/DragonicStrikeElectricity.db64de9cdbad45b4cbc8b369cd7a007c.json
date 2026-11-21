@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonicStrikeElectricity",
   "guid": "db64de9cdbad45b4cbc8b369cd7a007c",

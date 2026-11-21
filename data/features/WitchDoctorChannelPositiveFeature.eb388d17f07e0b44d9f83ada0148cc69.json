@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchDoctorChannelPositiveFeature",
   "guid": "eb388d17f07e0b44d9f83ada0148cc69",

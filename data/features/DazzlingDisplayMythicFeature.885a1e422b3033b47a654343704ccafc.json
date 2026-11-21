@@ -20,6 +20,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DazzlingDisplayMythicFeature",
   "guid": "885a1e422b3033b47a654343704ccafc",

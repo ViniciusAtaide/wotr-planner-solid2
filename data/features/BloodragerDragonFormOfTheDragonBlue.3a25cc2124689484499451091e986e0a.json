@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerDragonFormOfTheDragonBlue",
   "guid": "3a25cc2124689484499451091e986e0a",

@@ -13,6 +13,7 @@
     "MythicTrick2"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterPerceptionTier2Feature",
   "guid": "e9298851786c5334dba1398e9635a83d",

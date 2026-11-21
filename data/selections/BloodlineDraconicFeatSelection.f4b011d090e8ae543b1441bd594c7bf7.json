@@ -26,6 +26,7 @@
   "Group": "None",
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "IgnorePrerequisites": false,
   "Mode": "Default",
   "Obligatory": false,

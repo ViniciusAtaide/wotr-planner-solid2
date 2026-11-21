@@ -13,6 +13,7 @@
     "DemonicAspect"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "VrockAspectFeature",
   "guid": "38a54d808e7e1d8479d309a7e8b0ab3e",

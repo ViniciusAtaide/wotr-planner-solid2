@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BootsOfTheBattleHeraldFeature",
   "guid": "3e2ddd88c742410b9c5946bd7e7996f2"

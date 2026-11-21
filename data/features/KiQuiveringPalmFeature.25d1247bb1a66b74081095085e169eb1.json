@@ -22,6 +22,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KiQuiveringPalmFeature",
   "guid": "25d1247bb1a66b74081095085e169eb1",

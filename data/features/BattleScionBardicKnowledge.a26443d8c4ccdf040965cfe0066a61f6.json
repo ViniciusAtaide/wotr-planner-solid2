@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BattleScionBardicKnowledge",
   "guid": "a26443d8c4ccdf040965cfe0066a61f6",

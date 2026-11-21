@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonAttackGazeFeature",
   "guid": "e0cc4134510b074468b3d1185970c697",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ColorlessRemainsGoggles_SolidFeature",
   "guid": "97aaee699610481aa73c65cebfbd1957"

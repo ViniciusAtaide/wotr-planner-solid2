@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerHagBloodlineCurseConduitFeature",
   "guid": "2aefef394cb6491f9191a2d67ebb6b86",

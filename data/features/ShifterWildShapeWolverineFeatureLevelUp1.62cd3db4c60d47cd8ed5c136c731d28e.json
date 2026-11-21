@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeWolverineFeatureLevelUp1",
   "guid": "62cd3db4c60d47cd8ed5c136c731d28e",

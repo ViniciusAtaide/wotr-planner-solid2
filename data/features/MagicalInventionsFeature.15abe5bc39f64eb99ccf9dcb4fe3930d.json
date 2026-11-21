@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MagicalInventionsFeature",
   "guid": "15abe5bc39f64eb99ccf9dcb4fe3930d",

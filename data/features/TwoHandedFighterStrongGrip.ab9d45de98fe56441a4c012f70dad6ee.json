@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "TwoHandedFighterStrongGrip",
   "guid": "ab9d45de98fe56441a4c012f70dad6ee",

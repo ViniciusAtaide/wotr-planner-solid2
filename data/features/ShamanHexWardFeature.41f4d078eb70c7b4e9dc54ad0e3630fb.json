@@ -13,6 +13,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexWardFeature",
   "guid": "41f4d078eb70c7b4e9dc54ad0e3630fb",

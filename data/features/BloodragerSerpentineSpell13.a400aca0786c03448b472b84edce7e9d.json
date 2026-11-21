@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerSerpentineSpell13",
   "guid": "a400aca0786c03448b472b84edce7e9d",

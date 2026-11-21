@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AuraOfCourageFeature",
   "guid": "e45ab30f49215054e83b4ea12165409f",

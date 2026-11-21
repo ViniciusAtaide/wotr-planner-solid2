@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CloakOfCleansingFeature",
   "guid": "7079b0e34db8b8b4faf54ec3084ec056"

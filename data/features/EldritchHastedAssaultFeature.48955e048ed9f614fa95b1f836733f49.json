@@ -22,6 +22,7 @@
     "EldritchScionArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchHastedAssaultFeature",
   "guid": "48955e048ed9f614fa95b1f836733f49",

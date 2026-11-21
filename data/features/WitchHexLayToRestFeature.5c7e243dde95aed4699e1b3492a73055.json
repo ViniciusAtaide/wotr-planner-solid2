@@ -20,6 +20,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexLayToRestFeature",
   "guid": "5c7e243dde95aed4699e1b3492a73055",

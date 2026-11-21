@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeLizardFeatureLevelUp",
   "guid": "9e6e778d3527432c9037be84fa87d42d",

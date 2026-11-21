@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelFirstAscension",
   "guid": "58abcd052187a264aba9b0ce285c49f4",

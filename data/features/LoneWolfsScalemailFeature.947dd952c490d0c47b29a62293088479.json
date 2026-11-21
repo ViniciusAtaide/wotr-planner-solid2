@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LoneWolfsScalemailFeature",
   "guid": "947dd952c490d0c47b29a62293088479"

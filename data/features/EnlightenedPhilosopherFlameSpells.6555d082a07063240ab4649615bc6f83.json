@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnlightenedPhilosopherFlameSpells",
   "guid": "6555d082a07063240ab4649615bc6f83"

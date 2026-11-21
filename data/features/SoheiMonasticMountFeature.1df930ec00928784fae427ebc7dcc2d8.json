@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SoheiMonasticMountFeature",
   "guid": "1df930ec00928784fae427ebc7dcc2d8",

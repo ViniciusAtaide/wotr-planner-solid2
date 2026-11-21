@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanLifeSpiritGreaterFeature",
   "guid": "8cae5b62ad604de41bf3e9f4489c6b8f",

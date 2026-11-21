@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LichSkeletalBarbarianTierI",
   "guid": "e2ae828e848a30d4d9471a0dd393435e",

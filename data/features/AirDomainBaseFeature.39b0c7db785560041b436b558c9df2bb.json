@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AirDomainBaseFeature",
   "guid": "39b0c7db785560041b436b558c9df2bb",

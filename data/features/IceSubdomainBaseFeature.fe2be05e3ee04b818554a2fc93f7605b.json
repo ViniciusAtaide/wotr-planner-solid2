@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "IceSubdomainBaseFeature",
   "guid": "fe2be05e3ee04b818554a2fc93f7605b",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationManeuverMasteryDisarmGreater",
   "guid": "dfca4c8ba82b44d48b72b24812f2f7d5"

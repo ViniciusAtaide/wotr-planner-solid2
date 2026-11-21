@@ -5,6 +5,7 @@
     "AngelMythcHalo"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SolarWindsFeature",
   "guid": "066213b574290694c815f3b2a491839f",

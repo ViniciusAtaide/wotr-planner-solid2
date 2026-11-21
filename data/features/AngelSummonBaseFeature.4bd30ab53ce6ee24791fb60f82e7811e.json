@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelSummonBaseFeature",
   "guid": "4bd30ab53ce6ee24791fb60f82e7811e",

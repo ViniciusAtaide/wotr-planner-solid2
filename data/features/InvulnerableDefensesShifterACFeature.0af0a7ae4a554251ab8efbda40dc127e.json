@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InvulnerableDefensesShifterACFeature",
   "guid": "0af0a7ae4a554251ab8efbda40dc127e"

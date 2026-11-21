@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KnifeMasterSneakStab",
   "guid": "df4f34f7cac73ab40986bc33f87b1a3c",

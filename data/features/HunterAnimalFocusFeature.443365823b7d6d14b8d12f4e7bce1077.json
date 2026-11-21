@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HunterAnimalFocusFeature",
   "guid": "443365823b7d6d14b8d12f4e7bce1077",

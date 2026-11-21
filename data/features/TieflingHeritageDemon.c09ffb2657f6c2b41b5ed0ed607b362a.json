@@ -57,6 +57,7 @@
     "TieflingHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TieflingHeritageDemon",
   "guid": "c09ffb2657f6c2b41b5ed0ed607b362a",

@@ -27,6 +27,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElvenImprovedImmunities",
   "guid": "12a62aa4876a4c6b95e8acca7a6f8369",

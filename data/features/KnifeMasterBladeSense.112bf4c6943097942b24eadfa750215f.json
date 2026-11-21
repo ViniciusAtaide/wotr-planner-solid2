@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 6,
   "assetName": "KnifeMasterBladeSense",
   "guid": "112bf4c6943097942b24eadfa750215f",

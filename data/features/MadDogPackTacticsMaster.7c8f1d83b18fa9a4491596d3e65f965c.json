@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MadDogPackTacticsMaster",
   "guid": "7c8f1d83b18fa9a4491596d3e65f965c",

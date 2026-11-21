@@ -73,6 +73,7 @@
   "GiveFeaturesForPreviousLevels": true,
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "LevelEntries": [
     {
       "Level": 3,

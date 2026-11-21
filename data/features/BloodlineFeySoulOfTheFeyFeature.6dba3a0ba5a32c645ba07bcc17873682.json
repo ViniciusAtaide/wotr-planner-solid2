@@ -25,6 +25,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineFeySoulOfTheFeyFeature",
   "guid": "6dba3a0ba5a32c645ba07bcc17873682",

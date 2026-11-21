@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnemyOfTheFey",
   "guid": "b08a858f2e4887f45aca4c09893a0adc",

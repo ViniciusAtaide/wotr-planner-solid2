@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArmoredHulkImprovedArmoredSwiftness",
   "guid": "0db9a2b013e8fc6409611c2a16ae56bc",

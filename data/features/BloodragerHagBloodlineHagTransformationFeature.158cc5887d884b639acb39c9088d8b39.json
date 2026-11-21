@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerHagBloodlineHagTransformationFeature",
   "guid": "158cc5887d884b639acb39c9088d8b39",

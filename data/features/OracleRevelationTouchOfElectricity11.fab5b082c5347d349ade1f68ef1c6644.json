@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationTouchOfElectricity11",
   "guid": "fab5b082c5347d349ade1f68ef1c6644"

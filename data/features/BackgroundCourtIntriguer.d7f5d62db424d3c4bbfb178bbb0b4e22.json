@@ -38,6 +38,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundCourtIntriguer",
   "guid": "d7f5d62db424d3c4bbfb178bbb0b4e22",

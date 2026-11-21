@@ -31,6 +31,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChampionOfTheFaithGoodFeature",
   "guid": "92b34412524dda24fa544c54189792d7",

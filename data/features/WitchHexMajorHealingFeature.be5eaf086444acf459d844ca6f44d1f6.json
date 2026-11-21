@@ -20,6 +20,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexMajorHealingFeature",
   "guid": "be5eaf086444acf459d844ca6f44d1f6",

@@ -84,6 +84,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnergizedWildShapeFeature",
   "guid": "92df031ed2cb4153950853d6a3b9813e",

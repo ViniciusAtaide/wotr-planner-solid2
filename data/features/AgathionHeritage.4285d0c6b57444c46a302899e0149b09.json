@@ -42,6 +42,7 @@
     "AasimarHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AgathionHeritage",
   "guid": "4285d0c6b57444c46a302899e0149b09",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MightyAdvisorFeature",
   "guid": "c81182153ad34f8d89581ae91eeb2036"

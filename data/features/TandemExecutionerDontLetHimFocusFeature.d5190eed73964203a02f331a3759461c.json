@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TandemExecutionerDontLetHimFocusFeature",
   "guid": "d5190eed73964203a02f331a3759461c",

@@ -103,6 +103,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "GreenFaithCameliaFeature",
   "guid": "ca763809e01f4247a3639965364c26cb",

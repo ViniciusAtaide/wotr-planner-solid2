@@ -37,6 +37,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationLifesense",
   "guid": "17e537c174c7f0f4c9422c5ab5e3c2b8",

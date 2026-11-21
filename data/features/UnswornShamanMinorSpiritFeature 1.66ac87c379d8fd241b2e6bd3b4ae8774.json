@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UnswornShamanMinorSpiritFeature 1",
   "guid": "66ac87c379d8fd241b2e6bd3b4ae8774",

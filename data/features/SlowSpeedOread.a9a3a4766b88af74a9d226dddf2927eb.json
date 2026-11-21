@@ -17,6 +17,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SlowSpeedOread",
   "guid": "a9a3a4766b88af74a9d226dddf2927eb",

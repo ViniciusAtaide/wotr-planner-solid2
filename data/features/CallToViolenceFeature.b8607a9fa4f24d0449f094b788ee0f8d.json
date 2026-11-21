@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CallToViolenceFeature",
   "guid": "b8607a9fa4f24d0449f094b788ee0f8d"

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LifeSpiritSpellListFeature",
   "guid": "d920be3b06dabf74f9b01aa9752402dc"

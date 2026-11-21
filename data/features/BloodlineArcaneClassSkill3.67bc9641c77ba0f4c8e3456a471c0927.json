@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineArcaneClassSkill3",
   "guid": "67bc9641c77ba0f4c8e3456a471c0927",

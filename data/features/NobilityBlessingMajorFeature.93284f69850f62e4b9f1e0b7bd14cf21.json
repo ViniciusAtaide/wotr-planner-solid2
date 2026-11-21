@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NobilityBlessingMajorFeature",
   "guid": "93284f69850f62e4b9f1e0b7bd14cf21",

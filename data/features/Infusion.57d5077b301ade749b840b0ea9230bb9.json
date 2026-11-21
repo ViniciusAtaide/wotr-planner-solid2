@@ -11,6 +11,7 @@
     "VivisectionistDiscovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Infusion",
   "guid": "57d5077b301ade749b840b0ea9230bb9",

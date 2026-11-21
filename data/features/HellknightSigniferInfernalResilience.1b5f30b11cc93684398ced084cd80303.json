@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellknightSigniferInfernalResilience",
   "guid": "1b5f30b11cc93684398ced084cd80303",

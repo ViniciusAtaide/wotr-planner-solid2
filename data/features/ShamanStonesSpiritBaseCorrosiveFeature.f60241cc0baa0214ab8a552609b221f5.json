@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanStonesSpiritBaseCorrosiveFeature",
   "guid": "f60241cc0baa0214ab8a552609b221f5"

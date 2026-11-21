@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "LoremasterShamanLevelUp",
   "guid": "2f7039b020af33c44b992e9301982fde",

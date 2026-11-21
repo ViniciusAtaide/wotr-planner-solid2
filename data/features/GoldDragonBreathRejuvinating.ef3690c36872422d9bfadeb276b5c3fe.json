@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GoldDragonBreathRejuvinating",
   "guid": "ef3690c36872422d9bfadeb276b5c3fe",

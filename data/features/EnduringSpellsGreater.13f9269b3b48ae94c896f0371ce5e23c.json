@@ -13,6 +13,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnduringSpellsGreater",
   "guid": "13f9269b3b48ae94c896f0371ce5e23c",

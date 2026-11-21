@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreataxeProficiency",
   "guid": "70ab8880eaf6c0640887ae586556a652",

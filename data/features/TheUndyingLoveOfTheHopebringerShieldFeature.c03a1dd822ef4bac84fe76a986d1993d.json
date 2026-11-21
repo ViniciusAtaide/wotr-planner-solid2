@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TheUndyingLoveOfTheHopebringerShieldFeature",
   "guid": "c03a1dd822ef4bac84fe76a986d1993d"

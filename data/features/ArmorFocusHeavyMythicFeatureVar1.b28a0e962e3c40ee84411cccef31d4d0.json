@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArmorFocusHeavyMythicFeatureVar1",
   "guid": "b28a0e962e3c40ee84411cccef31d4d0",

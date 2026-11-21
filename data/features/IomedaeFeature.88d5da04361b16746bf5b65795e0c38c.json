@@ -146,6 +146,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "IomedaeFeature",
   "guid": "88d5da04361b16746bf5b65795e0c38c",

@@ -28,6 +28,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NaturalCharmer",
   "guid": "0ebbc4a0ecf03844384a177e9f1f9a11",

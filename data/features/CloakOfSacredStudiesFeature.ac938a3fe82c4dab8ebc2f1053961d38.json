@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CloakOfSacredStudiesFeature",
   "guid": "ac938a3fe82c4dab8ebc2f1053961d38"

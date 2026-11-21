@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalColdForm",
   "guid": "0d77308bf9f33dd41a4b6e50afb13b9c",

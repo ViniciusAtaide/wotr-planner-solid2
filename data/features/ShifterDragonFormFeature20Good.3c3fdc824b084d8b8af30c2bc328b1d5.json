@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterDragonFormFeature20Good",
   "guid": "3c3fdc824b084d8b8af30c2bc328b1d5",

@@ -47,6 +47,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CloudInfusion",
   "guid": "3c53ee4965a13d74e81b37ae34f0861b",

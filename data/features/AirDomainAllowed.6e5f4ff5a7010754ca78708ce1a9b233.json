@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AirDomainAllowed",
   "guid": "6e5f4ff5a7010754ca78708ce1a9b233"

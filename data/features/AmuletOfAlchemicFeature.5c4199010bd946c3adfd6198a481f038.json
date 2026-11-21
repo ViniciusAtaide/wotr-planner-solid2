@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AmuletOfAlchemicFeature",
   "guid": "5c4199010bd946c3adfd6198a481f038",

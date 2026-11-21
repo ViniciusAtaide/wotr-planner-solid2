@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlayersPhylacteryResourceFeature",
   "guid": "315862e015604d2295c10f2dbfb23fe6"

@@ -5,6 +5,7 @@
     "KineticBlast"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "AirBlastFeature",
   "guid": "cb09e292ad9acc3428fa0dfdcbb83883",

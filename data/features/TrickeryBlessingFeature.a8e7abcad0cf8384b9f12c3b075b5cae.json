@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TrickeryBlessingFeature",
   "guid": "a8e7abcad0cf8384b9f12c3b075b5cae",

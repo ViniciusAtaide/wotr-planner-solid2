@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "MudBlastFeature",
   "guid": "6e33cde96209b5a4f9596a6e509de532",

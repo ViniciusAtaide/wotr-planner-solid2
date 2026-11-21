@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NatureSpiritSpellListFeature",
   "guid": "12afba6b29c15e042ba505cd1c0c1145"

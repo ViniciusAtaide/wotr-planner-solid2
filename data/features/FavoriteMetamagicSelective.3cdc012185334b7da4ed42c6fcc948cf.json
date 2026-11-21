@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FavoriteMetamagicSelective",
   "guid": "3cdc012185334b7da4ed42c6fcc948cf",

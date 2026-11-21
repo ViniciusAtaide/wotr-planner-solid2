@@ -15,6 +15,7 @@
     "Mercy"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MercyDazed",
   "guid": "7df9329013baaec4fac20ae08bc1f849",

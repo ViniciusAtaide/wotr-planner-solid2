@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HarmPreventersFeature",
   "guid": "03526ea1a0f7469d911a00138f0650ea"

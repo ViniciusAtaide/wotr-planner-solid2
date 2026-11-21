@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleFinalRevelation",
   "guid": "0336dc22538ba5f42b73da4fb3f50849",

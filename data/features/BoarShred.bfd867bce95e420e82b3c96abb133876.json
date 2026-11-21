@@ -36,6 +36,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BoarShred",
   "guid": "bfd867bce95e420e82b3c96abb133876",

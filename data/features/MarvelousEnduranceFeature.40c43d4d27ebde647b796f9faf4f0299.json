@@ -13,6 +13,7 @@
     "AzataSuperpowerAbilities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MarvelousEnduranceFeature",
   "guid": "40c43d4d27ebde647b796f9faf4f0299",

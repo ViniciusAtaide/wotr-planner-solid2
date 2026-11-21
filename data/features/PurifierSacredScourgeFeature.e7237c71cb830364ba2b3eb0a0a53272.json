@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PurifierSacredScourgeFeature",
   "guid": "e7237c71cb830364ba2b3eb0a0a53272",

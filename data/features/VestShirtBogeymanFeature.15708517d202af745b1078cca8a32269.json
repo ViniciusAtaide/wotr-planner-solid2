@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "VestShirtBogeymanFeature",
   "guid": "15708517d202af745b1078cca8a32269",

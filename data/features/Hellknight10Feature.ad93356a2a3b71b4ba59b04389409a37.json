@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Hellknight10Feature",
   "guid": "ad93356a2a3b71b4ba59b04389409a37",

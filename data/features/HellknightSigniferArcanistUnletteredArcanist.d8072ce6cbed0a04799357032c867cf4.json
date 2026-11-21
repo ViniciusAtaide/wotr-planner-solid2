@@ -23,6 +23,7 @@
     "HellknightSigniferSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HellknightSigniferArcanistUnletteredArcanist",
   "guid": "d8072ce6cbed0a04799357032c867cf4",

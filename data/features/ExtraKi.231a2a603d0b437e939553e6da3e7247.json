@@ -20,6 +20,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "ExtraKi",
   "guid": "231a2a603d0b437e939553e6da3e7247",

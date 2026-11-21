@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalistElectricityFeature",
   "guid": "4bd021d45673492482a1db7a61581e9d",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MadnessDomainBaseFeatureSeparatist",
   "guid": "bdde630b62c049c7b2f6d56df755d8fa",

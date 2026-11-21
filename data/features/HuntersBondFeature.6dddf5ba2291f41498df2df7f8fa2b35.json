@@ -13,6 +13,7 @@
     "RangerBond"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HuntersBondFeature",
   "guid": "6dddf5ba2291f41498df2df7f8fa2b35",

@@ -36,6 +36,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FocusedShot",
   "guid": "f979ed68d1e74d21962edc66f0a1d169",

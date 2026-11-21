@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EmergencySwapFeature",
   "guid": "5f2bed4914be7bc409123ae821cfdb6d",

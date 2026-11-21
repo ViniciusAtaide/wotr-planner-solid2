@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AnimalDomainAllowed",
   "guid": "9f05f9da2ea5ae44eac47d407a0000e5"

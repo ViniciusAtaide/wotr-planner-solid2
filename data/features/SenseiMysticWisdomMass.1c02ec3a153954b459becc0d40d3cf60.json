@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SenseiMysticWisdomMass",
   "guid": "1c02ec3a153954b459becc0d40d3cf60",

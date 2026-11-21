@@ -34,6 +34,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TandemExecutionerPenetratingCascadeFeature",
   "guid": "3dad959870604d208b5ce1b19d3cf49d",

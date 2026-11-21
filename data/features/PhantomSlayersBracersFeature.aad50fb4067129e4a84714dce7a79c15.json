@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "PhantomSlayersBracersFeature",
   "guid": "aad50fb4067129e4a84714dce7a79c15"

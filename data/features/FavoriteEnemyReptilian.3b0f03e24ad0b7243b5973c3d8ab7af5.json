@@ -5,6 +5,7 @@
     "FavoriteEnemy"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 8,
   "assetName": "FavoriteEnemyReptilian",
   "guid": "3b0f03e24ad0b7243b5973c3d8ab7af5",

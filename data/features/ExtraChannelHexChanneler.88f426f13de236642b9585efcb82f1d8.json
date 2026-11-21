@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ExtraChannelHexChanneler",
   "guid": "88f426f13de236642b9585efcb82f1d8",

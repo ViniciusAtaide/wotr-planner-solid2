@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DestructionBlessingMajorFeature",
   "guid": "11cb0f4df754cde419e233cb4d179f9c",

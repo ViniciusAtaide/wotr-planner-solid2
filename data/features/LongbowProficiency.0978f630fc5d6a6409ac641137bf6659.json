@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LongbowProficiency",
   "guid": "0978f630fc5d6a6409ac641137bf6659",

@@ -5,6 +5,7 @@
     "FavoriteTerrain"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 4,
   "assetName": "FavoriteTerrainAbyss",
   "guid": "b3f10ef830d9fc44eab628ca1c1ed4fb",

@@ -29,6 +29,7 @@
     "Discovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DispellingBombsFeature",
   "guid": "92085b99a3fd6e34b85f0e2bb67a17ba",

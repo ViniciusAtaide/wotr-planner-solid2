@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CharmDomainBaseFeature",
   "guid": "4847d450fbef9b444abcc3a82337b426",

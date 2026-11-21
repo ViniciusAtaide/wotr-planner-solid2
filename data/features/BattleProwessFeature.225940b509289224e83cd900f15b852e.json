@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BattleProwessFeature",
   "guid": "225940b509289224e83cd900f15b852e",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MartyrAuraOfHealthFeature",
   "guid": "caa8099018a01b74298aecb560b21cdc",

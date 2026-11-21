@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SelfRelianceFeature",
   "guid": "2eab2580ece085241b093270b2b789b7",

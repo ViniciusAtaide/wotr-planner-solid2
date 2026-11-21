@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalistFireFeature",
   "guid": "089e7f52b4ff45df856f0eda3e6c56af",

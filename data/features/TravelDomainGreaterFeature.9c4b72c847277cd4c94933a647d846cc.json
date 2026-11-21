@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TravelDomainGreaterFeature",
   "guid": "9c4b72c847277cd4c94933a647d846cc",

@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WarpriestClassAsBABFeature",
   "guid": "2e134d80fef14a44aae9c087215c15af"

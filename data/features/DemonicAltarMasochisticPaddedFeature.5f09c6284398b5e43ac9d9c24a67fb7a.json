@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonicAltarMasochisticPaddedFeature",
   "guid": "5f09c6284398b5e43ac9d9c24a67fb7a"

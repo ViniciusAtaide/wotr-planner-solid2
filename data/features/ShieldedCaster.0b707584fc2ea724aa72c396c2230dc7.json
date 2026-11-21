@@ -30,6 +30,7 @@
     "TeamworkFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShieldedCaster",
   "guid": "0b707584fc2ea724aa72c396c2230dc7",

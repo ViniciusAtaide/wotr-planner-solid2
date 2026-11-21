@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalAcidStrikes20",
   "guid": "d37a8f6f5df057a4ea50b2c065288263"

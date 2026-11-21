@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "CourtPoetInsightfulDamageFeature",
   "guid": "04da9870c35d48efb109838cb2bb8d82",

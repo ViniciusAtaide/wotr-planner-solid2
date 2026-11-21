@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TwoHandedFighterGreaterPowerAttack",
   "guid": "1b058a5ce1de415449a0f105c55b5f8b",

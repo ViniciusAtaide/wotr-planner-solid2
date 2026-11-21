@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 100,
   "assetName": "TenderTouchFeature",
   "guid": "a5733da8915602049b1ba0020e9f97ac"

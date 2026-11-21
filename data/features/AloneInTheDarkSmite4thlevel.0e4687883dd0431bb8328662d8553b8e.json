@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AloneInTheDarkSmite4thlevel",
   "guid": "0e4687883dd0431bb8328662d8553b8e",

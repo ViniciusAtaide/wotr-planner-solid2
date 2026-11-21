@@ -22,6 +22,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WeakeningWoundFeature",
   "guid": "2b61127f29ba97942868e8677b7633e6",

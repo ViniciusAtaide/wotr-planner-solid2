@@ -38,6 +38,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShieldsProficiency",
   "guid": "cb8686e7357a68c42bdd9d4e65334633",

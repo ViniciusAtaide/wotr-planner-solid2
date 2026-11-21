@@ -49,6 +49,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WreckingBlowsFeature",
   "guid": "5bccc86dd1f187a4a99f092dc054c755",

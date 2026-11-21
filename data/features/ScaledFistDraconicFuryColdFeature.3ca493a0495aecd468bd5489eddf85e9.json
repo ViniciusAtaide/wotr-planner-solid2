@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScaledFistDraconicFuryColdFeature",
   "guid": "3ca493a0495aecd468bd5489eddf85e9",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InvincibleRangedFeature",
   "guid": "898eb7082dfa41a0ba7f52af05660eb7"

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "FlameDancerPerformanceFeature",
   "guid": "3c10a0069e7f110499d2e810f4861a6e",

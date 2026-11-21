@@ -32,6 +32,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundHealer",
   "guid": "f0d2840b6564c6f408c1e068d0707ca0",

@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EarthDomainBaseFeatureSeparatist",
   "guid": "dfa493d6b1434ec5963e03e41c2ec61a",

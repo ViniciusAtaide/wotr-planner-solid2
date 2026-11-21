@@ -24,6 +24,7 @@
     "ExoticWeaponProficiency"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DoubleAxeProficiency",
   "guid": "0ea5cf20b69aea44793043e1926e9057",

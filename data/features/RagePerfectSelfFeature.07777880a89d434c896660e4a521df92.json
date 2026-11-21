@@ -15,6 +15,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RagePerfectSelfFeature",
   "guid": "07777880a89d434c896660e4a521df92",

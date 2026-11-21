@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DirgeBardHauntedEyesFeature",
   "guid": "44ccf877fb894944a87c81cd8851e37f",

@@ -76,6 +76,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerAbyssalWanderingFeature",
   "guid": "6ed94b85f02f4c8a8f57ca49b400e358",

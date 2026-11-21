@@ -5,6 +5,7 @@
     "DefensivePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RousedDefenseDefensivePower",
   "guid": "f848ddcf71dd57243958eea7661be6ef",

@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "PlasmaBlastFeature",
   "guid": "93d8bc401accfe6489ea3797e316e5d9",

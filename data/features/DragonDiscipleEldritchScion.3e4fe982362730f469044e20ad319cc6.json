@@ -43,6 +43,7 @@
     "DragonDiscipleSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonDiscipleEldritchScion",
   "guid": "3e4fe982362730f469044e20ad319cc6",

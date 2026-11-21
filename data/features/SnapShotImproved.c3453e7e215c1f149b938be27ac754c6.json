@@ -40,6 +40,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SnapShotImproved",
   "guid": "c3453e7e215c1f149b938be27ac754c6",

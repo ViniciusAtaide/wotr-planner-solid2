@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlagueHexStrengthWeakenedFeature",
   "guid": "c6c6c70d65e94606932f13904dddec41",

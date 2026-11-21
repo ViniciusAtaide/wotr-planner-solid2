@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FascinateFeature",
   "guid": "ddaec3a5845bc7d4191792529b687d65",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RageshaperDevastatingFormMighty",
   "guid": "c62ceaf7706444a2ba93d1990ee6ea12",

@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ExtraRageInstinctualWarrior",
   "guid": "dcc338110bab48ddbdc22e82cef7a6db",

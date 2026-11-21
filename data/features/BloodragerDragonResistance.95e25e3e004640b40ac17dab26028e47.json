@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "BloodragerDragonResistance",
   "guid": "95e25e3e004640b40ac17dab26028e47",

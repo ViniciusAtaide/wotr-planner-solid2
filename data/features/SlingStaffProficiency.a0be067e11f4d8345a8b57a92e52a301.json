@@ -24,6 +24,7 @@
     "ExoticWeaponProficiency"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SlingStaffProficiency",
   "guid": "a0be067e11f4d8345a8b57a92e52a301",

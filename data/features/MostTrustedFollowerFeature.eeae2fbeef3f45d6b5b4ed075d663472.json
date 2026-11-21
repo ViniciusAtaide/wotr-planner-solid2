@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MostTrustedFollowerFeature",
   "guid": "eeae2fbeef3f45d6b5b4ed075d663472",

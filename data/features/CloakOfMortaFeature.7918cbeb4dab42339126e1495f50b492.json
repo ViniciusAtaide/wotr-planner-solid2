@@ -58,6 +58,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CloakOfMortaFeature",
   "guid": "7918cbeb4dab42339126e1495f50b492",

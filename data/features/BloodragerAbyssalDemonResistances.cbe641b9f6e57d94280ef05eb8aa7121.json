@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerAbyssalDemonResistances",
   "guid": "cbe641b9f6e57d94280ef05eb8aa7121",

@@ -55,6 +55,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BreadthOfExperience",
   "guid": "351bfb6ce48d441da02cc141e7f19ed8",

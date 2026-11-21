@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineDraconicGoldBreathWeaponFeature",
   "guid": "fcf0cb61b79b6fd47a6ed91f40820cea",

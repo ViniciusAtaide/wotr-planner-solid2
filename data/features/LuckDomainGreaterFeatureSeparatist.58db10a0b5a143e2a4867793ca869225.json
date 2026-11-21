@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LuckDomainGreaterFeatureSeparatist",
   "guid": "58db10a0b5a143e2a4867793ca869225",

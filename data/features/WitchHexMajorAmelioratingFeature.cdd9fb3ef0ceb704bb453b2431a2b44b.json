@@ -20,6 +20,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexMajorAmelioratingFeature",
   "guid": "cdd9fb3ef0ceb704bb453b2431a2b44b",

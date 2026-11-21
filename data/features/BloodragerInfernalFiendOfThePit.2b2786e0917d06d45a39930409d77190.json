@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerInfernalFiendOfThePit",
   "guid": "2b2786e0917d06d45a39930409d77190",

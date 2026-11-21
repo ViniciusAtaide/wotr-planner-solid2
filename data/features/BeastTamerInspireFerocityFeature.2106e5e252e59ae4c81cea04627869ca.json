@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 4,
   "assetName": "BeastTamerInspireFerocityFeature",
   "guid": "2106e5e252e59ae4c81cea04627869ca",

@@ -11,6 +11,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "JumpUp",
   "guid": "9f2d35be63f68614b89c901db84dd750",

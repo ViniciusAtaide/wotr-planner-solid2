@@ -5,6 +5,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RangedCleave",
   "guid": "b3fb61cecd4de98419d82e465bc588f2",

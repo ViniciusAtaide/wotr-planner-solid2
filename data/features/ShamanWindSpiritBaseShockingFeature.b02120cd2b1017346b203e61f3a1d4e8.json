@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanWindSpiritBaseShockingFeature",
   "guid": "b02120cd2b1017346b203e61f3a1d4e8"

@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "IncenseFogIncreasedRangeFeature",
   "guid": "1cd39502119e97f4caa72e7e53ce5ee9",

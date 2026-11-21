@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BardMovePerformance",
   "guid": "36931765983e96d4bb07ce7844cd897e",

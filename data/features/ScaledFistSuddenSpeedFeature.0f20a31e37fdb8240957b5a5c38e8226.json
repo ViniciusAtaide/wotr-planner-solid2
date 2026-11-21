@@ -13,6 +13,7 @@
     "ScaledFistKiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScaledFistSuddenSpeedFeature",
   "guid": "0f20a31e37fdb8240957b5a5c38e8226",

@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImprovedUnarmedStrikeMythicFeat",
   "guid": "e086a07dae105244291fb11e05d0715f",

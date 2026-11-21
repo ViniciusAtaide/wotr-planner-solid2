@@ -24,6 +24,7 @@
     "ExoticWeaponProficiency"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElvenCurvedBladeProficiency",
   "guid": "0fca9259e370cd049a1dd50bede687f7",

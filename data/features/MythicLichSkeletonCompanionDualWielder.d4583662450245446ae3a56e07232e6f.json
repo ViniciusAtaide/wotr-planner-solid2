@@ -10,6 +10,7 @@
     "SkeletalChampion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MythicLichSkeletonCompanionDualWielder",
   "guid": "d4583662450245446ae3a56e07232e6f",

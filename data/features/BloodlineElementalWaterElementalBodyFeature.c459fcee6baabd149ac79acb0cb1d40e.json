@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalWaterElementalBodyFeature",
   "guid": "c459fcee6baabd149ac79acb0cb1d40e",

@@ -34,6 +34,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LightArmorProficiency",
   "guid": "6d3728d4e9c9898458fe5e9532951132",

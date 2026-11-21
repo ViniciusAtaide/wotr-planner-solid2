@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RapierProficiency",
   "guid": "292d51f3d6a331644a8c29be0614f671",

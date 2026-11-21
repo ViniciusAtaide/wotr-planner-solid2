@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SongOfInspirationFeature",
   "guid": "fe280a76c5bb2364daae55e4209e985c",

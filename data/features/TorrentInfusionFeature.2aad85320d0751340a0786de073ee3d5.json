@@ -45,6 +45,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TorrentInfusionFeature",
   "guid": "2aad85320d0751340a0786de073ee3d5",

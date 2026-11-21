@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DarknessDomainGreaterFeatureSeparatist",
   "guid": "def73a2785fa4a1bae1f21ccde48f83f",

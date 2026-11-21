@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SharpTeethFeature",
   "guid": "1fb15984335a4694a29b0346cac282c2",

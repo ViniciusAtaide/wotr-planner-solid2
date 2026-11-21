@@ -14,6 +14,7 @@
     "MysticTheurgeArcaneSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "MysticTheurgeBloodrager",
   "guid": "fe5f2ed255c736f47b110611db98da46",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 4,
   "assetName": "InspireTranquilityFeature",
   "guid": "6ef23b06bafd8f544b783979e01e3505",

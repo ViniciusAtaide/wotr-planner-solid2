@@ -20,6 +20,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LightningReflexesImproved",
   "guid": "1e813eb8159b67a459b1c975027866e5",

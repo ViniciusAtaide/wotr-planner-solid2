@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AssassinAlterEgoFeature",
   "guid": "18723d73d81e479c93576070fb374b03",

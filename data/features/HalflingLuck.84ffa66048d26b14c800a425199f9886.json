@@ -27,6 +27,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HalflingLuck",
   "guid": "84ffa66048d26b14c800a425199f9886",

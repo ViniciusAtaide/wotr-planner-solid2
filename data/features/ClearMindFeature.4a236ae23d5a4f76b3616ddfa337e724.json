@@ -42,6 +42,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ClearMindFeature",
   "guid": "4a236ae23d5a4f76b3616ddfa337e724",

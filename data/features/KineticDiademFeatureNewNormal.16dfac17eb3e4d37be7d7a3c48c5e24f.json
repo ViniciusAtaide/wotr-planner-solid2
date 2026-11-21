@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "KineticDiademFeatureNewNormal",
   "guid": "16dfac17eb3e4d37be7d7a3c48c5e24f"

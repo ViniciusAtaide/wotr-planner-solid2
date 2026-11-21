@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterChimeraAspectFeature",
   "guid": "da614f1134c9494287b98694ee1aa5e5"

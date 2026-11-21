@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "RampageOnHitDamage",
   "guid": "b55375fc8af84eebbb14f857f94daeac",

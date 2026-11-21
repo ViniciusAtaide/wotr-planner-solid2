@@ -13,6 +13,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SlowSpeedGnome",
   "guid": "09bc9ccb8ee0ffe4b8827066b1ed7e11",

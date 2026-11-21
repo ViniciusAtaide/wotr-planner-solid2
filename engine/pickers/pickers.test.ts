@@ -3,9 +3,10 @@ import { describe, expect, it } from 'vitest';
 import { abilityScores, slotKey, type Build, type SlotId } from '../build';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
+import type { Blueprint } from '../data';
 import { enforcer, jackInTheGreen } from '../gold';
 import { buildGrantIndex } from '../grants';
-import { candidates, picker } from './pickers';
+import { candidates, picker, shownInSelection } from './pickers';
 import { offeredClasses, offeredMythicClasses, offeredRaces } from './offers';
 import { breaks, opensAt, refusal } from '../refusals';
 import { pauseAt, walk } from '../walk';
@@ -155,5 +156,43 @@ describe('what character creation offers (comparison bug 5)', () => {
     for (const path of ['Mythic Hero', 'Aeon', 'Azata', 'Legend']) expect(mythics).toContain(path);
     expect(mythics).not.toContain('Mythic Companion');
     expect(mythics).not.toContain('Shard Powers');
+  });
+});
+
+const JACK_SPELL_SPECIALIZATION_GAP = 'f327a765a4353d04f872482ef3e48c35';
+
+describe('which options the level-up screen lists', () => {
+  it('lists every pick the gold Builds made, in its own slot', () => {
+    for (const gold of [enforcer, jackInTheGreen]) {
+      for (const pick of gold.build.picks.filter((p) => p.feature !== JACK_SPELL_SPECIALIZATION_GAP)) {
+        const listed = picker(data, gold.build, pick.slot, G)?.options.find(
+          (o) => o.feature === pick.feature && JSON.stringify(o.param) === JSON.stringify(pick.param),
+        );
+        expect({ slot: slotKey(pick.slot), feature: pick.feature, shown: listed?.shown }).toEqual({
+          slot: slotKey(pick.slot),
+          feature: pick.feature,
+          shown: true,
+        });
+      }
+    }
+  });
+
+  it('lists the background groups, and leaves out the companions’ backgrounds', () => {
+    const background = { place: { level: 1 }, selection: 'f926dabeee7f8a54db8f2010b323383c', index: 0 };
+    const fighter: Build = { race: HUMAN, scores, levels: [{ class: FIGHTER }], picks: [] };
+    const shown = (picker(data, fighter, background, G)?.options ?? [])
+      .filter((o) => o.shown)
+      .map((o) => data.blueprints.get(o.feature)?.name);
+    for (const group of ['Craftsman', 'Noble', 'Regional', 'Warrior']) expect(shown).toContain(group);
+    expect(shown.some((n) => n?.startsWith('Urban Hunter'))).toBe(false);
+    expect(shown.some((n) => n?.startsWith('Numerian Companion'))).toBe(false);
+  });
+
+  it('hides an option only when it is unavailable and the game marks it hidden while unavailable', () => {
+    const named = { name: 'X', HideInUI: true, HideNotAvailibleInUI: true } as unknown as Blueprint;
+    expect(shownInSelection(named, false)).toBe(true);
+    expect(shownInSelection(named, true)).toBe(false);
+    expect(shownInSelection({ ...named, HideNotAvailibleInUI: false } as Blueprint, true)).toBe(true);
+    expect(shownInSelection({ HideInUI: false } as unknown as Blueprint, false)).toBe(false);
   });
 });

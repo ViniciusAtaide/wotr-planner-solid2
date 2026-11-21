@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AirDomainSpellListFeature",
   "guid": "421ddcc7dbb6ee7479de949aaa81108d"

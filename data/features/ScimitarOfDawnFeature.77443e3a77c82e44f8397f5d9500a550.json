@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScimitarOfDawnFeature",
   "guid": "77443e3a77c82e44f8397f5d9500a550"

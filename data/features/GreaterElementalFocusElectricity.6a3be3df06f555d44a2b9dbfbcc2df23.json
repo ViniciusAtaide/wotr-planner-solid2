@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreaterElementalFocusElectricity",
   "guid": "6a3be3df06f555d44a2b9dbfbcc2df23",

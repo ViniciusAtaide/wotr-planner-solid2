@@ -80,6 +80,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnlightenedPhilosopherRevelationMentalAcuity",
   "guid": "736d3d5d940736b4e87792e94eaff96b",

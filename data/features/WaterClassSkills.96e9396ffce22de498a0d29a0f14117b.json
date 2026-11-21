@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WaterClassSkills",
   "guid": "96e9396ffce22de498a0d29a0f14117b",

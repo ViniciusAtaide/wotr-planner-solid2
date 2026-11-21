@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LiberationDomainBaseFeatureSeparatist",
   "guid": "a10a7a8e62ee4ec8a78d617273df1e49",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonCLGazeFeature",
   "guid": "911be6cfed6bb71449cbf6d1173f4dc2",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterFeyFreedomOfMovement",
   "guid": "3aad3a2eaa2b404dbd4ad0655be8c8ed",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChampionOfTheFaithEnchantWeaponFeature",
   "guid": "ecdc00a98070bfb4083e24983b7c7054",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodLustFeature",
   "guid": "703c488da4a34dc883dd7787e8d7ed51",

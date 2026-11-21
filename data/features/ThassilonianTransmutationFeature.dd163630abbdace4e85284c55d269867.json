@@ -16,6 +16,7 @@
     "ThassilonianSpellbook"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ThassilonianTransmutationFeature",
   "guid": "dd163630abbdace4e85284c55d269867",

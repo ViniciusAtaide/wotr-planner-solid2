@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreaterDispelFocus",
   "guid": "d0cf79c8e0a44325b00dc8fa6ad37d7c",

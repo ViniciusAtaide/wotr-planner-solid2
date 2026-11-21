@@ -27,6 +27,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CripplingStrike",
   "guid": "b696bd7cb38da194fa3404032483d1db",

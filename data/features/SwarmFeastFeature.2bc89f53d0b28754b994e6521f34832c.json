@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SwarmFeastFeature",
   "guid": "2bc89f53d0b28754b994e6521f34832c",

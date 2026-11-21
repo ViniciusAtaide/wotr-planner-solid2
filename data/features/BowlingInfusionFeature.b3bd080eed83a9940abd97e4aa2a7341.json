@@ -36,6 +36,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BowlingInfusionFeature",
   "guid": "b3bd080eed83a9940abd97e4aa2a7341",

@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalEarthSpellLevel2",
   "guid": "2d2c94099ad287f4695d3f6ababe8360",

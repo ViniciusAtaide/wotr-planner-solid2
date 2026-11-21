@@ -43,6 +43,7 @@
     "TeamworkFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShieldWall",
   "guid": "8976de442862f82488a4b138a0a89907",

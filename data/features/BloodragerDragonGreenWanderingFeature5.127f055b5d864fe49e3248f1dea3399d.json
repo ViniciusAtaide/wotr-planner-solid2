@@ -103,6 +103,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerDragonGreenWanderingFeature5",
   "guid": "127f055b5d864fe49e3248f1dea3399d",

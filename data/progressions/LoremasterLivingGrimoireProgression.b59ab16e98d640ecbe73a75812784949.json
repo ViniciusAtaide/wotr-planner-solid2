@@ -26,6 +26,7 @@
     "ReplaceSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "LevelEntries": [
     {
       "Level": 2,

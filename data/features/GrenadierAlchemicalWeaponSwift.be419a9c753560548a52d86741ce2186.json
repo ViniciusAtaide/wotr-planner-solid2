@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GrenadierAlchemicalWeaponSwift",
   "guid": "be419a9c753560548a52d86741ce2186"

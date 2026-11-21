@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InstinctualWarriorProficiencies",
   "guid": "3d1cf37e3ce44e27ab3241fd750f6972",

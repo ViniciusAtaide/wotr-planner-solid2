@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkillFocusLoreReligionMythicFeat",
   "guid": "122ebdbb2b6a4df4b944a947e78ec5f9",

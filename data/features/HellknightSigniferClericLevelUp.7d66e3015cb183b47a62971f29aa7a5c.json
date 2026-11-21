@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "HellknightSigniferClericLevelUp",
   "guid": "7d66e3015cb183b47a62971f29aa7a5c",

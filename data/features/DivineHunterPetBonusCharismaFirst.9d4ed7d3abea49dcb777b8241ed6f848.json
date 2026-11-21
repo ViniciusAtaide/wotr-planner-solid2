@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivineHunterPetBonusCharismaFirst",
   "guid": "9d4ed7d3abea49dcb777b8241ed6f848",

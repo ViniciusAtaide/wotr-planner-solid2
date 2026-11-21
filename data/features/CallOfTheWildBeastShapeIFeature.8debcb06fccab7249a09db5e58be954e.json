@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CallOfTheWildBeastShapeIFeature",
   "guid": "8debcb06fccab7249a09db5e58be954e",

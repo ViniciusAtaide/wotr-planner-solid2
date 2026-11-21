@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MantisFavorFeature",
   "guid": "fa56b28ef1594a4f8ca3680c744fd23d",

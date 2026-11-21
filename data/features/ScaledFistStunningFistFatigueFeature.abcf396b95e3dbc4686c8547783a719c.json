@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScaledFistStunningFistFatigueFeature",
   "guid": "abcf396b95e3dbc4686c8547783a719c",

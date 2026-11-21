@@ -21,6 +21,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SneakAttackerMythicFeat",
   "guid": "d0a53bf03b978634890e5ebab4a90ecb",

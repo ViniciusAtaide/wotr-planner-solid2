@@ -15,6 +15,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BolsteredSpellFeat",
   "guid": "fbf5d9ce931f47f3a0c818b3f8ef8414",

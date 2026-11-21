@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkillFocusThieveryMythicFeat",
   "guid": "9d277308f2d12af428f7726d58152ca5",

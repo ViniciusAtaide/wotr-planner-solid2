@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SwarmINfestFeature",
   "guid": "0cff0d8546c7ed948b35c2de5c70c10a",

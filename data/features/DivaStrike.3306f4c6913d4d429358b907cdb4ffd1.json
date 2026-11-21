@@ -46,6 +46,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivaStrike",
   "guid": "3306f4c6913d4d429358b907cdb4ffd1",

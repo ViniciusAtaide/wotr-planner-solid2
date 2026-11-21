@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UnparalleledSensesFeature2",
   "guid": "8cf6099cd0bb4c75a7f84a6a8552ef8f"

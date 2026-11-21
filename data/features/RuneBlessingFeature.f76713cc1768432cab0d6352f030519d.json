@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RuneBlessingFeature",
   "guid": "f76713cc1768432cab0d6352f030519d",

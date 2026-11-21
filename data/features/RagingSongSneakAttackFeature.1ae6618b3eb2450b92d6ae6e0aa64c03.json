@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RagingSongSneakAttackFeature",
   "guid": "1ae6618b3eb2450b92d6ae6e0aa64c03",

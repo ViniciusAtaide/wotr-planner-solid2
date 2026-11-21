@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KnowledgeDomainGreaterFeatureSeparatist",
   "guid": "de87cf92a9a344198dd5a2880c6029cb",

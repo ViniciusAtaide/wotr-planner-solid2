@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DeadlyAimMythicFeat",
   "guid": "ec661a003088c174ca3d477b51d35e03",

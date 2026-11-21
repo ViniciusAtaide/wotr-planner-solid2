@@ -21,6 +21,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AcrobaticSpellcaster",
   "guid": "7ba4b4023a7748669098c479dd9e8de6",

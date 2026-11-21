@@ -54,6 +54,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "BackgroundRekarthDLC2",
   "guid": "ab8136b1b9d54982a5c9faf100547483",

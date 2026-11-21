@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellsSealFeature",
   "guid": "b6798b29d36982b4786a32dfd81a914f",

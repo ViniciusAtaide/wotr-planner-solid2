@@ -36,6 +36,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StunningCriticalFeature",
   "guid": "7fb3023bda2f42728e76cf269f5a2fa0",

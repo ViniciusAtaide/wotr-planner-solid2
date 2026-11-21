@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SwarmDevourFeature",
   "guid": "af8f79138da3a04429dd4a48d8098e6d",

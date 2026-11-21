@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PurifierSinEaterFeature",
   "guid": "c243fb4b07396534ca62dd6d01093631",

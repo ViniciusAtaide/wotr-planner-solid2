@@ -36,6 +36,7 @@
     "OracleMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleNatureMysteryFeature",
   "guid": "69579bfe28e15b942af0722021d8725c",

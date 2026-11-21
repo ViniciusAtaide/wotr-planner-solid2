@@ -22,6 +22,7 @@
     "CombatFeat"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RayShield",
   "guid": "e92cb7c4c900dcf4282def347af42b9c",

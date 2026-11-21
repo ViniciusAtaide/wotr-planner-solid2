@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleNatureFinalRevelation",
   "guid": "e46981dfc05f3924784942b8684194ec",

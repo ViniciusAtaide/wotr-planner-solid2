@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LawDomainSpellListFeature",
   "guid": "d44e03ca0e001364e9fb746ea622739b"

@@ -19,6 +19,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DoubleKineticistInfusions",
   "guid": "7410cc35ae6aa9d4a82f1d23c081a1ac",

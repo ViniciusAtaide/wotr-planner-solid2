@@ -71,6 +71,7 @@
     "TieflingHeritage"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "TieflingHeritageBaphomet",
   "guid": "48b6d747d3310724ba4d76c8aabae2de"

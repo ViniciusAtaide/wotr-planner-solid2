@@ -19,6 +19,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationVortexSpells",
   "guid": "cd9791a958181544a8b71346ec0722db",

@@ -30,6 +30,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DeflectArrows",
   "guid": "2c61fdbf242866f4e93c3e1477fb96b5",

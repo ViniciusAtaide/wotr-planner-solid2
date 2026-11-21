@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SoheiMountedCombatFeatFeature",
   "guid": "64f12b8a5149e8e4386a767eaf2b62b4",

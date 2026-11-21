@@ -37,6 +37,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreaterSunder",
   "guid": "54d824028117e884a8f9356c7c66149b",

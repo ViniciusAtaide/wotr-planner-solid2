@@ -138,6 +138,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ErastilFeature",
   "guid": "afc775188deb7a44aa4cbde03512c671",

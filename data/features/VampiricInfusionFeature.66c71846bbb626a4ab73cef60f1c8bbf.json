@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "VampiricInfusionFeature",
   "guid": "66c71846bbb626a4ab73cef60f1c8bbf",

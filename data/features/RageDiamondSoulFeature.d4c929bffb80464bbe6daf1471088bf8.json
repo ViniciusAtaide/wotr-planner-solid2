@@ -15,6 +15,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RageDiamondSoulFeature",
   "guid": "d4c929bffb80464bbe6daf1471088bf8",

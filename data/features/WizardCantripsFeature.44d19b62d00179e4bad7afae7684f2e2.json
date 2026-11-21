@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WizardCantripsFeature",
   "guid": "44d19b62d00179e4bad7afae7684f2e2",

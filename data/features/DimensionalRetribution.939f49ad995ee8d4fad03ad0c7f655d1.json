@@ -15,6 +15,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DimensionalRetribution",
   "guid": "939f49ad995ee8d4fad03ad0c7f655d1",

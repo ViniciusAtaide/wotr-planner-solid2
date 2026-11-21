@@ -38,6 +38,7 @@
     "EldritchKnightSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "EldritchKnightSorcerer",
   "guid": "89d2b9f096b54804c8350dd2a899f8a4",

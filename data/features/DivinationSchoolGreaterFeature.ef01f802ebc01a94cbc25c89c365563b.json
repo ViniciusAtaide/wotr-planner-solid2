@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivinationSchoolGreaterFeature",
   "guid": "ef01f802ebc01a94cbc25c89c365563b",

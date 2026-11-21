@@ -146,6 +146,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UrgathoaFeature",
   "guid": "812f6c07148088e41a9ac94b56ac2fc8",

@@ -129,6 +129,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NethysFeature",
   "guid": "6262cfce7c31626458325ca0909de997",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "BrokenPhylacterySoulRingFeature",
   "guid": "a8e75168a655bfd4abf8adafe2e9ba91"

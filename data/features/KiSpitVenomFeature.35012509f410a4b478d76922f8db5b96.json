@@ -22,6 +22,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KiSpitVenomFeature",
   "guid": "35012509f410a4b478d76922f8db5b96",

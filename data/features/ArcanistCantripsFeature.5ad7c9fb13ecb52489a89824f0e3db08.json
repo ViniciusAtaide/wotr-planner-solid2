@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcanistCantripsFeature",
   "guid": "5ad7c9fb13ecb52489a89824f0e3db08",

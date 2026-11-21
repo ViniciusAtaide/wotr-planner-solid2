@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierPawChallenge",
   "guid": "d67ed8bfadc8466c86a0779fdd18a2cf",

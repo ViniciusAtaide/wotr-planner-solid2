@@ -13,6 +13,7 @@
     "TerrainDominance"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TerrainExpertiseDesert",
   "guid": "ed3d8aec565efb541af67716944dc587",

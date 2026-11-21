@@ -13,6 +13,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexIceplantFeature",
   "guid": "999e367bbabc42d46bf864d3f4bda86d",

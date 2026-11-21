@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonLevel1MaxAbilityWisdomFeature",
   "guid": "b0b5d090fb6e45acb818d6efedf7b872"

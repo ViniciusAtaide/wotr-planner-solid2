@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 5,
   "assetName": "BackrankAssistanceFeature",
   "guid": "3943d609dbaa0864e972a5d92ad26561"

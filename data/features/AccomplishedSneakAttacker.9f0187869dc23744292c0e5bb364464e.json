@@ -21,6 +21,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AccomplishedSneakAttacker",
   "guid": "9f0187869dc23744292c0e5bb364464e",

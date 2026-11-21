@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalWitchColdRayFeature",
   "guid": "8cb71f2cc612478ea00b03d180b9e22c",

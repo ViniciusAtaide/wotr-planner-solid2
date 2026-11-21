@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationAcidSkin17",
   "guid": "d0a9e7c3d65e11b4d8362f6bc4754585"

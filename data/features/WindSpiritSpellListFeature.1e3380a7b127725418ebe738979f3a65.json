@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WindSpiritSpellListFeature",
   "guid": "1e3380a7b127725418ebe738979f3a65"

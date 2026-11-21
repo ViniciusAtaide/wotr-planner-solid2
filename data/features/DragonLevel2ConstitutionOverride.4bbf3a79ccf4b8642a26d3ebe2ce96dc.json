@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonLevel2ConstitutionOverride",
   "guid": "4bbf3a79ccf4b8642a26d3ebe2ce96dc",

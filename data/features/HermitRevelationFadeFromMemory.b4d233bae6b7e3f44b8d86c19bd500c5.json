@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HermitRevelationFadeFromMemory",
   "guid": "b4d233bae6b7e3f44b8d86c19bd500c5",

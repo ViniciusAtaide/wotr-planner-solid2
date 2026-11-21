@@ -21,6 +21,7 @@
     "HellknightSigniferSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HellknightSigniferThassilonianTransmutation",
   "guid": "94a15b3f73655c54c87d906d37de3a3f",

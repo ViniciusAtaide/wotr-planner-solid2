@@ -22,6 +22,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElvenSpirit",
   "guid": "191a6ee9ccf849f8b34d34ad93b7af06",

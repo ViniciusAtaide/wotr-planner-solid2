@@ -19,6 +19,7 @@
     "WeaponTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FightersTactics",
   "guid": "87d6de4d30adc7244b7a3427d041dcaa",

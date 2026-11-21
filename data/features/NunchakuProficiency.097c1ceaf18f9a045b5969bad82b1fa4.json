@@ -24,6 +24,7 @@
     "ExoticWeaponProficiency"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NunchakuProficiency",
   "guid": "097c1ceaf18f9a045b5969bad82b1fa4",

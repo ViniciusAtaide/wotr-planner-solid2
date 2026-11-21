@@ -35,6 +35,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PossessedShamanSharedSkillKnowledgeWorld",
   "guid": "b759917c319f79b46b2040f6901aa5ce",

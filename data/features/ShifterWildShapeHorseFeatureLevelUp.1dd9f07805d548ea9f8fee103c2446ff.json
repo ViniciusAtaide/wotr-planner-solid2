@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeHorseFeatureLevelUp",
   "guid": "1dd9f07805d548ea9f8fee103c2446ff",

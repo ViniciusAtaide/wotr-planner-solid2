@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerSerpentineDazingGlare8",
   "guid": "08f3591505206f5408577b0e2a5556ba",

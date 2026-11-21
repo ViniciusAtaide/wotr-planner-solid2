@@ -13,6 +13,7 @@
     "LichUniqueAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EclipseChillFeature",
   "guid": "731bebb09171d5748b6f08cbe88f8af7",

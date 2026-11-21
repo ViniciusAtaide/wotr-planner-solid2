@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArmoredBattlemageMediumArmor",
   "guid": "9a4287e181c450447af1a7565c1b260b",

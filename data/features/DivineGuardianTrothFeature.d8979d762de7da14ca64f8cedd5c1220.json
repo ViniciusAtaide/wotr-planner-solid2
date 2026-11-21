@@ -25,6 +25,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivineGuardianTrothFeature",
   "guid": "d8979d762de7da14ca64f8cedd5c1220",

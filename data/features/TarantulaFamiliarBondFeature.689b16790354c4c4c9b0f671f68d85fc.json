@@ -27,6 +27,7 @@
     "Familiar"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TarantulaFamiliarBondFeature",
   "guid": "689b16790354c4c4c9b0f671f68d85fc",

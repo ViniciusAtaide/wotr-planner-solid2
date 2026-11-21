@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "IncenseFogSacredIncenseFeature",
   "guid": "a3c58f42ba0e324469381c027a1950a4",

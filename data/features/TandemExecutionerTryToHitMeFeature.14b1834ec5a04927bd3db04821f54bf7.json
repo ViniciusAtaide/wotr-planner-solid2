@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TandemExecutionerTryToHitMeFeature",
   "guid": "14b1834ec5a04927bd3db04821f54bf7",

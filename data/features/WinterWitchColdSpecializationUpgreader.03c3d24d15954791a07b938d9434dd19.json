@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WinterWitchColdSpecializationUpgreader",
   "guid": "03c3d24d15954791a07b938d9434dd19"

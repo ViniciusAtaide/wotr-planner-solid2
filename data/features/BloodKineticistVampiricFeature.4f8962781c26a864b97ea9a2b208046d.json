@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodKineticistVampiricFeature",
   "guid": "4f8962781c26a864b97ea9a2b208046d",

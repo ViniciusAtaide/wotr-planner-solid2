@@ -17,6 +17,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Diehard",
   "guid": "86669ce8759f9d7478565db69b8c19ad",

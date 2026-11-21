@@ -70,6 +70,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonDiscipleBreathFeature",
   "guid": "0aadb51129cb0c147b5d2464c0db10b3",

@@ -13,6 +13,7 @@
     "DemonMajorAspect"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "VrolikaiAspectFeature",
   "guid": "0ed608f1a0695cd4cb80bf6d415ab295",

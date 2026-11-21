@@ -143,6 +143,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ZonKuthonFeature",
   "guid": "f7eed400baa66a744ad361d4df0e6f1b",

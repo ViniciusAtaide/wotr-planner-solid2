@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShadowSpellsFeatureVanish",
   "guid": "bac639f6e6524da08334a0e4534bd23e",

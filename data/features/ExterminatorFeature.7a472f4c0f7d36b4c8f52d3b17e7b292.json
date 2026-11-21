@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ExterminatorFeature",
   "guid": "7a472f4c0f7d36b4c8f52d3b17e7b292"

@@ -24,6 +24,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SturdySnootFeatureMainNew",
   "guid": "190bd11d6ff64d3c9524cc541a5ba97a"

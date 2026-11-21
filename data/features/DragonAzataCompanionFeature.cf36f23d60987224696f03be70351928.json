@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonAzataCompanionFeature",
   "guid": "cf36f23d60987224696f03be70351928",

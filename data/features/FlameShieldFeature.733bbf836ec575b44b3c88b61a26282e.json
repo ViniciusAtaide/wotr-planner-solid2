@@ -29,6 +29,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FlameShieldFeature",
   "guid": "733bbf836ec575b44b3c88b61a26282e",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FeralChampnionWildShapeIWolfFeature",
   "guid": "1b60050091002ad458bd49788e84f13a",

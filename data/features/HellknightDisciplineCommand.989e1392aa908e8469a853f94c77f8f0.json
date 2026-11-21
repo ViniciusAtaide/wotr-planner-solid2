@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellknightDisciplineCommand",
   "guid": "989e1392aa908e8469a853f94c77f8f0",

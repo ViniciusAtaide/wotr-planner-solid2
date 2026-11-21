@@ -47,6 +47,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DeadlyEarthInfusion",
   "guid": "061f5d7e659432b478668b70f6d4caae",

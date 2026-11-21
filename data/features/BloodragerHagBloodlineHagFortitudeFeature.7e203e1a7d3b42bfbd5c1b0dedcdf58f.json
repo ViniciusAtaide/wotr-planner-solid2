@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerHagBloodlineHagFortitudeFeature",
   "guid": "7e203e1a7d3b42bfbd5c1b0dedcdf58f",

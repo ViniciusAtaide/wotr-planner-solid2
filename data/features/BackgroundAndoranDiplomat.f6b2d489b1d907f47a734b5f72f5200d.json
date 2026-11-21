@@ -19,6 +19,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundAndoranDiplomat",
   "guid": "f6b2d489b1d907f47a734b5f72f5200d",

@@ -17,6 +17,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElixirThrow",
   "guid": "fd1f99a42ff74d74f95c50cfc632cd69",

@@ -26,6 +26,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationLightningBreath",
   "guid": "b7b19ce8776f81547ad3bfb6ac859045",

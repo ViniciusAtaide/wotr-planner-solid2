@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SKaldMovePerformance",
   "guid": "f24dc98de96671d4288cba09584e249b",

@@ -64,6 +64,7 @@
     "TieflingHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TieflingHeritageKyton",
   "guid": "c5b7ad498cca069499dc71b97cbe51fb",

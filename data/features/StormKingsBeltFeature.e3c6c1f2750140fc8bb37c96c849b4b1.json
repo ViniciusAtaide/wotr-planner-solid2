@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "StormKingsBeltFeature",
   "guid": "e3c6c1f2750140fc8bb37c96c849b4b1"

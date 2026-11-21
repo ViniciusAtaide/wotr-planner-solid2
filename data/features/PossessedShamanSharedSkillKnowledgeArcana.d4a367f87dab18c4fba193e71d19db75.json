@@ -35,6 +35,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PossessedShamanSharedSkillKnowledgeArcana",
   "guid": "d4a367f87dab18c4fba193e71d19db75",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GlobalSpellLegendBanishFeature",
   "guid": "d1ac9da167f4431fb265ba0037fea6cd"

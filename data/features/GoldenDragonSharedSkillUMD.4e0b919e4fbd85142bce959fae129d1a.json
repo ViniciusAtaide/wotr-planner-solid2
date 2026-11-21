@@ -48,6 +48,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GoldenDragonSharedSkillUMD",
   "guid": "4e0b919e4fbd85142bce959fae129d1a",

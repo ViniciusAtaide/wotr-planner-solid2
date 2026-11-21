@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HeavyMaceProficiency",
   "guid": "3f18330d717ea0148b496ee8cc291a60",

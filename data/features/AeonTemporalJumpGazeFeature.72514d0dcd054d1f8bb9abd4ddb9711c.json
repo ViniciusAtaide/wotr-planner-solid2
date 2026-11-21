@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonTemporalJumpGazeFeature",
   "guid": "72514d0dcd054d1f8bb9abd4ddb9711c",

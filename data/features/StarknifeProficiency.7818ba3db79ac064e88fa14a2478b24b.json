@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StarknifeProficiency",
   "guid": "7818ba3db79ac064e88fa14a2478b24b",

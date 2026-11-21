@@ -25,6 +25,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerUndeadGhostStrike",
   "guid": "84634e9e49342ce44ae6dd13b4279838",

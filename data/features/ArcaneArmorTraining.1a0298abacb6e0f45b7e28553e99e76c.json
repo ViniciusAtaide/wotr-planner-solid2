@@ -19,6 +19,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcaneArmorTraining",
   "guid": "1a0298abacb6e0f45b7e28553e99e76c",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "LocketOfMagicMissileMasteryFeatureQuick",
   "guid": "604e2bda4ca0fb94296ac15e863659ce"

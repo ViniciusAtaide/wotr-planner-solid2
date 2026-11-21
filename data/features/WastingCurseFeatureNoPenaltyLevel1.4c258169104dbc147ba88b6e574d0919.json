@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WastingCurseFeatureNoPenaltyLevel1",
   "guid": "4c258169104dbc147ba88b6e574d0919",

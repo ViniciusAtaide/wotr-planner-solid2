@@ -43,6 +43,7 @@
     "OreadHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OreadHeritageIronsoul",
   "guid": "81c7a84ae0fe7ac4e8fe3efed22649d2",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScaledFistACBonus",
   "guid": "3929bfd1beeeed243970c9fc0cf333f8",

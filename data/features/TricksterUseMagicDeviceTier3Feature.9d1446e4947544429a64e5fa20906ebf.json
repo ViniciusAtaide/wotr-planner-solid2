@@ -13,6 +13,7 @@
     "MythicTrick3"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterUseMagicDeviceTier3Feature",
   "guid": "9d1446e4947544429a64e5fa20906ebf",

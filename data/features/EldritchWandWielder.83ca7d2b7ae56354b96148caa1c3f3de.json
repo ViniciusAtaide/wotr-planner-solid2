@@ -5,6 +5,7 @@
     "EldritchScionArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchWandWielder",
   "guid": "83ca7d2b7ae56354b96148caa1c3f3de",

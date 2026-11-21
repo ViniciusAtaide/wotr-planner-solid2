@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonicAltarMasochisticClothFeature",
   "guid": "af11264704786b6428962181bc750722"

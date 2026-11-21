@@ -34,6 +34,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexHypothermiaFeature",
   "guid": "9b764fbd91bf92643a36d833762fd069",

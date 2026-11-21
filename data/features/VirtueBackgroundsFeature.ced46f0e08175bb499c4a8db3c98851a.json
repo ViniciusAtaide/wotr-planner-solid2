@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "VirtueBackgroundsFeature",
   "guid": "ced46f0e08175bb499c4a8db3c98851a",

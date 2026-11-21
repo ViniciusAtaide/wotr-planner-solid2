@@ -16,6 +16,7 @@
     "FinesseTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinesseTrainingDuelingSword",
   "guid": "2dd8ca4a7c061b14c95f04b7adda1cd6",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChargedWaterKineticBladeFeature",
   "guid": "988e3aed25d921144903fbe5a6cc2a8a"

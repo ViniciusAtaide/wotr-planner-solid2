@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GoodDomainAllowed",
   "guid": "882521af8012fc749930b03dc18a69de"

@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UnholyBeast",
   "guid": "2101bf9664ce4012b8011da12b4797e5",

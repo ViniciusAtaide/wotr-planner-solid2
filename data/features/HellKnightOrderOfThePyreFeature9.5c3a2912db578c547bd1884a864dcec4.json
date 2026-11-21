@@ -23,6 +23,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellKnightOrderOfThePyreFeature9",
   "guid": "5c3a2912db578c547bd1884a864dcec4",

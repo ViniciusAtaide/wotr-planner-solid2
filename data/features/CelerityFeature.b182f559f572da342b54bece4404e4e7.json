@@ -43,6 +43,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CelerityFeature",
   "guid": "b182f559f572da342b54bece4404e4e7",

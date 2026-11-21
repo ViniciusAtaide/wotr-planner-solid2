@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanCantripsFeature",
   "guid": "1c7cc4b02e560f74796842ba31f2acda"

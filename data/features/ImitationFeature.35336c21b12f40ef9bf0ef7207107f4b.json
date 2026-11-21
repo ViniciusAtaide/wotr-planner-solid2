@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImitationFeature",
   "guid": "35336c21b12f40ef9bf0ef7207107f4b",

@@ -36,6 +36,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexFriendToAnimalsFeature",
   "guid": "0d92799cecf414249a23ad82f7e9901a",

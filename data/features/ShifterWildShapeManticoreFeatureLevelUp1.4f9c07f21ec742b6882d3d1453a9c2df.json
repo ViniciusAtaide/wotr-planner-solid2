@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeManticoreFeatureLevelUp1",
   "guid": "4f9c07f21ec742b6882d3d1453a9c2df",

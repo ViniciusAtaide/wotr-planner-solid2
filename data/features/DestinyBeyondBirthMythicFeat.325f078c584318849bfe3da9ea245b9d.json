@@ -25,6 +25,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DestinyBeyondBirthMythicFeat",
   "guid": "325f078c584318849bfe3da9ea245b9d",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DarkLurkerArchetypeBlindsight",
   "guid": "359b313177f74a17bda6007265a58207",

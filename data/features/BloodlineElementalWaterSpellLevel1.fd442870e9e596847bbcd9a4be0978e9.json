@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalWaterSpellLevel1",
   "guid": "fd442870e9e596847bbcd9a4be0978e9",

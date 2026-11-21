@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "EverlastingLightFeature",
   "guid": "824df03a2fdf4d5299e1b540adf86583"

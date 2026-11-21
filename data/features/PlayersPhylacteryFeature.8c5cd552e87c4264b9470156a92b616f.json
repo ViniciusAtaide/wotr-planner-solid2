@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlayersPhylacteryFeature",
   "guid": "8c5cd552e87c4264b9470156a92b616f"

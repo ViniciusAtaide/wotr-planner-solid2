@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineUndeadIncorporealFormFeature",
   "guid": "eafdc6762cbfa7d4d8220c6d6372973d",

@@ -34,6 +34,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SprayInfusion",
   "guid": "b5852e8287f12d34ca6f84fcc7019f07",

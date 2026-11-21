@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineSerpentineSerpentsFangBiteFeatureAddLevel4",
   "guid": "eea5698f942ea2c45b4e0f58c5240038",

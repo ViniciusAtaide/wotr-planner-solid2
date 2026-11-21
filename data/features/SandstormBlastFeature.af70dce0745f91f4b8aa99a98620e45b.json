@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "SandstormBlastFeature",
   "guid": "af70dce0745f91f4b8aa99a98620e45b",

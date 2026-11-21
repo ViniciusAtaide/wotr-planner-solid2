@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlagueHexDexterityImpairedFeature",
   "guid": "4a590791161145de8cf8d27cdefb8705",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PrismaticRingFeature",
   "guid": "40365c7ca844d11459cd8be4c1ce7586"

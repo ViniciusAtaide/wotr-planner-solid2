@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ForceMissileFeature",
   "guid": "f9501f0df27af5446b705b5da255469a"

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcaneMetamagicFeature17",
   "guid": "bbb28051942243cf81dc90ec40b646ba",

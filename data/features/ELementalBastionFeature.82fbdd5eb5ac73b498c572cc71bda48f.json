@@ -23,6 +23,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ELementalBastionFeature",
   "guid": "82fbdd5eb5ac73b498c572cc71bda48f",

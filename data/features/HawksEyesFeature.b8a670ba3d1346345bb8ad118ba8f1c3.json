@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HawksEyesFeature",
   "guid": "b8a670ba3d1346345bb8ad118ba8f1c3"

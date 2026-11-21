@@ -37,6 +37,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "WinterWitchWitch",
   "guid": "3473fa3a4f9e8da44a75e884c03b1cbb",

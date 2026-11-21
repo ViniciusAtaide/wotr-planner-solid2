@@ -10,6 +10,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterFeyChimeraHorseFeature",
   "guid": "d04153a4fcba47c38e12e9eb5a2f6cb3",

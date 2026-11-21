@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FighterTraining",
   "guid": "2b636b9e8dd7df94cbd372c52237eebf",

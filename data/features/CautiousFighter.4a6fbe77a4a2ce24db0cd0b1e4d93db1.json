@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CautiousFighter",
   "guid": "4a6fbe77a4a2ce24db0cd0b1e4d93db1",

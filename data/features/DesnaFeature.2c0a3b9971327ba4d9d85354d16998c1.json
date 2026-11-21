@@ -161,6 +161,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DesnaFeature",
   "guid": "2c0a3b9971327ba4d9d85354d16998c1",

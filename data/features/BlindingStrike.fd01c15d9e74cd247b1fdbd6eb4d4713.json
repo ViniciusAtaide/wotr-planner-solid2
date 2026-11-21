@@ -37,6 +37,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BlindingStrike",
   "guid": "fd01c15d9e74cd247b1fdbd6eb4d4713",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "BruisersChainshirtFeature",
   "guid": "2f08e4d39c1c568478c43aba81c42525"

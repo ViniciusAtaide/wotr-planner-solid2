@@ -10,6 +10,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HelmetEvilTeethFeature",
   "guid": "dff21bfaae5d0c74b87104403ffd1d82",

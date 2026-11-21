@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonSummonBaseFeature",
   "guid": "0a4b9114759b20a45af6642964fc56bc",

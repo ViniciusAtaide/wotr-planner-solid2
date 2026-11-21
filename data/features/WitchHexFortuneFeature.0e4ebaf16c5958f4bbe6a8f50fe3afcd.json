@@ -13,6 +13,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexFortuneFeature",
   "guid": "0e4ebaf16c5958f4bbe6a8f50fe3afcd",

@@ -14,6 +14,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BootsOfTheCatFeature",
   "guid": "46c6e281f0be45a1a270bc8e2c22c137",

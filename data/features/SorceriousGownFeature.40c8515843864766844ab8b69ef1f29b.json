@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SorceriousGownFeature",
   "guid": "40c8515843864766844ab8b69ef1f29b"

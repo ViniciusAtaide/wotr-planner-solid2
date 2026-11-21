@@ -103,6 +103,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerDragonRedWanderingFeature6",
   "guid": "5509bcd2c8694418ac4a19270110bae0",

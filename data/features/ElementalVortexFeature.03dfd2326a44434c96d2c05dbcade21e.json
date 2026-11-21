@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalVortexFeature",
   "guid": "03dfd2326a44434c96d2c05dbcade21e",

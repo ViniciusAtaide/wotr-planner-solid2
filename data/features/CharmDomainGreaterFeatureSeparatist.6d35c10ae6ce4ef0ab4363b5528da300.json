@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CharmDomainGreaterFeatureSeparatist",
   "guid": "6d35c10ae6ce4ef0ab4363b5528da300",

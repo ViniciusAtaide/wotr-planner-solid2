@@ -21,6 +21,7 @@
     "HellknightSigniferSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HellknightSigniferThassilonianConjuration",
   "guid": "7436a9fb73b809b40908973e51e82c0a",

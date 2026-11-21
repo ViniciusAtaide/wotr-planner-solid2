@@ -5,6 +5,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UnrelentingAssault",
   "guid": "b0db6bc8548257a40b055c37d7cbc3e0",

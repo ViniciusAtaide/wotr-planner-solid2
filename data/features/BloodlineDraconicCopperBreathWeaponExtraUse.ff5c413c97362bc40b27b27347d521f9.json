@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "BloodlineDraconicCopperBreathWeaponExtraUse",
   "guid": "ff5c413c97362bc40b27b27347d521f9",

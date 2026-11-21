@@ -28,6 +28,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SlayerTrapfinding",
   "guid": "e3c12938c2f93544da89824fbe0933a5",

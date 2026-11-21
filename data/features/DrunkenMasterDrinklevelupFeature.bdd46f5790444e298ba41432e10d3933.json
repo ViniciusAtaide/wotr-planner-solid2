@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrunkenMasterDrinklevelupFeature",
   "guid": "bdd46f5790444e298ba41432e10d3933"

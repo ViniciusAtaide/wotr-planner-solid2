@@ -25,6 +25,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineSerpentineScaledSoulFeature",
   "guid": "18436c3dfd2000142ae087bf03740fdf",

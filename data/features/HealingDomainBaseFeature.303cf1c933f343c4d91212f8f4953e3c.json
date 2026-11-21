@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HealingDomainBaseFeature",
   "guid": "303cf1c933f343c4d91212f8f4953e3c",

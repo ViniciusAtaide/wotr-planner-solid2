@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "MagmaBlastFeature",
   "guid": "408b25c6d9f223b41b935e6ec550e88d",

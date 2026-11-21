@@ -23,6 +23,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterArcanistMagicDeceiver",
   "guid": "d20206c5e91942399e76eb366c026ca9",

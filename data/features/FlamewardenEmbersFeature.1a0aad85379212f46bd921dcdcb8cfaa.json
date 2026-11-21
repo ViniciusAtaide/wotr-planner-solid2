@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FlamewardenEmbersFeature",
   "guid": "1a0aad85379212f46bd921dcdcb8cfaa",

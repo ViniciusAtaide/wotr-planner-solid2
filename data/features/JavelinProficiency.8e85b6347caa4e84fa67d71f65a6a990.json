@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "JavelinProficiency",
   "guid": "8e85b6347caa4e84fa67d71f65a6a990",

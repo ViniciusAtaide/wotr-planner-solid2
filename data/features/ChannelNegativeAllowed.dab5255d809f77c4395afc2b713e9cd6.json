@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChannelNegativeAllowed",
   "guid": "dab5255d809f77c4395afc2b713e9cd6"

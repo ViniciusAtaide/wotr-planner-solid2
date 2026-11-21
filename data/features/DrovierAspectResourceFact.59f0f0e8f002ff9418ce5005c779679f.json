@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrovierAspectResourceFact",
   "guid": "59f0f0e8f002ff9418ce5005c779679f"

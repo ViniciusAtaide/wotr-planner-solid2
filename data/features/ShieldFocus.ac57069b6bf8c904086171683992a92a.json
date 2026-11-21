@@ -27,6 +27,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShieldFocus",
   "guid": "ac57069b6bf8c904086171683992a92a",

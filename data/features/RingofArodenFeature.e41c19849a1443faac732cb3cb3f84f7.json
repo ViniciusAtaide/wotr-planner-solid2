@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RingofArodenFeature",
   "guid": "e41c19849a1443faac732cb3cb3f84f7"

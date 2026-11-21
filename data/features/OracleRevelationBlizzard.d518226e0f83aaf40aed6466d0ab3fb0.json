@@ -35,6 +35,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationBlizzard",
   "guid": "d518226e0f83aaf40aed6466d0ab3fb0",

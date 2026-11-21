@@ -16,6 +16,7 @@
     "ThassilonianSpellbook"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ThassilonianNecromancyFeature",
   "guid": "fb343ede45ca1a84496c91c190a847ff",

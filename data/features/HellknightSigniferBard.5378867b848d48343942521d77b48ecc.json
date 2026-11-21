@@ -14,6 +14,7 @@
     "HellknightSigniferSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HellknightSigniferBard",
   "guid": "5378867b848d48343942521d77b48ecc",

@@ -35,6 +35,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GrapplingInfusionFeature",
   "guid": "e2d70b95e80549b439d30df29a79cb58",

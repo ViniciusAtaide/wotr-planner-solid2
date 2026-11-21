@@ -32,6 +32,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexBattleMasterFeature",
   "guid": "4db9f3d913a59f14f9cc4ffaa73de2f0",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WindWhispererHasteFeature",
   "guid": "83bb307b3ee74090b7b86c1a8c0a7612",

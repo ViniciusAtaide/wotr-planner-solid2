@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "WitchOfTheVeilShroudedStep1",
   "guid": "c7c37bafb59f4e3d9a0387b67e779b05"

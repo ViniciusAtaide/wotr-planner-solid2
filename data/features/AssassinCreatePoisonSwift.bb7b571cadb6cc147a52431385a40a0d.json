@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AssassinCreatePoisonSwift",
   "guid": "bb7b571cadb6cc147a52431385a40a0d",

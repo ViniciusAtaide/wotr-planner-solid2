@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SoheiFlurryOfBlowstLevel11Unlock",
   "guid": "dfc54683a9b7b2d4294ad1fd2acd5877"

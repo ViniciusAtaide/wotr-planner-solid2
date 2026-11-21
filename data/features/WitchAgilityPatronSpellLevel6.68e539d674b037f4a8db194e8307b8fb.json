@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchAgilityPatronSpellLevel6",
   "guid": "68e539d674b037f4a8db194e8307b8fb",

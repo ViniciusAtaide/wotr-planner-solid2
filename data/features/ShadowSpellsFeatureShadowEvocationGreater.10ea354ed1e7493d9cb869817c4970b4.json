@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShadowSpellsFeatureShadowEvocationGreater",
   "guid": "10ea354ed1e7493d9cb869817c4970b4",

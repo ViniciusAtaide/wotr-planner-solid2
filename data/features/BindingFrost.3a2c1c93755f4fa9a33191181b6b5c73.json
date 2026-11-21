@@ -24,6 +24,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BindingFrost",
   "guid": "3a2c1c93755f4fa9a33191181b6b5c73",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpiritWardenUnnaturalMienFeature",
   "guid": "cb9776aab731ce84b940327b99ae35ec",

@@ -44,6 +44,7 @@
     "FinesseTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinesseTrainingTalon",
   "guid": "f1017d46f56547a3b10dc9b9b5b8da5a",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "SavingThrowAgainsBlindnessFeature",
   "guid": "fc7a7567948768743bcff98ec51d22d5"

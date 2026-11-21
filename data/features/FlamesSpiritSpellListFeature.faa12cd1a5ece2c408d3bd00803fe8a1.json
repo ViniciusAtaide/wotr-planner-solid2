@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FlamesSpiritSpellListFeature",
   "guid": "faa12cd1a5ece2c408d3bd00803fe8a1"

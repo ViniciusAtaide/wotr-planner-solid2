@@ -15,6 +15,7 @@
     "Mercy"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MercyCursed",
   "guid": "445c696bead5140459909ffbed14750e",

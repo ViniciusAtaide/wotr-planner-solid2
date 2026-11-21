@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ThirdJudgment",
   "guid": "490c7e92b22cc8a4bb4885a027b355db",

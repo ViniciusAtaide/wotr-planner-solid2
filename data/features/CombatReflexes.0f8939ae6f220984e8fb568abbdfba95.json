@@ -6,6 +6,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CombatReflexes",
   "guid": "0f8939ae6f220984e8fb568abbdfba95",

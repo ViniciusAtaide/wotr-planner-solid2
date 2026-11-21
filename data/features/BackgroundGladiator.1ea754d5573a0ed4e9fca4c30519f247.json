@@ -40,6 +40,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundGladiator",
   "guid": "1ea754d5573a0ed4e9fca4c30519f247",

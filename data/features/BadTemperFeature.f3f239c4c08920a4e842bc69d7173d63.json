@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 100,
   "assetName": "BadTemperFeature",
   "guid": "f3f239c4c08920a4e842bc69d7173d63"

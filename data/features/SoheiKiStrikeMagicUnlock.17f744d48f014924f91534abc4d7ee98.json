@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SoheiKiStrikeMagicUnlock",
   "guid": "17f744d48f014924f91534abc4d7ee98",

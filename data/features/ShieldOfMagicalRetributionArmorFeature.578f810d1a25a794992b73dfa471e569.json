@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "ShieldOfMagicalRetributionArmorFeature",
   "guid": "578f810d1a25a794992b73dfa471e569"

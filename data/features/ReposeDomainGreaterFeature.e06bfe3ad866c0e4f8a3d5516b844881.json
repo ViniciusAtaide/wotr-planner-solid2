@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ReposeDomainGreaterFeature",
   "guid": "e06bfe3ad866c0e4f8a3d5516b844881",

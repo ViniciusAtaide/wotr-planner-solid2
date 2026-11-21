@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TorturedCrusaderFeature",
   "guid": "42b00dea1ecd43d9ab3b975ce8b845cc",

@@ -15,6 +15,7 @@
     "WizardFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpellPenetration",
   "guid": "ee7dc126939e4d9438357fbd5980d459",

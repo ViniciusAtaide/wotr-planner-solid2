@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanStonesSpiritBaseFeature",
   "guid": "5c3ccab7cb27f4a408531197eb2abd3f",

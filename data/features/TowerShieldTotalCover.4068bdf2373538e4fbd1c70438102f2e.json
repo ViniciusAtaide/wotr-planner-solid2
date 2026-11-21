@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TowerShieldTotalCover",
   "guid": "4068bdf2373538e4fbd1c70438102f2e",

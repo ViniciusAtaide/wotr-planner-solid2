@@ -22,6 +22,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PointBlankShot",
   "guid": "0da0c194d6e1d43419eb8d990b28e0ab",

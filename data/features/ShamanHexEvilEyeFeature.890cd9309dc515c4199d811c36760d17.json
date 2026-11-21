@@ -13,6 +13,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexEvilEyeFeature",
   "guid": "890cd9309dc515c4199d811c36760d17",

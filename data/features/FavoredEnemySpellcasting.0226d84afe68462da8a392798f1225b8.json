@@ -18,6 +18,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FavoredEnemySpellcasting",
   "guid": "0226d84afe68462da8a392798f1225b8",

@@ -20,6 +20,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexDeathCurseFeature",
   "guid": "b7cd7ba71151e354d9c8a1bff959d789",

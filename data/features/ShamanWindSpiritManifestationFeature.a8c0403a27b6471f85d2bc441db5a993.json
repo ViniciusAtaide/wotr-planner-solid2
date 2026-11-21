@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanWindSpiritManifestationFeature",
   "guid": "a8c0403a27b6471f85d2bc441db5a993",

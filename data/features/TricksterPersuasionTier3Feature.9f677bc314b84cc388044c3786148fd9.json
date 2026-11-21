@@ -17,6 +17,7 @@
     "MythicTrick3"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterPersuasionTier3Feature",
   "guid": "9f677bc314b84cc388044c3786148fd9",

@@ -42,6 +42,7 @@
     "AasimarHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelHeritage",
   "guid": "ceedc840b113c3348a2f32b434df5fef",

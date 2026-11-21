@@ -40,6 +40,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundHermit",
   "guid": "aec583b2cf2305d4fa6a58d640a54f16",

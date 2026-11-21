@@ -5,6 +5,7 @@
     "LichUniqueAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "IndestructibleBonesFeature",
   "guid": "42274a4428cb43b40acf771a7f5ddfac",

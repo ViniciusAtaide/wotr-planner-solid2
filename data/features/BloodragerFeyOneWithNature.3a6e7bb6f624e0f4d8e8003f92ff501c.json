@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerFeyOneWithNature",
   "guid": "3a6e7bb6f624e0f4d8e8003f92ff501c",

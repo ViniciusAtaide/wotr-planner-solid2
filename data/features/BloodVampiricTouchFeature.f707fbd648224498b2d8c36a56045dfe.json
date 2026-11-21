@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodVampiricTouchFeature",
   "guid": "f707fbd648224498b2d8c36a56045dfe",

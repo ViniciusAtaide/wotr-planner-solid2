@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "FeyResistanceFeature",
   "guid": "ae0ef197e1904464e9afe115334d4bca",

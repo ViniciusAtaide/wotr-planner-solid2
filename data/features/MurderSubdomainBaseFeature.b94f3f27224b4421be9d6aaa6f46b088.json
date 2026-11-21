@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MurderSubdomainBaseFeature",
   "guid": "b94f3f27224b4421be9d6aaa6f46b088",

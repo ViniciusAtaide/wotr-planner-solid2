@@ -21,6 +21,7 @@
     "MysticTheurgeArcaneSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "MysticTheurgeThassilonianNecromancy",
   "guid": "6abab609b1a3f8d43be7cbd3a01d220c",

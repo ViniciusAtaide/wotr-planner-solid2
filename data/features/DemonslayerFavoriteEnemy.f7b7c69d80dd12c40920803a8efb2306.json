@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "DemonslayerFavoriteEnemy",
   "guid": "f7b7c69d80dd12c40920803a8efb2306",

@@ -46,6 +46,7 @@
     "DragonDiscipleSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonDiscipleArcanist",
   "guid": "08c222927713408bb09e0eab99ff4310",

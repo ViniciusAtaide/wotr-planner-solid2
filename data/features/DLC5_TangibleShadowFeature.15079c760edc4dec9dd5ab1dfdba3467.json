@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 5,
   "assetName": "DLC5_TangibleShadowFeature",
   "guid": "15079c760edc4dec9dd5ab1dfdba3467"

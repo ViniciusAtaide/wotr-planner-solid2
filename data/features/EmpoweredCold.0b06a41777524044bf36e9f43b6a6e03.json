@@ -24,6 +24,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EmpoweredCold",
   "guid": "0b06a41777524044bf36e9f43b6a6e03",

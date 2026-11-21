@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineAbyssalClawsFeatureLevel1",
   "guid": "61dc09810c47fef45983dbd1d172baa6"

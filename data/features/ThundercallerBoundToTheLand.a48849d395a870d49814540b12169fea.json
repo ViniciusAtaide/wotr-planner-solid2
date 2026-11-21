@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ThundercallerBoundToTheLand",
   "guid": "a48849d395a870d49814540b12169fea",

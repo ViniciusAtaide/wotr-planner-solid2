@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SableMarineFeatheredConfusionFeature",
   "guid": "28d5122a7ab544a38577ce96b979d2f8",

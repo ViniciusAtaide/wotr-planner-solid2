@@ -30,6 +30,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "BloodlineElementalFireResistanceAbilityAdd",
   "guid": "24980315c1bdcc4478ebb717e9b81961",

@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "LoremasterInquisitorLevelUp",
   "guid": "ebfb9e77e0b10f44bbbb773d8b99f60f",

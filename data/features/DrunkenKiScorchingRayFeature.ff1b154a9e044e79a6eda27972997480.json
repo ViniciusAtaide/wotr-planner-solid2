@@ -22,6 +22,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrunkenKiScorchingRayFeature",
   "guid": "ff1b154a9e044e79a6eda27972997480",

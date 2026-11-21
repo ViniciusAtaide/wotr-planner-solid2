@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundMendevianOrphan",
   "guid": "1d27bef027bdecc42a80c950cdc11380",

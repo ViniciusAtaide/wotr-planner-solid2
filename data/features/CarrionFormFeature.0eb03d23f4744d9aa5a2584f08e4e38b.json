@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CarrionFormFeature",
   "guid": "0eb03d23f4744d9aa5a2584f08e4e38b",

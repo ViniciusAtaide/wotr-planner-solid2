@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SickleProficiency",
   "guid": "7b4c0488057fa2e42b8a92bac3304eb9",

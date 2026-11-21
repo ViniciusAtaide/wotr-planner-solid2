@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalClassSkill",
   "guid": "582a0ee43b0a38c4581c96cec8ddcdfd",

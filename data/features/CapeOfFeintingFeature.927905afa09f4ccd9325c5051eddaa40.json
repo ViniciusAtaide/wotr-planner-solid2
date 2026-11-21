@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CapeOfFeintingFeature",
   "guid": "927905afa09f4ccd9325c5051eddaa40"

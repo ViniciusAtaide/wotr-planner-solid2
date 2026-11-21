@@ -15,6 +15,7 @@
     "WeaponTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "TwoHandedFighterWeaponTraining",
   "guid": "88da2a5dfc505054f933bb81014e864f",

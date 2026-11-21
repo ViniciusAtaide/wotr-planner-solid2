@@ -49,6 +49,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DhampirHeritageNosferatu",
   "guid": "a4e0d7fe3a18a874091541334cdac2d6",

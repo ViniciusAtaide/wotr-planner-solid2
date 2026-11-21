@@ -29,6 +29,7 @@
     "Discovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CursedBombsFeature",
   "guid": "bf8f80f3a492e7946924e1cd9c4b0867",

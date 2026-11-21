@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeWereWolfFeature8",
   "guid": "0fbe74aa690041fe8a4ad4b6155decab",

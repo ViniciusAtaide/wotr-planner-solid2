@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WarDomainBaseFeatureSeparatist",
   "guid": "08bc520f095d433ea117b1e84c81b336",

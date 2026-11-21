@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LiberationBlessingFeature",
   "guid": "61061faf477d67b43b6dedb3e8f205d7",

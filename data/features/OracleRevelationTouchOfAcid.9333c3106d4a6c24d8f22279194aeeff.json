@@ -39,6 +39,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationTouchOfAcid",
   "guid": "9333c3106d4a6c24d8f22279194aeeff",

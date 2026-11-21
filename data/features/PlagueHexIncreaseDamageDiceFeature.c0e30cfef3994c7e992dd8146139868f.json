@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlagueHexIncreaseDamageDiceFeature",
   "guid": "c0e30cfef3994c7e992dd8146139868f",

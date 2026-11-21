@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LongbowProficiencyBracersOfArchery",
   "guid": "3d14fa9e7620b134aba7e0f06aa107d6"

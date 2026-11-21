@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "SigilOfCreationRingFeature",
   "guid": "3e354532d3e41b548b883f7a67f27acf"

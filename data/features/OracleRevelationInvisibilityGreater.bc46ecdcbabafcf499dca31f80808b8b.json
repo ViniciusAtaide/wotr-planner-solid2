@@ -13,6 +13,7 @@
     "OracleRevelation"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 0,
   "assetName": "OracleRevelationInvisibilityGreater",
   "guid": "bc46ecdcbabafcf499dca31f80808b8b",

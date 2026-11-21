@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DevilbanePriestHeavyArmorProficiency",
   "guid": "907baa147cfa41b41b4a13c9a3bf3880",

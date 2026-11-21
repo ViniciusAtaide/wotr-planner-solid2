@@ -5,6 +5,7 @@
     "MythicTrick1"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterLoreNature1Feature",
   "guid": "cb232b9ed5c216242a667e95527ad8e1",

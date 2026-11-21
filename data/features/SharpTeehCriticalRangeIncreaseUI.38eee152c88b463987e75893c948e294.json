@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 4,
   "assetName": "SharpTeehCriticalRangeIncreaseUI",
   "guid": "38eee152c88b463987e75893c948e294",

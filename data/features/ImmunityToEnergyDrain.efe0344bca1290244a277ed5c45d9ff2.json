@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImmunityToEnergyDrain",
   "guid": "efe0344bca1290244a277ed5c45d9ff2",

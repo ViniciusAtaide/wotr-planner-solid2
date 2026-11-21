@@ -14,6 +14,7 @@
     "MysticTheurgeArcaneSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "MysticTheurgeSkald",
   "guid": "866874606e674aaf91e2b5e3da8da3f0",

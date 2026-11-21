@@ -22,6 +22,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KiColdIceStrikeFeature",
   "guid": "bd0eea84b4ff6994a96b119a3cee8357",

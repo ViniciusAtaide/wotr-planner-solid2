@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ThugBrutalBeatingFeature",
   "guid": "74179cb9dbaba2b47b25535fe12fea1d",

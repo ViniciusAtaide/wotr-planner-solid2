@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RangerProficiencies",
   "guid": "c5e479367d07d62428f2fe92f39c0341",

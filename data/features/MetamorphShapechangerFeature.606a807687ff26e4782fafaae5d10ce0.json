@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MetamorphShapechangerFeature",
   "guid": "606a807687ff26e4782fafaae5d10ce0",

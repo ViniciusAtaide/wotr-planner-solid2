@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SmitingJudgmentFeatureMagic",
   "guid": "6b96f8db83d8e754cb0c1993c71c39d0"

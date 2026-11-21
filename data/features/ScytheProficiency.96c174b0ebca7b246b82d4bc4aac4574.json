@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScytheProficiency",
   "guid": "96c174b0ebca7b246b82d4bc4aac4574",

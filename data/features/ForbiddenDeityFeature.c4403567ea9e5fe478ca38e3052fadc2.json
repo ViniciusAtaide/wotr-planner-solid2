@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ForbiddenDeityFeature",
   "guid": "c4403567ea9e5fe478ca38e3052fadc2"

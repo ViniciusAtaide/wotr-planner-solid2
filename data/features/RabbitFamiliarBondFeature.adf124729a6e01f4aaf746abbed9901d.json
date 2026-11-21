@@ -27,6 +27,7 @@
     "Familiar"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RabbitFamiliarBondFeature",
   "guid": "adf124729a6e01f4aaf746abbed9901d",

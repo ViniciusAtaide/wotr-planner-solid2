@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BeltOfArodenFeature",
   "guid": "ec4fdd66369b40b79a7da33b090007f9"

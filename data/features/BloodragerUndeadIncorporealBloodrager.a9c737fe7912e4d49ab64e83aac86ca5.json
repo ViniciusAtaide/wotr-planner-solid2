@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerUndeadIncorporealBloodrager",
   "guid": "a9c737fe7912e4d49ab64e83aac86ca5",

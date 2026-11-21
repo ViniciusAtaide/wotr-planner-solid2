@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TandemExecutionerWorkInTandemFeature",
   "guid": "45c697a4418f4ad885e627006bf602b3",

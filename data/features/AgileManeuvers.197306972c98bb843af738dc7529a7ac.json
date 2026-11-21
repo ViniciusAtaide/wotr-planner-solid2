@@ -42,6 +42,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AgileManeuvers",
   "guid": "197306972c98bb843af738dc7529a7ac",

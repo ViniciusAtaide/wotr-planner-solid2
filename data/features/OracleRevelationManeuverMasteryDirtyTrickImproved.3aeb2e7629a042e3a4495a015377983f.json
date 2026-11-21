@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationManeuverMasteryDirtyTrickImproved",
   "guid": "3aeb2e7629a042e3a4495a015377983f"

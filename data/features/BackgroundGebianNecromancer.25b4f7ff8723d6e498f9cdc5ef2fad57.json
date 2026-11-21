@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundGebianNecromancer",
   "guid": "25b4f7ff8723d6e498f9cdc5ef2fad57",

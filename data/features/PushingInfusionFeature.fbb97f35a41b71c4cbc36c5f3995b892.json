@@ -33,6 +33,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PushingInfusionFeature",
   "guid": "fbb97f35a41b71c4cbc36c5f3995b892",

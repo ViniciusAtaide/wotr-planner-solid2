@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AloneinTheDarkLastManStandingFeature",
   "guid": "3ca1d2a2633c46b69236fbc637db6980",

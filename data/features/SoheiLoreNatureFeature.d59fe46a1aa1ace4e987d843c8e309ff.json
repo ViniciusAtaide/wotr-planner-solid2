@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SoheiLoreNatureFeature",
   "guid": "d59fe46a1aa1ace4e987d843c8e309ff",

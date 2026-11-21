@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WindWhispererFoMFeature",
   "guid": "0d319cfd0a2f457cb5f99c90e9d6dc2e",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnergyEquilibriumFeature11",
   "guid": "6e88bfc908c44f87aa5a35f37edd4642",

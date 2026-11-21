@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleFlameSpells",
   "guid": "efe346f6fec1ea84d84daa9eefdef204"

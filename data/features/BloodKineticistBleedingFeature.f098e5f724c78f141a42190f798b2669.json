@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodKineticistBleedingFeature",
   "guid": "f098e5f724c78f141a42190f798b2669",

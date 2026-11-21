@@ -40,6 +40,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EntanglingInfusionFeature",
   "guid": "607539d018d03454aaac0a2c1522f7ac",

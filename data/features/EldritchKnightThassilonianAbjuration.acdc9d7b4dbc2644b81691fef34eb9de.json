@@ -21,6 +21,7 @@
     "EldritchKnightSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "EldritchKnightThassilonianAbjuration",
   "guid": "acdc9d7b4dbc2644b81691fef34eb9de",

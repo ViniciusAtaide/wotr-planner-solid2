@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineDraconicGreenBreathWeaponBaseFeatureDisciple",
   "guid": "1c65cf4f3301a1648831d5128c969727",

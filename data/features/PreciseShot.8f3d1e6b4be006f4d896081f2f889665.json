@@ -22,6 +22,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PreciseShot",
   "guid": "8f3d1e6b4be006f4d896081f2f889665",

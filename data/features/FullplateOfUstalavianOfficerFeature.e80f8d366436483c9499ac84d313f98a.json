@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FullplateOfUstalavianOfficerFeature",
   "guid": "e80f8d366436483c9499ac84d313f98a"

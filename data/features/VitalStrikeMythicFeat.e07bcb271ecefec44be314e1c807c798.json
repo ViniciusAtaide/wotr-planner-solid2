@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "VitalStrikeMythicFeat",
   "guid": "e07bcb271ecefec44be314e1c807c798",

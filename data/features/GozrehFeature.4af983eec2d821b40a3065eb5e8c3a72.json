@@ -132,6 +132,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GozrehFeature",
   "guid": "4af983eec2d821b40a3065eb5e8c3a72",

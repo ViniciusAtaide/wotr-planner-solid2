@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellknightSigniferAssiduous GazeFeature",
   "guid": "33c9dbdbe033a9f43894f8643fceb8fb",

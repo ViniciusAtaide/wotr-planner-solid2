@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OverlordsChainmailFeature",
   "guid": "08a2b9fe005945da947949359d71f505"

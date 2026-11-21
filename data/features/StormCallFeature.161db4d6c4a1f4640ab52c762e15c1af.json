@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StormCallFeature",
   "guid": "161db4d6c4a1f4640ab52c762e15c1af",

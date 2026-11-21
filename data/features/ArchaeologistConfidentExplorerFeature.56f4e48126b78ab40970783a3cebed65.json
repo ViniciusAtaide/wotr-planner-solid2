@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 4,
   "assetName": "ArchaeologistConfidentExplorerFeature",
   "guid": "56f4e48126b78ab40970783a3cebed65",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HexingClawsFeature",
   "guid": "47dd88ebda844f8485ab96936ca7809c",

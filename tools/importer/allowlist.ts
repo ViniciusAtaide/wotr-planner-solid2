@@ -1376,6 +1376,7 @@ export const allowlist: readonly AllowEntry[] = [
       Groups: list(featureGroup),
       Ranks: int,
       HideInUI: bool,
+      HideNotAvailibleInUI: orDefault(bool, false),
       LevelEntries: levelEntries,
       m_Classes: list(struct({ m_Class: ref('classes'), AdditionalLevel: int })),
       m_Archetypes: list(struct({ m_Archetype: ref('archetypes'), AdditionalLevel: int })),
@@ -1388,6 +1389,7 @@ export const allowlist: readonly AllowEntry[] = [
     },
     cite: [
       'UnitLogic/Feature.cs Hidden (HideInUI)',
+      'UI/MVVM/_VM/CharGen/Phases/FeatureSelector/CharGenFeatureSelectorItemVM.cs ShouldBeHidden (HideNotAvailibleInUI)',
       'Blueprints/Classes/Prerequisites/PrerequisiteFeaturesFromList.cs IsDeity (Groups)',
       'Blueprints/Classes/BlueprintProgression.cs CalcLevel (m_Classes, AdditionalLevel, m_Archetypes, ForAllOtherClasses, m_AlternateProgressionClasses, AlternateProgressionType, m_FeaturesRankIncrease)',
       'UnitLogic/Class/LevelUp/Actions/LevelUpHelper.cs UpdateProgression (GiveFeaturesForPreviousLevels, m_ExclusiveProgression)',
@@ -1404,6 +1406,7 @@ export const allowlist: readonly AllowEntry[] = [
       Groups: list(featureGroup),
       Ranks: int,
       HideInUI: bool,
+      HideNotAvailibleInUI: orDefault(bool, false),
       m_AllFeatures: list(ref(...FEATURE)),
       Mode: enumOf('Default', 'OnlyNew', 'OnlyRankUp'),
       Group: featureGroup,
@@ -1413,6 +1416,7 @@ export const allowlist: readonly AllowEntry[] = [
     },
     cite: [
       'UnitLogic/Feature.cs Hidden (HideInUI)',
+      'UI/MVVM/_VM/CharGen/Phases/FeatureSelector/CharGenFeatureSelectorItemVM.cs ShouldBeHidden (HideNotAvailibleInUI)',
       'Blueprints/Classes/Prerequisites/PrerequisiteFeaturesFromList.cs IsDeity (Groups)',
       'Blueprints/Classes/Selection/BlueprintFeatureSelection.cs CanSelect (m_AllFeatures, Mode, IgnorePrerequisites, ExceptWhiteListed)',
       'Blueprints/Classes/Selection/BlueprintFeatureSelection.cs GetGroup (Group)',
@@ -1427,9 +1431,10 @@ export const allowlist: readonly AllowEntry[] = [
   blueprint<BlueprintFeature>({
     type: 'BlueprintFeature',
     name: 'm_DisplayName',
-    fields: { Groups: list(featureGroup), Ranks: int, HideInUI: bool },
+    fields: { Groups: list(featureGroup), Ranks: int, HideInUI: bool, HideNotAvailibleInUI: orDefault(bool, false) },
     cite: [
       'UnitLogic/Feature.cs Hidden (HideInUI)',
+      'UI/MVVM/_VM/CharGen/Phases/FeatureSelector/CharGenFeatureSelectorItemVM.cs ShouldBeHidden (HideNotAvailibleInUI)',
       'Blueprints/Classes/Prerequisites/PrerequisiteFeaturesFromList.cs IsDeity (Groups)',
       'Blueprints/Classes/BlueprintFeature.cs MeetsPrerequisites (Ranks)',
     ],
@@ -1441,6 +1446,7 @@ export const allowlist: readonly AllowEntry[] = [
       Groups: list(featureGroup),
       Ranks: int,
       HideInUI: bool,
+      HideNotAvailibleInUI: orDefault(bool, false),
       ParameterType: enumOf(
         'Custom',
         'SpellSpecialization',
@@ -1477,6 +1483,7 @@ export const allowlist: readonly AllowEntry[] = [
     },
     cite: [
       'UnitLogic/Feature.cs Hidden (HideInUI)',
+      'UI/MVVM/_VM/CharGen/Phases/FeatureSelector/CharGenFeatureSelectorItemVM.cs ShouldBeHidden (HideNotAvailibleInUI)',
       'Blueprints/Classes/Prerequisites/PrerequisiteFeaturesFromList.cs IsDeity (Groups)',
       'Blueprints/Classes/BlueprintFeature.cs MeetsPrerequisites (Ranks)',
       'Blueprints/Classes/Selection/BlueprintParametrizedFeature.cs CanSelect (ParameterType, RequireProficiency, m_Prerequisite, HasNoSuchFeature, IgnoreParameterFeaturePrerequisites)',
@@ -1487,9 +1494,16 @@ export const allowlist: readonly AllowEntry[] = [
   blueprint<BlueprintFeatureReplaceSpellbook>({
     type: 'BlueprintFeatureReplaceSpellbook',
     name: 'm_DisplayName',
-    fields: { Groups: list(featureGroup), Ranks: int, HideInUI: bool, m_Spellbook: ref('spellbooks') },
+    fields: {
+      Groups: list(featureGroup),
+      Ranks: int,
+      HideInUI: bool,
+      HideNotAvailibleInUI: orDefault(bool, false),
+      m_Spellbook: ref('spellbooks'),
+    },
     cite: [
       'UnitLogic/Feature.cs Hidden (HideInUI)',
+      'UI/MVVM/_VM/CharGen/Phases/FeatureSelector/CharGenFeatureSelectorItemVM.cs ShouldBeHidden (HideNotAvailibleInUI)',
       'Blueprints/Classes/Prerequisites/PrerequisiteFeaturesFromList.cs IsDeity (Groups)',
       'Blueprints/Classes/BlueprintFeature.cs MeetsPrerequisites (Ranks)',
       'UnitLogic/Class/LevelUp/Actions/SelectFeature.cs GetReplaceSpellbook (m_Spellbook)',
@@ -1498,9 +1512,16 @@ export const allowlist: readonly AllowEntry[] = [
   blueprint<BlueprintFeatureSelectMythicSpellbook>({
     type: 'BlueprintFeatureSelectMythicSpellbook',
     name: 'm_DisplayName',
-    fields: { Groups: list(featureGroup), Ranks: int, HideInUI: bool, m_AllowedSpellbooks: list(ref('spellbooks')) },
+    fields: {
+      Groups: list(featureGroup),
+      Ranks: int,
+      HideInUI: bool,
+      HideNotAvailibleInUI: orDefault(bool, false),
+      m_AllowedSpellbooks: list(ref('spellbooks')),
+    },
     cite: [
       'UnitLogic/Feature.cs Hidden (HideInUI)',
+      'UI/MVVM/_VM/CharGen/Phases/FeatureSelector/CharGenFeatureSelectorItemVM.cs ShouldBeHidden (HideNotAvailibleInUI)',
       'Blueprints/Classes/Prerequisites/PrerequisiteFeaturesFromList.cs IsDeity (Groups)',
       'Blueprints/Classes/BlueprintFeature.cs MeetsPrerequisites (Ranks)',
       'Blueprints/Classes/BlueprintFeatureSelectMythicSpellbook.cs CanSelect (m_AllowedSpellbooks)',
@@ -1513,11 +1534,13 @@ export const allowlist: readonly AllowEntry[] = [
       Groups: list(featureGroup),
       Ranks: int,
       HideInUI: bool,
+      HideNotAvailibleInUI: orDefault(bool, false),
       m_Features: list(ref(...FEATURE)),
       SelectableRaceStat: bool,
     },
     cite: [
       'UnitLogic/Feature.cs Hidden (HideInUI)',
+      'UI/MVVM/_VM/CharGen/Phases/FeatureSelector/CharGenFeatureSelectorItemVM.cs ShouldBeHidden (HideNotAvailibleInUI)',
       'Blueprints/Classes/Prerequisites/PrerequisiteFeaturesFromList.cs IsDeity (Groups)',
       'Blueprints/Classes/BlueprintFeature.cs MeetsPrerequisites (Ranks)',
       'UnitLogic/Class/LevelUp/Actions/SelectRace.cs Apply (m_Features, SelectableRaceStat)',

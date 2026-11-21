@@ -16,6 +16,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FastLearner",
   "guid": "7ad59ca648c14c0a92adec798d51eb6d",

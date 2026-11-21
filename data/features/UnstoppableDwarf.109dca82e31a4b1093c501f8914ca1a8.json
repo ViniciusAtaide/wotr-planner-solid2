@@ -38,6 +38,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UnstoppableDwarf",
   "guid": "109dca82e31a4b1093c501f8914ca1a8",

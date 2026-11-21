@@ -16,6 +16,7 @@
     "FinesseTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FinesseTrainingElvenCurvedBlade",
   "guid": "04f3b956e5a5cf649bce83774e0bfe4a",

@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Shadowplay",
   "guid": "caba7e4dc9b14206bbf667814cc1cb90",

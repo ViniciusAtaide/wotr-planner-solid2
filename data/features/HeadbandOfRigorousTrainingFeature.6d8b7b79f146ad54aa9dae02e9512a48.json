@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "HeadbandOfRigorousTrainingFeature",
   "guid": "6d8b7b79f146ad54aa9dae02e9512a48"

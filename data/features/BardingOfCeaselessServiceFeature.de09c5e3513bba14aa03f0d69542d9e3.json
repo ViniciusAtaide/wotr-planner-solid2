@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "BardingOfCeaselessServiceFeature",
   "guid": "de09c5e3513bba14aa03f0d69542d9e3"

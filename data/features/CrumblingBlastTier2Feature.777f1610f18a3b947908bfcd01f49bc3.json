@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CrumblingBlastTier2Feature",
   "guid": "777f1610f18a3b947908bfcd01f49bc3",

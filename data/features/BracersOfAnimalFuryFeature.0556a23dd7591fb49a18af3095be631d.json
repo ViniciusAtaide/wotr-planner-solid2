@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "BracersOfAnimalFuryFeature",
   "guid": "0556a23dd7591fb49a18af3095be631d"

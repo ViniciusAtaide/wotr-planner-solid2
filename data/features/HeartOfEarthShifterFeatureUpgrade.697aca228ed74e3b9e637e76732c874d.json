@@ -26,6 +26,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HeartOfEarthShifterFeatureUpgrade",
   "guid": "697aca228ed74e3b9e637e76732c874d"

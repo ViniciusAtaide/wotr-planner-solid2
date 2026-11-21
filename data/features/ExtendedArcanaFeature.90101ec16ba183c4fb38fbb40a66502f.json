@@ -14,6 +14,7 @@
     "EldritchScionArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ExtendedArcanaFeature",
   "guid": "90101ec16ba183c4fb38fbb40a66502f",

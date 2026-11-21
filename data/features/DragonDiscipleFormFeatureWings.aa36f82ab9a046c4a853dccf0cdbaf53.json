@@ -64,6 +64,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonDiscipleFormFeatureWings",
   "guid": "aa36f82ab9a046c4a853dccf0cdbaf53",

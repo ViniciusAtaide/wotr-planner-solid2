@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "RacerSpeedFeature",
   "guid": "48e1e373ab3a76f499ec6713e4ba1ada",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WinterChildCompanionFirstUpgradeFeature",
   "guid": "a3e2972bb89b450ea6aab160fcb451c6",

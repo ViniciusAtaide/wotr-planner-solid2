@@ -38,6 +38,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SculptingTheRiver",
   "guid": "57c3ea6b05da4226aaeeb21da04e82ea",

@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FavoriteMetamagicEmpower",
   "guid": "abebb469211025b48ac7a32da41f06e8",

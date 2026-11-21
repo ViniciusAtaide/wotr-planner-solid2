@@ -13,6 +13,7 @@
     "OppositionSchool"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OppositionSchoolEvocation",
   "guid": "c3724cfbe98875f4a9f6d1aabd4011a6",

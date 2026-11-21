@@ -24,6 +24,7 @@
     "DivineHerbalistMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivineHerbalistWavesMysteryFeature",
   "guid": "d91dcec40f768ea47b45bb4c4b2af40d",

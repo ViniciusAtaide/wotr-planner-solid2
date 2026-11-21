@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcaneRiderMountedCombatFeature",
   "guid": "f6021e6d04e14e65a90e416ef08dc521",

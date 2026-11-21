@@ -50,6 +50,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LightBardingProficiency",
   "guid": "c62ba548b1a34b94b9802925b35737c2",

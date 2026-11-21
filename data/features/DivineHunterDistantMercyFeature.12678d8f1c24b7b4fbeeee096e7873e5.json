@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivineHunterDistantMercyFeature",
   "guid": "12678d8f1c24b7b4fbeeee096e7873e5",

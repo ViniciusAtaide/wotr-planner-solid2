@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "TowerShieldWardenOfDarknessShieldFeature",
   "guid": "4211cdbf0bf04a540a366ba1d1c7dcc2"

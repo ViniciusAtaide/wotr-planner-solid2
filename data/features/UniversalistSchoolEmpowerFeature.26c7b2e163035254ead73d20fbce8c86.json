@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UniversalistSchoolEmpowerFeature",
   "guid": "26c7b2e163035254ead73d20fbce8c86",

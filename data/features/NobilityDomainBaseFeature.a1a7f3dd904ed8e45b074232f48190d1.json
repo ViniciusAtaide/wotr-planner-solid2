@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NobilityDomainBaseFeature",
   "guid": "a1a7f3dd904ed8e45b074232f48190d1",

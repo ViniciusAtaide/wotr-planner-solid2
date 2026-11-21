@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RingOfBoneBreakingFeature",
   "guid": "e7a07e95a8bc4f80ba162389946cf752"

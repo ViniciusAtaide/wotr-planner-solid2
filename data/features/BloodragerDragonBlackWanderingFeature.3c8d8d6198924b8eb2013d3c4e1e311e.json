@@ -112,6 +112,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerDragonBlackWanderingFeature",
   "guid": "3c8d8d6198924b8eb2013d3c4e1e311e",

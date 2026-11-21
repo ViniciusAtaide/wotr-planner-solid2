@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellKnightOrderOfTheChainFeatureMain1",
   "guid": "6c27b29fc314c744e9ac860d6beec5de"

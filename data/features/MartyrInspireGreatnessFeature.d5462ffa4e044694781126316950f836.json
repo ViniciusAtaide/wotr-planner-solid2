@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "MartyrInspireGreatnessFeature",
   "guid": "d5462ffa4e044694781126316950f836",

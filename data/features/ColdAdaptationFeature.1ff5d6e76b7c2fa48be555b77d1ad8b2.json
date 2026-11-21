@@ -38,6 +38,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ColdAdaptationFeature",
   "guid": "1ff5d6e76b7c2fa48be555b77d1ad8b2",

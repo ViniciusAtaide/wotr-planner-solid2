@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerUndeadFrightfulStrikes",
   "guid": "d23ea2bb07e936b4fa932b878230bf68",

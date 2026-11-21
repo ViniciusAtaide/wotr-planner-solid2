@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "BloodlineDraconicCopperResistancesAbilityLevel3",
   "guid": "e67d06fab10bf39438afba1f9663d328",

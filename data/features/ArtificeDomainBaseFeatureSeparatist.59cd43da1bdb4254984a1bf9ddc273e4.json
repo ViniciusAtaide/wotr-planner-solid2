@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArtificeDomainBaseFeatureSeparatist",
   "guid": "59cd43da1bdb4254984a1bf9ddc273e4",

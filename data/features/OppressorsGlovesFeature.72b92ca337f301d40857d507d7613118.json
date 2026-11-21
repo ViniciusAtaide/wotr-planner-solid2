@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "OppressorsGlovesFeature",
   "guid": "72b92ca337f301d40857d507d7613118"

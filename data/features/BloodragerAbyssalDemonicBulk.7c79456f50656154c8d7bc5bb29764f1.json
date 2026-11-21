@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerAbyssalDemonicBulk",
   "guid": "7c79456f50656154c8d7bc5bb29764f1",

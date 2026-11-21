@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FiendflashShifteACBonusUnarmored",
   "guid": "5c9ac114c928420eb1a5041dfa84f07c"

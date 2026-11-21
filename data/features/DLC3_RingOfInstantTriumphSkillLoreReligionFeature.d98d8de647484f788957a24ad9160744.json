@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DLC3_RingOfInstantTriumphSkillLoreReligionFeature",
   "guid": "d98d8de647484f788957a24ad9160744"

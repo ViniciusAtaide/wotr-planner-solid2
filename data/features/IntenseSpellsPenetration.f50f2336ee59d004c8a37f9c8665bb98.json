@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "IntenseSpellsPenetration",
   "guid": "f50f2336ee59d004c8a37f9c8665bb98",

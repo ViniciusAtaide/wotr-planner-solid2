@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 20,
   "assetName": "AlchemistBombsFeature",
   "guid": "c59b2f256f5a70a4d896568658315b7d",

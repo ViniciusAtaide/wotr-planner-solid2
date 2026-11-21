@@ -31,6 +31,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BearingTheShard",
   "guid": "ffae1721b245412ab68514252b9d271d",

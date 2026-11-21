@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellKnightOrderOfTheGodclawFeatureMain1",
   "guid": "4b46f15dcb606954e84d954d5a6596eb"

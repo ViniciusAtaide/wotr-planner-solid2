@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MutatingStrainImprovedFeature",
   "guid": "6aa16e16a689467eb258003d06630db0",

@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "HellknightSigniferFeyspeakerLevelUp",
   "guid": "bd0063c8cf9644d4fbba370cdca433c4",

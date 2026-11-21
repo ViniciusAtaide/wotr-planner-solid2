@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "NegotiatorsBracersFeature",
   "guid": "99a340dd8ddf6d840b63c5f478f47006"

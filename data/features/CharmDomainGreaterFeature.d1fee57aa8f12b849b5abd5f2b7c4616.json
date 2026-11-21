@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CharmDomainGreaterFeature",
   "guid": "d1fee57aa8f12b849b5abd5f2b7c4616",

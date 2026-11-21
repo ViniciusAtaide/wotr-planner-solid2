@@ -46,6 +46,7 @@
     "MysticTheurgeArcaneSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "MysticTheurgeArcanist",
   "guid": "376fb45ad15500a4a88bf8120000e221",

@@ -13,6 +13,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AbundantSmite",
   "guid": "7e5b63faeca24474db0bfd019167dda4",

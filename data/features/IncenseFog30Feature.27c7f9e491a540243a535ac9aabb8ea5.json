@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "IncenseFog30Feature",
   "guid": "27c7f9e491a540243a535ac9aabb8ea5",

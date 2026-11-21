@@ -13,6 +13,7 @@
     "DemonicAspect"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BrimorakAspectFeature",
   "guid": "28f08ce20ee81b24abfd49404e4b9577",

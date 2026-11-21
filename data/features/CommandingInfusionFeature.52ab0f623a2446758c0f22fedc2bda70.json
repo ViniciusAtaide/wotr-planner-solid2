@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CommandingInfusionFeature",
   "guid": "52ab0f623a2446758c0f22fedc2bda70",

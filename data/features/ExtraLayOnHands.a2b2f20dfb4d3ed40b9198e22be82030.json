@@ -18,6 +18,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ExtraLayOnHands",
   "guid": "a2b2f20dfb4d3ed40b9198e22be82030",

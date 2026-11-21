@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ClericProficiencies",
   "guid": "8c971173613282844888dc20d572cfc9",

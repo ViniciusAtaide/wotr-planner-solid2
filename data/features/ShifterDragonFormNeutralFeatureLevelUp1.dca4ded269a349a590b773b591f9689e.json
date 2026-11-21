@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterDragonFormNeutralFeatureLevelUp1",
   "guid": "dca4ded269a349a590b773b591f9689e"

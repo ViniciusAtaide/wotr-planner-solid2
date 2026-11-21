@@ -20,6 +20,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexLifeGiverFeature",
   "guid": "c7eb5151b6a670e47bf4713c0934e144",

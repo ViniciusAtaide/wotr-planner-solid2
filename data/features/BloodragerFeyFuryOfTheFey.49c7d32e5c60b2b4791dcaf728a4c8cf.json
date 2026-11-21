@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerFeyFuryOfTheFey",
   "guid": "49c7d32e5c60b2b4791dcaf728a4c8cf",

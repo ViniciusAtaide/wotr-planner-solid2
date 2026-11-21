@@ -54,6 +54,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DuelingMastery",
   "guid": "c3a66c1bbd2fb65498b130802d5f183a",

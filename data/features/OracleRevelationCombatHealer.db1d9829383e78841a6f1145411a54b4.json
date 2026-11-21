@@ -33,6 +33,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationCombatHealer",
   "guid": "db1d9829383e78841a6f1145411a54b4",

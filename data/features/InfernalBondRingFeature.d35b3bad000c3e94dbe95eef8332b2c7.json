@@ -10,6 +10,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "InfernalBondRingFeature",
   "guid": "d35b3bad000c3e94dbe95eef8332b2c7"

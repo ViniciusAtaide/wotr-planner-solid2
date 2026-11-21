@@ -40,6 +40,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "SelectableRaceStat": true,
   "assetName": "MongrelmanRace",

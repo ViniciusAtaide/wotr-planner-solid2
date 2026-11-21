@@ -14,6 +14,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterSkald",
   "guid": "be85d2746a464b49a37193c9bab425ce",

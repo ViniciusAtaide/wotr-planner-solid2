@@ -10,6 +10,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MasterShapeshifter",
   "guid": "934670ef88b281b4da5596db8b00df2f",

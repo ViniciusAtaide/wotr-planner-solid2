@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DawnflowersKiss_Good02_ScimitarFeature",
   "guid": "52e86894436542ff84bb5709d51795d5"

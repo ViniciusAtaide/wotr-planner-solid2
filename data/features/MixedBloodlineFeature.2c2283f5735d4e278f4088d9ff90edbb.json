@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MixedBloodlineFeature",
   "guid": "2c2283f5735d4e278f4088d9ff90edbb",

@@ -34,6 +34,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonbloodShifterAspectFeatureNeutral",
   "guid": "98f8aaf2baec4abcb1f868a6f2ece134",

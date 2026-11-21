@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "HellknightSigniferShamanLevelUp",
   "guid": "f073d0122a4dd5f46a63403ef212fabe",

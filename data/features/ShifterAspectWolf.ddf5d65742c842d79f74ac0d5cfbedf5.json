@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterAspectWolf",
   "guid": "ddf5d65742c842d79f74ac0d5cfbedf5",

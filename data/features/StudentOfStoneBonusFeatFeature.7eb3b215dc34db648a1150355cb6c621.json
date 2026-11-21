@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StudentOfStoneBonusFeatFeature",
   "guid": "7eb3b215dc34db648a1150355cb6c621",

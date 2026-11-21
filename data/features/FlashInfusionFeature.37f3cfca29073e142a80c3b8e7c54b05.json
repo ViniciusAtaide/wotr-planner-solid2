@@ -35,6 +35,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FlashInfusionFeature",
   "guid": "37f3cfca29073e142a80c3b8e7c54b05",

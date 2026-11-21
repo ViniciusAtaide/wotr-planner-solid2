@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WavesSpiritSpellListFeature",
   "guid": "700942eefb96b0c40b523ee228c1ed8c"

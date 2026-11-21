@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FakeInspireGreatnessFeature",
   "guid": "bc4cac39686b44ab8030edc4b60634ce",

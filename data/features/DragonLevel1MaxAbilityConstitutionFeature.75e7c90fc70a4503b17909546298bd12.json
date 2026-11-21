@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonLevel1MaxAbilityConstitutionFeature",
   "guid": "75e7c90fc70a4503b17909546298bd12"

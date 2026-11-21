@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalRampagerClaws1d6",
   "guid": "1c592a4f288a46889aa70a0eac774c4f",

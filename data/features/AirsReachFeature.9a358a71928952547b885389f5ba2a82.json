@@ -26,6 +26,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AirsReachFeature",
   "guid": "9a358a71928952547b885389f5ba2a82",

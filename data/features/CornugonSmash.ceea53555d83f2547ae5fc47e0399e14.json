@@ -22,6 +22,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CornugonSmash",
   "guid": "ceea53555d83f2547ae5fc47e0399e14",

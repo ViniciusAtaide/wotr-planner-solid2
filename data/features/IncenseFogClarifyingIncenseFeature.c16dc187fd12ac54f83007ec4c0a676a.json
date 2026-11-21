@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "IncenseFogClarifyingIncenseFeature",
   "guid": "c16dc187fd12ac54f83007ec4c0a676a",

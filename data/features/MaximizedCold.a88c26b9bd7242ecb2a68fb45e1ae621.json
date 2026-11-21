@@ -31,6 +31,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MaximizedCold",
   "guid": "a88c26b9bd7242ecb2a68fb45e1ae621",

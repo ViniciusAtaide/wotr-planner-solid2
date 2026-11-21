@@ -20,6 +20,7 @@
     "Discovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChokingBombFeature",
   "guid": "b3c6cb76d5b11cf4c8314d7b1c7b9b8b",

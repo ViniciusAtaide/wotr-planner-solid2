@@ -22,6 +22,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BlindFightGreater",
   "guid": "80a50d9744a40ac4c96e2cc6451a6703",

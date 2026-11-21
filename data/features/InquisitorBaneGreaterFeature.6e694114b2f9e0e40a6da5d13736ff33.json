@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InquisitorBaneGreaterFeature",
   "guid": "6e694114b2f9e0e40a6da5d13736ff33",

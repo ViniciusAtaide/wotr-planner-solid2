@@ -50,6 +50,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AerialEvasionFeature",
   "guid": "871e6b0bb9d050743b98b78990ae1cff",

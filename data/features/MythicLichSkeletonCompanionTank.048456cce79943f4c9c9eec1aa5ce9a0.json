@@ -10,6 +10,7 @@
     "SkeletalChampion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MythicLichSkeletonCompanionTank",
   "guid": "048456cce79943f4c9c9eec1aa5ce9a0",

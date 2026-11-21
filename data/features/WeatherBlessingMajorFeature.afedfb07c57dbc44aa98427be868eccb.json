@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WeatherBlessingMajorFeature",
   "guid": "afedfb07c57dbc44aa98427be868eccb",

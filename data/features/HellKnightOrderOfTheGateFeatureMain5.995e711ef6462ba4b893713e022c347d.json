@@ -31,6 +31,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellKnightOrderOfTheGateFeatureMain5",
   "guid": "995e711ef6462ba4b893713e022c347d"

@@ -13,6 +13,7 @@
     "LichUniqueAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DeathOfElementsFeature",
   "guid": "2743491c52185344fba589754590d909",

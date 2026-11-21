@@ -13,6 +13,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexEvilEyeFeature",
   "guid": "a977bcfb36169d447914f084793cac2c",

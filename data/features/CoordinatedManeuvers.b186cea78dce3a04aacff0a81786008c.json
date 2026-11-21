@@ -31,6 +31,7 @@
     "TeamworkFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CoordinatedManeuvers",
   "guid": "b186cea78dce3a04aacff0a81786008c",

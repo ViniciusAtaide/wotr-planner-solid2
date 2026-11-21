@@ -51,6 +51,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RagingBrutality",
   "guid": "c002fad1506842abb2da5bcedacc358e",

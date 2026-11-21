@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FalchionProficiency",
   "guid": "caff2f50d06e4069ab18dc05cc97a966",

@@ -17,6 +17,7 @@
     "CreatureType"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonType",
   "guid": "455ac88e22f55804ab87c2467deff1d6",

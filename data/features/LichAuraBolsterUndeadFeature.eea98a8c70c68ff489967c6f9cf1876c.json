@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LichAuraBolsterUndeadFeature",
   "guid": "eea98a8c70c68ff489967c6f9cf1876c",

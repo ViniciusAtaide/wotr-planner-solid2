@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DanceOfAvoidanceFeature",
   "guid": "32a4cdb964a370340a2d945ec8a76375",

@@ -20,6 +20,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FullArcanistReservoire",
   "guid": "b3f5fd67399a2a54ea4ddd97206b4c82",

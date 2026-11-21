@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "LoremasterLivingGrimoireLevelUp",
   "guid": "c7c1c05751d644d6ad2c1b73b52bd858",

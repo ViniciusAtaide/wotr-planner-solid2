@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ReanimatorSimpleReanimationFeature",
   "guid": "d45a818a74b842f3912adc22419b2760",

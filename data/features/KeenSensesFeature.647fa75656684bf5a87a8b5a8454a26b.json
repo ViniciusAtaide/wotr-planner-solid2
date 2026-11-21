@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KeenSensesFeature",
   "guid": "647fa75656684bf5a87a8b5a8454a26b",

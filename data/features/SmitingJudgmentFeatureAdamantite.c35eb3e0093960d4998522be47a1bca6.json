@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SmitingJudgmentFeatureAdamantite",
   "guid": "c35eb3e0093960d4998522be47a1bca6"

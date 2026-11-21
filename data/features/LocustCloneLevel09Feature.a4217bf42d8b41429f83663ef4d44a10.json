@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LocustCloneLevel09Feature",
   "guid": "a4217bf42d8b41429f83663ef4d44a10",

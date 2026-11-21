@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleAncestorFinalRevelation",
   "guid": "933b4d571a31b9a43aa424eac0a22068",

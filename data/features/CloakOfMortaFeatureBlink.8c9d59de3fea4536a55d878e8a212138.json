@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CloakOfMortaFeatureBlink",
   "guid": "8c9d59de3fea4536a55d878e8a212138"

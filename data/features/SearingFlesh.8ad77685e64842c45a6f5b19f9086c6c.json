@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SearingFlesh",
   "guid": "8ad77685e64842c45a6f5b19f9086c6c",

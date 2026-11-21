@@ -44,6 +44,7 @@
     "VivisectionistDiscovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreaterMutagenFeature",
   "guid": "76c61966afdd82048911f3d63c6fe0bc",

@@ -5,6 +5,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Alertness",
   "guid": "1c04fe9a13a22bc499ffac03e6f79153",

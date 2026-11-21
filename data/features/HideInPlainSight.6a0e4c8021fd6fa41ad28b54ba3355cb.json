@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HideInPlainSight",
   "guid": "6a0e4c8021fd6fa41ad28b54ba3355cb",

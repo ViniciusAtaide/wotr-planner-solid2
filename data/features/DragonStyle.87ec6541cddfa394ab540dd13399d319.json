@@ -45,6 +45,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonStyle",
   "guid": "87ec6541cddfa394ab540dd13399d319",

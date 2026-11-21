@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonRageFeature",
   "guid": "6a8af3f208a0fa747a465b70b7043019",

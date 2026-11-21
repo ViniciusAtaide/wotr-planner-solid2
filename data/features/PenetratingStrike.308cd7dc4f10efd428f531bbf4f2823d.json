@@ -23,6 +23,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PenetratingStrike",
   "guid": "308cd7dc4f10efd428f531bbf4f2823d",

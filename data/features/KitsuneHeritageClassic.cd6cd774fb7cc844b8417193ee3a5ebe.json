@@ -44,6 +44,7 @@
     "KitsuneHeritage"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KitsuneHeritageClassic",
   "guid": "cd6cd774fb7cc844b8417193ee3a5ebe",

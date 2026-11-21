@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreaterChimericAspectFeature",
   "guid": "29b6f12ebb17485fa783f6e284bab6b3",

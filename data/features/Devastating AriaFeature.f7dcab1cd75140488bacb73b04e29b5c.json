@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Devastating AriaFeature",
   "guid": "f7dcab1cd75140488bacb73b04e29b5c",

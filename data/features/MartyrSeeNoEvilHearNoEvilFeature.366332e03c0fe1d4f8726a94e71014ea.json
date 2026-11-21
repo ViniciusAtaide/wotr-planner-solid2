@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "MartyrSeeNoEvilHearNoEvilFeature",
   "guid": "366332e03c0fe1d4f8726a94e71014ea",

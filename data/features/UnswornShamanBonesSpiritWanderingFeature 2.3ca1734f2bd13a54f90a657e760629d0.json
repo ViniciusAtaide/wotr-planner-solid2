@@ -50,6 +50,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UnswornShamanBonesSpiritWanderingFeature 2",
   "guid": "3ca1734f2bd13a54f90a657e760629d0",

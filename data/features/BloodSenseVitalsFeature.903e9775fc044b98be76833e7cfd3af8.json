@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodSenseVitalsFeature",
   "guid": "903e9775fc044b98be76833e7cfd3af8",

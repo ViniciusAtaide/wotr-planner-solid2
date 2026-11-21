@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScapegoatFeature",
   "guid": "cffe3f12c8d00ba4fa15d0c6fcd375c8",

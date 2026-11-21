@@ -159,6 +159,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AsmodeusFeature",
   "guid": "a3a5ccc9c670e6f4ca4a686d23b89900",

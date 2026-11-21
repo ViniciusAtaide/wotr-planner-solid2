@@ -18,6 +18,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ExtraChannelShaman",
   "guid": "4cc73e43ab814bc48ade2e291729b359",

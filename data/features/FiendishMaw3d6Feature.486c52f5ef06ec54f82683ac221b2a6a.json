@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FiendishMaw3d6Feature",
   "guid": "486c52f5ef06ec54f82683ac221b2a6a",

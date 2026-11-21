@@ -37,6 +37,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShatterDefenses",
   "guid": "61a17ccbbb3d79445b0926347ec07577",

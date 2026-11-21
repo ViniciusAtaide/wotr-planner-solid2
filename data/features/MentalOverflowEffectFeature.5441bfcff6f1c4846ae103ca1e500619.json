@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MentalOverflowEffectFeature",
   "guid": "5441bfcff6f1c4846ae103ca1e500619",

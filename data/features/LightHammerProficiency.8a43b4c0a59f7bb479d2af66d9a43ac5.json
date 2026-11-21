@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LightHammerProficiency",
   "guid": "8a43b4c0a59f7bb479d2af66d9a43ac5",

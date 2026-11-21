@@ -5,6 +5,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnduringSpells",
   "guid": "2f206e6d292bdfb4d981e99dcf08153f",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImpromptuSneakAttackFeature",
   "guid": "8ec618121de114845981933a3d5c4b02",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WinterWitchFrostPower",
   "guid": "a593f3f1f8137c74da7569dbdac62949",

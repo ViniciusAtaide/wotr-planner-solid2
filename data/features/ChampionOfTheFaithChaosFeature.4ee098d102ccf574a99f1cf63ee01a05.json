@@ -31,6 +31,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChampionOfTheFaithChaosFeature",
   "guid": "4ee098d102ccf574a99f1cf63ee01a05",

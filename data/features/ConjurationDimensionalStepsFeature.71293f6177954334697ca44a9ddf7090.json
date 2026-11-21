@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ConjurationDimensionalStepsFeature",
   "guid": "71293f6177954334697ca44a9ddf7090",

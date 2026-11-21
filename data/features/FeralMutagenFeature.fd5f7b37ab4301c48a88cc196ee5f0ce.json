@@ -21,6 +21,7 @@
     "VivisectionistDiscovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FeralMutagenFeature",
   "guid": "fd5f7b37ab4301c48a88cc196ee5f0ce",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "AmuletOfDevourFeature",
   "guid": "ef6f73328180fa748a393435e8c48e1f"

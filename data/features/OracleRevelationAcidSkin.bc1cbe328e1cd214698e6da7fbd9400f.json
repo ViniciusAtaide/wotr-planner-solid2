@@ -58,6 +58,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationAcidSkin",
   "guid": "bc1cbe328e1cd214698e6da7fbd9400f",

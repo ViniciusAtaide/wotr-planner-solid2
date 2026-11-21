@@ -34,6 +34,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexFireNimbusFeature",
   "guid": "24074b42608fff54f8e1a5b7fa4a7d29",

@@ -53,6 +53,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonicDefencesElectricity",
   "guid": "af0027e0c0432bc418e813e32de0460b",

@@ -58,6 +58,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerCelestialWanderingFeature",
   "guid": "fa5bf2a496444e2aada8897eddf6b31a",

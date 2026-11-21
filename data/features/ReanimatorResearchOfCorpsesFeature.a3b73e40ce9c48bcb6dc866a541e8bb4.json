@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ReanimatorResearchOfCorpsesFeature",
   "guid": "a3b73e40ce9c48bcb6dc866a541e8bb4",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SoulOfStoneFeature",
   "guid": "cbfbc3b230813ad4d81433ac9fb40ae7",

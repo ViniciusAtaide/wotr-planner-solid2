@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SummonFrozenAbrikandilu",
   "guid": "09ef79b322f14f21aaa01a6808304512",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StrengthBlessingMajorFeature",
   "guid": "53261225db472664b841d7930f6ffe76",

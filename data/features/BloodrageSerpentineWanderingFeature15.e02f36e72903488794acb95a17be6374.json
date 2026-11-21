@@ -58,6 +58,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodrageSerpentineWanderingFeature15",
   "guid": "e02f36e72903488794acb95a17be6374",

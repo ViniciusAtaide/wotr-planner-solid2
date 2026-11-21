@@ -155,6 +155,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CalistriaFeature",
   "guid": "c7531715a3f046d4da129619be63f44c",

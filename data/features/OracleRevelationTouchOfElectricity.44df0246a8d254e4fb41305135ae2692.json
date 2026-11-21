@@ -39,6 +39,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationTouchOfElectricity",
   "guid": "44df0246a8d254e4fb41305135ae2692",

@@ -67,6 +67,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalAcidWanderingFeature9",
   "guid": "a6df8cd3a6e44ab594aab7e99b923c01",

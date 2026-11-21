@@ -30,6 +30,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DualMindedHalfElf",
   "guid": "ac53bfa3023b41978f3e327c3a4a647f",

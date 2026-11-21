@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlagueHexCharismaDamageFeature",
   "guid": "9213e20f726e4785bd42f1e3d7acc703",

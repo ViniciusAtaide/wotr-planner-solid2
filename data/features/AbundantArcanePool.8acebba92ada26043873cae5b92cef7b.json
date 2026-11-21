@@ -27,6 +27,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AbundantArcanePool",
   "guid": "8acebba92ada26043873cae5b92cef7b",

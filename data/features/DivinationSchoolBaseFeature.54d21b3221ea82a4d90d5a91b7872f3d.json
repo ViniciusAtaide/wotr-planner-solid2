@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivinationSchoolBaseFeature",
   "guid": "54d21b3221ea82a4d90d5a91b7872f3d",

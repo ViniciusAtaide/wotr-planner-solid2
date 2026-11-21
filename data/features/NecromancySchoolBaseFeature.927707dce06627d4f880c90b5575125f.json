@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NecromancySchoolBaseFeature",
   "guid": "927707dce06627d4f880c90b5575125f",

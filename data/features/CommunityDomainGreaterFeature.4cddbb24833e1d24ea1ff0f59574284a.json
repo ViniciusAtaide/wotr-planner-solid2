@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CommunityDomainGreaterFeature",
   "guid": "4cddbb24833e1d24ea1ff0f59574284a",

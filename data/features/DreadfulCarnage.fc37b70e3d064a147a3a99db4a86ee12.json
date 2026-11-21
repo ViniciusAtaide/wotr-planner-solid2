@@ -37,6 +37,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DreadfulCarnage",
   "guid": "fc37b70e3d064a147a3a99db4a86ee12",

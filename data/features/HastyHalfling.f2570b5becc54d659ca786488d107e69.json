@@ -29,6 +29,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HastyHalfling",
   "guid": "f2570b5becc54d659ca786488d107e69",

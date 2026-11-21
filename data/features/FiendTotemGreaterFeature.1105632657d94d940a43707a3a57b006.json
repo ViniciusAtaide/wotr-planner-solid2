@@ -49,6 +49,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FiendTotemGreaterFeature",
   "guid": "1105632657d94d940a43707a3a57b006",

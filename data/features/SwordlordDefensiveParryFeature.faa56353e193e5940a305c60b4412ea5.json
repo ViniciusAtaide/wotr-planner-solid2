@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SwordlordDefensiveParryFeature",
   "guid": "faa56353e193e5940a305c60b4412ea5",

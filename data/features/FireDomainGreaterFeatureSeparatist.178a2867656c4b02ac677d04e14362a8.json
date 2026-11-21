@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "FireDomainGreaterFeatureSeparatist",
   "guid": "178a2867656c4b02ac677d04e14362a8",

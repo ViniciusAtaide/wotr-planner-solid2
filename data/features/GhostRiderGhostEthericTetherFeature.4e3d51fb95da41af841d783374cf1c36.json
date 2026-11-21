@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GhostRiderGhostEthericTetherFeature",
   "guid": "4e3d51fb95da41af841d783374cf1c36",

@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundAlkenstarAlchemist",
   "guid": "f51af2d4fa3358844879cbc5ee0f1073",

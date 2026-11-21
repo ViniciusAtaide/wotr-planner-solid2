@@ -38,6 +38,7 @@
     "TeamworkFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SiezeTheMoment",
   "guid": "1191ef3065e6f8e4f9fbe1b7e3c0f760",

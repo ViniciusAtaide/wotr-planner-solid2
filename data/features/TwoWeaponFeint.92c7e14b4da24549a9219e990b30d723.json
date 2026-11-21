@@ -44,6 +44,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TwoWeaponFeint",
   "guid": "92c7e14b4da24549a9219e990b30d723",

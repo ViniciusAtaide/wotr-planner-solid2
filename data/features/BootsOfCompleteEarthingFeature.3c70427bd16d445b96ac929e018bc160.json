@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "BootsOfCompleteEarthingFeature",
   "guid": "3c70427bd16d445b96ac929e018bc160"

@@ -19,6 +19,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundOsirionHistorian",
   "guid": "759e9118b89068245afc0e25817aaf58",

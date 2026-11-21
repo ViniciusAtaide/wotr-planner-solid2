@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PhantasmalGuideFeature",
   "guid": "2c5fde95eef5303489c819057ff0a65b"

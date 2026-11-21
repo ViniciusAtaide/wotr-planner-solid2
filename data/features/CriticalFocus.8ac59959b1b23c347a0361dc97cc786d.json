@@ -15,6 +15,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CriticalFocus",
   "guid": "8ac59959b1b23c347a0361dc97cc786d",

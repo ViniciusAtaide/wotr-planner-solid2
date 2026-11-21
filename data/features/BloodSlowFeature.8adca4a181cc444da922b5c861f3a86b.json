@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodSlowFeature",
   "guid": "8adca4a181cc444da922b5c861f3a86b",

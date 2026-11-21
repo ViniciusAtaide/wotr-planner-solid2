@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodEneravtionFeature",
   "guid": "9b748f01f281406c8517e907cce551db",

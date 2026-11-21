@@ -37,6 +37,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelSummonFeatureTier3",
   "guid": "295a0d23a64a85b4a9e99e05041a3f8c",

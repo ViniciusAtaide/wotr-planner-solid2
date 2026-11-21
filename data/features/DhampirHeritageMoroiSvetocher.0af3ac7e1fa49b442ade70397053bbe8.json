@@ -49,6 +49,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DhampirHeritageMoroiSvetocher",
   "guid": "0af3ac7e1fa49b442ade70397053bbe8",

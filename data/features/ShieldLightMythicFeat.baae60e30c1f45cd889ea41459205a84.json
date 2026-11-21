@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShieldLightMythicFeat",
   "guid": "baae60e30c1f45cd889ea41459205a84",

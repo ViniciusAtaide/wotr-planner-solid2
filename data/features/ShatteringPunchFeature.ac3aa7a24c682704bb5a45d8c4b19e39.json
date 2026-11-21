@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShatteringPunchFeature",
   "guid": "ac3aa7a24c682704bb5a45d8c4b19e39",

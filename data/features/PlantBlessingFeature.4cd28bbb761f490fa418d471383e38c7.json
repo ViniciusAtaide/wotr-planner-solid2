@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlantBlessingFeature",
   "guid": "4cd28bbb761f490fa418d471383e38c7",

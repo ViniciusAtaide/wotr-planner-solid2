@@ -40,6 +40,7 @@
     "OracleMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleBattleMysteryFeature",
   "guid": "6b8e676943cb91648b21b7ca72fbb833",

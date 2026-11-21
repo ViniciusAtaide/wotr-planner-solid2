@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MagusProficiencies",
   "guid": "8f8c2640ffad89349883fc2e5ff2091e",

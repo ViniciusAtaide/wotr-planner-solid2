@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChronomancyFeature",
   "guid": "47ac3e4aa5054963bf1f521b292d17fc",

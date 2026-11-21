@@ -26,6 +26,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlagueHexMentalImpairedFeature",
   "guid": "046b40d2d753429991d60495386d9d9d",

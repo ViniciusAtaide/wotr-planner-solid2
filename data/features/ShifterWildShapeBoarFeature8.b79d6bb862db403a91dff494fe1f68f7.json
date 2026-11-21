@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeBoarFeature8",
   "guid": "b79d6bb862db403a91dff494fe1f68f7",

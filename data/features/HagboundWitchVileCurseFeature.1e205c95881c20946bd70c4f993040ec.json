@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HagboundWitchVileCurseFeature",
   "guid": "1e205c95881c20946bd70c4f993040ec",

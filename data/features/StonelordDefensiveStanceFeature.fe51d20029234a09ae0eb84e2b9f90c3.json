@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StonelordDefensiveStanceFeature",
   "guid": "fe51d20029234a09ae0eb84e2b9f90c3",

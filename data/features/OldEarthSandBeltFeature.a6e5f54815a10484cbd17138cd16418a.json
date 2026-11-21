@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OldEarthSandBeltFeature",
   "guid": "a6e5f54815a10484cbd17138cd16418a"

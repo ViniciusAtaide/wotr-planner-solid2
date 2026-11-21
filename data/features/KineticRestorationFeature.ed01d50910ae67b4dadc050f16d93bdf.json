@@ -29,6 +29,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KineticRestorationFeature",
   "guid": "ed01d50910ae67b4dadc050f16d93bdf",

@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterLoreReligionTravelDomainFeature",
   "guid": "1f180126ed8845dcaf5de6e1e5302a43",

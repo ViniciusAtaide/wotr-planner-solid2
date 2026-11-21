@@ -37,6 +37,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MagneticInfusionFeature",
   "guid": "d6b95ac99e3004b499d750835864e053",

@@ -28,6 +28,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TrickeryDomainBaseFeatureSeparatist",
   "guid": "1b9ad1d739094039906abff310b4b574",

@@ -47,6 +47,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivaStyle",
   "guid": "b46bf228d6b2427abd028e2fe7b84600",

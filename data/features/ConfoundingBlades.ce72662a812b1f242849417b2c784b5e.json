@@ -34,6 +34,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ConfoundingBlades",
   "guid": "ce72662a812b1f242849417b2c784b5e",

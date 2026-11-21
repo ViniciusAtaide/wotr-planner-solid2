@@ -21,6 +21,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HuntersSurprise",
   "guid": "6209197fed619cf41910f9aaceaf7d51",

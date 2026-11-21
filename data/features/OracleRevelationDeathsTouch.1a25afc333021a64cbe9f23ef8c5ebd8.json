@@ -26,6 +26,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationDeathsTouch",
   "guid": "1a25afc333021a64cbe9f23ef8c5ebd8",

@@ -40,6 +40,7 @@
     "OracleMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleWavesMysteryFeature",
   "guid": "e2f8bd7c45dfb954c8c42b168505c783",

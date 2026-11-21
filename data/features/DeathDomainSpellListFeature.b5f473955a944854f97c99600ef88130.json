@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DeathDomainSpellListFeature",
   "guid": "b5f473955a944854f97c99600ef88130"

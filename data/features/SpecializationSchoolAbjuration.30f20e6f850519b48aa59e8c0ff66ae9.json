@@ -14,6 +14,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpecializationSchoolAbjuration",
   "guid": "30f20e6f850519b48aa59e8c0ff66ae9",

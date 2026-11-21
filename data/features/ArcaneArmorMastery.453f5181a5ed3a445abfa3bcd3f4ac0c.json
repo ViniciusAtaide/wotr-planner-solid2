@@ -28,6 +28,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcaneArmorMastery",
   "guid": "453f5181a5ed3a445abfa3bcd3f4ac0c",

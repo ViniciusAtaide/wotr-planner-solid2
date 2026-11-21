@@ -5,6 +5,7 @@
   "Group": "MythicTrick3",
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "IgnorePrerequisites": false,
   "Mode": "Default",
   "Obligatory": false,

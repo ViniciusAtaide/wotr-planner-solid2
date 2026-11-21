@@ -30,6 +30,7 @@
     "HellknightSigniferSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "HellknightSigniferMagus",
   "guid": "0615ae4a3d7fe7045a3b59bf1df7c3e1",

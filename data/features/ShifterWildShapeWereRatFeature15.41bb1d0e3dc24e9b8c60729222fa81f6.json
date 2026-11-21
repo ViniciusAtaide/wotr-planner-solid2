@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeWereRatFeature15",
   "guid": "41bb1d0e3dc24e9b8c60729222fa81f6",

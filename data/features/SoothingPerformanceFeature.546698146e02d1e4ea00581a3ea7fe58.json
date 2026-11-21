@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SoothingPerformanceFeature",
   "guid": "546698146e02d1e4ea00581a3ea7fe58",

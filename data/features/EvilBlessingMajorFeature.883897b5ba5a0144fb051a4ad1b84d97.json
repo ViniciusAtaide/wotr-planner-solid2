@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EvilBlessingMajorFeature",
   "guid": "883897b5ba5a0144fb051a4ad1b84d97",

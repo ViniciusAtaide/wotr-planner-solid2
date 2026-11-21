@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FoolResistanceFeature",
   "guid": "dd2e9aa312664a6b93bc5d4c2915e8f1",

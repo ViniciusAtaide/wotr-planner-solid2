@@ -22,6 +22,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrunkenKiShoutFeature",
   "guid": "11e1819a4f524e2ab76a322dd4aba0af",

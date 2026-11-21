@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GuidanceBackgroundsFeature",
   "guid": "6828cbd9b774f624fa9af24a775996f2",

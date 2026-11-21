@@ -20,6 +20,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodDrinker",
   "guid": "96983d50aca1d214e8adc57a39b41c25",

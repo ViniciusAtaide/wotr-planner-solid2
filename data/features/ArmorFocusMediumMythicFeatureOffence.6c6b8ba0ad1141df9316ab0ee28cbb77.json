@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArmorFocusMediumMythicFeatureOffence",
   "guid": "6c6b8ba0ad1141df9316ab0ee28cbb77",

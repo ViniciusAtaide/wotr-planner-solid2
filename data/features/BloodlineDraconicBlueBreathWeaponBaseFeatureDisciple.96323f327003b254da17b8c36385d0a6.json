@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineDraconicBlueBreathWeaponBaseFeatureDisciple",
   "guid": "96323f327003b254da17b8c36385d0a6",

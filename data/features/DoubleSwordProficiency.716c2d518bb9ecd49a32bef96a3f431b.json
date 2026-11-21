@@ -24,6 +24,7 @@
     "ExoticWeaponProficiency"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DoubleSwordProficiency",
   "guid": "716c2d518bb9ecd49a32bef96a3f431b",

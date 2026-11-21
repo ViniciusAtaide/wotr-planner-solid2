@@ -30,6 +30,7 @@
     "MagusArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BaneBladeFeature",
   "guid": "a2e0691dcfda2374e84d8bbf480e06a0",

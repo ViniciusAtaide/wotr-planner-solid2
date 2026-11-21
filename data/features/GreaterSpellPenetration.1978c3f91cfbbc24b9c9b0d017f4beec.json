@@ -14,6 +14,7 @@
     "WizardFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreaterSpellPenetration",
   "guid": "1978c3f91cfbbc24b9c9b0d017f4beec",

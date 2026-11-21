@@ -23,6 +23,7 @@
     "EldritchKnightSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "EldritchKnightEldritchScoundrel",
   "guid": "cb62f835fcbb01349b04cbf6ae6d9fdf",

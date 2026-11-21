@@ -13,6 +13,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexAuraOfPurityFeature",
   "guid": "3459664f16e56124f95ec4c9f9856d06",

@@ -32,6 +32,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineDraconicCopperClawsFeatureAddLevel3",
   "guid": "1d30e6104b1b6d84099d0bdda4d885fd"

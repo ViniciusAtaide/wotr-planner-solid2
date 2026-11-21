@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MartyrPerformanceResourceFact",
   "guid": "8504fad23ce93d44caf69550b8059e7b",

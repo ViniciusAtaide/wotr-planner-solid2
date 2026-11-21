@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcaneWeaponPlus5",
   "guid": "3cbe3e308342b3247ba2f4fbaf5e6307",

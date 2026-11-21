@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "LoremasterOracleLevelUp",
   "guid": "0f5c3d9d29ef9ed40ad35cb16c6f0b3b",

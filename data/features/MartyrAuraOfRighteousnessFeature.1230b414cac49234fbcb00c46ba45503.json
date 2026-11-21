@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MartyrAuraOfRighteousnessFeature",
   "guid": "1230b414cac49234fbcb00c46ba45503",

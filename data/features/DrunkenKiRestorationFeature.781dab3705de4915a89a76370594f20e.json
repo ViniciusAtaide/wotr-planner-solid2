@@ -22,6 +22,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrunkenKiRestorationFeature",
   "guid": "781dab3705de4915a89a76370594f20e",

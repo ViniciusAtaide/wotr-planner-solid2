@@ -18,6 +18,7 @@
     "AnimalCompanion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "AnimalCompanionFeatureHorse_PreorderBonus",
   "guid": "bfeb9be0a3c9420b8b2beecc8171029c",

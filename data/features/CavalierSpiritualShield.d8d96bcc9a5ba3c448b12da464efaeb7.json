@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierSpiritualShield",
   "guid": "d8d96bcc9a5ba3c448b12da464efaeb7",

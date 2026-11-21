@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HammerblowFeature",
   "guid": "3e8e80a099fc78e4baf464744f0ba8d2",

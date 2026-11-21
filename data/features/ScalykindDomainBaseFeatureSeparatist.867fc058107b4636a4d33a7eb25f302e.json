@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScalykindDomainBaseFeatureSeparatist",
   "guid": "867fc058107b4636a4d33a7eb25f302e",

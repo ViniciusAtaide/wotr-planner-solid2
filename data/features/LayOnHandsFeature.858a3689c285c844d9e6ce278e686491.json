@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LayOnHandsFeature",
   "guid": "858a3689c285c844d9e6ce278e686491",

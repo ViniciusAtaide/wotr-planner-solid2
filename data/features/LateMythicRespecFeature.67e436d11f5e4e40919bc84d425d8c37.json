@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LateMythicRespecFeature",
   "guid": "67e436d11f5e4e40919bc84d425d8c37"

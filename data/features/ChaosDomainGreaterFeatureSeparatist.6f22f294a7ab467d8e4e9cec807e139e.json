@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChaosDomainGreaterFeatureSeparatist",
   "guid": "6f22f294a7ab467d8e4e9cec807e139e",

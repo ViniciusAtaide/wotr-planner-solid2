@@ -15,6 +15,7 @@
     "DragonDiscipleSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "DragonDiscipleNatureMage",
   "guid": "bd7628e052e34745b89324ee822f6458",

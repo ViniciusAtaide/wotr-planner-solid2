@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ObsidianMaskFeature",
   "guid": "784cebe0778841e2856db5d8411d0a73"

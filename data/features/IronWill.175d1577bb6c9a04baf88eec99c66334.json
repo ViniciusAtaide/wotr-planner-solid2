@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "IronWill",
   "guid": "175d1577bb6c9a04baf88eec99c66334",

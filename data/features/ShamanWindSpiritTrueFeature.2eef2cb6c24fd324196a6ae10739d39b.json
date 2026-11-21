@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanWindSpiritTrueFeature",
   "guid": "2eef2cb6c24fd324196a6ae10739d39b",

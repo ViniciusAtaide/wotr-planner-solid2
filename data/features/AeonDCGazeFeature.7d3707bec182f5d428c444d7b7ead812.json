@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonDCGazeFeature",
   "guid": "7d3707bec182f5d428c444d7b7ead812",

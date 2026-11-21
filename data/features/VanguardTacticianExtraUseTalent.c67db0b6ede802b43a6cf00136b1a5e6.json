@@ -13,6 +13,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": true,
   "Ranks": 10,
   "assetName": "VanguardTacticianExtraUseTalent",
   "guid": "c67db0b6ede802b43a6cf00136b1a5e6",

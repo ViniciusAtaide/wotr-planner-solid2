@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SecondChanceFeatureLevel16",
   "guid": "ae91786a9fb948798e6c9bab5b277420",

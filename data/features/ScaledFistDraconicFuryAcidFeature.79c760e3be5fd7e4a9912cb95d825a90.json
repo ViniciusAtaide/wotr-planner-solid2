@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScaledFistDraconicFuryAcidFeature",
   "guid": "79c760e3be5fd7e4a9912cb95d825a90",

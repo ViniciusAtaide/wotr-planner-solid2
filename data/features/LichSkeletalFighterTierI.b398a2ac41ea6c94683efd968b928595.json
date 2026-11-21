@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LichSkeletalFighterTierI",
   "guid": "b398a2ac41ea6c94683efd968b928595",

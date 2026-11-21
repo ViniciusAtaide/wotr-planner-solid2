@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierStealGlory",
   "guid": "2f96ffadc3dcc5d449a022c7dc537c05",

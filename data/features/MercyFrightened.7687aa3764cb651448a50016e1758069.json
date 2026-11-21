@@ -22,6 +22,7 @@
     "Mercy"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MercyFrightened",
   "guid": "7687aa3764cb651448a50016e1758069",

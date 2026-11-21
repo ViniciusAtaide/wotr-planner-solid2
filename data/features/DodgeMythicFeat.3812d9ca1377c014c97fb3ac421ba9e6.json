@@ -20,6 +20,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DodgeMythicFeat",
   "guid": "3812d9ca1377c014c97fb3ac421ba9e6",

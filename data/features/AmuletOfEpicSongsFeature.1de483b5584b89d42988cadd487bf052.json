@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "AmuletOfEpicSongsFeature",
   "guid": "1de483b5584b89d42988cadd487bf052"

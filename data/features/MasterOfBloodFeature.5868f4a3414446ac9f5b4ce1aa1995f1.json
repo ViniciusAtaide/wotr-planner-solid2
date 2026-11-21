@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MasterOfBloodFeature",
   "guid": "5868f4a3414446ac9f5b4ce1aa1995f1",

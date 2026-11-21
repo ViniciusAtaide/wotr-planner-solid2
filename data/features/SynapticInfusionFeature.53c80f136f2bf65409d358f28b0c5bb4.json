@@ -35,6 +35,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SynapticInfusionFeature",
   "guid": "53c80f136f2bf65409d358f28b0c5bb4",

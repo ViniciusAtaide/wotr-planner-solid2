@@ -25,6 +25,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpellPenetrationMythicFeat",
   "guid": "51b6b22ff184eef46a675449e837365d",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SoheiUnarmedStrikeFeature",
   "guid": "60e81557bac3a11458657685515c1c16",

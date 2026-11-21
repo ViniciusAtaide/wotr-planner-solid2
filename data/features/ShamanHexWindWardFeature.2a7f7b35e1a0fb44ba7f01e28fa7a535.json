@@ -34,6 +34,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexWindWardFeature",
   "guid": "2a7f7b35e1a0fb44ba7f01e28fa7a535",

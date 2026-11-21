@@ -39,6 +39,7 @@
     "TeamworkFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackToBack",
   "guid": "c920f2cd2244d284aa69a146aeefcb2c",

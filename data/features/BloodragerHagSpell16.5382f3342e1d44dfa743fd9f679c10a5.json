@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerHagSpell16",
   "guid": "5382f3342e1d44dfa743fd9f679c10a5",

@@ -38,6 +38,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GrimGrandeur",
   "guid": "0007ad807bb44bb19b84492f1dac5bcb",

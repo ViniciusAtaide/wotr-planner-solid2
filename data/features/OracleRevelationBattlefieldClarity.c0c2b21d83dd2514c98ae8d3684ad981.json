@@ -26,6 +26,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationBattlefieldClarity",
   "guid": "c0c2b21d83dd2514c98ae8d3684ad981",

@@ -22,6 +22,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CombatExpertiseFeature",
   "guid": "4c44724ffa8844f4d9bedb5bb27d144a",

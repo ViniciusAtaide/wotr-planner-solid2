@@ -23,6 +23,7 @@
     "EldritchScionArcana"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MaximizedArcanaFeature",
   "guid": "6c44c7fe4cf35644ea5ed25e48aa6db6",

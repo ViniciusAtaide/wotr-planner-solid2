@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ProtectionDomainBaseReapplyClassFeature",
   "guid": "adddb0b1553f4dbcbb3f546df918af22"

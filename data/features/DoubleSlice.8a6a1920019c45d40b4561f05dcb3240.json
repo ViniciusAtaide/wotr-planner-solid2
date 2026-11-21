@@ -26,6 +26,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DoubleSlice",
   "guid": "8a6a1920019c45d40b4561f05dcb3240",

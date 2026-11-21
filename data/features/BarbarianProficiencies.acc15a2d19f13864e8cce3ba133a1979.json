@@ -17,6 +17,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BarbarianProficiencies",
   "guid": "acc15a2d19f13864e8cce3ba133a1979",

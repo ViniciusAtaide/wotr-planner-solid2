@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DisenchanterMysticInterferenceFeature",
   "guid": "eb796b57b9ad58a4d8b3c386d530c429",

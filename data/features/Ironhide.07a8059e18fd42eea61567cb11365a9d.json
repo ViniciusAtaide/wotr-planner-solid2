@@ -20,6 +20,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Ironhide",
   "guid": "07a8059e18fd42eea61567cb11365a9d",

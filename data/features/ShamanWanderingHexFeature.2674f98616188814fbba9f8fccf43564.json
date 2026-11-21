@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanWanderingHexFeature",
   "guid": "2674f98616188814fbba9f8fccf43564",

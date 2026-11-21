@@ -178,6 +178,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WarpriestDeitySacredWeaponFeature",
   "guid": "bae328694ee21bc4587c5ffd0035b6a2"

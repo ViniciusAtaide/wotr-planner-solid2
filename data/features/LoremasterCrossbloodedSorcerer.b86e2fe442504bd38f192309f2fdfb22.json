@@ -23,6 +23,7 @@
     "MythicAdditionalProgressions"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "LoremasterCrossbloodedSorcerer",
   "guid": "b86e2fe442504bd38f192309f2fdfb22",

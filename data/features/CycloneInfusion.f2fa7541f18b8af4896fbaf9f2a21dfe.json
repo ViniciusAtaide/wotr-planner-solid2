@@ -36,6 +36,7 @@
     "KineticBlastInfusion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CycloneInfusion",
   "guid": "f2fa7541f18b8af4896fbaf9f2a21dfe",

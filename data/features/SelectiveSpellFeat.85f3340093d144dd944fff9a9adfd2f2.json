@@ -15,6 +15,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SelectiveSpellFeat",
   "guid": "85f3340093d144dd944fff9a9adfd2f2",

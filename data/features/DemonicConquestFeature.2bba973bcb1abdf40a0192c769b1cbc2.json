@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonicConquestFeature",
   "guid": "2bba973bcb1abdf40a0192c769b1cbc2",

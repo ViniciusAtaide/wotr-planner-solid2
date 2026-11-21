@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "WinterWitchWinterChildLevelUp",
   "guid": "8146ffda8c4f4bb795db89341a16324a",

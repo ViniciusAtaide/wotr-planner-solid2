@@ -26,6 +26,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationErosionTouch",
   "guid": "b459fee5bc4b33449bb883b0ac5a01d8",

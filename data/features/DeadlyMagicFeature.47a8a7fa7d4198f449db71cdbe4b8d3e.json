@@ -13,6 +13,7 @@
     "LichUniqueAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DeadlyMagicFeature",
   "guid": "47a8a7fa7d4198f449db71cdbe4b8d3e",

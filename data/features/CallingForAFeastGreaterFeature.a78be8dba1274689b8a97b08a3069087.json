@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CallingForAFeastGreaterFeature",
   "guid": "a78be8dba1274689b8a97b08a3069087",

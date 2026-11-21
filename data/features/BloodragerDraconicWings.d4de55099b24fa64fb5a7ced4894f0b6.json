@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerDraconicWings",
   "guid": "d4de55099b24fa64fb5a7ced4894f0b6",

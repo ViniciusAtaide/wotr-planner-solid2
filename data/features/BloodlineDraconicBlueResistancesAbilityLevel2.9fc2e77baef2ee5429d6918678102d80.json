@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "BloodlineDraconicBlueResistancesAbilityLevel2",
   "guid": "9fc2e77baef2ee5429d6918678102d80",

@@ -131,6 +131,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GyronnaFeature",
   "guid": "8b535b6842e063d48a571a042c3c6e8f",

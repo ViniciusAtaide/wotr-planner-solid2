@@ -29,6 +29,7 @@
     "WarpriestBlessing"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AirBlessingFeature",
   "guid": "e1ff99dc3aeaa064e8eecde51c1c4773",

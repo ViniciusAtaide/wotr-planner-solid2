@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalFireElementalMovementFeature",
   "guid": "f48c7d56a8a13af4d8e1cc9aae579b01",

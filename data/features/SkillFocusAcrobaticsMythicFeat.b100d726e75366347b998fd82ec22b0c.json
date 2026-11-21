@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkillFocusAcrobaticsMythicFeat",
   "guid": "b100d726e75366347b998fd82ec22b0c",

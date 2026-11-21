@@ -26,6 +26,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BackgroundScholarArcane",
   "guid": "9dae3842d599b7c4389dc8df22f66a80",

@@ -5,6 +5,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "SwiftFootFeature",
   "guid": "7df32d4e9bd2cdc48b0f69b03a57754a",

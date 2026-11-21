@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "ShadowShamanShadowsFeature",
   "guid": "b38e129e760940378d369a79a5c81b30",

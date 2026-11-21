@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanWeaponPoolFeature",
   "guid": "ef7e19661304e124f95c49637f931429",

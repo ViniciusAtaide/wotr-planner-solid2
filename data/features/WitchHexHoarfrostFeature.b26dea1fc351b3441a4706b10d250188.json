@@ -20,6 +20,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexHoarfrostFeature",
   "guid": "b26dea1fc351b3441a4706b10d250188",

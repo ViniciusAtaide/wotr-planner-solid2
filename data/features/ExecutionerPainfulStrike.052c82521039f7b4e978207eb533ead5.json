@@ -64,6 +64,7 @@
     "SlayerTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ExecutionerPainfulStrike",
   "guid": "052c82521039f7b4e978207eb533ead5",

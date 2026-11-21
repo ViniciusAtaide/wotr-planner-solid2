@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "ExtraPerformancePaladinMartyr",
   "guid": "639ce2b85a13404caa618f36748d7fa5",

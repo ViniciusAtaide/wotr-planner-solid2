@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalFireSpell7",
   "guid": "9f9aef67313c76d43ac01d40d8bc5b86",

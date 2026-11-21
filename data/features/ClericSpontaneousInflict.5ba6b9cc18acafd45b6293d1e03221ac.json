@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ClericSpontaneousInflict",
   "guid": "5ba6b9cc18acafd45b6293d1e03221ac",

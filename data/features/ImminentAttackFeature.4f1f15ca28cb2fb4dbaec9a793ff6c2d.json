@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImminentAttackFeature",
   "guid": "4f1f15ca28cb2fb4dbaec9a793ff6c2d",

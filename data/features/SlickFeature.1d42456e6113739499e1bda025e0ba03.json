@@ -34,6 +34,7 @@
     "KineticWildTalent"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SlickFeature",
   "guid": "1d42456e6113739499e1bda025e0ba03",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "DeliquescentGlovesFeature",
   "guid": "4441d87e0c4152e4e8e87933b196e786"

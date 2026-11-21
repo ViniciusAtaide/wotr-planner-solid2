@@ -26,6 +26,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DisplayWeaponProwess",
   "guid": "ac8d4d2e375a8c841a19ed46696e5af2",

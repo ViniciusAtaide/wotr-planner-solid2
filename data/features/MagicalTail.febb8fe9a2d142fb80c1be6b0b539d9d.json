@@ -227,6 +227,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 8,
   "assetName": "MagicalTail",
   "guid": "febb8fe9a2d142fb80c1be6b0b539d9d",

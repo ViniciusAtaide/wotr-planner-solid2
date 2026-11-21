@@ -53,6 +53,7 @@
     "KineticElementalFocus"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "LevelEntries": [
     {
       "Level": 7,

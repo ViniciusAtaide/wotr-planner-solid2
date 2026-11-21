@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EcclesitheurgeBlessingFeature",
   "guid": "770888bf36d8dcd418961ae6ede16f8b",

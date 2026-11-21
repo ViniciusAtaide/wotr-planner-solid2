@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalAcidSpell7",
   "guid": "2882d4aac205db6418255d8eeb2d3fa7",

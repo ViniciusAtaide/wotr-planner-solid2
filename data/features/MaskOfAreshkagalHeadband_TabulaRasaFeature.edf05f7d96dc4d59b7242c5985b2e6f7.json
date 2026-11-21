@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MaskOfAreshkagalHeadband_TabulaRasaFeature",
   "guid": "edf05f7d96dc4d59b7242c5985b2e6f7"

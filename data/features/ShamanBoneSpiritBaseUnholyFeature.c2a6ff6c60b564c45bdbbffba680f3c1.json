@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanBoneSpiritBaseUnholyFeature",
   "guid": "c2a6ff6c60b564c45bdbbffba680f3c1"

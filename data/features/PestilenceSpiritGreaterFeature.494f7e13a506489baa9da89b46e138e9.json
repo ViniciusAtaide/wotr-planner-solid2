@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PestilenceSpiritGreaterFeature",
   "guid": "494f7e13a506489baa9da89b46e138e9",

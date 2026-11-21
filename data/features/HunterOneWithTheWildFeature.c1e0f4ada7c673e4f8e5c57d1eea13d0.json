@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HunterOneWithTheWildFeature",
   "guid": "c1e0f4ada7c673e4f8e5c57d1eea13d0",

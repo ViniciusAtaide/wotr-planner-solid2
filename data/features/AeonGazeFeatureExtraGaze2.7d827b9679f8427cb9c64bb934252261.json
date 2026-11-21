@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 3,
   "assetName": "AeonGazeFeatureExtraGaze2",
   "guid": "7d827b9679f8427cb9c64bb934252261",

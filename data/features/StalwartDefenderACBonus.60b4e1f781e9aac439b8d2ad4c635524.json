@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 4,
   "assetName": "StalwartDefenderACBonus",
   "guid": "60b4e1f781e9aac439b8d2ad4c635524",

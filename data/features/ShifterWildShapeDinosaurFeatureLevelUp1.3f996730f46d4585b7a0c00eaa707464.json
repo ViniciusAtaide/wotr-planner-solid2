@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeDinosaurFeatureLevelUp1",
   "guid": "3f996730f46d4585b7a0c00eaa707464",

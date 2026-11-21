@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RazmiryMaskFeatureUpgrade",
   "guid": "e5cae174489f449282df168abe07c3c5"

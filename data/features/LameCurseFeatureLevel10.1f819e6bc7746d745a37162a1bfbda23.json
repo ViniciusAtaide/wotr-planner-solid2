@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LameCurseFeatureLevel10",
   "guid": "1f819e6bc7746d745a37162a1bfbda23"

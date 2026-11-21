@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchScionCantripsFeature",
   "guid": "d093b8dec70b5d144acb593a3029d830",

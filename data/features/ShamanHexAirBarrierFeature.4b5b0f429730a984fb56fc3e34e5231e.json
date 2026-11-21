@@ -27,6 +27,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexAirBarrierFeature",
   "guid": "4b5b0f429730a984fb56fc3e34e5231e",

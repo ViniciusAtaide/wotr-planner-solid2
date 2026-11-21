@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchArcherRangedSpellCombat",
   "guid": "8b68a5b8223beed40b137885116c408f",

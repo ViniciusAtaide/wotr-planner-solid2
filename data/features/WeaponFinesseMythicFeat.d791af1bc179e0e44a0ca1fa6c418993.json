@@ -19,6 +19,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WeaponFinesseMythicFeat",
   "guid": "d791af1bc179e0e44a0ca1fa6c418993",

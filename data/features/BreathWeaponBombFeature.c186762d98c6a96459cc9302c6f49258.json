@@ -29,6 +29,7 @@
     "Discovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BreathWeaponBombFeature",
   "guid": "c186762d98c6a96459cc9302c6f49258",

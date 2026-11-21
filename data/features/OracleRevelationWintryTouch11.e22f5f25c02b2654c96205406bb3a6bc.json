@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationWintryTouch11",
   "guid": "e22f5f25c02b2654c96205406bb3a6bc"

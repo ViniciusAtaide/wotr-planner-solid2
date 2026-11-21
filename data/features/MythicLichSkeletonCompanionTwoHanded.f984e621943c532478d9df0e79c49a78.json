@@ -10,6 +10,7 @@
     "SkeletalChampion"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MythicLichSkeletonCompanionTwoHanded",
   "guid": "f984e621943c532478d9df0e79c49a78",

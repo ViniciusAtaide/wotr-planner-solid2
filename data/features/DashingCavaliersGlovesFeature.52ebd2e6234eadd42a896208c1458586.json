@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "DashingCavaliersGlovesFeature",
   "guid": "52ebd2e6234eadd42a896208c1458586"

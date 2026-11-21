@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OldEarthSandAmuletFeature",
   "guid": "ad30167a519323d4b94e34df76adf466"

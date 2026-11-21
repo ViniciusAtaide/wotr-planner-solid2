@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShieldHeavyMythicFeat",
   "guid": "6449dd91423645ddb2f9eb86aaeabfcf",

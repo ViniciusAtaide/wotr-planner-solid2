@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpiritWardenRebukeSpirits",
   "guid": "302cd70a0bb2b5440abf7616b17fc4c1",

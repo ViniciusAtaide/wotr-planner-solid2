@@ -67,6 +67,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodragerElementalFireWanderingFeature12",
   "guid": "939ffd60acc9484191ee6c20fd25ddbf",

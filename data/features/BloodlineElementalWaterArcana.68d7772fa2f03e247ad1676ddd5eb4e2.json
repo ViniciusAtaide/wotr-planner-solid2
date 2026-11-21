@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineElementalWaterArcana",
   "guid": "68d7772fa2f03e247ad1676ddd5eb4e2",

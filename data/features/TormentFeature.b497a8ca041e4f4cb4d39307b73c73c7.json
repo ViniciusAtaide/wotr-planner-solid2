@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TormentFeature",
   "guid": "b497a8ca041e4f4cb4d39307b73c73c7",

@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DragonDiscipleFormFeatureFirst",
   "guid": "0ee31c9fc504b51489d12d43168b5009",

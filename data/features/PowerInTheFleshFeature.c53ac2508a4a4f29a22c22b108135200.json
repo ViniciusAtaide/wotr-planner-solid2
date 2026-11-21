@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PowerInTheFleshFeature",
   "guid": "c53ac2508a4a4f29a22c22b108135200",

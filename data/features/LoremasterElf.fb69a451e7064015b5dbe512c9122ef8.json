@@ -38,6 +38,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LoremasterElf",
   "guid": "fb69a451e7064015b5dbe512c9122ef8",

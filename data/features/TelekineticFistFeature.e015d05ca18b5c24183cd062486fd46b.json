@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TelekineticFistFeature",
   "guid": "e015d05ca18b5c24183cd062486fd46b",

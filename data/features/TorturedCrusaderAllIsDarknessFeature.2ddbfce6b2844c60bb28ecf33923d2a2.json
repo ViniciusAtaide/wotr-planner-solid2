@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "TorturedCrusaderAllIsDarknessFeature",
   "guid": "2ddbfce6b2844c60bb28ecf33923d2a2",

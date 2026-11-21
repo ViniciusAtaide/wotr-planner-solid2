@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SkillFocusUseMagicDeviceMythicFeat",
   "guid": "93bc16aff4412aa4c9886b741116da37",

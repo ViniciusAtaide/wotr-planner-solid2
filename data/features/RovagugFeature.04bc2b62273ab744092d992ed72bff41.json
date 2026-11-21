@@ -151,6 +151,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RovagugFeature",
   "guid": "04bc2b62273ab744092d992ed72bff41",

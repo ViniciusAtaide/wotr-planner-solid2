@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SwordSaintInstantFocus",
   "guid": "5fcdb5b9dd41724439c6c4e4b6d27e81",

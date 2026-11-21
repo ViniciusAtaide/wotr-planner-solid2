@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ProclaimerCleanserOfEvil15FeetFeatureLimit",
   "guid": "f0f07c512fa3bc44f8593154bf6b2a11",

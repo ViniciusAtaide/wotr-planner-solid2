@@ -14,6 +14,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "ArcheryBonuses",
   "guid": "136adc54467964446b2e790c1698d93a",

@@ -19,6 +19,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KineticSharpshooterProficiencies",
   "guid": "80f7afbee34145459ac5c77f3aac51c5",

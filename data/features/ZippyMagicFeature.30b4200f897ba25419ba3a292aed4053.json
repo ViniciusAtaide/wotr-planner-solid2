@@ -5,6 +5,7 @@
     "AzataSuperpowerAbilities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ZippyMagicFeature",
   "guid": "30b4200f897ba25419ba3a292aed4053",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ElementalOverflowEffectFeature",
   "guid": "74e4520801f18ae42af3acf261ac7e90",

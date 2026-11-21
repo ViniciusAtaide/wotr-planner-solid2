@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "IllusionSchoolGreaterFeature",
   "guid": "f0585eb111ede2c4ebf00b057d069463",

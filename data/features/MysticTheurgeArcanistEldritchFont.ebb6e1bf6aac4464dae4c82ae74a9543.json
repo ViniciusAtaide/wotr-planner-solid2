@@ -23,6 +23,7 @@
     "MysticTheurgeArcaneSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "MysticTheurgeArcanistEldritchFont",
   "guid": "ebb6e1bf6aac4464dae4c82ae74a9543",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PenetratingHex",
   "guid": "1bcd56515995430dbcd632cd649a7b25",

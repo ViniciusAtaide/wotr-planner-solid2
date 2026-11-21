@@ -22,6 +22,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ExplosiveExpert",
   "guid": "8a551fcca93446f0adfbe5e57e5bc636",

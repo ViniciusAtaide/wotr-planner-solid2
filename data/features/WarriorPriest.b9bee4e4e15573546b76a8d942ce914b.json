@@ -43,6 +43,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WarriorPriest",
   "guid": "b9bee4e4e15573546b76a8d942ce914b",

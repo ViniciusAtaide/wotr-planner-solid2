@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HandaxeProficiency",
   "guid": "c59205a5d18930d4b88b74d2acda2f49",

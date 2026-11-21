@@ -130,6 +130,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PrimalistTakeBloodlinePower12",
   "guid": "57bb4dc36611c7444817c13135ec58b4",

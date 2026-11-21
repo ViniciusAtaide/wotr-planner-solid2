@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "UltimatePredatorsGauntletsFeature",
   "guid": "34de3a3c62738df4392185764bf7c980"

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "StudentOfWarKnowSlowYourEnemyFeature",
   "guid": "13d93becd091494fb629621094ccbfa4",

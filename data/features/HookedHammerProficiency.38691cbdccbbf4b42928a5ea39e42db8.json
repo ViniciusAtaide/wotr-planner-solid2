@@ -24,6 +24,7 @@
     "ExoticWeaponProficiency"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HookedHammerProficiency",
   "guid": "38691cbdccbbf4b42928a5ea39e42db8",

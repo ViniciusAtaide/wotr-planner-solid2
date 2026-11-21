@@ -35,6 +35,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationSpiritOfTheWarrior",
   "guid": "b63f198db73edbc4b84d863cb681f5bc",

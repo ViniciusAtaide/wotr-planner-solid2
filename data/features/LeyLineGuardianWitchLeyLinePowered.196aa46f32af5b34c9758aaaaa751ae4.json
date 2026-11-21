@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LeyLineGuardianWitchLeyLinePowered",
   "guid": "196aa46f32af5b34c9758aaaaa751ae4",

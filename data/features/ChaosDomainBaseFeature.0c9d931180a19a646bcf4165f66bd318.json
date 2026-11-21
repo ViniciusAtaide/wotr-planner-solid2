@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ChaosDomainBaseFeature",
   "guid": "0c9d931180a19a646bcf4165f66bd318",

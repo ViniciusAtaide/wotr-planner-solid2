@@ -32,6 +32,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TwoWeaponFighting",
   "guid": "ac8aaf29054f5b74eb18f2af950e752d",

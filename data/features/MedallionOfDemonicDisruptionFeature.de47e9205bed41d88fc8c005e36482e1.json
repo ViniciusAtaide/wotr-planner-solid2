@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MedallionOfDemonicDisruptionFeature",
   "guid": "de47e9205bed41d88fc8c005e36482e1"

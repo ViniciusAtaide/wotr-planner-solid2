@@ -5,6 +5,7 @@
     "MythicTrick1"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterKnowledgeWorldTier1Feature",
   "guid": "06983a66bd6bac04db3996cd3064d9f0",

@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrovierAnimalAspectBaseFeature",
   "guid": "951d01f8091b4af48b2417e6a700a17f",

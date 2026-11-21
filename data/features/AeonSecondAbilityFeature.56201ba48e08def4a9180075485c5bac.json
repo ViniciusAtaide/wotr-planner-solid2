@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonSecondAbilityFeature",
   "guid": "56201ba48e08def4a9180075485c5bac",

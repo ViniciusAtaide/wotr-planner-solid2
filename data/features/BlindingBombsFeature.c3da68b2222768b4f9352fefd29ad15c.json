@@ -29,6 +29,7 @@
     "Discovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BlindingBombsFeature",
   "guid": "c3da68b2222768b4f9352fefd29ad15c",

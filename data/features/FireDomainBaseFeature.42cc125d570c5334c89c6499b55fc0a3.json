@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FireDomainBaseFeature",
   "guid": "42cc125d570c5334c89c6499b55fc0a3",

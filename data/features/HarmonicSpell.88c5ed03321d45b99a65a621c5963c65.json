@@ -15,6 +15,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HarmonicSpell",
   "guid": "88c5ed03321d45b99a65a621c5963c65",

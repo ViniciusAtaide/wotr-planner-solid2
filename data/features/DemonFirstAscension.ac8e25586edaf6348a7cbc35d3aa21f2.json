@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DemonFirstAscension",
   "guid": "ac8e25586edaf6348a7cbc35d3aa21f2",

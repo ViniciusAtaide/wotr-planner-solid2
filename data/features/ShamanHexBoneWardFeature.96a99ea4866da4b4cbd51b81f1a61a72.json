@@ -34,6 +34,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexBoneWardFeature",
   "guid": "96a99ea4866da4b4cbd51b81f1a61a72",

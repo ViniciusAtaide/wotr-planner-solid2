@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HolyDevoteesWrathFeature",
   "guid": "81b5d4099a8c5a7489c78d7f4150acd6"

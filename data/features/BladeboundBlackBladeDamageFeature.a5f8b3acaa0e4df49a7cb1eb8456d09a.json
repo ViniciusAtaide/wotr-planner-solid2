@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BladeboundBlackBladeDamageFeature",
   "guid": "a5f8b3acaa0e4df49a7cb1eb8456d09a",

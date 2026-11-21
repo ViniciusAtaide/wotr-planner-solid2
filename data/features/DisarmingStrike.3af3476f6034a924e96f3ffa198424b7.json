@@ -37,6 +37,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DisarmingStrike",
   "guid": "3af3476f6034a924e96f3ffa198424b7",

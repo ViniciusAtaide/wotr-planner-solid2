@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RingOfEvasionFeature",
   "guid": "08b55e758d6e6e344b7e74b1a89b389a"

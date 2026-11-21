@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KineticWarriorFeature",
   "guid": "ff14cb2bfab1c0547be66d8aaa7e4ada",

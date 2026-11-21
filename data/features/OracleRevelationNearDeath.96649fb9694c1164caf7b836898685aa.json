@@ -41,6 +41,7 @@
     "OracleRevelation"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OracleRevelationNearDeath",
   "guid": "96649fb9694c1164caf7b836898685aa",

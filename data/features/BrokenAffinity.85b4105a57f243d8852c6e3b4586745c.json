@@ -24,6 +24,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BrokenAffinity",
   "guid": "85b4105a57f243d8852c6e3b4586745c",

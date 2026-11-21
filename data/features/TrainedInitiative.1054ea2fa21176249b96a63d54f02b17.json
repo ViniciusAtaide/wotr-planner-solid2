@@ -15,6 +15,7 @@
     "WeaponTraining"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TrainedInitiative",
   "guid": "1054ea2fa21176249b96a63d54f02b17",

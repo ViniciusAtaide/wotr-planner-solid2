@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "RobeOfEarthFeature",
   "guid": "db564a58e77d1a64bada263b94d1ef8d"

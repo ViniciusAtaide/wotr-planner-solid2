@@ -13,6 +13,7 @@
     "LichUniqueAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitheringLifeFeature",
   "guid": "715ba496673489045a74dfcbddf876c2",

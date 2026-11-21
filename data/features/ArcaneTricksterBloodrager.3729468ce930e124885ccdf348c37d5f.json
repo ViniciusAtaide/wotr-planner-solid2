@@ -14,6 +14,7 @@
     "ArcaneTricksterSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "ArcaneTricksterBloodrager",
   "guid": "3729468ce930e124885ccdf348c37d5f",

@@ -22,6 +22,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrunkenKiAbudantStepFeature",
   "guid": "ba74cb907d0849d6b2afccebe69bef81",

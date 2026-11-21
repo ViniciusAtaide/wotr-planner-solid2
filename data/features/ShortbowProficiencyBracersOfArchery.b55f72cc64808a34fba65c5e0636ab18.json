@@ -12,6 +12,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShortbowProficiencyBracersOfArchery",
   "guid": "b55f72cc64808a34fba65c5e0636ab18"

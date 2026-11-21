@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "LichSkeletalInquisitorTierI",
   "guid": "f9f5e55cbf4026b47a5f622e3f06fb5f",

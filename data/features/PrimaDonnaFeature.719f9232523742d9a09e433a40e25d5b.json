@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PrimaDonnaFeature",
   "guid": "719f9232523742d9a09e433a40e25d5b",

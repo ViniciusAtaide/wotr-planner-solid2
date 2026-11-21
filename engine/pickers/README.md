@@ -8,7 +8,7 @@ What each slot can take (guide §4, build ticket 04). S lists a slot's options a
 - `OptionStatus`: one option of a slot, with its status at the paused walk.
   - `feature`: the option.
   - `param`: the parameter, for a parametrized feat (one option per parameter) or a Mythic spellbook.
-  - `shown`: whether the game shows it (map 19). A hidden option is judged like any other; surfaces leave it out.
+  - `shown`: whether the game's level-up screen lists it (`shownInSelection`). The game builds the list from the selection's items with no `HideInUI` filter (`CharGenFeatureSelectorStateVM.CreateFeaturesList`), and hides an item only when it is unavailable and has `HideNotAvailibleInUI` (`CharGenFeatureSelectorItemVM.ShouldBeHidden`). So a nested selection marked `HideInUI` (the background groups, the Sorcerer's bloodline feats, the prestige classes' spellbooks) is listed, and a companion-only background is not. A nameless blueprint is never listed (map 19). `UnitPartHiddenFacts` (facts hidden by unit state) is not ported. A hidden option is judged like any other; surfaces leave it out.
   - `closed`: why the game refuses it; absent when it is open.
   - `gearItems`: the worn items an open option needs under the Gear opt-in (ADR 0002); absent when it needs none.
 - `candidates(data, selection)`: every option a slot lists.
@@ -58,3 +58,5 @@ bun engine/pickers/sweep.ts [<gold name prefix>] [<slot filter substring>]
 ```
 
 It prints each disagreement and a count, and exits 1 when there is any. `bun run check` runs only the sample in pickers.agree.test.ts; the sweep runs every option, which takes minutes.
+
+The test "lists every pick the gold Builds made, in its own slot" leaves out Jack-in-the-Green's known gap, Spell Specialization at level 11 (map 22), as the MCP's end-to-end test does.

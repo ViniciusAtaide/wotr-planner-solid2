@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BlizzardServantFeature",
   "guid": "025d5a55f50f44d2a3db30f9e8854bdf",

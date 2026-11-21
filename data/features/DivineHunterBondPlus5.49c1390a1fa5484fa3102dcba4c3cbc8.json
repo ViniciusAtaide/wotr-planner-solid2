@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DivineHunterBondPlus5",
   "guid": "49c1390a1fa5484fa3102dcba4c3cbc8",

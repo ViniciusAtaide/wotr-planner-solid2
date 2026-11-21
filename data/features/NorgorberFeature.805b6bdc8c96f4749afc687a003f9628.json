@@ -147,6 +147,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NorgorberFeature",
   "guid": "805b6bdc8c96f4749afc687a003f9628",

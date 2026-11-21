@@ -13,6 +13,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlagueHexNegativeLevelFeature",
   "guid": "a9184917ef1c4b358ba03da5f6b03931",

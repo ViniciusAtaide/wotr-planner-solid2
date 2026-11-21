@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlagueHexStrengthDamageFeature",
   "guid": "ed39cb73232b4473934fe932bd7c0d58",

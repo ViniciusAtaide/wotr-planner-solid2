@@ -6,6 +6,7 @@
   "GiveFeaturesForPreviousLevels": true,
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "LevelEntries": [
     {
       "Level": 1,

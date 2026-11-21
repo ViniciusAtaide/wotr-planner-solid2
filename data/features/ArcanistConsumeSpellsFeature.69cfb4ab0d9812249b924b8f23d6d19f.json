@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcanistConsumeSpellsFeature",
   "guid": "69cfb4ab0d9812249b924b8f23d6d19f",

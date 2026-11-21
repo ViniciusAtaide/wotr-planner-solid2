@@ -24,6 +24,7 @@
     "DefensivePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "IncreasedDamageReductionDefensivePower",
   "guid": "d10496e92d0799a40bb3930b8f4fda0d",

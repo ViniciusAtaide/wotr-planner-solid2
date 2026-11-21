@@ -90,6 +90,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "NaturalSpell",
   "guid": "c806103e27cce6f429e5bf47067966cf",

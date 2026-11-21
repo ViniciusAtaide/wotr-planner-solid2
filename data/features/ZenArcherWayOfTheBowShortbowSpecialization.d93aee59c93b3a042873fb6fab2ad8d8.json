@@ -16,6 +16,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ZenArcherWayOfTheBowShortbowSpecialization",
   "guid": "d93aee59c93b3a042873fb6fab2ad8d8"

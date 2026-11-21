@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "InvisibleThiefFeature",
   "guid": "9a70f4efef9c2964c82cecefdd34292b",

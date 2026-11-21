@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "BardingOfLifeFeature",
   "guid": "915a6610cc9840df90e83ac5f2015ad4"

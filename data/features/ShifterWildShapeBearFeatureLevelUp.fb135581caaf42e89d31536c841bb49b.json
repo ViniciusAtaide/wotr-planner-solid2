@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShifterWildShapeBearFeatureLevelUp",
   "guid": "fb135581caaf42e89d31536c841bb49b",

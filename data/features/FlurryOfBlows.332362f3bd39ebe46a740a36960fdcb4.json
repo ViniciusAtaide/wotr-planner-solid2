@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FlurryOfBlows",
   "guid": "332362f3bd39ebe46a740a36960fdcb4",

@@ -27,6 +27,7 @@
     "Familiar"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DuckFamiliarBondFeature",
   "guid": "7ba93e2b888a3bd4ba5795ae001049f8",

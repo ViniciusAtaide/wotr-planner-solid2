@@ -22,6 +22,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrunkenKiSpitVenomFeature",
   "guid": "ed0a79e7d03b4fea9d78dca2c87e12f9",

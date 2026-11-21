@@ -13,6 +13,7 @@
     "DemonMajorAspect"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OmoxAspectFeature",
   "guid": "daf030c7563b2664eb1031d91eaae7ab",

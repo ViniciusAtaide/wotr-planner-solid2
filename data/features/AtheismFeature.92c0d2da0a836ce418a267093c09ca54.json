@@ -58,6 +58,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AtheismFeature",
   "guid": "92c0d2da0a836ce418a267093c09ca54",

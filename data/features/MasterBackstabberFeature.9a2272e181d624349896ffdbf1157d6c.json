@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MasterBackstabberFeature",
   "guid": "9a2272e181d624349896ffdbf1157d6c",

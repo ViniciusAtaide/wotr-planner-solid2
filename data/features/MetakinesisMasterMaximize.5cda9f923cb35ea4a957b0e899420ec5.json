@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MetakinesisMasterMaximize",
   "guid": "5cda9f923cb35ea4a957b0e899420ec5",

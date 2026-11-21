@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ThunderstormKineticBladeFeature",
   "guid": "785d708a6464709499b9021b53200356"

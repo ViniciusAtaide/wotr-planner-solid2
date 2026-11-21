@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KnowledgeBlessingMajorFeature",
   "guid": "852b2cb8e81642ce976b51370c547c21",

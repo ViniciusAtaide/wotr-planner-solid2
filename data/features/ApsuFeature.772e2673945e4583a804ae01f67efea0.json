@@ -161,6 +161,7 @@
     "Deities"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ApsuFeature",
   "guid": "772e2673945e4583a804ae01f67efea0",

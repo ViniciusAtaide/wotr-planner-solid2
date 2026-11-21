@@ -10,6 +10,7 @@
     "MythicTrick1"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterMobilityTier1Feature",
   "guid": "6079a3c329989a64cad3fbd4076d5fb9",

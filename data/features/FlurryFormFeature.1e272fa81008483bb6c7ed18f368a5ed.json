@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FlurryFormFeature",
   "guid": "1e272fa81008483bb6c7ed18f368a5ed",

@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MurderSubdomainSpellListFeature",
   "guid": "73bc020e32984b2d993fd1d5de9c58bd"

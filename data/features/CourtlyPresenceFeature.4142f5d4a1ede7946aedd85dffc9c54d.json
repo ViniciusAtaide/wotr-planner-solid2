@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CourtlyPresenceFeature",
   "guid": "4142f5d4a1ede7946aedd85dffc9c54d",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DuelistParryFeature",
   "guid": "47e9ac1bf9c376e44b64cb5844a5e6a6",

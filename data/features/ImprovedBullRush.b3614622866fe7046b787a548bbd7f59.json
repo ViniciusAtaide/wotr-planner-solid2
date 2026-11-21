@@ -30,6 +30,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ImprovedBullRush",
   "guid": "b3614622866fe7046b787a548bbd7f59",

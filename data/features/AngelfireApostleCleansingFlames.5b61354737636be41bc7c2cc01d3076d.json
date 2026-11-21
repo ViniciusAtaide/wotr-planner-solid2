@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AngelfireApostleCleansingFlames",
   "guid": "5b61354737636be41bc7c2cc01d3076d",

@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MythicBrewPotionsFeat",
   "guid": "a155dc95e3fb2d44481c76bc4aea26b9",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "OrderOfThePawDangerWardFeature",
   "guid": "7790869061f94b1bb2fccdf7af50cd4d",

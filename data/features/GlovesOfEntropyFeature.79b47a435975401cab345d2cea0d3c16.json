@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 5,
   "assetName": "GlovesOfEntropyFeature",
   "guid": "79b47a435975401cab345d2cea0d3c16"

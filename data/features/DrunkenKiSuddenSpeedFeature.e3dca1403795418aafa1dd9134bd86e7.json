@@ -13,6 +13,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrunkenKiSuddenSpeedFeature",
   "guid": "e3dca1403795418aafa1dd9134bd86e7",

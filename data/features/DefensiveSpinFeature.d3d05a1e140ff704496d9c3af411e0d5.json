@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DefensiveSpinFeature",
   "guid": "d3d05a1e140ff704496d9c3af411e0d5",

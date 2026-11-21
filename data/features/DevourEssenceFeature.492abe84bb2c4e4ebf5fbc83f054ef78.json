@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DevourEssenceFeature",
   "guid": "492abe84bb2c4e4ebf5fbc83f054ef78",

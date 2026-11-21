@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FocusedRageFeature",
   "guid": "17b5ab9075c34e24a46ca655406041ea",

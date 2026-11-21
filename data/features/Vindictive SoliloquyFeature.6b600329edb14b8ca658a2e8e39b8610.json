@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Vindictive SoliloquyFeature",
   "guid": "6b600329edb14b8ca658a2e8e39b8610",

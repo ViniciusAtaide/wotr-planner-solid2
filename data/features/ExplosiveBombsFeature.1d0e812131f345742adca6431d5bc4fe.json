@@ -20,6 +20,7 @@
     "Discovery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ExplosiveBombsFeature",
   "guid": "1d0e812131f345742adca6431d5bc4fe",

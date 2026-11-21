@@ -23,6 +23,7 @@
     "EldritchKnightSpellbook"
   ],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "Ranks": 1,
   "assetName": "EldritchKnightArcanistMagicDeceiver",
   "guid": "ad6b14b53faa437494f2a77d7022a726",

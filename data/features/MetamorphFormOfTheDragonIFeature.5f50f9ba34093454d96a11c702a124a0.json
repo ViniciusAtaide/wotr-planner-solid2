@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MetamorphFormOfTheDragonIFeature",
   "guid": "5f50f9ba34093454d96a11c702a124a0",

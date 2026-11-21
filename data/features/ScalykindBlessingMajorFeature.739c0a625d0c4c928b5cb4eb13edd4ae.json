@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScalykindBlessingMajorFeature",
   "guid": "739c0a625d0c4c928b5cb4eb13edd4ae",

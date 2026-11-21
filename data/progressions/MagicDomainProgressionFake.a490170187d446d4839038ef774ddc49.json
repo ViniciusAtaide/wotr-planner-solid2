@@ -27,6 +27,7 @@
     "Domain"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "LevelEntries": [],
   "Ranks": 1,
   "assetName": "MagicDomainProgressionFake",

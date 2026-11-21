@@ -49,6 +49,7 @@
     "RagePower"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CripplingBlowsFeature",
   "guid": "0eec6efbb7f66e148817c9f51b804f08",

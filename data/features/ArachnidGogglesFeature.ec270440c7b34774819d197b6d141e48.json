@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArachnidGogglesFeature",
   "guid": "ec270440c7b34774819d197b6d141e48"

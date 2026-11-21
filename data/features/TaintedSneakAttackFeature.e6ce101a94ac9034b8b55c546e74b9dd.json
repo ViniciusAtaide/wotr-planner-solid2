@@ -15,6 +15,7 @@
     "LichUniqueAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TaintedSneakAttackFeature",
   "guid": "e6ce101a94ac9034b8b55c546e74b9dd",

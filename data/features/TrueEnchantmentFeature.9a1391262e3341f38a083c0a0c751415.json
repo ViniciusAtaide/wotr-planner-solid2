@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TrueEnchantmentFeature",
   "guid": "9a1391262e3341f38a083c0a0c751415",

@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WarpriestSacredWeaponBaseDamageFeature",
   "guid": "8eb5505ae69cc174fb1781134f949e5f",

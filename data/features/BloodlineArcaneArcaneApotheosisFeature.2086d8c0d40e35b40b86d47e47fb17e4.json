@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineArcaneArcaneApotheosisFeature",
   "guid": "2086d8c0d40e35b40b86d47e47fb17e4",

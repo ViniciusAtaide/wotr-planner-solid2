@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WeakeningSneakAttack",
   "guid": "be5299f235f34bdc9703da1ad013e74a",

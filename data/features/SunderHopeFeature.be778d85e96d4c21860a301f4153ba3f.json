@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SunderHopeFeature",
   "guid": "be778d85e96d4c21860a301f4153ba3f",

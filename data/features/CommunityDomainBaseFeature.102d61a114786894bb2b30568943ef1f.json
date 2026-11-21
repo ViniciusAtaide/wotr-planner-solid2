@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CommunityDomainBaseFeature",
   "guid": "102d61a114786894bb2b30568943ef1f",

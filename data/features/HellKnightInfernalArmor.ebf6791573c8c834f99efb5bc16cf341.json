@@ -20,6 +20,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HellKnightInfernalArmor",
   "guid": "ebf6791573c8c834f99efb5bc16cf341",

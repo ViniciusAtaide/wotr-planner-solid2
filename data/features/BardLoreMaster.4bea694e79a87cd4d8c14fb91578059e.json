@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BardLoreMaster",
   "guid": "4bea694e79a87cd4d8c14fb91578059e",

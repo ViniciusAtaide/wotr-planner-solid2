@@ -27,6 +27,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TricksterLoreReligionAirDomainFeature",
   "guid": "2dc50974356942c7b9f2ccfdcdeb7d61",

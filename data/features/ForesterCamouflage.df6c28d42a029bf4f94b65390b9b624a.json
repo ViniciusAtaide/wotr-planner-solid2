@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ForesterCamouflage",
   "guid": "df6c28d42a029bf4f94b65390b9b624a",

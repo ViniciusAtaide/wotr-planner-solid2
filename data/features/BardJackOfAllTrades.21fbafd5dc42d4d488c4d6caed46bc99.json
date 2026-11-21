@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BardJackOfAllTrades",
   "guid": "21fbafd5dc42d4d488c4d6caed46bc99",

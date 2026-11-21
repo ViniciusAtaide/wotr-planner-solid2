@@ -23,6 +23,7 @@
     "EnlightenedPhilosopherMystery"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnlightenedPhilosopherWindMysteryFeature",
   "guid": "3812dcb2fe59ecd449285391db677edc",

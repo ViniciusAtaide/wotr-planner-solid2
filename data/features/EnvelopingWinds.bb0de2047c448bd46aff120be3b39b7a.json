@@ -39,6 +39,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EnvelopingWinds",
   "guid": "bb0de2047c448bd46aff120be3b39b7a",

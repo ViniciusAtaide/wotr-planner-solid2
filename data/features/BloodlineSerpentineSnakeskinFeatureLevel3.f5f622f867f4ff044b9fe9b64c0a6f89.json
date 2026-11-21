@@ -18,6 +18,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BloodlineSerpentineSnakeskinFeatureLevel3",
   "guid": "f5f622f867f4ff044b9fe9b64c0a6f89",

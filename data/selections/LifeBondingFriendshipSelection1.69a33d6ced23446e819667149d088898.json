@@ -29,6 +29,7 @@
   "Group": "TeamworkFeat",
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": true,
   "IgnorePrerequisites": true,
   "Mode": "Default",
   "Obligatory": false,

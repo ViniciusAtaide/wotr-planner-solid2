@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PowerlessProphecyCurseFeatureLevel1",
   "guid": "e567696843b0da74b8d7e1e7f0649b9e",

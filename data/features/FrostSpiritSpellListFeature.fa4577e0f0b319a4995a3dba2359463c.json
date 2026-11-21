@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "FrostSpiritSpellListFeature",
   "guid": "fa4577e0f0b319a4995a3dba2359463c"

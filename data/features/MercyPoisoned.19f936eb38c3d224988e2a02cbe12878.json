@@ -15,6 +15,7 @@
     "Mercy"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MercyPoisoned",
   "guid": "19f936eb38c3d224988e2a02cbe12878",

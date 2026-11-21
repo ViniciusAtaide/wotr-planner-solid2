@@ -36,6 +36,7 @@
     "CombatFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "Feint",
   "guid": "c610310d31414edabcedf0c8a6fe32c4",

@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DruidOrisonsFeature",
   "guid": "f2ed91cc202bd344691eef91eb6d5d1a",

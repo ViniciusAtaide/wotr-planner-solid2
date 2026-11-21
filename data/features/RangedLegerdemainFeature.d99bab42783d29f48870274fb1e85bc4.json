@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RangedLegerdemainFeature",
   "guid": "d99bab42783d29f48870274fb1e85bc4",

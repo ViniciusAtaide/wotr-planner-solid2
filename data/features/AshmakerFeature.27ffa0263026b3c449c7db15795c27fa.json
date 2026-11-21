@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AshmakerFeature",
   "guid": "27ffa0263026b3c449c7db15795c27fa"

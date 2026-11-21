@@ -13,6 +13,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AbundantSmiteChaos",
   "guid": "4cdc155e26204491ba4d193646cb4443",

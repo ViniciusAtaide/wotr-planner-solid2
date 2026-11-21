@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "StoneSpiritSpellListFeature",
   "guid": "f25964faa73484140b2efeafa0402965"

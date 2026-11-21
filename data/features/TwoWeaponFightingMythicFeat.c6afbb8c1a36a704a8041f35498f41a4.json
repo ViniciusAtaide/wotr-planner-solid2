@@ -13,6 +13,7 @@
     "MythicFeat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "TwoWeaponFightingMythicFeat",
   "guid": "c6afbb8c1a36a704a8041f35498f41a4",

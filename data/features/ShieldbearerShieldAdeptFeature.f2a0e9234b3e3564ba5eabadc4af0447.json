@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShieldbearerShieldAdeptFeature",
   "guid": "f2a0e9234b3e3564ba5eabadc4af0447",

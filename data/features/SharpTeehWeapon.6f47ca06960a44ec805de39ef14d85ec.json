@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SharpTeehWeapon",
   "guid": "6f47ca06960a44ec805de39ef14d85ec",

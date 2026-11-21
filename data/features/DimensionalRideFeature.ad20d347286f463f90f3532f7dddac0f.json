@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DimensionalRideFeature",
   "guid": "ad20d347286f463f90f3532f7dddac0f",

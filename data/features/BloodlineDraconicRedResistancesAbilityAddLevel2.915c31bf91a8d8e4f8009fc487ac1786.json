@@ -32,6 +32,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 2,
   "assetName": "BloodlineDraconicRedResistancesAbilityAddLevel2",
   "guid": "915c31bf91a8d8e4f8009fc487ac1786"

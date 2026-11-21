@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "AeonNormalizeSizeGazeFeature",
   "guid": "c90b37a7f4894ac5a27f506aba5760b5",

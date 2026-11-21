@@ -10,6 +10,7 @@
     "Racial"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HalfOrcFerocity",
   "guid": "c99f3405d1ef79049bd90678a666e1d7",

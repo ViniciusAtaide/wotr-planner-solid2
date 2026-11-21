@@ -13,6 +13,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HistoryOfTerrors",
   "guid": "9e4c7d08f67f4496ba42c2cdb00609a7",

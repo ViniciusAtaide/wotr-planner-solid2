@@ -36,6 +36,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "KnowledgeDomainBaseFeatureSeparatist",
   "guid": "e3e9a34a843342ae82d995edf3233be6",

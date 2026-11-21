@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MonkStyleExtraStrike",
   "guid": "1673659a96a1d1f4f919048021436bc1"

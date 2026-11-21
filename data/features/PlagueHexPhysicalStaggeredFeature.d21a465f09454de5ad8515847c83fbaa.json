@@ -26,6 +26,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "PlagueHexPhysicalStaggeredFeature",
   "guid": "d21a465f09454de5ad8515847c83fbaa",

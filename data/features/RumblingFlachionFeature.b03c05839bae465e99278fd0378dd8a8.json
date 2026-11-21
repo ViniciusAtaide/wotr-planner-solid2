@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "RumblingFlachionFeature",
   "guid": "b03c05839bae465e99278fd0378dd8a8"

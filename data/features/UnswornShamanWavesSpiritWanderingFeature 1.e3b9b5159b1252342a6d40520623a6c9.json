@@ -50,6 +50,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "UnswornShamanWavesSpiritWanderingFeature 1",
   "guid": "e3b9b5159b1252342a6d40520623a6c9",

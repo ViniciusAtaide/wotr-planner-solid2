@@ -30,6 +30,7 @@
     "Feat"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "GreaterPenetratingStrike",
   "guid": "eb6eb946c68ef094f89c7633f5bfdc9b",

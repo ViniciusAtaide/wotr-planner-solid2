@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierCockatriceChallenge",
   "guid": "ba176bca404967b47bf9e583e80c3fd5",

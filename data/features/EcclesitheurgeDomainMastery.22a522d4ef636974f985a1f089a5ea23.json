@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EcclesitheurgeDomainMastery",
   "guid": "22a522d4ef636974f985a1f089a5ea23",

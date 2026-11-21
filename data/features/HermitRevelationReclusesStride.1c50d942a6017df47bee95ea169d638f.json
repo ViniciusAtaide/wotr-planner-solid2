@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "HermitRevelationReclusesStride",
   "guid": "1c50d942a6017df47bee95ea169d638f",

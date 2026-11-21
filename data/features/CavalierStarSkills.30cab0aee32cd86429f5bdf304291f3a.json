@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "CavalierStarSkills",
   "guid": "30cab0aee32cd86429f5bdf304291f3a",

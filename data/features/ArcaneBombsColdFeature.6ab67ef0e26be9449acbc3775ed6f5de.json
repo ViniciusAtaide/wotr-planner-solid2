@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ArcaneBombsColdFeature",
   "guid": "6ab67ef0e26be9449acbc3775ed6f5de",

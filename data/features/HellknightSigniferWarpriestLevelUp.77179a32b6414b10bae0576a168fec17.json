@@ -8,6 +8,7 @@
   ],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 10,
   "assetName": "HellknightSigniferWarpriestLevelUp",
   "guid": "77179a32b6414b10bae0576a168fec17",

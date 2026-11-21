@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SunDomainGreaterFeature",
   "guid": "3e301c9d0e735b649955139ee0f5f165",

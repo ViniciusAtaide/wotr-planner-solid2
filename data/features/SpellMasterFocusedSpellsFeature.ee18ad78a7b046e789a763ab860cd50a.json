@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "SpellMasterFocusedSpellsFeature",
   "guid": "ee18ad78a7b046e789a763ab860cd50a",

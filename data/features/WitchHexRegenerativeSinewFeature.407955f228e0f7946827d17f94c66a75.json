@@ -20,6 +20,7 @@
     "WitchHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "WitchHexRegenerativeSinewFeature",
   "guid": "407955f228e0f7946827d17f94c66a75",

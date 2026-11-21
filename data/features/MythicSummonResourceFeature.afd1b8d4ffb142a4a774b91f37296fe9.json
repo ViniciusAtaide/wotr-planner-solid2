@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": true,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MythicSummonResourceFeature",
   "guid": "afd1b8d4ffb142a4a774b91f37296fe9"

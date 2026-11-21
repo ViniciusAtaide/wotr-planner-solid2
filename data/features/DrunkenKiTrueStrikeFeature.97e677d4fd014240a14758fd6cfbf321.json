@@ -22,6 +22,7 @@
     "KiPowers"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "DrunkenKiTrueStrikeFeature",
   "guid": "97e677d4fd014240a14758fd6cfbf321",

@@ -79,6 +79,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ScarredHideFeature",
   "guid": "e05f729b68d14ea0b034b9ee84630ec3",

@@ -5,6 +5,7 @@
   "Group": "WeaponTraining",
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "IgnorePrerequisites": false,
   "Mode": "OnlyRankUp",
   "Obligatory": false,

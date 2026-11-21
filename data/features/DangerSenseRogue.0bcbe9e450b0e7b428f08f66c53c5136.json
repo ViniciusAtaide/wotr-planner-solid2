@@ -3,6 +3,7 @@
   "Components": [],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 6,
   "assetName": "DangerSenseRogue",
   "guid": "0bcbe9e450b0e7b428f08f66c53c5136",

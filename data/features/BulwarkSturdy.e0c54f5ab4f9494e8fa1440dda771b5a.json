@@ -22,6 +22,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "BulwarkSturdy",
   "guid": "e0c54f5ab4f9494e8fa1440dda771b5a",

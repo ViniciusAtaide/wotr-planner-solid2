@@ -15,6 +15,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "EldritchWeaponPlus3",
   "guid": "010ec746da5d9374aa7dfb8a1dd817db",

@@ -34,6 +34,7 @@
     "ShamanHex"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "ShamanHexBeckoningChillFeature",
   "guid": "905a9eccb9fa73e4da1d3e86bcb1e421",

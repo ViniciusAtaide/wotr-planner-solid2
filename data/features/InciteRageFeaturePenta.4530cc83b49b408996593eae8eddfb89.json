@@ -11,6 +11,7 @@
   ],
   "Groups": [],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "InciteRageFeaturePenta",
   "guid": "4530cc83b49b408996593eae8eddfb89",

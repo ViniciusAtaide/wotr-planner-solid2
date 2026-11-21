@@ -5,6 +5,7 @@
     "MythicAbility"
   ],
   "HideInUI": false,
+  "HideNotAvailibleInUI": false,
   "Ranks": 1,
   "assetName": "MythicCharge",
   "guid": "3d1a968428c9b3d4d9d4d27e656b65a8",
