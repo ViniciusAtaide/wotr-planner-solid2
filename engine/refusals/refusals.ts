@@ -136,17 +136,29 @@ function shortList(names: readonly string[]): string {
   return more > 0 ? `${shown.join(', ')} and ${more} more` : head;
 }
 
+export function bareNameOf(data: CheckedData, guid: Guid | string): string {
+  const bp = data.blueprints.get(guid);
+  return (bp && bareName(bp)) ?? nameOf(data, guid);
+}
+
+export function namesIn(data: CheckedData, guids: readonly Guid[]): ReadonlyMap<Guid, string> {
+  const unique = [...new Set(guids)];
+  const bare = unique.map((g) => bareNameOf(data, g));
+  const count = new Map<string, number>();
+  for (const b of bare) count.set(b, (count.get(b) ?? 0) + 1);
+  return new Map(unique.map((g, i) => [g, (count.get(bare[i]!) ?? 0) > 1 ? nameOf(data, g) : bare[i]!]));
+}
+
+export function listNames(data: CheckedData, guids: readonly Guid[]): string[] {
+  return [...new Set(namesIn(data, guids).values())];
+}
+
 function plain(w: Wording, guid: Guid | string): string {
-  const bp = w.data.blueprints.get(guid);
-  return (bp && bareName(bp)) ?? nameOf(w.data, guid);
+  return bareNameOf(w.data, guid);
 }
 
 function plainNames(w: Wording, guids: readonly Guid[]): string[] {
-  const unique = [...new Set(guids)];
-  const bare = unique.map((g) => plain(w, g));
-  const count = new Map<string, number>();
-  for (const b of bare) count.set(b, (count.get(b) ?? 0) + 1);
-  return [...new Set(unique.map((g, i) => ((count.get(bare[i]!) ?? 0) > 1 ? nameOf(w.data, g) : bare[i]!)))];
+  return listNames(w.data, guids);
 }
 
 function familyOf(names: readonly string[]): string | undefined {

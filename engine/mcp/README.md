@@ -45,6 +45,7 @@ Citations for these live in `cites.ts`.
 
 ## Design notes
 
+- **Names in lists.** What a change breaks or clears, `buildsOn`, `shares` and `wontStack` name blueprints bare, keeping a qualifier only where two names in the same list would read the same (R's `namesIn`), so "Seize the Moment", not "Seize the Moment (feature)" (QA pass 2). An option's own name stays the full display name.
 - **Plain edits.** `plainEdit` applies one edit through E's `allows`: the new code, or a refusal naming what it breaks. `plainEdits` treats several edits (as `set_start` and `level_up` make) as one plain edit, refused when the Build after all of them breaks anything. `pick` and `equip` go through their `mode` instead.
 - **What breaks, in words.** `breaksInWords` lists what an edit breaks, each line R's: a pick reads as `pickInWords` gives it (`L3 Feat: Power Attack`), and another choice as its place, its kind and R's reason.
 - **`options`** lists only the options the game shows, open ones first, `OPTIONS_PER_PAGE` (25) a page, filtered by name. Closed ones are counts by R's reason, and are listed one by one only with `include_closed`. An option's name (`optionName`) is the feature's, with its parameter in brackets.

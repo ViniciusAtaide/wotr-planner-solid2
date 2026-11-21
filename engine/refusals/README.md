@@ -12,6 +12,8 @@ Why the game refuses a choice, worded true for this Build (guide §4, GLOSSARY.m
 - `ruleText(w, failed)`: one rule's reason, worded with the values it compared.
 - `unmetText(w, unmet)`: one unmet prerequisite leaf, worded for this Build.
 - `nameOf(data, guid)`: a blueprint's display name.
+- `bareNameOf(data, guid)`: its bare name (`bareName`), or `nameOf` when it has none.
+- `namesIn(data, guids)` and `listNames(data, guids)`: the names of a list, each bare unless two in the list would read the same, which keep their qualifiers. `namesIn` maps each GUID to its name; `listNames` gives the distinct names in order. R's own lists, the MCP's breaks and Synergy words, and the planner's Synergy lines and broken-pick names use them (QA pass 2).
 - `statName(stat)`: a stat's name.
 - `gearNote(data, items)`: the note an option allowed only with the Gear counted carries.
 - `rankLevelRange`, `abilityScoreRange`, `skillRankRange` and `archetypeCount`: why a value no Build code holds is refused where it comes in (a Rank level outside 1–255, a score outside 7–18, skill ranks outside 0–255, more than one archetype for a class), with the value given.
@@ -23,7 +25,7 @@ Why the game refuses a choice, worded true for this Build (guide §4, GLOSSARY.m
 
 ## Rules
 
-- **Names in Refusals** are bare (`bareName`): "Allied Spellcaster", not the importer's globally qualified "Allied Spellcaster (feature)". A list keeps a qualifier only where two of its names would otherwise read the same (`plainNames`). `nameOf` stays the globally unique name for other callers.
+- **Names in Refusals** are bare (`bareName`): "Allied Spellcaster", not the importer's globally qualified "Allied Spellcaster (feature)". A list keeps a qualifier only where two of its names would otherwise read the same (`namesIn`). `nameOf` stays the globally unique name for other callers.
 - **A condition** (`PrerequisiteCondition`) is worded by what its options are: each shown fact in it, and the named grantors of each hidden one.
   - Ability grantors are left out: picks made through an ability are daily choices and never part of a Build (map tickets 24 and 26). An example is Mixed Bloodline.
   - **Family:** when the options' bare names share leading words, the condition reads as that family. The noun is the shown facts' shared bare name, or else the grantors' kind noun: "Needs a Draconic Bloodline", in the manner of map 30's family names. When the character holds a fact of the same specific kind, its name follows as "(yours: Abyssal Bloodline)".

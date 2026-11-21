@@ -35,6 +35,9 @@ import {
   gearNote,
   nameOf,
   buildNameLength,
+  bareNameOf,
+  listNames,
+  namesIn,
   rankLevelRange,
   refusal,
   refusalWords,
@@ -82,14 +85,23 @@ async function open(e: Engine, code: string): Promise<Build | ToolRefusal> {
 
 const isRefusal = (x: unknown): x is ToolRefusal => typeof x === 'object' && x !== null && 'refused' in x;
 
-function pickInWords(e: Engine, p: Pick): string {
-  return `${placeKey(p.slot.place)} ${nameOf(e.data, p.slot.selection)}: ${nameOf(e.data, p.feature)}`;
+function pickInWords(e: Engine, p: Pick, names?: ReadonlyMap<Guid, string>): string {
+  const name = names?.get(p.feature) ?? bareNameOf(e.data, p.feature);
+  return `${placeKey(p.slot.place)} ${bareNameOf(e.data, p.slot.selection)}: ${name}`;
+}
+
+function picksInWords(e: Engine, picks: readonly Pick[]): string[] {
+  const names = namesIn(
+    e.data,
+    picks.map((p) => p.feature),
+  );
+  return picks.map((p) => pickInWords(e, p, names));
 }
 
 function breaksInWords(e: Engine, b: Breaks, unitOf?: () => Parameters<typeof refusal>[0]['unit']): string[] {
   const w = { data: e.data, G: e.G, unit: unitOf?.() };
   return [
-    ...b.picks.map((p) => pickInWords(e, p)),
+    ...picksInWords(e, b.picks),
     ...b.others.map((f: Failure) => `${placeKey(f.place)} ${f.choice}: ${refusalWords(w, f)}`),
   ];
 }
@@ -115,7 +127,7 @@ async function withMode(
   if (mode === 'strict') return plainEdit(e, build, edit);
   const c = cascade(e.data, build, edit, e.G);
   if (!c.ok) return refused('A cascade can’t mend what the change breaks.', { breaks: breaksInWords(e, c) });
-  if (mode === 'preview') return { preview: true, clears: c.cleared.map((p) => pickInWords(e, p)) };
+  if (mode === 'preview') return { preview: true, clears: picksInWords(e, c.cleared) };
   return changed(e, c.build);
 }
 
@@ -286,10 +298,10 @@ export async function options(
     ...(o.param && { param: o.param }),
     name: optionName(e, o),
     summary: NO_SUMMARY,
-    buildsOn: links
-      .needs(o.feature)
-      .filter((g) => held.has(g))
-      .map((g) => nameOf(e.data, g)),
+    buildsOn: listNames(
+      e.data,
+      links.needs(o.feature).filter((g) => held.has(g)),
+    ),
     ...(o.synergy && o.synergy.shared.length > 0 && { shares: o.synergy.shared.map((s) => sharedWords(e, s)) }),
     ...(o.synergy && o.synergy.wontStack.length > 0 && { wontStack: o.synergy.wontStack.map((c) => stackWords(e, c)) }),
     ...(o.gearItems && { gear: gearNote(e.data, o.gearItems) }),
@@ -319,13 +331,13 @@ function topicWords(t: Topic): string {
 }
 
 function sharedWords(e: Engine, s: SharedTopic): string {
-  return `${topicWords(s.topic)}, like ${s.with.map((g) => nameOf(e.data, g)).join(', ')}`;
+  return `${topicWords(s.topic)}, like ${listNames(e.data, s.with).join(', ')}`;
 }
 
 function stackWords(e: Engine, c: StackClash): string {
   const stat = statName(c.stat);
   const kind = c.descriptor.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase();
-  return `Its ${kind} bonus to ${stat} won't stack with ${c.with.map((g) => nameOf(e.data, g)).join(', ')}.`;
+  return `Its ${kind} bonus to ${stat} won't stack with ${listNames(e.data, c.with).join(', ')}.`;
 }
 
 function optionName(e: Engine, o: { readonly feature: Guid; readonly param?: GrantParam }): string {

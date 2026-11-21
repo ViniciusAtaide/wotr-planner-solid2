@@ -5,7 +5,7 @@ import { decodeBuild, encodeBuild } from '../codec';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { jackInTheGreen } from '../gold';
-import { archetypeCount, buildNameLength, rankLevelRange, skillRankRange } from '../refusals';
+import { archetypeCount, buildNameLength, listNames, namesIn, rankLevelRange, skillRankRange } from '../refusals';
 import { walk } from '../walk';
 import {
   engineOf,
@@ -198,5 +198,20 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(
       (await decodeBuild(e.data, ok(await start_build(e, { name: '  ' }), 'start_build').code)).name,
     ).toBeUndefined();
+  });
+
+  it('names a list bare, qualifying only names that collide in it (QA pass 2)', () => {
+    const SEIZE_FEATURE = '1191ef3065e6f8e4f9fbe1b7e3c0f760';
+    const SEIZE_BUFF = '953c3dbda63dcdb4aad6c54c1a4590d0';
+    const COORDINATED_FEATURE = 'b186cea78dce3a04aacff0a81786008c';
+    expect(listNames(e.data, [SEIZE_FEATURE, COORDINATED_FEATURE])).toEqual([
+      'Seize the Moment',
+      'Coordinated Maneuvers',
+    ]);
+    expect(listNames(e.data, [SEIZE_FEATURE, SEIZE_BUFF])).toEqual([
+      'Seize the Moment (feature)',
+      'Seize the Moment (buff)',
+    ]);
+    expect(namesIn(e.data, [COORDINATED_FEATURE]).get(COORDINATED_FEATURE)).toBe('Coordinated Maneuvers');
   });
 });
