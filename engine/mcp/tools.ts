@@ -3,6 +3,7 @@ import {
   slotKey,
   toAbilityScores,
   toArchetypes,
+  toBuildName,
   toRankLevel,
   toSkillRanks,
   type Alignment,
@@ -33,6 +34,7 @@ import {
   archetypeCount,
   gearNote,
   nameOf,
+  buildNameLength,
   rankLevelRange,
   refusal,
   refusalWords,
@@ -117,8 +119,13 @@ async function withMode(
   return changed(e, c.build);
 }
 
-export function start_build(e: Engine): Promise<Changed> {
-  return changed(e, { levels: [], picks: [] });
+export function start_build(e: Engine): Promise<Changed>;
+export function start_build(e: Engine, args: { readonly name?: string }): Promise<Changed | ToolRefusal>;
+export async function start_build(e: Engine, args: { readonly name?: string } = {}): Promise<Changed | ToolRefusal> {
+  if (args.name === undefined || args.name.trim() === '') return changed(e, { levels: [], picks: [] });
+  const name = toBuildName(args.name);
+  if (name === undefined) return refused(buildNameLength(args.name));
+  return changed(e, { name, levels: [], picks: [] });
 }
 
 export async function set_start(
@@ -474,6 +481,7 @@ export function explain(e: Engine, args: { readonly guid: Guid }): Description |
 }
 
 export interface Sheet {
+  readonly name?: string;
   readonly level: number;
   readonly scores: Readonly<Record<Attribute, number>>;
   readonly baseAttackBonus: number;
@@ -503,6 +511,7 @@ function sheetOf(e: Engine, build: Build, level: number): Sheet {
     skills[statName(skill)] = { ranks: unit.base.get(skill) ?? 0, value: unit.skillBase(skill) };
   }
   return {
+    ...(build.name !== undefined && { name: build.name }),
     level: Math.min(level, build.levels.length),
     scores: Object.fromEntries(ATTRIBUTES.map((a) => [a, unit.permanent(a)])) as Record<Attribute, number>,
     baseAttackBonus: unit.tableStat('m_BaseAttackBonus'),

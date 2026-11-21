@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { abilityScores, placeKey, skillRanks, slotKey, type Build } from '../build';
+import { abilityScores, placeKey, sameBuild, skillRanks, slotKey, toBuildName, type Build } from '../build';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { allows, apply, breaksOf, cascade, clearPicks, type Edit } from './edits';
@@ -182,5 +182,25 @@ describe('E: edits', { timeout: 30_000 }, () => {
     expect(c.ok && c.build.raceStat).toBeUndefined();
     const back = allows(data, v.build, { kind: 'race', race: HUMAN, raceStat: 'Dexterity' }, G);
     expect(back.ok && back.build.raceStat).toBe('Dexterity');
+  });
+
+  it('renames a Build in one edit that never touches the walk', () => {
+    const name = toBuildName('  Jack of the Green  ');
+    expect(name).toBe('Jack of the Green');
+    const rename: Edit = { kind: 'rename', ...(name && { name }) };
+    const verdict = allows(data, jackInTheGreen.build, rename, G);
+    expect(verdict).toEqual({ ok: true, build: { ...jackInTheGreen.build, name } });
+    const c = cascade(data, jackInTheGreen.build, rename, G);
+    expect(c).toEqual({
+      ok: true,
+      cleared: [],
+      clearedSkills: [],
+      clearedRanks: [],
+      build: { ...jackInTheGreen.build, name },
+    });
+    const renamed = apply(jackInTheGreen.build, rename);
+    expect(sameBuild(renamed, jackInTheGreen.build)).toBe(false);
+    expect(walk(data, renamed, G).failures).toEqual(walk(data, jackInTheGreen.build, G).failures);
+    expect(apply(renamed, { kind: 'rename' })).toEqual(jackInTheGreen.build);
   });
 });

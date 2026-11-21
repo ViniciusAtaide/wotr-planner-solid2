@@ -29,7 +29,8 @@ structure = opt(key(races)), ability [race stat], alignment, opt(6 × u8 [point 
             varint picks, picks × (place, kindKey [selection], varint index, kindKey [feature], parameter),
             varint gear, gear × (u8 place, key(items)),
             flag [the Gear opt-in],
-            varint aspects, aspects × key(activatables)
+            varint aspects, aspects × key(activatables),
+            [name: varint bytes, UTF-8 bytes]
 place     = 0, varint level | 1, varint rank
 parameter = 0 [none] | 1, u8 weapon category | 2, u8 school | 3, u8 skill | 4, kindKey [a blueprint]
 ability   = 0 [none] | 1 + its index in Str, Dex, Con, Int, Wis, Cha
@@ -45,7 +46,7 @@ Picks are written in slot order (`slotOrder`): levels before ranks, then by the 
 
 **Aliases and twins.** An alias override names an old GUID the game replaced: its hash counts in the collision test, and it reads as the one GUID naming it, or, when several do, as itself, and `openBuild` moves the pick to the heir its slot takes. Inside `linkKeys`, each hash of a kind holds a `Hashed` entry: the first GUID `named` with that hash, whether it is `live` (a blueprint of the data), the `heirs` alias overrides name for it, and whether a second GUID `shared` the hash. A twin item (map ticket 29) reads as the item offered in its place.
 
-**Exact.** A Build reads back unchanged from its code, picks in slot order, and has only one body. Decoding refuses anything the encoder never writes: an unknown tag or index, a varint longer than needed, picks, class choices, skills or Gear out of order or named twice, a hash listed but not named, a count larger than the bytes and hashes left could hold (`Reader.count`: each counted thing takes at least a byte or a hash), or bytes left over. It also refuses a Build no planner makes whatever the data (`keepsFixedRules`): a point buy that doesn't fit (a score below 7 or above 18, or more than the point buy allows), an increase off every fourth level, a skill's ranks above the character level, a Rank level of 0, or more than one archetype for a class (`toArchetypes`, build ticket 05d).
+**Exact.** A Build reads back unchanged from its code, picks in slot order, and has only one body. Decoding refuses anything the encoder never writes: an unknown tag or index, a varint longer than needed, picks, class choices, skills or Gear out of order or named twice, a hash listed but not named, a count larger than the bytes and hashes left could hold (`Reader.count`: each counted thing takes at least a byte or a hash), or bytes left over. The name is optional and last (ticket 11): a body that ends after the aspects is a nameless Build, so every code written before the name decodes as it did. A name must be the trimmed text of 1 to 60 characters that `toBuildName` keeps, in valid UTF-8, with nothing after it. It also refuses a Build no planner makes whatever the data (`keepsFixedRules`): a point buy that doesn't fit (a score below 7 or above 18, or more than the point buy allows), an increase off every fourth level, a skill's ranks above the character level, a Rank level of 0, or more than one archetype for a class (`toArchetypes`, build ticket 05d).
 
 ## Design notes
 

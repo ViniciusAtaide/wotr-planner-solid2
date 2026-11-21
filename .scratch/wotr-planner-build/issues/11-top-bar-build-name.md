@@ -29,3 +29,7 @@ User, 2026-11-21: "I don't like how at first draw the focus it on the character 
 
 - Both halves are merged and the checks above pass.
 - `Status: done` and an `## Outcome`.
+
+## Progress
+
+- **Engine half (done):** `Build.name` (`BuildName`, `toBuildName`, `MAX_NAME_LENGTH` 60, counted in code points), R's `buildNameLength`, the codec's optional last field (varint length, UTF-8), E's `rename` (allowed without a walk), `start_build`'s optional `name` and `sheet`'s `name`. A blank name leaves the Build nameless. The UI's history takes `rename` like any edit, so it is one Undo entry; the UI half's tests cover it there.

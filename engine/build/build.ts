@@ -34,6 +34,20 @@ export type SkillRanks = Readonly<Partial<Record<StatType, SkillRank>>>;
 export type AbilityScore = number & { readonly brand: 'AbilityScore' };
 export type AbilityScores = Readonly<Record<Attribute, AbilityScore>>;
 
+export const MAX_NAME_LENGTH = 60;
+
+export type BuildName = string & { readonly brand: 'BuildName' };
+
+export function nameLength(name: string): number {
+  return [...name].length;
+}
+
+export function toBuildName(raw: unknown): BuildName | undefined {
+  if (typeof raw !== 'string') return undefined;
+  const name = raw.trim();
+  return name !== '' && nameLength(name) <= MAX_NAME_LENGTH ? (name as BuildName) : undefined;
+}
+
 export const MIN_SCORE = 7;
 export const MAX_SCORE = 18;
 const ATTRIBUTE_NAMES: readonly Attribute[] = [
@@ -145,6 +159,7 @@ export type GearPlace =
 export type Gear = Readonly<Partial<Record<GearPlace, Guid>>>;
 
 export interface Build {
+  readonly name?: BuildName;
   readonly race?: Guid;
   readonly raceStat?: Attribute;
   readonly alignment?: Alignment;

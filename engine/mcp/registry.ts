@@ -52,9 +52,9 @@ const object = (properties: Json, required: readonly string[] = []): Json => ({
 export const TOOLS: readonly ToolDef[] = [
   {
     name: 'start_build',
-    description: 'Start an empty Build. Returns its code.',
-    inputSchema: object({}),
-    run: (e) => tools.start_build(e),
+    description: 'Start an empty Build, with an optional name of at most 60 characters. Returns its code.',
+    inputSchema: object({ name: { type: 'string' } }),
+    run: (e, a) => tools.start_build(e, a as Parameters<typeof tools.start_build>[1]),
   },
   {
     name: 'set_start',
@@ -210,7 +210,8 @@ export const TOOLS: readonly ToolDef[] = [
   },
   {
     name: 'sheet',
-    description: 'The numbers at a character level: ability scores, base attack, saves, skills, spellbooks.',
+    description:
+      "The Build's name and the numbers at a character level: ability scores, base attack, saves, skills, spellbooks.",
     inputSchema: object({ code, level: { type: 'integer', minimum: 1 } }, ['code']),
     run: (e, a) => tools.sheet(e, a as Parameters<typeof tools.sheet>[1]),
   },

@@ -21,7 +21,7 @@ From `tools.ts`, the shared shapes:
 
 The 14 tools, in map 08's order:
 
-- `start_build`: an empty Build.
+- `start_build`: an empty Build, with an optional name (ticket 11). A name over 60 characters is refused in R's words; a blank one leaves the Build nameless.
 - `set_start`: the race, its chosen +2, the point buy and the alignment; each one left out stays as it is.
 - `level_up`: one more level of a class, returning the new code with the slots the level opened.
 - `next_slots`: the open slots, in walk order.
@@ -33,7 +33,7 @@ The 14 tools, in map 08's order:
 - `synergies`: at a slot, or at every open slot, the open options that link to what the Build holds: `buildsOn` (the chain kind), `shares` (an ability score, weapon or spell school it shares with held facts, "Dexterity, like Two-Weapon Fighting") and `wontStack` (a bonus of a type already given to the same stat). `options` carries `shares` and `wontStack` on each option too.
 - `search`: the shown blueprints whose name holds the text, of one kind when asked, at most 50.
 - `explain`: a blueprint's basic description (engine/describe).
-- `sheet`: the numbers at a character level, the Build's last by default.
+- `sheet`: the Build's name, if it has one, and the numbers at a character level, the Build's last by default.
 - `compare`: 2 to 4 Builds' sheets at checkpoint levels, their chain link counts, and the first place they diverge.
 
 ## Rules

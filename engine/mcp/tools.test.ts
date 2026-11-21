@@ -5,7 +5,7 @@ import { decodeBuild, encodeBuild } from '../codec';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { jackInTheGreen } from '../gold';
-import { archetypeCount, rankLevelRange, skillRankRange } from '../refusals';
+import { archetypeCount, buildNameLength, rankLevelRange, skillRankRange } from '../refusals';
 import { walk } from '../walk';
 import {
   engineOf,
@@ -180,5 +180,23 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     const code = (await start_build(e)).code;
     const fighter = ok(await level_up(e, { code, class: '48ac8db94d5de7645906c7d0ad3bcfbd' }), 'level_up');
     expect(ok(await sheet(e, { code: fighter.code }), 'sheet')).toMatchObject({ level: 1, baseAttackBonus: 1 });
+  });
+
+  it("names a Build at its start, refuses a name over 60 characters in R's words, and shows the name on the sheet", async () => {
+    const started = ok(await start_build(e, { name: '  Lann  ' }), 'start_build');
+    expect((await decodeBuild(e.data, started.code)).name).toBe('Lann');
+    const fighter = ok(
+      await level_up(e, { code: started.code, class: '48ac8db94d5de7645906c7d0ad3bcfbd' }),
+      'level_up',
+    );
+    expect(ok(await sheet(e, { code: fighter.code }), 'sheet')).toMatchObject({ name: 'Lann', level: 1 });
+    expect(await start_build(e, { name: 'x'.repeat(61) })).toEqual({
+      refused: true,
+      reason: buildNameLength('x'.repeat(61)),
+    });
+    expect(buildNameLength('x'.repeat(61))).toBe("A Build's name is at most 60 characters, not 61.");
+    expect(
+      (await decodeBuild(e.data, ok(await start_build(e, { name: '  ' }), 'start_build').code)).name,
+    ).toBeUndefined();
   });
 });

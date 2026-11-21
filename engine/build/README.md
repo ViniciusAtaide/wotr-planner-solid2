@@ -30,6 +30,7 @@ Every citation of the game's code lives in `cites.ts`, keyed by the type or fiel
   - `levels`: character level i + 1 is `levels[i]`.
   - `ranks`: Mythic rank r + 1 is `ranks[r]`.
   - `aspects`: the aspect toggles the Build keeps on (GLOSSARY.md "Aspect kept on"; map 32), each an activatable ability the character holds. Only these toggles' buffs count as on.
+  - `name`: the Build's optional name (ticket 11), plain text the player gives it, never game text. `toBuildName` trims it and keeps 1 to 60 characters (`MAX_NAME_LENGTH`, counted in code points); R words a longer one (`buildNameLength`). Nothing the walk reads.
   - `countGear`: the opt-in of ADR 0002: the Gear's Enhancement bonuses count toward stat prerequisites, and each pick that needs them is marked gear-dependent. Off by default; the MCP never sets it.
 
 ## Keys

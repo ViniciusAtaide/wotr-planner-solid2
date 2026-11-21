@@ -6,6 +6,7 @@ import {
   type Alignment,
   type Archetypes,
   type Build,
+  type BuildName,
   type GearPlace,
   type Pick,
   type RankLevel,
@@ -38,7 +39,8 @@ export type Edit =
   | { readonly kind: 'dropLevel' }
   | { readonly kind: 'dropRank' }
   | { readonly kind: 'rankClass'; readonly rank: number; readonly class: Guid }
-  | { readonly kind: 'countGear'; readonly on: boolean };
+  | { readonly kind: 'countGear'; readonly on: boolean }
+  | { readonly kind: 'rename'; readonly name?: BuildName };
 
 export function apply(build: Build, edit: Edit): Build {
   switch (edit.kind) {
@@ -115,6 +117,10 @@ export function apply(build: Build, edit: Edit): Build {
       const { countGear: _count, ...rest } = build;
       return edit.on ? { ...rest, countGear: true } : rest;
     }
+    case 'rename': {
+      const { name: _name, ...rest } = build;
+      return edit.name === undefined ? rest : { ...rest, name: edit.name };
+    }
   }
 }
 
@@ -189,6 +195,7 @@ export function applyWith(data: CheckedData, build: Build, edit: Edit): Build {
 
 export function allows(data: CheckedData, build: Build, edit: Edit, G: GrantIndex = buildGrantIndex(data)): Verdict {
   const after = applyWith(data, build, edit);
+  if (edit.kind === 'rename') return { ok: true, build: after };
   const broken = breaksOf(data, build, after, G);
   return broken.picks.length === 0 && broken.others.length === 0
     ? { ok: true, build: after }
@@ -239,6 +246,7 @@ function clearSkills(build: Build, levels: readonly number[]): Build {
 
 export function cascade(data: CheckedData, build: Build, edit: Edit, G: GrantIndex = buildGrantIndex(data)): Cascade {
   let after = applyWith(data, build, edit);
+  if (edit.kind === 'rename') return { ok: true, cleared: [], clearedSkills: [], clearedRanks: [], build: after };
   const cleared: Pick[] = [];
   const clearedSkills = new Set<number>();
   const clearedRanks: number[] = [];

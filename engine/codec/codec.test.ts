@@ -1,6 +1,7 @@
 import { fileURLToPath } from 'node:url';
+import { deflateRawSync, inflateRawSync } from 'node:zlib';
 import { describe, expect, it } from 'vitest';
-import { abilityScores, slotKey, type Build } from '../build';
+import { abilityScores, slotKey, toBuildName, type Build, type BuildName } from '../build';
 import { decodeBuild, DecodeError, encodeBuild, keyHash, linkKeys, openBuild } from './codec';
 import { loadData, type CheckedData } from '../load';
 import { readDataDir } from '../data-dir';
@@ -120,6 +121,57 @@ describe('C: the Build code', { timeout: 30_000 }, () => {
     const blueprints = new Map(data.blueprints);
     blueprints.delete(DODGE);
     await failsWith(code, 'unknownKey', { ...data, blueprints });
+  });
+
+  describe("the Build's name (ticket 11)", () => {
+    const small: Build = { race: HUMAN, levels: [{ class: FIGHTER }], picks: [] };
+    const named = (name: string): Build => ({ ...small, name: toBuildName(name) as BuildName });
+    const toCode = (bytes: Uint8Array) =>
+      btoa(String.fromCharCode(...bytes))
+        .replace(/\+/g, '-')
+        .replace(/\//g, '_')
+        .replace(/=+$/, '');
+    const reworked = async (build: Build, change: (body: Uint8Array) => Uint8Array): Promise<string> => {
+      const bytes = bytesOf(await encodeBuild(data, build));
+      const body = change(new Uint8Array(inflateRawSync(bytes.subarray(1))));
+      return toCode(Uint8Array.from([bytes[0] ?? 0, ...deflateRawSync(body)]));
+    };
+    const withName = (raw: Uint8Array) => (body: Uint8Array) => Uint8Array.from([...body, raw.length, ...raw]);
+
+    it('round-trips a Build with a name, and one without, exactly', async () => {
+      for (const build of [small, named('Sosiel the Kind'), named('Ærendil ⚔ 龍'), named('x'.repeat(60))])
+        expect(await decodeBuild(data, await encodeBuild(data, build))).toEqual(build);
+    });
+
+    it('writes nothing for a nameless Build, so every code written so far opens nameless', async () => {
+      const nameless = bytesOf(await encodeBuild(data, small));
+      const body = inflateRawSync(nameless.subarray(1));
+      const namedBody = inflateRawSync(bytesOf(await encodeBuild(data, named('Seelah'))).subarray(1));
+      expect([...namedBody.subarray(0, body.length)]).toEqual([...body]);
+      expect([...namedBody.subarray(body.length)]).toEqual([6, ...new TextEncoder().encode('Seelah')]);
+      expect(
+        await decodeBuild(data, 'AWOVUuuJfBSkJ3DDQ1R-2tWlBVxWgnqMDIyMAjx8XDxcjAyMzIwMDCCKgYVRlpGHgQEA'),
+      ).not.toHaveProperty('name');
+    });
+
+    it('keeps names to trimmed text of 1 to 60 characters', () => {
+      expect(toBuildName('  Ember  ')).toBe('Ember');
+      expect(toBuildName('   ')).toBeUndefined();
+      expect(toBuildName('x'.repeat(60))).toBe('x'.repeat(60));
+      expect(toBuildName('x'.repeat(61))).toBeUndefined();
+      expect(toBuildName('龍'.repeat(60))).toBe('龍'.repeat(60));
+    });
+
+    it('refuses anything after the name, and a name the planner never writes', async () => {
+      const utf8 = (s: string) => new TextEncoder().encode(s);
+      await failsWith(await reworked(named('Arue'), (b) => Uint8Array.from([...b, 0])), 'format');
+      await failsWith(await reworked(small, withName(utf8(' Arue'))), 'format');
+      await failsWith(await reworked(small, withName(utf8(''))), 'format');
+      await failsWith(await reworked(small, withName(utf8('x'.repeat(61)))), 'format');
+      await failsWith(await reworked(small, withName(Uint8Array.from([0xff, 0xfe]))), 'format');
+      await failsWith(await reworked(small, (b) => Uint8Array.from([...b, 9, 65])), 'format');
+      expect(await decodeBuild(data, await reworked(small, withName(utf8('Arue'))))).toEqual(named('Arue'));
+    });
   });
 
   describe('aliases (hand-built; no real one exists yet)', () => {

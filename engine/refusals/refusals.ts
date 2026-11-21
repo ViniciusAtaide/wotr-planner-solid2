@@ -1,7 +1,9 @@
 import {
   MAX_BYTE,
+  MAX_NAME_LENGTH,
   MAX_SCORE,
   MIN_SCORE,
+  nameLength,
   placeKey,
   slotKey,
   withPick,
@@ -52,6 +54,10 @@ export function abilityScoreRange(found: unknown): string {
 
 export function skillRankRange(found: unknown): string {
   return `Skill ranks are whole numbers from 0 to ${MAX_BYTE}, not ${JSON.stringify(found)}.`;
+}
+
+export function buildNameLength(found: string): string {
+  return `A Build's name is at most ${MAX_NAME_LENGTH} characters, not ${nameLength(found.trim())}.`;
 }
 
 export function archetypeCount(found: readonly unknown[]): string {

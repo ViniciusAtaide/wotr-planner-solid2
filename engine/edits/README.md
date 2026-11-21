@@ -21,6 +21,7 @@ E answers whether a change keeps a Build possible (guide §4; map ticket 11, "Ca
   - `dropLevel`: the last character level taken off; its picks' slots go with it.
   - `dropRank`: the last Mythic rank taken off.
   - `rankClass`: a Mythic rank's class (1-based): a path, or a switch at its rank (map ticket 31).
+  - `rename`: the Build's name, or none to clear it. One edit, so one Undo entry. The walk never reads the name, so `allows` and `cascade` allow it without walking.
   - `countGear`: ADR 0002's opt-in, under which the Gear's Enhancement counts toward stat prerequisites. The MCP never sets it.
 - `apply(build, edit)`: the Build with the edit made. Nothing is judged here.
 - `clearPicks(build, slots)`: the Build without the picks in these slots.

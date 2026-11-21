@@ -3,11 +3,13 @@ import {
   toAbilityScores,
   toArchetypes,
   toRankLevel,
+  toBuildName,
   toSkillRank,
   type AbilityScores,
   type Alignment,
   type Ascension,
   type Build,
+  type BuildName,
   type ClassChoice,
   type GearPlace,
   type LevelUp,
@@ -270,7 +272,7 @@ class Writer {
   }
 
   build(b: Build): void {
-    const { race, raceStat, alignment, scores, levels, ranks, classChoices, picks, gear, countGear, aspects } = b;
+    const { race, raceStat, alignment, scores, levels, ranks, classChoices, picks, gear, countGear, aspects, name } = b;
     if (race === undefined) this.byte(0);
     else {
       this.byte(1);
@@ -327,6 +329,13 @@ class Writer {
     this.byte(countGear === true ? 1 : 0);
     this.varint(aspects?.length ?? 0);
     for (const a of aspects ?? []) this.key(a);
+    if (name !== undefined) this.text(name);
+  }
+
+  text(s: string): void {
+    const utf8 = new TextEncoder().encode(s);
+    this.varint(utf8.length);
+    for (const b of utf8) this.byte(b);
   }
 
   param(p: GrantParam | undefined): void {
@@ -520,10 +529,12 @@ class Reader {
     const countGear = this.flag();
     const aspects: Guid[] = [];
     for (let i = this.count(); i > 0; i--) aspects.push(this.key('activatables'));
+    const name = this.at < this.bytes.length ? this.name() : undefined;
     if (this.at !== this.bytes.length || this.hashAt !== this.hashes.length) {
       throw new DecodeError('format', 'left over');
     }
     return {
+      ...(name !== undefined && { name }),
       ...(race !== undefined && { race }),
       ...(raceStat !== undefined && { raceStat }),
       ...(alignment !== undefined && { alignment }),
@@ -536,6 +547,22 @@ class Reader {
       ...(aspects.length > 0 && { aspects }),
       ...(countGear && { countGear }),
     };
+  }
+
+  name(): BuildName {
+    const length = this.varint();
+    if (length > this.bytes.length - this.at) throw new DecodeError('format', 'name');
+    const utf8 = this.bytes.subarray(this.at, this.at + length);
+    this.at += length;
+    let text: string;
+    try {
+      text = new TextDecoder('utf-8', { fatal: true }).decode(utf8);
+    } catch {
+      throw new DecodeError('format', 'name');
+    }
+    const name = toBuildName(text);
+    if (name !== text) throw new DecodeError('format', 'name');
+    return name;
   }
 
   param(): GrantParam | undefined {
