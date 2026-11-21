@@ -67,4 +67,22 @@ describe('Synergy topics', { timeout: 30_000 }, () => {
     const s = synergyOf(data, held, { feature: WEAPON_TRAINING_THROWN });
     expect(s.shared.map((t) => topicKey(t.topic))).toContain('group Thrown');
   });
+
+  it("links Weapon Focus and Improved Critical only on the weapon they're taken for, not on proficiencies or special-weapon gates (MCP QA)", () => {
+    const WEAPON_FOCUS = '1e1f627d26ad36f43bbd26cc2bf8ac7e';
+    const IMPROVED_CRITICAL = 'f4201c85a991369408740c6888362e20';
+    const SIMPLE_WEAPONS = 'e70ecf1ed95ca2f40b754f1adb22bbdd';
+    expect(topicsOf(data, WEAPON_FOCUS)).toEqual([]);
+    expect(topicsOf(data, SIMPLE_WEAPONS)).toEqual([]);
+    const held = heldIndex(data, [
+      { blueprint: WEAPON_FOCUS, param: { WeaponCategory: 'Longsword' } },
+      { blueprint: SIMPLE_WEAPONS },
+    ]);
+    const shared = (category: 'Longsword' | 'Dagger') =>
+      synergyOf(data, held, { feature: IMPROVED_CRITICAL, param: { WeaponCategory: category } }).shared.map((t) =>
+        topicKey(t.topic),
+      );
+    expect(shared('Longsword')).toEqual(['weapon Longsword', 'group BladesHeavy']);
+    expect(shared('Dagger')).toEqual([]);
+  });
 });

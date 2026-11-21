@@ -156,15 +156,6 @@ function componentTopics(c: Component): Topic[] {
         return [{ kind: 'weapon', category: any.WeaponCategory as WeaponCategory }];
       if (any.ParameterType === 'SpellSchool') return [{ kind: 'school', school: any.SpellSchool as SpellSchool }];
       return [];
-    case 'PrerequisiteConditionForWeaponCategory':
-      return (any.m_WeaponCategories as readonly WeaponCategory[]).map((category) => ({ kind: 'weapon', category }));
-    case 'AddProficiencies':
-      return ((any.WeaponProficiencies as readonly WeaponCategory[] | null) ?? []).map((category) => ({
-        kind: 'weapon',
-        category,
-      }));
-    case 'AddBackgroundWeaponProficiency':
-      return [{ kind: 'weapon', category: any.Proficiency as WeaponCategory }];
     case 'WeaponGroupAttackBonus':
     case 'WeaponGroupDamageBonus':
       return any.WeaponGroup === 'None' ? [] : [{ kind: 'group', group: any.WeaponGroup as WeaponFighterGroup }];

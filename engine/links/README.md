@@ -12,7 +12,7 @@ Which blueprints build on which. This feature works out the prerequisite-chain k
 - `topicsOf(data, guid, param?)`, `Topic` and `topicKey`: what a blueprint is about.
   - An ability score its stat bonuses raise (`AddStatBonus`, `AddStatBonusIfHasFact`, `AddContextStatBonus`) or that it replaces (`ReplaceStatBaseAttribute`).
   - An ability score its prerequisites ask for above the average 10. The game's many "Intelligence 3" prerequisites only keep animals out, so they aren't a link.
-  - A weapon category its prerequisites name (`PrerequisiteParametrizedFeature`, `PrerequisiteConditionForWeaponCategory`) or its proficiencies grant.
+  - A weapon category its prerequisites name (`PrerequisiteParametrizedFeature`). Proficiencies aren't weapon topics: one grants 16 to 56 weapons and floods every Weapon Focus option. Nor is `PrerequisiteConditionForWeaponCategory`, a gate on special parameters (tentacle, sting, ray…) that says nothing of the feat's weapon (MCP QA).
   - The weapon category, spell school or skill a parametrized pick was taken for (its parameter). A weapon category also brings the fighter groups its weapon types belong to (`weaponGroupsOf`), so Weapon Focus (Dagger) shares light blades and thrown weapons with Weapon Training.
   - A weapon group its group bonuses name (`WeaponGroupAttackBonus`, `WeaponGroupDamageBonus`), and the weapon and ability a damage-stat replacement names.
   - A spell school its school saves, DCs and caster levels name.
