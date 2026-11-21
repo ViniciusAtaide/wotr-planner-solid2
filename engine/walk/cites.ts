@@ -530,6 +530,7 @@ export const cites = {
   'Walker.selectionPossible': ['Blueprints/Classes/Prerequisites/PrerequisiteSelectionPossible.cs CheckInternal'],
   'Walker.canSelectParam': [
     'Blueprints/Classes/Selection/BlueprintParametrizedFeature.cs CanSelect',
+    'Blueprints/Classes/Selection/BlueprintParametrizedFeature.cs ExtractItemsSpellSchool',
     'Enums/WeaponCategoryExtension.cs HasSubCategory',
     'Blueprints/Classes/Prerequisites/IParamPrerequisite.cs IParamPrerequisite',
     'Blueprints/Classes/Prerequisites/PrerequisiteConditionForWeaponCategory.cs CanBeSelected',

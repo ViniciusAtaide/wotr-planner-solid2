@@ -90,6 +90,20 @@ describe('S: the pickers', { timeout: 30_000 }, () => {
     expect(option?.closed).toBeUndefined();
   });
 
+  it('offers no Universalist school, as the game leaves it out of its spell school items (QA pass 5)', () => {
+    const schoolOf = (param: object | undefined): unknown =>
+      param !== undefined && 'SpellSchool' in param ? param.SpellSchool : undefined;
+    const schools = candidates(data, BASIC).flatMap((o) => schoolOf(o.param) ?? []);
+    expect(schools).toContain('Enchantment');
+    expect(schools).not.toContain('Universalist');
+    const pick = jackInTheGreen.build.picks.find((p) => schoolOf(p.param) !== undefined);
+    expect(pick).toBeDefined();
+    const paused = pauseAt(data, jackInTheGreen.build, pick?.slot as SlotId, G);
+    expect(paused?.judge(pick?.feature as string, { SpellSchool: 'Universalist' })).toMatchObject({
+      rule: 'BlueprintParametrizedFeature.CanSelect:Items',
+    });
+  });
+
   it('returns nothing for a slot the Build never opens', () => {
     expect(picker(data, jackInTheGreen.build, { place: { level: 2 }, selection: BASIC, index: 0 }, G)).toBeUndefined();
   });

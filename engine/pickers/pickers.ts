@@ -33,7 +33,6 @@ const SPELL_SCHOOLS: readonly SpellSchool[] = [
   'Illusion',
   'Necromancy',
   'Transmutation',
-  'Universalist',
 ];
 
 export function parameters(feat: BlueprintParametrizedFeature): readonly GrantParam[] {

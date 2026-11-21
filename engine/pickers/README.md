@@ -61,7 +61,7 @@ Citations for these live in `cites.ts`.
 
 - **`candidates`** lists a selection's items (`m_AllFeatures`), a parametrized feat once per parameter. A Mythic spellbook selection's items are itself, with no spellbook, and itself with each of its `m_AllowedSpellbooks`, as the game collects them.
 - **`parameters`** follows the game's extraction of a parametrized feat's selection items, by `ParameterType`: every weapon category, every spell school, every skill, or the feat's `BlueprintParameterVariants` (Custom and FeatureSelection). The spell parameters are out of v1 (map 22), so those types list nothing.
-- **`SPELL_SCHOOLS`** is the game's spell school enum less `None`, which the parametrized feat's `CanSelect` refuses.
+- **`SPELL_SCHOOLS`** is the game's spell school enum less `None`, which the parametrized feat's `CanSelect` refuses, and less `Universalist`, which its item extraction (`ExtractItemsSpellSchool`) leaves out. The walk refuses a Universalist param too, as an item the feat doesn't offer.
 - **`picker`** judges each candidate at the paused walk and asks it for the Gear items an open option needs.
 - **`walkVerdict`** walks the Build with the option taken in the slot and returns the refusal the walk records for that slot, or undefined when it applies the pick. It is the self-check every picker answer must agree with (guide §6).
 

@@ -1379,6 +1379,8 @@ class Walker {
     }
     if (type === 'SpellSchool' && value === 'None')
       return { rule: 'BlueprintParametrizedFeature.CanSelect:SpellSchool' };
+    if (type === 'SpellSchool' && value === 'Universalist')
+      return { rule: 'BlueprintParametrizedFeature.CanSelect:Items' };
     if (u.factWith(feat.guid, param) !== undefined) return { rule: 'BlueprintParametrizedFeature.CanSelect:held' };
     const prerequisite = refGuid(feat.m_Prerequisite);
     if (prerequisite !== undefined && u.factWith(prerequisite, param) === undefined && !this.slotWaives(slot)) {
