@@ -1,13 +1,15 @@
 import type { JSX } from '@solidjs/web';
-import { createMemo, For, Match, onSettled, Show, Switch, useContext } from 'solid-js';
+import { createEffect, createMemo, createSignal, For, Match, onSettled, Show, Switch, useContext } from 'solid-js';
 import { slotKey, type Place } from '~engine/build';
 import { isShown, refGuid, type Attribute } from '~engine/data';
 import type { Edit } from '~engine/edits';
 import { nameOf } from '~engine/refusals';
-import type { OpenedSlot } from '~engine/walk';
+import { ATTRIBUTES, type OpenedSlot } from '~engine/walk';
 
 import { Badge, FeatIcon, type FeatCategory } from '../design';
-import { CharacterCard, ScoresStep } from './CharacterCard';
+import { CharacterCard, ScoresStep, SHORT } from './CharacterCard';
+import { ChoiceDialog } from './ChoiceDialog';
+import { isListStep, type ListMode } from './list-mode';
 import { RaceStep } from './CharacterSteps';
 import { StepArrived } from './ChoiceList';
 import { featCategory } from './feat-category';
@@ -61,7 +63,7 @@ const REDUCED_MOTION = '(prefers-reduced-motion: reduce)';
 const FINE_POINTER = '(pointer: fine)';
 
 export function firstControl(el: HTMLElement, fine: boolean): HTMLElement | null {
-  const controls = 'button:not([disabled]):not([data-back]), [role="button"][tabindex="0"]';
+  const controls = 'button:not([disabled]):not([data-back]):not([data-aside]), [role="button"][tabindex="0"]';
   return el.querySelector<HTMLElement>(fine ? `input, ${controls}` : controls);
 }
 
@@ -78,14 +80,28 @@ export interface HereProps {
   readonly title: string;
   readonly editing: boolean;
   readonly onBack: () => void;
+  readonly list?: boolean;
+  readonly mode?: ListMode;
+  readonly line?: string;
+  readonly confirming?: boolean;
   readonly children: JSX.Element;
 }
 
 export function Here(props: HereProps) {
   let el: HTMLDivElement | undefined;
   const arrived = useContext(StepArrived);
+  const [dialog, setDialog] = createSignal(false);
+  let expand: HTMLButtonElement | undefined;
+  const modal = () => props.list === true && props.mode === 'modal';
+  createEffect(
+    () => props.confirming === true,
+    (confirming) => {
+      if (confirming) setDialog(false);
+    },
+  );
   onSettled(() => {
     if (!arrived()) return;
+    if (modal()) setDialog(true);
     const frame = requestAnimationFrame(() => {
       const still = matchMedia(REDUCED_MOTION).matches;
       el?.scrollIntoView?.({ block: 'start', behavior: still ? 'auto' : 'smooth' });
@@ -111,7 +127,30 @@ export function Here(props: HereProps) {
           Back to the next choice
         </button>
       </Show>
-      {props.children}
+      <Show when={props.list === true}>
+        <button
+          ref={(b) => {
+            expand = b;
+          }}
+          type="button"
+          class="trail-link trail-here__expand"
+          data-aside
+          onClick={() => setDialog(true)}
+        >
+          {modal() ? 'Open the list' : 'Expand'}
+        </button>
+      </Show>
+      <Show when={dialog() && props.confirming !== true} fallback={<Show when={!modal()}>{props.children}</Show>}>
+        <p class="trail-note">Choosing in the dialog.</p>
+        <ChoiceDialog
+          title={props.title}
+          line={props.line ?? ''}
+          onClose={() => setDialog(false)}
+          returnTo={() => expand}
+        >
+          {props.children}
+        </ChoiceDialog>
+      </Show>
     </div>
   );
 }
@@ -124,6 +163,7 @@ export interface TrailProps {
   readonly select: (s: Selection | undefined) => void;
   readonly phone: boolean;
   readonly diff?: (a: Attribute) => boolean;
+  readonly listMode?: ListMode;
 }
 
 export default function Trail(props: TrailProps) {
@@ -133,6 +173,7 @@ export default function Trail(props: TrailProps) {
   const step = createMemo((): Step => props.selection ?? nextStep(view(), props.state), {
     equals: (a, b) => stepKey(a) === stepKey(b),
   });
+  const scoresLine = () => ATTRIBUTES.map((a) => `${SHORT[a]} ${props.planner.walked().unit.permanent(a)}`).join(' · ');
   const firstStep = createMemo((was?: string) => was ?? stepKey(step()));
   const arrived = createMemo((was?: boolean) => was === true || stepKey(step()) !== firstStep());
   const applied = (edits: NonEmpty<Edit>, outcome: EditOutcome): EditOutcome => {
@@ -176,6 +217,10 @@ export default function Trail(props: TrailProps) {
           title={stepTitle(view(), step())}
           editing={editing() && step().kind !== 'scores'}
           onBack={() => props.select(undefined)}
+          list={isListStep(step())}
+          mode={props.listMode ?? 'inline'}
+          line={scoresLine()}
+          confirming={props.planner.session().kind === 'confirming'}
         >
           <StepBody trail={api} step={step()} {...(props.diff && { diff: props.diff })} />
         </Here>
