@@ -13,7 +13,7 @@ export const PLACES = Object.keys(PLACE_ITEM_TYPES) as GearPlace[];
 export const ITEMS_SHOWN = 60;
 
 export function placeWords(p: GearPlace): string {
-  return p.replace(/([a-z])([A-Z])/g, '$1 $2');
+  return p.replace(/([a-z])([A-Z0-9])/g, '$1 $2');
 }
 
 export function wornLine(data: CheckedData, gear: Readonly<Partial<Record<GearPlace, Guid>>> | undefined): string {

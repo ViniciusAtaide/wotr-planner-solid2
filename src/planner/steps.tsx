@@ -1,7 +1,7 @@
 import { createMemo, createSignal, For, Match, Show, Switch } from 'solid-js';
 import { slotKey, toRankLevel, toSkillRanks, type SlotId } from '~engine/build';
 import type { Attribute, StatType } from '~engine/data';
-import type { Edit } from '~engine/edits';
+import { allows, type Edit } from '~engine/edits';
 import { linkIndex } from '~engine/links';
 import { expectedLevel } from '~engine/mcp';
 import { mythicStartingClass, offeredClasses, offeredMythicClasses, picker, type OptionStatus } from '~engine/pickers';
@@ -10,18 +10,28 @@ import { ATTRIBUTES, SKILL_ATTRIBUTE } from '~engine/walk';
 
 import { Button, ClosedCount, OptionList, PickerOption, Refusal } from '../design';
 import { BackgroundStep, RaceStep } from './CharacterSteps';
-import { ChoiceList, currentFirst, Filter, judge, type ChoiceRow } from './ChoiceList';
+import {
+  ChoiceList,
+  createReveal,
+  currentFirst,
+  Filter,
+  judge,
+  moveThroughOptions,
+  type ChoiceRow,
+} from './ChoiceList';
 import { featCategory } from './feat-category';
 import { flatName, shownArchetypes } from './flat-choices';
-import type { EditOutcome, NonEmpty } from './planner-state';
+import { judgeClasses, type EditOutcome, type NonEmpty } from './planner-state';
 import type { Planner } from './state';
 import type { TrailAction, TrailState, TrailView } from './trail-state';
 import {
+  atLevelCap,
   classLevelAt,
   isBackgroundSlot,
   isFirstLevelOfClass,
   isHeritageSlot,
   mythicDue,
+  sameRanks,
   skillBudget,
   slotLabel,
 } from './trail-state';
@@ -73,7 +83,6 @@ function PickStep(props: SlotStepProps) {
   const planner = () => props.trail.planner;
   const data = () => planner().engine.data;
   const [text, setText] = createSignal('');
-  const [allClosed, setAllClosed] = createSignal(false);
   const p = createMemo(() => picker(data(), planner().build(), props.slot, planner().engine.G));
   const current = () =>
     planner()
@@ -91,7 +100,8 @@ function PickStep(props: SlotStepProps) {
   });
   const open = () => listed().filter((o) => o.closed === undefined);
   const closed = () => listed().filter((o) => o.closed !== undefined);
-  const closedShown = () => (allClosed() ? closed() : closed().slice(0, CLOSED_SHOWN));
+  const reveal = createReveal(CLOSED_SHOWN, () => closed().length);
+  const closedShown = () => closed().slice(0, reveal.limit());
   const words = (o: OptionStatus): readonly string[] => {
     if (o.closed === undefined) return [];
     const r = refusal({ data: data(), G: planner().engine.G, unit: p()?.unit }, o.closed);
@@ -126,17 +136,9 @@ function PickStep(props: SlotStepProps) {
       { kind: 'pick', slot: props.slot, pick: { feature: o.feature, ...(o.param && { param: o.param }) } },
       `Picked ${name(o)}`,
     );
-  const move = (e: KeyboardEvent) => {
-    if (e.key !== 'j' && e.key !== 'k') return;
-    if ((e.target as HTMLElement).tagName === 'INPUT') return;
-    const options = [...(e.currentTarget as HTMLElement).querySelectorAll<HTMLElement>('.ww-option')];
-    const at = options.indexOf(document.activeElement as HTMLElement);
-    options[Math.max(0, Math.min(options.length - 1, at + (e.key === 'j' ? 1 : -1)))]?.focus();
-    e.preventDefault();
-  };
   return (
     <Show when={p()} fallback={<p class="trail-note">This choice doesn't open in the Build any more.</p>}>
-      <div class="trail-step" onKeyDown={move}>
+      <div class="trail-step" onKeyDown={moveThroughOptions}>
         <Filter
           label={`Filter ${slotLabel(data(), props.slot.selection)} by name`}
           value={text()}
@@ -176,7 +178,7 @@ function PickStep(props: SlotStepProps) {
           </For>
           <Show when={closed().length > closedShown().length}>
             <ClosedCount text={`${closed().length - closedShown().length} more closed: ${byReason()}`} />
-            <Button onClick={() => setAllClosed(true)}>Show all closed</Button>
+            <Button onClick={() => reveal.more()}>Show all closed</Button>
           </Show>
         </OptionList>
         <Show when={current()}>
@@ -235,7 +237,23 @@ export function SkillsStep(props: LevelStepProps) {
   const budget = () => skillBudget(props.trail.view(), props.level);
   const last = () => props.level === build().levels.length;
   const left = () => budget().available - budget().spent;
-  const previous = () => build().levels[props.level - 2]?.skills;
+  const previous = () => {
+    const before = build().levels[props.level - 2]?.skills;
+    return before === undefined || sameRanks(before, ranks()) ? undefined : before;
+  };
+  const raisable = createMemo(() => {
+    const engine = props.trail.planner.engine;
+    const b = build();
+    const now = ranks();
+    return new Set(
+      SKILLS.filter((skill) => {
+        const skills = toSkillRanks({ ...now, [skill]: (now[skill] ?? 0) + 1 });
+        return (
+          skills !== undefined && allows(engine.data, b, { kind: 'skills', level: props.level, skills }, engine.G).ok
+        );
+      }),
+    );
+  });
   const set = (skill: StatType, delta: number) => {
     const wanted: Record<string, number> = { ...ranks() };
     const n = Math.max(0, (wanted[skill] ?? 0) + delta);
@@ -304,6 +322,7 @@ export function SkillsStep(props: LevelStepProps) {
                 type="button"
                 class="trail-stepper"
                 aria-label={`More ${statName(skill)} ranks`}
+                disabled={!raisable().has(skill)}
                 onClick={() => set(skill, 1)}
               >
                 +
@@ -326,11 +345,19 @@ function ClassList(props: TrailStepProps) {
     const b = planner().build();
     const data = planner().engine.data;
     const previous = b.levels.at(-1)?.class;
+    const level = b.levels.length + 1;
+    const offered = offeredClasses(data);
+    const judgedAll = judgeClasses(
+      planner().engine,
+      b,
+      { level },
+      offered.map((c) => c.guid),
+      (cls) => ({ kind: 'addLevel', class: cls }),
+    );
     return currentFirst(
-      offeredClasses(data).flatMap((c): ChoiceRow[] => {
+      offered.flatMap((c): ChoiceRow[] => {
         const name = c.name ?? c.assetName;
-        const judged = judge(planner().engine, b, { kind: 'addLevel', class: c.guid });
-        const level = b.levels.length + 1;
+        const judged = judgedAll.get(c.guid) ?? { open: false, reasons: [] };
         const plain: ChoiceRow = {
           key: c.guid,
           name,
@@ -363,6 +390,11 @@ function ClassList(props: TrailStepProps) {
     );
   });
   return <ChoiceList label="Filter classes and archetypes by name" rows={rows()} />;
+}
+
+export function startingWith(key: string | undefined, rows: ChoiceRow[]): ChoiceRow[] {
+  const at = rows.findIndex((r) => r.key === key);
+  return at <= 0 ? rows : [rows[at] as ChoiceRow, ...rows.slice(0, at), ...rows.slice(at + 1)];
 }
 
 export function NextLevelStep(props: TrailStepProps) {
@@ -419,18 +451,31 @@ export function MythicStep(props: TrailStepProps) {
     const level = d === undefined ? undefined : toRankLevel(d.at);
     if (d === undefined || level === undefined) return [];
     const b = planner().build();
-    const path = b.ranks?.at(-1)?.class ?? mythicStartingClass(planner().engine.data);
-    return currentFirst(
-      offeredMythicClasses(planner().engine.data).map((c) => {
-        const name = c.name ?? c.assetName;
-        return {
-          key: c.guid,
-          name,
-          ...judge(planner().engine, b, { kind: 'addRank', class: c.guid, level }),
-          current: c.guid === path,
-          take: () => props.trail.edit({ kind: 'addRank', class: c.guid, level }, `Mythic rank ${d.rank} as ${name}`),
-        };
-      }),
+    const path = b.ranks?.at(-1)?.class;
+    const first = path ?? mythicStartingClass(planner().engine.data);
+    const offered = offeredMythicClasses(planner().engine.data);
+    const judged = judgeClasses(
+      planner().engine,
+      b,
+      { rank: d.rank },
+      offered.map((c) => c.guid),
+      (cls) => ({ kind: 'addRank', class: cls, level }),
+      level,
+    );
+    return startingWith(
+      first,
+      currentFirst(
+        offered.map((c) => {
+          const name = c.name ?? c.assetName;
+          return {
+            key: c.guid,
+            name,
+            ...(judged.get(c.guid) ?? { open: false, reasons: [] }),
+            current: c.guid === path,
+            take: () => props.trail.edit({ kind: 'addRank', class: c.guid, level }, `Mythic rank ${d.rank} as ${name}`),
+          };
+        }),
+      ),
     );
   });
   return (
@@ -441,13 +486,15 @@ export function MythicStep(props: TrailStepProps) {
             Your story grants Mythic rank {d().rank} at level {d().at}.
           </p>
           <ChoiceList label="Filter Mythic paths by name" rows={rows()} />
-          <button
-            type="button"
-            class="trail-link"
-            onClick={() => props.trail.send({ kind: 'mythicLater', level: planner().build().levels.length })}
-          >
-            Not now · onward to level {planner().build().levels.length + 1}
-          </button>
+          <Show when={!atLevelCap(props.trail.view())}>
+            <button
+              type="button"
+              class="trail-link"
+              onClick={() => props.trail.send({ kind: 'mythicLater', level: planner().build().levels.length })}
+            >
+              Not now · onward to level {planner().build().levels.length + 1}
+            </button>
+          </Show>
         </div>
       )}
     </Show>
@@ -461,15 +508,21 @@ export function LevelEditor(props: LevelStepProps) {
   const classRows = createMemo((): ChoiceRow[] => {
     const b = planner().build();
     const now = level()?.class;
+    const offered = offeredClasses(data());
+    const judged = judgeClasses(
+      planner().engine,
+      b,
+      { level: props.level },
+      offered.map((c) => c.guid),
+      (cls) => ({ kind: 'class', level: props.level, class: cls }),
+    );
     return currentFirst(
-      offeredClasses(data()).map((c) => {
+      offered.map((c) => {
         const name = c.name ?? c.assetName;
         return {
           key: c.guid,
           name,
-          ...(c.guid === now
-            ? { open: true, reasons: [] }
-            : judge(planner().engine, b, { kind: 'class', level: props.level, class: c.guid })),
+          ...(c.guid === now ? { open: true, reasons: [] } : (judged.get(c.guid) ?? { open: false, reasons: [] })),
           current: c.guid === now,
           take: () => {
             if (c.guid !== now)
@@ -543,15 +596,22 @@ export function RankEditor(props: RankStepProps) {
   const rows = createMemo((): ChoiceRow[] => {
     const b = planner().build();
     const now = rank()?.class;
+    const offered = offeredMythicClasses(data());
+    const judged = judgeClasses(
+      planner().engine,
+      b,
+      { rank: props.rank },
+      offered.map((c) => c.guid),
+      (cls) => ({ kind: 'rankClass', rank: props.rank, class: cls }),
+      rank()?.level,
+    );
     return currentFirst(
-      offeredMythicClasses(data()).map((c) => {
+      offered.map((c) => {
         const name = c.name ?? c.assetName;
         return {
           key: c.guid,
           name,
-          ...(c.guid === now
-            ? { open: true, reasons: [] }
-            : judge(planner().engine, b, { kind: 'rankClass', rank: props.rank, class: c.guid })),
+          ...(c.guid === now ? { open: true, reasons: [] } : (judged.get(c.guid) ?? { open: false, reasons: [] })),
           current: c.guid === now,
           take: () => {
             if (c.guid !== now)

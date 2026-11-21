@@ -25,7 +25,9 @@ import { linkDidNotOpen, nameOf } from '~engine/refusals';
 import { EMPTY, openHash } from './link';
 import Planner from './Planner';
 import { createPlanner, type Planner as PlannerApi } from './state';
-import { MythicStep, NextLevelStep, RankEditor, SlotStep, type TrailApi } from './steps';
+import { ChoiceList } from './ChoiceList';
+import { placeWords } from './GearStep';
+import { MythicStep, NextLevelStep, RankEditor, SkillsStep, SlotStep, type TrailApi } from './steps';
 import Trail from './Trail';
 import { reduceTrail, TRAIL_START, type TrailState } from './trail-state';
 import type { Selection } from './workspace-state';
@@ -154,6 +156,10 @@ function apiOf(planner: PlannerApi, state: TrailState = TRAIL_START): TrailApi {
 }
 
 describe('a Build code from the MCP opens the same Build in the UI', () => {
+  afterEach(() => {
+    cleanup();
+  });
+
   test('every step of a Fighter built through the MCP', { timeout: 120_000 }, async () => {
     const steps = await fighterThroughMcp();
     expect(steps.length).toBeGreaterThan(4);
@@ -186,6 +192,11 @@ describe('a Build code from the MCP opens the same Build in the UI', () => {
     await screen.findByText(linkDidNotOpen('load', 'notACode'));
     expect(container.querySelectorAll(LEVEL_STOPS).length).toBe(0);
     expect(container.querySelector('.trail-here__title')?.textContent).toBe('Your character · set the ability scores');
+    flush();
+    expect(location.hash).toBe('#b=*');
+    tap('Raise Strength');
+    await waitFor(() => expect(location.hash).not.toBe('#b=*'));
+    expect(screen.getByText(linkDidNotOpen('load', 'notACode'))).toBeTruthy();
     cleanup();
     history.replaceState(null, '', '/');
   });
@@ -556,6 +567,14 @@ describe('the levelling trail (build ticket 07)', () => {
     expect(names).not.toContain('Shard Powers');
   });
 
+  test('before any rank the starting path comes first but is not marked current (QA pass 1)', () => {
+    const levels = Array.from({ length: 10 }, () => ({ class: fighter }));
+    render(() => <MythicStep trail={apiOf(createPlanner(e, { ...cleaver, levels }))} />);
+    flush();
+    expect(document.querySelector('button.ww-option .ww-option__name')?.textContent).toBe(nameOf(e.data, MYTHIC_HERO));
+    expect(document.querySelector('button.ww-option[aria-current="true"]')).toBeNull();
+  });
+
   test('a due Mythic rank lists the paths with their status', () => {
     const levels = Array.from({ length: 10 }, () => ({ class: fighter }));
     render(() => <MythicStep trail={apiOf(createPlanner(e, { ...cleaver, levels }))} />);
@@ -574,10 +593,13 @@ describe('the levelling trail (build ticket 07)', () => {
     openMenu();
     await waitFor(() => expect(screen.getByRole('menuitem', { name: 'Copy link' })).toBeEnabled());
     menuItem('Copy link');
-    await screen.findByRole('menuitem', { name: 'Link copied.' });
+    await waitFor(() => expect(document.querySelector('.planner-menu__said')?.textContent).toBe('Link copied.'));
+    expect(screen.queryByRole('menu')).toBeNull();
     expect(written[0]).toBe(`${location.origin}/${location.hash}`);
+    openMenu();
     menuItem('Export as text');
-    await screen.findByRole('menuitem', { name: 'Build sheet copied.' });
+    await waitFor(() => expect(document.querySelector('.planner-menu__said')?.textContent).toBe('Build sheet copied.'));
+    expect(screen.queryByRole('menu')).toBeNull();
     expect(written[1]).toContain('Level 1: Fighter 1 · Power Attack');
   });
 });
@@ -717,11 +739,15 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     expect(levelRows()).toBe(3);
   });
 
-  test('a failed paste puts back the page’s own link', async () => {
+  test('a failed paste keeps the pasted link until the Build is edited (QA pass 1)', async () => {
     const code = await openPlanner(cleaver);
     pasteHash('#b=not-a-build-code');
     await waitFor(() => expect(document.querySelector('.planner-notice')).not.toBeNull());
-    expect(location.hash).toBe(`#b=${code}`);
+    expect(location.hash).toBe('#b=not-a-build-code');
+    tap('Lawful Good');
+    await waitFor(() => expect(location.hash).not.toBe('#b=not-a-build-code'));
+    expect(location.hash).not.toBe(`#b=${code}`);
+    expect(location.hash).toMatch(/^#b=./);
   });
 
   test('the link notice clears when a later link opens', async () => {
@@ -918,5 +944,91 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     } finally {
       vi.unstubAllGlobals();
     }
+  });
+});
+
+describe('QA pass 1', () => {
+  const skilled = (first: Record<string, number>, second: Record<string, number>): Build => ({
+    ...withLevels(2),
+    levels: [
+      { class: fighter, skills: skillRanks(first) },
+      { class: fighter, skills: skillRanks(second) },
+    ],
+  });
+
+  test('"Same as level N−1" shows only when it would change the level', () => {
+    const differ = createPlanner(e, skilled({ SkillAthletics: 1 }, { SkillMobility: 1 }));
+    const { unmount } = render(() => <SkillsStep trail={apiOf(differ)} level={2} />);
+    flush();
+    expect(button('Same as level 1')).toBeTruthy();
+    tap('Same as level 1');
+    expect(differ.build().levels[1]?.skills).toEqual({ SkillAthletics: 1 });
+    expect(screen.queryByRole('button', { name: 'Same as level 1' })).toBeNull();
+    unmount();
+  });
+
+  test('the + skill stepper is disabled at the rank cap, as the score steppers are', () => {
+    const planner = createPlanner(e, {
+      ...withLevels(1),
+      levels: [{ class: fighter, skills: skillRanks({ SkillAthletics: 1 }) }],
+    });
+    render(() => <SkillsStep trail={apiOf(planner)} level={1} />);
+    flush();
+    expect(button(/^More Athletics/)).toBeDisabled();
+    expect(button(/^More Mobility/)).toBeEnabled();
+  });
+
+  test('Up and Down move through the options, as J and K do, and Down leaves the filter', () => {
+    const rows = Array.from({ length: 14 }, (_, i) => ({
+      key: `r${i}`,
+      name: `Row ${String(i).padStart(2, '0')}`,
+      open: true,
+      reasons: [],
+      current: false,
+      take: () => {},
+    }));
+    render(() => <ChoiceList label="Filter rows" rows={rows} />);
+    flush();
+    const options = () => [...document.querySelectorAll<HTMLElement>('button.ww-option')];
+    const filter = screen.getByRole('searchbox', { name: 'Filter rows' });
+    filter.focus();
+    fireEvent.keyDown(filter, { key: 'ArrowDown' });
+    expect(document.activeElement).toBe(options()[0]);
+    fireEvent.keyDown(options()[0] ?? document.body, { key: 'ArrowDown' });
+    expect(document.activeElement).toBe(options()[1]);
+    fireEvent.keyDown(options()[1] ?? document.body, { key: 'ArrowUp' });
+    expect(document.activeElement).toBe(options()[0]);
+    fireEvent.keyDown(options()[0] ?? document.body, { key: 'j' });
+    expect(document.activeElement).toBe(options()[1]);
+  });
+
+  test('after a pick, focus lands on the next step, never on the page body', async () => {
+    await openPlanner(cleaver);
+    const first = document.querySelector<HTMLElement>('.trail-here button.ww-option');
+    first?.focus();
+    fireEvent.click(first ?? document.body);
+    flush();
+    await waitFor(() => expect(document.activeElement).not.toBe(document.body));
+    expect(document.activeElement?.closest('.trail-here')).not.toBeNull();
+  });
+
+  test('Gear places read as words with their number', () => {
+    expect(placeWords('Ring1')).toBe('Ring 1');
+    expect(placeWords('MainHand')).toBe('Main Hand');
+  });
+
+  test('"Show all closed" reveals the closed options a step at a time until all show', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
+    const closed = () => document.querySelectorAll('.trail-here .ww-option--closed').length;
+    const before = closed();
+    const more = Number(
+      /^(\d+) more closed/.exec(document.querySelector('.trail-here .ww-count')?.textContent ?? '')?.[1],
+    );
+    expect(more).toBeGreaterThan(0);
+    tap('Show all closed');
+    expect(closed()).toBeGreaterThan(before);
+    await waitFor(() => expect(closed()).toBe(before + more));
   });
 });

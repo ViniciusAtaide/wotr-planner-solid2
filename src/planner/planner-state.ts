@@ -1,7 +1,9 @@
-import { sameBuild, type Build, type Pick } from '~engine/build';
+import { sameBuild, type Build, type Pick, type Place } from '~engine/build';
+import type { Guid } from '~engine/data';
+import { classPicker } from '~engine/pickers';
 import { allows, cascade, type Breaks, type Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
-import { nameOf, refusalWords } from '~engine/refusals';
+import { nameOf, refusal, refusalWords } from '~engine/refusals';
 import { walk } from '~engine/walk';
 
 export type NonEmpty<T> = readonly [T, ...T[]];
@@ -97,30 +99,88 @@ export function brokenWords(engine: Engine, build: Build, b: Breaks): string[] {
 
 export type Verdict =
   | { readonly kind: 'applies'; readonly build: Build }
-  | { readonly kind: 'clears'; readonly build: Build; readonly cleared: readonly Pick[] }
+  | {
+      readonly kind: 'clears';
+      readonly build: Build;
+      readonly cleared: readonly Pick[];
+      readonly clearedSkills: readonly number[];
+      readonly clearedRanks: readonly number[];
+    }
   | { readonly kind: 'breaks'; readonly breaks: Breaks };
 
 export function verdictOf(engine: Engine, build: Build, edit: Edit): Verdict {
   const allowed = allows(engine.data, build, edit, engine.G);
   if (allowed.ok) return { kind: 'applies', build: allowed.build };
   const c = cascade(engine.data, build, edit, engine.G);
-  return c.ok ? { kind: 'clears', build: c.build, cleared: c.cleared } : { kind: 'breaks', breaks: c };
+  return c.ok
+    ? {
+        kind: 'clears',
+        build: c.build,
+        cleared: c.cleared,
+        clearedSkills: c.clearedSkills,
+        clearedRanks: c.clearedRanks,
+      }
+    : { kind: 'breaks', breaks: c };
 }
 
 export function verdictOfAll(engine: Engine, build: Build, edits: NonEmpty<Edit>): Verdict {
   let now = build;
   const cleared: Pick[] = [];
+  const clearedSkills = new Set<number>();
+  const clearedRanks = new Set<number>();
   for (const edit of edits) {
     const v = verdictOf(engine, now, edit);
     if (v.kind === 'breaks') return v;
-    if (v.kind === 'clears') cleared.push(...v.cleared);
+    if (v.kind === 'clears') {
+      cleared.push(...v.cleared);
+      for (const l of v.clearedSkills) clearedSkills.add(l);
+      for (const r of v.clearedRanks) clearedRanks.add(r);
+    }
     now = v.build;
   }
-  return cleared.length > 0 ? { kind: 'clears', build: now, cleared } : { kind: 'applies', build: now };
+  const sorted = (xs: Set<number>) => [...xs].sort((a, b) => a - b);
+  return cleared.length + clearedSkills.size + clearedRanks.size > 0
+    ? { kind: 'clears', build: now, cleared, clearedSkills: sorted(clearedSkills), clearedRanks: sorted(clearedRanks) }
+    : { kind: 'applies', build: now };
 }
 
 export function laterPicks(n: number): string {
   return `${n} later ${n === 1 ? 'pick' : 'picks'}`;
+}
+
+export function laterChoices(n: number): string {
+  return `${n} later ${n === 1 ? 'choice' : 'choices'}`;
+}
+
+type Clears = Extract<Verdict, { readonly kind: 'clears' }>;
+
+export function clearedCount(v: Clears): number {
+  return v.cleared.length + v.clearedSkills.length + v.clearedRanks.length;
+}
+
+function numbers(word: string, ns: readonly number[]): string {
+  return `${word}${ns.length === 1 ? '' : 's'} ${ns.join(', ')}`;
+}
+
+export function clearsSummary(v: Clears): string {
+  const parts = [
+    v.cleared.length > 0 ? laterPicks(v.cleared.length) : undefined,
+    v.clearedSkills.length > 0 ? `the skill ranks of ${numbers('level', v.clearedSkills)}` : undefined,
+    v.clearedRanks.length > 0 ? numbers('Mythic rank', v.clearedRanks) : undefined,
+  ].filter((p) => p !== undefined);
+  const list = parts.length < 2 ? parts.join('') : `${parts.slice(0, -1).join(', ')} and ${parts.at(-1) ?? ''}`;
+  return `This breaks ${list}. ${clearedCount(v) === 1 ? 'It' : 'They'}'ll be cleared, not moved.`;
+}
+
+export function clearsList(engine: Engine, before: Build, v: Clears): Pending['clears'] {
+  return [
+    ...v.cleared.map((p) => ({ name: nameOf(engine.data, p.feature), place: placeWords(p.slot.place) })),
+    ...v.clearedSkills.map((level) => ({ name: 'Skill ranks', place: `Level ${level}` })),
+    ...v.clearedRanks.map((rank) => {
+      const cls = before.ranks?.[rank - 1]?.class;
+      return { name: cls === undefined ? 'Mythic rank' : nameOf(engine.data, cls), place: `Rank ${rank}` };
+    }),
+  ];
 }
 
 export interface Judged {
@@ -135,17 +195,40 @@ export function judgeAll(engine: Engine, build: Build, edits: NonEmpty<Edit>): J
     case 'applies':
       return { open: true, reasons: [] };
     case 'clears':
-      return { open: true, note: `Clears ${laterPicks(v.cleared.length)}`, reasons: [] };
+      return {
+        open: true,
+        note: `Clears ${v.cleared.length === clearedCount(v) ? laterPicks(v.cleared.length) : laterChoices(clearedCount(v))}`,
+        reasons: [],
+      };
     case 'breaks':
       return { open: false, reasons: brokenWords(engine, build, v.breaks) };
   }
+}
+
+export function judgeClasses(
+  engine: Engine,
+  build: Build,
+  place: Place,
+  classes: readonly Guid[],
+  edit: (cls: Guid) => Edit,
+  rankLevel?: number,
+): ReadonlyMap<Guid, Judged> {
+  const p = classPicker(engine.data, build, place, engine.G, rankLevel);
+  if (p === undefined) return new Map(classes.map((c) => [c, judgeAll(engine, build, [edit(c)])]));
+  return new Map(
+    p.options.map((o): [Guid, Judged] => {
+      if (o.closed === undefined) return [o.class, { open: true, reasons: [] }];
+      const r = refusal({ data: engine.data, G: engine.G, unit: p.unit }, o.closed);
+      return [o.class, { open: false, reasons: r.unmet.length > 0 ? r.unmet : [r.text] }];
+    }),
+  );
 }
 
 function edited(engine: Engine, s: PlannerState, edits: NonEmpty<Edit>, title: string): PlannerState {
   const v = verdictOfAll(engine, s.present, edits);
   switch (v.kind) {
     case 'applies':
-      return commit(s, v.build, title);
+      return sameBuild(s.present, v.build) ? { ...s, session: IDLE } : commit(s, v.build, title);
     case 'breaks':
       return {
         ...s,
@@ -161,8 +244,8 @@ function edited(engine: Engine, s: PlannerState, edits: NonEmpty<Edit>, title: s
           kind: 'confirming',
           pending: {
             title,
-            summary: `This breaks ${laterPicks(v.cleared.length)}. They'll be cleared, not moved.`,
-            clears: v.cleared.map((p) => ({ name: nameOf(engine.data, p.feature), place: placeWords(p.slot.place) })),
+            summary: clearsSummary(v),
+            clears: clearsList(engine, s.present, v),
             build: v.build,
           },
         },

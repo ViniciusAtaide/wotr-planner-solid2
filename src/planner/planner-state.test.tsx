@@ -18,9 +18,12 @@ import {
 import type { Edit } from '~engine/edits';
 import { readDataDir } from '~engine/data-dir';
 import { loadData } from '~engine/load';
+import { jackInTheGreen } from '~engine/gold';
 import { engineOf } from '~engine/mcp';
+import { nameOf } from '~engine/refusals';
 
 import {
+  clearsSummary,
   OPENED_A_LINK,
   outcomeOf,
   plannerAt,
@@ -279,6 +282,84 @@ describe('PlannerState: one test per table cell', () => {
 });
 
 describe('PlannerState: edit outcomes and the rest of the rules', () => {
+  test('an edit that changes nothing adds no history entry, for one edit or several (QA pass 1)', () => {
+    const good = run(plannerAt(cleaver), {
+      kind: 'edit',
+      edit: { kind: 'alignment', alignment: 'LawfulGood' },
+      title: 'Good',
+    });
+    expect(good.past).toHaveLength(1);
+    const again = run(good, { kind: 'edit', edit: { kind: 'alignment', alignment: 'LawfulGood' }, title: 'Good' });
+    expect(again.past).toHaveLength(1);
+    expect(again.change).toBe('Good');
+    expect(outcomeOf(again)).toBe('applied');
+    const both = run(good, {
+      kind: 'edits',
+      edits: [
+        { kind: 'alignment', alignment: 'LawfulGood' },
+        { kind: 'alignment', alignment: 'LawfulGood' },
+      ],
+      title: 'Good twice',
+    });
+    expect(both.past).toHaveLength(1);
+    const refused: PlannerState = { ...good, session: REFUSED };
+    expect(
+      run(refused, { kind: 'edit', edit: { kind: 'alignment', alignment: 'LawfulGood' }, title: 'Good' }).session,
+    ).toEqual({
+      kind: 'idle',
+    });
+  });
+
+  test('a preview words cleared picks, skill ranks and Mythic ranks together', () => {
+    const clears = (cleared: number, clearedSkills: number[], clearedRanks: number[]) =>
+      clearsSummary({
+        kind: 'clears',
+        build: cleaver,
+        cleared: cleaver.picks.slice(0, cleared),
+        clearedSkills,
+        clearedRanks,
+      });
+    expect(clears(1, [3], [9, 10])).toBe(
+      "This breaks 1 later pick, the skill ranks of level 3 and Mythic ranks 9, 10. They'll be cleared, not moved.",
+    );
+    expect(clears(0, [3], [])).toBe("This breaks the skill ranks of level 3. It'll be cleared, not moved.");
+    expect(clears(0, [], [9])).toBe("This breaks Mythic rank 9. It'll be cleared, not moved.");
+  });
+
+  test('a rank 8 switch that later ranks no longer follow lists them in the preview (QA pass 1)', () => {
+    const GOLD_DRAGON = 'daf1235b6217787499c14e4e32142523';
+    const DEVIL = '211f49705f478b3468db6daa802452a2';
+    const ranks = jackInTheGreen.build.ranks ?? [];
+    const gold: Build = {
+      ...jackInTheGreen.build,
+      ranks: ranks.map((r, i) => (i >= 7 ? { ...r, class: GOLD_DRAGON } : r)),
+      picks: jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place) || p.slot.place.rank <= 7),
+    };
+    const n = run(plannerAt(gold), {
+      kind: 'edit',
+      edit: { kind: 'rankClass', rank: 8, class: DEVIL },
+      title: 'Devil',
+    });
+    expect(n.session.kind).toBe('confirming');
+    if (n.session.kind !== 'confirming') return;
+    expect(n.session.pending.clears).toEqual(
+      expect.arrayContaining([
+        { name: nameOf(e.data, GOLD_DRAGON), place: 'Rank 9' },
+        { name: nameOf(e.data, GOLD_DRAGON), place: 'Rank 10' },
+      ]),
+    );
+    expect(n.session.pending.summary).toContain('Mythic ranks 9, 10');
+  });
+
+  test('a preview that clears one pick says so in the singular (QA pass 1)', () => {
+    const one: Build = { ...cleaver, picks: cleaver.picks.slice(0, 1) };
+    const n = run(plannerAt(one), { kind: 'edit', edit: WEAKER, title: 'Strength score' });
+    expect(n.session.kind === 'confirming' && n.session.pending.clears).toHaveLength(1);
+    expect(n.session.kind === 'confirming' && n.session.pending.summary).toBe(
+      "This breaks 1 later pick. It'll be cleared, not moved.",
+    );
+  });
+
   test('an edit that breaks later picks, mendable by clearing them, waits on the preview', () => {
     const n = run(plannerAt(cleaver), { kind: 'edit', edit: WEAKER, title: 'Strength score' });
     expect(outcomeOf(n)).toBe('confirming');

@@ -6,7 +6,7 @@ import type { Edit } from '~engine/edits';
 import { nameOf } from '~engine/refusals';
 import type { OpenedSlot } from '~engine/walk';
 
-import { FeatIcon, type FeatCategory } from '../design';
+import { Badge, FeatIcon, type FeatCategory } from '../design';
 import { CharacterCard, ScoresStep } from './CharacterCard';
 import { RaceStep } from './CharacterSteps';
 import { featCategory } from './feat-category';
@@ -33,6 +33,7 @@ import {
   characterChipSlots,
   classLevelAt,
   folded,
+  gearDependentSlots,
   hereLevel,
   increaseOffered,
   isBackgroundSlot,
@@ -55,6 +56,16 @@ import { sameSelection, type Selection } from './workspace-state';
 import { optionName } from './words';
 
 const REDUCED_MOTION = '(prefers-reduced-motion: reduce)';
+const FINE_POINTER = '(pointer: fine)';
+
+export function firstControl(el: HTMLElement, fine: boolean): HTMLElement | null {
+  const controls = 'button:not([disabled]):not([data-back]), [role="button"][tabindex="0"]';
+  return el.querySelector<HTMLElement>(fine ? `input, ${controls}` : controls);
+}
+
+function lost(active: Element | null): boolean {
+  return active === null || active === document.body || !active.isConnected;
+}
 
 export function stepKey(step: Step): string {
   return step.kind === 'slot' ? `slot ${slotKey(step.slot)}` : JSON.stringify(step);
@@ -73,6 +84,9 @@ export function Here(props: HereProps) {
   onSettled(() => {
     const still = matchMedia(REDUCED_MOTION).matches;
     el?.scrollIntoView?.({ block: 'start', behavior: still ? 'auto' : 'smooth' });
+    if (el !== undefined && lost(document.activeElement)) {
+      firstControl(el, matchMedia(FINE_POINTER).matches)?.focus({ preventScroll: true });
+    }
   });
   return (
     <div
@@ -86,7 +100,7 @@ export function Here(props: HereProps) {
     >
       <h3 class="trail-here__title">{props.title}</h3>
       <Show when={props.editing}>
-        <button type="button" class="trail-link" onClick={() => props.onBack()}>
+        <button type="button" class="trail-link" data-back onClick={() => props.onBack()}>
           Back to the next choice
         </button>
       </Show>
@@ -143,7 +157,7 @@ export default function Trail(props: TrailProps) {
   const editing = () => props.selection !== undefined;
   const isTarget = (s: Selection) => {
     const now = step();
-    return now.kind !== 'mythic' && now.kind !== 'nextLevel' && sameSelection(now, s);
+    return now.kind !== 'mythic' && now.kind !== 'nextLevel' && now.kind !== 'complete' && sameSelection(now, s);
   };
   const here = () => (
     <Show when={stepKey(step())} keyed>
@@ -168,7 +182,7 @@ export default function Trail(props: TrailProps) {
     return w.kind === 'rank' && w.rank === rank;
   };
 
-  const chip = (label: string, value: string | undefined, target: Selection, icon?: FeatCategory) => (
+  const chip = (label: string, value: string | undefined, target: Selection, icon?: FeatCategory, gear = false) => (
     <button
       type="button"
       class={['trail-chip', { 'trail-chip--empty': value === undefined, 'trail-chip--target': isTarget(target) }]}
@@ -179,6 +193,11 @@ export default function Trail(props: TrailProps) {
       <span>
         <Show when={icon}>{(c) => <FeatIcon category={c()} />}</Show>
         {value ?? 'Choose'}
+        <Show when={gear}>
+          <span class="trail-chip__gear" title="Taken through Gear (counted toward its prerequisites)">
+            <Badge kind="gear">◈</Badge>
+          </span>
+        </Show>
       </span>
     </button>
   );
@@ -193,6 +212,7 @@ export default function Trail(props: TrailProps) {
           : optionName(data(), s.pick.feature, s.pick.param),
       { kind: 'slot', slot: s.id },
       s.pick === undefined || background ? undefined : featCategory(data(), s.pick.feature),
+      s.pick !== undefined && gearDependentSlots(view()).has(slotKey(s.id)),
     );
   };
   const slotChips = (place: Place) => <For each={slotsAt(view(), place)}>{(s) => <>{slotChip(s)}</>}</For>;
@@ -348,7 +368,7 @@ export default function Trail(props: TrailProps) {
         </For>
         <Show when={where().kind === 'next'}>
           <li class="trail-stop trail-stop--here trail-stop--next">
-            <span class="trail-stop__mark">{build().levels.length + 1}</span>
+            <span class="trail-stop__mark">{step().kind === 'complete' ? '✓' : build().levels.length + 1}</span>
             <div class="trail-stop__body">{here()}</div>
           </li>
         </Show>
@@ -427,6 +447,9 @@ export function StepBody(props: StepBodyProps) {
       </Match>
       <Match when={props.step.kind === 'mythic'}>
         <MythicStep trail={props.trail} />
+      </Match>
+      <Match when={props.step.kind === 'complete'}>
+        <p class="trail-note">The game caps the character at this level, so no further level is offered.</p>
       </Match>
       <Match when={props.step.kind === 'nextLevel'}>
         <NextLevelStep trail={props.trail} />
