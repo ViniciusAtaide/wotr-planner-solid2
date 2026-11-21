@@ -2,6 +2,12 @@ import type { CheckedData } from '../load';
 import {
   refGuid,
   type ACBonusAgainstAttacks,
+  type AddBackgroundClassSkill,
+  type AddClassSkill,
+  type AddPet,
+  type AddProficiencies,
+  type ArmorProficiencyGroup,
+  type IncreaseActivatableAbilityGroupSize,
   type ACBonusAgainstFactOwner,
   type AddConditionImmunity,
   type AddDamageResistanceEnergy,
@@ -219,6 +225,53 @@ export const EQUIPMENT_LABELLED: ReadonlySet<string> = new Set([
   'ArmorEnhancementBonus',
   'MithralEnchantment',
 ]);
+
+export const FEATURE_LABELLED: ReadonlySet<string> = new Set([
+  'AddClassSkill',
+  'AddBackgroundClassSkill',
+  'AddProficiencies',
+  'IncreaseActivatableAbilityGroupSize',
+  'AddPet',
+]);
+
+const ARMOR_WEIGHTS: readonly ArmorProficiencyGroup[] = ['Light', 'Medium', 'Heavy'];
+const BARDING_WEIGHTS: readonly ArmorProficiencyGroup[] = ['LightBarding', 'MediumBarding', 'HeavyBarding'];
+const SHIELD_WORDS: Readonly<Partial<Record<ArmorProficiencyGroup, string>>> = {
+  Buckler: 'bucklers',
+  LightShield: 'light shields',
+  HeavyShield: 'heavy shields',
+  TowerShield: 'tower shields',
+};
+
+const LISTED_WEAPONS = 5;
+
+const plural = (name: string): string =>
+  name.endsWith('s') ? name : name.endsWith('knife') ? `${name.slice(0, -2)}ves` : `${name}s`;
+
+function armorWords(groups: readonly ArmorProficiencyGroup[]): string[] {
+  const weights = (of: readonly ArmorProficiencyGroup[], noun: string) => {
+    const held = of.filter((g) => groups.includes(g)).map((g) => words(g).split(' ')[0]!);
+    return held.length === 0 ? [] : [`${andList(held)} ${noun}`];
+  };
+  return [
+    ...weights(ARMOR_WEIGHTS, 'armor'),
+    ...groups.flatMap((g) => (SHIELD_WORDS[g] === undefined ? [] : [SHIELD_WORDS[g]])),
+    ...weights(BARDING_WEIGHTS, 'barding'),
+  ];
+}
+
+function proficiencies(data: CheckedData, c: AddProficiencies): string | undefined {
+  const armor = armorWords(c.ArmorProficiencies ?? []);
+  const weapons = [...new Set((c.WeaponProficiencies ?? []).map((w) => plural(words(w))))];
+  const weaponText =
+    weapons.length <= LISTED_WEAPONS
+      ? andList(weapons)
+      : `${weapons.length} kinds of weapon, among them ${andList(weapons.slice(0, 3))}`;
+  const parts = [...(armor.length > 0 ? [andList(armor)] : []), ...(weapons.length > 0 ? [weaponText] : [])];
+  if (parts.length === 0) return undefined;
+  const race = refGuid(c.m_RaceRestriction);
+  return `Proficient with ${parts.join('; and with ')}${race === undefined ? '' : ` (as ${bareNameOf(data, race)})`}.`;
+}
 
 export const RANK_SCALED: ReadonlySet<string> = new Set([
   'AddStatBonus',
@@ -579,6 +632,27 @@ function rawLabel(data: CheckedData, c: Component): Label | undefined {
         role: 'weakness',
         text: `Vulnerable to ${energy((c as AddEnergyVulnerability).Type)}: takes half again as much damage from it.`,
       };
+    case 'AddClassSkill':
+      return {
+        role: 'bonus',
+        text: `${statName((c as AddClassSkill).Skill)} is a class skill: +3 on it once it has a rank.`,
+      };
+    case 'AddBackgroundClassSkill':
+      return {
+        role: 'bonus',
+        text: `${statName((c as AddBackgroundClassSkill).Skill)} counts as a class skill; if it already is one, a +1 competence bonus on it instead.`,
+      };
+    case 'AddProficiencies': {
+      const text = proficiencies(data, c as AddProficiencies);
+      return text === undefined ? undefined : { role: 'bonus', text };
+    }
+    case 'IncreaseActivatableAbilityGroupSize':
+      return {
+        role: 'bonus',
+        text: `One more ${words((c as IncreaseActivatableAbilityGroupSize).Group)} active at a time.`,
+      };
+    case 'AddPet':
+      return { role: 'bonus', text: `Gains a pet: ${words((c as AddPet).Type)}.` };
     default:
       return undefined;
   }

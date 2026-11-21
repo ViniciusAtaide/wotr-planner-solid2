@@ -14,6 +14,14 @@ export const cites = {
     'Designers/Mechanics/Facts/Blindsense.cs OnTurnOn (Range)',
     'UnitLogic/FactLogic/AddDamageResistanceEnergy.cs CalculateValue',
   ],
+  FEATURE_LABELLED: [
+    'UnitLogic/FactLogic/AddClassSkill.cs OnTurnOn (Skill)',
+    'EntitySystem/Stats/ModifiableValueSkill.cs CalculateBaseValue',
+    'UnitLogic/FactLogic/AddBackgroundClassSkill.cs OnTurnOn (Skill)',
+    'UnitLogic/FactLogic/AddProficiencies.cs OnTurnOn (ArmorProficiencies, WeaponProficiencies, m_RaceRestriction)',
+    'UnitLogic/FactLogic/IncreaseActivatableAbilityGroupSize.cs OnTurnOn (Group)',
+    'UnitLogic/FactLogic/AddPet.cs TryUpdatePet (Type)',
+  ],
   EQUIPMENT_LABELLED: [
     'Designers/Mechanics/EquipmentEnchants/AddStatBonusEquipment.cs OnTurnOn (Descriptor, Stat, Value)',
     'Designers/Mechanics/EquipmentEnchants/IncreaseStatEquipment.cs OnTurnOn (Descriptor, Stat, Value)',

@@ -4,7 +4,7 @@ import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { buildGrantIndex } from '../grants';
 import { describe, NO_SUMMARY, summaryComponentTypes, summaryLabels, summaryText } from './describe';
-import { EQUIPMENT_LABELLED, labelOf, labelsOf, STAT_LABELLED, type Role } from './labels';
+import { EQUIPMENT_LABELLED, FEATURE_LABELLED, labelOf, labelsOf, STAT_LABELLED, type Role } from './labels';
 import { linkNames, spellDescriptors } from '../links';
 
 const files = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)));
@@ -237,13 +237,47 @@ suite('Summary labels', { timeout: 30_000 }, () => {
     for (const bp of data.blueprints.values())
       for (const c of bp.Components) {
         const label = labelOf(data, c);
-        if (!summaryComponentTypes.includes(c.$type) && !EQUIPMENT_LABELLED.has(c.$type) && !STAT_LABELLED.has(c.$type))
+        if (
+          !summaryComponentTypes.includes(c.$type) &&
+          !EQUIPMENT_LABELLED.has(c.$type) &&
+          !STAT_LABELLED.has(c.$type) &&
+          !FEATURE_LABELLED.has(c.$type)
+        )
           expect(label).toBeUndefined();
         if (label !== undefined)
           expect(label.text).not.toMatch(
             /\(internal\)|undefined|NaN|\b[A-Z][a-z]+[A-Z]\w*(Bonus|Immunity|Resistance)\b/,
           );
       }
+  });
+
+  it.each([
+    [
+      'AddClassSkill',
+      '5f6197b9fde96d840882b858208d2809',
+      'Lore (Nature) is a class skill: +3 on it once it has a rank.',
+    ],
+    [
+      'AddBackgroundClassSkill',
+      '621e1bb8e1d5e114da5a107351f5c7b3',
+      'Thievery counts as a class skill; if it already is one, a +1 competence bonus on it instead.',
+    ],
+    [
+      'AddProficiencies',
+      'fa3d3b2211a51994785d85e753f612d3',
+      'Proficient with longswords, rapiers, shortbows and shortswords.',
+    ],
+    ['AddProficiencies', 'a1a8971f48a829d4683097f8b14e41c8', 'Proficient with bombs.'],
+    [
+      'IncreaseActivatableAbilityGroupSize',
+      '9157c414fd5f3b346aaa67474a40dd16',
+      'One more arcane armor property active at a time.',
+    ],
+    ['AddPet', 'f6f1cdcc404f10c4493dc1e51208fd6f', 'Gains a pet: animal companion.'],
+  ])('words the kept feature component %s from a real blueprint (%s)', (type, guid, text) => {
+    const component = data.blueprints.get(guid)?.Components.find((c) => c.$type === type);
+    expect(component).toBeDefined();
+    expect(labelOf(data, component!)).toEqual({ role: 'bonus', text });
   });
 
   it('reads all 64 spell descriptor bits, the sign bit included', () => {
