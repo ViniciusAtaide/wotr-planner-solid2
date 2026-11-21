@@ -10,6 +10,13 @@ export const cites = {
     'Designers/Mechanics/Facts/Blindsense.cs OnTurnOn (Range)',
     'UnitLogic/FactLogic/AddDamageResistanceEnergy.cs CalculateValue',
   ],
+  EQUIPMENT_LABELLED: [
+    'Designers/Mechanics/EquipmentEnchants/AddStatBonusEquipment.cs OnTurnOn (Descriptor, Stat, Value)',
+    'Designers/Mechanics/EquipmentEnchants/IncreaseStatEquipment.cs OnTurnOn (Descriptor, Stat, Value)',
+    'Designers/GameHelper.cs GetWeaponEnhancementBonus (EnhancementBonus)',
+    'Designers/GameHelper.cs GetArmorEnhancementBonus (EnhancementValue)',
+    'Items/ItemEntityArmor.cs ArmorType',
+  ],
   labelOf: [
     'Designers/Mechanics/Facts/DraconicBloodlineArcana.cs OnEventAboutToTrigger (SpellDescriptor, SpellsOnly, UseContextBonus, Value)',
     'Designers/Mechanics/Facts/SpellSpecializationParametrized.cs OnEventAboutToTrigger',

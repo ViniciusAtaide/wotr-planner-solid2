@@ -245,6 +245,14 @@ function rangeAttack(c: AttackTypeAttackBonus, data: CheckedData): string {
   return `${bonus} on ${rolls}${whileHolding(data, c.CheckFact, c.m_RequiredFact)}.`;
 }
 
+export const EQUIPMENT_LABELLED: ReadonlySet<string> = new Set([
+  'AddStatBonusEquipment',
+  'IncreaseStatEquipment',
+  'WeaponEnhancementBonus',
+  'ArmorEnhancementBonus',
+  'MithralEnchantment',
+]);
+
 export const RANK_SCALED: ReadonlySet<string> = new Set([
   'ACBonusAgainstFactOwner',
   'AttackBonusAgainstFactOwner',
@@ -533,6 +541,31 @@ function rawLabel(data: CheckedData, c: Component): Label | undefined {
         text: `${signed(x.Bonus)}% arcane spell failure ${x.Universal ? 'from any source' : what}.`,
       };
     }
+    case 'AddStatBonusEquipment':
+    case 'IncreaseStatEquipment': {
+      const x = c as Component & {
+        readonly Descriptor: ModifierDescriptor;
+        readonly Stat: StatType;
+        readonly Value: number;
+      };
+      if (x.Stat === 'SneakAttack') return { role: 'bonus', text: `+${x.Value}d6 sneak attack damage.` };
+      return { role: 'bonus', text: `${typed(signed(x.Value), x.Descriptor)} to ${stat(x.Stat)}.` };
+    }
+    case 'WeaponEnhancementBonus':
+      return {
+        role: 'bonus',
+        text: `${signed((c as Component & { readonly EnhancementBonus: number }).EnhancementBonus)} enhancement bonus on attack and damage rolls with this weapon.`,
+      };
+    case 'ArmorEnhancementBonus':
+      return {
+        role: 'bonus',
+        text: `${signed((c as Component & { readonly EnhancementValue: number }).EnhancementValue)} enhancement bonus to the AC this armor or shield gives.`,
+      };
+    case 'MithralEnchantment':
+      return {
+        role: 'bonus',
+        text: 'Mithral: counts as one armor category lighter, heavy as medium and medium as light.',
+      };
     case 'AddEnergyVulnerability':
       return {
         role: 'weakness',

@@ -1,6 +1,6 @@
 import type { CheckedData } from '../load';
-import { isShown, kindOf, type Guid, type Kind } from '../data';
-import { buildGrantIndex, equipmentGrants, removes, type GrantIndex } from '../grants';
+import { enchantmentsOf, isShown, kindOf, type Guid, type Kind } from '../data';
+import { buildGrantIndex, EQUIPMENT_GRANT_KINDS, removes, type GrantIndex } from '../grants';
 import { linkIndex } from '../links';
 import { prerequisites } from '../prerequisites';
 import { nameOf, unmetText } from '../refusals';
@@ -52,8 +52,27 @@ const isItem = (data: CheckedData, guid: Guid) => {
   return bp !== undefined && kindOf[bp.$type] === 'items';
 };
 
-function equippedFacts(data: CheckedData, guid: Guid, G: GrantIndex): Guid[] {
-  return [...new Set(equipmentGrants(data, G, guid).map((g) => g.granted))];
+interface ItemPart {
+  readonly labels: readonly Label[];
+  readonly written?: string;
+}
+
+function itemParts(data: CheckedData, guid: Guid, G: GrantIndex): ItemPart[] {
+  const bp = data.blueprints.get(guid);
+  const seen = new Set<Guid>();
+  return (bp === undefined ? [] : enchantmentsOf(bp, data.blueprints)).flatMap((enchantment) => {
+    const granted = G.grantsOf(enchantment)
+      .filter((g) => EQUIPMENT_GRANT_KINDS.has(g.kind) && !seen.has(g.granted))
+      .map((g) => g.granted);
+    for (const fact of granted) seen.add(fact);
+    return [
+      { labels: labelsOf(data, enchantment, true) },
+      ...granted.map((fact) => {
+        const written = writtenSummary(data, fact);
+        return { labels: labelsOf(data, fact, true), ...(written !== undefined && { written }) };
+      }),
+    ];
+  });
 }
 
 function distinct<T>(items: readonly T[], key: (item: T) => string): T[] {
@@ -69,7 +88,7 @@ function distinct<T>(items: readonly T[], key: (item: T) => string): T[] {
 export function summaryLabels(data: CheckedData, guid: Guid, G: GrantIndex = grantIndexOf(data)): Label[] {
   if (!isItem(data, guid)) return labelsOf(data, guid);
   return distinct(
-    equippedFacts(data, guid, G).flatMap((fact) => labelsOf(data, fact, true)),
+    itemParts(data, guid, G).flatMap((p) => p.labels),
     (l) => l.text,
   );
 }
@@ -79,10 +98,7 @@ export function summaryText(data: CheckedData, guid: Guid, G: GrantIndex = grant
   if (written !== undefined) return written;
   if (!isItem(data, guid)) return summaryOf(labelsOf(data, guid));
   const parts = distinct(
-    equippedFacts(data, guid, G).flatMap((fact) => {
-      const own = writtenSummary(data, fact);
-      return own !== undefined ? [own] : labelsOf(data, fact, true).map((l) => l.text);
-    }),
+    itemParts(data, guid, G).flatMap((p) => (p.written !== undefined ? [p.written] : p.labels.map((l) => l.text))),
     (t) => t,
   );
   return parts.length === 0 ? NO_SUMMARY : parts.join(' ');

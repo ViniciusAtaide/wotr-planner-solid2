@@ -4,7 +4,7 @@ import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { buildGrantIndex } from '../grants';
 import { describe, NO_SUMMARY, summaryComponentTypes, summaryLabels, summaryText } from './describe';
-import { labelOf, labelsOf, type Role } from './labels';
+import { EQUIPMENT_LABELLED, labelOf, labelsOf, type Role } from './labels';
 import { spellDescriptors } from '../links';
 
 const files = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)));
@@ -236,7 +236,7 @@ suite('Summary labels', { timeout: 30_000 }, () => {
     for (const bp of data.blueprints.values())
       for (const c of bp.Components) {
         const label = labelOf(data, c);
-        if (!summaryComponentTypes.includes(c.$type)) expect(label).toBeUndefined();
+        if (!summaryComponentTypes.includes(c.$type) && !EQUIPMENT_LABELLED.has(c.$type)) expect(label).toBeUndefined();
         if (label !== undefined)
           expect(label.text).not.toMatch(
             /\(internal\)|undefined|NaN|\b[A-Z][a-z]+[A-Z]\w*(Bonus|Immunity|Resistance)\b/,
@@ -297,5 +297,17 @@ suite('Summary labels', { timeout: 30_000 }, () => {
       'immunity',
       'immunity',
     ]);
+  });
+
+  it("words the equipment bonuses the walk keeps: an item's stat and enhancement bonuses and mithral", () => {
+    expect(summaryText(data, '4782eaff2231a524183c6f6034ee31db', G)).toBe(
+      '+4 enhancement bonus to Strength. +4 enhancement bonus to Constitution.',
+    );
+    expect(summaryText(data, '1e785267696a49d40a5abd57d2de1910', G)).toBe(
+      '+2 enhancement bonus on attack and damage rolls with this weapon.',
+    );
+    expect(summaryText(data, '031564eb2aaf45842b5a92a96f92f31d', G)).toBe(
+      'Mithral: counts as one armor category lighter, heavy as medium and medium as light. +1 enhancement bonus to the AC this armor or shield gives.',
+    );
   });
 });
