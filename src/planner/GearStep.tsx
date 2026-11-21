@@ -1,7 +1,8 @@
 import { createMemo, createSignal, For, onSettled, Show, untrack, useContext } from 'solid-js';
 import type { GearPlace } from '~engine/build';
-import { isShown, type Guid } from '~engine/data';
+import type { Guid } from '~engine/data';
 import type { CheckedData } from '~engine/load';
+import { gearOptions } from '~engine/pickers';
 import { nameOf } from '~engine/refusals';
 import { PLACE_ITEM_TYPES } from '~engine/walk';
 
@@ -45,15 +46,7 @@ export function GearStep(props: GearStepProps) {
   const gear = () => planner().build().gear ?? {};
   const items = createMemo(() => {
     const t = text().toLowerCase();
-    return [...data().blueprints.values()]
-      .filter(
-        (bp) =>
-          isShown(bp) &&
-          PLACE_ITEM_TYPES[place()].includes(bp.$type) &&
-          !data().twins.has(bp.guid) &&
-          (t === '' || (bp.name ?? '').toLowerCase().includes(t)),
-      )
-      .sort((a, b) => (a.name ?? '').localeCompare(b.name ?? ''));
+    return gearOptions(data(), place()).filter((bp) => t === '' || (bp.name ?? '').toLowerCase().includes(t));
   });
   const summary = (item: Guid) => summaryFor(data(), planner().engine.G, item);
   const clashes = (item: Guid) => clashWords(planner().engine, planner().build(), place(), item);
