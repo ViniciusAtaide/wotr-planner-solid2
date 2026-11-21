@@ -211,7 +211,8 @@ export default function Trail(props: TrailProps) {
     equals: (a, b) => JSON.stringify(a) === JSON.stringify(b),
   });
   const editing = () => props.selection !== undefined;
-  const reopens = () => props.listMode === 'modal' && isListStep(step()) && props.state.dialog !== stepKey(step());
+  const reopens = () =>
+    props.listMode === 'modal' && isListStep(step(), build().levels.length) && props.state.dialog !== stepKey(step());
   const isTarget = (s: Selection) => {
     const now = step();
     return now.kind !== 'mythic' && now.kind !== 'nextLevel' && now.kind !== 'complete' && sameSelection(now, s);
@@ -224,7 +225,7 @@ export default function Trail(props: TrailProps) {
           title={stepTitle(view(), step())}
           editing={editing() && step().kind !== 'scores' && stepKey(step()) !== stepKey(next())}
           onBack={() => props.select(undefined)}
-          list={isListStep(step())}
+          list={isListStep(step(), build().levels.length)}
           mode={props.listMode ?? 'inline'}
           line={scoresLine()}
           confirming={props.planner.session().kind === 'confirming'}

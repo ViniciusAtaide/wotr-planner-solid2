@@ -18,4 +18,14 @@ describe('windowOf', () => {
   test('at the bottom it stops at the last row', () => {
     expect(windowOf(19_617, 507, 78, 258, 6)).toEqual({ start: 245, end: 258, row: 78 });
   });
+
+  test('the spacers and rows add up to the rows times the stride wherever the list is scrolled (QA pass 4)', () => {
+    for (const top of [0, 500, 4000, 14_752, 49_120]) {
+      const w = windowOf(top, 480, 64, 66, 6);
+      expect(w.start).toBeLessThanOrEqual(w.end);
+      expect(w.end).toBeLessThanOrEqual(66);
+      expect(w.start * w.row + (w.end - w.start) * w.row + (66 - w.end) * w.row).toBe(66 * 64);
+    }
+    expect(windowOf(49_120, 480, 64, 1, 6)).toEqual({ start: 1, end: 1, row: 64 });
+  });
 });

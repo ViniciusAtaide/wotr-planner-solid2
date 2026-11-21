@@ -107,11 +107,16 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
   let box: HTMLDivElement | undefined;
   const [detail, setDetail] = createSignal<OptionDetail | undefined>(undefined);
   let find: ((key: string) => OptionDetail | undefined) | undefined;
+  let pointed: string | undefined;
   const hub: DetailHub = {
     resolve: (f) => {
       find = f;
+      queueMicrotask(() => {
+        if (pointed !== undefined) hub.point(pointed);
+      });
     },
     point: (key) => {
+      pointed = key;
       const found = key === undefined ? undefined : find?.(key);
       if (found !== undefined) setDetail(found);
     },

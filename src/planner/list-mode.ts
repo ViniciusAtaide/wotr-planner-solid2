@@ -29,16 +29,17 @@ export function browserStorage(): Storage | undefined {
   }
 }
 
-export function isListStep(step: Step): boolean {
+export function isListStep(step: Step, levels: number): boolean {
   switch (step.kind) {
     case 'slot':
     case 'race':
     case 'level':
     case 'rank':
     case 'mythic':
-    case 'nextLevel':
     case 'gear':
       return true;
+    case 'nextLevel':
+      return levels === 0;
     case 'scores':
     case 'increase':
     case 'skills':
