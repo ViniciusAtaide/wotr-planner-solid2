@@ -420,7 +420,7 @@ export async function place_rank(
   const expected = expectedLevel(e.data, args.rank);
   return args.level === expected
     ? r
-    : { ...r, note: `Mythic rank ${args.rank} is usually reached at character level ${expected} (ADR 0003).` };
+    : { ...r, note: `Mythic rank ${args.rank} is usually reached at character level ${expected}.` };
 }
 
 export async function equip(

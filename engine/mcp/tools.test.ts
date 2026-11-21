@@ -9,6 +9,7 @@ import { archetypeCount, buildNameLength, listNames, namesIn, rankLevelRange, sk
 import { walk } from '../walk';
 import {
   engineOf,
+  expectedLevel,
   equip,
   explain,
   level_up,
@@ -305,5 +306,14 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(powerAttack.enables.length).toBeGreaterThan(0);
     for (const link of [...powerAttack.needs, ...powerAttack.enables]) expect(link.name).not.toBe(link.guid);
     expect(powerAttack.enables.map((l) => l.name)).toContain('Cleave');
+  });
+
+  it('notes a Mythic rank off its usual level in plain words, with no internal reference (MCP QA)', async () => {
+    const jack = await encodeBuild(e.data, jackInTheGreen.build);
+    const usual = expectedLevel(e.data, 10);
+    const moved = await place_rank(e, { code: jack, rank: 10, level: usual === 20 ? 19 : 20 });
+    expect(isRefusal(moved)).toBe(false);
+    if (isRefusal(moved)) return;
+    expect(moved.note).toMatch(/^Mythic rank 10 is usually reached at character level \d+\.$/);
   });
 });
