@@ -178,7 +178,13 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
   });
 
   it('searches, explains and gives the sheet', async () => {
-    expect(search(e, { text: 'power attack' }).map((h) => h.guid)).toContain('9972f33f977fc724c838e59641b2fca5');
+    expect(search(e, { text: 'power attack' }).hits.map((h) => h.guid)).toContain('9972f33f977fc724c838e59641b2fca5');
+    const classes = search(e, { text: '', kind: 'classes' });
+    expect(classes.total).toBeGreaterThan(50);
+    expect(classes.hits.length).toBe(50);
+    expect(classes.pages).toBe(Math.ceil(classes.total / 50));
+    const rest = search(e, { text: '', kind: 'classes', page: 2 });
+    expect([...classes.hits, ...rest.hits].map((h) => h.name)).toContain('Wizard');
     expect(explain(e, { guid: '9972f33f977fc724c838e59641b2fca5' })).toMatchObject({
       name: 'Power Attack',
       prerequisites: ['Needs Strength 13.'],

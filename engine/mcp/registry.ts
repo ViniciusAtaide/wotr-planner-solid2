@@ -192,11 +192,13 @@ export const TOOLS: readonly ToolDef[] = [
   },
   {
     name: 'search',
-    description: 'Blueprints the game shows whose name holds the text, with GUID, name and summary line.',
+    description:
+      'Blueprints the game shows whose name holds the text, with GUID, name and summary line: 50 a page by name, with the total and the number of pages. An empty text lists a kind.',
     inputSchema: object(
       {
         text: { type: 'string' },
         kind: { type: 'string', description: 'A data kind: classes, archetypes, features, selections, races, items…' },
+        page: { type: 'integer', minimum: 1 },
       },
       ['text'],
     ),

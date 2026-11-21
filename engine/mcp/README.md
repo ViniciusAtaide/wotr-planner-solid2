@@ -31,7 +31,7 @@ The 14 tools, in map 08's order:
 - `place_rank`: a Mythic rank's character level (ADR 0003).
 - `equip`: an item in a Gear place, or none to take it off, with `pick`'s modes.
 - `synergies`: at a slot, or at every open slot, the open options that link to what the Build holds: `buildsOn` (the chain kind), `shares` (an ability score, weapon or group, spell school, energy or descriptor it shares with held facts, "Shares Dexterity with Two-Weapon Fighting") and `wontStack` (a bonus of a type already given to the same stat). `options` carries `shares` and `wontStack` on each option too.
-- `search`: the shown blueprints whose name holds the text, of one kind when asked, at most 50.
+- `search`: the shown blueprints whose name holds the text, of one kind when asked, by name, 50 a page, with `total` and `pages` so an agent knows when a list is cut (MCP QA).
 - `explain`: a blueprint's description (engine/describe): its Summary and `labels` (06b), prerequisites, grants, where it can be picked and its chain links. `search` hits and `options` carry the Summary too.
 - `sheet`: the Build's name, if it has one, and the numbers at a character level, the Build's last by default.
 - `compare`: 2 to 4 Builds' sheets at checkpoint levels, their chain link counts, and the first place they diverge.

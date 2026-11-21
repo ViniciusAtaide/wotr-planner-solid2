@@ -486,24 +486,37 @@ async function allOpen(e: Engine, code: string, slot: SlotId, total: number): Pr
   return out;
 }
 
+const SEARCH_PER_PAGE = 50;
+
+export interface SearchHit {
+  readonly guid: Guid;
+  readonly name: string;
+  readonly kind: Kind;
+  readonly summary: string;
+}
+
 export function search(
   e: Engine,
-  args: { readonly text: string; readonly kind?: Kind },
-): readonly { readonly guid: Guid; readonly name: string; readonly kind: Kind; readonly summary: string }[] {
+  args: { readonly text: string; readonly kind?: Kind; readonly page?: number },
+): { readonly hits: readonly SearchHit[]; readonly total: number; readonly page: number; readonly pages: number } {
   const text = args.text.toLowerCase();
-  const out: { guid: Guid; name: string; kind: Kind; summary: string }[] = [];
-  for (const bp of e.data.blueprints.values()) {
-    if (!isShown(bp) || (args.kind !== undefined && kindOf[bp.$type] !== args.kind)) continue;
-    if (!(bp.name ?? '').toLowerCase().includes(text)) continue;
-    out.push({
+  const found = [...e.data.blueprints.values()]
+    .filter((bp) => isShown(bp) && (args.kind === undefined || kindOf[bp.$type] === args.kind))
+    .filter((bp) => (bp.name ?? '').toLowerCase().includes(text))
+    .sort((a, b) => (a.name ?? '').localeCompare(b.name ?? '') || a.guid.localeCompare(b.guid));
+  const pages = Math.max(1, Math.ceil(found.length / SEARCH_PER_PAGE));
+  const page = Math.min(Math.max(1, args.page ?? 1), pages);
+  return {
+    hits: found.slice((page - 1) * SEARCH_PER_PAGE, page * SEARCH_PER_PAGE).map((bp) => ({
       guid: bp.guid,
       name: bp.name ?? bp.assetName,
       kind: kindOf[bp.$type],
       summary: summaryText(e.data, bp.guid, e.G),
-    });
-    if (out.length >= 50) break;
-  }
-  return out;
+    })),
+    total: found.length,
+    page,
+    pages,
+  };
 }
 
 export function explain(e: Engine, args: { readonly guid: Guid }): Description | ToolRefusal {
