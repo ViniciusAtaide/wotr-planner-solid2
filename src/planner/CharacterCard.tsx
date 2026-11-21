@@ -1,11 +1,19 @@
 import type { JSX } from '@solidjs/web';
 import { For, Show } from 'solid-js';
-import { MAX_SCORE, MIN_SCORE, toAbilityScores, type AbilityScores, type Alignment } from '~engine/build';
+import {
+  abilityScores,
+  MAX_SCORE,
+  MIN_SCORE,
+  toAbilityScores,
+  type AbilityScores,
+  type Alignment,
+} from '~engine/build';
 import type { Attribute } from '~engine/data';
 import { offeredRaces } from '~engine/pickers';
 import { abilityScoreRange, nameOf } from '~engine/refusals';
 import { ATTRIBUTES, attributeBonus, pointBuyCost, POINT_BUY } from '~engine/walk';
 
+import { Button } from '../design';
 import type { TrailApi } from './steps';
 import { alignmentWords, characterLine, characterPicksLine } from './trail-state';
 
@@ -39,6 +47,7 @@ export interface CharacterCardProps {
   readonly editing: boolean;
   readonly onToggle: () => void;
   readonly chips: JSX.Element;
+  readonly scoresStep: boolean;
   readonly here: JSX.Element;
   readonly diff?: (a: Attribute) => boolean;
 }
@@ -75,7 +84,12 @@ export function CharacterCard(props: CharacterCardProps) {
         </button>
       </Show>
       <Show when={!props.folded}>
-        <StatTiles trail={props.trail} editing={props.editing} {...(props.diff && { diff: props.diff })} />
+        <Show
+          when={props.scoresStep}
+          fallback={<StatTiles trail={props.trail} editing={props.editing} {...(props.diff && { diff: props.diff })} />}
+        >
+          {props.here}
+        </Show>
         <Show when={build().levels.length === 0}>
           <p class="trail-note">Point buy only: the race and its +2 count from level 1.</p>
         </Show>
@@ -87,13 +101,39 @@ export function CharacterCard(props: CharacterCardProps) {
         </Show>
         {props.chips}
       </Show>
-      {props.here}
+      <Show when={!props.scoresStep}>{props.here}</Show>
     </section>
   );
 }
 
 export interface CardPartProps {
   readonly trail: TrailApi;
+}
+
+export interface ScoresStepProps {
+  readonly trail: TrailApi;
+  readonly diff?: (a: Attribute) => boolean;
+}
+
+export function ScoresStep(props: ScoresStepProps) {
+  const planner = () => props.trail.planner;
+  const left = () => POINT_BUY - pointBuyCost(planner().build().scores ?? TENS);
+  const done = () => {
+    if (planner().build().scores === undefined) {
+      planner().edit({ kind: 'scores', scores: abilityScores(TENS) }, 'Every score at 10');
+    }
+    props.trail.select(undefined);
+  };
+  return (
+    <div class="trail-step">
+      <StatTiles trail={props.trail} editing {...(props.diff && { diff: props.diff })} />
+      <Button variant="primary" onClick={done}>
+        <Show when={left() > 0} fallback="Done">
+          Done · leave {left()} unspent
+        </Show>
+      </Button>
+    </div>
+  );
 }
 
 export function RaceChips(props: CardPartProps) {

@@ -184,7 +184,7 @@ describe('a Build code from the MCP opens the same Build in the UI', () => {
     const { container } = render(() => <Planner />);
     await screen.findByText(linkDidNotOpen('load', 'notACode'));
     expect(container.querySelectorAll(LEVEL_STOPS).length).toBe(0);
-    expect(container.querySelector('.trail-here__title')?.textContent).toBe('Begin · choose a first class');
+    expect(container.querySelector('.trail-here__title')?.textContent).toBe('Your character · set the ability scores');
     cleanup();
     history.replaceState(null, '', '/');
   });
@@ -382,10 +382,26 @@ describe('the levelling trail (build ticket 07)', () => {
     history.replaceState(null, '', '/');
   });
 
+  test('a fresh Build opens on the ability scores, which stay open through their edits until Done', async () => {
+    await openPlanner(undefined);
+    expect(hereTitle()).toBe('Your character · set the ability scores');
+    tap('Raise Strength');
+    expect(hereTitle()).toBe('Your character · set the ability scores');
+    expect(screen.queryByRole('button', { name: 'Back to the next choice' })).toBeNull();
+    tap(/^Done/);
+    expect(hereTitle()).toBe('Begin · choose a first class');
+  });
+
+  test('a Build whose scores are set opens past them', async () => {
+    await openPlanner({ scores: abilityScores(SCORES), levels: [], picks: [] });
+    expect(hereTitle()).toBe('Begin · choose a first class');
+  });
+
   test('a reload keeps the Build, through the #b= link', async () => {
     await openPlanner(undefined);
     tap('Human');
     tap('Lawful Good');
+    tap(/^Done/);
     tap(/^Fighter/);
     await waitFor(() => expect(levelRows()).toBe(1));
     const shown = [...document.querySelectorAll('.trail-card__line')].map((n) => n.textContent);

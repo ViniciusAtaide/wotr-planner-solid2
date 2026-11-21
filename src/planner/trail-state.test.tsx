@@ -26,6 +26,7 @@ import {
   slotsAt,
   stepTitle,
   TRAIL_START,
+  whereOf,
   type Step,
   type TrailState,
   type TrailView,
@@ -77,9 +78,24 @@ const human = (levels: number, skills?: SkillRanks): Build => ({
 });
 
 describe('auto-advance: each pick opens the next empty one', () => {
-  test('an empty Build starts on the first class', () => {
-    expect(next({ levels: [], picks: [] })).toEqual({ kind: 'nextLevel' });
-    expect(stepTitle(viewOf({ levels: [], picks: [] }), { kind: 'nextLevel' })).toBe('Begin · choose a first class');
+  test('a fresh Build starts on the ability scores', () => {
+    const fresh: Build = { levels: [], picks: [] };
+    expect(next(fresh)).toEqual({ kind: 'scores' });
+    expect(stepTitle(viewOf(fresh), { kind: 'scores' })).toBe('Your character · set the ability scores');
+    expect(whereOf(viewOf(fresh), { kind: 'scores' })).toEqual({ kind: 'scores' });
+  });
+
+  test('a Build whose scores are set starts on its first unfinished step after them', () => {
+    const scored: Build = { scores: SCORES, levels: [], picks: [] };
+    expect(next(scored)).toEqual({ kind: 'nextLevel' });
+    expect(stepTitle(viewOf(scored), { kind: 'nextLevel' })).toBe('Begin · choose a first class');
+    const levelled = human(1);
+    expect(next(levelled)).toEqual({ kind: 'slot', slot: characterSlots(viewOf(levelled))[0]?.id });
+  });
+
+  test('a Build from a link with levels but no scores still starts on the ability scores', () => {
+    const unscored = filled({ race: HUMAN, levels: [{ class: FIGHTER }, { class: FIGHTER }], picks: [] });
+    expect(next(unscored)).toEqual({ kind: 'scores' });
   });
 
   test('the character’s choices come first, then the level’s, in the walk’s order', () => {

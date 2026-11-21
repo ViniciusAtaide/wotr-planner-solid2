@@ -31,19 +31,23 @@ to the player in the planner's own words: "Level 5 · choose feat", "Your charac
 
 **The next step** is the first of these that is open, in reading order (`nextStep`):
 
-1. the first empty slot with the character, then the first empty slot on the trail, in the walk's order;
-2. an ability increase the walk offers and the Build hasn't taken;
-3. the last level's skills, until the walk's budget for that level is spent or the player chooses "Done · leave N
+1. the ability scores, while the Build has none: the step opens in the character card in the tiles' place, and stays
+   open through its edits (race, +2 and alignment included) until "Done" ("Done · leave N unspent" while points are
+   left), which keeps every score at 10 when none was changed. So a fresh Build opens here, and a link opens on its
+   first unfinished step;
+2. the first empty slot with the character, then the first empty slot on the trail, in the walk's order;
+3. an ability increase the walk offers and the Build hasn't taken;
+4. the last level's skills, until the walk's budget for that level is spent or the player chooses "Done · leave N
    unspent";
-4. a Mythic rank whose Expected level (ADR 0003) the Build has reached, offered as the Mythic paths with their status,
+5. a Mythic rank whose Expected level (ADR 0003) the Build has reached, offered as the Mythic paths with their status,
    the current path first (before any rank, the game's starting Mythic class, S's `mythicStartingClass`);
    "Not now" puts it off until the next level;
-5. the next level: "Continue as <previous class> → level N" in one tap, or "Another class…", which lists every class
+6. the next level: "Continue as <previous class> → level N" in one tap, or "Another class…", which lists every class
    with its status, the previous class first, then the open ones, then the closed ones with their reasons.
 
 Each pick goes back to the next step. Tapping any chip (or a stop's title, for its class, archetype and removal, or a
-rank's, for its path and Rank level) opens that choice in place with "Back to the next choice"; the skills, a rank and
-Gear stay open through their edits, everything else returns to the next step once it applies. An edit that breaks later
+rank's, for its path and Rank level) opens that choice in place with "Back to the next choice"; the ability scores,
+the skills, a rank and Gear stay open through their edits, everything else returns to the next step once it applies. An edit that breaks later
 picks goes through the Cascade preview as before; once confirmed, the page lands on the first pick it cleared.
 
 **Icons**: a feat's chip and its row in a pick list carry its category's icon (`feat-category.ts`).
@@ -119,7 +123,8 @@ dimmed and inert behind "Edit the Second Build".
   `forked`, with its `layout`, `one` or `both`, and the edited `side`), the `Selection`, and the
   `LinkStatus` (`ok`, or `didNotOpen` on `load` or on `paste`, with its `LinkReason`). The `Selection` is the choice
   the player tapped open on the trail: a slot, a level's class (`level`), its ability increase (`increase`) or skills
-  (`skills`), a rank, or Gear; undefined follows the next step. `reduceWorkspace(state,
+  (`skills`), a rank, Gear, or the ability scores (`scores`, which the trail selects at their first edit to keep the
+  step open); undefined follows the next step. `reduceWorkspace(state,
   action, editing)`:
   - `fork` only from `single`, to `forked`, `both`, `second`;
   - `show` only when forked; the toggle's segments map onto it through a `Record`;
@@ -154,7 +159,8 @@ dimmed and inert behind "Edit the Second Build".
   open (`unfolded`), the character card opened or closed by hand (`characterOpen`) and "Another class…" (`otherClass`).
   `levelAdded` folds every chapter again and closes the class list.
   - `Step` is a `Selection`, a due Mythic rank (`mythic`) or the next level (`nextLevel`); `nextStep` gives the next
-    one in the order above, `whereOf` where it opens (the character, a level, a rank, the next stop, or Gear) and
+    one in the order above, `whereOf` where it opens (the character, the score tiles, a level, a rank, the next stop,
+    or Gear) and
     `stepTitle` its title. `slotWords` names a slot in a title (the selection's game name, lower case, without
     "selection"; build question 4 below) and `slotLabel` on a chip.
   - `shownSlots` leaves out the parametrized feats' own slots (their parameter is chosen with the feat);
@@ -173,7 +179,8 @@ dimmed and inert behind "Edit the Second Build".
   contents. Its `edit` sends the edit to the planner and, once it applies, goes back to the next step unless the
   choice stays open (`keepsSelection`), and folds the chapters again after a new level. `ChapterRow` is a folded
   chapter.
-- **`CharacterCard.tsx`**: the card, `RaceChips`, `AlignmentGrid` (`ALIGNMENT_GRID`) and `StatTiles`, whose steppers
+- **`CharacterCard.tsx`**: the card, `RaceChips`, `AlignmentGrid` (`ALIGNMENT_GRID`), `ScoresStep` (the scores step:
+  the tiles with their controls and "Done") and `StatTiles`, whose steppers
   stop at the scores a Build can hold (`MIN_SCORE`, `MAX_SCORE`) and send a point buy the walk refuses to the notice
   area.
 - **`steps.tsx`: what opens in place.** `TrailApi` is what a step reads and sends. `SlotStep` is a slot's open list:
@@ -271,7 +278,8 @@ dimmed and inert behind "Edit the Second Build".
 
 ## Tests
 
-- `trail-state.test.tsx`, the step model on the committed data: auto-advance (an empty Build starts on a first class;
+- `trail-state.test.tsx`, the step model on the committed data: auto-advance (a fresh Build, or a linked one without
+  scores, starts on the ability scores; one with scores starts on a first class;
   the character's slots, then the level's in the walk's order; then a due increase, the last level's skills and the
   next level; a due Mythic rank before the next level, and "Not now"), skills closing on the walk's budget or on Done,
   chapters and folding (a finished chapter before the step folds; the current, an unfinished and a tapped one don't;

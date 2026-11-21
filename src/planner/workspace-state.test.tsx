@@ -293,6 +293,7 @@ function exists(selection: Selection, build: Build): boolean {
     case 'rank':
       return build.ranks?.[selection.rank - 1] !== undefined;
     case 'gear':
+    case 'scores':
       return true;
   }
 }

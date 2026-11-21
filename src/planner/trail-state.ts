@@ -17,6 +17,7 @@ export type Step =
 
 export type Where =
   | { readonly kind: 'character' }
+  | { readonly kind: 'scores' }
   | { readonly kind: 'level'; readonly level: number }
   | { readonly kind: 'rank'; readonly rank: number }
   | { readonly kind: 'next' }
@@ -134,6 +135,7 @@ export function mythicDue(t: TrailView, later: number | undefined): MythicDue | 
 }
 
 export function nextStep(t: TrailView, s: Pick<TrailState, 'skillsLeft' | 'mythicLater'>): Step {
+  if (t.build.scores === undefined) return { kind: 'scores' };
   const empty = (slots: readonly OpenedSlot[]) => slots.find((x) => x.pick === undefined);
   const slot = empty(characterSlots(t)) ?? empty(shownSlots(t));
   if (slot !== undefined) return { kind: 'slot', slot: slot.id };
@@ -161,6 +163,8 @@ export function whereOf(t: TrailView, step: Step): Where {
       return { kind: 'rank', rank: step.rank };
     case 'gear':
       return { kind: 'gear' };
+    case 'scores':
+      return { kind: 'scores' };
     case 'mythic':
     case 'nextLevel':
       return { kind: 'next' };
@@ -193,6 +197,8 @@ export function stepTitle(t: TrailView, step: Step): string {
       return `Mythic rank ${step.rank} · the path`;
     case 'gear':
       return 'Your gear';
+    case 'scores':
+      return 'Your character · set the ability scores';
     case 'mythic':
       return `Ascend to Mythic rank ${step.rank}`;
     case 'nextLevel':
@@ -203,7 +209,7 @@ export function stepTitle(t: TrailView, step: Step): string {
 }
 
 export function keepsSelection(s: Selection | undefined): boolean {
-  return s?.kind === 'skills' || s?.kind === 'rank' || s?.kind === 'gear';
+  return s?.kind === 'skills' || s?.kind === 'rank' || s?.kind === 'gear' || s?.kind === 'scores';
 }
 
 export function hereLevel(t: TrailView, where: Where): number {
@@ -213,6 +219,7 @@ export function hereLevel(t: TrailView, where: Where): number {
     case 'rank':
       return t.build.ranks?.[where.rank - 1]?.level ?? t.build.levels.length;
     case 'character':
+    case 'scores':
     case 'next':
     case 'gear':
       return t.build.levels.length + 1;

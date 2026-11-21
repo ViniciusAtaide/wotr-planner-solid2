@@ -7,7 +7,7 @@ import { nameOf } from '~engine/refusals';
 import type { OpenedSlot } from '~engine/walk';
 
 import { FeatIcon, type FeatCategory } from '../design';
-import { CharacterCard } from './CharacterCard';
+import { CharacterCard, ScoresStep } from './CharacterCard';
 import { featCategory } from './feat-category';
 import { GearStep, wornLine } from './GearStep';
 import type { EditOutcome } from './planner-state';
@@ -106,11 +106,16 @@ export default function Trail(props: TrailProps) {
   const data = () => props.planner.engine.data;
   const build = () => props.planner.build();
   const view = createMemo((): TrailView => ({ data: data(), build: build(), walk: props.planner.walked() }));
+  const step = createMemo((): Step => props.selection ?? nextStep(view(), props.state), {
+    equals: (a, b) => stepKey(a) === stepKey(b),
+  });
   const edit = (e: Edit, title: string): EditOutcome => {
     const outcome = props.planner.edit(e, title);
     if (outcome === 'applied') {
       if (e.kind === 'addLevel') props.send({ kind: 'levelAdded' });
-      if (!keepsSelection(props.selection)) props.select(undefined);
+      if (!keepsSelection(props.selection)) {
+        props.select(e.kind === 'scores' && step().kind === 'scores' ? { kind: 'scores' } : undefined);
+      }
     }
     return outcome;
   };
@@ -125,9 +130,6 @@ export default function Trail(props: TrailProps) {
     select: (s) => props.select(s),
     edit,
   };
-  const step = createMemo((): Step => props.selection ?? nextStep(view(), props.state), {
-    equals: (a, b) => stepKey(a) === stepKey(b),
-  });
   const where = createMemo(() => whereOf(view(), step()), {
     equals: (a, b) => JSON.stringify(a) === JSON.stringify(b),
   });
@@ -139,8 +141,13 @@ export default function Trail(props: TrailProps) {
   const here = () => (
     <Show when={stepKey(step())} keyed>
       {(key) => (
-        <Here step={key} title={stepTitle(view(), step())} editing={editing()} onBack={() => props.select(undefined)}>
-          <StepBody trail={api} step={step()} />
+        <Here
+          step={key}
+          title={stepTitle(view(), step())}
+          editing={editing() && step().kind !== 'scores'}
+          onBack={() => props.select(undefined)}
+        >
+          <StepBody trail={api} step={step()} {...(props.diff && { diff: props.diff })} />
         </Here>
       )}
     </Show>
@@ -220,7 +227,8 @@ export default function Trail(props: TrailProps) {
     open: props.state.characterOpen,
   });
   const characterOpen = () => characterEditing(cardView());
-  const cardFolded = () => characterFolded({ ...cardView(), hereIsCharacter: where().kind === 'character' });
+  const hereIsCharacter = () => where().kind === 'character' || where().kind === 'scores';
+  const cardFolded = () => characterFolded({ ...cardView(), hereIsCharacter: hereIsCharacter() });
   const foldView = () => ({
     phone: props.phone,
     levels: build().levels.length,
@@ -297,7 +305,8 @@ export default function Trail(props: TrailProps) {
             </div>
           </Show>
         }
-        here={<Show when={where().kind === 'character'}>{here()}</Show>}
+        scoresStep={where().kind === 'scores'}
+        here={<Show when={hereIsCharacter()}>{here()}</Show>}
       />
       <ol class="trail-path" aria-label="Levels">
         <For each={chapters(build().levels.length)}>
@@ -381,6 +390,7 @@ export function ChapterRow(props: ChapterRowProps) {
 export interface StepBodyProps {
   readonly trail: TrailApi;
   readonly step: Step;
+  readonly diff?: (a: Attribute) => boolean;
 }
 
 export function StepBody(props: StepBodyProps) {
@@ -396,6 +406,9 @@ export function StepBody(props: StepBodyProps) {
       <Match when={rank()}>{(r) => <RankEditor trail={props.trail} rank={r()} />}</Match>
       <Match when={props.step.kind === 'gear'}>
         <GearStep trail={props.trail} />
+      </Match>
+      <Match when={props.step.kind === 'scores'}>
+        <ScoresStep trail={props.trail} {...(props.diff && { diff: props.diff })} />
       </Match>
       <Match when={props.step.kind === 'mythic'}>
         <MythicStep trail={props.trail} />

@@ -12,7 +12,8 @@ export type Selection =
   | { readonly kind: 'increase'; readonly level: number }
   | { readonly kind: 'skills'; readonly level: number }
   | { readonly kind: 'rank'; readonly rank: number }
-  | { readonly kind: 'gear' };
+  | { readonly kind: 'gear' }
+  | { readonly kind: 'scores' };
 
 export type Side = 'first' | 'second';
 export type Layout = 'one' | 'both';
@@ -70,6 +71,7 @@ export function sameSelection(a: Selection | undefined, b: Selection | undefined
     case 'rank':
       return b.kind === 'rank' && a.rank === b.rank;
     case 'gear':
+    case 'scores':
       return a.kind === b.kind;
   }
 }
@@ -92,6 +94,7 @@ export function resolve(
     case 'rank':
       return selection.rank >= 1 && selection.rank <= (build.ranks?.length ?? 0) ? selection : undefined;
     case 'gear':
+    case 'scores':
       return selection;
   }
 }

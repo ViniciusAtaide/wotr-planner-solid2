@@ -566,6 +566,10 @@
   scroll-margin-bottom: 72px;
 }
 
+.trail-card > .trail-here {
+  padding-inline: var(--space-2);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .trail-here {
     animation: trail-arrive 180ms ease-out;
