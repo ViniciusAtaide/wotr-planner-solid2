@@ -3,6 +3,7 @@ import {
   slotKey,
   type Alignment,
   type Build,
+  type GearPlace,
   type Pick as BuildPick,
   type Place,
   type SkillRanks,
@@ -45,6 +46,7 @@ export interface TrailState {
   readonly closedShown: ReadonlySet<string>;
   readonly skillsCleared: ReadonlySet<number>;
   readonly dialog: string | undefined;
+  readonly gearPlace?: GearPlace | undefined;
 }
 
 export type TrailAction =
@@ -56,7 +58,8 @@ export type TrailAction =
   | { readonly kind: 'otherClass'; readonly open: boolean }
   | { readonly kind: 'toggleClosed'; readonly list: string }
   | { readonly kind: 'skillsCleared'; readonly levels: readonly number[] }
-  | { readonly kind: 'dialog'; readonly step: string | undefined };
+  | { readonly kind: 'dialog'; readonly step: string | undefined }
+  | { readonly kind: 'gearPlace'; readonly place: GearPlace };
 
 export const TRAIL_START: TrailState = {
   skillsLeft: new Set(),
@@ -96,6 +99,8 @@ export function reduceTrail(s: TrailState, a: TrailAction): TrailState {
           };
     case 'dialog':
       return s.dialog === a.step ? s : { ...s, dialog: a.step };
+    case 'gearPlace':
+      return s.gearPlace === a.place ? s : { ...s, gearPlace: a.place };
     case 'toggleClosed': {
       const closedShown = new Set(s.closedShown);
       if (!closedShown.delete(a.list)) closedShown.add(a.list);

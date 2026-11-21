@@ -1,4 +1,4 @@
-import { createMemo, createSignal, For, onSettled, Show, useContext } from 'solid-js';
+import { createMemo, createSignal, For, onSettled, Show, untrack, useContext } from 'solid-js';
 import type { GearPlace } from '~engine/build';
 import { isShown, type Guid } from '~engine/data';
 import type { CheckedData } from '~engine/load';
@@ -8,6 +8,7 @@ import { PLACE_ITEM_TYPES } from '~engine/walk';
 import { Button, OptionList, PickerOption } from '../design';
 import { Filter, SCROLL_STYLE } from './ChoiceList';
 import { clashWords } from './gear-clash';
+import { StepFilter } from './list-panel';
 import { OptionDetails, summaryFor, type OptionDetail } from './option-detail';
 import type { TrailApi } from './steps';
 
@@ -33,8 +34,14 @@ export interface GearStepProps {
 export function GearStep(props: GearStepProps) {
   const planner = () => props.trail.planner;
   const data = () => planner().engine.data;
-  const [place, setPlace] = createSignal<GearPlace>('Armor');
-  const [text, setText] = createSignal('');
+  const place = (): GearPlace => props.trail.state().gearPlace ?? 'Armor';
+  const setPlace = (p: GearPlace) => props.trail.send({ kind: 'gearPlace', place: p });
+  const remembered = useContext(StepFilter);
+  const [text, setOwnText] = createSignal(untrack(() => remembered?.text() ?? ''));
+  const setText = (t: string) => {
+    setOwnText(t);
+    remembered?.set(t);
+  };
   const gear = () => planner().build().gear ?? {};
   const items = createMemo(() => {
     const t = text().toLowerCase();

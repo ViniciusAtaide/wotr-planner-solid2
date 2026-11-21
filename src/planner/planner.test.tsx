@@ -2342,9 +2342,10 @@ describe('Gear that won’t stack (ticket 06, engine 4d9b8b50)', () => {
 
   test('a second Ring of Protection is badged in the list, and the pane says why', async () => {
     const planner = createPlanner(e, { ...cleaver, gear: { Ring1: ring() } });
+    const api = apiOf(planner);
     render(() => (
       <ChoiceDialog title="Gear" line="" onClose={() => {}}>
-        <GearStep trail={apiOf(planner)} />
+        <GearStep trail={api} />
       </ChoiceDialog>
     ));
     flush();
@@ -2363,9 +2364,31 @@ describe('Gear that won’t stack (ticket 06, engine 4d9b8b50)', () => {
     );
   });
 
+  test('Expand and closing keep the Gear place and the typed filter (QA pass 5)', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(document.querySelector('.trail-gear .trail-card__head') ?? document.body);
+    flush();
+    fireEvent.click(placeChip('Ring 2') ?? document.body);
+    flush();
+    fireEvent.input(document.querySelector('.trail-gear [data-picker-filter]') ?? document.body, {
+      target: { value: 'protection' },
+    });
+    flush();
+    tap('Expand');
+    const box = document.querySelector('.choice-dialog');
+    expect(box?.querySelector('.trail-places .trail-chip--target')?.textContent).toContain('Ring 2');
+    expect(box?.querySelector<HTMLInputElement>('[data-picker-filter]')?.value).toBe('protection');
+    fireEvent.keyDown(box ?? document.body, { key: 'Escape' });
+    flush();
+    expect(document.querySelector('.choice-dialog')).toBeNull();
+    expect(document.querySelector('.trail-gear .trail-places .trail-chip--target')?.textContent).toContain('Ring 2');
+    expect(document.querySelector<HTMLInputElement>('.trail-gear [data-picker-filter]')?.value).toBe('protection');
+  });
+
   test('a worn Ring of Protection that clashes with the other says so under it', () => {
     const planner = createPlanner(e, { ...cleaver, gear: { Ring1: ring(), Ring2: ring() } });
-    render(() => <GearStep trail={apiOf(planner)} />);
+    const api = apiOf(planner);
+    render(() => <GearStep trail={api} />);
     flush();
     fireEvent.click(placeChip('Ring 2') ?? document.body);
     flush();

@@ -350,6 +350,8 @@ dimmed and inert behind "Edit the Second Build".
 - **`PickStep.tsx`**: a slot's open list (`PickStep`, moved out of `steps.tsx`): S's options as rows, open then
   closed, a parent row expanding its sub-options in place (`paramLabel` names a value without repeating its feat),
   the keys above, Synergy links, the filter and its mark, "Show N closed", and "Clear this pick".
+- **Gear's place and filter** survive Expand and closing (QA pass 5): the chosen place is the trail's
+  (`TrailState.gearPlace`) and the typed text the step's (`StepFilter`), so the inline card and the dialog share them.
 - **Gear that won't stack** (`gear-clash.ts`): E's `gearClashes` names the bonuses an item would give in a place that
   won't stack with what the Build holds or wears elsewhere, worded by `stackWords`. A worn item that clashes says so
   under it; in the item list a row carries a "Won't stack" badge and the dialog's pane the sentence. E's
