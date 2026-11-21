@@ -6,21 +6,14 @@ import { picker, type OptionStatus } from '~engine/pickers';
 import { gearNote, listNames, nameOf, refusal } from '~engine/refusals';
 
 import { Button, ClosedCount, OptionList, PickerOption } from '../design';
-import {
-  clampMark,
-  createReveal,
-  Filter,
-  markInView,
-  moveThroughOptions,
-  SCROLL_STYLE,
-  type ClosedToggle,
-} from './ChoiceList';
+import { clampMark, createReveal, Filter, moveThroughOptions, SCROLL_STYLE, type ClosedToggle } from './ChoiceList';
 import { featCategory } from './feat-category';
 import { after } from './flat-choices';
 import { childSlotOf, pickRows, rowMembers, rowOpen, type PickRow } from './nested-options';
 import type { NonEmpty } from './planner-state';
 import type { TrailApi } from './steps';
 import { slotLabel } from './trail-state';
+import { scrollToIndex, WindowedRows } from './WindowedRows';
 import { shownName } from './words';
 
 const CLOSED_SHOWN = 30;
@@ -33,6 +26,24 @@ export interface PickStepProps {
 
 const listedOf = (o: OptionStatus) =>
   o.name === undefined ? undefined : { name: o.name, ...(o.qualifier !== undefined && { qualifier: o.qualifier }) };
+
+type Item =
+  | { readonly kind: 'row'; readonly row: PickRow; readonly index: number }
+  | { readonly kind: 'child'; readonly row: PickRow; readonly option: OptionStatus }
+  | { readonly kind: 'none'; readonly row: PickRow };
+
+function itemKey(it: Item): string {
+  if (it.kind === 'row') return it.row.key;
+  if (it.kind === 'none') return `${it.row.key}/none`;
+  return `${it.row.key}/${it.option.feature} ${JSON.stringify(it.option.param ?? null)}`;
+}
+
+function sameItem(a: Item, b: Item): boolean {
+  if (a.kind !== b.kind || a.row !== b.row) return false;
+  if (a.kind === 'row' && b.kind === 'row') return a.index === b.index;
+  if (a.kind === 'child' && b.kind === 'child') return a.option === b.option;
+  return true;
+}
 
 export function paramLabel(full: string, group: string): string {
   if (!full.startsWith(`${group} (`) || !full.endsWith(')')) return full;
@@ -66,7 +77,11 @@ export function PickStep(props: PickStepProps) {
   let scroller: HTMLDivElement | undefined;
   createEffect(
     () => mark(),
-    () => markInView(scroller),
+    (at) =>
+      scrollToIndex(
+        scroller,
+        items().findIndex((it) => it.kind === 'row' && it.index === at),
+      ),
   );
   const closedShown = () =>
     showClosed.shown ? closed().slice(0, reveal.limit()) : closed().filter((r) => holdsRow(r));
@@ -189,6 +204,30 @@ export function PickStep(props: PickStepProps) {
     else take(o);
   };
   const lead = (row: PickRow): OptionStatus | undefined => rowMembers(row)[0];
+  let lastItems = new Map<string, Item>();
+  const items = createMemo((): Item[] => {
+    const fresh = open().flatMap((row, index): Item[] => {
+      const head: Item = { kind: 'row', row, index };
+      if (row.kind === 'option' || expanded() !== row.key) return [head];
+      const kids = children(row);
+      return [
+        head,
+        ...(kids.length === 0
+          ? [{ kind: 'none', row } as const]
+          : kids.map((option) => ({ kind: 'child', row, option }) as const)),
+      ];
+    });
+    const kept = new Map<string, Item>();
+    const out = fresh.map((it) => {
+      const key = itemKey(it);
+      const before = lastItems.get(key);
+      const same = before !== undefined && sameItem(before, it) ? before : it;
+      kept.set(key, same);
+      return same;
+    });
+    lastItems = kept;
+    return out;
+  });
   return (
     <Show when={p()} fallback={<p class="trail-note">This choice doesn't open in the Build any more.</p>}>
       <div class="trail-step" onKeyDown={onKey}>
@@ -218,66 +257,70 @@ export function PickStep(props: PickStepProps) {
           }}
         >
           <OptionList>
-            <For each={open()} keyed={(r) => r.key}>
-              {(r, i) => (
-                <Show
-                  when={r().kind !== 'option'}
-                  fallback={
+            <WindowedRows items={items()} key={itemKey} scroller={() => scroller}>
+              {(it) => {
+                const row = it.row;
+                if (it.kind === 'none') {
+                  return (
+                    <div class="trail-sub-row" data-child-of={row.key}>
+                      <p class="trail-note">Nothing to choose here yet.</p>
+                    </div>
+                  );
+                }
+                if (it.kind === 'child') {
+                  const o = it.option;
+                  return (
+                    <div class="trail-sub-row" data-child-of={row.key}>
+                      <Show
+                        when={o.closed === undefined}
+                        fallback={
+                          <PickerOption
+                            name={childName(row, o)}
+                            status="closed"
+                            refusal={words(o, row.kind === 'nested' ? nested()?.picker?.unit : p()?.unit)}
+                          />
+                        }
+                      >
+                        <PickerOption
+                          name={childName(row, o)}
+                          status="open"
+                          selected={childCurrent(row, o)}
+                          onPick={() => takeChild(row, o)}
+                        />
+                      </Show>
+                    </div>
+                  );
+                }
+                if (row.kind === 'option') {
+                  return (
                     <PickerOption
-                      name={r().name}
+                      name={row.name}
                       status="open"
-                      icon={featCategory(data(), lead(r())?.feature ?? '')}
-                      selected={isCurrent(lead(r()) as OptionStatus)}
-                      marked={i() === mark()}
-                      links={links(lead(r()) as OptionStatus)}
-                      gear={gearOf(lead(r()))}
-                      onPick={() => take(lead(r()) as OptionStatus)}
+                      icon={featCategory(data(), row.option.feature)}
+                      selected={isCurrent(row.option)}
+                      marked={it.index === mark()}
+                      links={links(row.option)}
+                      gear={gearOf(row.option)}
+                      onPick={() => take(row.option)}
                     />
-                  }
-                >
-                  <div class="trail-parent" data-parent={r().key}>
+                  );
+                }
+                return (
+                  <div class="trail-parent" data-parent={row.key}>
                     <PickerOption
-                      name={r().name}
+                      name={row.name}
                       status="open"
-                      icon={featCategory(data(), lead(r())?.feature ?? '')}
-                      selected={holdsRow(r())}
-                      marked={i() === mark()}
-                      expanded={expanded() === r().key}
-                      links={links(lead(r()) as OptionStatus)}
-                      onPick={() => toggle(r().key)}
+                      icon={featCategory(data(), lead(row)?.feature ?? '')}
+                      selected={holdsRow(row)}
+                      marked={it.index === mark()}
+                      expanded={expanded() === row.key}
+                      links={links(lead(row) as OptionStatus)}
+                      onPick={() => toggle(row.key)}
                     />
-                    <Show when={expanded() === r().key}>
-                      <div class="trail-sub" data-child-of={r().key} role="group" aria-label={`${r().name} choices`}>
-                        <For each={children(r())} keyed={(o) => `${o.feature} ${JSON.stringify(o.param ?? null)}`}>
-                          {(o) => (
-                            <Show
-                              when={o().closed === undefined}
-                              fallback={
-                                <PickerOption
-                                  name={childName(r(), o())}
-                                  status="closed"
-                                  refusal={words(o(), r().kind === 'nested' ? nested()?.picker?.unit : p()?.unit)}
-                                />
-                              }
-                            >
-                              <PickerOption
-                                name={childName(r(), o())}
-                                status="open"
-                                selected={childCurrent(r(), o())}
-                                onPick={() => takeChild(r(), o())}
-                              />
-                            </Show>
-                          )}
-                        </For>
-                        <Show when={children(r()).length === 0}>
-                          <p class="trail-note">Nothing to choose here yet.</p>
-                        </Show>
-                      </div>
-                    </Show>
                   </div>
-                </Show>
-              )}
-            </For>
+                );
+              }}
+            </WindowedRows>
             <For each={closedShown()} keyed={(r) => r.key}>
               {(r) => (
                 <PickerOption
