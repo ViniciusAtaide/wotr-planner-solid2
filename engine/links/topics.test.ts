@@ -82,7 +82,23 @@ describe('Synergy topics', { timeout: 30_000 }, () => {
       synergyOf(data, held, { feature: IMPROVED_CRITICAL, param: { WeaponCategory: category } }).shared.map((t) =>
         topicKey(t.topic),
       );
-    expect(shared('Longsword')).toEqual(['weapon Longsword', 'group BladesHeavy']);
+    expect(shared('Longsword')).toEqual(['weapon Longsword']);
     expect(shared('Dagger')).toEqual([]);
+  });
+
+  it("links a weapon's group only to a group-based pick, and never on a race's ability bonus (QA pass 4)", () => {
+    const WEAPON_FOCUS = '1e1f627d26ad36f43bbd26cc2bf8ac7e';
+    const IMPROVED_CRITICAL = 'f4201c85a991369408740c6888362e20';
+    const WEAPON_TRAINING_HEAVY_BLADES = '2a0ce0186af38ed419f47fce16f93c2a';
+    const RAKSHASA_SPAWN = 'ea6a099d0e963e145a7268e4343d5924';
+    const focus = heldIndex(data, [{ blueprint: WEAPON_FOCUS, param: { WeaponCategory: 'Longsword' } }]);
+    expect(
+      synergyOf(data, focus, { feature: IMPROVED_CRITICAL, param: { WeaponCategory: 'Falchion' } }).shared,
+    ).toEqual([]);
+    expect(
+      synergyOf(data, focus, { feature: WEAPON_TRAINING_HEAVY_BLADES }).shared.map((t) => topicKey(t.topic)),
+    ).toEqual(['group BladesHeavy']);
+    const raced = heldIndex(data, [{ blueprint: RAKSHASA_SPAWN }]);
+    expect(synergyOf(data, raced, { feature: DODGE }).shared).toEqual([]);
   });
 });

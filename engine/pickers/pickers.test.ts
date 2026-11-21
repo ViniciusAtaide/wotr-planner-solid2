@@ -379,7 +379,7 @@ describe('what character creation offers (comparison bug 5)', { timeout: 30_000 
           for (const s of o.synergy?.shared ?? []) found.add(s.topic.kind);
       return found;
     };
-    expect([...kinds(jackInTheGreen)].sort()).toEqual(['ability', 'descriptor', 'energy', 'school']);
+    expect([...kinds(jackInTheGreen)].sort()).toEqual(['descriptor', 'energy', 'school']);
     expect([...kinds(enforcer)].sort()).toEqual(expect.arrayContaining(['ability', 'weapon']));
   }, 120_000);
 
