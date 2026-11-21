@@ -249,10 +249,11 @@ export function ChoiceList(props: ChoiceListProps) {
     (at) => scrollToIndex(scroller, at),
   );
   createEffect(
-    () => (filtering() ? open()[mark()]?.key : undefined),
-    (key) => {
-      if (key !== undefined) hub?.point(key);
+    () => {
+      const list = listed();
+      return { list, key: filtering() ? open()[mark()]?.key : undefined };
     },
+    ({ key }) => hub?.point(key),
   );
   return (
     <div

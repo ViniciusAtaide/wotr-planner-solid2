@@ -16,6 +16,7 @@ import {
 import { decodeBuild, DecodeError, encodeBuild } from '../codec';
 import type { CheckedData } from '../load';
 import {
+  equippableItems,
   isShown,
   kindOf,
   type Attribute,
@@ -566,8 +567,10 @@ export function search(
   args: { readonly text: string; readonly kind?: Kind; readonly page?: number },
 ): { readonly hits: readonly SearchHit[]; readonly total: number; readonly page: number; readonly pages: number } {
   const text = args.text.toLowerCase();
+  const gear = new Set(equippableItems(e.data.blueprints).map((b) => b.guid));
   const found = [...e.data.blueprints.values()]
     .filter((bp) => isShown(bp) && (args.kind === undefined || kindOf[bp.$type] === args.kind))
+    .filter((bp) => kindOf[bp.$type] !== 'items' || (gear.has(bp.guid) && !e.data.twins.has(bp.guid)))
     .filter((bp) => (bp.name ?? '').toLowerCase().includes(text))
     .sort((a, b) => (a.name ?? '').localeCompare(b.name ?? '') || a.guid.localeCompare(b.guid));
   const pages = Math.max(1, Math.ceil(found.length / SEARCH_PER_PAGE));

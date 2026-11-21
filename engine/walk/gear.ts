@@ -2,6 +2,7 @@ import type { Build, Gear, GearPlace } from '../build';
 import {
   armorType,
   enchantmentsOf,
+  itemPartSet,
   shieldArmor,
   weaponType,
   refGuid,
@@ -60,6 +61,7 @@ function oneHanded(unit: Unit, weapon: BlueprintItemWeapon): boolean {
 export function misfit(unit: Unit, gear: Gear, place: GearPlace): FailedRule | undefined {
   const item = unit.bp(gear[place] ?? '');
   if (item === undefined) return { rule: 'data.unknownItem' };
+  if (itemPartSet(unit.data.blueprints).has(item.guid)) return { rule: 'map12.notGear' };
   const worn = WORN[place];
   if (worn !== undefined) {
     return item.$type === worn ? undefined : { rule: 'EquipmentSlot.IsItemSupported', found: item.$type, needed: worn };

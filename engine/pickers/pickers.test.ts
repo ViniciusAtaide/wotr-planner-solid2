@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { abilityScores, placeKey, slotKey, type Build, type Place, type SlotId } from '../build';
+import { abilityScores, placeKey, slotKey, type Build, type GearPlace, type Place, type SlotId } from '../build';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import type { Blueprint } from '../data';
@@ -21,6 +21,8 @@ import { backgroundPicker } from './background-picker';
 import { firstLevelWith, heritageSlotIn, racePicker } from './race-picker';
 import { namesInList } from './option-names';
 import { gearClashes, gearClashIndex } from './gear-clashes';
+import { gearOptions } from './gear-options';
+import { PLACE_ITEM_TYPES } from '../walk';
 import { guids } from '../data';
 import { breaks, opensAt, refusal } from '../refusals';
 import { prerequisites } from '../prerequisites';
@@ -541,6 +543,29 @@ describe('which options the level-up screen lists', { timeout: 30_000 }, () => {
       }
     }
     expect(shared).toEqual([]);
+  });
+
+  it('offers each Gear place its items once by name, never a part of another item (QA pass 5)', () => {
+    for (const place of Object.keys(PLACE_ITEM_TYPES) as GearPlace[]) {
+      const names = gearOptions(data, place).map((bp) => bp.name);
+      expect(names.length, place).toBeGreaterThan(0);
+      expect(
+        names.filter((n, i) => names.indexOf(n) !== i),
+        place,
+      ).toEqual([]);
+    }
+    const offHand = gearOptions(data, 'OffHand').map((bp) => bp.name);
+    expect(offHand.filter((n) => n === 'Masterwork Spiked Heavy Shield')).toHaveLength(1);
+    expect(offHand.filter((n) => n === 'Masterwork Gnome Hooked Hammer')).toHaveLength(1);
+  });
+
+  it('refuses a part of another item worn on its own, as no Gear (QA pass 5)', () => {
+    const second = [...data.blueprints.values()].find((bp) => bp.assetName === 'MasterworkGnomehookedHammerSecond');
+    expect(second).toBeDefined();
+    const worn: Build = { ...jackInTheGreen.build, gear: { MainHand: second?.guid as string } };
+    expect(walk(data, worn, G).failures).toContainEqual(
+      expect.objectContaining({ choice: 'gear', subject: second?.guid, rule: 'map12.notGear' }),
+    );
   });
 
   it("finds a worn item's bonuses that won't stack with what the Build holds or wears in its other places (MCP QA)", () => {

@@ -333,12 +333,11 @@ export function PickStep(props: PickStepProps) {
   });
   createEffect(
     () => {
-      const it = items()[mark()];
-      return it === undefined ? undefined : itemKey(it);
+      const list = items();
+      const it = list[mark()];
+      return { list, key: it === undefined ? undefined : itemKey(it) };
     },
-    (key) => {
-      if (key !== undefined) hub?.point(key);
-    },
+    ({ key }) => hub?.point(key),
   );
   return (
     <Show

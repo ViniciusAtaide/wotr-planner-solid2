@@ -1932,6 +1932,51 @@ describe('Summaries and Synergy in the lists (ticket 06)', () => {
   const rowOf = (key: string) => document.querySelector<HTMLElement>(`[data-detail-key="${key}"]`);
   const keyOf = (feature: string) => `${feature} null`;
 
+  test('the pane never goes stale: it follows a filter to the marked row, or empties (QA pass 5)', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
+    await waitFor(() => expect(document.querySelector('.choice-dialog')).not.toBeNull());
+    const pane = () => document.querySelector('.choice-dialog__detail');
+    const name = () => pane()?.querySelector('.choice-dialog__name')?.textContent ?? null;
+    const filter = document.querySelector<HTMLInputElement>('.choice-dialog [data-picker-filter]');
+    const type = (text: string) => {
+      fireEvent.input(filter ?? document.body, { target: { value: text } });
+      flush();
+    };
+    type('toughness');
+    await waitFor(() => expect(name()).toBe('Toughness'));
+    type('zzzz');
+    await waitFor(() => expect(name()).toBeNull());
+    expect(pane()?.textContent).toContain('Point at or focus');
+    type('power attack');
+    await waitFor(() => expect(name()).toBe('Power Attack'));
+  });
+
+  test('keyboard focus on a closed row shows it in the pane (QA pass 5)', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
+    await waitFor(() => expect(document.querySelector('.choice-dialog')).not.toBeNull());
+    fireEvent.input(document.querySelector('.choice-dialog [data-picker-filter]') ?? document.body, {
+      target: { value: 'dodge' },
+    });
+    flush();
+    fireEvent.click(screen.getByRole('button', { name: /^Show \d+ closed$/ }));
+    flush();
+    const dodge = [...document.querySelectorAll<HTMLElement>('.choice-dialog .ww-option--closed')].find(
+      (r) => r.querySelector('.ww-option__name')?.textContent === 'Dodge',
+    );
+    dodge?.focus();
+    flush();
+    await waitFor(() =>
+      expect(document.querySelector('.choice-dialog__detail .choice-dialog__name')?.textContent).toBe('Dodge'),
+    );
+    expect(document.querySelector('.choice-dialog__detail')?.textContent).toContain('Closed');
+  });
+
   test('an option row shows its Summary on one line', () => {
     const options = picker(e.data, cleaver, FEAT, e.G)?.options ?? [];
     const described = options.find(
