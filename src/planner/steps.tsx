@@ -23,7 +23,7 @@ import {
 } from './ChoiceList';
 import { featCategory } from './feat-category';
 import { flatName, shownArchetypes } from './flat-choices';
-import { judgeClasses, type EditOutcome, type NonEmpty } from './planner-state';
+import { judgeClasses, type ClassJudged, type EditOutcome, type NonEmpty } from './planner-state';
 import type { Planner } from './state';
 import type { TrailAction, TrailState, TrailView } from './trail-state';
 import {
@@ -375,24 +375,30 @@ function ClassList(props: TrailStepProps) {
     );
     return currentFirst(
       offered.flatMap((c): ChoiceRow[] => {
-        const judged = judgedAll.get(c.guid) ?? { open: false, reasons: [] };
+        const judged: ClassJudged = judgedAll.get(c.guid) ?? { open: false, reasons: [] };
+        if (judged.shown === false && c.guid !== previous) return [];
         const name = judged.label ?? bareNameOf(data, c.guid);
         const plain: ChoiceRow = {
           key: c.guid,
           name,
-          ...judged,
+          open: judged.open,
+          reasons: judged.reasons,
+          note: judged.note,
           current: c.guid === previous,
           take: () => props.trail.edit({ kind: 'addLevel', class: c.guid }, `Level ${level} as ${name}`),
         };
         if (b.levels.some((l) => l.class === c.guid)) return [plain];
         return [
           plain,
-          ...shownArchetypes(data, c.guid).map((a) => {
-            const flat = flatName(name, bareNameOf(data, a));
+          ...[...(judged.archetypes?.keys() ?? shownArchetypes(data, c.guid))].map((a) => {
+            const own = judged.archetypes?.get(a);
+            const flat = flatName(name, own?.label ?? bareNameOf(data, a));
             return {
               key: `${c.guid} ${a}`,
               name: flat,
-              ...judged,
+              open: judged.open && (own?.open ?? true),
+              reasons: [...judged.reasons, ...(own?.reasons ?? [])],
+              note: judged.note,
               current: false,
               take: () =>
                 props.trail.editAll(
@@ -524,30 +530,40 @@ export function LevelEditor(props: LevelStepProps) {
   const planner = () => props.trail.planner;
   const data = () => planner().engine.data;
   const level = () => planner().build().levels[props.level - 1];
-  const classRows = createMemo((): ChoiceRow[] => {
-    const b = planner().build();
-    const now = level()?.class;
-    const offered = offeredClasses(data());
-    const judged = judgeClasses(
+  const judgedHere = createMemo(() =>
+    judgeClasses(
       planner().engine,
-      b,
+      planner().build(),
       { level: props.level },
-      offered.map((c) => c.guid),
+      offeredClasses(data()).map((c) => c.guid),
       (cls) => ({ kind: 'class', level: props.level, class: cls }),
-    );
+    ),
+  );
+  const classRows = createMemo((): ChoiceRow[] => {
+    const now = level()?.class;
+    const judged = judgedHere();
     return currentFirst(
-      offered.map((c) => {
-        const name = judged.get(c.guid)?.label ?? bareNameOf(data(), c.guid);
-        return {
-          key: c.guid,
-          name,
-          ...(c.guid === now ? { open: true, reasons: [] } : (judged.get(c.guid) ?? { open: false, reasons: [] })),
-          current: c.guid === now,
-          take: () => {
-            if (c.guid !== now)
-              props.trail.edit({ kind: 'class', level: props.level, class: c.guid }, `Level ${props.level} as ${name}`);
+      offeredClasses(data()).flatMap((c): ChoiceRow[] => {
+        const own = judged.get(c.guid);
+        if (own?.shown === false && c.guid !== now) return [];
+        const name = own?.label ?? bareNameOf(data(), c.guid);
+        return [
+          {
+            key: c.guid,
+            name,
+            ...(c.guid === now
+              ? { open: true, reasons: [] }
+              : { open: own?.open ?? false, reasons: own?.reasons ?? [], note: own?.note }),
+            current: c.guid === now,
+            take: () => {
+              if (c.guid !== now)
+                props.trail.edit(
+                  { kind: 'class', level: props.level, class: c.guid },
+                  `Level ${props.level} as ${name}`,
+                );
+            },
           },
-        };
+        ];
       }),
     );
   });
@@ -556,7 +572,8 @@ export function LevelEditor(props: LevelStepProps) {
     if (cls === undefined || !isFirstLevelOfClass(planner().build(), props.level)) return [];
     const b = planner().build();
     const held = b.classChoices?.[cls]?.archetypes[0];
-    const options = shownArchetypes(data(), cls);
+    const judged = judgedHere().get(cls)?.archetypes;
+    const options = judged === undefined ? shownArchetypes(data(), cls) : [...judged.keys()];
     if (options.length === 0) return [];
     const none: ChoiceRow = {
       key: 'none',
@@ -568,15 +585,21 @@ export function LevelEditor(props: LevelStepProps) {
     };
     return [
       none,
-      ...options.map((a) => ({
-        key: a,
-        name: nameOf(data(), a),
-        ...(a === held
-          ? { open: true, reasons: [] }
-          : judge(planner().engine, b, { kind: 'archetypes', class: cls, archetypes: [a] })),
-        current: a === held,
-        take: () => props.trail.edit({ kind: 'archetypes', class: cls, archetypes: [a] }, `Took ${nameOf(data(), a)}`),
-      })),
+      ...options.map((a) => {
+        const own = judged?.get(a);
+        const name = own?.label ?? bareNameOf(data(), a);
+        return {
+          key: a,
+          name,
+          ...(a === held
+            ? { open: true, reasons: [] }
+            : own === undefined
+              ? judge(planner().engine, b, { kind: 'archetypes', class: cls, archetypes: [a] })
+              : { open: own.open, reasons: own.reasons }),
+          current: a === held,
+          take: () => props.trail.edit({ kind: 'archetypes', class: cls, archetypes: [a] }, `Took ${name}`),
+        };
+      }),
     ];
   });
   return (

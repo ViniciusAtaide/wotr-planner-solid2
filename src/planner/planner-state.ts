@@ -1,6 +1,7 @@
 import { sameBuild, type Build, type Pick, type Place } from '~engine/build';
 import type { Guid } from '~engine/data';
 import { classPicker } from '~engine/pickers';
+import type { FailedRule } from '~engine/walk';
 import { allows, cascade, type Breaks, type Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
 import { nameOf, refusal, refusalWords } from '~engine/refusals';
@@ -215,19 +216,39 @@ export function judgeClasses(
 ): ReadonlyMap<Guid, ClassJudged> {
   const p = classPicker(engine.data, build, place, engine.G, rankLevel);
   if (p === undefined) return new Map(classes.map((c) => [c, judgeAll(engine, build, [edit(c)])]));
+  const words = (closed: FailedRule): readonly string[] => {
+    const r = refusal({ data: engine.data, G: engine.G, unit: p.unit }, closed);
+    return r.unmet.length > 0 ? r.unmet : [r.text];
+  };
+  const labelOf = (n: { readonly name?: string; readonly qualifier?: string }) =>
+    n.name === undefined ? {} : { label: n.qualifier === undefined ? n.name : `${n.name} (${n.qualifier})` };
   return new Map(
-    p.options.map((o): [Guid, ClassJudged] => {
-      const label =
-        o.name === undefined ? {} : { label: o.qualifier === undefined ? o.name : `${o.name} (${o.qualifier})` };
-      if (o.closed === undefined) return [o.class, { open: true, reasons: [], ...label }];
-      const r = refusal({ data: engine.data, G: engine.G, unit: p.unit }, o.closed);
-      return [o.class, { open: false, reasons: r.unmet.length > 0 ? r.unmet : [r.text], ...label }];
-    }),
+    p.options.map((o): [Guid, ClassJudged] => [
+      o.class,
+      {
+        open: o.closed === undefined,
+        reasons: o.closed === undefined ? [] : words(o.closed),
+        shown: o.shown,
+        ...labelOf(o),
+        archetypes: new Map(
+          o.archetypes.map((a): [Guid, ArchetypeJudged] => [
+            a.archetype,
+            { open: a.closed === undefined, reasons: a.closed === undefined ? [] : words(a.closed), ...labelOf(a) },
+          ]),
+        ),
+      },
+    ]),
   );
+}
+
+export interface ArchetypeJudged extends Judged {
+  readonly label?: string;
 }
 
 export interface ClassJudged extends Judged {
   readonly label?: string;
+  readonly shown?: boolean;
+  readonly archetypes?: ReadonlyMap<Guid, ArchetypeJudged>;
 }
 
 function edited(engine: Engine, s: PlannerState, edits: NonEmpty<Edit>, title: string): PlannerState {

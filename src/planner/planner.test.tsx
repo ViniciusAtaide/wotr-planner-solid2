@@ -1047,6 +1047,15 @@ describe('QA pass 1', () => {
     expect(screen.getByText('7 more closed: Needs a level 1 Build.')).toBeTruthy();
   });
 
+  test('the class list names each class and archetype once, without the classes the game hides', () => {
+    const planner = createPlanner(e, { scores: abilityScores(SCORES), race: DWARF, levels: [], picks: [] });
+    render(() => <NextLevelStep trail={apiOf(planner)} />);
+    flush();
+    const names = [...document.querySelectorAll('.ww-option__name')].map((n) => n.textContent ?? '');
+    expect(names.length).toBeGreaterThan(40);
+    expect(names.filter((n, i) => names.indexOf(n) !== i)).toEqual([]);
+  });
+
   test('⌘Z undoes from a filter that is empty', async () => {
     await openPlanner(cleaver);
     const option = document.querySelector<HTMLElement>('.trail-here button.ww-option');

@@ -1,11 +1,11 @@
 import { placeKey, slotKey, type Alignment, type Build, type Place, type SkillRanks, type SlotId } from '~engine/build';
 import type { CheckedData } from '~engine/load';
 import { expectedLevel } from '~engine/mcp';
-import { BACKGROUNDS_BASE_SELECTION, characterWideSlots, namesInList } from '~engine/pickers';
+import { BACKGROUNDS_BASE_SELECTION, characterWideSlots, heritageSlotIn, namesInList } from '~engine/pickers';
 import { nameOf } from '~engine/refusals';
 import type { OpenedSlot, Walk } from '~engine/walk';
 
-import { backgroundChildren, heritageSlotIn } from './flat-choices';
+import { backgroundChildren } from './flat-choices';
 import type { Selection } from './workspace-state';
 import { bareNameOf, shownName } from './words';
 
