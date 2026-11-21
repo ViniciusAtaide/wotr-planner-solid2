@@ -18,7 +18,7 @@ export type Topic =
   | { readonly kind: 'ability'; readonly stat: Attribute }
   | { readonly kind: 'weapon'; readonly category: WeaponCategory }
   | { readonly kind: 'school'; readonly school: SpellSchool }
-  | { readonly kind: 'group'; readonly group: WeaponFighterGroup }
+  | { readonly kind: 'group'; readonly group: WeaponFighterGroup; readonly fromWeapon?: true }
   | { readonly kind: 'energy'; readonly energy: DamageEnergyType }
   | { readonly kind: 'descriptor'; readonly descriptor: LinkedDescriptor };
 
@@ -145,7 +145,7 @@ function componentTopics(c: Component): Topic[] {
     case 'AddStatBonus':
     case 'AddStatBonusIfHasFact':
     case 'AddContextStatBonus':
-      return ability(any.Stat as StatType);
+      return any.Descriptor === 'Racial' ? [] : ability(any.Stat as StatType);
     case 'PrerequisiteStatValue':
     case 'PrerequisiteFullStatValue':
       return (any.Value as number) > AVERAGE_SCORE ? ability(any.Stat as StatType) : [];
@@ -189,7 +189,7 @@ function paramTopics(data: CheckedData, param: GrantParam | undefined): Topic[] 
   if ('WeaponCategory' in param)
     return [
       { kind: 'weapon', category: param.WeaponCategory },
-      ...weaponGroupsOf(data, param.WeaponCategory).map((group): Topic => ({ kind: 'group', group })),
+      ...weaponGroupsOf(data, param.WeaponCategory).map((group): Topic => ({ kind: 'group', group, fromWeapon: true })),
     ];
   if ('SpellSchool' in param) return [{ kind: 'school', school: param.SpellSchool }];
   if ('StatType' in param) return ability(param.StatType);
@@ -251,6 +251,7 @@ export interface HeldFact {
 
 export interface HeldIndex {
   readonly byTopic: ReadonlyMap<string, readonly Guid[]>;
+  readonly byWeaponGroup: ReadonlyMap<string, readonly Guid[]>;
   readonly byBonus: ReadonlyMap<string, readonly Guid[]>;
 }
 
@@ -258,6 +259,7 @@ const bonusKey = (b: StatBonus) => `${b.stat} ${b.descriptor}`;
 
 export function heldIndex(data: CheckedData, held: readonly HeldFact[]): HeldIndex {
   const byTopic = new Map<string, Guid[]>();
+  const byWeaponGroup = new Map<string, Guid[]>();
   const byBonus = new Map<string, Guid[]>();
   const add = (m: Map<string, Guid[]>, key: string, g: Guid) => {
     const list = m.get(key) ?? [];
@@ -265,10 +267,11 @@ export function heldIndex(data: CheckedData, held: readonly HeldFact[]): HeldInd
     m.set(key, list);
   };
   for (const h of held) {
-    for (const t of topicsOf(data, h.blueprint, h.param)) add(byTopic, topicKey(t), h.blueprint);
+    for (const t of topicsOf(data, h.blueprint, h.param))
+      add(t.kind === 'group' && t.fromWeapon ? byWeaponGroup : byTopic, topicKey(t), h.blueprint);
     for (const b of bonusesOf(data, h.blueprint)) if (!stackable(b.descriptor)) add(byBonus, bonusKey(b), h.blueprint);
   }
-  return { byTopic, byBonus };
+  return { byTopic, byWeaponGroup, byBonus };
 }
 
 export function synergyOf(
@@ -278,7 +281,9 @@ export function synergyOf(
 ): Synergy {
   const others = (list: readonly Guid[] | undefined) => (list ?? []).filter((g) => g !== option.feature);
   const shared = topicsOf(data, option.feature, option.param).flatMap((topic): SharedTopic[] => {
-    const by = others(index.byTopic.get(topicKey(topic)));
+    const key = topicKey(topic);
+    const viaWeapon = topic.kind === 'group' && topic.fromWeapon === true;
+    const by = others([...(index.byTopic.get(key) ?? []), ...(viaWeapon ? [] : (index.byWeaponGroup.get(key) ?? []))]);
     return by.length === 0 ? [] : [{ topic, with: by }];
   });
   const wontStack = bonusesOf(data, option.feature)

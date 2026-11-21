@@ -20,7 +20,7 @@ import { classPicker } from './class-picker';
 import { backgroundPicker } from './background-picker';
 import { firstLevelWith, heritageSlotIn, racePicker } from './race-picker';
 import { namesInList } from './option-names';
-import { gearClashes } from './gear-clashes';
+import { gearClashes, gearClashIndex } from './gear-clashes';
 import { guids } from '../data';
 import { breaks, opensAt, refusal } from '../refusals';
 import { prerequisites } from '../prerequisites';
@@ -379,7 +379,7 @@ describe('what character creation offers (comparison bug 5)', { timeout: 30_000 
           for (const s of o.synergy?.shared ?? []) found.add(s.topic.kind);
       return found;
     };
-    expect([...kinds(jackInTheGreen)].sort()).toEqual(['ability', 'descriptor', 'energy', 'school']);
+    expect([...kinds(jackInTheGreen)].sort()).toEqual(['descriptor', 'energy', 'school']);
     expect([...kinds(enforcer)].sort()).toEqual(expect.arrayContaining(['ability', 'weapon']));
   }, 120_000);
 
@@ -536,5 +536,10 @@ describe('which options the level-up screen lists', { timeout: 30_000 }, () => {
       { stat: 'AC', descriptor: 'Deflection', with: [RING_OF_PROTECTION_1] },
     ]);
     expect(gearClashes(data, ringed, 'Ring1', RING_OF_PROTECTION_1, G)).toEqual([]);
+    const rings = [...data.blueprints.values()]
+      .filter((b) => b.$type === 'BlueprintItemEquipmentRing')
+      .map((b) => b.guid);
+    const index = gearClashIndex(data, ringed, 'Ring2', G);
+    for (const ring of rings) expect(index(ring)).toEqual(gearClashes(data, ringed, 'Ring2', ring, G));
   });
 });
