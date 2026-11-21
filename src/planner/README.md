@@ -456,8 +456,10 @@ dimmed and inert behind "Edit the Second Build".
   character's picks, one line per level with its class, archetype, picks and skills, one per Mythic rank, and the Gear.
   A nested pick is one entry, as it is one chip on the trail: "Armor Focus (Light Armor Focus)" (`nestedParent`,
   `chipSlots` and `pickLabels` in `trail-state.ts`). `nestedLabel` names the value once: a value whose name already
-  repeats its parent keeps only its own part ("Ascendant Element (Electricity)"), and a parent named "… Selection"
-  drops the word ("Bloodline Feat (Improved Initiative)"). A value not yet chosen keeps its own chip, so the step stays in
+  repeats its parent, in parentheses or after " — ", keeps only its own part ("Ascendant Element (Electricity)",
+  "Elemental Focus (Electricity)"); a parent named "… Selection" drops the word ("Bloodline Feat (Improved
+  Initiative)"); and "Bloodline", "Feat" or "Selection" the parent already says leaves the value ("Second Bloodline
+  (Draconic — Bronze)"). A value not yet chosen keeps its own chip, so the step stays in
   reach.
 - **`Planner.tsx`: the page.**
   - `Boot` is `loading`, `failed` (with Retry, which loads again) or `ready` with the engine, the linked Build, the

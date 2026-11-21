@@ -2302,6 +2302,11 @@ describe('QA pass 4, severity 1', () => {
     expect(nestedLabel('Ascendant Element', 'Ascendant Element (Electricity)')).toBe('Ascendant Element (Electricity)');
     expect(nestedLabel('Bloodline Feat Selection', 'Improved Initiative')).toBe('Bloodline Feat (Improved Initiative)');
     expect(nestedLabel('Armor Focus', 'Light Armor Focus')).toBe('Armor Focus (Light Armor Focus)');
+    expect(nestedLabel('Elemental Focus', 'Elemental Focus — Electricity')).toBe('Elemental Focus (Electricity)');
+    expect(nestedLabel('Bloodline Feat Selection', 'Skill Focus — Mobility')).toBe(
+      'Bloodline Feat (Skill Focus — Mobility)',
+    );
+    expect(nestedLabel('Second Bloodline', 'Draconic Bloodline — Bronze')).toBe('Second Bloodline (Draconic — Bronze)');
   });
 
   test('the name refusal floats under the field and describes it, so the top bar keeps its height', async () => {

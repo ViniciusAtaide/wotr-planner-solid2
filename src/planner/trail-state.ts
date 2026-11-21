@@ -455,9 +455,25 @@ export function chipSlots(slots: readonly OpenedSlot[]): readonly OpenedSlot[] {
   return slots.filter((s) => s.pick === undefined || nestedParent(slots, s) === undefined);
 }
 
+const SHARED_WORDS = ['Selection', 'Feat', 'Bloodline'] as const;
+
+function withoutPrefix(text: string, prefix: string): string | undefined {
+  if (text.startsWith(`${prefix} (`) && text.endsWith(')')) return text.slice(prefix.length + 2, -1);
+  for (const join of [' — ', ' - ', ': '])
+    if (text.startsWith(`${prefix}${join}`)) return text.slice(prefix.length + join.length);
+  return undefined;
+}
+
 export function nestedLabel(parent: string, child: string): string {
-  const inner = child.startsWith(`${parent} (`) && child.endsWith(')') ? child.slice(parent.length + 2, -1) : child;
-  return `${parent.replace(/ selection$/i, '')} (${inner})`;
+  const shown = parent.replace(/ selection$/i, '');
+  const bare = withoutPrefix(child, parent) ?? withoutPrefix(child, shown);
+  const own =
+    bare ??
+    SHARED_WORDS.filter((w) => new RegExp(`\\b${w}\\b`, 'i').test(parent))
+      .reduce((text, w) => text.replace(new RegExp(`\\s*\\b${w}\\b`, 'gi'), ''), child)
+      .replace(/\s{2,}/g, ' ')
+      .trim();
+  return `${shown} (${own === '' ? child : own})`;
 }
 
 export function pickLabels(data: CheckedData, slots: readonly OpenedSlot[]): ReadonlyMap<string, string> {
