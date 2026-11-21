@@ -65,8 +65,7 @@ export function misfit(unit: Unit, gear: Gear, place: GearPlace): FailedRule | u
     return item.$type === worn ? undefined : { rule: 'EquipmentSlot.IsItemSupported', found: item.$type, needed: worn };
   }
   if (place === 'Armor') {
-    const type = item.$type === 'BlueprintItemArmor' ? armorType(item, unit.data.blueprints) : undefined;
-    return type?.m_IsArmor ? undefined : { rule: 'ArmorSlot.IsItemSupported', found: item.$type };
+    return item.$type === 'BlueprintItemArmor' ? undefined : { rule: 'ArmorSlot.IsItemSupported', found: item.$type };
   }
   if (item.$type === 'BlueprintItemShield') {
     return place === 'OffHand' ? undefined : { rule: 'HandSlot.IsItemTypeSupported:shield', found: place };

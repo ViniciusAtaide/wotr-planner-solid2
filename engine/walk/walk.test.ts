@@ -1211,4 +1211,12 @@ describe('the areas ticket 03 left untested (ticket 03c)', { timeout: 30_000 }, 
       'BlueprintParametrizedFeature.CanSelect:Param',
     );
   });
+
+  it("wears a robe in the Armor place: the game's armor slot takes every armor item, cloth ones too (MCP QA)", () => {
+    const ROBE_OF_FIRE_ARMOR = '86f0292dc48f0e8458384f9198f4db81';
+    const robed: Build = { ...jackInTheGreen.build, gear: { Armor: ROBE_OF_FIRE_ARMOR } };
+    const w = walk(data, robed, G);
+    expect(w.failures.filter((f) => f.choice === 'gear')).toEqual([]);
+    expect(w.unit.worn.get('Armor')).toBe(ROBE_OF_FIRE_ARMOR);
+  });
 });
