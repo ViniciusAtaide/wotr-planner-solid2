@@ -11,7 +11,7 @@ What the planner says about one blueprint: its Summary (ticket 06b), and the bas
   - `summarySource`: where `summary` comes from: `written`, `labels` or `none`.
   - `labels`: the same sentences, each with its `Role`, for a UI that groups or marks them.
   - `prerequisites`: each prerequisite, worded by R.
-  - `grants`: the shown facts it grants, each with the level it grants it at when the grant says so.
+  - `grants`: the shown facts it grants, each with the level it grants it at when the grant says so, and `when`, the condition of a conditional grant: "at Cleric, Inquisitor or Warpriest level 1" (`AddFeatureOnClassLevel`), "with Weapon Focus" (`AddFeatureIfHasFact`), "while the alignment is Good" (`AddFeatureOnAlignment`). Desna's starknife proficiency is a cleric's, not every worshipper's (MCP QA).
   - `pickedIn`: where it can be picked, that is the shown selections that list it.
   - `needs`, `enables`: its prerequisite-chain links (map 09), from engine/links.
 - `NO_SUMMARY`: "No summary yet.", the Summary of a blueprint with nothing labelled (map 10). Never a guess or a raw component name.

@@ -310,4 +310,14 @@ suite('Summary labels', { timeout: 30_000 }, () => {
       'Mithral: counts as one armor category lighter, heavy as medium and medium as light. +1 enhancement bonus to the AC this armor or shield gives.',
     );
   });
+
+  it("says when a conditional grant applies, so a deity's cleric-only proficiency reads as one (MCP QA)", () => {
+    const desna = describe(data, '2c0a3b9971327ba4d9d85354d16998c1', G);
+    expect(desna?.grants.find((g) => g.guid === '7818ba3db79ac064e88fa14a2478b24b')).toEqual({
+      guid: '7818ba3db79ac064e88fa14a2478b24b',
+      name: expect.stringContaining('Starknife'),
+      level: 1,
+      when: 'at Cleric, Inquisitor or Warpriest level 1',
+    });
+  });
 });

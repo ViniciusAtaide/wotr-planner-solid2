@@ -1,9 +1,22 @@
 import type { CheckedData } from '../load';
-import { enchantmentsOf, isShown, kindOf, type Guid, type Kind } from '../data';
-import { buildGrantIndex, EQUIPMENT_GRANT_KINDS, removes, type GrantIndex } from '../grants';
+import {
+  enchantmentsOf,
+  guids,
+  isShown,
+  kindOf,
+  refGuid,
+  type AddFeatureIfHasFact,
+  type AddFeatureOnAlignment,
+  type AddFeatureOnClassLevel,
+  type Blueprint,
+  type Guid,
+  type Kind,
+} from '../data';
+import { buildGrantIndex, EQUIPMENT_GRANT_KINDS, removes, type Grant, type GrantIndex } from '../grants';
 import { linkIndex } from '../links';
 import { prerequisites } from '../prerequisites';
-import { nameOf, unmetText } from '../refusals';
+import { bareNameOf, listNames, nameOf, unmetText } from '../refusals';
+import { orList } from './labels';
 import { labelsOf, type Label } from './labels';
 
 export interface Description {
@@ -14,7 +27,12 @@ export interface Description {
   readonly summarySource: SummarySource;
   readonly labels: readonly Label[];
   readonly prerequisites: readonly string[];
-  readonly grants: readonly { readonly guid: Guid; readonly name: string; readonly level?: number }[];
+  readonly grants: readonly {
+    readonly guid: Guid;
+    readonly name: string;
+    readonly level?: number;
+    readonly when?: string;
+  }[];
   readonly pickedIn: readonly { readonly guid: Guid; readonly name: string }[];
   readonly needs: readonly Guid[];
   readonly enables: readonly Guid[];
@@ -104,6 +122,26 @@ export function summaryText(data: CheckedData, guid: Guid, G: GrantIndex = grant
   return parts.length === 0 ? NO_SUMMARY : parts.join(' ');
 }
 
+function grantCondition(data: CheckedData, bp: Blueprint, g: Grant): string | undefined {
+  const named = (r: unknown) => refGuid(r) === g.granted;
+  for (const c of bp.Components) {
+    if (c.$type === 'AddFeatureOnClassLevel' && g.kind === c.$type && named((c as AddFeatureOnClassLevel).m_Feature)) {
+      const x = c as AddFeatureOnClassLevel;
+      const classes = listNames(data, guids([x.m_Class, ...(x.m_AdditionalClasses ?? [])]));
+      return `${x.BeforeThisLevel ? 'below' : 'at'} ${orList(classes)} level ${x.Level}`;
+    }
+    if (c.$type === 'AddFeatureIfHasFact' && g.kind === c.$type && named((c as AddFeatureIfHasFact).m_Feature)) {
+      const x = c as AddFeatureIfHasFact;
+      const fact = refGuid(x.m_CheckedFact);
+      return fact === undefined ? undefined : `${x.Not ? 'without' : 'with'} ${bareNameOf(data, fact)}`;
+    }
+    if (c.$type === 'AddFeatureOnAlignment' && g.kind === c.$type && (c as AddFeatureOnAlignment).m_Facts.some(named)) {
+      return `while the alignment is ${(c as AddFeatureOnAlignment).Alignment}`;
+    }
+  }
+  return undefined;
+}
+
 export function describe(
   data: CheckedData,
   guid: Guid,
@@ -132,11 +170,15 @@ export function describe(
     ),
     grants: G.grantsOf(guid)
       .filter((g) => !removes(g) && shown(g.granted) && g.kind !== 'selectionOption' && g.kind !== 'classArchetype')
-      .map((g) => ({
-        guid: g.granted,
-        name: nameOf(data, g.granted),
-        ...(g.level !== undefined && { level: g.level }),
-      })),
+      .map((g) => {
+        const when = grantCondition(data, bp, g);
+        return {
+          guid: g.granted,
+          name: nameOf(data, g.granted),
+          ...(g.level !== undefined && { level: g.level }),
+          ...(when !== undefined && { when }),
+        };
+      }),
     pickedIn: [
       ...new Map(
         G.grantorsOf(guid)
