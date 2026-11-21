@@ -415,8 +415,9 @@ function combine(leaves: readonly PrerequisiteLeaf[], ctx: Context, forcedTrueWi
     if (leaf.Group === 'All') {
       allOk = (allOk ?? true) && holds;
       if (!holds) unmetAll.push(unmet);
+    } else if (forcedTrueWins && leaf.Group === 'ForcedTrue') {
+      if (holds) return { ok: true, unmet: [] };
     } else {
-      if (forcedTrueWins && leaf.Group === 'ForcedTrue' && holds) return { ok: true, unmet: [] };
       anyOk = (anyOk ?? false) || holds;
       if (!holds) unmetAny.push(unmet);
     }

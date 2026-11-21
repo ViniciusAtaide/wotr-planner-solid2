@@ -23,7 +23,7 @@ Why the game refuses a choice, worded true for this Build (guide §4, GLOSSARY.m
 
 ## Rules
 
-- **`refusal`** words a walk Failure or a picker's closed option. The unmet leaves of group All are a line each. The others (Any, ForcedTrue), of which one would do, share one line: "One of these: …", or the leaf alone when there is only one.
+- **`refusal`** words a walk Failure or a picker's closed option. The unmet leaves of group All are a line each. The others (Any, and ForcedTrue for a feature), of which one would do, share one line: "One of these: …", or the leaf alone when there is only one. A class's failing ForcedTrue leaf never reaches R: the walk doesn't count it. A line the unmet leaves would repeat, such as two identical `PrerequisiteNoClassLevel` components, is worded once.
 - **`gearNote`** (ADR 0002) names the worn items an option needs when it is allowed only with the Gear counted.
 - **`nameOf`** gives the display name. A blueprint the game never names reads as its asset name marked "(internal)" (map 19); a GUID the data doesn't hold reads as itself.
 - **`statName`** names an ability, a skill, the base attack bonus or a save. Saves drop their `Save` prefix; skills drop `Skill`, and the four whose names carry a subject in brackets (Knowledge (Arcana), Knowledge (World), Lore (Nature), Lore (Religion)) come from `BRACKETED_SKILL_NAMES`. Everything else is its identifier split into words (`camelWords`: `FooBar` as `Foo Bar`).

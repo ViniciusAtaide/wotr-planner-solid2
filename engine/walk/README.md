@@ -174,7 +174,7 @@ P says what each leaf asks; this module answers whether the character has it, po
 - `considerFulfilled`: `Prerequisite.ConsiderFulfilled`, which only PrerequisiteFeaturesFromList overrides: a deity list (P's IsDeity) at the first character level is met while the character holds no deity, since the deity is chosen in a later band.
 - `Judgement`: the leaves a check judges, and those that failed.
 - `meetsPrerequisites`: `BlueprintFeature.MeetsPrerequisites`: a feature at its rank cap fails unless it is a selection; then every All leaf holds and, when other leaves exist, one of them does. A progression's grant (`fromProgression`) checks only CheckInProgression leaves, and a waived slot under ExceptWhiteListed only whitelisted ones.
-- `classMeetsPrerequisites`: `BlueprintCharacterClass.MeetsPrerequisites`: 20 levels at most, 10 for a prestige class, then the leaves, where a passing ForcedTrue leaf is enough on its own.
+- `classMeetsPrerequisites`: `BlueprintCharacterClass.MeetsPrerequisites`: 20 levels at most, 10 for a prestige class, then the leaves. A passing `ForcedTrue` leaf is enough on its own, and a failing one counts for nothing: it neither refuses the class nor shows as unmet. That's the game's three-way switch, and it lets a character take a first level of Angel, Demon or Dragon Disciple, whose `ForcedTrue` leaf asks for a level already held. Features and archetypes keep the game's two-way check, where `ForcedTrue` joins `Any`.
 - `archetypeMeetsPrerequisites`: `BlueprintArchetype.MeetsPrerequisites`: every All leaf, and one of the others.
 - `combine`: the All/Any combination the MeetsPrerequisites methods share.
 - `isSelectionType`: IFeatureSelection: the blueprint types that open a slot (`SELECTION_TYPES`).

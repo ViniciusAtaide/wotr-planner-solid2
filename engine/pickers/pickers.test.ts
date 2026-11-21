@@ -166,6 +166,24 @@ describe('what character creation offers (comparison bug 5)', { timeout: 30_000 
     expect(mythics).not.toContain('Shard Powers');
   });
 
+  it('words a repeated unmet prerequisite once, and never lists a failing ForcedTrue one for a class', () => {
+    const ranks = jackInTheGreen.build.ranks ?? [];
+    const ANGEL = 'a5a9fe8f663d701488bd1db8ea40484e';
+    const angelOverAzata = walk(
+      data,
+      { ...jackInTheGreen.build, ranks: [...ranks.slice(0, 3), { class: ANGEL, level: ranks[3]!.level }] },
+      G,
+    ).failures.find((f) => f.subject === ANGEL && f.rule === 'BlueprintCharacterClass.MeetsPrerequisites');
+    expect(angelOverAzata?.unmet?.length).toBeGreaterThan(0);
+    const once = refusal({ data, G }, angelOverAzata!);
+    const twice = refusal(
+      { data, G },
+      { ...angelOverAzata!, unmet: [...angelOverAzata!.unmet!, ...angelOverAzata!.unmet!] },
+    );
+    expect(twice.unmet).toEqual(once.unmet);
+    expect(once.unmet.join(' ')).not.toMatch(/Angel level/);
+  });
+
   it('offers every path switch the walk takes, Legend by its own name, and not the story’s Legend choice', () => {
     const GOLD_DRAGON = 'daf1235b6217787499c14e4e32142523';
     const LEGEND = '3d420403f3e7340499931324640efe96';

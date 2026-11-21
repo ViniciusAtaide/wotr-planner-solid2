@@ -666,6 +666,13 @@ describe('path switches (map ticket 31)', { timeout: 30_000 }, () => {
     '3d420403f3e7340499931324640efe96',
   ];
 
+  it("opens a class's first level when its ForcedTrue prerequisite (a level already in it) fails, as the game's class check does", () => {
+    const ANGEL = 'a5a9fe8f663d701488bd1db8ea40484e';
+    expect(rankFailures(switchAt(ANGEL, 3), 3)).toEqual([]);
+    const held = walk(data, switchAt(ANGEL, 3), G);
+    expect(held.unit.classLevel(ANGEL)).toBe(1);
+  });
+
   it('marks the ranks ended after Legend, and not on a path', () => {
     const AEON = '15a85e67b7d69554cab9ed5830d0268e';
     const ranks = jackInTheGreen.build.ranks ?? [];

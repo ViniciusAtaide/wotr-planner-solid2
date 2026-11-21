@@ -31,8 +31,8 @@ export interface Wording {
 
 export function refusal(w: Wording, failed: FailedRule): Refusal {
   const unmet = failed.unmet ?? [];
-  const all = unmet.filter((u) => u.leaf.Group === 'All').map((u) => unmetText(w, u));
-  const any = unmet.filter((u) => u.leaf.Group !== 'All').map((u) => unmetText(w, u).replace(/\.$/, ''));
+  const all = [...new Set(unmet.filter((u) => u.leaf.Group === 'All').map((u) => unmetText(w, u)))];
+  const any = [...new Set(unmet.filter((u) => u.leaf.Group !== 'All').map((u) => unmetText(w, u).replace(/\.$/, '')))];
   const either = any.length === 0 ? [] : any.length === 1 ? [`${any[0]}.`] : [`One of these: ${any.join('; ')}.`];
   return { rule: failed.rule, text: ruleText(w, failed), unmet: [...all, ...either] };
 }
