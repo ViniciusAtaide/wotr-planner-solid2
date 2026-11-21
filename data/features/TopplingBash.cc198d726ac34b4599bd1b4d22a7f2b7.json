@@ -33,6 +33,10 @@
       "m_Feature": "!bp_ac57069b6bf8c904086171683992a92a"
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Damage, Melee, Defense"
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",

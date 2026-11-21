@@ -17,6 +17,10 @@
       "Value": 3
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Damage, Melee, Mounted, CombatManeuver"
+    },
+    {
       "$type": "PrerequisiteNoClassLevel",
       "CheckInProgression": false,
       "Group": "All",

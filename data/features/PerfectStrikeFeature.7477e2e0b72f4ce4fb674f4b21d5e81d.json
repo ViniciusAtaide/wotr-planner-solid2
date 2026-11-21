@@ -46,6 +46,10 @@
       "IsFeatureSelectionWhiteList": false,
       "Stat": "Intelligence",
       "Value": 3
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Melee, Ranged"
     }
   ],
   "Groups": [

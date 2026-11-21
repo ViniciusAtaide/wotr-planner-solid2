@@ -1,6 +1,11 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Magic"
+    }
+  ],
   "Groups": [
     "Feat"
   ],

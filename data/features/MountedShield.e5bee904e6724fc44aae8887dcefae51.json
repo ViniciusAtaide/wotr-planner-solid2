@@ -16,6 +16,10 @@
       "m_Feature": "!bp_ac57069b6bf8c904086171683992a92a"
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Mounted, Defense"
+    },
+    {
       "$type": "PrerequisiteNoClassLevel",
       "CheckInProgression": false,
       "Group": "All",

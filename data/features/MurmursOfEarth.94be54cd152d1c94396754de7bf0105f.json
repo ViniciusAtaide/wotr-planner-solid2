@@ -28,6 +28,10 @@
       "InvertDifficultyRequirements": false,
       "MinDifficulty": "Story",
       "m_Facts": []
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Defense, Skills"
     }
   ],
   "Groups": [

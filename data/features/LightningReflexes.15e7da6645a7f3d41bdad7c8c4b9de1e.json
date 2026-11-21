@@ -7,6 +7,10 @@
       "ScaleByBasicAttackBonus": false,
       "Stat": "SaveReflex",
       "Value": 2
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Defense, SavingThrows"
     }
   ],
   "Groups": [

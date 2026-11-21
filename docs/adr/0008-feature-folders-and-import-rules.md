@@ -37,7 +37,7 @@ engine/describe      → data, load, grants, links, prerequisites, refusals
 engine/mcp           → build, codec, data, describe, edits, grants, links, pickers, refusals, walk, load, gold, data-dir, cite
 tools/dump           → —
 tools/decompiled     → engine: cite, data, load, prerequisites, grants, build, gold, walk, pickers, mcp
-tools/importer       → engine: cite, data, data-dir, load, prerequisites, grants, walk; tools/dump, tools/decompiled
+tools/importer       → engine: cite, data, data-dir, load, prerequisites, grants, walk, pickers; tools/dump, tools/decompiled
 tools/repo-checks    → —
 vite/data-document   → engine/data-dir
 src/design           → engine/walk

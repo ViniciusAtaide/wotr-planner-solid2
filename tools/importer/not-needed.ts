@@ -120,7 +120,6 @@ export const notNeededFamilies: readonly NotNeededFamily[] = [
       'ChangePortraitComponent',
       'DeityDependencyClass',
       'DisableClassAdditionalVisualSettings',
-      'FeatureTagsComponent',
       'HideClassIfPrerequisitesRequiredComponent',
       'HideFeatureInInspect',
       'MythicClassArtComponent',

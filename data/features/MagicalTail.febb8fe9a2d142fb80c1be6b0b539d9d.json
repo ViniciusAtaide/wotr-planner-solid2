@@ -9,6 +9,10 @@
       "m_Feature": "!bp_fd188bb7bb0002e49863aec93bfb9d99"
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Magic"
+    },
+    {
       "$type": "AddFactContextActions",
       "Activated": {
         "Actions": [

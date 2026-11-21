@@ -55,7 +55,7 @@ import type { Failure, FailedRule } from './failure';
 import { armorGroupInFlags, cannotWear, gearEnhancement, gearOf, misfit, wornArmorGroup } from './gear';
 import { calcLevel, canAddArchetype, levelEntries } from './progression';
 import { applySpellbook, classSpellbook, demand } from './spellbooks';
-import { applyStats } from './stats';
+import { applyStats, skillPointsAvailable } from './stats';
 import {
   ATTRIBUTES,
   isAttribute,
@@ -178,6 +178,8 @@ export interface Walk {
   readonly slots: readonly OpenedSlot[];
   readonly gearDependent: readonly GearDependent[];
   readonly dropped: readonly Dropped[];
+  readonly attributePoints: readonly number[];
+  readonly skillPoints: readonly number[];
   readonly unit: Unit;
 }
 
@@ -343,6 +345,8 @@ class Walker {
   readonly gearDependent: GearDependent[] = [];
   readonly gearDependentFacts = new Map<Fact, readonly Guid[]>();
   readonly dropped: Dropped[] = [];
+  readonly attributePoints: number[] = [];
+  readonly skillPoints: number[] = [];
   legendTaken = false;
   readonly takenOff = new Set<Guid>();
   readonly aspectsOn = new Map<Guid, Guid>();
@@ -409,6 +413,8 @@ class Walker {
       slots: this.opened,
       gearDependent: this.gearDependent,
       dropped: this.dropped,
+      attributePoints: this.attributePoints,
+      skillPoints: this.skillPoints,
       unit: this.unit,
     };
   }
@@ -762,10 +768,16 @@ class Walker {
           break;
         case 'AddAttribute':
           if (firstLevel) applyStats.scores(this);
-          if (!mythic) applyStats.increase(this, choice as LevelUp);
+          if (!mythic) {
+            this.attributePoints.push(state.attributePoints);
+            applyStats.increase(this, choice as LevelUp);
+          }
           break;
         case 'Skills':
-          if (!mythic) applyStats.skills(this, choice as LevelUp);
+          if (!mythic) {
+            this.skillPoints.push(skillPointsAvailable(this.unit));
+            applyStats.skills(this, choice as LevelUp);
+          }
           break;
         default:
           break;

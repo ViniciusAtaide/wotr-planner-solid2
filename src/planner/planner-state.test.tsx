@@ -20,8 +20,8 @@ import { readDataDir } from '~engine/data-dir';
 import { loadData } from '~engine/load';
 import { engineOf } from '~engine/mcp';
 
-import type { ChoiceProps } from './panels';
 import {
+  OPENED_A_LINK,
   outcomeOf,
   plannerAt,
   reducePlanner,
@@ -65,7 +65,15 @@ const CONFIRMING: Session = {
   kind: 'confirming',
   pending: { title: 'Weaker', summary: 'Clears picks.', clears: [], build: previewed },
 };
-const at = (session: Session): PlannerState => ({ past: [before], present: now, future: [after], session });
+const at = (session: Session): PlannerState => ({
+  past: [before],
+  present: now,
+  future: [after],
+  session,
+  change: 'Level 2',
+  pastChanges: [undefined],
+  futureChanges: ['Level 3'],
+});
 const states = { idle: at({ kind: 'idle' }), refused: at(REFUSED), confirming: at(CONFIRMING) };
 type Kind = keyof typeof states;
 
@@ -81,6 +89,9 @@ describe('PlannerState: one test per table cell', () => {
         expect(n.past).toEqual([...s.past, s.present]);
         expect(n.future).toEqual([]);
         expect(n.session.kind).toBe('idle');
+        expect(n.change).toBe('Add level 3');
+        expect(n.pastChanges).toEqual([undefined, 'Level 2']);
+        expect(n.futureChanges).toEqual([]);
       },
     ],
     [
@@ -102,7 +113,15 @@ describe('PlannerState: one test per table cell', () => {
       'confirm',
       'confirming',
       (s, n) =>
-        expect(n).toEqual({ past: [...s.past, s.present], present: previewed, future: [], session: { kind: 'idle' } }),
+        expect(n).toEqual({
+          past: [...s.past, s.present],
+          present: previewed,
+          future: [],
+          session: { kind: 'idle' },
+          change: 'Weaker',
+          pastChanges: [undefined, 'Level 2'],
+          futureChanges: [],
+        }),
     ],
     ['cancel', 'idle', (s, n) => expect(n).toBe(s)],
     ['cancel', 'refused', (s, n) => expect(n).toBe(s)],
@@ -113,39 +132,102 @@ describe('PlannerState: one test per table cell', () => {
     [
       'undo',
       'idle',
-      (_, n) => expect(n).toEqual({ past: [], present: before, future: [now, after], session: { kind: 'idle' } }),
+      (_, n) =>
+        expect(n).toEqual({
+          past: [],
+          present: before,
+          future: [now, after],
+          session: { kind: 'idle' },
+          change: undefined,
+          pastChanges: [],
+          futureChanges: ['Level 2', 'Level 3'],
+        }),
     ],
     [
       'undo',
       'refused',
-      (_, n) => expect(n).toEqual({ past: [], present: before, future: [now, after], session: { kind: 'idle' } }),
+      (_, n) =>
+        expect(n).toEqual({
+          past: [],
+          present: before,
+          future: [now, after],
+          session: { kind: 'idle' },
+          change: undefined,
+          pastChanges: [],
+          futureChanges: ['Level 2', 'Level 3'],
+        }),
     ],
     ['undo', 'confirming', (s, n) => expect(n).toEqual({ ...s, session: { kind: 'idle' } })],
     [
       'redo',
       'idle',
-      (_, n) => expect(n).toEqual({ past: [before, now], present: after, future: [], session: { kind: 'idle' } }),
+      (_, n) =>
+        expect(n).toEqual({
+          past: [before, now],
+          present: after,
+          future: [],
+          session: { kind: 'idle' },
+          change: 'Level 3',
+          pastChanges: [undefined, 'Level 2'],
+          futureChanges: [],
+        }),
     ],
     [
       'redo',
       'refused',
-      (_, n) => expect(n).toEqual({ past: [before, now], present: after, future: [], session: { kind: 'idle' } }),
+      (_, n) =>
+        expect(n).toEqual({
+          past: [before, now],
+          present: after,
+          future: [],
+          session: { kind: 'idle' },
+          change: 'Level 3',
+          pastChanges: [undefined, 'Level 2'],
+          futureChanges: [],
+        }),
     ],
     ['redo', 'confirming', (s, n) => expect(n).toBe(s)],
     [
       'replace',
       'idle',
-      (_, n) => expect(n).toEqual({ past: [before, now], present: cleaver, future: [], session: { kind: 'idle' } }),
+      (_, n) =>
+        expect(n).toEqual({
+          past: [before, now],
+          present: cleaver,
+          future: [],
+          session: { kind: 'idle' },
+          change: OPENED_A_LINK,
+          pastChanges: [undefined, 'Level 2'],
+          futureChanges: [],
+        }),
     ],
     [
       'replace',
       'refused',
-      (_, n) => expect(n).toEqual({ past: [before, now], present: cleaver, future: [], session: { kind: 'idle' } }),
+      (_, n) =>
+        expect(n).toEqual({
+          past: [before, now],
+          present: cleaver,
+          future: [],
+          session: { kind: 'idle' },
+          change: OPENED_A_LINK,
+          pastChanges: [undefined, 'Level 2'],
+          futureChanges: [],
+        }),
     ],
     [
       'replace',
       'confirming',
-      (_, n) => expect(n).toEqual({ past: [before, now], present: cleaver, future: [], session: { kind: 'idle' } }),
+      (_, n) =>
+        expect(n).toEqual({
+          past: [before, now],
+          present: cleaver,
+          future: [],
+          session: { kind: 'idle' },
+          change: OPENED_A_LINK,
+          pastChanges: [undefined, 'Level 2'],
+          futureChanges: [],
+        }),
     ],
     ['reset', 'idle', (_, n) => expect(n).toEqual(plannerAt(cleaver))],
     ['reset', 'refused', (_, n) => expect(n).toEqual(plannerAt(cleaver))],
@@ -238,9 +320,5 @@ describe('impossible states do not type-check', () => {
   test('a Build holds only values its code can', () => {
     expectTypeOf<number>().not.toExtend<Ascension['level']>();
     expectTypeOf<readonly [string, string]>().not.toExtend<ClassChoice['archetypes']>();
-  });
-
-  test('Choice hands back its own options’ values', () => {
-    expectTypeOf<ChoiceProps<'A' | 'B'>['onChange']>().parameter(0).toEqualTypeOf<'A' | 'B'>();
   });
 });

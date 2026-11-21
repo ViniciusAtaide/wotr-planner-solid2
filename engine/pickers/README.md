@@ -11,6 +11,8 @@ What each slot can take (guide §4, build ticket 04). S lists a slot's options a
   - `shown`: whether the game's level-up screen lists it (`shownInSelection`). The game builds the list from the selection's items with no `HideInUI` filter (`CharGenFeatureSelectorStateVM.CreateFeaturesList`), and hides an item only when it is unavailable and has `HideNotAvailibleInUI` (`CharGenFeatureSelectorItemVM.ShouldBeHidden`). So a nested selection marked `HideInUI` (the background groups, the Sorcerer's bloodline feats, the prestige classes' spellbooks) is listed, and a companion-only background is not. A nameless blueprint is never listed (map 19). `UnitPartHiddenFacts` (facts hidden by unit state) is not ported. A hidden option is judged like any other; surfaces leave it out.
   - `closed`: why the game refuses it; absent when it is open.
   - `gearItems`: the worn items an open option needs under the Gear opt-in (ADR 0002); absent when it needs none.
+- `offeredClasses`, `offeredMythicClasses`, `offeredRaces`, `mythicStartingClass` and `NOT_MAIN_CHARACTER_MYTHICS`: what character creation offers. `characterWideSlots` and `BACKGROUNDS_BASE_SELECTION`: which of the walk's slots belong to the character.
+- `featureTags`, `tagsOf`, `FEATURE_TAG_BITS`, `FeatureTag`, `pickerComponentTypes`: a feat's tags as the level-up list shows them.
 - `candidates(data, selection)`: every option a slot lists.
 - `parameters(feat)`: a parametrized feat's parameters.
 - `walkVerdict(data, build, slot, option, G?)`: what the walk says of an option in a slot.
@@ -20,11 +22,16 @@ What each slot can take (guide §4, build ticket 04). S lists a slot's options a
 - **What character creation offers** (`offers.ts`):
   - `offeredClasses` is the root progression's `m_CharacterClasses` (`ProgressionRoot.AvailableCharacterClasses`);
   - `offeredRaces` is `m_CharacterRaces` (`CharacterRaces`);
+  - `mythicStartingClass` is `m_MythicStartingClass` (`MythicStartingClass`), the Mythic class a character starts on;
   - `offeredMythicClasses` is `m_CharacterMythics` (`AvailableCharacterMythics`), minus `NOT_MAIN_CHARACTER_MYTHICS`: the companions' Mythic class and Shard Powers, a planner rule from map ticket 34.
 
   Each list is kept to shown blueprints and sorted by name. The game's DLC filter is not ported, because every DLC's data is present.
 
+- **Which slots belong to the character** (`offers.ts`, map 13's 2026-11-21 amendment): `characterWideSlots(data, slots)` gives the keys of the walk's opened slots that the planner shows with the character rather than on a level. A slot belongs to the character when the race grants it (`SelectRace.Apply`), when it is the root progression's deity selection (`ProgressionRoot.DeitySelection`), when it is `BACKGROUNDS_BASE_SELECTION` (BackgroundsBaseSelection), or when it opens inside one of those, at any depth. The game's character creation puts racial, heritage and background selections in its race-features phase and the deity in its lore phase (`CharGenFeatureSelectorPhaseVM.GetFeaturePriority`), apart from the class's own; the planner keeps that split by what grants the slot. For a class that depends on a deity (a Cleric), the game shows the deity among the class's features; the planner still shows it with the character, as the ticket decided.
+
 Citations for these live in `cites.ts`.
+
+- **A feat's tags** (`tags.ts`): `featureTags(data, feature)` is the tags the game's level-up list shows under a feat and searches (`CharGenFeatureSelectorItemVM`, from its `FeatureTagsComponent`), undefined for a feature with none; only the game's feats carry it. `tagsOf` reads them as names or as the `FeatureTag` enum's bits (`FEATURE_TAG_BITS`). `pickerComponentTypes` names the component types S reads, for the importer's reader check.
 
 - **`candidates`** lists a selection's items (`m_AllFeatures`), a parametrized feat once per parameter. A Mythic spellbook selection's items are itself, with no spellbook, and itself with each of its `m_AllowedSpellbooks`, as the game collects them.
 - **`parameters`** follows the game's extraction of a parametrized feat's selection items, by `ParameterType`: every weapon category, every spell school, every skill, or the feat's `BlueprintParameterVariants` (Custom and FeatureSelection). The spell parameters are out of v1 (map 22), so those types list nothing.

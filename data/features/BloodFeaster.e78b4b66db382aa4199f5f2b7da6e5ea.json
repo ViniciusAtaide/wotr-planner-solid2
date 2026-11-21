@@ -14,6 +14,10 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_96983d50aca1d214e8adc57a39b41c25"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Damage, Skills"
     }
   ],
   "Groups": [

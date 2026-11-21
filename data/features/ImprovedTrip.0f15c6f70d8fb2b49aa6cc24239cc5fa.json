@@ -22,6 +22,10 @@
       "Group": "Any",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_ff14cb2bfab1c0547be66d8aaa7e4ada"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, CombatManeuver"
     }
   ],
   "Groups": [

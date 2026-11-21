@@ -20,6 +20,10 @@
       "WeaponProficiencies": []
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Defense"
+    },
+    {
       "$type": "PrerequisiteClassLevel",
       "CheckInProgression": false,
       "Group": "Any",

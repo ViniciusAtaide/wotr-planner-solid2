@@ -15,6 +15,10 @@
       "IsFeatureSelectionWhiteList": false,
       "Stat": "Dexterity",
       "Value": 15
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Defense"
     }
   ],
   "Groups": [

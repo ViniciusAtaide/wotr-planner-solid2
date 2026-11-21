@@ -37,6 +37,10 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_a29a582c3daa4c24bb0e991c596ccb28"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Damage, Melee, Skills, Style"
     }
   ],
   "Groups": [

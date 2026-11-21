@@ -16,6 +16,10 @@
       "m_Feature": "!bp_95e04a9e86aa9e64dad7122625b79c62"
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "ClassSpecific"
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "Any",

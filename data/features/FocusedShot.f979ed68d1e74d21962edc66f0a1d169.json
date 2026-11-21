@@ -29,6 +29,10 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_8f3d1e6b4be006f4d896081f2f889665"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Damage, Ranged"
     }
   ],
   "Groups": [

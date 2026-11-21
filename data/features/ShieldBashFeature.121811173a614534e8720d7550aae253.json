@@ -29,6 +29,10 @@
       "Value": 3
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Damage, Melee, Defense"
+    },
+    {
       "$type": "AddProficiencies",
       "ArmorProficiencies": [],
       "WeaponProficiencies": [

@@ -44,6 +44,10 @@
       "IsFeatureSelectionWhiteList": false,
       "Stat": "SkillMobility",
       "Value": 8
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Damage, Melee, Skills, Style"
     }
   ],
   "Groups": [

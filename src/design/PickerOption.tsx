@@ -1,6 +1,7 @@
 import { Show, type ParentProps } from 'solid-js';
 
 import Badge from './Badge';
+import FeatIcon, { type FeatCategory } from './FeatIcon';
 import Refusal from './Refusal';
 
 export type OptionStatus = 'open' | 'closed';
@@ -38,6 +39,7 @@ export interface PickerOptionProps {
   readonly status: OptionStatus;
   readonly selected?: boolean;
   readonly mythic?: boolean;
+  readonly icon?: FeatCategory | undefined;
   readonly links?: string | undefined;
   readonly gear?: string | undefined;
   readonly refusal?: readonly string[];
@@ -47,6 +49,9 @@ export interface PickerOptionProps {
 export default function PickerOption(props: PickerOptionProps) {
   const badges = () => (
     <span class="ww-option__badges">
+      <Show when={props.selected === true}>
+        <span class="ww-option__current">Current</span>
+      </Show>
       <Show when={props.mythic}>
         <Badge kind="mythic" />
       </Show>
@@ -61,7 +66,10 @@ export default function PickerOption(props: PickerOptionProps) {
       when={props.status === 'open'}
       fallback={
         <div class="ww-option ww-option--closed" role="button" aria-disabled="true" tabindex="0">
-          <span class="ww-option__name">{props.name}</span>
+          <span class="ww-option__name">
+            <Show when={props.icon}>{(c) => <FeatIcon category={c()} />}</Show>
+            {props.name}
+          </span>
           {badges()}
           <Show when={props.links}>{(links) => <span class="ww-option__meta">{links()}</span>}</Show>
           <Refusal lines={props.refusal ?? []} />
@@ -74,7 +82,10 @@ export default function PickerOption(props: PickerOptionProps) {
         aria-current={props.selected === true ? 'true' : undefined}
         onClick={() => props.onPick?.()}
       >
-        <span class="ww-option__name">{props.name}</span>
+        <span class="ww-option__name">
+          <Show when={props.icon}>{(c) => <FeatIcon category={c()} />}</Show>
+          {props.name}
+        </span>
         {badges()}
         <Show when={props.links}>{(links) => <span class="ww-option__meta">{links()}</span>}</Show>
         <Show when={props.gear}>{(gear) => <Refusal gear lines={[gear()]} />}</Show>

@@ -198,6 +198,8 @@ export const cites = {
   EquipmentRestrictionAlignment: ['Blueprints/Items/Components/EquipmentRestrictionAlignment.cs CanBeEquippedBy'],
   'EquipmentRestrictionAlignment.Alignment': ['UnitLogic/Alignments/AlignmentMaskType.cs AlignmentMaskType'],
   EquipmentRestrictionMainPlayer: ['Blueprints/Items/Components/EquipmentRestrictionMainPlayer.cs CanBeEquippedBy'],
+  FeatureTagsComponent: ['Designers/Mechanics/Facts/FeatureTagsComponent.cs FeatureTagsComponent'],
+  'FeatureTagsComponent.FeatureTags': ['Blueprints/Classes/Selection/FeatureTag.cs FeatureTag'],
   PrerequisiteGroup: ['Blueprints/Classes/Prerequisites/Prerequisite.cs Prerequisite (Group)'],
   PrerequisiteBase: ['Blueprints/Classes/Prerequisites/Prerequisite.cs Prerequisite'],
   'PrerequisiteBase.CheckInProgression': [

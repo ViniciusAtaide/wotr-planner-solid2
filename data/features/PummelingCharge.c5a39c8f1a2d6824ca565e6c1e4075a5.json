@@ -24,6 +24,10 @@
       "Level": 8,
       "Not": false,
       "m_CharacterClass": "!bp_e8f21e5b58e0569468e420ebea456124"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Melee, Style"
     }
   ],
   "Groups": [

@@ -10,6 +10,10 @@
       "Value": 3
     },
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Magic, Defense"
+    },
+    {
       "$type": "RemoveFeatureOnApply",
       "m_Feature": "!bp_16e6a6d3d14142da96d2703812b732f6"
     }

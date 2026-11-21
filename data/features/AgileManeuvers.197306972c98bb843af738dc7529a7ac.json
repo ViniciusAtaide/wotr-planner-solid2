@@ -35,6 +35,10 @@
       "Group": "Any",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_0f15c6f70d8fb2b49aa6cc24239cc5fa"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "CombatManeuver"
     }
   ],
   "Groups": [

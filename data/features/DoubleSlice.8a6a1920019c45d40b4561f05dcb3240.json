@@ -19,6 +19,10 @@
     {
       "$type": "AddMechanicsFeature",
       "m_Feature": "DoubleSlice"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Damage, Melee"
     }
   ],
   "Groups": [

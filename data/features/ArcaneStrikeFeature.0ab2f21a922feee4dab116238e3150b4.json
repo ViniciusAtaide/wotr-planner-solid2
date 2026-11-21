@@ -22,6 +22,10 @@
       "IsFeatureSelectionWhiteList": false,
       "Stat": "Intelligence",
       "Value": 3
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Damage, Melee, Ranged, Magic"
     }
   ],
   "Groups": [

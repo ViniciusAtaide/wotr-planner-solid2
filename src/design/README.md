@@ -14,6 +14,7 @@ props types and helper types:
 - `Button`, `ButtonVariant`: an action.
 - `CascadePreview`: what a Cascade edit will clear, before it applies.
 - `CompareToggle`: the segmented control that switches between compared Builds, generic over its segments.
+- `FeatIcon`, `FeatCategory`, `FEAT_CATEGORY_NAMES`: a feat's category as a small line drawing.
 - `Kbd`: a keyboard hint.
 - `LevelRow`, `Timeline`, `PickChips`, `PickChip`: the Timeline and its rows and chips.
 - `PickerOption`, `OptionList`, `PickerHead`, `ClosedCount`, `OptionStatus`: the picker's parts.
@@ -42,6 +43,11 @@ props types and helper types:
 - **CompareToggle.** A segmented control over its own segment type `S`: `value` is the pressed segment and
   `onChange` hands back an `S`, so a consumer maps segments through a `Record` with no cast. On a phone it switches
   which Build compare shows; on desktop it adds "Side by side". Four segments at most.
+- **FeatIcon.** A feat's category as a line drawing on a 24×24 grid, `1.05em` square, stroked in the text's color
+  (`ww-feat-icon`), so it follows its chip or option. The twelve drawings (Weapon, Ranged, Unarmed Combat, Armour and
+  Shield, Combat Manoeuvres, Mounted Combat, Magic, Skill, Teamwork, Racial, Class, Miscellaneous) were drawn for the
+  Rust planner (`~/code/wotr-planner`, `libs/ui/src/icons.rs`) and are copied here unchanged, in the same order. It is
+  decorative (`aria-hidden`): the name beside it says what the pick is. The consumer decides the category.
 - **Kbd.** A key, for the keyboard-first planner's hints. Hidden on touch screens (the `pointer: coarse` rule in
   `components.css`).
 - **Timeline, LevelRow, PickChips.** `Timeline` is the column of level rows and Mythic ranks. `LevelRow` is one
@@ -53,9 +59,9 @@ props types and helper types:
   for ("4 ranks to spend"), and `gear` marks a gear-dependent pick (ADR 0002), whose label adds "◈ Gear".
 - **PickerOption, OptionList, PickerHead, ClosedCount.** `PickerOption` is one option at a slot, with its status from
   S (`OptionStatus`) and every line of its Refusal from R. `name` is the game name, with its parameter when it takes
-  one; `selected` marks the Build's current pick at this slot; `links` are its Synergy links, worded ("Enables Weapon
+  one; `selected` marks the Build's current pick at this slot, with the word "Current" beside its badges as well as the gold edge; `links` are its Synergy links, worded ("Enables Weapon
   Specialization (Longsword) → and 3 more"); `gear` is R's gear-dependent note, for an open option that needs the Gear
-  counted; `refusal` is R's lines, for a closed option. An open option is a button; a closed one stays focusable
+  counted; `refusal` is R's lines, for a closed option. `icon` puts a `FeatIcon` before the name. An open option is a button; a closed one stays focusable
   (`aria-disabled`) so its Refusal can be read. A gear-dependent option shows ◈ Gear beside ✓ Open, with R's note
   naming the items it counts. `OptionList` is the picker's list of options, `PickerHead` the picker panel's heading
   (the slot and its counts, "212 open · 1,034 closed"), and `ClosedCount` the closed options a list doesn't show,

@@ -23,6 +23,10 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_308cd7dc4f10efd428f531bbf4f2823d"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Damage, Melee, Ranged"
     }
   ],
   "Groups": [

@@ -8,6 +8,10 @@
       "IsFeatureSelectionWhiteList": false,
       "Stat": "SkillPersuasion",
       "Value": 1
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Skills"
     }
   ],
   "Groups": [

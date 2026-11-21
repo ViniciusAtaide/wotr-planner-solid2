@@ -15,6 +15,10 @@
       "InvertDifficultyRequirements": false,
       "MinDifficulty": "Story",
       "m_Facts": []
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Damage, Ranged"
     }
   ],
   "Groups": [

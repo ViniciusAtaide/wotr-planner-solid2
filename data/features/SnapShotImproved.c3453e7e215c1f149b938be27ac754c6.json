@@ -33,6 +33,10 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_9c928dc570bb9e54a9649b3ebfe47a41"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Ranged, Defense"
     }
   ],
   "Groups": [

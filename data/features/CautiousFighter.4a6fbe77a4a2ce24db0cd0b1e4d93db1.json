@@ -7,6 +7,10 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_b0c3ef2729c498f47970bb50fa1acd30"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Defense"
     }
   ],
   "Groups": [

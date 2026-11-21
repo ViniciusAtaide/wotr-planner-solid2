@@ -2,6 +2,10 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "ClassSpecific"
+    },
+    {
       "$type": "PrerequisiteFeaturesFromList",
       "Amount": 1,
       "CheckInProgression": false,

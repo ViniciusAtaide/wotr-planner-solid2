@@ -15,6 +15,10 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_9972f33f977fc724c838e59641b2fca5"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Attack, Skills"
     }
   ],
   "Groups": [

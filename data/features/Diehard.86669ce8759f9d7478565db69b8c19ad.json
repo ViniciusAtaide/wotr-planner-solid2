@@ -11,6 +11,10 @@
     {
       "$type": "AddMechanicsFeature",
       "m_Feature": "HalfOrcFerocity"
+    },
+    {
+      "$type": "FeatureTagsComponent",
+      "FeatureTags": "Defense"
     }
   ],
   "Groups": [

@@ -75,6 +75,7 @@ export const FEATURES: readonly Feature[] = [
       'engine/prerequisites',
       'engine/grants',
       'engine/walk',
+      'engine/pickers',
       'engine/compact',
       'tools/dump',
       'tools/decompiled',
