@@ -5,4 +5,5 @@ export * from './race-picker';
 export * from './background-picker';
 export * from './option-names';
 export * from './tags';
+export * from './gear-clashes';
 export { cites } from './cites';

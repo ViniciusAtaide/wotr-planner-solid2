@@ -20,6 +20,7 @@ import { classPicker } from './class-picker';
 import { backgroundPicker } from './background-picker';
 import { firstLevelWith, heritageSlotIn, racePicker } from './race-picker';
 import { namesInList } from './option-names';
+import { gearClashes } from './gear-clashes';
 import { guids } from '../data';
 import { breaks, opensAt, refusal } from '../refusals';
 import { prerequisites } from '../prerequisites';
@@ -526,5 +527,14 @@ describe('which options the level-up screen lists', { timeout: 30_000 }, () => {
       }
     }
     expect(shared).toEqual([]);
+  });
+
+  it("finds a worn item's bonuses that won't stack with what the Build holds or wears in its other places (MCP QA)", () => {
+    const RING_OF_PROTECTION_1 = 'f333bf86cd122974792162cbcd27c9ed';
+    const ringed = { ...jackInTheGreen.build, gear: { Ring1: RING_OF_PROTECTION_1 } };
+    expect(gearClashes(data, ringed, 'Ring2', RING_OF_PROTECTION_1, G)).toEqual([
+      { stat: 'AC', descriptor: 'Deflection', with: [RING_OF_PROTECTION_1] },
+    ]);
+    expect(gearClashes(data, ringed, 'Ring1', RING_OF_PROTECTION_1, G)).toEqual([]);
   });
 });
