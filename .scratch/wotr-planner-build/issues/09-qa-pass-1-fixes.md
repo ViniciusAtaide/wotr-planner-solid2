@@ -50,3 +50,13 @@ Fix every finding of the first QA pass on the planner (run on `e77c4d7e`, 2026-1
   - **The rank count isn't a bug.** "(yours: 3)" is the character's rank after Legend. Since `switchAtRank8` and `ranksEnded`, that case reads "After Legend, no Mythic rank follows".
   - **`HideInUI` leaves still show,** because they are real reasons.
 - **`Walk.maxCharacterLevel`** (for the trail's level cap): 20, or 40 after Legend.
+- **4, first step:** each `allows` walked the unchanged Build again. Its refusals are now kept per Build (`refusalsByBuild`).
+  - **Profiled on Jack (bun):** a slot picker takes 7–18 ms, a full walk 12–30 ms depending on load, and one `allows` 8–15 ms.
+  - **Measured in one run:**
+
+    | | Before | After |
+    | --- | --- | --- |
+    | Class list at level 3 (40 `allows`) | 564–607 ms | 299–317 ms |
+    | A Cascade | 21–22 ms | 14 ms |
+
+  - **Checkpoints:** whether to add per-level checkpoints on top of this is with the coordinator.

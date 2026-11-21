@@ -125,7 +125,23 @@ export function clearPicks(build: Build, slots: readonly SlotId[]): Build {
 
 const PLACELESS: ReadonlySet<Failure['choice']> = new Set(['gear', 'aspect']);
 
-function keyedRefusals(data: CheckedData, build: Build, G: GrantIndex): Map<string, Failure> {
+interface WalkedRefusals {
+  readonly data: CheckedData;
+  readonly G: GrantIndex;
+  readonly keyed: ReadonlyMap<string, Failure>;
+}
+
+const refusalsByBuild = new WeakMap<Build, WalkedRefusals>();
+
+function keyedRefusals(data: CheckedData, build: Build, G: GrantIndex): ReadonlyMap<string, Failure> {
+  const walked = refusalsByBuild.get(build);
+  if (walked !== undefined && walked.data === data && walked.G === G) return walked.keyed;
+  const keyed = walkRefusals(data, build, G);
+  refusalsByBuild.set(build, { data, G, keyed });
+  return keyed;
+}
+
+function walkRefusals(data: CheckedData, build: Build, G: GrantIndex): ReadonlyMap<string, Failure> {
   const out = new Map<string, Failure>();
   for (const f of walk(data, build, G).failures) {
     const key =

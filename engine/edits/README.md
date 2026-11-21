@@ -31,6 +31,7 @@ E answers whether a change keeps a Build possible (guide §4; map ticket 11, "Ca
 ## Rules
 
 - **What breaks.** `breaksOf` walks both Builds and keys each refusal by what it refuses (`keyedRefusals`: a pick by its slot, any other choice by its place, choice and subject), so the two walks can be compared; a refusal whose key the earlier walk lacks is broken by the edit.
+- **One walk per Build.** A Build is a value nothing changes, so its keyed refusals are kept per Build object (`refusalsByBuild`, a `WeakMap`, reused only for the same data and grant index). Judging a list of edits against one Build walks that Build once, not once per edit. On Jack the 40-class list at level 3 went from about 580 ms to about 310 ms, and a Cascade from about 21 ms to about 14 ms.
 - **Cascade.** The edit is made, then everything it breaks that can be cleared is cleared, then whatever that clearing breaks, until nothing more breaks. It clears and never moves (map ticket 11). Three kinds of choice can be cleared:
   - **Picks.** `cleared` lists them, in the order they were cleared.
   - **A level's skill ranks,** when the level is now over its budget or a rank breaks the skill rules, as after a class change to a class with fewer skill points. `clearedSkills` lists the levels.
