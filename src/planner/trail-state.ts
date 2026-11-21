@@ -5,7 +5,7 @@ import { BACKGROUNDS_BASE_SELECTION, characterWideSlots, heritageSlotIn, namesIn
 import { nameOf } from '~engine/refusals';
 import type { OpenedSlot, Walk } from '~engine/walk';
 
-import { backgroundChildren, flatName } from './flat-choices';
+import { backgroundChildren, flatName, joinedName } from './flat-choices';
 import type { Selection } from './workspace-state';
 import { bareNameOf, shownName } from './words';
 
@@ -34,6 +34,7 @@ export interface TrailState {
   readonly otherClass: boolean;
   readonly closedShown: ReadonlySet<string>;
   readonly skillsCleared: ReadonlySet<number>;
+  readonly dialog: string | undefined;
 }
 
 export type TrailAction =
@@ -44,7 +45,8 @@ export type TrailAction =
   | { readonly kind: 'character'; readonly open: boolean }
   | { readonly kind: 'otherClass'; readonly open: boolean }
   | { readonly kind: 'toggleClosed'; readonly list: string }
-  | { readonly kind: 'skillsCleared'; readonly levels: readonly number[] };
+  | { readonly kind: 'skillsCleared'; readonly levels: readonly number[] }
+  | { readonly kind: 'dialog'; readonly step: string | undefined };
 
 export const TRAIL_START: TrailState = {
   skillsLeft: new Set(),
@@ -54,6 +56,7 @@ export const TRAIL_START: TrailState = {
   otherClass: false,
   closedShown: new Set(),
   skillsCleared: new Set(),
+  dialog: undefined,
 };
 
 export function reduceTrail(s: TrailState, a: TrailAction): TrailState {
@@ -81,6 +84,8 @@ export function reduceTrail(s: TrailState, a: TrailAction): TrailState {
             skillsCleared: new Set([...s.skillsCleared, ...a.levels]),
             skillsLeft: new Set([...s.skillsLeft].filter((l) => !a.levels.includes(l))),
           };
+    case 'dialog':
+      return s.dialog === a.step ? s : { ...s, dialog: a.step };
     case 'toggleClosed': {
       const closedShown = new Set(s.closedShown);
       if (!closedShown.delete(a.list)) closedShown.add(a.list);
@@ -413,7 +418,7 @@ export function characterPicksLine(t: TrailView): string {
   const race =
     t.build.race === undefined
       ? []
-      : [flatName(bareNameOf(t.data, t.build.race), heritage && shownName(t.data, heritage.feature, heritage.param))];
+      : [joinedName(bareNameOf(t.data, t.build.race), heritage && shownName(t.data, heritage.feature, heritage.param))];
   const base = backgroundSlot(t);
   const child =
     base === undefined ? undefined : backgroundChildren(t.walk.slots, base.id).find((s) => s.pick !== undefined)?.pick;

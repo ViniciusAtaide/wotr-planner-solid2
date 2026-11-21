@@ -896,6 +896,7 @@
 .trail-sub-row > .ww-option {
   box-sizing: border-box;
   height: 100%;
+  align-content: center;
 }
 
 .trail-window-row--fixed .ww-option__meta {

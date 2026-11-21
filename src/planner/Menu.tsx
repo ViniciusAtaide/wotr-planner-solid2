@@ -1,6 +1,7 @@
 import { createSignal, For, onSettled, Show } from 'solid-js';
 
 import type { ShareLinkProps } from '../design';
+import { keepFocus } from './focus-return';
 import type { ListMode } from './list-mode';
 
 export type Copied = 'idle' | 'copied' | 'refused';
@@ -51,12 +52,15 @@ export function PlannerMenu(props: PlannerMenuProps) {
     }, SAID_FOR_MS);
   };
   let root: HTMLDivElement | undefined;
+  let toggle: HTMLButtonElement | undefined;
   onSettled(() => {
     const away = (e: Event) => {
       if (root !== undefined && e.target instanceof Node && !root.contains(e.target)) setOpen(false);
     };
     const esc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpen(false);
+      if (e.key !== 'Escape' || !open()) return;
+      setOpen(false);
+      keepFocus(toggle);
     };
     document.addEventListener('pointerdown', away);
     document.addEventListener('keydown', esc);
@@ -83,6 +87,9 @@ export function PlannerMenu(props: PlannerMenuProps) {
       }}
     >
       <button
+        ref={(el) => {
+          toggle = el;
+        }}
         type="button"
         class="planner-menu__button"
         aria-label="Build menu"

@@ -6,7 +6,7 @@ import { picker, type OptionStatus } from '~engine/pickers';
 import { gearNote, listNames, nameOf, refusal } from '~engine/refusals';
 
 import { Button, ClosedCount, OptionList, PickerOption } from '../design';
-import { clampMark, createReveal, Filter, moveThroughOptions, SCROLL_STYLE, type ClosedToggle } from './ChoiceList';
+import { createReveal, Filter, moveThroughOptions, SCROLL_STYLE, type ClosedToggle } from './ChoiceList';
 import { featCategory } from './feat-category';
 import { after } from './flat-choices';
 import { childSlotOf, pickRows, rowMembers, rowOpen, type PickRow } from './nested-options';
@@ -27,10 +27,22 @@ export interface PickStepProps {
 const listedOf = (o: OptionStatus) =>
   o.name === undefined ? undefined : { name: o.name, ...(o.qualifier !== undefined && { qualifier: o.qualifier }) };
 
-type Item =
+export type Item =
   | { readonly kind: 'row'; readonly row: PickRow; readonly index: number }
   | { readonly kind: 'child'; readonly row: PickRow; readonly option: OptionStatus }
   | { readonly kind: 'none'; readonly row: PickRow };
+
+function markable(it: Item): boolean {
+  return it.kind === 'row' || (it.kind === 'child' && it.option.closed === undefined);
+}
+
+export function nextMark(items: readonly Item[], at: number, delta: number): number {
+  for (let i = at + delta; i >= 0 && i < items.length; i += delta) {
+    const it = items[i];
+    if (it !== undefined && markable(it)) return i;
+  }
+  return Math.max(0, Math.min(at, items.length - 1));
+}
 
 function itemKey(it: Item): string {
   if (it.kind === 'row') return it.row.key;
@@ -77,11 +89,7 @@ export function PickStep(props: PickStepProps) {
   let scroller: HTMLDivElement | undefined;
   createEffect(
     () => mark(),
-    (at) =>
-      scrollToIndex(
-        scroller,
-        items().findIndex((it) => it.kind === 'row' && it.index === at),
-      ),
+    (at) => scrollToIndex(scroller, at),
   );
   const closedShown = () =>
     showClosed.shown ? closed().slice(0, reveal.limit()) : closed().filter((r) => holdsRow(r));
@@ -204,6 +212,10 @@ export function PickStep(props: PickStepProps) {
     else take(o);
   };
   const lead = (row: PickRow): OptionStatus | undefined => rowMembers(row)[0];
+  const enterItem = (it: Item | undefined) => {
+    if (it?.kind === 'row') enterRow(it.row);
+    else if (it?.kind === 'child' && it.option.closed === undefined) takeChild(it.row, it.option);
+  };
   let lastItems = new Map<string, Item>();
   const items = createMemo((): Item[] => {
     const fresh = open().flatMap((row, index): Item[] => {
@@ -238,8 +250,8 @@ export function PickStep(props: PickStepProps) {
             setText(t);
             setMark(0);
           }}
-          onMove={(delta) => setMark((m) => clampMark(m, delta, open().length))}
-          onEnter={() => enterRow(open()[mark()])}
+          onMove={(delta) => setMark((m) => nextMark(items(), m, delta))}
+          onEnter={() => enterItem(items()[mark()])}
         />
         <Show when={text() === '' || rows().length > 0} fallback={<p class="trail-note">No matches for “{text()}”.</p>}>
           <p class="trail-note">
@@ -258,7 +270,7 @@ export function PickStep(props: PickStepProps) {
         >
           <OptionList>
             <WindowedRows items={items()} key={itemKey} scroller={() => scroller}>
-              {(it) => {
+              {(it, at) => {
                 const row = it.row;
                 if (it.kind === 'none') {
                   return (
@@ -285,6 +297,7 @@ export function PickStep(props: PickStepProps) {
                           name={childName(row, o)}
                           status="open"
                           selected={childCurrent(row, o)}
+                          marked={at === mark()}
                           onPick={() => takeChild(row, o)}
                         />
                       </Show>
@@ -298,7 +311,7 @@ export function PickStep(props: PickStepProps) {
                       status="open"
                       icon={featCategory(data(), row.option.feature)}
                       selected={isCurrent(row.option)}
-                      marked={it.index === mark()}
+                      marked={at === mark()}
                       links={links(row.option)}
                       gear={gearOf(row.option)}
                       onPick={() => take(row.option)}
@@ -312,7 +325,7 @@ export function PickStep(props: PickStepProps) {
                       status="open"
                       icon={featCategory(data(), lead(row)?.feature ?? '')}
                       selected={holdsRow(row)}
-                      marked={it.index === mark()}
+                      marked={at === mark()}
                       expanded={expanded() === row.key}
                       links={links(lead(row) as OptionStatus)}
                       onPick={() => toggle(row.key)}

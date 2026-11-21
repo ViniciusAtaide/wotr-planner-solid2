@@ -7,6 +7,7 @@ import { walk } from '~engine/walk';
 
 import { Button, CascadePreview, CompareToggle, Refusal } from '../design';
 import { loadEngine } from './engine';
+import { keepFocus } from './focus-return';
 import { EMPTY, openHash } from './link';
 import { PlannerMenu, UndoLine } from './Menu';
 import { createShareCode, shareLinkOf, type ShareCode } from './share-code';
@@ -124,7 +125,13 @@ export function RefusalNotice(props: RefusalNoticeProps) {
           </button>
         </Show>
       </div>
-      <Button variant="ghost" onClick={() => props.onDismiss()}>
+      <Button
+        variant="ghost"
+        onClick={() => {
+          props.onDismiss();
+          keepFocus(undefined);
+        }}
+      >
         Dismiss
       </Button>
     </div>
@@ -197,12 +204,13 @@ function Workspace(props: WorkspaceProps) {
   };
   const confirming = () => active().session().kind === 'confirming';
   let focusedOutsideDialog: HTMLElement | undefined;
+  let wasConfirming = false;
   createEffect(
     () => confirming(),
     (now) => {
-      if (now) return;
-      const back = focusedOutsideDialog;
-      if (back?.isConnected === true && document.activeElement !== back) back.focus();
+      const ended = wasConfirming && !now;
+      wasConfirming = now;
+      if (ended) keepFocus(focusedOutsideDialog);
     },
   );
   const resolved = createMemo(() =>
@@ -417,7 +425,13 @@ function Workspace(props: WorkspaceProps) {
             {(words) => (
               <div class="planner-notice" role="status">
                 <Refusal lines={[words()]} />
-                <Button variant="ghost" onClick={() => send({ kind: 'dismissLink' })}>
+                <Button
+                  variant="ghost"
+                  onClick={() => {
+                    send({ kind: 'dismissLink' });
+                    keepFocus(undefined);
+                  }}
+                >
                   Dismiss
                 </Button>
               </div>

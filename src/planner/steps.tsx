@@ -11,7 +11,7 @@ import { Button, Refusal } from '../design';
 import { BackgroundStep, RaceStep } from './CharacterSteps';
 import { PickStep } from './PickStep';
 import { ChoiceList, currentFirst, judge, type ChoiceRow, type ClosedToggle } from './ChoiceList';
-import { flatName, shownArchetypes } from './flat-choices';
+import { joinedName, shownArchetypes } from './flat-choices';
 import { judgeClasses, type ClassJudged, type EditOutcome, type NonEmpty } from './planner-state';
 import type { Planner } from './state';
 import type { TrailAction, TrailState, TrailView } from './trail-state';
@@ -25,6 +25,7 @@ import {
   sameRanks,
   skillBudget,
 } from './trail-state';
+import { keepFocus } from './focus-return';
 import type { Selection } from './workspace-state';
 import { bareNameOf } from './words';
 
@@ -206,7 +207,11 @@ export function SkillsStep(props: LevelStepProps) {
                 class="trail-stepper"
                 aria-label={`Fewer ${statName(skill)} ranks`}
                 disabled={(ranks()[skill] ?? 0) === 0}
-                onClick={() => set(skill, -1)}
+                onClick={(e) => {
+                  const fewer = e.currentTarget;
+                  set(skill, -1);
+                  keepFocus(fewer, () => fewer.parentElement?.querySelector<HTMLElement>('button:not(:disabled)'));
+                }}
               >
                 −
               </button>
@@ -216,7 +221,11 @@ export function SkillsStep(props: LevelStepProps) {
                 class="trail-stepper"
                 aria-label={`More ${statName(skill)} ranks`}
                 disabled={!raisable(skill)}
-                onClick={() => set(skill, 1)}
+                onClick={(e) => {
+                  const more = e.currentTarget;
+                  set(skill, 1);
+                  keepFocus(more, () => more.parentElement?.querySelector<HTMLElement>('button:not(:disabled)'));
+                }}
               >
                 +
               </button>
@@ -266,7 +275,7 @@ function ClassList(props: TrailStepProps) {
           plain,
           ...[...(judged.archetypes?.keys() ?? shownArchetypes(data, c.guid))].map((a) => {
             const own = judged.archetypes?.get(a);
-            const flat = flatName(name, own?.label ?? bareNameOf(data, a));
+            const flat = joinedName(name, own?.label ?? bareNameOf(data, a));
             return {
               key: `${c.guid} ${a}`,
               name: flat,

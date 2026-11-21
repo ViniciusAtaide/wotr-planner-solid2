@@ -28,13 +28,23 @@ export interface FlatChoice {
   readonly reasons: readonly string[];
 }
 
-export function flatName(group: string, variation: string | undefined): string {
-  if (variation === undefined || variation === group) return group;
+function variationPart(group: string, variation: string | undefined): string | undefined {
+  if (variation === undefined || variation === group) return undefined;
   const rest = variation.startsWith(`${group} `)
     ? variation.slice(group.length).replace(/^\s*[—–-]?\s*/, '')
     : variation;
   const inner = /^\((.*)\)$/.exec(rest)?.[1] ?? rest;
-  return inner === '' ? group : `${group} (${inner})`;
+  return inner === '' ? undefined : inner;
+}
+
+export function flatName(group: string, variation: string | undefined): string {
+  const part = variationPart(group, variation);
+  return part === undefined ? group : `${group} (${part})`;
+}
+
+export function joinedName(group: string, variation: string | undefined): string {
+  const part = variationPart(group, variation);
+  return part === undefined ? group : `${group} · ${part}`;
 }
 
 function optionLabel(engine: Engine, o: OptionStatus): string {
@@ -85,7 +95,7 @@ export function raceLabel(engine: Engine, build: Build, w: Walk): string | undef
   if (build.race === undefined) return undefined;
   const slot = heritageSlot(engine, build, w);
   const pick = slot && pickAt(build, slot.id);
-  return flatName(bareNameOf(engine.data, build.race), pick && shownName(engine.data, pick.feature, pick.param));
+  return joinedName(bareNameOf(engine.data, build.race), pick && shownName(engine.data, pick.feature, pick.param));
 }
 
 function raceWords(engine: Engine, closed: RaceOption['closed']): readonly string[] {
@@ -124,7 +134,7 @@ export function raceChoices(engine: Engine, build: Build, w: Walk): FlatChoice[]
       .filter((o) => o.shown)
       .map((o) => ({
         key: `${r.race} ${o.feature}`,
-        name: flatName(raceName, optionLabel(engine, o)),
+        name: joinedName(raceName, optionLabel(engine, o)),
         edits: after(clearing(heritage.slot.id), [raceEdit, pickEdit(heritage.slot.id, o)]),
         current: build.race === r.race && wasPick?.feature === o.feature,
         ...inherit(race, closedWords(engine, undefined, o)),

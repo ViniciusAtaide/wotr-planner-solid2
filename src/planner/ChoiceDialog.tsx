@@ -4,6 +4,32 @@ import { createSignal, For, onSettled, Show } from 'solid-js';
 const FINE_POINTER = '(pointer: fine)';
 const HASH_WATCH_MS = 250;
 
+let holders = 0;
+
+function ownsEntry(): boolean {
+  return (history.state as { choiceDialog?: boolean } | null)?.choiceDialog === true;
+}
+
+function holdEntry(): void {
+  holders += 1;
+  if (!ownsEntry()) history.pushState({ choiceDialog: true }, '');
+}
+
+function releaseEntry(popped: boolean): void {
+  holders = Math.max(0, holders - 1);
+  if (popped) return;
+  setTimeout(() => {
+    if (holders > 0 || !ownsEntry()) return;
+    const keep = location.hash;
+    const restore = () => {
+      window.removeEventListener('popstate', restore);
+      if (location.hash !== keep) history.replaceState(null, '', keep === '' ? location.pathname : keep);
+    };
+    window.addEventListener('popstate', restore);
+    history.back();
+  }, 0);
+}
+
 export interface OptionDetail {
   readonly name: string;
   readonly closed: boolean;
@@ -42,7 +68,7 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
     const opener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const root = document.documentElement;
     root.classList.add('choice-open');
-    history.pushState({ choiceDialog: true }, '');
+    holdEntry();
     let latest = location.hash;
     let popped = false;
     const watch = setInterval(() => {
@@ -62,15 +88,7 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
       clearInterval(watch);
       window.removeEventListener('popstate', onPop);
       root.classList.remove('choice-open');
-      if (!popped && (history.state as { choiceDialog?: boolean } | null)?.choiceDialog === true) {
-        const keep = location.hash;
-        const restore = () => {
-          window.removeEventListener('popstate', restore);
-          if (location.hash !== keep) history.replaceState(null, '', keep === '' ? location.pathname : keep);
-        };
-        window.addEventListener('popstate', restore);
-        history.back();
-      }
+      releaseEntry(popped);
       const back = opener?.isConnected === true && opener !== document.body ? opener : props.returnTo?.();
       back?.focus({ preventScroll: true });
     };

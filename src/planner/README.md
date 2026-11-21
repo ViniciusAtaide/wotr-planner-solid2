@@ -96,9 +96,14 @@ written under try/catch; the page works without storage).
   for the option under the pointer or focus (`detailOf`), full screen without it under 600 px; a header naming the
   step, the scores the step reads, and "← Back". Focus moves into it (the filter under a fine pointer, else the first
   option) and back to the opener, or to the step's button when the opener is gone; the page behind doesn't scroll
-  (`choice-open` on the root). Escape or Back closes it without picking. It pushes a history entry, so a phone's back
-  closes it; the newest `#b=` is put back on the way out, so the planner never reopens an older Build. A pick applies,
-  closes it and the trail moves on; a Cascade preview closes it instead of stacking on it; Undo works while it is open.
+  (`choice-open` on the root). Escape or Back closes it without picking. Open dialogs share one history entry
+  (`holdEntry`, `releaseEntry`), so a phone's back closes it, and a dialog that closes as the next one opens no longer
+  pops the newcomer's entry; the entry goes only once no dialog holds it, and the newest `#b=` is put back on the way
+  out, so the planner never reopens an older Build. A pick applies, closes it and the trail moves on; Undo works while
+  it is open. Whether it is open is the trail's state, not the dialog's (`TrailState.dialog`, the step key it shows,
+  QA pass 3): arriving at a list step or "Open the list" sets it, Back, Escape or the back button clears it. A Cascade
+  preview hides it without clearing it, so it is back after Cancel, and a chip of the step whose dialog was closed
+  opens it again in one click instead of leaving the step.
   Inside it the list is capped at 60vh (`--choice-list-max: 60vh`), so it windows like the inline list.
 
 **Capped lists, closed choices hidden** (user, 2026-11-21): every choice list (a slot's pick list, the race,
@@ -138,17 +143,17 @@ Enter, a click) opens a parent, Left closes it and returns to it from a sub-opti
 parents and the open sub-options in order. The filter matches a parent by its name or its values' names; Enter on a
 marked parent opens it.
 
-**Flat lists** (user, 2026-11-21): a choice that opens a second choice is listed as one row per pair, the second in
-parentheses, so typing in the filter finds either name, and a row takes both as one change (one Undo entry). Each
+**Flat lists** (user, 2026-11-21): a choice that opens a second choice is listed as one row per pair, so typing in the filter finds either name, and a row takes both as one change (one Undo entry). Each
 name is S's bare name, and a variation never repeats its group: "Aasimar" and "Scholar (Nature)", not "Aasimar (Aasimar
 (Heritage))" or "Scholar (Scholar — Nature)" (`flatName`). The group "None" (no background) is not listed:
 
-- the race with its heritage, "Tiefling (Beastbrood (Rakshasa-Spawn))", or the race alone when it opens none (a
+- the race with its heritage after a dot, "Tiefling · Beastbrood (Rakshasa-Spawn)" (`joinedName`; QA pass 3 found
+  the nested parentheses of the first form, "Tiefling (Beastbrood (Rakshasa-Spawn))", hard to read), or the race alone when it opens none (a
   Human's bonus feat stays a pick of its own). The heritage is the race's own selection in the game's Racial feature
   group. A row works before level 1: the heritage pick waits in the Build for the slot level 1 opens. Changing the
   race clears the old heritage first, so the old pick never lingers;
-- the background group with its variation, "Noble (Courtier)", or the group alone;
-- the class with its archetype, "Fighter (Two-Handed Fighter)", in the class list for a class the Build hasn't taken
+- the background group with its variation in parentheses, "Noble (Courtier)" (`flatName`), or the group alone;
+- the class with its archetype after a dot, "Fighter · Two-Handed Fighter" (`joinedName`), in the class list for a class the Build hasn't taken
   (an archetype belongs to a class's first level).
 
 The race chip and the background chip name the pair; the heritage and the variation have no chip of their own. Each
@@ -397,7 +402,14 @@ dimmed and inert behind "Edit the Second Build".
   `prefers-reduced-motion: no-preference`.
 - Focus:
   - the Cascade preview opens on Cancel, the least destructive action;
-  - when it closes, focus goes back to the last element focused outside any dialog (`focusin` tracking in `Planner.tsx`);
+  - when it closes, focus goes back to the last element focused outside any dialog (`focusin` tracking in `Planner.tsx`),
+    or, when that element is gone, to the nearest stable control (`keepFocus`, `stableControl` in `focus-return.ts`:
+    the targeted chip, the step's filter or first control, the ⋯ button);
+  - the same holds wherever a control that had focus goes away (QA pass 3): Escape on the ⋯ menu returns to its
+    button, Dismiss on a notice to the nearest stable control, and a skill stepper that turns disabled ("Fewer" at no
+    ranks, "More" at the cap) hands focus to the skill's other stepper;
+  - in a pick list the filter's Up and Down mark parents and the open values of an expanded parent alike (`nextMark`
+    skips closed values), so Enter from the filter opens a parent and, after Down, takes one of its values;
   - a list's filter takes focus only under a fine pointer, without scrolling, so the step's own scroll into view wins;
   - "Clear this pick" sits after the options, so Tab from the filter reaches an option first.
 - Before level 1 the tiles show the point buy only. The walk applies race and its +2 at level 1, as the game's

@@ -12,6 +12,7 @@ import {
   backgroundChoices,
   backgroundLabel,
   flatName,
+  joinedName,
   raceChoices,
   raceLabel,
   shownArchetypes,
@@ -53,6 +54,9 @@ describe('flat names', () => {
     expect(flatName('Aasimar', 'Aasimar')).toBe('Aasimar');
     expect(flatName('Aasimar', 'Aasimar (Heritage)')).toBe('Aasimar (Heritage)');
     expect(flatName('Scholar', 'Scholar — Nature')).toBe('Scholar (Nature)');
+    expect(joinedName('Aasimar', 'Aasimar (Angelkin (Angel-Blooded))')).toBe('Aasimar · Angelkin (Angel-Blooded)');
+    expect(joinedName('Alchemist', 'Chirurgeon')).toBe('Alchemist · Chirurgeon');
+    expect(joinedName('Human', undefined)).toBe('Human');
   });
 
   test('earlier edits go first', () => {
@@ -70,8 +74,8 @@ describe('races with their heritages', () => {
   test('each race is listed with each heritage, and a race without one on its own', () => {
     const choices = raceChoices(e, fresh, walked(fresh));
     const names = choices.map((c) => c.name);
-    expect(names).toContain('Tiefling (Beastbrood (Rakshasa-Spawn))');
-    expect(names).toContain('Dwarf (Barrow Dwarf)');
+    expect(names).toContain('Tiefling · Beastbrood (Rakshasa-Spawn)');
+    expect(names).toContain('Dwarf · Barrow Dwarf');
     expect(names).toContain('Human');
     expect(names.filter((n) => n.startsWith('Human'))).toEqual(['Human']);
     expect(names).toContain('Aasimar');
@@ -80,14 +84,14 @@ describe('races with their heritages', () => {
   });
 
   test('one row sets the race and its heritage before level 1, and the heritage holds at level 1', () => {
-    const row = named(raceChoices(e, fresh, walked(fresh)), 'Tiefling (Beastbrood (Rakshasa-Spawn))');
+    const row = named(raceChoices(e, fresh, walked(fresh)), 'Tiefling · Beastbrood (Rakshasa-Spawn)');
     const raced = taken(fresh, row);
     expect(raced.race).toBe(TIEFLING);
-    expect(raceLabel(e, raced, walked(raced))).toBe('Tiefling (Beastbrood (Rakshasa-Spawn))');
+    expect(raceLabel(e, raced, walked(raced))).toBe('Tiefling · Beastbrood (Rakshasa-Spawn)');
     const levelled = allows(e.data, raced, { kind: 'addLevel', class: FIGHTER }, e.G);
     expect(levelled.ok).toBe(true);
     if (!levelled.ok) return;
-    expect(raceLabel(e, levelled.build, walked(levelled.build))).toBe('Tiefling (Beastbrood (Rakshasa-Spawn))');
+    expect(raceLabel(e, levelled.build, walked(levelled.build))).toBe('Tiefling · Beastbrood (Rakshasa-Spawn)');
     expect(walked(levelled.build).slots.filter((s) => s.source.kind === 'race' && s.pick === undefined)).toEqual([]);
     expect(named(raceChoices(e, levelled.build, walked(levelled.build)), row.name).current).toBe(true);
   });
@@ -96,7 +100,7 @@ describe('races with their heritages', () => {
     const fresh1: Build = { scores: SCORES, levels: [{ class: FIGHTER }], picks: [] };
     const tiefling = taken(
       fresh1,
-      named(raceChoices(e, fresh1, walked(fresh1)), 'Tiefling (Beastbrood (Rakshasa-Spawn))'),
+      named(raceChoices(e, fresh1, walked(fresh1)), 'Tiefling · Beastbrood (Rakshasa-Spawn)'),
     );
     const human = named(raceChoices(e, tiefling, walked(tiefling)), 'Human');
     expect(human.note).toBeUndefined();
@@ -142,15 +146,15 @@ describe('backgrounds with their variations', () => {
 describe('the character’s picks line', () => {
   test('names the race and the background as their flat pairs (QA pass 2)', () => {
     const fresh: Build = { scores: SCORES, levels: [{ class: FIGHTER }], picks: [] };
-    const raced = taken(fresh, named(raceChoices(e, fresh, walked(fresh)), 'Tiefling (Beastbrood (Rakshasa-Spawn))'));
+    const raced = taken(fresh, named(raceChoices(e, fresh, walked(fresh)), 'Tiefling · Beastbrood (Rakshasa-Spawn)'));
     const base = backgroundSlot({ data: e.data, build: raced, walk: walked(raced) });
     if (base === undefined) throw new Error('no background slot');
     const done = taken(raced, named(backgroundChoices(e, raced, walked(raced), base.id), 'Scholar (Nature)'));
     const line = characterPicksLine({ data: e.data, build: done, walk: walked(done) });
-    expect(line.startsWith('Tiefling (Beastbrood (Rakshasa-Spawn)) · ')).toBe(true);
+    expect(line.startsWith('Tiefling · Beastbrood (Rakshasa-Spawn) · ')).toBe(true);
     expect(line).toContain('Scholar (Nature)');
     expect(line).not.toContain('Scholar — Nature');
-    expect(line).not.toContain('· Beastbrood');
+    expect(line.split('Beastbrood')).toHaveLength(2);
   });
 });
 

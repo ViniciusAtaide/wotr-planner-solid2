@@ -1,5 +1,5 @@
 import type { JSX } from '@solidjs/web';
-import { createEffect, createMemo, createSignal, For, Match, onSettled, Show, Switch, useContext } from 'solid-js';
+import { createMemo, For, Match, onSettled, Show, Switch, useContext } from 'solid-js';
 import { slotKey, type Place } from '~engine/build';
 import { isShown, refGuid, type Attribute } from '~engine/data';
 import type { Edit } from '~engine/edits';
@@ -84,21 +84,18 @@ export interface HereProps {
   readonly mode?: ListMode;
   readonly line?: string;
   readonly confirming?: boolean;
+  readonly dialogOpen?: boolean;
+  readonly onDialog?: (open: boolean) => void;
   readonly children: JSX.Element;
 }
 
 export function Here(props: HereProps) {
   let el: HTMLDivElement | undefined;
   const arrived = useContext(StepArrived);
-  const [dialog, setDialog] = createSignal(false);
   let expand: HTMLButtonElement | undefined;
   const modal = () => props.list === true && props.mode === 'modal';
-  createEffect(
-    () => props.confirming === true,
-    (confirming) => {
-      if (confirming) setDialog(false);
-    },
-  );
+  const setDialog = (open: boolean) => props.onDialog?.(open);
+  const dialog = () => props.dialogOpen === true;
   onSettled(() => {
     if (!arrived()) return;
     if (modal()) setDialog(true);
@@ -205,6 +202,7 @@ export default function Trail(props: TrailProps) {
     equals: (a, b) => JSON.stringify(a) === JSON.stringify(b),
   });
   const editing = () => props.selection !== undefined;
+  const reopens = () => props.listMode === 'modal' && isListStep(step()) && props.state.dialog !== stepKey(step());
   const isTarget = (s: Selection) => {
     const now = step();
     return now.kind !== 'mythic' && now.kind !== 'nextLevel' && now.kind !== 'complete' && sameSelection(now, s);
@@ -221,6 +219,8 @@ export default function Trail(props: TrailProps) {
           mode={props.listMode ?? 'inline'}
           line={scoresLine()}
           confirming={props.planner.session().kind === 'confirming'}
+          dialogOpen={props.state.dialog === key}
+          onDialog={(open) => props.send({ kind: 'dialog', step: open ? key : undefined })}
         >
           <StepBody trail={api} step={step()} {...(props.diff && { diff: props.diff })} />
         </Here>
@@ -248,7 +248,10 @@ export default function Trail(props: TrailProps) {
       type="button"
       class={['trail-chip', { 'trail-chip--empty': value === undefined, 'trail-chip--target': isTarget(target) }]}
       aria-pressed={isTarget(target) ? 'true' : 'false'}
-      onClick={() => props.select(isTarget(target) && editing() ? undefined : target)}
+      onClick={() => {
+        if (isTarget(target) && reopens()) props.send({ kind: 'dialog', step: stepKey(step()) });
+        else props.select(isTarget(target) && editing() ? undefined : target);
+      }}
     >
       <small>{label}</small>
       <span>

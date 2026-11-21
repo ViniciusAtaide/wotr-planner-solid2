@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { cleanup, fireEvent, render, screen, waitFor } from '@solidjs/testing-library';
+import { cleanup, fireEvent, render, screen, waitFor, within } from '@solidjs/testing-library';
 import { createSignal, flush } from 'solid-js';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 import { abilityScores, rankLevel, skillRanks, slotKey, type Build, type SlotId } from '~engine/build';
@@ -438,16 +438,16 @@ describe('the levelling trail (build ticket 07)', () => {
     filterAndTake('rakshasa');
     expect(hereTitle()).toBe('Begin · choose a first class');
     expect(document.querySelector('.planner-undo__what')?.textContent).toBe(
-      'Race Tiefling (Beastbrood (Rakshasa-Spawn))',
+      'Race Tiefling · Beastbrood (Rakshasa-Spawn)',
     );
-    expect(chipNamed('Race').textContent).toContain('Tiefling (Beastbrood (Rakshasa-Spawn))');
+    expect(chipNamed('Race').textContent).toContain('Tiefling · Beastbrood (Rakshasa-Spawn)');
   });
 
   test('the class list holds each class with its archetypes, and one row takes both as one change', async () => {
     await openPlanner({ scores: abilityScores(SCORES), race: DWARF, levels: [], picks: [] });
     filterAndTake('two-handed fighter');
     expect(levelRows()).toBe(1);
-    expect(document.querySelector('.planner-undo__what')?.textContent).toBe('Level 1 as Fighter (Two-Handed Fighter)');
+    expect(document.querySelector('.planner-undo__what')?.textContent).toBe('Level 1 as Fighter · Two-Handed Fighter');
     expect(chipNamed('Archetype').textContent).toContain('Two-Handed Fighter');
     tap('Undo');
     expect(levelRows()).toBe(0);
@@ -549,7 +549,7 @@ describe('the levelling trail (build ticket 07)', () => {
   test('from 900 px wide the character card keeps its controls after level 1', async () => {
     await openPlanner(withLevels(2));
     expect(button('Raise Strength')).toBeEnabled();
-    expect(chipNamed('Race').textContent).toContain('Dwarf (Basic)');
+    expect(chipNamed('Race').textContent).toContain('Dwarf · Basic');
     expect(button('Lawful Good')).toBeTruthy();
     expect(document.querySelector('[aria-label="The character"] button.trail-card__head')).toBeNull();
   });
@@ -701,6 +701,8 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     expect(hereTitle()).toBe('Level 1 · choose feat');
     tap(/^Cancel/);
     expect(hereTitle()).toBe('Level 1 · choose feat');
+    await waitFor(() => expect(document.activeElement).not.toBe(document.body));
+    expect(document.activeElement?.closest('[role="dialog"]')).toBeNull();
   });
 
   test('Tab stays inside the Cascade preview, and the page behind it is inert', async () => {
@@ -849,12 +851,12 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     await openPlanner(cleaver);
     fireEvent.click(chipNamed('Race'));
     flush();
-    expect(button(/^Dwarf \(Basic\)/)).toHaveAttribute('aria-current', 'true');
-    tap(/^Elf \(Basic\)/);
+    expect(button(/^Dwarf · Basic/)).toHaveAttribute('aria-current', 'true');
+    tap(/^Elf · Basic/);
     fireEvent.click(chipNamed('Race'));
     flush();
-    expect(button(/^Elf \(Basic\)/)).toHaveAttribute('aria-current', 'true');
-    expect(button(/^Dwarf \(Basic\)/)).not.toHaveAttribute('aria-current');
+    expect(button(/^Elf · Basic/)).toHaveAttribute('aria-current', 'true');
+    expect(button(/^Dwarf · Basic/)).not.toHaveAttribute('aria-current');
   });
 
   test('before level 1 the stats say they are the point buy only (comparison bug 4)', async () => {
@@ -919,6 +921,34 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     for (let i = 0; i < 5; i++) tap('Raise Strength');
     for (let i = 0; i < 6; i++) tap('Raise Dexterity');
     await waitFor(() => expect(document.querySelector('.planner-notices [role="alert"]')).not.toBeNull());
+  });
+
+  test('Dismiss on a refusal leaves focus on a control, not the page (QA pass 3)', async () => {
+    await openPlanner(cleaver);
+    openCharacter();
+    for (let i = 0; i < 5; i++) tap('Raise Strength');
+    for (let i = 0; i < 6; i++) tap('Raise Dexterity');
+    await waitFor(() => expect(document.querySelector('.planner-notices [role="alert"]')).not.toBeNull());
+    const dismiss = within(document.querySelector<HTMLElement>('.planner-notices') ?? document.body).getByRole(
+      'button',
+      { name: 'Dismiss' },
+    );
+    dismiss.focus();
+    fireEvent.click(dismiss);
+    flush();
+    await waitFor(() => expect(document.querySelector('.planner-notices [role="alert"]')).toBeNull());
+    await waitFor(() => expect(document.activeElement).not.toBe(document.body));
+    expect(document.activeElement?.isConnected).toBe(true);
+  });
+
+  test('Escape on the open menu returns focus to its button (QA pass 3)', async () => {
+    await openPlanner(cleaver);
+    openMenu();
+    screen.getAllByRole('menuitem')[0]?.focus();
+    fireEvent.keyDown(document.activeElement ?? document, { key: 'Escape' });
+    flush();
+    expect(screen.queryByRole('menu')).toBeNull();
+    await waitFor(() => expect(document.activeElement).toBe(button('Build menu')));
   });
 
   test('the Skills chip says what the level holds (audit)', () => {
@@ -1034,6 +1064,25 @@ describe('QA pass 1', () => {
     expect(button(/^More Mobility/)).toBeEnabled();
   });
 
+  test('taking a skill’s last rank moves focus to its other stepper, not the page (QA pass 3)', async () => {
+    const planner = createPlanner(e, {
+      ...withLevels(1),
+      levels: [{ class: fighter, skills: skillRanks({ SkillAthletics: 1 }) }],
+    });
+    render(() => <SkillsStep trail={apiOf(planner)} level={1} />);
+    flush();
+    const fewer = await waitFor(() => {
+      const b = button(/^Fewer Athletics/);
+      expect(b).toBeEnabled();
+      return b;
+    });
+    fewer.focus();
+    fireEvent.click(fewer);
+    flush();
+    await waitFor(() => expect(button(/^Fewer Athletics/)).toBeDisabled());
+    await waitFor(() => expect(document.activeElement).toBe(button(/^More Athletics/)));
+  });
+
   test('in the filter, Up and Down move the marked row Enter takes; on the rows, they move focus as J and K do', () => {
     const taken: string[] = [];
     const rows = Array.from({ length: 14 }, (_, i) => ({
@@ -1066,8 +1115,8 @@ describe('QA pass 1', () => {
 
   test('the filter matches each typed word, and says when nothing matches', () => {
     const rows = [
-      'Tiefling (Beastbrood (Rakshasa-Spawn))',
-      'Tiefling (Pitborn (Demon-Spawn))',
+      'Tiefling · Beastbrood (Rakshasa-Spawn)',
+      'Tiefling · Pitborn (Demon-Spawn)',
       ...Array.from({ length: 12 }, (_, i) => `Elf ${i}`),
     ].map((name, i) => ({ key: `r${i}`, name, open: true, reasons: [], current: false, take: () => {} }));
     render(() => <ChoiceList label="Filter races" rows={rows} />);
@@ -1076,7 +1125,7 @@ describe('QA pass 1', () => {
     fireEvent.input(filter, { target: { value: 'tiefling rak' } });
     flush();
     expect([...document.querySelectorAll('.ww-option__name')].map((n) => n.textContent)).toEqual([
-      'Tiefling (Beastbrood (Rakshasa-Spawn))',
+      'Tiefling · Beastbrood (Rakshasa-Spawn)',
     ]);
     fireEvent.input(filter, { target: { value: 'gnoll' } });
     flush();
@@ -1399,6 +1448,27 @@ describe('nested sub-choices (ticket 08)', () => {
     expect(planner.build()).toEqual(fighter1);
   });
 
+  test('from the filter, Enter opens a parent, Down marks its first open value, and Enter takes it', () => {
+    const planner = featList();
+    const filter = document.querySelector<HTMLInputElement>('[data-picker-filter]') ?? document.body;
+    fireEvent.input(filter, { target: { value: 'weapon focus' } });
+    flush();
+    fireEvent.keyDown(filter, { key: 'Enter' });
+    flush();
+    expect(parent('Weapon Focus')).toHaveAttribute('aria-expanded', 'true');
+    fireEvent.keyDown(filter, { key: 'ArrowDown' });
+    flush();
+    const marked = document.querySelector('.ww-option--marked');
+    expect(marked?.closest('[data-child-of]')).not.toBeNull();
+    expect(marked?.classList.contains('ww-option--closed')).toBe(false);
+    const name = marked?.querySelector('.ww-option__name')?.textContent ?? '';
+    fireEvent.keyDown(filter, { key: 'Enter' });
+    flush();
+    const pick = planner.build().picks.find((p) => slotKey(p.slot) === slotKey(FEAT));
+    expect(pick?.param).toBeDefined();
+    expect(planner.change()).toContain(name);
+  });
+
   test('Right opens a parent, Down reaches its values, Left closes it and returns to the parent', () => {
     featList();
     const wf = parent('Weapon Focus');
@@ -1483,6 +1553,46 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
     tap('Lower Strength');
     await waitFor(() => expect(dialog()).not.toBeNull());
     expect(dialogBox()).toBeNull();
+  });
+
+  test('after a Cascade Cancel the dialog is back, with no second click (QA pass 3)', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    tap('Open the list');
+    tap('Lower Strength');
+    await waitFor(() => expect(dialog()).not.toBeNull());
+    expect(dialogBox()).toBeNull();
+    tap(/^Cancel/);
+    await waitFor(() => expect(dialogBox()).not.toBeNull());
+    expect(dialogTitle()).toBe(hereTitle());
+  });
+
+  test('one click on the chip of a step whose dialog was closed opens it again (QA pass 3)', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
+    await waitFor(() => expect(dialogBox()).not.toBeNull());
+    fireEvent.keyDown(dialogBox() ?? document.body, { key: 'Escape' });
+    flush();
+    expect(dialogBox()).toBeNull();
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
+    expect(dialogBox()).not.toBeNull();
+    expect(dialogTitle()).toBe('Level 1 · choose feat');
+  });
+
+  test('a pick in the dialog leaves the next step’s dialog open once the old one’s history entry settles (ticket 10)', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    tap('Open the list');
+    const first = hereTitle();
+    pickFirstIn(dialogBox() ?? document);
+    await waitFor(() => expect(hereTitle()).not.toBe(first));
+    await new Promise((r) => setTimeout(r, 30));
+    flush();
+    expect(dialogBox()).not.toBeNull();
+    expect(dialogTitle()).toBe(hereTitle());
   });
 
   test('"Show N closed" works inside the dialog', async () => {
