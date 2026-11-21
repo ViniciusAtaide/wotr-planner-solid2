@@ -44,23 +44,33 @@ to the player in the planner's own words: "Level 5 · choose feat", "Your charac
 5. the last level's skills, until the walk's budget for that level is spent or the player chooses "Done · leave N
    unspent";
 6. a Mythic rank whose Expected level (ADR 0003) the Build has reached, offered as the Mythic paths with their status,
-   the current path first (before any rank, the game's starting Mythic class, S's `mythicStartingClass`);
-   "Not now" puts it off until the next level;
+   the current path first and marked (before any rank, the game's starting Mythic class, S's `mythicStartingClass`,
+   comes first but unmarked, since nothing is current yet); "Not now" puts it off until the next level. No rank is
+   offered once the walk says the ranks have ended (`Walk.ranksEnded`, Legend at rank 8);
 7. the next level: "Continue as <previous class> → level N" in one tap, or "Another class…", which lists every class
    (and each archetype of a class the Build hasn't taken, below) with its status, the previous class first, then the
-   open ones, then the closed ones with their reasons.
+   open ones, then the closed ones with their reasons. At the level cap (`Walk.maxCharacterLevel`, `atLevelCap`) no
+   next level is offered: a due Mythic rank still is, even after "Not now" (which the cap hides), and otherwise the
+   trail ends on "Level N · the Build is complete" (`complete`).
 
 Each pick goes back to the next step. Tapping any chip (or a stop's title, for its class, archetype and removal, or a
 rank's, for its path and Rank level) opens that choice in place with "Back to the next choice"; the ability scores,
 the skills, a rank and Gear stay open through their edits, everything else returns to the next step once it applies. An edit that breaks later
-picks goes through the Cascade preview as before; once confirmed, the page lands on the first pick it cleared.
+picks goes through the Cascade preview as before, which lists what E clears: the picks, the levels whose skill ranks
+go (`clearedSkills`) and the Mythic ranks that go (`clearedRanks`), worded together (`clearsSummary`, `clearsList`);
+once confirmed, the page lands on the first pick it cleared.
 
 **Icons**: a feat's chip and its row in a pick list carry its category's icon (`feat-category.ts`).
 
 **Lists**: a pick list is open, sorted by name, with a filter above it that takes focus only under a fine pointer (so a
 phone keeps its keyboard down); Enter takes the first open row; the current pick is marked; closed rows show R's
 reasons; an open row carries no badge, since a row you can tap is open. A small set (+2, the six ability increases,
-the last one marked "as before") is a row of buttons. A class or path list gets the filter from 13 rows up.
+the last one marked "as before") is a row of buttons. A class or path list gets the filter from 13 rows up. Up and
+Down move through the options as J and K do, and Down leaves the filter for the first option. "Show all closed"
+reveals the rest a step at a time (`createReveal`, `REVEAL_STEP` rows a frame), so the first rows show at once.
+
+**Focus**: when a new step arrives and focus was lost with the old one (on the page body), it lands on the step's
+first control: the filter under a fine pointer, else its first button, never "Back to the next choice".
 
 **Flat lists** (user, 2026-11-21): a choice that opens a second choice is listed as one row per pair, the second in
 parentheses, so typing in the filter finds either name, and a row takes both as one change (one Undo entry):
@@ -78,20 +88,28 @@ every pair would cost a walk each (three seconds for the class list on a level-1
 status (the race's or class's judged edit, the heritage's or variation's own status in its slot), and the edits are
 checked as a whole when the row is taken: they apply, wait on the Cascade preview, or are refused.
 
-**Skills**: a budget line ("3 of 4 skill points spent") on the last level, "Same as level N−1", and − and + steppers.
+**Skills**: a budget line ("3 of 4 skill points spent") on the last level, "Same as level N−1" (only when it would
+change the level, `sameRanks`), and − and + steppers; a + is disabled when the walk refuses that rank (`allows` on the
+open step's level only: the rank cap or no points left), as the score steppers stop at their bounds.
 A past level shows its ranks without a budget. The budget is the walk's (`Walk.skillPoints`), never the page's.
 
 **Undo**: one line at the bottom naming the last change ("Picked Acid Bomb · Undo"; "Opened a link" after a pasted
 link), offered while there is history, plus ⌘Z and ⇧⌘Z. After an undo it names the change now on top. There are no Undo and Redo buttons.
+An edit that changes nothing (`sameBuild`) adds no history entry. The bar is opaque, so chips never show through.
+
+**Gear marks** (ADR 0002): a pick the walk marks as taken through Gear (`Walk.gearDependent`, `gearDependentSlots`)
+carries ◈ on its chip and "(Gear)" after its name in the folded rows and Export; Export's score line says "(Gear
+counted)" when the Build counts Gear, so it reads as the card does.
 
 **Folding, phones only (under 900 px)**: once level 1 is done (every choice made, `levelOneDone`) the character card
 shrinks to one line (race, alignment, +2 and the character's picks) until tapped; before that it is open with its
 controls. Levels group into chapters of four, ending on the milestones; a finished
-chapter before the current step folds into one row (its classes, Mythic ranks and picks), which a tap opens and "Fold
+chapter before the current step folds into one row (its classes, counted as "Alchemist ×4" so the count never reads as a class level, Mythic ranks and picks), which a tap opens and "Fold
 levels N–M" closes. Taking the next level folds them all again. The chapter holding the current step never folds. From
 900 px wide nothing folds: the card keeps its race, alignment and score controls, and the trail is a centred column.
 
-**The menu (⋯)**: Copy link, Fork this Build, and Export as text (a plain build sheet copied to the clipboard). The
+**The menu (⋯)**: Copy link, Fork this Build, and Export as text (a plain build sheet copied to the clipboard). A copy
+closes the menu and says so beside it for a moment; a refused copy keeps the menu open with the reason. The
 address bar keeps the Build in `#b=`, so a reload opens it again. When forked, the compare toggle and "Close the fork…"
 sit beside the menu; a phone shows one trail with the toggle, a desktop two side by side, the one not being edited
 dimmed and inert behind "Edit the Second Build".
@@ -120,6 +138,7 @@ dimmed and inert behind "Edit the Second Build".
     choice with R's reason (`brokenWords`). From `refused` the result replaces the refusal; while `confirming` it does
     nothing, since the background is inert. `outcomeOf` reads the result as an `EditOutcome`: `applied`, `confirming`
     or `refused`.
+  - An edit whose result is the same Build (`sameBuild`) adds no history entry and leaves `idle`.
   - `edits` is the same for several edits as one change, one history entry under one title: `verdictOfAll` folds
     `verdictOf` over them, adding up what each clears, and stops at the first that breaks. `judgeAll` words that
     verdict for a list row (open, open with "Clears N later picks", or closed with `brokenWords`).
@@ -221,12 +240,15 @@ dimmed and inert behind "Edit the Second Build".
   pick" after the options. `IncreaseStep`, `SkillsStep`, `NextLevelStep` (with the lazy `ClassList`), `MythicStep`,
   `LevelEditor` (class, archetype, Remove level on the last) and `RankEditor` (Rank level stepper with the Expected
   level as a hint, path, Remove rank on the last).
-- **`ChoiceList.tsx`**: the class, path and archetype lists. `judge` gives a row's status from E: open when `allows`
-  passes, open with "Clears N later picks" when only a `cascade` mends it, else closed with `brokenWords`.
+- **`ChoiceList.tsx`**: the class, path and archetype lists. A class or path list takes each row's status from S's
+  `classPicker`, one paused walk for the whole list (`judgeClasses` in `planner-state.ts`): open, or closed with R's
+  reasons. What a taken row would break is found only when it is taken (the Cascade preview or a refusal). Other rows
+  use `judge`: open when `allows` passes, open with "Clears N later picks" when only a `cascade` mends it, else closed
+  with `brokenWords`.
   `currentFirst` sorts the current one first, then open, then by name. `Filter` is the list filter (`focusFilter`
   focuses it only under a fine pointer); `FILTER_FROM` is the row count from which a list gets one.
 - **`GearStep.tsx`**: the Gear (GLOSSARY.md) in place (`GearStep`), `PLACES` (the Gear places in the walk's order),
-  `placeWords` (a place's name in words, "Left Hand"), and `wornLine` (what the Gear card's line lists: each worn
+  `placeWords` (a place's name in words, "Left Hand", "Ring 1"), and `wornLine` (what the Gear card's line lists: each worn
   item's game name, or "Nothing worn"). In place: ADR 0002's opt-in, the places as a grid of chips with what each
   wears, and the chosen place's items as an open list (the first `ITEMS_SHOWN`, filtered by name), from the walk's
   `PLACE_ITEM_TYPES` (`~engine/walk`, where its citation lives) with a twin group shown by the one offered in its place
@@ -253,8 +275,9 @@ dimmed and inert behind "Edit the Second Build".
     written (`replaceState`) only when it is `current`, which also covers a side switch; on `failed` it keeps the last
     good code.
   - A pasted hash (`hashchange`) equal to the current `linkCode` does nothing. Otherwise it is decoded behind a
-    `latest` token, so the last pasted link wins, and goes to `linkOpened` or to `linkFailed` on `paste`, which puts
-    the page's own hash back.
+    `latest` token, so the last pasted link wins, and goes to `linkOpened` or to `linkFailed` on `paste`.
+  - A link that doesn't open, on load or pasted, stays in the address bar with the notice saying why, until the Build
+    is edited (`brokenOver`): only then does the page write its own code again.
   - One window key handler switches on the edited planner's `Session`, `unreachable` as its default. While
     confirming, ⌘Z and Esc cancel and ⇧⌘Z and / do nothing; otherwise ⌘Z undoes, ⇧⌘Z redoes, / focuses the filter and
     Esc goes back to the next choice.
@@ -292,8 +315,9 @@ dimmed and inert behind "Edit the Second Build".
 - The Skills chip says what its level holds ("4 ranks"), and "2 of 4" while the last level's budget isn't spent.
 - A refusal names its place in words ("Level 2: …") and, through R's `refusalWords`, the unmet needs after the rule's
   sentence.
-- The class list costs a walk per class, so it is built only while "Another class…", the level editor or an empty
-  Build's first step shows it; otherwise only the previous class is judged, for its Continue button.
+- The class list is built only while "Another class…", the level editor or an empty Build's first step shows it;
+  otherwise only the previous class is judged, for its Continue button. One `classPicker` walk judges the list (46 ms
+  for a level editor on Jack in the Green, from about 0.9 s with an `allows` per class).
 - The runtime checks that stay: `resolve`, the constructors where values come in, the walk's rules across fields
   (point buy, an increase every 4th level, skill totals, the rank cap), the workspace's guard while confirming (backed
   by the inert background), the `latest` tokens, the `sameBuild` skip, `ShareCode`'s `failed`, and the second planner

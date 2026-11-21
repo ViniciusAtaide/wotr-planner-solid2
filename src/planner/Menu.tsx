@@ -13,6 +13,8 @@ export async function copyText(text: string): Promise<Copied> {
   }
 }
 
+const SAID_FOR_MS = 3000;
+
 const LINK_WORDS: Readonly<Record<Copied, string>> = {
   idle: 'Copy link',
   copied: 'Link copied.',
@@ -35,6 +37,14 @@ export function PlannerMenu(props: PlannerMenuProps) {
   const [open, setOpen] = createSignal(false);
   const [link, setLink] = createSignal<Copied>('idle');
   const [sheet, setSheet] = createSignal<Copied>('idle');
+  const [said, setSaid] = createSignal<string | undefined>(undefined);
+  const copied = (words: string) => {
+    setOpen(false);
+    setSaid(words);
+    setTimeout(() => {
+      if (said() === words) setSaid(undefined);
+    }, SAID_FOR_MS);
+  };
   let root: HTMLDivElement | undefined;
   createEffect(
     () => (props.link.state === 'ready' ? props.link.url : props.link.state),
@@ -81,11 +91,16 @@ export function PlannerMenu(props: PlannerMenuProps) {
         aria-expanded={open() ? 'true' : 'false'}
         onClick={() => {
           setSheet('idle');
+          setLink('idle');
+          setSaid(undefined);
           setOpen(!open());
         }}
       >
         ⋯
       </button>
+      <span class="planner-menu__said" role="status">
+        {said()}
+      </span>
       <Show when={open()}>
         <div class="planner-menu__list" role="menu" aria-label="Build">
           <button
@@ -93,7 +108,11 @@ export function PlannerMenu(props: PlannerMenuProps) {
             role="menuitem"
             disabled={props.link.state !== 'ready'}
             onClick={() => {
-              if (props.link.state === 'ready') void copyText(props.link.url).then(setLink);
+              if (props.link.state !== 'ready') return;
+              void copyText(props.link.url).then((c) => {
+                setLink(c);
+                if (c === 'copied') copied(LINK_WORDS.copied);
+              });
             }}
           >
             {linkLabel()}
@@ -110,7 +129,16 @@ export function PlannerMenu(props: PlannerMenuProps) {
               Fork this Build
             </button>
           </Show>
-          <button type="button" role="menuitem" onClick={() => void copyText(props.sheet()).then(setSheet)}>
+          <button
+            type="button"
+            role="menuitem"
+            onClick={() =>
+              void copyText(props.sheet()).then((c) => {
+                setSheet(c);
+                if (c === 'copied') copied(SHEET_WORDS.copied);
+              })
+            }
+          >
             {SHEET_WORDS[sheet()]}
           </button>
         </div>

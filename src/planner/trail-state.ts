@@ -1,4 +1,4 @@
-import { placeKey, slotKey, type Alignment, type Build, type Place, type SlotId } from '~engine/build';
+import { placeKey, slotKey, type Alignment, type Build, type Place, type SkillRanks, type SlotId } from '~engine/build';
 import type { CheckedData } from '~engine/load';
 import { expectedLevel } from '~engine/mcp';
 import { BACKGROUNDS_BASE_SELECTION, characterWideSlots } from '~engine/pickers';
@@ -14,7 +14,8 @@ export const CHAPTER_LEVELS = 4;
 export type Step =
   | Selection
   | { readonly kind: 'mythic'; readonly rank: number; readonly at: number }
-  | { readonly kind: 'nextLevel' };
+  | { readonly kind: 'nextLevel' }
+  | { readonly kind: 'complete' };
 
 export type Where =
   | { readonly kind: 'character' }
@@ -122,6 +123,13 @@ export interface SkillBudget {
   readonly available: number;
 }
 
+export function sameRanks(a: SkillRanks, b: SkillRanks): boolean {
+  const ranks = (r: SkillRanks): Record<string, number> => ({ ...r });
+  const x = ranks(a);
+  const y = ranks(b);
+  return [...new Set([...Object.keys(x), ...Object.keys(y)])].every((k) => (x[k] ?? 0) === (y[k] ?? 0));
+}
+
 export function skillsSpent(build: Build, level: number): number {
   return Object.values(build.levels[level - 1]?.skills ?? {}).reduce((n, r) => n + (r ?? 0), 0);
 }
@@ -151,9 +159,13 @@ export interface MythicDue {
   readonly at: number;
 }
 
+export function atLevelCap(t: TrailView): boolean {
+  return t.build.levels.length >= t.walk.maxCharacterLevel;
+}
+
 export function mythicDue(t: TrailView, later: number | undefined): MythicDue | undefined {
   const levels = t.build.levels.length;
-  if (later === levels) return undefined;
+  if (t.walk.ranksEnded || (later === levels && !atLevelCap(t))) return undefined;
   const rank = (t.build.ranks?.length ?? 0) + 1;
   const at = expectedLevel(t.data, rank);
   return at > 0 && at <= levels ? { rank, at } : undefined;
@@ -171,7 +183,7 @@ export function nextStep(t: TrailView, s: Pick<TrailState, 'skillsLeft' | 'mythi
   if (skills !== undefined) return { kind: 'skills', level: skills };
   const due = mythicDue(t, s.mythicLater);
   if (due !== undefined) return { kind: 'mythic', ...due };
-  return { kind: 'nextLevel' };
+  return atLevelCap(t) ? { kind: 'complete' } : { kind: 'nextLevel' };
 }
 
 export function whereOf(t: TrailView, step: Step): Where {
@@ -195,6 +207,7 @@ export function whereOf(t: TrailView, step: Step): Where {
       return { kind: 'character' };
     case 'mythic':
     case 'nextLevel':
+    case 'complete':
       return { kind: 'next' };
   }
 }
@@ -231,6 +244,8 @@ export function stepTitle(t: TrailView, step: Step): string {
       return 'Your character · choose a race';
     case 'mythic':
       return `Ascend to Mythic rank ${step.rank}`;
+    case 'complete':
+      return `Level ${t.build.levels.length} · the Build is complete`;
     case 'nextLevel':
       return t.build.levels.length === 0
         ? 'Begin · choose a first class'
@@ -282,7 +297,9 @@ export function folded(chapter: number, v: FoldView): boolean {
 
 export function levelOneDone(t: TrailView, next: Step): boolean {
   const levels = t.build.levels.length;
-  return levels > 1 || (levels === 1 && (next.kind === 'nextLevel' || next.kind === 'mythic'));
+  return (
+    levels > 1 || (levels === 1 && (next.kind === 'nextLevel' || next.kind === 'mythic' || next.kind === 'complete'))
+  );
 }
 
 export interface CardView {
@@ -322,12 +339,21 @@ export function characterLine(data: CheckedData, build: Build): string {
     .join(' · ');
 }
 
-function pickNames(data: CheckedData, slots: readonly OpenedSlot[]): string[] {
-  return slots.flatMap((s) => (s.pick === undefined ? [] : [optionName(data, s.pick.feature, s.pick.param)]));
+export function gearDependentSlots(t: TrailView): ReadonlySet<string> {
+  return new Set(t.walk.gearDependent.flatMap((g) => (g.slot === undefined ? [] : [slotKey(g.slot)])));
+}
+
+function pickNames(t: TrailView, slots: readonly OpenedSlot[]): string[] {
+  const gear = gearDependentSlots(t);
+  return slots.flatMap((s) =>
+    s.pick === undefined
+      ? []
+      : [`${optionName(t.data, s.pick.feature, s.pick.param)}${gear.has(slotKey(s.id)) ? ' (Gear)' : ''}`],
+  );
 }
 
 export function characterPicksLine(t: TrailView): string {
-  return pickNames(t.data, characterSlots(t)).join(' · ');
+  return pickNames(t, characterSlots(t)).join(' · ');
 }
 
 export function rankNumbersAt(build: Build, level: number): readonly number[] {
@@ -337,7 +363,7 @@ export function rankNumbersAt(build: Build, level: number): readonly number[] {
 
 export function levelLine(t: TrailView, level: number): string {
   const l = t.build.levels[level - 1];
-  return [...pickNames(t.data, slotsAt(t, { level })), l?.increase && `${l.increase} +1`]
+  return [...pickNames(t, slotsAt(t, { level })), l?.increase && `${l.increase} +1`]
     .filter((x) => typeof x === 'string')
     .join(' · ');
 }
@@ -360,12 +386,12 @@ export function chapterSummary(t: TrailView, chapter: number): ChapterSummary {
   }
   const ranks = levels.flatMap((l) => rankNumbersAt(t.build, l));
   return {
-    classes: [...counts].map(([name, n]) => `${name} ${n}`).join(' / '),
+    classes: [...counts].map(([name, n]) => `${name} ×${n}`).join(' / '),
     ranks: ranks.map((r) => `M${r}`).join(' '),
     picks: levels
       .flatMap((l) => [
         levelLine(t, l),
-        ...rankNumbersAt(t.build, l).map((r) => pickNames(t.data, slotsAt(t, { rank: r })).join(' · ')),
+        ...rankNumbersAt(t.build, l).map((r) => pickNames(t, slotsAt(t, { rank: r })).join(' · ')),
       ])
       .filter((x) => x !== '')
       .join(' · '),

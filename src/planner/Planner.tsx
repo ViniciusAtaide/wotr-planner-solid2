@@ -180,11 +180,14 @@ function Workspace(props: WorkspaceProps) {
   );
 
   let ownHash = props.initialLink.kind === 'ok' ? openedHash : '';
+  let brokenOver: Build | undefined = props.initialLink.kind === 'ok' ? undefined : props.initialBuild;
   createEffect(
-    () => linkCode(),
-    (c) => {
-      if (c.kind !== 'current') return;
-      ownHash = `#b=${c.code}`;
+    () => ({ code: linkCode(), build: active().build(), broken: workspace().link.kind === 'didNotOpen' }),
+    ({ code, build, broken }) => {
+      if (code.kind !== 'current') return;
+      if (broken && build === brokenOver) return;
+      brokenOver = undefined;
+      ownHash = `#b=${code.code}`;
       if (location.hash !== ownHash) history.replaceState(null, '', ownHash);
     },
   );
@@ -201,8 +204,8 @@ function Workspace(props: WorkspaceProps) {
         send({ kind: 'linkOpened', build: opened.build });
         return;
       }
+      brokenOver = active().latest().present;
       send({ kind: 'linkFailed', on: 'paste', reason: opened.reason });
-      history.replaceState(null, '', ownHash === '' ? `${location.pathname}${location.search}` : ownHash);
     });
   };
 

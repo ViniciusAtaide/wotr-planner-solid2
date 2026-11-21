@@ -1,27 +1,33 @@
 import { join } from 'node:path';
 import { describe, expect, test } from 'vitest';
-import { abilityScores, skillRanks, slotKey, toRankLevel, type Build, type SkillRanks } from '~engine/build';
+import { abilityScores, rankLevel, skillRanks, slotKey, toRankLevel, type Build, type SkillRanks } from '~engine/build';
 import { cascade } from '~engine/edits';
 import { readDataDir } from '~engine/data-dir';
+import { jackInTheGreen } from '~engine/gold';
 import { loadData } from '~engine/load';
 import { engineOf, expectedLevel } from '~engine/mcp';
 import { picker } from '~engine/pickers';
 import { walk } from '~engine/walk';
 
 import {
+  atLevelCap,
   chapterOf,
   chapterRange,
   chapters,
+  chapterSummary,
   characterEditing,
   characterFolded,
   characterSlots,
   firstCleared,
   folded,
+  gearDependentSlots,
   keepsSelection,
+  levelLine,
   levelOneDone,
   mythicDue,
   nextStep,
   reduceTrail,
+  sameRanks,
   skillBudget,
   slotsAt,
   stepTitle,
@@ -38,6 +44,7 @@ const e = engineOf(loadData(files.files, files.overrides));
 const HUMAN = '0a5d473ead98b0646b94495af250fdc4';
 const FIGHTER = '48ac8db94d5de7645906c7d0ad3bcfbd';
 const MYTHIC_HERO = '247aa787806d5da4f89cfc3dff0b217f';
+const LEGEND = '3d420403f3e7340499931324640efe96';
 const BASIC_FEAT_SELECTION = '247a4068296e8be42890143f451b4b45';
 const FIGHTER_FEAT_SELECTION = '41c8486641f7d6d4283ca9dae4147a9f';
 const POWER_ATTACK = '9972f33f977fc724c838e59641b2fca5';
@@ -178,6 +185,21 @@ describe('auto-advance: each pick opens the next empty one', () => {
       second > 0 && second <= at ? { rank: 2, at: second } : undefined,
     );
   });
+
+  test('no rank is offered once the walk says the ranks have ended (Legend at rank 8)', () => {
+    const ranks = jackInTheGreen.build.ranks ?? [];
+    const upTo8 = (eighth: string): Build => ({
+      ...jackInTheGreen.build,
+      ranks: [...ranks.slice(0, 7), { class: eighth, level: ranks[7]?.level ?? rankLevel(19) }],
+      picks: jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place) || p.slot.place.rank < 8),
+    });
+    const legend = viewOf(upTo8(LEGEND));
+    expect(legend.walk.ranksEnded).toBe(true);
+    expect(mythicDue(legend, undefined)).toBeUndefined();
+    const onward = viewOf(upTo8(ranks[7]?.class ?? MYTHIC_HERO));
+    expect(onward.walk.ranksEnded).toBe(false);
+    expect(mythicDue(onward, undefined)?.rank).toBe(9);
+  });
 });
 
 describe('skills close on their budget or on Done', () => {
@@ -271,5 +293,51 @@ describe('editing and the Cascade', () => {
     expect(keepsSelection({ kind: 'increase', level: 4 })).toBe(false);
     expect(keepsSelection({ kind: 'level', level: 1 })).toBe(false);
     expect(keepsSelection(undefined)).toBe(false);
+  });
+});
+
+describe('QA pass 1', () => {
+  const DODGE = '97e216dbb46ae3c4faef90cf6bbe6fd5';
+  const DEX_BELT = 'b6af4c1834999e74497b41588d1071cd';
+
+  test('a pick taken through Gear is marked where the trail names it (ADR 0002)', () => {
+    const slot = { place: { level: 1 }, selection: FIGHTER_FEAT_SELECTION, index: 0 };
+    const dodge = (countGear: boolean): Build => ({
+      scores: abilityScores({ ...SCORES, Dexterity: 12 }),
+      levels: [{ class: FIGHTER }],
+      gear: { Belt: DEX_BELT },
+      countGear,
+      picks: [{ slot, feature: DODGE }],
+    });
+    const counted = viewOf(dodge(true));
+    expect(gearDependentSlots(counted).has(slotKey(slot))).toBe(true);
+    expect(levelLine(counted, 1)).toContain('Dodge (Gear)');
+    expect(levelLine(viewOf(dodge(false)), 1)).not.toContain('(Gear)');
+  });
+
+  test('at the level cap a due rank is offered even after Not now, and a finished Build ends complete', () => {
+    expect(atLevelCap(viewOf(human(20)))).toBe(true);
+    expect(atLevelCap(viewOf(human(19)))).toBe(false);
+    expect(mythicDue(viewOf(human(19)), 19)).toBeUndefined();
+    expect(mythicDue(viewOf(human(20)), 20)?.rank).toBe(1);
+    const finished = filled(jackInTheGreen.build);
+    const done = next(finished, { skillsLeft: new Set([20]), mythicLater: undefined });
+    expect(done).toEqual({ kind: 'complete' });
+    expect(stepTitle(viewOf(finished), done)).toBe('Level 20 · the Build is complete');
+  });
+
+  test('a folded chapter counts its levels per class so they do not read as a class level', () => {
+    expect(chapterSummary(viewOf(human(4)), 1).classes).toBe('Fighter ×4');
+  });
+
+  test('two levels hold the same skills whatever the key order', () => {
+    expect(
+      sameRanks(
+        skillRanks({ SkillAthletics: 1, SkillMobility: 1 }),
+        skillRanks({ SkillMobility: 1, SkillAthletics: 1 }),
+      ),
+    ).toBe(true);
+    expect(sameRanks(skillRanks({ SkillAthletics: 1 }), skillRanks({ SkillMobility: 1 }))).toBe(false);
+    expect(sameRanks({}, {})).toBe(true);
   });
 });

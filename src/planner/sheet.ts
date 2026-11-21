@@ -27,7 +27,7 @@ export function buildSheet(t: TrailView): string {
   const { data, build } = t;
   const lines = [
     characterLine(data, build),
-    ATTRIBUTES.map((a) => `${SHORT_NAMES[a] ?? a} ${t.walk.unit.permanent(a)}`).join(' · '),
+    `${ATTRIBUTES.map((a) => `${SHORT_NAMES[a] ?? a} ${t.walk.unit.permanent(a)}`).join(' · ')}${build.countGear === true ? ' (Gear counted)' : ''}`,
   ];
   const picks = characterPicksLine(t);
   if (picks !== '') lines.push(picks);
