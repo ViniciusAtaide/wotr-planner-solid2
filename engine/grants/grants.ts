@@ -389,3 +389,15 @@ export function buildGrantIndex(data: Pick<CheckedData, 'blueprints'>): GrantInd
   };
   return index;
 }
+
+export const EQUIPMENT_GRANT_KINDS: ReadonlySet<GrantKind> = new Set([
+  'AddUnitFeatureEquipment',
+  'AddUnitFactEquipment',
+]);
+
+export function equipmentGrants(data: Pick<CheckedData, 'blueprints'>, G: GrantIndex, item: Guid): Grant[] {
+  const bp = data.blueprints.get(item);
+  return (bp === undefined ? [] : enchantmentsOf(bp, data.blueprints)).flatMap((enchantment) =>
+    G.grantsOf(enchantment).filter((grant) => EQUIPMENT_GRANT_KINDS.has(grant.kind)),
+  );
+}

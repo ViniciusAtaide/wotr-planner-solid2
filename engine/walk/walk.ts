@@ -10,7 +10,6 @@ import {
   type SlotId,
 } from '../build';
 import {
-  enchantmentsOf,
   guids,
   refGuid,
   type AddFeatureOnApply,
@@ -36,7 +35,14 @@ import {
   type NoSelectionIfAlreadyHasFeature,
 } from '../data';
 import { blueprintRoot, type CheckedData } from '../load';
-import { actionGrant, buildGrantIndex, type FieldGrantKind, type GrantIndex, type GrantParam } from '../grants';
+import {
+  actionGrant,
+  buildGrantIndex,
+  equipmentGrants,
+  type FieldGrantKind,
+  type GrantIndex,
+  type GrantParam,
+} from '../grants';
 import { namedFacts, paramPrerequisites, prerequisites } from '../prerequisites';
 import {
   archetypeMeetsPrerequisites,
@@ -752,13 +758,9 @@ class Walker {
 
   wear(place: GearPlace, item: Guid): void {
     this.unit.worn.set(place, item);
-    const bp = this.unit.bp(item);
-    for (const enchantment of bp === undefined ? [] : enchantmentsOf(bp, this.data.blueprints)) {
-      for (const g of this.G.grantsOf(enchantment)) {
-        if (g.kind !== 'AddUnitFeatureEquipment' && g.kind !== 'AddUnitFactEquipment') continue;
-        const fact = this.gain(g.granted, undefined, { kind: 'component', from: enchantment, component: g.kind });
-        this.record(place, 'equipment', fact);
-      }
+    for (const g of equipmentGrants(this.data, this.G, item)) {
+      const fact = this.gain(g.granted, undefined, { kind: 'component', from: g.grantor, component: g.kind });
+      this.record(place, 'equipment', fact);
     }
   }
 

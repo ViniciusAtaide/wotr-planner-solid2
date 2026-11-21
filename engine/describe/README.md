@@ -16,7 +16,7 @@ What the planner says about one blueprint: its Summary (ticket 06b), and the bas
   - `needs`, `enables`: its prerequisite-chain links (map 09), from engine/links.
 - `NO_SUMMARY`: "No summary yet.", the Summary of a blueprint with nothing labelled (map 10). Never a guess or a raw component name.
 - `summaryOf(labels)`: the Summary text of a list of labels.
-- `writtenSummary(data, guid)` and `summaryText(data, guid)`: a blueprint's hand-written summary, if any; and its Summary text, the hand-written one first. The MCP's `search` and `options` use `summaryText`.
+- `writtenSummary(data, guid)`, `summaryText(data, guid, G?)` and `summaryLabels(data, guid, G?)`: a blueprint's hand-written summary, if any; its Summary text, the hand-written one first; and the labels behind it. The MCP's `search` and `options` use `summaryText`.
 - `labelOf(data, component)` and `labelsOf(data, guid)`: a component's `Label` (06b), or undefined for a component no label covers; and a blueprint's labels, in component order, each distinct sentence once.
 - `Label`: `role` and `text`. `Role` is one of `bonus`, `save`, `immunity`, `resistance`, `weakness`, `requirement` and `trigger` (map 10's roles, with `weakness` for a vulnerability).
 - `GROUP_WORDS`, `descriptorWord` and `words`: the plain words labels use for weapon groups, spell descriptors and identifiers, shared with the MCP's Synergy words.
@@ -38,6 +38,7 @@ What the planner says about one blueprint: its Summary (ticket 06b), and the bas
   - **Ranks.** Where the game multiplies a bonus by the fact's rank (`RANK_SCALED`, and `ManeuverBonus` unless it ignores the rank), a blueprint of more than one rank says so: "+1 dodge bonus to AC against certain foes, per rank (up to 6)."
   - A component that names nothing a sentence can say (a descriptor immunity with no descriptor) gets no label.
 - **The Summary** is the blueprint's labels in component order, each distinct sentence once.
+- **Items.** An item's own components carry nothing a label reads; what it does sits on the facts its enchantments grant when worn. Its Summary is theirs, composed in the walk's grant order (G's `equipmentGrants`, the same list the walk's `wear` gains) with each sentence once. A granted fact's hand-written summary stands in for its labels. Each fact is worded at one rank, the rank one worn item gives, even when the fact allows more so that copies stack. An item's own hand-written summary, if any, comes first. Of 2669 shown items, 320 have a Summary (before: none).
 - **Hand-written summaries** (06c, map 10) replace a generated one that reads badly. Each is a `summary` override in `data/overrides/<AssetName>.<guid>.summary.json`: the target GUID, our own `text`, the `reason` the generated one won't do, and the `fingerprint` of the components it describes. The load check refuses a summary whose components changed since it was written, naming both fingerprints. It is wording only: `labels` stay the generated ones, and no link is read from it.
 
 ## Design notes

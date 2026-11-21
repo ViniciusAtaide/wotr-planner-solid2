@@ -297,7 +297,7 @@ export async function options(
     feature: o.feature,
     ...(o.param && { param: o.param }),
     name: optionName(e, o),
-    summary: summaryText(e.data, o.feature),
+    summary: summaryText(e.data, o.feature, e.G),
     buildsOn: listNames(
       e.data,
       links.needs(o.feature).filter((g) => held.has(g)),
@@ -497,7 +497,7 @@ export function search(
       guid: bp.guid,
       name: bp.name ?? bp.assetName,
       kind: kindOf[bp.$type],
-      summary: summaryText(e.data, bp.guid),
+      summary: summaryText(e.data, bp.guid, e.G),
     });
     if (out.length >= 50) break;
   }

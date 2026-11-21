@@ -1,6 +1,6 @@
 import type { CheckedData } from '../load';
 import { isShown, kindOf, type Guid, type Kind } from '../data';
-import { buildGrantIndex, removes, type GrantIndex } from '../grants';
+import { buildGrantIndex, equipmentGrants, removes, type GrantIndex } from '../grants';
 import { linkIndex } from '../links';
 import { prerequisites } from '../prerequisites';
 import { nameOf, unmetText } from '../refusals';
@@ -39,8 +39,53 @@ export function writtenSummary(data: CheckedData, guid: Guid): string | undefine
   return written.get(guid);
 }
 
-export function summaryText(data: CheckedData, guid: Guid): string {
-  return writtenSummary(data, guid) ?? summaryOf(labelsOf(data, guid));
+const grantIndexes = new WeakMap<CheckedData, GrantIndex>();
+
+function grantIndexOf(data: CheckedData): GrantIndex {
+  let G = grantIndexes.get(data);
+  if (G === undefined) grantIndexes.set(data, (G = buildGrantIndex(data)));
+  return G;
+}
+
+const isItem = (data: CheckedData, guid: Guid) => {
+  const bp = data.blueprints.get(guid);
+  return bp !== undefined && kindOf[bp.$type] === 'items';
+};
+
+function equippedFacts(data: CheckedData, guid: Guid, G: GrantIndex): Guid[] {
+  return [...new Set(equipmentGrants(data, G, guid).map((g) => g.granted))];
+}
+
+function distinct<T>(items: readonly T[], key: (item: T) => string): T[] {
+  const seen = new Set<string>();
+  return items.filter((item) => {
+    const k = key(item);
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+}
+
+export function summaryLabels(data: CheckedData, guid: Guid, G: GrantIndex = grantIndexOf(data)): Label[] {
+  if (!isItem(data, guid)) return labelsOf(data, guid);
+  return distinct(
+    equippedFacts(data, guid, G).flatMap((fact) => labelsOf(data, fact, true)),
+    (l) => l.text,
+  );
+}
+
+export function summaryText(data: CheckedData, guid: Guid, G: GrantIndex = grantIndexOf(data)): string {
+  const written = writtenSummary(data, guid);
+  if (written !== undefined) return written;
+  if (!isItem(data, guid)) return summaryOf(labelsOf(data, guid));
+  const parts = distinct(
+    equippedFacts(data, guid, G).flatMap((fact) => {
+      const own = writtenSummary(data, fact);
+      return own !== undefined ? [own] : labelsOf(data, fact, true).map((l) => l.text);
+    }),
+    (t) => t,
+  );
+  return parts.length === 0 ? NO_SUMMARY : parts.join(' ');
 }
 
 export function describe(
@@ -56,14 +101,15 @@ export function describe(
   };
   const w = { data, G };
   const links = linkIndex(data, G);
-  const labels = labelsOf(data, guid);
+  const labels = summaryLabels(data, guid, G);
   const written = writtenSummary(data, guid);
+  const summary = summaryText(data, guid, G);
   return {
     guid,
     name: nameOf(data, guid),
     kind: kindOf[bp.$type],
-    summary: written ?? summaryOf(labels),
-    summarySource: written !== undefined ? 'written' : labels.length > 0 ? 'labels' : 'none',
+    summary,
+    summarySource: written !== undefined ? 'written' : summary !== NO_SUMMARY ? 'labels' : 'none',
     labels,
     prerequisites: prerequisites(bp, data.blueprints).map((leaf) =>
       unmetText(w, { leaf }).replace(/^Needs /, leaf.Group === 'All' ? 'Needs ' : 'Or: needs '),

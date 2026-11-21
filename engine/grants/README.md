@@ -11,6 +11,7 @@ Every citation of the game's code lives in `cites.ts`, keyed by the identifier t
 - `fieldGrantKinds`, `FieldGrantKind`: the grant kinds a blueprint's own fields make.
 - `grantTypes`, `isGrant`: the grant component types G reads.
 - `removes(grant)`: whether a grant takes its fact away.
+- `equipmentGrants(data, G, item)` and `EQUIPMENT_GRANT_KINDS`: the facts a worn item gives, in order: each of its enchantments (`enchantmentsOf`: its type's, then its own; a shield's armor and weapon parts), then each enchantment's `AddUnitFeatureEquipment` and `AddUnitFactEquipment` grants. The walk's `wear` gains exactly these, and describe composes an item's Summary from them.
 - `actionGrant`, `ActionGrant`: what a grant action gives.
 - `reachableFromRoot`, `reachableFromGear`: what a Build can come to hold.
 - `grantorKind`: a grantor's kind, as the index groups them.

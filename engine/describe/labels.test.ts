@@ -3,7 +3,7 @@ import { describe as suite, expect, it } from 'vitest';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { buildGrantIndex } from '../grants';
-import { describe, NO_SUMMARY, summaryComponentTypes } from './describe';
+import { describe, NO_SUMMARY, summaryComponentTypes, summaryLabels, summaryText } from './describe';
 import { labelOf, labelsOf, type Role } from './labels';
 import { spellDescriptors } from '../links';
 
@@ -282,6 +282,20 @@ suite('Summary labels', { timeout: 30_000 }, () => {
     ]);
     expect(labelsOf(data, '06964d468fde1dc4aa71a92ea04d930d').map((l) => l.text)).toEqual([
       '+4 on concentration checks.',
+    ]);
+  });
+
+  it("composes an item's Summary from the facts its enchantments grant, worded at the one rank an item gives", () => {
+    const coldBelt = describe(data, '546c72cd7d8ec664ea5fcfae47c7b91b', G);
+    expect(coldBelt).toMatchObject({ summarySource: 'labels', summary: 'Resistance 10 to cold.' });
+    expect(coldBelt?.labels).toEqual([{ role: 'resistance', text: 'Resistance 10 to cold.' }]);
+    expect(summaryText(data, '6ba58bebb6e6e2046a2847c0f0d18dfe', G)).toBe(
+      'Immune to the blindness condition. Immune to gaze attack effects. Immune to gaze attack spells.',
+    );
+    expect(summaryLabels(data, '6ba58bebb6e6e2046a2847c0f0d18dfe', G).map((l) => l.role)).toEqual([
+      'immunity',
+      'immunity',
+      'immunity',
     ]);
   });
 });

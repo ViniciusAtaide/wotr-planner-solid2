@@ -97,6 +97,10 @@ export const cites = {
     'Designers/Mechanics/EquipmentEnchants/AddUnitFeatureEquipment.cs OnActivate',
   ],
   'componentReaders.AddUnitFactEquipment': ['Designers/Mechanics/EquipmentEnchants/AddUnitFactEquipment.cs OnActivate'],
+  equipmentGrants: [
+    'Designers/Mechanics/EquipmentEnchants/AddUnitFeatureEquipment.cs OnActivate',
+    'Designers/Mechanics/EquipmentEnchants/AddUnitFactEquipment.cs OnActivate',
+  ],
   'GRANT_ACTION_FIELDS.ContextActionAddFeature': [
     'UnitLogic/Mechanics/Actions/ContextActionAddFeature.cs RunAction (m_PermanentFeature)',
   ],

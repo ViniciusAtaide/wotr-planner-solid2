@@ -22,4 +22,4 @@ Give each of 06a's 50 carriers a label ([map 10](../../wotr-planner/issues/10-ge
 - **Spell descriptors:** `spellDescriptors` reads the 64-bit flags as unsigned, so the sign bit counts.
 - **Tests:** one real blueprint per carrier with its exact sentence (`labels.test.ts`); no label anywhere holds an asset name, `undefined` or a component name; describe's Summary and the placeholder; the MCP's `explain`.
 - **Coverage:** 554 of 8053 shown blueprints have a Summary (524 features, 30 buffs).
-- **Follow-up:** items show no Summary yet. Their effects sit on the features their enchantments grant, so an item's Summary could gather its granted facts' labels. That's for 06c or a new ticket.
+- **Items (coordinator's follow-up, done):** an item's Summary is composed from the facts its enchantments grant when worn, in the walk's grant order (G's `equipmentGrants`, which the walk's `wear` now uses too), each sentence once, worded at the one rank a worn item gives. Coverage went from 554 to 874 of 8053 shown blueprints (items: 0 to 320 of 2669).

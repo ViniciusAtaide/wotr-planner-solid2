@@ -543,9 +543,9 @@ function rawLabel(data: CheckedData, c: Component): Label | undefined {
   }
 }
 
-export function labelsOf(data: CheckedData, guid: Guid): Label[] {
+export function labelsOf(data: CheckedData, guid: Guid, atOneRank = false): Label[] {
   const bp = data.blueprints.get(guid);
-  const ranks = bp !== undefined && 'Ranks' in bp && typeof bp.Ranks === 'number' ? bp.Ranks : 1;
+  const ranks = !atOneRank && bp !== undefined && 'Ranks' in bp && typeof bp.Ranks === 'number' ? bp.Ranks : 1;
   const seen = new Set<string>();
   return (bp?.Components ?? []).flatMap((c) => {
     const label = labelOf(data, c, ranks);
