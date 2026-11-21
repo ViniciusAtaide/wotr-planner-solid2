@@ -685,6 +685,17 @@ describe('path switches (map ticket 31)', { timeout: 30_000 }, () => {
     expect(walk(data, switchAt('3d420403f3e7340499931324640efe96', 8), G).ranksEnded).toBe(true);
   });
 
+  it('caps the character level at 20, and at 40 after Legend', () => {
+    const ranks = jackInTheGreen.build.ranks ?? [];
+    const aeonTo9: Build = {
+      ...jackInTheGreen.build,
+      ranks: ranks.slice(0, 9).map((r, i) => (i >= 2 ? { ...r, class: '15a85e67b7d69554cab9ed5830d0268e' } : r)),
+      picks: jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place)),
+    };
+    expect(walk(data, aeonTo9, G).maxCharacterLevel).toBe(20);
+    expect(walk(data, switchAt('3d420403f3e7340499931324640efe96', 8), G).maxCharacterLevel).toBe(40);
+  });
+
   it('refuses every switch at ranks 9 and 10 after a path through rank 8 or 9', () => {
     for (const cls of SWITCHES) {
       for (const rank of [9, 10]) {

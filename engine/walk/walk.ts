@@ -182,6 +182,7 @@ export interface Walk {
   readonly skillPoints: readonly number[];
   readonly unit: Unit;
   readonly ranksEnded: boolean;
+  readonly maxCharacterLevel: number;
 }
 
 class SlotState implements SlotChain {
@@ -426,6 +427,7 @@ class Walker {
       skillPoints: this.skillPoints,
       unit: this.unit,
       ranksEnded: this.ranksEnded,
+      maxCharacterLevel: this.maxCharacterLevel(),
     };
   }
 
