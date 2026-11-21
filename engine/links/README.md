@@ -1,6 +1,6 @@
 # Synergy links
 
-Which blueprints build on which. This feature works out the prerequisite-chain kind of Synergy link (map 09, build ticket 05): "this needs" and "this enables", read from P (prerequisites) and G (grants). Ticket 06 adds the topic kinds that the data already holds: ability score, weapon category, spell school, and the "won't stack" warning (`topics.ts`). Energy type and the descriptor list wait until the importer keeps the components that name them.
+Which blueprints build on which. This feature works out the prerequisite-chain kind of Synergy link (map 09, build ticket 05): "this needs" and "this enables", read from P (prerequisites) and G (grants). Ticket 06d adds the topic kinds (`topics.ts`): ability score, weapon category or group, spell school, energy type, a short descriptor list, and the "won't stack" warning.
 
 ## Public entry
 
@@ -13,7 +13,13 @@ Which blueprints build on which. This feature works out the prerequisite-chain k
   - An ability score its stat bonuses raise (`AddStatBonus`, `AddStatBonusIfHasFact`, `AddContextStatBonus`) or that it replaces (`ReplaceStatBaseAttribute`).
   - An ability score its prerequisites ask for above the average 10. The game's many "Intelligence 3" prerequisites only keep animals out, so they aren't a link.
   - A weapon category its prerequisites name (`PrerequisiteParametrizedFeature`, `PrerequisiteConditionForWeaponCategory`) or its proficiencies grant.
-  - The weapon category, spell school or skill a parametrized pick was taken for (its parameter).
+  - The weapon category, spell school or skill a parametrized pick was taken for (its parameter). A weapon category also brings the fighter groups its weapon types belong to (`weaponGroupsOf`), so Weapon Focus (Dagger) shares light blades and thrown weapons with Weapon Training.
+  - A weapon group its group bonuses name (`WeaponGroupAttackBonus`, `WeaponGroupDamageBonus`), and the weapon and ability a damage-stat replacement names.
+  - A spell school its school saves, DCs and caster levels name.
+  - An energy type its resistances, immunities and vulnerability name, or that its spell descriptors name (fire, cold, acid, electricity, sonic: an Elemental Focus, a draconic arcana).
+  - A descriptor from the short hand-picked list (`LINKED_DESCRIPTORS`, map 09: fear, mind-affecting, compulsion, charm, emotion, poison, disease, death, sleep, paralysis and curse) that its saves, immunities, DCs, caster levels or arcana name. Other descriptors aren't links.
+- `weaponGroupsOf(data, category)`: the fighter groups of a weapon category, gathered from the weapon types the data holds.
+- `spellDescriptors(wrapper)` and `SPELL_DESCRIPTORS`: the names of the spell descriptor flags a 64-bit `SpellDescriptorWrapper` sets, read as an unsigned 64-bit number so the sign bit (`AnomalyDistortion`) counts.
 - `bonusesOf(data, guid)` and `StatBonus`: its stat bonuses, by stat and bonus type.
 - `stackable(descriptor)` and `STACKING_DESCRIPTORS`: whether bonuses of that type stack. This ports the game's `ModifierDescriptorHelper.IsStackable` (`cites.ts`). Any other type counts once per stat, the highest.
 - `heldIndex(data, held)` and `synergyOf(data, index, option)`, returning a `Synergy`:
@@ -27,7 +33,7 @@ Which blueprints build on which. This feature works out the prerequisite-chain k
 - **Needs.** A blueprint needs every blueprint its `requires` prerequisites name, kept to the ones the game shows.
 - **Enables.** A blueprint enables every blueprint whose prerequisites require it, or require a fact it grants. The grants are G's, with removals left out, and a blueprint never enables itself.
 
-Neither rule ports a game method: the links are the planner's own reading of P and G, so this feature has no citations.
+Neither rule ports a game method: the chain links are the planner's own reading of P and G. The topic kinds cite where the game reads what they link on (`cites.ts`): the descriptor flags, a weapon type's groups, a group bonus's group, a descriptor DC's descriptors and a resistance's energy.
 
 ## Design notes
 

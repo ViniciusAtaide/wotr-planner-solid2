@@ -369,7 +369,7 @@ describe('what character creation offers (comparison bug 5)', { timeout: 30_000 
     expect(line).not.toMatch(/Second Bloodrager Bloodline/);
   });
 
-  it('marks the options that share an ability, a weapon or a school with what the gold Builds hold', () => {
+  it('marks the options that share an ability, a weapon, a school, an energy or a descriptor with what the gold Builds hold', () => {
     const kinds = (gold: typeof jackInTheGreen) => {
       const found = new Set<string>();
       for (const p of gold.build.picks)
@@ -377,7 +377,7 @@ describe('what character creation offers (comparison bug 5)', { timeout: 30_000 
           for (const s of o.synergy?.shared ?? []) found.add(s.topic.kind);
       return found;
     };
-    expect([...kinds(jackInTheGreen)].sort()).toEqual(['ability', 'school', 'weapon']);
+    expect([...kinds(jackInTheGreen)].sort()).toEqual(['ability', 'descriptor', 'energy', 'school', 'weapon']);
     expect([...kinds(enforcer)].sort()).toEqual(expect.arrayContaining(['ability', 'weapon']));
   }, 120_000);
 

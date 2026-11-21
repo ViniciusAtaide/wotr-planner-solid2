@@ -60,6 +60,7 @@ import {
   type WeaponSpecializationParametrized,
   type WeaponTypeDamageStatReplacement,
 } from '../data';
+import { spellDescriptors } from '../links';
 import { bareNameOf, statName } from '../refusals';
 
 export type Role = 'bonus' | 'save' | 'immunity' | 'resistance' | 'weakness' | 'requirement' | 'trigger';
@@ -68,73 +69,6 @@ export interface Label {
   readonly role: Role;
   readonly text: string;
 }
-
-const SPELL_DESCRIPTORS: readonly string[] = [
-  'Fire',
-  'Acid',
-  'Cold',
-  'Electricity',
-  'MindAffecting',
-  'Fear',
-  'Compulsion',
-  'Emotion',
-  'Poison',
-  'Summoning',
-  'Good',
-  'Evil',
-  'Chaos',
-  'Law',
-  'Disease',
-  'Charm',
-  'Daze',
-  'Sickened',
-  'Shaken',
-  'Fatigue',
-  'Staggered',
-  'Nauseated',
-  'Frightened',
-  'Exhausted',
-  'Stun',
-  'Paralysis',
-  'Confusion',
-  'Blindness',
-  'Curse',
-  'Death',
-  'Sonic',
-  'Cure',
-  'Sleep',
-  'Polymorph',
-  'Trample',
-  'Force',
-  'StatDebuff',
-  'RestoreHP',
-  'TemporaryHP',
-  'Bomb',
-  'BreathWeapon',
-  'Bleed',
-  'VilderavnBleed',
-  'SightBased',
-  'Ground',
-  'Petrified',
-  'NegativeEmotion',
-  'GazeAttack',
-  'Metal',
-  'MovementImpairing',
-  'Hex',
-  'FearImmunity',
-  'UndeadControl',
-  'ChannelPositiveHeal',
-  'ChannelNegativeHeal',
-  'ChannelPositiveHarm',
-  'ChannelNegativeHarm',
-  'Arcane',
-  'Divine',
-  'Trap',
-  'Siege',
-  'Stratagem',
-  'NegativeLevel',
-  'AnomalyDistortion',
-];
 
 const SPELL_DESCRIPTOR_WORDS: Readonly<Record<string, string>> = {
   MindAffecting: 'mind-affecting',
@@ -152,7 +86,7 @@ const SPELL_DESCRIPTOR_WORDS: Readonly<Record<string, string>> = {
   AnomalyDistortion: 'anomaly',
 };
 
-const GROUP_WORDS: Readonly<Record<WeaponFighterGroup, string>> = {
+export const GROUP_WORDS: Readonly<Record<WeaponFighterGroup, string>> = {
   None: 'no weapon group',
   Axes: 'axes',
   BladesHeavy: 'heavy blades',
@@ -206,13 +140,10 @@ function andList(items: readonly string[]): string {
   return `${unique.slice(0, -1).join(', ')} and ${unique.at(-1)}`;
 }
 
-export function spellDescriptors(wrapper: SpellDescriptorWrapper): string[] {
-  const bits = BigInt.asUintN(64, BigInt(wrapper.m_IntValue));
-  return SPELL_DESCRIPTORS.filter((_, i) => ((bits >> BigInt(i)) & 1n) === 1n);
-}
+export const descriptorWord = (d: string): string => SPELL_DESCRIPTOR_WORDS[d] ?? words(d);
 
 function descriptorWords(wrapper: SpellDescriptorWrapper): string {
-  return orList(spellDescriptors(wrapper).map((d) => SPELL_DESCRIPTOR_WORDS[d] ?? words(d)));
+  return orList(spellDescriptors(wrapper).map(descriptorWord));
 }
 
 const signed = (n: number) => (n < 0 ? `-${-n}` : `+${n}`);

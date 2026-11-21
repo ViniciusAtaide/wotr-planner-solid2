@@ -24,7 +24,7 @@ import {
   type Kind,
   type StatType,
 } from '../data';
-import { describe, labelsOf, summaryOf, type Description } from '../describe';
+import { describe, descriptorWord, GROUP_WORDS, labelsOf, summaryOf, words, type Description } from '../describe';
 import { allows, apply, breaksOf, cascade, type Breaks, type Edit } from '../edits';
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
 import { linkIndex, type SharedTopic, type StackClash, type Topic } from '../links';
@@ -325,9 +325,20 @@ export async function options(
 }
 
 function topicWords(t: Topic): string {
-  if (t.kind === 'ability') return t.stat;
-  if (t.kind === 'school') return `${t.school} spells`;
-  return t.category.replace(/([a-z])([A-Z])/g, '$1 $2');
+  switch (t.kind) {
+    case 'ability':
+      return t.stat;
+    case 'school':
+      return `${t.school} spells`;
+    case 'weapon':
+      return t.category.replace(/([a-z])([A-Z])/g, '$1 $2');
+    case 'group':
+      return GROUP_WORDS[t.group];
+    case 'energy':
+      return words(t.energy);
+    case 'descriptor':
+      return `${descriptorWord(t.descriptor)} effects`;
+  }
 }
 
 function sharedWords(e: Engine, s: SharedTopic): string {

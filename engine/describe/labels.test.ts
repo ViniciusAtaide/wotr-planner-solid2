@@ -4,7 +4,8 @@ import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { buildGrantIndex } from '../grants';
 import { describe, NO_SUMMARY, summaryComponentTypes } from './describe';
-import { labelOf, labelsOf, spellDescriptors, type Role } from './labels';
+import { labelOf, labelsOf, type Role } from './labels';
+import { spellDescriptors } from '../links';
 
 const files = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)));
 const data = loadData(files.files, files.overrides);

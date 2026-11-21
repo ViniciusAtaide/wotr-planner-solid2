@@ -17,7 +17,7 @@ What the planner says about one blueprint: its Summary (ticket 06b), and the bas
 - `summaryOf(labels)`: the Summary text of a list of labels.
 - `labelOf(data, component)` and `labelsOf(data, guid)`: a component's `Label` (06b), or undefined for a component no label covers; and a blueprint's labels, in component order, each distinct sentence once.
 - `Label`: `role` and `text`. `Role` is one of `bonus`, `save`, `immunity`, `resistance`, `weakness`, `requirement` and `trigger` (map 10's roles, with `weakness` for a vulnerability).
-- `spellDescriptors(wrapper)`: the names of the spell descriptor flags a 64-bit `SpellDescriptorWrapper` sets, read as an unsigned 64-bit number so the sign bit (`AnomalyDistortion`) counts.
+- `GROUP_WORDS`, `descriptorWord` and `words`: the plain words labels use for weapon groups, spell descriptors and identifiers, shared with the MCP's Synergy words.
 - `summaryComponentTypes`: the 50 carriers 06a keeps for the Summaries, the importer's reader set for them.
 - `cites`: the game methods whose mechanics a sentence states.
 

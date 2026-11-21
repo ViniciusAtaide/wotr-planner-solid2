@@ -1,7 +1,6 @@
 import type { Cites } from '../cite';
 
 export const cites = {
-  SPELL_DESCRIPTORS: ['Blueprints/Classes/Spells/SpellDescriptor.cs SpellDescriptor'],
   labelOf: [
     'Designers/Mechanics/Facts/DraconicBloodlineArcana.cs OnEventAboutToTrigger (SpellDescriptor, SpellsOnly, UseContextBonus, Value)',
     'Designers/Mechanics/Facts/SpellSpecializationParametrized.cs OnEventAboutToTrigger',
