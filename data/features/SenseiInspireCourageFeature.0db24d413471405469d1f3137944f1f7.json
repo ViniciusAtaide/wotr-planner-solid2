@@ -15,5 +15,6 @@
   "Ranks": 4,
   "assetName": "SenseiInspireCourageFeature",
   "guid": "0db24d413471405469d1f3137944f1f7",
-  "name": "Inspire Courage (Sensei)"
+  "name": "Inspire Courage (Sensei)",
+  "qualifier": "Sensei"
 }

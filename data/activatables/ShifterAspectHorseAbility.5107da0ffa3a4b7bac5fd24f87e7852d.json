@@ -6,5 +6,6 @@
   "assetName": "ShifterAspectHorseAbility",
   "guid": "5107da0ffa3a4b7bac5fd24f87e7852d",
   "m_Buff": "!bp_0bdfd34b7e5a4639bf6b716fa2ac0098",
-  "name": "Horse (Shifter 1)"
+  "name": "Horse (Shifter 1)",
+  "qualifier": "Shifter 1"
 }

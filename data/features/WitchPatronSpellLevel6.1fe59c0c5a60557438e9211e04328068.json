@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "WitchPatronSpellLevel6",
   "guid": "1fe59c0c5a60557438e9211e04328068",
-  "name": "Patron Spells (Devotion 12)"
+  "name": "Patron Spells (Devotion 12)",
+  "qualifier": "Devotion 12"
 }

@@ -6,5 +6,6 @@
   "assetName": "ShifterAspectSpiderAbility",
   "guid": "56af94739fbf401799f6e54b091750e5",
   "m_Buff": "!bp_49e196492d2c4aa588bafffea6db8c43",
-  "name": "Spider (Shifter 1)"
+  "name": "Spider (Shifter 1)",
+  "qualifier": "Shifter 1"
 }

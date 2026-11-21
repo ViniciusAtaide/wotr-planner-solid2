@@ -11,5 +11,6 @@
   "Stacking": "Prolong",
   "assetName": "CavalierTacticianPreciseStrikeBuff",
   "guid": "731a11dcc952e744f8a88768e07a0542",
-  "name": "Precise Strike (buff)"
+  "name": "Precise Strike (buff)",
+  "qualifier": "buff"
 }

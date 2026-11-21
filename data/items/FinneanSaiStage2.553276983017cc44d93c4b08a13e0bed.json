@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_0944f411666c7594aa1398a7476ecf7d",
-  "name": "Finnean the Talking Weapon (Sai +3)"
+  "name": "Finnean the Talking Weapon (Sai +3)",
+  "qualifier": "Sai +3"
 }

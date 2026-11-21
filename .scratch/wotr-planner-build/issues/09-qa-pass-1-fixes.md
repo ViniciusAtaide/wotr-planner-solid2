@@ -74,3 +74,10 @@ Fix every finding of the first QA pass on the planner (run on `e77c4d7e`, 2026-1
     | Cascade preview | 23 ms | 16 ms |
 
   - **Next for the UI:** it switches the class editor and steps to `classPicker`.
+- **5, bare names:**
+  - **The importer** writes every qualified name's `qualifier` on its own (2,269 files gain one field; names unchanged).
+  - **S:** `namesInList` and `bareName`. `picker` and `classPicker` give each option its bare `name`, plus its `qualifier` only when another option in the same list shares the bare name.
+  - **Where "(feature)" came from:** the shared-name rule qualifies across all reachable data, and "Allied Spellcaster" is also a Cavalier buff.
+  - **For the UI:**
+    - Labels like "Scholar — Nature (Background Selection)" and "Enforcing Gaze (Selection)" are selection names, so the UI uses `bareName` for slot labels.
+    - "Expanded Arsenal (Magic School)" is the game's own display name and stays whole. The UI adds "(Abjuration)" for the chosen school.

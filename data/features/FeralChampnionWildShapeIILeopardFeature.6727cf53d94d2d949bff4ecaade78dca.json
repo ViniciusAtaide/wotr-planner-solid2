@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "FeralChampnionWildShapeIILeopardFeature",
   "guid": "6727cf53d94d2d949bff4ecaade78dca",
-  "name": "Wild Shape (Leopard) (Feral Champion)"
+  "name": "Wild Shape (Leopard) (Feral Champion)",
+  "qualifier": "Feral Champion"
 }

@@ -65,5 +65,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Knowledge Domain (Domain Selection)"
+  "name": "Knowledge Domain (Domain Selection)",
+  "qualifier": "Domain Selection"
 }

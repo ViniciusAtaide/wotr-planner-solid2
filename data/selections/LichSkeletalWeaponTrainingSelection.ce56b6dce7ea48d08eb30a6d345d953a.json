@@ -15,5 +15,6 @@
   "m_AllFeatures": [
     "!bp_bc4cc2147809483fbb195841b8567127"
   ],
-  "name": "Weapon Training (Skeletal Fighter I)"
+  "name": "Weapon Training (Skeletal Fighter I)",
+  "qualifier": "Skeletal Fighter I"
 }

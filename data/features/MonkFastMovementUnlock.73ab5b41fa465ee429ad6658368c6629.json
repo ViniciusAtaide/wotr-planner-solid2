@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "MonkFastMovementUnlock",
   "guid": "73ab5b41fa465ee429ad6658368c6629",
-  "name": "Fast Movement (Monk)"
+  "name": "Fast Movement (Monk)",
+  "qualifier": "Monk"
 }

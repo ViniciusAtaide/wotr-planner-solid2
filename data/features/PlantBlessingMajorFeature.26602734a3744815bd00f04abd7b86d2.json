@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "PlantBlessingMajorFeature",
   "guid": "26602734a3744815bd00f04abd7b86d2",
-  "name": "Battle Companion (Plant)"
+  "name": "Battle Companion (Plant)",
+  "qualifier": "Plant"
 }

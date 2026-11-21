@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_bbf7d0ea57e4c9349b65c82abc6787b4",
-  "name": "Finnean the Talking Weapon (Light Hammer +3)"
+  "name": "Finnean the Talking Weapon (Light Hammer +3)",
+  "qualifier": "Light Hammer +3"
 }

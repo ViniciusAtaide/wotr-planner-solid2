@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "TravelDomainBaseFeatureSeparatist",
   "guid": "2519a72bae8c4630a1bda96858d40241",
-  "name": "Travel Domain (Separatist)"
+  "name": "Travel Domain (Separatist)",
+  "qualifier": "Separatist"
 }

@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "MetamorphClassSkills",
   "guid": "1d42191a101f2fb42b6e87b7bfc99a5e",
-  "name": "Class Skills (Metamorph)"
+  "name": "Class Skills (Metamorph)",
+  "qualifier": "Metamorph"
 }

@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "HealingBlessingMajorFeature",
   "guid": "4ef6d989132eaf7438df8acb9aa92458",
-  "name": "Fast Healing (Healing)"
+  "name": "Fast Healing (Healing)",
+  "qualifier": "Healing"
 }

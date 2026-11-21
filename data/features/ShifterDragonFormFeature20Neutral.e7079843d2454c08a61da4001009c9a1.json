@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "ShifterDragonFormFeature20Neutral",
   "guid": "e7079843d2454c08a61da4001009c9a1",
-  "name": "Greater Wyrmshifter (Universal)"
+  "name": "Greater Wyrmshifter (Universal)",
+  "qualifier": "Universal"
 }

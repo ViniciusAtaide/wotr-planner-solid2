@@ -49,5 +49,6 @@
   "Ranks": 1,
   "assetName": "OracleRevelationStoneStability",
   "guid": "4244aa481ad9a604db8442c02712c1e0",
-  "name": "Stone Stability (Revelation)"
+  "name": "Stone Stability (Revelation)",
+  "qualifier": "Revelation"
 }

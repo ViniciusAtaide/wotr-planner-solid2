@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "MonkACBonusUnlock",
   "guid": "2615c5f87b3d72b42ac0e73b56d895e0",
-  "name": "AC Bonus (Monk)"
+  "name": "AC Bonus (Monk)",
+  "qualifier": "Monk"
 }

@@ -15,5 +15,6 @@
   "m_AllFeatures": [
     "!bp_8891303b67eb273428f1691864b08cf8"
   ],
-  "name": "School Power (selection)"
+  "name": "School Power (selection)",
+  "qualifier": "selection"
 }

@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_b1cbf457fd471d148b39ae56667f405a",
-  "name": "Finnean the Talking Weapon (Bardiche +1)"
+  "name": "Finnean the Talking Weapon (Bardiche +1)",
+  "qualifier": "Bardiche +1"
 }

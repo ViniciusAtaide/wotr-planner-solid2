@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "AuraOfCourageFeature",
   "guid": "e45ab30f49215054e83b4ea12165409f",
-  "name": "Aura of Courage (Paladin)"
+  "name": "Aura of Courage (Paladin)",
+  "qualifier": "Paladin"
 }

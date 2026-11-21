@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "BloodlineCelestialResistancesAbilityLevel1",
   "guid": "bf1429cc15c22f045b19e11d6bffeefb",
-  "name": "Celestial Resistances (before level 9)"
+  "name": "Celestial Resistances (before level 9)",
+  "qualifier": "before level 9"
 }

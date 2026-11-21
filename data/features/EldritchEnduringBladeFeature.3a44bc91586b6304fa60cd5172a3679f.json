@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "EldritchEnduringBladeFeature",
   "guid": "3a44bc91586b6304fa60cd5172a3679f",
-  "name": "Enduring Blade (Magus Arcana)"
+  "name": "Enduring Blade (Magus Arcana)",
+  "qualifier": "Magus Arcana"
 }

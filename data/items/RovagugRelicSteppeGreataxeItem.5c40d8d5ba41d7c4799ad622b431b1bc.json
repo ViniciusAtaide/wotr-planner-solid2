@@ -10,5 +10,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_e8059a8eac62cd74f9171d748a5ae428",
-  "name": "Grave Singer (Greataxe)"
+  "name": "Grave Singer (Greataxe)",
+  "qualifier": "Greataxe"
 }

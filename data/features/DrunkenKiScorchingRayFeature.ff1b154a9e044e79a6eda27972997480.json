@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "DrunkenKiScorchingRayFeature",
   "guid": "ff1b154a9e044e79a6eda27972997480",
-  "name": "Ki Power: Scorching Ray (Drunken Ki)"
+  "name": "Ki Power: Scorching Ray (Drunken Ki)",
+  "qualifier": "Drunken Ki"
 }

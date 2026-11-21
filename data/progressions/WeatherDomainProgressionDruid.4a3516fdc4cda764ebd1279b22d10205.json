@@ -56,5 +56,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Weather Domain (Druid)"
+  "name": "Weather Domain (Druid)",
+  "qualifier": "Druid"
 }

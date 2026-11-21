@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_cf3e703db4b81904e982a66d7b8474ea",
-  "name": "Finnean (Light Mace)"
+  "name": "Finnean (Light Mace)",
+  "qualifier": "Light Mace"
 }

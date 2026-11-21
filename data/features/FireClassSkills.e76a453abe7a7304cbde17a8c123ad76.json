@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "FireClassSkills",
   "guid": "e76a453abe7a7304cbde17a8c123ad76",
-  "name": "Class Skills (Fire)"
+  "name": "Class Skills (Fire)",
+  "qualifier": "Fire"
 }

@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ArmoredBattlemageArcanePoolFeature",
   "guid": "466c40aba50096341bf6532b1e53e8bd",
-  "name": "Arcane Pool (Armored Battlemage)"
+  "name": "Arcane Pool (Armored Battlemage)",
+  "qualifier": "Armored Battlemage"
 }

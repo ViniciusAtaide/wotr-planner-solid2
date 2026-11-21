@@ -14,5 +14,6 @@
   "Stacking": "Replace",
   "assetName": "BloodragerHagBloodlineCurseConduitBuff",
   "guid": "e8473665806543c1a79c7f15725ba5cb",
-  "name": "Curse Conduit (Bloodrage)"
+  "name": "Curse Conduit (Bloodrage)",
+  "qualifier": "Bloodrage"
 }

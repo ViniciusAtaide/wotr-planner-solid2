@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_a7da36e0e7bb60e42b9f23462ce2f4fc",
-  "name": "Finnean the Talking Weapon (Shortsword +1)"
+  "name": "Finnean the Talking Weapon (Shortsword +1)",
+  "qualifier": "Shortsword +1"
 }

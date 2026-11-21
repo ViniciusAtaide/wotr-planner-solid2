@@ -15,5 +15,6 @@
   "Ranks": 5,
   "assetName": "InspireHeroicsFeature",
   "guid": "199d6fa0de149d044a8ab622a542cc79",
-  "name": "Inspire Heroics (Bard)"
+  "name": "Inspire Heroics (Bard)",
+  "qualifier": "Bard"
 }

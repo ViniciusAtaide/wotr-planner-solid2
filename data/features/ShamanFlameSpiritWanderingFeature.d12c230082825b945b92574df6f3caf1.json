@@ -54,5 +54,6 @@
   "Ranks": 1,
   "assetName": "ShamanFlameSpiritWanderingFeature",
   "guid": "d12c230082825b945b92574df6f3caf1",
-  "name": "Flame (Shaman 4)"
+  "name": "Flame (Shaman 4)",
+  "qualifier": "Shaman 4"
 }

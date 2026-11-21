@@ -18,5 +18,6 @@
   "Ranks": 1,
   "assetName": "CavalierTacticianFeature",
   "guid": "404f6e3da48b87f4e9fca21150d47f71",
-  "name": "Tactician (Cavalier)"
+  "name": "Tactician (Cavalier)",
+  "qualifier": "Cavalier"
 }

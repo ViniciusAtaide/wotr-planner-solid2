@@ -14,5 +14,6 @@
   "Ranks": 1,
   "assetName": "EldritchWandMastery",
   "guid": "d88e219124a9e5d4da4908f599aef7aa",
-  "name": "Wand Mastery (Magus Arcana)"
+  "name": "Wand Mastery (Magus Arcana)",
+  "qualifier": "Magus Arcana"
 }

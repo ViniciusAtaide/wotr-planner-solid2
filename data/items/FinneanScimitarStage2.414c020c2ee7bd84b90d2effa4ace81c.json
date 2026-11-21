@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_d9fbec4637d71bd4ebc977628de3daf3",
-  "name": "Finnean the Talking Weapon (Scimitar +3)"
+  "name": "Finnean the Talking Weapon (Scimitar +3)",
+  "qualifier": "Scimitar +3"
 }

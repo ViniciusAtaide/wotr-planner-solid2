@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ShamanBonesSpiritManifestationFeature",
   "guid": "10bb6847ee6b4cbf86dded2d86b76ab6",
-  "name": "Manifestation (Bones)"
+  "name": "Manifestation (Bones)",
+  "qualifier": "Bones"
 }

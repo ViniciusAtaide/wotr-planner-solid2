@@ -22,5 +22,6 @@
   "Ranks": 1,
   "assetName": "BloodragerDragonSilverBreath",
   "guid": "76148c4ea58ea40419a649b0f66ba5c9",
-  "name": "Breath Weapon (bloodrager, silver)"
+  "name": "Breath Weapon (bloodrager, silver)",
+  "qualifier": "bloodrager, silver"
 }

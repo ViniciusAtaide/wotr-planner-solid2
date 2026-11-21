@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "ShamanHexSlumberFeature",
   "guid": "894ef7374b805dd43b97603371b7ef10",
-  "name": "Slumber (shaman hex)"
+  "name": "Slumber (shaman hex)",
+  "qualifier": "shaman hex"
 }

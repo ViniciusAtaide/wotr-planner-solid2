@@ -25,5 +25,6 @@
   "Ranks": 1,
   "assetName": "ImprovedEvasion",
   "guid": "0d35d6c4d5eef8d4790d09bd9a874e57",
-  "name": "Improved Evasion (Advanced Talents)"
+  "name": "Improved Evasion (Advanced Talents)",
+  "qualifier": "Advanced Talents"
 }

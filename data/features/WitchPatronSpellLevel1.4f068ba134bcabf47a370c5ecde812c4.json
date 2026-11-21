@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "WitchPatronSpellLevel1",
   "guid": "4f068ba134bcabf47a370c5ecde812c4",
-  "name": "Patron Spells (Strength 2)"
+  "name": "Patron Spells (Strength 2)",
+  "qualifier": "Strength 2"
 }

@@ -13,5 +13,6 @@
   "Ranks": 1,
   "assetName": "HumanSkilled",
   "guid": "3adf9274a210b164cb68f472dc1e4544",
-  "name": "Skilled (Human)"
+  "name": "Skilled (Human)",
+  "qualifier": "Human"
 }

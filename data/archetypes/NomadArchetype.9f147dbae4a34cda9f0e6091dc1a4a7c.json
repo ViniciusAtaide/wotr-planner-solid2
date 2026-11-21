@@ -94,5 +94,6 @@
   "m_ReflexSave": null,
   "m_ReplaceSpellbook": null,
   "m_WillSave": null,
-  "name": "Nomad (Ranger)"
+  "name": "Nomad (Ranger)",
+  "qualifier": "Ranger"
 }

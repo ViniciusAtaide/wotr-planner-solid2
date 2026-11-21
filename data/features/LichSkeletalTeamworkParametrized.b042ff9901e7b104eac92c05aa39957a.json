@@ -27,5 +27,6 @@
   "assetName": "LichSkeletalTeamworkParametrized",
   "guid": "b042ff9901e7b104eac92c05aa39957a",
   "m_Prerequisite": null,
-  "name": "Teamwork Feat (Skeletal Inquisitor I)"
+  "name": "Teamwork Feat (Skeletal Inquisitor I)",
+  "qualifier": "Skeletal Inquisitor I"
 }

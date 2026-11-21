@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "WitchPatronSpellLevel8",
   "guid": "fa87073eb39634141a289e8ffe50a99a",
-  "name": "Patron Spells (Elements 16)"
+  "name": "Patron Spells (Elements 16)",
+  "qualifier": "Elements 16"
 }

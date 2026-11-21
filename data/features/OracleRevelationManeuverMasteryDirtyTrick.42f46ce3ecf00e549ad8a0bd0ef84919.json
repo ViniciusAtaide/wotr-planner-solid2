@@ -41,5 +41,6 @@
   "Ranks": 1,
   "assetName": "OracleRevelationManeuverMasteryDirtyTrick",
   "guid": "42f46ce3ecf00e549ad8a0bd0ef84919",
-  "name": "Dirty Trick (Maneuver Mastery)"
+  "name": "Dirty Trick (Maneuver Mastery)",
+  "qualifier": "Maneuver Mastery"
 }

@@ -26,5 +26,6 @@
   "Ranks": 20,
   "assetName": "SearingFleshEffectFeature",
   "guid": "642bb6097c37b3b4b8be1f46d2d9296e",
-  "name": "Searing Flesh (effect)"
+  "name": "Searing Flesh (effect)",
+  "qualifier": "effect"
 }

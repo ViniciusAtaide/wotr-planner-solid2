@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "SlowSpeedHalfling",
   "guid": "b8926aeaac17dc7408a5059788255819",
-  "name": "Slow Movement (Halfling)"
+  "name": "Slow Movement (Halfling)",
+  "qualifier": "Halfling"
 }

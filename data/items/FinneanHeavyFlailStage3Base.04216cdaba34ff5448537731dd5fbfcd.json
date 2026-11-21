@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_8fefb7e0da38b06408f185e29372c703",
-  "name": "Finnean the Talking Weapon (Heavy Flail +5)"
+  "name": "Finnean the Talking Weapon (Heavy Flail +5)",
+  "qualifier": "Heavy Flail +5"
 }

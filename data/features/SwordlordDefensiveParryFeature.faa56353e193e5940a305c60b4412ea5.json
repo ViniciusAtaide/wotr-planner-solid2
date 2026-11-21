@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "SwordlordDefensiveParryFeature",
   "guid": "faa56353e193e5940a305c60b4412ea5",
-  "name": "Defensive Parry (Aldori Defender)"
+  "name": "Defensive Parry (Aldori Defender)",
+  "qualifier": "Aldori Defender"
 }

@@ -129,5 +129,6 @@
   "m_ReflexSave": null,
   "m_ReplaceSpellbook": null,
   "m_WillSave": null,
-  "name": "Divine Hunter (Paladin)"
+  "name": "Divine Hunter (Paladin)",
+  "qualifier": "Paladin"
 }

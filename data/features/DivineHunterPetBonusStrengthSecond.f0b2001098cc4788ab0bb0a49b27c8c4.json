@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "DivineHunterPetBonusStrengthSecond",
   "guid": "f0b2001098cc4788ab0bb0a49b27c8c4",
-  "name": "Companion Ability Score Bonus — Strength (second pick)"
+  "name": "Companion Ability Score Bonus — Strength (second pick)",
+  "qualifier": "second pick"
 }

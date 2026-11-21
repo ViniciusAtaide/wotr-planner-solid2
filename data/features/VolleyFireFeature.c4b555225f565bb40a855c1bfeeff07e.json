@@ -33,5 +33,6 @@
   "Ranks": 1,
   "assetName": "VolleyFireFeature",
   "guid": "c4b555225f565bb40a855c1bfeeff07e",
-  "name": "Volley Fire (feature)"
+  "name": "Volley Fire (feature)",
+  "qualifier": "feature"
 }

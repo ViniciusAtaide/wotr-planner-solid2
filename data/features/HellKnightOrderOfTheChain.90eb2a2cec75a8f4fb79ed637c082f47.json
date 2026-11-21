@@ -62,5 +62,6 @@
   "Ranks": 1,
   "assetName": "HellKnightOrderOfTheChain",
   "guid": "90eb2a2cec75a8f4fb79ed637c082f47",
-  "name": "Order of the Chain (Order)"
+  "name": "Order of the Chain (Order)",
+  "qualifier": "Order"
 }

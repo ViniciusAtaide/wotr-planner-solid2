@@ -70,5 +70,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Plagued (Beneficial Curse)"
+  "name": "Plagued (Beneficial Curse)",
+  "qualifier": "Beneficial Curse"
 }

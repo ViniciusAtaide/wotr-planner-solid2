@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "DarknessDomainBaseFeatureSeparatist",
   "guid": "4cd75a11ca884f9589583576c31b51d3",
-  "name": "Darkness Domain (Separatist)"
+  "name": "Darkness Domain (Separatist)",
+  "qualifier": "Separatist"
 }

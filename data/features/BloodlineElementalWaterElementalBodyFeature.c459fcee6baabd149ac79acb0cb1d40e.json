@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "BloodlineElementalWaterElementalBodyFeature",
   "guid": "c459fcee6baabd149ac79acb0cb1d40e",
-  "name": "Elemental Body (water)"
+  "name": "Elemental Body (water)",
+  "qualifier": "water"
 }

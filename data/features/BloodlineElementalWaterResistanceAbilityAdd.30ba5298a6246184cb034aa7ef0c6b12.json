@@ -34,5 +34,6 @@
   "Ranks": 2,
   "assetName": "BloodlineElementalWaterResistanceAbilityAdd",
   "guid": "30ba5298a6246184cb034aa7ef0c6b12",
-  "name": "Elemental Resistance (Elemental Bloodline — Water)"
+  "name": "Elemental Resistance (Elemental Bloodline — Water)",
+  "qualifier": "Elemental Bloodline — Water"
 }

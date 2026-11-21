@@ -52,5 +52,6 @@
   "m_Classes": [],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Summon Shadow (Shadowcaster)"
+  "name": "Summon Shadow (Shadowcaster)",
+  "qualifier": "Shadowcaster"
 }

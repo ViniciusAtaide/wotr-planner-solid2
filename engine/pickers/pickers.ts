@@ -4,6 +4,7 @@ import { refGuid, type Blueprint, type BlueprintParametrizedFeature, type Guid, 
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
 import type { FailedRule, Unit } from '../walk';
 import { SKILL_ATTRIBUTE, pauseAt, walk, type OpenedSlot, type PausedWalk, WEAPON_CATEGORIES } from '../walk';
+import { namesInList } from './option-names';
 
 export interface OptionStatus {
   readonly feature: Guid;
@@ -11,6 +12,8 @@ export interface OptionStatus {
   readonly shown: boolean;
   readonly closed?: FailedRule;
   readonly gearItems?: readonly Guid[];
+  readonly name?: string;
+  readonly qualifier?: string;
 }
 
 export interface Picker {
@@ -74,11 +77,19 @@ export function picker(
 ): Picker | undefined {
   const paused = pauseAt(data, build, slot, G);
   if (paused === undefined) return undefined;
-  return {
-    slot: paused.slot,
-    options: candidates(data, slot.selection).map((o) => status(data, paused, o)),
-    unit: paused.unit,
-  };
+  const options = candidates(data, slot.selection).map((o) => status(data, paused, o));
+  return { slot: paused.slot, options: withListNames(data, options), unit: paused.unit };
+}
+
+function withListNames(data: CheckedData, options: readonly OptionStatus[]): OptionStatus[] {
+  const names = namesInList(
+    data,
+    options.filter((o) => o.shown).map((o) => o.feature),
+  );
+  return options.map((o) => {
+    const listed = names.get(o.feature);
+    return listed === undefined ? o : { ...o, ...listed };
+  });
 }
 
 export function shownInSelection(bp: Blueprint, unavailable: boolean): boolean {

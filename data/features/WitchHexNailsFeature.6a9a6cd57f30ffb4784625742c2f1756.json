@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "WitchHexNailsFeature",
   "guid": "6a9a6cd57f30ffb4784625742c2f1756",
-  "name": "Nails (witch hex)"
+  "name": "Nails (witch hex)",
+  "qualifier": "witch hex"
 }

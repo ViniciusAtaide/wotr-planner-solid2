@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "WitchPatronSpellLevel4",
   "guid": "67b193a85d73dd142b1de8eeba2647c6",
-  "name": "Patron Spells (Devotion 8)"
+  "name": "Patron Spells (Devotion 8)",
+  "qualifier": "Devotion 8"
 }

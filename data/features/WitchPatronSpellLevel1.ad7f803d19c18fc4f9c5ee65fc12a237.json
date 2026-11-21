@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "WitchPatronSpellLevel1",
   "guid": "ad7f803d19c18fc4f9c5ee65fc12a237",
-  "name": "Patron Spells (Deception 2)"
+  "name": "Patron Spells (Deception 2)",
+  "qualifier": "Deception 2"
 }

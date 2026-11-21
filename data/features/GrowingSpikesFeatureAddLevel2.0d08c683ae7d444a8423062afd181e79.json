@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "GrowingSpikesFeatureAddLevel2",
   "guid": "0d08c683ae7d444a8423062afd181e79",
-  "name": "Grow Spikes (Child of the Manticore 7)"
+  "name": "Grow Spikes (Child of the Manticore 7)",
+  "qualifier": "Child of the Manticore 7"
 }

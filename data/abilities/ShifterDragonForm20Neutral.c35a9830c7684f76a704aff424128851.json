@@ -22,5 +22,6 @@
   ],
   "assetName": "ShifterDragonForm20Neutral",
   "guid": "c35a9830c7684f76a704aff424128851",
-  "name": "Greater Wyrmshifter (Universal ability)"
+  "name": "Greater Wyrmshifter (Universal ability)",
+  "qualifier": "Universal ability"
 }

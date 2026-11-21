@@ -34,5 +34,6 @@
   "Ranks": 2,
   "assetName": "BloodlineElementalAirResistanceAbilityAdd",
   "guid": "6472c51065d734e4b99ac56694925920",
-  "name": "Elemental Resistance (Elemental Bloodline — Air)"
+  "name": "Elemental Resistance (Elemental Bloodline — Air)",
+  "qualifier": "Elemental Bloodline — Air"
 }

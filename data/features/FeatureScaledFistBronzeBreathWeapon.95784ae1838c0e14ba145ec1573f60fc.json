@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "FeatureScaledFistBronzeBreathWeapon",
   "guid": "95784ae1838c0e14ba145ec1573f60fc",
-  "name": "Draconic Breath (Bronze Dragon — Electricity)"
+  "name": "Draconic Breath (Bronze Dragon — Electricity)",
+  "qualifier": "Bronze Dragon — Electricity"
 }

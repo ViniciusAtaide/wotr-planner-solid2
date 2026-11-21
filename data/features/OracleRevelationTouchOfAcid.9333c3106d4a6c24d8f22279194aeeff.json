@@ -43,5 +43,6 @@
   "Ranks": 1,
   "assetName": "OracleRevelationTouchOfAcid",
   "guid": "9333c3106d4a6c24d8f22279194aeeff",
-  "name": "Touch of Acid (Revelation)"
+  "name": "Touch of Acid (Revelation)",
+  "qualifier": "Revelation"
 }

@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "QuarterstaffMasterFlurryUnlock",
   "guid": "44b0f313ec56481eb447019fbe714330",
-  "name": "Flurry of Blows (Quarterstaff Master)"
+  "name": "Flurry of Blows (Quarterstaff Master)",
+  "qualifier": "Quarterstaff Master"
 }

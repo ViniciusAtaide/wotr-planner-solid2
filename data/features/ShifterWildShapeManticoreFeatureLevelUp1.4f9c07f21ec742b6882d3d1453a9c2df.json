@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "ShifterWildShapeManticoreFeatureLevelUp1",
   "guid": "4f9c07f21ec742b6882d3d1453a9c2df",
-  "name": "Manticore Shape (level 8)"
+  "name": "Manticore Shape (level 8)",
+  "qualifier": "level 8"
 }

@@ -4,10 +4,13 @@ import type { Guid } from '../data';
 import { buildGrantIndex, type GrantIndex } from '../grants';
 import { pauseAtClass, type FailedRule, type Unit } from '../walk';
 import { offeredClasses, offeredMythicClasses } from './offers';
+import { namesInList } from './option-names';
 
 export interface ClassOption {
   readonly class: Guid;
   readonly closed?: FailedRule;
+  readonly name?: string;
+  readonly qualifier?: string;
 }
 
 export interface ClassPicker {
@@ -26,12 +29,16 @@ export function classPicker(
   const paused = pauseAtClass(data, build, place, G, rankLevel);
   if (paused === undefined) return undefined;
   const candidates = 'rank' in place ? offeredMythicClasses(data) : offeredClasses(data);
+  const names = namesInList(
+    data,
+    candidates.map((c) => c.guid),
+  );
   return {
     place,
     unit: paused.unit,
     options: candidates.map((c) => {
       const closed = paused.judge(c.guid)[0];
-      return closed === undefined ? { class: c.guid } : { class: c.guid, closed };
+      return { class: c.guid, ...names.get(c.guid), ...(closed && { closed }) };
     }),
   };
 }

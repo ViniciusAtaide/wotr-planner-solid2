@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "DarknessDomainBaseFeature",
   "guid": "9dc5863168155854fa8daf4a780f6663",
-  "name": "Darkness Domain (level 1)"
+  "name": "Darkness Domain (level 1)",
+  "qualifier": "level 1"
 }

@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "ShamanHexWardFeature",
   "guid": "41f4d078eb70c7b4e9dc54ad0e3630fb",
-  "name": "Ward (shaman hex)"
+  "name": "Ward (shaman hex)",
+  "qualifier": "shaman hex"
 }

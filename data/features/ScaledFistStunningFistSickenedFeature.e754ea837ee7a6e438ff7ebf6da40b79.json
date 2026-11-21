@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ScaledFistStunningFistSickenedFeature",
   "guid": "e754ea837ee7a6e438ff7ebf6da40b79",
-  "name": "Stunning Fist: Sicken (Scaled Fist)"
+  "name": "Stunning Fist: Sicken (Scaled Fist)",
+  "qualifier": "Scaled Fist"
 }

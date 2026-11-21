@@ -43,5 +43,6 @@
   "Ranks": 1,
   "assetName": "OracleRevelationAirBarrier",
   "guid": "7e9743e4be4aad9438a58988cfe521bb",
-  "name": "Air Barrier (Revelation)"
+  "name": "Air Barrier (Revelation)",
+  "qualifier": "Revelation"
 }

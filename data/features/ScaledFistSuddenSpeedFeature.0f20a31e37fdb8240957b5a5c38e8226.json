@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "ScaledFistSuddenSpeedFeature",
   "guid": "0f20a31e37fdb8240957b5a5c38e8226",
-  "name": "Ki Power: Sudden Speed (Scaled Fist)"
+  "name": "Ki Power: Sudden Speed (Scaled Fist)",
+  "qualifier": "Scaled Fist"
 }

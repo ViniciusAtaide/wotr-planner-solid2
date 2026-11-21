@@ -6,5 +6,6 @@
   "m_Enchantments": [
     "!bp_3c62e48bfec049b99f7c7f6759c42b1f"
   ],
-  "name": "Seal of Jubilex (glasses)"
+  "name": "Seal of Jubilex (glasses)",
+  "qualifier": "glasses"
 }

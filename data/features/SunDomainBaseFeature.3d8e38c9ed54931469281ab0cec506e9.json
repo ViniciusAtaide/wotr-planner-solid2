@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "SunDomainBaseFeature",
   "guid": "3d8e38c9ed54931469281ab0cec506e9",
-  "name": "Sun Domain (level 1)"
+  "name": "Sun Domain (level 1)",
+  "qualifier": "level 1"
 }

@@ -80,5 +80,6 @@
   "m_ReflexSave": null,
   "m_ReplaceSpellbook": null,
   "m_WillSave": null,
-  "name": "Divine Hunter (Hunter)"
+  "name": "Divine Hunter (Hunter)",
+  "qualifier": "Hunter"
 }

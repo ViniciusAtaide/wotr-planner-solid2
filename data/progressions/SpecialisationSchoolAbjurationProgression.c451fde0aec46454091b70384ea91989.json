@@ -46,5 +46,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": null,
-  "name": "Specialist School — Abjuration (Wizard)"
+  "name": "Specialist School — Abjuration (Wizard)",
+  "qualifier": "Wizard"
 }

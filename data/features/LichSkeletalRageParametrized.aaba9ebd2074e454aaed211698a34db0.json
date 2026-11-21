@@ -46,5 +46,6 @@
   "assetName": "LichSkeletalRageParametrized",
   "guid": "aaba9ebd2074e454aaed211698a34db0",
   "m_Prerequisite": null,
-  "name": "Rage Power (Skeleton Upgrade Selection)"
+  "name": "Rage Power (Skeleton Upgrade Selection)",
+  "qualifier": "Skeleton Upgrade Selection"
 }

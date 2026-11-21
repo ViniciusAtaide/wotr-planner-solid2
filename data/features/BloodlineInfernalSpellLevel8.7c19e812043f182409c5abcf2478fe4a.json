@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "BloodlineInfernalSpellLevel8",
   "guid": "7c19e812043f182409c5abcf2478fe4a",
-  "name": "Power Word Stun (Infernal Bloodline)"
+  "name": "Power Word Stun (Infernal Bloodline)",
+  "qualifier": "Infernal Bloodline"
 }

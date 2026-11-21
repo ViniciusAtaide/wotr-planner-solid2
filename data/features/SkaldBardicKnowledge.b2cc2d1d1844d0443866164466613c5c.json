@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "SkaldBardicKnowledge",
   "guid": "b2cc2d1d1844d0443866164466613c5c",
-  "name": "Bardic Knowledge (Skald)"
+  "name": "Bardic Knowledge (Skald)",
+  "qualifier": "Skald"
 }

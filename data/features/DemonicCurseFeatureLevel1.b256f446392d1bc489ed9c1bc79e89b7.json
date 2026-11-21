@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "DemonicCurseFeatureLevel1",
   "guid": "b256f446392d1bc489ed9c1bc79e89b7",
-  "name": "Demonic (level 1)"
+  "name": "Demonic (level 1)",
+  "qualifier": "level 1"
 }

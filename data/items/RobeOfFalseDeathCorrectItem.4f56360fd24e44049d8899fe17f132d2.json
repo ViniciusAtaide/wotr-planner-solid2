@@ -12,5 +12,6 @@
   "m_Enchantments": [
     "!bp_26dbbd72d08a9874e967b23fe73a210d"
   ],
-  "name": "Robe of False Death (shirt)"
+  "name": "Robe of False Death (shirt)",
+  "qualifier": "shirt"
 }

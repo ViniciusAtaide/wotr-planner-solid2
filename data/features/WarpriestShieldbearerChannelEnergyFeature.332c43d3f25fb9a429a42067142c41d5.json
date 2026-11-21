@@ -24,5 +24,6 @@
   "Ranks": 10,
   "assetName": "WarpriestShieldbearerChannelEnergyFeature",
   "guid": "332c43d3f25fb9a429a42067142c41d5",
-  "name": "Channel Positive Energy (Shieldbearer)"
+  "name": "Channel Positive Energy (Shieldbearer)",
+  "qualifier": "Shieldbearer"
 }

@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_a492410f3d65f744c892faf09daad84a",
-  "name": "Dead Bough (Heavy Pick)"
+  "name": "Dead Bough (Heavy Pick)",
+  "qualifier": "Heavy Pick"
 }

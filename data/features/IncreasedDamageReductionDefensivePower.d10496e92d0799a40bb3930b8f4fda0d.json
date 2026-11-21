@@ -28,5 +28,6 @@
   "Ranks": 2,
   "assetName": "IncreasedDamageReductionDefensivePower",
   "guid": "d10496e92d0799a40bb3930b8f4fda0d",
-  "name": "Increased Damage Reduction (Defensive Powers)"
+  "name": "Increased Damage Reduction (Defensive Powers)",
+  "qualifier": "Defensive Powers"
 }

@@ -43,5 +43,6 @@
     "!bp_e953dabc5485bc64ba88c5c539e338bf",
     "!bp_eabd9c10a6c30934f9d7e22b6027977b"
   ],
-  "name": "Spell Specialization (level 1)"
+  "name": "Spell Specialization (level 1)",
+  "qualifier": "level 1"
 }

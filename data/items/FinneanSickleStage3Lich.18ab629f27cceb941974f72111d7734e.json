@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_ec2da496c7936e14c9a28ce616a6b4cd",
-  "name": "Finnean (Sickle)"
+  "name": "Finnean (Sickle)",
+  "qualifier": "Sickle"
 }

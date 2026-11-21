@@ -57,5 +57,6 @@
   "Ranks": 1,
   "assetName": "DragonicDefencesFire",
   "guid": "d2a31af5bd02f9a4a87d6015fdba56bb",
-  "name": "Draconic Defenses (fire)"
+  "name": "Draconic Defenses (fire)",
+  "qualifier": "fire"
 }

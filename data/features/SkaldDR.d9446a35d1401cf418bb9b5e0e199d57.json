@@ -7,5 +7,6 @@
   "Ranks": 10,
   "assetName": "SkaldDR",
   "guid": "d9446a35d1401cf418bb9b5e0e199d57",
-  "name": "Damage Reduction (Skald)"
+  "name": "Damage Reduction (Skald)",
+  "qualifier": "Skald"
 }

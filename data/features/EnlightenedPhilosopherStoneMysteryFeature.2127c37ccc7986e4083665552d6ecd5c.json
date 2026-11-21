@@ -31,5 +31,6 @@
   "Ranks": 1,
   "assetName": "EnlightenedPhilosopherStoneMysteryFeature",
   "guid": "2127c37ccc7986e4083665552d6ecd5c",
-  "name": "Stone (Enlightened Philosopher)"
+  "name": "Stone (Enlightened Philosopher)",
+  "qualifier": "Enlightened Philosopher"
 }

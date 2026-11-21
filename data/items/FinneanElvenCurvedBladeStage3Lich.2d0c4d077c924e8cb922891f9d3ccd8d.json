@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_b5e6838ad2a62b146b49619bcf9f42aa",
-  "name": "Finnean (Elven Curve Blade)"
+  "name": "Finnean (Elven Curve Blade)",
+  "qualifier": "Elven Curve Blade"
 }

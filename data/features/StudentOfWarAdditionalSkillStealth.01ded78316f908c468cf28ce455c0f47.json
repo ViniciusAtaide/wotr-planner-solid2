@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "StudentOfWarAdditionalSkillStealth",
   "guid": "01ded78316f908c468cf28ce455c0f47",
-  "name": "Class Skill — Stealth (Additional Class Skill)"
+  "name": "Class Skill — Stealth (Additional Class Skill)",
+  "qualifier": "Additional Class Skill"
 }

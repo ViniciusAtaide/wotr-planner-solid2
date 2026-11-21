@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "SoheiMountedCombatFeatFeature",
   "guid": "64f12b8a5149e8e4386a767eaf2b62b4",
-  "name": "Bonus Feats (Sohei)"
+  "name": "Bonus Feats (Sohei)",
+  "qualifier": "Sohei"
 }

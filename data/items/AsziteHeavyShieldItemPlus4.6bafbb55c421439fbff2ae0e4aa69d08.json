@@ -5,5 +5,6 @@
   "guid": "6bafbb55c421439fbff2ae0e4aa69d08",
   "m_ArmorComponent": "!bp_aa9f0f53159a453f9210c433e684679d",
   "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
-  "name": "Heavy Shield +4 (aszite)"
+  "name": "Heavy Shield +4 (aszite)",
+  "qualifier": "aszite"
 }

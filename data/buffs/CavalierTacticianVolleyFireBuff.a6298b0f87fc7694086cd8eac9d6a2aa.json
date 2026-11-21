@@ -11,5 +11,6 @@
   "Stacking": "Prolong",
   "assetName": "CavalierTacticianVolleyFireBuff",
   "guid": "a6298b0f87fc7694086cd8eac9d6a2aa",
-  "name": "Volley Fire (buff)"
+  "name": "Volley Fire (buff)",
+  "qualifier": "buff"
 }

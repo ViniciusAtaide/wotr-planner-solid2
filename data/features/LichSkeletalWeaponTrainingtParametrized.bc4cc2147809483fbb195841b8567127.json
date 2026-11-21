@@ -27,5 +27,6 @@
   "assetName": "LichSkeletalWeaponTrainingtParametrized",
   "guid": "bc4cc2147809483fbb195841b8567127",
   "m_Prerequisite": null,
-  "name": "Weapon Training (Skeleton Upgrade Selection)"
+  "name": "Weapon Training (Skeleton Upgrade Selection)",
+  "qualifier": "Skeleton Upgrade Selection"
 }

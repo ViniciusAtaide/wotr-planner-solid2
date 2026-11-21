@@ -46,5 +46,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": null,
-  "name": "Air (Elemental Focus)"
+  "name": "Air (Elemental Focus)",
+  "qualifier": "Elemental Focus"
 }

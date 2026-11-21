@@ -25,6 +25,7 @@ export interface BlueprintBase {
   readonly guid: Guid;
   readonly assetName: string;
   readonly name?: string;
+  readonly qualifier?: string;
   readonly Components: readonly Component[];
 }
 

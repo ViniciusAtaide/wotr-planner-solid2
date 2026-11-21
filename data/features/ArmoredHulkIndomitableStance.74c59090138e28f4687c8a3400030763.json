@@ -22,5 +22,6 @@
   "Ranks": 1,
   "assetName": "ArmoredHulkIndomitableStance",
   "guid": "74c59090138e28f4687c8a3400030763",
-  "name": "Indomitable Stance (Armored Hulk)"
+  "name": "Indomitable Stance (Armored Hulk)",
+  "qualifier": "Armored Hulk"
 }

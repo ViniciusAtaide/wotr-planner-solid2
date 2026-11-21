@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "ProtectionDomainBaseFeature",
   "guid": "a05a8959c594daa40a1c5add79566566",
-  "name": "Protection Domain (level 1)"
+  "name": "Protection Domain (level 1)",
+  "qualifier": "level 1"
 }

@@ -42,5 +42,6 @@
     "!bp_7863c6208ec327d45bf4de5ce3fe9008",
     "!bp_4d42e0f607c84cb79f4d0df6d3f41f46"
   ],
-  "name": "Arcane Spellcasting (Mystic Theurge)"
+  "name": "Arcane Spellcasting (Mystic Theurge)",
+  "qualifier": "Mystic Theurge"
 }

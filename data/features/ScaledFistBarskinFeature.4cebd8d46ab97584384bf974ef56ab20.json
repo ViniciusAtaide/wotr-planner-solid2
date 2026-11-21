@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "ScaledFistBarskinFeature",
   "guid": "4cebd8d46ab97584384bf974ef56ab20",
-  "name": "Ki Power: Barkskin (Scaled Fist)"
+  "name": "Ki Power: Barkskin (Scaled Fist)",
+  "qualifier": "Scaled Fist"
 }

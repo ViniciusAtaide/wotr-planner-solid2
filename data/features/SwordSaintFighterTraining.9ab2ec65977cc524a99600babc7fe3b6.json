@@ -16,5 +16,6 @@
   "Ranks": 1,
   "assetName": "SwordSaintFighterTraining",
   "guid": "9ab2ec65977cc524a99600babc7fe3b6",
-  "name": "Fighter Training (Sword Saint)"
+  "name": "Fighter Training (Sword Saint)",
+  "qualifier": "Sword Saint"
 }

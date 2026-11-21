@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "WitchHexIceplantFeature",
   "guid": "9af6dc2697c8ef24eab8ce1c697b05c4",
-  "name": "Iceplant (witch hex)"
+  "name": "Iceplant (witch hex)",
+  "qualifier": "witch hex"
 }

@@ -15,5 +15,6 @@
   "Ranks": 5,
   "assetName": "InspireCompetenceFeature",
   "guid": "6d3fcfab6d935754c918eb0e004b5ef7",
-  "name": "Inspire Competence (Bard)"
+  "name": "Inspire Competence (Bard)",
+  "qualifier": "Bard"
 }

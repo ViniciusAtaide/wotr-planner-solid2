@@ -11,5 +11,6 @@
   "Stacking": "Prolong",
   "assetName": "CavalierTacticianTandemTripBuff",
   "guid": "965ea9716b87f4b46a6a8f50523393bd",
-  "name": "Tandem Trip (buff)"
+  "name": "Tandem Trip (buff)",
+  "qualifier": "buff"
 }

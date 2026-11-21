@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "ShifterWildShapeManticoreFeatureLevelUp",
   "guid": "719be33c87f94ed58414ba3eb5a4b664",
-  "name": "Manticore Shape (Child of the Manticore)"
+  "name": "Manticore Shape (Child of the Manticore)",
+  "qualifier": "Child of the Manticore"
 }

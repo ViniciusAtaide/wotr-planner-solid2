@@ -633,5 +633,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Undead Bloodline (Secondary Bloodline)"
+  "name": "Undead Bloodline (Secondary Bloodline)",
+  "qualifier": "Secondary Bloodline"
 }

@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "WarDomainBaseFeature",
   "guid": "640c20da7d6fcbc43b0d30a0a762f122",
-  "name": "War Domain (level 1)"
+  "name": "War Domain (level 1)",
+  "qualifier": "level 1"
 }

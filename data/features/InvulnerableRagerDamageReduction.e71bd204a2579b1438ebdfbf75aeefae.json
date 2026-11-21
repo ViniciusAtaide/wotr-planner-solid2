@@ -7,5 +7,6 @@
   "Ranks": 10,
   "assetName": "InvulnerableRagerDamageReduction",
   "guid": "e71bd204a2579b1438ebdfbf75aeefae",
-  "name": "Damage Reduction (Invulnerable Rager)"
+  "name": "Damage Reduction (Invulnerable Rager)",
+  "qualifier": "Invulnerable Rager"
 }

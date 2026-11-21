@@ -23,5 +23,6 @@
   "Ranks": 1,
   "assetName": "WolfScarredFaceCurseFeatureLevel1NoProgression",
   "guid": "3719895b1519447b8bb65428351507ba",
-  "name": "Wolf-Scarred Face (level 1)"
+  "name": "Wolf-Scarred Face (level 1)",
+  "qualifier": "level 1"
 }

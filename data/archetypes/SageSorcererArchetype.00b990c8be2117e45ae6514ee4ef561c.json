@@ -90,5 +90,6 @@
   "m_ReflexSave": null,
   "m_ReplaceSpellbook": "!bp_cc2052732997b654e93eac268a39a0a9",
   "m_WillSave": null,
-  "name": "Sage Sorcerer (Sorcerer)"
+  "name": "Sage Sorcerer (Sorcerer)",
+  "qualifier": "Sorcerer"
 }

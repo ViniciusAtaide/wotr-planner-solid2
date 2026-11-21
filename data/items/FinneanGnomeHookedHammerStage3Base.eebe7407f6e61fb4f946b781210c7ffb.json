@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": "!bp_b9382c119bfc12e4883f224aef2e4343",
   "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3",
-  "name": "Finnean the Talking Weapon (Gnome Hooked Hammer +5)"
+  "name": "Finnean the Talking Weapon (Gnome Hooked Hammer +5)",
+  "qualifier": "Gnome Hooked Hammer +5"
 }

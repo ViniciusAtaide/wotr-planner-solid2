@@ -23,5 +23,6 @@
   "Stacking": "Replace",
   "assetName": "ShifterAspectElephantBuff",
   "guid": "c4c39e7078224b6caaf3c8a02032b5cb",
-  "name": "Mammoth (Shifter 9)"
+  "name": "Mammoth (Shifter 9)",
+  "qualifier": "Shifter 9"
 }

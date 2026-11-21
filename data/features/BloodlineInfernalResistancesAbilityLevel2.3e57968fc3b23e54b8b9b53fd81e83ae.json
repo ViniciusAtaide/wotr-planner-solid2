@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "BloodlineInfernalResistancesAbilityLevel2",
   "guid": "3e57968fc3b23e54b8b9b53fd81e83ae",
-  "name": "Infernal Resistances (level 9)"
+  "name": "Infernal Resistances (level 9)",
+  "qualifier": "level 9"
 }

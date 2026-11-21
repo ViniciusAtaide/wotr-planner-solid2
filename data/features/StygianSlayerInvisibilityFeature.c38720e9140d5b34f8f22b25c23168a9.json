@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "StygianSlayerInvisibilityFeature",
   "guid": "c38720e9140d5b34f8f22b25c23168a9",
-  "name": "Invisibility (Stygian Slayer)"
+  "name": "Invisibility (Stygian Slayer)",
+  "qualifier": "Stygian Slayer"
 }

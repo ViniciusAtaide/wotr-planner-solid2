@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": "!bp_46d278a32a4594747b90a979d776640a",
   "m_Type": "!bp_0ec97c08fdf87e44f8f16ba87b511743",
-  "name": "Finnean the Talking Weapon (Dwarven Urgrosh +5)"
+  "name": "Finnean the Talking Weapon (Dwarven Urgrosh +5)",
+  "qualifier": "Dwarven Urgrosh +5"
 }

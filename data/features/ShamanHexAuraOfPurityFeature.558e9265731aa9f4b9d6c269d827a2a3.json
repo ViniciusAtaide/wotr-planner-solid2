@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "ShamanHexAuraOfPurityFeature",
   "guid": "558e9265731aa9f4b9d6c269d827a2a3",
-  "name": "Aura of Purity (shaman hex)"
+  "name": "Aura of Purity (shaman hex)",
+  "qualifier": "shaman hex"
 }

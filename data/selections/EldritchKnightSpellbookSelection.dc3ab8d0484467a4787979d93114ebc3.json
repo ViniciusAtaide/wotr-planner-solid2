@@ -42,5 +42,6 @@
     "!bp_c3f32e9e35564d17b3043aa8ece555b9",
     "!bp_ad6b14b53faa437494f2a77d7022a726"
   ],
-  "name": "Arcane Spellcasting (Eldritch Knight)"
+  "name": "Arcane Spellcasting (Eldritch Knight)",
+  "qualifier": "Eldritch Knight"
 }

@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "ProtectionDomainBaseFeatureSeparatist",
   "guid": "7f6b270327ca454b802ed15f4a6ee4f4",
-  "name": "Protection Domain (Separatist)"
+  "name": "Protection Domain (Separatist)",
+  "qualifier": "Separatist"
 }

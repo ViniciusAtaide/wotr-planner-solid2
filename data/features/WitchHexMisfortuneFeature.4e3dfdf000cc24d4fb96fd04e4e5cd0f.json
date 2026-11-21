@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "WitchHexMisfortuneFeature",
   "guid": "4e3dfdf000cc24d4fb96fd04e4e5cd0f",
-  "name": "Misfortune (witch hex)"
+  "name": "Misfortune (witch hex)",
+  "qualifier": "witch hex"
 }

@@ -9,5 +9,6 @@
   "Ranks": 1,
   "assetName": "EldritchWandWielder",
   "guid": "83ca7d2b7ae56354b96148caa1c3f3de",
-  "name": "Wand Wielder (Magus Arcana)"
+  "name": "Wand Wielder (Magus Arcana)",
+  "qualifier": "Magus Arcana"
 }

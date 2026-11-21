@@ -22,5 +22,6 @@
   "Ranks": 1,
   "assetName": "BloodragerDragonCopperBreath",
   "guid": "c77f94d216144f145a3a4b4e615b4e87",
-  "name": "Breath Weapon (bloodrager, copper)"
+  "name": "Breath Weapon (bloodrager, copper)",
+  "qualifier": "bloodrager, copper"
 }

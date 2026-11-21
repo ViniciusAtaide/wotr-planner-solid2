@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "NobilityDomainBaseFeature",
   "guid": "a1a7f3dd904ed8e45b074232f48190d1",
-  "name": "Nobility Domain (level 1)"
+  "name": "Nobility Domain (level 1)",
+  "qualifier": "level 1"
 }

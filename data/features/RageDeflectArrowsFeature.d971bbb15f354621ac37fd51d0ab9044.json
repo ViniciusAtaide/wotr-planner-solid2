@@ -42,5 +42,6 @@
   "Ranks": 1,
   "assetName": "RageDeflectArrowsFeature",
   "guid": "d971bbb15f354621ac37fd51d0ab9044",
-  "name": "Deflect Arrows (Instinctual Warrior)"
+  "name": "Deflect Arrows (Instinctual Warrior)",
+  "qualifier": "Instinctual Warrior"
 }

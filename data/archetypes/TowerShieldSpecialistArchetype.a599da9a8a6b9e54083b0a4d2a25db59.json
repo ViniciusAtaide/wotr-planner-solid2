@@ -163,5 +163,6 @@
   "m_ReflexSave": null,
   "m_ReplaceSpellbook": null,
   "m_WillSave": null,
-  "name": "Tower Shield Specialist (Fighter)"
+  "name": "Tower Shield Specialist (Fighter)",
+  "qualifier": "Fighter"
 }

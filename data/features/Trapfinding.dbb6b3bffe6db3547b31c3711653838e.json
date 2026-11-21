@@ -26,5 +26,6 @@
   "Ranks": 10,
   "assetName": "Trapfinding",
   "guid": "dbb6b3bffe6db3547b31c3711653838e",
-  "name": "Trapfinding (Rogue)"
+  "name": "Trapfinding (Rogue)",
+  "qualifier": "Rogue"
 }

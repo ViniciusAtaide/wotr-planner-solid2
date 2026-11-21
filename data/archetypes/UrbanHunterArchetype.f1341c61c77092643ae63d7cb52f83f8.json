@@ -121,5 +121,6 @@
   "m_ReflexSave": null,
   "m_ReplaceSpellbook": null,
   "m_WillSave": null,
-  "name": "Urban Hunter (Hunter)"
+  "name": "Urban Hunter (Hunter)",
+  "qualifier": "Hunter"
 }

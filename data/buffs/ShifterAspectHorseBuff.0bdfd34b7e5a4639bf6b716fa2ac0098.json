@@ -32,5 +32,6 @@
   "Stacking": "Replace",
   "assetName": "ShifterAspectHorseBuff",
   "guid": "0bdfd34b7e5a4639bf6b716fa2ac0098",
-  "name": "Horse (Shifter 9)"
+  "name": "Horse (Shifter 9)",
+  "qualifier": "Shifter 9"
 }

@@ -16,5 +16,6 @@
   "Ranks": 1,
   "assetName": "EldritchScionFighterTraining",
   "guid": "eadc14e84c7e3c34684252b5c6459a45",
-  "name": "Fighter Training (Magus)"
+  "name": "Fighter Training (Magus)",
+  "qualifier": "Magus"
 }

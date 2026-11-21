@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "UnswornShamanMinorSpiritFeature 1",
   "guid": "66ac87c379d8fd241b2e6bd3b4ae8774",
-  "name": "Minor Spirit (Unsworn Shaman)"
+  "name": "Minor Spirit (Unsworn Shaman)",
+  "qualifier": "Unsworn Shaman"
 }

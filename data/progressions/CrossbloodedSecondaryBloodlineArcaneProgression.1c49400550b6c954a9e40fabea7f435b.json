@@ -633,5 +633,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Arcane Bloodline (Secondary Bloodline)"
+  "name": "Arcane Bloodline (Secondary Bloodline)",
+  "qualifier": "Secondary Bloodline"
 }

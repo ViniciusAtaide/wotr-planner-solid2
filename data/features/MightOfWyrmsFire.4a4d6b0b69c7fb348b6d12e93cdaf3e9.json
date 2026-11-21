@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "MightOfWyrmsFire",
   "guid": "4a4d6b0b69c7fb348b6d12e93cdaf3e9",
-  "name": "Might of Wyrms (fire)"
+  "name": "Might of Wyrms (fire)",
+  "qualifier": "fire"
 }

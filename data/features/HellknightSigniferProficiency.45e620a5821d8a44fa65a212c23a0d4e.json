@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "HellknightSigniferProficiency",
   "guid": "45e620a5821d8a44fa65a212c23a0d4e",
-  "name": "Weapon and Armor Proficiency (Hellknight Signifer)"
+  "name": "Weapon and Armor Proficiency (Hellknight Signifer)",
+  "qualifier": "Hellknight Signifer"
 }

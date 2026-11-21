@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "ScaledFistACBonusUnlock",
   "guid": "2a8922e28b3eba54fa7a244f7b05bd9e",
-  "name": "AC Bonus (Scaled Fist)"
+  "name": "AC Bonus (Scaled Fist)",
+  "qualifier": "Scaled Fist"
 }

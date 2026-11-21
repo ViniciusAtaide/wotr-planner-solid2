@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "WitchHexWardFeature",
   "guid": "4649c74487a4b7d499aed2c5b02ae89d",
-  "name": "Ward (witch hex)"
+  "name": "Ward (witch hex)",
+  "qualifier": "witch hex"
 }

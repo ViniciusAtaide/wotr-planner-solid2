@@ -14,5 +14,6 @@
   "assetName": "BloodlineArcaneSchoolPowerFeature",
   "guid": "8891303b67eb273428f1691864b08cf8",
   "m_Prerequisite": null,
-  "name": "School Power (feature)"
+  "name": "School Power (feature)",
+  "qualifier": "feature"
 }

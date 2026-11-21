@@ -28,5 +28,6 @@
   "Ranks": 1,
   "assetName": "DivineHerbalistAncestorsMysteryFeature",
   "guid": "2af1112188727bf469ec50c5575b6c52",
-  "name": "Ancestor (Divine Herbalist)"
+  "name": "Ancestor (Divine Herbalist)",
+  "qualifier": "Divine Herbalist"
 }

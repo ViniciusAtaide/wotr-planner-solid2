@@ -24,5 +24,6 @@
   "assetName": "BloodlineArcaneNewArcanaFeatureMagus",
   "guid": "c66e61dea38f3d8479a54eabec20ac99",
   "m_Prerequisite": null,
-  "name": "New Arcana (Eldritch Scion)"
+  "name": "New Arcana (Eldritch Scion)",
+  "qualifier": "Eldritch Scion"
 }

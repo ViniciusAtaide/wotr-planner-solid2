@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "DirgeOfDoomFeature",
   "guid": "1d48ab2bded57a74dad8af3da07d313a",
-  "name": "Dirge of Doom (Bard)"
+  "name": "Dirge of Doom (Bard)",
+  "qualifier": "Bard"
 }

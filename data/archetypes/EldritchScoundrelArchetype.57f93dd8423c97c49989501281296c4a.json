@@ -109,5 +109,6 @@
   "m_ReflexSave": null,
   "m_ReplaceSpellbook": "!bp_4f96fb20f06b7494a8b2bd731a70af6c",
   "m_WillSave": null,
-  "name": "Eldritch Scoundrel (Rogue)"
+  "name": "Eldritch Scoundrel (Rogue)",
+  "qualifier": "Rogue"
 }

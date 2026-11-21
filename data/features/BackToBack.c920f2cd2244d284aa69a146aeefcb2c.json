@@ -47,5 +47,6 @@
   "Ranks": 1,
   "assetName": "BackToBack",
   "guid": "c920f2cd2244d284aa69a146aeefcb2c",
-  "name": "Back to Back (feature)"
+  "name": "Back to Back (feature)",
+  "qualifier": "feature"
 }

@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_4b289eccefe6d704093201e52eb6d123",
-  "name": "Finnean the Talking Weapon (Spear +3)"
+  "name": "Finnean the Talking Weapon (Spear +3)",
+  "qualifier": "Spear +3"
 }

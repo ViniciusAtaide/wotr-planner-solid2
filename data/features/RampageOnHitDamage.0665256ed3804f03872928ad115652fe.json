@@ -7,5 +7,6 @@
   "Ranks": 3,
   "assetName": "RampageOnHitDamage",
   "guid": "0665256ed3804f03872928ad115652fe",
-  "name": "Elemental Damage (Fire Rampage)"
+  "name": "Elemental Damage (Fire Rampage)",
+  "qualifier": "Fire Rampage"
 }

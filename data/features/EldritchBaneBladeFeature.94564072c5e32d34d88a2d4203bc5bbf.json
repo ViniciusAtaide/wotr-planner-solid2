@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "EldritchBaneBladeFeature",
   "guid": "94564072c5e32d34d88a2d4203bc5bbf",
-  "name": "Bane Blade (Magus Arcana)"
+  "name": "Bane Blade (Magus Arcana)",
+  "qualifier": "Magus Arcana"
 }

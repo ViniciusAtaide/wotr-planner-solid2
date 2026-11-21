@@ -62,5 +62,6 @@
   "Ranks": 1,
   "assetName": "HellKnightOrderOfTheRack",
   "guid": "9ff89287e89287c4498d551d88221447",
-  "name": "Order of the Rack (Order)"
+  "name": "Order of the Rack (Order)",
+  "qualifier": "Order"
 }

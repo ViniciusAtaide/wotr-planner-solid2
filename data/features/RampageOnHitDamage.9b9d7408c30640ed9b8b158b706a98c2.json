@@ -7,5 +7,6 @@
   "Ranks": 3,
   "assetName": "RampageOnHitDamage",
   "guid": "9b9d7408c30640ed9b8b158b706a98c2",
-  "name": "Elemental Damage (Cold Rampage)"
+  "name": "Elemental Damage (Cold Rampage)",
+  "qualifier": "Cold Rampage"
 }

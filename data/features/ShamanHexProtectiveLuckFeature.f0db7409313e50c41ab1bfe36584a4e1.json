@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "ShamanHexProtectiveLuckFeature",
   "guid": "f0db7409313e50c41ab1bfe36584a4e1",
-  "name": "Protective Luck (shaman hex)"
+  "name": "Protective Luck (shaman hex)",
+  "qualifier": "shaman hex"
 }

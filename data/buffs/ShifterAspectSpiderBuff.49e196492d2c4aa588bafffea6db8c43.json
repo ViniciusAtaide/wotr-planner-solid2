@@ -23,5 +23,6 @@
   "Stacking": "Replace",
   "assetName": "ShifterAspectSpiderBuff",
   "guid": "49e196492d2c4aa588bafffea6db8c43",
-  "name": "Spider (Shifter 9)"
+  "name": "Spider (Shifter 9)",
+  "qualifier": "Shifter 9"
 }

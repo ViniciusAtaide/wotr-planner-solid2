@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_5f824fbb0766a3543bbd6ae50248688f",
-  "name": "Finnean (Greatsword)"
+  "name": "Finnean (Greatsword)",
+  "qualifier": "Greatsword"
 }

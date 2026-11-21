@@ -30,5 +30,6 @@
   "Ranks": 1,
   "assetName": "SeekerTrapfinding",
   "guid": "cb3abfaa682b67c48953dfa200aab325",
-  "name": "Seeker's Trapfinding (Oracle)"
+  "name": "Seeker's Trapfinding (Oracle)",
+  "qualifier": "Oracle"
 }

@@ -30,5 +30,6 @@
   "m_ReflexSave": null,
   "m_ReplaceSpellbook": null,
   "m_WillSave": null,
-  "name": "Thassilonian Specialist (Wizard)"
+  "name": "Thassilonian Specialist (Wizard)",
+  "qualifier": "Wizard"
 }

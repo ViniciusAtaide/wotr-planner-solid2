@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "WitchDoctorChannelPositiveFeature",
   "guid": "eb388d17f07e0b44d9f83ada0148cc69",
-  "name": "Channel Energy (Witch Doctor)"
+  "name": "Channel Energy (Witch Doctor)",
+  "qualifier": "Witch Doctor"
 }

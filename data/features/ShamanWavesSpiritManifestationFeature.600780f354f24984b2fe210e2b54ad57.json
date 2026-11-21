@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ShamanWavesSpiritManifestationFeature",
   "guid": "600780f354f24984b2fe210e2b54ad57",
-  "name": "Manifestation (Waves)"
+  "name": "Manifestation (Waves)",
+  "qualifier": "Waves"
 }

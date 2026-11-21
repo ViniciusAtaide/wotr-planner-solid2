@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "BloodragerCelestialConviction",
   "guid": "713d244738edd8e488b924fe43ff880e",
-  "name": "Conviction (bloodrager)"
+  "name": "Conviction (bloodrager)",
+  "qualifier": "bloodrager"
 }

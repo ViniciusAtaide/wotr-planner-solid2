@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "FeatureWingsDraconicCopper",
   "guid": "0d42c3500717d294886409527b211d3b",
-  "name": "Wings (copper dragon)"
+  "name": "Wings (copper dragon)",
+  "qualifier": "copper dragon"
 }

@@ -21,5 +21,6 @@
   "Ranks": 1,
   "assetName": "BloodlineAbyssalClawsFeatureAddLevel1",
   "guid": "e17698ef77dc3174cbd0a42422c22441",
-  "name": "Grow Claws (Abyssal Bloodline)"
+  "name": "Grow Claws (Abyssal Bloodline)",
+  "qualifier": "Abyssal Bloodline"
 }

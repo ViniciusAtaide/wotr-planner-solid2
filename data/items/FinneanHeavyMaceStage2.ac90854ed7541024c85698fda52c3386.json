@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_d5a167f0f0208dd439ec7481e8989e21",
-  "name": "Finnean the Talking Weapon (Heavy Mace +3)"
+  "name": "Finnean the Talking Weapon (Heavy Mace +3)",
+  "qualifier": "Heavy Mace +3"
 }

@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "DragonicStrikeCold",
   "guid": "3ff9333e578d7c2448ba18b6ffacb885",
-  "name": "Draconic Strike (cold)"
+  "name": "Draconic Strike (cold)",
+  "qualifier": "cold"
 }

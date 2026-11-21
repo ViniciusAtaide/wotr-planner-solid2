@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "WitchHexSlumberFeature",
   "guid": "498d7668a6086454cb2def921b89bd8f",
-  "name": "Slumber (witch hex)"
+  "name": "Slumber (witch hex)",
+  "qualifier": "witch hex"
 }

@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "CavalierSwordSkills",
   "guid": "0e333ad0b9537d0478c771cd0fe38e66",
-  "name": "Skills (Order of the Sword)"
+  "name": "Skills (Order of the Sword)",
+  "qualifier": "Order of the Sword"
 }

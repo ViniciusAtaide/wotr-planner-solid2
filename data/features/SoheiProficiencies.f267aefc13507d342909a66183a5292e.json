@@ -19,5 +19,6 @@
   "Ranks": 1,
   "assetName": "SoheiProficiencies",
   "guid": "f267aefc13507d342909a66183a5292e",
-  "name": "Weapon and Armor Proficiency (Sohei)"
+  "name": "Weapon and Armor Proficiency (Sohei)",
+  "qualifier": "Sohei"
 }

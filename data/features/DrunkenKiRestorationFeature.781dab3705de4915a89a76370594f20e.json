@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "DrunkenKiRestorationFeature",
   "guid": "781dab3705de4915a89a76370594f20e",
-  "name": "Ki Power: Restoration (Drunken Ki)"
+  "name": "Ki Power: Restoration (Drunken Ki)",
+  "qualifier": "Drunken Ki"
 }

@@ -54,5 +54,6 @@
   "Ranks": 1,
   "assetName": "ShamanFrostSpiritWanderingFeature",
   "guid": "6aeab860502ca2643affcbf1a83187e0",
-  "name": "Frost (Shaman 4)"
+  "name": "Frost (Shaman 4)",
+  "qualifier": "Shaman 4"
 }

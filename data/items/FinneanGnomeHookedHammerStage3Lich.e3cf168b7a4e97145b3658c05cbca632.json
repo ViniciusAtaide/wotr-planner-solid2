@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": "!bp_093ce980a54f17541a5cafb22e9c79a4",
   "m_Type": "!bp_91645b645cf121a479c1fabc5678dcb3",
-  "name": "Finnean (Gnome Hooked Hammer)"
+  "name": "Finnean (Gnome Hooked Hammer)",
+  "qualifier": "Gnome Hooked Hammer"
 }

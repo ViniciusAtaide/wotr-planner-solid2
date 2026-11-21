@@ -48,5 +48,6 @@
   "assetName": "SpellSpecialization10",
   "guid": "2b96df8e6eb1f794eaf7e1defbf4f54b",
   "m_Prerequisite": "!bp_16fa59cc9a72a6043b566b49184f53fe",
-  "name": "Spell Specialization (change 10)"
+  "name": "Spell Specialization (change 10)",
+  "qualifier": "change 10"
 }

@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "HellknightDisciplineWrackFeature",
   "guid": "813d9df0462ac8f43bcc4fb9e528659e",
-  "name": "Wrack (Disciplines)"
+  "name": "Wrack (Disciplines)",
+  "qualifier": "Disciplines"
 }

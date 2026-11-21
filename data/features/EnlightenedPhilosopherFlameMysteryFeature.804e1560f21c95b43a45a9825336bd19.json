@@ -31,5 +31,6 @@
   "Ranks": 1,
   "assetName": "EnlightenedPhilosopherFlameMysteryFeature",
   "guid": "804e1560f21c95b43a45a9825336bd19",
-  "name": "Flame (Enlightened Philosopher)"
+  "name": "Flame (Enlightened Philosopher)",
+  "qualifier": "Enlightened Philosopher"
 }

@@ -203,5 +203,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Undead (Bloodline)"
+  "name": "Undead (Bloodline)",
+  "qualifier": "Bloodline"
 }

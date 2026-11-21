@@ -19,5 +19,6 @@
   "Ranks": 1,
   "assetName": "SacredArmorShieldEnchantPlus2",
   "guid": "9051a98e60cca2742ad5a80ab9c9a1f3",
-  "name": "Sacred Shield (Shieldbearer 8)"
+  "name": "Sacred Shield (Shieldbearer 8)",
+  "qualifier": "Shieldbearer 8"
 }

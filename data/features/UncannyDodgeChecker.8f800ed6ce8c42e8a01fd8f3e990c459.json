@@ -65,5 +65,6 @@
   "Ranks": 2,
   "assetName": "UncannyDodgeChecker",
   "guid": "8f800ed6ce8c42e8a01fd8f3e990c459",
-  "name": "Uncanny Dodge (class feature)"
+  "name": "Uncanny Dodge (class feature)",
+  "qualifier": "class feature"
 }

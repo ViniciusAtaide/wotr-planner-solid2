@@ -11,5 +11,6 @@
   "Stacking": "Prolong",
   "assetName": "CavalierTacticianShakeItOffBuff",
   "guid": "2f5768f642de59f40acd5211a627a237",
-  "name": "Shake It Off (buff)"
+  "name": "Shake It Off (buff)",
+  "qualifier": "buff"
 }

@@ -16,5 +16,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_07cc1a7fceaee5b42b3e43da960fe76d",
-  "name": "Your Phylactery (Dagger)"
+  "name": "Your Phylactery (Dagger)",
+  "qualifier": "Dagger"
 }

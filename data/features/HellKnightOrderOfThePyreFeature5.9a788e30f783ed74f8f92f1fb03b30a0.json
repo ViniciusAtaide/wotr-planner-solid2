@@ -27,5 +27,6 @@
   "Ranks": 1,
   "assetName": "HellKnightOrderOfThePyreFeature5",
   "guid": "9a788e30f783ed74f8f92f1fb03b30a0",
-  "name": "Order of the Pyre (level 5)"
+  "name": "Order of the Pyre (level 5)",
+  "qualifier": "level 5"
 }

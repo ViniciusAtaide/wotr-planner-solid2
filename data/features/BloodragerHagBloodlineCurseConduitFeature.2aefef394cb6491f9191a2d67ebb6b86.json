@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "BloodragerHagBloodlineCurseConduitFeature",
   "guid": "2aefef394cb6491f9191a2d67ebb6b86",
-  "name": "Curse Conduit (Hag)"
+  "name": "Curse Conduit (Hag)",
+  "qualifier": "Hag"
 }

@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "HellKnightOrderOfTheScourgeFeature5",
   "guid": "05a7202154a23424f8c3e7da65c03d59",
-  "name": "Order of the Scourge (level 5)"
+  "name": "Order of the Scourge (level 5)",
+  "qualifier": "level 5"
 }

@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "LichSkeletalFighterTierI",
   "guid": "b398a2ac41ea6c94683efd968b928595",
-  "name": "Skeletal Fighter I (level 2)"
+  "name": "Skeletal Fighter I (level 2)",
+  "qualifier": "level 2"
 }

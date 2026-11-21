@@ -27,5 +27,6 @@
   "Ranks": 1,
   "assetName": "EnlightenedPhilosopherBonesMysteryFeature",
   "guid": "511ee1f805f8d1445b64f4c8398ca938",
-  "name": "Bones (Enlightened Philosopher)"
+  "name": "Bones (Enlightened Philosopher)",
+  "qualifier": "Enlightened Philosopher"
 }

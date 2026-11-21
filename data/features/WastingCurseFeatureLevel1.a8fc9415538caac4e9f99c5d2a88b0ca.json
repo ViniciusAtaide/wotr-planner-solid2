@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "WastingCurseFeatureLevel1",
   "guid": "a8fc9415538caac4e9f99c5d2a88b0ca",
-  "name": "Wasting (level 1)"
+  "name": "Wasting (level 1)",
+  "qualifier": "level 1"
 }

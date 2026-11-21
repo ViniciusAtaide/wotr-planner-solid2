@@ -48,5 +48,6 @@
     "!bp_a99916a8aad2414f970072db7b760c48",
     "!bp_606ca13281f4404a9c224aa7ce8a802e"
   ],
-  "name": "Blessings (Warpriest)"
+  "name": "Blessings (Warpriest)",
+  "qualifier": "Warpriest"
 }

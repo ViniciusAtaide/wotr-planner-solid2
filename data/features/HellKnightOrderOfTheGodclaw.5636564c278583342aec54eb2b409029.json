@@ -62,5 +62,6 @@
   "Ranks": 1,
   "assetName": "HellKnightOrderOfTheGodclaw",
   "guid": "5636564c278583342aec54eb2b409029",
-  "name": "Order of the Godclaw (Order)"
+  "name": "Order of the Godclaw (Order)",
+  "qualifier": "Order"
 }

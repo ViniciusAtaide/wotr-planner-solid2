@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "StudentOfWarAdditionalSkillKnowledgeWorld",
   "guid": "5b048c32212b9e34c80a13ee913050cf",
-  "name": "Class Skill — Knowledge (World) (Additional Class Skill)"
+  "name": "Class Skill — Knowledge (World) (Additional Class Skill)",
+  "qualifier": "Additional Class Skill"
 }

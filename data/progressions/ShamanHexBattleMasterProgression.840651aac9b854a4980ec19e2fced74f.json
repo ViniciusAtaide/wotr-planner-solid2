@@ -50,5 +50,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Battle Master (progression)"
+  "name": "Battle Master (progression)",
+  "qualifier": "progression"
 }

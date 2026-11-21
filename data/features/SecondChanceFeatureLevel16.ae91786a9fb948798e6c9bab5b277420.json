@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "SecondChanceFeatureLevel16",
   "guid": "ae91786a9fb948798e6c9bab5b277420",
-  "name": "Second Chance (level 15)"
+  "name": "Second Chance (level 15)",
+  "qualifier": "level 15"
 }

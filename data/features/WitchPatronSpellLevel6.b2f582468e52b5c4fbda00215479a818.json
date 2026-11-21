@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "WitchPatronSpellLevel6",
   "guid": "b2f582468e52b5c4fbda00215479a818",
-  "name": "Patron Spells (Endurance 12)"
+  "name": "Patron Spells (Endurance 12)",
+  "qualifier": "Endurance 12"
 }

@@ -15,5 +15,6 @@
   "m_AllFeatures": [
     "!bp_ea0ce0aeef8c9e04eadc1ed766455178"
   ],
-  "name": "Fey Magic (Feyspeaker)"
+  "name": "Fey Magic (Feyspeaker)",
+  "qualifier": "Feyspeaker"
 }

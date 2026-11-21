@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "OracleBattleFinalRevelation",
   "guid": "9caa8060ec83c0842b127c318571c6d1",
-  "name": "Final Revelation (Battle)"
+  "name": "Final Revelation (Battle)",
+  "qualifier": "Battle"
 }

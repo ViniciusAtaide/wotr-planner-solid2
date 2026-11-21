@@ -33,5 +33,6 @@
   "Ranks": 1,
   "assetName": "AirBlessingFeature",
   "guid": "e1ff99dc3aeaa064e8eecde51c1c4773",
-  "name": "Air (Blessings)"
+  "name": "Air (Blessings)",
+  "qualifier": "Blessings"
 }

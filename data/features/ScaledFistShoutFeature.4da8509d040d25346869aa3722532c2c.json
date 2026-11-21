@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "ScaledFistShoutFeature",
   "guid": "4da8509d040d25346869aa3722532c2c",
-  "name": "Ki Power: Shout (Scaled Fist)"
+  "name": "Ki Power: Shout (Scaled Fist)",
+  "qualifier": "Scaled Fist"
 }

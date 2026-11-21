@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ImitatorMasterSlayerFeature",
   "guid": "97c7054442504513b0324c00db0290fc",
-  "name": "Master Slayer (Imitator)"
+  "name": "Master Slayer (Imitator)",
+  "qualifier": "Imitator"
 }

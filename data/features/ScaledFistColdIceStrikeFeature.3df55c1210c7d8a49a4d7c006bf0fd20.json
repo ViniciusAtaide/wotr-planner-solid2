@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "ScaledFistColdIceStrikeFeature",
   "guid": "3df55c1210c7d8a49a4d7c006bf0fd20",
-  "name": "Ki Power: Cold Ice Strike (Scaled Fist)"
+  "name": "Ki Power: Cold Ice Strike (Scaled Fist)",
+  "qualifier": "Scaled Fist"
 }

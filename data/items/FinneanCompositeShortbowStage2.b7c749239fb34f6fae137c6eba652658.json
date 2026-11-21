@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_011f6f86a0b16df4bbf7f40878c3e80b",
-  "name": "Finnean the Talking Weapon (Composite Shortbow +3)"
+  "name": "Finnean the Talking Weapon (Composite Shortbow +3)",
+  "qualifier": "Composite Shortbow +3"
 }

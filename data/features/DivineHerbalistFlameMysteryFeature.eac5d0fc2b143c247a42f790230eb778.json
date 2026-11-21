@@ -28,5 +28,6 @@
   "Ranks": 1,
   "assetName": "DivineHerbalistFlameMysteryFeature",
   "guid": "eac5d0fc2b143c247a42f790230eb778",
-  "name": "Flame (Divine Herbalist)"
+  "name": "Flame (Divine Herbalist)",
+  "qualifier": "Divine Herbalist"
 }

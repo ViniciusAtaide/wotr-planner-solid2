@@ -22,5 +22,6 @@
   ],
   "assetName": "WitchWanderingHexAbility",
   "guid": "b209beab784d93546b40a2fa2a09ffa8",
-  "name": "Wandering Witch Hex (ability)"
+  "name": "Wandering Witch Hex (ability)",
+  "qualifier": "ability"
 }

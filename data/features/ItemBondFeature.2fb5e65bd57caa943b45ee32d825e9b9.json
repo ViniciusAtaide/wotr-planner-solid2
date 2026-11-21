@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ItemBondFeature",
   "guid": "2fb5e65bd57caa943b45ee32d825e9b9",
-  "name": "Arcane Bond — Object (Wizard)"
+  "name": "Arcane Bond — Object (Wizard)",
+  "qualifier": "Wizard"
 }

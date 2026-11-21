@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "AuraOfFaithFeature",
   "guid": "0437f4af5ad49b544bccf48aa7a51319",
-  "name": "Aura of Faith (Paladin)"
+  "name": "Aura of Faith (Paladin)",
+  "qualifier": "Paladin"
 }

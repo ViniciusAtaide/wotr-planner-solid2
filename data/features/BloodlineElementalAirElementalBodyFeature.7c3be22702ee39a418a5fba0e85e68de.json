@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "BloodlineElementalAirElementalBodyFeature",
   "guid": "7c3be22702ee39a418a5fba0e85e68de",
-  "name": "Elemental Body (air)"
+  "name": "Elemental Body (air)",
+  "qualifier": "air"
 }

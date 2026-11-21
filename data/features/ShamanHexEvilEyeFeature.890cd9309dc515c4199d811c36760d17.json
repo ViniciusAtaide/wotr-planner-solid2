@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "ShamanHexEvilEyeFeature",
   "guid": "890cd9309dc515c4199d811c36760d17",
-  "name": "Evil Eye (shaman hex)"
+  "name": "Evil Eye (shaman hex)",
+  "qualifier": "shaman hex"
 }

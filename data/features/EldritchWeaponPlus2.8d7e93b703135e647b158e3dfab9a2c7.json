@@ -19,5 +19,6 @@
   "Ranks": 1,
   "assetName": "EldritchWeaponPlus2",
   "guid": "8d7e93b703135e647b158e3dfab9a2c7",
-  "name": "Arcane Weapon (+2) (Magus)"
+  "name": "Arcane Weapon (+2) (Magus)",
+  "qualifier": "Magus"
 }

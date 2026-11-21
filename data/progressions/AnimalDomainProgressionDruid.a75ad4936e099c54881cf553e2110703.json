@@ -190,5 +190,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Animal Domain (Druid)"
+  "name": "Animal Domain (Druid)",
+  "qualifier": "Druid"
 }

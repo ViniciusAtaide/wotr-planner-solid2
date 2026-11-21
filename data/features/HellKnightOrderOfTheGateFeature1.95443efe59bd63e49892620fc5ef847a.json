@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "HellKnightOrderOfTheGateFeature1",
   "guid": "95443efe59bd63e49892620fc5ef847a",
-  "name": "Order of the Gate (level 1)"
+  "name": "Order of the Gate (level 1)",
+  "qualifier": "level 1"
 }

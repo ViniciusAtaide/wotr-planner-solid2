@@ -10,5 +10,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_cf72040b79c99504785976b28d54b2b7",
-  "name": "Bellowing Howl (weapon)"
+  "name": "Bellowing Howl (weapon)",
+  "qualifier": "weapon"
 }

@@ -17,5 +17,6 @@
   "Ranks": 5,
   "assetName": "ArmoredBattlemageArmorTraining",
   "guid": "7be523d531bb17449bdba98df0e197ff",
-  "name": "Armor Training (Armored Battlemage)"
+  "name": "Armor Training (Armored Battlemage)",
+  "qualifier": "Armored Battlemage"
 }

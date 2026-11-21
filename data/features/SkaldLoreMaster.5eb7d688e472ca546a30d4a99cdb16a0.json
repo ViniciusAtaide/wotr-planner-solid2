@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "SkaldLoreMaster",
   "guid": "5eb7d688e472ca546a30d4a99cdb16a0",
-  "name": "Lore Master (Skald)"
+  "name": "Lore Master (Skald)",
+  "qualifier": "Skald"
 }

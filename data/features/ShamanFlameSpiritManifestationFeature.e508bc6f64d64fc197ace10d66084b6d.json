@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ShamanFlameSpiritManifestationFeature",
   "guid": "e508bc6f64d64fc197ace10d66084b6d",
-  "name": "Manifestation (Flame)"
+  "name": "Manifestation (Flame)",
+  "qualifier": "Flame"
 }

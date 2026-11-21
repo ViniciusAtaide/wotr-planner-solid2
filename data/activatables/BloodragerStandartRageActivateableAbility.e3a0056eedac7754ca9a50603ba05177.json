@@ -6,5 +6,6 @@
   "assetName": "BloodragerStandartRageActivateableAbility",
   "guid": "e3a0056eedac7754ca9a50603ba05177",
   "m_Buff": "!bp_5eac31e457999334b98f98b60fc73b2f",
-  "name": "Bloodrage (Bloodrager 1)"
+  "name": "Bloodrage (Bloodrager 1)",
+  "qualifier": "Bloodrager 1"
 }

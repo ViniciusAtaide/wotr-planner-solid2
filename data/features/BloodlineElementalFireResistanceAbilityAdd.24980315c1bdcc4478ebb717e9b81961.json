@@ -34,5 +34,6 @@
   "Ranks": 2,
   "assetName": "BloodlineElementalFireResistanceAbilityAdd",
   "guid": "24980315c1bdcc4478ebb717e9b81961",
-  "name": "Elemental Resistance (Elemental Bloodline — Fire)"
+  "name": "Elemental Resistance (Elemental Bloodline — Fire)",
+  "qualifier": "Elemental Bloodline — Fire"
 }

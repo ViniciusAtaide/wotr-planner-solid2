@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "SageSorcererCantripsFeature",
   "guid": "50d700ea98467834c9fc622efa03d598",
-  "name": "Cantrips (Sage Sorcerer)"
+  "name": "Cantrips (Sage Sorcerer)",
+  "qualifier": "Sage Sorcerer"
 }

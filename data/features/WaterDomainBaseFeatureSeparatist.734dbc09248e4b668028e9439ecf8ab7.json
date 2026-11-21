@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "WaterDomainBaseFeatureSeparatist",
   "guid": "734dbc09248e4b668028e9439ecf8ab7",
-  "name": "Water Domain (Separatist)"
+  "name": "Water Domain (Separatist)",
+  "qualifier": "Separatist"
 }

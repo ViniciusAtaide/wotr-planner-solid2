@@ -23,5 +23,6 @@
   "Ranks": 1,
   "assetName": "OracleRevelationSpiritOfNature",
   "guid": "a5ab3559cb7921a4a8c288110be248ec",
-  "name": "Spirit of Nature (Revelation)"
+  "name": "Spirit of Nature (Revelation)",
+  "qualifier": "Revelation"
 }

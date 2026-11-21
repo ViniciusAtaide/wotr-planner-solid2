@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "TricksterLoreReligionDarknessDomainFeature",
   "guid": "26845c3c10514868b8244c42caf6f82d",
-  "name": "Darkness Domain (Lore (Religion) 2 Rank)"
+  "name": "Darkness Domain (Lore (Religion) 2 Rank)",
+  "qualifier": "Lore (Religion) 2 Rank"
 }

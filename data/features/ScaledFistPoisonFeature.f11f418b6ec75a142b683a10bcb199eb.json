@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "ScaledFistPoisonFeature",
   "guid": "f11f418b6ec75a142b683a10bcb199eb",
-  "name": "Ki Power: Poison (Scaled Fist)"
+  "name": "Ki Power: Poison (Scaled Fist)",
+  "qualifier": "Scaled Fist"
 }

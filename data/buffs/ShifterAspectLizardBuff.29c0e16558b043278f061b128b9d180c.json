@@ -23,5 +23,6 @@
   "Stacking": "Replace",
   "assetName": "ShifterAspectLizardBuff",
   "guid": "29c0e16558b043278f061b128b9d180c",
-  "name": "Lizard (Shifter 9)"
+  "name": "Lizard (Shifter 9)",
+  "qualifier": "Shifter 9"
 }

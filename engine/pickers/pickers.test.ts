@@ -17,6 +17,7 @@ import {
 } from './offers';
 import { featureTags, tagsOf } from './tags';
 import { classPicker } from './class-picker';
+import { namesInList } from './option-names';
 import { breaks, opensAt, refusal } from '../refusals';
 import { pauseAt, walk } from '../walk';
 
@@ -226,6 +227,25 @@ describe('what character creation offers (comparison bug 5)', { timeout: 30_000 
     expect(differ).toEqual([]);
     expect(laterOnly).toBeGreaterThan(0);
   }, 120_000);
+
+  it('names each option bare, and qualifies it only when another option in the same list shares its name', () => {
+    const ALLIED_SPELLCASTER = '9093ceeefe9b84746a5993d619d7c86f';
+    const ALLIED_SPELLCASTER_BUFF = '3de0359d9480cb549ab6cf1eac51f9dc';
+    expect(data.blueprints.get(ALLIED_SPELLCASTER)?.name).toBe('Allied Spellcaster (feature)');
+    const basic = jackInTheGreen.build.picks.find((p) => p.slot.selection === '247a4068296e8be42890143f451b4b45');
+    const feats = picker(data, jackInTheGreen.build, basic!.slot, G);
+    const allied = feats?.options.find((o) => o.feature === ALLIED_SPELLCASTER);
+    expect(allied?.name).toBe('Allied Spellcaster');
+    expect(allied?.qualifier).toBeUndefined();
+    const both = namesInList(data, [ALLIED_SPELLCASTER, ALLIED_SPELLCASTER_BUFF]);
+    expect(both.get(ALLIED_SPELLCASTER)).toEqual({ name: 'Allied Spellcaster', qualifier: 'feature' });
+    expect(both.get(ALLIED_SPELLCASTER_BUFF)).toEqual({ name: 'Allied Spellcaster', qualifier: 'buff' });
+    const mythics = classPicker(data, jackInTheGreen.build, { rank: 8 }, G);
+    const names = (mythics?.options ?? []).map((o) => o.name);
+    expect(names).toContain('Legend');
+    expect(names).toContain('Gold Dragon');
+    expect((mythics?.options ?? []).every((o) => o.qualifier === undefined)).toBe(true);
+  });
 
   it('offers every path switch the walk takes, Legend by its own name, and not the story’s Legend choice', () => {
     const GOLD_DRAGON = 'daf1235b6217787499c14e4e32142523';

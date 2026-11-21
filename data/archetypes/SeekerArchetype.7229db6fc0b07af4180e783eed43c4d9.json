@@ -47,5 +47,6 @@
   "m_ReflexSave": null,
   "m_ReplaceSpellbook": null,
   "m_WillSave": null,
-  "name": "Seeker (Sorcerer)"
+  "name": "Seeker (Sorcerer)",
+  "qualifier": "Sorcerer"
 }

@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "DruidAlignmentRestriction",
   "guid": "d00ff3791359311449c481126fbf71ce",
-  "name": "Alignment Restriction (Druid)"
+  "name": "Alignment Restriction (Druid)",
+  "qualifier": "Druid"
 }

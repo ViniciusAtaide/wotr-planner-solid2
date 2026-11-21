@@ -21,5 +21,6 @@
   ],
   "assetName": "PossessedShamanWanderingSkillsAbility",
   "guid": "c8d7c885c44d6014499119be5b464ec6",
-  "name": "Wandering Spirit (Wandering Skills)"
+  "name": "Wandering Spirit (Wandering Skills)",
+  "qualifier": "Wandering Skills"
 }

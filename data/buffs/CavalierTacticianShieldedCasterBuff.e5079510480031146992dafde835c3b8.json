@@ -11,5 +11,6 @@
   "Stacking": "Prolong",
   "assetName": "CavalierTacticianShieldedCasterBuff",
   "guid": "e5079510480031146992dafde835c3b8",
-  "name": "Shielded Caster (buff)"
+  "name": "Shielded Caster (buff)",
+  "qualifier": "buff"
 }

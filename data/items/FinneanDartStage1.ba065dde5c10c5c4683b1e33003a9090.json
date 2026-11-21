@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_f415ae950523a7843a74d7780dd551af",
-  "name": "Finnean the Talking Weapon (Dart +1)"
+  "name": "Finnean the Talking Weapon (Dart +1)",
+  "qualifier": "Dart +1"
 }

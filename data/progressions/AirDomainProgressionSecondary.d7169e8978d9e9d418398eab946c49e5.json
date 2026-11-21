@@ -77,5 +77,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Air Domain (Domain Selection)"
+  "name": "Air Domain (Domain Selection)",
+  "qualifier": "Domain Selection"
 }

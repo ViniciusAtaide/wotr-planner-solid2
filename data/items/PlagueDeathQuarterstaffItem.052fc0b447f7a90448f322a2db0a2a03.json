@@ -10,5 +10,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_629736dabac7f9f4a819dc854eaed2d6",
-  "name": "Indomitable Life (weapon)"
+  "name": "Indomitable Life (weapon)",
+  "qualifier": "weapon"
 }

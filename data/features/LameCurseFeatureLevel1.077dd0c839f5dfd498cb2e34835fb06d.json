@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "LameCurseFeatureLevel1",
   "guid": "077dd0c839f5dfd498cb2e34835fb06d",
-  "name": "Lame (level 1)"
+  "name": "Lame (level 1)",
+  "qualifier": "level 1"
 }

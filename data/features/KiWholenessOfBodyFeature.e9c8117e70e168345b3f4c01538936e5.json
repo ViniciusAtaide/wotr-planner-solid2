@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "KiWholenessOfBodyFeature",
   "guid": "e9c8117e70e168345b3f4c01538936e5",
-  "name": "Ki Power: Wholeness of Body (Monk)"
+  "name": "Ki Power: Wholeness of Body (Monk)",
+  "qualifier": "Monk"
 }

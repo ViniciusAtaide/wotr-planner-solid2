@@ -22,5 +22,6 @@
     "!bp_653831e19515438b948764291689dc3a",
     "!bp_e0cc4134510b074468b3d1185970c697"
   ],
-  "name": "Enforcing Gaze (selection)"
+  "name": "Enforcing Gaze (selection)",
+  "qualifier": "selection"
 }

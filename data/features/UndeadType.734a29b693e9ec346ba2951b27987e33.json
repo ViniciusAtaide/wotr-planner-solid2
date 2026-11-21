@@ -19,5 +19,6 @@
   "Ranks": 1,
   "assetName": "UndeadType",
   "guid": "734a29b693e9ec346ba2951b27987e33",
-  "name": "Undead (Dead Man's Hat)"
+  "name": "Undead (Dead Man's Hat)",
+  "qualifier": "Dead Man's Hat"
 }

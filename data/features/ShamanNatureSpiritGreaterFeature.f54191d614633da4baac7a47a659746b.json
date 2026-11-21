@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "ShamanNatureSpiritGreaterFeature",
   "guid": "f54191d614633da4baac7a47a659746b",
-  "name": "Spirit of Nature (Nature)"
+  "name": "Spirit of Nature (Nature)",
+  "qualifier": "Nature"
 }

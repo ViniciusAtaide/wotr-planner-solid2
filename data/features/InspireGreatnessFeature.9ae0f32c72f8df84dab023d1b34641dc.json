@@ -15,5 +15,6 @@
   "Ranks": 5,
   "assetName": "InspireGreatnessFeature",
   "guid": "9ae0f32c72f8df84dab023d1b34641dc",
-  "name": "Inspire Greatness (Bard)"
+  "name": "Inspire Greatness (Bard)",
+  "qualifier": "Bard"
 }

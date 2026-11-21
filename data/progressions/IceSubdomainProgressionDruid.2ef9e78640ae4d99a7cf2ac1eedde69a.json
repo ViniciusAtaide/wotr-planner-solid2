@@ -48,5 +48,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Ice Subdomain (Druid)"
+  "name": "Ice Subdomain (Druid)",
+  "qualifier": "Druid"
 }

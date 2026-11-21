@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "ShamanWanderingHexFeature",
   "guid": "2674f98616188814fbba9f8fccf43564",
-  "name": "Wandering Hex (Shaman 6)"
+  "name": "Wandering Hex (Shaman 6)",
+  "qualifier": "Shaman 6"
 }

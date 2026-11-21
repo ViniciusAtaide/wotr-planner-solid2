@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "DivineHunterPetBonusCharismaSecond",
   "guid": "2aa3f0ed804748968fcffa41b5f05fc0",
-  "name": "Companion Ability Score Bonus — Charisma (second pick)"
+  "name": "Companion Ability Score Bonus — Charisma (second pick)",
+  "qualifier": "second pick"
 }

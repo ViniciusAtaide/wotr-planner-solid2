@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "NatureSense",
   "guid": "3a859e435fdd6d343b80d4970a7664c1",
-  "name": "Nature Sense (Druid)"
+  "name": "Nature Sense (Druid)",
+  "qualifier": "Druid"
 }

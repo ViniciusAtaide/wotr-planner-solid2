@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "EvilBlessingMajorFeature",
   "guid": "883897b5ba5a0144fb051a4ad1b84d97",
-  "name": "Battle Companion (Evil)"
+  "name": "Battle Companion (Evil)",
+  "qualifier": "Evil"
 }

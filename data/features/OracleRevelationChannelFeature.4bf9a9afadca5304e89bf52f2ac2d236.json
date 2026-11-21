@@ -17,5 +17,6 @@
   "Ranks": 10,
   "assetName": "OracleRevelationChannelFeature",
   "guid": "4bf9a9afadca5304e89bf52f2ac2d236",
-  "name": "Channel Positive Energy (Revelation)"
+  "name": "Channel Positive Energy (Revelation)",
+  "qualifier": "Revelation"
 }

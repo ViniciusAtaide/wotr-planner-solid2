@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "OracleRevelationManeuverMasteryTripImproved",
   "guid": "fd2ff793aa20419892810845f52bd136",
-  "name": "Trip (Revelation)"
+  "name": "Trip (Revelation)",
+  "qualifier": "Revelation"
 }

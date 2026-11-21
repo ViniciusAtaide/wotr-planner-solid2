@@ -22,5 +22,6 @@
   "Ranks": 1,
   "assetName": "BloodlineCelestialAscensionAbility",
   "guid": "d85e0396d8f68e047b7b67a1290f8dbc",
-  "name": "Ascension (Empyreal Bloodline)"
+  "name": "Ascension (Empyreal Bloodline)",
+  "qualifier": "Empyreal Bloodline"
 }

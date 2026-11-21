@@ -11,5 +11,6 @@
   "Stacking": "Prolong",
   "assetName": "CavalierTacticianOutflankBuff",
   "guid": "44569e9e95364bf42b1071382a8a89da",
-  "name": "Outflank (buff)"
+  "name": "Outflank (buff)",
+  "qualifier": "buff"
 }

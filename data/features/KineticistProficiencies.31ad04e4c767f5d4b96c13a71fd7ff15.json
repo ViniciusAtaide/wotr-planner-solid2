@@ -27,5 +27,6 @@
   "Ranks": 1,
   "assetName": "KineticistProficiencies",
   "guid": "31ad04e4c767f5d4b96c13a71fd7ff15",
-  "name": "Weapon and Armor Proficiency (Kineticist)"
+  "name": "Weapon and Armor Proficiency (Kineticist)",
+  "qualifier": "Kineticist"
 }

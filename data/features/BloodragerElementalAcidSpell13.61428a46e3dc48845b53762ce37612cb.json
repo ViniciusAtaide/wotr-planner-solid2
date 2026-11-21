@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "BloodragerElementalAcidSpell13",
   "guid": "61428a46e3dc48845b53762ce37612cb",
-  "name": "Bonus Spell — Protection from Energy (Elemental — Earth)"
+  "name": "Bonus Spell — Protection from Energy (Elemental — Earth)",
+  "qualifier": "Elemental — Earth"
 }

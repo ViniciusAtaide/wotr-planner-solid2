@@ -23,5 +23,6 @@
   "Ranks": 3,
   "assetName": "StalwartDefenderDamageReduction",
   "guid": "4d4f48f401d5d8b408c2e7a973fba9ea",
-  "name": "Damage Reduction (Stalwart Defender)"
+  "name": "Damage Reduction (Stalwart Defender)",
+  "qualifier": "Stalwart Defender"
 }

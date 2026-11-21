@@ -11,5 +11,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_b1cbf457fd471d148b39ae56667f405a",
-  "name": "Flame's Hatred (Bardiche)"
+  "name": "Flame's Hatred (Bardiche)",
+  "qualifier": "Bardiche"
 }

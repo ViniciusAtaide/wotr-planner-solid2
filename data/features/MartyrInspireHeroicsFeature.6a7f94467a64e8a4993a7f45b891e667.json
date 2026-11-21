@@ -15,5 +15,6 @@
   "Ranks": 5,
   "assetName": "MartyrInspireHeroicsFeature",
   "guid": "6a7f94467a64e8a4993a7f45b891e667",
-  "name": "Inspire Heroics (Martyr)"
+  "name": "Inspire Heroics (Martyr)",
+  "qualifier": "Martyr"
 }

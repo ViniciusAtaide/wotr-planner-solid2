@@ -11,5 +11,6 @@
   "Stacking": "Prolong",
   "assetName": "CavalierTacticianCoordinatedDefenseBuff",
   "guid": "9c179de4894c295499822714878f3590",
-  "name": "Coordinated Defense (buff)"
+  "name": "Coordinated Defense (buff)",
+  "qualifier": "buff"
 }

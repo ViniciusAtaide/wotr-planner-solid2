@@ -28,5 +28,6 @@
   "Ranks": 1,
   "assetName": "DivineHerbalistNatureMysteryFeature",
   "guid": "b52fb5bc68d3edc4b9525f4e7414765f",
-  "name": "Nature (Divine Herbalist)"
+  "name": "Nature (Divine Herbalist)",
+  "qualifier": "Divine Herbalist"
 }

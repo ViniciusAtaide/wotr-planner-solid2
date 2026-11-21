@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "BloodlineUndeadSpellLevel1",
   "guid": "3e4080a48cbd3154aac907befca64801",
-  "name": "Cause Fear (Undead Bloodline)"
+  "name": "Cause Fear (Undead Bloodline)",
+  "qualifier": "Undead Bloodline"
 }

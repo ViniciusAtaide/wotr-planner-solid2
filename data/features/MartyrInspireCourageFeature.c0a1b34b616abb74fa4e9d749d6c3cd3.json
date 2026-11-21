@@ -15,5 +15,6 @@
   "Ranks": 4,
   "assetName": "MartyrInspireCourageFeature",
   "guid": "c0a1b34b616abb74fa4e9d749d6c3cd3",
-  "name": "Inspire Courage (Martyr)"
+  "name": "Inspire Courage (Martyr)",
+  "qualifier": "Martyr"
 }

@@ -15,5 +15,6 @@
   "m_AllFeatures": [
     "!bp_90f171fadf81f164d9828ce05441e617"
   ],
-  "name": "Weapon Focus (Skeletal Fighter I)"
+  "name": "Weapon Focus (Skeletal Fighter I)",
+  "qualifier": "Skeletal Fighter I"
 }
