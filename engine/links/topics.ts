@@ -17,10 +17,10 @@ import type { GrantParam } from '../grants';
 export type Topic =
   | { readonly kind: 'ability'; readonly stat: Attribute }
   | { readonly kind: 'weapon'; readonly category: WeaponCategory }
-  | { readonly kind: 'school'; readonly school: SpellSchool }
+  | { readonly kind: 'school'; readonly school: SpellSchool; readonly against?: true }
   | { readonly kind: 'group'; readonly group: WeaponFighterGroup; readonly fromWeapon?: true }
-  | { readonly kind: 'energy'; readonly energy: DamageEnergyType }
-  | { readonly kind: 'descriptor'; readonly descriptor: LinkedDescriptor };
+  | { readonly kind: 'energy'; readonly energy: DamageEnergyType; readonly against?: true }
+  | { readonly kind: 'descriptor'; readonly descriptor: LinkedDescriptor; readonly against?: true };
 
 export type LinkedDescriptor =
   | 'Fear'
@@ -91,6 +91,8 @@ export function stackable(descriptor: ModifierDescriptor): boolean {
   return STACKING_DESCRIPTORS.has(descriptor);
 }
 
+const sideKey = (t: { readonly against?: true }): string => (t.against === true ? ' against' : '');
+
 export function topicKey(t: Topic): string {
   switch (t.kind) {
     case 'ability':
@@ -98,25 +100,27 @@ export function topicKey(t: Topic): string {
     case 'weapon':
       return `weapon ${t.category}`;
     case 'school':
-      return `school ${t.school}`;
+      return `school ${t.school}${sideKey(t)}`;
     case 'group':
       return `group ${t.group}`;
     case 'energy':
-      return `energy ${t.energy}`;
+      return `energy ${t.energy}${sideKey(t)}`;
     case 'descriptor':
-      return `descriptor ${t.descriptor}`;
+      return `descriptor ${t.descriptor}${sideKey(t)}`;
   }
 }
 
-function descriptorTopics(wrapper: SpellDescriptorWrapper): Topic[] {
+const AGAINST = { against: true } as const;
+
+function descriptorTopics(wrapper: SpellDescriptorWrapper, side: { readonly against?: true }): Topic[] {
   return spellDescriptors(wrapper).flatMap((d): Topic[] => {
     const energy = ENERGY_DESCRIPTORS[d];
-    if (energy !== undefined) return [{ kind: 'energy', energy }];
-    return LINKED_DESCRIPTORS.has(d) ? [{ kind: 'descriptor', descriptor: d as LinkedDescriptor }] : [];
+    if (energy !== undefined) return [{ kind: 'energy', energy, ...side }];
+    return LINKED_DESCRIPTORS.has(d) ? [{ kind: 'descriptor', descriptor: d as LinkedDescriptor, ...side }] : [];
   });
 }
 
-const energyTopic = (energy: DamageEnergyType): Topic[] => [{ kind: 'energy', energy }];
+const energyAgainst = (energy: DamageEnergyType): Topic[] => [{ kind: 'energy', energy, against: true }];
 
 const groupsByData = new WeakMap<CheckedData, ReadonlyMap<WeaponCategory, readonly WeaponFighterGroup[]>>();
 
@@ -162,23 +166,26 @@ function componentTopics(c: Component): Topic[] {
     case 'WeaponTypeDamageStatReplacement':
       return [{ kind: 'weapon', category: any.Category as WeaponCategory }, ...ability(any.Stat as StatType)];
     case 'SavingThrowBonusAgainstSchool':
+      return [{ kind: 'school', school: any.School as SpellSchool, against: true }];
     case 'IncreaseSpellSchoolDC':
     case 'IncreaseSpellSchoolCasterLevel':
       return [{ kind: 'school', school: any.School as SpellSchool }];
     case 'AddDamageResistanceEnergy':
     case 'AddEnergyImmunity':
     case 'AddEnergyVulnerability':
-      return energyTopic(any.Type as DamageEnergyType);
+      return energyAgainst(any.Type as DamageEnergyType);
     case 'AddEnergyDamageImmunity':
-      return energyTopic(any.EnergyType as DamageEnergyType);
+      return energyAgainst(any.EnergyType as DamageEnergyType);
     case 'SavingThrowBonusAgainstDescriptor':
+      return descriptorTopics(any.SpellDescriptor as SpellDescriptorWrapper, AGAINST);
     case 'DraconicBloodlineArcana':
-      return descriptorTopics(any.SpellDescriptor as SpellDescriptorWrapper);
+      return descriptorTopics(any.SpellDescriptor as SpellDescriptorWrapper, {});
     case 'BuffDescriptorImmunity':
     case 'SpellImmunityToSpellDescriptor':
+      return descriptorTopics(any.Descriptor as SpellDescriptorWrapper, AGAINST);
     case 'IncreaseSpellDescriptorDC':
     case 'IncreaseSpellDescriptorCasterLevel':
-      return descriptorTopics(any.Descriptor as SpellDescriptorWrapper);
+      return descriptorTopics(any.Descriptor as SpellDescriptorWrapper, {});
     default:
       return [];
   }

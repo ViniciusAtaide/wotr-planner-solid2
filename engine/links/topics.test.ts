@@ -5,6 +5,8 @@ import { readDataDir } from '../data-dir';
 import { buildGrantIndex } from '../grants';
 import { heldIndex, stackable, synergyOf, topicKey, topicsOf, weaponGroupsOf } from './topics';
 import { enablesWith, linkIndex } from './links';
+import { topicWords } from './words';
+import type { Blueprint, Component } from '../data';
 
 const files = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)));
 const data = loadData(files.files, files.overrides);
@@ -48,10 +50,10 @@ describe('Synergy topics', { timeout: 30_000 }, () => {
   it('reads energy, a short descriptor list and weapon groups from the Summary carriers (06d)', () => {
     expect(topicsOf(data, ELEMENTAL_FOCUS_FIRE).map(topicKey)).toEqual(['energy Fire']);
     expect(topicsOf(data, ONE_FOOT_IN_THE_GRAVE).map(topicKey)).toEqual([
-      'descriptor MindAffecting',
-      'descriptor Poison',
-      'descriptor Disease',
-      'descriptor Death',
+      'descriptor MindAffecting against',
+      'descriptor Poison against',
+      'descriptor Disease against',
+      'descriptor Death against',
     ]);
     expect(topicsOf(data, WEAPON_TRAINING_THROWN).map(topicKey)).toContain('group Thrown');
     expect(topicsOf(data, IMPROVED_ELVEN_IMMUNITIES).map(topicKey)).toContain('school Enchantment');
@@ -101,6 +103,44 @@ describe('Synergy topics', { timeout: 30_000 }, () => {
     ).toEqual(['group BladesHeavy']);
     const raced = heldIndex(data, [{ blueprint: RAKSHASA_SPAWN }]);
     expect(synergyOf(data, raced, { feature: DODGE }).shared).toEqual([]);
+  });
+
+  it('links a school only on the same side: your spells with your spells, saves with saves (QA pass 5)', () => {
+    const ELVEN_IMMUNITIES = '2483a523984f44944a7cf157b21bf79c';
+    const INDOMITABLE_WILL = 'e9ae7276574c170468937b617d993357';
+    const focus = heldIndex(data, [{ blueprint: SPELL_FOCUS, param: { SpellSchool: 'Enchantment' } }]);
+    const shared = (held: ReturnType<typeof heldIndex>, feature: string) =>
+      synergyOf(data, held, { feature }).shared.map((t) => topicKey(t.topic));
+    expect(shared(focus, ELVEN_IMMUNITIES)).toEqual([]);
+    expect(shared(focus, IMPROVED_ELVEN_IMMUNITIES)).toEqual(['school Enchantment']);
+    const saves = heldIndex(data, [{ blueprint: ELVEN_IMMUNITIES }]);
+    expect(shared(saves, INDOMITABLE_WILL)).toEqual(['school Enchantment against']);
+    expect(topicWords({ kind: 'school', school: 'Enchantment', against: true })).toBe(
+      'saves against Enchantment spells',
+    );
+  });
+
+  it('links a descriptor only on the same side: Fear spell DCs apart from defences against fear (QA pass 5)', () => {
+    const IMMUNITY_TO_FEAR = '12a47d1d5d02fe34c8158ca58e0b3b60';
+    const FEARLESS = '39144c817b70467499cc32e3cff59d81';
+    const immunity = data.blueprints.get(IMMUNITY_TO_FEAR) as Blueprint;
+    const fearImmunity = immunity.Components.find((c) => c.$type === 'BuffDescriptorImmunity') as Component;
+    const fearDc = (guid: string): Blueprint =>
+      ({ ...immunity, guid, Components: [{ ...fearImmunity, $type: 'IncreaseSpellDescriptorDC' }] }) as Blueprint;
+    const DREAD_A = 'f0000000000000000000000000000001';
+    const DREAD_B = 'f0000000000000000000000000000002';
+    const withDc = {
+      ...data,
+      blueprints: new Map([...data.blueprints, [DREAD_A, fearDc(DREAD_A)], [DREAD_B, fearDc(DREAD_B)]]),
+    };
+    const shared = (held: string, feature: string) =>
+      synergyOf(withDc, heldIndex(withDc, [{ blueprint: held }]), { feature }).shared.map((t) => topicKey(t.topic));
+    expect(shared(IMMUNITY_TO_FEAR, FEARLESS)).toContain('descriptor Fear against');
+    expect(shared(DREAD_A, DREAD_B)).toContain('descriptor Fear');
+    expect(shared(IMMUNITY_TO_FEAR, DREAD_A)).toEqual([]);
+    expect(shared(DREAD_A, FEARLESS)).toEqual([]);
+    expect(topicWords({ kind: 'descriptor', descriptor: 'Fear', against: true })).toBe('defences against fear effects');
+    expect(topicWords({ kind: 'energy', energy: 'Fire', against: true })).toBe('defences against fire');
   });
 
   it("computes a parametrized value's enables with its parameter (QA pass 4)", () => {

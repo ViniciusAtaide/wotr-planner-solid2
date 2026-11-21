@@ -46,15 +46,15 @@ export function topicWords(t: Topic): string {
     case 'ability':
       return statName(t.stat);
     case 'school':
-      return `${t.school} spells`;
+      return t.against === true ? `saves against ${t.school} spells` : `${t.school} spells`;
     case 'weapon':
       return words(t.category).replace(/^./, (c) => c.toUpperCase());
     case 'group':
       return GROUP_WORDS[t.group];
     case 'energy':
-      return words(t.energy);
+      return t.against === true ? `defences against ${words(t.energy)}` : words(t.energy);
     case 'descriptor':
-      return `${descriptorWord(t.descriptor)} effects`;
+      return `${t.against === true ? 'defences against ' : ''}${descriptorWord(t.descriptor)} effects`;
   }
 }
 
