@@ -1,0 +1,31 @@
+{
+  "$type": "BlueprintCharacterClass",
+  "ClassSkills": [
+    "SkillAthletics",
+    "SkillMobility",
+    "SkillPerception",
+    "SkillStealth"
+  ],
+  "Components": [],
+  "DontAddCasterLevels": false,
+  "HideIfRestricted": false,
+  "HideInUI": false,
+  "HitDie": "D10",
+  "IsMythic": false,
+  "PrestigeClass": false,
+  "SkillPoints": 1,
+  "assetName": "OutsiderClass",
+  "guid": "92ab5f2fe00631b44810deffcc1a97fd",
+  "m_Archetypes": [
+    "!bp_1e1f35b991f64013b3a347b826a30645",
+    "!bp_9c42fff4a4854e0c8ac7bcf01da63c80"
+  ],
+  "m_BaseAttackBonus": "!bp_b3057560ffff3514299e8b93e7648a9d",
+  "m_FortitudeSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "m_IsHigherMythic": false,
+  "m_Progression": "!bp_d63657c4ae347ac4fb87f123b98f78d4",
+  "m_ReflexSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_Spellbook": null,
+  "m_WillSave": "!bp_ff4662bde9e75f145853417313842751",
+  "name": "Outsider"
+}

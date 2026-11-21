@@ -3,6 +3,11 @@
   "BlueprintParameterVariants": [],
   "Components": [
     {
+      "$type": "WeaponFocusParametrized",
+      "Descriptor": "UntypedStackable",
+      "m_MythicFocus": "!bp_74eb201774bccb9428ba5ac8440bf990"
+    },
+    {
       "$type": "PrerequisiteStatValue",
       "CheckInProgression": false,
       "Group": "All",

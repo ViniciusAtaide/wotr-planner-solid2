@@ -2,6 +2,26 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 1,
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "None",
+      "Not": false,
+      "m_CheckedFact": "!bp_734a29b693e9ec346ba2951b27987e33"
+    },
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 1,
+      "Descriptor": "Dodge",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_734a29b693e9ec346ba2951b27987e33"
+    },
+    {
       "$type": "AddContextStatBonus",
       "Descriptor": "Racial",
       "HasMinimal": false,

@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "SubtypeEvil",
+  "guid": "5279fc8380dd9ba419b4471018ffadd1",
+  "name": "Evil Subtype"
+}

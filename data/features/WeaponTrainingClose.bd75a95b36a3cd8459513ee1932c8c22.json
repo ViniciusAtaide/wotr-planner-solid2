@@ -1,6 +1,33 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "WeaponGroupAttackBonus",
+      "AttackBonus": 1,
+      "Descriptor": "WeaponTraining",
+      "WeaponGroup": "Close",
+      "contextMultiplier": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "multiplyByContext": false
+    },
+    {
+      "$type": "WeaponGroupDamageBonus",
+      "AdditionalValue": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "DamageBonus": 1,
+      "Descriptor": "WeaponTraining",
+      "WeaponGroup": "Close"
+    },
+    {
+      "$type": "WeaponTraining"
+    }
+  ],
   "Groups": [
     "WeaponTraining"
   ],

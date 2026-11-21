@@ -2,6 +2,29 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 0,
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Rank"
+      },
+      "Descriptor": "Circumstance",
+      "Not": false,
+      "m_CheckedFact": "!bp_ea7b666ca40181640bc7add7b398c324"
+    },
+    {
+      "$type": "DamageBonusAgainstFactOwner",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Rank"
+      },
+      "DamageBonus": 0,
+      "Descriptor": "Circumstance",
+      "m_CheckedFact": "!bp_ea7b666ca40181640bc7add7b398c324"
+    },
+    {
       "$type": "ContextRankConfig",
       "m_BaseValueType": "ClassLevel",
       "m_Class": [

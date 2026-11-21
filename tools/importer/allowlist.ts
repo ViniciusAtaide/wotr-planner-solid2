@@ -105,6 +105,21 @@ import {
   type IsAlchemistSpellbook,
   type IncreaseActivatableAbilityGroupSize,
   type AddContextStatBonus,
+  type WeaponGroupAttackBonus,
+  type WeaponGroupDamageBonus,
+  type AttackBonusAgainstFactOwner,
+  type DamageBonusAgainstFactOwner,
+  type ACBonusAgainstFactOwner,
+  type WeaponTraining,
+  type WeaponTypeDamageStatReplacement,
+  type ManeuverBonus,
+  type ManeuverDefenceBonus,
+  type WeaponFocusParametrized,
+  type WeaponSpecializationParametrized,
+  type ImprovedCriticalParametrized,
+  type AlignmentComponent,
+  type CombatManeuver,
+  type WeaponFighterGroup,
   type IncreaseSpellDescriptorDC,
   type IncreaseSpellSchoolDC,
   type SpellPenetrationBonus,
@@ -162,6 +177,7 @@ import {
   lazy,
   num,
   poly,
+  heldRefOrNull,
   heldRefs,
   enumOf,
   int,
@@ -817,6 +833,42 @@ const featureParameterType = enumOf(
   'FeatureSelection',
 );
 
+const alignmentComponent: Spec<AlignmentComponent> = enumOf('None', 'Neutral', 'Good', 'Evil', 'Lawful', 'Chaotic');
+
+const weaponFighterGroup: Spec<WeaponFighterGroup> = enumOf(
+  'None',
+  'Axes',
+  'BladesHeavy',
+  'BladesLight',
+  'Bows',
+  'Crossbows',
+  'Double',
+  'Flails',
+  'Hammers',
+  'Monk',
+  'Natural',
+  'Polearms',
+  'Spears',
+  'Thrown',
+  'Close',
+);
+
+const combatManeuver: Spec<CombatManeuver> = enumOf(
+  'None',
+  'Trip',
+  'Overrun',
+  'Disarm',
+  'Grapple',
+  'BullRush',
+  'SunderArmor',
+  'DirtyTrickBlind',
+  'DirtyTrickEntangle',
+  'DirtyTrickSickened',
+  'Pull',
+  'AwesomeBlow',
+  'PullToPointSpell',
+);
+
 const spellSchool = enumOf(
   'None',
   'Abjuration',
@@ -1445,7 +1497,7 @@ export const allowlist: readonly AllowEntry[] = [
   blueprint<BlueprintBuff>({
     type: 'BlueprintBuff',
     name: 'm_DisplayName',
-    fields: { Stacking: enumOf('Replace', 'Prolong', 'Ignore', 'Stack', 'Poison', 'Summ') },
+    fields: { Stacking: enumOf('Replace', 'Prolong', 'Ignore', 'Stack', 'Poison', 'Summ', 'Rank') },
     cite: [
       'UnitLogic/FactLogic/AddFacts.cs UpdateFacts',
       'UnitLogic/Buffs/BuffCollection.cs PrepareFactForAttach (Stacking)',
@@ -1738,7 +1790,7 @@ export const allowlist: readonly AllowEntry[] = [
   component<AddFeatureOnAlignment>({
     type: 'AddFeatureOnAlignment',
     fields: {
-      Alignment: enumOf('None', 'Neutral', 'Good', 'Evil', 'Lawful', 'Chaotic'),
+      Alignment: alignmentComponent,
       m_Facts: heldRefs(...FACT),
     },
     keepIf: (kept) => kept.m_Facts.length > 0,
@@ -2626,6 +2678,119 @@ export const allowlist: readonly AllowEntry[] = [
     type: 'IncreaseAllSpellsDC',
     fields: { Value: rankedContextValue, Descriptor: modifierDescriptor, SpellsOnly: orDefault(bool, false) },
     cite: ['Designers/Mechanics/Facts/IncreaseAllSpellsDC.cs OnEventAboutToTrigger (Value, Descriptor, SpellsOnly)'],
+  }),
+  component<WeaponGroupAttackBonus>({
+    type: 'WeaponGroupAttackBonus',
+    fields: {
+      WeaponGroup: weaponFighterGroup,
+      AttackBonus: orDefault(int, 0),
+      Descriptor: modifierDescriptor,
+      multiplyByContext: orDefault(bool, false),
+      contextMultiplier: rankedContextValue,
+    },
+    cite: [
+      'Designers/Mechanics/Facts/WeaponGroupAttackBonus.cs OnEventAboutToTrigger (WeaponGroup, AttackBonus, Descriptor, multiplyByContext, contextMultiplier)',
+    ],
+  }),
+  component<WeaponGroupDamageBonus>({
+    type: 'WeaponGroupDamageBonus',
+    fields: {
+      WeaponGroup: weaponFighterGroup,
+      DamageBonus: orDefault(int, 0),
+      AdditionalValue: rankedContextValue,
+      Descriptor: modifierDescriptor,
+    },
+    cite: [
+      'Designers/Mechanics/Facts/WeaponGroupDamageBonus.cs OnEventAboutToTrigger (WeaponGroup, DamageBonus, AdditionalValue, Descriptor)',
+    ],
+  }),
+  component<AttackBonusAgainstFactOwner>({
+    type: 'AttackBonusAgainstFactOwner',
+    fields: {
+      m_CheckedFact: heldRefOrNull(...FACT),
+      AttackBonus: orDefault(int, 0),
+      Bonus: rankedContextValue,
+      Descriptor: modifierDescriptor,
+      Not: orDefault(bool, false),
+    },
+    cite: [
+      'Designers/Mechanics/Facts/AttackBonusAgainstFactOwner.cs OnEventAboutToTrigger (m_CheckedFact, AttackBonus, Bonus, Descriptor, Not)',
+    ],
+  }),
+  component<DamageBonusAgainstFactOwner>({
+    type: 'DamageBonusAgainstFactOwner',
+    fields: {
+      m_CheckedFact: heldRefOrNull(...FACT),
+      DamageBonus: orDefault(int, 0),
+      Bonus: rankedContextValue,
+      Descriptor: modifierDescriptor,
+    },
+    cite: [
+      'Designers/Mechanics/Facts/DamageBonusAgainstFactOwner.cs OnEventAboutToTrigger (m_CheckedFact, DamageBonus, Bonus, Descriptor)',
+    ],
+  }),
+  component<ACBonusAgainstFactOwner>({
+    type: 'ACBonusAgainstFactOwner',
+    fields: {
+      m_CheckedFact: heldRefOrNull(...FACT),
+      Bonus: orDefault(int, 0),
+      Descriptor: modifierDescriptor,
+      Alignment: alignmentComponent,
+      NoFact: orDefault(bool, false),
+    },
+    cite: [
+      'Designers/Mechanics/Facts/ACBonusAgainstFactOwner.cs OnEventAboutToTrigger (m_CheckedFact, Bonus, Descriptor, Alignment, NoFact)',
+    ],
+  }),
+  component<WeaponTraining>({
+    type: 'WeaponTraining',
+    fields: {},
+    cite: ['UnitLogic/FactLogic/WeaponTraining.cs OnTurnOn'],
+  }),
+  component<WeaponTypeDamageStatReplacement>({
+    type: 'WeaponTypeDamageStatReplacement',
+    fields: {
+      Stat: statType,
+      Category: weaponCategory,
+      OnlyOneHanded: orDefault(bool, false),
+      TwoHandedBonus: orDefault(bool, false),
+    },
+    cite: [
+      'Designers/Mechanics/Facts/WeaponTypeDamageStatReplacement.cs OnEventAboutToTrigger (Stat, Category, OnlyOneHanded, TwoHandedBonus)',
+    ],
+  }),
+  component<ManeuverBonus>({
+    type: 'ManeuverBonus',
+    fields: {
+      Type: combatManeuver,
+      Mythic: orDefault(bool, false),
+      Bonus: orDefault(int, 0),
+      Descriptor: modifierDescriptor,
+      IgnoreFactRank: orDefault(bool, false),
+    },
+    cite: [
+      'Designers/Mechanics/Facts/ManeuverBonus.cs OnEventAboutToTrigger (Type, Mythic, Bonus, Descriptor, IgnoreFactRank)',
+    ],
+  }),
+  component<ManeuverDefenceBonus>({
+    type: 'ManeuverDefenceBonus',
+    fields: { Type: combatManeuver, Bonus: orDefault(int, 0), Descriptor: modifierDescriptor },
+    cite: ['Designers/Mechanics/Facts/ManeuverDefenceBonus.cs OnEventAboutToTrigger (Type, Bonus, Descriptor)'],
+  }),
+  component<WeaponFocusParametrized>({
+    type: 'WeaponFocusParametrized',
+    fields: { m_MythicFocus: refOrNull(...FACT), Descriptor: modifierDescriptor },
+    cite: ['Designers/Mechanics/Facts/WeaponFocusParametrized.cs OnEventAboutToTrigger (m_MythicFocus, Descriptor)'],
+  }),
+  component<WeaponSpecializationParametrized>({
+    type: 'WeaponSpecializationParametrized',
+    fields: { Mythic: orDefault(bool, false) },
+    cite: ['Designers/Mechanics/Facts/WeaponSpecializationParametrized.cs OnEventAboutToTrigger (Mythic)'],
+  }),
+  component<ImprovedCriticalParametrized>({
+    type: 'ImprovedCriticalParametrized',
+    fields: {},
+    cite: ['Designers/Mechanics/Facts/ImprovedCriticalParametrized.cs OnEventAboutToTrigger'],
   }),
   component<AddStatBonus>({
     type: 'AddStatBonus',

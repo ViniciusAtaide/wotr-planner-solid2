@@ -2,6 +2,20 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "ManeuverBonus",
+      "Bonus": 2,
+      "Descriptor": "UntypedStackable",
+      "IgnoreFactRank": false,
+      "Mythic": false,
+      "Type": "DirtyTrickBlind"
+    },
+    {
+      "$type": "ManeuverDefenceBonus",
+      "Bonus": 2,
+      "Descriptor": "UntypedStackable",
+      "Type": "Disarm"
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "Any",
@@ -15,6 +29,34 @@
       "IsFeatureSelectionWhiteList": false,
       "Stat": "Intelligence",
       "Value": 13
+    },
+    {
+      "$type": "ManeuverBonus",
+      "Bonus": 2,
+      "Descriptor": "UntypedStackable",
+      "IgnoreFactRank": false,
+      "Mythic": false,
+      "Type": "DirtyTrickEntangle"
+    },
+    {
+      "$type": "ManeuverBonus",
+      "Bonus": 2,
+      "Descriptor": "UntypedStackable",
+      "IgnoreFactRank": false,
+      "Mythic": false,
+      "Type": "DirtyTrickSickened"
+    },
+    {
+      "$type": "ManeuverDefenceBonus",
+      "Bonus": 2,
+      "Descriptor": "UntypedStackable",
+      "Type": "DirtyTrickEntangle"
+    },
+    {
+      "$type": "ManeuverDefenceBonus",
+      "Bonus": 2,
+      "Descriptor": "UntypedStackable",
+      "Type": "DirtyTrickSickened"
     },
     {
       "$type": "PrerequisiteFeature",

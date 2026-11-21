@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "32848"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": "!bp_02707231be1d3a74ba7e38a426c8df37"
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "32848"
+      },
+      "m_CasterIgnoreImmunityFact": "!bp_02707231be1d3a74ba7e38a426c8df37"
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "VerminImmunities",
+  "guid": "ef52e9b62f00135458c9093783c270e6",
+  "name": "Vermin"
+}

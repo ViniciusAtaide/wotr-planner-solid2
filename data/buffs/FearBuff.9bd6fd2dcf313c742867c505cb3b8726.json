@@ -1,0 +1,8 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [],
+  "Stacking": "Replace",
+  "assetName": "FearBuff",
+  "guid": "9bd6fd2dcf313c742867c505cb3b8726",
+  "name": "Fear"
+}

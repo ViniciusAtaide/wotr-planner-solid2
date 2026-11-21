@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "BlueDragonBlindsense",
+  "guid": "f6f8f9bb00a637d43b060706c1b83400"
+}

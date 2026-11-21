@@ -7,6 +7,30 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_ed699d64870044b43bb5a7fbe3f29494"
+    },
+    {
+      "$type": "ManeuverBonus",
+      "Bonus": 0,
+      "Descriptor": "UntypedStackable",
+      "IgnoreFactRank": false,
+      "Mythic": true,
+      "Type": "DirtyTrickBlind"
+    },
+    {
+      "$type": "ManeuverBonus",
+      "Bonus": 0,
+      "Descriptor": "UntypedStackable",
+      "IgnoreFactRank": false,
+      "Mythic": true,
+      "Type": "DirtyTrickEntangle"
+    },
+    {
+      "$type": "ManeuverBonus",
+      "Bonus": 0,
+      "Descriptor": "UntypedStackable",
+      "IgnoreFactRank": false,
+      "Mythic": true,
+      "Type": "DirtyTrickSickened"
     }
   ],
   "Groups": [

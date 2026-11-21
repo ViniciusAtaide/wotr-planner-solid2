@@ -1,0 +1,56 @@
+{
+  "$type": "BlueprintProgression",
+  "AlternateProgressionType": "Div2",
+  "Components": [],
+  "ForAllOtherClasses": false,
+  "GiveFeaturesForPreviousLevels": false,
+  "Groups": [],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "LevelEntries": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_9054d3988d491d944ac144e27b6bc318",
+        "!bp_247a4068296e8be42890143f451b4b45"
+      ]
+    },
+    {
+      "Level": 3,
+      "m_Features": [
+        "!bp_247a4068296e8be42890143f451b4b45"
+      ]
+    },
+    {
+      "Level": 5,
+      "m_Features": [
+        "!bp_247a4068296e8be42890143f451b4b45"
+      ]
+    },
+    {
+      "Level": 7,
+      "m_Features": [
+        "!bp_247a4068296e8be42890143f451b4b45"
+      ]
+    },
+    {
+      "Level": 9,
+      "m_Features": [
+        "!bp_247a4068296e8be42890143f451b4b45"
+      ]
+    }
+  ],
+  "Ranks": 1,
+  "assetName": "OutsiderProgression",
+  "guid": "d63657c4ae347ac4fb87f123b98f78d4",
+  "m_AlternateProgressionClasses": [],
+  "m_Archetypes": [],
+  "m_Classes": [
+    {
+      "AdditionalLevel": 0,
+      "m_Class": "!bp_92ab5f2fe00631b44810deffcc1a97fd"
+    }
+  ],
+  "m_ExclusiveProgression": null,
+  "m_FeaturesRankIncrease": []
+}

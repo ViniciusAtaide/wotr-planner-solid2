@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Fire",
+      "Value": {
+        "Value": 10,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "FireResistance10",
+  "guid": "24700a71dd3dc844ea585345f6dd18f6",
+  "name": "Fire Resistance 10"
+}

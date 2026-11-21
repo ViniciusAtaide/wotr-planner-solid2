@@ -1,0 +1,39 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_c263f44f72df009489409af122b5eefc",
+        "!bp_4b152a7bc5bab5042b437b955fea46cd",
+        "!bp_12a47d1d5d02fe34c8158ca58e0b3b60",
+        "!bp_c0845a4e242a9f04d9368fe03ac3e431",
+        "!bp_2af1da7f84e683c4ab026ba58ce73138",
+        "!bp_41d5e076fcea3fa4a9158ffded9185f7",
+        "!bp_7e3f3228be49cce49bda37f7901bf246",
+        "!bp_def36192c3e74756b3650ac3cdb640e7",
+        "!bp_bd9df2d4a4cef274285b8827b6769bde",
+        "!bp_3eb606c0564d0814ea01a824dbe42fb0"
+      ]
+    },
+    {
+      "$type": "AddEnergyDamageImmunity",
+      "EnergyType": "NegativeEnergy"
+    },
+    {
+      "$type": "AddEnergyDamageImmunity",
+      "EnergyType": "PositiveEnergy"
+    }
+  ],
+  "Groups": [
+    "CreatureType"
+  ],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "ConstructImmunities",
+  "guid": "ccf4b37a13f14b728e8e04aca5c8a27c"
+}

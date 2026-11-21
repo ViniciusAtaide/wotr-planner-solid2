@@ -14,6 +14,22 @@
       "ScaleByBasicAttackBonus": false,
       "Stat": "AdditionalDamage",
       "Value": 1
+    },
+    {
+      "$type": "ManeuverBonus",
+      "Bonus": 1,
+      "Descriptor": "UntypedStackable",
+      "IgnoreFactRank": false,
+      "Mythic": false,
+      "Type": "BullRush"
+    },
+    {
+      "$type": "ManeuverBonus",
+      "Bonus": 1,
+      "Descriptor": "UntypedStackable",
+      "IgnoreFactRank": false,
+      "Mythic": false,
+      "Type": "Trip"
     }
   ],
   "Groups": [],

@@ -2,11 +2,73 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 2,
+      "Descriptor": "None",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_734a29b693e9ec346ba2951b27987e33"
+    },
+    {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 0,
+      "Bonus": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "None",
+      "Not": false,
+      "m_CheckedFact": "!bp_734a29b693e9ec346ba2951b27987e33"
+    },
+    {
+      "$type": "DamageBonusAgainstFactOwner",
+      "Bonus": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "DamageBonus": 0,
+      "Descriptor": "None",
+      "m_CheckedFact": "!bp_734a29b693e9ec346ba2951b27987e33"
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": true,
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_295dff380fb8ed743bd5c76a30a49a46"
+    },
+    {
+      "$type": "DamageBonusAgainstFactOwner",
+      "Bonus": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "DamageBonus": 0,
+      "Descriptor": "None",
+      "m_CheckedFact": "!bp_5d6c8a31bbc195648af1bf95425b6a54"
+    },
+    {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 0,
+      "Bonus": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "None",
+      "Not": false,
+      "m_CheckedFact": "!bp_5d6c8a31bbc195648af1bf95425b6a54"
+    },
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 2,
+      "Descriptor": "None",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_5d6c8a31bbc195648af1bf95425b6a54"
     },
     {
       "$type": "SavingThrowBonusAgainstDescriptor",

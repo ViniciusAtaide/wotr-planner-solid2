@@ -1,6 +1,15 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 2,
+      "Descriptor": "UntypedStackable",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_734a29b693e9ec346ba2951b27987e33"
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

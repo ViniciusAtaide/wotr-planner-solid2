@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "SavingThrowBonusAgainstDescriptor",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "ModifierDescriptor": "Anomaly",
+      "OnlyPositiveValue": false,
+      "SpellDescriptor": {
+        "m_IntValue": "8589934592"
+      },
+      "Value": 5,
+      "m_DisablingFeature": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "AnomalyPolymorphResistanceFeature",
+  "guid": "824b464688ba43d487992a932a5ad0ee",
+  "name": "Polymorph Resistance"
+}

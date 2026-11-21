@@ -1,0 +1,25 @@
+{
+  "$type": "BlueprintArchetype",
+  "AddFeatures": [
+    {
+      "Level": 1,
+      "m_Features": [
+        "!bp_c36e5b572e214ddf857a7bc2d52ba2ad"
+      ]
+    }
+  ],
+  "AddSkillPoints": 0,
+  "ClassSkills": [],
+  "Components": [],
+  "RemoveFeatures": [],
+  "RemoveSpellbook": false,
+  "ReplaceClassSkills": false,
+  "assetName": "OusiderGoodFortitudeWillSaveArchetype",
+  "guid": "9c42fff4a4854e0c8ac7bcf01da63c80",
+  "m_BaseAttackBonus": null,
+  "m_FortitudeSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_ReflexSave": "!bp_ff4662bde9e75f145853417313842751",
+  "m_ReplaceSpellbook": null,
+  "m_WillSave": "!bp_dc0c7c1aba755c54f96c089cdf7d14a3",
+  "name": "Outsider"
+}

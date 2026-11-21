@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddDamageResistanceEnergy",
+      "Type": "Sonic",
+      "Value": {
+        "Value": 10,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "SonicResistance10",
+  "guid": "844664661e89d9f479ff768cc3b743df",
+  "name": "Sonic Resistance 10"
+}

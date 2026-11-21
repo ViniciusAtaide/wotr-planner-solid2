@@ -543,6 +543,124 @@ export interface IncreaseAllSpellsDC extends Component {
   readonly SpellsOnly: boolean;
 }
 
+export type WeaponFighterGroup =
+  | 'None'
+  | 'Axes'
+  | 'BladesHeavy'
+  | 'BladesLight'
+  | 'Bows'
+  | 'Crossbows'
+  | 'Double'
+  | 'Flails'
+  | 'Hammers'
+  | 'Monk'
+  | 'Natural'
+  | 'Polearms'
+  | 'Spears'
+  | 'Thrown'
+  | 'Close';
+
+export type CombatManeuver =
+  | 'None'
+  | 'Trip'
+  | 'Overrun'
+  | 'Disarm'
+  | 'Grapple'
+  | 'BullRush'
+  | 'SunderArmor'
+  | 'DirtyTrickBlind'
+  | 'DirtyTrickEntangle'
+  | 'DirtyTrickSickened'
+  | 'Pull'
+  | 'AwesomeBlow'
+  | 'PullToPointSpell';
+
+export interface WeaponGroupAttackBonus extends Component {
+  readonly $type: 'WeaponGroupAttackBonus';
+  readonly WeaponGroup: WeaponFighterGroup;
+  readonly AttackBonus: number;
+  readonly Descriptor: ModifierDescriptor;
+  readonly multiplyByContext: boolean;
+  readonly contextMultiplier: RankedContextValue;
+}
+
+export interface WeaponGroupDamageBonus extends Component {
+  readonly $type: 'WeaponGroupDamageBonus';
+  readonly WeaponGroup: WeaponFighterGroup;
+  readonly DamageBonus: number;
+  readonly AdditionalValue: RankedContextValue;
+  readonly Descriptor: ModifierDescriptor;
+}
+
+export interface AttackBonusAgainstFactOwner extends Component {
+  readonly $type: 'AttackBonusAgainstFactOwner';
+  readonly m_CheckedFact: Ref | null;
+  readonly AttackBonus: number;
+  readonly Bonus: RankedContextValue;
+  readonly Descriptor: ModifierDescriptor;
+  readonly Not: boolean;
+}
+
+export interface DamageBonusAgainstFactOwner extends Component {
+  readonly $type: 'DamageBonusAgainstFactOwner';
+  readonly m_CheckedFact: Ref | null;
+  readonly DamageBonus: number;
+  readonly Bonus: RankedContextValue;
+  readonly Descriptor: ModifierDescriptor;
+}
+
+export interface ACBonusAgainstFactOwner extends Component {
+  readonly $type: 'ACBonusAgainstFactOwner';
+  readonly m_CheckedFact: Ref | null;
+  readonly Bonus: number;
+  readonly Descriptor: ModifierDescriptor;
+  readonly Alignment: AlignmentComponent;
+  readonly NoFact: boolean;
+}
+
+export interface WeaponTraining extends Component {
+  readonly $type: 'WeaponTraining';
+}
+
+export interface WeaponTypeDamageStatReplacement extends Component {
+  readonly $type: 'WeaponTypeDamageStatReplacement';
+  readonly Stat: StatType;
+  readonly Category: WeaponCategory;
+  readonly OnlyOneHanded: boolean;
+  readonly TwoHandedBonus: boolean;
+}
+
+export interface ManeuverBonus extends Component {
+  readonly $type: 'ManeuverBonus';
+  readonly Type: CombatManeuver;
+  readonly Mythic: boolean;
+  readonly Bonus: number;
+  readonly Descriptor: ModifierDescriptor;
+  readonly IgnoreFactRank: boolean;
+}
+
+export interface ManeuverDefenceBonus extends Component {
+  readonly $type: 'ManeuverDefenceBonus';
+  readonly Type: CombatManeuver;
+  readonly Bonus: number;
+  readonly Descriptor: ModifierDescriptor;
+}
+
+export interface WeaponFocusParametrized extends Component {
+  readonly $type: 'WeaponFocusParametrized';
+  readonly m_MythicFocus: Ref | null;
+  readonly Descriptor: ModifierDescriptor;
+}
+
+export interface WeaponSpecializationParametrized extends Component {
+  readonly $type: 'WeaponSpecializationParametrized';
+  readonly Mythic: boolean;
+}
+
+export interface ImprovedCriticalParametrized extends Component {
+  readonly $type: 'ImprovedCriticalParametrized';
+}
+
 export interface AddContextStatBonus extends Component {
   readonly $type: 'AddContextStatBonus';
   readonly Descriptor: 'Racial';
@@ -960,7 +1078,7 @@ export interface BlueprintBuff extends BlueprintBase {
   readonly Stacking: StackingType;
 }
 
-export type StackingType = 'Replace' | 'Prolong' | 'Ignore' | 'Stack' | 'Poison' | 'Summ';
+export type StackingType = 'Replace' | 'Prolong' | 'Ignore' | 'Stack' | 'Poison' | 'Summ' | 'Rank';
 
 export interface BlueprintAbility extends BlueprintBase {
   readonly $type: 'BlueprintAbility';

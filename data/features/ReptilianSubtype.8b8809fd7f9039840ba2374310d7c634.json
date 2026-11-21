@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "CreatureType"
+  ],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "ReptilianSubtype",
+  "guid": "8b8809fd7f9039840ba2374310d7c634",
+  "name": "Reptilian Humanoid"
+}

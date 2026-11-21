@@ -1,0 +1,27 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddFacts",
+      "HasDifficultyRequirements": false,
+      "InvertDifficultyRequirements": false,
+      "MinDifficulty": "Story",
+      "m_Facts": [
+        "!bp_64e647c10eece1545b00a442330f49da",
+        "!bp_7e3f3228be49cce49bda37f7901bf246",
+        "!bp_daf27e1f12e736d4294b525489e99de4",
+        "!bp_24700a71dd3dc844ea585345f6dd18f6",
+        "!bp_cd1e5ab641a833c49994aff99db98952",
+        "!bp_5279fc8380dd9ba419b4471018ffadd1",
+        "!bp_1dd712e7f147ab84bad6ffccd21a878d"
+      ]
+    }
+  ],
+  "Groups": [],
+  "HideInUI": true,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "SubtypeDemon",
+  "guid": "dc960a234d365cb4f905bdc5937e623a",
+  "name": "Demon Unit"
+}

@@ -3,6 +3,10 @@
   "BlueprintParameterVariants": [],
   "Components": [
     {
+      "$type": "WeaponSpecializationParametrized",
+      "Mythic": true
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",

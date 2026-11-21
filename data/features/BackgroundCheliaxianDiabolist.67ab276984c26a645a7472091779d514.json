@@ -6,6 +6,14 @@
       "Skill": "SkillKnowledgeArcana"
     },
     {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 4,
+      "Descriptor": "Dodge",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_6026db1a1a84ac14d9e94404af3baf0a"
+    },
+    {
       "$type": "AddBackgroundClassSkill",
       "Skill": "SkillKnowledgeArcana"
     }

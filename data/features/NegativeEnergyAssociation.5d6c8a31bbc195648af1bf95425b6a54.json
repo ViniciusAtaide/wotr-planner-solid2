@@ -1,0 +1,12 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "CreatureType"
+  ],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "NegativeEnergyAssociation",
+  "guid": "5d6c8a31bbc195648af1bf95425b6a54"
+}

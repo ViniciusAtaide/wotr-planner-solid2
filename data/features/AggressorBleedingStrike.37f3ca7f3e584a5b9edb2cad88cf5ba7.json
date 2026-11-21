@@ -1,6 +1,30 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 0,
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Rank"
+      },
+      "Descriptor": "None",
+      "Not": false,
+      "m_CheckedFact": "!bp_221ded0007da47c3937a8a280f0e3fec"
+    },
+    {
+      "$type": "DamageBonusAgainstFactOwner",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Rank"
+      },
+      "DamageBonus": 0,
+      "Descriptor": "None",
+      "m_CheckedFact": "!bp_221ded0007da47c3937a8a280f0e3fec"
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

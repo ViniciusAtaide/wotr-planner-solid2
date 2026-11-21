@@ -2,6 +2,14 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "ManeuverBonus",
+      "Bonus": 2,
+      "Descriptor": "UntypedStackable",
+      "IgnoreFactRank": false,
+      "Mythic": false,
+      "Type": "DirtyTrickBlind"
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",
@@ -30,6 +38,22 @@
       "IsFeatureSelectionWhiteList": false,
       "Stat": "BaseAttackBonus",
       "Value": 6
+    },
+    {
+      "$type": "ManeuverBonus",
+      "Bonus": 2,
+      "Descriptor": "UntypedStackable",
+      "IgnoreFactRank": false,
+      "Mythic": false,
+      "Type": "DirtyTrickEntangle"
+    },
+    {
+      "$type": "ManeuverBonus",
+      "Bonus": 2,
+      "Descriptor": "UntypedStackable",
+      "IgnoreFactRank": false,
+      "Mythic": false,
+      "Type": "DirtyTrickSickened"
     },
     {
       "$type": "PrerequisiteFeature",

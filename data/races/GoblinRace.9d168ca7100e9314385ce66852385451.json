@@ -1,0 +1,38 @@
+{
+  "$type": "BlueprintRace",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Dexterity",
+      "Value": 4
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Charisma",
+      "Value": -2
+    },
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "Strength",
+      "Value": -2
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "SelectableRaceStat": false,
+  "assetName": "GoblinRace",
+  "guid": "9d168ca7100e9314385ce66852385451",
+  "m_Features": [
+    "!bp_610652378253d3845bb70f005c084daa",
+    "!bp_9c747d24f6321f744aa1bb4bd343880d"
+  ],
+  "name": "Goblin"
+}

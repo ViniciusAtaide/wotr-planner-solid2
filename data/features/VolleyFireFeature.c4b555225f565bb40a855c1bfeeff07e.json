@@ -21,6 +21,18 @@
       "Not": true,
       "m_CheckedFact": "!bp_a6298b0f87fc7694086cd8eac9d6a2aa",
       "m_Feature": "!bp_a6298b0f87fc7694086cd8eac9d6a2aa"
+    },
+    {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 0,
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "TargetCustomProperty"
+      },
+      "Descriptor": "None",
+      "Not": false,
+      "m_CheckedFact": "!bp_febd99a95065bdf4297acad705f7a797"
     }
   ],
   "Groups": [

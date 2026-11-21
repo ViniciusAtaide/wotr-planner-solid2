@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "CreatureType"
+  ],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "MagicalBeastType",
+  "guid": "625827490ea69d84d8e599a33929fdc6",
+  "name": "Magical Beast"
+}

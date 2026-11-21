@@ -1,0 +1,21 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "AddStatBonus",
+      "Descriptor": "Racial",
+      "ScaleByBasicAttackBonus": false,
+      "Stat": "SkillStealth",
+      "Value": 4
+    }
+  ],
+  "Groups": [
+    "Racial"
+  ],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "Stealthy",
+  "guid": "610652378253d3845bb70f005c084daa",
+  "name": "Stealthy"
+}

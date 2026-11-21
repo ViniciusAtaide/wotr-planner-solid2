@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "SubtypeChaotic",
+  "guid": "1dd712e7f147ab84bad6ffccd21a878d",
+  "name": "Chaotic Subtype"
+}

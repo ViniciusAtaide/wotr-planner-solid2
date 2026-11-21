@@ -128,6 +128,23 @@ export function refOrNull(...kinds: Kind[]): Spec<Ref | null> {
   };
 }
 
+export function heldRefOrNull(...kinds: Kind[]): Spec<Ref | null> {
+  return {
+    describe: `a reference to ${kinds.join(' or ')}, or null (others dropped)`,
+    zero: { value: null },
+    keep(raw, at, ctx) {
+      if (raw === null) return null;
+      const guid = refGuid(raw);
+      if (guid !== undefined && ctx.heldKind(guid) === undefined) {
+        ctx.dropped(at, guid);
+        return null;
+      }
+      if (checkRef(raw, at, ctx, kinds)) ctx.names?.(refGuid(raw)!);
+      return raw as Ref;
+    },
+  };
+}
+
 export function heldRefs(...kinds: Kind[]): Spec<readonly Ref[]> {
   return {
     describe: `a list of references to ${kinds.join(' or ')} (others dropped)`,

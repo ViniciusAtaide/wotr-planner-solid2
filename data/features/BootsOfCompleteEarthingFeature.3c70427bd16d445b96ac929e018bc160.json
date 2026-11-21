@@ -28,6 +28,14 @@
       },
       "m_FactToCheck": null,
       "m_IgnoreFeature": null
+    },
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 1,
+      "Descriptor": "Dodge",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_41999279a69640369c8e7b02c4747fa1"
     }
   ],
   "Groups": [],

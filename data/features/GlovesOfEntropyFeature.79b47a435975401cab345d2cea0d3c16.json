@@ -2,6 +2,12 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "ManeuverDefenceBonus",
+      "Bonus": 4,
+      "Descriptor": "UntypedStackable",
+      "Type": "Disarm"
+    },
+    {
       "$type": "AddFacts",
       "HasDifficultyRequirements": false,
       "InvertDifficultyRequirements": false,

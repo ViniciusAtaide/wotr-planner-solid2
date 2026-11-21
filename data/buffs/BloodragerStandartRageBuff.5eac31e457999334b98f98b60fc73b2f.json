@@ -51,6 +51,17 @@
       "m_Type": "SpeedBonus",
       "m_UseMax": true,
       "m_UseMin": false
+    },
+    {
+      "$type": "WeaponGroupDamageBonus",
+      "AdditionalValue": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "DamageBonus": 2,
+      "Descriptor": "Rage",
+      "WeaponGroup": "Thrown"
     }
   ],
   "Stacking": "Replace",

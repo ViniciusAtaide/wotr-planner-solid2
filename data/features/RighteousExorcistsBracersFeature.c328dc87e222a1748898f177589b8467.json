@@ -1,6 +1,18 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "DamageBonusAgainstFactOwner",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "DamageBonus": 1,
+      "Descriptor": "Morale",
+      "m_CheckedFact": "!bp_dc960a234d365cb4f905bdc5937e623a"
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

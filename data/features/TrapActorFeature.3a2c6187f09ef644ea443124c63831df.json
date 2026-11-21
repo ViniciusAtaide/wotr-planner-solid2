@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "TrapActorFeature",
+  "guid": "3a2c6187f09ef644ea443124c63831df"
+}

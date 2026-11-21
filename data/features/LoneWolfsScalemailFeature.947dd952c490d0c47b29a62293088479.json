@@ -2,6 +2,22 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 3,
+      "Descriptor": "Insight",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_70cffb448c132fa409e49156d013b175"
+    },
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 3,
+      "Descriptor": "Insight",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_c4a7f98d743bc784c9d4cf2105852c39"
+    },
+    {
       "$type": "AddMechanicsFeature",
       "m_Feature": "CannotBeFlanked"
     }

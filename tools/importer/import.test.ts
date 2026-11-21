@@ -5,7 +5,7 @@ import { keptSet } from './keep-rule';
 import { keepBlueprint, shortType, type FilterContext } from './filter';
 import { displayName, neutralName, sharedKeyCollector } from './names';
 import { applyPatch } from './overrides';
-import { bool, enumOf, heldRefs, int, list, orDefault, orNull, ref } from './spec';
+import { bool, enumOf, heldRefOrNull, heldRefs, int, list, orDefault, orNull, ref } from './spec';
 
 const g = (n: number) => `a${'0'.repeat(30)}${n}`;
 
@@ -64,6 +64,15 @@ describe('specs', () => {
     const { ctx, problems, dropped } = context({ [g(1)]: 'features' });
     expect(heldRefs('features').keep([`!bp_${g(1)}`, `!bp_${g(3)}`], 'x.m_Facts', ctx)).toEqual([`!bp_${g(1)}`]);
     expect(dropped).toEqual([`x.m_Facts ${g(3)}`]);
+    expect(problems).toEqual([]);
+  });
+
+  it('drop and count a single held reference to a blueprint the planner does not hold, keeping null', () => {
+    const { ctx, problems, dropped } = context({ [g(1)]: 'features' });
+    expect(heldRefOrNull('features').keep(`!bp_${g(1)}`, 'x.m_CheckedFact', ctx)).toBe(`!bp_${g(1)}`);
+    expect(heldRefOrNull('features').keep(`!bp_${g(3)}`, 'y.m_CheckedFact', ctx)).toBeNull();
+    expect(heldRefOrNull('features').keep(null, 'z.m_CheckedFact', ctx)).toBeNull();
+    expect(dropped).toEqual([`y.m_CheckedFact ${g(3)}`]);
     expect(problems).toEqual([]);
   });
 });

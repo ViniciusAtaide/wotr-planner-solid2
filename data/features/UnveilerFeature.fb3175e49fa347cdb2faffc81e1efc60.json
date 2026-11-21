@@ -6,6 +6,14 @@
       "ModifierDescriptor": "UntypedStackable",
       "School": "Illusion",
       "Value": 10
+    },
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 2,
+      "Descriptor": "Insight",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_41999279a69640369c8e7b02c4747fa1"
     }
   ],
   "Groups": [],

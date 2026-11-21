@@ -12,6 +12,10 @@
       "m_CharacterClass": "!bp_48ac8db94d5de7645906c7d0ad3bcfbd"
     },
     {
+      "$type": "WeaponSpecializationParametrized",
+      "Mythic": false
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",

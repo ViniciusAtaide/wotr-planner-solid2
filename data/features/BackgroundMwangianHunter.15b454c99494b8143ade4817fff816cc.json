@@ -21,6 +21,17 @@
       ]
     },
     {
+      "$type": "WeaponGroupDamageBonus",
+      "AdditionalValue": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "DamageBonus": 1,
+      "Descriptor": "UntypedStackable",
+      "WeaponGroup": "Thrown"
+    },
+    {
       "$type": "AddBackgroundClassSkill",
       "Skill": "SkillLoreNature"
     },

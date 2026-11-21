@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "HideNotAvailibleInUI": true,
+  "Ranks": 1,
+  "assetName": "OutsiderEmptyFeature",
+  "guid": "c36e5b572e214ddf857a7bc2d52ba2ad"
+}

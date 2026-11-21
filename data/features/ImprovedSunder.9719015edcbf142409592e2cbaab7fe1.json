@@ -2,6 +2,20 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "ManeuverBonus",
+      "Bonus": 2,
+      "Descriptor": "UntypedStackable",
+      "IgnoreFactRank": false,
+      "Mythic": false,
+      "Type": "SunderArmor"
+    },
+    {
+      "$type": "ManeuverDefenceBonus",
+      "Bonus": 2,
+      "Descriptor": "UntypedStackable",
+      "Type": "SunderArmor"
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",

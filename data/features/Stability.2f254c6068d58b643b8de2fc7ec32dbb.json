@@ -1,6 +1,19 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "ManeuverDefenceBonus",
+      "Bonus": 4,
+      "Descriptor": "UntypedStackable",
+      "Type": "Trip"
+    },
+    {
+      "$type": "ManeuverDefenceBonus",
+      "Bonus": 4,
+      "Descriptor": "UntypedStackable",
+      "Type": "BullRush"
+    }
+  ],
   "Groups": [
     "Racial"
   ],

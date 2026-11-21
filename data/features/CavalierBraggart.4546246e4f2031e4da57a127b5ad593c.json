@@ -2,6 +2,30 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 0,
+      "Bonus": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "Morale",
+      "Not": false,
+      "m_CheckedFact": "!bp_25ec6cb6ab1845c48a95f9c20b034220"
+    },
+    {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 0,
+      "Bonus": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "Morale",
+      "Not": false,
+      "m_CheckedFact": "!bp_f08a7239aa961f34c8301518e71d4cdf"
+    },
+    {
       "$type": "AddFacts",
       "HasDifficultyRequirements": false,
       "InvertDifficultyRequirements": false,
@@ -9,6 +33,18 @@
       "m_Facts": [
         "!bp_bcbd674ec70ff6f4894bb5f07b6f4095"
       ]
+    },
+    {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 0,
+      "Bonus": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "Morale",
+      "Not": false,
+      "m_CheckedFact": "!bp_9bd6fd2dcf313c742867c505cb3b8726"
     }
   ],
   "Groups": [],

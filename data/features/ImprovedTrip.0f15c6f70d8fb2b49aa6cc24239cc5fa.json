@@ -2,6 +2,20 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "ManeuverBonus",
+      "Bonus": 2,
+      "Descriptor": "UntypedStackable",
+      "IgnoreFactRank": false,
+      "Mythic": false,
+      "Type": "Trip"
+    },
+    {
+      "$type": "ManeuverDefenceBonus",
+      "Bonus": 2,
+      "Descriptor": "UntypedStackable",
+      "Type": "Trip"
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "Any",

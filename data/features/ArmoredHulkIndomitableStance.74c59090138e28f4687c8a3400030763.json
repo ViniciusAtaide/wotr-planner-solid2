@@ -29,6 +29,37 @@
       },
       "Value": 1,
       "m_DisablingFeature": null
+    },
+    {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 1,
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "None",
+      "Not": false,
+      "m_CheckedFact": "!bp_f36da144a379d534cad8e21667079066"
+    },
+    {
+      "$type": "DamageBonusAgainstFactOwner",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "DamageBonus": 1,
+      "Descriptor": "None",
+      "m_CheckedFact": "!bp_f36da144a379d534cad8e21667079066"
+    },
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 1,
+      "Descriptor": "None",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_f36da144a379d534cad8e21667079066"
     }
   ],
   "Groups": [],

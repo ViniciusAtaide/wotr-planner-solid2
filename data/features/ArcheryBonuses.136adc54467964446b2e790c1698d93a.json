@@ -2,6 +2,29 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "WeaponGroupAttackBonus",
+      "AttackBonus": 2,
+      "Descriptor": "Competence",
+      "WeaponGroup": "Bows",
+      "contextMultiplier": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "multiplyByContext": false
+    },
+    {
+      "$type": "WeaponGroupDamageBonus",
+      "AdditionalValue": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "DamageBonus": 1,
+      "Descriptor": "Competence",
+      "WeaponGroup": "Bows"
+    },
+    {
       "$type": "AddFacts",
       "HasDifficultyRequirements": false,
       "InvertDifficultyRequirements": false,

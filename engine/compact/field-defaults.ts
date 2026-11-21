@@ -41,6 +41,13 @@ export const FIELD_DEFAULTS: FieldDefaults = {
   AbilityApplyFact: {
     m_Facts: [],
   },
+  ACBonusAgainstFactOwner: {
+    Alignment: 'None',
+    Bonus: 0,
+    Descriptor: 'None',
+    m_CheckedFact: null,
+    NoFact: false,
+  },
   AddBackgroundArmorProficiency: {
     Proficiency: 'None',
   },
@@ -114,6 +121,12 @@ export const FIELD_DEFAULTS: FieldDefaults = {
   },
   ArmorEnhancementBonus: {
     EnhancementValue: 0,
+  },
+  AttackBonusAgainstFactOwner: {
+    AttackBonus: 0,
+    Descriptor: 'None',
+    m_CheckedFact: null,
+    Not: false,
   },
   BlueprintActivatableAbility: {
     Group: 'None',
@@ -340,6 +353,11 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     m_UseMax: false,
     m_UseMin: false,
   },
+  DamageBonusAgainstFactOwner: {
+    DamageBonus: 0,
+    Descriptor: 'None',
+    m_CheckedFact: null,
+  },
   DraconicBloodlineArcana: {
     SpellsOnly: true,
     UseContextBonus: false,
@@ -410,6 +428,18 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     MaxLevel: null,
     MinLevel: null,
     Not: false,
+  },
+  ManeuverBonus: {
+    Bonus: 0,
+    Descriptor: 'None',
+    IgnoreFactRank: false,
+    Mythic: false,
+    Type: 'None',
+  },
+  ManeuverDefenceBonus: {
+    Bonus: 0,
+    Descriptor: 'None',
+    Type: 'None',
   },
   MonkNoArmorAndMonkWeaponFeatureUnlock: {
     IsSohei: false,
@@ -599,5 +629,27 @@ export const FIELD_DEFAULTS: FieldDefaults = {
   WeaponEnhancementBonus: {
     EnhancementBonus: 0,
     Stack: false,
+  },
+  WeaponFocusParametrized: {
+    Descriptor: 'None',
+    m_MythicFocus: null,
+  },
+  WeaponGroupAttackBonus: {
+    AttackBonus: 0,
+    Descriptor: 'None',
+    multiplyByContext: false,
+    WeaponGroup: 'None',
+  },
+  WeaponGroupDamageBonus: {
+    DamageBonus: 0,
+    Descriptor: 'None',
+    WeaponGroup: 'None',
+  },
+  WeaponSpecializationParametrized: {
+    Mythic: false,
+  },
+  WeaponTypeDamageStatReplacement: {
+    OnlyOneHanded: false,
+    TwoHandedBonus: false,
   },
 };

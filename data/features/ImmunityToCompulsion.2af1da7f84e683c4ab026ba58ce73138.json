@@ -1,0 +1,28 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [
+    {
+      "$type": "BuffDescriptorImmunity",
+      "CheckFact": false,
+      "Descriptor": {
+        "m_IntValue": "64"
+      },
+      "m_FactToCheck": null,
+      "m_IgnoreFeature": null
+    },
+    {
+      "$type": "SpellImmunityToSpellDescriptor",
+      "Descriptor": {
+        "m_IntValue": "64"
+      },
+      "m_CasterIgnoreImmunityFact": null
+    }
+  ],
+  "Groups": [],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "ImmunityToCompulsion",
+  "guid": "2af1da7f84e683c4ab026ba58ce73138",
+  "name": "Immunity to Compulsion"
+}

@@ -1,0 +1,13 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [
+    "CreatureType"
+  ],
+  "HideInUI": false,
+  "HideNotAvailibleInUI": false,
+  "Ranks": 1,
+  "assetName": "GiantSubtype",
+  "guid": "f9c388137f4faa74aac9065a68b56880",
+  "name": "Giant Humanoid"
+}

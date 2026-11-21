@@ -1,0 +1,8 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [],
+  "Stacking": "Replace",
+  "assetName": "SummonedCreatureSpawnMonsterI-III",
+  "guid": "6fcdf014694b2b542a867763b4369cb3",
+  "name": "Summon"
+}

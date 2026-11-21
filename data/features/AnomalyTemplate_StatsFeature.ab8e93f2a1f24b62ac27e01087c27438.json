@@ -1,0 +1,10 @@
+{
+  "$type": "BlueprintFeature",
+  "Components": [],
+  "Groups": [],
+  "HideInUI": true,
+  "HideNotAvailibleInUI": true,
+  "Ranks": 1,
+  "assetName": "AnomalyTemplate_StatsFeature",
+  "guid": "ab8e93f2a1f24b62ac27e01087c27438"
+}

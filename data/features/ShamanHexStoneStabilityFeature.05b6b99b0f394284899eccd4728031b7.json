@@ -9,6 +9,18 @@
       "m_Feature": "!bp_acff6b0cf279a31439010afea01df912"
     },
     {
+      "$type": "ManeuverDefenceBonus",
+      "Bonus": 4,
+      "Descriptor": "UntypedStackable",
+      "Type": "Trip"
+    },
+    {
+      "$type": "ManeuverDefenceBonus",
+      "Bonus": 4,
+      "Descriptor": "UntypedStackable",
+      "Type": "BullRush"
+    },
+    {
       "$type": "AddFeatureOnClassLevel",
       "BeforeThisLevel": false,
       "Level": 5,

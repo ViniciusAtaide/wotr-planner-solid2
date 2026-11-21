@@ -1,0 +1,8 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [],
+  "Stacking": "Replace",
+  "assetName": "ChargeBuff",
+  "guid": "f36da144a379d534cad8e21667079066",
+  "name": "Charge"
+}

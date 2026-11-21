@@ -2,6 +2,17 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "WeaponGroupDamageBonus",
+      "AdditionalValue": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "DamageBonus": 1,
+      "Descriptor": "None",
+      "WeaponGroup": "Bows"
+    },
+    {
       "$type": "AddStatBonus",
       "Descriptor": "Luck",
       "ScaleByBasicAttackBonus": false,

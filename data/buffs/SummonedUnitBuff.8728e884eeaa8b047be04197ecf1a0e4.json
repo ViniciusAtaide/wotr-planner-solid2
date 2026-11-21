@@ -1,0 +1,8 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [],
+  "Stacking": "Prolong",
+  "assetName": "SummonedUnitBuff",
+  "guid": "8728e884eeaa8b047be04197ecf1a0e4",
+  "name": "Summoned"
+}

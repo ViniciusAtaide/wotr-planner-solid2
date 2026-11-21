@@ -1,6 +1,76 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 2,
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "Insight",
+      "Not": false,
+      "m_CheckedFact": "!bp_625827490ea69d84d8e599a33929fdc6"
+    },
+    {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 2,
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "Insight",
+      "Not": false,
+      "m_CheckedFact": "!bp_a95311b3dc996964cbaa30ff9965aaf6"
+    },
+    {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 2,
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "Insight",
+      "Not": false,
+      "m_CheckedFact": "!bp_57614b50e8d86b24395931fffc5e409b"
+    },
+    {
+      "$type": "DamageBonusAgainstFactOwner",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "DamageBonus": 2,
+      "Descriptor": "Insight",
+      "m_CheckedFact": "!bp_625827490ea69d84d8e599a33929fdc6"
+    },
+    {
+      "$type": "DamageBonusAgainstFactOwner",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "DamageBonus": 2,
+      "Descriptor": "Insight",
+      "m_CheckedFact": "!bp_a95311b3dc996964cbaa30ff9965aaf6"
+    },
+    {
+      "$type": "DamageBonusAgainstFactOwner",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "DamageBonus": 2,
+      "Descriptor": "Insight",
+      "m_CheckedFact": "!bp_57614b50e8d86b24395931fffc5e409b"
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

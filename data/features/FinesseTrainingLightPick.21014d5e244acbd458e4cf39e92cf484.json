@@ -2,6 +2,13 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "WeaponTypeDamageStatReplacement",
+      "Category": "LightPick",
+      "OnlyOneHanded": false,
+      "Stat": "Dexterity",
+      "TwoHandedBonus": true
+    },
+    {
       "$type": "PrerequisiteProficiency",
       "ArmorProficiencies": [],
       "CheckInProgression": false,

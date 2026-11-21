@@ -1,6 +1,38 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 2,
+      "Descriptor": "Competence",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_70cffb448c132fa409e49156d013b175"
+    },
+    {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 2,
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "Competence",
+      "Not": false,
+      "m_CheckedFact": "!bp_70cffb448c132fa409e49156d013b175"
+    },
+    {
+      "$type": "DamageBonusAgainstFactOwner",
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "DamageBonus": 2,
+      "Descriptor": "Competence",
+      "m_CheckedFact": "!bp_70cffb448c132fa409e49156d013b175"
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

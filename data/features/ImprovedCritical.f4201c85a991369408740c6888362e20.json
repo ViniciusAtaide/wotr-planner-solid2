@@ -11,6 +11,9 @@
       "Value": 8
     },
     {
+      "$type": "ImprovedCriticalParametrized"
+    },
+    {
       "$type": "FeatureTagsComponent",
       "FeatureTags": "Attack, Critical"
     },

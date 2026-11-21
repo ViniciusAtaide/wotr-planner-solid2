@@ -1,6 +1,13 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "ManeuverDefenceBonus",
+      "Bonus": 4,
+      "Descriptor": "UntypedStackable",
+      "Type": "Disarm"
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

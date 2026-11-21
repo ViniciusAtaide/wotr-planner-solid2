@@ -29,6 +29,42 @@
       "ModifierDescriptor": "Racial",
       "School": "Necromancy",
       "Value": 2
+    },
+    {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 1,
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "Racial",
+      "Not": false,
+      "m_CheckedFact": "!bp_2fe24d538bbcea34cbe9e8600d92bdd2"
+    },
+    {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 1,
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "Racial",
+      "Not": false,
+      "m_CheckedFact": "!bp_1b466705276e3124ab43f865e282c6e8"
+    },
+    {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 1,
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "Descriptor": "Racial",
+      "Not": false,
+      "m_CheckedFact": "!bp_561041cdb5887464883c55c75219a9dc"
     }
   ],
   "Groups": [],

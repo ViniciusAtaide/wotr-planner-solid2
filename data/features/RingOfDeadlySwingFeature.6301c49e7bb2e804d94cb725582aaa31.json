@@ -1,6 +1,19 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "WeaponGroupAttackBonus",
+      "AttackBonus": 2,
+      "Descriptor": "Competence",
+      "WeaponGroup": "Thrown",
+      "contextMultiplier": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "multiplyByContext": false
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

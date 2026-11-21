@@ -15,6 +15,14 @@
       },
       "Value": 4,
       "m_DisablingFeature": null
+    },
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 2,
+      "Descriptor": "Dodge",
+      "NoFact": false,
+      "m_CheckedFact": null
     }
   ],
   "Groups": [],

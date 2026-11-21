@@ -7,6 +7,14 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_9719015edcbf142409592e2cbaab7fe1"
+    },
+    {
+      "$type": "ManeuverBonus",
+      "Bonus": 0,
+      "Descriptor": "UntypedStackable",
+      "IgnoreFactRank": false,
+      "Mythic": true,
+      "Type": "SunderArmor"
     }
   ],
   "Groups": [

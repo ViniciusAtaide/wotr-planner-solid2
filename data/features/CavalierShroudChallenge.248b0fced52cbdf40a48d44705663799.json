@@ -2,6 +2,18 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "AttackBonusAgainstFactOwner",
+      "AttackBonus": 0,
+      "Bonus": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Rank"
+      },
+      "Descriptor": "Morale",
+      "Not": false,
+      "m_CheckedFact": "!bp_ae15179714437c24caf6c5d3e014251b"
+    },
+    {
       "$type": "ContextRankConfig",
       "m_BaseValueType": "ClassLevel",
       "m_Class": [

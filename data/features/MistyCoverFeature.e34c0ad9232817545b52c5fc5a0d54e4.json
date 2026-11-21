@@ -1,6 +1,71 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 2,
+      "Descriptor": "Insight",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_70cffb448c132fa409e49156d013b175"
+    },
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 2,
+      "Descriptor": "Insight",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_8728e884eeaa8b047be04197ecf1a0e4"
+    },
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 2,
+      "Descriptor": "Insight",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_2c3b98e56c1b4e9479f692d7ef95b2d2"
+    },
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 2,
+      "Descriptor": "Insight",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_25629d7e78016a340b0e50818b6d8bb5"
+    },
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 2,
+      "Descriptor": "Insight",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_932d27490e1701548a48b4cbc2f2caac"
+    },
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 2,
+      "Descriptor": "Insight",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_6fcdf014694b2b542a867763b4369cb3"
+    },
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 2,
+      "Descriptor": "Insight",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_50d51854cf6a3434d96a87d050e1d09a"
+    },
+    {
+      "$type": "ACBonusAgainstFactOwner",
+      "Alignment": "None",
+      "Bonus": 2,
+      "Descriptor": "Insight",
+      "NoFact": false,
+      "m_CheckedFact": "!bp_0dff842f06edace43baf8a2f44207045"
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

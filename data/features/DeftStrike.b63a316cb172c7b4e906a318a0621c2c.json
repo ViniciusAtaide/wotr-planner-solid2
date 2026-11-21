@@ -1,6 +1,14 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "WeaponTypeDamageStatReplacement",
+      "Category": "DuelingSword",
+      "OnlyOneHanded": true,
+      "Stat": "Dexterity",
+      "TwoHandedBonus": true
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,
