@@ -2405,7 +2405,7 @@ describe('Gear that won’t stack (ticket 06, engine 4d9b8b50)', () => {
     fireEvent.pointerOver(row() ?? document.body);
     flush();
     expect(document.querySelector('.choice-dialog__warnings')?.textContent).toBe(
-      "Its deflection bonus to AC won't stack with Ring of Protection +1.",
+      "Its deflection bonus to AC won't stack with Ring of Protection +1; both are +1, so only one counts.",
     );
   });
 
@@ -2457,7 +2457,7 @@ describe('Gear that won’t stack (ticket 06, engine 4d9b8b50)', () => {
     fireEvent.click(placeChip('Ring 2') ?? document.body);
     flush();
     expect(document.querySelector('.trail-gear__clash')?.textContent).toBe(
-      "Its deflection bonus to AC won't stack with Ring of Protection +1.",
+      "Its deflection bonus to AC won't stack with Ring of Protection +1; both are +1, so only one counts.",
     );
     fireEvent.click(placeChip('Armor') ?? document.body);
     flush();

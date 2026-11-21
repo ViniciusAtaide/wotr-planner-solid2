@@ -5,7 +5,7 @@ import { readDataDir } from '../data-dir';
 import { buildGrantIndex } from '../grants';
 import { heldIndex, stackable, synergyOf, topicKey, topicsOf, weaponGroupsOf } from './topics';
 import { enablesWith, linkIndex } from './links';
-import { topicWords } from './words';
+import { stackWords, topicWords } from './words';
 import type { Blueprint, Component } from '../data';
 
 const files = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)));
@@ -43,7 +43,12 @@ describe('Synergy topics', { timeout: 30_000 }, () => {
   it('warns that a bonus of the same type to the same stat as a held one will not stack', () => {
     const held = heldIndex(data, [{ blueprint: STRENGTH_OF_THE_ABYSS_9 }]);
     const s = synergyOf(data, held, { feature: STRENGTH_OF_THE_ABYSS_13 });
-    expect(s.wontStack).toEqual([{ stat: 'Strength', descriptor: 'Inherent', with: [STRENGTH_OF_THE_ABYSS_9] }]);
+    expect(s.wontStack).toEqual([
+      { stat: 'Strength', descriptor: 'Inherent', with: [STRENGTH_OF_THE_ABYSS_9], value: 4, held: 2 },
+    ]);
+    expect(stackWords(data, s.wontStack[0]!)).toBe(
+      "Its inherent bonus to Strength won't stack with Strength of the Abyss; the higher, +4, counts",
+    );
     expect(s.shared.map((t) => topicKey(t.topic))).toEqual(['ability Strength']);
   });
 

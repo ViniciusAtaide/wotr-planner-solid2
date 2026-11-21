@@ -572,7 +572,11 @@ describe('which options the level-up screen lists', { timeout: 30_000 }, () => {
     const RING_OF_PROTECTION_1 = 'f333bf86cd122974792162cbcd27c9ed';
     const ringed = { ...jackInTheGreen.build, gear: { Ring1: RING_OF_PROTECTION_1 } };
     expect(gearClashes(data, ringed, 'Ring2', RING_OF_PROTECTION_1, G)).toEqual([
-      { stat: 'AC', descriptor: 'Deflection', with: [RING_OF_PROTECTION_1] },
+      { stat: 'AC', descriptor: 'Deflection', with: [RING_OF_PROTECTION_1], value: 1, held: 1 },
+    ]);
+    const RING_OF_PROTECTION_3 = '31315100c28e6a2418396fb152466fcd';
+    expect(gearClashes(data, ringed, 'Ring2', RING_OF_PROTECTION_3, G)).toEqual([
+      { stat: 'AC', descriptor: 'Deflection', with: [RING_OF_PROTECTION_1], value: 3, held: 1 },
     ]);
     expect(gearClashes(data, ringed, 'Ring1', RING_OF_PROTECTION_1, G)).toEqual([]);
     const rings = [...data.blueprints.values()]

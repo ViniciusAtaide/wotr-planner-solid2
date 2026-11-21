@@ -2,7 +2,7 @@ import type { CheckedData } from '../load';
 import type { Build, GearPlace } from '../build';
 import { enchantmentsOf, type Guid } from '../data';
 import { buildGrantIndex, equipmentGrants, type GrantIndex } from '../grants';
-import { bonusesOf, stackable, type StackClash } from '../links';
+import { bonusesOf, clashOf, highestOf, stackable, type StackClash, type StatBonus } from '../links';
 import { walk } from '../walk';
 
 function partsOf(data: CheckedData, G: GrantIndex, worn: Guid): Guid[] {
@@ -24,26 +24,29 @@ export function gearClashIndex(
   const owners = new Map<Guid, Guid>();
   for (const worn of unit.worn.values()) for (const part of partsOf(data, G, worn)) owners.set(part, worn);
   for (const f of unit.facts()) if (!owners.has(f.blueprint)) owners.set(f.blueprint, f.blueprint);
-  const held = new Map<string, Guid[]>();
+  const held = new Map<string, Map<Guid, number | undefined>>();
   for (const [part, owner] of owners)
     for (const b of bonusesOf(data, part)) {
       if (stackable(b.descriptor)) continue;
       const key = `${b.stat} ${b.descriptor}`;
-      const list = held.get(key) ?? [];
-      if (!list.includes(owner)) held.set(key, [...list, owner]);
+      const values = held.get(key) ?? new Map<Guid, number | undefined>();
+      values.set(owner, values.has(owner) ? highestOf([values.get(owner), b.value]) : b.value);
+      held.set(key, values);
     }
   return (item) => {
-    const clashes: StackClash[] = [];
-    const seen = new Set<string>();
+    const own = new Map<string, StatBonus>();
     for (const part of partsOf(data, G, item))
       for (const b of bonusesOf(data, part)) {
         const key = `${b.stat} ${b.descriptor}`;
-        const by = held.get(key);
-        if (stackable(b.descriptor) || by === undefined || seen.has(key)) continue;
-        seen.add(key);
-        clashes.push({ stat: b.stat, descriptor: b.descriptor, with: by });
+        if (stackable(b.descriptor) || !held.has(key)) continue;
+        const before = own.get(key);
+        const value = before === undefined ? b.value : highestOf([before.value, b.value]);
+        own.set(key, { stat: b.stat, descriptor: b.descriptor, ...(value !== undefined && { value }) });
       }
-    return clashes;
+    return [...own].map(([key, b]): StackClash => {
+      const values = held.get(key)!;
+      return clashOf(b, [...values.keys()], highestOf([...values.values()]));
+    });
   };
 }
 

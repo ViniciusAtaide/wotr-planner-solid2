@@ -66,6 +66,14 @@ export function sharedWords(data: CheckedData, s: SharedTopic): string {
   return `Shares ${topicWords(s.topic)} with ${linkNames(data, s.with).join(', ')}`;
 }
 
+const signed = (n: number): string => (n < 0 ? `${n}` : `+${n}`);
+
+function whichCounts(c: StackClash): string {
+  if (c.value === undefined || c.held === undefined) return '';
+  if (c.value === c.held) return `; both are ${signed(c.value)}, so only one counts`;
+  return `; the higher, ${signed(Math.max(c.value, c.held))}, counts`;
+}
+
 export function stackWords(data: CheckedData, c: StackClash): string {
-  return `Its ${words(c.descriptor)} bonus to ${statName(c.stat)} won't stack with ${linkNames(data, c.with).join(', ')}`;
+  return `Its ${words(c.descriptor)} bonus to ${statName(c.stat)} won't stack with ${linkNames(data, c.with).join(', ')}${whichCounts(c)}`;
 }

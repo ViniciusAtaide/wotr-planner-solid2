@@ -2,6 +2,7 @@ import type { CheckedData } from '../load';
 import type {
   Attribute,
   Component,
+  ContextValue,
   DamageEnergyType,
   Guid,
   ModifierDescriptor,
@@ -60,6 +61,7 @@ const ENERGY_DESCRIPTORS: Readonly<Record<string, DamageEnergyType>> = {
 export interface StatBonus {
   readonly stat: StatType;
   readonly descriptor: ModifierDescriptor;
+  readonly value?: number;
 }
 
 const ATTRIBUTES: ReadonlySet<string> = new Set([
@@ -225,14 +227,37 @@ const STAT_BONUSES: ReadonlySet<string> = new Set([
 
 const SAVES: readonly StatType[] = ['SaveFortitude', 'SaveReflex', 'SaveWill'];
 
+function fixedValue(c: Component): number | undefined {
+  const any = c as Component & { readonly Value?: number | ContextValue; readonly Multiplier?: number };
+  if (typeof any.Value === 'number') return any.Value;
+  if (any.Value?.ValueType !== 'Simple') return undefined;
+  return any.Value.Value * (c.$type === 'AddContextStatBonus' ? (any.Multiplier ?? 1) : 1);
+}
+
 export function bonusesOf(data: CheckedData, guid: Guid): StatBonus[] {
   const bp = data.blueprints.get(guid);
   return (bp?.Components ?? []).flatMap((c): StatBonus[] => {
     const any = c as Component & { readonly Stat: StatType; readonly Descriptor: ModifierDescriptor };
-    if (c.$type === 'AllSavesBonusEquipment') return SAVES.map((stat) => ({ stat, descriptor: any.Descriptor }));
+    const value = fixedValue(c);
+    const valued = value === undefined ? {} : { value };
+    if (c.$type === 'AllSavesBonusEquipment')
+      return SAVES.map((stat) => ({ stat, descriptor: any.Descriptor, ...valued }));
     if (!STAT_BONUSES.has(c.$type)) return [];
-    return [{ stat: any.Stat, descriptor: any.Descriptor }];
+    return [{ stat: any.Stat, descriptor: any.Descriptor, ...valued }];
   });
+}
+
+export function highestOf(values: readonly (number | undefined)[]): number | undefined {
+  return values.length === 0 || values.some((v) => v === undefined) ? undefined : Math.max(...(values as number[]));
+}
+
+export function clashOf(b: StatBonus, by: readonly Guid[], held: number | undefined): StackClash {
+  return {
+    stat: b.stat,
+    descriptor: b.descriptor,
+    with: by,
+    ...(b.value !== undefined && held !== undefined && { value: b.value, held }),
+  };
 }
 
 export interface SharedTopic {
@@ -244,6 +269,8 @@ export interface StackClash {
   readonly stat: StatType;
   readonly descriptor: ModifierDescriptor;
   readonly with: readonly Guid[];
+  readonly value?: number;
+  readonly held?: number;
 }
 
 export interface Synergy {
@@ -260,6 +287,7 @@ export interface HeldIndex {
   readonly byTopic: ReadonlyMap<string, readonly Guid[]>;
   readonly byWeaponGroup: ReadonlyMap<string, readonly Guid[]>;
   readonly byBonus: ReadonlyMap<string, readonly Guid[]>;
+  readonly bonusValues: ReadonlyMap<string, ReadonlyMap<Guid, number | undefined>>;
 }
 
 const bonusKey = (b: StatBonus) => `${b.stat} ${b.descriptor}`;
@@ -268,6 +296,7 @@ export function heldIndex(data: CheckedData, held: readonly HeldFact[]): HeldInd
   const byTopic = new Map<string, Guid[]>();
   const byWeaponGroup = new Map<string, Guid[]>();
   const byBonus = new Map<string, Guid[]>();
+  const bonusValues = new Map<string, Map<Guid, number | undefined>>();
   const add = (m: Map<string, Guid[]>, key: string, g: Guid) => {
     const list = m.get(key) ?? [];
     if (!list.includes(g)) list.push(g);
@@ -276,9 +305,15 @@ export function heldIndex(data: CheckedData, held: readonly HeldFact[]): HeldInd
   for (const h of held) {
     for (const t of topicsOf(data, h.blueprint, h.param))
       add(t.kind === 'group' && t.fromWeapon ? byWeaponGroup : byTopic, topicKey(t), h.blueprint);
-    for (const b of bonusesOf(data, h.blueprint)) if (!stackable(b.descriptor)) add(byBonus, bonusKey(b), h.blueprint);
+    for (const b of bonusesOf(data, h.blueprint)) {
+      if (stackable(b.descriptor)) continue;
+      add(byBonus, bonusKey(b), h.blueprint);
+      const values = bonusValues.get(bonusKey(b)) ?? new Map<Guid, number | undefined>();
+      values.set(h.blueprint, highestOf([values.has(h.blueprint) ? values.get(h.blueprint) : b.value, b.value]));
+      bonusValues.set(bonusKey(b), values);
+    }
   }
-  return { byTopic, byWeaponGroup, byBonus };
+  return { byTopic, byWeaponGroup, byBonus, bonusValues };
 }
 
 export function synergyOf(
@@ -297,7 +332,8 @@ export function synergyOf(
     .filter((b) => !stackable(b.descriptor))
     .flatMap((b): StackClash[] => {
       const by = others(index.byBonus.get(bonusKey(b)));
-      return by.length === 0 ? [] : [{ stat: b.stat, descriptor: b.descriptor, with: by }];
+      const values = index.bonusValues.get(bonusKey(b));
+      return by.length === 0 ? [] : [clashOf(b, by, highestOf(by.map((g) => values?.get(g))))];
     });
   return { shared, wontStack };
 }

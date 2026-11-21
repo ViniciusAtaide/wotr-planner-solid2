@@ -484,7 +484,12 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     const ringed = await encodeBuild(e.data, { ...jackInTheGreen.build, gear: { Ring1: RING_OF_PROTECTION_1 } });
     const second = ok(await equip(e, { code: ringed, place: 'Ring2', item: RING_OF_PROTECTION_1 }), 'equip');
     expect('wontStack' in second && second.wontStack).toEqual([
-      "Its deflection bonus to AC won't stack with Ring of Protection +1.",
+      "Its deflection bonus to AC won't stack with Ring of Protection +1; both are +1, so only one counts.",
+    ]);
+    const RING_OF_PROTECTION_3 = '31315100c28e6a2418396fb152466fcd';
+    const better = ok(await equip(e, { code: ringed, place: 'Ring2', item: RING_OF_PROTECTION_3 }), 'equip');
+    expect('wontStack' in better && better.wontStack).toEqual([
+      "Its deflection bonus to AC won't stack with Ring of Protection +1; the higher, +3, counts.",
     ]);
     const first = ok(
       await equip(e, {
