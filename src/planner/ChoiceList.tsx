@@ -1,4 +1,14 @@
-import { createEffect, createMemo, createSignal, For, onCleanup, onSettled, Show } from 'solid-js';
+import {
+  createContext,
+  createEffect,
+  createMemo,
+  createSignal,
+  For,
+  onCleanup,
+  onSettled,
+  Show,
+  useContext,
+} from 'solid-js';
 import type { Build } from '~engine/build';
 import type { Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
@@ -90,6 +100,8 @@ export function moveThroughOptions(e: KeyboardEvent): void {
   e.preventDefault();
 }
 
+export const StepArrived = createContext<() => boolean>(() => true);
+
 export function focusFilter(el: HTMLInputElement | undefined): void {
   if (el !== undefined && matchMedia('(pointer: fine)').matches) el.focus({ preventScroll: true });
 }
@@ -104,7 +116,10 @@ export interface FilterProps {
 
 export function Filter(props: FilterProps) {
   let input: HTMLInputElement | undefined;
-  onSettled(() => focusFilter(input));
+  const arrived = useContext(StepArrived);
+  onSettled(() => {
+    if (arrived()) focusFilter(input);
+  });
   return (
     <input
       ref={(el) => {
@@ -160,7 +175,12 @@ export function createClosedToggle(given: () => ClosedToggle | undefined): Close
 }
 
 export function markInView(scroller: HTMLElement | undefined): void {
-  scroller?.querySelector<HTMLElement>('.ww-option--marked')?.scrollIntoView?.({ block: 'nearest' });
+  const row = scroller?.querySelector<HTMLElement>('.ww-option--marked');
+  if (scroller === undefined || row === null || row === undefined) return;
+  const box = scroller.getBoundingClientRect();
+  const at = row.getBoundingClientRect();
+  if (at.top < box.top) scroller.scrollTop -= box.top - at.top;
+  else if (at.bottom > box.bottom) scroller.scrollTop += at.bottom - box.bottom;
 }
 
 const rowReason = (r: ChoiceRow) => r.reasons.join(' ') || 'closed';

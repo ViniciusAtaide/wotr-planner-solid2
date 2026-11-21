@@ -1,7 +1,8 @@
 # Shell
 
 The app frame around every page (build ticket 05a): the ground, the header with the app's name linking home, and the
-loading fallback while a page's data arrives.
+loading fallback while a page's data arrives. Under 600 px the header's name reads "WP" (its accessible name stays
+"Worldwound Planner"), so a phone's top bar isn't crowded (build ticket 11).
 
 ## Public entry
 

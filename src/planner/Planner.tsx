@@ -245,6 +245,7 @@ function Workspace(props: WorkspaceProps) {
   };
 
   onSettled(() => {
+    history.scrollRestoration = 'manual';
     const media = matchMedia(PHONE_WIDTH_QUERY);
     const onMedia = () => setPhone(media.matches);
     onMedia();

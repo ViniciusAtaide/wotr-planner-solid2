@@ -1,5 +1,5 @@
 import type { JSX } from '@solidjs/web';
-import { createMemo, For, Match, onSettled, Show, Switch } from 'solid-js';
+import { createMemo, For, Match, onSettled, Show, Switch, useContext } from 'solid-js';
 import { slotKey, type Place } from '~engine/build';
 import { isShown, refGuid, type Attribute } from '~engine/data';
 import type { Edit } from '~engine/edits';
@@ -9,6 +9,7 @@ import type { OpenedSlot } from '~engine/walk';
 import { Badge, FeatIcon, type FeatCategory } from '../design';
 import { CharacterCard, ScoresStep } from './CharacterCard';
 import { RaceStep } from './CharacterSteps';
+import { StepArrived } from './ChoiceList';
 import { featCategory } from './feat-category';
 import { backgroundLabel, raceLabel } from './flat-choices';
 import { GearStep, wornLine } from './GearStep';
@@ -82,12 +83,17 @@ export interface HereProps {
 
 export function Here(props: HereProps) {
   let el: HTMLDivElement | undefined;
+  const arrived = useContext(StepArrived);
   onSettled(() => {
-    const still = matchMedia(REDUCED_MOTION).matches;
-    el?.scrollIntoView?.({ block: 'start', behavior: still ? 'auto' : 'smooth' });
-    if (el !== undefined && lost(document.activeElement)) {
-      firstControl(el, matchMedia(FINE_POINTER).matches)?.focus({ preventScroll: true });
-    }
+    if (!arrived()) return;
+    const frame = requestAnimationFrame(() => {
+      const still = matchMedia(REDUCED_MOTION).matches;
+      el?.scrollIntoView?.({ block: 'start', behavior: still ? 'auto' : 'smooth' });
+      if (el !== undefined && lost(document.activeElement)) {
+        firstControl(el, matchMedia(FINE_POINTER).matches)?.focus({ preventScroll: true });
+      }
+    });
+    return () => cancelAnimationFrame(frame);
   });
   return (
     <div
@@ -127,6 +133,8 @@ export default function Trail(props: TrailProps) {
   const step = createMemo((): Step => props.selection ?? nextStep(view(), props.state), {
     equals: (a, b) => stepKey(a) === stepKey(b),
   });
+  const firstStep = createMemo((was?: string) => was ?? stepKey(step()));
+  const arrived = createMemo((was?: boolean) => was === true || stepKey(step()) !== firstStep());
   const applied = (edits: NonEmpty<Edit>, outcome: EditOutcome): EditOutcome => {
     if (outcome === 'applied') {
       if (edits.some((e) => e.kind === 'addLevel')) props.send({ kind: 'levelAdded' });
@@ -326,73 +334,79 @@ export default function Trail(props: TrailProps) {
   );
 
   return (
-    <div class="trail">
-      <CharacterCard
-        trail={api}
-        folded={cardFolded()}
-        foldable={props.phone}
-        editing={characterOpen()}
-        onToggle={() => props.send({ kind: 'character', open: cardFolded() ? true : !characterOpen() })}
-        {...(props.diff && { diff: props.diff })}
-        chips={
-          <div class="trail-chips">
-            {chip('Race', raceLabel(props.planner.engine, build(), props.planner.walked()), { kind: 'race' })}
-            <For each={characterChipSlots(view())}>
-              {(s) => <>{slotChip(s, pickLabels(data(), characterChipSlots(view())))}</>}
-            </For>
-          </div>
-        }
-        scoresStep={where().kind === 'scores'}
-        here={<Show when={hereIsCharacter()}>{here()}</Show>}
-      />
-      <ol class="trail-path" aria-label="Levels">
-        <For each={chapters(build().levels.length)}>
-          {(n) => (
-            <Show
-              when={folded(n, foldView())}
-              fallback={
-                <>
-                  <Show when={props.state.unfolded.has(n)}>
-                    <li class="trail-fold-close">
-                      <button
-                        type="button"
-                        class="trail-link"
-                        onClick={() => props.send({ kind: 'toggleChapter', chapter: n })}
-                      >
-                        Fold levels {chapterRange(n).first}–{chapterRange(n).last}
-                      </button>
-                    </li>
-                  </Show>
-                  {stops(n)}
-                </>
-              }
-            >
-              <ChapterRow view={view()} chapter={n} onOpen={() => props.send({ kind: 'toggleChapter', chapter: n })} />
-            </Show>
-          )}
-        </For>
-        <Show when={where().kind === 'next'}>
-          <li class="trail-stop trail-stop--here trail-stop--next">
-            <span class="trail-stop__mark">{build().levels.length + 1}</span>
-            <div class="trail-stop__body">{here()}</div>
-          </li>
-        </Show>
-      </ol>
-      <section class="trail-card trail-gear" aria-label="Gear">
-        <button
-          type="button"
-          class="trail-card__head"
-          aria-expanded={where().kind === 'gear' ? 'true' : 'false'}
-          onClick={() => props.select(where().kind === 'gear' ? undefined : { kind: 'gear' })}
-        >
-          <span class="trail-kicker">
-            Gear <span aria-hidden="true">{where().kind === 'gear' ? '▾' : '▸'}</span>
-          </span>
-          <span class="trail-fold-line">{wornLine(data(), build().gear)}</span>
-        </button>
-        <Show when={where().kind === 'gear'}>{here()}</Show>
-      </section>
-    </div>
+    <StepArrived value={arrived}>
+      <div class="trail">
+        <CharacterCard
+          trail={api}
+          folded={cardFolded()}
+          foldable={props.phone}
+          editing={characterOpen()}
+          onToggle={() => props.send({ kind: 'character', open: cardFolded() ? true : !characterOpen() })}
+          {...(props.diff && { diff: props.diff })}
+          chips={
+            <div class="trail-chips">
+              {chip('Race', raceLabel(props.planner.engine, build(), props.planner.walked()), { kind: 'race' })}
+              <For each={characterChipSlots(view())}>
+                {(s) => <>{slotChip(s, pickLabels(data(), characterChipSlots(view())))}</>}
+              </For>
+            </div>
+          }
+          scoresStep={where().kind === 'scores'}
+          here={<Show when={hereIsCharacter()}>{here()}</Show>}
+        />
+        <ol class="trail-path" aria-label="Levels">
+          <For each={chapters(build().levels.length)}>
+            {(n) => (
+              <Show
+                when={folded(n, foldView())}
+                fallback={
+                  <>
+                    <Show when={props.state.unfolded.has(n)}>
+                      <li class="trail-fold-close">
+                        <button
+                          type="button"
+                          class="trail-link"
+                          onClick={() => props.send({ kind: 'toggleChapter', chapter: n })}
+                        >
+                          Fold levels {chapterRange(n).first}–{chapterRange(n).last}
+                        </button>
+                      </li>
+                    </Show>
+                    {stops(n)}
+                  </>
+                }
+              >
+                <ChapterRow
+                  view={view()}
+                  chapter={n}
+                  onOpen={() => props.send({ kind: 'toggleChapter', chapter: n })}
+                />
+              </Show>
+            )}
+          </For>
+          <Show when={where().kind === 'next'}>
+            <li class="trail-stop trail-stop--here trail-stop--next">
+              <span class="trail-stop__mark">{build().levels.length + 1}</span>
+              <div class="trail-stop__body">{here()}</div>
+            </li>
+          </Show>
+        </ol>
+        <section class="trail-card trail-gear" aria-label="Gear">
+          <button
+            type="button"
+            class="trail-card__head"
+            aria-expanded={where().kind === 'gear' ? 'true' : 'false'}
+            onClick={() => props.select(where().kind === 'gear' ? undefined : { kind: 'gear' })}
+          >
+            <span class="trail-kicker">
+              Gear <span aria-hidden="true">{where().kind === 'gear' ? '▾' : '▸'}</span>
+            </span>
+            <span class="trail-fold-line">{wornLine(data(), build().gear)}</span>
+          </button>
+          <Show when={where().kind === 'gear'}>{here()}</Show>
+        </section>
+      </div>
+    </StepArrived>
   );
 }
 
