@@ -15,9 +15,14 @@ import {
 import { buildGrantIndex, EQUIPMENT_GRANT_KINDS, removes, type Grant, type GrantIndex } from '../grants';
 import { linkIndex } from '../links';
 import { prerequisites } from '../prerequisites';
-import { bareNameOf, listNames, nameOf, unmetText } from '../refusals';
+import { bareNameOf, listNames, nameOf, namesIn, unmetText } from '../refusals';
 import { orList } from './labels';
 import { labelsOf, type Label } from './labels';
+
+export interface NamedLink {
+  readonly guid: Guid;
+  readonly name: string;
+}
 
 export interface Description {
   readonly guid: Guid;
@@ -34,8 +39,8 @@ export interface Description {
     readonly when?: string;
   }[];
   readonly pickedIn: readonly { readonly guid: Guid; readonly name: string }[];
-  readonly needs: readonly Guid[];
-  readonly enables: readonly Guid[];
+  readonly needs: readonly NamedLink[];
+  readonly enables: readonly NamedLink[];
 }
 
 export const NO_SUMMARY = 'No summary yet.';
@@ -142,13 +147,18 @@ function grantCondition(data: CheckedData, bp: Blueprint, g: Grant): string | un
   return undefined;
 }
 
+function named(data: CheckedData, guids: readonly Guid[]): NamedLink[] {
+  const names = namesIn(data, guids);
+  return guids.map((guid) => ({ guid, name: names.get(guid) ?? guid }));
+}
+
 export function describe(
   data: CheckedData,
   guid: Guid,
   G: GrantIndex = buildGrantIndex(data),
 ): Description | undefined {
   const bp = data.blueprints.get(guid);
-  if (bp === undefined || !isShown(bp)) return undefined;
+  if (bp === undefined || bp.name === undefined) return undefined;
   const shown = (g: Guid) => {
     const b = data.blueprints.get(g);
     return b !== undefined && isShown(b);
@@ -186,8 +196,8 @@ export function describe(
           .map((g) => [g.grantor, { guid: g.grantor, name: nameOf(data, g.grantor) }]),
       ).values(),
     ],
-    needs: links.needs(guid),
-    enables: links.enables(guid),
+    needs: named(data, links.needs(guid)),
+    enables: named(data, links.enables(guid)),
   };
 }
 

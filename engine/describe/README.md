@@ -4,7 +4,7 @@ What the planner says about one blueprint: its Summary (ticket 06b), and the bas
 
 ## Public entry
 
-- `describe(data, guid, G?)`: a blueprint's basic description, or undefined when the data doesn't hold the blueprint or the game never shows it (map 19).
+- `describe(data, guid, G?)`: a blueprint's description, or undefined when the data doesn't hold the blueprint or the game never names it (map 19). A named blueprint hidden from the character screen (`HideInUI`) is still described, since a selection can offer it: the background groups Scholar, Noble and Street Urchin are (MCP QA).
 - `Description`: one blueprint, described.
   - `guid`, `name`, `kind`: which blueprint it is; the name is R's `nameOf`.
   - `summary`: the Summary: the hand-written summary when there is one (06c), else the labelled components' sentences joined (`summaryOf`), else `NO_SUMMARY`.
@@ -13,7 +13,7 @@ What the planner says about one blueprint: its Summary (ticket 06b), and the bas
   - `prerequisites`: each prerequisite, worded by R.
   - `grants`: the shown facts it grants, each with the level it grants it at when the grant says so, and `when`, the condition of a conditional grant: "at Cleric, Inquisitor or Warpriest level 1" (`AddFeatureOnClassLevel`), "with Weapon Focus" (`AddFeatureIfHasFact`), "while the alignment is Good" (`AddFeatureOnAlignment`). Desna's starknife proficiency is a cleric's, not every worshipper's (MCP QA).
   - `pickedIn`: where it can be picked, that is the shown selections that list it.
-  - `needs`, `enables`: its prerequisite-chain links (map 09), from engine/links.
+  - `needs`, `enables`: its prerequisite-chain links (map 09), from engine/links, each a `NamedLink` (`guid` and the name R's `namesIn` gives it in that list).
 - `NO_SUMMARY`: "No summary yet.", the Summary of a blueprint with nothing labelled (map 10). Never a guess or a raw component name.
 - `summaryOf(labels)`: the Summary text of a list of labels.
 - `writtenSummary(data, guid)`, `summaryText(data, guid, G?)` and `summaryLabels(data, guid, G?)`: a blueprint's hand-written summary, if any; its Summary text, the hand-written one first; and the labels behind it. The MCP's `search` and `options` use `summaryText`.

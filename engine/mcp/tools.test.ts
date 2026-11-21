@@ -4,7 +4,7 @@ import { placeKey, slotKey, type Build, type Place } from '../build';
 import { decodeBuild, encodeBuild } from '../codec';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
-import { jackInTheGreen } from '../gold';
+import { enforcer, jackInTheGreen } from '../gold';
 import { archetypeCount, buildNameLength, listNames, namesIn, rankLevelRange, skillRankRange } from '../refusals';
 import { walk } from '../walk';
 import {
@@ -27,6 +27,8 @@ import {
 
 const files = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)));
 const e = engineOf(loadData(files.files, files.overrides));
+
+const isRefusal = (x: unknown): x is ToolRefusal => typeof x === 'object' && x !== null && 'refused' in x;
 
 const SPELL_SPECIALIZATION_FIRST = 'f327a765a4353d04f872482ef3e48c35';
 const FIGHTER = '48ac8db94d5de7645906c7d0ad3bcfbd';
@@ -270,5 +272,38 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
       reason:
         'Not a skill: "Climb". The skills are Mobility, Perception, Thievery, Athletics, Persuasion, Lore (Nature), Knowledge (Arcana), Lore (Religion), Knowledge (World), Stealth, Use Magic Device.',
     });
+  });
+
+  it('explains every option that options offers, open or closed, at slots of both gold Builds (MCP QA)', async () => {
+    const refusedExplain: string[] = [];
+    let explained = 0;
+    for (const gold of [jackInTheGreen, enforcer]) {
+      const code = await encodeBuild(e.data, gold.build);
+      const picks = gold.build.picks;
+      const slots = [0, 1, 2, 3, Math.floor(picks.length / 2), picks.length - 3, picks.length - 1]
+        .map((i) => picks[i]?.slot)
+        .filter((s): s is NonNullable<typeof s> => s !== undefined);
+      for (const slot of slots) {
+        for (let page = 1, pages = 1; page <= pages; page++) {
+          const listed = ok(await options(e, { code, slot, include_closed: true, page }), 'options');
+          pages = listed.pages;
+          for (const o of [...listed.open, ...(listed.closed ?? [])]) {
+            explained++;
+            if (isRefusal(explain(e, { guid: o.feature }))) refusedExplain.push(`${o.name} ${o.feature}`);
+          }
+        }
+      }
+    }
+    expect(explained).toBeGreaterThan(500);
+    expect(refusedExplain).toEqual([]);
+  }, 120_000);
+
+  it('names what a blueprint needs and enables in explain (MCP QA)', () => {
+    const powerAttack = explain(e, { guid: '9972f33f977fc724c838e59641b2fca5' });
+    expect(isRefusal(powerAttack)).toBe(false);
+    if (isRefusal(powerAttack)) return;
+    expect(powerAttack.enables.length).toBeGreaterThan(0);
+    for (const link of [...powerAttack.needs, ...powerAttack.enables]) expect(link.name).not.toBe(link.guid);
+    expect(powerAttack.enables.map((l) => l.name)).toContain('Cleave');
   });
 });
