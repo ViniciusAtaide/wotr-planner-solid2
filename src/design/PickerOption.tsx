@@ -38,6 +38,7 @@ export interface PickerOptionProps {
   readonly name: string;
   readonly status: OptionStatus;
   readonly selected?: boolean;
+  readonly marked?: boolean;
   readonly mythic?: boolean;
   readonly icon?: FeatCategory | undefined;
   readonly links?: string | undefined;
@@ -80,7 +81,10 @@ export default function PickerOption(props: PickerOptionProps) {
     >
       <button
         type="button"
-        class={['ww-option', { 'ww-option--selected': props.selected === true }]}
+        class={[
+          'ww-option',
+          { 'ww-option--selected': props.selected === true, 'ww-option--marked': props.marked === true },
+        ]}
         aria-current={props.selected === true ? 'true' : undefined}
         onClick={() => props.onPick?.()}
       >

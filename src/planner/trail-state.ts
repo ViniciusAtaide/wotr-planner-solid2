@@ -1,13 +1,13 @@
 import { placeKey, slotKey, type Alignment, type Build, type Place, type SkillRanks, type SlotId } from '~engine/build';
 import type { CheckedData } from '~engine/load';
 import { expectedLevel } from '~engine/mcp';
-import { BACKGROUNDS_BASE_SELECTION, characterWideSlots } from '~engine/pickers';
+import { BACKGROUNDS_BASE_SELECTION, characterWideSlots, namesInList } from '~engine/pickers';
 import { nameOf } from '~engine/refusals';
 import type { OpenedSlot, Walk } from '~engine/walk';
 
 import { backgroundChildren, heritageSlotIn } from './flat-choices';
 import type { Selection } from './workspace-state';
-import { optionName } from './words';
+import { bareNameOf, shownName } from './words';
 
 export const CHAPTER_LEVELS = 4;
 
@@ -213,7 +213,7 @@ export function whereOf(t: TrailView, step: Step): Where {
 }
 
 export function slotLabel(data: CheckedData, selection: string): string {
-  return nameOf(data, selection).replace(/ selection$/i, '');
+  return bareNameOf(data, selection).replace(/ selection$/i, '');
 }
 
 export function slotWords(data: CheckedData, selection: string): string {
@@ -343,13 +343,27 @@ export function gearDependentSlots(t: TrailView): ReadonlySet<string> {
   return new Set(t.walk.gearDependent.flatMap((g) => (g.slot === undefined ? [] : [slotKey(g.slot)])));
 }
 
+export function pickLabels(data: CheckedData, slots: readonly OpenedSlot[]): ReadonlyMap<string, string> {
+  const names = namesInList(
+    data,
+    slots.flatMap((s) => (s.pick === undefined ? [] : [s.pick.feature])),
+  );
+  return new Map(
+    slots.flatMap((s) =>
+      s.pick === undefined
+        ? []
+        : [[slotKey(s.id), shownName(data, s.pick.feature, s.pick.param, names.get(s.pick.feature))] as const],
+    ),
+  );
+}
+
 function pickNames(t: TrailView, slots: readonly OpenedSlot[]): string[] {
   const gear = gearDependentSlots(t);
-  return slots.flatMap((s) =>
-    s.pick === undefined
-      ? []
-      : [`${optionName(t.data, s.pick.feature, s.pick.param)}${gear.has(slotKey(s.id)) ? ' (Gear)' : ''}`],
-  );
+  const labels = pickLabels(t.data, slots);
+  return slots.flatMap((s) => {
+    const label = labels.get(slotKey(s.id));
+    return label === undefined ? [] : [`${label}${gear.has(slotKey(s.id)) ? ' (Gear)' : ''}`];
+  });
 }
 
 export function characterPicksLine(t: TrailView): string {

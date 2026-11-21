@@ -948,6 +948,11 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
 });
 
 describe('QA pass 1', () => {
+  afterEach(() => {
+    cleanup();
+    history.replaceState(null, '', '/');
+  });
+
   const skilled = (first: Record<string, number>, second: Record<string, number>): Build => ({
     ...withLevels(2),
     levels: [
@@ -978,28 +983,90 @@ describe('QA pass 1', () => {
     expect(button(/^More Mobility/)).toBeEnabled();
   });
 
-  test('Up and Down move through the options, as J and K do, and Down leaves the filter', () => {
+  test('in the filter, Up and Down move the marked row Enter takes; on the rows, they move focus as J and K do', () => {
+    const taken: string[] = [];
     const rows = Array.from({ length: 14 }, (_, i) => ({
       key: `r${i}`,
       name: `Row ${String(i).padStart(2, '0')}`,
       open: true,
       reasons: [],
       current: false,
-      take: () => {},
+      take: () => void taken.push(`r${i}`),
     }));
     render(() => <ChoiceList label="Filter rows" rows={rows} />);
     flush();
     const options = () => [...document.querySelectorAll<HTMLElement>('button.ww-option')];
+    const marked = () => document.querySelector('button.ww-option--marked')?.textContent;
     const filter = screen.getByRole('searchbox', { name: 'Filter rows' });
     filter.focus();
+    expect(marked()).toContain('Row 00');
     fireEvent.keyDown(filter, { key: 'ArrowDown' });
-    expect(document.activeElement).toBe(options()[0]);
+    flush();
+    expect(marked()).toContain('Row 01');
+    expect(document.activeElement).toBe(filter);
+    fireEvent.keyDown(filter, { key: 'Enter' });
+    expect(taken).toEqual(['r1']);
+    options()[0]?.focus();
     fireEvent.keyDown(options()[0] ?? document.body, { key: 'ArrowDown' });
     expect(document.activeElement).toBe(options()[1]);
-    fireEvent.keyDown(options()[1] ?? document.body, { key: 'ArrowUp' });
+    fireEvent.keyDown(options()[1] ?? document.body, { key: 'k' });
     expect(document.activeElement).toBe(options()[0]);
-    fireEvent.keyDown(options()[0] ?? document.body, { key: 'j' });
-    expect(document.activeElement).toBe(options()[1]);
+  });
+
+  test('the filter matches each typed word, and says when nothing matches', () => {
+    const rows = [
+      'Tiefling (Beastbrood (Rakshasa-Spawn))',
+      'Tiefling (Pitborn (Demon-Spawn))',
+      ...Array.from({ length: 12 }, (_, i) => `Elf ${i}`),
+    ].map((name, i) => ({ key: `r${i}`, name, open: true, reasons: [], current: false, take: () => {} }));
+    render(() => <ChoiceList label="Filter races" rows={rows} />);
+    flush();
+    const filter = screen.getByRole('searchbox', { name: 'Filter races' });
+    fireEvent.input(filter, { target: { value: 'tiefling rak' } });
+    flush();
+    expect([...document.querySelectorAll('.ww-option__name')].map((n) => n.textContent)).toEqual([
+      'Tiefling (Beastbrood (Rakshasa-Spawn))',
+    ]);
+    fireEvent.input(filter, { target: { value: 'gnoll' } });
+    flush();
+    expect(screen.getByText('No matches for “gnoll”.')).toBeTruthy();
+  });
+
+  test('closed rows show a few per reason, then count the rest by reason', () => {
+    const rows = Array.from({ length: 10 }, (_, i) => ({
+      key: `c${i}`,
+      name: `Closed ${i}`,
+      open: false,
+      reasons: ['Needs a level 1 Build.'],
+      current: false,
+      take: () => {},
+    }));
+    render(() => <ChoiceList label="Filter" rows={rows} />);
+    flush();
+    expect(document.querySelectorAll('.ww-option--closed').length).toBe(3);
+    expect(screen.getByText('7 more closed: Needs a level 1 Build.')).toBeTruthy();
+  });
+
+  test('⌘Z undoes from a filter that is empty', async () => {
+    await openPlanner(cleaver);
+    const option = document.querySelector<HTMLElement>('.trail-here button.ww-option');
+    fireEvent.click(option ?? document.body);
+    flush();
+    const filter = document.querySelector<HTMLInputElement>('.trail-here [data-picker-filter]');
+    expect(filter?.value).toBe('');
+    const before = document.querySelector('.planner-undo__what')?.textContent;
+    fireEvent.keyDown(filter ?? window, { key: 'z', metaKey: true });
+    flush();
+    expect(document.querySelector('.planner-undo__what')?.textContent).not.toBe(before);
+  });
+
+  test("pick lists show bare names, not the importer's qualifiers", async () => {
+    await openPlanner({ ...cleaver, picks: cleaver.picks.filter((p) => slotKey(p.slot) !== slotKey(FEAT)) });
+    fireEvent.click(chipNamed('Feat'));
+    flush();
+    const names = [...document.querySelectorAll('.trail-here .ww-option__name')].map((n) => n.textContent ?? '');
+    expect(names.length).toBeGreaterThan(0);
+    expect(names.filter((n) => n.endsWith(' (feature)'))).toEqual([]);
   });
 
   test('after a pick, focus lands on the next step, never on the page body', async () => {

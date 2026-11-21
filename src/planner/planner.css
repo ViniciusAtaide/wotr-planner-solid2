@@ -843,3 +843,9 @@
     min-height: 44px;
   }
 }
+
+.trail-choices .ww-option--marked,
+.trail-step .ww-option--marked {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+}

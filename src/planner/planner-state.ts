@@ -212,16 +212,22 @@ export function judgeClasses(
   classes: readonly Guid[],
   edit: (cls: Guid) => Edit,
   rankLevel?: number,
-): ReadonlyMap<Guid, Judged> {
+): ReadonlyMap<Guid, ClassJudged> {
   const p = classPicker(engine.data, build, place, engine.G, rankLevel);
   if (p === undefined) return new Map(classes.map((c) => [c, judgeAll(engine, build, [edit(c)])]));
   return new Map(
-    p.options.map((o): [Guid, Judged] => {
-      if (o.closed === undefined) return [o.class, { open: true, reasons: [] }];
+    p.options.map((o): [Guid, ClassJudged] => {
+      const label =
+        o.name === undefined ? {} : { label: o.qualifier === undefined ? o.name : `${o.name} (${o.qualifier})` };
+      if (o.closed === undefined) return [o.class, { open: true, reasons: [], ...label }];
       const r = refusal({ data: engine.data, G: engine.G, unit: p.unit }, o.closed);
-      return [o.class, { open: false, reasons: r.unmet.length > 0 ? r.unmet : [r.text] }];
+      return [o.class, { open: false, reasons: r.unmet.length > 0 ? r.unmet : [r.text], ...label }];
     }),
   );
+}
+
+export interface ClassJudged extends Judged {
+  readonly label?: string;
 }
 
 function edited(engine: Engine, s: PlannerState, edits: NonEmpty<Edit>, title: string): PlannerState {

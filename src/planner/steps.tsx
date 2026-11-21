@@ -12,10 +12,12 @@ import { Button, ClosedCount, OptionList, PickerOption, Refusal } from '../desig
 import { BackgroundStep, RaceStep } from './CharacterSteps';
 import {
   ChoiceList,
+  clampMark,
   createReveal,
   currentFirst,
   Filter,
   judge,
+  matches,
   moveThroughOptions,
   type ChoiceRow,
 } from './ChoiceList';
@@ -36,7 +38,7 @@ import {
   slotLabel,
 } from './trail-state';
 import type { Selection } from './workspace-state';
-import { optionName } from './words';
+import { bareNameOf, shownName } from './words';
 
 export interface TrailApi {
   readonly planner: Planner;
@@ -88,13 +90,20 @@ function PickStep(props: SlotStepProps) {
     planner()
       .build()
       .picks.find((q) => slotKey(q.slot) === slotKey(props.slot));
-  const name = (o: OptionStatus) => optionName(data(), o.feature, o.param);
+  const name = (o: OptionStatus) =>
+    shownName(
+      data(),
+      o.feature,
+      o.param,
+      o.name === undefined ? undefined : { name: o.name, ...(o.qualifier !== undefined && { qualifier: o.qualifier }) },
+    );
+  const [mark, setMark] = createSignal(0);
   const listed = createMemo(() => {
-    const t = text().toLowerCase();
+    const t = text();
     return (p()?.options ?? [])
       .filter((o) => o.shown)
       .map((o) => ({ o, n: name(o) }))
-      .filter(({ n }) => t === '' || n.toLowerCase().includes(t))
+      .filter(({ n }) => matches(n, t))
       .sort((a, b) => a.n.localeCompare(b.n))
       .map(({ o }) => o);
   });
@@ -142,23 +151,33 @@ function PickStep(props: SlotStepProps) {
         <Filter
           label={`Filter ${slotLabel(data(), props.slot.selection)} by name`}
           value={text()}
-          onInput={setText}
+          onInput={(t) => {
+            setText(t);
+            setMark(0);
+          }}
+          onMove={(delta) => setMark((m) => clampMark(m, delta, open().length))}
           onEnter={() => {
-            const first = open()[0];
-            if (first !== undefined) take(first);
+            const marked = open()[mark()];
+            if (marked !== undefined) take(marked);
           }}
         />
-        <p class="trail-note">
-          {open().length} open · {closed().length} closed
-        </p>
+        <Show
+          when={text() === '' || listed().length > 0}
+          fallback={<p class="trail-note">No matches for “{text()}”.</p>}
+        >
+          <p class="trail-note">
+            {open().length} open · {closed().length} closed
+          </p>
+        </Show>
         <OptionList>
           <For each={open()} keyed={optionKey}>
-            {(o) => (
+            {(o, i) => (
               <PickerOption
                 name={name(o())}
                 status="open"
                 icon={featCategory(data(), o().feature)}
                 selected={isCurrent(o())}
+                marked={i() === mark()}
                 links={links(o())}
                 gear={o().gearItems === undefined ? undefined : gearNote(data(), o().gearItems ?? [])}
                 onPick={() => take(o())}
@@ -356,8 +375,8 @@ function ClassList(props: TrailStepProps) {
     );
     return currentFirst(
       offered.flatMap((c): ChoiceRow[] => {
-        const name = c.name ?? c.assetName;
         const judged = judgedAll.get(c.guid) ?? { open: false, reasons: [] };
+        const name = judged.label ?? bareNameOf(data, c.guid);
         const plain: ChoiceRow = {
           key: c.guid,
           name,
@@ -369,7 +388,7 @@ function ClassList(props: TrailStepProps) {
         return [
           plain,
           ...shownArchetypes(data, c.guid).map((a) => {
-            const flat = flatName(name, nameOf(data, a));
+            const flat = flatName(name, bareNameOf(data, a));
             return {
               key: `${c.guid} ${a}`,
               name: flat,
@@ -466,7 +485,7 @@ export function MythicStep(props: TrailStepProps) {
       first,
       currentFirst(
         offered.map((c) => {
-          const name = c.name ?? c.assetName;
+          const name = judged.get(c.guid)?.label ?? bareNameOf(planner().engine.data, c.guid);
           return {
             key: c.guid,
             name,
@@ -518,7 +537,7 @@ export function LevelEditor(props: LevelStepProps) {
     );
     return currentFirst(
       offered.map((c) => {
-        const name = c.name ?? c.assetName;
+        const name = judged.get(c.guid)?.label ?? bareNameOf(data(), c.guid);
         return {
           key: c.guid,
           name,
@@ -607,7 +626,7 @@ export function RankEditor(props: RankStepProps) {
     );
     return currentFirst(
       offered.map((c) => {
-        const name = c.name ?? c.assetName;
+        const name = judged.get(c.guid)?.label ?? bareNameOf(data(), c.guid);
         return {
           key: c.guid,
           name,

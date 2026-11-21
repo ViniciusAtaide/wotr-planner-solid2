@@ -182,10 +182,10 @@ function Workspace(props: WorkspaceProps) {
   let ownHash = props.initialLink.kind === 'ok' ? openedHash : '';
   let brokenOver: Build | undefined = props.initialLink.kind === 'ok' ? undefined : props.initialBuild;
   createEffect(
-    () => ({ code: linkCode(), build: active().build(), broken: workspace().link.kind === 'didNotOpen' }),
-    ({ code, build, broken }) => {
+    () => ({ code: linkCode(), broken: workspace().link.kind === 'didNotOpen' }),
+    ({ code, broken }) => {
       if (code.kind !== 'current') return;
-      if (broken && build === brokenOver) return;
+      if (broken && active().latest().present === brokenOver) return;
       brokenOver = undefined;
       ownHash = `#b=${code.code}`;
       if (location.hash !== ownHash) history.replaceState(null, '', ownHash);
@@ -221,8 +221,11 @@ function Workspace(props: WorkspaceProps) {
         return;
       case 'idle':
       case 'refused': {
-        const typing = e.target instanceof Element && e.target.closest('input, select, textarea') !== null;
-        if (undoKey && !typing) {
+        const field = e.target instanceof Element ? e.target.closest('input, select, textarea') : null;
+        const typing = field !== null;
+        const emptyFilter =
+          field instanceof HTMLInputElement && field.hasAttribute('data-picker-filter') && field.value === '';
+        if (undoKey && (!typing || emptyFilter)) {
           e.preventDefault();
           send({ kind: 'planner', action: { kind: e.shiftKey ? 'redo' : 'undo' } });
         } else if (e.key === '/' && !typing) {

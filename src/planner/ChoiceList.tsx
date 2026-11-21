@@ -10,6 +10,35 @@ export type { Judged };
 
 export const FILTER_FROM = 13;
 const CLOSED_SHOWN = 12;
+export const CLOSED_PER_REASON = 3;
+
+export function matches(name: string, text: string): boolean {
+  const words = text
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((w) => w !== '');
+  const n = name.toLowerCase();
+  return words.every((w) => n.includes(w));
+}
+
+export function clampMark(at: number, delta: number, count: number): number {
+  return count === 0 ? 0 : Math.max(0, Math.min(count - 1, at + delta));
+}
+
+export function byReason<T>(rows: readonly T[], reasonOf: (row: T) => string): readonly (readonly [string, number])[] {
+  const counts = new Map<string, number>();
+  for (const r of rows) counts.set(reasonOf(r), (counts.get(reasonOf(r)) ?? 0) + 1);
+  return [...counts];
+}
+
+export function firstPerReason<T>(rows: readonly T[], reasonOf: (row: T) => string, each: number): T[] {
+  const seen = new Map<string, number>();
+  return rows.filter((r) => {
+    const n = seen.get(reasonOf(r)) ?? 0;
+    seen.set(reasonOf(r), n + 1);
+    return n < each;
+  });
+}
 
 export interface ChoiceRow {
   readonly key: string;
@@ -52,11 +81,9 @@ export function currentFirst(rows: readonly ChoiceRow[]): ChoiceRow[] {
 }
 
 export function moveThroughOptions(e: KeyboardEvent): void {
-  const letter = e.key === 'j' || e.key === 'k';
   const down = e.key === 'j' || e.key === 'ArrowDown';
-  if (!letter && !down && e.key !== 'ArrowUp') return;
-  const typing = (e.target as HTMLElement).tagName === 'INPUT';
-  if (typing && (letter || !down)) return;
+  if (!down && e.key !== 'k' && e.key !== 'ArrowUp') return;
+  if ((e.target as HTMLElement).tagName === 'INPUT') return;
   const options = [...(e.currentTarget as HTMLElement).querySelectorAll<HTMLElement>('.ww-option')];
   const at = options.indexOf(document.activeElement as HTMLElement);
   options[Math.max(0, Math.min(options.length - 1, at + (down ? 1 : -1)))]?.focus();
@@ -72,6 +99,7 @@ export interface FilterProps {
   readonly value: string;
   readonly onInput: (text: string) => void;
   readonly onEnter: () => void;
+  readonly onMove?: (delta: number) => void;
 }
 
 export function Filter(props: FilterProps) {
@@ -90,6 +118,12 @@ export function Filter(props: FilterProps) {
       value={props.value}
       onInput={(e) => props.onInput(e.currentTarget.value)}
       onKeyDown={(e) => {
+        const delta = e.key === 'ArrowDown' ? 1 : e.key === 'ArrowUp' ? -1 : 0;
+        if (delta !== 0 && props.onMove !== undefined) {
+          e.preventDefault();
+          props.onMove(delta);
+          return;
+        }
         if (e.key !== 'Enter') return;
         e.preventDefault();
         props.onEnter();
@@ -103,28 +137,51 @@ export interface ChoiceListProps {
   readonly rows: readonly ChoiceRow[];
 }
 
+const rowReason = (r: ChoiceRow) => r.reasons.join(' ') || 'closed';
+
 export function ChoiceList(props: ChoiceListProps) {
   const [text, setText] = createSignal('');
-  const listed = createMemo(() => {
-    const t = text().toLowerCase();
-    return props.rows.filter((r) => t === '' || r.name.toLowerCase().includes(t));
-  });
+  const [mark, setMark] = createSignal(0);
+  const [all, setAll] = createSignal(false);
+  const listed = createMemo(() => props.rows.filter((r) => matches(r.name, text())));
   const open = () => listed().filter((r) => r.open);
   const closed = () => listed().filter((r) => !r.open);
   const reveal = createReveal(CLOSED_SHOWN, () => closed().length);
-  const closedShown = () => closed().slice(0, reveal.limit());
+  const closedShown = () =>
+    all() ? closed().slice(0, reveal.limit()) : firstPerReason(closed(), rowReason, CLOSED_PER_REASON);
+  const hidden = () => {
+    const shown = new Set(closedShown());
+    return byReason(
+      closed().filter((r) => !shown.has(r)),
+      rowReason,
+    );
+  };
+  const filtering = () => props.rows.length >= FILTER_FROM;
   return (
     <div class="trail-choices" onKeyDown={moveThroughOptions}>
-      <Show when={props.rows.length >= FILTER_FROM}>
-        <Filter label={props.label} value={text()} onInput={setText} onEnter={() => open()[0]?.take()} />
+      <Show when={filtering()}>
+        <Filter
+          label={props.label}
+          value={text()}
+          onInput={(t) => {
+            setText(t);
+            setMark(0);
+          }}
+          onMove={(delta) => setMark((m) => clampMark(m, delta, open().length))}
+          onEnter={() => open()[mark()]?.take()}
+        />
+      </Show>
+      <Show when={text() !== '' && listed().length === 0}>
+        <p class="trail-note">No matches for “{text()}”.</p>
       </Show>
       <OptionList>
         <For each={open()} keyed={(r) => r.key}>
-          {(r) => (
+          {(r, i) => (
             <PickerOption
               name={r().name}
               status="open"
               selected={r().current}
+              marked={filtering() && i() === mark()}
               links={r().note}
               onPick={() => r().take()}
             />
@@ -133,9 +190,16 @@ export function ChoiceList(props: ChoiceListProps) {
         <For each={closedShown()} keyed={(r) => r.key}>
           {(r) => <PickerOption name={r().name} status="closed" refusal={r().reasons} />}
         </For>
-        <Show when={closed().length > closedShown().length}>
-          <ClosedCount text={`${closed().length - closedShown().length} more closed`} />
-          <button type="button" class="trail-link" onClick={() => reveal.more()}>
+        <Show when={hidden().length > 0}>
+          <For each={hidden()}>{([reason, n]) => <ClosedCount text={`${n} more closed: ${reason}`} />}</For>
+          <button
+            type="button"
+            class="trail-link"
+            onClick={() => {
+              setAll(true);
+              reveal.more();
+            }}
+          >
             Show all closed
           </button>
         </Show>

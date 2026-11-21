@@ -8,7 +8,7 @@ import { refusal } from '~engine/refusals';
 import { walk, type OpenedSlot, type Walk } from '~engine/walk';
 
 import { judgeAll, type Judged, type NonEmpty } from './planner-state';
-import { optionName } from './words';
+import { bareNameOf, shownName } from './words';
 
 export interface FlatChoice {
   readonly key: string;
@@ -21,7 +21,21 @@ export interface FlatChoice {
 }
 
 export function flatName(group: string, variation: string | undefined): string {
-  return variation === undefined ? group : `${group} (${variation})`;
+  if (variation === undefined || variation === group) return group;
+  const rest = variation.startsWith(`${group} `)
+    ? variation.slice(group.length).replace(/^\s*[—–-]?\s*/, '')
+    : variation;
+  const inner = /^\((.*)\)$/.exec(rest)?.[1] ?? rest;
+  return inner === '' ? group : `${group} (${inner})`;
+}
+
+function optionLabel(engine: Engine, o: OptionStatus): string {
+  return shownName(
+    engine.data,
+    o.feature,
+    o.param,
+    o.name === undefined ? undefined : { name: o.name, ...(o.qualifier !== undefined && { qualifier: o.qualifier }) },
+  );
 }
 
 export function after(first: readonly Edit[], then: NonEmpty<Edit>): NonEmpty<Edit> {
@@ -85,13 +99,9 @@ export function heritageSlot(engine: Engine, build: Build, w: Walk): OpenedSlot 
 
 export function raceLabel(engine: Engine, build: Build, w: Walk): string | undefined {
   if (build.race === undefined) return undefined;
-  const race = engine.data.blueprints.get(build.race);
   const slot = heritageSlot(engine, build, w);
   const pick = slot && pickAt(build, slot.id);
-  return flatName(
-    race?.name ?? race?.assetName ?? build.race,
-    pick && optionName(engine.data, pick.feature, pick.param),
-  );
+  return flatName(bareNameOf(engine.data, build.race), pick && shownName(engine.data, pick.feature, pick.param));
 }
 
 export function raceChoices(engine: Engine, build: Build, w: Walk): FlatChoice[] {
@@ -103,7 +113,7 @@ export function raceChoices(engine: Engine, build: Build, w: Walk): FlatChoice[]
       ? []
       : [{ kind: 'pick', slot: wasPick.slot }];
   return offeredRaces(data).flatMap((r): FlatChoice[] => {
-    const raceName = r.name ?? r.assetName;
+    const raceName = bareNameOf(data, r.guid);
     const raceEdit: Edit = { kind: 'race', race: r.guid, ...(build.raceStat && { raceStat: build.raceStat }) };
     const judged: Judged =
       r.guid === build.race
@@ -127,7 +137,7 @@ export function raceChoices(engine: Engine, build: Build, w: Walk): FlatChoice[]
       .filter((o) => o.shown)
       .map((o) => ({
         key: `${r.guid} ${o.feature}`,
-        name: flatName(raceName, optionName(data, o.feature, o.param)),
+        name: flatName(raceName, optionLabel(engine, o)),
         edits: after(clearing(slot.id), [raceEdit, pickEdit(slot.id, o)]),
         current: build.race === r.guid && wasPick?.feature === o.feature,
         ...inherit(judged, closedWords(engine, p, o)),
@@ -147,10 +157,12 @@ export function backgroundLabel(engine: Engine, build: Build, w: Walk, base: Slo
     .map((s) => pickAt(build, s.id))
     .find((p) => p !== undefined);
   return flatName(
-    optionName(engine.data, group.feature, group.param),
-    child && optionName(engine.data, child.feature, child.param),
+    shownName(engine.data, group.feature, group.param),
+    child && shownName(engine.data, child.feature, child.param),
   );
 }
+
+export const NO_BACKGROUND = 'None';
 
 export function backgroundChoices(engine: Engine, build: Build, w: Walk, base: SlotId): FlatChoice[] {
   const data = engine.data;
@@ -164,7 +176,7 @@ export function backgroundChoices(engine: Engine, build: Build, w: Walk, base: S
   return (p?.options ?? [])
     .filter((o) => o.shown)
     .flatMap((o): FlatChoice[] => {
-      const groupName = optionName(data, o.feature, o.param);
+      const groupName = optionLabel(engine, o);
       const groupWords = closedWords(engine, p, o);
       const open: Judged = { open: true, reasons: [] };
       const chosen: Build = { ...build, picks: [...others, { slot: base, feature: o.feature }] };
@@ -175,6 +187,7 @@ export function backgroundChoices(engine: Engine, build: Build, w: Walk, base: S
           .map((q) => ({ kind: 'pick', slot: q.slot }));
       const sameGroup = group?.feature === o.feature;
       if (children.length === 0) {
+        if (groupName === NO_BACKGROUND) return [];
         return [
           {
             key: o.feature,
@@ -192,7 +205,7 @@ export function backgroundChoices(engine: Engine, build: Build, w: Walk, base: S
           .filter((x) => x.shown)
           .map((x) => ({
             key: `${o.feature} ${x.feature}`,
-            name: flatName(groupName, optionName(data, x.feature, x.param)),
+            name: flatName(groupName, optionLabel(engine, x)),
             edits: after(clearing(child.id), [pickEdit(base, o), pickEdit(child.id, x)]),
             current: sameGroup && held?.feature === x.feature,
             ...inherit(open, [...groupWords, ...closedWords(engine, cp, x)]),

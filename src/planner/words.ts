@@ -1,6 +1,7 @@
 import type { CheckedData } from '~engine/load';
 import type { Guid } from '~engine/data';
 import type { GrantParam } from '~engine/grants';
+import { bareName, type ListName } from '~engine/pickers';
 import { nameOf, statName } from '~engine/refusals';
 
 export function ordinal(n: number): string {
@@ -9,8 +10,24 @@ export function ordinal(n: number): string {
   return `${n}${suffix}`;
 }
 
+export function bareNameOf(data: CheckedData, guid: Guid): string {
+  const bp = data.blueprints.get(guid);
+  return (bp === undefined ? undefined : bareName(bp)) ?? nameOf(data, guid);
+}
+
+export function listedName(listed: ListName): string {
+  return listed.qualifier === undefined ? listed.name : `${listed.name} (${listed.qualifier})`;
+}
+
+export function shownName(data: CheckedData, feature: Guid, param?: GrantParam, listed?: ListName): string {
+  return withParam(data, listed === undefined ? bareNameOf(data, feature) : listedName(listed), param);
+}
+
 export function optionName(data: CheckedData, feature: Guid, param?: GrantParam): string {
-  const name = nameOf(data, feature);
+  return withParam(data, nameOf(data, feature), param);
+}
+
+function withParam(data: CheckedData, name: string, param?: GrantParam): string {
   if (param === undefined) return name;
   if ('WeaponCategory' in param) return `${name} (${param.WeaponCategory.replace(/([a-z])([A-Z])/g, '$1 $2')})`;
   if ('SpellSchool' in param) return `${name} (${param.SpellSchool})`;

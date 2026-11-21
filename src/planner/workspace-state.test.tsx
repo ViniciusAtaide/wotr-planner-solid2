@@ -172,6 +172,11 @@ describe('WorkspaceState', () => {
     expect(reduceWorkspace(failed, { kind: 'dismissLink' }, 'idle').link).toEqual({ kind: 'ok' });
   });
 
+  test('a link that opens closes any open step (QA, flat lists)', () => {
+    const open = { ...workspaceAt(cleaver, LINK_OK), selection: { kind: 'race' } as const };
+    expect(reduceWorkspace(open, { kind: 'linkOpened' }, 'idle').selection).toBeUndefined();
+  });
+
   test('sameSelection compares by kind and key', () => {
     expect(sameSelection({ kind: 'slot', slot: FEAT }, { kind: 'slot', slot: { ...FEAT } })).toBe(true);
     expect(sameSelection({ kind: 'slot', slot: FEAT }, { kind: 'slot', slot: BONUS_COMBAT_FEAT })).toBe(false);

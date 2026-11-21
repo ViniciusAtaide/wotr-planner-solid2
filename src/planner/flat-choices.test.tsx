@@ -50,6 +50,9 @@ describe('flat names', () => {
   test('a variation goes in parentheses after its group', () => {
     expect(flatName('Noble', 'Courtier')).toBe('Noble (Courtier)');
     expect(flatName('Human', undefined)).toBe('Human');
+    expect(flatName('Aasimar', 'Aasimar')).toBe('Aasimar');
+    expect(flatName('Aasimar', 'Aasimar (Heritage)')).toBe('Aasimar (Heritage)');
+    expect(flatName('Scholar', 'Scholar — Nature')).toBe('Scholar (Nature)');
   });
 
   test('earlier edits go first', () => {
@@ -71,6 +74,8 @@ describe('races with their heritages', () => {
     expect(names).toContain('Dwarf (Barrow Dwarf)');
     expect(names).toContain('Human');
     expect(names.filter((n) => n.startsWith('Human'))).toEqual(['Human']);
+    expect(names).toContain('Aasimar');
+    expect(names.filter((n) => /^(\w+) \(\1 /.test(n))).toEqual([]);
     expect(choices.every((c) => c.open)).toBe(true);
   });
 
@@ -119,6 +124,8 @@ describe('backgrounds with their variations', () => {
     expect(names).toContain('Noble (Courtier)');
     expect(names).toContain('Warrior (Gladiator)');
     expect(names).not.toContain('Noble');
+    expect(names).not.toContain('None');
+    expect(names.filter((n) => /\(Background Selection\)/.test(n))).toEqual([]);
   });
 
   test('one row takes the group and its variation, and another group clears the old variation', () => {

@@ -120,6 +120,7 @@ export function reduceWorkspace(s: WorkspaceState, a: WorkspaceAction, editing: 
     case 'close':
       return s.view.kind !== 'forked' || confirming ? s : { ...s, view: SINGLE };
     case 'linkOpened':
+      return s.link.kind === 'ok' && s.selection === undefined ? s : { ...s, link: LINK_OK, selection: undefined };
     case 'dismissLink':
       return s.link.kind === 'ok' ? s : { ...s, link: LINK_OK };
     case 'linkFailed':

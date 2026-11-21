@@ -40,6 +40,7 @@ import {
   isFirstLevelOfClass,
   keepsSelection,
   levelOneDone,
+  pickLabels,
   nextStep,
   rankNumbersAt,
   skillBudget,
@@ -201,7 +202,7 @@ export default function Trail(props: TrailProps) {
       </span>
     </button>
   );
-  const slotChip = (s: OpenedSlot) => {
+  const slotChip = (s: OpenedSlot, labels: ReadonlyMap<string, string>) => {
     const background = isBackgroundSlot(view(), s.id);
     return chip(
       slotLabel(data(), s.id.selection),
@@ -209,13 +210,15 @@ export default function Trail(props: TrailProps) {
         ? undefined
         : background
           ? backgroundLabel(props.planner.engine, build(), props.planner.walked(), s.id)
-          : optionName(data(), s.pick.feature, s.pick.param),
+          : (labels.get(slotKey(s.id)) ?? optionName(data(), s.pick.feature, s.pick.param)),
       { kind: 'slot', slot: s.id },
       s.pick === undefined || background ? undefined : featCategory(data(), s.pick.feature),
       s.pick !== undefined && gearDependentSlots(view()).has(slotKey(s.id)),
     );
   };
-  const slotChips = (place: Place) => <For each={slotsAt(view(), place)}>{(s) => <>{slotChip(s)}</>}</For>;
+  const slotChips = (place: Place) => (
+    <For each={slotsAt(view(), place)}>{(s) => <>{slotChip(s, pickLabels(data(), slotsAt(view(), place)))}</>}</For>
+  );
   const hasArchetypes = (level: number) => {
     const cls = data().blueprints.get(build().levels[level - 1]?.class ?? '');
     return (
@@ -334,7 +337,9 @@ export default function Trail(props: TrailProps) {
         chips={
           <div class="trail-chips">
             {chip('Race', raceLabel(props.planner.engine, build(), props.planner.walked()), { kind: 'race' })}
-            <For each={characterChipSlots(view())}>{(s) => <>{slotChip(s)}</>}</For>
+            <For each={characterChipSlots(view())}>
+              {(s) => <>{slotChip(s, pickLabels(data(), characterChipSlots(view())))}</>}
+            </For>
           </div>
         }
         scoresStep={where().kind === 'scores'}

@@ -63,17 +63,24 @@ once confirmed, the page lands on the first pick it cleared.
 **Icons**: a feat's chip and its row in a pick list carry its category's icon (`feat-category.ts`).
 
 **Lists**: a pick list is open, sorted by name, with a filter above it that takes focus only under a fine pointer (so a
-phone keeps its keyboard down); Enter takes the first open row; the current pick is marked; closed rows show R's
-reasons; an open row carries no badge, since a row you can tap is open. A small set (+2, the six ability increases,
-the last one marked "as before") is a row of buttons. A class or path list gets the filter from 13 rows up. Up and
-Down move through the options as J and K do, and Down leaves the filter for the first option. "Show all closed"
-reveals the rest a step at a time (`createReveal`, `REVEAL_STEP` rows a frame), so the first rows show at once.
+phone keeps its keyboard down); the filter matches each typed word on its own (`matches`: "tiefling rak" finds
+Rakshasa-Spawn) and says "No matches for …" when nothing does. In the filter, Up and Down move a mark over the open rows
+(`clampMark`) and Enter takes the marked row, the first until moved; on the rows, Up, Down, J and K move the focus
+(`moveThroughOptions`). The current pick is marked; closed rows show R's reasons; an open row carries no badge, since
+a row you can tap is open. A class, path, race or background list shows the first few closed rows per reason
+(`CLOSED_PER_REASON`, `firstPerReason`) and counts the rest by reason ("44 more closed: …", `byReason`). Names are S's
+bare names, qualified only when two in the same list share one (`shownName`, `pickLabels`, `bareNameOf`). A small set
+(+2, the six ability increases, the last one marked "as before") is a row of buttons. A class or path list gets the
+filter from 13 rows up. "Show all closed" reveals the rest a step at a time (`createReveal`, `REVEAL_STEP` rows a
+frame), so the first rows show at once.
 
 **Focus**: when a new step arrives and focus was lost with the old one (on the page body), it lands on the step's
 first control: the filter under a fine pointer, else its first button, never "Back to the next choice".
 
 **Flat lists** (user, 2026-11-21): a choice that opens a second choice is listed as one row per pair, the second in
-parentheses, so typing in the filter finds either name, and a row takes both as one change (one Undo entry):
+parentheses, so typing in the filter finds either name, and a row takes both as one change (one Undo entry). Each
+name is S's bare name, and a variation never repeats its group: "Aasimar" and "Scholar (Nature)", not "Aasimar (Aasimar
+(Heritage))" or "Scholar (Scholar — Nature)" (`flatName`). The group "None" (no background) is not listed:
 
 - the race with its heritage, "Tiefling (Beastbrood (Rakshasa-Spawn))", or the race alone when it opens none (a
   Human's bonus feat stays a pick of its own). The heritage is the race's own selection in the game's Racial feature
@@ -176,6 +183,7 @@ dimmed and inert behind "Edit the Second Build".
     is confirming;
   - `select` sets the selection, and the side when it names one;
   - `linkOpened` and `dismissLink` set the link back to `ok`, and `linkFailed` sets `didNotOpen`. Edits never clear it.
+    `linkOpened` also closes any open step, so the trail resolves as on load.
 
   `reducePage` is the glue the page and the sequence test share: a `Page` is the workspace and both planners. `fork`
   resets the second planner to the first's `present`; `close` makes the edited planner's whole state, history
@@ -279,8 +287,9 @@ dimmed and inert behind "Edit the Second Build".
   - A link that doesn't open, on load or pasted, stays in the address bar with the notice saying why, until the Build
     is edited (`brokenOver`): only then does the page write its own code again.
   - One window key handler switches on the edited planner's `Session`, `unreachable` as its default. While
-    confirming, ⌘Z and Esc cancel and ⇧⌘Z and / do nothing; otherwise ⌘Z undoes, ⇧⌘Z redoes, / focuses the filter and
-    Esc goes back to the next choice.
+    confirming, ⌘Z and Esc cancel and ⇧⌘Z and / do nothing; otherwise ⌘Z undoes, ⇧⌘Z redoes (also from an empty
+    filter, which has no text to undo; a filter with text keeps its own undo), / focuses the filter and Esc goes back
+    to the next choice.
   - `confirm` commits the Cascade preview's Build and selects the first pick it cleared (`firstCleared`).
   - Each side keeps its own `TrailState`, so switching sides keeps a trail's folds and skills left unspent.
   - While confirming, everything behind the Cascade preview is `inert` (`planner-behind`), and the preview keeps Tab
