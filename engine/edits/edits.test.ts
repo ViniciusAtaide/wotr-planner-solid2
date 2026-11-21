@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { abilityScores, placeKey, slotKey, type Build } from '../build';
+import { abilityScores, placeKey, skillRanks, slotKey, type Build } from '../build';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { allows, apply, breaksOf, cascade, clearPicks, type Edit } from './edits';
@@ -106,5 +106,56 @@ describe('E: edits', { timeout: 30_000 }, () => {
       expect(allows(data, fighter(2), { kind: 'addLevel', class: FIGHTER }, G).ok).toBe(true);
       expect(allows(data, fighter(2), { kind: 'dropLevel' }, G).ok).toBe(true);
     });
+  });
+
+  it('clears the later ranks a switch no longer allows, when rank 8 changes from Gold Dragon to Devil', () => {
+    const GOLD_DRAGON = 'daf1235b6217787499c14e4e32142523';
+    const DEVIL = '211f49705f478b3468db6daa802452a2';
+    const ranks = jackInTheGreen.build.ranks ?? [];
+    const gold: Build = {
+      ...jackInTheGreen.build,
+      ranks: ranks.map((r, i) => (i >= 7 ? { ...r, class: GOLD_DRAGON } : r)),
+      picks: jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place) || p.slot.place.rank <= 7),
+    };
+    expect(walk(data, gold, G).failures.filter((f) => 'rank' in f.place)).toEqual([]);
+    const edit: Edit = { kind: 'rankClass', rank: 8, class: DEVIL };
+    expect(allows(data, gold, edit, G).ok).toBe(false);
+    const c = cascade(data, gold, edit, G);
+    expect(c.ok).toBe(true);
+    if (!c.ok) return;
+    expect(c.clearedRanks).toEqual([9, 10]);
+    expect(c.build.ranks?.map((r) => r.class)).toEqual([...ranks.slice(0, 7).map((r) => r.class), DEVIL]);
+    expect(walk(data, c.build, G).failures.filter((f) => 'rank' in f.place)).toEqual([]);
+  });
+
+  it("clears a level's skill ranks when a class change leaves it over its budget, and lists them", () => {
+    const ROGUE = '299aa766dee3cbf4790da4efb8c72484';
+    const FIGHTER = '48ac8db94d5de7645906c7d0ad3bcfbd';
+    const rogue = cascade(data, jackInTheGreen.build, { kind: 'class', level: 3, class: ROGUE }, G);
+    expect(rogue.ok).toBe(true);
+    if (!rogue.ok) return;
+    const own = rogue.build.levels[2]?.skills ?? {};
+    const extra = ['SkillAthletics', 'SkillKnowledgeArcana', 'SkillPerception'];
+    const spent: Build = {
+      ...rogue.build,
+      levels: rogue.build.levels.map((l, i) =>
+        i === 2 ? { ...l, skills: skillRanks({ ...own, ...Object.fromEntries(extra.map((k) => [k, 1])) }) } : l,
+      ),
+    };
+    expect(walk(data, spent, G).failures.filter((f) => f.choice === 'skills')).toEqual([]);
+    const edit: Edit = { kind: 'class', level: 3, class: FIGHTER };
+    const refused = allows(data, spent, edit, G);
+    expect(refused.ok).toBe(false);
+    if (refused.ok) return;
+    expect(refused.others).toContainEqual(
+      expect.objectContaining({ place: { level: 3 }, choice: 'skills', rule: 'SpendSkillPoint.Check:points' }),
+    );
+    const c = cascade(data, spent, edit, G);
+    expect(c.ok).toBe(true);
+    if (!c.ok) return;
+    expect(c.clearedSkills).toEqual([3]);
+    expect(c.build.levels[2]?.skills).toBeUndefined();
+    expect(c.build.levels[2]?.class).toBe(FIGHTER);
+    expect(walk(data, c.build, G).failures.filter((f) => f.choice === 'skills')).toEqual([]);
   });
 });

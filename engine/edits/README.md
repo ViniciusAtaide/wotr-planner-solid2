@@ -26,12 +26,17 @@ E answers whether a change keeps a Build possible (guide §4; map ticket 11, "Ca
 - `clearPicks(build, slots)`: the Build without the picks in these slots.
 - `breaksOf(data, before, after, G?)`: what `after` breaks of `before`, as `Breaks`: `picks`, the picks it breaks, in the Build's order, and `others`, the other choices it breaks (a class, an archetype, Gear…), each with its refusal.
 - `allows(data, build, edit, G?)`: whether a plain edit keeps the Build possible, that is, breaks nothing the Build had right. Its `Verdict` is allowed with the new Build, or refused with what it breaks.
-- `cascade(data, build, edit, G?)`: a Cascade edit, as a `Cascade`.
+- `cascade(data, build, edit, G?)`: a Cascade edit, as a `Cascade`: when it's allowed, `cleared` picks, `clearedSkills` levels, `clearedRanks` and the new `build`.
 
 ## Rules
 
 - **What breaks.** `breaksOf` walks both Builds and keys each refusal by what it refuses (`keyedRefusals`: a pick by its slot, any other choice by its place, choice and subject), so the two walks can be compared; a refusal whose key the earlier walk lacks is broken by the edit.
-- **Cascade.** The edit is made, then every pick it breaks is cleared, then every pick that clearing breaks, until nothing more breaks. `cleared` is the preview, in the order the picks were cleared; `build` is what the Cascade leaves. It is refused, with what it breaks, when the edit breaks a choice clearing picks can't mend: the edited pick itself, or a class, archetype, Gear or other choice.
+- **Cascade.** The edit is made, then everything it breaks that can be cleared is cleared, then whatever that clearing breaks, until nothing more breaks. It clears and never moves (map ticket 11). Three kinds of choice can be cleared:
+  - **Picks.** `cleared` lists them, in the order they were cleared.
+  - **A level's skill ranks,** when the level is now over its budget or a rank breaks the skill rules, as after a class change to a class with fewer skill points. `clearedSkills` lists the levels.
+  - **Mythic ranks,** from the first refused rank to the last, since ranks come in order. An example is Gold Dragon at ranks 9–10 after rank 8 becomes Devil (`map31.switchAtRank8`). The picks at those ranks are cleared with them and listed in `cleared`, and `clearedRanks` lists the rank numbers.
+
+  `build` is what the Cascade leaves. The Cascade is refused, with what it breaks, when the edit breaks its own target (the edited pick, the edited level's skills, or the edited rank or one before it) or a choice it can't clear (a level's class, an archetype, Gear and the like).
 
 ## Tests
 

@@ -171,21 +171,89 @@ export function allows(data: CheckedData, build: Build, edit: Edit, G: GrantInde
 }
 
 export type Cascade =
-  | { readonly ok: true; readonly cleared: readonly Pick[]; readonly build: Build }
+  | {
+      readonly ok: true;
+      readonly cleared: readonly Pick[];
+      readonly clearedSkills: readonly number[];
+      readonly clearedRanks: readonly number[];
+      readonly build: Build;
+    }
   | ({ readonly ok: false } & Breaks);
+
+const levelOf = (f: Failure) => ('level' in f.place ? f.place.level : undefined);
+const rankOf = (f: Failure) => ('rank' in f.place ? f.place.rank : undefined);
+
+function editedSkillsLevel(edit: Edit): number | undefined {
+  return edit.kind === 'skills' ? edit.level : undefined;
+}
+
+function editedRank(build: Build, edit: Edit): number | undefined {
+  if (edit.kind === 'rankClass' || edit.kind === 'rankLevel') return edit.rank;
+  if (edit.kind === 'addRank') return (build.ranks?.length ?? 0) + 1;
+  return undefined;
+}
+
+function dropRanksFrom(build: Build, rank: number): { readonly build: Build; readonly picks: readonly Pick[] } {
+  const beyond = (p: Pick) => 'rank' in p.slot.place && p.slot.place.rank >= rank;
+  return {
+    build: { ...build, ranks: (build.ranks ?? []).slice(0, rank - 1), picks: build.picks.filter((p) => !beyond(p)) },
+    picks: build.picks.filter(beyond),
+  };
+}
+
+function clearSkills(build: Build, levels: readonly number[]): Build {
+  return {
+    ...build,
+    levels: build.levels.map((l, i) => {
+      if (!levels.includes(i + 1)) return l;
+      const { skills: _skills, ...rest } = l;
+      return rest;
+    }),
+  };
+}
 
 export function cascade(data: CheckedData, build: Build, edit: Edit, G: GrantIndex = buildGrantIndex(data)): Cascade {
   let after = apply(build, edit);
   const cleared: Pick[] = [];
+  const clearedSkills = new Set<number>();
+  const clearedRanks: number[] = [];
   for (;;) {
     const broken = breaksOf(data, build, after, G);
+    const refuse = { ok: false as const, ...broken };
     const edited = edit.kind === 'pick' ? broken.picks.find((p) => slotKey(p.slot) === slotKey(edit.slot)) : undefined;
-    if (broken.others.length > 0 || edited !== undefined) return { ok: false, ...broken };
-    if (broken.picks.length === 0) return { ok: true, cleared, build: after };
+    if (edited !== undefined) return refuse;
+    const skills = broken.others.filter((f) => f.choice === 'skills' && levelOf(f) !== undefined);
+    const ranks = broken.others.filter((f) => (f.choice === 'class' || f.choice === 'rank') && rankOf(f) !== undefined);
+    if (broken.others.length > skills.length + ranks.length) return refuse;
+    const skillLevels = [...new Set(skills.map((f) => levelOf(f) as number))].filter(
+      (l) => Object.keys(after.levels[l - 1]?.skills ?? {}).length > 0,
+    );
+    const firstRank = ranks.length === 0 ? undefined : Math.min(...ranks.map((f) => rankOf(f) as number));
+    const ownSkills = editedSkillsLevel(edit);
+    const ownRank = editedRank(build, edit);
+    if (skills.length > 0 && (skillLevels.length === 0 || (ownSkills !== undefined && skillLevels.includes(ownSkills))))
+      return refuse;
+    if (
+      firstRank !== undefined &&
+      (firstRank > (after.ranks?.length ?? 0) || (ownRank !== undefined && firstRank <= ownRank))
+    )
+      return refuse;
+    if (broken.picks.length === 0 && skillLevels.length === 0 && firstRank === undefined)
+      return { ok: true, cleared, clearedSkills: [...clearedSkills].sort((a, b) => a - b), clearedRanks, build: after };
     cleared.push(...broken.picks);
     after = clearPicks(
       after,
       broken.picks.map((p) => p.slot),
     );
+    if (skillLevels.length > 0) {
+      for (const l of skillLevels) clearedSkills.add(l);
+      after = clearSkills(after, skillLevels);
+    }
+    if (firstRank !== undefined) {
+      for (let r = firstRank; r <= (after.ranks?.length ?? 0); r++) clearedRanks.push(r);
+      const dropped = dropRanksFrom(after, firstRank);
+      cleared.push(...dropped.picks);
+      after = dropped.build;
+    }
   }
 }
