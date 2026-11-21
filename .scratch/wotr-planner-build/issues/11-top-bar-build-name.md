@@ -1,6 +1,6 @@
 # The top bar: the Build's name, first focus, and "WP" on phones
 
-Status: open
+Status: done
 Blocked by: none (the UI half waits on the engine half for the name)
 Plan: [plan](../plan.md)
 
@@ -33,3 +33,8 @@ User, 2026-11-21: "I don't like how at first draw the focus it on the character 
 ## Progress
 
 - **Engine half (done):** `Build.name` (`BuildName`, `toBuildName`, `MAX_NAME_LENGTH` 60, counted in code points), R's `buildNameLength`, the codec's optional last field (varint length, UTF-8), E's `rename` (allowed without a walk), `start_build`'s optional `name` and `sheet`'s `name`. A blank name leaves the Build nameless. The UI's history takes `rename` like any edit, so it is one Undo entry; the UI half's tests cover it there.
+- **UI half (done, Planner UI session):** first draw at the top with nothing focused and "WP" under 600 px landed with QA pass 2's fixes. The name label is `src/planner/BuildName.tsx`, portalled into the shell header's new centre slot: "Untitled Build" muted, click or Enter or Space to edit, Enter or blur saves through `rename` (one Undo entry), Escape cancels, a blank name clears it, past 60 characters R's `buildNameLength` shows under the field. The title is "<name> · Worldwound Planner".
+
+## Outcome
+
+Done. Tests: the untitled label, naming as one Undo step with focus back on the label, Escape cancelling without leaving the step, the 60-character refusal, clearing, the page title, and the shell's centre slot (with ticket 11's earlier tests for first focus and "WP"). Checked in the browser at 1280 and 375: the label sits centred in the top bar beside "Worldwound Planner" or "WP", nothing has focus on load, a name saves on Enter, shows in the tab title, rides in the link and survives a reload.

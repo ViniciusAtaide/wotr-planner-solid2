@@ -83,7 +83,16 @@ first control: the filter under a fine pointer, else its first button, never "Ba
 bar. The step region's scroll into view and focus, and a filter's own focus, wait until the step has changed since the
 page loaded (`StepArrived`, a context `Trail` provides; sticky once true), and the browser's scroll restoration is
 manual, so a reload starts at the top too. The scroll and focus run in the next animation frame, after paint. A
-list's marked row is kept in view by scrolling the list box only (`markInView`), never the page.
+list's marked row is kept in view by scrolling the list box only (`scrollToIndex`), never the page.
+
+**The Build's name** (build ticket 11, `BuildName.tsx`): a label centred in the top bar (portalled into the shell's
+`#app-header-center`; in the toolbar when there is no shell, as in tests) shows the Build's name, or "Untitled
+Build" in `ink-muted`. A click, Enter or Space turns it into a text field in place; Enter or leaving the field saves
+through E's `rename` (one Undo entry, "Named the Build …"), Escape cancels and keeps the step, and a blank name
+clears it. A name past 60 characters (`MAX_NAME_LENGTH`, counted in code points) is refused in R's words
+(`buildNameLength`) under the field; leaving the field then cancels. The field's text is set once when it opens,
+not bound, so a re-render (the refusal) never resets what is typed. The document title is "<name> · Worldwound
+Planner" (`pageTitle`). The name travels in the Build code, so a link or a reload keeps it.
 
 **Choice lists: inline first or modal first** (build ticket 10, user 2026-11-21): the ⋯ menu's "Choice lists" group
 switches every list step (a slot, the race, a level's or rank's editor, a due Mythic rank, the next level, Gear:

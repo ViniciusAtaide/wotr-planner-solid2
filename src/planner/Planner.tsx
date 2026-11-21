@@ -1,3 +1,5 @@
+import { Title } from '@solidjs/meta';
+import { Portal } from '@solidjs/web';
 import { createEffect, createMemo, createSignal, For, Match, onSettled, Show, Switch } from 'solid-js';
 import type { Build } from '~engine/build';
 import type { Attribute } from '~engine/data';
@@ -6,6 +8,7 @@ import { linkDidNotOpen } from '~engine/refusals';
 import { walk } from '~engine/walk';
 
 import { Button, CascadePreview, CompareToggle, Refusal } from '../design';
+import { BuildNameLabel, HEADER_SLOT, pageTitle, renameTitle } from './BuildName';
 import { loadEngine } from './engine';
 import { keepFocus } from './focus-return';
 import { EMPTY, openHash } from './link';
@@ -364,10 +367,28 @@ function Workspace(props: WorkspaceProps) {
     </section>
   );
 
+  const [headerSlot, setHeaderSlot] = createSignal<HTMLElement | null>(null);
+  onSettled(() => {
+    setHeaderSlot(document.getElementById(HEADER_SLOT));
+  });
+  const nameLabel = () => (
+    <BuildNameLabel
+      name={active().build().name}
+      onRename={(name) => {
+        active().edit({ kind: 'rename', ...(name !== undefined && { name }) }, renameTitle(name));
+      }}
+    />
+  );
+
   return (
     <main class="planner">
+      <Title>{pageTitle(active().build().name)}</Title>
+      <Show when={headerSlot()}>{(slot) => <Portal mount={slot()}>{nameLabel()}</Portal>}</Show>
       <div class="planner-behind" inert={confirming()}>
         <div class="planner-bar" role="toolbar" aria-label="Build">
+          <Show when={headerSlot() === null}>
+            <div class="planner-bar__name">{nameLabel()}</div>
+          </Show>
           <Show when={forked()}>
             {(v) => (
               <>
