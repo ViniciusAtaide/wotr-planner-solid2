@@ -1,0 +1,8 @@
+{
+  "$type": "BlueprintBuff",
+  "Components": [],
+  "Stacking": "Replace",
+  "assetName": "SpellCombatBuff",
+  "guid": "91e4b45ab5f29574aa1fb41da4bbdcf2",
+  "name": "Spell Combat"
+}

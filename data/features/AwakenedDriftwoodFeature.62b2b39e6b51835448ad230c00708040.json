@@ -1,6 +1,24 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "SpellPenetrationBonus",
+      "CheckFact": false,
+      "Descriptor": "UntypedStackable",
+      "Value": {
+        "Value": 3,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_RequiredFact": null
+    },
+    {
+      "$type": "IncreaseSpellSchoolDC",
+      "BonusDC": 1,
+      "Descriptor": "UntypedStackable",
+      "School": "Necromancy"
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

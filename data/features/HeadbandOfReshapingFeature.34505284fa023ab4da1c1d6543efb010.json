@@ -1,6 +1,13 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "IncreaseSpellSchoolCasterLevel",
+      "BonusLevel": 1,
+      "Descriptor": "UntypedStackable",
+      "School": "Transmutation"
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

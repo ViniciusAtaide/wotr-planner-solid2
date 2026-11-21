@@ -2,6 +2,15 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "IncreaseSpellDescriptorDC",
+      "BonusDC": 3,
+      "Descriptor": {
+        "m_IntValue": "4"
+      },
+      "ModifierDescriptor": "UntypedStackable",
+      "SpellsOnly": false
+    },
+    {
       "$type": "PrerequisiteFeature",
       "CheckInProgression": false,
       "Group": "All",

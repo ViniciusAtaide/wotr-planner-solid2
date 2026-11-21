@@ -11,6 +11,16 @@
         "ValueRank": "Default",
         "ValueType": "Simple"
       }
+    },
+    {
+      "$type": "IncreaseAllSpellsDC",
+      "Descriptor": "UntypedStackable",
+      "SpellsOnly": false,
+      "Value": {
+        "Value": 3,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
     }
   ],
   "Groups": [],

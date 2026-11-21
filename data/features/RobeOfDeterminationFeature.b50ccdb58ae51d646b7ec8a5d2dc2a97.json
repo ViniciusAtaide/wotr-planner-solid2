@@ -2,6 +2,17 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "SpellPenetrationBonus",
+      "CheckFact": false,
+      "Descriptor": "UntypedStackable",
+      "Value": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_RequiredFact": null
+    },
+    {
       "$type": "AddSpellResistance",
       "AddBonusToResistance": false,
       "AddCR": false,
@@ -11,6 +22,16 @@
         "ValueRank": "Default",
         "ValueType": "Simple"
       }
+    },
+    {
+      "$type": "ConcentrationBonus",
+      "CheckFact": false,
+      "Value": {
+        "Value": 4,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_RequiredFact": null
     }
   ],
   "Groups": [],

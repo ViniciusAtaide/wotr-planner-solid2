@@ -2,6 +2,19 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "DraconicBloodlineArcana",
+      "SpellDescriptor": {
+        "m_IntValue": "4"
+      },
+      "SpellsOnly": true,
+      "UseContextBonus": true,
+      "Value": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "CasterProperty"
+      }
+    },
+    {
       "$type": "PrerequisiteCondition",
       "CheckInProgression": false,
       "Condition": {

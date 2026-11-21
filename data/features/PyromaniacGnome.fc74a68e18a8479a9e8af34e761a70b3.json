@@ -17,6 +17,15 @@
         "ValueRank": "Default",
         "ValueType": "Simple"
       }
+    },
+    {
+      "$type": "IncreaseSpellDescriptorDC",
+      "BonusDC": 1,
+      "Descriptor": {
+        "m_IntValue": "1"
+      },
+      "ModifierDescriptor": "UntypedStackable",
+      "SpellsOnly": false
     }
   ],
   "Groups": [],

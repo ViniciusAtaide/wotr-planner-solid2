@@ -1,6 +1,17 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "ConcentrationBonus",
+      "CheckFact": true,
+      "Value": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_RequiredFact": "!bp_91e4b45ab5f29574aa1fb41da4bbdcf2"
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

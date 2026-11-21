@@ -1,6 +1,18 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "SpellPenetrationBonus",
+      "CheckFact": false,
+      "Descriptor": "UntypedStackable",
+      "Value": {
+        "Value": 0,
+        "ValueRank": "Default",
+        "ValueType": "Rank"
+      },
+      "m_RequiredFact": null
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

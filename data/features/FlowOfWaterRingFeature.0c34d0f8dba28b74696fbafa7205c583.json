@@ -15,6 +15,15 @@
       },
       "Value": 0,
       "m_DisablingFeature": null
+    },
+    {
+      "$type": "IncreaseSpellDescriptorDC",
+      "BonusDC": 1,
+      "Descriptor": {
+        "m_IntValue": "4"
+      },
+      "ModifierDescriptor": "UntypedStackable",
+      "SpellsOnly": true
     }
   ],
   "Groups": [],

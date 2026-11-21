@@ -2,6 +2,12 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "IncreaseSpellSchoolDC",
+      "BonusDC": 2,
+      "Descriptor": "UntypedStackable",
+      "School": "Enchantment"
+    },
+    {
       "$type": "SavingThrowBonusAgainstSchool",
       "ModifierDescriptor": "UntypedStackable",
       "School": "Enchantment",

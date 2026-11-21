@@ -6,7 +6,9 @@
       "HasDifficultyRequirements": false,
       "InvertDifficultyRequirements": false,
       "MinDifficulty": "Story",
-      "m_Facts": []
+      "m_Facts": [
+        "!bp_8898a573e8a8a184b8186dbc3a26da74"
+      ]
     }
   ],
   "Groups": [],

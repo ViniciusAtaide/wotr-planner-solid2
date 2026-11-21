@@ -7,6 +7,27 @@
       "Group": "All",
       "IsFeatureSelectionWhiteList": false,
       "m_Feature": "!bp_25a5878d125338244896ebd3238226c8"
+    },
+    {
+      "$type": "ConcentrationBonus",
+      "CheckFact": false,
+      "Value": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_RequiredFact": null
+    },
+    {
+      "$type": "SpellPenetrationBonus",
+      "CheckFact": false,
+      "Descriptor": "UntypedStackable",
+      "Value": {
+        "Value": 1,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_RequiredFact": null
     }
   ],
   "Groups": [

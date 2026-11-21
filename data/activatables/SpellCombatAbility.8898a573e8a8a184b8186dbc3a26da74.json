@@ -1,0 +1,11 @@
+{
+  "$type": "BlueprintActivatableAbility",
+  "Components": [],
+  "Group": "None",
+  "WeightInGroup": 1,
+  "assetName": "SpellCombatAbility",
+  "guid": "8898a573e8a8a184b8186dbc3a26da74",
+  "m_Buff": "!bp_91e4b45ab5f29574aa1fb41da4bbdcf2",
+  "name": "Spell Combat (Magus 1)",
+  "qualifier": "Magus 1"
+}

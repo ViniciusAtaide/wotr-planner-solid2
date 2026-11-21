@@ -3,6 +3,9 @@
   "BlueprintParameterVariants": [],
   "Components": [
     {
+      "$type": "SpellSpecializationParametrized"
+    },
+    {
       "$type": "AddFeatureOnApply",
       "m_Feature": "!bp_fe9220cdc16e5f444a84d85d5fa8e3d5"
     },

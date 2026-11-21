@@ -2,6 +2,16 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "IncreaseAllSpellsDC",
+      "Descriptor": "UntypedStackable",
+      "SpellsOnly": false,
+      "Value": {
+        "Value": 1,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    },
+    {
       "$type": "AddStatBonus",
       "Descriptor": "UntypedStackable",
       "ScaleByBasicAttackBonus": false,

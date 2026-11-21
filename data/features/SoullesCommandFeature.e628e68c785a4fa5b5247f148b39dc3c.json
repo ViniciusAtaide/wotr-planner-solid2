@@ -1,6 +1,13 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "IncreaseSpellSchoolDC",
+      "BonusDC": 2,
+      "Descriptor": "UntypedStackable",
+      "School": "Necromancy"
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

@@ -2,6 +2,12 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "IncreaseSpellSchoolDC",
+      "BonusDC": 2,
+      "Descriptor": "UntypedStackable",
+      "School": "Necromancy"
+    },
+    {
       "$type": "AddFeatureIfHasFact",
       "Not": true,
       "m_CheckedFact": "!bp_734a29b693e9ec346ba2951b27987e33",

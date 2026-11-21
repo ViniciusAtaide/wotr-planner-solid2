@@ -2,6 +2,12 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "IncreaseSpellSchoolCasterLevel",
+      "BonusLevel": 4,
+      "Descriptor": "UntypedStackable",
+      "School": "Divination"
+    },
+    {
       "$type": "AddFacts",
       "HasDifficultyRequirements": false,
       "InvertDifficultyRequirements": false,

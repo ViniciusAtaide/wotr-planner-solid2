@@ -1,6 +1,13 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "IncreaseSpellSchoolDC",
+      "BonusDC": 1,
+      "Descriptor": "UntypedStackable",
+      "School": "Enchantment"
+    }
+  ],
   "Groups": [
     "Racial"
   ],

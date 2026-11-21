@@ -1,6 +1,16 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "IncreaseSpellDescriptorDC",
+      "BonusDC": 2,
+      "Descriptor": {
+        "m_IntValue": "16384"
+      },
+      "ModifierDescriptor": "UntypedStackable",
+      "SpellsOnly": false
+    }
+  ],
   "Groups": [],
   "HideInUI": true,
   "HideNotAvailibleInUI": false,

@@ -73,4 +73,13 @@ export const summaryComponentTypes: readonly string[] = [
   'AddConditionImmunity',
   'AddImmunityToCriticalHits',
   'AddImmunityToPrecisionDamage',
+  'IncreaseSpellDescriptorDC',
+  'IncreaseSpellSchoolDC',
+  'SpellPenetrationBonus',
+  'ConcentrationBonus',
+  'IncreaseSpellDescriptorCasterLevel',
+  'IncreaseSpellSchoolCasterLevel',
+  'SpellSpecializationParametrized',
+  'DraconicBloodlineArcana',
+  'IncreaseAllSpellsDC',
 ];

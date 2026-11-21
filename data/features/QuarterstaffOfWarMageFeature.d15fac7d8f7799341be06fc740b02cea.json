@@ -2,11 +2,32 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "SpellPenetrationBonus",
+      "CheckFact": false,
+      "Descriptor": "UntypedStackable",
+      "Value": {
+        "Value": 4,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_RequiredFact": null
+    },
+    {
       "$type": "AddStatBonus",
       "Descriptor": "Competence",
       "ScaleByBasicAttackBonus": false,
       "Stat": "SkillUseMagicDevice",
       "Value": 5
+    },
+    {
+      "$type": "IncreaseAllSpellsDC",
+      "Descriptor": "UntypedStackable",
+      "SpellsOnly": true,
+      "Value": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
     }
   ],
   "Groups": [],

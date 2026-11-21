@@ -38,7 +38,8 @@ The data document before 06a: raw 2.046 MB, gzip 0.478 MB, brotli 0.380 MB (`enc
 | --- | --- | --- | --- | --- | --- | --- |
 | Baseline | — | — | — | 2.046 MB | 0.478 MB | 0.380 MB |
 | 1. Resistances and immunities | e0dcd9d0 | `AddDamageResistanceEnergy`, `AddDamageResistancePhysical`, `AddEnergyDamageImmunity`, `AddEnergyImmunity`, `AddSpellResistance`, `AddFortification` (6) | 279 gain the component; nothing else changes | 2.057 MB | 0.481 MB | 0.381 MB |
-| 2. Saves and immunities by descriptor, school and condition | (this commit) | `SavingThrowBonusAgainstDescriptor`, `SavingThrowBonusAgainstSchool`, `BuffDescriptorImmunity`, `SpellImmunityToSpellDescriptor`, `AddConditionImmunity`, `AddImmunityToCriticalHits`, `AddImmunityToPrecisionDamage` (7; 13 in all) | 246 gain components; 2 new referenced facts | 2.070 MB | 0.485 MB | 0.384 MB |
+| 2. Saves and immunities by descriptor, school and condition | 55048111 | `SavingThrowBonusAgainstDescriptor`, `SavingThrowBonusAgainstSchool`, `BuffDescriptorImmunity`, `SpellImmunityToSpellDescriptor`, `AddConditionImmunity`, `AddImmunityToCriticalHits`, `AddImmunityToPrecisionDamage` (7; 13 in all) | 246 gain components; 2 new referenced facts | 2.070 MB | 0.485 MB | 0.384 MB |
+| 3. Spellcasting | (this commit) | `IncreaseSpellDescriptorDC`, `IncreaseSpellSchoolDC`, `IncreaseAllSpellsDC`, `IncreaseSpellDescriptorCasterLevel`, `IncreaseSpellSchoolCasterLevel`, `SpellPenetrationBonus`, `ConcentrationBonus`, `SpellSpecializationParametrized`, `DraconicBloodlineArcana` (9; 22 in all) | 148 gain components (156 in all); 2 new held facts; 4 keep a granted toggle | 2.076 MB | 0.486 MB | 0.386 MB |
 
 - **Family 1's data changes:** each changed file only gains its kept resistance or immunity components (the diff's removed lines are a `}` becoming `},`). The report's In-play count falls from 376 to 370.
 - **The reader set:** `engine/describe` declares `summaryComponentTypes`, and the allowlist test holds every kept type to one reader set.
@@ -48,3 +49,10 @@ The data document before 06a: raw 2.046 MB, gzip 0.478 MB, brotli 0.380 MB (`enc
   - Two facts are newly held because the kept immunities name them: `FeyType` (a buff immunity's fact to check) and `IgnoreImmunityToFear` (a caster fact that ignores fear immunity).
 - **Exact descriptor values:** a spell descriptor is a 64-bit flag set (`SpellDescriptorWrapper.m_IntValue`) with bits up to 63. A JSON number would lose those bits, so the importer reads the value as an exact decimal string (`exactWideInts`) and the engine decodes it with BigInt.
 - **Kept, not dropped:** the "this field doesn't matter" guard caught three references that do. Bravery's save bonus has a disabling feature, several spell immunities name a caster fact that ignores them, and buff immunities name an ignore feature and a fact to check. All three are kept as references.
+- **Family 3's data changes:**
+  - 148 features gain their kept DC, caster-level, spell-penetration, concentration and Draconic arcana components.
+  - Improved Spell Combat's concentration bonus applies only while Spell Combat is on, so its kept `m_RequiredFact` names `SpellCombatBuff`. That buff, and the `SpellCombatAbility` toggle whose buff it is, are now held.
+  - Because the toggle is held, the four features that grant it (Spell Combat, Eldritch Archer's Ranged Spell Combat, Divine Trick and Soulless Command) now keep it in their `AddFacts`. Two of them change only for that: Spell Combat and Ranged Spell Combat.
+  - The feature and the toggle share the display name, so the shared-name rule qualifies them: the feature's name is now "Spell Combat (Magus)". Lists still show the bare name unless both appear in one list.
+  - The toggle brings three in-play types, now noted in `not-needed.ts`: `ActivatableAbilityRestrictionByEquipmentSet`, `DeactivateOnGripChanged` and `SetMagusFeatureActive`.
+- **Left for later families or dropped:** `AutoMetamagic` (it needs the metamagic flags and spell lists) and `IncreaseSpellDC` (it names single spells, which `data/` doesn't hold) stay not needed for now.

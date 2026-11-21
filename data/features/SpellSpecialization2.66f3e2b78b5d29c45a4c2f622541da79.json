@@ -3,6 +3,9 @@
   "BlueprintParameterVariants": [],
   "Components": [
     {
+      "$type": "SpellSpecializationParametrized"
+    },
+    {
       "$type": "RemoveFeatureOnApply",
       "m_Feature": "!bp_f327a765a4353d04f872482ef3e48c35"
     },

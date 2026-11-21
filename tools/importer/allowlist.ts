@@ -105,6 +105,15 @@ import {
   type IsAlchemistSpellbook,
   type IncreaseActivatableAbilityGroupSize,
   type AddContextStatBonus,
+  type IncreaseSpellDescriptorDC,
+  type IncreaseSpellSchoolDC,
+  type SpellPenetrationBonus,
+  type ConcentrationBonus,
+  type IncreaseSpellDescriptorCasterLevel,
+  type IncreaseSpellSchoolCasterLevel,
+  type SpellSpecializationParametrized,
+  type DraconicBloodlineArcana,
+  type IncreaseAllSpellsDC,
   type AddConditionImmunity,
   type AddImmunityToCriticalHits,
   type AddImmunityToPrecisionDamage,
@@ -2540,6 +2549,83 @@ export const allowlist: readonly AllowEntry[] = [
     type: 'AddImmunityToPrecisionDamage',
     fields: {},
     cite: ['UnitLogic/FactLogic/AddImmunityToPrecisionDamage.cs OnEventAboutToTrigger'],
+  }),
+  component<IncreaseSpellDescriptorDC>({
+    type: 'IncreaseSpellDescriptorDC',
+    fields: {
+      Descriptor: spellDescriptor,
+      BonusDC: orDefault(int, 0),
+      ModifierDescriptor: modifierDescriptor,
+      SpellsOnly: orDefault(bool, false),
+    },
+    cite: [
+      'Designers/Mechanics/Facts/IncreaseSpellDescriptorDC.cs OnEventAboutToTrigger (Descriptor, BonusDC, ModifierDescriptor, SpellsOnly)',
+    ],
+  }),
+  component<IncreaseSpellSchoolDC>({
+    type: 'IncreaseSpellSchoolDC',
+    fields: { School: spellSchool, BonusDC: orDefault(int, 0), Descriptor: modifierDescriptor },
+    cite: ['Designers/Mechanics/Facts/IncreaseSpellSchoolDC.cs OnEventAboutToTrigger (School, BonusDC, Descriptor)'],
+  }),
+  component<SpellPenetrationBonus>({
+    type: 'SpellPenetrationBonus',
+    fields: {
+      Value: rankedContextValue,
+      Descriptor: modifierDescriptor,
+      CheckFact: orDefault(bool, false),
+      m_RequiredFact: refOrNull(...FACT),
+    },
+    cite: [
+      'Designers/Mechanics/Facts/SpellPenetrationBonus.cs OnEventAboutToTrigger (Value, Descriptor, CheckFact, m_RequiredFact)',
+    ],
+  }),
+  component<ConcentrationBonus>({
+    type: 'ConcentrationBonus',
+    fields: { Value: rankedContextValue, CheckFact: orDefault(bool, false), m_RequiredFact: refOrNull(...FACT) },
+    cite: [
+      'Designers/Mechanics/Facts/ConcentrationBonus.cs GetStaticConcentrationBonus (Value, CheckFact, m_RequiredFact)',
+    ],
+  }),
+  component<IncreaseSpellDescriptorCasterLevel>({
+    type: 'IncreaseSpellDescriptorCasterLevel',
+    fields: {
+      Descriptor: spellDescriptor,
+      BonusCasterLevel: orDefault(int, 0),
+      ModifierDescriptor: modifierDescriptor,
+      SpellsOnly: orDefault(bool, false),
+    },
+    cite: [
+      'Designers/Mechanics/Facts/IncreaseSpellDescriptorCasterLevel.cs OnEventAboutToTrigger (Descriptor, BonusCasterLevel, ModifierDescriptor, SpellsOnly)',
+    ],
+  }),
+  component<IncreaseSpellSchoolCasterLevel>({
+    type: 'IncreaseSpellSchoolCasterLevel',
+    fields: { School: spellSchool, BonusLevel: orDefault(int, 0), Descriptor: modifierDescriptor },
+    cite: [
+      'Designers/Mechanics/Facts/IncreaseSpellSchoolCasterLevel.cs OnEventAboutToTrigger (School, BonusLevel, Descriptor)',
+    ],
+  }),
+  component<SpellSpecializationParametrized>({
+    type: 'SpellSpecializationParametrized',
+    fields: {},
+    cite: ['Designers/Mechanics/Facts/SpellSpecializationParametrized.cs OnEventAboutToTrigger'],
+  }),
+  component<DraconicBloodlineArcana>({
+    type: 'DraconicBloodlineArcana',
+    fields: {
+      SpellDescriptor: spellDescriptor,
+      SpellsOnly: orDefault(bool, true),
+      UseContextBonus: orDefault(bool, false),
+      Value: rankedContextValue,
+    },
+    cite: [
+      'Designers/Mechanics/Facts/DraconicBloodlineArcana.cs OnEventAboutToTrigger (SpellDescriptor, SpellsOnly, UseContextBonus, Value)',
+    ],
+  }),
+  component<IncreaseAllSpellsDC>({
+    type: 'IncreaseAllSpellsDC',
+    fields: { Value: rankedContextValue, Descriptor: modifierDescriptor, SpellsOnly: orDefault(bool, false) },
+    cite: ['Designers/Mechanics/Facts/IncreaseAllSpellsDC.cs OnEventAboutToTrigger (Value, Descriptor, SpellsOnly)'],
   }),
   component<AddStatBonus>({
     type: 'AddStatBonus',

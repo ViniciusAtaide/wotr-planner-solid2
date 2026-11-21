@@ -2,6 +2,16 @@
   "$type": "BlueprintFeature",
   "Components": [
     {
+      "$type": "ConcentrationBonus",
+      "CheckFact": false,
+      "Value": {
+        "Value": 4,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_RequiredFact": null
+    },
+    {
       "$type": "PrerequisiteStatValue",
       "CheckInProgression": false,
       "Group": "All",

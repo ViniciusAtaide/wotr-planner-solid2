@@ -479,6 +479,70 @@ export interface AddImmunityToPrecisionDamage extends Component {
   readonly $type: 'AddImmunityToPrecisionDamage';
 }
 
+export interface IncreaseSpellDescriptorDC extends Component {
+  readonly $type: 'IncreaseSpellDescriptorDC';
+  readonly Descriptor: SpellDescriptorWrapper;
+  readonly BonusDC: number;
+  readonly ModifierDescriptor: ModifierDescriptor;
+  readonly SpellsOnly: boolean;
+}
+
+export interface IncreaseSpellSchoolDC extends Component {
+  readonly $type: 'IncreaseSpellSchoolDC';
+  readonly School: SpellSchool;
+  readonly BonusDC: number;
+  readonly Descriptor: ModifierDescriptor;
+}
+
+export interface SpellPenetrationBonus extends Component {
+  readonly $type: 'SpellPenetrationBonus';
+  readonly Value: RankedContextValue;
+  readonly Descriptor: ModifierDescriptor;
+  readonly CheckFact: boolean;
+  readonly m_RequiredFact: Ref | null;
+}
+
+export interface ConcentrationBonus extends Component {
+  readonly $type: 'ConcentrationBonus';
+  readonly Value: RankedContextValue;
+  readonly CheckFact: boolean;
+  readonly m_RequiredFact: Ref | null;
+}
+
+export interface IncreaseSpellDescriptorCasterLevel extends Component {
+  readonly $type: 'IncreaseSpellDescriptorCasterLevel';
+  readonly Descriptor: SpellDescriptorWrapper;
+  readonly BonusCasterLevel: number;
+  readonly ModifierDescriptor: ModifierDescriptor;
+  readonly SpellsOnly: boolean;
+}
+
+export interface IncreaseSpellSchoolCasterLevel extends Component {
+  readonly $type: 'IncreaseSpellSchoolCasterLevel';
+  readonly School: SpellSchool;
+  readonly BonusLevel: number;
+  readonly Descriptor: ModifierDescriptor;
+}
+
+export interface SpellSpecializationParametrized extends Component {
+  readonly $type: 'SpellSpecializationParametrized';
+}
+
+export interface DraconicBloodlineArcana extends Component {
+  readonly $type: 'DraconicBloodlineArcana';
+  readonly SpellDescriptor: SpellDescriptorWrapper;
+  readonly SpellsOnly: boolean;
+  readonly UseContextBonus: boolean;
+  readonly Value: RankedContextValue;
+}
+
+export interface IncreaseAllSpellsDC extends Component {
+  readonly $type: 'IncreaseAllSpellsDC';
+  readonly Value: RankedContextValue;
+  readonly Descriptor: ModifierDescriptor;
+  readonly SpellsOnly: boolean;
+}
+
 export interface AddContextStatBonus extends Component {
   readonly $type: 'AddContextStatBonus';
   readonly Descriptor: 'Racial';

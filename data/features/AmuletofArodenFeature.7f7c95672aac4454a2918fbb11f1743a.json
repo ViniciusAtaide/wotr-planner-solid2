@@ -1,6 +1,20 @@
 {
   "$type": "BlueprintFeature",
-  "Components": [],
+  "Components": [
+    {
+      "$type": "DraconicBloodlineArcana",
+      "SpellDescriptor": {
+        "m_IntValue": "1073741839"
+      },
+      "SpellsOnly": true,
+      "UseContextBonus": true,
+      "Value": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      }
+    }
+  ],
   "Groups": [],
   "HideInUI": false,
   "HideNotAvailibleInUI": false,

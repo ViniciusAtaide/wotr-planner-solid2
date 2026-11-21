@@ -292,6 +292,10 @@ export const FIELD_DEFAULTS: FieldDefaults = {
   CompanionInParty: {
     Not: false,
   },
+  ConcentrationBonus: {
+    CheckFact: false,
+    m_RequiredFact: null,
+  },
   ContextActionAddFeature: {
     m_SetRankFrom: null,
   },
@@ -336,6 +340,10 @@ export const FIELD_DEFAULTS: FieldDefaults = {
     m_UseMax: false,
     m_UseMin: false,
   },
+  DraconicBloodlineArcana: {
+    SpellsOnly: true,
+    UseContextBonus: false,
+  },
   EquipmentRestrictionClass: {
     Not: false,
   },
@@ -362,6 +370,30 @@ export const FIELD_DEFAULTS: FieldDefaults = {
   },
   IncreaseActivatableAbilityGroupSize: {
     Group: 'None',
+  },
+  IncreaseAllSpellsDC: {
+    Descriptor: 'None',
+    SpellsOnly: false,
+  },
+  IncreaseSpellDescriptorCasterLevel: {
+    BonusCasterLevel: 0,
+    ModifierDescriptor: 'None',
+    SpellsOnly: false,
+  },
+  IncreaseSpellDescriptorDC: {
+    BonusDC: 0,
+    ModifierDescriptor: 'None',
+    SpellsOnly: false,
+  },
+  IncreaseSpellSchoolCasterLevel: {
+    BonusLevel: 0,
+    Descriptor: 'None',
+    School: 'None',
+  },
+  IncreaseSpellSchoolDC: {
+    BonusDC: 0,
+    Descriptor: 'None',
+    School: 'None',
   },
   IncreaseStatEquipment: {
     Value: 0,
@@ -551,6 +583,11 @@ export const FIELD_DEFAULTS: FieldDefaults = {
   },
   SpellImmunityToSpellDescriptor: {
     m_CasterIgnoreImmunityFact: null,
+  },
+  SpellPenetrationBonus: {
+    CheckFact: false,
+    Descriptor: 'None',
+    m_RequiredFact: null,
   },
   UnitClass: {
     LimitMaxLevel: false,

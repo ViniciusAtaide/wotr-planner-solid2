@@ -30,6 +30,16 @@
       "Value": 1
     },
     {
+      "$type": "ConcentrationBonus",
+      "CheckFact": false,
+      "Value": {
+        "Value": 2,
+        "ValueRank": "Default",
+        "ValueType": "Simple"
+      },
+      "m_RequiredFact": null
+    },
+    {
       "$type": "PrerequisiteCasterTypeSpellLevel",
       "CheckInProgression": false,
       "Group": "Any",

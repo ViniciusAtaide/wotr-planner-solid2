@@ -7,6 +7,12 @@
       "ScaleByBasicAttackBonus": false,
       "Stat": "AdditionalAttackBonus",
       "Value": 2
+    },
+    {
+      "$type": "IncreaseSpellSchoolCasterLevel",
+      "BonusLevel": 2,
+      "Descriptor": "UntypedStackable",
+      "School": "Evocation"
     }
   ],
   "Groups": [],

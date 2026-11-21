@@ -9,6 +9,12 @@
       },
       "m_FactToCheck": null,
       "m_IgnoreFeature": null
+    },
+    {
+      "$type": "IncreaseSpellSchoolDC",
+      "BonusDC": 1,
+      "Descriptor": "UntypedStackable",
+      "School": "Necromancy"
     }
   ],
   "Groups": [],

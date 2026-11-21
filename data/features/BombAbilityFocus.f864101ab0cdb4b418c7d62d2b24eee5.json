@@ -16,6 +16,15 @@
       "m_Feature": "!bp_0c7a9899e27cae6449ee1fb3049f128d"
     },
     {
+      "$type": "IncreaseSpellDescriptorDC",
+      "BonusDC": 2,
+      "Descriptor": {
+        "m_IntValue": "549755813888"
+      },
+      "ModifierDescriptor": "UntypedStackable",
+      "SpellsOnly": false
+    },
+    {
       "$type": "FeatureTagsComponent",
       "FeatureTags": "Attack, Ranged, ClassSpecific"
     }
