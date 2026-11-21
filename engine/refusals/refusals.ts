@@ -288,6 +288,7 @@ export function unmetText(w: Wording, u: Unmet): string {
     case 'mythicLevel':
       return `Needs Mythic rank ${n.Level}${has(u)}.`;
     case 'alignment': {
+      if (w.unit !== undefined && w.unit.alignment === undefined) return 'Choose an alignment first.';
       const allowed = typeof n.Alignment === 'number' ? `alignment mask ${n.Alignment}` : camelWords(n.Alignment);
       const yours = w.unit?.alignment === undefined ? '' : ` (yours: ${camelWords(w.unit.alignment)})`;
       return `Needs an alignment of ${allowed}${yours}.`;

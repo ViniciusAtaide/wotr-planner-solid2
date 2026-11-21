@@ -494,4 +494,16 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     );
     expect('wontStack' in first).toBe(false);
   });
+
+  it("closes a pick whose prerequisite reads the alignment while none is chosen, in R's words (QA pass 5)", async () => {
+    const DEITY_SELECTION = '59e7a76987fe3b547b9cce045f4db3e4';
+    const ASMODEUS = 'a3a5ccc9c670e6f4ca4a686d23b89900';
+    const { alignment: _alignment, ...unaligned } = jackInTheGreen.build;
+    const code = await encodeBuild(e.data, unaligned);
+    const slot = jackInTheGreen.build.picks.find((p) => p.slot.selection === DEITY_SELECTION)!.slot;
+    const listed = ok(await options(e, { code, slot, include_closed: true, text: 'Asmodeus' }), 'options');
+    const asmodeus = listed.closed?.find((o) => o.feature === ASMODEUS);
+    expect(asmodeus?.refusal?.unmet).toContain('Choose an alignment first.');
+    expect(listed.open.find((o) => o.feature === ASMODEUS)).toBeUndefined();
+  });
 });

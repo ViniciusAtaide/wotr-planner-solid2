@@ -274,6 +274,7 @@ const BASIC_DWARF = '8b2da1d0f9504872809e63b39c24c502';
 const cleaver: Build = {
   scores: abilityScores(SCORES),
   race: DWARF,
+  alignment: 'TrueNeutral',
   levels: [{ class: fighter }],
   picks: [
     { slot: DWARF_HERITAGE, feature: BASIC_DWARF },
