@@ -2409,6 +2409,25 @@ describe('Gear that won’t stack (ticket 06, engine 4d9b8b50)', () => {
     );
   });
 
+  test('the Gear list names each item once: no second end of a double weapon (QA pass 5, engine gearOptions)', () => {
+    const planner = createPlanner(e, cleaver);
+    const api = apiOf(planner);
+    render(() => <GearStep trail={api} />);
+    flush();
+    const namesFor = (place: string, text: string) => {
+      fireEvent.click(placeChip(place) ?? document.body);
+      flush();
+      fireEvent.input(document.querySelector('[data-picker-filter]') ?? document.body, { target: { value: text } });
+      flush();
+      return [...document.querySelectorAll('.trail-gear__items .ww-option__name')].map((n) => n.textContent ?? '');
+    };
+    const urgrosh = namesFor('Main Hand', 'urgrosh');
+    expect(urgrosh.length).toBeGreaterThan(0);
+    expect(new Set(urgrosh).size).toBe(urgrosh.length);
+    const shields = namesFor('Off Hand', 'spiked heavy shield');
+    expect(shields.filter((n) => n === 'Masterwork Spiked Heavy Shield')).toHaveLength(1);
+  });
+
   test('Expand and closing keep the Gear place and the typed filter (QA pass 5)', async () => {
     await openPlanner(cleaver);
     fireEvent.click(document.querySelector('.trail-gear .trail-card__head') ?? document.body);
