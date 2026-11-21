@@ -20,7 +20,7 @@ import { classPicker } from './class-picker';
 import { backgroundPicker } from './background-picker';
 import { firstLevelWith, heritageSlotIn, racePicker } from './race-picker';
 import { namesInList } from './option-names';
-import { gearClashes } from './gear-clashes';
+import { gearClashes, gearClashIndex } from './gear-clashes';
 import { guids } from '../data';
 import { breaks, opensAt, refusal } from '../refusals';
 import { prerequisites } from '../prerequisites';
@@ -536,5 +536,10 @@ describe('which options the level-up screen lists', { timeout: 30_000 }, () => {
       { stat: 'AC', descriptor: 'Deflection', with: [RING_OF_PROTECTION_1] },
     ]);
     expect(gearClashes(data, ringed, 'Ring1', RING_OF_PROTECTION_1, G)).toEqual([]);
+    const rings = [...data.blueprints.values()]
+      .filter((b) => b.$type === 'BlueprintItemEquipmentRing')
+      .map((b) => b.guid);
+    const index = gearClashIndex(data, ringed, 'Ring2', G);
+    for (const ring of rings) expect(index(ring)).toEqual(gearClashes(data, ringed, 'Ring2', ring, G));
   });
 });
