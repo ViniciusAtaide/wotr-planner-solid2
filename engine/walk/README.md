@@ -329,6 +329,7 @@ This is not `tools/importer/not-needed.ts`, which lists the types the allowlist 
 
 ## Design notes
 
+- **One walk per Build.** A Build is a value nothing changes, so `walk` keeps each Build object's `Walk` (`walksByBuild`, a `WeakMap`, reused only for the same data and grant index) and nothing outside the walk changes a `Unit`. The planner's sheet, E's `allows` and the slot pickers that read the same Build share one walk: a pick in the planner walked its Build 4 times and now walks it twice (QA pass 2, measured in the browser on Jack with Gold Dragon from rank 8). Opening a pick list (about 370 ms) and a pick (about 200 ms) spend under a tenth of that walking; the rest is building and drawing the list's rows, so per-level checkpoints, which would save part of a 10 ms walk, are left out.
 - **One judge.** The walk is the only place legality is decided; P and G answer their own questions and the walk combines them. A Refusal's wording is R's (ticket 04): the walk records only `FailedRule` data.
 - **The game's model, unrenamed.** `Unit` keeps the game's UnitDescriptor shape, and data fields keep the dump's names (`m_AllFeatures`, `LevelEntries`), so each rule reads the state its C# method reads (ADR 0005).
 - **The main character.** A Build is always the main character and never a pet or a companion (map ticket 01): IsMainCharacter checks, PrerequisiteMainCharacter and EquipmentRestrictionMainPlayer pass, PrerequisiteIsPet fails.

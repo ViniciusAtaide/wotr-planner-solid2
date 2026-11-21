@@ -333,8 +333,20 @@ export function pathSwitchClasses(data: CheckedData): Guid[] {
   return [...higher, ...SWITCH_TO];
 }
 
+interface WalkedBuild {
+  readonly data: CheckedData;
+  readonly G: GrantIndex;
+  readonly walk: Walk;
+}
+
+const walksByBuild = new WeakMap<Build, WalkedBuild>();
+
 export function walk(data: CheckedData, build: Build, G: GrantIndex = buildGrantIndex(data)): Walk {
-  return new Walker(data, build, G).run();
+  const walked = walksByBuild.get(build);
+  if (walked !== undefined && walked.data === data && walked.G === G) return walked.walk;
+  const fresh = new Walker(data, build, G).run();
+  walksByBuild.set(build, { data, G, walk: fresh });
+  return fresh;
 }
 
 export interface PausedWalk {

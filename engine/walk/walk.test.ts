@@ -1141,4 +1141,13 @@ describe('the areas ticket 03 left untested (ticket 03c)', { timeout: 30_000 }, 
       }),
     );
   });
+
+  it('walks a Build object once, and again for other data or another grant index', () => {
+    const b: Build = { ...jackInTheGreen.build };
+    const first = walk(data, b, G);
+    expect(walk(data, b, G)).toBe(first);
+    expect(walk(data, { ...b }, G)).not.toBe(first);
+    expect(walk(data, b, buildGrantIndex(data))).not.toBe(first);
+    expect(walk(data, b, buildGrantIndex(data)).failures).toEqual(first.failures);
+  });
 });
