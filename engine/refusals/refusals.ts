@@ -13,7 +13,7 @@ import {
   type SlotId,
 } from '../build';
 import type { CheckedData } from '../load';
-import { bareName, isShown, type Guid, type StatType } from '../data';
+import { bareName, isShown, type FeatureParameterType, type Guid, type StatType } from '../data';
 import { buildGrantIndex, grantorKind, type GrantIndex, type GrantParam } from '../grants';
 import { conditionFacts } from '../prerequisites';
 import type { FailedRule, Rule, Unmet, Value, Unit } from '../walk';
@@ -30,6 +30,16 @@ export interface Wording {
   readonly G: GrantIndex;
   readonly unit?: Unit | undefined;
 }
+
+const PARAM_WORDS: Readonly<Record<FeatureParameterType, string>> = {
+  Custom: 'option',
+  SpellSpecialization: 'spell',
+  WeaponCategory: 'weapon',
+  SpellSchool: 'spell school',
+  LearnSpell: 'spell',
+  Skill: 'skill',
+  FeatureSelection: 'option',
+};
 
 export function refusal(w: Wording, failed: FailedRule): Refusal {
   const unmet = failed.unmet ?? [];
@@ -393,6 +403,8 @@ export function ruleText(w: Wording, f: FailedRule): string {
       return 'None of its own options is open.';
     case 'BlueprintParametrizedFeature.CanSelect:Items':
       return 'Not a choice this feat offers.';
+    case 'BlueprintParametrizedFeature.CanSelect:Param':
+      return `This feat is taken for one ${PARAM_WORDS[f.needed as FeatureParameterType] ?? 'choice'}; pick it with that choice.`;
     case 'BlueprintParametrizedFeature.CanSelect:SpellSchool':
       return 'Needs a spell school.';
     case 'BlueprintParametrizedFeature.CanSelect:held':

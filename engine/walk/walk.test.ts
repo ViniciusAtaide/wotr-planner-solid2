@@ -1183,4 +1183,32 @@ describe('the areas ticket 03 left untested (ticket 03c)', { timeout: 30_000 }, 
     ]);
     expect(walk(data, jackInTheGreen.build, G).failures.filter((f) => 'rank' in f.place)).toEqual([]);
   });
+
+  it('refuses a parametrized feat taken without its parameter, as the game does (MCP QA)', () => {
+    const WEAPON_FOCUS = '1e1f627d26ad36f43bbd26cc2bf8ac7e';
+    const BASIC_FEATS = '247a4068296e8be42890143f451b4b45';
+    const feat = jackInTheGreen.build.picks.find(
+      (p) => p.slot.selection === BASIC_FEATS && 'level' in p.slot.place && p.slot.place.level >= 7,
+    )!;
+    const swap = (param?: { WeaponCategory: 'Scimitar' }): Build => ({
+      ...jackInTheGreen.build,
+      picks: jackInTheGreen.build.picks.map((p) =>
+        p === feat ? { slot: p.slot, feature: WEAPON_FOCUS, ...(param && { param }) } : p,
+      ),
+    });
+    const at = (b: Build) =>
+      walk(data, b, G)
+        .failures.filter(
+          (f) =>
+            f.slot !== undefined &&
+            f.slot.selection === BASIC_FEATS &&
+            f.slot.index === feat.slot.index &&
+            JSON.stringify(f.slot.place) === JSON.stringify(feat.slot.place),
+        )
+        .map((f) => [f.rule, f.needed]);
+    expect(at(swap())).toEqual([['BlueprintParametrizedFeature.CanSelect:Param', 'WeaponCategory']]);
+    expect(at(swap({ WeaponCategory: 'Scimitar' })).map(([rule]) => rule)).not.toContain(
+      'BlueprintParametrizedFeature.CanSelect:Param',
+    );
+  });
 });

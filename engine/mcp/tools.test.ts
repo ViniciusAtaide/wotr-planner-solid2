@@ -227,4 +227,15 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(r).toMatchObject({ refused: true });
     expect(JSON.stringify(r)).toContain('Mythic ranks stop at 10.');
   });
+
+  it("refuses a parametrized feat picked without its parameter, in R's words (MCP QA)", async () => {
+    const BASIC_FEATS = '247a4068296e8be42890143f451b4b45';
+    const feat = jackInTheGreen.build.picks.find(
+      (p) => p.slot.selection === BASIC_FEATS && 'level' in p.slot.place && p.slot.place.level >= 7,
+    )!;
+    const jack = await encodeBuild(e.data, jackInTheGreen.build);
+    const r = await pick(e, { code: jack, slot: feat.slot, feature: '1e1f627d26ad36f43bbd26cc2bf8ac7e' });
+    expect(r).toMatchObject({ refused: true });
+    expect(JSON.stringify(r)).toContain('This feat is taken for one weapon; pick it with that choice.');
+  });
 });

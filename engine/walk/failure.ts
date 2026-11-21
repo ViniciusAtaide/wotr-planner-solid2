@@ -33,6 +33,7 @@ export type Rule =
   | 'BlueprintFeatureSelection.CanSelect:Mode'
   | 'NestedFeatureSelectionUtils.AllNestedFeaturesUnavailable'
   | 'BlueprintParametrizedFeature.CanSelect:Items'
+  | 'BlueprintParametrizedFeature.CanSelect:Param'
   | 'BlueprintParametrizedFeature.CanSelect:SpellSchool'
   | 'BlueprintParametrizedFeature.CanSelect:held'
   | 'BlueprintParametrizedFeature.CanSelect:m_Prerequisite'

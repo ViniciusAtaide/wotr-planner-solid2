@@ -1526,8 +1526,13 @@ class Walker {
       return this.canSelectMythicSpellbook(slot, pick);
     }
     const outer = this.canSelect(slot, pick.feature);
-    if (outer !== undefined || pick.param === undefined) return outer;
+    if (outer !== undefined) return outer;
     const feat = this.unit.bp(pick.feature);
+    if (pick.param === undefined) {
+      return feat?.$type === 'BlueprintParametrizedFeature'
+        ? { rule: 'BlueprintParametrizedFeature.CanSelect:Param', needed: feat.ParameterType }
+        : undefined;
+    }
     if (feat?.$type !== 'BlueprintParametrizedFeature') return { rule: 'BlueprintParametrizedFeature.CanSelect:Items' };
     const nested = new SlotState(slot.id, feat.guid, slot.source, slot.level, slot);
     return this.canSelectParam(nested, feat, pick.param);
