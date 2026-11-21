@@ -316,4 +316,18 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     if (isRefusal(moved)) return;
     expect(moved.note).toMatch(/^Mythic rank 10 is usually reached at character level \d+\.$/);
   });
+
+  it('names the places an item goes in when equip refuses it for its place (MCP QA)', async () => {
+    const jack = await encodeBuild(e.data, jackInTheGreen.build);
+    const RING_OF_PROTECTION_1 = 'f333bf86cd122974792162cbcd27c9ed';
+    const BELT_OF_GIANT_STRENGTH_2 = 'c354de364a714ee4dbe2cfee628df267';
+    expect(await equip(e, { code: jack, place: 'Belt', item: RING_OF_PROTECTION_1 })).toEqual({
+      refused: true,
+      reason: "It doesn't go in this place; it goes in a Ring 1 or Ring 2 place.",
+    });
+    expect(await equip(e, { code: jack, place: 'Head', item: BELT_OF_GIANT_STRENGTH_2 })).toEqual({
+      refused: true,
+      reason: "It doesn't go in this place; it goes in the Belt place.",
+    });
+  });
 });

@@ -15,6 +15,7 @@ Why the game refuses a choice, worded true for this Build (guide §4, GLOSSARY.m
 - `bareNameOf(data, guid)`: its bare name (`bareName`), or `nameOf` when it has none.
 - `namesIn(data, guids)` and `listNames(data, guids)`: the names of a list, each bare unless two in the list would read the same, which keep their qualifiers. `namesIn` maps each GUID to its name; `listNames` gives the distinct names in order. R's own lists, the MCP's breaks and Synergy words, and the planner's Synergy lines and broken-pick names use them (QA pass 2).
 - `statName(stat)`: a stat's name.
+- `gearPlaceName(place)`: a Gear place in words ("Ring 1", "Main hand"). An item refused for its place is told where it goes: "It doesn't go in this place; it goes in a Ring 1 or Ring 2 place." (the places `PLACE_ITEM_TYPES` gives its type; MCP QA).
 - `gearNote(data, items)`: the note an option allowed only with the Gear counted carries.
 - `rankLevelRange`, `abilityScoreRange`, `skillRankRange` and `archetypeCount`: why a value no Build code holds is refused where it comes in (a Rank level outside 1–255, a score outside 7–18, skill ranks outside 0–255, more than one archetype for a class), with the value given.
 - `LinkReason` and `linkDidNotOpen(on, reason)`: why a Share link didn't open, by its reason group (other game data, a newer planner, not a Build code) and by when (`load`: the planner starts empty; `paste`: it keeps the Build it had).

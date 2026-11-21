@@ -17,7 +17,7 @@ import { bareName, isShown, type FeatureParameterType, type Guid, type StatType 
 import { buildGrantIndex, grantorKind, type GrantIndex, type GrantParam } from '../grants';
 import { conditionFacts } from '../prerequisites';
 import type { FailedRule, Rule, Unmet, Value, Unit } from '../walk';
-import { pauseAt, walk } from '../walk';
+import { pauseAt, PLACE_ITEM_TYPES, walk } from '../walk';
 
 export interface Refusal {
   readonly rule: Rule;
@@ -336,6 +336,18 @@ export function unmetText(w: Wording, u: Unmet): string {
 const v = (x: Value | undefined): string =>
   x === undefined ? '' : Array.isArray(x) ? x.map(String).join(', ') : typeof x === 'boolean' ? String(x) : String(x);
 
+export function gearPlaceName(place: string): string {
+  return place
+    .replace(/([a-z])([A-Z0-9])/g, '$1 $2')
+    .replace(/ ([A-Z])(?=[a-z])/g, (_, c: string) => ` ${c.toLowerCase()}`);
+}
+
+function placesTaking(type: Value | undefined): string[] {
+  return Object.entries(PLACE_ITEM_TYPES)
+    .filter(([, types]) => types.some((t) => t === type))
+    .map(([place]) => gearPlaceName(place));
+}
+
 export function ruleText(w: Wording, f: FailedRule): string {
   const name = (x: Value | undefined) => (typeof x === 'string' ? plain(w, x) : v(x));
   switch (f.rule) {
@@ -432,8 +444,12 @@ export function ruleText(w: Wording, f: FailedRule): string {
     case 'ItemEntity.CanBeEquippedBy':
       return "The character can't wear it.";
     case 'EquipmentSlot.IsItemSupported':
-    case 'ArmorSlot.IsItemSupported':
-      return "It doesn't go in this place.";
+    case 'ArmorSlot.IsItemSupported': {
+      const places = placesTaking(f.found);
+      return places.length === 0
+        ? "It doesn't go in any Gear place."
+        : `It doesn't go in this place; it goes in ${places.length === 1 ? 'the' : 'a'} ${places.join(' or ')} place.`;
+    }
     case 'HandSlot.IsItemTypeSupported:shield':
       return 'A shield goes in the off hand.';
     case 'HandSlot.IsItemTypeSupported:type':
