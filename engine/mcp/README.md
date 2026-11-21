@@ -23,7 +23,7 @@ The 14 tools, in map 08's order:
 
 - `start_build`: an empty Build, with an optional name (ticket 11). A name over 60 characters is refused in R's words; a blank one leaves the Build nameless.
 - `set_start`: the race, its chosen +2, the point buy and the alignment; each one left out stays as it is.
-- `level_up`: one more level of a class, returning the new code with the slots the level opened.
+- `level_up`: one more level of a class, returning the new code with the slots the level opened. When the new class itself is closed there (its prerequisites, the rank cap, a path switch off rank 8), it is refused with R's reason and unmet needs for that class, not as a break of other choices (MCP QA).
 - `next_slots`: the open `slots`, in walk order, and `skillPointsLeft` (the last character level and its points) when that level still has skill points to spend. Skill points carry from level to level as the game pools them, so only the last level's budget is left to spend; a Build is finished when both are empty (MCP QA).
 - `options`: a slot's options.
 - `pick`: an option in a slot.

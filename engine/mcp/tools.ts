@@ -254,9 +254,21 @@ export async function level_up(
       ? [{ kind: 'increase', level: build.levels.length + 1, increase: args.increase } as const]
       : []),
   ];
+  const place: Place = mythic ? { rank } : { level: build.levels.length + 1 };
+  const after = edits.reduce(apply, build);
+  const walked = walk(e.data, after, e.G);
+  const own = walked.failures.find(
+    (f) =>
+      placeKey(f.place) === placeKey(place) &&
+      (f.choice === 'class' || f.choice === 'rank') &&
+      f.subject === args.class,
+  );
+  if (own !== undefined) {
+    const r = refusal({ data: e.data, G: e.G, unit: walked.unit }, own);
+    return refused(r.text, r.unmet.length > 0 ? { unmet: r.unmet } : {});
+  }
   const r = await plainEdits(e, build, edits);
   if (isRefusal(r)) return r;
-  const place: Place = mythic ? { rank } : { level: build.levels.length + 1 };
   return { ...r, slots: openSlots(e, r.build, place) };
 }
 

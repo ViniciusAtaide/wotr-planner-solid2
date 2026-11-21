@@ -405,4 +405,20 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     const sheeted = (await run('sheet', { code: placed.code as string })) as Record<string, unknown>;
     expect(sheeted.build).toEqual(expect.objectContaining({ race: jackInTheGreen.build.race }));
   });
+
+  it("refuses a level_up on its own class's reasons, not as a break of other choices (MCP QA)", async () => {
+    const azata = [...e.data.blueprints.values()].find(
+      (b) => b.$type === 'BlueprintCharacterClass' && b.name === 'Azata',
+    )!;
+    const mortal = await encodeBuild(e.data, {
+      ...jackInTheGreen.build,
+      ranks: [],
+      picks: jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place)),
+    });
+    const r = await level_up(e, { code: mortal, class: azata.guid });
+    expect(r).toMatchObject({ refused: true });
+    expect(r).not.toHaveProperty('breaks');
+    expect(JSON.stringify(r)).not.toContain('would break other choices');
+    expect(JSON.stringify(r)).toContain('Mythic Hero');
+  });
 });
