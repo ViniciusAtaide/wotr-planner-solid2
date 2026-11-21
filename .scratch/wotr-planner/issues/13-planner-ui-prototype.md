@@ -36,3 +36,14 @@ Coordinator, 2026-11-20, on ticket 05's questions and the user's standing instru
 - **The Solid template's demo goes:** the users routes, `routes/api/users.ts`, the counter, and `server/session.ts` and `server/db.ts` with their test, unless the MCP route needs one of them.
 - **One page:** the planner at `/`, with the Build in `#b=<code>`. Undo and redo walk a history of Builds, each one codable, fork opens the current code beside it, and compare shows the two sheets side by side. On a phone it is one column, with the picker as a full-screen sheet.
 - **Styling** comes from the design system ("Worldwound Planner": dark fantasy, dark-first), ported into `src/` before the UI is built.
+
+## Amendment: the levelling trail (user, 2026-11-21)
+
+The UI built by ticket 05 was reviewed twice (a Rust UI comparison and a pristine skills audit, `ui-findings-combined.md` in the session notes). It scored 3/10 and cost about 438 clicks for a full Build. The user asked for a remake that is mobile first and has flavor: planning should feel like walking the character's path. A throwaway prototype (branch `ticket/prototype-levelling-flow`) tried four shapes, and the user picked **D, the trail with chips**:
+
+- **The character card:** race, alignment, scores with their +2, and the character-wide picks.
+- **The trail:** a stop per level, with every pick a chip that a tap opens in place. Mythic ranks are their own stops, and every 4th level is a milestone.
+- **The flow:** the next step opens in place, each pick advances, and the next level is "Continue as <class>" in one tap. Small choices are buttons, lists are open with a filter, skills have a budget and "Same as before".
+- **On phones,** the character card and finished chapters of four levels fold by themselves. From 900 px wide nothing folds.
+
+This replaces the Timeline-plus-side-picker shape and its full-screen phone sheet. Refusals in lists, instant picks, the Cascade preview, undo, and fork and compare stay. Undo becomes a single line naming the last change, plus the keyboard. Fork, Share link and Export move into a menu. Built by build ticket 07.
