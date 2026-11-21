@@ -373,7 +373,7 @@ export default function Trail(props: TrailProps) {
         </For>
         <Show when={where().kind === 'next'}>
           <li class="trail-stop trail-stop--here trail-stop--next">
-            <span class="trail-stop__mark">{step().kind === 'complete' ? '✓' : build().levels.length + 1}</span>
+            <span class="trail-stop__mark">{build().levels.length + 1}</span>
             <div class="trail-stop__body">{here()}</div>
           </li>
         </Show>
@@ -452,9 +452,6 @@ export function StepBody(props: StepBodyProps) {
       </Match>
       <Match when={props.step.kind === 'mythic'}>
         <MythicStep trail={props.trail} />
-      </Match>
-      <Match when={props.step.kind === 'complete'}>
-        <p class="trail-note">The game caps the character at this level, so no further level is offered.</p>
       </Match>
       <Match when={props.step.kind === 'nextLevel'}>
         <NextLevelStep trail={props.trail} />

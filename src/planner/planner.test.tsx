@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { cleanup, fireEvent, render, screen, waitFor } from '@solidjs/testing-library';
 import { createSignal, flush } from 'solid-js';
@@ -447,6 +448,31 @@ describe('the levelling trail (build ticket 07)', () => {
     expect(chipNamed('Background').textContent).toContain('Noble (Courtier)');
     expect(document.querySelector('.planner-undo__what')?.textContent).toBe('Background Noble (Courtier)');
   });
+
+  test(
+    'at the level cap the trail ends on the cap level, with no closing stop (user, 2026-11-21)',
+    { timeout: 120_000 },
+    () => {
+      const finished = everyChoiceMade(jackInTheGreen.build);
+      render(() => (
+        <Trail
+          planner={createPlanner(e, finished)}
+          state={{ ...TRAIL_START, skillsLeft: new Set([20]) }}
+          send={() => {}}
+          selection={undefined}
+          select={() => {}}
+          phone={false}
+        />
+      ));
+      flush();
+      expect(document.querySelector('.trail-stop--next')).toBeNull();
+      expect(document.querySelector('.trail-here')).toBeNull();
+      const levels = [...document.querySelectorAll(LEVEL_STOPS)].map(
+        (li) => li.querySelector('.trail-stop__mark')?.textContent,
+      );
+      expect(levels.at(-1)).toBe('20');
+    },
+  );
 
   test('a Build whose scores are set opens past them', async () => {
     await openPlanner({ scores: abilityScores(SCORES), race: DWARF, levels: [], picks: [] });
@@ -1118,6 +1144,25 @@ describe('QA pass 1', () => {
     flush();
     await waitFor(() => expect(document.activeElement).not.toBe(document.body));
     expect(document.activeElement?.closest('.trail-here')).not.toBeNull();
+  });
+
+  test('a tile’s controls fill their track and set no width wider than it (user, 2026-11-21)', () => {
+    const css = readFileSync(join(process.cwd(), 'src/planner/planner.css'), 'utf8');
+    const rule = (selector: string) => {
+      const at = css.indexOf(`${selector} {`);
+      expect(at).toBeGreaterThanOrEqual(0);
+      return css.slice(at, css.indexOf('}', at));
+    };
+    for (const selector of ['.trail-stepper', '.trail-plus2']) {
+      const body = rule(selector);
+      expect(body).toContain('box-sizing: border-box');
+      expect(body).toContain('width: 100%');
+      expect(body).toContain('min-width: 0');
+      expect(body).not.toMatch(/min-width: \d+px/);
+    }
+    expect(rule('.trail-stat__steps')).toContain('grid-template-columns: repeat(2, minmax(0, 1fr))');
+    expect(rule('.trail-stats')).toContain('minmax(0, 1fr)');
+    expect(rule('.trail-stat')).toContain('min-width: 0');
   });
 
   test('Gear places read as words with their number', () => {
