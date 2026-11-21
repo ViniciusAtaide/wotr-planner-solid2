@@ -373,7 +373,9 @@ dimmed and inert behind "Edit the Second Build".
   Refusal, the written Summary and its labels by role (or "No summary yet."), the won't-stack warnings, and every
   link (builds on, shares, enables) without "and N more". Linked feats are named by `linkNames` (`engine/links`: each bare name once, no qualifier, sorted here). What a value enables comes from `enablesWith` (`engine/links`), so a weapon
   value lists only what its weapon can lead to (Weapon Focus (Rapier) enables Fencing Grace, (Bardiche) doesn't).
-  A pointed key (the marked row) applies a microtask later, and only if nothing newer was pointed at since. A parent row speaks for all its values: open when any is,
+  A pointed key (the marked row) applies a microtask later, and only if nothing newer was pointed at since. The lists
+  point again whenever their rows change (a filter, an expanded parent), so the pane never keeps a row the list no
+  longer shows: it moves to the marked row, or empties when nothing is listed (QA pass 5). A parent row speaks for all its values: open when any is,
   sharing what any of them shares. Rows without a resolver fall back to what the row shows (`detailOf`).
 - **`CharacterSteps.tsx`**: `RaceStep` and `BackgroundStep`, the flat race and background lists in place.
 - **`words.ts`: names for the planner's surfaces.** Game names (ADR 0006) and the planner's own words, never the game's
