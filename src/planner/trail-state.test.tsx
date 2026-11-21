@@ -85,18 +85,20 @@ const human = (levels: number, skills?: SkillRanks): Build => ({
 });
 
 describe('auto-advance: each pick opens the next empty one', () => {
-  test('a fresh Build starts on the ability scores', () => {
+  test('a fresh Build starts on the race', () => {
     const fresh: Build = { levels: [], picks: [] };
-    expect(next(fresh)).toEqual({ kind: 'scores' });
-    expect(stepTitle(viewOf(fresh), { kind: 'scores' })).toBe('Your character · set the ability scores');
-    expect(whereOf(viewOf(fresh), { kind: 'scores' })).toEqual({ kind: 'scores' });
+    expect(next(fresh)).toEqual({ kind: 'race' });
+    expect(stepTitle(viewOf(fresh), { kind: 'race' })).toBe('Your character · choose a race');
+    expect(whereOf(viewOf(fresh), { kind: 'race' })).toEqual({ kind: 'character' });
+    const scoredOnly: Build = { scores: SCORES, levels: [], picks: [] };
+    expect(next(scoredOnly)).toEqual({ kind: 'race' });
   });
 
-  test('a Build whose scores are set starts on its first unfinished step after them', () => {
-    const unraced: Build = { scores: SCORES, levels: [], picks: [] };
-    expect(next(unraced)).toEqual({ kind: 'race' });
-    expect(stepTitle(viewOf(unraced), { kind: 'race' })).toBe('Your character · choose a race');
-    expect(whereOf(viewOf(unraced), { kind: 'race' })).toEqual({ kind: 'character' });
+  test('a Build with its race starts on the ability scores, then its first unfinished step after them', () => {
+    const unscored: Build = { race: HUMAN, levels: [], picks: [] };
+    expect(next(unscored)).toEqual({ kind: 'scores' });
+    expect(stepTitle(viewOf(unscored), { kind: 'scores' })).toBe('Your character · set the ability scores');
+    expect(whereOf(viewOf(unscored), { kind: 'scores' })).toEqual({ kind: 'scores' });
     const scored: Build = { scores: SCORES, race: HUMAN, levels: [], picks: [] };
     expect(next(scored)).toEqual({ kind: 'nextLevel' });
     expect(stepTitle(viewOf(scored), { kind: 'nextLevel' })).toBe('Begin · choose a first class');

@@ -34,11 +34,12 @@ to the player in the planner's own words: "Level 5 · choose feat", "Your charac
 
 **The next step** is the first of these that is open, in reading order (`nextStep`):
 
-1. the ability scores, while the Build has none: the step opens in the character card in the tiles' place, and stays
-   open through its edits (race, +2 and alignment included) until "Done" ("Done · leave N unspent" while points are
-   left), which keeps every score at 10 when none was changed. So a fresh Build opens here, and a link opens on its
-   first unfinished step;
-2. the race, while the Build has none (below, "Flat lists");
+1. the race, while the Build has none (below, "Flat lists"), since its bonuses shape the scores. The race is a
+   full-width field at the top of the character card ("Race", "Choose your race" in the accent color while unset;
+   `trail-race`), and its list opens right under it, above the tiles. So a fresh Build opens here (user, 2026-11-21);
+2. the ability scores, while the Build has none: the step opens in the character card in the tiles' place, and stays
+   open through its edits (+2 and alignment included) until "Done" ("Done · leave N unspent" while points are
+   left), which keeps every score at 10 when none was changed. A link opens on its first unfinished step;
 3. the first empty slot with the character, then the first empty slot on the trail, in the walk's order;
 4. an ability increase the walk offers and the Build hasn't taken;
 5. the last level's skills, until the walk's budget for that level is spent or the player chooses "Done · leave N
