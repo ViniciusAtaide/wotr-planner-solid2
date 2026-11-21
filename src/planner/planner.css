@@ -437,6 +437,16 @@ html.choice-open .planner-undo:not(:empty) {
   color: var(--ink-muted);
 }
 
+.trail-alignment-name--unset {
+  color: var(--gold);
+}
+
+.trail-alignment-field--target {
+  padding: var(--space-2);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius-md);
+}
+
 .trail-alignment {
   --size: min(280px, 76vw);
   --node: 52px;

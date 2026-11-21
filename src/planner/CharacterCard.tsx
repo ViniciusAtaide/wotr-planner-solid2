@@ -1,5 +1,5 @@
 import type { JSX } from '@solidjs/web';
-import { createSignal, For, Show } from 'solid-js';
+import { createEffect, createSignal, For, Show } from 'solid-js';
 import {
   abilityScores,
   MAX_SCORE,
@@ -58,6 +58,8 @@ export interface CharacterCardProps {
   readonly race: JSX.Element;
   readonly chips: JSX.Element;
   readonly scoresStep: boolean;
+  readonly alignmentStep?: boolean;
+  readonly alignmentArrives?: boolean;
   readonly here: JSX.Element;
   readonly diff?: (a: Attribute) => boolean;
 }
@@ -104,9 +106,11 @@ export function CharacterCard(props: CharacterCardProps) {
         <Show when={build().levels.length === 0}>
           <p class="trail-note">Point buy only: the race and its +2 count from level 1.</p>
         </Show>
-        <Show when={props.editing}>
-          <h4 class="trail-subhead">Alignment</h4>
-          <AlignmentWheel trail={props.trail} />
+        <Show when={props.editing || props.alignmentStep === true}>
+          <div class={['trail-alignment-field', { 'trail-alignment-field--target': props.alignmentStep === true }]}>
+            <h4 class="trail-subhead">Alignment</h4>
+            <AlignmentWheel trail={props.trail} arrives={props.alignmentArrives === true} />
+          </div>
         </Show>
         {props.chips}
       </Show>
@@ -144,8 +148,22 @@ export function ScoresStep(props: ScoresStepProps) {
   );
 }
 
-export function AlignmentWheel(props: CardPartProps) {
+export interface AlignmentWheelProps extends CardPartProps {
+  readonly arrives?: boolean;
+}
+
+export function AlignmentWheel(props: AlignmentWheelProps) {
   const now = () => props.trail.planner.build().alignment;
+  let wheel: HTMLDivElement | undefined;
+  createEffect(
+    () => props.arrives === true,
+    (due) => {
+      if (!due) return;
+      const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      wheel?.scrollIntoView?.({ block: 'center', behavior: still ? 'auto' : 'smooth' });
+      wheel?.querySelector<HTMLElement>('button')?.focus({ preventScroll: true });
+    },
+  );
   const [pointed, setPointed] = createSignal<Alignment | undefined>(undefined);
   const shownName = () => {
     const a = pointed() ?? now();
@@ -153,10 +171,17 @@ export function AlignmentWheel(props: CardPartProps) {
   };
   return (
     <div class="trail-alignment-wrap">
-      <p class="trail-alignment-name" aria-hidden="true">
+      <p class={['trail-alignment-name', { 'trail-alignment-name--unset': now() === undefined }]} aria-hidden="true">
         {shownName()}
       </p>
-      <div class="trail-alignment" role="group" aria-label="Alignment">
+      <div
+        ref={(el) => {
+          wheel = el;
+        }}
+        class="trail-alignment"
+        role="group"
+        aria-label="Alignment"
+      >
         <For each={ALIGNMENT_WHEEL}>
           {(node) => (
             <button

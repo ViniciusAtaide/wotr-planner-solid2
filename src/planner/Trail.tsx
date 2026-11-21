@@ -233,7 +233,13 @@ export default function Trail(props: TrailProps) {
     props.listMode === 'modal' && isListStep(step(), build().levels.length) && props.state.dialog !== stepKey(step());
   const isTarget = (s: Selection) => {
     const now = step();
-    return now.kind !== 'mythic' && now.kind !== 'nextLevel' && now.kind !== 'complete' && sameSelection(now, s);
+    return (
+      now.kind !== 'mythic' &&
+      now.kind !== 'nextLevel' &&
+      now.kind !== 'complete' &&
+      now.kind !== 'alignment' &&
+      sameSelection(now, s)
+    );
   };
   const here = () => (
     <Show when={stepKey(step())} keyed>
@@ -388,7 +394,9 @@ export default function Trail(props: TrailProps) {
   });
   const [arriving, setArriving] = createSignal<string | undefined>(undefined);
   const fieldKey = (st: Step) =>
-    st.kind === 'race' || (st.kind === 'slot' && isCharacterSlot(view(), st.slot)) ? stepKey(st) : undefined;
+    st.kind === 'race' || st.kind === 'alignment' || (st.kind === 'slot' && isCharacterSlot(view(), st.slot))
+      ? stepKey(st)
+      : undefined;
   const isFieldKey = (key: string) =>
     key === stepKey({ kind: 'race' }) ||
     characterSlots(view()).some((x) => stepKey({ kind: 'slot', slot: x.id }) === key);
@@ -406,7 +414,7 @@ export default function Trail(props: TrailProps) {
         setArriving(undefined);
         return;
       }
-      if (props.listMode === 'modal') props.send({ kind: 'dialog', step: arrivingKey });
+      if (props.listMode === 'modal' && now.kind !== 'alignment') props.send({ kind: 'dialog', step: arrivingKey });
       else setArriving(arrivingKey);
     },
   );
@@ -512,6 +520,8 @@ export default function Trail(props: TrailProps) {
             </div>
           }
           scoresStep={where().kind === 'scores'}
+          alignmentStep={step().kind === 'alignment'}
+          alignmentArrives={arriving() === stepKey({ kind: 'alignment' })}
           here={<Show when={where().kind === 'scores'}>{here()}</Show>}
         />
         <ol class="trail-path" aria-label="Levels">
