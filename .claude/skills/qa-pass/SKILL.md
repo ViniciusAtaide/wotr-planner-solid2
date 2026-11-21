@@ -17,7 +17,7 @@ git -C /Users/thaynamarcela/code/wotr-planner-solid2 worktree add --detach "$QA"
 for d in node_modules blueprints decompiled; do ln -s /Users/thaynamarcela/code/wotr-planner-solid2/$d "$QA/$d"; done
 ```
 
-Start `bun run dev -- --port <free port 3100–3199>` in `$QA` as a background command. WebStorm doesn't have this checkout open: use the built-in file tools there. When done, stop the server and `git -C /Users/thaynamarcela/code/wotr-planner-solid2 worktree remove --force "$QA"`.
+Build and serve production in `$QA`: `bun run build`, then `PORT=<free port 3100–3199> bun start` as a background command. Time everything on this build: the dev server runs Solid's development instrumentation, which makes picks look 3–10× slower than users see. WebStorm doesn't have this checkout open: use the built-in file tools there. When done, stop the server and `git -C /Users/thaynamarcela/code/wotr-planner-solid2 worktree remove --force "$QA"`.
 
 Drive the app with the built-in browser (`mcp__Claude_Browser__*`; load the schemas you need in one ToolSearch). **Front the tab with `tabs_select` before timing anything**: a hidden pane throttles frames and skews every timing. Test at 375 px (`resize_window` preset `mobile`) and at 1280 px (preset `desktop`).
 
@@ -31,7 +31,7 @@ The brief says what changed; always cover it, plus:
 - every choice list: filtering, keyboard, closed choices and their Refusals, names (no internal qualifiers);
 - the Share link: reopen in a new tab, a broken link;
 - Gear, Export, fork and compare;
-- each list open and each pick's time (over 200 ms is a finding), and the console.
+- each list open and each pick's time on the production build (over 100 ms is a finding), and the console.
 
 A finding is anything wrong, confusing, inconsistent or ugly: overflow, clipped text, layout shift, lost focus, stale UI after an edit, a dead-end step, wrong counts, an option the game wouldn't offer or a missing one it would, a Build that won't reopen from its link, a console error.
 
