@@ -210,6 +210,12 @@ export function clearedSkillsDue(
     });
 }
 
+function afterLevel(t: TrailView, slot: SlotId, level: number): boolean {
+  const later = t.walk.slots.findIndex((s) => 'level' in s.id.place && s.id.place.level > level);
+  if (later < 0) return false;
+  return t.walk.slots.findIndex((s) => slotKey(s.id) === slotKey(slot)) >= later;
+}
+
 export function nextStep(
   t: TrailView,
   s: Pick<TrailState, 'skillsLeft' | 'mythicLater'> & Partial<Pick<TrailState, 'skillsCleared'>>,
@@ -217,12 +223,17 @@ export function nextStep(
   if (t.build.race === undefined) return { kind: 'race' };
   if (t.build.scores === undefined) return { kind: 'scores' };
   const empty = (slots: readonly OpenedSlot[]) => slots.find((x) => x.pick === undefined);
-  const slot = empty(characterSlots(t)) ?? empty(shownSlots(t));
-  if (slot !== undefined) return { kind: 'slot', slot: slot.id };
-  const increase = increaseDue(t);
-  if (increase !== undefined) return { kind: 'increase', level: increase };
+  const character = empty(characterSlots(t));
+  if (character !== undefined) return { kind: 'slot', slot: character.id };
+  const slot = empty(shownSlots(t));
   const redo = clearedSkillsDue(t, s.skillsCleared, s.skillsLeft);
+  if (slot !== undefined && (redo === undefined || !afterLevel(t, slot.id, redo)))
+    return { kind: 'slot', slot: slot.id };
+  const increase = increaseDue(t);
+  if (increase !== undefined && (redo === undefined || increase <= redo)) return { kind: 'increase', level: increase };
   if (redo !== undefined) return { kind: 'skills', level: redo };
+  if (slot !== undefined) return { kind: 'slot', slot: slot.id };
+  if (increase !== undefined) return { kind: 'increase', level: increase };
   const skills = skillsDue(t, s.skillsLeft);
   if (skills !== undefined) return { kind: 'skills', level: skills };
   const due = mythicDue(t, s.mythicLater);
@@ -390,24 +401,44 @@ export function gearDependentSlots(t: TrailView): ReadonlySet<string> {
   return new Set(t.walk.gearDependent.flatMap((g) => (g.slot === undefined ? [] : [slotKey(g.slot)])));
 }
 
+export function nestedParent(slots: readonly OpenedSlot[], child: OpenedSlot): OpenedSlot | undefined {
+  return slots.find(
+    (p) => p !== child && p.pick?.feature === child.id.selection && placeKey(p.id.place) === placeKey(child.id.place),
+  );
+}
+
+export function chipSlots(slots: readonly OpenedSlot[]): readonly OpenedSlot[] {
+  return slots.filter((s) => s.pick === undefined || nestedParent(slots, s) === undefined);
+}
+
 export function pickLabels(data: CheckedData, slots: readonly OpenedSlot[]): ReadonlyMap<string, string> {
   const names = namesInList(
     data,
     slots.flatMap((s) => (s.pick === undefined ? [] : [s.pick.feature])),
   );
-  return new Map(
+  const own = new Map(
     slots.flatMap((s) =>
       s.pick === undefined
         ? []
         : [[slotKey(s.id), shownName(data, s.pick.feature, s.pick.param, names.get(s.pick.feature))] as const],
     ),
   );
+  const labels = new Map(own);
+  for (const child of slots) {
+    const parent = child.pick === undefined ? undefined : nestedParent(slots, child);
+    const parentLabel = parent && own.get(slotKey(parent.id));
+    const childLabel = own.get(slotKey(child.id));
+    if (parent !== undefined && parentLabel !== undefined && childLabel !== undefined) {
+      labels.set(slotKey(parent.id), `${parentLabel} (${childLabel})`);
+    }
+  }
+  return labels;
 }
 
-function pickNames(t: TrailView, slots: readonly OpenedSlot[]): string[] {
+export function pickNames(t: TrailView, slots: readonly OpenedSlot[]): string[] {
   const gear = gearDependentSlots(t);
   const labels = pickLabels(t.data, slots);
-  return slots.flatMap((s) => {
+  return chipSlots(slots).flatMap((s) => {
     const label = labels.get(slotKey(s.id));
     return label === undefined ? [] : [`${label}${gear.has(slotKey(s.id)) ? ' (Gear)' : ''}`];
   });

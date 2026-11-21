@@ -1,27 +1,15 @@
-import {
-  createContext,
-  createEffect,
-  createMemo,
-  createSignal,
-  For,
-  onCleanup,
-  onSettled,
-  Show,
-  useContext,
-} from 'solid-js';
+import { createContext, createEffect, createMemo, createSignal, For, onSettled, Show, useContext } from 'solid-js';
 import type { Build } from '~engine/build';
 import type { Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
 
-import { ClosedCount, OptionList, PickerOption } from '../design';
+import { OptionList, PickerOption } from '../design';
 import { judgeAll, type Judged } from './planner-state';
 import { scrollToIndex, WindowedRows } from './WindowedRows';
 
 export type { Judged };
 
 export const FILTER_FROM = 13;
-const CLOSED_SHOWN = 12;
-export const CLOSED_PER_REASON = 3;
 
 export function matches(name: string, text: string): boolean {
   const words = text
@@ -36,21 +24,6 @@ export function clampMark(at: number, delta: number, count: number): number {
   return count === 0 ? 0 : Math.max(0, Math.min(count - 1, at + delta));
 }
 
-export function byReason<T>(rows: readonly T[], reasonOf: (row: T) => string): readonly (readonly [string, number])[] {
-  const counts = new Map<string, number>();
-  for (const r of rows) counts.set(reasonOf(r), (counts.get(reasonOf(r)) ?? 0) + 1);
-  return [...counts];
-}
-
-export function firstPerReason<T>(rows: readonly T[], reasonOf: (row: T) => string, each: number): T[] {
-  const seen = new Map<string, number>();
-  return rows.filter((r) => {
-    const n = seen.get(reasonOf(r)) ?? 0;
-    seen.set(reasonOf(r), n + 1);
-    return n < each;
-  });
-}
-
 export interface ChoiceRow {
   readonly key: string;
   readonly name: string;
@@ -63,26 +36,6 @@ export interface ChoiceRow {
 
 export function judge(engine: Engine, build: Build, edit: Edit): Judged {
   return judgeAll(engine, build, [edit]);
-}
-
-export const REVEAL_STEP = 60;
-
-export function createReveal(first: number, total: () => number) {
-  const [limit, setLimit] = createSignal(first);
-  let frame: number | undefined;
-  onCleanup(() => {
-    if (frame !== undefined) cancelAnimationFrame(frame);
-  });
-  const more = () => {
-    let shown = limit();
-    const grow = () => {
-      shown += REVEAL_STEP;
-      setLimit(shown);
-      frame = shown < total() ? requestAnimationFrame(grow) : undefined;
-    };
-    grow();
-  };
-  return { limit, more };
 }
 
 export function currentFirst(rows: readonly ChoiceRow[]): ChoiceRow[] {
@@ -175,30 +128,15 @@ export function createClosedToggle(given: () => ClosedToggle | undefined): Close
   };
 }
 
-const rowReason = (r: ChoiceRow) => r.reasons.join(' ') || 'closed';
-
 export function ChoiceList(props: ChoiceListProps) {
   const [text, setText] = createSignal('');
   const [mark, setMark] = createSignal(0);
-  const [all, setAll] = createSignal(false);
   let scroller: HTMLDivElement | undefined;
   const toggle = createClosedToggle(() => props.closed);
   const listed = createMemo(() => props.rows.filter((r) => matches(r.name, text())));
   const open = () => listed().filter((r) => r.open);
   const closed = () => listed().filter((r) => !r.open);
-  const reveal = createReveal(CLOSED_SHOWN, () => closed().length);
-  const closedShown = () => {
-    if (!toggle.shown) return closed().filter((r) => r.current);
-    return all() ? closed().slice(0, reveal.limit()) : firstPerReason(closed(), rowReason, CLOSED_PER_REASON);
-  };
-  const hidden = () => {
-    if (!toggle.shown) return [];
-    const shown = new Set(closedShown());
-    return byReason(
-      closed().filter((r) => !shown.has(r)),
-      rowReason,
-    );
-  };
+  const closedShown = () => (toggle.shown ? closed() : closed().filter((r) => r.current));
   const filtering = () => props.rows.length >= FILTER_FROM;
   createEffect(
     () => mark(),
@@ -247,19 +185,6 @@ export function ChoiceList(props: ChoiceListProps) {
           <For each={closedShown()} keyed={(r) => r.key}>
             {(r) => <PickerOption name={r().name} status="closed" selected={r().current} refusal={r().reasons} />}
           </For>
-          <Show when={hidden().length > 0}>
-            <For each={hidden()}>{([reason, n]) => <ClosedCount text={`${n} more closed: ${reason}`} />}</For>
-            <button
-              type="button"
-              class="trail-link"
-              onClick={() => {
-                setAll(true);
-                reveal.more();
-              }}
-            >
-              Show all closed
-            </button>
-          </Show>
         </OptionList>
       </div>
       <Show when={closed().length > 0}>

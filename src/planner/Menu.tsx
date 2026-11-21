@@ -53,20 +53,25 @@ export function PlannerMenu(props: PlannerMenuProps) {
   };
   let root: HTMLDivElement | undefined;
   let toggle: HTMLButtonElement | undefined;
+  const close = () => {
+    setOpen(false);
+    keepFocus(toggle);
+  };
   onSettled(() => {
     const away = (e: Event) => {
       if (root !== undefined && e.target instanceof Node && !root.contains(e.target)) setOpen(false);
     };
     const esc = (e: KeyboardEvent) => {
-      if (e.key !== 'Escape' || !open()) return;
-      setOpen(false);
-      keepFocus(toggle);
+      if (e.key === 'Escape' && open()) close();
     };
+    const moved = () => setOpen(false);
     document.addEventListener('pointerdown', away);
     document.addEventListener('keydown', esc);
+    window.addEventListener('hashchange', moved);
     return () => {
       document.removeEventListener('pointerdown', away);
       document.removeEventListener('keydown', esc);
+      window.removeEventListener('hashchange', moved);
     };
   });
   const linkLabel = () => {
@@ -113,6 +118,7 @@ export function PlannerMenu(props: PlannerMenuProps) {
             disabled={props.link.state !== 'ready'}
             onClick={() => {
               if (props.link.state !== 'ready') return;
+              close();
               void copyText(props.link.url).then((c) => {
                 if (c === 'copied') copied(LINK_WORDS.copied);
                 else setSaid(LINK_WORDS.refused);
@@ -126,7 +132,7 @@ export function PlannerMenu(props: PlannerMenuProps) {
               type="button"
               role="menuitem"
               onClick={() => {
-                setOpen(false);
+                close();
                 props.onFork();
               }}
             >
@@ -136,12 +142,13 @@ export function PlannerMenu(props: PlannerMenuProps) {
           <button
             type="button"
             role="menuitem"
-            onClick={() =>
+            onClick={() => {
+              close();
               void copyText(props.sheet()).then((c) => {
                 if (c === 'copied') copied(SHEET_WORDS.copied);
                 else setSaid(SHEET_WORDS.refused);
-              })
-            }
+              });
+            }}
           >
             {SHEET_WORDS.idle}
           </button>
@@ -153,7 +160,10 @@ export function PlannerMenu(props: PlannerMenuProps) {
                   type="button"
                   role="menuitemradio"
                   aria-checked={props.listMode === mode ? 'true' : 'false'}
-                  onClick={() => props.onListMode(mode)}
+                  onClick={() => {
+                    close();
+                    props.onListMode(mode);
+                  }}
                 >
                   {words}
                 </button>

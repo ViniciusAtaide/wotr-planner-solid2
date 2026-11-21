@@ -22,9 +22,11 @@ import {
 } from '~engine/mcp';
 import { picker } from '~engine/pickers';
 import { linkDidNotOpen, nameOf } from '~engine/refusals';
+import { walk } from '~engine/walk';
 
 import { EMPTY, openHash } from './link';
 import Planner, { RefusalNotice } from './Planner';
+import { buildSheet } from './sheet';
 import { createPlanner, type Planner as PlannerApi } from './state';
 import { ChoiceList } from './ChoiceList';
 import { placeWords } from './GearStep';
@@ -875,18 +877,6 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b)));
   });
 
-  test('the closed summary names each reason once (audit)', () => {
-    render(() => <SlotStep trail={apiOf(createPlanner(e, cleaver))} slot={slotNamed(cleaver, 'BasicFeatSelection')} />);
-    flush();
-    const summary = document.querySelector('.ww-count')?.textContent ?? '';
-    const labels = summary
-      .replace(/^\d+ more closed: /, '')
-      .split(', ')
-      .map((part) => part.replace(/^\d+ /, ''));
-    expect(labels.length).toBeGreaterThan(0);
-    expect(new Set(labels).size).toBe(labels.length);
-  });
-
   test('the alignment wheel names the alignment under focus, else the chosen one, and marks it', async () => {
     await openPlanner(undefined);
     const name = () => document.querySelector('.trail-alignment-name')?.textContent;
@@ -1146,8 +1136,8 @@ describe('QA pass 1', () => {
     expect(document.querySelectorAll('.ww-option--closed').length).toBe(0);
     expect(screen.getByText('No choices open here.')).toBeTruthy();
     tap('Show 10 closed');
-    expect(document.querySelectorAll('.ww-option--closed').length).toBe(3);
-    expect(screen.getByText('7 more closed: Needs a level 1 Build.')).toBeTruthy();
+    expect(document.querySelectorAll('.ww-option--closed').length).toBe(10);
+    expect(screen.queryByRole('button', { name: 'Show all closed' })).toBeNull();
     tap('Hide closed');
     expect(document.querySelectorAll('.ww-option--closed').length).toBe(0);
     expect(button('Show 10 closed')).toBeTruthy();
@@ -1283,7 +1273,24 @@ describe('QA pass 1', () => {
     await waitFor(() =>
       expect(document.querySelector('.planner-menu__said')?.textContent).toBe('Copy refused by the browser'),
     );
+    openMenu();
     expect(screen.getByRole('menuitem', { name: 'Export as text' })).toBeTruthy();
+  });
+
+  test('the ⋯ menu closes after any item, and when the page’s link changes (QA pass 3)', async () => {
+    await openPlanner(cleaver);
+    openMenu();
+    menuItem('Export as text');
+    expect(screen.queryByRole('menu')).toBeNull();
+    openMenu();
+    fireEvent.click(screen.getByRole('menuitemradio', { name: 'Inline first' }));
+    flush();
+    expect(screen.queryByRole('menu')).toBeNull();
+    await waitFor(() => expect(document.activeElement).toBe(button('Build menu')));
+    openMenu();
+    window.dispatchEvent(new HashChangeEvent('hashchange'));
+    flush();
+    expect(screen.queryByRole('menu')).toBeNull();
   });
 
   test('a broken pasted link says it is not a planner link unless it reads as a newer one (QA pass 2)', async () => {
@@ -1317,26 +1324,42 @@ describe('QA pass 1', () => {
     expect(rest).toEqual([...rest].sort((a, b) => a.localeCompare(b)));
   });
 
+  test('"No archetype" stays first when an archetype is held (QA pass 3)', () => {
+    const fighterClass = cleaver.levels[0]?.class ?? '';
+    const twoHanded = [...e.data.blueprints.values()].find(
+      (b) => b.$type === 'BlueprintArchetype' && nameOf(e.data, b.guid) === 'Two-Handed Fighter',
+    );
+    if (twoHanded === undefined) throw new Error('no Two-Handed Fighter');
+    const held: Build = { ...cleaver, classChoices: { [fighterClass]: { archetypes: [twoHanded.guid] } } };
+    render(() => <LevelEditor trail={apiOf(createPlanner(e, held))} level={1} />);
+    flush();
+    const list = [...document.querySelectorAll('.trail-subhead')].find(
+      (h) => h.textContent === 'Archetype',
+    )?.nextElementSibling;
+    const names = [...(list?.querySelectorAll('button.ww-option .ww-option__name') ?? [])].map(
+      (n) => n.textContent ?? '',
+    );
+    expect(names.slice(0, 2)).toEqual(['No archetype', 'Two-Handed Fighter']);
+  });
+
   test('Gear places read as words with their number', () => {
     expect(placeWords('Ring1')).toBe('Ring 1');
     expect(placeWords('MainHand')).toBe('Main Hand');
   });
 
-  test('"Show all closed" reveals the closed options a step at a time until all show', async () => {
+  test('"Show N closed" shows every closed option in one step (QA pass 3)', async () => {
     await openPlanner(cleaver);
     fireEvent.click(chipNamed('Power Attack'));
     flush();
     expect(document.querySelectorAll('.trail-here .ww-option--closed').length).toBe(0);
+    const label = [...document.querySelectorAll('.trail-here button')]
+      .map((b) => b.textContent ?? '')
+      .find((t) => /^Show \d+ closed$/.test(t));
+    const n = Number(/\d+/.exec(label ?? '')?.[0]);
+    expect(n).toBeGreaterThan(30);
     tap(/^Show \d+ closed$/);
-    const closed = () => document.querySelectorAll('.trail-here .ww-option--closed').length;
-    const before = closed();
-    const more = Number(
-      /^(\d+) more closed/.exec(document.querySelector('.trail-here .ww-count')?.textContent ?? '')?.[1],
-    );
-    expect(more).toBeGreaterThan(0);
-    tap('Show all closed');
-    expect(closed()).toBeGreaterThan(before);
-    await waitFor(() => expect(closed()).toBe(before + more));
+    expect(document.querySelectorAll('.trail-here .ww-option--closed').length).toBe(n);
+    expect(screen.queryByRole('button', { name: 'Show all closed' })).toBeNull();
   });
 });
 
@@ -1433,6 +1456,36 @@ describe('nested sub-choices (ticket 08)', () => {
     expect(planner.build()).toEqual(fighter1);
   });
 
+  test('an open parent lists its values by name, open before closed (QA pass 3)', () => {
+    featList();
+    click(parent('Weapon Focus'));
+    const rows = [...document.querySelectorAll('[data-child-of] .ww-option')];
+    const named = (closed: boolean) =>
+      rows
+        .filter((r) => r.classList.contains('ww-option--closed') === closed)
+        .map((r) => r.querySelector('.ww-option__name')?.textContent ?? '');
+    const open = named(false);
+    expect(open.length).toBeGreaterThan(5);
+    expect(open).toEqual([...open].sort((a, b) => a.localeCompare(b)));
+    const closed = named(true);
+    expect(closed).toEqual([...closed].sort((a, b) => a.localeCompare(b)));
+  });
+
+  test('a nested pick shows as one chip and one Export entry, "Parent (Value)" (QA pass 3)', () => {
+    const planner = featList();
+    click(parent('Armor Focus'));
+    click(child('Light Armor Focus'));
+    const built = planner.build();
+    cleanup();
+    trailOf(built);
+    const chips = [...document.querySelectorAll('.trail-chip')].map((c) => c.textContent ?? '');
+    expect(chips.filter((c) => c.includes('Armor Focus'))).toHaveLength(1);
+    expect(chips.some((c) => c.includes('Armor Focus (Light Armor Focus)'))).toBe(true);
+    const sheet = buildSheet({ data: e.data, build: built, walk: walk(e.data, built, e.G) });
+    expect(sheet.split('Light Armor Focus')).toHaveLength(2);
+    expect(sheet).toContain('Armor Focus (Light Armor Focus)');
+  });
+
   test('a nested selection takes both picks as one Undo step', () => {
     const planner = featList();
     click(parent('Armor Focus'));
@@ -1507,6 +1560,7 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
     fireEvent.click(screen.getByRole('menuitemradio', { name: 'Modal first' }));
     flush();
     expect(localStorage.getItem('wotr.choiceLists')).toBe('modal');
+    openMenu();
     expect(screen.getByRole('menuitemradio', { name: 'Modal first' })).toHaveAttribute('aria-checked', 'true');
     cleanup();
     await openPlanner(cleaver);

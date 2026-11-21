@@ -5,8 +5,8 @@ import { linkIndex } from '~engine/links';
 import { picker, type OptionStatus } from '~engine/pickers';
 import { gearNote, listNames, nameOf, refusal } from '~engine/refusals';
 
-import { Button, ClosedCount, OptionList, PickerOption } from '../design';
-import { createReveal, Filter, moveThroughOptions, SCROLL_STYLE, type ClosedToggle } from './ChoiceList';
+import { Button, OptionList, PickerOption } from '../design';
+import { Filter, moveThroughOptions, SCROLL_STYLE, type ClosedToggle } from './ChoiceList';
 import { featCategory } from './feat-category';
 import { after } from './flat-choices';
 import { childSlotOf, pickRows, rowMembers, rowOpen, type PickRow } from './nested-options';
@@ -16,7 +16,6 @@ import { slotLabel } from './trail-state';
 import { scrollToIndex, WindowedRows } from './WindowedRows';
 import { shownName } from './words';
 
-const CLOSED_SHOWN = 30;
 const GROUP_REASONS = 3;
 
 export interface PickStepProps {
@@ -79,7 +78,6 @@ export function PickStep(props: PickStepProps) {
   const rows = createMemo(() => pickRows(data(), p()?.options ?? [], { option: name, group: groupName }, text()));
   const open = () => rows().filter(rowOpen);
   const closed = () => rows().filter((r) => !rowOpen(r));
-  const reveal = createReveal(CLOSED_SHOWN, () => closed().length);
   const showClosed: ClosedToggle = {
     get shown() {
       return props.trail.state().closedShown.has('pick');
@@ -91,8 +89,7 @@ export function PickStep(props: PickStepProps) {
     () => mark(),
     (at) => scrollToIndex(scroller, at),
   );
-  const closedShown = () =>
-    showClosed.shown ? closed().slice(0, reveal.limit()) : closed().filter((r) => holdsRow(r));
+  const closedShown = () => (showClosed.shown ? closed() : closed().filter((r) => holdsRow(r)));
   const words = (o: OptionStatus, unit = p()?.unit): readonly string[] => {
     if (o.closed === undefined) return [];
     const r = refusal({ data: data(), G: planner().engine.G, unit }, o.closed);
@@ -100,14 +97,7 @@ export function PickStep(props: PickStepProps) {
   };
   const rowWords = (row: PickRow): readonly string[] =>
     [...new Set(rowMembers(row).flatMap((o) => words(o)))].slice(0, GROUP_REASONS);
-  const byReason = () => {
-    const counts = new Map<string, number>();
-    for (const row of closed().slice(closedShown().length)) {
-      const label = rowMembers(row)[0]?.closed?.unmet?.length ? 'need a prerequisite' : 'refused by the game';
-      counts.set(label, (counts.get(label) ?? 0) + 1);
-    }
-    return [...counts].map(([label, n]) => `${n} ${label}`).join(', ');
-  };
+
   const held = createMemo(() => new Set([...(p()?.unit.facts() ?? [])].map((f) => f.blueprint)));
   const links = (o: OptionStatus): string | undefined => {
     const index = linkIndex(data(), planner().engine.G);
@@ -196,7 +186,7 @@ export function PickStep(props: PickStepProps) {
   };
   const children = (row: PickRow): readonly OptionStatus[] => {
     const all = row.kind === 'params' ? row.options : row.kind === 'nested' ? (nested()?.picker?.options ?? []) : [];
-    const shown = all.filter((o) => o.shown);
+    const shown = all.filter((o) => o.shown).toSorted((a, b) => childName(row, a).localeCompare(childName(row, b)));
     return [...shown.filter((o) => o.closed === undefined), ...shown.filter((o) => o.closed !== undefined)];
   };
   const childName = (row: PickRow, o: OptionStatus) =>
@@ -346,10 +336,6 @@ export function PickStep(props: PickStepProps) {
                 />
               )}
             </For>
-            <Show when={showClosed.shown && closed().length > closedShown().length}>
-              <ClosedCount text={`${closed().length - closedShown().length} more closed: ${byReason()}`} />
-              <Button onClick={() => reveal.more()}>Show all closed</Button>
-            </Show>
           </OptionList>
         </div>
         <Show when={closed().length > 0}>

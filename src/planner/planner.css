@@ -177,7 +177,8 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
-  min-height: 52px;
+  box-sizing: border-box;
+  min-height: var(--undo-bar-height);
   margin: 0 calc(-1 * var(--space-3));
   padding: var(--space-1) var(--space-4);
   border-top: 1px solid var(--line);
@@ -187,6 +188,15 @@
 
 .planner-undo:empty {
   visibility: hidden;
+}
+
+html.choice-open .planner-undo:not(:empty) {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 16;
+  margin: 0;
 }
 
 .planner-undo__what {
@@ -994,6 +1004,14 @@ html.choice-open {
     height: 100dvh;
     border: 0;
     border-radius: 0;
+  }
+
+  html.choice-open:has(.planner-undo:not(:empty)) .choice-overlay {
+    place-items: start center;
+  }
+
+  html.choice-open:has(.planner-undo:not(:empty)) .choice-dialog {
+    height: calc(100dvh - var(--undo-bar-height));
   }
 
   .choice-dialog__body {

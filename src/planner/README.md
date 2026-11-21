@@ -68,12 +68,13 @@ phone keeps its keyboard down); the filter matches each typed word on its own (`
 Rakshasa-Spawn) and says "No matches for …" when nothing does. In the filter, Up and Down move a mark over the open rows
 (`clampMark`) and Enter takes the marked row, the first until moved; on the rows, Up, Down, J and K move the focus
 (`moveThroughOptions`). The current pick is marked; closed rows show R's reasons; an open row carries no badge, since
-a row you can tap is open. A class, path, race or background list shows the first few closed rows per reason
-(`CLOSED_PER_REASON`, `firstPerReason`) and counts the rest by reason ("44 more closed: …", `byReason`). Names are S's
+a row you can tap is open. Closed rows are hidden until "Show N closed", which shows every one of them at once (QA
+pass 3; 201 closed feats render in about 35 ms in a production build). Names are S's
 bare names, qualified only when two in the same list share one (`shownName`, `pickLabels`, `bareNameOf`). A small set
 (+2, the six ability increases, the last one marked "as before") is a row of buttons. A class or path list gets the
-filter from 13 rows up. "Show all closed" reveals the rest a step at a time (`createReveal`, `REVEAL_STEP` rows a
-frame), so the first rows show at once.
+filter from 13 rows up. An open parent's values
+are sorted by name, open before closed, and a level's archetype list starts with "No archetype", then the held
+archetype, then the rest by name.
 
 **Focus**: when a new step arrives and focus was lost with the old one (on the page body), it lands on the step's
 first control: the filter under a fine pointer, else its first button, never "Back to the next choice".
@@ -200,7 +201,9 @@ dimmed and inert behind "Edit the Second Build".
 - The Cascade preview gives one count of what it clears ("This breaks 14 later choices: …", "Clear 14 choices"),
   its rows in walk order, levels and ranks interleaved by where they fall (`clearsList`).
 - Levels whose skill ranks a confirmed Cascade cleared (`Pending.clearedSkills`) come back as a trail step until spent
-  or left (`skillsCleared`, `clearedSkillsDue`), with the budget line and "Done · leave N unspent".
+  or left (`skillsCleared`, `clearedSkillsDue`), with the budget line and "Done · leave N unspent". They come in walk
+  order with the empty slots (QA pass 3, `afterLevel` in `nextStep`): a cleared level's skills come before a later
+  level's empty pick, and an increase due at or before that level comes before them.
 - "Same as level N−1" shows only when the walk allows it; the skills step's checks (the + steppers and "Same as") run
   once per Build change, just after the edit paints (`skillChecks`).
 - The folded card line and Export name the race and background as their flat pairs (`characterPicksLine`).
@@ -297,7 +300,7 @@ dimmed and inert behind "Edit the Second Build".
   opens; `optionKey` keys an option with its parameter.
 - **`PickStep.tsx`**: a slot's open list (`PickStep`, moved out of `steps.tsx`): S's options as rows, open then
   closed, a parent row expanding its sub-options in place (`paramLabel` names a value without repeating its feat),
-  the keys above, Synergy links, the filter and its mark, "Show all closed", and "Clear this pick".
+  the keys above, Synergy links, the filter and its mark, "Show N closed", and "Clear this pick".
 - **`list-mode.ts`**: `ListMode`, `readListMode`/`writeListMode` (try/catch around `localStorage`, `browserStorage`)
   and `isListStep`. **`ChoiceDialog.tsx`**: the modal frame (`ChoiceDialog`, `detailOf`, `dialogStart`).
 - **`CharacterSteps.tsx`**: `RaceStep` and `BackgroundStep`, the flat race and background lists in place.
@@ -337,8 +340,7 @@ dimmed and inert behind "Edit the Second Build".
   stop at the scores a Build can hold (`MIN_SCORE`, `MAX_SCORE`) and send a point buy the walk refuses to the notice
   area.
 - **`steps.tsx`: what opens in place.** `TrailApi` is what a step reads and sends. `SlotStep` is a slot's open list:
-  S's options the game shows, open then closed with R's Refusals (the first `CLOSED_SHOWN`, then "Show all closed"
-  and the rest counted by reason), each option's Synergy links (what it builds on that the character already holds at
+  S's options the game shows, open then closed with R's Refusals (all of them once "Show N closed" is pressed), each option's Synergy links (what it builds on that the character already holds at
   the slot, and what it enables), J and K to move, Enter in the filter to take the first open one, and "Clear this
   pick" after the options. `IncreaseStep`, `SkillsStep`, `NextLevelStep` (with the lazy `ClassList`), `MythicStep`,
   `LevelEditor` (class, archetype, Remove level on the last) and `RankEditor` (Rank level stepper with the Expected
@@ -367,8 +369,14 @@ dimmed and inert behind "Edit the Second Build".
   the tags are the game's. `featCategory(data, feature)` reads a feature's tags through S and returns its drawing, or
   undefined when the game gives it no tags.
 - **`Menu.tsx`**: `PlannerMenu`, the ⋯ menu (`copyText` reports whether the clipboard took the text), and `UndoLine`.
+  The menu closes after any item, on Escape, on a tap outside and when the page's link changes (`hashchange`), handing
+  focus back to its button. While a choice dialog is open the Undo bar is fixed above it (`html.choice-open`), and on a
+  phone the full-screen dialog stops short of it (`--undo-bar-height`), so Undo stays in reach.
 - **`sheet.ts`**: `buildSheet`, the plain-text build sheet Export copies: the character line, the scores, the
   character's picks, one line per level with its class, archetype, picks and skills, one per Mythic rank, and the Gear.
+  A nested pick is one entry, as it is one chip on the trail: "Armor Focus (Light Armor Focus)" (`nestedParent`,
+  `chipSlots` and `pickLabels` in `trail-state.ts`). A value not yet chosen keeps its own chip, so the step stays in
+  reach.
 - **`Planner.tsx`: the page.**
   - `Boot` is `loading`, `failed` (with Retry, which loads again) or `ready` with the engine, the linked Build, the
     `LinkStatus` and the hash it opened. The ready workspace reads `location.hash` again, so a link pasted while the

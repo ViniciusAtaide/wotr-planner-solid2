@@ -472,24 +472,26 @@ export function LevelEditor(props: LevelStepProps) {
       current: held === undefined,
       take: () => props.trail.edit({ kind: 'archetypes', class: cls, archetypes: [] }, 'No archetype'),
     };
-    return currentFirst([
+    return [
       none,
-      ...options.map((a) => {
-        const own = judged?.get(a);
-        const name = own?.label ?? bareNameOf(data(), a);
-        return {
-          key: a,
-          name,
-          ...(a === held
-            ? { open: true, reasons: [] }
-            : own === undefined
-              ? judge(planner().engine, b, { kind: 'archetypes', class: cls, archetypes: [a] })
-              : { open: own.open, reasons: own.reasons }),
-          current: a === held,
-          take: () => props.trail.edit({ kind: 'archetypes', class: cls, archetypes: [a] }, `Took ${name}`),
-        };
-      }),
-    ]);
+      ...currentFirst(
+        options.map((a) => {
+          const own = judged?.get(a);
+          const name = own?.label ?? bareNameOf(data(), a);
+          return {
+            key: a,
+            name,
+            ...(a === held
+              ? { open: true, reasons: [] }
+              : own === undefined
+                ? judge(planner().engine, b, { kind: 'archetypes', class: cls, archetypes: [a] })
+                : { open: own.open, reasons: own.reasons }),
+            current: a === held,
+            take: () => props.trail.edit({ kind: 'archetypes', class: cls, archetypes: [a] }, `Took ${name}`),
+          };
+        }),
+      ),
+    ];
   });
   return (
     <Show when={level()}>

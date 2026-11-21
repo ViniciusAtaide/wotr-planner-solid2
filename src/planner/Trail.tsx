@@ -43,6 +43,7 @@ import {
   isFirstLevelOfClass,
   keepsSelection,
   levelOneDone,
+  chipSlots,
   pickLabels,
   nextStep,
   rankNumbersAt,
@@ -280,7 +281,9 @@ export default function Trail(props: TrailProps) {
     );
   };
   const slotChips = (place: Place) => (
-    <For each={slotsAt(view(), place)}>{(s) => <>{slotChip(s, pickLabels(data(), slotsAt(view(), place)))}</>}</For>
+    <For each={chipSlots(slotsAt(view(), place))}>
+      {(s) => <>{slotChip(s, pickLabels(data(), slotsAt(view(), place)))}</>}
+    </For>
   );
   const hasArchetypes = (level: number) => {
     const cls = data().blueprints.get(build().levels[level - 1]?.class ?? '');

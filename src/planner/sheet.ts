@@ -8,11 +8,11 @@ import {
   characterPicksLine,
   classLevelAt,
   levelLine,
+  pickNames,
   rankNumbersAt,
   slotsAt,
   type TrailView,
 } from './trail-state';
-import { optionName } from './words';
 
 const SHORT_NAMES: Readonly<Record<string, string>> = {
   Strength: 'STR',
@@ -47,9 +47,7 @@ export function buildSheet(t: TrailView): string {
     for (const rank of rankNumbersAt(build, level)) {
       const r = build.ranks?.[rank - 1];
       if (r === undefined) continue;
-      const rankPicks = slotsAt(t, { rank }).flatMap((s) =>
-        s.pick === undefined ? [] : [optionName(data, s.pick.feature, s.pick.param)],
-      );
+      const rankPicks = pickNames(t, slotsAt(t, { rank }));
       lines.push(`Mythic rank ${rank} at level ${r.level}: ${[nameOf(data, r.class), ...rankPicks].join(' · ')}`);
     }
   }

@@ -343,6 +343,27 @@ describe('QA pass 1', () => {
     );
   });
 
+  test('a cleared level’s skills come before the empty picks of later levels, in walk order (QA pass 3)', () => {
+    const three = filled(human(3, skillRanks({ SkillAthletics: 1 })));
+    const late = three.picks.find(
+      (p) => 'level' in p.slot.place && p.slot.place.level === 3 && p.slot.selection === BASIC_FEAT_SELECTION,
+    );
+    if (late === undefined) throw new Error('no level 3 feat');
+    const cleared: Build = {
+      ...three,
+      levels: three.levels.map((l, i) => (i === 0 ? { class: l.class } : l)),
+      picks: three.picks.filter((p) => p !== late),
+    };
+    const s = reduceTrail(TRAIL_START, { kind: 'skillsCleared', levels: [1] });
+    const left = { ...s, skillsLeft: new Set([2, 3]) };
+    expect(nextStep(viewOf(cleared), left)).toEqual({ kind: 'skills', level: 1 });
+    const done = reduceTrail(left, { kind: 'leaveSkills', level: 1 });
+    expect(nextStep(viewOf(cleared), { ...done, skillsLeft: new Set([...done.skillsLeft, 2, 3]) })).toEqual({
+      kind: 'slot',
+      slot: late.slot,
+    });
+  });
+
   test('a folded chapter counts its levels per class so they do not read as a class level', () => {
     expect(chapterSummary(viewOf(human(4)), 1).classes).toBe('Fighter ×4');
   });

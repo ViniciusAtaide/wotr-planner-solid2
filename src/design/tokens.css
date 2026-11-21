@@ -34,6 +34,7 @@
   --radius-md: 4px;
   --radius-lg: 8px;
   --choice-row-height: 78px;
+  --undo-bar-height: 52px;
   --choice-list-max: calc(6.5 * var(--choice-row-height));
   --notice-max-height: 50vh;
   --font-display: 'Grenze', 'Palatino Linotype', Palatino, Georgia, serif;
