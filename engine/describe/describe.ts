@@ -15,7 +15,7 @@ import {
 import { buildGrantIndex, EQUIPMENT_GRANT_KINDS, removes, type Grant, type GrantIndex } from '../grants';
 import { linkIndex } from '../links';
 import { prerequisites } from '../prerequisites';
-import { bareNameOf, listNames, nameOf, namesIn, unmetText } from '../refusals';
+import { bareNameOf, listNames, nameOf, unmetText } from '../refusals';
 import { orList } from './labels';
 import { labelsOf, type Label } from './labels';
 
@@ -156,8 +156,7 @@ function grantCondition(data: CheckedData, bp: Blueprint, g: Grant): string | un
 }
 
 function named(data: CheckedData, guids: readonly Guid[]): NamedLink[] {
-  const names = namesIn(data, guids);
-  return guids.map((guid) => ({ guid, name: names.get(guid) ?? guid }));
+  return guids.map((guid) => ({ guid, name: bareNameOf(data, guid) }));
 }
 
 function classParts(data: CheckedData, bp: Blueprint, G: GrantIndex): Partial<Description> {

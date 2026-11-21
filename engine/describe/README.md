@@ -15,7 +15,7 @@ What the planner says about one blueprint: its Summary (ticket 06b), and the bas
   - `pickedIn`: where it can be picked, that is the shown selections that list it.
   - `progression` and `archetypes`, for a class: what its progression gives at each level (`LevelLink`: `level`, `guid`, `name`), and its archetypes. A class grants only its progression, so `grants` alone was empty (MCP QA).
   - `forClass` and `replaces`, for an archetype: its class, and what it takes away at each level.
-  - `needs`, `enables`: its prerequisite-chain links (map 09), from engine/links, each a `NamedLink` (`guid` and the name R's `namesIn` gives it in that list).
+  - `needs`, `enables`: its prerequisite-chain links (map 09), from engine/links, each a `NamedLink` (`guid` and its bare name: links never show a qualifier; QA pass 4).
 - `NO_SUMMARY`: "No summary yet.", the Summary of a blueprint with nothing labelled (map 10). Never a guess or a raw component name.
 - `summaryOf(labels)`: the Summary text of a list of labels.
 - `writtenSummary(data, guid)`, `summaryText(data, guid, G?)` and `summaryLabels(data, guid, G?)`: a blueprint's hand-written summary, if any; its Summary text, the hand-written one first; and the labels behind it. The MCP's `search` and `options` use `summaryText`.

@@ -27,7 +27,7 @@ import {
 import { describe, summaryText, type Description } from '../describe';
 import { allows, apply, breaksOf, cascade, type Breaks, type Edit } from '../edits';
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
-import { linkIndex, sharedWords, stackWords } from '../links';
+import { linkIndex, linkNames, sharedWords, stackWords } from '../links';
 import { gearClashes, picker, type OptionStatus } from '../pickers';
 import {
   abilityScoreRange,
@@ -36,7 +36,6 @@ import {
   nameOf,
   buildNameLength,
   bareNameOf,
-  listNames,
   namesIn,
   rankLevelRange,
   refusal,
@@ -356,7 +355,7 @@ export async function options(
     ...(o.param && { param: o.param }),
     name: optionName(e, o),
     summary: summaryText(e.data, o.feature, e.G),
-    buildsOn: listNames(
+    buildsOn: linkNames(
       e.data,
       links.needs(o.feature).filter((g) => held.has(g)),
     ),

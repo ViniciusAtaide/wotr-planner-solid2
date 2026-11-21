@@ -1,6 +1,6 @@
 import type { CheckedData } from '../load';
-import type { WeaponFighterGroup } from '../data';
-import { listNames, statName } from '../refusals';
+import type { Guid, WeaponFighterGroup } from '../data';
+import { bareNameOf, statName } from '../refusals';
 import type { SharedTopic, StackClash, Topic } from './topics';
 
 export const GROUP_WORDS: Readonly<Record<WeaponFighterGroup, string>> = {
@@ -58,10 +58,14 @@ export function topicWords(t: Topic): string {
   }
 }
 
+export function linkNames(data: CheckedData, guids: readonly Guid[]): string[] {
+  return [...new Set(guids.map((g) => bareNameOf(data, g)))];
+}
+
 export function sharedWords(data: CheckedData, s: SharedTopic): string {
-  return `Shares ${topicWords(s.topic)} with ${listNames(data, s.with).join(', ')}`;
+  return `Shares ${topicWords(s.topic)} with ${linkNames(data, s.with).join(', ')}`;
 }
 
 export function stackWords(data: CheckedData, c: StackClash): string {
-  return `Its ${words(c.descriptor)} bonus to ${statName(c.stat)} won't stack with ${listNames(data, c.with).join(', ')}`;
+  return `Its ${words(c.descriptor)} bonus to ${statName(c.stat)} won't stack with ${linkNames(data, c.with).join(', ')}`;
 }

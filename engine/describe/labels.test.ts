@@ -5,7 +5,7 @@ import { readDataDir } from '../data-dir';
 import { buildGrantIndex } from '../grants';
 import { describe, NO_SUMMARY, summaryComponentTypes, summaryLabels, summaryText } from './describe';
 import { EQUIPMENT_LABELLED, labelOf, labelsOf, STAT_LABELLED, type Role } from './labels';
-import { spellDescriptors } from '../links';
+import { linkNames, spellDescriptors } from '../links';
 
 const files = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)));
 const data = loadData(files.files, files.overrides);
@@ -367,5 +367,18 @@ suite('Summary labels', { timeout: 30_000 }, () => {
     expect(describe(data, '4e219f5894ad0ea4daa0699e28c37b1d', G)?.summary).toMatch(
       /^Rerolls a failed concealment roll/,
     );
+  });
+
+  it('names links bare: a selection\'s internal "with X" qualifier never shows (QA pass 4)', () => {
+    const dodge = describe(data, '97e216dbb46ae3c4faef90cf6bbe6fd5', G);
+    const names = (dodge?.enables ?? []).map((l) => l.name);
+    expect(names.some((n) => n.startsWith('Kineticist Bonus Feat — Air'))).toBe(true);
+    expect(names.filter((n) => n.includes('(with '))).toEqual([]);
+    expect(
+      linkNames(
+        data,
+        (dodge?.enables ?? []).map((l) => l.guid),
+      ),
+    ).toEqual([...new Set(names)]);
   });
 });
