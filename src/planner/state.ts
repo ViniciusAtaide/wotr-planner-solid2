@@ -47,6 +47,7 @@ export function createPlanner(engine: Engine, initial: Build) {
       return s.kind === 'refused' ? s.lines : undefined;
     },
     edit: (edit: Edit, title: string): EditOutcome => outcomeOf(send({ kind: 'edit', edit, title })),
+    editAll: (edits: NonEmpty<Edit>, title: string): EditOutcome => outcomeOf(send({ kind: 'edits', edits, title })),
     confirm: () => send({ kind: 'confirm' }),
     cancel: () => send({ kind: 'cancel' }),
     refuse: (lines: NonEmpty<string>) => send({ kind: 'refuse', lines }),

@@ -1,10 +1,11 @@
 import { placeKey, slotKey, type Alignment, type Build, type Place, type SlotId } from '~engine/build';
 import type { CheckedData } from '~engine/load';
 import { expectedLevel } from '~engine/mcp';
-import { characterWideSlots } from '~engine/pickers';
+import { BACKGROUNDS_BASE_SELECTION, characterWideSlots } from '~engine/pickers';
 import { nameOf } from '~engine/refusals';
 import type { OpenedSlot, Walk } from '~engine/walk';
 
+import { backgroundChildren, heritageSlotIn } from './flat-choices';
 import type { Selection } from './workspace-state';
 import { optionName } from './words';
 
@@ -92,6 +93,30 @@ export function isCharacterSlot(t: TrailView, slot: SlotId): boolean {
   return characterWideSlots(t.data, t.walk.slots).has(slotKey(slot));
 }
 
+export function backgroundSlot(t: TrailView): OpenedSlot | undefined {
+  return t.walk.slots.find((s) => s.id.selection === BACKGROUNDS_BASE_SELECTION);
+}
+
+export function isBackgroundSlot(t: TrailView, slot: SlotId): boolean {
+  const base = backgroundSlot(t);
+  if (base === undefined) return false;
+  const key = slotKey(slot);
+  return key === slotKey(base.id) || backgroundChildren(t.walk.slots, base.id).some((s) => slotKey(s.id) === key);
+}
+
+export function isHeritageSlot(t: TrailView, slot: SlotId): boolean {
+  const heritage = heritageSlotIn(t.data, t.walk.slots);
+  return heritage !== undefined && slotKey(heritage.id) === slotKey(slot);
+}
+
+export function characterChipSlots(t: TrailView): readonly OpenedSlot[] {
+  const base = backgroundSlot(t);
+  const children = new Set(
+    base === undefined ? [] : backgroundChildren(t.walk.slots, base.id).map((s) => slotKey(s.id)),
+  );
+  return characterSlots(t).filter((s) => !children.has(slotKey(s.id)) && !isHeritageSlot(t, s.id));
+}
+
 export interface SkillBudget {
   readonly spent: number;
   readonly available: number;
@@ -136,6 +161,7 @@ export function mythicDue(t: TrailView, later: number | undefined): MythicDue | 
 
 export function nextStep(t: TrailView, s: Pick<TrailState, 'skillsLeft' | 'mythicLater'>): Step {
   if (t.build.scores === undefined) return { kind: 'scores' };
+  if (t.build.race === undefined) return { kind: 'race' };
   const empty = (slots: readonly OpenedSlot[]) => slots.find((x) => x.pick === undefined);
   const slot = empty(characterSlots(t)) ?? empty(shownSlots(t));
   if (slot !== undefined) return { kind: 'slot', slot: slot.id };
@@ -165,6 +191,8 @@ export function whereOf(t: TrailView, step: Step): Where {
       return { kind: 'gear' };
     case 'scores':
       return { kind: 'scores' };
+    case 'race':
+      return { kind: 'character' };
     case 'mythic':
     case 'nextLevel':
       return { kind: 'next' };
@@ -199,6 +227,8 @@ export function stepTitle(t: TrailView, step: Step): string {
       return 'Your gear';
     case 'scores':
       return 'Your character · set the ability scores';
+    case 'race':
+      return 'Your character · choose a race';
     case 'mythic':
       return `Ascend to Mythic rank ${step.rank}`;
     case 'nextLevel':

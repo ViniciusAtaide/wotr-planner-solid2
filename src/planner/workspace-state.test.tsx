@@ -294,6 +294,7 @@ function exists(selection: Selection, build: Build): boolean {
       return build.ranks?.[selection.rank - 1] !== undefined;
     case 'gear':
     case 'scores':
+    case 'race':
       return true;
   }
 }

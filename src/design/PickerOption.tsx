@@ -58,7 +58,9 @@ export default function PickerOption(props: PickerOptionProps) {
       <Show when={props.status === 'open' && props.gear}>
         <Badge kind="gear" />
       </Show>
-      <Badge kind={props.status} />
+      <Show when={props.status === 'closed'}>
+        <Badge kind="closed" />
+      </Show>
     </span>
   );
   return (

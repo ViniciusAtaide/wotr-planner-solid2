@@ -9,7 +9,6 @@ import {
   type Alignment,
 } from '~engine/build';
 import type { Attribute } from '~engine/data';
-import { offeredRaces } from '~engine/pickers';
 import { abilityScoreRange, nameOf } from '~engine/refusals';
 import { ATTRIBUTES, attributeBonus, pointBuyCost, POINT_BUY } from '~engine/walk';
 
@@ -104,8 +103,6 @@ export function CharacterCard(props: CharacterCardProps) {
           <p class="trail-note">Point buy only: the race and its +2 count from level 1.</p>
         </Show>
         <Show when={props.editing}>
-          <h4 class="trail-subhead">Race</h4>
-          <RaceChips trail={props.trail} />
           <h4 class="trail-subhead">Alignment</h4>
           <AlignmentWheel trail={props.trail} />
         </Show>
@@ -142,31 +139,6 @@ export function ScoresStep(props: ScoresStepProps) {
           Done · leave {left()} unspent
         </Show>
       </Button>
-    </div>
-  );
-}
-
-export function RaceChips(props: CardPartProps) {
-  const build = () => props.trail.planner.build();
-  return (
-    <div class="trail-buttons" role="group" aria-label="Race">
-      <For each={offeredRaces(props.trail.planner.engine.data)}>
-        {(r) => (
-          <button
-            type="button"
-            class={['trail-button', { 'trail-button--on': build().race === r.guid }]}
-            aria-pressed={build().race === r.guid ? 'true' : 'false'}
-            onClick={() =>
-              props.trail.edit(
-                { kind: 'race', race: r.guid, ...(build().raceStat && { raceStat: build().raceStat }) },
-                `Race ${r.name ?? r.assetName}`,
-              )
-            }
-          >
-            {r.name ?? r.assetName}
-          </button>
-        )}
-      </For>
     </div>
   );
 }

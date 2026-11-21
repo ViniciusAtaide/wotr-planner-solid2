@@ -4,7 +4,9 @@ import type { Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
 
 import { ClosedCount, OptionList, PickerOption } from '../design';
-import { brokenWords, laterPicks, verdictOf } from './planner-state';
+import { judgeAll, type Judged } from './planner-state';
+
+export type { Judged };
 
 export const FILTER_FROM = 13;
 const CLOSED_SHOWN = 12;
@@ -19,22 +21,8 @@ export interface ChoiceRow {
   readonly take: () => void;
 }
 
-export interface Judged {
-  readonly open: boolean;
-  readonly note?: string;
-  readonly reasons: readonly string[];
-}
-
 export function judge(engine: Engine, build: Build, edit: Edit): Judged {
-  const v = verdictOf(engine, build, edit);
-  switch (v.kind) {
-    case 'applies':
-      return { open: true, reasons: [] };
-    case 'clears':
-      return { open: true, note: `Clears ${laterPicks(v.cleared.length)}`, reasons: [] };
-    case 'breaks':
-      return { open: false, reasons: brokenWords(engine, build, v.breaks) };
-  }
+  return judgeAll(engine, build, [edit]);
 }
 
 export function currentFirst(rows: readonly ChoiceRow[]): ChoiceRow[] {

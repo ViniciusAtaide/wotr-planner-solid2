@@ -86,7 +86,11 @@ describe('auto-advance: each pick opens the next empty one', () => {
   });
 
   test('a Build whose scores are set starts on its first unfinished step after them', () => {
-    const scored: Build = { scores: SCORES, levels: [], picks: [] };
+    const unraced: Build = { scores: SCORES, levels: [], picks: [] };
+    expect(next(unraced)).toEqual({ kind: 'race' });
+    expect(stepTitle(viewOf(unraced), { kind: 'race' })).toBe('Your character · choose a race');
+    expect(whereOf(viewOf(unraced), { kind: 'race' })).toEqual({ kind: 'character' });
+    const scored: Build = { scores: SCORES, race: HUMAN, levels: [], picks: [] };
     expect(next(scored)).toEqual({ kind: 'nextLevel' });
     expect(stepTitle(viewOf(scored), { kind: 'nextLevel' })).toBe('Begin · choose a first class');
     const levelled = human(1);

@@ -34,6 +34,7 @@ export const OPENED_A_LINK = 'Opened a link';
 
 export type PlannerAction =
   | { readonly kind: 'edit'; readonly edit: Edit; readonly title: string }
+  | { readonly kind: 'edits'; readonly edits: NonEmpty<Edit>; readonly title: string }
   | { readonly kind: 'refuse'; readonly lines: NonEmpty<string> }
   | { readonly kind: 'confirm' }
   | { readonly kind: 'cancel' }
@@ -106,12 +107,42 @@ export function verdictOf(engine: Engine, build: Build, edit: Edit): Verdict {
   return c.ok ? { kind: 'clears', build: c.build, cleared: c.cleared } : { kind: 'breaks', breaks: c };
 }
 
+export function verdictOfAll(engine: Engine, build: Build, edits: NonEmpty<Edit>): Verdict {
+  let now = build;
+  const cleared: Pick[] = [];
+  for (const edit of edits) {
+    const v = verdictOf(engine, now, edit);
+    if (v.kind === 'breaks') return v;
+    if (v.kind === 'clears') cleared.push(...v.cleared);
+    now = v.build;
+  }
+  return cleared.length > 0 ? { kind: 'clears', build: now, cleared } : { kind: 'applies', build: now };
+}
+
 export function laterPicks(n: number): string {
   return `${n} later ${n === 1 ? 'pick' : 'picks'}`;
 }
 
-function edited(engine: Engine, s: PlannerState, edit: Edit, title: string): PlannerState {
-  const v = verdictOf(engine, s.present, edit);
+export interface Judged {
+  readonly open: boolean;
+  readonly note?: string;
+  readonly reasons: readonly string[];
+}
+
+export function judgeAll(engine: Engine, build: Build, edits: NonEmpty<Edit>): Judged {
+  const v = verdictOfAll(engine, build, edits);
+  switch (v.kind) {
+    case 'applies':
+      return { open: true, reasons: [] };
+    case 'clears':
+      return { open: true, note: `Clears ${laterPicks(v.cleared.length)}`, reasons: [] };
+    case 'breaks':
+      return { open: false, reasons: brokenWords(engine, build, v.breaks) };
+  }
+}
+
+function edited(engine: Engine, s: PlannerState, edits: NonEmpty<Edit>, title: string): PlannerState {
+  const v = verdictOfAll(engine, s.present, edits);
   switch (v.kind) {
     case 'applies':
       return commit(s, v.build, title);
@@ -172,7 +203,9 @@ export function reducePlanner(engine: Engine, s: PlannerState, a: PlannerAction)
   const confirming = s.session.kind === 'confirming';
   switch (a.kind) {
     case 'edit':
-      return confirming ? s : edited(engine, s, a.edit, a.title);
+      return confirming ? s : edited(engine, s, [a.edit], a.title);
+    case 'edits':
+      return confirming ? s : edited(engine, s, a.edits, a.title);
     case 'refuse':
       return confirming ? s : { ...s, session: { kind: 'refused', lines: a.lines } };
     case 'confirm':
