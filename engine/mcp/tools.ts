@@ -45,7 +45,18 @@ import {
   statName,
   type Refusal,
 } from '../refusals';
-import { maxSpellLevel, ATTRIBUTES, SKILL_ATTRIBUTE, bandOf, pauseAt, walk, type Band, type Failure } from '../walk';
+import {
+  maxSpellLevel,
+  ATTRIBUTES,
+  POINT_BUY,
+  SKILL_ATTRIBUTE,
+  bandOf,
+  pauseAt,
+  pointBuyCost,
+  walk,
+  type Band,
+  type Failure,
+} from '../walk';
 
 export interface Engine {
   readonly data: CheckedData;
@@ -168,7 +179,7 @@ export async function set_start(
     readonly scores?: Readonly<Record<Attribute, number>>;
     readonly alignment?: Alignment;
   },
-): Promise<Changed | ToolRefusal> {
+): Promise<(Changed & { readonly pointBuy?: { readonly spent: number; readonly of: number } }) | ToolRefusal> {
   const build = await open(e, args.code);
   if (isRefusal(build)) return build;
   const scores = args.scores === undefined ? undefined : toAbilityScores(args.scores);
@@ -183,7 +194,9 @@ export async function set_start(
     ...(scores !== undefined ? [{ kind: 'scores', scores } as const] : []),
     ...(args.alignment !== undefined ? [{ kind: 'alignment', alignment: args.alignment } as const] : []),
   ];
-  return plainEdits(e, build, edits);
+  const r = await plainEdits(e, build, edits);
+  if (isRefusal(r) || r.build.scores === undefined) return r;
+  return { ...r, pointBuy: { spent: pointBuyCost(r.build.scores), of: POINT_BUY } };
 }
 
 async function plainEdits(e: Engine, build: Build, edits: readonly Edit[]): Promise<Changed | ToolRefusal> {

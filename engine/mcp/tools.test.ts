@@ -461,4 +461,19 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     const texts = all.flatMap((l) => (isRefusal(l) ? [] : (l.closed ?? []))).map((o) => o.refusal?.text ?? '');
     expect(texts.some((t) => /^Needs proficiency with (?!its weapon)/.test(t))).toBe(true);
   });
+
+  it('says the point buy spent, and lists each prerequisite once in explain (MCP QA)', async () => {
+    const started = ok(
+      await set_start(e, {
+        code: (await start_build(e)).code,
+        scores: { Strength: 16, Dexterity: 12, Constitution: 14, Intelligence: 10, Wisdom: 12, Charisma: 10 },
+      }),
+      'set_start',
+    );
+    expect(started.pointBuy?.of).toBe(25);
+    expect(started.pointBuy?.spent).toBeGreaterThan(0);
+    const zealot = search(e, { text: 'Domain Zealot' }).hits.find((h) => h.name === 'Domain Zealot');
+    const d = zealot && explain(e, { guid: zealot.guid });
+    expect(d && !isRefusal(d) && new Set(d.prerequisites).size === d.prerequisites.length).toBe(true);
+  });
 });

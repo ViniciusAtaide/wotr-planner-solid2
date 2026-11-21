@@ -24,7 +24,7 @@ What the planner says about one blueprint: its Summary (ticket 06b), and the bas
 
 ## Rules
 
-- **Prerequisites.** Each prerequisite is R's `unmetText` for that leaf, so the wording has one source. A leaf of group All keeps R's "Needs …"; a leaf of the other groups (Any, ForcedTrue), of which one would do, reads "Or: needs …".
+- **Prerequisites.** Each prerequisite is R's `unmetText` for that leaf, so the wording has one source; a line two leaves would repeat is listed once (Domain Zealot's two Domain Selection leaves; MCP QA). A leaf of group All keeps R's "Needs …"; a leaf of the other groups (Any, ForcedTrue), of which one would do, reads "Or: needs …".
 - **Grants.** G's grants of the blueprint, less removals, less facts the game never shows, and less the grants that are really list membership (a selection's options, a class's archetypes): those are not what it grants but what can be picked in it.
 - **Picked in.** The shown selections that list the blueprint among their options, each once.
 

@@ -175,9 +175,13 @@ export function describe(
     summary,
     summarySource: written !== undefined ? 'written' : summary !== NO_SUMMARY ? 'labels' : 'none',
     labels,
-    prerequisites: prerequisites(bp, data.blueprints).map((leaf) =>
-      unmetText(w, { leaf }).replace(/^Needs /, leaf.Group === 'All' ? 'Needs ' : 'Or: needs '),
-    ),
+    prerequisites: [
+      ...new Set(
+        prerequisites(bp, data.blueprints).map((leaf) =>
+          unmetText(w, { leaf }).replace(/^Needs /, leaf.Group === 'All' ? 'Needs ' : 'Or: needs '),
+        ),
+      ),
+    ],
     grants: G.grantsOf(guid)
       .filter((g) => !removes(g) && shown(g.granted) && g.kind !== 'selectionOption' && g.kind !== 'classArchetype')
       .map((g) => {

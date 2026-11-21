@@ -59,7 +59,7 @@ const RAW_TOOLS: readonly ToolDef[] = [
   {
     name: 'set_start',
     description:
-      "Set the race, the race's chosen +2, the point buy and the alignment. Subrace, background and deity are level-1 picks.",
+      "Set the race, the race's chosen +2, the point buy and the alignment. Subrace, background and deity are level-1 picks. With scores set, pointBuy says the points spent of the total.",
     inputSchema: object(
       {
         code,
@@ -215,7 +215,7 @@ const RAW_TOOLS: readonly ToolDef[] = [
   {
     name: 'sheet',
     description:
-      "The Build's name, the numbers at a character level and the whole Build. scores are the permanent scores prerequisites read, and scoresWithGear adds worn Gear's enhancement. Each save is its class base, its ability modifier and their sum; feats, Gear and other bonuses aren't counted. Skills, base attack and spellbooks too.",
+      "The Build's name, the numbers at a character level and the whole Build. scores are the permanent scores prerequisites read, and scoresWithGear adds worn Gear's enhancement. Each save is its class base, its ability modifier and their sum; feats, Gear and other bonuses aren't counted. Skills, base attack and spellbooks too: a spellbook's mythicLevel counts the Mythic ranks added after a Mythic spell list merged into it, so a path's own spellbook counts its ranks in baseLevel. A level past the Build's last reads the last (level says which).",
     inputSchema: object({ code, level: { type: 'integer', minimum: 1 } }, ['code']),
     run: (e, a) => tools.sheet(e, a as Parameters<typeof tools.sheet>[1]),
   },
