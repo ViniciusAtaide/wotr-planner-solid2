@@ -339,6 +339,11 @@ dimmed and inert behind "Edit the Second Build".
 - **`PickStep.tsx`**: a slot's open list (`PickStep`, moved out of `steps.tsx`): S's options as rows, open then
   closed, a parent row expanding its sub-options in place (`paramLabel` names a value without repeating its feat),
   the keys above, Synergy links, the filter and its mark, "Show N closed", and "Clear this pick".
+- **Gear that won't stack** (`gear-clash.ts`): E's `gearClashes` names the bonuses an item would give in a place that
+  won't stack with what the Build holds or wears elsewhere, worded by `stackWords`. A worn item that clashes says so
+  under it; in the item list a row carries a "Won't stack" badge and the dialog's pane the sentence. Each call walks
+  the Build, so the list's badges are filled after paint, one item per task, cached per Build, place and item
+  (`fillClashes`), and appear as they come; the worn item and the pane ask for theirs directly.
 - **A step's filter text** lives in `Here` (`StepFilter`, `createFilterMemory` in `list-panel.ts`), not in the list, so
   Expand and the dialog's return after a Cascade Cancel keep what was typed.
 - **The address bar** takes a Build's code only when the code is the active Build's own (`ShareCode`'s `of`), so a

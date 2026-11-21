@@ -2212,3 +2212,56 @@ describe('QA pass 4, severity 1', () => {
     expect(document.activeElement).toBe(items().at(-1));
   });
 });
+
+describe('Gear that won’t stack (ticket 06, engine 4d9b8b50)', () => {
+  afterEach(() => {
+    cleanup();
+  });
+
+  const ring = () => {
+    const found = [...e.data.blueprints.values()].find(
+      (bp) => bp.name === 'Ring of Protection +1' && !e.data.twins.has(bp.guid),
+    );
+    if (found === undefined) throw new Error('no Ring of Protection +1');
+    return found.guid;
+  };
+  const placeChip = (name: string) =>
+    [...document.querySelectorAll<HTMLElement>('.trail-places .trail-chip')].find((c) => c.textContent?.includes(name));
+
+  test('a second Ring of Protection is badged in the list, and the pane says why', async () => {
+    const planner = createPlanner(e, { ...cleaver, gear: { Ring1: ring() } });
+    render(() => (
+      <ChoiceDialog title="Gear" line="" onClose={() => {}}>
+        <GearStep trail={apiOf(planner)} />
+      </ChoiceDialog>
+    ));
+    flush();
+    fireEvent.click(placeChip('Ring 2') ?? document.body);
+    flush();
+    fireEvent.input(document.querySelector('[data-picker-filter]') ?? document.body, {
+      target: { value: 'ring of protection +1' },
+    });
+    flush();
+    const row = () => document.querySelector<HTMLElement>(`[data-detail-key="${ring()}"]`);
+    await waitFor(() => expect(row()?.textContent).toContain('Won’t stack'.replace('’', "'")));
+    fireEvent.pointerOver(row() ?? document.body);
+    flush();
+    expect(document.querySelector('.choice-dialog__warnings')?.textContent).toBe(
+      "Its deflection bonus to AC won't stack with Ring of Protection +1.",
+    );
+  });
+
+  test('a worn Ring of Protection that clashes with the other says so under it', () => {
+    const planner = createPlanner(e, { ...cleaver, gear: { Ring1: ring(), Ring2: ring() } });
+    render(() => <GearStep trail={apiOf(planner)} />);
+    flush();
+    fireEvent.click(placeChip('Ring 2') ?? document.body);
+    flush();
+    expect(document.querySelector('.trail-gear__clash')?.textContent).toBe(
+      "Its deflection bonus to AC won't stack with Ring of Protection +1.",
+    );
+    fireEvent.click(placeChip('Armor') ?? document.body);
+    flush();
+    expect(document.querySelector('.trail-gear__clash')).toBeNull();
+  });
+});

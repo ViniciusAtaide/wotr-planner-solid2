@@ -1089,6 +1089,13 @@ html.choice-open {
   margin: 0;
 }
 
+.trail-gear__clash {
+  margin: 0;
+  color: var(--closed);
+  font-size: 13px;
+  line-height: 18px;
+}
+
 @media (max-width: 599px) {
   .choice-dialog {
     width: 100vw;
