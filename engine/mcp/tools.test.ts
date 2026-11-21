@@ -476,4 +476,22 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     const d = zealot && explain(e, { guid: zealot.guid });
     expect(d && !isRefusal(d) && new Set(d.prerequisites).size === d.prerequisites.length).toBe(true);
   });
+
+  it("warns when a worn item's bonus won't stack with what the Build holds or wears (MCP QA)", async () => {
+    const RING_OF_PROTECTION_1 = 'f333bf86cd122974792162cbcd27c9ed';
+    const ringed = await encodeBuild(e.data, { ...jackInTheGreen.build, gear: { Ring1: RING_OF_PROTECTION_1 } });
+    const second = ok(await equip(e, { code: ringed, place: 'Ring2', item: RING_OF_PROTECTION_1 }), 'equip');
+    expect('wontStack' in second && second.wontStack).toEqual([
+      "Its deflection bonus to AC won't stack with Ring of Protection +1.",
+    ]);
+    const first = ok(
+      await equip(e, {
+        code: await encodeBuild(e.data, jackInTheGreen.build),
+        place: 'Ring1',
+        item: RING_OF_PROTECTION_1,
+      }),
+      'equip',
+    );
+    expect('wontStack' in first).toBe(false);
+  });
 });

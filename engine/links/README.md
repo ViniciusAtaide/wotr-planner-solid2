@@ -22,7 +22,7 @@ Which blueprints build on which. This feature works out the prerequisite-chain k
 - `topicWords(topic)`, `sharedWords(data, shared)` and `stackWords(data, clash)`: the Synergy words, one source for the planner and the MCP: "Shares fire with Elemental Focus", "Its insight bonus to Strength won't stack with …". Names come from R's `listNames`.
 - `words`, `GROUP_WORDS` and `descriptorWord`: the plain words for identifiers, weapon groups and spell descriptors that the Synergy words and describe's labels share.
 - `spellDescriptors(wrapper)` and `SPELL_DESCRIPTORS`: the names of the spell descriptor flags a 64-bit `SpellDescriptorWrapper` sets, read as an unsigned 64-bit number so the sign bit (`AnomalyDistortion`) counts.
-- `bonusesOf(data, guid)` and `StatBonus`: its stat bonuses, by stat and bonus type.
+- `bonusesOf(data, guid)` and `StatBonus`: its stat bonuses, by stat and bonus type: `AddStatBonus`, `AddStatBonusIfHasFact`, `AddContextStatBonus`, and an item enchantment's `AddStatBonusEquipment`, `IncreaseStatEquipment` and `AllSavesBonusEquipment` (all three saves).
 - `stackable(descriptor)` and `STACKING_DESCRIPTORS`: whether bonuses of that type stack. This ports the game's `ModifierDescriptorHelper.IsStackable` (`cites.ts`). Any other type counts once per stat, the highest.
 - `heldIndex(data, held)` and `synergyOf(data, index, option)`, returning a `Synergy`:
   - **`shared`:** the topics the option shares with facts the character holds, each with those facts;

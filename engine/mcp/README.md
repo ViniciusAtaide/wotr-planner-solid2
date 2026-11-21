@@ -29,7 +29,7 @@ The 14 tools, in map 08's order:
 - `pick`: an option in a slot.
 - `set_skills`: a character level's skill ranks, replacing that level's. A skill is named as `sheet` shows it ("Mobility", "Knowledge (Arcana)", any case) or by its game key (`SkillMobility`); an unknown name is refused with the list of skills (MCP QA).
 - `place_rank`: a Mythic rank's character level (ADR 0003).
-- `equip`: an item in a Gear place, or none to take it off, with `pick`'s modes.
+- `equip`: an item in a Gear place, or none to take it off, with `pick`'s modes. A worn item whose bonus won't stack with one the Build holds or wears elsewhere (a second Ring of Protection's deflection) carries `wontStack`, in links' words, naming the other item or fact (MCP QA).
 - `synergies`: at a slot, or at every open slot, the open options that link to what the Build holds, each row with the `slot`, `feature` and `param` that `pick` takes and the `place` spelled as `next_slots` spells it ("L11", "M9"; MCP QA): `buildsOn` (the chain kind), `shares` (an ability score, weapon or group, spell school, energy or descriptor it shares with held facts, "Shares Dexterity with Two-Weapon Fighting") and `wontStack` (a bonus of a type already given to the same stat). `options` carries `shares` and `wontStack` on each option too.
 - `search`: the shown blueprints whose name holds the text, of one kind when asked, by name, 50 a page, with `total` and `pages` so an agent knows when a list is cut (MCP QA).
 - `explain`: a blueprint's description (engine/describe): its Summary and `labels` (06b), prerequisites, grants, where it can be picked and its chain links. `search` hits and `options` carry the Summary too.

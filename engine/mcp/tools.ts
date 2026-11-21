@@ -16,6 +16,7 @@ import {
 import { decodeBuild, DecodeError, encodeBuild } from '../codec';
 import type { CheckedData } from '../load';
 import {
+  enchantmentsOf,
   isShown,
   kindOf,
   type Attribute,
@@ -26,8 +27,8 @@ import {
 } from '../data';
 import { describe, summaryText, type Description } from '../describe';
 import { allows, apply, breaksOf, cascade, type Breaks, type Edit } from '../edits';
-import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
-import { linkIndex, sharedWords, stackWords } from '../links';
+import { buildGrantIndex, equipmentGrants, type GrantIndex, type GrantParam } from '../grants';
+import { bonusesOf, linkIndex, sharedWords, stackable, stackWords, type StackClash } from '../links';
 import { picker, type OptionStatus } from '../pickers';
 import {
   abilityScoreRange,
@@ -487,7 +488,11 @@ export async function place_rank(
 export async function equip(
   e: Engine,
   args: { readonly code: string; readonly place: GearPlace; readonly item?: Guid; readonly mode?: Mode },
-): Promise<Changed | ToolRefusal | { readonly preview: true; readonly clears: readonly string[] }> {
+): Promise<
+  | (Changed & { readonly wontStack?: readonly string[] })
+  | ToolRefusal
+  | { readonly preview: true; readonly clears: readonly string[] }
+> {
   const build = await open(e, args.code);
   if (isRefusal(build)) return build;
   const edit: Edit = { kind: 'gear', place: args.place, ...(args.item !== undefined && { item: args.item }) };
@@ -495,7 +500,44 @@ export async function equip(
     (f) => f.choice === 'gear' && f.subject === args.item,
   );
   if (own !== undefined) return refused(refusal({ data: e.data, G: e.G }, own).text);
-  return withMode(e, build, edit, args.mode ?? 'strict');
+  const r = await withMode(e, build, edit, args.mode ?? 'strict');
+  if (args.item === undefined || !('code' in r)) return r;
+  const clashes = gearClashes(e, build, args.place, args.item);
+  return clashes.length === 0 ? r : { ...r, wontStack: clashes };
+}
+
+function gearClashes(e: Engine, build: Build, place: GearPlace, item: Guid): string[] {
+  const without = apply(build, { kind: 'gear', place });
+  const unit = walk(e.data, without, e.G).unit;
+  const partsOf = (worn: Guid) => {
+    const bp = e.data.blueprints.get(worn);
+    return [
+      ...(bp === undefined ? [] : enchantmentsOf(bp, e.data.blueprints)),
+      ...equipmentGrants(e.data, e.G, worn).map((g) => g.granted),
+    ];
+  };
+  const owners = new Map<Guid, Guid>();
+  for (const worn of unit.worn.values()) for (const part of partsOf(worn)) owners.set(part, worn);
+  for (const f of unit.facts()) if (!owners.has(f.blueprint)) owners.set(f.blueprint, f.blueprint);
+  const held = new Map<string, Guid[]>();
+  for (const [part, owner] of owners)
+    for (const b of bonusesOf(e.data, part)) {
+      if (stackable(b.descriptor)) continue;
+      const key = `${b.stat} ${b.descriptor}`;
+      const list = held.get(key) ?? [];
+      if (!list.includes(owner)) held.set(key, [...list, owner]);
+    }
+  const clashes: StackClash[] = [];
+  const seen = new Set<string>();
+  for (const part of partsOf(item))
+    for (const b of bonusesOf(e.data, part)) {
+      const key = `${b.stat} ${b.descriptor}`;
+      const by = held.get(key);
+      if (stackable(b.descriptor) || by === undefined || seen.has(key)) continue;
+      seen.add(key);
+      clashes.push({ stat: b.stat, descriptor: b.descriptor, with: by });
+    }
+  return clashes.map((c) => `${stackWords(e.data, c)}.`);
 }
 
 export interface SynergyRow {

@@ -208,12 +208,22 @@ export function topicsOf(data: CheckedData, guid: Guid, param?: GrantParam): Top
   });
 }
 
+const STAT_BONUSES: ReadonlySet<string> = new Set([
+  'AddStatBonus',
+  'AddStatBonusIfHasFact',
+  'AddContextStatBonus',
+  'AddStatBonusEquipment',
+  'IncreaseStatEquipment',
+]);
+
+const SAVES: readonly StatType[] = ['SaveFortitude', 'SaveReflex', 'SaveWill'];
+
 export function bonusesOf(data: CheckedData, guid: Guid): StatBonus[] {
   const bp = data.blueprints.get(guid);
   return (bp?.Components ?? []).flatMap((c): StatBonus[] => {
-    if (c.$type !== 'AddStatBonus' && c.$type !== 'AddStatBonusIfHasFact' && c.$type !== 'AddContextStatBonus')
-      return [];
     const any = c as Component & { readonly Stat: StatType; readonly Descriptor: ModifierDescriptor };
+    if (c.$type === 'AllSavesBonusEquipment') return SAVES.map((stat) => ({ stat, descriptor: any.Descriptor }));
+    if (!STAT_BONUSES.has(c.$type)) return [];
     return [{ stat: any.Stat, descriptor: any.Descriptor }];
   });
 }
