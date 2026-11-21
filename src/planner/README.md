@@ -360,7 +360,9 @@ dimmed and inert behind "Edit the Second Build".
   `OptionDetails` context: a list hands the dialog a resolver from a row's `data-detail-key` to an `OptionDetail`, and
   points it at the marked row as the mark moves; the pane then shows the name, Current and Open or Closed, the
   Refusal, the written Summary and its labels by role (or "No summary yet."), the won't-stack warnings, and every
-  link (builds on, shares, enables) without "and N more". A parent row speaks for all its values: open when any is,
+  link (builds on, shares, enables) without "and N more". What a value enables comes from `enablesWith` (`engine/links`), so a weapon
+  value lists only what its weapon can lead to (Weapon Focus (Rapier) enables Fencing Grace, (Bardiche) doesn't).
+  A pointed key (the marked row) applies a microtask later, and only if nothing newer was pointed at since. A parent row speaks for all its values: open when any is,
   sharing what any of them shares. Rows without a resolver fall back to what the row shows (`detailOf`).
 - **`CharacterSteps.tsx`**: `RaceStep` and `BackgroundStep`, the flat race and background lists in place.
 - **`words.ts`: names for the planner's surfaces.** Game names (ADR 0006) and the planner's own words, never the game's

@@ -117,12 +117,16 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
     },
     point: (key) => {
       pointed = key;
-      const found = key === undefined ? undefined : find?.(key);
-      if (found !== undefined) setDetail(found);
+      queueMicrotask(() => {
+        if (pointed !== key) return;
+        const found = key === undefined ? undefined : find?.(key);
+        if (found !== undefined) setDetail(found);
+      });
     },
   };
   const follow = (target: EventTarget | null) => {
     const key = keyOf(target);
+    pointed = key;
     const found = key === undefined ? undefined : find?.(key);
     setDetail(found ?? detailOf(target) ?? detail());
   };

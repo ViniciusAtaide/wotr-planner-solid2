@@ -2,7 +2,7 @@ import { createEffect, createMemo, createSignal, For, onSettled, Show, untrack, 
 import { slotKey, type Build, type Pick, type SlotId } from '~engine/build';
 import type { Guid } from '~engine/data';
 import type { Edit } from '~engine/edits';
-import { linkIndex } from '~engine/links';
+import { enablesWith, linkIndex } from '~engine/links';
 import { picker, type OptionStatus } from '~engine/pickers';
 import { gearNote, listNames, nameOf, refusal } from '~engine/refusals';
 
@@ -132,7 +132,7 @@ export function PickStep(props: PickStepProps) {
   const links = (o: OptionStatus): string | undefined => {
     const index = linkIndex(data(), planner().engine.G);
     const on = index.needs(o.feature).filter((g) => held().has(g));
-    const enables = index.enables(o.feature);
+    const enables = enablesWith(data(), o.feature, o.param, planner().engine.G);
     const parts = [
       on.length > 0 && `Builds on ${listNames(data(), on).join(', ')}`,
       enables[0] !== undefined &&
@@ -151,7 +151,7 @@ export function PickStep(props: PickStepProps) {
     o === undefined ? undefined : summaryFor(data(), planner().engine.G, o.feature).text;
   const fullLinks = (o: OptionStatus): readonly string[] => {
     const on = buildsOn(o);
-    const enables = linkIndex(data(), planner().engine.G).enables(o.feature);
+    const enables = enablesWith(data(), o.feature, o.param, planner().engine.G);
     return [
       ...(on.length > 0 ? [`Builds on ${sorted(listNames(data(), on)).join(', ')}`] : []),
       ...synergyLines(data(), o.synergy),

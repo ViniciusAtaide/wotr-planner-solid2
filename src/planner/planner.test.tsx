@@ -1949,7 +1949,7 @@ describe('Summaries and Synergy in the lists (ticket 06)', () => {
     flush();
     const marked = document.querySelector('.choice-dialog .ww-option--marked .ww-option__name')?.textContent;
     expect(marked).toBeTruthy();
-    expect(pane()?.querySelector('.choice-dialog__name')?.textContent).toBe(marked);
+    await waitFor(() => expect(pane()?.querySelector('.choice-dialog__name')?.textContent).toBe(marked));
   });
 
   test('the pane follows the mark after typing, names a value with its feat, and sorts its links (QA pass 4)', async () => {
@@ -1985,6 +1985,38 @@ describe('Summaries and Synergy in the lists (ticket 06)', () => {
     fireEvent.pointerOver(bardiche ?? document.body);
     flush();
     expect(pane()?.querySelector('.choice-dialog__name')?.textContent).toBe('Weapon Focus (Bardiche)');
+  });
+
+  test('a weapon value enables only what its weapon can lead to (QA pass 4, engine enablesWith)', () => {
+    render(() => (
+      <ChoiceDialog title="Feat" line="" onClose={() => {}}>
+        <SlotStep trail={apiOf(createPlanner(e, cleaver))} slot={FEAT} />
+      </ChoiceDialog>
+    ));
+    flush();
+    fireEvent.input(document.querySelector('.choice-dialog [data-picker-filter]') ?? document.body, {
+      target: { value: 'weapon focus' },
+    });
+    flush();
+    const parentRow = [...document.querySelectorAll<HTMLElement>('.choice-dialog [data-parent] > .ww-option')].find(
+      (b) => b.querySelector('.ww-option__name')?.textContent === 'Weapon Focus',
+    );
+    fireEvent.click(parentRow ?? document.body);
+    flush();
+    const enablesOf = (value: string) => {
+      const row = [...document.querySelectorAll<HTMLElement>('.choice-dialog [data-child-of] .ww-option')].find(
+        (b) => b.querySelector('.ww-option__name')?.textContent === value,
+      );
+      fireEvent.pointerOver(row ?? document.body);
+      flush();
+      return (
+        [...document.querySelectorAll('.choice-dialog__links li')]
+          .map((li) => li.textContent ?? '')
+          .find((line) => line.startsWith('Enables ')) ?? ''
+      );
+    };
+    expect(enablesOf('Bardiche')).not.toContain('Fencing Grace');
+    expect(enablesOf('Rapier')).toContain('Fencing Grace');
   });
 
   test('the next level is a list step only before level 1, so Modal first keeps "Continue as …" inline (QA pass 4)', () => {
