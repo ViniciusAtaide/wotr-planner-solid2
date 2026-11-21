@@ -178,8 +178,17 @@ export function breaksOf(
 
 export type Verdict = { readonly ok: true; readonly build: Build } | ({ readonly ok: false } & Breaks);
 
-export function allows(data: CheckedData, build: Build, edit: Edit, G: GrantIndex = buildGrantIndex(data)): Verdict {
+export function applyWith(data: CheckedData, build: Build, edit: Edit): Build {
   const after = apply(build, edit);
+  if (edit.kind !== 'race' || after.raceStat === undefined) return after;
+  const race = after.race === undefined ? undefined : data.blueprints.get(after.race);
+  if (race?.$type === 'BlueprintRace' && race.SelectableRaceStat) return after;
+  const { raceStat: _stat, ...rest } = after;
+  return rest;
+}
+
+export function allows(data: CheckedData, build: Build, edit: Edit, G: GrantIndex = buildGrantIndex(data)): Verdict {
+  const after = applyWith(data, build, edit);
   const broken = breaksOf(data, build, after, G);
   return broken.picks.length === 0 && broken.others.length === 0
     ? { ok: true, build: after }
@@ -229,7 +238,7 @@ function clearSkills(build: Build, levels: readonly number[]): Build {
 }
 
 export function cascade(data: CheckedData, build: Build, edit: Edit, G: GrantIndex = buildGrantIndex(data)): Cascade {
-  let after = apply(build, edit);
+  let after = applyWith(data, build, edit);
   const cleared: Pick[] = [];
   const clearedSkills = new Set<number>();
   const clearedRanks: number[] = [];

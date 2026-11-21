@@ -25,6 +25,7 @@ E answers whether a change keeps a Build possible (guide §4; map ticket 11, "Ca
 - `apply(build, edit)`: the Build with the edit made. Nothing is judged here.
 - `clearPicks(build, slots)`: the Build without the picks in these slots.
 - `breaksOf(data, before, after, G?)`: what `after` breaks of `before`, as `Breaks`: `picks`, the picks it breaks, in the Build's order, and `others`, the other choices it breaks (a class, an archetype, Gear…), each with its refusal.
+- `applyWith(data, build, edit)`: `apply`, settled against the data: a race edit drops a racial +2 (`raceStat`) the new race doesn't let you choose (`BlueprintRace.SelectableRaceStat`; the walk's `SelectRaceStat.Check`), so changing Human +2 Strength to Tiefling leaves no impossible start. `allows` and `cascade` make every edit through it. A heritage is a pick, and the walk's +2 rule reads only the race, so a heritage change can't leave the +2 stale.
 - `allows(data, build, edit, G?)`: whether a plain edit keeps the Build possible, that is, breaks nothing the Build had right. Its `Verdict` is allowed with the new Build, or refused with what it breaks.
 - `cascade(data, build, edit, G?)`: a Cascade edit, as a `Cascade`: when it's allowed, `cleared` picks, `clearedSkills` levels, `clearedRanks` and the new `build`.
 

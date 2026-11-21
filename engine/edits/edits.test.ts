@@ -158,4 +158,29 @@ describe('E: edits', { timeout: 30_000 }, () => {
     expect(c.build.levels[2]?.class).toBe(FIGHTER);
     expect(walk(data, c.build, G).failures.filter((f) => f.choice === 'skills')).toEqual([]);
   });
+
+  it("drops a racial +2 the new race doesn't let you choose, so the Build can go on", () => {
+    const HUMAN = '0a5d473ead98b0646b94495af250fdc4';
+    const TIEFLING = '5c4e42124dc2b4647af6e36cf2590500';
+    const human: Build = {
+      ...jackInTheGreen.build,
+      race: HUMAN,
+      raceStat: 'Strength',
+      levels: [],
+      ranks: [],
+      picks: [],
+    };
+    expect(walk(data, human, G).failures).toEqual([]);
+    const edit: Edit = { kind: 'race', race: TIEFLING, raceStat: 'Strength' };
+    const v = allows(data, human, edit, G);
+    expect(v.ok).toBe(true);
+    if (!v.ok) return;
+    expect(v.build.race).toBe(TIEFLING);
+    expect(v.build.raceStat).toBeUndefined();
+    expect(walk(data, v.build, G).failures).toEqual([]);
+    const c = cascade(data, human, edit, G);
+    expect(c.ok && c.build.raceStat).toBeUndefined();
+    const back = allows(data, v.build, { kind: 'race', race: HUMAN, raceStat: 'Dexterity' }, G);
+    expect(back.ok && back.build.raceStat).toBe('Dexterity');
+  });
 });
