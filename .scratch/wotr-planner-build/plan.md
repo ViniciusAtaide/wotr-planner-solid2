@@ -13,7 +13,8 @@ The full-stack planner and its MCP server, as the design map specifies ([map](..
 - **The design is settled.** It lives in [docs/decompiled-guide.md](../../docs/decompiled-guide.md), the ADRs in [docs/adr/](../../docs/adr/), [GLOSSARY.md](../../GLOSSARY.md) and the map's resolved tickets. A ticket that runs into a design question stops and raises it as a new ticket on the map; it doesn't decide the question in passing.
 - **Tools:** WebStorm (`mcp__webstorm__*`) everywhere, as `CLAUDE.local.md` says: `scripts/worktree.sh` opens each worktree as its own WebStorm project, and its path is the `projectPath`. RustRover for `~/code/wotr-planner`.
 - **Review as you go:** the user follows a ticket in its WebStorm window's Commit tab, so a ticket's work stays uncommitted until its commit (or a checkpoint the coordinator agrees). After merging, the coordinator finishes the worktree with `scripts/worktree-done.sh <name>`, which closes its WebStorm window, then removes the worktree and its branch.
-- **Commits:** one per session, made when its work is done, through the pre-commit hook, never bypassing it. In the main checkout, stage by path (never `git add -A`, since another session may share the folder) and commit to `main`. In a worktree, commit to its branch; the coordinator merges it.
+- **Report, then end the turn.** After each commit, report its hash to the coordinator and end your turn. A message the coordinator sends reaches a session only between turns, so a session that keeps working through several commits in one turn misses changes of plan, answers and new findings until it stops.
+- **Commits:** one per session, made when its work is done, through the pre-commit hook, never bypassing it. In the main checkout, stage by path (never `git add -A`, since another session may share the folder) and commit to `main`. In a worktree, commit to its branch; the coordinator merges it with `scripts/merge-ticket.sh <branch>` and closes the worktree with `scripts/worktree-done.sh <name>`.
 
 ## Tickets
 
@@ -40,6 +41,7 @@ The full-stack planner and its MCP server, as the design map specifies ([map](..
 | 07 | [The levelling trail (UI remake, part 1)](issues/07-the-levelling-trail.md) | none (the UX audit's bugs were fixed in `6d07a62c`) | 10 |
 | 05e | [Legend's rank, the fake Legend class, and Gold Dragon on offer](issues/05e-legend-switch-rank.md) | none | 6, 7 |
 | 08 | [Sub-choices nested under their parent in pick lists](issues/08-nested-sub-choices.md) | the flat choice lists work | 10 |
+| 09 | [QA pass 1 fixes](issues/09-qa-pass-1-fixes.md) | none | 6, 7, 10 |
 | 10 | [Choice lists: inline first or modal first](issues/10-choice-list-mode.md) | the capped choice lists change | 10 |
 | 11 | [The top bar: the Build's name, first focus, and "WP" on phones](issues/11-top-bar-build-name.md) | none | 7, 10 |
 | 06 | [After first use: summaries, more links, the published site](issues/06-after-first-use.md) | 05 | none |

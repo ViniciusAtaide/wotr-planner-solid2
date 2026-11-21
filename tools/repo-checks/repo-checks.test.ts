@@ -3,6 +3,7 @@ import { codeComments, commentProblems, cssComments } from './comments';
 import type { Feature } from './features';
 import { configImportProblems } from './config-imports';
 import { declarationProblems, importProblems } from './imports';
+import { planRowProblems } from './plan-rows';
 
 const file = (path: string, text: string) => ({ path, text });
 
@@ -107,6 +108,28 @@ describe('the config-import check', () => {
     expect(configImportProblems((path) => files[path])).toEqual([
       "vite/plugin/index.ts: import './plugin': [config-import] needs its file extension, since vite.config.ts loads natively",
       "engine/x/index.ts: import '~engine/y': [config-import] vite.config.ts loads natively, so path aliases don't resolve",
+    ]);
+  });
+});
+
+describe('the plan-rows check', () => {
+  const plan = [
+    '| # | Ticket |',
+    '| --- | --- |',
+    '| 01 | [One](issues/01-one.md) |',
+    '| 02 | [Two](issues/02-two.md) |',
+  ].join('\n');
+
+  it('passes when every ticket file has exactly one row and every row has a file', () => {
+    expect(planRowProblems(plan, ['01-one.md', '02-two.md'])).toEqual([]);
+  });
+
+  it('reports a ticket with no row, a row with no file, and a ticket with two rows', () => {
+    const doubled = `${plan}\n| 02 | [Two again](issues/02-two.md) |`;
+    expect(planRowProblems(doubled, ['01-one.md', '03-three.md'])).toEqual([
+      '.scratch/wotr-planner-build/plan.md: row links issues/02-two.md: [plan-row] no such ticket file',
+      '.scratch/wotr-planner-build/plan.md: issues/02-two.md: [plan-row] has 2 rows',
+      '.scratch/wotr-planner-build/issues/03-three.md: [plan-row] has no row in .scratch/wotr-planner-build/plan.md',
     ]);
   });
 });

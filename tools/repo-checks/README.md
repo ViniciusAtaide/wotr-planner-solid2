@@ -1,16 +1,16 @@
 # Repo checks
 
-Two deterministic checks that `bun run check` runs (as `bun run check:repo`, right after the lint): the import rules over the declared feature DAG, and the ban on comments in code (ADR 0008). Each prints one line per problem, naming the file, the import or line, and the rule in brackets, and exits 1 on any problem.
+The deterministic checks that `bun run check` runs (as `bun run check:repo`, right after the lint): the import rules over the declared feature DAG, the ban on comments in code (ADR 0008), the config's imports, and the plan's ticket rows. Each prints one line per problem, naming the file, the import or line, and the rule in brackets, and exits 1 on any problem.
 
 ```bash
-bun tools/repo-checks/main.ts            # both checks
+bun tools/repo-checks/main.ts            # every check
 bun tools/repo-checks/main.ts imports    # one of them
 bun tools/repo-checks/main.ts comments
 ```
 
 ## Public entry
 
-`index.ts` exports `importProblems`, `commentProblems`, `codeComments`, `cssComments`, `configImportProblems`, `FEATURES` and `APP_LAYER`. `main.ts` is the command line.
+`index.ts` exports `importProblems`, `commentProblems`, `codeComments`, `cssComments`, `configImportProblems`, `planRowProblems`, `FEATURES` and `APP_LAYER`. `main.ts` is the command line.
 
 ## The declared DAG (`features.ts`)
 
@@ -41,3 +41,7 @@ Vite loads `vite.config.ts` with Node's own module loader, so every runtime impo
 ## Tests
 
 `repo-checks.test.ts` runs the checks on small in-memory inputs; the config-import check follows a planted chain and reports a missing extension and an alias, skipping a type-only import and a package; comments inside strings, templates, regular expressions and JSX text are ignored and real ones found; the allowed directives and the generated files pass; CSS strings are skipped; and each import rule fires with its message, including a cycle, an unknown name and a layer breach in a declared DAG.
+
+## The plan-rows check (`plan-rows.ts`)
+
+Sessions write ticket files, so the plan's table drifts unless something holds it. Every `.md` in `.scratch/wotr-planner-build/issues/` must have exactly one row in `.scratch/wotr-planner-build/plan.md` that links it as `(issues/<file>)`, and every such link must name an existing file. A missing row, a dangling link or a doubled row is a `[plan-row]` problem.
