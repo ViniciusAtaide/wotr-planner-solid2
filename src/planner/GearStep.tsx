@@ -7,7 +7,7 @@ import { nameOf } from '~engine/refusals';
 import { PLACE_ITEM_TYPES } from '~engine/walk';
 
 import { Button, OptionList, PickerOption } from '../design';
-import { Filter, SCROLL_STYLE } from './ChoiceList';
+import { Filter, ranked, SCROLL_STYLE } from './ChoiceList';
 import { clashWords } from './gear-clash';
 import { StepFilter } from './list-panel';
 import { OptionDetails, summaryFor, type OptionDetail } from './option-detail';
@@ -44,10 +44,7 @@ export function GearStep(props: GearStepProps) {
     remembered?.set(t);
   };
   const gear = () => planner().build().gear ?? {};
-  const items = createMemo(() => {
-    const t = text().toLowerCase();
-    return gearOptions(data(), place()).filter((bp) => t === '' || (bp.name ?? '').toLowerCase().includes(t));
-  });
+  const items = createMemo(() => ranked(gearOptions(data(), place()), (bp) => bp.name ?? '', text()));
   const summary = (item: Guid) => summaryFor(data(), planner().engine.G, item);
   const clashes = (item: Guid) => clashWords(planner().engine, planner().build(), place(), item);
   const hub = useContext(OptionDetails);

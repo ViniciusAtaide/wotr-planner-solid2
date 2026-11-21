@@ -87,7 +87,8 @@ the planner yet (`SPELL_NOT_MODELLED`).
 phone keeps its keyboard down); the filter matches each typed word on its own (`matches`: "tiefling rak" finds
 Rakshasa-Spawn) and says "No matches for …" when nothing does. A choice list ranks what matches (`matchRank`, `ranked`, QA pass 5): a name
 that starts with the text first, then one where every typed word starts a word, then the rest, each in list order,
-so "human" and Enter take Human, not Half-Orc · Human-Raised. In the filter, Up and Down move a mark over the open rows
+so "human" and Enter take Human, not Half-Orc · Human-Raised. A slot's pick list and the Gear list order their matches the same way
+(`rankOrder`). In the filter, Up and Down move a mark over the open rows
 (`clampMark`) and Enter takes the marked row, the first until moved; on the rows, Up, Down, J and K move the focus
 (`moveThroughOptions`). The current pick is marked; closed rows show R's reasons; an open row carries no badge, since
 a row you can tap is open. Closed rows are hidden until "Show N closed", which shows every one of them at once (QA

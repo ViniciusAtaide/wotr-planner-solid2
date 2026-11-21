@@ -563,6 +563,27 @@ describe('the levelling trail (build ticket 07)', () => {
     expect(fieldValue('Race')).toBe('Human');
   });
 
+  test('the feat and Gear filters rank the same way (QA pass 5)', () => {
+    const planner = createPlanner(e, cleaver);
+    const api = apiOf(planner);
+    render(() => <SlotStep trail={api} slot={FEAT} />);
+    flush();
+    fireEvent.input(document.querySelector('[data-picker-filter]') ?? document.body, { target: { value: 'weapon' } });
+    flush();
+    const feats = [...document.querySelectorAll('button.ww-option .ww-option__name')].map((n) => n.textContent ?? '');
+    const ranks = feats.map((n) => matchRank(n, 'weapon'));
+    expect(ranks.length).toBeGreaterThan(2);
+    expect(ranks[0]).toBe(0);
+    expect(ranks).toEqual([...ranks].sort((x, y) => x - y));
+    cleanup();
+    render(() => <GearStep trail={apiOf(createPlanner(e, cleaver))} />);
+    flush();
+    fireEvent.input(document.querySelector('[data-picker-filter]') ?? document.body, { target: { value: 'leather' } });
+    flush();
+    const armor = [...document.querySelectorAll('.ww-option__name')].map((n) => n.textContent ?? '');
+    expect(armor[0]?.toLowerCase().startsWith('leather')).toBe(true);
+  });
+
   test('the class list holds each class with its archetypes, and one row takes both as one change', async () => {
     await openPlanner({ scores: abilityScores(SCORES), race: DWARF, alignment: 'TrueNeutral', levels: [], picks: [] });
     filterAndTake('two-handed fighter');

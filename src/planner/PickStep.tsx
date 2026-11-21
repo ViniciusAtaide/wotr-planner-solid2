@@ -7,7 +7,15 @@ import { picker, type OptionStatus } from '~engine/pickers';
 import { gearNote, refusal } from '~engine/refusals';
 
 import { Button, OptionList, PickerOption } from '../design';
-import { Filter, moveThroughOptions, SCROLL_STYLE, StepArrived, type ClosedToggle, type FieldMode } from './ChoiceList';
+import {
+  Filter,
+  moveThroughOptions,
+  rankOrder,
+  SCROLL_STYLE,
+  StepArrived,
+  type ClosedToggle,
+  type FieldMode,
+} from './ChoiceList';
 import { featCategory } from './feat-category';
 import { after } from './flat-choices';
 import { CollapsedLists, createListPanel, StepFilter } from './list-panel';
@@ -105,7 +113,9 @@ export function PickStep(props: PickStepProps) {
   const current = () => pickAt(props.slot);
   const name = (o: OptionStatus) => shownName(data(), o.feature, o.param, listedOf(o));
   const groupName = (o: OptionStatus) => shownName(data(), o.feature, undefined, listedOf(o));
-  const rows = createMemo(() => pickRows(data(), p()?.options ?? [], { option: name, group: groupName }, text()));
+  const rows = createMemo(() =>
+    rankOrder(pickRows(data(), p()?.options ?? [], { option: name, group: groupName }, text()), (r) => r.name, text()),
+  );
   const open = () => rows().filter(rowOpen);
   const closed = () => rows().filter((r) => !rowOpen(r));
   const showClosed: ClosedToggle = {

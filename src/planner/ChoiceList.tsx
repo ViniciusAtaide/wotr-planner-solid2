@@ -42,13 +42,20 @@ export function matchRank(name: string, text: string): number {
   return typedWords.every((w) => nameWords.some((nw) => nw.startsWith(w))) ? 1 : 2;
 }
 
-export function ranked<T>(rows: readonly T[], nameOf: (row: T) => string, text: string): T[] {
-  const kept = rows.filter((r) => matches(nameOf(r), text));
-  if (text.trim() === '') return kept;
-  return kept
+export function rankOrder<T>(rows: readonly T[], nameOf: (row: T) => string, text: string): T[] {
+  if (text.trim() === '') return [...rows];
+  return rows
     .map((row, at) => ({ row, at, rank: matchRank(nameOf(row), text) }))
     .sort((a, b) => a.rank - b.rank || a.at - b.at)
     .map((x) => x.row);
+}
+
+export function ranked<T>(rows: readonly T[], nameOf: (row: T) => string, text: string): T[] {
+  return rankOrder(
+    rows.filter((r) => matches(nameOf(r), text)),
+    nameOf,
+    text,
+  );
 }
 
 export function clampMark(at: number, delta: number, count: number): number {
