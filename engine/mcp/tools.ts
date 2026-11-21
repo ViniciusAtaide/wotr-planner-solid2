@@ -601,10 +601,10 @@ function sheetOf(e: Engine, build: Build, level: number): Sheet {
 export async function sheet(
   e: Engine,
   args: { readonly code: string; readonly level?: number },
-): Promise<Sheet | ToolRefusal> {
+): Promise<(Sheet & { readonly build: Build }) | ToolRefusal> {
   const build = await open(e, args.code);
   if (isRefusal(build)) return build;
-  return sheetOf(e, build, args.level ?? build.levels.length);
+  return { ...sheetOf(e, build, args.level ?? build.levels.length), build };
 }
 
 export async function compare(

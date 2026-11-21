@@ -402,5 +402,7 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(placed.build).toBeUndefined();
     expect(placed.brief).toMatch(/^Halfling · .* · \d+ picks/);
     expect(JSON.stringify(placed).length).toBeLessThan(1500);
+    const sheeted = (await run('sheet', { code: placed.code as string })) as Record<string, unknown>;
+    expect(sheeted.build).toEqual(expect.objectContaining({ race: jackInTheGreen.build.race }));
   });
 });

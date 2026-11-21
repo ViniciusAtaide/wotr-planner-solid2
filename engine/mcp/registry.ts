@@ -215,7 +215,7 @@ const RAW_TOOLS: readonly ToolDef[] = [
   {
     name: 'sheet',
     description:
-      "The Build's name and the numbers at a character level: ability scores, base attack, saves, skills, spellbooks.",
+      "The Build's name, the numbers at a character level (ability scores, base attack, saves, skills, spellbooks) and the whole Build.",
     inputSchema: object({ code, level: { type: 'integer', minimum: 1 } }, ['code']),
     run: (e, a) => tools.sheet(e, a as Parameters<typeof tools.sheet>[1]),
   },

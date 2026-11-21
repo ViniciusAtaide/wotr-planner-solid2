@@ -60,3 +60,9 @@ Coordinator, 2026-11-20, on ticket 05's questions and the user's standing instru
 ## Amendment: Builds have names again (user, 2026-11-21)
 
 The user wants to name a Build from the planner's top bar, so a Build gains an optional `name` (plain text, at most 60 characters) and the Build code carries it as an optional last field of version 1. Codes without it still open, nameless. `start_build` takes an optional `name` again. Build ticket 11.
+
+## Amendment: changes return a brief line, and `sheet` gives the Build (Coordinator, 2026-11-21, from the MCP QA pass)
+
+Every changing tool now returns `{ code, brief }` or a Refusal. `brief` is one line: the name, race, classes, Mythic path, pick count and Gear count. `sheet` returns the full Build beside its numbers.
+
+Three agents built Builds over the MCP to level 20 and Mythic rank 10. Returning the whole Build on every change cost 10–13 KB a call late in a Build, though an agent goes on from the code. The engine's tool functions still return the Build, for the planner and the tests. Build commit `88671619`.
