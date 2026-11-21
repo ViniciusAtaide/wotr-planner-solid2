@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import { cleanup, fireEvent, render, screen, waitFor, within } from '@solidjs/testing-library';
 import { createSignal, flush } from 'solid-js';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
-import { abilityScores, rankLevel, skillRanks, slotKey, type Build, type SlotId } from '~engine/build';
+import { abilityScores, rankLevel, skillRanks, slotKey, type Build, type BuildName, type SlotId } from '~engine/build';
 import { encodeBuild } from '~engine/codec';
 import { loadData } from '~engine/load';
 import { readDataDir } from '~engine/data-dir';
@@ -22,7 +22,7 @@ import {
 } from '~engine/mcp';
 import { picker, type OptionStatus } from '~engine/pickers';
 import { GROUP_WORDS } from '~engine/describe';
-import { linkDidNotOpen, nameOf } from '~engine/refusals';
+import { buildNameLength, linkDidNotOpen, nameOf } from '~engine/refusals';
 import { walk } from '~engine/walk';
 
 import { EMPTY, openHash } from './link';
@@ -31,6 +31,7 @@ import { buildSheet } from './sheet';
 import { createPlanner, type Planner as PlannerApi } from './state';
 import { ChoiceList } from './ChoiceList';
 import { PickerOption } from '../design';
+import { pageTitle } from './BuildName';
 import { ChoiceDialog } from './ChoiceDialog';
 import { GearStep, placeWords } from './GearStep';
 import { stackWords, summaryFor, topicWords } from './option-detail';
@@ -1876,5 +1877,70 @@ describe('Summaries and Synergy in the lists (ticket 06)', () => {
     expect(listed?.querySelector('.ww-option__meta')?.textContent).toBe(
       summaryFor(e.data, e.G, listed?.getAttribute('data-detail-key') ?? '').text,
     );
+  });
+});
+
+describe('the Build-name label (ticket 11)', () => {
+  afterEach(() => {
+    cleanup();
+    history.replaceState(null, '', '/');
+  });
+
+  const label = () => document.querySelector<HTMLButtonElement>('.build-name__label');
+  const input = () => document.querySelector<HTMLInputElement>('.build-name__input');
+  const typeName = async (text: string) => {
+    fireEvent.click(label() ?? document.body);
+    flush();
+    await waitFor(() => expect(document.activeElement).toBe(input()));
+    fireEvent.input(input() ?? document.body, { target: { value: text } });
+    flush();
+  };
+
+  test('a nameless Build reads "Untitled Build", and Enter names it as one Undo step', async () => {
+    await openPlanner(cleaver);
+    expect(label()?.textContent).toBe('Untitled Build');
+    expect(label()?.classList.contains('build-name__label--untitled')).toBe(true);
+    await typeName('  Grey Warden ');
+    fireEvent.keyDown(input() ?? document.body, { key: 'Enter' });
+    flush();
+    expect(input()).toBeNull();
+    expect(label()?.textContent).toBe('Grey Warden');
+    expect(document.querySelector('.planner-undo__what')?.textContent).toBe('Named the Build Grey Warden');
+    await waitFor(() => expect(document.activeElement).toBe(label()));
+    tap('Undo');
+    expect(label()?.textContent).toBe('Untitled Build');
+  });
+
+  test('Escape cancels the edit and keeps the step', async () => {
+    await openPlanner(cleaver);
+    const step = hereTitle();
+    await typeName('Not this');
+    fireEvent.keyDown(input() ?? document.body, { key: 'Escape' });
+    flush();
+    expect(input()).toBeNull();
+    expect(label()?.textContent).toBe('Untitled Build');
+    expect(document.querySelector('.planner-undo__what')).toBeNull();
+    expect(hereTitle()).toBe(step);
+  });
+
+  test('a name past 60 characters is refused in R’s words, and an empty one clears the name', async () => {
+    await openPlanner({ ...cleaver, name: 'Grey Warden' as BuildName });
+    const long = 'x'.repeat(61);
+    await typeName(long);
+    fireEvent.keyDown(input() ?? document.body, { key: 'Enter' });
+    flush();
+    expect(screen.getByRole('alert').textContent).toBe(buildNameLength(long));
+    expect(input()).not.toBeNull();
+    fireEvent.input(input() ?? document.body, { target: { value: '   ' } });
+    flush();
+    fireEvent.keyDown(input() ?? document.body, { key: 'Enter' });
+    flush();
+    expect(label()?.textContent).toBe('Untitled Build');
+    expect(document.querySelector('.planner-undo__what')?.textContent).toBe('Cleared the Build’s name');
+  });
+
+  test('the page title carries the name', () => {
+    expect(pageTitle(undefined)).toBe('Worldwound Planner');
+    expect(pageTitle('Grey Warden')).toBe('Grey Warden · Worldwound Planner');
   });
 });

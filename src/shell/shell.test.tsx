@@ -15,4 +15,15 @@ describe('the shell header', () => {
     expect(link.querySelector('.app-header__short')?.textContent).toBe('WP');
     expect(link.querySelector('.app-header__short')).toHaveAttribute('aria-hidden', 'true');
   });
+
+  test('keeps a centre slot that a page fills, such as the Build’s name', () => {
+    render(() => (
+      <Shell home="/">
+        <main>Page</main>
+      </Shell>
+    ));
+    const slot = document.getElementById('app-header-center');
+    expect(slot?.closest('header')).not.toBeNull();
+    expect(slot?.previousElementSibling?.matches('.app-header__name')).toBe(true);
+  });
 });

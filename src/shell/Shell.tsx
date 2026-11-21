@@ -18,6 +18,8 @@ export function Shell(props: ShellProps) {
             WP
           </span>
         </a>
+        <div class="app-header__center" id="app-header-center" />
+        <span class="app-header__end" aria-hidden="true" />
       </header>
       <Loading fallback={<main>Loading…</main>}>{props.children}</Loading>
     </div>
