@@ -5,6 +5,7 @@ import type { Engine } from '~engine/mcp';
 
 import { OptionList, PickerOption } from '../design';
 import { CollapsedLists, createListPanel } from './list-panel';
+import { OptionDetails, type OptionDetail } from './option-detail';
 import { judgeAll, type Judged } from './planner-state';
 import { scrollToIndex, WindowedRows } from './WindowedRows';
 
@@ -153,9 +154,29 @@ export function ChoiceList(props: ChoiceListProps) {
     panel.hide();
     r.take();
   };
+  const hub = useContext(OptionDetails);
+  const findDetail = (key: string): OptionDetail | undefined => {
+    const r = props.rows.find((row) => row.key === key);
+    return r === undefined
+      ? undefined
+      : {
+          name: r.name,
+          closed: !r.open,
+          current: r.current,
+          summary: undefined,
+          links: r.note === undefined ? [] : [r.note],
+          warnings: [],
+          refusal: r.reasons,
+        };
+  };
+  onSettled(() => hub?.resolve(findDetail));
   createEffect(
     () => mark(),
-    (at) => scrollToIndex(scroller, at),
+    (at) => {
+      scrollToIndex(scroller, at);
+      const r = open()[at];
+      if (r !== undefined && filtering()) hub?.point(r.key);
+    },
   );
   return (
     <div
@@ -208,13 +229,22 @@ export function ChoiceList(props: ChoiceListProps) {
                   status="open"
                   selected={r.current}
                   marked={filtering() && i === mark()}
+                  detailKey={r.key}
                   links={r.note}
                   onPick={() => take(r)}
                 />
               )}
             </WindowedRows>
             <For each={closedShown()} keyed={(r) => r.key}>
-              {(r) => <PickerOption name={r().name} status="closed" selected={r().current} refusal={r().reasons} />}
+              {(r) => (
+                <PickerOption
+                  name={r().name}
+                  status="closed"
+                  selected={r().current}
+                  detailKey={r().key}
+                  refusal={r().reasons}
+                />
+              )}
             </For>
           </OptionList>
         </div>

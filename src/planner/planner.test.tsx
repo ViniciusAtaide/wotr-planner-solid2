@@ -20,7 +20,8 @@ import {
   type OptionView,
   type ToolRefusal,
 } from '~engine/mcp';
-import { picker } from '~engine/pickers';
+import { picker, type OptionStatus } from '~engine/pickers';
+import { GROUP_WORDS } from '~engine/describe';
 import { linkDidNotOpen, nameOf } from '~engine/refusals';
 import { walk } from '~engine/walk';
 
@@ -29,7 +30,10 @@ import Planner, { RefusalNotice } from './Planner';
 import { buildSheet } from './sheet';
 import { createPlanner, type Planner as PlannerApi } from './state';
 import { ChoiceList } from './ChoiceList';
-import { placeWords } from './GearStep';
+import { PickerOption } from '../design';
+import { ChoiceDialog } from './ChoiceDialog';
+import { GearStep, placeWords } from './GearStep';
+import { stackWords, summaryFor, topicWords } from './option-detail';
 import { LevelEditor, MythicStep, NextLevelStep, RankEditor, SkillsStep, SlotStep, type TrailApi } from './steps';
 import Trail from './Trail';
 import { reduceTrail, TRAIL_START, type TrailState } from './trail-state';
@@ -1755,5 +1759,122 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
     tap('Expand');
     expect(dialogBox()?.querySelector('button.ww-option')).not.toBeNull();
     expect(document.querySelector('.trail-here .trail-note')?.textContent).toBe('Choosing in the dialog.');
+  });
+});
+
+describe('Summaries and Synergy in the lists (ticket 06)', () => {
+  afterEach(() => {
+    cleanup();
+    localStorage.clear();
+    history.replaceState(null, '', '/');
+  });
+
+  const rowOf = (key: string) => document.querySelector<HTMLElement>(`[data-detail-key="${key}"]`);
+  const keyOf = (feature: string) => `${feature} null`;
+
+  test('an option row shows its Summary on one line', () => {
+    const options = picker(e.data, cleaver, FEAT, e.G)?.options ?? [];
+    const described = options.find(
+      (o) =>
+        o.shown &&
+        o.closed === undefined &&
+        o.param === undefined &&
+        summaryFor(e.data, e.G, o.feature).text !== undefined,
+    );
+    if (described === undefined) throw new Error('no open feat with a Summary');
+    render(() => <SlotStep trail={apiOf(createPlanner(e, cleaver))} slot={FEAT} />);
+    flush();
+    const row = rowOf(keyOf(described.feature));
+    expect(row?.querySelector('.ww-option__meta')?.textContent).toBe(summaryFor(e.data, e.G, described.feature).text);
+  });
+
+  test('an option sharing a topic with the Build is marked, and the detail pane names what it shares', () => {
+    const build = jackInTheGreen.build;
+    const shares = (o: OptionStatus) =>
+      o.shown &&
+      o.closed === undefined &&
+      o.param === undefined &&
+      e.data.blueprints.get(o.feature)?.$type !== 'BlueprintFeatureSelection' &&
+      (o.synergy?.shared.length ?? 0) > 0;
+    let found: { readonly slot: SlotId; readonly option: OptionStatus } | undefined;
+    for (const s of walk(e.data, build, e.G).slots.filter((x) => 'level' in x.id.place && x.id.place.level > 1)) {
+      const option = picker(e.data, build, s.id, e.G)?.options.find(shares);
+      if (option !== undefined) {
+        found = { slot: s.id, option };
+        break;
+      }
+    }
+    if (found === undefined) throw new Error('no option sharing a topic on the gold Build');
+    const { slot, option } = found;
+    render(() => (
+      <ChoiceDialog title="Pick" line="" onClose={() => {}}>
+        <SlotStep trail={apiOf(createPlanner(e, build))} slot={slot} />
+      </ChoiceDialog>
+    ));
+    flush();
+    const row = rowOf(keyOf(option.feature));
+    expect(row?.textContent).toContain('Synergy');
+    fireEvent.pointerOver(row ?? document.body);
+    flush();
+    const pane = document.querySelector('.choice-dialog__detail');
+    expect(pane?.querySelector('.choice-dialog__links')?.textContent).toMatch(/Shares /);
+  });
+
+  test('the detail pane shows the Summary’s labels, says Current, and follows the marked row', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
+    await waitFor(() => expect(document.querySelector('.choice-dialog')).not.toBeNull());
+    fireEvent.pointerOver(rowOf(keyOf(POWER_ATTACK)) ?? document.body);
+    flush();
+    const pane = () => document.querySelector('.choice-dialog__detail');
+    expect(pane()?.querySelector('.choice-dialog__name')?.textContent).toBe('Power Attack');
+    expect(pane()?.textContent).toContain('Current');
+    const own = summaryFor(e.data, e.G, POWER_ATTACK);
+    if (own.labels.length > 0) {
+      expect(pane()?.querySelectorAll('.choice-dialog__labels li')).toHaveLength(own.labels.length);
+    } else if (!own.written) {
+      expect(pane()?.textContent).toContain('No summary yet.');
+    }
+    const filter = document.querySelector<HTMLInputElement>('.choice-dialog [data-picker-filter]');
+    fireEvent.keyDown(filter ?? document.body, { key: 'ArrowDown' });
+    flush();
+    const marked = document.querySelector('.choice-dialog .ww-option--marked .ww-option__name')?.textContent;
+    expect(marked).toBeTruthy();
+    expect(pane()?.querySelector('.choice-dialog__name')?.textContent).toBe(marked);
+  });
+
+  test('Synergy words name every link kind, and a clash reads as a warning', () => {
+    expect(topicWords({ kind: 'ability', stat: 'Dexterity' })).toBe('Dexterity');
+    expect(topicWords({ kind: 'school', school: 'Evocation' })).toBe('Evocation spells');
+    expect(topicWords({ kind: 'weapon', category: 'BastardSword' })).toBe('Bastard sword');
+    expect(topicWords({ kind: 'group', group: 'BladesLight' })).toBe(GROUP_WORDS.BladesLight);
+    expect(topicWords({ kind: 'energy', energy: 'Fire' })).toBe('fire');
+    expect(topicWords({ kind: 'descriptor', descriptor: 'MindAffecting' })).toBe('mind-affecting effects');
+    expect(stackWords(e.data, { stat: 'Strength', descriptor: 'Inherent', with: [POWER_ATTACK] })).toBe(
+      "Its inherent bonus to Strength won't stack with Power Attack",
+    );
+    render(() => <PickerOption name="Bull's Strength" status="open" clash />);
+    expect(screen.getByText("Won't stack")).toBeTruthy();
+  });
+
+  test('Gear items show their Summaries in the list and under the worn item', () => {
+    const items = [...e.data.blueprints.values()].filter(
+      (bp) => bp.$type === 'BlueprintItemArmor' && summaryFor(e.data, e.G, bp.guid).text !== undefined,
+    );
+    const worn = items.find((bp) => !e.data.twins.has(bp.guid));
+    if (worn === undefined) throw new Error('no armour with a Summary');
+    const planner = createPlanner(e, { ...cleaver, gear: { Armor: worn.guid } });
+    render(() => <GearStep trail={apiOf(planner)} />);
+    flush();
+    const text = summaryFor(e.data, e.G, worn.guid).text;
+    expect(document.querySelector('.trail-gear__worn')?.textContent).toBe(text);
+    const listed = [...document.querySelectorAll<HTMLElement>('[data-detail-key]')].find(
+      (r) => summaryFor(e.data, e.G, r.getAttribute('data-detail-key') ?? '').text !== undefined,
+    );
+    expect(listed?.querySelector('.ww-option__meta')?.textContent).toBe(
+      summaryFor(e.data, e.G, listed?.getAttribute('data-detail-key') ?? '').text,
+    );
   });
 });

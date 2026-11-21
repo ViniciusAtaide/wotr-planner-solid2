@@ -43,6 +43,10 @@ export interface PickerOptionProps {
   readonly mythic?: boolean;
   readonly icon?: FeatCategory | undefined;
   readonly links?: string | undefined;
+  readonly summary?: string | undefined;
+  readonly linked?: boolean;
+  readonly clash?: boolean;
+  readonly detailKey?: string | undefined;
   readonly gear?: string | undefined;
   readonly refusal?: readonly string[];
   readonly onPick?: () => void;
@@ -62,6 +66,12 @@ export default function PickerOption(props: PickerOptionProps) {
       <Show when={props.mythic}>
         <Badge kind="mythic" />
       </Show>
+      <Show when={props.linked === true}>
+        <Badge kind="link">Synergy</Badge>
+      </Show>
+      <Show when={props.clash === true}>
+        <Badge kind="clash">Won't stack</Badge>
+      </Show>
       <Show when={props.status === 'open' && props.gear}>
         <Badge kind="gear" />
       </Show>
@@ -74,13 +84,19 @@ export default function PickerOption(props: PickerOptionProps) {
     <Show
       when={props.status === 'open'}
       fallback={
-        <div class="ww-option ww-option--closed" role="button" aria-disabled="true" tabindex="0">
+        <div
+          class="ww-option ww-option--closed"
+          role="button"
+          aria-disabled="true"
+          tabindex="0"
+          data-detail-key={props.detailKey}
+        >
           <span class="ww-option__name">
             <Show when={props.icon}>{(c) => <FeatIcon category={c()} />}</Show>
             {props.name}
           </span>
           {badges()}
-          <Show when={props.links}>{(links) => <span class="ww-option__meta">{links()}</span>}</Show>
+          <Show when={props.summary ?? props.links}>{(meta) => <span class="ww-option__meta">{meta()}</span>}</Show>
           <Refusal lines={props.refusal ?? []} />
         </div>
       }
@@ -93,6 +109,7 @@ export default function PickerOption(props: PickerOptionProps) {
         ]}
         aria-current={props.selected === true ? 'true' : undefined}
         aria-expanded={props.expanded === undefined ? undefined : props.expanded ? 'true' : 'false'}
+        data-detail-key={props.detailKey}
         onClick={() => props.onPick?.()}
       >
         <span class="ww-option__name">
@@ -100,7 +117,7 @@ export default function PickerOption(props: PickerOptionProps) {
           {props.name}
         </span>
         {badges()}
-        <Show when={props.links}>{(links) => <span class="ww-option__meta">{links()}</span>}</Show>
+        <Show when={props.summary ?? props.links}>{(meta) => <span class="ww-option__meta">{meta()}</span>}</Show>
         <Show when={props.gear}>{(gear) => <Refusal gear lines={[gear()]} />}</Show>
       </button>
     </Show>

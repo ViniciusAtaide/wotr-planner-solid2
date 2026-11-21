@@ -118,6 +118,10 @@
   color: var(--ink-muted);
   border-color: var(--line-strong);
 }
+.ww-badge--clash {
+  color: var(--closed);
+  border-color: var(--closed);
+}
 
 .ww-timeline {
   display: flex;

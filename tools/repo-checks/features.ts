@@ -111,6 +111,7 @@ export const FEATURES: readonly Feature[] = [
       'engine/compact',
       'engine/data',
       'engine/data-dir',
+      'engine/describe',
       'engine/edits',
       'engine/gold',
       'engine/grants',

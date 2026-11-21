@@ -1,5 +1,6 @@
-import { createEffect, createMemo, createSignal, For, Show, useContext } from 'solid-js';
+import { createEffect, createMemo, createSignal, For, onSettled, Show, useContext } from 'solid-js';
 import { slotKey, type Build, type Pick, type SlotId } from '~engine/build';
+import type { Guid } from '~engine/data';
 import type { Edit } from '~engine/edits';
 import { linkIndex } from '~engine/links';
 import { picker, type OptionStatus } from '~engine/pickers';
@@ -10,6 +11,7 @@ import { Filter, moveThroughOptions, SCROLL_STYLE, StepArrived, type ClosedToggl
 import { featCategory } from './feat-category';
 import { after } from './flat-choices';
 import { CollapsedLists, createListPanel } from './list-panel';
+import { clashLines, OptionDetails, summaryFor, synergyLines, type OptionDetail } from './option-detail';
 import { childSlotOf, pickRows, rowMembers, rowOpen, type PickRow } from './nested-options';
 import type { NonEmpty } from './planner-state';
 import type { TrailApi } from './steps';
@@ -88,7 +90,11 @@ export function PickStep(props: PickStepProps) {
   let scroller: HTMLDivElement | undefined;
   createEffect(
     () => mark(),
-    (at) => scrollToIndex(scroller, at),
+    (at) => {
+      scrollToIndex(scroller, at);
+      const it = items()[at];
+      if (it !== undefined) hub?.point(itemKey(it));
+    },
   );
   const closedShown = () => (showClosed.shown ? closed() : closed().filter((r) => holdsRow(r)));
   const words = (o: OptionStatus, unit = p()?.unit): readonly string[] => {
@@ -111,6 +117,67 @@ export function PickStep(props: PickStepProps) {
     ].filter((w) => typeof w === 'string');
     return parts.length > 0 ? parts.join(' · ') : undefined;
   };
+  const buildsOn = (o: OptionStatus): readonly Guid[] =>
+    linkIndex(data(), planner().engine.G)
+      .needs(o.feature)
+      .filter((g) => held().has(g));
+  const linked = (o: OptionStatus | undefined) =>
+    o !== undefined && (buildsOn(o).length > 0 || (o.synergy?.shared.length ?? 0) > 0);
+  const clash = (o: OptionStatus | undefined) => (o?.synergy?.wontStack.length ?? 0) > 0;
+  const summary = (o: OptionStatus | undefined) =>
+    o === undefined ? undefined : summaryFor(data(), planner().engine.G, o.feature).text;
+  const fullLinks = (o: OptionStatus): readonly string[] => {
+    const on = buildsOn(o);
+    const enables = linkIndex(data(), planner().engine.G).enables(o.feature);
+    return [
+      ...(on.length > 0 ? [`Builds on ${listNames(data(), on).join(', ')}`] : []),
+      ...synergyLines(data(), o.synergy),
+      ...(enables.length > 0 ? [`Enables ${listNames(data(), enables).join(', ')}`] : []),
+    ];
+  };
+  const detailOf = (row: PickRow, o: OptionStatus, child: boolean): OptionDetail => {
+    if (!child && row.kind === 'params') {
+      const open = rowOpen(row);
+      return {
+        name: row.name,
+        closed: !open,
+        current: holdsRow(row),
+        summary: summaryFor(data(), planner().engine.G, row.feature),
+        links: [
+          ...fullLinks(o).filter((line) => !line.startsWith('Shares ')),
+          ...new Set(row.options.flatMap((m) => synergyLines(data(), m.synergy))),
+        ],
+        warnings: [],
+        refusal: open ? [] : rowWords(row),
+      };
+    }
+    return detailOne(row, o, child);
+  };
+  const detailOne = (row: PickRow, o: OptionStatus, child: boolean): OptionDetail => ({
+    name: child ? childName(row, o) : row.name,
+    closed: o.closed === undefined ? false : true,
+    current: child ? childCurrent(row, o) : row.kind === 'option' ? isCurrent(o) : holdsRow(row),
+    summary: summaryFor(data(), planner().engine.G, o.feature),
+    links: fullLinks(o),
+    warnings: clashLines(data(), o.synergy),
+    refusal:
+      o.closed === undefined ? [] : words(o, child && row.kind === 'nested' ? nested()?.picker?.unit : p()?.unit),
+    gear: gearOf(o),
+  });
+  const findDetail = (key: string): OptionDetail | undefined => {
+    const cut = key.indexOf('/');
+    const rowKey = cut < 0 ? key : key.slice(0, cut);
+    const row = rows().find((r) => r.key === rowKey);
+    if (row === undefined) return undefined;
+    if (cut < 0) {
+      const o = lead(row);
+      return o === undefined ? undefined : detailOf(row, o, false);
+    }
+    const o = children(row).find((c) => `${rowKey}/${c.feature} ${JSON.stringify(c.param ?? null)}` === key);
+    return o === undefined ? undefined : detailOf(row, o, true);
+  };
+  const hub = useContext(OptionDetails);
+  onSettled(() => hub?.resolve(findDetail));
   const isCurrent = (o: OptionStatus) => {
     const c = current();
     return c !== undefined && c.feature === o.feature && JSON.stringify(c.param) === JSON.stringify(o.param);
@@ -317,6 +384,7 @@ export function PickStep(props: PickStepProps) {
                             <PickerOption
                               name={childName(row, o)}
                               status="closed"
+                              detailKey={itemKey(it)}
                               refusal={words(o, row.kind === 'nested' ? nested()?.picker?.unit : p()?.unit)}
                             />
                           }
@@ -326,6 +394,10 @@ export function PickStep(props: PickStepProps) {
                             status="open"
                             selected={childCurrent(row, o)}
                             marked={at === mark()}
+                            detailKey={itemKey(it)}
+                            summary={row.kind === 'nested' ? summary(o) : undefined}
+                            linked={linked(o)}
+                            clash={clash(o)}
                             onPick={() => takeChild(row, o)}
                           />
                         </Show>
@@ -340,7 +412,11 @@ export function PickStep(props: PickStepProps) {
                         icon={featCategory(data(), row.option.feature)}
                         selected={isCurrent(row.option)}
                         marked={at === mark()}
+                        detailKey={row.key}
+                        summary={summary(row.option)}
                         links={links(row.option)}
+                        linked={linked(row.option)}
+                        clash={clash(row.option)}
                         gear={gearOf(row.option)}
                         onPick={() => take(row.option)}
                       />
@@ -355,7 +431,10 @@ export function PickStep(props: PickStepProps) {
                         selected={holdsRow(row)}
                         marked={at === mark()}
                         expanded={expanded() === row.key}
+                        detailKey={row.key}
+                        summary={summary(lead(row))}
                         links={links(lead(row) as OptionStatus)}
+                        linked={rowMembers(row).some((m) => linked(m))}
                         onPick={() => toggle(row.key)}
                       />
                     </div>
@@ -369,6 +448,7 @@ export function PickStep(props: PickStepProps) {
                     status="closed"
                     icon={featCategory(data(), lead(r())?.feature ?? '')}
                     selected={holdsRow(r())}
+                    detailKey={r().key}
                     links={links(lead(r()) as OptionStatus)}
                     refusal={r().kind === 'params' ? rowWords(r()) : words(lead(r()) as OptionStatus)}
                   />

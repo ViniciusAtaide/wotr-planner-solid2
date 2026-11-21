@@ -94,7 +94,7 @@ written under try/catch; the page works without storage).
 - **Modal first**: a list step opens in the dialog when it arrives (never on page load), and the trail shows "Open the
   list" in its place.
 - **The dialog** (`ChoiceDialog.tsx`, in a `Portal`): centered over most of the viewport on desktop with a detail pane
-  for the option under the pointer or focus (`detailOf`), full screen without it under 600 px; a header naming the
+  for the option under the pointer, under focus or marked from the filter, full screen without it under 600 px; a header naming the
   step, the scores the step reads, and "← Back". Focus moves into it (the filter under a fine pointer, else the first
   option) and back to the opener, or to the step's button when the opener is gone; the page behind doesn't scroll
   (`choice-open` on the root). Escape or Back closes it without picking; Escape is caught at the document while it is
@@ -319,6 +319,18 @@ dimmed and inert behind "Edit the Second Build".
   the keys above, Synergy links, the filter and its mark, "Show N closed", and "Clear this pick".
 - **`list-mode.ts`**: `ListMode`, `readListMode`/`writeListMode` (try/catch around `localStorage`, `browserStorage`)
   and `isListStep`. **`ChoiceDialog.tsx`**: the modal frame (`ChoiceDialog`, `detailOf`, `dialogStart`).
+- **`option-detail.ts`**: what an option says beyond its name (ticket 06's UI side). `summaryFor` is S's Summary of a
+  blueprint (`summaryText`, `summaryLabels`, `writtenSummary` from `engine/describe`), cached per data document. A
+  row shows it as its one meta line, cut with an ellipsis, and falls back to its link line when there is none; Gear
+  items show it in the list (two lines at most) and under the worn item. `topicWords`, `sharedWords` and
+  `stackWords` put S's Synergy in words for every topic kind (ability, weapon, weapon group, school, energy,
+  descriptor) and for a bonus that won't stack; a row carries a "Synergy" badge when it builds on or shares a topic
+  with what the Build holds, and a "Won't stack" badge for a clash. The detail pane gets the whole story through the
+  `OptionDetails` context: a list hands the dialog a resolver from a row's `data-detail-key` to an `OptionDetail`, and
+  points it at the marked row as the mark moves; the pane then shows the name, Current and Open or Closed, the
+  Refusal, the written Summary and its labels by role (or "No summary yet."), the won't-stack warnings, and every
+  link (builds on, shares, enables) without "and N more". A parent row speaks for all its values: open when any is,
+  sharing what any of them shares. Rows without a resolver fall back to what the row shows (`detailOf`).
 - **`CharacterSteps.tsx`**: `RaceStep` and `BackgroundStep`, the flat race and background lists in place.
 - **`words.ts`: names for the planner's surfaces.** Game names (ADR 0006) and the planner's own words, never the game's
   text. `ordinal` writes "1st", "2nd", "3rd", "4th"…; `optionName` is an option's name: the feature's game name, with

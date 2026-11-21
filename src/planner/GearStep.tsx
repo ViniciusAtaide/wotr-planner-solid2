@@ -1,4 +1,4 @@
-import { createMemo, createSignal, For, Show } from 'solid-js';
+import { createMemo, createSignal, For, onSettled, Show, useContext } from 'solid-js';
 import type { GearPlace } from '~engine/build';
 import { isShown, type Guid } from '~engine/data';
 import type { CheckedData } from '~engine/load';
@@ -7,6 +7,7 @@ import { PLACE_ITEM_TYPES } from '~engine/walk';
 
 import { Button, OptionList, PickerOption } from '../design';
 import { Filter, SCROLL_STYLE } from './ChoiceList';
+import { OptionDetails, summaryFor, type OptionDetail } from './option-detail';
 import type { TrailApi } from './steps';
 
 export const PLACES = Object.keys(PLACE_ITEM_TYPES) as GearPlace[];
@@ -46,6 +47,21 @@ export function GearStep(props: GearStepProps) {
       )
       .sort((a, b) => (a.name ?? '').localeCompare(b.name ?? ''));
   });
+  const summary = (item: Guid) => summaryFor(data(), planner().engine.G, item);
+  const hub = useContext(OptionDetails);
+  const findDetail = (key: string): OptionDetail | undefined =>
+    data().blueprints.has(key)
+      ? {
+          name: nameOf(data(), key),
+          closed: false,
+          current: gear()[place()] === key,
+          summary: summary(key),
+          links: [],
+          warnings: [],
+          refusal: [],
+        }
+      : undefined;
+  onSettled(() => hub?.resolve(findDetail));
   const wear = (item: Guid) => props.trail.edit({ kind: 'gear', place: place(), item }, `Wore ${nameOf(data(), item)}`);
   return (
     <div class="trail-step">
@@ -92,6 +108,9 @@ export function GearStep(props: GearStepProps) {
           </Button>
         )}
       </Show>
+      <Show when={gear()[place()] && summary(gear()[place()] as Guid).text}>
+        {(text) => <p class="trail-note trail-gear__worn">{text()}</p>}
+      </Show>
       <Filter
         label={`Filter ${placeWords(place())} items by name`}
         value={text()}
@@ -101,7 +120,7 @@ export function GearStep(props: GearStepProps) {
           if (first !== undefined) wear(first.guid);
         }}
       />
-      <div class="trail-scroll" style={SCROLL_STYLE}>
+      <div class="trail-scroll trail-gear__items" style={SCROLL_STYLE}>
         <OptionList>
           <For each={items().slice(0, ITEMS_SHOWN)} keyed={(bp) => bp.guid}>
             {(item) => (
@@ -109,6 +128,8 @@ export function GearStep(props: GearStepProps) {
                 name={item().name ?? item().assetName}
                 status="open"
                 selected={gear()[place()] === item().guid}
+                summary={summary(item().guid).text}
+                detailKey={item().guid}
                 onPick={() => wear(item().guid)}
               />
             )}

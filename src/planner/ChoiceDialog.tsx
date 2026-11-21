@@ -1,6 +1,8 @@
 import { Portal, type JSX } from '@solidjs/web';
 import { createSignal, For, onSettled, Show } from 'solid-js';
 
+import { OptionDetails, type DetailHub, type OptionDetail, type OptionSummary } from './option-detail';
+
 const FINE_POINTER = '(pointer: fine)';
 const HASH_WATCH_MS = 250;
 
@@ -30,22 +32,62 @@ function releaseEntry(popped: boolean): void {
   }, 0);
 }
 
-export interface OptionDetail {
-  readonly name: string;
-  readonly closed: boolean;
-  readonly lines: readonly string[];
-  readonly meta?: string | undefined;
-}
-
 export function detailOf(target: EventTarget | null): OptionDetail | undefined {
   const option = target instanceof Element ? target.closest('.ww-option') : null;
   if (option === null) return undefined;
+  const meta = option.querySelector('.ww-option__meta')?.textContent;
   return {
     name: option.querySelector('.ww-option__name')?.textContent ?? '',
     closed: option.classList.contains('ww-option--closed'),
-    lines: [...option.querySelectorAll('.ww-refusal li')].map((li) => li.textContent ?? ''),
-    meta: option.querySelector('.ww-option__meta')?.textContent ?? undefined,
+    current: option.classList.contains('ww-option--selected'),
+    summary: undefined,
+    links: meta === undefined || meta === null ? [] : [meta],
+    warnings: [],
+    refusal: [...option.querySelectorAll('.ww-refusal li')].map((li) => li.textContent ?? ''),
   };
+}
+
+function keyOf(target: EventTarget | null): string | undefined {
+  const el = target instanceof Element ? target.closest('[data-detail-key]') : null;
+  return el?.getAttribute('data-detail-key') ?? undefined;
+}
+
+const ROLE_WORDS: Readonly<Record<string, string>> = {
+  bonus: 'Bonus',
+  save: 'Save',
+  immunity: 'Immunity',
+  resistance: 'Resistance',
+  weakness: 'Weakness',
+  requirement: 'Needs',
+  trigger: 'When',
+};
+
+function SummaryBlock(props: { readonly summary: OptionSummary }) {
+  return (
+    <>
+      <Show when={props.summary.written && props.summary.text}>
+        {(text) => <p class="choice-dialog__summary">{text()}</p>}
+      </Show>
+      <Show
+        when={props.summary.labels.length > 0}
+        fallback={
+          <Show when={!props.summary.written}>
+            <p class="trail-note">No summary yet.</p>
+          </Show>
+        }
+      >
+        <ul class="choice-dialog__labels">
+          <For each={props.summary.labels}>
+            {(label) => (
+              <li>
+                <span class="choice-dialog__role">{ROLE_WORDS[label.role] ?? label.role}</span> {label.text}
+              </li>
+            )}
+          </For>
+        </ul>
+      </Show>
+    </>
+  );
 }
 
 export function dialogStart(box: HTMLElement, fine: boolean): HTMLElement | null {
@@ -64,6 +106,21 @@ export interface ChoiceDialogProps {
 export function ChoiceDialog(props: ChoiceDialogProps) {
   let box: HTMLDivElement | undefined;
   const [detail, setDetail] = createSignal<OptionDetail | undefined>(undefined);
+  let find: ((key: string) => OptionDetail | undefined) | undefined;
+  const hub: DetailHub = {
+    resolve: (f) => {
+      find = f;
+    },
+    point: (key) => {
+      const found = key === undefined ? undefined : find?.(key);
+      if (found !== undefined) setDetail(found);
+    },
+  };
+  const follow = (target: EventTarget | null) => {
+    const key = keyOf(target);
+    const found = key === undefined ? undefined : find?.(key);
+    setDetail(found ?? detailOf(target) ?? detail());
+  };
   onSettled(() => {
     const opener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const root = document.documentElement;
@@ -112,8 +169,8 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
           role="dialog"
           aria-modal="true"
           aria-label={props.title}
-          onFocusIn={(e) => setDetail(detailOf(e.target) ?? detail())}
-          onPointerOver={(e) => setDetail(detailOf(e.target) ?? detail())}
+          onFocusIn={(e) => follow(e.target)}
+          onPointerOver={(e) => follow(e.target)}
         >
           <header class="choice-dialog__head">
             <button type="button" class="trail-link" data-close onClick={() => props.onClose()}>
@@ -125,19 +182,33 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
             </div>
           </header>
           <div class="choice-dialog__body">
-            <div class="choice-dialog__list">{props.children}</div>
+            <div class="choice-dialog__list">
+              <OptionDetails value={hub}>{props.children}</OptionDetails>
+            </div>
             <aside class="choice-dialog__detail" aria-label="The option in focus">
               <Show when={detail()} fallback={<p class="trail-note">Point at or focus an option to see it here.</p>}>
                 {(d) => (
                   <>
                     <h3 class="choice-dialog__name">{d().name}</h3>
-                    <p class="trail-note">{d().closed ? 'Closed' : 'Open'}</p>
-                    <Show when={d().meta}>
-                      <p class="trail-note">{d().meta}</p>
-                    </Show>
+                    <p class="trail-note">
+                      {d().current ? 'Current · ' : ''}
+                      {d().closed ? 'Closed' : 'Open'}
+                    </p>
                     <ul class="ww-refusal">
-                      <For each={d().lines}>{(line) => <li>{line}</li>}</For>
+                      <For each={d().refusal}>{(line) => <li>{line}</li>}</For>
                     </ul>
+                    <Show when={d().summary}>{(summary) => <SummaryBlock summary={summary()} />}</Show>
+                    <Show when={d().warnings.length > 0}>
+                      <ul class="choice-dialog__warnings">
+                        <For each={d().warnings}>{(line) => <li>{line}</li>}</For>
+                      </ul>
+                    </Show>
+                    <Show when={d().links.length > 0}>
+                      <ul class="choice-dialog__links">
+                        <For each={d().links}>{(line) => <li>{line}</li>}</For>
+                      </ul>
+                    </Show>
+                    <Show when={d().gear}>{(gear) => <p class="trail-note">{gear()}</p>}</Show>
                   </>
                 )}
               </Show>

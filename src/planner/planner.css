@@ -1019,6 +1019,49 @@ html.choice-open {
   font: 600 17px/22px var(--font-display);
 }
 
+.choice-dialog__summary {
+  margin: var(--space-3) 0;
+}
+
+.choice-dialog__labels,
+.choice-dialog__links,
+.choice-dialog__warnings {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: var(--space-3) 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.choice-dialog__role {
+  margin-right: var(--space-1);
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.choice-dialog__links {
+  color: var(--ink-muted);
+}
+
+.choice-dialog__warnings {
+  color: var(--closed);
+}
+
+.trail-gear__items .ww-option__meta {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.trail-gear__worn {
+  margin: 0;
+}
+
 @media (max-width: 599px) {
   .choice-dialog {
     width: 100vw;
