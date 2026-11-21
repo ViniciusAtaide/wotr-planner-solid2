@@ -236,7 +236,14 @@ export default function Trail(props: TrailProps) {
     return w.kind === 'rank' && w.rank === rank;
   };
 
-  const chip = (label: string, value: string | undefined, target: Selection, icon?: FeatCategory, gear = false) => (
+  const chip = (
+    label: string,
+    value: string | undefined,
+    target: Selection,
+    icon?: FeatCategory,
+    gear = false,
+    empty = 'Choose',
+  ) => (
     <button
       type="button"
       class={['trail-chip', { 'trail-chip--empty': value === undefined, 'trail-chip--target': isTarget(target) }]}
@@ -246,7 +253,7 @@ export default function Trail(props: TrailProps) {
       <small>{label}</small>
       <span>
         <Show when={icon}>{(c) => <FeatIcon category={c()} />}</Show>
-        {value ?? 'Choose'}
+        {value ?? empty}
         <Show when={gear}>
           <span class="trail-chip__gear" title="Taken through Gear (counted toward its prerequisites)">
             <Badge kind="gear">◈</Badge>
@@ -388,9 +395,17 @@ export default function Trail(props: TrailProps) {
           editing={characterOpen()}
           onToggle={() => props.send({ kind: 'character', open: cardFolded() ? true : !characterOpen() })}
           {...(props.diff && { diff: props.diff })}
+          race={chip(
+            'Race',
+            raceLabel(props.planner.engine, build(), props.planner.walked()),
+            { kind: 'race' },
+            undefined,
+            false,
+            'Choose your race',
+          )}
+          raceStep={step().kind === 'race'}
           chips={
             <div class="trail-chips">
-              {chip('Race', raceLabel(props.planner.engine, build(), props.planner.walked()), { kind: 'race' })}
               <For each={characterChipSlots(view())}>
                 {(s) => <>{slotChip(s, pickLabels(data(), characterChipSlots(view())))}</>}
               </For>

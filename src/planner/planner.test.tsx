@@ -192,7 +192,7 @@ describe('a Build code from the MCP opens the same Build in the UI', () => {
     const { container } = render(() => <Planner />);
     await screen.findByText(linkDidNotOpen('load', 'notACode'));
     expect(container.querySelectorAll(LEVEL_STOPS).length).toBe(0);
-    expect(container.querySelector('.trail-here__title')?.textContent).toBe('Your character · set the ability scores');
+    expect(container.querySelector('.trail-here__title')?.textContent).toBe('Your character · choose a race');
     flush();
     expect(location.hash).toBe('#b=*');
     tap('Raise Strength');
@@ -409,14 +409,27 @@ describe('the levelling trail (build ticket 07)', () => {
     history.replaceState(null, '', '/');
   });
 
-  test('a fresh Build opens on the ability scores, which stay open through their edits until Done', async () => {
+  test('a fresh Build opens on the race, then the ability scores, which stay open through their edits until Done', async () => {
     await openPlanner(undefined);
+    expect(hereTitle()).toBe('Your character · choose a race');
+    expect(chipNamed('Race').textContent).toContain('Choose your race');
+    expect(chipNamed('Race').closest('.trail-race')).not.toBeNull();
+    tap(/^Human$/);
     expect(hereTitle()).toBe('Your character · set the ability scores');
     tap('Raise Strength');
     expect(hereTitle()).toBe('Your character · set the ability scores');
     expect(screen.queryByRole('button', { name: 'Back to the next choice' })).toBeNull();
     tap(/^Done/);
-    expect(hereTitle()).toBe('Your character · choose a race');
+    expect(hereTitle()).toBe('Begin · choose a first class');
+  });
+
+  test('the race list opens right under the race field, above the scores', async () => {
+    await openPlanner(undefined);
+    const field = document.querySelector('.trail-race');
+    const list = document.querySelector('.trail-here');
+    const tiles = document.querySelector('[aria-label="The character"] [aria-label="Raise Strength"]');
+    expect(field?.compareDocumentPosition(list ?? document.body)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+    expect(list?.compareDocumentPosition(tiles ?? document.body)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
   });
 
   test('the race list holds each race with its heritages, and one row takes both as one change', async () => {
@@ -481,8 +494,8 @@ describe('the levelling trail (build ticket 07)', () => {
 
   test('a reload keeps the Build, through the #b= link', async () => {
     await openPlanner(undefined);
-    tap(/^Done/);
     tap(/^Human$/);
+    tap(/^Done/);
     tap('Lawful Good');
     tap(/^Fighter$/);
     await waitFor(() => expect(levelRows()).toBe(1));
@@ -518,7 +531,6 @@ describe('the levelling trail (build ticket 07)', () => {
   test('race, +2, alignment and score edits reach the Undo line, and an undo names the change before', async () => {
     await openPlanner(undefined);
     const line = () => document.querySelector('.planner-undo__what')?.textContent;
-    tap(/^Done/);
     tap(/^Human$/);
     expect(line()).toBe('Race Human');
     tap('Racial +2 to Strength');

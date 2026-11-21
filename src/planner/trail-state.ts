@@ -209,8 +209,8 @@ export function nextStep(
   t: TrailView,
   s: Pick<TrailState, 'skillsLeft' | 'mythicLater'> & Partial<Pick<TrailState, 'skillsCleared'>>,
 ): Step {
-  if (t.build.scores === undefined) return { kind: 'scores' };
   if (t.build.race === undefined) return { kind: 'race' };
+  if (t.build.scores === undefined) return { kind: 'scores' };
   const empty = (slots: readonly OpenedSlot[]) => slots.find((x) => x.pick === undefined);
   const slot = empty(characterSlots(t)) ?? empty(shownSlots(t));
   if (slot !== undefined) return { kind: 'slot', slot: slot.id };
