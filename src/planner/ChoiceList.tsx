@@ -150,12 +150,13 @@ export function Filter(props: FilterProps) {
       type="search"
       placeholder={
         props.field === undefined
-          ? 'Type to filter, Enter takes the first ( / )'
+          ? 'Filter'
           : props.open === true
             ? (props.field.value ?? props.field.placeholder)
             : props.field.placeholder
       }
       aria-label={props.field === undefined ? props.label : undefined}
+      aria-keyshortcuts={props.field === undefined ? '/' : undefined}
       data-picker-filter
       value={props.field === undefined || props.open === true ? props.value : (props.field.value ?? '')}
       onInput={(e) => props.onInput(e.currentTarget.value)}

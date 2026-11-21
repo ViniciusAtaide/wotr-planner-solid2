@@ -314,8 +314,10 @@ export function slotLabel(data: CheckedData, selection: string): string {
   return bareNameOf(data, selection).replace(/ selection$/i, '');
 }
 
-export function slotWords(data: CheckedData, selection: string): string {
-  return slotLabel(data, selection).toLowerCase();
+export function slotName(t: TrailView, slot: SlotId): string {
+  const label = slotLabel(t.data, slot.selection);
+  const opened = t.walk.slots.find((s) => slotKey(s.id) === slotKey(slot));
+  return opened?.source.kind === 'race' && /^feats?$/i.test(label) ? 'Bonus feat' : label;
 }
 
 function placeTitle(place: Place): string {
@@ -325,7 +327,7 @@ function placeTitle(place: Place): string {
 export function stepTitle(t: TrailView, step: Step): string {
   switch (step.kind) {
     case 'slot':
-      return `${isCharacterSlot(t, step.slot) ? 'Your character' : placeTitle(step.slot.place)} · choose ${slotWords(t.data, step.slot.selection)}`;
+      return `${isCharacterSlot(t, step.slot) ? 'Your character' : placeTitle(step.slot.place)} · choose ${slotName(t, step.slot).toLowerCase()}`;
     case 'increase':
       return `Level ${step.level} · raise an ability`;
     case 'skills':

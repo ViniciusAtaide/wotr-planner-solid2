@@ -1,6 +1,7 @@
 import { Portal, type JSX } from '@solidjs/web';
 import { createSignal, For, onSettled, Show } from 'solid-js';
 
+import { focusNextStep } from './focus-return';
 import { holdDialogEntry, onUserPop, releaseDialogEntry } from './history-moves';
 import { OptionDetails, type DetailHub, type OptionDetail, type OptionSummary } from './option-detail';
 
@@ -107,6 +108,11 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
     const found = key === undefined ? undefined : find?.(key);
     setDetail(found ?? detailOf(target) ?? detail());
   };
+  let dismissed = false;
+  const dismiss = () => {
+    dismissed = true;
+    props.onClose();
+  };
   onSettled(() => {
     const opener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const root = document.documentElement;
@@ -115,13 +121,13 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
     let popped = false;
     const stopPop = onUserPop(() => {
       popped = true;
-      props.onClose();
+      dismiss();
     });
     const onEscape = (e: KeyboardEvent) => {
       if (e.key !== 'Escape') return;
       e.preventDefault();
       e.stopPropagation();
-      props.onClose();
+      dismiss();
     };
     document.addEventListener('keydown', onEscape, true);
     const frame = requestAnimationFrame(() => {
@@ -133,6 +139,10 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
       document.removeEventListener('keydown', onEscape, true);
       root.classList.remove('choice-open');
       releaseDialogEntry(popped);
+      if (!dismissed) {
+        focusNextStep();
+        return;
+      }
       const back = opener?.isConnected === true && opener !== document.body ? opener : props.returnTo?.();
       back?.focus({ preventScroll: true });
     };
@@ -152,7 +162,7 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
           onPointerOver={(e) => follow(e.target)}
         >
           <header class="choice-dialog__head">
-            <button type="button" class="trail-link" data-close onClick={() => props.onClose()}>
+            <button type="button" class="trail-link" data-close onClick={dismiss}>
               ← Back
             </button>
             <div class="choice-dialog__titles">
