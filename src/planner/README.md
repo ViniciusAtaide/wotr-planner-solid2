@@ -90,7 +90,7 @@ that starts with the text first, then one where every typed word starts a word, 
 so "human" and Enter take Human, not Half-Orc · Human-Raised. A slot's pick list and the Gear list order their matches the same way
 (`rankOrder`). In the filter, Up and Down move a mark over the open rows
 (`clampMark`) and Enter takes the marked row, the first until moved; on the rows, Up, Down, J and K move the focus
-(`moveThroughOptions`). The current pick is marked; closed rows show R's reasons; an open row carries no badge, since
+(`moveThroughOptions`). The filter's placeholder is just "Filter", so it fits at 375 px (QA pass 5); `/` focuses it from anywhere, announced as its `aria-keyshortcuts`. The current pick is marked; closed rows show R's reasons; an open row carries no badge, since
 a row you can tap is open. Closed rows are hidden until "Show N closed", which shows every one of them at once (QA
 pass 3; 201 closed feats render in about 35 ms in a production build). Names are S's
 bare names, qualified only when two in the same list share one (`shownName`, `pickLabels`, `bareNameOf`). A small set
@@ -128,7 +128,13 @@ written under try/catch; the page works without storage).
 - **The dialog** (`ChoiceDialog.tsx`, in a `Portal`): centered over most of the viewport on desktop with a detail pane
   for the option under the pointer, under focus or marked from the filter, full screen without it under 600 px; a header naming the
   step, the scores the step reads, and "← Back". Focus moves into it (the filter under a fine pointer, else the first
-  option) and back to the opener, or to the step's button when the opener is gone; the page behind doesn't scroll
+  option). Closed by Escape, Back or the back button, it gives focus back to the opener, or to the step's button when
+  the opener is gone; closed because a pick moved the trail on, it leaves focus to the next step: that step's arrival
+  focuses its first control, and failing that the targeted chip, the targeted field's filter (a Modal first field's input is left alone, since focusing it opens
+  its dialog) or the step's first control does
+  (`focusNextStep`, QA pass 5), never ⋯ or the control that opened a dialog several picks ago. While another dialog is
+  open (the next field's, or a Cascade preview that only hid this one) it leaves focus to that dialog, so after Cancel
+  focus goes back to the field and its dialog is back; the page behind doesn't scroll
   (`choice-open` on the root). Escape or Back closes it without picking; Escape is caught at the document while it is
   open (capture phase), so one press closes it from anywhere in it, the filter included, whatever is typed, and the
   page's own Escape (leave the step) skips a key the dialog took. Open dialogs share one history entry, and
@@ -395,8 +401,9 @@ dimmed and inert behind "Edit the Second Build".
   - `Step` is a `Selection`, a due Mythic rank (`mythic`) or the next level (`nextLevel`); `nextStep` gives the next
     one in the order above, `whereOf` where it opens (the character, the score tiles, a level, a rank, the next stop,
     or Gear) and
-    `stepTitle` its title. `slotWords` names a slot in a title (the selection's game name, lower case, without
-    "selection"; build question 4 below) and `slotLabel` on a chip.
+    `stepTitle` its title. `slotLabel` names a slot (the selection's game name without "selection"; build question 4
+    below), lower case in a title. `slotName` is the name a field, chip and title show: a feat slot the race grants
+    (the Human's) reads "Bonus feat" (QA pass 5), so it isn't taken for the level's own feat.
   - `shownSlots` leaves out the parametrized feats' own slots (their parameter is chosen with the feat);
     `characterSlots` and `slotsAt` split the rest between the character card and the stops by S's `characterWideSlots`.
   - `skillBudget`, `skillsDue`, `increaseDue` and `increaseOffered` read the walk's `skillPoints` and
@@ -496,7 +503,10 @@ dimmed and inert behind "Edit the Second Build".
   - the Cascade preview opens on Cancel, the least destructive action;
   - when it closes, focus goes back to the last element focused outside any dialog (`focusin` tracking in `Planner.tsx`),
     or, when that element is gone, to the nearest stable control (`keepFocus`, `stableControl` in `focus-return.ts`:
-    the targeted chip, the step's filter or first control, the ⋯ button);
+    the targeted chip, the targeted field's filter, the step's first control, the ⋯ button);
+  - a step's first control (`firstControl`) skips its aside links ("Back to the next choice", "Expand", and at the
+    skills step "Same as level N" and "Done · leave N unspent"), so arriving at the skills step focuses the first
+    skill's stepper (QA pass 5);
   - the same holds wherever a control that had focus goes away (QA pass 3): Escape on the ⋯ menu returns to its
     button, Dismiss on a notice to the nearest stable control, and a skill stepper that turns disabled ("Fewer" at no
     ranks, "More" at the cap) hands focus to the skill's other stepper;

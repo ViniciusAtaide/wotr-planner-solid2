@@ -173,6 +173,7 @@ export function SkillsStep(props: LevelStepProps) {
             <button
               type="button"
               class="trail-button"
+              data-aside
               onClick={() =>
                 props.trail.edit(
                   { kind: 'skills', level: props.level, skills: same() },
@@ -189,6 +190,7 @@ export function SkillsStep(props: LevelStepProps) {
         <button
           type="button"
           class="trail-link"
+          data-aside
           onClick={() => {
             props.trail.send({ kind: 'leaveSkills', level: props.level });
             props.trail.select(undefined);

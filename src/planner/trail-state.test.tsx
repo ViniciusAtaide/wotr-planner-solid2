@@ -129,7 +129,7 @@ describe('auto-advance: each pick opens the next empty one', () => {
     expect(character[0]).toBe(BASIC_FEAT_SELECTION);
     const first = next(build);
     expect(first).toEqual({ kind: 'slot', slot: characterSlots(view)[0]?.id });
-    expect(stepTitle(view, first)).toBe('Your character · choose feat');
+    expect(stepTitle(view, first)).toBe('Your character · choose bonus feat');
 
     let b = build;
     for (const s of characterSlots(view)) {

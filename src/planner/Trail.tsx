@@ -27,6 +27,7 @@ import { BackgroundStep, RaceStep } from './CharacterSteps';
 import { PickStep } from './PickStep';
 import { StepArrived } from './ChoiceList';
 import { featCategory } from './feat-category';
+import { firstControl } from './focus-return';
 import { backgroundLabel, raceLabel } from './flat-choices';
 import { GearStep, wornLine } from './GearStep';
 import type { EditOutcome, NonEmpty } from './planner-state';
@@ -64,8 +65,7 @@ import {
   nextStep,
   rankNumbersAt,
   skillBudget,
-  slotLabel,
-  slotWords,
+  slotName,
   SPELL_NOT_MODELLED,
   spellPick,
   slotsAt,
@@ -82,11 +82,6 @@ import { optionName } from './words';
 
 const REDUCED_MOTION = '(prefers-reduced-motion: reduce)';
 const FINE_POINTER = '(pointer: fine)';
-
-export function firstControl(el: HTMLElement, fine: boolean): HTMLElement | null {
-  const controls = 'button:not([disabled]):not([data-back]):not([data-aside]), [role="button"][tabindex="0"]';
-  return el.querySelector<HTMLElement>(fine ? `input, ${controls}` : controls);
-}
 
 function lost(active: Element | null): boolean {
   return active === null || active === document.body || !active.isConnected;
@@ -137,23 +132,27 @@ export function Here(props: HereProps) {
       aria-label={props.title}
     >
       <h3 class="trail-here__title">{props.title}</h3>
-      <Show when={props.editing}>
-        <button type="button" class="trail-link" data-back onClick={() => props.onBack()}>
-          Back to the next choice
-        </button>
-      </Show>
-      <Show when={props.list === true}>
-        <button
-          ref={(b) => {
-            expand = b;
-          }}
-          type="button"
-          class="trail-link trail-here__expand"
-          data-aside
-          onClick={() => setDialog(true)}
-        >
-          {modal() ? 'Open the list' : 'Expand'}
-        </button>
+      <Show when={props.editing || props.list === true}>
+        <div class="trail-here__links">
+          <Show when={props.editing}>
+            <button type="button" class="trail-link" data-back onClick={() => props.onBack()}>
+              Back to the next choice
+            </button>
+          </Show>
+          <Show when={props.list === true}>
+            <button
+              ref={(b) => {
+                expand = b;
+              }}
+              type="button"
+              class="trail-link trail-here__expand"
+              data-aside
+              onClick={() => setDialog(true)}
+            >
+              {modal() ? 'Open the list' : 'Expand'}
+            </button>
+          </Show>
+        </div>
       </Show>
       <Show
         when={dialog() && props.confirming !== true}
@@ -321,9 +320,9 @@ export default function Trail(props: TrailProps) {
         title={stepTitle(view(), step)}
         modal={props.listMode === 'modal'}
         field={{
-          label: slotLabel(data(), s.id.selection),
+          label: slotName(view(), s.id),
           value: value(),
-          placeholder: `Choose your ${slotWords(data(), s.id.selection)}`,
+          placeholder: `Choose your ${slotName(view(), s.id).toLowerCase()}`,
           target: isTarget({ kind: 'slot', slot: s.id }),
           arrive: arriving() === stepKey(step),
         }}
@@ -336,7 +335,7 @@ export default function Trail(props: TrailProps) {
   const slotChip = (s: OpenedSlot, labels: ReadonlyMap<string, string>) => {
     const background = isBackgroundSlot(view(), s.id);
     return chip(
-      slotLabel(data(), s.id.selection),
+      slotName(view(), s.id),
       s.pick === undefined
         ? undefined
         : background

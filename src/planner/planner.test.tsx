@@ -382,6 +382,19 @@ function fieldTake(label: string, text: string): void {
   flush();
 }
 
+async function atBonusCombatFeat(): Promise<string> {
+  await openPlanner({ ...cleaver, picks: cleaver.picks.filter((p) => slotKey(p.slot) !== slotKey(BONUS_COMBAT_FEAT)) });
+  fieldTake('Background', 'courtier');
+  fieldTake('Deity', 'gozreh');
+  await waitFor(() => expect(hereTitle()).toBe('Level 1 · choose bonus combat feat'));
+  await waitFor(async () => {
+    const opened = await openHash(e, location.hash);
+    const picks = opened.kind === 'opened' ? opened.build.picks : [];
+    expect(picks.some((p) => e.data.blueprints.get(p.feature)?.name === 'Gozreh')).toBe(true);
+  });
+  return location.hash;
+}
+
 function openTarget(): void {
   const input = document.querySelector<HTMLInputElement>('.trail-field--target input');
   if (input !== null) {
@@ -1348,6 +1361,52 @@ describe('QA pass 1', () => {
     expect(stepRoot()?.contains(document.activeElement)).toBe(true);
   });
 
+  test('arriving at the skills step focuses the first skill’s stepper, not "Done" (QA pass 5)', async () => {
+    await atBonusCombatFeat();
+    showList();
+    filterAndTake('Cleave');
+    await waitFor(() => expect(hereTitle()).toBe('Level 1 · train your skills'));
+    expect(button(/^Done · leave/)).toBeInTheDocument();
+    await waitFor(() => expect(document.activeElement?.classList.contains('trail-stepper')).toBe(true));
+    expect(document.activeElement?.getAttribute('aria-label')).toMatch(/^More .+ ranks$/);
+  });
+
+  test('a list step puts "Back to the next choice" and "Expand" on one row (QA pass 5)', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Cleave'));
+    flush();
+    const back = button('Back to the next choice');
+    expect(back.parentElement).toBe(button('Expand').parentElement);
+    expect(back.parentElement?.classList.contains('trail-here__links')).toBe(true);
+    const css = readFileSync(join(process.cwd(), 'src/planner/planner.css'), 'utf8');
+    const links = css.slice(css.indexOf('.trail-here__links {'));
+    expect(links.slice(0, links.indexOf('}'))).toContain('display: flex');
+  });
+
+  test('a list filter reads just "Filter", short enough for a phone, and names / as its shortcut (QA pass 5)', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Cleave'));
+    flush();
+    const filter = document.querySelector<HTMLInputElement>('.trail-here [data-picker-filter]');
+    expect(filter?.placeholder).toBe('Filter');
+    expect(filter?.getAttribute('aria-keyshortcuts')).toBe('/');
+  });
+
+  test('the feat slot a Human gets from the race is labelled "Bonus feat" (QA pass 5)', async () => {
+    const human =
+      [...e.data.blueprints.values()].find((bp) => bp.name === 'Human' && bp.$type === 'BlueprintRace')?.guid ?? DWARF;
+    await openPlanner({
+      scores: abilityScores(SCORES),
+      race: human,
+      alignment: 'TrueNeutral',
+      levels: [{ class: fighter }],
+      picks: [],
+    });
+    expect(field('Bonus feat')).toBeInTheDocument();
+    expect(() => field('Feat')).toThrow();
+    expect(field('Bonus feat').querySelector('input')?.getAttribute('placeholder')).toBe('Choose your bonus feat');
+  });
+
   test('a tile’s controls fill their track and set no width wider than it (user, 2026-11-21)', () => {
     const css = readFileSync(join(process.cwd(), 'src/planner/planner.css'), 'utf8');
     const rule = (selector: string) => {
@@ -1685,6 +1744,34 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
     cleanup();
     localStorage.clear();
     history.replaceState(null, '', '/');
+  });
+
+  test('a pick in a dialog sends focus to the next step, not back to what opened the dialog (QA pass 5)', async () => {
+    const hash = await atBonusCombatFeat();
+    cleanup();
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    history.replaceState(null, '', `/${hash}`);
+    render(() => <Planner />);
+    await screen.findByRole('toolbar', { name: 'Build' });
+    flush();
+    const menu = button('Build menu');
+    menu.focus();
+    fireEvent.click(button('Open the list'));
+    flush();
+    const box = await waitFor(() => {
+      const found = document.querySelector<HTMLElement>('.choice-dialog');
+      expect(found).not.toBeNull();
+      return found;
+    });
+    await waitFor(() => expect(box?.contains(document.activeElement)).toBe(true));
+    const cleave = [...(box?.querySelectorAll<HTMLElement>('button.ww-option') ?? [])].find(
+      (b) => b.querySelector('.ww-option__name')?.textContent === 'Cleave',
+    );
+    fireEvent.click(cleave ?? document.body);
+    flush();
+    await waitFor(() => expect(document.querySelector('.choice-dialog')).toBeNull());
+    await waitFor(() => expect(document.activeElement?.classList.contains('trail-stepper')).toBe(true));
+    expect(document.activeElement).not.toBe(menu);
   });
 
   const dialogBox = () => document.querySelector<HTMLElement>('.choice-dialog');
