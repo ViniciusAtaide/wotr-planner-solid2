@@ -181,6 +181,7 @@ export interface Walk {
   readonly attributePoints: readonly number[];
   readonly skillPoints: readonly number[];
   readonly unit: Unit;
+  readonly ranksEnded: boolean;
 }
 
 class SlotState implements SlotChain {
@@ -355,7 +356,7 @@ class Walker {
   readonly dropped: Dropped[] = [];
   readonly attributePoints: number[] = [];
   readonly skillPoints: number[] = [];
-  legendTaken = false;
+  ranksEnded = false;
   readonly takenOff = new Set<Guid>();
   readonly aspectsOn = new Map<Guid, Guid>();
   readonly refusedAspects = new Set<Guid>();
@@ -424,6 +425,7 @@ class Walker {
       attributePoints: this.attributePoints,
       skillPoints: this.skillPoints,
       unit: this.unit,
+      ranksEnded: this.ranksEnded,
     };
   }
 
@@ -981,7 +983,7 @@ class Walker {
       const b = u.bp(c) as BlueprintCharacterClass | undefined;
       return b?.IsMythic === true && c !== starting && !b.m_IsHigherMythic && !SWITCH_TO.has(c);
     };
-    if (this.legendTaken) {
+    if (this.ranksEnded) {
       this.fail({ choice: 'rank', subject: cls, rule: 'map31.legendEndsAscensions' });
       return;
     }
@@ -1002,7 +1004,7 @@ class Walker {
     } else if (cls === LEGEND_CLASS) {
       this.dropRanks({ keepGeneral: false, startingLevel: 2 });
       this.loseMythicSpellbooks();
-      this.legendTaken = true;
+      this.ranksEnded = true;
     }
   }
 

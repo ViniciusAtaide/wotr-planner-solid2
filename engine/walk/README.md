@@ -6,7 +6,7 @@ Every rule here ports one decompiled C# method. `cites.ts` holds the citations, 
 
 ## Public entry
 
-- **The walk** (`walk.ts`): `walk(data, build, G?)` returns a `Walk`: its `gains`, `failures`, opened `slots`, `gearDependent` choices, path-switch `dropped` facts, each level's `attributePoints` and `skillPoints`, and the finished `unit`. `pauseAt(data, build, slot, G?)` returns a `PausedWalk` (build ticket 04). Also `BANDS` and `Band`, `bandOf`, the result types `Gain`, `OpenedSlot`, `GearDependent`, `Dropped`, and `appliedGrantTypes` and `appliedFieldGrants` for the coverage check.
+- **The walk** (`walk.ts`): `walk(data, build, G?)` returns a `Walk`: its `gains`, `failures`, opened `slots`, `gearDependent` choices, path-switch `dropped` facts, each level's `attributePoints` and `skillPoints`, the finished `unit`, and `ranksEnded`: true once a taken rank ends the ascensions (Legend), the same flag that refuses any rank after it (`map31.legendEndsAscensions`). `pauseAt(data, build, slot, G?)` returns a `PausedWalk` (build ticket 04). Also `BANDS` and `Band`, `bandOf`, the result types `Gain`, `OpenedSlot`, `GearDependent`, `Dropped`, and `appliedGrantTypes` and `appliedFieldGrants` for the coverage check.
 - **The character** (`unit.ts`): `Unit`, `Fact`, `Source`, `ClassData`, `ProgressionData`, the parameter helpers `paramKey`, `paramBlueprint`, `paramValue`, `isParamType` and `ParamType`, `ATTRIBUTES`, `SKILL_ATTRIBUTE`, `isAttribute`, `isSkill`, `stackingOf` and `applyProgression`.
 - **Failures** (`failure.ts`, re-exported by `walk.ts`): `Rule`, `Value`, `Unmet`, `FailedRule`, `Failure`.
 - **Stats** (`stats.ts`): `POINT_BUY`, `attributeBonus`, `pointBuyCost`, `skillPointsAvailable`, `applyStats`, `StatsHost`.

@@ -666,6 +666,18 @@ describe('path switches (map ticket 31)', { timeout: 30_000 }, () => {
     '3d420403f3e7340499931324640efe96',
   ];
 
+  it('marks the ranks ended after Legend, and not on a path', () => {
+    const AEON = '15a85e67b7d69554cab9ed5830d0268e';
+    const ranks = jackInTheGreen.build.ranks ?? [];
+    const aeonTo9: Build = {
+      ...jackInTheGreen.build,
+      ranks: ranks.slice(0, 9).map((r, i) => (i >= 2 ? { ...r, class: AEON } : r)),
+      picks: jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place)),
+    };
+    expect(walk(data, aeonTo9, G).ranksEnded).toBe(false);
+    expect(walk(data, switchAt('3d420403f3e7340499931324640efe96', 8), G).ranksEnded).toBe(true);
+  });
+
   it('refuses every switch at ranks 9 and 10 after a path through rank 8 or 9', () => {
     for (const cls of SWITCHES) {
       for (const rank of [9, 10]) {
