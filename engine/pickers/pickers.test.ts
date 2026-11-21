@@ -21,6 +21,7 @@ import { backgroundPicker } from './background-picker';
 import { firstLevelWith, heritageSlotIn, racePicker } from './race-picker';
 import { namesInList } from './option-names';
 import { breaks, opensAt, refusal } from '../refusals';
+import { prerequisites } from '../prerequisites';
 import { pauseAt, walk } from '../walk';
 
 const files = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)));
@@ -344,6 +345,29 @@ describe('what character creation offers (comparison bug 5)', { timeout: 30_000 
     expect(judged).toBeGreaterThan(10);
     expect(differ).toEqual([]);
   }, 120_000);
+
+  it('words a condition by the family its options share, else by a few bare names', () => {
+    const DRAGON_DISCIPLE = '72051275b1dbb2d42ba9118237794f7c';
+    const p = classPicker(data, jackInTheGreen.build, { level: 10 }, G);
+    const ddLeaf = prerequisites(data.blueprints.get(DRAGON_DISCIPLE)!, data.blueprints).find(
+      (l) => l.names.kind === 'condition',
+    )!;
+    const [condition] = refusal(
+      { data, G, unit: p?.unit },
+      { rule: 'BlueprintCharacterClass.MeetsPrerequisites', unmet: [{ leaf: ddLeaf }] },
+    ).unmet;
+    expect(condition).toMatch(/^Needs a Draconic Bloodline( \(yours: [^)]+\))?\.$/);
+    expect(condition!.length).toBeLessThan(80);
+    const second = [...data.blueprints.values()].find((b) => b.assetName === 'BloodragerDragonBlackSecondBloodline')!;
+    const leaf = prerequisites(second, data.blueprints).find((l) => l.names.kind === 'condition')!;
+    const [line] = refusal(
+      { data, G },
+      { rule: 'BlueprintFeatureSelection.CanSelect:MeetsPrerequisites', unmet: [{ leaf }] },
+    ).unmet;
+    expect(line).toMatch(/^Needs one of .+ and \d+ more\.$/);
+    expect(line!.length).toBeLessThanOrEqual(120);
+    expect(line).not.toMatch(/Second Bloodrager Bloodline/);
+  });
 
   it('names each option bare, and qualifies it only when another option in the same list shares its name', () => {
     const ALLIED_SPELLCASTER = '9093ceeefe9b84746a5993d619d7c86f';

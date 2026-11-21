@@ -1707,6 +1707,12 @@ export function isShown(bp: Blueprint): boolean {
   return bp.name !== undefined && !('HideInUI' in bp && bp.HideInUI);
 }
 
+export function bareName(bp: Blueprint): string | undefined {
+  const { name, qualifier } = bp;
+  if (name === undefined) return undefined;
+  return qualifier !== undefined && name.endsWith(` (${qualifier})`) ? name.slice(0, -(qualifier.length + 3)) : name;
+}
+
 export type Override = OverrideBase &
   (
     | { readonly change: 'add' }

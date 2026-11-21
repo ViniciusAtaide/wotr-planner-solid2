@@ -11,7 +11,7 @@ import {
   type SlotId,
 } from '../build';
 import type { CheckedData } from '../load';
-import { isShown, type Guid, type StatType } from '../data';
+import { bareName, isShown, type Guid, type StatType } from '../data';
 import { buildGrantIndex, grantorKind, type GrantIndex, type GrantParam } from '../grants';
 import { conditionFacts } from '../prerequisites';
 import type { FailedRule, Rule, Unmet, Value, Unit } from '../walk';
@@ -130,9 +130,76 @@ function shortList(names: readonly string[]): string {
   return more > 0 ? `${shown.join(', ')} and ${more} more` : head;
 }
 
+function plain(w: Wording, guid: Guid | string): string {
+  const bp = w.data.blueprints.get(guid);
+  return (bp && bareName(bp)) ?? nameOf(w.data, guid);
+}
+
+function plainNames(w: Wording, guids: readonly Guid[]): string[] {
+  const unique = [...new Set(guids)];
+  const bare = unique.map((g) => plain(w, g));
+  const count = new Map<string, number>();
+  for (const b of bare) count.set(b, (count.get(b) ?? 0) + 1);
+  return [...new Set(unique.map((g, i) => ((count.get(bare[i]!) ?? 0) > 1 ? nameOf(w.data, g) : bare[i]!)))];
+}
+
+function familyOf(names: readonly string[]): string | undefined {
+  if (names.length < 2) return undefined;
+  const words = names.map((n) => n.split(' '));
+  const common: string[] = [];
+  for (let i = 0; words.every((ws) => ws[i] !== undefined && ws[i] === words[0]![i]); i++) common.push(words[0]![i]!);
+  while (common.length > 0 && /^[—–,:-]$/.test(common.at(-1)!)) common.pop();
+  return common.length === 0 ? undefined : common.join(' ');
+}
+
+function conditionText(w: Wording, facts: readonly Guid[]): string {
+  const shown: Guid[] = [];
+  const grantors: Guid[] = [];
+  const kinds = new Set<string>();
+  for (const fact of facts) {
+    const bp = w.data.blueprints.get(fact);
+    if (bp !== undefined && isShown(bp)) {
+      shown.push(fact);
+      continue;
+    }
+    for (const [kind, gs] of w.G.namedGrantorsByKind(fact)) {
+      const held = gs.filter((g) => w.data.blueprints.get(g)?.$type !== 'BlueprintAbility');
+      if (held.length === 0) continue;
+      kinds.add(kind);
+      grantors.push(...held);
+    }
+  }
+  const options = [...new Set((grantors.length > 0 ? grantors : shown).map((g) => plain(w, g)))];
+  const family = familyOf(options);
+  if (family !== undefined) {
+    const shownBare = [...new Set(shown.map((g) => plain(w, g)))];
+    const [kind] = [...kinds];
+    const noun =
+      shownBare.length === 1 ? shownBare[0]! : kinds.size === 1 && kind !== undefined ? grantorKindNoun(kind) : '';
+    const phrase = noun === '' || family.toLowerCase().endsWith(noun.toLowerCase()) ? family : `${family} ${noun}`;
+    const own = new Set([...shown, ...grantors]);
+    const yours =
+      w.unit === undefined
+        ? []
+        : [...w.unit.facts()]
+            .map((f) => f.blueprint)
+            .filter((g) => {
+              const held = w.data.blueprints.get(g);
+              const kind = grantorKind(held);
+              return (
+                held !== undefined && isShown(held) && !kind.startsWith('Blueprint') && kinds.has(kind) && !own.has(g)
+              );
+            });
+    const mine = yours.length === 0 ? '' : ` (yours: ${shortList(plainNames(w, yours))})`;
+    return `Needs ${article(phrase)}${mine}.`;
+  }
+  if (options.length === 0) return 'Needs a condition the game checks.';
+  return options.length === 1 ? `Needs ${options[0]}.` : `Needs one of ${shortList(options)}.`;
+}
+
 function factName(w: Wording, fact: Guid): string {
   const bp = w.data.blueprints.get(fact);
-  if (bp === undefined || isShown(bp)) return nameOf(w.data, fact);
+  if (bp === undefined || isShown(bp)) return plain(w, fact);
   const byKind = w.G.namedGrantorsByKind(fact);
   const [kind] = [...byKind.keys()];
   if (byKind.size === 1 && kind !== undefined && !kind.startsWith('Blueprint')) {
@@ -145,12 +212,19 @@ function factName(w: Wording, fact: Guid): string {
             return held !== undefined && isShown(held) && grantorKind(held) === kind;
           });
     const mine =
-      yours.length === 0 ? '' : ` (yours, ${shortList(yours.map((f) => nameOf(w.data, f.blueprint)))}, doesn't)`;
+      yours.length === 0
+        ? ''
+        : ` (yours, ${shortList(
+            plainNames(
+              w,
+              yours.map((f) => f.blueprint),
+            ),
+          )}, doesn't)`;
     return `${article(noun)} that allows it${mine}`;
   }
   const grantors = [...byKind.values()].flat();
-  if (grantors.length > 0) return `one of ${shortList(grantors.map((g) => nameOf(w.data, g)))}`;
-  return nameOf(w.data, fact);
+  if (grantors.length > 0) return `one of ${shortList(plainNames(w, grantors))}`;
+  return plain(w, fact);
 }
 
 const has = (u: Unmet) => (u.found === undefined ? '' : ` (yours: ${u.found})`);
@@ -172,13 +246,13 @@ export function unmetText(w: Wording, u: Unmet): string {
     case 'classLevel':
       return forbids
         ? n.Level <= 1
-          ? `Not with levels in ${nameOf(w.data, n.m_CharacterClass)}.`
-          : `Needs fewer than ${n.Level} levels of ${nameOf(w.data, n.m_CharacterClass)}${has(u)}.`
-        : `Needs ${nameOf(w.data, n.m_CharacterClass)} level ${n.Level}${has(u)}.`;
+          ? `Not with levels in ${plain(w, n.m_CharacterClass)}.`
+          : `Needs fewer than ${n.Level} levels of ${plain(w, n.m_CharacterClass)}${has(u)}.`
+        : `Needs ${plain(w, n.m_CharacterClass)} level ${n.Level}${has(u)}.`;
     case 'archetypeLevel':
       return forbids
-        ? `Not with the ${nameOf(w.data, n.m_Archetype)} archetype.`
-        : `Needs ${nameOf(w.data, n.m_Archetype)} level ${n.Level}${has(u)}.`;
+        ? `Not with the ${plain(w, n.m_Archetype)} archetype.`
+        : `Needs ${plain(w, n.m_Archetype)} level ${n.Level}${has(u)}.`;
     case 'stat':
       return `Needs ${statName(n.Stat)} ${n.Value}${has(u)}.`;
     case 'characterLevel':
@@ -205,15 +279,15 @@ export function unmetText(w: Wording, u: Unmet): string {
         : `Needs ${spontaneous}${type} spells of level ${n.RequiredSpellLevel}${has(u)}.`;
     }
     case 'classSpellLevel':
-      return `Needs ${nameOf(w.data, n.m_CharacterClass)} spells of level ${n.RequiredSpellLevel}${has(u)}.`;
+      return `Needs ${plain(w, n.m_CharacterClass)} spells of level ${n.RequiredSpellLevel}${has(u)}.`;
     case 'parametrizedFeature': {
       const param = n.ParameterType === 'SpellSchool' ? n.SpellSchool : camelWords(n.WeaponCategory);
-      return `Needs ${nameOf(w.data, n.m_Feature)} (${param}).`;
+      return `Needs ${plain(w, n.m_Feature)} (${param}).`;
     }
     case 'weaponSubCategory':
-      return `Needs ${nameOf(w.data, n.m_Feature)} with a weapon of the ${camelWords(n.SubCategory).toLowerCase()} kind.`;
+      return `Needs ${plain(w, n.m_Feature)} with a weapon of the ${camelWords(n.SubCategory).toLowerCase()} kind.`;
     case 'selectionPossible':
-      return `Needs an option of ${nameOf(w.data, n.m_ThisFeature)} still open.`;
+      return `Needs an option of ${plain(w, n.m_ThisFeature)} still open.`;
     case 'pet':
       return forbids
         ? `Not with a ${camelWords(n.Type).toLowerCase()} pet.`
@@ -225,13 +299,9 @@ export function unmetText(w: Wording, u: Unmet): string {
     case 'story':
       return 'Needs a story event.';
     case 'spellsInSpellbook':
-      return `Needs a spell for ${nameOf(w.data, n.m_SpellSpecializationFeat)}; feats taken for a spell aren't in the planner yet.`;
-    case 'condition': {
-      const facts = conditionFacts(n.Condition);
-      return facts.length === 0
-        ? 'Needs a condition the game checks.'
-        : `Needs a condition on ${shortList(facts.map((f) => factName(w, f)))}.`;
-    }
+      return `Needs a spell for ${plain(w, n.m_SpellSpecializationFeat)}; feats taken for a spell aren't in the planner yet.`;
+    case 'condition':
+      return conditionText(w, conditionFacts(n.Condition));
   }
 }
 
@@ -239,12 +309,12 @@ const v = (x: Value | undefined): string =>
   x === undefined ? '' : Array.isArray(x) ? x.map(String).join(', ') : typeof x === 'boolean' ? String(x) : String(x);
 
 export function ruleText(w: Wording, f: FailedRule): string {
-  const name = (x: Value | undefined) => (typeof x === 'string' ? nameOf(w.data, x) : v(x));
+  const name = (x: Value | undefined) => (typeof x === 'string' ? plain(w, x) : v(x));
   switch (f.rule) {
     case 'SelectRace.Check':
       return 'Not a race.';
     case 'BlueprintRace.GetRestrictedByArchetype':
-      return `An archetype of the Build needs another race: ${shortList((Array.isArray(f.found) ? f.found : []).map((a) => nameOf(w.data, String(a))))}.`;
+      return `An archetype of the Build needs another race: ${shortList(plainNames(w, (Array.isArray(f.found) ? f.found : []).map(String)))}.`;
     case 'SelectRaceStat.Check':
       return "This race doesn't let you choose the ability its +2 goes to.";
     case 'StatsDistribution.CanAdd':

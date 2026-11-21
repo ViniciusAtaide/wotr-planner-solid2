@@ -1,15 +1,11 @@
 import type { CheckedData } from '../load';
-import type { Blueprint, Guid } from '../data';
+import { bareName, type Guid } from '../data';
+
+export { bareName };
 
 export interface ListName {
   readonly name: string;
   readonly qualifier?: string;
-}
-
-export function bareName(bp: Blueprint): string | undefined {
-  const { name, qualifier } = bp;
-  if (name === undefined) return undefined;
-  return qualifier !== undefined && name.endsWith(` (${qualifier})`) ? name.slice(0, -(qualifier.length + 3)) : name;
 }
 
 export function namesInList(data: CheckedData, guids: readonly Guid[]): ReadonlyMap<Guid, ListName> {

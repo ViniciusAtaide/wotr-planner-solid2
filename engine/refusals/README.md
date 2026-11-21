@@ -23,6 +23,12 @@ Why the game refuses a choice, worded true for this Build (guide §4, GLOSSARY.m
 
 ## Rules
 
+- **Names in Refusals** are bare (`bareName`): "Allied Spellcaster", not the importer's globally qualified "Allied Spellcaster (feature)". A list keeps a qualifier only where two of its names would otherwise read the same (`plainNames`). `nameOf` stays the globally unique name for other callers.
+- **A condition** (`PrerequisiteCondition`) is worded by what its options are: each shown fact in it, and the named grantors of each hidden one.
+  - Ability grantors are left out: picks made through an ability are daily choices and never part of a Build (map tickets 24 and 26). An example is Mixed Bloodline.
+  - **Family:** when the options' bare names share leading words, the condition reads as that family. The noun is the shown facts' shared bare name, or else the grantors' kind noun: "Needs a Draconic Bloodline", in the manner of map 30's family names. When the character holds a fact of the same specific kind, its name follows as "(yours: Abyssal Bloodline)".
+  - **No family:** the condition lists at most three distinct bare names, then "and N more" (map 19's wording for nameless prerequisites). Two grantors with the same bare name satisfy it equally, so that name is listed once.
+  - **Length:** every condition in the data words in 120 characters or fewer.
 - **`refusal`** words a walk Failure or a picker's closed option. The unmet leaves of group All are a line each. The others (Any, and ForcedTrue for a feature), of which one would do, share one line: "One of these: …", or the leaf alone when there is only one. A class's failing ForcedTrue leaf never reaches R: the walk doesn't count it. A line the unmet leaves would repeat, such as two identical `PrerequisiteNoClassLevel` components, is worded once.
 - **`gearNote`** (ADR 0002) names the worn items an option needs when it is allowed only with the Gear counted.
 - **`nameOf`** gives the display name. A blueprint the game never names reads as its asset name marked "(internal)" (map 19); a GUID the data doesn't hold reads as itself.
