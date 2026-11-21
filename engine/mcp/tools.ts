@@ -375,8 +375,12 @@ export async function options(
   };
 }
 
-function optionName(e: Engine, o: { readonly feature: Guid; readonly param?: GrantParam }): string {
-  const name = nameOf(e.data, o.feature);
+function optionName(
+  e: Engine,
+  o: { readonly feature: Guid; readonly param?: GrantParam; readonly name?: string; readonly qualifier?: string },
+): string {
+  const listed = o.name === undefined ? undefined : o.qualifier === undefined ? o.name : `${o.name} (${o.qualifier})`;
+  const name = listed ?? nameOf(e.data, o.feature);
   if (o.param === undefined) return name;
   if ('WeaponCategory' in o.param) return `${name} (${o.param.WeaponCategory.replace(/([a-z])([A-Z])/g, '$1 $2')})`;
   if ('SpellSchool' in o.param) return `${name} (${o.param.SpellSchool})`;

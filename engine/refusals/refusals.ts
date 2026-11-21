@@ -171,7 +171,7 @@ function plainNames(w: Wording, guids: readonly Guid[]): string[] {
   return listNames(w.data, guids);
 }
 
-function familyOf(names: readonly string[]): string | undefined {
+export function familyOf(names: readonly string[]): string | undefined {
   if (names.length < 2) return undefined;
   const words = names.map((n) => n.split(' '));
   const common: string[] = [];

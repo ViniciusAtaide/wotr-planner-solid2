@@ -20,6 +20,7 @@ import { classPicker } from './class-picker';
 import { backgroundPicker } from './background-picker';
 import { firstLevelWith, heritageSlotIn, racePicker } from './race-picker';
 import { namesInList } from './option-names';
+import { guids } from '../data';
 import { breaks, opensAt, refusal } from '../refusals';
 import { prerequisites } from '../prerequisites';
 import { pauseAt, walk } from '../walk';
@@ -500,5 +501,30 @@ describe('which options the level-up screen lists', { timeout: 30_000 }, () => {
     expect(shownInSelection(named, true)).toBe(false);
     expect(shownInSelection({ ...named, HideNotAvailibleInUI: false } as Blueprint, true)).toBe(true);
     expect(shownInSelection({ HideInUI: false } as unknown as Blueprint, false)).toBe(false);
+  });
+
+  it('tells apart same-named options in one list by the prerequisite the game separates them by (MCP QA)', () => {
+    const DRACONIC = 'f4b011d090e8ae543b1441bd594c7bf7';
+    const ELEMENTAL = 'd2a4b74ee7e43a648b51d0f36db2aa34';
+    const NATURE_MAGE = '7cb23fae66c54c6eb698c151aba54c0c';
+    const UNLETTERED = '760f927485da2194da1e97f2ded0d0ca';
+    const bloodlines = namesInList(data, [DRACONIC, ELEMENTAL]);
+    expect(bloodlines.get(DRACONIC)).toEqual({ name: 'Bloodline Feat Selection', qualifier: 'Draconic Bloodline' });
+    expect(bloodlines.get(ELEMENTAL)).toEqual({ name: 'Bloodline Feat Selection', qualifier: 'Elemental Bloodline' });
+    const arcanists = namesInList(data, [NATURE_MAGE, UNLETTERED]);
+    expect(arcanists.get(NATURE_MAGE)).toEqual({ name: 'Arcanist', qualifier: 'Nature Mage' });
+    expect(arcanists.get(UNLETTERED)).toEqual({ name: 'Arcanist', qualifier: 'Unlettered Arcanist' });
+    expect(namesInList(data, [DRACONIC]).get(DRACONIC)).toEqual({ name: 'Bloodline Feat Selection' });
+    const shared: string[] = [];
+    for (const bp of data.blueprints.values()) {
+      if (!('m_AllFeatures' in bp)) continue;
+      const seen = new Set<string>();
+      for (const n of namesInList(data, guids(bp.m_AllFeatures)).values()) {
+        const shown = n.qualifier === undefined ? n.name : `${n.name} (${n.qualifier})`;
+        if (seen.has(shown)) shared.push(`${bp.assetName}: ${shown}`);
+        seen.add(shown);
+      }
+    }
+    expect(shared).toEqual([]);
   });
 });
