@@ -241,6 +241,10 @@ export function nextStep(
   return atLevelCap(t) ? { kind: 'complete' } : { kind: 'nextLevel' };
 }
 
+export function stepKey(step: Step): string {
+  return step.kind === 'slot' ? `slot ${slotKey(step.slot)}` : JSON.stringify(step);
+}
+
 export function whereOf(t: TrailView, step: Step): Where {
   switch (step.kind) {
     case 'slot': {

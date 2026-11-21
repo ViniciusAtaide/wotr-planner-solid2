@@ -56,7 +56,6 @@ export interface CharacterCardProps {
   readonly editing: boolean;
   readonly onToggle: () => void;
   readonly race: JSX.Element;
-  readonly raceStep: boolean;
   readonly chips: JSX.Element;
   readonly scoresStep: boolean;
   readonly here: JSX.Element;
@@ -96,7 +95,6 @@ export function CharacterCard(props: CharacterCardProps) {
       </Show>
       <Show when={!props.folded}>
         <div class="trail-race">{props.race}</div>
-        <Show when={props.raceStep}>{props.here}</Show>
         <Show
           when={props.scoresStep}
           fallback={<StatTiles trail={props.trail} editing={props.editing} {...(props.diff && { diff: props.diff })} />}
@@ -112,7 +110,6 @@ export function CharacterCard(props: CharacterCardProps) {
         </Show>
         {props.chips}
       </Show>
-      <Show when={!props.scoresStep && !props.raceStep}>{props.here}</Show>
     </section>
   );
 }

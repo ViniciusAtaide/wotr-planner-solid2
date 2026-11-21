@@ -19,9 +19,16 @@ A Build reads as the character's path, phone first. From top to bottom the page 
   the top, neutral at the sides, evil red across the bottom; the name of the alignment under the pointer or focus, else
   the chosen one, above it), the six ability scores as tiles
   with − and + steppers and a +2 button under each (disabled, in the same place, when the race sets its bonuses), the
-  points left, and the character's own picks as chips: what the race grants (a Human's bonus feat), the background and
-  what it opens, and the deity. Which slots those are is S's answer (`characterWideSlots`), so nothing character-wide
-  sits on the Level 1 stop.
+  points left, and the character's own picks as a column of labeled search fields (user, 2026-11-21;
+  `CharacterField.tsx`): Race at the top, then what the race grants (a Human's bonus feat), the background and the
+  deity. Which slots those are is S's answer (`characterWideSlots`), so nothing character-wide sits on the Level 1
+  stop. A field shows its label and the current choice, or "Choose your …" in the accent style while unset; the one the
+  trail waits on is underlined in gold. Inline first, focusing or typing in it opens its list under it (the lists'
+  field mode, `FieldMode` on `ChoiceList` and `PickStep`: the same cap, windowing, closed rows and keys), and a pick
+  closes it and moves the trail on, with no step heading, Back or Expand around it. While closed, a field computes
+  nothing (its rows and picker load only while its list is open). Modal first, focusing or clicking it opens the
+  dialog instead, and a pick closes that dialog. A field whose step arrives through auto-advance opens itself (and
+  takes focus under a fine pointer; on touch its first option does), never on first load.
 - **The trail**: one stop per character level, titled with its class and class level, with its picks as chips: each
   slot the walk opens there, an Archetype chip at a class's first level when it has archetypes, the ability increase
   when the walk offers one, and the skills ("4 ranks"). Each Mythic rank is its own stop after the level it is taken at,
@@ -35,7 +42,7 @@ to the player in the planner's own words: "Level 5 · choose feat", "Your charac
 **The next step** is the first of these that is open, in reading order (`nextStep`):
 
 1. the race, while the Build has none (below, "Flat lists"), since its bonuses shape the scores. The race is a
-   full-width field at the top of the character card ("Race", "Choose your race" in the accent color while unset;
+   labeled field at the top of the character card ("Race", "Choose your race" in the accent color while unset;
    `trail-race`), and its list opens right under it, above the tiles. So a fresh Build opens here (user, 2026-11-21);
 2. the ability scores, while the Build has none: the step opens in the character card in the tiles' place, and stays
    open through its edits (+2 and alignment included) until "Done" ("Done · leave N unspent" while points are
@@ -55,7 +62,7 @@ to the player in the planner's own words: "Level 5 · choose feat", "Your charac
    trail simply ends on the cap level's stop, with no closing card (user, 2026-11-21; `complete`, where `end`).
 
 Each pick goes back to the next step. Tapping any chip (or a stop's title, for its class, archetype and removal, or a
-rank's, for its path and Rank level) opens that choice in place with "Back to the next choice"; the ability scores,
+rank's, for its path and Rank level) opens that choice in place, with "Back to the next choice" only when it isn't the next choice already; the ability scores,
 the skills, a rank and Gear stay open through their edits, everything else returns to the next step once it applies. An edit that breaks later
 picks goes through the Cascade preview as before, which lists what E clears: the picks, the levels whose skill ranks
 go (`clearedSkills`) and the Mythic ranks that go (`clearedRanks`), worded together (`clearsSummary`, `clearsList`);

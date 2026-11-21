@@ -177,8 +177,9 @@ describe('a Build code from the MCP opens the same Build in the UI', () => {
       expect(await encodeBuild(e.data, opened)).toBe(step.code);
       const shown = trailOf(opened);
       expect(shown.querySelectorAll(LEVEL_STOPS).length).toBe(opened.levels.length);
+      const text = [shown.textContent ?? '', ...[...shown.querySelectorAll('input')].map((i) => i.value)].join(' ');
       for (const p of opened.picks) {
-        expect(shown.textContent).toContain(optionName(e.data, p.feature, p.param));
+        expect(text).toContain(optionName(e.data, p.feature, p.param));
       }
     }
   });
@@ -199,7 +200,7 @@ describe('a Build code from the MCP opens the same Build in the UI', () => {
     const { container } = render(() => <Planner />);
     await screen.findByText(linkDidNotOpen('load', 'notACode'));
     expect(container.querySelectorAll(LEVEL_STOPS).length).toBe(0);
-    expect(container.querySelector('.trail-here__title')?.textContent).toBe('Your character · choose a race');
+    expect(container.querySelector('.trail-field--target .trail-field__label')?.textContent).toBe('Race');
     flush();
     expect(location.hash).toBe('#b=*');
     tap('Raise Strength');
@@ -323,10 +324,63 @@ const button = (name: string | RegExp) => screen.getByRole('button', { name });
 const dialog = () => document.querySelector('[role="dialog"]');
 const hereTitle = () => document.querySelector('.trail-here__title')?.textContent;
 
+function activeFilter(): HTMLInputElement | null {
+  return (
+    document.querySelector<HTMLInputElement>('.trail-field--target [data-picker-filter]') ??
+    document.querySelector<HTMLInputElement>('.trail-here [data-picker-filter]')
+  );
+}
+
 function showList(): void {
-  document.querySelector<HTMLElement>('.trail-here [data-picker-filter]')?.focus();
+  activeFilter()?.focus();
   flush();
 }
+
+function field(label: string): HTMLElement {
+  const found = [...document.querySelectorAll<HTMLElement>('.trail-field')].find(
+    (f) => f.querySelector('.trail-field__label')?.textContent === label,
+  );
+  if (found === undefined) throw new Error(`no field ${label}`);
+  return found;
+}
+
+function fieldValue(label: string): string {
+  return field(label).querySelector<HTMLInputElement>('input')?.value ?? '';
+}
+
+function openField(label: string): void {
+  field(label).querySelector<HTMLInputElement>('input')?.focus();
+  flush();
+}
+
+function stepRoot(): HTMLElement | null {
+  return (
+    document.querySelector('.trail-field--target')?.closest<HTMLElement>('.trail-choices, .trail-step') ??
+    document.querySelector<HTMLElement>('.trail-here')
+  );
+}
+
+function fieldTake(label: string, text: string): void {
+  const input = field(label).querySelector<HTMLInputElement>('input');
+  if (input === null) throw new Error(`no input in ${label}`);
+  input.focus();
+  fireEvent.input(input, { target: { value: text } });
+  flush();
+  fireEvent.keyDown(input, { key: 'Enter' });
+  flush();
+}
+
+function openTarget(): void {
+  const input = document.querySelector<HTMLInputElement>('.trail-field--target input');
+  if (input !== null) {
+    input.focus();
+    flush();
+    return;
+  }
+  tap('Open the list');
+}
+
+const targetField = () => document.querySelector('.trail-field--target .trail-field__label')?.textContent ?? undefined;
 
 function tap(name: string | RegExp): void {
   fireEvent.click(button(name));
@@ -362,7 +416,7 @@ function chipNamed(text: string): HTMLElement {
 }
 
 function filterAndTake(text: string): void {
-  const filter = document.querySelector<HTMLInputElement>('.trail-here [data-picker-filter]');
+  const filter = activeFilter();
   if (filter === null) throw new Error('no filter');
   fireEvent.input(filter, { target: { value: text } });
   flush();
@@ -423,9 +477,11 @@ describe('the levelling trail (build ticket 07)', () => {
 
   test('a fresh Build opens on the race, then the ability scores, which stay open through their edits until Done', async () => {
     await openPlanner(undefined);
-    expect(hereTitle()).toBe('Your character · choose a race');
-    expect(chipNamed('Race').textContent).toContain('Choose your race');
-    expect(chipNamed('Race').closest('.trail-race')).not.toBeNull();
+    expect(targetField()).toBe('Race');
+    expect(fieldValue('Race')).toBe('');
+    expect(field('Race').querySelector('input')?.getAttribute('placeholder')).toBe('Choose your race');
+    expect(field('Race').classList.contains('trail-field--unset')).toBe(true);
+    expect(field('Race').closest('.trail-race')).not.toBeNull();
     showList();
     tap(/^Human$/);
     expect(hereTitle()).toBe('Your character · set the ability scores');
@@ -436,24 +492,44 @@ describe('the levelling trail (build ticket 07)', () => {
     expect(hereTitle()).toBe('Begin · choose a first class');
   });
 
-  test('the race list opens right under the race field, above the scores', async () => {
+  test('the race step is only the labeled Race field: no heading, Back or Expand, and focus opens its list (user)', async () => {
     await openPlanner(undefined);
-    const field = document.querySelector('.trail-race');
-    const list = document.querySelector('.trail-here');
+    expect(document.querySelector('.trail-here')).toBeNull();
+    expect(screen.queryByRole('button', { name: 'Back to the next choice' })).toBeNull();
+    expect(screen.queryByRole('button', { name: 'Expand' })).toBeNull();
+    expect(field('Race').closest('.trail-race')?.querySelector('button.ww-option')).toBeNull();
+    openField('Race');
+    const row = field('Race').closest('.trail-race')?.querySelector('button.ww-option');
+    expect(row).not.toBeNull();
     const tiles = document.querySelector('[aria-label="The character"] [aria-label="Raise Strength"]');
-    expect(field?.compareDocumentPosition(list ?? document.body)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
-    expect(list?.compareDocumentPosition(tiles ?? document.body)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+    expect(row?.compareDocumentPosition(tiles ?? document.body)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+    fireEvent.click(row ?? document.body);
+    flush();
+    expect(fieldValue('Race')).not.toBe('');
+    expect(hereTitle()).toBe('Your character · set the ability scores');
+  });
+
+  test('"Back to the next choice" shows only after jumping away from the next choice (user)', async () => {
+    await openPlanner(cleaver);
+    expect(targetField()).toBe('Background');
+    expect(screen.queryByRole('button', { name: 'Back to the next choice' })).toBeNull();
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
+    expect(hereTitle()).toBe('Level 1 · choose feat');
+    tap('Back to the next choice');
+    expect(document.querySelector('.trail-here')).toBeNull();
+    expect(targetField()).toBe('Background');
   });
 
   test('the race list holds each race with its heritages, and one row takes both as one change', async () => {
     await openPlanner({ scores: abilityScores(SCORES), levels: [], picks: [] });
-    expect(hereTitle()).toBe('Your character · choose a race');
+    expect(targetField()).toBe('Race');
     filterAndTake('rakshasa');
     expect(hereTitle()).toBe('Begin · choose a first class');
     expect(document.querySelector('.planner-undo__what')?.textContent).toBe(
       'Race Tiefling · Beastbrood (Rakshasa-Spawn)',
     );
-    expect(chipNamed('Race').textContent).toContain('Tiefling · Beastbrood (Rakshasa-Spawn)');
+    expect(fieldValue('Race')).toBe('Tiefling · Beastbrood (Rakshasa-Spawn)');
   });
 
   test('the class list holds each class with its archetypes, and one row takes both as one change', async () => {
@@ -468,10 +544,8 @@ describe('the levelling trail (build ticket 07)', () => {
 
   test('the background list holds each group with its variations', async () => {
     await openPlanner(cleaver);
-    fireEvent.click(chipNamed('Background'));
-    flush();
-    filterAndTake('courtier');
-    expect(chipNamed('Background').textContent).toContain('Noble (Courtier)');
+    fieldTake('Background', 'courtier');
+    expect(fieldValue('Background')).toBe('Noble (Courtier)');
     expect(document.querySelector('.planner-undo__what')?.textContent).toBe('Background Noble (Courtier)');
   });
 
@@ -530,17 +604,17 @@ describe('the levelling trail (build ticket 07)', () => {
 
   test('a pick opens the next empty choice in place, and the Undo line names it', async () => {
     await openPlanner(cleaver);
-    const first = hereTitle();
-    expect(first).toMatch(/^Your character · choose /);
+    const first = targetField();
+    expect(first).toBeTruthy();
     showList();
-    const option = document.querySelector<HTMLElement>('.trail-here button.ww-option');
+    const option = stepRoot()?.querySelector<HTMLElement>('button.ww-option');
     const name = option?.querySelector('.ww-option__name')?.textContent ?? '';
     fireEvent.click(option ?? document.body);
     flush();
-    expect(hereTitle()).not.toBe(first);
+    expect(targetField() ?? hereTitle()).not.toBe(first);
     expect(document.querySelector('.planner-undo')?.textContent).toContain(name);
     tap('Undo');
-    expect(hereTitle()).toBe(first);
+    expect(targetField()).toBe(first);
   });
 
   test('race, +2, alignment and score edits reach the Undo line, and an undo names the change before', async () => {
@@ -565,7 +639,7 @@ describe('the levelling trail (build ticket 07)', () => {
   test('from 900 px wide the character card keeps its controls after level 1', async () => {
     await openPlanner(withLevels(2));
     expect(button('Raise Strength')).toBeEnabled();
-    expect(chipNamed('Race').textContent).toContain('Dwarf · Basic');
+    expect(fieldValue('Race')).toBe('Dwarf · Basic');
     expect(button('Lawful Good')).toBeTruthy();
     expect(document.querySelector('[aria-label="The character"] button.trail-card__head')).toBeNull();
   });
@@ -865,12 +939,10 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
 
   test('the race the Build holds is marked after a change (comparison bug 1)', async () => {
     await openPlanner(cleaver);
-    fireEvent.click(chipNamed('Race'));
-    flush();
+    openField('Race');
     expect(button(/^Dwarf · Basic/)).toHaveAttribute('aria-current', 'true');
     tap(/^Elf · Basic/);
-    fireEvent.click(chipNamed('Race'));
-    flush();
+    openField('Race');
     expect(button(/^Elf · Basic/)).toHaveAttribute('aria-current', 'true');
     expect(button(/^Dwarf · Basic/)).not.toHaveAttribute('aria-current');
   });
@@ -1193,10 +1265,10 @@ describe('QA pass 1', () => {
   test('⌘Z undoes from a filter that is empty', async () => {
     await openPlanner(cleaver);
     showList();
-    const option = document.querySelector<HTMLElement>('.trail-here button.ww-option');
+    const option = stepRoot()?.querySelector<HTMLElement>('button.ww-option');
     fireEvent.click(option ?? document.body);
     flush();
-    const filter = document.querySelector<HTMLInputElement>('.trail-here [data-picker-filter]');
+    const filter = activeFilter();
     expect(filter?.value).toBe('');
     const before = document.querySelector('.planner-undo__what')?.textContent;
     fireEvent.keyDown(filter ?? window, { key: 'z', metaKey: true });
@@ -1216,12 +1288,12 @@ describe('QA pass 1', () => {
   test('after a pick, focus lands on the next step, never on the page body', async () => {
     await openPlanner(cleaver);
     showList();
-    const first = document.querySelector<HTMLElement>('.trail-here button.ww-option');
+    const first = stepRoot()?.querySelector<HTMLElement>('button.ww-option');
     first?.focus();
     fireEvent.click(first ?? document.body);
     flush();
     await waitFor(() => expect(document.activeElement).not.toBe(document.body));
-    expect(document.activeElement?.closest('.trail-here')).not.toBeNull();
+    expect(stepRoot()?.contains(document.activeElement)).toBe(true);
   });
 
   test('a tile’s controls fill their track and set no width wider than it (user, 2026-11-21)', () => {
@@ -1252,11 +1324,11 @@ describe('QA pass 1', () => {
       expect(document.activeElement).toBe(document.body);
       expect(scrolled).not.toHaveBeenCalled();
       showList();
-      const option = document.querySelector<HTMLElement>('.trail-here button.ww-option');
+      const option = stepRoot()?.querySelector<HTMLElement>('button.ww-option');
       fireEvent.click(option ?? document.body);
       flush();
       await waitFor(() => expect(scrolled).toHaveBeenCalled());
-      expect(document.activeElement?.closest('.trail-here')).not.toBeNull();
+      await waitFor(() => expect(stepRoot()?.contains(document.activeElement)).toBe(true));
     } finally {
       Reflect.deleteProperty(Element.prototype, 'scrollIntoView');
     }
@@ -1590,27 +1662,32 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
     localStorage.setItem('wotr.choiceLists', 'modal');
     await openPlanner(cleaver);
     expect(dialogBox()).toBeNull();
-    expect(document.querySelector('.trail-here button.ww-option')).toBeNull();
-    tap('Open the list');
-    expect(dialogTitle()).toBe(hereTitle());
+    expect(document.querySelector('button.ww-option')).toBeNull();
+    openTarget();
+    expect(dialogBox()).not.toBeNull();
     expect(document.documentElement.classList.contains('choice-open')).toBe(true);
-    const first = hereTitle();
+    const first = dialogTitle();
     pickFirstIn(dialogBox() ?? document);
-    await waitFor(() => expect(hereTitle()).not.toBe(first));
-    await waitFor(() => expect(dialogTitle()).toBe(hereTitle()));
+    await waitFor(() => expect(dialogTitle()).not.toBe(first));
+    expect(dialogTitle()).toBeTruthy();
   });
 
   test('Escape and the back button close the dialog without picking, and focus returns to the step', async () => {
     localStorage.setItem('wotr.choiceLists', 'modal');
     await openPlanner(cleaver);
     const before = location.hash;
-    tap('Open the list');
+    openTarget();
     fireEvent.keyDown(dialogBox() ?? document.body, { key: 'Escape' });
     flush();
     expect(dialogBox()).toBeNull();
     expect(document.documentElement.classList.contains('choice-open')).toBe(false);
-    expect(document.activeElement?.textContent).toBe('Open the list');
-    tap('Open the list');
+    await new Promise((r) => setTimeout(r, 10));
+    flush();
+    expect(dialogBox()).toBeNull();
+    expect(document.activeElement?.closest('.trail-field--target')).not.toBeNull();
+    fireEvent.click(document.activeElement ?? document.body);
+    flush();
+    expect(dialogBox()).not.toBeNull();
     window.dispatchEvent(new PopStateEvent('popstate'));
     flush();
     expect(dialogBox()).toBeNull();
@@ -1620,7 +1697,7 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
   test('a Cascade preview replaces the dialog rather than stacking on it', async () => {
     localStorage.setItem('wotr.choiceLists', 'modal');
     await openPlanner(cleaver);
-    tap('Open the list');
+    openTarget();
     expect(dialogBox()).not.toBeNull();
     tap('Lower Strength');
     await waitFor(() => expect(dialog()).not.toBeNull());
@@ -1630,13 +1707,14 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
   test('after a Cascade Cancel the dialog is back, with no second click (QA pass 3)', async () => {
     localStorage.setItem('wotr.choiceLists', 'modal');
     await openPlanner(cleaver);
-    tap('Open the list');
+    openTarget();
+    const title = dialogTitle();
     tap('Lower Strength');
     await waitFor(() => expect(dialog()).not.toBeNull());
     expect(dialogBox()).toBeNull();
     tap(/^Cancel/);
     await waitFor(() => expect(dialogBox()).not.toBeNull());
-    expect(dialogTitle()).toBe(hereTitle());
+    expect(dialogTitle()).toBe(title);
   });
 
   test('one click on the chip of a step whose dialog was closed opens it again (QA pass 3)', async () => {
@@ -1657,14 +1735,15 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
   test('a pick in the dialog leaves the next step’s dialog open once the old one’s history entry settles (ticket 10)', async () => {
     localStorage.setItem('wotr.choiceLists', 'modal');
     await openPlanner(cleaver);
-    tap('Open the list');
-    const first = hereTitle();
+    openTarget();
+    const first = dialogTitle();
     pickFirstIn(dialogBox() ?? document);
-    await waitFor(() => expect(hereTitle()).not.toBe(first));
+    await waitFor(() => expect(dialogTitle()).not.toBe(first));
+    const next = dialogTitle();
     await new Promise((r) => setTimeout(r, 30));
     flush();
     expect(dialogBox()).not.toBeNull();
-    expect(dialogTitle()).toBe(hereTitle());
+    expect(dialogTitle()).toBe(next);
   });
 
   test('"Show N closed" works inside the dialog', async () => {
@@ -1685,31 +1764,31 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
 
   test('inline: the list hides until its filter has focus, and hides on blur, Escape and a pick (user)', async () => {
     await openPlanner(cleaver);
-    const rows = () => document.querySelectorAll('.trail-here button.ww-option:not(.ww-option--selected)').length;
-    const filter = () => document.querySelector<HTMLInputElement>('.trail-here [data-picker-filter]');
-    expect(filter()).not.toBeNull();
+    const rows = () => stepRoot()?.querySelectorAll('button.ww-option:not(.ww-option--selected)').length ?? 0;
+    const step = () => targetField() ?? hereTitle();
+    expect(activeFilter()).not.toBeNull();
     expect(rows()).toBe(0);
     showList();
     expect(rows()).toBeGreaterThan(0);
     const outside = button('Build menu');
-    fireEvent.focusOut(filter() ?? document.body, { relatedTarget: outside });
+    fireEvent.focusOut(activeFilter() ?? document.body, { relatedTarget: outside });
     flush();
     expect(rows()).toBe(0);
     showList();
-    fireEvent.keyDown(filter() ?? document.body, { key: 'Escape' });
+    const first = step();
+    fireEvent.keyDown(activeFilter() ?? document.body, { key: 'Escape' });
     flush();
     expect(rows()).toBe(0);
-    expect(hereTitle()).toMatch(/^Your character · choose /);
-    fireEvent.input(filter() ?? document.body, { target: { value: 'a' } });
+    expect(step()).toBe(first);
+    fireEvent.input(activeFilter() ?? document.body, { target: { value: 'a' } });
     flush();
     expect(rows()).toBeGreaterThan(0);
-    const first = hereTitle();
-    const option = document.querySelector<HTMLElement>('.trail-here button.ww-option');
+    const option = stepRoot()?.querySelector<HTMLElement>('button.ww-option');
     const name = option?.querySelector('.ww-option__name')?.textContent ?? '';
     fireEvent.pointerDown(option ?? document.body);
     fireEvent.click(option ?? document.body);
     flush();
-    expect(hereTitle()).not.toBe(first);
+    expect(step()).not.toBe(first);
     expect(document.querySelector('.planner-undo')?.textContent).toContain(name);
   });
 
@@ -1755,7 +1834,8 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
 
   test('inline first: the list sits in the trail, and Expand opens the same list in the dialog', async () => {
     await openPlanner(cleaver);
-    showList();
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
     expect(document.querySelector('.trail-here button.ww-option')).not.toBeNull();
     expect(dialogBox()).toBeNull();
     tap('Expand');
