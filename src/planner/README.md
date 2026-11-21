@@ -331,8 +331,8 @@ dimmed and inert behind "Edit the Second Build".
 - **`option-detail.ts`**: what an option says beyond its name (ticket 06's UI side). `summaryFor` is S's Summary of a
   blueprint (`summaryText`, `summaryLabels`, `writtenSummary` from `engine/describe`), cached per data document. A
   row shows it as its one meta line, cut with an ellipsis, and falls back to its link line when there is none; Gear
-  items show it in the list (two lines at most) and under the worn item. `topicWords`, `sharedWords` and
-  `stackWords` put S's Synergy in words for every topic kind (ability, weapon, weapon group, school, energy,
+  items show it in the list (two lines at most) and under the worn item. `topicWords`, `sharedWords`
+  and `stackWords` (from `engine/links`, shared with the MCP) put S's Synergy in words for every topic kind (ability, weapon, weapon group, school, energy,
   descriptor) and for a bonus that won't stack; a row carries a "Synergy" badge when it builds on or shares a topic
   with what the Build holds, and a "Won't stack" badge for a clash. The detail pane gets the whole story through the
   `OptionDetails` context: a list hands the dialog a resolver from a row's `data-detail-key` to an `OptionDetail`, and
