@@ -83,6 +83,23 @@ page loaded (`StepArrived`, a context `Trail` provides; sticky once true), and t
 manual, so a reload starts at the top too. The scroll and focus run in the next animation frame, after paint. A
 list's marked row is kept in view by scrolling the list box only (`markInView`), never the page.
 
+**Choice lists: inline first or modal first** (build ticket 10, user 2026-11-21): the ⋯ menu's "Choice lists" group
+switches every list step (a slot, the race, a level's or rank's editor, a due Mythic rank, the next level, Gear:
+`isListStep`) between two frames around the same list component, so filtering, statuses, closed rows and nested
+sub-choices are shared. The choice is kept per viewer in `localStorage` (`wotr.choiceLists`, `list-mode.ts`, read and
+written under try/catch; the page works without storage).
+- **Inline first** (the default): the list sits in the trail as before, and "Expand" opens it in the dialog.
+- **Modal first**: a list step opens in the dialog when it arrives (never on page load), and the trail shows "Open the
+  list" in its place.
+- **The dialog** (`ChoiceDialog.tsx`, in a `Portal`): centered over most of the viewport on desktop with a detail pane
+  for the option under the pointer or focus (`detailOf`), full screen without it under 600 px; a header naming the
+  step, the scores the step reads, and "← Back". Focus moves into it (the filter under a fine pointer, else the first
+  option) and back to the opener, or to the step's button when the opener is gone; the page behind doesn't scroll
+  (`choice-open` on the root). Escape or Back closes it without picking. It pushes a history entry, so a phone's back
+  closes it; the newest `#b=` is put back on the way out, so the planner never reopens an older Build. A pick applies,
+  closes it and the trail moves on; a Cascade preview closes it instead of stacking on it; Undo works while it is open.
+  Inside it the list has no height cap (`--choice-list-max: none`).
+
 **Capped lists, closed choices hidden** (user, 2026-11-21): every choice list (a slot's pick list, the race,
 background, class, archetype and Mythic path lists, and the Gear items) scrolls inside a capped height
 (`trail-scroll`, `SCROLL_STYLE`: `max-height: var(--choice-list-max)`, `overflow-y: auto`), at least six and a half
@@ -246,6 +263,8 @@ dimmed and inert behind "Edit the Second Build".
 - **`PickStep.tsx`**: a slot's open list (`PickStep`, moved out of `steps.tsx`): S's options as rows, open then
   closed, a parent row expanding its sub-options in place (`paramLabel` names a value without repeating its feat),
   the keys above, Synergy links, the filter and its mark, "Show all closed", and "Clear this pick".
+- **`list-mode.ts`**: `ListMode`, `readListMode`/`writeListMode` (try/catch around `localStorage`, `browserStorage`)
+  and `isListStep`. **`ChoiceDialog.tsx`**: the modal frame (`ChoiceDialog`, `detailOf`, `dialogStart`).
 - **`CharacterSteps.tsx`**: `RaceStep` and `BackgroundStep`, the flat race and background lists in place.
 - **`words.ts`: names for the planner's surfaces.** Game names (ADR 0006) and the planner's own words, never the game's
   text. `ordinal` writes "1st", "2nd", "3rd", "4th"…; `optionName` is an option's name: the feature's game name, with
