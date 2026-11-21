@@ -32,6 +32,25 @@ export function matches(name: string, text: string): boolean {
   return words.every((w) => n.includes(w));
 }
 
+export function matchRank(name: string, text: string): number {
+  const typed = text.trim().toLowerCase();
+  if (typed === '') return 0;
+  const n = name.toLowerCase();
+  if (n.startsWith(typed)) return 0;
+  const nameWords = n.split(/[^\p{L}\p{N}]+/u).filter((w) => w !== '');
+  const typedWords = typed.split(/\s+/);
+  return typedWords.every((w) => nameWords.some((nw) => nw.startsWith(w))) ? 1 : 2;
+}
+
+export function ranked<T>(rows: readonly T[], nameOf: (row: T) => string, text: string): T[] {
+  const kept = rows.filter((r) => matches(nameOf(r), text));
+  if (text.trim() === '') return kept;
+  return kept
+    .map((row, at) => ({ row, at, rank: matchRank(nameOf(row), text) }))
+    .sort((a, b) => a.rank - b.rank || a.at - b.at)
+    .map((x) => x.row);
+}
+
 export function clampMark(at: number, delta: number, count: number): number {
   return count === 0 ? 0 : Math.max(0, Math.min(count - 1, at + delta));
 }
@@ -209,7 +228,7 @@ export function ChoiceList(props: ChoiceListProps) {
     () => box,
   );
   const all = createMemo((): readonly ChoiceRow[] => (props.field !== undefined && !panel.shown() ? [] : props.rows));
-  const listed = createMemo(() => all().filter((r) => matches(r.name, text())));
+  const listed = createMemo(() => ranked(all(), (r) => r.name, text()));
   const open = () => listed().filter((r) => r.open);
   const closed = () => listed().filter((r) => !r.open);
   const closedShown = () => (toggle.shown ? closed() : closed().filter((r) => r.current));
