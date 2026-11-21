@@ -15,6 +15,7 @@ import type { Engine } from '~engine/mcp';
 
 import { ClosedCount, OptionList, PickerOption } from '../design';
 import { judgeAll, type Judged } from './planner-state';
+import { scrollToIndex, WindowedRows } from './WindowedRows';
 
 export type { Judged };
 
@@ -174,15 +175,6 @@ export function createClosedToggle(given: () => ClosedToggle | undefined): Close
   };
 }
 
-export function markInView(scroller: HTMLElement | undefined): void {
-  const row = scroller?.querySelector<HTMLElement>('.ww-option--marked');
-  if (scroller === undefined || row === null || row === undefined) return;
-  const box = scroller.getBoundingClientRect();
-  const at = row.getBoundingClientRect();
-  if (at.top < box.top) scroller.scrollTop -= box.top - at.top;
-  else if (at.bottom > box.bottom) scroller.scrollTop += at.bottom - box.bottom;
-}
-
 const rowReason = (r: ChoiceRow) => r.reasons.join(' ') || 'closed';
 
 export function ChoiceList(props: ChoiceListProps) {
@@ -210,7 +202,7 @@ export function ChoiceList(props: ChoiceListProps) {
   const filtering = () => props.rows.length >= FILTER_FROM;
   createEffect(
     () => mark(),
-    () => markInView(scroller),
+    (at) => scrollToIndex(scroller, at),
   );
   return (
     <div class="trail-choices" onKeyDown={moveThroughOptions}>
@@ -240,18 +232,18 @@ export function ChoiceList(props: ChoiceListProps) {
         }}
       >
         <OptionList>
-          <For each={open()} keyed={(r) => r.key}>
+          <WindowedRows items={open()} key={(r) => r.key} scroller={() => scroller}>
             {(r, i) => (
               <PickerOption
-                name={r().name}
+                name={r.name}
                 status="open"
-                selected={r().current}
-                marked={filtering() && i() === mark()}
-                links={r().note}
-                onPick={() => r().take()}
+                selected={r.current}
+                marked={filtering() && i === mark()}
+                links={r.note}
+                onPick={() => r.take()}
               />
             )}
-          </For>
+          </WindowedRows>
           <For each={closedShown()} keyed={(r) => r.key}>
             {(r) => <PickerOption name={r().name} status="closed" selected={r().current} refusal={r().reasons} />}
           </For>

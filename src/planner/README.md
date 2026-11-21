@@ -98,21 +98,34 @@ written under try/catch; the page works without storage).
   (`choice-open` on the root). Escape or Back closes it without picking. It pushes a history entry, so a phone's back
   closes it; the newest `#b=` is put back on the way out, so the planner never reopens an older Build. A pick applies,
   closes it and the trail moves on; a Cascade preview closes it instead of stacking on it; Undo works while it is open.
-  Inside it the list has no height cap (`--choice-list-max: none`).
+  Inside it the list is capped at 60vh (`--choice-list-max: 60vh`), so it windows like the inline list.
 
 **Capped lists, closed choices hidden** (user, 2026-11-21): every choice list (a slot's pick list, the race,
 background, class, archetype and Mythic path lists, and the Gear items) scrolls inside a capped height
 (`trail-scroll`, `SCROLL_STYLE`: `max-height: var(--choice-list-max)`, `overflow-y: auto`), at least six and a half
 rows (`--choice-list-max` is 6.5 × `--choice-row-height`, a two-line row, in `tokens.css`), with the filter and the
-headings outside the scroll. The marked row Enter takes is kept in view (`markInView`), and keyboard focus scrolls
+headings outside the scroll. The marked row Enter takes is kept in view (`scrollToIndex`), and keyboard focus scrolls
 the row it reaches. Closed choices are hidden by default: "Show N closed" below the list reveals them with their
 grouped reasons, and "Hide closed" hides them again; the choice is remembered per list kind for the session, in the
 trail's state (`closedShown`, `toggleClosed`; `closedToggle` in `steps.tsx`). A list with no open row says "No choices
 open here" and keeps the button. The Build's current pick shows even when it has become closed, marked Current.
 
+**Windowed lists** (coordinator, 2026-11-21): the open rows of a pick list and of the class, path and archetype lists
+render through `WindowedRows` (`WindowedRows.tsx`): only the rows in the scroll box plus `OVERSCAN` (6) above and
+below, with spacer blocks for the rest. Every row is one fixed height, `--choice-row-height` less the list gap
+(`trail-window-row--fixed`, the meta line cut with an ellipsis), so a row's place is its index times the row height
+(`windowOf`) and no row is measured. An expanded parent's sub-options are rows of their own in the same window
+(`trail-sub-row`, `data-child-of`), so the pick list is one flat list of parents and sub-options. Filtering, the mark
+and keyboard movement work on that list, not the DOM; a row keeps its element while its item and index are unchanged,
+so scrolling and expanding rebuild only the rows that come into view. Without layout (jsdom) every row renders. The
+closed rows, shown on demand and capped, render after the window. Measured on the Gold Dragon Jack Build's M9 Dragon
+Feat chip (258 options) in a production build with the tab in front: opening it went from 46–62 ms to 35–71 ms with
+13 rows in the DOM instead of 258, and a pick takes 32–37 ms both before and after. The dev server's figures (about
+260 ms and 110 ms) are mostly Solid's development instrumentation.
+
 **Sub-choices nested in pick lists** (build ticket 08, user 2026-11-21): in a pick list, an option that opens a
 further choice is one parent row that expands its sub-options right under it, indented a step with a rule on the left
-(`trail-sub`), the parent marked ▸ or ▾ (`aria-expanded`). Two kinds, from S's options (`nested-options.ts`,
+(`trail-sub-row`), the parent marked ▸ or ▾ (`aria-expanded`). Two kinds, from S's options (`nested-options.ts`,
 `pickRows`): a parametrized feat's values, its options sharing a feature with different parameters (Weapon Focus →
 Kukri, Spell Focus → its schools); and an option that is itself a selection (Armor Focus → Light Armor Focus; a
 prestige class's spellbook selection), whose sub-options are S's picker at the slot it opens (`childSlotOf`), asked

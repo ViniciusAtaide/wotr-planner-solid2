@@ -1333,7 +1333,10 @@ describe('nested sub-choices (ticket 08)', () => {
     click(parent('Weapon Focus'));
     click(parent('Armor Focus'));
     expect(parent('Weapon Focus')).toHaveAttribute('aria-expanded', 'false');
-    expect(document.querySelectorAll('[data-child-of]')).toHaveLength(1);
+    const parents = new Set(
+      [...document.querySelectorAll('[data-child-of]')].map((c) => c.getAttribute('data-child-of')),
+    );
+    expect(parents.size).toBe(1);
     expect(child('Light Armor Focus')).toBeTruthy();
   });
 
