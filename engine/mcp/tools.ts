@@ -131,6 +131,25 @@ async function withMode(
   return changed(e, c.build);
 }
 
+export function brief(e: Engine, build: Build): string {
+  const count = (list: readonly { readonly class: Guid }[]) => {
+    const n = new Map<Guid, number>();
+    for (const l of list) n.set(l.class, (n.get(l.class) ?? 0) + 1);
+    return [...n].map(([cls, k]) => `${bareNameOf(e.data, cls)} ${k}`).join(', ');
+  };
+  const gear = Object.keys(build.gear ?? {}).length;
+  return [
+    build.name,
+    build.race === undefined ? 'no race' : bareNameOf(e.data, build.race),
+    build.levels.length === 0 ? 'no levels' : count(build.levels),
+    (build.ranks?.length ?? 0) > 0 ? count(build.ranks ?? []) : undefined,
+    `${build.picks.length} picks`,
+    gear > 0 ? `${gear} Gear` : undefined,
+  ]
+    .filter((p): p is string => p !== undefined)
+    .join(' · ');
+}
+
 export function start_build(e: Engine): Promise<Changed>;
 export function start_build(e: Engine, args: { readonly name?: string }): Promise<Changed | ToolRefusal>;
 export async function start_build(e: Engine, args: { readonly name?: string } = {}): Promise<Changed | ToolRefusal> {

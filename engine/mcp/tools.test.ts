@@ -26,6 +26,7 @@ import {
   type Changed,
   type ToolRefusal,
 } from './tools';
+import { TOOLS } from './registry';
 
 const files = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)));
 const e = engineOf(loadData(files.files, files.overrides));
@@ -386,5 +387,20 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
       'set_skills',
     );
     expect(ok(await next_slots(e, { code: spent.code }), 'next_slots').skillPointsLeft).toBeUndefined();
+  });
+
+  it('answers a change over the MCP with the code and a brief line, not the whole Build (MCP QA)', async () => {
+    const run = (name: string, args: Record<string, unknown>) => TOOLS.find((t) => t.name === name)!.run(e, args);
+    const started = (await run('start_build', { name: 'Lann' })) as Record<string, unknown>;
+    expect(started).toEqual({ code: expect.any(String), brief: 'Lann · no race · no levels · 0 picks' });
+    const jack = await encodeBuild(e.data, jackInTheGreen.build);
+    const placed = (await run('place_rank', {
+      code: jack,
+      rank: 1,
+      level: jackInTheGreen.build.ranks![0]!.level,
+    })) as Record<string, unknown>;
+    expect(placed.build).toBeUndefined();
+    expect(placed.brief).toMatch(/^Halfling · .* · \d+ picks/);
+    expect(JSON.stringify(placed).length).toBeLessThan(1500);
   });
 });

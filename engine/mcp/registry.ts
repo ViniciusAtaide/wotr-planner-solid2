@@ -49,7 +49,7 @@ const object = (properties: Json, required: readonly string[] = []): Json => ({
   additionalProperties: false,
 });
 
-export const TOOLS: readonly ToolDef[] = [
+const RAW_TOOLS: readonly ToolDef[] = [
   {
     name: 'start_build',
     description: 'Start an empty Build, with an optional name of at most 60 characters. Returns its code.',
@@ -233,3 +233,14 @@ export const TOOLS: readonly ToolDef[] = [
     run: (e, a) => tools.compare(e, a as Parameters<typeof tools.compare>[1]),
   },
 ];
+
+function withBrief(e: Engine, result: unknown): unknown {
+  if (typeof result !== 'object' || result === null || !('code' in result) || !('build' in result)) return result;
+  const { build, ...rest } = result as tools.Changed;
+  return { ...rest, brief: tools.brief(e, build) };
+}
+
+export const TOOLS: readonly ToolDef[] = RAW_TOOLS.map((t) => ({
+  ...t,
+  run: async (e: Engine, args: Json) => withBrief(e, await t.run(e, args)),
+}));
