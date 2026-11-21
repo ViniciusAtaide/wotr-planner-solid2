@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "OracleRevelationManeuverMasteryDisarmimproved",
   "guid": "ac721e90aae441878fa75619e13c66e9",
-  "name": "Disarm (Revelation)"
+  "name": "Disarm (Revelation)",
+  "qualifier": "Revelation"
 }

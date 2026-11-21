@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ChaosBlessingMajorFeature",
   "guid": "2067f183d94f69a418533c9611ed127e",
-  "name": "Battle Companion (Chaos)"
+  "name": "Battle Companion (Chaos)",
+  "qualifier": "Chaos"
 }

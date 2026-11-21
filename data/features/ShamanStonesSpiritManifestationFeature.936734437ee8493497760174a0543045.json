@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ShamanStonesSpiritManifestationFeature",
   "guid": "936734437ee8493497760174a0543045",
-  "name": "Manifestation (Stone)"
+  "name": "Manifestation (Stone)",
+  "qualifier": "Stone"
 }

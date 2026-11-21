@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "WitchPatronSpellLevel8",
   "guid": "937c6595be0888749ab5fe3b10c358fb",
-  "name": "Patron Spells (Ancestors 16)"
+  "name": "Patron Spells (Ancestors 16)",
+  "qualifier": "Ancestors 16"
 }

@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ForesterTacticianFeature",
   "guid": "994db4abfa0d6194eb3c847605e6f148",
-  "name": "Tactician (Forester)"
+  "name": "Tactician (Forester)",
+  "qualifier": "Forester"
 }

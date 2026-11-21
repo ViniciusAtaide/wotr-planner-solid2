@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "FortuneRevelationFeature",
   "guid": "16935c4660ee4c7da976b5f6cafb43dd",
-  "name": "Fortune (Revelation)"
+  "name": "Fortune (Revelation)",
+  "qualifier": "Revelation"
 }

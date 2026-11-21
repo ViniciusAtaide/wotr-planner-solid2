@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_1ac79088a7e5dde46966636a3ac71c35",
-  "name": "Finnean the Talking Weapon (Composite Longbow +1)"
+  "name": "Finnean the Talking Weapon (Composite Longbow +1)",
+  "qualifier": "Composite Longbow +1"
 }

@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ShamanWindSpiritManifestationFeature",
   "guid": "a8c0403a27b6471f85d2bc441db5a993",
-  "name": "Manifestation (Wind)"
+  "name": "Manifestation (Wind)",
+  "qualifier": "Wind"
 }

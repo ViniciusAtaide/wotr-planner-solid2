@@ -6,5 +6,6 @@
   "assetName": "ShifterAspectDinosaurAbility",
   "guid": "4b399131ebbf485e940ccd3690eab8d3",
   "m_Buff": "!bp_4a981c46dc60474cad17549a2b9f7f65",
-  "name": "Dinosaur (Shifter 1)"
+  "name": "Dinosaur (Shifter 1)",
+  "qualifier": "Shifter 1"
 }

@@ -10,5 +10,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_b1cbf457fd471d148b39ae56667f405a",
-  "name": "Death's Consonant (Bardiche)"
+  "name": "Death's Consonant (Bardiche)",
+  "qualifier": "Bardiche"
 }

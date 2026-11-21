@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "IncenseFogFeature",
   "guid": "7614401346b64a8409f7b8c367db488f",
-  "name": "Incense Fog (Incense Synthesizer)"
+  "name": "Incense Fog (Incense Synthesizer)",
+  "qualifier": "Incense Synthesizer"
 }

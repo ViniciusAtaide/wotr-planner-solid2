@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "BloodlineInfernalSpellLevel6",
   "guid": "88bcb7d7f62edf74a863d6e8c02add40",
-  "name": "Hellfire Ray (Infernal Bloodline)"
+  "name": "Hellfire Ray (Infernal Bloodline)",
+  "qualifier": "Infernal Bloodline"
 }

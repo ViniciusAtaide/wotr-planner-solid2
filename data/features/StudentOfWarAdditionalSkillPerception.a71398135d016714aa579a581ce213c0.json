@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "StudentOfWarAdditionalSkillPerception",
   "guid": "a71398135d016714aa579a581ce213c0",
-  "name": "Class Skill — Perception (Additional Class Skill)"
+  "name": "Class Skill — Perception (Additional Class Skill)",
+  "qualifier": "Additional Class Skill"
 }

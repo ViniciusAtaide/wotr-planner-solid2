@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "AirDomainBaseFeatureSeparatist",
   "guid": "b7f7096b7d394f219e6f28b957cd5f39",
-  "name": "Air Domain (Separatist)"
+  "name": "Air Domain (Separatist)",
+  "qualifier": "Separatist"
 }

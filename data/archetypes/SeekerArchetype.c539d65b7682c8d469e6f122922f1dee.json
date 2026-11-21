@@ -52,5 +52,6 @@
   "m_ReflexSave": null,
   "m_ReplaceSpellbook": null,
   "m_WillSave": null,
-  "name": "Seeker (Oracle)"
+  "name": "Seeker (Oracle)",
+  "qualifier": "Oracle"
 }

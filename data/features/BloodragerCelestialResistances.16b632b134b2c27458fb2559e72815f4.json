@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "BloodragerCelestialResistances",
   "guid": "16b632b134b2c27458fb2559e72815f4",
-  "name": "Celestial Resistances (bloodrager)"
+  "name": "Celestial Resistances (bloodrager)",
+  "qualifier": "bloodrager"
 }

@@ -11,5 +11,6 @@
   "Stacking": "Prolong",
   "assetName": "CavalierTacticianAlliedSpellcasterBuff",
   "guid": "3de0359d9480cb549ab6cf1eac51f9dc",
-  "name": "Allied Spellcaster (buff)"
+  "name": "Allied Spellcaster (buff)",
+  "qualifier": "buff"
 }

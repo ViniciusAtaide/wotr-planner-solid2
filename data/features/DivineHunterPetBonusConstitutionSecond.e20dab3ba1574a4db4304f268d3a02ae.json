@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "DivineHunterPetBonusConstitutionSecond",
   "guid": "e20dab3ba1574a4db4304f268d3a02ae",
-  "name": "Companion Ability Score Bonus — Constitution (second pick)"
+  "name": "Companion Ability Score Bonus — Constitution (second pick)",
+  "qualifier": "second pick"
 }

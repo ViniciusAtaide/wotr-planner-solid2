@@ -200,5 +200,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Arcane (Bloodline)"
+  "name": "Arcane (Bloodline)",
+  "qualifier": "Bloodline"
 }

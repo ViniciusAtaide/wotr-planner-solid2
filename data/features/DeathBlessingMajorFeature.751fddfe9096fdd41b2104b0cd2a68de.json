@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "DeathBlessingMajorFeature",
   "guid": "751fddfe9096fdd41b2104b0cd2a68de",
-  "name": "Death's Touch (Death)"
+  "name": "Death's Touch (Death)",
+  "qualifier": "Death"
 }

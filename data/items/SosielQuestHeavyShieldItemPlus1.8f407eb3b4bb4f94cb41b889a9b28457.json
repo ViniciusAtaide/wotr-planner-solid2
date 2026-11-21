@@ -5,5 +5,6 @@
   "guid": "8f407eb3b4bb4f94cb41b889a9b28457",
   "m_ArmorComponent": "!bp_7e7f7395ffad3d843a8eb6aaafd47022",
   "m_WeaponComponent": "!bp_ff8047f887565284e93773b4a698c393",
-  "name": "Immaculate Petal (+1)"
+  "name": "Immaculate Petal (+1)",
+  "qualifier": "+1"
 }

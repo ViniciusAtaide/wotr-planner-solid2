@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "StrengthDomainBaseFeature",
   "guid": "526f99784e9fe4346824e7f210d46112",
-  "name": "Strength Domain (level 1)"
+  "name": "Strength Domain (level 1)",
+  "qualifier": "level 1"
 }

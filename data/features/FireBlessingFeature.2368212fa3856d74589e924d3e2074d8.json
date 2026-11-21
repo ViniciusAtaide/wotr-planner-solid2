@@ -33,5 +33,6 @@
   "Ranks": 1,
   "assetName": "FireBlessingFeature",
   "guid": "2368212fa3856d74589e924d3e2074d8",
-  "name": "Fire (Blessings)"
+  "name": "Fire (Blessings)",
+  "qualifier": "Blessings"
 }

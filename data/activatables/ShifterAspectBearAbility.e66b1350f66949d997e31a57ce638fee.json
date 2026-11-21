@@ -6,5 +6,6 @@
   "assetName": "ShifterAspectBearAbility",
   "guid": "e66b1350f66949d997e31a57ce638fee",
   "m_Buff": "!bp_a237792fc2644a4ebc6eefa2d325f181",
-  "name": "Bear (Shifter 1)"
+  "name": "Bear (Shifter 1)",
+  "qualifier": "Shifter 1"
 }

@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "WildShapeIIISmilodonFeature",
   "guid": "253c0c0d00e50a24797445f20af52dc8",
-  "name": "Wild Shape (Smilodon) (Druid)"
+  "name": "Wild Shape (Smilodon) (Druid)",
+  "qualifier": "Druid"
 }

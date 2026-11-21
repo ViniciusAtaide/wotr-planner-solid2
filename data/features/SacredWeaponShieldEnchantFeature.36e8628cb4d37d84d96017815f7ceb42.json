@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "SacredWeaponShieldEnchantFeature",
   "guid": "36e8628cb4d37d84d96017815f7ceb42",
-  "name": "Sacred Weapon (Shieldbearer)"
+  "name": "Sacred Weapon (Shieldbearer)",
+  "qualifier": "Shieldbearer"
 }

@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "HealingDomainBaseFeatureSeparatist",
   "guid": "dd2d81c2bbfe40248c2af37d95ae5850",
-  "name": "Healing Domain (Separatist)"
+  "name": "Healing Domain (Separatist)",
+  "qualifier": "Separatist"
 }

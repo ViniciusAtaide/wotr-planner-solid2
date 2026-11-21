@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "WitchAgilityPatronSpellLevel2",
   "guid": "beb4a8ad0033dbf47939c96ec14583fa",
-  "name": "Patron Spells (Agility 4)"
+  "name": "Patron Spells (Agility 4)",
+  "qualifier": "Agility 4"
 }

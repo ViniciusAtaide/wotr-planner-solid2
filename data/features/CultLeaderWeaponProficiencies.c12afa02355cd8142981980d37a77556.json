@@ -22,5 +22,6 @@
   "Ranks": 1,
   "assetName": "CultLeaderWeaponProficiencies",
   "guid": "c12afa02355cd8142981980d37a77556",
-  "name": "Weapon and Armor Proficiency (Cult Leader)"
+  "name": "Weapon and Armor Proficiency (Cult Leader)",
+  "qualifier": "Cult Leader"
 }

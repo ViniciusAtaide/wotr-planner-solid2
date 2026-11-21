@@ -15,5 +15,6 @@
   "m_AllFeatures": [
     "!bp_31470b17e8446ae4ea0dacd6c5817d86"
   ],
-  "name": "Battle Master (level 8)"
+  "name": "Battle Master (level 8)",
+  "qualifier": "level 8"
 }

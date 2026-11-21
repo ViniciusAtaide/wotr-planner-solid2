@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "KiQuiveringPalmFeature",
   "guid": "25d1247bb1a66b74081095085e169eb1",
-  "name": "Ki Power: Quivering Palm (Monk)"
+  "name": "Ki Power: Quivering Palm (Monk)",
+  "qualifier": "Monk"
 }

@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "BloodlineArcaneItemBondFeature",
   "guid": "473fca42a1f049ef88ba8824c9827d87",
-  "name": "Arcane Bond — Object (Arcane Bond)"
+  "name": "Arcane Bond — Object (Arcane Bond)",
+  "qualifier": "Arcane Bond"
 }

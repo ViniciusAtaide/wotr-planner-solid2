@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "OracleNatureFinalRevelation",
   "guid": "e46981dfc05f3924784942b8684194ec",
-  "name": "Final Revelation (Nature)"
+  "name": "Final Revelation (Nature)",
+  "qualifier": "Nature"
 }

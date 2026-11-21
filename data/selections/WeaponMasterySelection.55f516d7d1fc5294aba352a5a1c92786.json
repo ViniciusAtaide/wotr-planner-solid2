@@ -15,5 +15,6 @@
   "m_AllFeatures": [
     "!bp_38ae5ac04463a8947b7c06a6c72dd6bb"
   ],
-  "name": "Weapon Mastery (Fighter)"
+  "name": "Weapon Mastery (Fighter)",
+  "qualifier": "Fighter"
 }

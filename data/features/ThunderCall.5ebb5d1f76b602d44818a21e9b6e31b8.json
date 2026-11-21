@@ -15,5 +15,6 @@
   "Ranks": 5,
   "assetName": "ThunderCall",
   "guid": "5ebb5d1f76b602d44818a21e9b6e31b8",
-  "name": "Thunder Call (Thundercaller)"
+  "name": "Thunder Call (Thundercaller)",
+  "qualifier": "Thundercaller"
 }

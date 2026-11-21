@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "MagicDomainBaseFeatureSeparatist",
   "guid": "e04e3432601140808d6f58d7d1087894",
-  "name": "Magic Domain (Separatist)"
+  "name": "Magic Domain (Separatist)",
+  "qualifier": "Separatist"
 }

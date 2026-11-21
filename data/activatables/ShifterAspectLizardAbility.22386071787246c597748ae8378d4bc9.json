@@ -6,5 +6,6 @@
   "assetName": "ShifterAspectLizardAbility",
   "guid": "22386071787246c597748ae8378d4bc9",
   "m_Buff": "!bp_29c0e16558b043278f061b128b9d180c",
-  "name": "Lizard (Shifter 1)"
+  "name": "Lizard (Shifter 1)",
+  "qualifier": "Shifter 1"
 }

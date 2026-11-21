@@ -133,5 +133,6 @@
   "m_ReflexSave": null,
   "m_ReplaceSpellbook": "!bp_0b00eedc8dc8421ca277ddc4c44c60b1",
   "m_WillSave": null,
-  "name": "Numerian Companion (Bard)"
+  "name": "Numerian Companion (Bard)",
+  "qualifier": "Bard"
 }

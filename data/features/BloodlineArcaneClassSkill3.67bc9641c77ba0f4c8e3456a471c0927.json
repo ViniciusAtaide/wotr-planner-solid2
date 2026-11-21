@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "BloodlineArcaneClassSkill3",
   "guid": "67bc9641c77ba0f4c8e3456a471c0927",
-  "name": "Class Skill — Lore (Nature) (Bloodline Class Skill Selection)"
+  "name": "Class Skill — Lore (Nature) (Bloodline Class Skill Selection)",
+  "qualifier": "Bloodline Class Skill Selection"
 }

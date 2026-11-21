@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ShamanNatureSpiritManifestationFeature",
   "guid": "f0bf97f286bb44a686108a97988de89c",
-  "name": "Manifestation (Nature)"
+  "name": "Manifestation (Nature)",
+  "qualifier": "Nature"
 }

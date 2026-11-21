@@ -19,5 +19,6 @@
   "Ranks": 1,
   "assetName": "EldritchScoundrelCantripFeature",
   "guid": "0e451b208e7b855468986e03fcd4f990",
-  "name": "Cantrips (Eldritch Scoundrel)"
+  "name": "Cantrips (Eldritch Scoundrel)",
+  "qualifier": "Eldritch Scoundrel"
 }

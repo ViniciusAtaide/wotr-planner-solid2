@@ -7,5 +7,6 @@
   "Ranks": 5,
   "assetName": "AllIsdarknessLvlUpFeature",
   "guid": "a1cf87d341064810b032780ecd8df079",
-  "name": "All Is Darkness (rank)"
+  "name": "All Is Darkness (rank)",
+  "qualifier": "rank"
 }

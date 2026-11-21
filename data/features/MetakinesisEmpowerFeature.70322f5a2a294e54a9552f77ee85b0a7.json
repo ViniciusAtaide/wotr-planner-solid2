@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "MetakinesisEmpowerFeature",
   "guid": "70322f5a2a294e54a9552f77ee85b0a7",
-  "name": "Metakinesis — Empowered (Kineticist)"
+  "name": "Metakinesis — Empowered (Kineticist)",
+  "qualifier": "Kineticist"
 }

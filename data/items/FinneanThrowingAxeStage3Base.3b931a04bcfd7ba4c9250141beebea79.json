@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_ca131c71f4fefcb48b30b5991520e01d",
-  "name": "Finnean the Talking Weapon (Throwing Axe +5)"
+  "name": "Finnean the Talking Weapon (Throwing Axe +5)",
+  "qualifier": "Throwing Axe +5"
 }

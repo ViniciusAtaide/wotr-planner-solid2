@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "EldritchDimensionStrikeFeature",
   "guid": "bbb9e0fb2fe51634a9b6d4586c65c407",
-  "name": "Dimension Strike (Magus Arcana)"
+  "name": "Dimension Strike (Magus Arcana)",
+  "qualifier": "Magus Arcana"
 }

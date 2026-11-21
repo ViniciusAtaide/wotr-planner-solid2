@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "DivineHunterPetBonusDexteritySecond",
   "guid": "5361cc2680274efc883070862fa98885",
-  "name": "Companion Ability Score Bonus — Dexterity (second pick)"
+  "name": "Companion Ability Score Bonus — Dexterity (second pick)",
+  "qualifier": "second pick"
 }

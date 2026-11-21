@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "MadnessDomainBaseFeature",
   "guid": "84bf46e8086dbdc438bac875ab0e5c2f",
-  "name": "Madness Domain (level 1)"
+  "name": "Madness Domain (level 1)",
+  "qualifier": "level 1"
 }

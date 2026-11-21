@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "ShamanHexFortuneFeature",
   "guid": "64ed6d1a539434c469c69011e8df7163",
-  "name": "Fortune (shaman hex)"
+  "name": "Fortune (shaman hex)",
+  "qualifier": "shaman hex"
 }

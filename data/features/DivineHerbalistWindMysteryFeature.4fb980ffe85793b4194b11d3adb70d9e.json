@@ -28,5 +28,6 @@
   "Ranks": 1,
   "assetName": "DivineHerbalistWindMysteryFeature",
   "guid": "4fb980ffe85793b4194b11d3adb70d9e",
-  "name": "Wind (Divine Herbalist)"
+  "name": "Wind (Divine Herbalist)",
+  "qualifier": "Divine Herbalist"
 }

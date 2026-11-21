@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ForesterAnimalFocusFeature",
   "guid": "f63fdfe05a7393b40b5cd60e270bb117",
-  "name": "Animal Focus (Forester)"
+  "name": "Animal Focus (Forester)",
+  "qualifier": "Forester"
 }

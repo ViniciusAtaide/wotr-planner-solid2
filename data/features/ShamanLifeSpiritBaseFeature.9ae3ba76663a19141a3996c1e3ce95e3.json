@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "ShamanLifeSpiritBaseFeature",
   "guid": "9ae3ba76663a19141a3996c1e3ce95e3",
-  "name": "Channel (Life)"
+  "name": "Channel (Life)",
+  "qualifier": "Life"
 }

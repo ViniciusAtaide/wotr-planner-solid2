@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "AnimalBlessingMajorFeature",
   "guid": "4a9feb61035b23447a83b52d401c3b2b",
-  "name": "Battle Companion (Animal)"
+  "name": "Battle Companion (Animal)",
+  "qualifier": "Animal"
 }

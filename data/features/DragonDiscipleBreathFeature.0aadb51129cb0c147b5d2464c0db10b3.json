@@ -74,5 +74,6 @@
   "Ranks": 1,
   "assetName": "DragonDiscipleBreathFeature",
   "guid": "0aadb51129cb0c147b5d2464c0db10b3",
-  "name": "Breath Weapon (Dragon Disciple)"
+  "name": "Breath Weapon (Dragon Disciple)",
+  "qualifier": "Dragon Disciple"
 }

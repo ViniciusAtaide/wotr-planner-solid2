@@ -34,5 +34,6 @@
   "Ranks": 2,
   "assetName": "BloodlineInfernalResistancesAbilityAdd",
   "guid": "c8b51c7112077384da68c48359419046",
-  "name": "Infernal Resistances (Infernal Bloodline)"
+  "name": "Infernal Resistances (Infernal Bloodline)",
+  "qualifier": "Infernal Bloodline"
 }

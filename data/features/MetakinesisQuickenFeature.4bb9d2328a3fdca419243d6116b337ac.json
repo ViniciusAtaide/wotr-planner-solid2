@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "MetakinesisQuickenFeature",
   "guid": "4bb9d2328a3fdca419243d6116b337ac",
-  "name": "Metakinesis — Quicken (Kineticist)"
+  "name": "Metakinesis — Quicken (Kineticist)",
+  "qualifier": "Kineticist"
 }

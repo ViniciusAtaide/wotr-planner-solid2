@@ -169,5 +169,6 @@
     "!bp_7ba4b4023a7748669098c479dd9e8de6",
     "!bp_c4b555225f565bb40a855c1bfeeff07e"
   ],
-  "name": "Bonus Combat Feat (Warpriest)"
+  "name": "Bonus Combat Feat (Warpriest)",
+  "qualifier": "Warpriest"
 }

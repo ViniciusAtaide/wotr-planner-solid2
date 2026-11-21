@@ -30,5 +30,6 @@
   "Ranks": 1,
   "assetName": "SorcererSeekerTrapfinding",
   "guid": "b1c4f14bc87534e4da7ecd8e0b0658d2",
-  "name": "Seeker's Trapfinding (Sorcerer)"
+  "name": "Seeker's Trapfinding (Sorcerer)",
+  "qualifier": "Sorcerer"
 }

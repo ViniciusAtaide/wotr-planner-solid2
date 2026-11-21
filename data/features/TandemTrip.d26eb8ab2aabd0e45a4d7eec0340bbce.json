@@ -46,5 +46,6 @@
   "Ranks": 1,
   "assetName": "TandemTrip",
   "guid": "d26eb8ab2aabd0e45a4d7eec0340bbce",
-  "name": "Tandem Trip (feature)"
+  "name": "Tandem Trip (feature)",
+  "qualifier": "feature"
 }

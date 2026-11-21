@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "DrunkenKiTrueStrikeFeature",
   "guid": "97e677d4fd014240a14758fd6cfbf321",
-  "name": "Ki Power: True Strike (Drunken Ki)"
+  "name": "Ki Power: True Strike (Drunken Ki)",
+  "qualifier": "Drunken Ki"
 }

@@ -35,5 +35,6 @@
   "Ranks": 1,
   "assetName": "EnlightenedPhilosopherAncestorsMysteryFeature",
   "guid": "36e136a4cc77a434083a12a72678a9ba",
-  "name": "Ancestor (Enlightened Philosopher)"
+  "name": "Ancestor (Enlightened Philosopher)",
+  "qualifier": "Enlightened Philosopher"
 }

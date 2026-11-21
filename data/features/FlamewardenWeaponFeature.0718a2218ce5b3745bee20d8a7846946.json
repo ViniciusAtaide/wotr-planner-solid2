@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "FlamewardenWeaponFeature",
   "guid": "0718a2218ce5b3745bee20d8a7846946",
-  "name": "Touch of Flame (Flamewarden)"
+  "name": "Touch of Flame (Flamewarden)",
+  "qualifier": "Flamewarden"
 }

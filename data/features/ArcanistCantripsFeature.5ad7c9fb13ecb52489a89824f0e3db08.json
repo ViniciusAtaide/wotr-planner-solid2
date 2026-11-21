@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ArcanistCantripsFeature",
   "guid": "5ad7c9fb13ecb52489a89824f0e3db08",
-  "name": "Cantrips (Arcanist)"
+  "name": "Cantrips (Arcanist)",
+  "qualifier": "Arcanist"
 }

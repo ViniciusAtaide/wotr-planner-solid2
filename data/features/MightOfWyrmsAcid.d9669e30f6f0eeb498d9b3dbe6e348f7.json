@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "MightOfWyrmsAcid",
   "guid": "d9669e30f6f0eeb498d9b3dbe6e348f7",
-  "name": "Might of Wyrms (acid)"
+  "name": "Might of Wyrms (acid)",
+  "qualifier": "acid"
 }

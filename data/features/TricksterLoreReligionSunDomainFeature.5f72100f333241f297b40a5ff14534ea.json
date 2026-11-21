@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "TricksterLoreReligionSunDomainFeature",
   "guid": "5f72100f333241f297b40a5ff14534ea",
-  "name": "Sun Domain (Lore (Religion) 2 Rank)"
+  "name": "Sun Domain (Lore (Religion) 2 Rank)",
+  "qualifier": "Lore (Religion) 2 Rank"
 }

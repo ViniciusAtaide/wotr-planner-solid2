@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "WarpriestSacredWeaponBaseDamageFeature",
   "guid": "8eb5505ae69cc174fb1781134f949e5f",
-  "name": "Sacred Weapon (Warpriest 1)"
+  "name": "Sacred Weapon (Warpriest 1)",
+  "qualifier": "Warpriest 1"
 }

@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "HellKnightOrderOfTheGodclawFeature1",
   "guid": "2e54719cdb9e8114f928dcc8ad3c471f",
-  "name": "Order of the Godclaw (level 1)"
+  "name": "Order of the Godclaw (level 1)",
+  "qualifier": "level 1"
 }

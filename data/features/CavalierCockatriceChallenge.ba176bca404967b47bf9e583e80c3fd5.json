@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "CavalierCockatriceChallenge",
   "guid": "ba176bca404967b47bf9e583e80c3fd5",
-  "name": "Challenge (Order of the Cockatrice)"
+  "name": "Challenge (Order of the Cockatrice)",
+  "qualifier": "Order of the Cockatrice"
 }

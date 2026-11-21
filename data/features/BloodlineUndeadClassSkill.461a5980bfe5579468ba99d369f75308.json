@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "BloodlineUndeadClassSkill",
   "guid": "461a5980bfe5579468ba99d369f75308",
-  "name": "Class Skill — Lore (Religion) (Undead Bloodline)"
+  "name": "Class Skill — Lore (Religion) (Undead Bloodline)",
+  "qualifier": "Undead Bloodline"
 }

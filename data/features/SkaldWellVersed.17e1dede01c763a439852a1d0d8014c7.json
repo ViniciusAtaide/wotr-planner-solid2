@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "SkaldWellVersed",
   "guid": "17e1dede01c763a439852a1d0d8014c7",
-  "name": "Well-Versed (Skald)"
+  "name": "Well-Versed (Skald)",
+  "qualifier": "Skald"
 }

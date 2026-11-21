@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "SteelbloodArmorProficiency",
   "guid": "86cb0c8eacd562e469375cef71698f9b",
-  "name": "Weapon and Armor Proficiency (Steelblood)"
+  "name": "Weapon and Armor Proficiency (Steelblood)",
+  "qualifier": "Steelblood"
 }

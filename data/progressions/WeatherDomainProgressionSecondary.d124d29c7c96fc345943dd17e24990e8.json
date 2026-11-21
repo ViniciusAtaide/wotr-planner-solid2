@@ -65,5 +65,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Weather Domain (Domain Selection)"
+  "name": "Weather Domain (Domain Selection)",
+  "qualifier": "Domain Selection"
 }

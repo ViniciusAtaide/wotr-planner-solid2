@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "WitchHexEvilEyeFeature",
   "guid": "a977bcfb36169d447914f084793cac2c",
-  "name": "Evil Eye (witch hex)"
+  "name": "Evil Eye (witch hex)",
+  "qualifier": "witch hex"
 }

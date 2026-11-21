@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "BattleProwessFeature",
   "guid": "225940b509289224e83cd900f15b852e",
-  "name": "Battle Prowess (feature)"
+  "name": "Battle Prowess (feature)",
+  "qualifier": "feature"
 }

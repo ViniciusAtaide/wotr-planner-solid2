@@ -21,5 +21,6 @@
   "Ranks": 1,
   "assetName": "AnimalDomainBaseFeature",
   "guid": "d577aba79b5727a4ab74627c4c6ba23c",
-  "name": "Animal Domain (level 1)"
+  "name": "Animal Domain (level 1)",
+  "qualifier": "level 1"
 }

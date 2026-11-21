@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "WitchHexAmelioratingFeature",
   "guid": "3cdd3660fb69f3e4db0160fa97dfa85d",
-  "name": "Ameliorating (witch hex)"
+  "name": "Ameliorating (witch hex)",
+  "qualifier": "witch hex"
 }

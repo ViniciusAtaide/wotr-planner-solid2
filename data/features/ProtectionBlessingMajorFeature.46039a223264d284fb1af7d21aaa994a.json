@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ProtectionBlessingMajorFeature",
   "guid": "46039a223264d284fb1af7d21aaa994a",
-  "name": "Aura of Protection (Protection)"
+  "name": "Aura of Protection (Protection)",
+  "qualifier": "Protection"
 }

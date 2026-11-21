@@ -28,5 +28,6 @@
   "Ranks": 1,
   "assetName": "DivineHerbalistWavesMysteryFeature",
   "guid": "d91dcec40f768ea47b45bb4c4b2af40d",
-  "name": "Waves (Divine Herbalist)"
+  "name": "Waves (Divine Herbalist)",
+  "qualifier": "Divine Herbalist"
 }

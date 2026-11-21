@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "TandemExecutionerStudyTargetFeature",
   "guid": "3dac0ae65dec4b619c035df07751b59d",
-  "name": "Studied Target (Tandem Executioner)"
+  "name": "Studied Target (Tandem Executioner)",
+  "qualifier": "Tandem Executioner"
 }

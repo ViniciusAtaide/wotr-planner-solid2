@@ -633,5 +633,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Fey Bloodline (Secondary Bloodline)"
+  "name": "Fey Bloodline (Secondary Bloodline)",
+  "qualifier": "Secondary Bloodline"
 }

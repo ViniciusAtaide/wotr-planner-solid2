@@ -32,5 +32,6 @@
   "Ranks": 1,
   "assetName": "TrickeryDomainBaseFeature",
   "guid": "cd1f4a784e0820647a34fe9bd5ffa770",
-  "name": "Trickery Domain (level 1)"
+  "name": "Trickery Domain (level 1)",
+  "qualifier": "level 1"
 }

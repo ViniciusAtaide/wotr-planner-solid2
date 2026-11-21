@@ -20,5 +20,6 @@
   "Ranks": 1,
   "assetName": "MantisZealotProficiencies",
   "guid": "4cea744f5eb84a6385c269b1da1da523",
-  "name": "Weapon and Armor Proficiency (Mantis Zealot)"
+  "name": "Weapon and Armor Proficiency (Mantis Zealot)",
+  "qualifier": "Mantis Zealot"
 }

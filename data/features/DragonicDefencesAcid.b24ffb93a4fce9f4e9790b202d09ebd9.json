@@ -57,5 +57,6 @@
   "Ranks": 1,
   "assetName": "DragonicDefencesAcid",
   "guid": "b24ffb93a4fce9f4e9790b202d09ebd9",
-  "name": "Draconic Defenses (acid)"
+  "name": "Draconic Defenses (acid)",
+  "qualifier": "acid"
 }

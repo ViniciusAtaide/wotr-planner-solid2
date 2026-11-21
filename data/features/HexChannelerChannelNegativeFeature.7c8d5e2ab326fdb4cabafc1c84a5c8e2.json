@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "HexChannelerChannelNegativeFeature",
   "guid": "7c8d5e2ab326fdb4cabafc1c84a5c8e2",
-  "name": "Channel Negative Energy (Hex Channeler)"
+  "name": "Channel Negative Energy (Hex Channeler)",
+  "qualifier": "Hex Channeler"
 }

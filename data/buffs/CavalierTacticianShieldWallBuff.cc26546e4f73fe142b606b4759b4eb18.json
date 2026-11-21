@@ -11,5 +11,6 @@
   "Stacking": "Prolong",
   "assetName": "CavalierTacticianShieldWallBuff",
   "guid": "cc26546e4f73fe142b606b4759b4eb18",
-  "name": "Shield Wall (buff)"
+  "name": "Shield Wall (buff)",
+  "qualifier": "buff"
 }

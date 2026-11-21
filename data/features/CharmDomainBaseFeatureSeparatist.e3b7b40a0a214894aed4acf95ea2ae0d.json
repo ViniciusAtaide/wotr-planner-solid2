@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "CharmDomainBaseFeatureSeparatist",
   "guid": "e3b7b40a0a214894aed4acf95ea2ae0d",
-  "name": "Charm Domain (Separatist)"
+  "name": "Charm Domain (Separatist)",
+  "qualifier": "Separatist"
 }

@@ -30,5 +30,6 @@
   "Ranks": 1,
   "assetName": "OracleRevelationDeathsTouch",
   "guid": "1a25afc333021a64cbe9f23ef8c5ebd8",
-  "name": "Death's Touch (Revelation)"
+  "name": "Death's Touch (Revelation)",
+  "qualifier": "Revelation"
 }

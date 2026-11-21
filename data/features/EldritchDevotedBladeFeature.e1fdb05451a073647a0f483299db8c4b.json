@@ -19,5 +19,6 @@
   "Ranks": 1,
   "assetName": "EldritchDevotedBladeFeature",
   "guid": "e1fdb05451a073647a0f483299db8c4b",
-  "name": "Devoted Blade (Magus Arcana)"
+  "name": "Devoted Blade (Magus Arcana)",
+  "qualifier": "Magus Arcana"
 }

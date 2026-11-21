@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "ArcaneMediumArmor",
   "guid": "8498cdb82f5eb6d4f91e72b1a18944ff",
-  "name": "Arcane Medium Armor (Magus)"
+  "name": "Arcane Medium Armor (Magus)",
+  "qualifier": "Magus"
 }

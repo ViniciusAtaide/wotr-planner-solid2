@@ -143,5 +143,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Druid (progression)"
+  "name": "Druid (progression)",
+  "qualifier": "progression"
 }

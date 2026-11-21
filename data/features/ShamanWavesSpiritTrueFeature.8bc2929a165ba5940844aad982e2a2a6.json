@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ShamanWavesSpiritTrueFeature",
   "guid": "8bc2929a165ba5940844aad982e2a2a6",
-  "name": "Elemental Form (Waves)"
+  "name": "Elemental Form (Waves)",
+  "qualifier": "Waves"
 }

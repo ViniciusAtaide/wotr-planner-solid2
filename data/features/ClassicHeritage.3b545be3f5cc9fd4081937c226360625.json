@@ -46,5 +46,6 @@
   "Ranks": 1,
   "assetName": "ClassicHeritage",
   "guid": "3b545be3f5cc9fd4081937c226360625",
-  "name": "Aasimar (Heritage)"
+  "name": "Aasimar (Heritage)",
+  "qualifier": "Heritage"
 }

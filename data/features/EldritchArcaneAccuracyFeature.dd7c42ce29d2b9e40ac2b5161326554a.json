@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "EldritchArcaneAccuracyFeature",
   "guid": "dd7c42ce29d2b9e40ac2b5161326554a",
-  "name": "Arcane Accuracy (Magus Arcana)"
+  "name": "Arcane Accuracy (Magus Arcana)",
+  "qualifier": "Magus Arcana"
 }

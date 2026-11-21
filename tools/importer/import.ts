@@ -379,9 +379,20 @@ function writeNames(files: ReadonlyMap<string, string>, names: ReadonlyMap<Guid,
   for (const [path, content] of files) {
     const guid = /\.([0-9a-f]{32})\.json$/.exec(path)?.[1];
     const name = guid === undefined ? undefined : names.get(guid);
-    out.set(path, name === undefined ? content : serialise({ ...(JSON.parse(content) as object), name }));
+    if (name === undefined) {
+      out.set(path, content);
+      continue;
+    }
+    const json = JSON.parse(content) as { readonly name?: string };
+    const qualifier = qualifierOf(json.name, name);
+    out.set(path, serialise({ ...json, name, ...(qualifier !== undefined && { qualifier }) }));
   }
   return out;
+}
+
+function qualifierOf(bare: string | undefined, qualified: string): string | undefined {
+  if (bare === undefined || !qualified.startsWith(`${bare} (`) || !qualified.endsWith(')')) return undefined;
+  return qualified.slice(bare.length + 2, -1);
 }
 
 function quietContext(heldKind: (guid: Guid) => Kind | undefined, types: ReadonlyMap<Guid, string>): FilterContext {

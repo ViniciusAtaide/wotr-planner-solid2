@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "CommunityDomainBaseFeatureSeparatist",
   "guid": "4b21b19a676f4373bd0a97f4bb49dc27",
-  "name": "Community Domain (Separatist)"
+  "name": "Community Domain (Separatist)",
+  "qualifier": "Separatist"
 }

@@ -50,5 +50,6 @@
     "!bp_f05fb4f417465f94fb1b4d6c48ea42cf",
     "!bp_d124d29c7c96fc345943dd17e24990e8"
   ],
-  "name": "Domain Selection (Cleric)"
+  "name": "Domain Selection (Cleric)",
+  "qualifier": "Cleric"
 }

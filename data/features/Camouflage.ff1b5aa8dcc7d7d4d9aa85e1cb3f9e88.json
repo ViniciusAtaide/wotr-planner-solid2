@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "Camouflage",
   "guid": "ff1b5aa8dcc7d7d4d9aa85e1cb3f9e88",
-  "name": "Camouflage (Ranger)"
+  "name": "Camouflage (Ranger)",
+  "qualifier": "Ranger"
 }

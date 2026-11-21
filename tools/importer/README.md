@@ -168,6 +168,7 @@ The sourced items (map ticket 12) are the equipment blueprints the dump traces t
 
 The importer resolves each kept blueprint's English display name from the dump's strings and writes it as `name` (ADR 0006, map ticket 19). It is the only game text `data/` holds; descriptions are never read here.
 
+- **Written names:** a qualified name is written as `name` ("Allied Spellcaster (feature)"), with the qualifier on its own in `qualifier` ("feature"). S can then show the bare name in a list, and add the qualifier only when two options in that list share it.
 - `displayName`: the English text of a localised-string field, or nothing when the blueprint has none.
   - A field holds either its own key (`m_Key`) or a shared string's key (`Shared.stringkey`).
   - Some shared references keep the asset (`Shared.assetguid`) but lose the key. Such a field takes the key that every other reference to the same asset gives.

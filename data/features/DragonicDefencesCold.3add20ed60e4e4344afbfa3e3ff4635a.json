@@ -57,5 +57,6 @@
   "Ranks": 1,
   "assetName": "DragonicDefencesCold",
   "guid": "3add20ed60e4e4344afbfa3e3ff4635a",
-  "name": "Draconic Defenses (cold)"
+  "name": "Draconic Defenses (cold)",
+  "qualifier": "cold"
 }

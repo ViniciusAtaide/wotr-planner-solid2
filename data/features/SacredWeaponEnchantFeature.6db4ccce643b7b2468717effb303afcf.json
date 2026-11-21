@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "SacredWeaponEnchantFeature",
   "guid": "6db4ccce643b7b2468717effb303afcf",
-  "name": "Sacred Weapon (Warpriest 4)"
+  "name": "Sacred Weapon (Warpriest 4)",
+  "qualifier": "Warpriest 4"
 }

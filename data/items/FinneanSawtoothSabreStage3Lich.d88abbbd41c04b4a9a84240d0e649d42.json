@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_ef50f200e4ab429b8bcb66a56f886c2f",
-  "name": "Finnean (Sawtooth Saber)"
+  "name": "Finnean (Sawtooth Saber)",
+  "qualifier": "Sawtooth Saber"
 }

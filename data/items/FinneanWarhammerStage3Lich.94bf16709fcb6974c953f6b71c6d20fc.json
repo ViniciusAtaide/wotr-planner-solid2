@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_fac41e149f49cba4a8e06ce39b41a6fa",
-  "name": "Finnean (Warhammer)"
+  "name": "Finnean (Warhammer)",
+  "qualifier": "Warhammer"
 }

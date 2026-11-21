@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "TricksterLoreReligionTrickeryDomainFeature",
   "guid": "5fd4a416ff3e4755bf5821aa68241187",
-  "name": "Trickery Domain (Lore (Religion) 2 Rank)"
+  "name": "Trickery Domain (Lore (Religion) 2 Rank)",
+  "qualifier": "Lore (Religion) 2 Rank"
 }

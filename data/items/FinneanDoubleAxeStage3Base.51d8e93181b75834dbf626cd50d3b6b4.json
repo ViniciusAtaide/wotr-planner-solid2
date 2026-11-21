@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": "!bp_cea60dea088daa34097a1b53fa8f71ab",
   "m_Type": "!bp_87d76c7534506a546a065731ee6a38cd",
-  "name": "Finnean the Talking Weapon (Orc Double Axe +5)"
+  "name": "Finnean the Talking Weapon (Orc Double Axe +5)",
+  "qualifier": "Orc Double Axe +5"
 }

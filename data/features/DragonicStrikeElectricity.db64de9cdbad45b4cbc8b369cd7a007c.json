@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "DragonicStrikeElectricity",
   "guid": "db64de9cdbad45b4cbc8b369cd7a007c",
-  "name": "Draconic Strike (electricity)"
+  "name": "Draconic Strike (electricity)",
+  "qualifier": "electricity"
 }

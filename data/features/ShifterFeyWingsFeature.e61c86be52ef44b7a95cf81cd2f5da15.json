@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "ShifterFeyWingsFeature",
   "guid": "e61c86be52ef44b7a95cf81cd2f5da15",
-  "name": "Wings (Fey Aspect)"
+  "name": "Wings (Fey Aspect)",
+  "qualifier": "Fey Aspect"
 }

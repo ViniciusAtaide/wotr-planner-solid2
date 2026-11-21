@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_a6925f5f897801449a648d865637e5a0",
-  "name": "Finnean (Dwarven Waraxe)"
+  "name": "Finnean (Dwarven Waraxe)",
+  "qualifier": "Dwarven Waraxe"
 }

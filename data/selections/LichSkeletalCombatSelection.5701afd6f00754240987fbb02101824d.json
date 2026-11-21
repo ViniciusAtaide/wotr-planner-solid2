@@ -15,5 +15,6 @@
   "m_AllFeatures": [
     "!bp_b8a52bbe63e7d6b48b002ee474e90fdd"
   ],
-  "name": "Bonus Combat Feat (Skeletal Fighter I)"
+  "name": "Bonus Combat Feat (Skeletal Fighter I)",
+  "qualifier": "Skeletal Fighter I"
 }

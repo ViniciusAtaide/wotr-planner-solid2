@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "QuarterstaffMasterDamageBonus20",
   "guid": "4f0e077d20c3463ebfd18d14fc1c3663",
-  "name": "Quarterstaff Damage (Quarterstaff Master 20)"
+  "name": "Quarterstaff Damage (Quarterstaff Master 20)",
+  "qualifier": "Quarterstaff Master 20"
 }

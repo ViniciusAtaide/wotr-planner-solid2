@@ -14,5 +14,6 @@
   "assetName": "FeyspeakerMagicFeature",
   "guid": "ea0ce0aeef8c9e04eadc1ed766455178",
   "m_Prerequisite": null,
-  "name": "Fey Magic (Druid)"
+  "name": "Fey Magic (Druid)",
+  "qualifier": "Druid"
 }

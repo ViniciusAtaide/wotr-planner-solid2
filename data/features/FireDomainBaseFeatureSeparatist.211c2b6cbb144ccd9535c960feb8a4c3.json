@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "FireDomainBaseFeatureSeparatist",
   "guid": "211c2b6cbb144ccd9535c960feb8a4c3",
-  "name": "Fire Domain (Separatist)"
+  "name": "Fire Domain (Separatist)",
+  "qualifier": "Separatist"
 }

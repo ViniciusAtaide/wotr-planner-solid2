@@ -11,5 +11,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_6ff66364e0a2c89469c2e52ebb46365e",
-  "name": "Flame's Hatred (Trident)"
+  "name": "Flame's Hatred (Trident)",
+  "qualifier": "Trident"
 }

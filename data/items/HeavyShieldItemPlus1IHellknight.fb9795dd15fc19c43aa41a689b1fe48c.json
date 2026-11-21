@@ -5,5 +5,6 @@
   "guid": "fb9795dd15fc19c43aa41a689b1fe48c",
   "m_ArmorComponent": "!bp_7e7f7395ffad3d843a8eb6aaafd47022",
   "m_WeaponComponent": "!bp_7c8f6712c444cf446a4bd3b8b717cb5c",
-  "name": "Heavy Shield +1 (Spiked Heavy Shield)"
+  "name": "Heavy Shield +1 (Spiked Heavy Shield)",
+  "qualifier": "Spiked Heavy Shield"
 }

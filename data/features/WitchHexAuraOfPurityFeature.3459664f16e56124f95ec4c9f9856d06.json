@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "WitchHexAuraOfPurityFeature",
   "guid": "3459664f16e56124f95ec4c9f9856d06",
-  "name": "Aura of Purity (witch hex)"
+  "name": "Aura of Purity (witch hex)",
+  "qualifier": "witch hex"
 }

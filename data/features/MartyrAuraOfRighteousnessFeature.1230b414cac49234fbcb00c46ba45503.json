@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "MartyrAuraOfRighteousnessFeature",
   "guid": "1230b414cac49234fbcb00c46ba45503",
-  "name": "Aura of Righteousness (Martyr)"
+  "name": "Aura of Righteousness (Martyr)",
+  "qualifier": "Martyr"
 }

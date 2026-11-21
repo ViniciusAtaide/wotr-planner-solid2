@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "UndeadSubdomainBaseFeatureSeparatist",
   "guid": "0873e3d21968486e8eed1760536242e2",
-  "name": "Undead Subdomain (Separatist)"
+  "name": "Undead Subdomain (Separatist)",
+  "qualifier": "Separatist"
 }

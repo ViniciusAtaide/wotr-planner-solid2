@@ -26,5 +26,6 @@
   "Ranks": 20,
   "assetName": "FleshOfStoneEffectFeature",
   "guid": "a942347023fedb2419f8bdbb4450e528",
-  "name": "Flesh of Stone (effect)"
+  "name": "Flesh of Stone (effect)",
+  "qualifier": "effect"
 }

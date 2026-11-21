@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "WitchPatronSpellLevel1",
   "guid": "2e28c42c019f7174682c700046eb0e15",
-  "name": "Patron Spells (Mercy 2)"
+  "name": "Patron Spells (Mercy 2)",
+  "qualifier": "Mercy 2"
 }

@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "AuraOfRighteousnessFeature",
   "guid": "6bd4a71232014254e80726f3a3756962",
-  "name": "Aura of Righteousness (Paladin)"
+  "name": "Aura of Righteousness (Paladin)",
+  "qualifier": "Paladin"
 }

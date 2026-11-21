@@ -39,5 +39,6 @@
   "Ranks": 1,
   "assetName": "CoordinatedDefense",
   "guid": "992fd59da1783de49b135ad89142c6d7",
-  "name": "Coordinated Defense (feature)"
+  "name": "Coordinated Defense (feature)",
+  "qualifier": "feature"
 }

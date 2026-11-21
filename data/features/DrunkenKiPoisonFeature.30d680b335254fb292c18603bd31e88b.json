@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "DrunkenKiPoisonFeature",
   "guid": "30d680b335254fb292c18603bd31e88b",
-  "name": "Ki Power: Poison (Drunken Ki)"
+  "name": "Ki Power: Poison (Drunken Ki)",
+  "qualifier": "Drunken Ki"
 }

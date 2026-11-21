@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "MightOfWyrmsCold",
   "guid": "5d67e30a39ee85e4eb2700bad26bf443",
-  "name": "Might of Wyrms (cold)"
+  "name": "Might of Wyrms (cold)",
+  "qualifier": "cold"
 }

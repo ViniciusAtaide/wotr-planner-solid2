@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "EldritchPrescientAttackFeature",
   "guid": "f488849e6b23632459f4e07a151e14e8",
-  "name": "Prescient Attack (Magus Arcana)"
+  "name": "Prescient Attack (Magus Arcana)",
+  "qualifier": "Magus Arcana"
 }

@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_54e7473ff73910c47812fd39c897dc1a",
-  "name": "Executioner of Evil (Handaxe)"
+  "name": "Executioner of Evil (Handaxe)",
+  "qualifier": "Handaxe"
 }

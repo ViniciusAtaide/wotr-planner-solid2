@@ -42,5 +42,6 @@
   "Ranks": 1,
   "assetName": "BackgroundHunter",
   "guid": "dd715e89fceb7ad44b120a49e4395332",
-  "name": "Hunter (Background Selection)"
+  "name": "Hunter (Background Selection)",
+  "qualifier": "Background Selection"
 }

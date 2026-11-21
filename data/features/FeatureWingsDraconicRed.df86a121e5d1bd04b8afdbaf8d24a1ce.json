@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "FeatureWingsDraconicRed",
   "guid": "df86a121e5d1bd04b8afdbaf8d24a1ce",
-  "name": "Wings (red dragon)"
+  "name": "Wings (red dragon)",
+  "qualifier": "red dragon"
 }

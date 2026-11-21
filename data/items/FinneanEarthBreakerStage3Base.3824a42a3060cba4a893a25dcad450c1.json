@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_54e960775daa4714fa52e0954d8cf862",
-  "name": "Finnean the Talking Weapon (Earth Breaker +5)"
+  "name": "Finnean the Talking Weapon (Earth Breaker +5)",
+  "qualifier": "Earth Breaker +5"
 }

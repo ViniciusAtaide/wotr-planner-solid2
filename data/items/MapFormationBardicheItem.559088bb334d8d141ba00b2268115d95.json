@@ -10,5 +10,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_b1cbf457fd471d148b39ae56667f405a",
-  "name": "Finger of the Heiress (Bardiche)"
+  "name": "Finger of the Heiress (Bardiche)",
+  "qualifier": "Bardiche"
 }

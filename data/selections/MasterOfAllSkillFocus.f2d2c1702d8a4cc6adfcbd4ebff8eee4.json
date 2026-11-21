@@ -15,5 +15,6 @@
   "m_AllFeatures": [
     "!bp_c9629ef9eebb88b479b2fbc5e836656a"
   ],
-  "name": "Skill Focus (Master of All)"
+  "name": "Skill Focus (Master of All)",
+  "qualifier": "Master of All"
 }

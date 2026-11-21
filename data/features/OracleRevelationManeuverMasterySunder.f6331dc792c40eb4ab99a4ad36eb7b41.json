@@ -41,5 +41,6 @@
   "Ranks": 1,
   "assetName": "OracleRevelationManeuverMasterySunder",
   "guid": "f6331dc792c40eb4ab99a4ad36eb7b41",
-  "name": "Sunder Armor (Maneuver Mastery)"
+  "name": "Sunder Armor (Maneuver Mastery)",
+  "qualifier": "Maneuver Mastery"
 }

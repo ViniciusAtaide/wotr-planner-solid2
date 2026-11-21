@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "ReposeDomainBaseFeature",
   "guid": "8526bc808c303034cb2b7832bccf1482",
-  "name": "Repose Domain (level 1)"
+  "name": "Repose Domain (level 1)",
+  "qualifier": "level 1"
 }

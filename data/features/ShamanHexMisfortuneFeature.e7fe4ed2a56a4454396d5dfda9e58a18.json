@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "ShamanHexMisfortuneFeature",
   "guid": "e7fe4ed2a56a4454396d5dfda9e58a18",
-  "name": "Misfortune (shaman hex)"
+  "name": "Misfortune (shaman hex)",
+  "qualifier": "shaman hex"
 }

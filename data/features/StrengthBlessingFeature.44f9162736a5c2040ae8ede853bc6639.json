@@ -33,5 +33,6 @@
   "Ranks": 1,
   "assetName": "StrengthBlessingFeature",
   "guid": "44f9162736a5c2040ae8ede853bc6639",
-  "name": "Strength (Blessings)"
+  "name": "Strength (Blessings)",
+  "qualifier": "Blessings"
 }

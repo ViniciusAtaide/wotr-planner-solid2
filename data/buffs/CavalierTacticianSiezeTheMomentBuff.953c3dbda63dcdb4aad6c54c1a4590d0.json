@@ -11,5 +11,6 @@
   "Stacking": "Prolong",
   "assetName": "CavalierTacticianSiezeTheMomentBuff",
   "guid": "953c3dbda63dcdb4aad6c54c1a4590d0",
-  "name": "Seize the Moment (buff)"
+  "name": "Seize the Moment (buff)",
+  "qualifier": "buff"
 }

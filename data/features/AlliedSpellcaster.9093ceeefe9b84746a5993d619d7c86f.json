@@ -38,5 +38,6 @@
   "Ranks": 1,
   "assetName": "AlliedSpellcaster",
   "guid": "9093ceeefe9b84746a5993d619d7c86f",
-  "name": "Allied Spellcaster (feature)"
+  "name": "Allied Spellcaster (feature)",
+  "qualifier": "feature"
 }

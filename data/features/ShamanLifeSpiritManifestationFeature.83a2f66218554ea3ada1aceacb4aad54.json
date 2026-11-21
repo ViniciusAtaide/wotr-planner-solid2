@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "ShamanLifeSpiritManifestationFeature",
   "guid": "83a2f66218554ea3ada1aceacb4aad54",
-  "name": "Manifestation (Life)"
+  "name": "Manifestation (Life)",
+  "qualifier": "Life"
 }

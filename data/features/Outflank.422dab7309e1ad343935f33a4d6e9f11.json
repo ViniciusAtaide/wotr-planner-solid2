@@ -54,5 +54,6 @@
   "Ranks": 1,
   "assetName": "Outflank",
   "guid": "422dab7309e1ad343935f33a4d6e9f11",
-  "name": "Outflank (feature)"
+  "name": "Outflank (feature)",
+  "qualifier": "feature"
 }

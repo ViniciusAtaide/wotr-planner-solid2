@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "BloodlineInfernalClassSkill",
   "guid": "f07a37a5b245304429530842cb65e213",
-  "name": "Class Skill — Knowledge (World) (Infernal Bloodline)"
+  "name": "Class Skill — Knowledge (World) (Infernal Bloodline)",
+  "qualifier": "Infernal Bloodline"
 }

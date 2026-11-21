@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "ShamanHexHealingFeature",
   "guid": "3fb96b69065bcc643a696c6ba908d588",
-  "name": "Healing (shaman hex)"
+  "name": "Healing (shaman hex)",
+  "qualifier": "shaman hex"
 }

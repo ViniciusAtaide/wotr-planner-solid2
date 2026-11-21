@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "CavalierStarSkills",
   "guid": "30cab0aee32cd86429f5bdf304291f3a",
-  "name": "Skills (Order of the Star)"
+  "name": "Skills (Order of the Star)",
+  "qualifier": "Order of the Star"
 }

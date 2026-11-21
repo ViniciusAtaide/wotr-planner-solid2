@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "AzataSummonFeatureTier9",
   "guid": "8403a6cec131de949b42cfa329963736",
-  "name": "Summon Hamadryad (Azata)"
+  "name": "Summon Hamadryad (Azata)",
+  "qualifier": "Azata"
 }

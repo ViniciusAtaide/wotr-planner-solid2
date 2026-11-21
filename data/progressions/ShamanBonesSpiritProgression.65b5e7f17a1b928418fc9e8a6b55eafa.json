@@ -49,5 +49,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Bones (progression)"
+  "name": "Bones (progression)",
+  "qualifier": "progression"
 }

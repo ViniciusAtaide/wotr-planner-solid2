@@ -40,5 +40,6 @@
   "Ranks": 1,
   "assetName": "KnowledgeDomainBaseFeature",
   "guid": "5335f015063776d429a0b5eab97eb060",
-  "name": "Knowledge Domain (Void Form)"
+  "name": "Knowledge Domain (Void Form)",
+  "qualifier": "Void Form"
 }

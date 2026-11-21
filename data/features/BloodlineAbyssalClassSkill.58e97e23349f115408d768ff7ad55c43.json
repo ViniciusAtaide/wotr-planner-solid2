@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "BloodlineAbyssalClassSkill",
   "guid": "58e97e23349f115408d768ff7ad55c43",
-  "name": "Class Skill — Athletics (Abyssal Bloodline)"
+  "name": "Class Skill — Athletics (Abyssal Bloodline)",
+  "qualifier": "Abyssal Bloodline"
 }

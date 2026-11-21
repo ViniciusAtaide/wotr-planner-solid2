@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "MurderDomainBaseFeatureSeparatist",
   "guid": "f41a97edb97f445fa6e9fc68cd711d0e",
-  "name": "Death Domain (Murder Subdomain)"
+  "name": "Death Domain (Murder Subdomain)",
+  "qualifier": "Murder Subdomain"
 }

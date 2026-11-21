@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "StudentOfWarAdditionalSkillMobility",
   "guid": "a3017982e66981f4dadc1878094241f3",
-  "name": "Class Skill — Mobility (Additional Class Skill)"
+  "name": "Class Skill — Mobility (Additional Class Skill)",
+  "qualifier": "Additional Class Skill"
 }

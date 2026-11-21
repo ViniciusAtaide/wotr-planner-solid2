@@ -4,5 +4,6 @@
   "assetName": "KnightsEmblemSunsetBeltItem",
   "guid": "f21d7afb2cd9c2a408677be2059eab19",
   "m_Enchantments": [],
-  "name": "Mallander's Insult (belt)"
+  "name": "Mallander's Insult (belt)",
+  "qualifier": "belt"
 }

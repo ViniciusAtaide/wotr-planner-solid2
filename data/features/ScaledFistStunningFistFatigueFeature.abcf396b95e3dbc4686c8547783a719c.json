@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ScaledFistStunningFistFatigueFeature",
   "guid": "abcf396b95e3dbc4686c8547783a719c",
-  "name": "Stunning Fist: Fatigue (Scaled Fist)"
+  "name": "Stunning Fist: Fatigue (Scaled Fist)",
+  "qualifier": "Scaled Fist"
 }

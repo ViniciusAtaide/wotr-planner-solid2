@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "FastMovement",
   "guid": "d294a5dddd0120046aae7d4eb6cbc4fc",
-  "name": "Fast Movement (Barbarian)"
+  "name": "Fast Movement (Barbarian)",
+  "qualifier": "Barbarian"
 }

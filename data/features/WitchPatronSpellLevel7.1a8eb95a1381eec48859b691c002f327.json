@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "WitchPatronSpellLevel7",
   "guid": "1a8eb95a1381eec48859b691c002f327",
-  "name": "Patron Spells (Healing 14)"
+  "name": "Patron Spells (Healing 14)",
+  "qualifier": "Healing 14"
 }

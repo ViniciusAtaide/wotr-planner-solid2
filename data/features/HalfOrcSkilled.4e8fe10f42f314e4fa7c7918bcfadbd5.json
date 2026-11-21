@@ -13,5 +13,6 @@
   "Ranks": 1,
   "assetName": "HalfOrcSkilled",
   "guid": "4e8fe10f42f314e4fa7c7918bcfadbd5",
-  "name": "Skilled (Human-Raised)"
+  "name": "Skilled (Human-Raised)",
+  "qualifier": "Human-Raised"
 }

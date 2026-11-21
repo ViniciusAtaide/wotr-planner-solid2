@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "DevilbanePriestHeavyArmorProficiency",
   "guid": "907baa147cfa41b41b4a13c9a3bf3880",
-  "name": "Armor Proficiency (Heavy Armor) (Demonbane Priest)"
+  "name": "Armor Proficiency (Heavy Armor) (Demonbane Priest)",
+  "qualifier": "Demonbane Priest"
 }

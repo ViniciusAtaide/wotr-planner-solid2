@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "CavalierShroudChallenge",
   "guid": "248b0fced52cbdf40a48d44705663799",
-  "name": "Challenge (Order of the Shroud)"
+  "name": "Challenge (Order of the Shroud)",
+  "qualifier": "Order of the Shroud"
 }

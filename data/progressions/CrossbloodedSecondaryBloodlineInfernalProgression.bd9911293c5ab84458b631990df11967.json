@@ -633,5 +633,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Infernal Bloodline (Secondary Bloodline)"
+  "name": "Infernal Bloodline (Secondary Bloodline)",
+  "qualifier": "Secondary Bloodline"
 }

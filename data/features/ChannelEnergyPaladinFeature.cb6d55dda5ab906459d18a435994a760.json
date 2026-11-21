@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ChannelEnergyPaladinFeature",
   "guid": "cb6d55dda5ab906459d18a435994a760",
-  "name": "Channel Positive Energy (Paladin)"
+  "name": "Channel Positive Energy (Paladin)",
+  "qualifier": "Paladin"
 }

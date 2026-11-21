@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "BloodlineElementalEarthElementalBodyFeature",
   "guid": "6541fc1423987a341b30ea68a54f0327",
-  "name": "Elemental Body (earth)"
+  "name": "Elemental Body (earth)",
+  "qualifier": "earth"
 }

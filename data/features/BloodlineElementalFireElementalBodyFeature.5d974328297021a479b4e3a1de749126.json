@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "BloodlineElementalFireElementalBodyFeature",
   "guid": "5d974328297021a479b4e3a1de749126",
-  "name": "Elemental Body (fire)"
+  "name": "Elemental Body (fire)",
+  "qualifier": "fire"
 }

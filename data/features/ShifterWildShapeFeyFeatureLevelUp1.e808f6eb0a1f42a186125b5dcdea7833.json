@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "ShifterWildShapeFeyFeatureLevelUp1",
   "guid": "e808f6eb0a1f42a186125b5dcdea7833",
-  "name": "Fey Shape (level 8)"
+  "name": "Fey Shape (level 8)",
+  "qualifier": "level 8"
 }

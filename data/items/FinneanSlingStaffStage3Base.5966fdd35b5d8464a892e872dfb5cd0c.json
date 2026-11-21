@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_25da2dc95ed4a6b419608c678f2a9cc3",
-  "name": "Finnean the Talking Weapon (Sling Staff +5)"
+  "name": "Finnean the Talking Weapon (Sling Staff +5)",
+  "qualifier": "Sling Staff +5"
 }

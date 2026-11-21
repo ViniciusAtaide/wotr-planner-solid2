@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "ScaledFistScorchingRayFeature",
   "guid": "fa1e4965fe009be478a1283727e68c65",
-  "name": "Ki Power: Scorching Ray (Scaled Fist)"
+  "name": "Ki Power: Scorching Ray (Scaled Fist)",
+  "qualifier": "Scaled Fist"
 }

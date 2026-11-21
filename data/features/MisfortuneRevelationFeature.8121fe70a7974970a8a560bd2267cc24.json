@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "MisfortuneRevelationFeature",
   "guid": "8121fe70a7974970a8a560bd2267cc24",
-  "name": "Misfortune (Revelation)"
+  "name": "Misfortune (Revelation)",
+  "qualifier": "Revelation"
 }

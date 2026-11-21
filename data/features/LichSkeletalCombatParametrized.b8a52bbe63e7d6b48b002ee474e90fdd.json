@@ -150,5 +150,6 @@
   "assetName": "LichSkeletalCombatParametrized",
   "guid": "b8a52bbe63e7d6b48b002ee474e90fdd",
   "m_Prerequisite": null,
-  "name": "Bonus Combat Feat (Skeleton Upgrade Selection)"
+  "name": "Bonus Combat Feat (Skeleton Upgrade Selection)",
+  "qualifier": "Skeleton Upgrade Selection"
 }

@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "PlaguedCurseFeatureLevel1",
   "guid": "add0c93a50a9f3c47a40edeb225f8ee4",
-  "name": "Plagued (level 1)"
+  "name": "Plagued (level 1)",
+  "qualifier": "level 1"
 }

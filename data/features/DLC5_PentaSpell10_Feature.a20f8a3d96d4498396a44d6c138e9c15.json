@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "DLC5_PentaSpell10_Feature",
   "guid": "a20f8a3d96d4498396a44d6c138e9c15",
-  "name": "Numerian Companion (level 13)"
+  "name": "Numerian Companion (level 13)",
+  "qualifier": "level 13"
 }

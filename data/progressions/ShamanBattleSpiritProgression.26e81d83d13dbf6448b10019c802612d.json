@@ -49,5 +49,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Battle (progression)"
+  "name": "Battle (progression)",
+  "qualifier": "progression"
 }

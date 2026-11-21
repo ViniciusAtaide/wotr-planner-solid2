@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_cf3e703db4b81904e982a66d7b8474ea",
-  "name": "Finnean the Talking Weapon (Light Mace +5)"
+  "name": "Finnean the Talking Weapon (Light Mace +5)",
+  "qualifier": "Light Mace +5"
 }

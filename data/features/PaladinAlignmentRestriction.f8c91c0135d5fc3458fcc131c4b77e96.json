@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "PaladinAlignmentRestriction",
   "guid": "f8c91c0135d5fc3458fcc131c4b77e96",
-  "name": "Alignment Restriction (Paladin)"
+  "name": "Alignment Restriction (Paladin)",
+  "qualifier": "Paladin"
 }

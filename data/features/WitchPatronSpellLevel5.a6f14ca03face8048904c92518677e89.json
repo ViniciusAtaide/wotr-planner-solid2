@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "WitchPatronSpellLevel5",
   "guid": "a6f14ca03face8048904c92518677e89",
-  "name": "Patron Spells (Transformation 10)"
+  "name": "Patron Spells (Transformation 10)",
+  "qualifier": "Transformation 10"
 }

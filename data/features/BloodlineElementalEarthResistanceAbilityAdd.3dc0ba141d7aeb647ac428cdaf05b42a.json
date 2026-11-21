@@ -34,5 +34,6 @@
   "Ranks": 2,
   "assetName": "BloodlineElementalEarthResistanceAbilityAdd",
   "guid": "3dc0ba141d7aeb647ac428cdaf05b42a",
-  "name": "Elemental Resistance (Elemental Bloodline — Earth)"
+  "name": "Elemental Resistance (Elemental Bloodline — Earth)",
+  "qualifier": "Elemental Bloodline — Earth"
 }

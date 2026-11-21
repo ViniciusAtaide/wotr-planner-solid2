@@ -5,5 +5,6 @@
   "guid": "67bf27804a830c84ca0b592c38759cfd",
   "m_ArmorComponent": "!bp_12b8d86d38bf5fc48a86e924af760e98",
   "m_WeaponComponent": "!bp_09f2e800b858b4d4c88b0eb05ad076d4",
-  "name": "Bellowing Howl (shield)"
+  "name": "Bellowing Howl (shield)",
+  "qualifier": "shield"
 }

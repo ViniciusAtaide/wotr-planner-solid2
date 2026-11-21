@@ -10,5 +10,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_2bc77aa47f97de348aefcf03ec8fa43b",
-  "name": "Scorpion's Kiss (Battleaxe)"
+  "name": "Scorpion's Kiss (Battleaxe)",
+  "qualifier": "Battleaxe"
 }

@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "CavalierShroudSkills",
   "guid": "3fc4db417af250f4ea0b81db21f2f7e0",
-  "name": "Skills (Order of the Shroud)"
+  "name": "Skills (Order of the Shroud)",
+  "qualifier": "Order of the Shroud"
 }

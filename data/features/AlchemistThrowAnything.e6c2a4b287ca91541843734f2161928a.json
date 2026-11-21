@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "AlchemistThrowAnything",
   "guid": "e6c2a4b287ca91541843734f2161928a",
-  "name": "Throw Anything (Alchemist)"
+  "name": "Throw Anything (Alchemist)",
+  "qualifier": "Alchemist"
 }

@@ -23,5 +23,6 @@
   "Stacking": "Replace",
   "assetName": "ShifterAspectBoarBuff",
   "guid": "0fdc579eafbf4fceae649beed8188a5c",
-  "name": "Boar (Shifter 9)"
+  "name": "Boar (Shifter 9)",
+  "qualifier": "Shifter 9"
 }

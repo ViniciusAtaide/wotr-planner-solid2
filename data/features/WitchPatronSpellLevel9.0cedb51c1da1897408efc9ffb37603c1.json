@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "WitchPatronSpellLevel9",
   "guid": "0cedb51c1da1897408efc9ffb37603c1",
-  "name": "Patron Spells (Insanity 18)"
+  "name": "Patron Spells (Insanity 18)",
+  "qualifier": "Insanity 18"
 }

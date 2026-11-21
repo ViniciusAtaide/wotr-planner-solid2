@@ -26,5 +26,6 @@
   "Ranks": 10,
   "assetName": "ChannelNegativeFeature",
   "guid": "3adb2c906e031ee41a01bfc1d5fb7eea",
-  "name": "Channel Negative Energy (Cleric)"
+  "name": "Channel Negative Energy (Cleric)",
+  "qualifier": "Cleric"
 }

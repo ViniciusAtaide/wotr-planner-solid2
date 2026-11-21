@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "ArcaneHeavyArmor",
   "guid": "c7afb6c47798b7a4abf21f343f07f8d5",
-  "name": "Arcane Heavy Armor (Magus)"
+  "name": "Arcane Heavy Armor (Magus)",
+  "qualifier": "Magus"
 }

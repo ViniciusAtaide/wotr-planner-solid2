@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_2ece38f30500f454b8569136221e55b0",
-  "name": "Finnean the Talking Weapon (Rapier +3)"
+  "name": "Finnean the Talking Weapon (Rapier +3)",
+  "qualifier": "Rapier +3"
 }

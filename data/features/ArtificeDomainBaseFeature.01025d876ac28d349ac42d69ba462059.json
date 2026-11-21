@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "ArtificeDomainBaseFeature",
   "guid": "01025d876ac28d349ac42d69ba462059",
-  "name": "Artifice Domain (level 1)"
+  "name": "Artifice Domain (level 1)",
+  "qualifier": "level 1"
 }

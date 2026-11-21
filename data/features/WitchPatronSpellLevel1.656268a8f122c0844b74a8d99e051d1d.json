@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "WitchPatronSpellLevel1",
   "guid": "656268a8f122c0844b74a8d99e051d1d",
-  "name": "Patron Spells (Insanity 2)"
+  "name": "Patron Spells (Insanity 2)",
+  "qualifier": "Insanity 2"
 }

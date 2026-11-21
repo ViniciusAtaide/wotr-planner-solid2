@@ -6,5 +6,6 @@
   "assetName": "ShifterAspectWolfAbility",
   "guid": "2ec2c06d00574e6795c48cb65e17cb52",
   "m_Buff": "!bp_d61bd26255d4425d929d73e57ef0e6dd",
-  "name": "Wolf (Shifter 1)"
+  "name": "Wolf (Shifter 1)",
+  "qualifier": "Shifter 1"
 }

@@ -7,5 +7,6 @@
   "Ranks": 2,
   "assetName": "BloodlineAbyssalResistancesAbilityLevel2",
   "guid": "67ac4240f1c0418409ac09f768e89908",
-  "name": "Demon Resistances (level 9)"
+  "name": "Demon Resistances (level 9)",
+  "qualifier": "level 9"
 }

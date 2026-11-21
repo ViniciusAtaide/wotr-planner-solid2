@@ -31,5 +31,6 @@
   "Ranks": 1,
   "assetName": "EnlightenedPhilosopherBattleMysteryFeature",
   "guid": "677fbcaa2a87cf94296138568db117a8",
-  "name": "Battle (Enlightened Philosopher)"
+  "name": "Battle (Enlightened Philosopher)",
+  "qualifier": "Enlightened Philosopher"
 }

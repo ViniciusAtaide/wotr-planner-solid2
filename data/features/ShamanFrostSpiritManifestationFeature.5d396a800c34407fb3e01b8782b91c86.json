@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "ShamanFrostSpiritManifestationFeature",
   "guid": "5d396a800c34407fb3e01b8782b91c86",
-  "name": "Manifestation (Frost)"
+  "name": "Manifestation (Frost)",
+  "qualifier": "Frost"
 }

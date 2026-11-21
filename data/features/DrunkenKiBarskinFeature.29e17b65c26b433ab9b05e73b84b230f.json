@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "DrunkenKiBarskinFeature",
   "guid": "29e17b65c26b433ab9b05e73b84b230f",
-  "name": "Ki Power: Barkskin (Drunken Ki)"
+  "name": "Ki Power: Barkskin (Drunken Ki)",
+  "qualifier": "Drunken Ki"
 }

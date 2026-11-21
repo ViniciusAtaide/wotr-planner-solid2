@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "AirDomainBaseFeature",
   "guid": "39b0c7db785560041b436b558c9df2bb",
-  "name": "Air Domain (level 1)"
+  "name": "Air Domain (level 1)",
+  "qualifier": "level 1"
 }

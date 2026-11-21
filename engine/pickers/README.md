@@ -5,6 +5,12 @@ What each slot can take (guide §4, build ticket 04). S lists a slot's options a
 ## Public entry
 
 - `picker(data, build, slot, G?)` and `Picker`: every option of a slot with its status, judged at the walk paused there; undefined when the Build never opens the slot. A `Picker` holds the opened `slot`, its `options`, and `unit`, the character at the pause, which R words each closed option's Refusal against.
+- `namesInList(data, guids)`, `bareName(bp)` and `ListName`: names as a list shows them.
+  - **Why:** the importer qualifies a shared name across everything a Build can reach, so "Allied Spellcaster" is "Allied Spellcaster (feature)" only because a Cavalier buff has the same name. A list only has to tell its own options apart.
+  - **`bareName`** is a blueprint's name without the qualifier the importer added. Use it for a slot's label.
+  - **`namesInList`** gives each distinct blueprint in a list its bare `name`, plus its `qualifier` only when another blueprint in the same list shares that bare name.
+  - **Where they apply:** `picker` puts both on every option (counting shown options only), and `classPicker` on every class.
+  - **Names that keep their parentheses:** a name the game itself writes that way ("Expanded Arsenal (Magic School)") has no qualifier and stays whole.
 - `classPicker(data, build, place, G?, rankLevel?)` and `ClassPicker`: every class on offer at a level (`offeredClasses`) or a Mythic rank (`offeredMythicClasses`), with its status, judged at one walk paused at that place's class choice (`pauseAtClass`). An existing level or rank pauses where the walk reaches it, and a new level (`levels.length + 1`) pauses after the last level. A new rank (`ranks.length + 1`) needs its `rankLevel` and pauses where the walk would ascend it.
   - An option's `closed` is the first refusal the walk gives that class there: wrong kind of class, prerequisites, the level cap, a path switch off rank 8, ranks ended, Devil's origin.
   - Status means legal at this place. What a class would break later is worked out only for the class the user takes, by E's `allows` and `cascade`, as for slot pickers.

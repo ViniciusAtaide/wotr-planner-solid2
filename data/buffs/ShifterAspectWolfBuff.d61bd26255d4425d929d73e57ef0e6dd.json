@@ -41,5 +41,6 @@
   "Stacking": "Replace",
   "assetName": "ShifterAspectWolfBuff",
   "guid": "d61bd26255d4425d929d73e57ef0e6dd",
-  "name": "Wolf (Shifter 9)"
+  "name": "Wolf (Shifter 9)",
+  "qualifier": "Shifter 9"
 }

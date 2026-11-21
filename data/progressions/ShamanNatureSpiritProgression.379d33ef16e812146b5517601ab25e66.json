@@ -51,5 +51,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Nature (progression)"
+  "name": "Nature (progression)",
+  "qualifier": "progression"
 }

@@ -6,5 +6,6 @@
   "assetName": "ShifterAspectTigerAbility",
   "guid": "958fcd0e2e674c72b97dea83b806eec1",
   "m_Buff": "!bp_0555960c7ab8431d86de4e7db0c22160",
-  "name": "Tiger (Shifter 1)"
+  "name": "Tiger (Shifter 1)",
+  "qualifier": "Shifter 1"
 }

@@ -26,5 +26,6 @@
   "Ranks": 1,
   "assetName": "MasterSpyTrapfindingFeature",
   "guid": "d55acf213bf709c40b2bc72b997fb345",
-  "name": "Trapfinding (Espionage Expert)"
+  "name": "Trapfinding (Espionage Expert)",
+  "qualifier": "Espionage Expert"
 }

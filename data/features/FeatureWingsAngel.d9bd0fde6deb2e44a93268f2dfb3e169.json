@@ -38,5 +38,6 @@
   "Ranks": 1,
   "assetName": "FeatureWingsAngel",
   "guid": "d9bd0fde6deb2e44a93268f2dfb3e169",
-  "name": "Wings (Aasimar)"
+  "name": "Wings (Aasimar)",
+  "qualifier": "Aasimar"
 }

@@ -54,5 +54,6 @@
   "Ranks": 1,
   "assetName": "ShamanBonesSpiritWanderingFeature",
   "guid": "a3862152ae6010445bc25915ac58fc8e",
-  "name": "Bones (Shaman 4)"
+  "name": "Bones (Shaman 4)",
+  "qualifier": "Shaman 4"
 }

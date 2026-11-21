@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "AbjurationResistanceFeature",
   "guid": "1abe070e7a00ddd48b8a141d71f79e70",
-  "name": "Resistance (Specialist School — Abjuration)"
+  "name": "Resistance (Specialist School — Abjuration)",
+  "qualifier": "Specialist School — Abjuration"
 }

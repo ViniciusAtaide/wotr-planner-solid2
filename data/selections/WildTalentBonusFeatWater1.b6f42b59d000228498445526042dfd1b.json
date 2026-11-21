@@ -61,5 +61,6 @@
     "!bp_72ba6ad46d94ecd41bad8e64739ea392",
     "!bp_4e219f5894ad0ea4daa0699e28c37b1d"
   ],
-  "name": "Kineticist Bonus Feat — Water (with Bull Rush)"
+  "name": "Kineticist Bonus Feat — Water (with Bull Rush)",
+  "qualifier": "with Bull Rush"
 }

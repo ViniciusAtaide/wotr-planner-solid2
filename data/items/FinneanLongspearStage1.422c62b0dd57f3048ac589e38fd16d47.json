@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_fa2dd17cbde7d3f4aa918d467c30516e",
-  "name": "Finnean the Talking Weapon (Longspear +1)"
+  "name": "Finnean the Talking Weapon (Longspear +1)",
+  "qualifier": "Longspear +1"
 }

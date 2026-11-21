@@ -55,5 +55,6 @@
   "Ranks": 1,
   "assetName": "PreciseStrike",
   "guid": "5662d1b793db90c4b9ba68037fd2a768",
-  "name": "Precise Strike (feature)"
+  "name": "Precise Strike (feature)",
+  "qualifier": "feature"
 }

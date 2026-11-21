@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "FakeLegendFeature",
   "guid": "63dbc00439ff894489a624abaa8ba79c",
-  "name": "Legend (feature)"
+  "name": "Legend (feature)",
+  "qualifier": "feature"
 }

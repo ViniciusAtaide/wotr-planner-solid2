@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "EldritchScionCantripsFeature",
   "guid": "d093b8dec70b5d144acb593a3029d830",
-  "name": "Cantrips (Magus)"
+  "name": "Cantrips (Magus)",
+  "qualifier": "Magus"
 }

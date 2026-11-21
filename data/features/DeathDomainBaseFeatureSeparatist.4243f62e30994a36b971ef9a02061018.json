@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "DeathDomainBaseFeatureSeparatist",
   "guid": "4243f62e30994a36b971ef9a02061018",
-  "name": "Death Domain (Separatist)"
+  "name": "Death Domain (Separatist)",
+  "qualifier": "Separatist"
 }

@@ -24,5 +24,6 @@
     "!bp_a79013ff4bcd4864cb669622a29ddafb",
     "!bp_3adb2c906e031ee41a01bfc1d5fb7eea"
   ],
-  "name": "Channel Energy (Cleric)"
+  "name": "Channel Energy (Cleric)",
+  "qualifier": "Cleric"
 }

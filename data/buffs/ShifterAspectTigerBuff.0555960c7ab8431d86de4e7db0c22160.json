@@ -23,5 +23,6 @@
   "Stacking": "Replace",
   "assetName": "ShifterAspectTigerBuff",
   "guid": "0555960c7ab8431d86de4e7db0c22160",
-  "name": "Tiger (Shifter 9)"
+  "name": "Tiger (Shifter 9)",
+  "qualifier": "Shifter 9"
 }

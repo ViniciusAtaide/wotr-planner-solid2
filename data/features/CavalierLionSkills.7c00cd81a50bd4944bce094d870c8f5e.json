@@ -12,5 +12,6 @@
   "Ranks": 1,
   "assetName": "CavalierLionSkills",
   "guid": "7c00cd81a50bd4944bce094d870c8f5e",
-  "name": "Skills (Order of the Lion)"
+  "name": "Skills (Order of the Lion)",
+  "qualifier": "Order of the Lion"
 }

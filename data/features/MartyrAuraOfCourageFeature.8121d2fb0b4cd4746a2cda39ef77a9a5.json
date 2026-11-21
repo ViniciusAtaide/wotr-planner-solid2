@@ -7,5 +7,6 @@
   "Ranks": 1,
   "assetName": "MartyrAuraOfCourageFeature",
   "guid": "8121d2fb0b4cd4746a2cda39ef77a9a5",
-  "name": "Aura of Courage (Martyr)"
+  "name": "Aura of Courage (Martyr)",
+  "qualifier": "Martyr"
 }

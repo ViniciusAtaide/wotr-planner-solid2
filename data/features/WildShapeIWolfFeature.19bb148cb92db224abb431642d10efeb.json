@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "WildShapeIWolfFeature",
   "guid": "19bb148cb92db224abb431642d10efeb",
-  "name": "Wild Shape (Wolf) (Druid)"
+  "name": "Wild Shape (Wolf) (Druid)",
+  "qualifier": "Druid"
 }

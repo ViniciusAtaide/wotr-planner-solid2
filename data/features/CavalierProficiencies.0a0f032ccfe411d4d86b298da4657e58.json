@@ -22,5 +22,6 @@
   "Ranks": 1,
   "assetName": "CavalierProficiencies",
   "guid": "0a0f032ccfe411d4d86b298da4657e58",
-  "name": "Weapon and Armor Proficiency (Cavalier)"
+  "name": "Weapon and Armor Proficiency (Cavalier)",
+  "qualifier": "Cavalier"
 }

@@ -133,5 +133,6 @@
   ],
   "m_ExclusiveProgression": null,
   "m_FeaturesRankIncrease": [],
-  "name": "Bloodrager (progression)"
+  "name": "Bloodrager (progression)",
+  "qualifier": "progression"
 }

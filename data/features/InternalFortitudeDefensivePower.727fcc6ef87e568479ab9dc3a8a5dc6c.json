@@ -9,5 +9,6 @@
   "Ranks": 1,
   "assetName": "InternalFortitudeDefensivePower",
   "guid": "727fcc6ef87e568479ab9dc3a8a5dc6c",
-  "name": "Internal Fortitude (Defensive Powers)"
+  "name": "Internal Fortitude (Defensive Powers)",
+  "qualifier": "Defensive Powers"
 }

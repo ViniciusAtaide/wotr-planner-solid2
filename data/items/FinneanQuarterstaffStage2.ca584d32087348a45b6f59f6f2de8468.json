@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_629736dabac7f9f4a819dc854eaed2d6",
-  "name": "Finnean the Talking Weapon (Quarterstaff +3)"
+  "name": "Finnean the Talking Weapon (Quarterstaff +3)",
+  "qualifier": "Quarterstaff +3"
 }

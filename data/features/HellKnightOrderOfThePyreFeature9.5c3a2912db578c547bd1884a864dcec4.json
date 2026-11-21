@@ -27,5 +27,6 @@
   "Ranks": 1,
   "assetName": "HellKnightOrderOfThePyreFeature9",
   "guid": "5c3a2912db578c547bd1884a864dcec4",
-  "name": "Order of the Pyre (level 9)"
+  "name": "Order of the Pyre (level 9)",
+  "qualifier": "level 9"
 }

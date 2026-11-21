@@ -27,5 +27,6 @@
   "Ranks": 1,
   "assetName": "EnlightenedPhilosopherWindMysteryFeature",
   "guid": "3812dcb2fe59ecd449285391db677edc",
-  "name": "Wind (Enlightened Philosopher)"
+  "name": "Wind (Enlightened Philosopher)",
+  "qualifier": "Enlightened Philosopher"
 }

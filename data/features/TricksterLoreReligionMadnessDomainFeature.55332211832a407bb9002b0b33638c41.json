@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "TricksterLoreReligionMadnessDomainFeature",
   "guid": "55332211832a407bb9002b0b33638c41",
-  "name": "Madness Domain (Lore (Religion) 2 Rank)"
+  "name": "Madness Domain (Lore (Religion) 2 Rank)",
+  "qualifier": "Lore (Religion) 2 Rank"
 }

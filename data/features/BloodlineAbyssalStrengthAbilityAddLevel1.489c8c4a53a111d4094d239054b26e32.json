@@ -21,5 +21,6 @@
   "Ranks": 2,
   "assetName": "BloodlineAbyssalStrengthAbilityAddLevel1",
   "guid": "489c8c4a53a111d4094d239054b26e32",
-  "name": "Strength of the Abyss (Abyssal Bloodline)"
+  "name": "Strength of the Abyss (Abyssal Bloodline)",
+  "qualifier": "Abyssal Bloodline"
 }

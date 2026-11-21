@@ -24,5 +24,6 @@
   "Ranks": 1,
   "assetName": "LawDomainBaseFeature",
   "guid": "9bd2d216e56a0db44be0df48ffc515af",
-  "name": "Law Domain (level 1)"
+  "name": "Law Domain (level 1)",
+  "qualifier": "level 1"
 }

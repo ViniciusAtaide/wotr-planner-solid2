@@ -31,5 +31,6 @@
   "Ranks": 1,
   "assetName": "TricksterLoreReligionAirDomainFeature",
   "guid": "2dc50974356942c7b9f2ccfdcdeb7d61",
-  "name": "Air Domain (Lore (Religion) 2 Rank)"
+  "name": "Air Domain (Lore (Religion) 2 Rank)",
+  "qualifier": "Lore (Religion) 2 Rank"
 }

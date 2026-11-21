@@ -20,5 +20,6 @@
   "Ranks": 1,
   "assetName": "KiDiamondBodyFeature",
   "guid": "a8819b70975701b4e874b2f9862aac24",
-  "name": "Ki Power: Diamond Body (Monk)"
+  "name": "Ki Power: Diamond Body (Monk)",
+  "qualifier": "Monk"
 }

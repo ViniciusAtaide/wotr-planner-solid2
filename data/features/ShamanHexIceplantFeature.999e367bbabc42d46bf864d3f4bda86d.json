@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "ShamanHexIceplantFeature",
   "guid": "999e367bbabc42d46bf864d3f4bda86d",
-  "name": "Iceplant (shaman hex)"
+  "name": "Iceplant (shaman hex)",
+  "qualifier": "shaman hex"
 }

@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_4eacfc7e152930a45a1a16217c35011c",
-  "name": "Bane of Flesh (weapon)"
+  "name": "Bane of Flesh (weapon)",
+  "qualifier": "weapon"
 }

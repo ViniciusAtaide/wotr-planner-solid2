@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_a70cea34b275522458654beb3c53fe3f",
-  "name": "Finnean the Talking Weapon (Javelin +3)"
+  "name": "Finnean the Talking Weapon (Javelin +3)",
+  "qualifier": "Javelin +3"
 }

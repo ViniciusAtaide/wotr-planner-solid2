@@ -9,5 +9,6 @@
   ],
   "m_SecondWeapon": null,
   "m_Type": "!bp_2bc77aa47f97de348aefcf03ec8fa43b",
-  "name": "Finnean the Talking Weapon (Battleaxe +3)"
+  "name": "Finnean the Talking Weapon (Battleaxe +3)",
+  "qualifier": "Battleaxe +3"
 }

@@ -153,5 +153,6 @@
   "assetName": "LichSkeletalWeaponParametrized",
   "guid": "90f171fadf81f164d9828ce05441e617",
   "m_Prerequisite": null,
-  "name": "Weapon Focus (Skeleton Upgrade Selection)"
+  "name": "Weapon Focus (Skeleton Upgrade Selection)",
+  "qualifier": "Skeleton Upgrade Selection"
 }

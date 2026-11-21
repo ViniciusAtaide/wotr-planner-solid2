@@ -62,5 +62,6 @@
     "!bp_15e7da6645a7f3d41bdad7c8c4b9de1e",
     "!bp_2a6091b97ad940943b46262600eaeaeb"
   ],
-  "name": "Kineticist Bonus Feat — Air (with Dodge)"
+  "name": "Kineticist Bonus Feat — Air (with Dodge)",
+  "qualifier": "with Dodge"
 }

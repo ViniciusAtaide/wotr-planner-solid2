@@ -17,5 +17,6 @@
   "Ranks": 1,
   "assetName": "WitchHexProtectiveLuckFeature",
   "guid": "ddfc51eaa495acb40a01b92a2dd4ab73",
-  "name": "Protective Luck (witch hex)"
+  "name": "Protective Luck (witch hex)",
+  "qualifier": "witch hex"
 }

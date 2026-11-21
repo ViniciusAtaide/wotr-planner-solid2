@@ -22,5 +22,6 @@
   "Ranks": 1,
   "assetName": "BloodragerDragonFormOfTheDragonRed",
   "guid": "361134f67b400a1449aaceeb5ef8040f",
-  "name": "Dragon Form (bloodrager, red)"
+  "name": "Dragon Form (bloodrager, red)",
+  "qualifier": "bloodrager, red"
 }

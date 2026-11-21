@@ -15,5 +15,6 @@
   "Ranks": 1,
   "assetName": "BardCantripsFeature",
   "guid": "4f422e8490ec7d94592a8069cce47f98",
-  "name": "Cantrips (Bard)"
+  "name": "Cantrips (Bard)",
+  "qualifier": "Bard"
 }
