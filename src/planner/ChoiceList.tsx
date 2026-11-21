@@ -4,6 +4,7 @@ import type { Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
 
 import { OptionList, PickerOption } from '../design';
+import { CollapsedLists, createListPanel } from './list-panel';
 import { judgeAll, type Judged } from './planner-state';
 import { scrollToIndex, WindowedRows } from './WindowedRows';
 
@@ -138,12 +139,37 @@ export function ChoiceList(props: ChoiceListProps) {
   const closed = () => listed().filter((r) => !r.open);
   const closedShown = () => (toggle.shown ? closed() : closed().filter((r) => r.current));
   const filtering = () => props.rows.length >= FILTER_FROM;
+  const collapsing = useContext(CollapsedLists);
+  const arrived = useContext(StepArrived);
+  let box: HTMLDivElement | undefined;
+  const panel = createListPanel(
+    () => collapsing && filtering(),
+    arrived(),
+    () => box,
+  );
+  const current = () => props.rows.find((r) => r.current);
+  const take = (r: ChoiceRow | undefined) => {
+    if (r === undefined) return;
+    panel.hide();
+    r.take();
+  };
   createEffect(
     () => mark(),
     (at) => scrollToIndex(scroller, at),
   );
   return (
-    <div class="trail-choices" onKeyDown={moveThroughOptions}>
+    <div
+      ref={(el) => {
+        box = el;
+      }}
+      class="trail-choices"
+      onKeyDown={(e) => {
+        panel.onKeyDown(e);
+        moveThroughOptions(e);
+      }}
+      onFocusIn={() => panel.onFocusIn()}
+      onFocusOut={(e) => panel.onFocusOut(e)}
+    >
       <Show when={filtering()}>
         <Filter
           label={props.label}
@@ -151,51 +177,57 @@ export function ChoiceList(props: ChoiceListProps) {
           onInput={(t) => {
             setText(t);
             setMark(0);
+            panel.show();
           }}
           onMove={(delta) => setMark((m) => clampMark(m, delta, open().length))}
-          onEnter={() => open()[mark()]?.take()}
+          onEnter={() => take(open()[mark()])}
         />
       </Show>
-      <Show when={text() !== '' && listed().length === 0}>
-        <p class="trail-note">No matches for “{text()}”.</p>
+      <Show when={panel.collapsed() && current()}>
+        {(r) => <PickerOption name={r().name} status="open" selected onPick={() => panel.show()} />}
       </Show>
-      <Show when={listed().length > 0 && open().length === 0}>
-        <p class="trail-note">No choices open here.</p>
-      </Show>
-      <div
-        class="trail-scroll"
-        style={SCROLL_STYLE}
-        ref={(el) => {
-          scroller = el;
-        }}
-      >
-        <OptionList>
-          <WindowedRows items={open()} key={(r) => r.key} scroller={() => scroller}>
-            {(r, i) => (
-              <PickerOption
-                name={r.name}
-                status="open"
-                selected={r.current}
-                marked={filtering() && i === mark()}
-                links={r.note}
-                onPick={() => r.take()}
-              />
-            )}
-          </WindowedRows>
-          <For each={closedShown()} keyed={(r) => r.key}>
-            {(r) => <PickerOption name={r().name} status="closed" selected={r().current} refusal={r().reasons} />}
-          </For>
-        </OptionList>
-      </div>
-      <Show when={closed().length > 0}>
-        <button
-          type="button"
-          class="trail-link"
-          aria-pressed={toggle.shown ? 'true' : 'false'}
-          onClick={() => toggle.toggle()}
+      <Show when={panel.shown()}>
+        <Show when={text() !== '' && listed().length === 0}>
+          <p class="trail-note">No matches for “{text()}”.</p>
+        </Show>
+        <Show when={listed().length > 0 && open().length === 0}>
+          <p class="trail-note">No choices open here.</p>
+        </Show>
+        <div
+          class={['trail-scroll', { 'trail-scroll--two-line': props.rows.some((r) => r.note !== undefined) }]}
+          style={SCROLL_STYLE}
+          ref={(el) => {
+            scroller = el;
+          }}
         >
-          {toggle.shown ? 'Hide closed' : `Show ${closed().length} closed`}
-        </button>
+          <OptionList>
+            <WindowedRows items={open()} key={(r) => r.key} scroller={() => scroller}>
+              {(r, i) => (
+                <PickerOption
+                  name={r.name}
+                  status="open"
+                  selected={r.current}
+                  marked={filtering() && i === mark()}
+                  links={r.note}
+                  onPick={() => take(r)}
+                />
+              )}
+            </WindowedRows>
+            <For each={closedShown()} keyed={(r) => r.key}>
+              {(r) => <PickerOption name={r().name} status="closed" selected={r().current} refusal={r().reasons} />}
+            </For>
+          </OptionList>
+        </div>
+        <Show when={closed().length > 0}>
+          <button
+            type="button"
+            class="trail-link"
+            aria-pressed={toggle.shown ? 'true' : 'false'}
+            onClick={() => toggle.toggle()}
+          >
+            {toggle.shown ? 'Hide closed' : `Show ${closed().length} closed`}
+          </button>
+        </Show>
       </Show>
     </div>
   );

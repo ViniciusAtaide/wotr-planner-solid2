@@ -97,7 +97,9 @@ written under try/catch; the page works without storage).
   for the option under the pointer or focus (`detailOf`), full screen without it under 600 px; a header naming the
   step, the scores the step reads, and "← Back". Focus moves into it (the filter under a fine pointer, else the first
   option) and back to the opener, or to the step's button when the opener is gone; the page behind doesn't scroll
-  (`choice-open` on the root). Escape or Back closes it without picking. Open dialogs share one history entry
+  (`choice-open` on the root). Escape or Back closes it without picking; Escape is caught at the document while it is
+  open (capture phase), so one press closes it from anywhere in it, the filter included, whatever is typed, and the
+  page's own Escape (leave the step) skips a key the dialog took. Open dialogs share one history entry
   (`holdEntry`, `releaseEntry`), so a phone's back closes it, and a dialog that closes as the next one opens no longer
   pops the newcomer's entry; the entry goes only once no dialog holds it, and the newest `#b=` is put back on the way
   out, so the planner never reopens an older Build. A pick applies, closes it and the trail moves on; Undo works while
@@ -110,18 +112,32 @@ written under try/catch; the page works without storage).
 **Capped lists, closed choices hidden** (user, 2026-11-21): every choice list (a slot's pick list, the race,
 background, class, archetype and Mythic path lists, and the Gear items) scrolls inside a capped height
 (`trail-scroll`, `SCROLL_STYLE`: `max-height: var(--choice-list-max)`, `overflow-y: auto`), at least six and a half
-rows (`--choice-list-max` is 6.5 × `--choice-row-height`, a two-line row, in `tokens.css`), with the filter and the
+rows (`--choice-list-max` is 6.5 rows and their gaps, in `tokens.css`), with the filter and the
 headings outside the scroll. The marked row Enter takes is kept in view (`scrollToIndex`), and keyboard focus scrolls
 the row it reaches. Closed choices are hidden by default: "Show N closed" below the list reveals them with their
 grouped reasons, and "Hide closed" hides them again; the choice is remembered per list kind for the session, in the
 trail's state (`closedShown`, `toggleClosed`; `closedToggle` in `steps.tsx`). A list with no open row says "No choices
 open here" and keeps the button. The Build's current pick shows even when it has become closed, marked Current.
 
+**Inline lists collapse to their filter** (user, 2026-11-21): in the trail (inline first), a list with a filter shows
+only the filter and, when there is one, the current pick, until the filter or a row in it has focus; then the list
+opens under the filter (`createListPanel` in `list-panel.ts`, turned on by the `CollapsedLists` context that `Here`
+gives its inline children; inside the dialog, and in a list too short for a filter, the list always shows). Typing,
+Up or Down open it too. It closes when focus moves outside the step, on a tap outside it, on Escape (which then
+leaves the step where it is) and after a pick. A press inside the step never closes it, so a tap on a row lands even
+where a tap doesn't focus the button. A step that arrives through auto-advance opens its list at once (and its filter
+takes focus under a fine pointer); on first load nothing opens, as ticket 11 asks.
+
+**Compact rows** (user, 2026-11-21): a row is one line, 44 px (`--choice-row-height`), the tap-target minimum, with a
+4 px gap (`--choice-row-gap`). A list whose rows carry a second line (a pick list, with its Synergy line, or a class
+list with notes) is 60 px a row (`--choice-row-two-line`, `trail-scroll--two-line`), the same for every row in it, so
+windowing holds.
+
 **Windowed lists** (coordinator, 2026-11-21): the open rows of a pick list and of the class, path and archetype lists
 render through `WindowedRows` (`WindowedRows.tsx`): only the rows in the scroll box plus `OVERSCAN` (6) above and
-below, with spacer blocks for the rest. Every row is one fixed height, `--choice-row-height` less the list gap
-(`trail-window-row--fixed`, the meta line cut with an ellipsis), so a row's place is its index times the row height
-(`windowOf`) and no row is measured. An expanded parent's sub-options are rows of their own in the same window
+below, with spacer blocks for the rest. Every row is one fixed height, `--choice-row-height`
+(`trail-window-row--fixed`, the name and the meta line cut with an ellipsis), so a row's place is its index times the
+row height and gap (`rowHeightOf`, `windowOf`) and no row is measured. An expanded parent's sub-options are rows of their own in the same window
 (`trail-sub-row`, `data-child-of`), so the pick list is one flat list of parents and sub-options. Filtering, the mark
 and keyboard movement work on that list, not the DOM; a row keeps its element while its item and index are unchanged,
 so scrolling and expanding rebuild only the rows that come into view. Without layout (jsdom) every row renders. The

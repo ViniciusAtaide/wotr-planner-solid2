@@ -894,9 +894,22 @@ html.choice-open .planner-undo:not(:empty) {
   border-left: 2px solid var(--line-strong);
 }
 
+.trail-scroll .ww-options {
+  gap: var(--choice-row-gap);
+}
+
+.trail-scroll--two-line {
+  --choice-row-height: var(--choice-row-two-line);
+  --choice-list-max: calc(6.5 * (var(--choice-row-two-line) + var(--choice-row-gap)));
+}
+
+.choice-dialog .trail-scroll--two-line {
+  --choice-list-max: 60vh;
+}
+
 .trail-window-row--fixed {
   box-sizing: border-box;
-  height: calc(var(--choice-row-height) - var(--space-2));
+  height: var(--choice-row-height);
   overflow: hidden;
 }
 
@@ -907,6 +920,14 @@ html.choice-open .planner-undo:not(:empty) {
   box-sizing: border-box;
   height: 100%;
   align-content: center;
+  row-gap: 0;
+  padding-block: 0;
+}
+
+.trail-window-row--fixed .ww-option__name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .trail-window-row--fixed .ww-option__meta {

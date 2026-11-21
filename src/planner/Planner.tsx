@@ -278,7 +278,7 @@ function Workspace(props: WorkspaceProps) {
             e.preventDefault();
             filter.focus();
           }
-        } else if (e.key === 'Escape' && workspace().selection !== undefined) {
+        } else if (e.key === 'Escape' && !e.defaultPrevented && workspace().selection !== undefined) {
           send({ kind: 'select', selection: undefined });
         }
         return;

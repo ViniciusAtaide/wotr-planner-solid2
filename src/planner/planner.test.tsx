@@ -318,6 +318,11 @@ const button = (name: string | RegExp) => screen.getByRole('button', { name });
 const dialog = () => document.querySelector('[role="dialog"]');
 const hereTitle = () => document.querySelector('.trail-here__title')?.textContent;
 
+function showList(): void {
+  document.querySelector<HTMLElement>('.trail-here [data-picker-filter]')?.focus();
+  flush();
+}
+
 function tap(name: string | RegExp): void {
   fireEvent.click(button(name));
   flush();
@@ -416,6 +421,7 @@ describe('the levelling trail (build ticket 07)', () => {
     expect(hereTitle()).toBe('Your character · choose a race');
     expect(chipNamed('Race').textContent).toContain('Choose your race');
     expect(chipNamed('Race').closest('.trail-race')).not.toBeNull();
+    showList();
     tap(/^Human$/);
     expect(hereTitle()).toBe('Your character · set the ability scores');
     tap('Raise Strength');
@@ -496,6 +502,7 @@ describe('the levelling trail (build ticket 07)', () => {
 
   test('a reload keeps the Build, through the #b= link', async () => {
     await openPlanner(undefined);
+    showList();
     tap(/^Human$/);
     tap(/^Done/);
     tap('Lawful Good');
@@ -520,6 +527,7 @@ describe('the levelling trail (build ticket 07)', () => {
     await openPlanner(cleaver);
     const first = hereTitle();
     expect(first).toMatch(/^Your character · choose /);
+    showList();
     const option = document.querySelector<HTMLElement>('.trail-here button.ww-option');
     const name = option?.querySelector('.ww-option__name')?.textContent ?? '';
     fireEvent.click(option ?? document.body);
@@ -533,6 +541,7 @@ describe('the levelling trail (build ticket 07)', () => {
   test('race, +2, alignment and score edits reach the Undo line, and an undo names the change before', async () => {
     await openPlanner(undefined);
     const line = () => document.querySelector('.planner-undo__what')?.textContent;
+    showList();
     tap(/^Human$/);
     expect(line()).toBe('Race Human');
     tap('Racial +2 to Strength');
@@ -1178,6 +1187,7 @@ describe('QA pass 1', () => {
 
   test('⌘Z undoes from a filter that is empty', async () => {
     await openPlanner(cleaver);
+    showList();
     const option = document.querySelector<HTMLElement>('.trail-here button.ww-option');
     fireEvent.click(option ?? document.body);
     flush();
@@ -1200,6 +1210,7 @@ describe('QA pass 1', () => {
 
   test('after a pick, focus lands on the next step, never on the page body', async () => {
     await openPlanner(cleaver);
+    showList();
     const first = document.querySelector<HTMLElement>('.trail-here button.ww-option');
     first?.focus();
     fireEvent.click(first ?? document.body);
@@ -1234,6 +1245,7 @@ describe('QA pass 1', () => {
       await openPlanner(cleaver);
       expect(document.activeElement).toBe(document.body);
       expect(scrolled).not.toHaveBeenCalled();
+      showList();
       const option = document.querySelector<HTMLElement>('.trail-here button.ww-option');
       fireEvent.click(option ?? document.body);
       flush();
@@ -1665,8 +1677,79 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
     expect(dialogBox()?.querySelectorAll('.ww-option--closed').length).toBeGreaterThan(0);
   });
 
+  test('inline: the list hides until its filter has focus, and hides on blur, Escape and a pick (user)', async () => {
+    await openPlanner(cleaver);
+    const rows = () => document.querySelectorAll('.trail-here button.ww-option:not(.ww-option--selected)').length;
+    const filter = () => document.querySelector<HTMLInputElement>('.trail-here [data-picker-filter]');
+    expect(filter()).not.toBeNull();
+    expect(rows()).toBe(0);
+    showList();
+    expect(rows()).toBeGreaterThan(0);
+    const outside = button('Build menu');
+    fireEvent.focusOut(filter() ?? document.body, { relatedTarget: outside });
+    flush();
+    expect(rows()).toBe(0);
+    showList();
+    fireEvent.keyDown(filter() ?? document.body, { key: 'Escape' });
+    flush();
+    expect(rows()).toBe(0);
+    expect(hereTitle()).toMatch(/^Your character · choose /);
+    fireEvent.input(filter() ?? document.body, { target: { value: 'a' } });
+    flush();
+    expect(rows()).toBeGreaterThan(0);
+    const first = hereTitle();
+    const option = document.querySelector<HTMLElement>('.trail-here button.ww-option');
+    const name = option?.querySelector('.ww-option__name')?.textContent ?? '';
+    fireEvent.pointerDown(option ?? document.body);
+    fireEvent.click(option ?? document.body);
+    flush();
+    expect(hereTitle()).not.toBe(first);
+    expect(document.querySelector('.planner-undo')?.textContent).toContain(name);
+  });
+
+  test('inline: a step held open by its chip shows the current pick under the filter while the list is hidden', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
+    fireEvent.focusOut(document.querySelector('.trail-here [data-picker-filter]') ?? document.body, {
+      relatedTarget: button('Build menu'),
+    });
+    flush();
+    const shown = [...document.querySelectorAll('.trail-here .ww-option')];
+    expect(shown).toHaveLength(1);
+    expect(shown[0]?.textContent).toContain('Power Attack');
+  });
+
+  test('Escape closes the dialog from its filter, even with text typed, and keeps the step (user)', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Power Attack'));
+    flush();
+    await waitFor(() => expect(dialogBox()).not.toBeNull());
+    const step = hereTitle();
+    const filter = dialogBox()?.querySelector<HTMLInputElement>('[data-picker-filter]');
+    fireEvent.input(filter ?? document.body, { target: { value: 'cleave' } });
+    flush();
+    fireEvent.keyDown(filter ?? document.body, { key: 'Escape' });
+    flush();
+    expect(dialogBox()).toBeNull();
+    expect(hereTitle()).toBe(step);
+    await new Promise((r) => setTimeout(r, 30));
+    flush();
+    expect(dialogBox()).toBeNull();
+  });
+
+  test('a choice row is one compact line, 44 px, or 60 px in a list whose rows carry a second line', () => {
+    const tokens = readFileSync(join(process.cwd(), 'src/design/tokens.css'), 'utf8');
+    expect(tokens).toContain('--choice-row-height: 44px;');
+    expect(tokens).toContain('--choice-row-two-line: 60px;');
+    const css = readFileSync(join(process.cwd(), 'src/planner/planner.css'), 'utf8');
+    expect(css).toMatch(/\.trail-scroll--two-line \{\s*--choice-row-height: var\(--choice-row-two-line\);/);
+  });
+
   test('inline first: the list sits in the trail, and Expand opens the same list in the dialog', async () => {
     await openPlanner(cleaver);
+    showList();
     expect(document.querySelector('.trail-here button.ww-option')).not.toBeNull();
     expect(dialogBox()).toBeNull();
     tap('Expand');
