@@ -33,6 +33,9 @@ export function CharacterField(props: CharacterFieldProps) {
     get arrive() {
       return props.field.arrive;
     },
+    get onArrived() {
+      return props.field.onArrived;
+    },
   };
   const shown = () => props.trail.state().dialog === key() && props.trail.planner.session().kind !== 'confirming';
   let returning = false;

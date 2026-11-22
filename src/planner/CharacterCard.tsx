@@ -1,5 +1,5 @@
 import type { JSX } from '@solidjs/web';
-import { createEffect, createSignal, For, Show } from 'solid-js';
+import { createEffect, createSignal, For, Show, untrack } from 'solid-js';
 import {
   abilityScores,
   MAX_SCORE,
@@ -60,6 +60,7 @@ export interface CharacterCardProps {
   readonly scoresStep: boolean;
   readonly alignmentStep?: boolean;
   readonly alignmentArrives?: boolean;
+  readonly onAlignmentArrived?: () => void;
   readonly here: JSX.Element;
   readonly diff?: (a: Attribute) => boolean;
 }
@@ -109,7 +110,11 @@ export function CharacterCard(props: CharacterCardProps) {
         <Show when={props.editing || props.alignmentStep === true}>
           <div class={['trail-alignment-field', { 'trail-alignment-field--target': props.alignmentStep === true }]}>
             <h4 class="trail-subhead">Alignment</h4>
-            <AlignmentWheel trail={props.trail} arrives={props.alignmentArrives === true} />
+            <AlignmentWheel
+              trail={props.trail}
+              arrives={props.alignmentArrives === true}
+              onArrived={() => props.onAlignmentArrived?.()}
+            />
           </div>
         </Show>
         {props.chips}
@@ -150,6 +155,7 @@ export function ScoresStep(props: ScoresStepProps) {
 
 export interface AlignmentWheelProps extends CardPartProps {
   readonly arrives?: boolean;
+  readonly onArrived?: () => void;
 }
 
 export function AlignmentWheel(props: AlignmentWheelProps) {
@@ -159,6 +165,7 @@ export function AlignmentWheel(props: AlignmentWheelProps) {
     () => props.arrives === true,
     (due) => {
       if (!due) return;
+      untrack(() => props.onArrived?.());
       const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
       wheel?.scrollIntoView?.({ block: 'center', behavior: still ? 'auto' : 'smooth' });
       wheel?.querySelector<HTMLElement>('button')?.focus({ preventScroll: true });
