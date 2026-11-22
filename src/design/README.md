@@ -61,7 +61,8 @@ props types and helper types:
   S (`OptionStatus`) and every line of its Refusal from R. `name` is the game name, with its parameter when it takes
   one; `selected` marks the Build's current pick at this slot, with the word "Current" beside its badges as well as the gold edge; `links` are its Synergy links, worded ("Enables Weapon
   Specialization (Longsword) → and 3 more"); `gear` is R's gear-dependent note, for an open option that needs the Gear
-  counted; `refusal` is R's lines, for a closed option. `icon` puts a `FeatIcon` before the name. An open option is a button; a closed one stays focusable
+  counted; `held` is R's note on an option the Build already picks later ("Held at level 5; taking it here clears
+  that pick."), shown under the name with a "Held later" badge and the `ww-option--held` class (QA pass 6); `refusal` is R's lines, for a closed option. `icon` puts a `FeatIcon` before the name. An open option is a button; a closed one stays focusable
   (`aria-disabled`) so its Refusal can be read. A gear-dependent option shows ◈ Gear beside ✓ Open, with R's note
   naming the items it counts. `OptionList` is the picker's list of options, `PickerHead` the picker panel's heading
   (the slot and its counts, "212 open · 1,034 closed"), and `ClosedCount` the closed options a list doesn't show,
