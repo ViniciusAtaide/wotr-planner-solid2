@@ -519,6 +519,8 @@ describe('the levelling trail (build ticket 07)', () => {
     tap('Raise Strength');
     expect(hereTitle()).toBe('Your character · set the ability scores');
     expect(screen.queryByRole('button', { name: 'Back to the next choice' })).toBeNull();
+    expect(button(/^Done/)).toBeDisabled();
+    tap('Racial +2 to Strength');
     tap(/^Done/);
     expect(hereTitle()).toBeUndefined();
     expect(document.querySelector('.trail-alignment-field--target')).not.toBeNull();
@@ -686,6 +688,7 @@ describe('the levelling trail (build ticket 07)', () => {
     await openPlanner(undefined);
     showList();
     tap(/^Human$/);
+    tap('Racial +2 to Strength');
     tap(/^Done/);
     await waitFor(() => expect(document.activeElement?.closest('.trail-alignment')).not.toBeNull());
     const race = field('Race').querySelector<HTMLInputElement>('input');
@@ -737,10 +740,27 @@ describe('the levelling trail (build ticket 07)', () => {
     expect(hereTitle()).toBe('Begin · choose a first class');
   });
 
+  test('a race changed to Human stops the trail at the scores until its +2 is placed (QA pass 6)', async () => {
+    await openPlanner(cleaver);
+    const race = field('Race').querySelector<HTMLInputElement>('input');
+    race?.focus();
+    flush();
+    fireEvent.input(race ?? document.body, { target: { value: 'human' } });
+    flush();
+    tapRow('Race', 'Human');
+    await waitFor(() => expect(hereTitle()).toBe('Your character · set the ability scores'));
+    expect(screen.getByText('Choose a score for the race’s +2.')).toBeInTheDocument();
+    expect(button(/^Done/)).toBeDisabled();
+    tap('Racial +2 to Dexterity');
+    await waitFor(() => expect(hereTitle()).not.toBe('Your character · set the ability scores'));
+    expect(screen.queryByText('Choose a score for the race’s +2.')).toBeNull();
+  });
+
   test('a reload keeps the Build, through the #b= link', async () => {
     await openPlanner(undefined);
     showList();
     tap(/^Human$/);
+    tap('Racial +2 to Strength');
     tap(/^Done/);
     tap('Lawful Good');
     tap(/^Fighter$/);
