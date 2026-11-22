@@ -2644,6 +2644,65 @@ describe('a dialog pick never reverts the Build (QA pass 5, severity 4)', () => 
     expect(document.querySelector('.choice-dialog')).toBeNull();
   });
 
+  const dialogTake = async (text: string) => {
+    const filter = await waitFor(() => {
+      const found = document.querySelector<HTMLInputElement>('.choice-dialog [data-picker-filter]');
+      expect(found).not.toBeNull();
+      return found;
+    });
+    if (filter === null) return;
+    fireEvent.input(filter, { target: { value: text } });
+    flush();
+    fireEvent.keyDown(filter, { key: 'Enter' });
+    flush();
+    await settle();
+  };
+  const heldNames = async () => {
+    const opened = await openHash(e, location.hash);
+    return opened.kind === 'opened' ? opened.build.picks.map((p) => e.data.blueprints.get(p.feature)?.name) : [];
+  };
+
+  test('picks in dialogs that each arrival opened leave no dialog entry behind in history (QA pass 6)', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner({
+      ...cleaver,
+      picks: cleaver.picks.filter((p) => slotKey(p.slot) !== slotKey(BONUS_COMBAT_FEAT)),
+    });
+    const depth = history.length;
+    openField('Background');
+    await dialogTake('courtier');
+    await dialogTake('gozreh');
+    await dialogTake('cleave');
+    await waitFor(() => expect(hereTitle()).toBe('Level 1 · train your skills'));
+    expect(document.querySelector('.choice-dialog')).toBeNull();
+    await waitFor(async () => expect(await heldNames()).toEqual(expect.arrayContaining(['Gozreh', 'Cleave'])));
+    await settle();
+    expect((history.state as { choiceDialog?: boolean } | null)?.choiceDialog).not.toBe(true);
+    expect(history.length).toBeLessThanOrEqual(depth + 1);
+  });
+
+  test('Back or Forward onto an entry the planner wrote, with no dialog open, never reverts the Build (QA pass 6)', async () => {
+    const before = await openPlanner({
+      ...cleaver,
+      picks: cleaver.picks.filter((p) => slotKey(p.slot) !== slotKey(BONUS_COMBAT_FEAT)),
+    });
+    fireEvent.click(chipNamed('Bonus Combat Feat'));
+    flush();
+    filterAndTake('cleave');
+    await settle();
+    await waitFor(async () => expect(await heldNames()).toContain('Cleave'));
+    const code = location.hash;
+    history.pushState({ plannerEntry: true }, '', `#b=${before}`);
+    history.back();
+    await settle();
+    history.forward();
+    await settle();
+    await settle();
+    expect(document.querySelector('.planner-undo__what')?.textContent).not.toBe('Opened a link');
+    expect(await heldNames()).toContain('Cleave');
+    expect(location.hash).toBe(code);
+  });
+
   test('two chained dialogs, then the back button, keep the pick and open no link', async () => {
     localStorage.setItem('wotr.choiceLists', 'modal');
     await openPlanner(cleaver);

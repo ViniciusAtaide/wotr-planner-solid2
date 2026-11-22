@@ -10,7 +10,7 @@ import { walk } from '~engine/walk';
 import { Button, CascadePreview, CompareToggle, Refusal } from '../design';
 import { BuildNameLabel, HEADER_SLOT, pageTitle, renameTitle } from './BuildName';
 import { loadEngine } from './engine';
-import { afterHistorySettles, isOwnHashChange, onHistorySettled } from './history-moves';
+import { afterHistorySettles, holdsHash, isOwnHashChange, onHistorySettled, writeHash } from './history-moves';
 import { keepFocus } from './focus-return';
 import { EMPTY, openHash } from './link';
 import { PlannerMenu, UndoLine } from './Menu';
@@ -229,7 +229,7 @@ function Workspace(props: WorkspaceProps) {
 
   let ownHash = props.initialLink.kind === 'ok' ? openedHash : '';
   const writeOwnHash = () => {
-    if (ownHash !== '' && location.hash !== ownHash) history.replaceState(null, '', ownHash);
+    if (ownHash !== '' && !holdsHash(ownHash)) writeHash(ownHash);
   };
   let brokenOver: Build | undefined = props.initialLink.kind === 'ok' ? undefined : props.initialBuild;
   createEffect(

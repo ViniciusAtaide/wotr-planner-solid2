@@ -13,6 +13,16 @@ function settle(): void {
   for (const hook of settledHooks) hook();
 }
 
+interface EntryState {
+  readonly choiceDialog?: boolean;
+  readonly plannerEntry?: boolean;
+}
+
+function entryState(): EntryState {
+  const state: unknown = history.state;
+  return typeof state === 'object' && state !== null ? (state as EntryState) : {};
+}
+
 function onPopstate(): void {
   if (pending > 0) {
     pending -= 1;
@@ -20,7 +30,7 @@ function onPopstate(): void {
     if (pending === 0) settle();
     return;
   }
-  if (userPops.size === 0) return;
+  if (userPops.size === 0 && entryState().plannerEntry !== true) return;
   landed = Date.now();
   for (const pop of userPops) pop();
   settle();
@@ -33,14 +43,22 @@ function listen(): void {
 }
 
 export function ownsDialogEntry(): boolean {
-  return (history.state as { choiceDialog?: boolean } | null)?.choiceDialog === true;
+  return entryState().choiceDialog === true;
+}
+
+export function holdsHash(hash: string): boolean {
+  return location.hash === hash && entryState().plannerEntry === true;
+}
+
+export function writeHash(hash: string): void {
+  history.replaceState({ ...entryState(), plannerEntry: true }, '', hash);
 }
 
 export function holdDialogEntry(): void {
   listen();
   holders += 1;
   afterHistorySettles(() => {
-    if (holders > 0 && !ownsDialogEntry()) history.pushState({ choiceDialog: true }, '');
+    if (holders > 0 && !ownsDialogEntry()) history.pushState({ choiceDialog: true, plannerEntry: true }, '');
   });
 }
 

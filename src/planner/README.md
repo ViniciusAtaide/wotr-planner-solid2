@@ -144,7 +144,13 @@ written under try/catch; the page works without storage).
   Build's `#b=` write wait (`afterHistorySettles`), and once it lands the newest code is written onto the entry it
   landed on (`onHistorySettled`). The popstate and hashchange that follow a move of its own are never read as a link
   the user opened (`isOwnHashChange`), so a pick made in a dialog can't come back as "Opened a link" with the Build
-  before it. A phone's back while a dialog is open closes the dialog the same way (`onUserPop`). A pick applies, closes it and the trail moves on; Undo works while
+  before it. The Build's code is written only through `writeHash`, which keeps the entry's state and marks it
+  `plannerEntry` (QA pass 6): writing `#b=` used to replace the state with `null`, so a dialog's entry lost its mark
+  after its first pick, the next dialog pushed another one, and no close gave either back; after a few chained Modal
+  first picks a browser Back landed on an older `#b=`. Now every close finds its entry and releases it, whatever closed
+  the dialog. A Back or Forward that lands on an entry the planner wrote, with no dialog open, is a move of its own
+  too: the current code is written onto it and the Build stays (Undo is for going back). The entry a link opened in
+  is marked once the Build is open (`holdsHash`), so this holds from the first pick. A phone's back while a dialog is open closes the dialog the same way (`onUserPop`). A pick applies, closes it and the trail moves on; Undo works while
   it is open. Whether it is open is the trail's state, not the dialog's (`TrailState.dialog`, the step key it shows,
   QA pass 3): arriving at a list step or "Open the list" sets it, Back, Escape or the back button clears it. A Cascade
   preview hides it without clearing it, so it is back after Cancel, and a chip of the step whose dialog was closed
