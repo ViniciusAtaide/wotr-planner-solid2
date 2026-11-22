@@ -327,6 +327,18 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
     expect(lines.slice(1).every((l) => l.endsWith(' (Level 1)'))).toBe(true);
   });
 
+  test('a reason the same at several levels shows once, with its levels (QA pass 6)', () => {
+    const failure = (level: number) => ({
+      place: { level },
+      choice: 'class' as const,
+      subject: cleaver.levels[0]?.class ?? '',
+      rule: 'BlueprintCharacterClass.MeetsPrerequisites' as const,
+    });
+    const lines = brokenWords(e, cleaver, { picks: [], others: [failure(1), failure(2), failure(3), failure(5)] });
+    expect(lines).toHaveLength(1);
+    expect(lines[0]).toMatch(/^Levels 1–3 and 5: /);
+  });
+
   test('a preview words cleared picks, skill ranks and Mythic ranks together', () => {
     const clears = (cleared: number, clearedSkills: number[], clearedRanks: number[]) =>
       clearsSummary({

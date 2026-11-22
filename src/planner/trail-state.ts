@@ -11,7 +11,13 @@ import {
 } from '~engine/build';
 import type { CheckedData } from '~engine/load';
 import { expectedLevel } from '~engine/mcp';
-import { BACKGROUNDS_BASE_SELECTION, characterWideSlots, heritageSlotIn, namesInList } from '~engine/pickers';
+import {
+  BACKGROUNDS_BASE_SELECTION,
+  characterWideSlots,
+  heritageSlotIn,
+  namesInList,
+  raceStatPending,
+} from '~engine/pickers';
 import { nameOf } from '~engine/refusals';
 import type { OpenedSlot, Walk } from '~engine/walk';
 
@@ -257,7 +263,7 @@ export function nextStep(
   s: Pick<TrailState, 'skillsLeft' | 'mythicLater'> & Partial<Pick<TrailState, 'skillsCleared'>>,
 ): Step {
   if (t.build.race === undefined) return { kind: 'race' };
-  if (t.build.scores === undefined) return { kind: 'scores' };
+  if (t.build.scores === undefined || raceStatPending(t.data, t.build)) return { kind: 'scores' };
   if (t.build.alignment === undefined) return { kind: 'alignment' };
   const empty = (slots: readonly OpenedSlot[]) => slots.find((x) => x.pick === undefined);
   const character = empty(characterSlots(t));

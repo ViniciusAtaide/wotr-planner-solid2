@@ -54,7 +54,10 @@ to the player in the planner's own words: "Level 5 · choose feat", "Your charac
    `trail-race`), and its list opens right under it, above the tiles. So a fresh Build opens here (user, 2026-11-21);
 2. the ability scores, while the Build has none: the step opens in the character card in the tiles' place, and stays
    open through its edits (+2 and alignment included) until "Done" ("Done · leave N unspent" while points are
-   left), which keeps every score at 10 when none was changed. A link opens on its first unfinished step;
+   left), which keeps every score at 10 when none was changed. The step is due too while the race gives +2 to an
+   ability of your choice and none is chosen (S's `raceStatPending`, QA pass 6), as after a race change to Human:
+   "Choose a score for the race's +2." shows under the tiles and "Done" waits until a +2 is placed. A link opens on
+   its first unfinished step;
 2b. the alignment, while the Build has none (QA pass 5): an unset alignment is unknown, so every pick that asks for one
    waits for it. The wheel in the character card is its field: outlined in gold with "Choose an alignment" while the
    trail waits on it, and arriving there scrolls it into view and focuses its first node. It comes before the first
@@ -264,7 +267,8 @@ dimmed and inert behind "Edit the Second Build".
 `index.ts` imports `planner.css` and exports `Planner`, the page.
 
 **QA pass 2** (2026-11-21):
-- A refusal names its reasons before the picks it would break (`brokenWords`), shows the first `NOTICE_LINES` and
+- A refusal names its reasons before the picks it would break (`brokenWords`); a reason the same at several places
+  shows once with them, in runs (R's `groupedFailures` and `placesWords`: "Levels 1–9: …", QA pass 6). It shows the first `NOTICE_LINES` and
   folds the rest into "…and N more" (`RefusalNotice`); the notice area is capped (`--notice-max-height`) and scrolls,
   so its lines are reachable on a phone.
 - The Cascade preview gives one count of what it clears ("This breaks 14 later choices: …", "Clear 14 choices"),

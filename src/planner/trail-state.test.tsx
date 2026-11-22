@@ -79,6 +79,7 @@ function filled(build: Build): Build {
 
 const human = (levels: number, skills?: SkillRanks): Build => ({
   race: HUMAN,
+  raceStat: 'Strength',
   scores: SCORES,
   alignment: 'TrueNeutral',
   levels: Array.from({ length: levels }, () => ({ class: FIGHTER, ...(skills && { skills }) })),
@@ -106,7 +107,9 @@ describe('auto-advance: each pick opens the next empty one', () => {
     expect(next(unscored)).toEqual({ kind: 'scores' });
     expect(stepTitle(viewOf(unscored), { kind: 'scores' })).toBe('Your character · set the ability scores');
     expect(whereOf(viewOf(unscored), { kind: 'scores' })).toEqual({ kind: 'scores' });
-    const scored: Build = { scores: SCORES, race: HUMAN, levels: [], picks: [] };
+    const unplaced: Build = { scores: SCORES, race: HUMAN, levels: [], picks: [] };
+    expect(next(unplaced)).toEqual({ kind: 'scores' });
+    const scored: Build = { ...unplaced, raceStat: 'Strength' };
     expect(next(scored)).toEqual({ kind: 'alignment' });
     expect(stepTitle(viewOf(scored), { kind: 'alignment' })).toBe('Your character · choose an alignment');
     expect(whereOf(viewOf(scored), { kind: 'alignment' })).toEqual({ kind: 'character' });

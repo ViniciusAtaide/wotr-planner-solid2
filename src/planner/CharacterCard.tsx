@@ -9,6 +9,7 @@ import {
   type Alignment,
 } from '~engine/build';
 import type { Attribute } from '~engine/data';
+import { raceStatPending } from '~engine/pickers';
 import { abilityScoreRange, nameOf } from '~engine/refusals';
 import { ATTRIBUTES, attributeBonus, pointBuyCost, POINT_BUY } from '~engine/walk';
 
@@ -135,6 +136,7 @@ export interface ScoresStepProps {
 export function ScoresStep(props: ScoresStepProps) {
   const planner = () => props.trail.planner;
   const left = () => POINT_BUY - pointBuyCost(planner().build().scores ?? TENS);
+  const pending = () => raceStatPending(planner().engine.data, planner().build());
   const done = () => {
     if (planner().build().scores === undefined) {
       planner().edit({ kind: 'scores', scores: abilityScores(TENS) }, 'Every score at 10');
@@ -144,7 +146,10 @@ export function ScoresStep(props: ScoresStepProps) {
   return (
     <div class="trail-step">
       <StatTiles trail={props.trail} editing {...(props.diff && { diff: props.diff })} />
-      <Button variant="primary" onClick={done}>
+      <Show when={pending()}>
+        <p class="trail-note">Choose a score for the race’s +2.</p>
+      </Show>
+      <Button variant="primary" disabled={pending()} onClick={done}>
         <Show when={left() > 0} fallback="Done">
           Done · leave {left()} unspent
         </Show>
