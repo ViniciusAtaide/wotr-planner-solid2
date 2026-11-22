@@ -4,7 +4,7 @@ import type { Guid } from '~engine/data';
 import type { Edit } from '~engine/edits';
 import { enablesWith, linkIndex, linkNames } from '~engine/links';
 import { picker, type OptionStatus } from '~engine/pickers';
-import { gearNote, refusal } from '~engine/refusals';
+import { clearsLaterText, gearNote, refusal } from '~engine/refusals';
 
 import { Button, OptionList, PickerOption } from '../design';
 import {
@@ -157,6 +157,8 @@ export function PickStep(props: PickStepProps) {
   const linked = (o: OptionStatus | undefined) =>
     o !== undefined && (buildsOn(o).length > 0 || (o.synergy?.shared.length ?? 0) > 0);
   const clash = (o: OptionStatus | undefined) => (o?.synergy?.wontStack.length ?? 0) > 0;
+  const heldLater = (o: OptionStatus | undefined) =>
+    o?.clearsLater === undefined ? undefined : clearsLaterText(o.clearsLater.place);
   const summary = (o: OptionStatus | undefined) =>
     o === undefined ? undefined : summaryFor(data(), planner().engine.G, o.feature).text;
   const fullLinks = (o: OptionStatus): readonly string[] => {
@@ -192,7 +194,7 @@ export function PickStep(props: PickStepProps) {
     current: child ? childCurrent(row, o) : row.kind === 'option' ? isCurrent(o) : holdsRow(row),
     summary: summaryFor(data(), planner().engine.G, o.feature),
     links: fullLinks(o),
-    warnings: clashLines(data(), o.synergy),
+    warnings: [...clashLines(data(), o.synergy), ...[heldLater(o)].filter((w) => w !== undefined)],
     refusal:
       o.closed === undefined ? [] : words(o, child && row.kind === 'nested' ? nested()?.picker?.unit : p()?.unit),
     gear: gearOf(o),
@@ -448,6 +450,7 @@ export function PickStep(props: PickStepProps) {
                             summary={row.kind === 'nested' ? summary(o) : undefined}
                             linked={linked(o)}
                             clash={clash(o)}
+                            held={heldLater(o)}
                             onPick={() => takeChild(row, o)}
                           />
                         </Show>
@@ -467,6 +470,7 @@ export function PickStep(props: PickStepProps) {
                         links={links(row.option)}
                         linked={linked(row.option)}
                         clash={clash(row.option)}
+                        held={heldLater(row.option)}
                         gear={gearOf(row.option)}
                         onPick={() => take(row.option)}
                       />

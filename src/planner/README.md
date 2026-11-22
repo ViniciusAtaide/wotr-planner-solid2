@@ -515,6 +515,10 @@ dimmed and inert behind "Edit the Second Build".
 
 ## Design notes
 
+- An open option the Build already picks in a later slot, where taking it here would make that pick fail (S's
+  `clearsLater`), carries a "Held later" badge and R's words as its line under the name ("Held at level 5; taking it
+  here clears that pick.", `clearsLaterText`), and the detail pane lists them with the warnings (QA pass 6). In a
+  windowed row that line may take two lines (`ww-option--held`), so the pick it clears reads in full at 375 px.
 - Layout (QA pass 6): a Mythic rank that is due marks its stop "M" and the rank in the Mythic style, not the next level's
   number. In a two-line windowed list a row's name has the first line to itself and its badges (Current, ▸, Synergy,
   Won't stack) sit at the end of the second, beside the summary, so a long name isn't cut at 375 px; one-line lists

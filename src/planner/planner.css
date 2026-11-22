@@ -988,6 +988,14 @@ html.choice-open .planner-undo:not(:empty) {
   grid-area: meta;
 }
 
+.trail-window-row--fixed .ww-option--held .ww-option__meta {
+  display: -webkit-box;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
 .trail-scroll--two-line .trail-window-row--fixed .ww-option__badges {
   grid-area: badges;
   align-self: center;

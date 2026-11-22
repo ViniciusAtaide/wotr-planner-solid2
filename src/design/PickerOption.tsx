@@ -46,6 +46,7 @@ export interface PickerOptionProps {
   readonly summary?: string | undefined;
   readonly linked?: boolean;
   readonly clash?: boolean;
+  readonly held?: string | undefined;
   readonly detailKey?: string | undefined;
   readonly gear?: string | undefined;
   readonly refusal?: readonly string[];
@@ -72,6 +73,9 @@ export default function PickerOption(props: PickerOptionProps) {
       <Show when={props.clash === true}>
         <Badge kind="clash">Won't stack</Badge>
       </Show>
+      <Show when={props.held}>
+        <Badge kind="clash">Held later</Badge>
+      </Show>
       <Show when={props.status === 'open' && props.gear}>
         <Badge kind="gear" />
       </Show>
@@ -96,7 +100,9 @@ export default function PickerOption(props: PickerOptionProps) {
             {props.name}
           </span>
           {badges()}
-          <Show when={props.summary ?? props.links}>{(meta) => <span class="ww-option__meta">{meta()}</span>}</Show>
+          <Show when={props.held ?? props.summary ?? props.links}>
+            {(meta) => <span class="ww-option__meta">{meta()}</span>}
+          </Show>
           <Refusal lines={props.refusal ?? []} />
         </div>
       }
@@ -105,7 +111,11 @@ export default function PickerOption(props: PickerOptionProps) {
         type="button"
         class={[
           'ww-option',
-          { 'ww-option--selected': props.selected === true, 'ww-option--marked': props.marked === true },
+          {
+            'ww-option--selected': props.selected === true,
+            'ww-option--marked': props.marked === true,
+            'ww-option--held': props.held !== undefined,
+          },
         ]}
         aria-current={props.selected === true ? 'true' : undefined}
         aria-expanded={props.expanded === undefined ? undefined : props.expanded ? 'true' : 'false'}
@@ -117,7 +127,9 @@ export default function PickerOption(props: PickerOptionProps) {
           {props.name}
         </span>
         {badges()}
-        <Show when={props.summary ?? props.links}>{(meta) => <span class="ww-option__meta">{meta()}</span>}</Show>
+        <Show when={props.held ?? props.summary ?? props.links}>
+          {(meta) => <span class="ww-option__meta">{meta()}</span>}
+        </Show>
         <Show when={props.gear}>{(gear) => <Refusal gear lines={[gear()]} />}</Show>
       </button>
     </Show>

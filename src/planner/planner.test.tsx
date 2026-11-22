@@ -50,6 +50,7 @@ import {
   type TrailState,
 } from './trail-state';
 import type { Selection } from './workspace-state';
+import { PickStep } from './PickStep';
 import { optionName, shownName } from './words';
 
 const gate = vi.hoisted(() => ({
@@ -2547,6 +2548,37 @@ describe('QA pass 4, severity 1', () => {
       'Bloodline Feat (Skill Focus — Mobility)',
     );
     expect(nestedLabel('Second Bloodline', 'Draconic Bloodline — Bronze')).toBe('Second Bloodline (Draconic — Bronze)');
+  });
+
+  test('an option the Build already picks later says so, with the pick taking it here clears (QA pass 6)', async () => {
+    const sorcererBonus: SlotId = { place: { level: 1 }, selection: 'd6dd06f454b34014ab0903cb1ed2ade3', index: 0 };
+    render(() => <PickStep trail={apiOf(createPlanner(e, jackInTheGreen.build))} slot={sorcererBonus} />);
+    flush();
+    const filter = document.querySelector<HTMLInputElement>('[data-picker-filter]');
+    filter?.focus();
+    fireEvent.input(filter ?? document.body, { target: { value: 'spell focus' } });
+    flush();
+    const parent = [...document.querySelectorAll<HTMLElement>('button.ww-option')].find(
+      (b) => b.querySelector('.ww-option__name')?.textContent === 'Spell Focus',
+    );
+    fireEvent.click(parent ?? document.body);
+    flush();
+    const evocation = await waitFor(() => {
+      const row = [...document.querySelectorAll<HTMLElement>('[data-child-of] .ww-option')].find((b) =>
+        b.querySelector('.ww-option__name')?.textContent?.includes('Evocation'),
+      );
+      expect(row).toBeDefined();
+      return row;
+    });
+    expect(evocation?.querySelector('.ww-badge--clash')?.textContent).toBe('Held later');
+    expect(evocation?.classList.contains('ww-option--held')).toBe(true);
+    expect(evocation?.querySelector('.ww-option__meta')?.textContent).toBe(
+      'Held at level 5; taking it here clears that pick.',
+    );
+    const others = [...document.querySelectorAll<HTMLElement>('[data-child-of] .ww-option')].filter(
+      (b) => b !== evocation,
+    );
+    expect(others.some((b) => b.textContent?.includes('Held later'))).toBe(false);
   });
 
   test('a nested name keeps one level of parentheses (QA pass 6)', () => {
