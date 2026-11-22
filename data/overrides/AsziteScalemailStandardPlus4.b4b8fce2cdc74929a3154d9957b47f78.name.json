@@ -1,6 +1,6 @@
 {
   "change": "name",
-  "qualifier": "aszite",
+  "qualifier": "Aszite",
   "reason": "\"Scalemail +4\" is two items: the plain one and the aszite one (AsziteScalemailStandardPlus4), whose armour carries AsziteArmorEnchantment. Restrictions, slot and type are the same, and their enhancement bonus isn't in data/, so the aszite one is qualified by its material; the plain one stays bare.",
   "target": "b4b8fce2cdc74929a3154d9957b47f78"
 }

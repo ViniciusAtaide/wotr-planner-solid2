@@ -1,6 +1,6 @@
 {
   "change": "name",
-  "qualifier": "aszite",
+  "qualifier": "Aszite",
   "reason": "\"Haramaki +4\" is two items: the plain one and the aszite one (AsziteHaramakiStandardPlus4), whose armour carries AsziteArmorEnchantment. Restrictions, slot and type are the same, and their enhancement bonus isn't in data/, so the aszite one is qualified by its material; the plain one stays bare.",
   "target": "980ed8dc52e545d4aca16b28185e9c31"
 }

@@ -233,6 +233,8 @@ The parts of `qualify.ts`:
 
 ## Gear names (`gear-names.ts`)
 
+Slot qualifiers are capitalised as the game's item type words read ("Armor", "Head"; QA pass 6), and the hand-written item qualifiers in `name` overrides are too ("Aszite", "Good").
+
 `qualifyGear` (map ticket 29, build tickets 02f and 02g): items a Build can equip that share a display name are told apart, item by item, by the first rule that sets each apart (`gearSources`):
 
 1. `twin`: twins collapse into one choice, offered as the lowest GUID (`CheckedData.twins`, `engine/data/twins.ts`; `twinStep`);

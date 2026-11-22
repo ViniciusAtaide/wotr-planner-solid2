@@ -238,7 +238,7 @@ Guide §3 point 5: the root and the Mythic settings the rules read.
 `twins.ts` derives Gear's twins (map ticket 29's rule 1, as amended after the review of build tickets 02 and 03). Items a Build can equip that share a display name, and whose kept fields are all equal apart from GUID and asset name, are one option. The pickers offer the lowest GUID among them; the others decode to it in a Build code. A part (a shield's armour half or bash weapon, a double weapon's second end) is compared without its name too, since it is never shown on its own. Twins are a derived view, so the loader computes them and `data/` never stores them (guide §3.4).
 
 - `equippableItems`: the items a Build can equip: every shown item that isn't worn only as part of another.
-- `itemPartSet`: the items worn only as part of another (a shield's armour half or bash weapon, a double weapon's second end), cached per blueprint map.
+- `itemPartSet`: the items worn only as part of another (a shield's armour half or bash weapon, a double weapon's second end), cached per blueprint map. An armour item whose type is a shield type is a shield's armour half even when no kept shield names it (WyrmwallArmorItem), since the game builds one only inside its shield (`BlueprintItemShield.ArmorComponent`; QA pass 6).
 - `deriveTwins`: each twin, mapped to the item the pickers offer in its place, the lowest GUID among its twins. Inside it, `twinKey` is an item as rule 1 compares it, with its parts replaced by their own keys; `asPart` leaves the name out too. Keys are cached per item and role (`twinKeyCache`).
 
 ## Helpers

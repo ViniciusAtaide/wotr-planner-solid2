@@ -1,6 +1,6 @@
 {
   "change": "name",
-  "qualifier": "aszite",
+  "qualifier": "Aszite",
   "reason": "\"Full Barding +4\" is two items: the plain one and the aszite one (AsziteFullBardingStandartPlus4), whose armour carries AsziteArmorEnchantment. Restrictions, slot and type are the same, and their enhancement bonus isn't in data/, so the aszite one is qualified by its material; the plain one stays bare.",
   "target": "ab64798aacb94e879e7ed2484154ac14"
 }

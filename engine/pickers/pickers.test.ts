@@ -618,6 +618,24 @@ describe('which options the level-up screen lists', { timeout: 30_000 }, () => {
     expect(gearOptions(data, 'Armor').map((bp) => bp.name)).toContain('Chainshirt');
   });
 
+  it("offers the character no pet's gear and no shield's armour half, and capitalises Gear qualifiers (QA pass 6)", () => {
+    const ANIMAL_COMPANION_CLASS = '26b10d4340839004f960f9816f6109fe';
+    const armor = gearOptions(data, 'Armor');
+    const forPets = armor.filter((bp) =>
+      bp.Components.some(
+        (c) => (c as { Not?: boolean }).Not === false && JSON.stringify(c).includes(ANIMAL_COMPANION_CLASS),
+      ),
+    );
+    expect(forPets).toEqual([]);
+    expect(armor.filter((bp) => /Barding/.test(bp.assetName)).map((bp) => bp.assetName)).toEqual([
+      'BardingOfSteadynessArmorItem',
+    ]);
+    expect(armor.map((bp) => bp.assetName)).not.toContain('WyrmwallArmorItem');
+    for (const place of Object.keys(PLACE_ITEM_TYPES) as GearPlace[])
+      for (const bp of gearOptions(data, place))
+        if (bp.qualifier !== undefined) expect(bp.qualifier, `${bp.name}`).toMatch(/^[A-Z0-9+]/);
+  });
+
   it('refuses a part of another item worn on its own, as no Gear (QA pass 5)', () => {
     const second = [...data.blueprints.values()].find((bp) => bp.assetName === 'MasterworkGnomehookedHammerSecond');
     expect(second).toBeDefined();

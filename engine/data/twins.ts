@@ -12,7 +12,12 @@ const partSets = new WeakMap<ReadonlyMap<Guid, Blueprint>, ReadonlySet<Guid>>();
 export function itemPartSet(blueprints: ReadonlyMap<Guid, Blueprint>): ReadonlySet<Guid> {
   let set = partSets.get(blueprints);
   if (set === undefined) {
-    set = new Set([...blueprints.values()].filter((b) => kindOf[b.$type] === 'items').flatMap(partsOf));
+    const items = [...blueprints.values()].filter((b) => kindOf[b.$type] === 'items');
+    const shieldHalves = items.filter(
+      (b) =>
+        b.$type === 'BlueprintItemArmor' && blueprints.get(refGuid(b.m_Type) ?? '')?.$type === 'BlueprintShieldType',
+    );
+    set = new Set([...items.flatMap(partsOf), ...shieldHalves.map((b) => b.guid)]);
     partSets.set(blueprints, set);
   }
   return set;

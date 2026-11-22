@@ -64,8 +64,12 @@ export interface GearNames {
   readonly problems: readonly string[];
 }
 
+const capitalised = (word: string) => word.replace(/^./, (c) => c.toUpperCase());
+
 const slotWords: { readonly [K in Blueprint['$type']]?: string } = Object.fromEntries(
-  Object.entries(kindWords).filter(([t]) => kindOf[t as Blueprint['$type']] === 'items'),
+  Object.entries(kindWords)
+    .filter(([t]) => kindOf[t as Blueprint['$type']] === 'items')
+    .map(([t, w]) => [t, capitalised(w)]),
 );
 
 export function qualifyGear(

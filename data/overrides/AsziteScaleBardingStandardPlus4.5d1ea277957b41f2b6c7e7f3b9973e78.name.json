@@ -1,6 +1,6 @@
 {
   "change": "name",
-  "qualifier": "aszite",
+  "qualifier": "Aszite",
   "reason": "\"Scale Barding +4\" is two items: the plain one and the aszite one (AsziteScaleBardingStandardPlus4), whose armour carries AsziteArmorEnchantment. Restrictions, slot and type are the same, and their enhancement bonus isn't in data/, so the aszite one is qualified by its material; the plain one stays bare.",
   "target": "5d1ea277957b41f2b6c7e7f3b9973e78"
 }

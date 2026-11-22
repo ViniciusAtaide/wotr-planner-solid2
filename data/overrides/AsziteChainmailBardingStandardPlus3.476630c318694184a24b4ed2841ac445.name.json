@@ -1,6 +1,6 @@
 {
   "change": "name",
-  "qualifier": "aszite",
+  "qualifier": "Aszite",
   "reason": "\"Chainmail Barding +3\" is two items: the plain one and the aszite one (AsziteChainmailBardingStandardPlus3), whose armour carries AsziteArmorEnchantment. Restrictions, slot and type are the same, and their enhancement bonus isn't in data/, so the aszite one is qualified by its material; the plain one stays bare.",
   "target": "476630c318694184a24b4ed2841ac445"
 }

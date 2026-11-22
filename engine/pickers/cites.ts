@@ -9,6 +9,11 @@ export const cites = {
   parameters: [
     'Blueprints/Classes/Selection/BlueprintParametrizedFeature.cs ExtractSelectionItems (ParameterType, BlueprintParameterVariants)',
   ],
+  gearOptions: [
+    'Blueprints/Items/Components/EquipmentRestrictionClass.cs CanBeEquippedBy (m_Class, Not)',
+    'Blueprints/Items/Components/EquipmentRestrictionHasAnyClassFromList.cs CanBeEquippedBy (m_Classes, Not)',
+    'Blueprints/Root/ProgressionRoot.cs AvailableCharacterClasses',
+  ],
   shownInSelection: [
     'UI/MVVM/_VM/CharGen/Phases/FeatureSelector/CharGenFeatureSelectorStateVM.cs CreateFeaturesList',
     'UI/MVVM/_VM/CharGen/Phases/FeatureSelector/CharGenFeatureSelectorItemVM.cs ShouldBeHidden (HideNotAvailibleInUI)',

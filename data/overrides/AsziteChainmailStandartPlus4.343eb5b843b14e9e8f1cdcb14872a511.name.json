@@ -1,6 +1,6 @@
 {
   "change": "name",
-  "qualifier": "aszite",
+  "qualifier": "Aszite",
   "reason": "\"Chainmail +4\" is two items: the plain one and the aszite one (AsziteChainmailStandartPlus4), whose armour carries AsziteArmorEnchantment. Restrictions, slot and type are the same, and their enhancement bonus isn't in data/, so the aszite one is qualified by its material; the plain one stays bare.",
   "target": "343eb5b843b14e9e8f1cdcb14872a511"
 }
