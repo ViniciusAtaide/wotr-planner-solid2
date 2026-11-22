@@ -338,25 +338,35 @@ export default function Trail(props: TrailProps) {
       />
     );
   };
-  const slotChip = (s: OpenedSlot, labels: ReadonlyMap<string, string>) => {
+  const chipOf = (s: OpenedSlot, labels: ReadonlyMap<string, string>) => {
     const background = isBackgroundSlot(view(), s.id);
-    return chip(
-      slotName(view(), s.id),
-      s.pick === undefined
-        ? undefined
-        : background
-          ? backgroundLabel(props.planner.engine, build(), props.planner.walked(), s.id)
-          : (labels.get(slotKey(s.id)) ?? optionName(data(), s.pick.feature, s.pick.param)),
-      { kind: 'slot', slot: s.id },
-      s.pick === undefined || background ? undefined : featCategory(data(), s.pick.feature),
-      s.pick !== undefined && gearDependentSlots(view()).has(slotKey(s.id)),
-      'Choose',
-      spellPick(view(), s.id) === undefined ? undefined : SPELL_NOT_MODELLED,
-    );
+    return {
+      slot: s.id,
+      label: slotName(view(), s.id),
+      value:
+        s.pick === undefined
+          ? undefined
+          : background
+            ? backgroundLabel(props.planner.engine, build(), props.planner.walked(), s.id)
+            : (labels.get(slotKey(s.id)) ?? optionName(data(), s.pick.feature, s.pick.param)),
+      icon: s.pick === undefined || background ? undefined : featCategory(data(), s.pick.feature),
+      gear: s.pick !== undefined && gearDependentSlots(view()).has(slotKey(s.id)),
+      note: spellPick(view(), s.id) === undefined ? undefined : SPELL_NOT_MODELLED,
+    };
+  };
+  type SlotChip = ReturnType<typeof chipOf>;
+  const chipKey = (c: SlotChip) =>
+    [slotKey(c.slot), c.label, c.value ?? '', c.icon ?? '', c.gear ? 'gear' : '', c.note ?? ''].join('\u0000');
+  const slotChip = (c: SlotChip) =>
+    chip(c.label, c.value, { kind: 'slot', slot: c.slot }, c.icon, c.gear, 'Choose', c.note);
+  const chipsAt = (place: Place): readonly SlotChip[] => {
+    const slots = slotsAt(view(), place);
+    const labels = pickLabels(data(), slots);
+    return chipSlots(slots).map((s) => chipOf(s, labels));
   };
   const slotChips = (place: Place) => (
-    <For each={chipSlots(slotsAt(view(), place))}>
-      {(s) => <>{slotChip(s, pickLabels(data(), slotsAt(view(), place)))}</>}
+    <For each={chipsAt(place)} keyed={chipKey}>
+      {(c) => untrack(() => slotChip(c()))}
     </For>
   );
   const hasArchetypes = (level: number) => {

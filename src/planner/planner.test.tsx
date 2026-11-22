@@ -41,9 +41,11 @@ import { summaryFor } from './option-detail';
 import { LevelEditor, MythicStep, NextLevelStep, RankEditor, SkillsStep, SlotStep, type TrailApi } from './steps';
 import Trail from './Trail';
 import {
+  characterSlots,
   nestedLabel,
   nextStep,
   reduceTrail,
+  shownSlots,
   SPELL_NOT_MODELLED,
   spellPick,
   TRAIL_START,
@@ -730,6 +732,40 @@ describe('the levelling trail (build ticket 07)', () => {
     expect(fieldValue('Background')).toBe('Noble (Courtier)');
     expect(document.querySelector('.planner-undo__what')?.textContent).toBe('Background Noble (Courtier)');
   });
+
+  test(
+    'an edit keeps the chips it doesn’t change, and the trail’s slot lists are worked out once per walk (QA pass 6)',
+    { timeout: 120_000 },
+    () => {
+      const planner = createPlanner(e, jackInTheGreen.build);
+      render(() => (
+        <Trail
+          planner={planner}
+          state={{ ...TRAIL_START, skillsLeft: new Set([20]) }}
+          send={() => {}}
+          selection={undefined}
+          select={() => {}}
+          phone={false}
+        />
+      ));
+      flush();
+      const chipAt = (level: number) =>
+        [...document.querySelectorAll('.trail-stop')]
+          .find((li) => li.querySelector('.trail-stop__mark')?.textContent === String(level))
+          ?.querySelector('.trail-chip');
+      const before = chipAt(1);
+      expect(before).toBeTruthy();
+      const view = () => ({ data: e.data, build: planner.build(), walk: planner.walked() });
+      const slots = characterSlots(view());
+      expect(characterSlots(view())).toBe(slots);
+      expect(shownSlots(view())).toBe(shownSlots(view()));
+      const was = planner.build().levels[15]?.increase;
+      planner.edit({ kind: 'increase', level: 16, increase: was === 'Wisdom' ? 'Charisma' : 'Wisdom' }, 'Level 16');
+      flush();
+      expect(chipAt(1)).toBe(before);
+      expect(characterSlots(view())).not.toBe(slots);
+    },
+  );
 
   test(
     'at the level cap the trail ends on the cap level, with no closing stop (user, 2026-11-21)',

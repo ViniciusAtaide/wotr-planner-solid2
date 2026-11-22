@@ -537,6 +537,16 @@ dimmed and inert behind "Edit the Second Build".
   `clearsLater`), carries a "Held later" badge and R's words as its line under the name ("Held at level 5; taking it
   here clears that pick.", `clearsLaterText`), and the detail pane lists them with the warnings (QA pass 6). In a
   windowed row that line may take two lines (`ww-option--held`), so the pick it clears reads in full at 375 px.
+- Speed on a full Build (QA pass 6 item 9): a walk is immutable and the engine caches it by Build, so what the trail
+  derives from it is cached per walk too (`byWalk` in `trail-state.ts`: the character-wide slot keys, `shownSlots`,
+  `characterSlots`, `characterChipSlots`); they used to be worked out again by every level's chips on every change.
+  A level's chips are keyed by what they show (`chipKey` in `Trail.tsx`), so an edit rebuilds only the chips it
+  changes instead of every chip on all 20 levels, and the labels of a place are named once, not once per chip. A
+  pick list's picker is cached per Build and slot (`pickerFor` in `PickStep.tsx`), so reopening a list on an
+  unchanged Build skips the engine's picker. Measured on a production build with Jack in the Green (level 20, Mythic
+  rank 10), script and layout to the next task, before → after: ability increase 35 → 23 ms, opening a level-17 feat
+  list 51 → 49 ms (27 ms when reopened), picking a feat 38 → 28 ms, opening the race list 20 → 22 ms, changing the race
+  51 → 37 ms. What is left of opening a list is mostly the engine's picker (about 30 ms).
 - Layout (QA pass 6): a Mythic rank that is due marks its stop "M" and the rank in the Mythic style, not the next level's
   number. In a two-line windowed list a row's name has the first line to itself and its badges (Current, ▸, Synergy,
   Won't stack) sit at the end of the second, beside the summary, so a long name isn't cut at 375 px; one-line lists

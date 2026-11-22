@@ -29,6 +29,19 @@ import { shownName } from './words';
 
 const GROUP_REASONS = 3;
 
+const pickersByBuild = new WeakMap<object, WeakMap<Build, Map<string, ReturnType<typeof picker>>>>();
+
+function pickerFor(...args: Parameters<typeof picker>): ReturnType<typeof picker> {
+  const [data, build, slot, G] = args;
+  const byGrants = pickersByBuild.get(G ?? data) ?? new WeakMap<Build, Map<string, ReturnType<typeof picker>>>();
+  pickersByBuild.set(G ?? data, byGrants);
+  const bySlot = byGrants.get(build) ?? new Map<string, ReturnType<typeof picker>>();
+  byGrants.set(build, bySlot);
+  const key = slotKey(slot);
+  if (!bySlot.has(key)) bySlot.set(key, picker(data, build, slot, G));
+  return bySlot.get(key);
+}
+
 export interface PickStepProps {
   readonly trail: TrailApi;
   readonly slot: SlotId;
@@ -95,7 +108,9 @@ export function PickStep(props: PickStepProps) {
     () => box,
   );
   const idle = () => props.field !== undefined && !panel.shown();
-  const p = createMemo(() => (idle() ? undefined : picker(data(), planner().build(), props.slot, planner().engine.G)));
+  const p = createMemo(() =>
+    idle() ? undefined : pickerFor(data(), planner().build(), props.slot, planner().engine.G),
+  );
   createEffect(
     () => panel.shown(),
     (shown) => {
@@ -259,7 +274,7 @@ export function PickStep(props: PickStepProps) {
         { slot: props.slot, feature: row.option.feature },
       ],
     };
-    return { row, slot: childSlot, picker: picker(data(), chosen, childSlot, planner().engine.G) };
+    return { row, slot: childSlot, picker: pickerFor(data(), chosen, childSlot, planner().engine.G) };
   });
   const takeNested = (row: PickRow & { readonly kind: 'nested' }, child: OptionStatus) =>
     apply(

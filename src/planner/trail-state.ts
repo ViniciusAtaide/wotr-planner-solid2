@@ -136,7 +136,22 @@ export function spellPick(t: TrailView, slot: SlotId): BuildPick | undefined {
   return pick !== undefined && pick.param === undefined && isSpellFeat(t.data, pick.feature) ? pick : undefined;
 }
 
-export function shownSlots(t: TrailView): readonly OpenedSlot[] {
+const byWalk = <T>(compute: (t: TrailView) => T): ((t: TrailView) => T) => {
+  const cache = new WeakMap<Walk, T>();
+  return (t) => {
+    const known = cache.get(t.walk);
+    if (known !== undefined) return known;
+    const fresh = compute(t);
+    cache.set(t.walk, fresh);
+    return fresh;
+  };
+};
+
+const wideSlots = byWalk((t) => characterWideSlots(t.data, t.walk.slots));
+
+export const shownSlots = byWalk(shownSlotsOf);
+
+function shownSlotsOf(t: TrailView): readonly OpenedSlot[] {
   return t.walk.slots
     .filter((s) => t.data.blueprints.get(s.id.selection)?.$type !== 'BlueprintParametrizedFeature')
     .map((s) => {
@@ -146,19 +161,19 @@ export function shownSlots(t: TrailView): readonly OpenedSlot[] {
     });
 }
 
-export function characterSlots(t: TrailView): readonly OpenedSlot[] {
-  const wide = characterWideSlots(t.data, t.walk.slots);
+export const characterSlots = byWalk((t): readonly OpenedSlot[] => {
+  const wide = wideSlots(t);
   return shownSlots(t).filter((s) => wide.has(slotKey(s.id)));
-}
+});
 
 export function slotsAt(t: TrailView, place: Place): readonly OpenedSlot[] {
-  const wide = characterWideSlots(t.data, t.walk.slots);
+  const wide = wideSlots(t);
   const key = placeKey(place);
   return shownSlots(t).filter((s) => placeKey(s.id.place) === key && !wide.has(slotKey(s.id)));
 }
 
 export function isCharacterSlot(t: TrailView, slot: SlotId): boolean {
-  return characterWideSlots(t.data, t.walk.slots).has(slotKey(slot));
+  return wideSlots(t).has(slotKey(slot));
 }
 
 export function backgroundSlot(t: TrailView): OpenedSlot | undefined {
@@ -177,13 +192,15 @@ export function isHeritageSlot(t: TrailView, slot: SlotId): boolean {
   return heritage !== undefined && slotKey(heritage.id) === slotKey(slot);
 }
 
-export function characterChipSlots(t: TrailView): readonly OpenedSlot[] {
+export const characterChipSlots = byWalk((t): readonly OpenedSlot[] => {
   const base = backgroundSlot(t);
   const children = new Set(
     base === undefined ? [] : backgroundChildren(t.walk.slots, base.id).map((s) => slotKey(s.id)),
   );
-  return characterSlots(t).filter((s) => !children.has(slotKey(s.id)) && !isHeritageSlot(t, s.id));
-}
+  const heritage = heritageSlotIn(t.data, t.walk.slots);
+  const heritageKey = heritage === undefined ? undefined : slotKey(heritage.id);
+  return characterSlots(t).filter((s) => !children.has(slotKey(s.id)) && slotKey(s.id) !== heritageKey);
+});
 
 export interface SkillBudget {
   readonly spent: number;
