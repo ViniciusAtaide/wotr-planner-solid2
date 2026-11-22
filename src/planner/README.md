@@ -481,7 +481,13 @@ dimmed and inert behind "Edit the Second Build".
   repeats its parent, in parentheses or after " — ", keeps only its own part ("Ascendant Element (Electricity)",
   "Elemental Focus (Electricity)"); a parent named "… Selection" drops the word ("Bloodline Feat (Improved
   Initiative)"); and "Bloodline", "Feat" or "Selection" the parent already says leaves the value ("Second Bloodline
-  (Draconic — Bronze)"). A value not yet chosen keeps its own chip, so the step stays in
+  (Draconic — Bronze)"). A name keeps one level of parentheses (QA pass 6; `withValue` in `words.ts`, for a nested
+  value and for a feat's parameter alike): a qualifier that only names the kind of value ("Magic School") gives way
+  to it ("Expanded Arsenal (Conjuration)"), any other ("Mythic", "1st Level") stays and the value follows after
+  " — " ("Spell Focus (Mythic) — Evocation"); a value that starts with all of its parent's own words drops them, and
+  its own parentheses become " — " ("Armor Focus (Mythic) — Heavy Armor — Endurance"). The Cascade preview lists a
+  nested pick the same way, as one row under its parent's name, and counts it once (`shownPicks` in
+  `planner-state.ts`). A value not yet chosen keeps its own chip, so the step stays in
   reach.
 - **`Planner.tsx`: the page.**
   - `Boot` is `loading`, `failed` (with Retry, which loads again) or `ready` with the engine, the linked Build, the

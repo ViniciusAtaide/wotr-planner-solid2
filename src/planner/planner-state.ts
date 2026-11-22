@@ -1,4 +1,4 @@
-import { sameBuild, type Build, type Pick, type Place } from '~engine/build';
+import { placeKey, sameBuild, type Build, type Pick, type Place } from '~engine/build';
 import type { Guid } from '~engine/data';
 import { classPicker } from '~engine/pickers';
 import type { FailedRule } from '~engine/walk';
@@ -6,6 +6,8 @@ import { allows, cascade, type Breaks, type Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
 import { bareNameOf, groupedFailures, nameOf, namesIn, placesWords, refusal } from '~engine/refusals';
 import { walk } from '~engine/walk';
+
+import { nestedLabel } from './trail-state';
 
 export type NonEmpty<T> = readonly [T, ...T[]];
 
@@ -162,8 +164,19 @@ export function laterChoices(n: number): string {
 
 type Clears = Extract<Verdict, { readonly kind: 'clears' }>;
 
+function childOf(picks: readonly Pick[], parent: Pick): Pick | undefined {
+  return picks.find(
+    (c) =>
+      c !== parent && c.slot.selection === parent.feature && placeKey(c.slot.place) === placeKey(parent.slot.place),
+  );
+}
+
+export function shownPicks(picks: readonly Pick[]): readonly Pick[] {
+  return picks.filter((p) => !picks.some((parent) => childOf(picks, parent) === p));
+}
+
 export function clearedCount(v: Clears): number {
-  return v.cleared.length + v.clearedSkills.length + v.clearedRanks.length;
+  return shownPicks(v.cleared).length + v.clearedSkills.length + v.clearedRanks.length;
 }
 
 function numbers(word: string, ns: readonly number[]): string {
@@ -173,7 +186,7 @@ function numbers(word: string, ns: readonly number[]): string {
 export function clearsSummary(v: Clears): string {
   const n = clearedCount(v);
   const parts = [
-    v.cleared.length > 0 ? laterPicks(v.cleared.length) : undefined,
+    v.cleared.length > 0 ? laterPicks(shownPicks(v.cleared).length) : undefined,
     v.clearedSkills.length > 0 ? `the skill ranks of ${numbers('level', v.clearedSkills)}` : undefined,
     v.clearedRanks.length > 0 ? numbers('Mythic rank', v.clearedRanks) : undefined,
   ].filter((p) => p !== undefined);
@@ -192,10 +205,15 @@ export function clearsList(engine: Engine, before: Build, v: Clears): Pending['c
     engine.data,
     v.cleared.map((p) => p.feature),
   );
+  const own = (p: Pick) => names.get(p.feature) ?? nameOf(engine.data, p.feature);
+  const named = (p: Pick, depth: number): string => {
+    const child = depth < v.cleared.length ? childOf(v.cleared, p) : undefined;
+    return child === undefined ? own(p) : nestedLabel(own(p), named(child, depth + 1));
+  };
   const rows = [
-    ...v.cleared.map((p) => ({
+    ...shownPicks(v.cleared).map((p) => ({
       at: whereIn(before, p.slot.place),
-      row: { name: names.get(p.feature) ?? nameOf(engine.data, p.feature), place: placeWords(p.slot.place) },
+      row: { name: named(p, 0), place: placeWords(p.slot.place) },
     })),
     ...v.clearedSkills.map((level) => ({
       at: level + 0.001,
@@ -226,7 +244,7 @@ export function judgeAll(engine: Engine, build: Build, edits: NonEmpty<Edit>): J
     case 'clears':
       return {
         open: true,
-        note: `Clears ${v.cleared.length === clearedCount(v) ? laterPicks(v.cleared.length) : laterChoices(clearedCount(v))}`,
+        note: `Clears ${shownPicks(v.cleared).length === clearedCount(v) ? laterPicks(clearedCount(v)) : laterChoices(clearedCount(v))}`,
         reasons: [],
       };
     case 'breaks':

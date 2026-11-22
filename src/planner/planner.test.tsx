@@ -23,7 +23,7 @@ import {
 } from '~engine/mcp';
 import { picker, type OptionStatus } from '~engine/pickers';
 import { GROUP_WORDS, stackWords, topicWords } from '~engine/links';
-import { buildNameLength, linkDidNotOpen, nameOf } from '~engine/refusals';
+import { bareNameOf, buildNameLength, linkDidNotOpen, nameOf } from '~engine/refusals';
 import { walk } from '~engine/walk';
 
 import { EMPTY, openHash } from './link';
@@ -50,7 +50,7 @@ import {
   type TrailState,
 } from './trail-state';
 import type { Selection } from './workspace-state';
-import { optionName } from './words';
+import { optionName, shownName } from './words';
 
 const gate = vi.hoisted(() => ({
   load: (): Promise<unknown> => Promise.reject(new Error('no engine yet')),
@@ -2547,6 +2547,30 @@ describe('QA pass 4, severity 1', () => {
       'Bloodline Feat (Skill Focus — Mobility)',
     );
     expect(nestedLabel('Second Bloodline', 'Draconic Bloodline — Bronze')).toBe('Second Bloodline (Draconic — Bronze)');
+  });
+
+  test('a nested name keeps one level of parentheses (QA pass 6)', () => {
+    expect(nestedLabel('Expanded Arsenal (Magic School)', 'Conjuration')).toBe('Expanded Arsenal (Conjuration)');
+    expect(nestedLabel('Spell Focus (Mythic)', 'Evocation')).toBe('Spell Focus (Mythic) — Evocation');
+    expect(nestedLabel('Armor Focus (Mythic)', 'Mythic Armor Focus (Heavy Armor) — Endurance')).toBe(
+      'Armor Focus (Mythic) — Heavy Armor — Endurance',
+    );
+    expect(nestedLabel('Weapon Focus', 'Weapon Specialization (Longsword)')).toBe(
+      'Weapon Focus (Weapon Specialization — Longsword)',
+    );
+  });
+
+  test('a feat’s parameter joins its name with one level of parentheses (QA pass 6)', () => {
+    const named = (name: string) =>
+      [...e.data.blueprints.values()].find(
+        (bp) => bp.$type === 'BlueprintParametrizedFeature' && bareNameOf(e.data, bp.guid) === name,
+      )?.guid ?? '';
+    expect(shownName(e.data, named('Expanded Arsenal (Magic School)'), { SpellSchool: 'Conjuration' })).toBe(
+      'Expanded Arsenal (Conjuration)',
+    );
+    expect(shownName(e.data, named('Weapon Focus (Mythic)'), { WeaponCategory: 'Longsword' })).toBe(
+      'Weapon Focus (Mythic) — Longsword',
+    );
   });
 
   test('the name refusal floats under the field and describes it, so the top bar keeps its height', async () => {
