@@ -416,6 +416,14 @@ export function pauseAt(
   }
 }
 
+const allFeatureSets = new WeakMap<BlueprintFeatureSelection, ReadonlySet<Guid>>();
+
+function allFeaturesOf(selection: BlueprintFeatureSelection): ReadonlySet<Guid> {
+  let set = allFeatureSets.get(selection);
+  if (set === undefined) allFeatureSets.set(selection, (set = new Set(guids(selection.m_AllFeatures))));
+  return set;
+}
+
 class Walker {
   readonly unit: Unit;
   readonly root: BlueprintRoot;
@@ -1327,7 +1335,7 @@ class Walker {
     if (selection?.$type !== 'BlueprintFeatureSelection' || bp === undefined || !('Ranks' in bp)) {
       return { rule: 'BlueprintFeatureSelection.CanSelect:selection', ...(selection && { found: selection.$type }) };
     }
-    if (!selection.m_AllFeatures.some((r) => refGuid(r) === feature)) {
+    if (!allFeaturesOf(selection).has(feature)) {
       return { rule: 'BlueprintFeatureSelection.CanSelect:m_AllFeatures' };
     }
     const waived = this.slotWaives(slot);
