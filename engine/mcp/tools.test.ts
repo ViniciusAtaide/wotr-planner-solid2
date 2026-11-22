@@ -533,4 +533,77 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(asmodeus?.refusal?.unmet).toContain('Choose an alignment first.');
     expect(listed.open.find((o) => o.feature === ASMODEUS)).toBeUndefined();
   });
+
+  it('places a Mythic rank at its Expected level when the character levels came first, and says when one is due (MCP QA)', async () => {
+    const MYTHIC_HERO = '247aa787806d5da4f89cfc3dff0b217f';
+    let code = (await start_build(e)).code;
+    const dueAt: (number | undefined)[] = [];
+    for (let l = 1; l <= 20; l++) {
+      const up = ok(await level_up(e, { code, class: FIGHTER }), `L${l}`);
+      dueAt.push(up.mythicRankDue?.expectedLevel);
+      code = up.code;
+    }
+    const first = expectedLevel(e.data, 1);
+    expect(dueAt.indexOf(first)).toBe(first - 1);
+    expect(dueAt.slice(0, first - 1).every((d) => d === undefined)).toBe(true);
+    expect(ok(await next_slots(e, { code }), 'next_slots').mythicRankDue).toEqual({ rank: 1, expectedLevel: first });
+    const rank = ok(await level_up(e, { code, class: MYTHIC_HERO }), 'M1');
+    expect(rank.characterLevel).toBe(first);
+    expect(rank.build.ranks?.[0]?.level).toBe(first);
+    expect(rank.note).toBeUndefined();
+    expect(ok(await next_slots(e, { code: rank.code }), 'next_slots').mythicRankDue).toEqual({
+      rank: 2,
+      expectedLevel: expectedLevel(e.data, 2),
+    });
+  });
+
+  it('places a Mythic rank at the last character level, naming what its Expected level would break (MCP QA)', async () => {
+    const ARCANIST = '52dbfd8505e22f84fad8d702611f60b7';
+    const MYTHIC_HERO = '247aa787806d5da4f89cfc3dff0b217f';
+    const LICH = '5d501618a28bdc24c80007a5c937dcb7';
+    const HOLY_WATER_JET = '3ff84c64d01075d4cbc3dc274c48a4bf';
+    let code = (await start_build(e)).code;
+    for (let l = 1; l <= 20; l++) code = ok(await level_up(e, { code, class: ARCANIST }), `L${l}`).code;
+    const exploit = ok(await next_slots(e, { code }), 'next_slots').slots.find(
+      (s) => s.place === 'L15' && s.selection === 'Arcanist Exploits',
+    )!.slot;
+    code = (ok(await pick(e, { code, slot: exploit, feature: HOLY_WATER_JET }), 'pick') as Changed).code;
+    for (let r = 1; r <= 2; r++) code = ok(await level_up(e, { code, class: MYTHIC_HERO }), `M${r}`).code;
+    const lich = ok(await level_up(e, { code, class: LICH }), 'M3');
+    expect(lich.characterLevel).toBe(20);
+    expect(lich.note).toBe(
+      `Mythic rank 3 is placed at character level 20, since at ${expectedLevel(e.data, 3)} it would break L15 Arcanist Exploits: Holy Water Jet.`,
+    );
+  });
+
+  it("gives a level's skill points, counting a later Intelligence increase for every level so far, as the game does (MCP QA)", async () => {
+    const ARCANIST = '52dbfd8505e22f84fad8d702611f60b7';
+    const HUMAN = '0a5d473ead98b0646b94495af250fdc4';
+    const scores = { Strength: 10, Dexterity: 14, Constitution: 14, Intelligence: 17, Wisdom: 10, Charisma: 10 };
+    const started = ok(
+      await set_start(e, { code: (await start_build(e)).code, race: HUMAN, raceStat: 'Intelligence', scores }),
+      'set_start',
+    );
+    const five = {
+      'Knowledge (Arcana)': 1,
+      'Knowledge (World)': 1,
+      'Use Magic Device': 1,
+      Perception: 1,
+      Persuasion: 1,
+    };
+    let code = started.code;
+    const budgets: number[] = [];
+    for (let l = 1; l <= 4; l++) {
+      const up = ok(
+        await level_up(e, { code, class: ARCANIST, ...(l === 4 && { increase: 'Intelligence' }) }),
+        `L${l}`,
+      );
+      budgets.push(up.skillPoints ?? 0);
+      const set = ok(await set_skills(e, { code: up.code, level: l, ranks: five }), `skills L${l}`);
+      expect(set.skillPointsLeft).toEqual(l < 4 ? undefined : { level: 4, points: 2 });
+      code = set.code;
+    }
+    expect(budgets).toEqual([5, 5, 5, 7]);
+    expect(ok(await next_slots(e, { code }), 'next_slots').skillPointsLeft).toEqual({ level: 4, points: 2 });
+  });
 });

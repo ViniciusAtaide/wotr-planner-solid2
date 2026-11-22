@@ -238,6 +238,33 @@ function openSlots(e: Engine, build: Build, place?: Place): SlotView[] {
     });
 }
 
+export interface RankDue {
+  readonly rank: number;
+  readonly expectedLevel: number;
+}
+
+function mythicRankDue(e: Engine, build: Build, ranksEnded: boolean): RankDue | undefined {
+  if (ranksEnded) return undefined;
+  const rank = (build.ranks?.length ?? 0) + 1;
+  const at = expectedLevel(e.data, rank);
+  return at > 0 && at <= build.levels.length ? { rank, expectedLevel: at } : undefined;
+}
+
+export interface LevelUp extends Changed {
+  readonly slots: readonly SlotView[];
+  readonly skillPoints?: number;
+  readonly characterLevel?: number;
+  readonly mythicRankDue?: RankDue;
+  readonly note?: string;
+}
+
+function rankPlacements(e: Engine, build: Build, rank: number): { readonly placed: number; readonly last?: number } {
+  const expected = expectedLevel(e.data, rank);
+  const after = Math.max(build.ranks?.at(-1)?.level ?? 1, 1);
+  const placed = Math.max(expected > 0 ? expected : build.levels.length, after);
+  return build.levels.length > placed ? { placed, last: build.levels.length } : { placed };
+}
+
 export async function level_up(
   e: Engine,
   args: {
@@ -246,28 +273,57 @@ export async function level_up(
     readonly archetypes?: readonly Guid[];
     readonly increase?: Attribute;
   },
-): Promise<(Changed & { readonly slots: readonly SlotView[] }) | ToolRefusal> {
+): Promise<LevelUp | ToolRefusal> {
   const build = await open(e, args.code);
   if (isRefusal(build)) return build;
   const cls = e.data.blueprints.get(args.class);
   if (cls?.$type !== 'BlueprintCharacterClass') return refused('Not a class.');
-  const mythic = cls.IsMythic;
-  const rank = (build.ranks?.length ?? 0) + 1;
-  const placed = Math.max(expectedLevel(e.data, rank), build.levels.length, 1);
-  const level = toRankLevel(placed);
-  if (mythic && level === undefined) return refused(rankLevelRange(placed));
   const archetypes = args.archetypes === undefined ? undefined : toArchetypes(args.archetypes);
   if (args.archetypes !== undefined && archetypes === undefined) return refused(archetypeCount(args.archetypes));
+  if (!cls.IsMythic) {
+    const r = await addLevelOrRank(e, build, args, archetypes, { level: build.levels.length + 1 }, [
+      { kind: 'addLevel', class: args.class },
+      ...(args.increase !== undefined
+        ? [{ kind: 'increase', level: build.levels.length + 1, increase: args.increase } as const]
+        : []),
+    ]);
+    if (isRefusal(r)) return r;
+    const w = walk(e.data, r.build, e.G);
+    const due = mythicRankDue(e, r.build, w.ranksEnded);
+    return { ...r, skillPoints: w.skillPoints.at(-1) ?? 0, ...(due && { mythicRankDue: due }) };
+  }
+  const rank = (build.ranks?.length ?? 0) + 1;
+  const addRankAt = async (at: number): Promise<LevelUp | ToolRefusal> => {
+    const level = toRankLevel(at);
+    if (level === undefined) return refused(rankLevelRange(at));
+    const r = await addLevelOrRank(e, build, args, archetypes, { rank }, [
+      { kind: 'addRank', class: args.class, level },
+    ]);
+    return isRefusal(r) ? r : { ...r, characterLevel: at };
+  };
+  const { placed, last } = rankPlacements(e, build, rank);
+  const first = await addRankAt(placed);
+  if (!isRefusal(first) || first.breaks === undefined || last === undefined) return first;
+  const later = await addRankAt(last);
+  if (isRefusal(later)) return first;
+  return {
+    ...later,
+    note: `Mythic rank ${rank} is placed at character level ${last}, since at ${placed} it would break ${first.breaks.join('; ')}.`,
+  };
+}
+
+async function addLevelOrRank(
+  e: Engine,
+  build: Build,
+  args: { readonly class: Guid },
+  archetypes: ReturnType<typeof toArchetypes>,
+  place: Place,
+  added: readonly Edit[],
+): Promise<(Changed & { readonly slots: readonly SlotView[] }) | ToolRefusal> {
   const edits: Edit[] = [
-    mythic && level !== undefined
-      ? { kind: 'addRank', class: args.class, level }
-      : { kind: 'addLevel', class: args.class },
+    ...added,
     ...(archetypes !== undefined ? [{ kind: 'archetypes', class: args.class, archetypes } as const] : []),
-    ...(!mythic && args.increase !== undefined
-      ? [{ kind: 'increase', level: build.levels.length + 1, increase: args.increase } as const]
-      : []),
   ];
-  const place: Place = mythic ? { rank } : { level: build.levels.length + 1 };
   const after = edits.reduce(apply, build);
   const walked = walk(e.data, after, e.G);
   const own = walked.failures.find(
@@ -289,6 +345,7 @@ export interface NextSlots {
   readonly slots: readonly SlotView[];
   readonly skillPointsLeft?: { readonly level: number; readonly points: number };
   readonly raceStatToChoose?: true;
+  readonly mythicRankDue?: RankDue;
 }
 
 export async function next_slots(e: Engine, args: { readonly code: string }): Promise<NextSlots | ToolRefusal> {
@@ -298,10 +355,12 @@ export async function next_slots(e: Engine, args: { readonly code: string }): Pr
   const level = build.levels.length;
   const spent = Object.values(build.levels.at(-1)?.skills ?? {}).reduce((n, r) => n + (r ?? 0), 0);
   const points = (w.skillPoints.at(-1) ?? 0) - spent;
+  const due = mythicRankDue(e, build, w.ranksEnded);
   return {
     slots: openSlots(e, build),
     ...(level > 0 && points > 0 && { skillPointsLeft: { level, points } }),
     ...(raceStatPending(e.data, build) && { raceStatToChoose: true as const }),
+    ...(due && { mythicRankDue: due }),
   };
 }
 
@@ -458,7 +517,9 @@ function skillKeys(ranks: Readonly<Record<string, number>>): Partial<Record<Stat
 export async function set_skills(
   e: Engine,
   args: { readonly code: string; readonly level: number; readonly ranks: Readonly<Record<string, number>> },
-): Promise<Changed | ToolRefusal> {
+): Promise<
+  (Changed & { readonly skillPointsLeft?: { readonly level: number; readonly points: number } }) | ToolRefusal
+> {
   const build = await open(e, args.code);
   if (isRefusal(build)) return build;
   if (args.level < 1 || args.level > build.levels.length) return refused('The Build has no such level.');
@@ -471,7 +532,11 @@ export async function set_skills(
     (f) => f.choice === 'skills' && 'level' in f.place && f.place.level === args.level,
   );
   if (own !== undefined) return refused(refusal({ data: e.data, G: e.G }, own).text);
-  return plainEdit(e, build, { kind: 'skills', level: args.level, skills });
+  const r = await plainEdit(e, build, { kind: 'skills', level: args.level, skills });
+  if (isRefusal(r)) return r;
+  const spent = Object.values(skills).reduce((n, k) => n + (k ?? 0), 0);
+  const points = (walk(e.data, r.build, e.G).skillPoints[args.level - 1] ?? 0) - spent;
+  return points > 0 ? { ...r, skillPointsLeft: { level: args.level, points } } : r;
 }
 
 export async function place_rank(

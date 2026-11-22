@@ -94,7 +94,7 @@ const RAW_TOOLS: readonly ToolDef[] = [
   {
     name: 'level_up',
     description:
-      "Add a level of a class, or the next Mythic rank for a Mythic class. An archetype, at most one per class, applies at the class's first level; an ability increase comes at every fourth level. Returns the new code and the slots the level opened.",
+      "Add a level of a class, or the next Mythic rank for a Mythic class. An archetype, at most one per class, applies at the class's first level; an ability increase comes at every fourth level. Returns the new code and the slots the level opened. A character level also returns its skillPoints and, once the character has reached the next Mythic rank's Expected level, mythicRankDue. A Mythic rank is placed at its Expected level (characterLevel says where); place_rank moves it.",
     inputSchema: object(
       { code, class: guid, archetypes: { type: 'array', items: guid, maxItems: 1 }, increase: attribute },
       ['code', 'class'],
@@ -104,7 +104,7 @@ const RAW_TOOLS: readonly ToolDef[] = [
   {
     name: 'next_slots',
     description:
-      'The open slots, in walk order: place, band and selection; skillPointsLeft when the last character level still has skill points to spend (set_skills); and raceStatToChoose when the race gives +2 to an ability of your choice and none is chosen (set_start raceStat). A Build is finished when all three are empty.',
+      "The open slots, in walk order: place, band and selection; skillPointsLeft when the last character level still has skill points to spend (set_skills); raceStatToChoose when the race gives +2 to an ability of your choice and none is chosen (set_start raceStat); and mythicRankDue when the character has reached the next Mythic rank's Expected level. A Build is finished when the first three are empty, and mythicRankDue too unless the Build skips Mythic ranks.",
     inputSchema: object({ code }, ['code']),
     run: (e, a) => tools.next_slots(e, a as Parameters<typeof tools.next_slots>[1]),
   },
@@ -126,14 +126,15 @@ const RAW_TOOLS: readonly ToolDef[] = [
   },
   {
     name: 'pick',
-    description: 'Put an option in a slot. A closed option is refused with its reason.',
+    description:
+      'Put an option in a slot. A closed option is refused with its reason. `mode`: strict (the default) refuses a change that breaks later picks, preview lists what a Cascade would clear, cascade clears it.',
     inputSchema: object({ code, slot, feature: guid, param, mode }, ['code', 'slot', 'feature']),
     run: (e, a) => tools.pick(e, a as Parameters<typeof tools.pick>[1]),
   },
   {
     name: 'set_skills',
     description:
-      'A character level\'s skill ranks, replacing that level\'s. Name each skill as sheet shows it ("Mobility", "Knowledge (Arcana)") or by its game key ("SkillMobility").',
+      'A character level\'s skill ranks, replacing that level\'s. Name each skill as sheet shows it ("Mobility", "Knowledge (Arcana)") or by its game key ("SkillMobility"). Returns skillPointsLeft when that level still has points; they carry to the next level.',
     inputSchema: object(
       {
         code,
@@ -155,7 +156,8 @@ const RAW_TOOLS: readonly ToolDef[] = [
   },
   {
     name: 'equip',
-    description: 'Put an item in a Gear place, or take it off when no item is given.',
+    description:
+      'Put an item in a Gear place, or take it off when no item is given. `mode`: strict (the default) refuses a change that breaks later picks, preview lists what a Cascade would clear, cascade clears it.',
     inputSchema: object(
       {
         code,

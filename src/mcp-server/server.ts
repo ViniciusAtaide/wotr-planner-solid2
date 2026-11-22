@@ -3,7 +3,7 @@ import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprotocol/sdk/types.js';
 import { loadData } from '~engine/load';
 import { readDataDir } from '~engine/data-dir';
-import { TOOLS, engineOf, type Engine } from '~engine/mcp';
+import { INSTRUCTIONS, TOOLS, engineOf, type Engine } from '~engine/mcp';
 
 let engine: Engine | undefined;
 
@@ -17,7 +17,10 @@ export function sharedEngine(): Engine {
 }
 
 export function createMcpServer(e: Engine = sharedEngine()): Server {
-  const server = new Server({ name: 'wotr-planner', version: '0.0.0' }, { capabilities: { tools: {} } });
+  const server = new Server(
+    { name: 'wotr-planner', version: '0.0.0' },
+    { capabilities: { tools: {} }, instructions: INSTRUCTIONS },
+  );
   server.setRequestHandler(ListToolsRequestSchema, () => ({
     tools: TOOLS.map(({ name, description, inputSchema }) => ({ name, description, inputSchema })),
   }));

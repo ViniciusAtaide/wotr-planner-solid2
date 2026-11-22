@@ -10,7 +10,7 @@ committed data once.
 
 - `sharedEngine`: the engine over the committed data, read on first use, from `data/` beside the working directory or
   from the directory `WOTR_DATA` names.
-- `createMcpServer`: an MCP server that lists the tools and runs them; a tool's answer, a Refusal too, is its JSON.
+- `createMcpServer`: an MCP server that lists the tools and runs them; a tool's answer, a Refusal too, is its JSON. Its initialize result carries `~engine/mcp`'s `INSTRUCTIONS`, the workflow an agent follows from an empty Build to a finished one.
 - `handleMcpRequest` (`http.ts`): the streamable-HTTP handler the `/mcp` route delegates to, with one server per
   request and JSON responses.
 
@@ -26,4 +26,4 @@ Run it from the repo root, or set `WOTR_DATA` to the data directory.
 
 ## Tests
 
-None of its own: the tools behind it are tested end to end in `engine/mcp/tools.test.ts`.
+`server.test.ts` connects a client over the SDK's in-memory transport and checks that initialize returns the instructions and that the tools are listed. The tools behind it are tested end to end in `engine/mcp/tools.test.ts`.
