@@ -1,8 +1,7 @@
-import type { GearPlace } from '~engine/build';
-import type { Guid } from '~engine/data';
 import { nameOf, statName } from '~engine/refusals';
-import { ATTRIBUTES } from '~engine/walk';
+import { ATTRIBUTES, SKILL_ATTRIBUTE } from '~engine/walk';
 
+import { PLACES, placeWords } from './GearStep';
 import {
   characterLine,
   characterPicksLine,
@@ -33,9 +32,9 @@ export function buildSheet(t: TrailView): string {
   if (picks !== '') lines.push(picks);
   for (const [i, l] of build.levels.entries()) {
     const level = i + 1;
-    const skills = Object.entries(l.skills ?? {})
-      .filter(([, n]) => (n ?? 0) > 0)
-      .map(([s, n]) => `${statName(s)} ${n}`)
+    const ranks: Readonly<Record<string, number | undefined>> = l.skills ?? {};
+    const skills = Object.keys(SKILL_ATTRIBUTE)
+      .flatMap((s) => ((ranks[s] ?? 0) > 0 ? [`${statName(s)} ${ranks[s]}`] : []))
       .join(', ');
     const archetype = classLevelAt(build, level) === 1 ? build.classChoices?.[l.class]?.archetypes[0] : undefined;
     const parts = [
@@ -51,9 +50,10 @@ export function buildSheet(t: TrailView): string {
       lines.push(`Mythic rank ${rank} at level ${r.level}: ${[nameOf(data, r.class), ...rankPicks].join(' · ')}`);
     }
   }
-  const worn = (Object.entries(build.gear ?? {}) as [GearPlace, Guid | undefined][]).flatMap(([place, item]) =>
-    item === undefined ? [] : [`${place.replace(/([a-z])([A-Z])/g, '$1 $2')}: ${nameOf(data, item)}`],
-  );
+  const worn = PLACES.flatMap((place) => {
+    const item = build.gear?.[place];
+    return item === undefined ? [] : [`${placeWords(place)}: ${nameOf(data, item)}`];
+  });
   if (worn.length > 0) lines.push(`Gear: ${worn.join(' · ')}`);
   return lines.join('\n');
 }

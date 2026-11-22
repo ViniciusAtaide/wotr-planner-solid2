@@ -23,20 +23,26 @@ export type { Judged };
 
 export const FILTER_FROM = 13;
 
+function compact(text: string): string {
+  return text.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '');
+}
+
 export function matches(name: string, text: string): boolean {
   const words = text
     .toLowerCase()
     .split(/\s+/)
     .filter((w) => w !== '');
   const n = name.toLowerCase();
-  return words.every((w) => n.includes(w));
+  return words.every((w) => n.includes(w)) || compact(name).includes(compact(text));
 }
 
 export function matchRank(name: string, text: string): number {
   const typed = text.trim().toLowerCase();
   if (typed === '') return 0;
   const n = name.toLowerCase();
-  if (n.startsWith(typed)) return 0;
+  const typedCompact = compact(typed);
+  if (compact(n) === typedCompact) return -1;
+  if (n.startsWith(typed) || compact(n).startsWith(typedCompact)) return 0;
   const nameWords = n.split(/[^\p{L}\p{N}]+/u).filter((w) => w !== '');
   const typedWords = typed.split(/\s+/);
   return typedWords.every((w) => nameWords.some((nw) => nw.startsWith(w))) ? 1 : 2;

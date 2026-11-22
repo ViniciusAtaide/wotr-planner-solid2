@@ -196,7 +196,7 @@ export default function Trail(props: TrailProps) {
   const step = createMemo((): Step => props.selection ?? nextStep(view(), props.state), {
     equals: (a, b) => stepKey(a) === stepKey(b),
   });
-  const scoresLine = () => ATTRIBUTES.map((a) => `${SHORT[a]} ${props.planner.walked().unit.permanent(a)}`).join(' · ');
+  const scoresLine = () => ATTRIBUTES.map((a) => `${SHORT[a]} ${props.planner.score(a)}`).join(' · ');
   const firstStep = createMemo((was?: string) => was ?? stepKey(step()));
   const arrived = createMemo((was?: boolean) => was === true || stepKey(step()) !== firstStep());
   const applied = (edits: NonEmpty<Edit>, outcome: EditOutcome): EditOutcome => {
@@ -255,7 +255,12 @@ export default function Trail(props: TrailProps) {
           dialogOpen={props.state.dialog === key}
           onDialog={(open) => props.send({ kind: 'dialog', step: open ? key : undefined })}
         >
-          <StepBody trail={api} step={step()} {...(props.diff && { diff: props.diff })} />
+          <StepBody
+            trail={api}
+            step={step()}
+            modal={props.listMode === 'modal'}
+            {...(props.diff && { diff: props.diff })}
+          />
         </Here>
       )}
     </Show>
@@ -628,6 +633,7 @@ export interface StepBodyProps {
   readonly trail: TrailApi;
   readonly step: Step;
   readonly diff?: (a: Attribute) => boolean;
+  readonly modal?: boolean;
 }
 
 export function StepBody(props: StepBodyProps) {
@@ -654,7 +660,7 @@ export function StepBody(props: StepBodyProps) {
         <MythicStep trail={props.trail} />
       </Match>
       <Match when={props.step.kind === 'nextLevel'}>
-        <NextLevelStep trail={props.trail} />
+        <NextLevelStep trail={props.trail} modal={props.modal === true} />
       </Match>
     </Switch>
   );

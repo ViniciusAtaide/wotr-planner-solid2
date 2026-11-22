@@ -10,6 +10,7 @@ import { ATTRIBUTES, SKILL_ATTRIBUTE } from '~engine/walk';
 import { Button, Refusal } from '../design';
 import { BackgroundStep, RaceStep } from './CharacterSteps';
 import { PickStep } from './PickStep';
+import { ChoiceDialog } from './ChoiceDialog';
 import { ChoiceList, currentFirst, judge, type ChoiceRow, type ClosedToggle } from './ChoiceList';
 import { joinedName, shownArchetypes } from './flat-choices';
 import { judgeClasses, type ClassJudged, type EditOutcome, type NonEmpty } from './planner-state';
@@ -313,7 +314,11 @@ export function startingWith(key: string | undefined, rows: ChoiceRow[]): Choice
   return at <= 0 ? rows : [rows[at] as ChoiceRow, ...rows.slice(0, at), ...rows.slice(at + 1)];
 }
 
-export function NextLevelStep(props: TrailStepProps) {
+export interface NextLevelStepProps extends TrailStepProps {
+  readonly modal?: boolean;
+}
+
+export function NextLevelStep(props: NextLevelStepProps) {
   const planner = () => props.trail.planner;
   const data = () => planner().engine.data;
   const next = () => planner().build().levels.length + 1;
@@ -346,11 +351,26 @@ export function NextLevelStep(props: TrailStepProps) {
         )}
       </Show>
       <Show
-        when={others()}
+        when={others() && (props.modal !== true || previous() === undefined)}
         fallback={
-          <button type="button" class="trail-link" onClick={() => props.trail.send({ kind: 'otherClass', open: true })}>
-            Another class…
-          </button>
+          <>
+            <button
+              type="button"
+              class="trail-link"
+              onClick={() => props.trail.send({ kind: 'otherClass', open: true })}
+            >
+              Another class…
+            </button>
+            <Show when={others()}>
+              <ChoiceDialog
+                title={`Level ${next()} · another class`}
+                line=""
+                onClose={() => props.trail.send({ kind: 'otherClass', open: false })}
+              >
+                <ClassList trail={props.trail} />
+              </ChoiceDialog>
+            </Show>
+          </>
         }
       >
         <ClassList trail={props.trail} />

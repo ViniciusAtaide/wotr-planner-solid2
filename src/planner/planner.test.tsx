@@ -31,7 +31,7 @@ import Planner, { RefusalNotice } from './Planner';
 import { buildSheet } from './sheet';
 import { createPlanner, type Planner as PlannerApi } from './state';
 import { AlignmentWheel } from './CharacterCard';
-import { ChoiceList, Filter, matchRank, ranked } from './ChoiceList';
+import { ChoiceList, Filter, matches, matchRank, ranked } from './ChoiceList';
 import { PickerOption } from '../design';
 import { pageTitle } from './BuildName';
 import { isListStep } from './list-mode';
@@ -581,7 +581,8 @@ describe('the levelling trail (build ticket 07)', () => {
   });
 
   test('a filter ranks a name that starts with the text, then a word that does, then the rest (QA pass 5)', async () => {
-    expect(matchRank('Human', 'human')).toBe(0);
+    expect(matchRank('Human', 'human')).toBe(-1);
+    expect(matchRank('Humanoid', 'human')).toBe(0);
     expect(matchRank('Half-Orc · Human-Raised', 'human')).toBe(1);
     expect(matchRank('Inhuman Grace', 'human')).toBe(2);
     expect(ranked(['Half-Orc · Human-Raised', 'Inhuman Grace', 'Human'], (n) => n, 'human')).toEqual([
@@ -592,6 +593,16 @@ describe('the levelling trail (build ticket 07)', () => {
     await openPlanner(undefined);
     filterAndTake('human');
     expect(fieldValue('Race')).toBe('Human');
+  });
+
+  test('a filter puts the name the text spells, spaces aside, before longer names (QA pass 6)', () => {
+    expect(matchRank('Chainshirt', 'chain shirt')).toBe(-1);
+    expect(matchRank('Chainshirt +1', 'chain shirt')).toBe(0);
+    expect(matches('Chainshirt', 'chain shirt')).toBe(true);
+    expect(matches('Chain Shirt', 'chainshirt')).toBe(true);
+    expect(
+      ranked(['Mithral Chainshirt', 'Chainmail Shirt', 'Chainshirt +1', 'Chainshirt'], (n) => n, 'chain shirt'),
+    ).toEqual(['Chainshirt', 'Chainshirt +1', 'Chainmail Shirt', 'Mithral Chainshirt']);
   });
 
   test('the feat and Gear filters rank the same way (QA pass 5)', () => {
@@ -1847,6 +1858,60 @@ describe('nested sub-choices (ticket 08)', () => {
     const sheet = buildSheet({ data: e.data, build: built, walk: walk(e.data, built, e.G) });
     expect(sheet.split('Light Armor Focus')).toHaveLength(2);
     expect(sheet).toContain('Armor Focus (Light Armor Focus)');
+  });
+
+  test('Export lists skills in the sheet’s order and Gear by place, as "Ring 1", whatever order the Build holds (QA pass 6)', () => {
+    const item = (name: string) => [...e.data.blueprints.values()].find((bp) => bp.name === name)?.guid ?? '';
+    const ring = item('Ring of Protection +1');
+    const armor = item('Chainshirt');
+    expect(ring).not.toBe('');
+    expect(armor).not.toBe('');
+    const shuffled: Build = {
+      ...cleaver,
+      levels: [{ class: fighter, skills: skillRanks({ SkillPersuasion: 1, SkillAthletics: 1, SkillMobility: 1 }) }],
+      gear: { Ring1: ring, Armor: armor },
+    };
+    const ordered: Build = {
+      ...cleaver,
+      levels: [{ class: fighter, skills: skillRanks({ SkillMobility: 1, SkillAthletics: 1, SkillPersuasion: 1 }) }],
+      gear: { Armor: armor, Ring1: ring },
+    };
+    const sheetOf = (b: Build) => buildSheet({ data: e.data, build: b, walk: walk(e.data, b, e.G) });
+    const sheet = sheetOf(shuffled);
+    expect(sheet).toBe(sheetOf(ordered));
+    expect(sheet).toContain('Gear: Armor: Chainshirt · Ring 1: Ring of Protection +1');
+    const level1 = sheet.split('\n').find((l) => l.startsWith('Level 1:')) ?? '';
+    expect(level1.indexOf('Mobility')).toBeLessThan(level1.indexOf('Athletics'));
+    expect(level1.indexOf('Athletics')).toBeLessThan(level1.indexOf('Persuasion'));
+  });
+
+  test('Modal first: Another class… opens the class list in a dialog, beside Continue (QA pass 6)', async () => {
+    const planner = createPlanner(e, cleaver);
+    render(() => <NextLevelStep trail={apiOf(planner, { ...TRAIL_START, otherClass: true })} modal />);
+    flush();
+    expect(button(/^Continue as Fighter/)).toBeInTheDocument();
+    expect(button('Another class…')).toBeInTheDocument();
+    const box = document.querySelector('.choice-dialog');
+    expect(box?.querySelector('.choice-dialog__title')?.textContent).toBe('Level 2 · another class');
+    const names = [...(box?.querySelectorAll('.ww-option__name') ?? [])].map((n) => n.textContent);
+    expect(names[0]).toBe('Fighter');
+    cleanup();
+    await new Promise((r) => setTimeout(r, 20));
+    await waitFor(() => expect(historyIdle()).toBe(true));
+  });
+
+  test('before level 1, the scores shown include the race’s bonuses (QA pass 6)', () => {
+    const unlevelled: Build = {
+      scores: abilityScores(SCORES),
+      race: DWARF,
+      alignment: 'TrueNeutral',
+      levels: [],
+      picks: [],
+    };
+    const planner = createPlanner(e, unlevelled);
+    expect(planner.score('Constitution')).toBe(SCORES.Constitution + 2);
+    expect(planner.score('Charisma')).toBe(SCORES.Charisma - 2);
+    expect(planner.score('Strength')).toBe(SCORES.Strength);
   });
 
   test('a nested selection takes both picks as one Undo step', () => {

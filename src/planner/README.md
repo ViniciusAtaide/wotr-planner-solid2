@@ -98,7 +98,9 @@ that starts with the text first, then one where every typed word starts a word, 
 so "human" and Enter take Human, not Half-Orc · Human-Raised. A slot's pick list and the Gear list order their matches the same way
 (`rankOrder`). In the filter, Up and Down move a mark over the open rows
 (`clampMark`) and Enter takes the marked row, the first until moved; on the rows, Up, Down, J and K move the focus
-(`moveThroughOptions`). The filter's placeholder is just "Filter", so it fits at 375 px (QA pass 5); `/` focuses it from anywhere, announced as its `aria-keyshortcuts`. The current pick is marked; closed rows show R's reasons; an open row carries no badge, since
+(`moveThroughOptions`). Ahead of those tiers comes the name the text spells exactly, spaces and punctuation aside,
+and a name that starts with it that way is a start: "chain shirt" puts Chainshirt first, then Chainshirt +1 (QA pass
+6); a name matches too when its letters hold the typed letters run together ("chainshirt" finds Chain Shirt). The filter's placeholder is just "Filter", so it fits at 375 px (QA pass 5); `/` focuses it from anywhere, announced as its `aria-keyshortcuts`. The current pick is marked; closed rows show R's reasons; an open row carries no badge, since
 a row you can tap is open. Closed rows are hidden until "Show N closed", which shows every one of them at once (QA
 pass 3; 201 closed feats render in about 35 ms in a production build). Names are S's
 bare names, qualified only when two in the same list share one (`shownName`, `pickLabels`, `bareNameOf`). A small set
@@ -106,6 +108,12 @@ bare names, qualified only when two in the same list share one (`shownName`, `pi
 filter from 13 rows up. An open parent's values
 are sorted by name, open before closed, and a level's archetype list starts with "No archetype", then the held
 archetype, then the rest by name.
+
+**Scores before level 1** (QA pass 6): the tiles, a dialog's header and compare's differences read
+`Planner.score`, which walks the Build with a placeholder first level (S's `firstLevelWith`) until it has one, so the
+race's bonuses show from the start instead of after the first class. **Another class…** in Modal first opens the
+class list in its own dialog ("Level N · another class"), beside "Continue as …"; closing it closes the list
+(`otherClass`).
 
 **Arrival waits for a held step** (QA pass 6): while a step is held open (a selection, such as the ability scores
 during their edits), the trail's next step doesn't arrive; it arrives when the hold ends. The first score edit used
@@ -484,6 +492,8 @@ dimmed and inert behind "Edit the Second Build".
   phone the full-screen dialog stops short of it (`--undo-bar-height`), so Undo stays in reach.
 - **`sheet.ts`**: `buildSheet`, the plain-text build sheet Export copies: the character line, the scores, the
   character's picks, one line per level with its class, archetype, picks and skills, one per Mythic rank, and the Gear.
+  Skills follow the skills step's order (`SKILL_ATTRIBUTE`) and Gear the places' (`PLACES`, worded by `placeWords`:
+  "Ring 1"), never the order the Build happens to hold them in, so a reloaded Build exports the same text (QA pass 6).
   A nested pick is one entry, as it is one chip on the trail: "Armor Focus (Light Armor Focus)" (`nestedParent`,
   `chipSlots` and `pickLabels` in `trail-state.ts`). `nestedLabel` names the value once: a value whose name already
   repeats its parent, in parentheses or after " — ", keeps only its own part ("Ascendant Element (Electricity)",

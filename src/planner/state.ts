@@ -1,7 +1,9 @@
 import { createMemo, createSignal } from 'solid-js';
 import type { Build } from '~engine/build';
+import type { Attribute } from '~engine/data';
 import type { Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
+import { firstLevelWith } from '~engine/pickers';
 import { walk } from '~engine/walk';
 
 import {
@@ -28,6 +30,12 @@ export function createPlanner(engine: Engine, initial: Build) {
   const build = () => state().present;
   const session = () => state().session;
   const walked = createMemo(() => walk(engine.data, build(), engine.G));
+  const scored = createMemo(() => {
+    const b = build();
+    return b.levels.length > 0 || b.race === undefined
+      ? walked()
+      : walk(engine.data, firstLevelWith(engine.data, b, b.race), engine.G);
+  });
 
   return {
     engine,
@@ -38,6 +46,7 @@ export function createPlanner(engine: Engine, initial: Build) {
     session,
     change: () => state().change,
     walked,
+    score: (a: Attribute) => scored().unit.permanent(a),
     pending: () => {
       const s = session();
       return s.kind === 'confirming' ? s.pending : undefined;

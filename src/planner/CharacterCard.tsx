@@ -242,7 +242,7 @@ export function StatTiles(props: StatTilesProps) {
     const race = data().blueprints.get(build().race ?? '');
     return race?.$type === 'BlueprintRace' && race.SelectableRaceStat;
   };
-  const value = (a: Attribute) => planner().walked().unit.permanent(a);
+  const value = (a: Attribute) => planner().score(a);
   const step = (a: Attribute, delta: number) => {
     const wanted = scores()[a] + delta;
     const next = toAbilityScores({ ...scores(), [a]: wanted });

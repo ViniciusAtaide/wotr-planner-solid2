@@ -337,7 +337,7 @@ function Workspace(props: WorkspaceProps) {
 
   const scoreDiffers = (s: Side) => (a: Attribute) => {
     const rival = planners[other(s)];
-    return forked() !== undefined && planners[s].walked().unit.permanent(a) !== rival.walked().unit.permanent(a);
+    return forked() !== undefined && planners[s].score(a) !== rival.score(a);
   };
   const diverge = createMemo(() => (forked() ? divergence([first.build(), second.build()]).divergeAt : undefined));
   const linkNotice = () => {
