@@ -509,6 +509,11 @@ dimmed and inert behind "Edit the Second Build".
 
 ## Design notes
 
+- Layout (QA pass 6): a Mythic rank that is due marks its stop "M" and the rank in the Mythic style, not the next level's
+  number. In a two-line windowed list a row's name has the first line to itself and its badges (Current, ▸, Synergy,
+  Won't stack) sit at the end of the second, beside the summary, so a long name isn't cut at 375 px; one-line lists
+  keep the badges beside the name. Gear's place chips fill as many columns of at least 9rem as their container holds
+  (`auto-fill`), so they fit the dialog's narrower column at 800 px, and a chip's name wraps instead of spilling.
 - `planner.css` styles the page phone first: the bar and menu, the trail's card, stops, chips, steps and folded
   rows, and the Undo line. Every value is a token from `tokens.css`; component looks stay in the design system's
   `components.css`. Every target is at least 44 px. A tile's controls (the score steppers and +2) fill their track (`width: 100%`, `min-width: 0`, `border-box`, the stepper pair a two-column `minmax(0, 1fr)` grid) and keep their 44 px height, so nothing spills past a tile however narrow its column; checked in the browser at 375, 768, 920 and 1280 px and with the grid squeezed to 80 px tiles. `planner-behind` wraps the page behind the overlay with
