@@ -29,7 +29,8 @@ import { EMPTY, openHash } from './link';
 import Planner, { RefusalNotice } from './Planner';
 import { buildSheet } from './sheet';
 import { createPlanner, type Planner as PlannerApi } from './state';
-import { ChoiceList, matchRank, ranked } from './ChoiceList';
+import { AlignmentWheel } from './CharacterCard';
+import { ChoiceList, Filter, matchRank, ranked } from './ChoiceList';
 import { PickerOption } from '../design';
 import { pageTitle } from './BuildName';
 import { isListStep } from './list-mode';
@@ -605,6 +606,93 @@ describe('the levelling trail (build ticket 07)', () => {
     expect(chipNamed('Archetype').textContent).toContain('Two-Handed Fighter');
     tap('Undo');
     expect(levelRows()).toBe(0);
+  });
+
+  const fieldRows = (label: string) =>
+    field(label).closest('.trail-choices, .trail-step')?.querySelectorAll('button.ww-option').length ?? 0;
+  const tapRow = (label: string, name: string) => {
+    const row = [
+      ...(field(label).closest('.trail-choices, .trail-step')?.querySelectorAll<HTMLElement>('button.ww-option') ?? []),
+    ].find((b) => b.querySelector('.ww-option__name')?.textContent === name);
+    if (row === undefined) throw new Error(`no ${name} in ${label}`);
+    row.focus();
+    fireEvent.click(row);
+    flush();
+  };
+
+  test('a tapped field pick closes its list, and the next field takes focus with only its own list open (QA pass 6)', async () => {
+    await openPlanner(cleaver);
+    showList();
+    fireEvent.input(activeFilter() ?? document.body, { target: { value: 'courtier' } });
+    flush();
+    tapRow('Background', 'Noble (Courtier)');
+    await waitFor(() => expect(targetField()).toBe('Deity'));
+    await waitFor(() => expect(field('Deity').closest('.trail-step')?.contains(document.activeElement)).toBe(true));
+    await new Promise((r) => setTimeout(r, 50));
+    flush();
+    expect(fieldRows('Background')).toBe(0);
+    expect(fieldRows('Deity')).toBeGreaterThan(0);
+  });
+
+  test('after an Undo the field that arrives again takes focus, and the other list closes (QA pass 6)', async () => {
+    await openPlanner(cleaver);
+    fieldTake('Background', 'courtier');
+    await waitFor(() => expect(field('Deity').closest('.trail-step')?.contains(document.activeElement)).toBe(true));
+    tap('Undo');
+    await waitFor(() => expect(targetField()).toBe('Background'));
+    await waitFor(() =>
+      expect(field('Background').closest('.trail-choices')?.contains(document.activeElement)).toBe(true),
+    );
+    await new Promise((r) => setTimeout(r, 50));
+    flush();
+    expect(fieldRows('Deity')).toBe(0);
+    expect(fieldRows('Background')).toBeGreaterThan(0);
+  });
+
+  test('an arrival is taken once: the arriving field and the wheel each report it handled (QA pass 6)', () => {
+    const fieldDone = vi.fn();
+    const wheelDone = vi.fn();
+    const api = apiOf(createPlanner(e, cleaver));
+    render(() => (
+      <>
+        <Filter
+          label="Filter deities by name"
+          value=""
+          onInput={() => {}}
+          onEnter={() => {}}
+          field={{
+            label: 'Deity',
+            value: undefined,
+            placeholder: 'Choose your deity',
+            target: true,
+            arrive: true,
+            onArrived: fieldDone,
+          }}
+        />
+        <AlignmentWheel trail={api} arrives onArrived={wheelDone} />
+      </>
+    ));
+    flush();
+    expect(fieldDone).toHaveBeenCalledTimes(1);
+    expect(wheelDone).toHaveBeenCalledTimes(1);
+  });
+
+  test('a race changed from the alignment step leaves the wheel without focus (QA pass 6)', async () => {
+    await openPlanner(undefined);
+    showList();
+    tap(/^Human$/);
+    tap(/^Done/);
+    await waitFor(() => expect(document.activeElement?.closest('.trail-alignment')).not.toBeNull());
+    const race = field('Race').querySelector<HTMLInputElement>('input');
+    race?.focus();
+    flush();
+    fireEvent.input(race ?? document.body, { target: { value: 'elf' } });
+    flush();
+    tapRow('Race', 'Elf · Basic');
+    await new Promise((r) => setTimeout(r, 50));
+    flush();
+    expect(fieldValue('Race')).toContain('Elf');
+    expect(document.activeElement?.closest('.trail-alignment')).toBeNull();
   });
 
   test('the background list holds each group with its variations', async () => {

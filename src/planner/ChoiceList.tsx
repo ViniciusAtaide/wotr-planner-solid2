@@ -104,6 +104,7 @@ export interface FieldMode {
   readonly placeholder: string;
   readonly target: boolean;
   readonly arrive: boolean;
+  readonly onArrived?: (() => void) | undefined;
 }
 
 export interface FilterProps {
@@ -125,19 +126,18 @@ export function Filter(props: FilterProps) {
     if (props.field === undefined && arrived()) focusFilter(input);
   });
   createEffect(
-    () => props.field?.arrive === true,
-    (due) => {
+    () => ({ due: props.field?.arrive === true, consume: props.field?.onArrived }),
+    ({ due, consume }) => {
       if (!due) return;
+      consume?.();
       props.onArrive?.();
       const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
       input?.scrollIntoView?.({ block: 'center', behavior: still ? 'auto' : 'smooth' });
       focusFilter(input);
       requestAnimationFrame(() => {
-        const now = document.activeElement;
-        if (now !== null && now !== document.body && now.isConnected) return;
-        input?.closest('.trail-choices, .trail-step')?.querySelector<HTMLElement>('button.ww-option')?.focus({
-          preventScroll: true,
-        });
+        const list = input?.closest<HTMLElement>('.trail-choices, .trail-step');
+        if (list === null || list === undefined || list.contains(document.activeElement)) return;
+        list.querySelector<HTMLElement>('button.ww-option')?.focus({ preventScroll: true });
       });
     },
   );
