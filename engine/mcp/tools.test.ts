@@ -356,6 +356,15 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(taken.build.picks).toContainEqual(expect.objectContaining({ slot: row.slot, feature: row.feature }));
   });
 
+  it('says which later pick an option would clear (QA pass 6)', async () => {
+    const jack = await encodeBuild(e.data, jackInTheGreen.build);
+    const slot = { place: { level: 1 }, selection: 'd6dd06f454b34014ab0903cb1ed2ade3', index: 0 };
+    const listed = ok(await options(e, { code: jack, slot, text: 'spell focus' }), 'options');
+    const evocation = listed.open.find((o) => JSON.stringify(o.param) === JSON.stringify({ SpellSchool: 'Evocation' }));
+    expect(evocation?.clears).toBe('Held at level 5; taking it here clears that pick.');
+    expect(listed.open.filter((o) => o.clears !== undefined)).toHaveLength(1);
+  });
+
   it("says a race's +2 is still to choose after a race change (QA pass 6)", async () => {
     const HUMAN = '0a5d473ead98b0646b94495af250fdc4';
     const GNOME = 'ef35a22c9a27da345a4528f0d5889157';

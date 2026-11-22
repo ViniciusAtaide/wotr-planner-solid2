@@ -2,6 +2,7 @@ export * from './areas';
 export * from './coverage';
 export * from './failure';
 export { PLACE_ITEM_TYPES } from './gear';
+export { isSelectionType } from './check';
 export * from './spellbooks';
 export * from './stats';
 export * from './unit';

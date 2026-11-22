@@ -1,6 +1,15 @@
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { abilityScores, placeKey, slotKey, type Build, type GearPlace, type Place, type SlotId } from '../build';
+import {
+  abilityScores,
+  placeKey,
+  slotKey,
+  withPick,
+  type Build,
+  type GearPlace,
+  type Place,
+  type SlotId,
+} from '../build';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import type { Blueprint } from '../data';
@@ -104,6 +113,28 @@ describe('S: the pickers', { timeout: 30_000 }, () => {
     expect(paused?.judge(pick?.feature as string, { SpellSchool: 'Universalist' })).toMatchObject({
       rule: 'BlueprintParametrizedFeature.CanSelect:Items',
     });
+  });
+
+  it('marks an option already picked later with the pick taking it here would clear, as the walk judges it (QA pass 6)', () => {
+    const SPELL_FOCUS = '16fa59cc9a72a6043b566b49184f53fe';
+    const SORCERER_BONUS = { place: { level: 1 }, selection: 'd6dd06f454b34014ab0903cb1ed2ade3', index: 0 };
+    const focus = picker(data, jackInTheGreen.build, SORCERER_BONUS, G)?.options.filter(
+      (o) => o.feature === SPELL_FOCUS,
+    );
+    const marked = focus?.filter((o) => o.clearsLater !== undefined) ?? [];
+    expect(marked.map((o) => o.param)).toEqual([{ SpellSchool: 'Evocation' }]);
+    expect(marked[0]?.clearsLater?.place).toEqual({ level: 5 });
+    for (const slot of [SORCERER_BONUS, { place: { level: 1 }, selection: BASIC, index: 0 }]) {
+      for (const o of picker(data, jackInTheGreen.build, slot, G)?.options ?? []) {
+        if (o.clearsLater === undefined) continue;
+        const taken = withPick(jackInTheGreen.build, { slot, feature: o.feature, ...(o.param && { param: o.param }) });
+        const later = slotKey(o.clearsLater);
+        expect(
+          walk(data, taken, G).failures.some((f) => f.slot !== undefined && slotKey(f.slot) === later),
+          `${o.feature} ${later}`,
+        ).toBe(true);
+      }
+    }
   });
 
   it('returns nothing for a slot the Build never opens', () => {

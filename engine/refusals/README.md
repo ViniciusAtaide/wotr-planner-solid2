@@ -22,6 +22,7 @@ Why the game refuses a choice, worded true for this Build (guide §4, GLOSSARY.m
 - `breaks(data, build, pick, G?)`: the later picks taking a pick would break.
 - `opensAt(data, build, slot, option, G?)`: the first later place where a closed option opens.
 
+- `clearsLaterText(place)`: the note on an option already picked later: "Held at level 11; taking it here clears that pick." (QA pass 6).
 - `groupedFailures(w, failures)` and `placesWords(places)`: failures with the same choice and the same words become one `FailureGroup` with all their places, so a class's alignment reason across nine levels reads once ("Levels 1–9: …"). `placesWords` writes runs of levels and ranks ("Levels 2 and 4–5; Rank 1"). The MCP's `breaks` and the planner's Cascade notice use them (QA pass 6).
 - `refusalWords(w, failed)`: the rule's sentence followed by its unmet needs, on one line. The planner's notice and the MCP's breakage words use it, so a refused class says which prerequisites fail.
 

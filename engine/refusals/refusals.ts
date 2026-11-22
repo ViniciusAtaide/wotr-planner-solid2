@@ -92,6 +92,11 @@ export function placesWords(places: readonly Place[]): string {
   return [...one(levels, 'Level', 'Levels'), ...one(ranks, 'Rank', 'Ranks')].join('; ');
 }
 
+export function clearsLaterText(place: Place): string {
+  const where = 'level' in place ? `level ${place.level}` : `Mythic rank ${place.rank}`;
+  return `Held at ${where}; taking it here clears that pick.`;
+}
+
 export function rankLevelRange(found: unknown): string {
   return `A Rank level is a whole number from 1 to ${MAX_BYTE}, not ${JSON.stringify(found)}.`;
 }

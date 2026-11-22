@@ -33,6 +33,7 @@ import { gearClashes, picker, raceStatPending, type OptionStatus } from '../pick
 import {
   abilityScoreRange,
   archetypeCount,
+  clearsLaterText,
   gearNote,
   groupedFailures,
   nameOf,
@@ -313,6 +314,7 @@ export interface OptionView {
   readonly shares?: readonly string[];
   readonly wontStack?: readonly string[];
   readonly gear?: string;
+  readonly clears?: string;
   readonly refusal?: Refusal;
 }
 
@@ -368,6 +370,7 @@ export async function options(
     ...(o.synergy &&
       o.synergy.wontStack.length > 0 && { wontStack: o.synergy.wontStack.map((c) => stackWords(e.data, c)) }),
     ...(o.gearItems && { gear: gearNote(e.data, o.gearItems) }),
+    ...(o.clearsLater && { clears: clearsLaterText(o.clearsLater.place) }),
     ...(o.closed && { refusal: refusal({ data: e.data, G: e.G, unit }, o.closed) }),
   });
   const openOnes = listed.filter((o) => o.closed === undefined);

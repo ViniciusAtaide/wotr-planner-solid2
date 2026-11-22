@@ -3,7 +3,15 @@ import type { CheckedData } from '../load';
 import { refGuid, type Blueprint, type BlueprintParametrizedFeature, type Guid, type SpellSchool } from '../data';
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
 import type { FailedRule, Unit } from '../walk';
-import { SKILL_ATTRIBUTE, pauseAt, walk, type OpenedSlot, type PausedWalk, WEAPON_CATEGORIES } from '../walk';
+import {
+  SKILL_ATTRIBUTE,
+  isSelectionType,
+  pauseAt,
+  walk,
+  type OpenedSlot,
+  type PausedWalk,
+  WEAPON_CATEGORIES,
+} from '../walk';
 import { heldIndex, synergyOf, type HeldIndex, type Synergy } from '../links';
 import { namesInList } from './option-names';
 
@@ -16,6 +24,7 @@ export interface OptionStatus {
   readonly name?: string;
   readonly qualifier?: string;
   readonly synergy?: Synergy;
+  readonly clearsLater?: SlotId;
 }
 
 export interface Picker {
@@ -80,7 +89,46 @@ export function picker(
   if (paused === undefined) return undefined;
   const held = heldIndex(data, [...paused.unit.facts()]);
   const options = candidates(data, slot.selection).map((o) => status(data, paused, o));
-  return { slot: paused.slot, options: withSynergy(data, held, withListNames(data, options)), unit: paused.unit };
+  const marked = withClearsLater(data, build, slot, options, G);
+  return { slot: paused.slot, options: withSynergy(data, held, withListNames(data, marked)), unit: paused.unit };
+}
+
+const sameParam = (a: GrantParam | undefined, b: GrantParam | undefined) => JSON.stringify(a) === JSON.stringify(b);
+
+function withClearsLater(
+  data: CheckedData,
+  build: Build,
+  slot: SlotId,
+  options: readonly OptionStatus[],
+  G: GrantIndex,
+): OptionStatus[] {
+  const here = slotKey(slot);
+  if (!build.picks.some((p) => slotKey(p.slot) !== here)) return [...options];
+  const order = new Map(walk(data, build, G).slots.map((s, i) => [slotKey(s.id), i] as const));
+  const at = order.get(here) ?? -1;
+  const ordered = build.picks
+    .filter((p) => slotKey(p.slot) !== here && order.has(slotKey(p.slot)))
+    .sort((a, b) => order.get(slotKey(a.slot))! - order.get(slotKey(b.slot))!);
+  return options.map((o) => {
+    if (o.closed !== undefined || !o.shown) return o;
+    const bp = data.blueprints.get(o.feature);
+    if (bp === undefined || !('Ranks' in bp)) return o;
+    const parametrized = bp.$type === 'BlueprintParametrizedFeature';
+    if (!parametrized && isSelectionType(bp.$type)) return o;
+    const same = ordered.filter((p) => p.feature === o.feature && sameParam(p.param, o.param));
+    const limit = parametrized ? 1 : bp.Ranks;
+    let held = 1;
+    for (const p of same) {
+      const later = order.get(slotKey(p.slot))! > at;
+      if (!later) {
+        held++;
+        continue;
+      }
+      if (held >= limit) return { ...o, clearsLater: p.slot };
+      held++;
+    }
+    return o;
+  });
 }
 
 function withSynergy(data: CheckedData, held: HeldIndex, options: readonly OptionStatus[]): OptionStatus[] {
