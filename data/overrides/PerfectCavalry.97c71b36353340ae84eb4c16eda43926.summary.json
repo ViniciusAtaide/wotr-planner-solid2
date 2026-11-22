@@ -3,5 +3,5 @@
   "fingerprint": "741638a5",
   "reason": "Its rule is BuffExtraEffects on MountedBuff applying PerfectCavalryBuff (the DisengageWithoutAttackOfOpportunity mechanics feature, read in Controllers/Combat/UnitCombatState.cs AttackOfOpportunity, plus AddFactsToPet), which data/ doesn't keep.",
   "target": "97c71b36353340ae84eb4c16eda43926",
-  "text": "While mounted, neither it nor its mount provokes attacks of opportunity by moving away from enemies."
+  "text": "While mounted, neither you nor your mount provokes attacks of opportunity by moving away."
 }

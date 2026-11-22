@@ -3,5 +3,5 @@
   "fingerprint": "51b410dc",
   "reason": "Its rule is the AlwaysChance mechanics feature, read in RuleSystem/Rules/RuleAttackRoll.cs IsSuccessRoll and RuleSystem/Rules/RuleCombatManeuver.cs GetResultFromRoll, which data/ doesn't keep.",
   "target": "d57301613ad6a5140b2fdac40fa368e3",
-  "text": "A natural 1 on an attack roll doesn't automatically miss: the attack still hits if the total reaches the target's AC. A natural 1 on a combat maneuver isn't a critical failure."
+  "text": "A natural 1 on an attack roll isn't an automatic miss; the attack hits if the total reaches the target's AC."
 }

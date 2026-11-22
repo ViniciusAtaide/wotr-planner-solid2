@@ -3,5 +3,5 @@
   "fingerprint": "741638a5",
   "reason": "Its rule is IgnoreSpellImmunity for the Poison and Disease descriptors (UnitLogic/FactLogic/IgnoreSpellImmunity.cs OnTurnOn, UnitPartSpellResistance.IgnoreImmunity), which data/ doesn't keep.",
   "target": "55c364c3f02e4fdc8a63125b5a4c256c",
-  "text": "Its poison and disease effects ignore creatures' immunity to poison and disease."
+  "text": "Your poison and disease effects ignore immunity to poison and disease."
 }

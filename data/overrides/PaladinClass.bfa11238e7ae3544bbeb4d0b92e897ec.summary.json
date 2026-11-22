@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "71cdbe04",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "bfa11238e7ae3544bbeb4d0b92e897ec",
-  "text": "Smite evil, lay on hands, mercies and auras, with prepared divine spells up to 4th level from Charisma, from 4th level on. Hit Die d10, 2 + Intelligence modifier skill points a level, full base attack bonus, good Fortitude and Will saves."
+  "text": "Prepared divine spells up to 4th level (Charisma), from class level 4. Hit Die d10, 2 + Int skill points a level, full BAB, good Fortitude and Will saves."
 }

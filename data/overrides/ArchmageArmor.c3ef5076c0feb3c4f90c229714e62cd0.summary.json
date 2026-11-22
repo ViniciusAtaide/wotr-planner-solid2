@@ -3,5 +3,5 @@
   "fingerprint": "741638a5",
   "reason": "Its rule is an AddAbilityUseTrigger on MageArmor (UnitLogic/FactLogic/AddAbilityUseTrigger.cs RunAction) applying MageArmorBuffMythic, whose BonusValue ContextRankConfig (ContextRankConfig.cs ApplyProgression) gives mythic rank + 4, which data/ doesn't keep.",
   "target": "c3ef5076c0feb3c4f90c229714e62cd0",
-  "text": "Casting Mage Armor (not from an item) gives it an armor bonus to AC of 4 + its mythic rank for the spell's duration, in place of the plain Mage Armor bonus."
+  "text": "Mage Armor you cast on yourself (not from an item) gives an armor bonus of 4 + your mythic rank instead of +4."
 }

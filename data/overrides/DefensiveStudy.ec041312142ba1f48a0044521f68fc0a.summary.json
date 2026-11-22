@@ -3,5 +3,5 @@
   "fingerprint": "648ecda1",
   "reason": "Its effect lives in SlayerStudyTargetBuff's AddFactContextActions, which applies SlayerStudyTargetDefensiveStudyBuff (ACBonusAgainstTarget ranked by SlayerStudyTargetFeature), not on the feature.",
   "target": "ec041312142ba1f48a0044521f68fc0a",
-  "text": "Against its studied target it gets a bonus to AC equal to its studied target bonus."
+  "text": "Against your studied target, you get an AC bonus equal to your studied target bonus."
 }

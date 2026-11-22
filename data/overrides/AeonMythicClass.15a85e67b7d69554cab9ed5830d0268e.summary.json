@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "7014c676",
-  "reason": "A class has no labelled components; its summary is the role its progression gives, which the generated text cannot say.",
+  "reason": "A Mythic class has no labelled components; this states what its progression and prerequisites can't (its spellbook, its entry rank from PrerequisiteMythicLevel). Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "15a85e67b7d69554cab9ed5830d0268e",
-  "text": "Mythic path of cosmic order: enforcing gazes, Aeon's bane and Aeon's immunities, with its own spontaneous spells."
+  "text": "Mythic path with its own spellbook, spells up to 7th level."
 }

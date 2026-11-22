@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "ced9d769",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "d5917881586ff1d4d96d5b7cebda9464",
-  "text": "A prestige class. Defensive stance and defensive powers, with AC bonuses, uncanny dodge and damage reduction. Hit Die d12, 2 + Intelligence modifier skill points a level, full base attack bonus, good Fortitude and Will saves."
+  "text": "Prestige class. Hit Die d12, 2 + Int skill points a level, full BAB, good Fortitude and Will saves."
 }

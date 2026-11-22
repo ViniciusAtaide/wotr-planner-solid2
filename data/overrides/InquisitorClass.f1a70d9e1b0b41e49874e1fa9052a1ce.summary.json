@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "1250e975",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "f1a70d9e1b0b41e49874e1fa9052a1ce",
-  "text": "Judgments, bane and teamwork feats, with spontaneous divine spells up to 6th level from Wisdom. Hit Die d8, 4 + Intelligence modifier skill points a level, medium base attack bonus (3/4 of the level), good Fortitude and Will saves."
+  "text": "Spontaneous divine spells up to 6th level (Wisdom). Hit Die d8, 4 + Int skill points a level, 3/4 BAB, good Fortitude and Will saves."
 }

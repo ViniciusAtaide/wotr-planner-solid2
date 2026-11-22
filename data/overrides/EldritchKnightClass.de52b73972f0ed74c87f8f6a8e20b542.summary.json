@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "257665ad",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "de52b73972f0ed74c87f8f6a8e20b542",
-  "text": "A prestige class. Bonus combat feats, and nine of its ten levels advance an arcane spellcasting class. Hit Die d10, 2 + Intelligence modifier skill points a level, full base attack bonus, good Fortitude save."
+  "text": "Prestige class. Levels 2-10 add a level of spells per day to an earlier arcane spellcasting class. Hit Die d10, 2 + Int skill points a level, full BAB, good Fortitude save."
 }

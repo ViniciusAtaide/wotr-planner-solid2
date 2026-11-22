@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "741638a5",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components, and this one is never a player pick, which no label can say.",
   "target": "8a3c86893f383214da070e9c84c1e95b",
-  "text": "A creature class: monstrous humanoids level in it. A player character never takes it. Hit Die d10, 4 + Intelligence modifier skill points a level, full base attack bonus, good Reflex and Will saves."
+  "text": "A creature class for monsters; player characters never take it."
 }

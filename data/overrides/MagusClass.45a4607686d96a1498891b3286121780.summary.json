@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "e05e4961",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "45a4607686d96a1498891b3286121780",
-  "text": "Spell combat and spellstrike mix weapon and spell, with an arcane pool for weapon enhancement and arcana; prepared arcane spells up to 6th level from Intelligence. Hit Die d8, 2 + Intelligence modifier skill points a level, medium base attack bonus (3/4 of the level), good Fortitude and Will saves."
+  "text": "Prepared arcane spells up to 6th level (Intelligence). Hit Die d8, 2 + Int skill points a level, 3/4 BAB, good Fortitude and Will saves."
 }

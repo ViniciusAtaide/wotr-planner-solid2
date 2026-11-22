@@ -3,5 +3,5 @@
   "fingerprint": "741638a5",
   "reason": "Its rule is an AddInitiatorAttackWithWeaponTrigger on a miss casting ThunderingBlowsAbility (Div2PlusStep MythicLevel ContextRankConfig) behind ThunderingBlowsCDBuff, which data/ doesn't keep.",
   "target": "8081c981b95ad9f49a421e7345c8c6f6",
-  "text": "Once per round, when a melee attack misses, it deals (half its mythic rank + 2)d6 sonic damage to every enemy within 10 feet of it."
+  "text": "Once per round, a melee miss deals (2 + half your mythic rank)d6 sonic damage to every enemy within 10 feet of you."
 }

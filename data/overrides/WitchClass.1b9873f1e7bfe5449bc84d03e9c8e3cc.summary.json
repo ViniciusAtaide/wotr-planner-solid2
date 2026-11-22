@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "d2467156",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "1b9873f1e7bfe5449bc84d03e9c8e3cc",
-  "text": "A familiar that holds its spells, and hexes, with prepared arcane spells up to 9th level from Intelligence. Hit Die d6, 2 + Intelligence modifier skill points a level, low base attack bonus (half the level), good Will save."
+  "text": "Prepared arcane spells up to 9th level (Intelligence). Hit Die d6, 2 + Int skill points a level, 1/2 BAB, good Will save."
 }

@@ -3,5 +3,5 @@
   "fingerprint": "741638a5",
   "reason": "Each option is an AscendantElement component (Designers/Mechanics/Facts/AscendantElement.cs OnEventAboutToTrigger), which data/ doesn't keep.",
   "target": "535d4e5d8a5664f4797560c280941782",
-  "text": "Pick an energy type (acid, cold, electricity, fire, negative energy or sonic): its damage of that type ignores resistance and immunity."
+  "text": "Pick an energy (acid, cold, electricity, fire, negative or sonic): your damage of that type ignores resistance and immunity."
 }

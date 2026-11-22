@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "704aa42c",
-  "reason": "A class has no labelled components; its summary is the role its progression gives, which the generated text cannot say.",
+  "reason": "A Mythic class has no labelled components; this states what its progression and prerequisites can't (its spellbook, its entry rank from PrerequisiteMythicLevel). Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "daf1235b6217787499c14e4e32142523",
-  "text": "A second Mythic path the story opens later: a gold dragon form, breath, dragon feats and perfect body, mind and soul, with its own spells."
+  "text": "Late Mythic path, begun at Mythic rank 8 in place of the earlier path."
 }

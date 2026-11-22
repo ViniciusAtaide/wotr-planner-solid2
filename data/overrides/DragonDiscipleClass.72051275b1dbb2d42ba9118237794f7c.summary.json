@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "2fb6b1a2",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "72051275b1dbb2d42ba9118237794f7c",
-  "text": "A prestige class. Draconic growth: natural armor, claws and bite, a breath weapon, ability score bonuses and wings. Seven of its ten levels advance an arcane spellcasting class. Hit Die d12, 2 + Intelligence modifier skill points a level, medium base attack bonus (3/4 of the level), good Fortitude and Will saves."
+  "text": "Prestige class. Levels 2-4, 6-8 and 10 add a level of spells per day to an earlier arcane spellcasting class. Hit Die d12, 2 + Int skill points a level, 3/4 BAB, good Fortitude and Will saves."
 }

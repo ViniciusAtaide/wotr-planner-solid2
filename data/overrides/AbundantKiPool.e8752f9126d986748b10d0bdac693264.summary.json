@@ -3,5 +3,5 @@
   "fingerprint": "14210094",
   "reason": "Its rule is IncreaseResourceAmountBySharedValue on KiPowerResource, ScaledFistPowerResource and DrunkenKiPowerResource scaled by a MythicLevel ContextRankConfig (UnitLogic/FactLogic/IncreaseResourceAmountBySharedValue.cs CalculateMaxResourceAmount), which data/ doesn't keep.",
   "target": "e8752f9126d986748b10d0bdac693264",
-  "text": "+1 ki point per mythic rank (also for the scaled fist and drunken master ki pools)."
+  "text": "+1 ki point per mythic rank (also the Scaled Fist and Drunken Master pools)."
 }

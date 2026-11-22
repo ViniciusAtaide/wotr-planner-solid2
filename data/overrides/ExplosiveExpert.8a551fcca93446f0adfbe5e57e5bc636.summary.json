@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "45a5878d",
-  "reason": "Its rule is an AddAbilityUseTrigger on the Bomb descriptor with a ContextActionRandomize over ContextRestoreResource (UnitLogic/Mechanics/Actions/ContextRestoreResource.cs RunAction) on AlchemistBombsResource, which data/ doesn't keep.",
+  "reason": "Its rule is an AddAbilityUseTrigger on the Bomb descriptor with a ContextActionRandomize over ContextRestoreResource (UnitLogic/Mechanics/Actions/ContextRestoreResource.cs RunAction) on AlchemistBombsResource, which data/ doesn't keep. The +1d6 is the extra rank of AlchemistBombsFeature it grants (AddCalculatedWeapon ScaleDamageByRank).",
   "target": "8a551fcca93446f0adfbe5e57e5bc636",
-  "text": "Each time it throws a bomb, there is a 50% chance the use comes back."
+  "text": "+1d6 bomb damage, and each bomb you throw has a 50% chance to give its use back."
 }

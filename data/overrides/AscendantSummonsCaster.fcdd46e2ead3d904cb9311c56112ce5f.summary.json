@@ -3,5 +3,5 @@
   "fingerprint": "741638a5",
   "reason": "Its rule is OnSpawnBuff (Designers/Mechanics/Facts/OnSpawnBuff.cs OnEventDidTrigger) applying AscendantSummonsBuff (AddContextStatBonus, AddOutgoingPhysicalDamageProperty), which data/ doesn't keep.",
   "target": "fcdd46e2ead3d904cb9311c56112ce5f",
-  "text": "Creatures it summons get +(half its mythic rank + 1) to Strength, Dexterity, Constitution, Wisdom and Charisma, and their attacks overcome all damage reduction."
+  "text": "Your summoned creatures get +(half your mythic rank + 1) to Strength, Dexterity, Constitution, Wisdom and Charisma, and their attacks overcome all damage reduction except DR/—."
 }

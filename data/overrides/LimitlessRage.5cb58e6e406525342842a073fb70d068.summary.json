@@ -3,5 +3,5 @@
   "fingerprint": "976dec62",
   "reason": "It has no component; the rage abilities' ActivatableAbilityResourceLogic (m_FreeBlueprint), the forms' AbilityResourceLogic (ResourceCostDecreasingFacts) and the rage buffs' TemporaryHitPointsPerLevel (Designers/Mechanics/Buffs/TemporaryHitPointsPerLevel.cs OnActivate) check for it.",
   "target": "5cb58e6e406525342842a073fb70d068",
-  "text": "Rage, focused rage, bloodrager rage and elemental rampage cost no rounds, and bloodrager elemental forms and the rageshaper's devastating form cost 1 use less. While raging it also gains temporary HP equal to half its remaining rage rounds."
+  "text": "Rage, focused rage, bloodrage and elemental rampage cost no rounds; bloodrager elemental forms and the Rageshaper's devastating form cost 1 use less. Raging also adds temporary hit points equal to half your remaining rage rounds."
 }

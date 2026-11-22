@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "b839cb50",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "52dbfd8505e22f84fad8d702611f60b7",
-  "text": "Prepares a few arcane spells each day and casts them freely from its slots, with an arcane reservoir and exploits. Spells up to 9th level from Intelligence. Hit Die d6, 2 + Intelligence modifier skill points a level, low base attack bonus (half the level), good Will save."
+  "text": "Arcane spells up to 9th level (Intelligence), prepared, then cast in any combination. Hit Die d6, 2 + Int skill points a level, 1/2 BAB, good Will save."
 }

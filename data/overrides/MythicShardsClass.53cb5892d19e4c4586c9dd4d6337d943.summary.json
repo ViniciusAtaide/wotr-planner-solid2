@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "0be59667",
-  "reason": "A class has no labelled components; its summary is the role its progression gives, which the generated text cannot say.",
+  "reason": "A Mythic class has no labelled components; this states what its progression and prerequisites can't (its spellbook, its entry rank from PrerequisiteMythicLevel). Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "53cb5892d19e4c4586c9dd4d6337d943",
-  "text": "Ranks of shard boons that each come with a curse."
+  "text": "Ranks of shard boons, each paired with a curse."
 }

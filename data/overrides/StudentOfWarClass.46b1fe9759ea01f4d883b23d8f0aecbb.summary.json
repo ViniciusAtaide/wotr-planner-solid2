@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "aee953d2",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "46b1fe9759ea01f4d883b23d8f0aecbb",
-  "text": "A prestige class. Know your enemy, bonus combat feats, Intelligence to AC (mind over metal) and martial stances. Hit Die d10, 4 + Intelligence modifier skill points a level, full base attack bonus, good Will save."
+  "text": "Prestige class. Hit Die d10, 4 + Int skill points a level, full BAB, good Will save."
 }

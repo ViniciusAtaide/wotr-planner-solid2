@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "1bf203fb",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "30b5e47d47a0e37438cc5a80c96cfb99",
-  "text": "Blessings, fervor, a sacred weapon and sacred armor, and bonus combat feats, with prepared divine spells up to 6th level from Wisdom. Hit Die d8, 2 + Intelligence modifier skill points a level, medium base attack bonus (3/4 of the level), good Fortitude and Will saves."
+  "text": "Prepared divine spells up to 6th level (Wisdom). Hit Die d8, 2 + Int skill points a level, 3/4 BAB, good Fortitude and Will saves."
 }

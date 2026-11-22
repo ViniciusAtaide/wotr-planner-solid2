@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "b839cb50",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "299aa766dee3cbf4790da4efb8c72484",
-  "text": "Sneak attack, rogue talents, trapfinding and evasion, with the most skill points of any class. Hit Die d8, 5 + Intelligence modifier skill points a level, medium base attack bonus (3/4 of the level), good Reflex save."
+  "text": "Hit Die d8, 5 + Int skill points a level, 3/4 BAB, good Reflex save."
 }

@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "b839cb50",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "48ac8db94d5de7645906c7d0ad3bcfbd",
-  "text": "Bonus combat feats at 1st level and every even level, with armor training and weapon training. Hit Die d10, 2 + Intelligence modifier skill points a level, full base attack bonus, good Fortitude save."
+  "text": "Hit Die d10, 2 + Int skill points a level, full BAB, good Fortitude save."
 }

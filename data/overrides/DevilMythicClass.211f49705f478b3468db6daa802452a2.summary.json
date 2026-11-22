@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "cf61d2db",
-  "reason": "A class has no labelled components; its summary is the role its progression gives, which the generated text cannot say.",
+  "reason": "A Mythic class has no labelled components; this states what its progression and prerequisites can't (its spellbook, its entry rank from PrerequisiteMythicLevel). Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "211f49705f478b3468db6daa802452a2",
-  "text": "A second Mythic path the story opens later: Hell's decree, dominance and rule, wings, and Mythic abilities and feats."
+  "text": "Late Mythic path, begun at Mythic rank 8 in place of the earlier path."
 }

@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "9159e154",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "ed246f1680e667b47b7427d51e651059",
-  "text": "A prestige class. A lawful armored warrior of an order: smite chaos, armor training, force of will and Hellknight disciplines. Hit Die d10, 2 + Intelligence modifier skill points a level, full base attack bonus, good Fortitude save."
+  "text": "Prestige class. Hit Die d10, 2 + Int skill points a level, full BAB, good Fortitude save."
 }

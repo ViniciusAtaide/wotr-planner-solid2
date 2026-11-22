@@ -3,5 +3,5 @@
   "fingerprint": "064ff96a",
   "reason": "It is a BlueprintFeatureSelection with IgnorePrerequisites over the *DomainProgressionSecondary options, which the generated summary doesn't describe.",
   "target": "213a8480d22206b45acbfa0619ca5aaf",
-  "text": "Pick an additional cleric domain, ignoring the domain's usual requirements."
+  "text": "Pick another domain, ignoring its usual requirements."
 }

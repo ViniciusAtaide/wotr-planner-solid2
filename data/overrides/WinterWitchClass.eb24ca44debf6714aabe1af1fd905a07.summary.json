@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "c7291be3",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "eb24ca44debf6714aabe1af1fd905a07",
-  "text": "A prestige class. Every level advances an arcane spellcasting class, with cold specialization and cold-based powers. Hit Die d6, 2 + Intelligence modifier skill points a level, low base attack bonus (half the level), good Will save."
+  "text": "Prestige class. Every level adds a level of spells per day to an earlier arcane spellcasting class. Hit Die d6, 2 + Int skill points a level, 1/2 BAB, good Will save."
 }

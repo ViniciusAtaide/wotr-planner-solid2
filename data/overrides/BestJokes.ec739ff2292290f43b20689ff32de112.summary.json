@@ -3,5 +3,5 @@
   "fingerprint": "741638a5",
   "reason": "Its effect lives in HideousLaughter's AbilityEffectRunAction (a ContextConditionCasterHasFact check on Best Jokes, then ContextActionOnRandomTargetsAround), not on the feature, which has no component.",
   "target": "ec739ff2292290f43b20689ff32de112",
-  "text": "When a target fails its save against its Hideous Laughter, the spell is cast again on one random enemy within 30 feet of that target that isn't already laughing."
+  "text": "When an enemy fails its save against your Hideous Laughter, the spell is cast again on a random enemy within 30 feet of it that isn't already laughing."
 }

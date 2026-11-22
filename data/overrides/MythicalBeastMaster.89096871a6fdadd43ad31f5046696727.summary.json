@@ -3,5 +3,5 @@
   "fingerprint": "c491b98d",
   "reason": "Its rule is AddFeatureToPet granting MythicalBeastPet (AddContextStatBonus on MasterMythicLevel, AddOutgoingPhysicalDamageProperty), which data/ doesn't keep.",
   "target": "89096871a6fdadd43ad31f5046696727",
-  "text": "Its animal companion gets +(half its mythic rank + 1) to Strength, Dexterity and Constitution, and the companion's attacks overcome all damage reduction."
+  "text": "Your animal companion gets +(half your mythic rank + 1) to Strength, Dexterity and Constitution, and its attacks overcome all damage reduction except DR/—."
 }

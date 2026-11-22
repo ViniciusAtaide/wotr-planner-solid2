@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "95648f81",
-  "reason": "Its rule is the MasterShapeshifter mechanics feature, read in UnitLogic/Buffs/Polymorph.cs and PolymorphBonuses.cs OnActivate, plus the wild shapes' AbilityResourceLogic ResourceCostDecreasingFacts, which data/ doesn't keep.",
+  "reason": "Its rule is the MasterShapeshifter mechanics feature, read in UnitLogic/Buffs/Polymorph.cs and PolymorphBonuses.cs OnActivate, plus the wild shapes' AbilityResourceLogic ResourceCostDecreasingFacts, which data/ doesn't keep; wild shape abilities list it in ResourceCostDecreasingFacts against a cost of 1, so they cost nothing.",
   "target": "934670ef88b281b4da5596db8b00df2f",
-  "text": "Its polymorph effects also give +4 Strength, Dexterity and Constitution, and its wild shapes cost 1 use less."
+  "text": "Polymorph effects on you also give +4 Strength, Dexterity and Constitution, and your wild shapes cost no uses."
 }

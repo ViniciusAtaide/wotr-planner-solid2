@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "b839cb50",
-  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "b3a505fb61437dc4097f43c3f8f9a4cf",
-  "text": "A bloodline that grants powers, bonus spells and bonus feats, with spontaneous arcane spells up to 9th level from Charisma. Hit Die d6, 2 + Intelligence modifier skill points a level, low base attack bonus (half the level), good Will save."
+  "text": "Spontaneous arcane spells up to 9th level (Charisma). Hit Die d6, 2 + Int skill points a level, 1/2 BAB, good Will save."
 }
