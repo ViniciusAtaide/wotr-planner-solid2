@@ -4,7 +4,7 @@ import { classPicker } from '~engine/pickers';
 import type { FailedRule } from '~engine/walk';
 import { allows, cascade, type Breaks, type Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
-import { bareNameOf, nameOf, namesIn, refusal, refusalWords } from '~engine/refusals';
+import { bareNameOf, groupedFailures, nameOf, namesIn, placesWords, refusal } from '~engine/refusals';
 import { walk } from '~engine/walk';
 
 export type NonEmpty<T> = readonly [T, ...T[]];
@@ -98,7 +98,9 @@ export function brokenWords(engine: Engine, build: Build, b: Breaks): string[] {
     b.picks.map((p) => p.feature),
   );
   return [
-    ...b.others.map((f) => `${placeWords(f.place)}: ${refusalWords({ data: engine.data, G: engine.G, unit }, f)}`),
+    ...groupedFailures({ data: engine.data, G: engine.G, unit }, b.others).map(
+      (g) => `${placesWords(g.places)}: ${g.text}`,
+    ),
     ...b.picks.map((p) => `${names.get(p.feature) ?? nameOf(engine.data, p.feature)} (${placeWords(p.slot.place)})`),
   ];
 }
