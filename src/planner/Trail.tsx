@@ -394,6 +394,14 @@ export default function Trail(props: TrailProps) {
   });
   const [arriving, setArriving] = createSignal<string | undefined>(undefined);
   const arrivalDone = () => setArriving(undefined);
+  const nextRank = () => {
+    const s = step();
+    return s.kind === 'mythic' ? s.rank : undefined;
+  };
+  const nextMark = () => {
+    const rank = nextRank();
+    return rank === undefined ? String(build().levels.length + 1) : `M${rank}`;
+  };
   const fieldKey = (st: Step) =>
     st.kind === 'race' || st.kind === 'alignment' || (st.kind === 'slot' && isCharacterSlot(view(), st.slot))
       ? stepKey(st)
@@ -558,8 +566,13 @@ export default function Trail(props: TrailProps) {
             )}
           </For>
           <Show when={where().kind === 'next'}>
-            <li class="trail-stop trail-stop--here trail-stop--next">
-              <span class="trail-stop__mark">{build().levels.length + 1}</span>
+            <li
+              class={[
+                'trail-stop trail-stop--here trail-stop--next',
+                { 'trail-stop--mythic': nextRank() !== undefined },
+              ]}
+            >
+              <span class="trail-stop__mark">{nextMark()}</span>
               <div class="trail-stop__body">{here()}</div>
             </li>
           </Show>

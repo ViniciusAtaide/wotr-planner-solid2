@@ -10,14 +10,15 @@ import { readDataDir } from '~engine/data-dir';
 import type { BlueprintCharacterClass } from '~engine/data';
 import { jackInTheGreen } from '~engine/gold';
 import {
+  type Changed,
   engineOf,
+  expectedLevel,
   level_up,
   options,
+  type OptionView,
   pick,
   set_start,
   start_build,
-  type Changed,
-  type OptionView,
   type ToolRefusal,
 } from '~engine/mcp';
 import { picker, type OptionStatus } from '~engine/pickers';
@@ -734,6 +735,45 @@ describe('the levelling trail (build ticket 07)', () => {
       expect(levels.at(-1)).toBe('20');
     },
   );
+
+  test('a Mythic rank that is due marks its stop M and the rank, not the next level (QA pass 6)', () => {
+    const at = expectedLevel(e.data, 1);
+    const levelled = everyChoiceMade({ ...cleaver, levels: Array.from({ length: at }, () => ({ class: fighter })) });
+    const points = createPlanner(e, levelled).walked().attributePoints;
+    const raised: Build = {
+      ...levelled,
+      levels: levelled.levels.map((l, i) => ((points[i] ?? 0) > 0 ? { ...l, increase: 'Strength' as const } : l)),
+    };
+    render(() => (
+      <Trail
+        planner={createPlanner(e, raised)}
+        state={{ ...TRAIL_START, skillsLeft: new Set(Array.from({ length: at }, (_, i) => i + 1)) }}
+        send={() => {}}
+        selection={undefined}
+        select={() => {}}
+        phone={false}
+      />
+    ));
+    flush();
+    const next = document.querySelector('.trail-stop--next');
+    expect(next?.querySelector('.trail-here__title')?.textContent).toBe('Ascend to Mythic rank 1');
+    expect(next?.querySelector('.trail-stop__mark')?.textContent).toBe('M1');
+    expect(next?.classList.contains('trail-stop--mythic')).toBe(true);
+  });
+
+  test('two-line rows give the name its own line, with the badges beside the summary (QA pass 6)', () => {
+    const css = readFileSync(join(process.cwd(), 'src/planner/planner.css'), 'utf8');
+    const rule = (selector: string) => {
+      const at = css.indexOf(`${selector} {`);
+      expect(at).toBeGreaterThanOrEqual(0);
+      return css.slice(at, css.indexOf('}', at));
+    };
+    const row = '.trail-scroll--two-line .trail-window-row--fixed';
+    expect(rule(`${row} .ww-option`)).toMatch(/'name name'\s*'meta badges'/);
+    expect(rule(`${row} .ww-option__badges`)).toContain('grid-area: badges');
+    expect(rule('.trail-places')).toContain('repeat(auto-fill, minmax(min(100%, 9rem), 1fr))');
+    expect(rule('.trail-places .trail-chip')).toContain('overflow-wrap: anywhere');
+  });
 
   test('a Build whose scores are set opens past them', async () => {
     await openPlanner({ scores: abilityScores(SCORES), race: DWARF, alignment: 'TrueNeutral', levels: [], picks: [] });
