@@ -24,6 +24,7 @@ import { nameOf } from '~engine/refusals';
 
 import {
   brokenWords,
+  clearsList,
   clearsSummary,
   OPENED_A_LINK,
   outcomeOf,
@@ -353,6 +354,20 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
     );
     expect(clears(0, [3], [])).toBe("This breaks the skill ranks of level 3. It'll be cleared, not moved.");
     expect(clears(0, [], [9])).toBe("This breaks Mythic rank 9. It'll be cleared, not moved.");
+  });
+
+  test('a preview lists a nested pick as one row, under its parent’s name, and counts it once (QA pass 6)', () => {
+    const parent = { slot: { place: { level: 2 }, selection: 'parent', index: 0 }, feature: POWER_ATTACK };
+    const child = { slot: { place: { level: 2 }, selection: POWER_ATTACK, index: 0 }, feature: CLEAVE };
+    const v = {
+      kind: 'clears' as const,
+      build: cleaver,
+      cleared: [parent, child],
+      clearedSkills: [],
+      clearedRanks: [],
+    };
+    expect(clearsList(e, cleaver, v)).toEqual([{ name: 'Power Attack (Cleave)', place: 'Level 2' }]);
+    expect(clearsSummary(v)).toBe("This breaks 1 later pick. It'll be cleared, not moved.");
   });
 
   test('a rank 8 switch that later ranks no longer follow lists them in the preview (QA pass 1)', () => {
