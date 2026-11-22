@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "8ca70768",
+  "reason": "HasArmorFeatureUnlock adds a buff whose sub-buff, applied while the armor is worn, holds the rule (AdditionalDiceOnAttack); data/ keeps none of it. Checked against the cached guides (~/code/wotr-planner/guide-cache); where they differ, the buff wins.",
+  "target": "6c6b8ba0ad1141df9316ab0ee28cbb77",
+  "text": "In medium armor: melee weapon hits deal +1d6 piercing damage plus your armor's AC bonus."
+}

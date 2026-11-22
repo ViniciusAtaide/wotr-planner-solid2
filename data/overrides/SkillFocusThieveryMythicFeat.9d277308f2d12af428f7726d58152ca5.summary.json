@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "8517e320",
+  "reason": "It grants an activatable ability whose buff carries Take10ForSuccess (applied in RuleSystem/Rules/RuleSkillCheck.cs), which isn't a Summary carrier. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "9d277308f2d12af428f7726d58152ca5",
+  "text": "Trickery checks count the d20 as 10 whenever 10 would succeed (a toggle, on by default)."
+}

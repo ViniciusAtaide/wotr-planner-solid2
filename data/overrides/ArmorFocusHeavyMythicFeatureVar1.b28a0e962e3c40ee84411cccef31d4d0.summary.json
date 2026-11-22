@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "010fafb6",
+  "reason": "HasArmorFeatureUnlock adds a buff whose sub-buff, applied while the armor is worn, holds the rule (AddDamageResistancePhysical, m_IsStackable); data/ keeps none of it. Checked against the cached guides (~/code/wotr-planner/guide-cache); where they differ, the buff wins.",
+  "target": "b28a0e962e3c40ee84411cccef31d4d0",
+  "text": "In heavy armor: DR/— equal to half your armor's AC bonus, stacking with other damage reduction."
+}

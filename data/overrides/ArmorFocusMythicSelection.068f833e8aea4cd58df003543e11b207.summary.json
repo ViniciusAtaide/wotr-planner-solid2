@@ -3,5 +3,5 @@
   "fingerprint": "0da69f14",
   "reason": "A selection whose options each work through HasArmorFeatureUnlock and a buff; the selection itself has no effect component.",
   "target": "068f833e8aea4cd58df003543e11b207",
-  "text": "Pick one of three benefits, two defensive and one offensive, for an armor category you have Armor Focus in. It works only while you wear armor of that category."
+  "text": "Pick a mythic upgrade for an armor category you have Armor Focus in; it works while you wear that armor."
 }

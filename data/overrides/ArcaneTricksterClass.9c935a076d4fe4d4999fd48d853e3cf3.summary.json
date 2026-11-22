@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "7ce7e9b5",
-  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook (the casting ability score is the spellbook's CastingAttribute in the dump, which data/ doesn't keep), which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "9c935a076d4fe4d4999fd48d853e3cf3",
   "text": "Prestige class. Every level adds a level of spells per day to an earlier arcane spellcasting class. Hit Die d6, 3 + Int skill points a level, 1/2 BAB, good Reflex and Will saves."
 }

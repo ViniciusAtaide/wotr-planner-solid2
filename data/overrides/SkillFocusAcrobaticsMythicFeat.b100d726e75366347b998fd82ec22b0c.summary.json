@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "7d64d20a",
+  "reason": "It grants an activatable ability whose buff carries Take10ForSuccess (applied in RuleSystem/Rules/RuleSkillCheck.cs), which isn't a Summary carrier. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "b100d726e75366347b998fd82ec22b0c",
+  "text": "Mobility checks count the d20 as 10 whenever 10 would succeed (a toggle, on by default)."
+}

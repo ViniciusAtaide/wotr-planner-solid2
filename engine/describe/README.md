@@ -47,8 +47,8 @@ What the planner says about one blueprint: its Summary (ticket 06b), and the bas
   - **Coverage for common picks.** An agent building through the MCP found "No summary yet." on its class, race and most Mythic picks: almost none of their rules sit in components a label reads (the planner keeps few of a Mythic ability's components, a class's spellcasting lives in its spellbook, a race's traits in its heritage and the features it grants). So these are written by hand, each from the blueprint's components and the decompiled C# it runs, in our own words (ADR 0006). Each `reason` names the components and the decompiled file and method whose rule the text states, as a `cites.ts` entry would.
     - **Mechanics only, and short.** An agent reads a Summary beside many others in `search` and `options`, so each states what the pick does and nothing else: no role, advice or flavour, which would steer an agent's choice, and nothing `explain` already lists (prerequisites, grants, a class's progression).
     - **Checked against the guides.** Each was compared with the guide pages cached in the Rust planner (`~/code/wotr-planner/guide-cache/txt`, saved 2026-11-09), as a fact check only, never as wording. Where a guide and the code disagree, the code wins (Spell Focus (Mythic) adds +2 from each focus feat, the guide says +1); where the guide caught a miss, the code confirmed it before the text changed (Master Shapeshifter's wild shapes cost nothing, Explosives Expert's extra bomb die).
-    - **Mythic abilities and Mythic feats:** every direct option of Mythic Ability Selection and Mythic Feat Selection.
-    - **Classes:** the spellcasting (prepared or spontaneous, arcane or divine, the highest spell level and the casting ability score), then the Hit Die, skill points, base attack bonus and good saves, read from the class's own fields (`HitDie`, `SkillPoints`, `m_BaseAttackBonus`, the save tables). A prestige class says which of its levels add spells per day to an earlier spellcasting class. A Mythic path says only what its progression can't: its spellbook, or that it starts at Mythic rank 8 (`PrerequisiteMythicLevel` 7); Legend cites the level cap of 40 (`UnitProgressionData.MaxCharacterLevel`). The casting ability score is the one fact the data and the guides don't both give (the guides name it only for the Bloodrager).
+    - **Mythic abilities and Mythic feats:** every direct option of Mythic Ability Selection and Mythic Feat Selection, and the options of the Mythic Armor Focus and Mythic Skill Focus selections.
+    - **Classes:** the spellcasting (prepared or spontaneous, arcane or divine, the highest spell level and the casting ability score), then the Hit Die, skill points, base attack bonus and good saves, read from the class's own fields (`HitDie`, `SkillPoints`, `m_BaseAttackBonus`, the save tables). A prestige class says which of its levels add spells per day to an earlier spellcasting class. A Mythic path says only what its progression can't: its spellbook, or that it starts at Mythic rank 8 (`PrerequisiteMythicLevel` 7); Legend cites the level cap of 40 (`UnitProgressionData.MaxCharacterLevel`). The casting ability score is each spellbook's `CastingAttribute` in the dump (data/ doesn't keep it); the guides name it only for the Bloodrager.
     - **Races:** the ability scores (a choice for Human, Half-Elf and Half-Orc; a heritage for the others) and the headline traits. Also the race traits a race grants that had none: Skilled (Human), the Feat selection, Orc Ferocity, Negative Energy Affinity (Dhampir), and the heritage selections of Aasimar, Dhampir, Half-Elf and Half-Orc.
     - **Counts** of shown blueprints with no Summary, before and after (2026-11-22). A Mythic ability or Mythic feat is a direct option of its selection; a feat is a feature of the `Feat` group; class features are the other features and selections.
 
@@ -60,10 +60,10 @@ What the planner says about one blueprint: its Summary (ticket 06b), and the bas
       | Mythic classes | 13 of 13 | 0 of 13 |
       | Races | 8 of 14 | 0 of 14 |
       | Feats | 186 of 270 | 186 of 270 |
-      | Class features | 2743 of 4052 | 2735 of 4052 |
-      | All shown blueprints | 4510 of 8779 | 4333 of 8779 |
+      | Class features | 2743 of 4052 | 2715 of 4052 |
+      | All shown blueprints | 4510 of 8779 | 4313 of 8779 |
 
-      Hand-written summaries went from 28 to 205. The feats and class features left without one are the next gap.
+      Hand-written summaries went from 28 to 225. The feats and class features left without one are the next gap.
 
 ## Design notes
 

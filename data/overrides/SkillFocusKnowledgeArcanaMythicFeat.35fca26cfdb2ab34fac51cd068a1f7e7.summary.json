@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "edf149fa",
+  "reason": "It grants an activatable ability whose buff carries Take10ForSuccess (applied in RuleSystem/Rules/RuleSkillCheck.cs), which isn't a Summary carrier. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "35fca26cfdb2ab34fac51cd068a1f7e7",
+  "text": "Knowledge (Arcana) checks count the d20 as 10 whenever 10 would succeed (a toggle, on by default)."
+}

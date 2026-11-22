@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "cfcfb21d",
+  "reason": "It grants an activatable ability whose buff carries Take10ForSuccess (applied in RuleSystem/Rules/RuleSkillCheck.cs), which isn't a Summary carrier. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "1ca4a55c495cc2348a903cd11beffef3",
+  "text": "Lore (Nature) checks count the d20 as 10 whenever 10 would succeed (a toggle, on by default)."
+}

@@ -3,5 +3,5 @@
   "fingerprint": "ff2c4292",
   "reason": "HasShieldFeatureUnlock adds ShieldTowerMythicBuffDR, whose AddDamageResistancePhysical with a ShieldBonus Div2 ContextRankConfig holds the rule.",
   "target": "f69f36e4a9bc410c8219094b18856e53",
-  "text": "While you wield a tower shield, you gain DR/— equal to half the shield's AC bonus."
+  "text": "While you wield a tower shield: DR/— equal to half the shield's AC bonus, stacking with other damage reduction."
 }

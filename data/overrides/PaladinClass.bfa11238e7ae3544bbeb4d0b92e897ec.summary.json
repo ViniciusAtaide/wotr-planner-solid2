@@ -1,7 +1,7 @@
 {
   "change": "summary",
   "fingerprint": "71cdbe04",
-  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook, which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook (the casting ability score is the spellbook's CastingAttribute in the dump, which data/ doesn't keep), which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
   "target": "bfa11238e7ae3544bbeb4d0b92e897ec",
   "text": "Prepared divine spells up to 4th level (Charisma), from class level 4. Hit Die d10, 2 + Int skill points a level, full BAB, good Fortitude and Will saves."
 }

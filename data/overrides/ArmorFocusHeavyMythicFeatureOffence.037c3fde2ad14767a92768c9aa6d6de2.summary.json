@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "010fafb6",
+  "reason": "HasArmorFeatureUnlock adds a buff whose sub-buff, applied while the armor is worn, holds the rule (AdditionalDiceOnAttack); data/ keeps none of it. Checked against the cached guides (~/code/wotr-planner/guide-cache); where they differ, the buff wins.",
+  "target": "037c3fde2ad14767a92768c9aa6d6de2",
+  "text": "In heavy armor: melee weapon hits deal +1d6 slashing damage plus your armor's AC bonus."
+}

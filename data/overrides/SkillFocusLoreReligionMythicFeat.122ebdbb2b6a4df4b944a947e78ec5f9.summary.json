@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "d8f17638",
+  "reason": "It grants an activatable ability whose buff carries Take10ForSuccess (applied in RuleSystem/Rules/RuleSkillCheck.cs), which isn't a Summary carrier. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "122ebdbb2b6a4df4b944a947e78ec5f9",
+  "text": "Lore (Religion) checks count the d20 as 10 whenever 10 would succeed (a toggle, on by default)."
+}
