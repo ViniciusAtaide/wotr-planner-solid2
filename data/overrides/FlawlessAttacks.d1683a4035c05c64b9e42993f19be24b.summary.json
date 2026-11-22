@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "4a519461",
+  "reason": "AddMechanicsFeature FlawlessAttacks is only a flag; the penalty step is in UnitLogic/Commands/UnitAttack.cs EnumerateAttacks.",
+  "target": "d1683a4035c05c64b9e42993f19be24b",
+  "text": "In a full attack, each extra attack takes -4 per step instead of -5 (-4, -8, -12 rather than -5, -10, -15)."
+}

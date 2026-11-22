@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "5e7f759c",
+  "reason": "The effect lives on each race and heritage as an AddStatBonusIfHasFact with InvertCondition checking this feat, not on the feat itself.",
+  "target": "325f078c584318849bfe3da9ea245b9d",
+  "text": "Removes your race's -2 racial penalty to an ability score."
+}

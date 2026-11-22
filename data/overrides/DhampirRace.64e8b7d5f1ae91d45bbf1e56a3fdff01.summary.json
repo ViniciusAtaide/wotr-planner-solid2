@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "A race's own components carry nothing a label reads: its ability scores come from SelectableRaceStat or its heritage selection, and its traits are features it grants, each summarized apart.",
+  "target": "64e8b7d5f1ae91d45bbf1e56a3fdff01",
+  "text": "A heritage, picked with the race, sets its ability scores (the classic one: +2 Dexterity and +2 Charisma, -2 Constitution). Healed by negative energy and harmed by positive energy, immune to level and ability drain, +2 on saves against mind-affecting effects and disease."
+}

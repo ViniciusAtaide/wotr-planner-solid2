@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "b839cb50",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "cda0615668a6df14eb36ba19ee881af6",
+  "text": "Favored enemies and terrains, a combat style and an animal companion, with prepared divine spells up to 4th level from Wisdom, from 4th level on. Hit Die d10, 4 + Intelligence modifier skill points a level, full base attack bonus, good Fortitude and Reflex saves."
+}

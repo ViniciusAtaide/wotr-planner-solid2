@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "dd3a045c",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "eb284ea8d40a2d045911f525eb96c43d",
+  "text": "A prestige class. An evil killer: death attack and a growing sneak attack. Hit Die d8, 3 + Intelligence modifier skill points a level, medium base attack bonus (3/4 of the level), good Reflex save."
+}

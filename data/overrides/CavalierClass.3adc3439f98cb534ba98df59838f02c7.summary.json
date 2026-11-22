@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "d2467156",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "3adc3439f98cb534ba98df59838f02c7",
+  "text": "A mounted warrior: a mount, an order, challenge and teamwork feats it shares as a tactician. Hit Die d10, 3 + Intelligence modifier skill points a level, full base attack bonus, good Fortitude save."
+}

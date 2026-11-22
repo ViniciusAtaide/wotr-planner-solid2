@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "77fa5026",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "90e4d7da3ccd1a8478411e07e91d5750",
+  "text": "A prestige class. Aldori dueling-sword techniques: deft strike, defensive parry, saving slash and adaptive tactics. Hit Die d10, 2 + Intelligence modifier skill points a level, full base attack bonus, good Reflex save."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "a919b5e3",
+  "reason": "AnyWeaponDamageStatReplacement (Designers/Mechanics/Facts/AnyWeaponDamageStatReplacement.cs OnEventAboutToTrigger) isn't among the components the planner keeps.",
+  "target": "d791af1bc179e0e44a0ca1fa6c418993",
+  "text": "With finessable melee weapons and natural weapons, use your Dexterity modifier instead of Strength on damage rolls when it is higher."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "a4c26b42",
+  "reason": "ModifyD20 (Designers/Mechanics/Facts/ModifyD20.cs) isn't a Summary carrier.",
+  "target": "4e56fcc942a9f0645a2e01c071453647",
+  "text": "Roll Reflex saves twice and keep the better result."
+}

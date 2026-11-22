@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its rule is AddOutgoingPhysicalDamageProperty for natural attacks, which data/ doesn't keep.",
+  "target": "3ac26dec060aa67409171e6e631a2942",
+  "text": "Its natural attacks overcome all damage reduction (magic, material and alignment)."
+}

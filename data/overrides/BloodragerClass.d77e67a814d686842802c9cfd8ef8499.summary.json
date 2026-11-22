@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "b839cb50",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "d77e67a814d686842802c9cfd8ef8499",
+  "text": "Bloodrage, with powers from a bloodline and spontaneous arcane spells up to 4th level from Charisma, from 4th level on. Hit Die d10, 3 + Intelligence modifier skill points a level, full base attack bonus, good Fortitude save."
+}

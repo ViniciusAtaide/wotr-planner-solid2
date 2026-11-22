@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "0fbd8a5c",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "20ce9bf8af32bee4c8557a045ab499b1",
+  "text": "A mystery and a curse shape its powers, with spontaneous divine spells up to 9th level from Charisma. Hit Die d8, 3 + Intelligence modifier skill points a level, medium base attack bonus (3/4 of the level), good Will save."
+}

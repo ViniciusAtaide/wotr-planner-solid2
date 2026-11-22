@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its rule is the RangedCleave component (UnitLogic/FactLogic/RangedCleave.cs OnEventDidTrigger), which data/ doesn't keep.",
+  "target": "b3fb61cecd4de98419d82e465bc588f2",
+  "text": "When a ranged weapon attack scores a critical hit or drops its target to 0 HP or below, the weapon's damage is also dealt to every other enemy within 10 feet of the target."
+}

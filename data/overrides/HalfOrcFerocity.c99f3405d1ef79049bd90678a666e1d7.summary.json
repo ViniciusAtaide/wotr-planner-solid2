@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "21c70ed1",
+  "reason": "Its rule is the HalfOrcFerocity mechanics feature (Controllers/Units/UnitLifeController.cs TryUseFerocity, UnitLogic/Parts/UnitPartFerocity.cs Active), not a component a label reads.",
+  "target": "c99f3405d1ef79049bd90678a666e1d7",
+  "text": "When it would fall unconscious, it stays on its feet for one more round, staggered."
+}

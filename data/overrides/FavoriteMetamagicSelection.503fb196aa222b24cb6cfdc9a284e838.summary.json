@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Each option is a FavoriteMetamagic* mechanics feature, read in RuleSystem/Rules/RuleApplyMetamagic.cs OnTrigger, which data/ doesn't keep.",
+  "target": "503fb196aa222b24cb6cfdc9a284e838",
+  "text": "Pick a metamagic feat it has (Empower, Extend, Maximize, Quicken, Reach, Bolstered, Selective, Persistent, Intensified or Piercing): that metamagic raises a spell's level by 1 less (never below 0)."
+}

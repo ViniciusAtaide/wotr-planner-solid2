@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "d2467156",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "42a455d9ec1ad924d889272429eb8391",
+  "text": "Elemental blasts at will, shaped by infusions and paid for with burn, plus wild talents; Constitution drives them. Hit Die d8, 2 + Intelligence modifier skill points a level, medium base attack bonus (3/4 of the level), good Fortitude and Reflex saves."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "ff2c4292",
+  "reason": "HasShieldFeatureUnlock adds ShieldLightMythicBuff, whose AddContextStatBonus on SaveReflex with a ShieldBonus ContextRankConfig holds the rule.",
+  "target": "baae60e30c1f45cd889ea41459205a84",
+  "text": "While you wield a light shield, it adds its AC bonus to your Reflex saves as well."
+}

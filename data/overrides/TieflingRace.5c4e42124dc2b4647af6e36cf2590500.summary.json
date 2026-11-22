@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "A race's own components carry nothing a label reads: its ability scores come from SelectableRaceStat or its heritage selection, and its traits are features it grants, each summarized apart.",
+  "target": "5c4e42124dc2b4647af6e36cf2590500",
+  "text": "A heritage, picked with the race, sets its ability scores (the classic one: +2 Dexterity and +2 Intelligence, -2 Charisma). Resistance 5 to cold, electricity and fire, and a spell-like ability once a day."
+}

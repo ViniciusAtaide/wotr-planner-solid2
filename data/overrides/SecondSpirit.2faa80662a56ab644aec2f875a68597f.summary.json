@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "d208c0ac",
+  "reason": "It is a BlueprintFeatureSelection over the Shaman*SpiritProgression options, which the generated summary doesn't describe.",
+  "target": "2faa80662a56ab644aec2f875a68597f",
+  "text": "Pick a second shaman spirit and gain its progression alongside the first."
+}

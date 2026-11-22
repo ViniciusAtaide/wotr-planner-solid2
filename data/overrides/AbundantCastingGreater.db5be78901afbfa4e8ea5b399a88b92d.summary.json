@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "a7147855",
+  "reason": "Its rule is AddSpellsPerDay (Designers/Mechanics/Facts/AddSpellsPerDay.cs OnActivate), whose BonusSpells Spellbook.GetSpellsPerDay adds only to levels the book already has, which data/ doesn't keep.",
+  "target": "db5be78901afbfa4e8ea5b399a88b92d",
+  "text": "+4 spells per day of each spell level 7 to 9 in every spellbook that already casts that level (not mythic spellbooks)."
+}

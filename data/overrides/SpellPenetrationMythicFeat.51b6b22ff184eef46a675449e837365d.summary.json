@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "545dacc7",
+  "reason": "AddFeatureIfHasFact picks hidden SpellPenetrationMythicFeatBase or SpellPenetrationMythicFeatUpgrade, whose SpellPenetrationBonus with a MythicLevel value holds the rule.",
+  "target": "51b6b22ff184eef46a675449e837365d",
+  "text": "+half your mythic rank on caster level checks to overcome spell resistance, or your full mythic rank with Greater Spell Penetration."
+}

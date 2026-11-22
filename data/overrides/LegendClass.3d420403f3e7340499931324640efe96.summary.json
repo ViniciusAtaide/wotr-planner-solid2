@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "a09336ee",
+  "reason": "Its rule is the LegendaryHero mechanics feature (UnitLogic/UnitProgressionData.cs MaxCharacterLevel, ExperienceTable), not a component a label reads; a class has no labelled components; its summary is the role its progression gives, which the generated text cannot say.",
+  "target": "3d420403f3e7340499931324640efe96",
+  "text": "Mythic path of a mortal hero: the character level cap rises from 20 to 40, on its own experience table, in place of Mythic path powers."
+}

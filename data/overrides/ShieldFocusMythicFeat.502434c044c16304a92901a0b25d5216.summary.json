@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "ff2c4292",
+  "reason": "ACTouchBonus (Designers/Mechanics/Facts/ACTouchBonus.cs OnEventAboutToTrigger) with a ShieldBonus ContextRankConfig isn't among the components the planner keeps.",
+  "target": "502434c044c16304a92901a0b25d5216",
+  "text": "Your shield's AC bonus, with its enhancement and Shield Focus, also counts against touch attacks."
+}

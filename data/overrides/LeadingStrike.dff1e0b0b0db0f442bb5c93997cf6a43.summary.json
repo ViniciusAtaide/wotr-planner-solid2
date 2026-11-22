@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its rule is an AddInitiatorAttackWithWeaponTrigger applying LeadingStrikeBuff (AddTargetAttackWithWeaponTrigger) whose LeadingStrikeDamageBuff AdditionalDiceOnAttack reads the feature's mythic-rank shared value, which data/ doesn't keep.",
+  "target": "dff1e0b0b0db0f442bb5c93997cf6a43",
+  "text": "A melee weapon hit marks the target. The next hit on it by an ally deals an extra 1d6 divine damage per mythic rank of the marker and clears the mark; it also clears when combat ends."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "a47a803d",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "610d836f3a3a9ed42a4349b62f002e96",
+  "text": "Nature's bond and wild shape, with prepared divine spells up to 9th level from Wisdom. Hit Die d8, 3 + Intelligence modifier skill points a level, medium base attack bonus (3/4 of the level), good Fortitude and Will saves."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "8800d6ae",
+  "reason": "It is a BlueprintFeatureSelection over the EnlightenedPhilosopher*MysteryFeature options, which the generated summary doesn't describe.",
+  "target": "4ff6f2905e1f4d1b92930b87f85bf86c",
+  "text": "Pick a second Enlightened Philosopher mystery and gain it alongside the first."
+}

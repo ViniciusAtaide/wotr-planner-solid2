@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "5b288665",
+  "reason": "It has no component; ArcanistArcaneReservoirResourceBuff's AddFactContextActions skips its ContextSpendResource on rest when the owner has it.",
+  "target": "b3f5fd67399a2a54ea4ddd97206b4c82",
+  "text": "Its arcane reservoir is full after a rest, instead of starting the day short."
+}

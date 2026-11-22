@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "d2467156",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "c75e0971973957d4dbad24bc7957e4fb",
+  "text": "Studied target for attack and damage bonuses against one foe, sneak attack from 3rd level, and slayer talents. Hit Die d10, 3 + Intelligence modifier skill points a level, full base attack bonus, good Fortitude and Reflex saves."
+}

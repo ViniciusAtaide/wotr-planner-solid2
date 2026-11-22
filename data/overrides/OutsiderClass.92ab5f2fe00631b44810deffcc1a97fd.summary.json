@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "92ab5f2fe00631b44810deffcc1a97fd",
+  "text": "A creature class: outsiders level in it. A player character never takes it. Hit Die d10, 1 + Intelligence modifier skill points a level, full base attack bonus, good Reflex and Will saves."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "de89089d",
+  "reason": "AddContextStatBonus on Initiative with a MythicLevel ContextRankConfig isn't among the components the planner keeps for this feat.",
+  "target": "25f4cb387ba4ab94d944fdef3da9ab97",
+  "text": "+1 on initiative per mythic rank."
+}

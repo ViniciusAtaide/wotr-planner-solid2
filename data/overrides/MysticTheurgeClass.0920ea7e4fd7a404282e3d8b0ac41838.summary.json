@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "e6de4e5b",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "0920ea7e4fd7a404282e3d8b0ac41838",
+  "text": "A prestige class. Every level advances both an arcane and a divine spellcasting class. Hit Die d6, 2 + Intelligence modifier skill points a level, low base attack bonus (half the level), good Will save."
+}

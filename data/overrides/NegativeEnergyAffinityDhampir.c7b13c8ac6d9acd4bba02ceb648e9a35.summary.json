@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "f4632213",
+  "reason": "It only grants the shared Negative Energy Affinity fact through AddFacts, and labels read no grant.",
+  "target": "c7b13c8ac6d9acd4bba02ceb648e9a35",
+  "text": "Negative energy heals it and positive energy harms it, as for the undead."
+}

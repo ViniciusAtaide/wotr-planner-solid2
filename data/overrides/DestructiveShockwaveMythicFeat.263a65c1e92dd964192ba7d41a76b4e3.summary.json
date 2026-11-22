@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "AddInitiatorAttackWithWeaponTrigger with OnMiss (Designers/Mechanics/Facts/AbstractWeaponTrigger.cs) applies DestructiveShockwaveMythicBuff, whose ContextActionDealDamage uses the feat's ContextCalculateSharedValue (StatBonusStrength); none of these are components the planner keeps.",
+  "target": "263a65c1e92dd964192ba7d41a76b4e3",
+  "text": "When a melee attack misses, the target still takes damage equal to your Strength modifier."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "4bebf9fc",
+  "reason": "A class has no labelled components; its summary is the role its progression gives, which the generated text cannot say.",
+  "target": "247aa787806d5da4f89cfc3dff0b217f",
+  "text": "The Mythic ranks taken before a path: a Mythic ability at odd ranks and a Mythic feat at even ranks, with Hard to Kill at rank 2."
+}

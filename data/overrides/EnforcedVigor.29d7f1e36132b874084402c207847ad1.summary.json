@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its rule is an AddOutgoingDamageTrigger (UnitLogic/Mechanics/Components/AddOutgoingDamageTrigger.cs) applying EnforcedVigorBuff for a Div2 MythicLevel duration, which data/ doesn't keep.",
+  "target": "29d7f1e36132b874084402c207847ad1",
+  "text": "When it damages an ally other than itself, that ally gets +2 on attack rolls, +2 on damage rolls and +1 on saves (mythic bonuses) for 1 round per 2 mythic ranks."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "2e6ff059",
+  "reason": "It is a BlueprintFeatureSelection over the DivineHerbalist*MysteryFeature options, which the generated summary doesn't describe.",
+  "target": "cff5c53fe99c48bf863a0005d768f75a",
+  "text": "Pick a second Divine Herbalist mystery and gain it alongside the first."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "A BlueprintFeatureSelection with no components; its effect is the pick from the MythicAbility group.",
+  "target": "8a6a511c55e67d04db328cc49aaad2b8",
+  "text": "Pick one extra mythic ability."
+}

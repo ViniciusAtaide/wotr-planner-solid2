@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "48c92690",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "ee6425d6392101843af35f756ce7fefd",
+  "text": "A prestige class. A lawful caster of a Hellknight order: every level advances a spellcasting class, and it casts in armor. Hit Die d8, 2 + Intelligence modifier skill points a level, medium base attack bonus (3/4 of the level), good Will save."
+}

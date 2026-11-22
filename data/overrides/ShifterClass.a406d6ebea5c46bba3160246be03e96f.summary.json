@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "9684ef65",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "a406d6ebea5c46bba3160246be03e96f",
+  "text": "Shifter aspects and wild shape, with claws that grow with level. Hit Die d10, 3 + Intelligence modifier skill points a level, full base attack bonus, good Fortitude and Reflex saves."
+}

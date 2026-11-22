@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "759e3aa1",
+  "reason": "ImprovedCriticalMythicParametrized (OnEventAboutToTrigger) isn't a Summary carrier.",
+  "target": "8bc0190a4ec04bd489eec290aeaa6d07",
+  "text": "Pick a weapon type you have Improved Critical in: +1 to its critical multiplier."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "a86f0779",
+  "reason": "The effect lives in SpellFocusParametrized on Spell Focus and Greater Spell Focus (m_MythicFocus, Designers/Mechanics/Facts/SpellFocusParametrized.cs GetBonusDC), not on the feat.",
+  "target": "41fa2470ab50ff441b4cfbb2fc725109",
+  "text": "Pick a spell school you have Spell Focus in: Spell Focus and Greater Spell Focus each add +2 instead of +1 to the DC of your spells and abilities of that school."
+}

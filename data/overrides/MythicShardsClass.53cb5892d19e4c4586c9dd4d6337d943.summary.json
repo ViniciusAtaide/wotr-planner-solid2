@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "0be59667",
+  "reason": "A class has no labelled components; its summary is the role its progression gives, which the generated text cannot say.",
+  "target": "53cb5892d19e4c4586c9dd4d6337d943",
+  "text": "Ranks of shard boons that each come with a curse."
+}

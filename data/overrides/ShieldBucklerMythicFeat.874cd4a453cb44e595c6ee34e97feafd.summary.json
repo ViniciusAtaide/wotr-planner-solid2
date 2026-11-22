@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "ff2c4292",
+  "reason": "HasShieldFeatureUnlock (Designers/Mechanics/Buffs/HasShieldFeatureUnlock.cs CheckEligibility) adds ShieldBucklerMythicBuff, whose area effect and ShieldBonusGetter property hold the rule.",
+  "target": "874cd4a453cb44e595c6ee34e97feafd",
+  "text": "While you wield a buckler, allies within 15 feet gain a shield bonus to AC equal to your buckler's AC bonus."
+}

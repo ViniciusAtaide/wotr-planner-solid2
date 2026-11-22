@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "a4b985ca",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "f5b8c63b141b2f44cbb8c2d7579c34f5",
+  "text": "A Magus who casts spontaneously from Charisma, with a sorcerer bloodline and a mystic focus pool; spells up to 6th level. Hit Die d8, 2 + Intelligence modifier skill points a level, medium base attack bonus (3/4 of the level), good Fortitude and Will saves."
+}

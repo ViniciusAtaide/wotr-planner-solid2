@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "7ce7e9b5",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "9c935a076d4fe4d4999fd48d853e3cf3",
+  "text": "A prestige class. Rogue and arcane caster in one: sneak attack grows, and every level advances an arcane spellcasting class. Hit Die d6, 3 + Intelligence modifier skill points a level, low base attack bonus (half the level), good Reflex and Will saves."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "1b0caa11",
+  "reason": "Each option grants an activatable ability whose buff carries Take10ForSuccess (Take10ForSuccess.cs, applied in RuleSystem/Rules/RuleSkillCheck.cs), which isn't a Summary carrier.",
+  "target": "a224819b9492019428c220754208ba3a",
+  "text": "Pick a skill you have Skill Focus in: a check with it treats the d20 as 10 whenever 10 would succeed. A toggle, on by default."
+}

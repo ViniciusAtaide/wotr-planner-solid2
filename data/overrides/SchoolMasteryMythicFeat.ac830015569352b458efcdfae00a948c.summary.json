@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "SchoolMasteryParametrized (SchoolMasteryParametrized.cs OnEventAboutToTrigger) isn't a Summary carrier.",
+  "target": "ac830015569352b458efcdfae00a948c",
+  "text": "Pick a spell school: +1 caster level for your spells of that school."
+}

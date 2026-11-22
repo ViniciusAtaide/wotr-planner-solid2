@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "fb09acbc",
+  "reason": "Its rule is AddOutgoingPhysicalDamageProperty adding the Good alignment, which data/ doesn't keep.",
+  "target": "a0a814897cd33ed4ea6ffca4b0e1197a",
+  "text": "Its physical damage counts as good-aligned for overcoming damage reduction."
+}

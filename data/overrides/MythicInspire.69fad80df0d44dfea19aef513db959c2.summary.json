@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "It has no component; the performance areas (InspireCourageArea, InspireCompetenceArea and others) swap in mythic effect buffs whose ContextCalculateSharedValue adds a Custom MythicLevel rank.",
+  "target": "69fad80df0d44dfea19aef513db959c2",
+  "text": "Its inspiring bardic performances grant larger bonuses: Inspire Courage and Inspire Competence get +1, rising to +2 at mythic rank 4, +3 at 7 and +4 at 10."
+}

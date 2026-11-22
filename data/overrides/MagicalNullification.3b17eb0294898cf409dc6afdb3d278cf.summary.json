@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "cc4e3b6e",
+  "reason": "Its effect lives in MagicalNullificationAbility's MagicalNullificationBuff (AddSpellImmunity AllSpells, AreaEffectImmunity, ContextActionDispelMagic with CheckType None in RuleSystem/Rules/RuleDispelMagic.cs OnTrigger), not on the feature.",
+  "target": "3b17eb0294898cf409dc6afdb3d278cf",
+  "text": "Toggle, free action. While on it is immune to spells and to Stinking Cloud and Acid Fog, and one spell effect on it is removed when it turns on and again each round, with no roll."
+}

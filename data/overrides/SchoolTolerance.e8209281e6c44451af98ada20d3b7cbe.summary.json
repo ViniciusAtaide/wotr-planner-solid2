@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "fbf811be",
+  "reason": "Its rule is RemoveOppositionSchool for each school (UnitLogic/FactLogic/RemoveOppositionSchool.cs OnActivate), which data/ doesn't keep.",
+  "target": "e8209281e6c44451af98ada20d3b7cbe",
+  "text": "Its wizard opposition schools are removed: it casts spells of those schools as normal."
+}

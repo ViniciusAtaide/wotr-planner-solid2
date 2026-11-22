@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "c72bf5fa",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "26b10d4340839004f960f9816f6109fe",
+  "text": "The class an animal companion levels in, following its master. Hit Die d8, 4 + Intelligence modifier skill points a level, medium base attack bonus (3/4 of the level), good Fortitude and Reflex saves."
+}

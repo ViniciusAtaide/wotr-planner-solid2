@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "2c5a4d60",
+  "reason": "The effect lives in MythicChannelProperty (StatBonusIfHasFactProperty, UnitLogic/Class/Kineticist/Properties/StatBonusIfHasFactProperty.cs GetBaseValue), which the channel abilities read as their DamageBonus rank, not on the feat.",
+  "target": "0e8d5acbc4a937f4a9566001df959bea",
+  "text": "Your channel energy heals or harms an extra amount equal to twice your Charisma modifier."
+}

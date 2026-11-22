@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its rule is the EnduringSpells component (Designers/Mechanics/Facts/EnduringSpells.cs HandleBuffDidAdded), which data/ doesn't keep.",
+  "target": "2f206e6d292bdfb4d981e99dcf08153f",
+  "text": "A buff it casts from a spellbook (not from an item) that lasts from 1 to 24 hours lasts 24 hours from when it was applied instead; with Greater Enduring Spells the threshold drops to 5 minutes."
+}

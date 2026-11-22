@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its rule is AdditionalDiceOnAttack with OnCharge (UnitLogic/Mechanics/Components/AdditionalDiceOnAttack.cs CheckCondition) and a MythicLevel ContextRankConfig, which data/ doesn't keep.",
+  "target": "3d1a968428c9b3d4d9d4d27e656b65a8",
+  "text": "A melee weapon hit on a charge deals an extra 1d6 divine damage per mythic rank."
+}

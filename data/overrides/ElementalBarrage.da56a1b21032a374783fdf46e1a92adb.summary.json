@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its rule is five AddOutgoingDamageTrigger components (UnitLogic/Mechanics/Components/AddOutgoingDamageTrigger.cs) with the ElementalBarrage*Buff marks and a MythicLevel ContextRankConfig, which data/ doesn't keep.",
+  "target": "da56a1b21032a374783fdf46e1a92adb",
+  "text": "Spell damage of one energy type (acid, cold, electricity, fire or sonic) marks the target for 3 rounds. Spell damage of a different one of those types to a marked target clears the mark and deals an extra 1d6 divine damage per mythic rank."
+}

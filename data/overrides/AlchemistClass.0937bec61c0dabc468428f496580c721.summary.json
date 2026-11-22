@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "b839cb50",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "0937bec61c0dabc468428f496580c721",
+  "text": "Bombs, mutagens and discoveries, with prepared extracts up to 6th level from Intelligence. Hit Die d8, 3 + Intelligence modifier skill points a level, medium base attack bonus (3/4 of the level), good Fortitude and Reflex saves."
+}

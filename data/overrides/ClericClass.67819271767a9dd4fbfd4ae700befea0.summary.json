@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "1250e975",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "67819271767a9dd4fbfd4ae700befea0",
+  "text": "Channel energy and two domains, with prepared divine spells up to 9th level from Wisdom. Hit Die d8, 2 + Intelligence modifier skill points a level, medium base attack bonus (3/4 of the level), good Fortitude and Will saves."
+}

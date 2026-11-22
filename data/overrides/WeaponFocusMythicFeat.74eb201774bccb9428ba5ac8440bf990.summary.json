@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "18534f3f",
+  "reason": "The effect lives in WeaponFocusParametrized on Weapon Focus and Greater Weapon Focus (m_MythicFocus, Designers/Mechanics/Facts/WeaponFocusParametrized.cs OnEventAboutToTrigger), not on the feat.",
+  "target": "74eb201774bccb9428ba5ac8440bf990",
+  "text": "Pick a weapon type you have Weapon Focus in: Weapon Focus and Greater Weapon Focus each give +2 instead of +1 on attack rolls with it."
+}

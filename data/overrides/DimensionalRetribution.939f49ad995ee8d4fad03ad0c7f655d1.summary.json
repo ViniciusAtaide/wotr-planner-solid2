@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "4fea3c02",
+  "reason": "Its effect lives in DimensionalRetributionTrigger's AddAbilityUseTargetTrigger (UnitLogic/FactLogic/AddAbilityUseTargetTrigger.cs RunAction) and DimensionalRetributionAbility's AbilityCustomDimensionDoor, not on the feature.",
+  "target": "939f49ad995ee8d4fad03ad0c7f655d1",
+  "text": "An enemy that targets it with a spell is marked for 2 rounds. Move action: teleport next to a marked enemy within long range, even out of sight."
+}

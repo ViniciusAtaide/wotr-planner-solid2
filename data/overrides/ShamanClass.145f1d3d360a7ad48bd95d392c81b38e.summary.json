@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "d2467156",
+  "reason": "A class has no labelled components; its summary is its role plus its HitDie, SkillPoints, m_BaseAttackBonus and saves tables (data/classes), which labels don't read.",
+  "target": "145f1d3d360a7ad48bd95d392c81b38e",
+  "text": "A spirit and its hexes, with prepared divine spells up to 9th level from Wisdom. Hit Die d8, 2 + Intelligence modifier skill points a level, medium base attack bonus (3/4 of the level), good Will save."
+}
