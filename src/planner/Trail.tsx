@@ -325,6 +325,7 @@ export default function Trail(props: TrailProps) {
           placeholder: `Choose your ${slotName(view(), s.id).toLowerCase()}`,
           target: isTarget({ kind: 'slot', slot: s.id }),
           arrive: arriving() === stepKey(step),
+          onArrived: arrivalDone,
         }}
         list={(f) =>
           background() ? <BackgroundStep trail={api} field={f} /> : <PickStep trail={api} slot={s.id} field={f} />
@@ -392,6 +393,7 @@ export default function Trail(props: TrailProps) {
     equals: (a, b) => stepKey(a) === stepKey(b),
   });
   const [arriving, setArriving] = createSignal<string | undefined>(undefined);
+  const arrivalDone = () => setArriving(undefined);
   const fieldKey = (st: Step) =>
     st.kind === 'race' || st.kind === 'alignment' || (st.kind === 'slot' && isCharacterSlot(view(), st.slot))
       ? stepKey(st)
@@ -507,6 +509,7 @@ export default function Trail(props: TrailProps) {
                 placeholder: 'Choose your race',
                 target: isTarget({ kind: 'race' }),
                 arrive: arriving() === stepKey({ kind: 'race' }),
+                onArrived: arrivalDone,
               }}
               list={(f) => <RaceStep trail={api} field={f} />}
             />
@@ -521,6 +524,7 @@ export default function Trail(props: TrailProps) {
           scoresStep={where().kind === 'scores'}
           alignmentStep={step().kind === 'alignment'}
           alignmentArrives={arriving() === stepKey({ kind: 'alignment' })}
+          onAlignmentArrived={arrivalDone}
           here={<Show when={where().kind === 'scores'}>{here()}</Show>}
         />
         <ol class="trail-path" aria-label="Levels">

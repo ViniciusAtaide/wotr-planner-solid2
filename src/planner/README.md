@@ -31,7 +31,12 @@ A Build reads as the character's path, phone first. From top to bottom the page 
   on touch its first option does), never on first load. Both are the trail's call, not the field's (QA pass 5): a
   field arrives only when the trail's next step becomes it (`arriving` in `Trail.tsx`), so a pick made elsewhere
   never opens a waiting field, and any change to the Build closes an open field's dialog. A click on a focused
-  field reopens its list.
+  field reopens its list. An arrival is taken once (QA pass 6): the field (or the alignment wheel) reports it handled
+  (`onArrived`) and the trail clears `arriving`, so a list or wheel rebuilt by a later change never arrives again; a
+  stale arrival used to reopen Background's list and focus its picked row a moment after the pick, above Deity's,
+  and to refocus the wheel after a race change. On touch the arriving field's first option takes focus unless focus
+  is already in that field, so the previous field's list closes (its focus left it) after a tap, an Undo or a race
+  change; under a fine pointer its filter does.
 - **The trail**: one stop per character level, titled with its class and class level, with its picks as chips: each
   slot the walk opens there, an Archetype chip at a class's first level when it has archetypes, the ability increase
   when the walk offers one, and the skills ("4 ranks"). Each Mythic rank is its own stop after the level it is taken at,
