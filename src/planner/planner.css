@@ -892,8 +892,13 @@ html.choice-open .planner-undo:not(:empty) {
 
 .trail-places {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 9rem), 1fr));
   gap: var(--space-2);
+}
+
+.trail-places .trail-chip {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 @media (min-width: 600px) {
@@ -904,10 +909,6 @@ html.choice-open .planner-undo:not(:empty) {
   .trail-skills {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: var(--space-4);
-  }
-
-  .trail-places {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -971,6 +972,26 @@ html.choice-open .planner-undo:not(:empty) {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.trail-scroll--two-line .trail-window-row--fixed .ww-option {
+  grid-template-areas:
+    'name name'
+    'meta badges';
+}
+
+.trail-scroll--two-line .trail-window-row--fixed .ww-option__name {
+  grid-area: name;
+}
+
+.trail-scroll--two-line .trail-window-row--fixed .ww-option__meta {
+  grid-area: meta;
+}
+
+.trail-scroll--two-line .trail-window-row--fixed .ww-option__badges {
+  grid-area: badges;
+  align-self: center;
+  flex-wrap: nowrap;
 }
 
 .ww-option__expand {
