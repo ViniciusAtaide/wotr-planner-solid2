@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "A race's own components carry nothing a label reads: its ability scores come from SelectableRaceStat or its heritage selection, and its traits are features it grants, each summarized apart. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "b7f02ba92b363064fb873963bec275ee",
+  "text": "Its heritage sets +2 to two ability scores (classic: Wisdom and Charisma), two skill bonuses and a spell-like ability once a day. Resistance 5 to acid, cold and electricity."
+}

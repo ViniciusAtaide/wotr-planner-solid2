@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "f27d248a",
+  "reason": "It has no component; each judgment's ActivatableAbilityResourceLogic names it as m_FreeBlueprint (UnitLogic/ActivatableAbilities/ActivatableAbilityResourceLogic.cs IsFreeBecauseOfFact).",
+  "target": "4a6dc772c9a7fe742a65820007107f03",
+  "text": "Your judgments cost no uses."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "A race's own components carry nothing a label reads: its ability scores come from SelectableRaceStat or its heritage selection, and its traits are features it grants, each summarized apart. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "1dc20e195581a804890ddc74218bfd8e",
+  "text": "+2 to one ability score of your choice. Stays up, staggered, for a round after it would fall unconscious; +2 on Intimidate and Perception; proficient with greataxes and falchions. Its heritage can trade traits."
+}

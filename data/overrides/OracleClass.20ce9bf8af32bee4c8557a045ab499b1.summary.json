@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "0fbd8a5c",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook (the casting ability score is the spellbook's CastingAttribute in the dump, which data/ doesn't keep), which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "20ce9bf8af32bee4c8557a045ab499b1",
+  "text": "Spontaneous divine spells up to 9th level (Charisma). Hit Die d8, 3 + Int skill points a level, 3/4 BAB, good Will save."
+}

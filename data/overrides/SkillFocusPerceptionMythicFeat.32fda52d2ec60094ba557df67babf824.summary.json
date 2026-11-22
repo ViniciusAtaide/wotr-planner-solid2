@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "1316bad2",
+  "reason": "It grants an activatable ability whose buff carries Take10ForSuccess (applied in RuleSystem/Rules/RuleSkillCheck.cs), which isn't a Summary carrier. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "32fda52d2ec60094ba557df67babf824",
+  "text": "Perception checks count the d20 as 10 whenever 10 would succeed (a toggle, on by default)."
+}

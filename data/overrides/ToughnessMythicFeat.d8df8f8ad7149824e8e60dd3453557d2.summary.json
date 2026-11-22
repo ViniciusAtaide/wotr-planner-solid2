@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "aad52c03",
+  "reason": "ToughnessLogic (ToughnessLogic.cs Apply) and DamageReductionBelowZero (DamageReductionBelowZero.cs OnEventAboutToTrigger) aren't components the planner keeps.",
+  "target": "d8df8f8ad7149824e8e60dd3453557d2",
+  "text": "+1 hit point per character level (at least +3), on top of Toughness's. While at 0 hit points or below, physical weapon damage is reduced by 10 unless it is epic."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "d4d4f2c1",
+  "reason": "Its rule is the ThrowElixir mechanics feature, read in UnitLogic/Abilities/AbilityData.cs GetApproachDistance, which data/ doesn't keep.",
+  "target": "fd1f99a42ff74d74f95c50cfc632cd69",
+  "text": "Your infused extracts can target an ally within 30 feet instead of only you."
+}

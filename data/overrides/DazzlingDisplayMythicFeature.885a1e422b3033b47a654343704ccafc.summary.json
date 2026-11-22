@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "552440f1",
+  "reason": "AddFacts grants three abilities whose difference from the base lies in their ActionType and Demoralize.Bonus (UnitLogic/Mechanics/Actions/Demoralize.cs RunAction adds Bonus to the Intimidate check), which the summary doesn't compare against DazzlingDisplayAction's full-round flag.",
+  "target": "885a1e422b3033b47a654343704ccafc",
+  "text": "Dazzling Display also works as a standard action at -5 on the Intimidate check, a move action at -10 or a swift action at -20."
+}

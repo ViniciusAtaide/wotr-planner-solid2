@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "A race's own components carry nothing a label reads: its ability scores come from SelectableRaceStat or its heritage selection, and its traits are features it grants, each summarized apart. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "64e8b7d5f1ae91d45bbf1e56a3fdff01",
+  "text": "Its heritage sets +2 to two ability scores and -2 to one (classic: +2 Dexterity and Charisma, -2 Constitution) and two skill bonuses. Healed by negative energy and harmed by positive, immune to energy drain, +2 on saves against disease and mind-affecting effects."
+}

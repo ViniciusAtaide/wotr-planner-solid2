@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "0da69f14",
+  "reason": "A selection whose options each work through HasArmorFeatureUnlock and a buff; the selection itself has no effect component.",
+  "target": "068f833e8aea4cd58df003543e11b207",
+  "text": "Pick a mythic upgrade for an armor category you have Armor Focus in; it works while you wear that armor."
+}

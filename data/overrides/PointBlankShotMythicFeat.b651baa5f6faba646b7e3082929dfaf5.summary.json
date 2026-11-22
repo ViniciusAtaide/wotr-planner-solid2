@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "2ea69eb8",
+  "reason": "DistanceAttackBonus and DistanceDamageBonus (Designers/Mechanics/Facts/DistanceAttackBonus.cs, DistanceDamageBonus.cs OnEventAboutToTrigger) aren't components the planner keeps.",
+  "target": "b651baa5f6faba646b7e3082929dfaf5",
+  "text": "Another +1 on ranged attack and damage rolls against targets within 30 feet, on top of Point-Blank Shot's."
+}

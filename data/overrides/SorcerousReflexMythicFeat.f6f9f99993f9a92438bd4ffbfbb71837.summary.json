@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "CombatStateTrigger applies SorcerousReflexMythicBuff, whose MetamagicOnNextSpell with SourcerousReflex (Designers/Mechanics/Facts/MetamagicOnNextSpell.cs CheckSpellLevel) holds the rule.",
+  "target": "f6f9f99993f9a92438bd4ffbfbb71837",
+  "text": "In each combat, the first spellbook spell you cast that is 1st level, or at least two levels below the highest level you can cast, is quickened."
+}

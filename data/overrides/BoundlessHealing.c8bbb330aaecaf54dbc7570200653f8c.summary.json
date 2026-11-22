@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its rule is AutoMetamagic with Reach (Designers/Mechanics/Facts/AutoMetamagic.cs) and AddUnlimitedSpell, which lifts the cap in UnitLogic/Mechanics/Components/ContextRankConfig.cs GetValue/ApplyMinMax, which data/ doesn't keep.",
+  "target": "c8bbb330aaecaf54dbc7570200653f8c",
+  "text": "Your healing spells (cures, heals, restorations, Breath of Life, Remove Disease, Neutralize Poison and the like) get Reach for free and have no caster level cap."
+}

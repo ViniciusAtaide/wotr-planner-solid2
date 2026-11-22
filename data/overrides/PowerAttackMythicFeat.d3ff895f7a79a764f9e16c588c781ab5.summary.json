@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "bb4e127b",
+  "reason": "The effect lives in PowerAttackBuffEffect's WeaponParametersDamageBonus (m_MythicBlueprint, Designers/Mechanics/Facts/WeaponParametersDamageBonus.cs OnEventAboutToTrigger and CalculatePowerAttackScaling), not on the feat.",
+  "target": "d3ff895f7a79a764f9e16c588c781ab5",
+  "text": "Power Attack's damage bonus is +3 per step instead of +2, and +5 instead of +3 with a weapon held in two hands."
+}

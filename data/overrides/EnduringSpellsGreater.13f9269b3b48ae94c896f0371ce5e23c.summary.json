@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "baeeb371",
+  "reason": "It has no component; Enduring Spells checks for it (m_Greater in Designers/Mechanics/Facts/EnduringSpells.cs HandleBuffDidAdded).",
+  "target": "13f9269b3b48ae94c896f0371ce5e23c",
+  "text": "Enduring Spells extends buffs lasting 5 minutes or more to 24 hours."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "010fafb6",
+  "reason": "HasArmorFeatureUnlock adds a buff whose sub-buff, applied while the armor is worn, holds the rule (ReplaceStatBaseAttribute Div2, MaxDexBonusIncrease); data/ keeps none of it. Checked against the cached guides (~/code/wotr-planner/guide-cache); where they differ, the buff wins.",
+  "target": "9b83bd09e7154b5f9c22a172efaaef4e",
+  "text": "In heavy armor: half your Strength modifier replaces your Dexterity modifier in AC, and the armor's Dexterity cap rises by your Strength modifier."
+}

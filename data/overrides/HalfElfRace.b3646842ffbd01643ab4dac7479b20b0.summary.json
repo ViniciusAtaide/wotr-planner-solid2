@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "A race's own components carry nothing a label reads: its ability scores come from SelectableRaceStat or its heritage selection, and its traits are features it grants, each summarized apart. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "b3646842ffbd01643ab4dac7479b20b0",
+  "text": "+2 to one ability score of your choice. Immune to sleep, +2 on saves against enchantments, +2 on Perception. The standard heritage adds a bonus Skill Focus (Adaptability); the others trade traits."
+}

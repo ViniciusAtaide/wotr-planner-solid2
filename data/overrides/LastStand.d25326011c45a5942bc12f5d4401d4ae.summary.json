@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "cc4e3b6e",
+  "reason": "Its rule is LastStandBuff (UnitHealthGuard, UnitLogic/FactLogic/UnitHealthGuard.cs TryReduceDamage; BuffOnHealthTickingTrigger, Designers/Mechanics/Buffs/BuffOnHealthTickingTrigger.cs Check) re-applied by AddRestTrigger, which data/ doesn't keep.",
+  "target": "d25326011c45a5942bc12f5d4401d4ae",
+  "text": "Once per rest, damage that would leave you below 5% of your hit points can't take you below 1, and nothing does for the next 2 rounds."
+}

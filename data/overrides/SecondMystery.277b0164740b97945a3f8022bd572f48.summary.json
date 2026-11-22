@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "9bf3a26d",
+  "reason": "It is a BlueprintFeatureSelection over the Oracle*MysteryFeature options, which the generated summary doesn't describe.",
+  "target": "277b0164740b97945a3f8022bd572f48",
+  "text": "Pick a second oracle mystery and gain it too."
+}

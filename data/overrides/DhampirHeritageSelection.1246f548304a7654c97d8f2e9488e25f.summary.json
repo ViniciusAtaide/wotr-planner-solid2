@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "A selection has no components a label reads; what it offers is its option list.",
+  "target": "1246f548304a7654c97d8f2e9488e25f",
+  "text": "Pick an undead heritage: it sets the ability score bonuses and penalty, and the skill bonuses."
+}

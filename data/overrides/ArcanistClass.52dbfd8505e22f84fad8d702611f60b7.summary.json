@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "b839cb50",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook (the casting ability score is the spellbook's CastingAttribute in the dump, which data/ doesn't keep), which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "52dbfd8505e22f84fad8d702611f60b7",
+  "text": "Arcane spells up to 9th level (Intelligence), prepared, then cast in any combination. Hit Die d6, 2 + Int skill points a level, 1/2 BAB, good Will save."
+}

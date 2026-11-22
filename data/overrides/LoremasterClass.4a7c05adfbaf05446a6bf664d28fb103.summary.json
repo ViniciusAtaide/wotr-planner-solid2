@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "ddefeef1",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook (the casting ability score is the spellbook's CastingAttribute in the dump, which data/ doesn't keep), which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "4a7c05adfbaf05446a6bf664d28fb103",
+  "text": "Prestige class. Every level adds a level of spells per day to an earlier spellcasting class. Hit Die d6, 3 + Int skill points a level, 1/2 BAB, good Will save."
+}

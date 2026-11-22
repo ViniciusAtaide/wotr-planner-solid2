@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "e2797b65",
+  "reason": "The effect lives in DeadlyAimBuffEffect's WeaponParametersDamageBonus (m_MythicBlueprint adds 1 to DamageBonus, Designers/Mechanics/Facts/WeaponParametersDamageBonus.cs OnEventAboutToTrigger(RuleCalculateWeaponStats)), not on the feat.",
+  "target": "ec661a003088c174ca3d477b51d35e03",
+  "text": "Deadly Aim's damage bonus is +3 instead of +2, still multiplied by 1 + base attack bonus / 4."
+}

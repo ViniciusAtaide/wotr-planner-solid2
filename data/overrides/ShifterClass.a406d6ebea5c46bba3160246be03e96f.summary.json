@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "9684ef65",
+  "reason": "A class has no labelled components; this states its HitDie, SkillPoints, m_BaseAttackBonus and save tables (data/classes) and its spellbook (the casting ability score is the spellbook's CastingAttribute in the dump, which data/ doesn't keep), which labels don't read. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "a406d6ebea5c46bba3160246be03e96f",
+  "text": "Hit Die d10, 3 + Int skill points a level, full BAB, good Fortitude and Reflex saves."
+}

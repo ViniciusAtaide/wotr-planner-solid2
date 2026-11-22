@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "183cd86c",
+  "reason": "The effect lives in RapidShotBuff's WeaponParametersAttackBonus (m_MultiplierFact with Multiplier 0), not on the feat.",
+  "target": "e332694d67066f24da821f119201b5c7",
+  "text": "Rapid Shot no longer gives -2 on your attack rolls."
+}

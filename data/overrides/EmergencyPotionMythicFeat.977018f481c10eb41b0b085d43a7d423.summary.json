@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "3df38d84",
+  "reason": "AddMechanicsFeature FastPotion is only a flag; the rule is in UnitLogic/Abilities/AbilityData.cs GetDefaultActionType.",
+  "target": "977018f481c10eb41b0b085d43a7d423",
+  "text": "Drinking a potion yourself takes a swift action instead of a move action while your swift action is unused."
+}

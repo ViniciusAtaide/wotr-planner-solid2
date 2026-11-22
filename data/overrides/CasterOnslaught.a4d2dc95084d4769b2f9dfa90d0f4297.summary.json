@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its rule is an AddAbilityUseTrigger (UnitLogic/FactLogic/AddAbilityUseTrigger.cs OnEventAboutToTrigger) applying CasterOnslaughtBuff (WeaponParametersAttackBonus, WeaponParametersDamageBonus) and an AddInitiatorAttackWithWeaponTrigger that removes it, which data/ doesn't keep.",
+  "target": "a4d2dc95084d4769b2f9dfa90d0f4297",
+  "text": "After you cast a spell, your next weapon attack within 1 round gets +1 per 2 mythic ranks on attack and damage."
+}

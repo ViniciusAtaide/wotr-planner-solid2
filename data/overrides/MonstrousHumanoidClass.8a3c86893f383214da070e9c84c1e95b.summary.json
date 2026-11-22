@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "A class has no labelled components, and this one is never a player pick, which no label can say.",
+  "target": "8a3c86893f383214da070e9c84c1e95b",
+  "text": "A creature class for monsters; player characters never take it."
+}

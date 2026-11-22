@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its rule is three BuffSubstitutionOnApply components (Designers/Mechanics/Facts/BuffSubstitutionOnApply.cs OnEventAboutToTrigger), which data/ doesn't keep.",
+  "target": "74afc3465db56924c9618a42d84efab8",
+  "text": "Paralysis becomes staggered, nausea becomes sickened and fright becomes shaken."
+}

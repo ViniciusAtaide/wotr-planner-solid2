@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "8ca70768",
+  "reason": "HasArmorFeatureUnlock adds a buff whose sub-buff, applied while the armor is worn, holds the rule (MaxDexBonusIncrease from StatBonusConstitution); data/ keeps none of it. Checked against the cached guides (~/code/wotr-planner/guide-cache); where they differ, the buff wins.",
+  "target": "b152e7fdfc6a452c8c47dd76de83e1aa",
+  "text": "In medium armor: +your Constitution modifier to its maximum Dexterity bonus."
+}

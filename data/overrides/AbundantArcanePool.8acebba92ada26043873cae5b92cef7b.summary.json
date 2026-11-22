@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "4fc90564",
+  "reason": "Its rule is IncreaseResourceAmountBySharedValue on ArcanePoolResourse and EldritchPoolResourse scaled by a MythicLevel ContextRankConfig (UnitLogic/FactLogic/IncreaseResourceAmountBySharedValue.cs CalculateMaxResourceAmount), which data/ doesn't keep.",
+  "target": "8acebba92ada26043873cae5b92cef7b",
+  "text": "+1 arcane pool point per mythic rank (eldritch pool for an Eldritch Scion)."
+}

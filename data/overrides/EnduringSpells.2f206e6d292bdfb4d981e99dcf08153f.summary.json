@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its rule is the EnduringSpells component (Designers/Mechanics/Facts/EnduringSpells.cs HandleBuffDidAdded), which data/ doesn't keep.",
+  "target": "2f206e6d292bdfb4d981e99dcf08153f",
+  "text": "Your spellbook buffs (not from items) lasting 1 to 24 hours last 24 hours instead."
+}

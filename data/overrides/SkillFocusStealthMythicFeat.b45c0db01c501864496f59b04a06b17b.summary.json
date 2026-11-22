@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "0eb957e5",
+  "reason": "It grants an activatable ability whose buff carries Take10ForSuccess (applied in RuleSystem/Rules/RuleSkillCheck.cs), which isn't a Summary carrier. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "b45c0db01c501864496f59b04a06b17b",
+  "text": "Stealth checks count the d20 as 10 whenever 10 would succeed (a toggle, on by default)."
+}

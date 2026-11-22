@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "f85a3bbe",
+  "reason": "HasArmorFeatureUnlock adds a buff whose sub-buff, applied while the armor is worn, holds the rule (MaxDexBonusIncrease, SetAttackerMissChance); data/ keeps none of it. Checked against the cached guides (~/code/wotr-planner/guide-cache); where they differ, the buff wins.",
+  "target": "40be409a44084b2998eda225dd9c544a",
+  "text": "In light armor: +your mythic rank to its maximum Dexterity bonus, and attacks against you have a 5% miss chance (10% at mythic rank 4, 15% at 7, 20% at 10)."
+}

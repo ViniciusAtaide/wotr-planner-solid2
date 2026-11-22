@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "5264a64c",
+  "reason": "Its rule is IncreaseResourceAmountBySharedValue on SmiteChaosResource with a Div2 MythicLevel ContextRankConfig (UnitLogic/FactLogic/IncreaseResourceAmountBySharedValue.cs CalculateMaxResourceAmount), which data/ doesn't keep.",
+  "target": "4cdc155e26204491ba4d193646cb4443",
+  "text": "+1 use of smite chaos per day per 2 mythic ranks."
+}

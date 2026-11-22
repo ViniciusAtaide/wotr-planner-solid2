@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its rule is an AddInitiatorAttackWithWeaponTrigger applying DistractingShotsBuff (ACContextBonusAgainstWeaponSubcategory with a negated Div2 mythic rank), which data/ doesn't keep.",
+  "target": "ad686f07a3deaf94ba91f97369156000",
+  "text": "A ranged weapon hit gives the target -1 AC per 2 mythic ranks against melee attacks for 1 round."
+}

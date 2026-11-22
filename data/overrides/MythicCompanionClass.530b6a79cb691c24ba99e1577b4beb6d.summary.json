@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "be69850b",
+  "reason": "A Mythic class has no labelled components; this states what its progression and prerequisites can't (its spellbook, its entry rank from PrerequisiteMythicLevel). Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "530b6a79cb691c24ba99e1577b4beb6d",
+  "text": "A companion's Mythic ranks, with no path."
+}

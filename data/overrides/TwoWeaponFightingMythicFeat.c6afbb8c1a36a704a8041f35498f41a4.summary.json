@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "aaa19668",
+  "reason": "The effect lives in TwoWeaponFightingBasicMechanics' TwoWeaponFightingAttackPenalty (m_MythicBlueprint, Designers/Mechanics/Facts/TwoWeaponFightingAttackPenalty.cs OnEventAboutToTrigger), not on the feat.",
+  "target": "c6afbb8c1a36a704a8041f35498f41a4",
+  "text": "Fighting with two weapons, the attack penalties are 0 on each hand instead of -2, still -2 when the off-hand weapon isn't light."
+}

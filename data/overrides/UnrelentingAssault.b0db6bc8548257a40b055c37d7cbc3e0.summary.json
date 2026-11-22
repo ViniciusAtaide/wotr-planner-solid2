@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its rule is an AddInitiatorAttackWithWeaponTrigger (OnlyOnFirstAttack) adding UnrelentingAssaultBuff ranks and UnrelentingAssaultEffectBuff (UnitLogic/Buffs/Components/WeaponAttackTypeDamageBonus.cs OnEventAboutToTrigger), which data/ doesn't keep.",
+  "target": "b0db6bc8548257a40b055c37d7cbc3e0",
+  "text": "Each round you make a melee attack, +2 melee weapon damage, stacking to +10 until combat ends."
+}

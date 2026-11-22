@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "281ba6ca",
+  "reason": "DefensiveCombatTraining with Mythic set (Designers/Mechanics/Facts/DefensiveCombatTraining.cs OnEventAboutToTrigger(RuleCalculateBaseCMD)) isn't a Summary carrier.",
+  "target": "479ee593a2a9cad4db68468c39a623ba",
+  "text": "+half your mythic rank (at least +1) to CMD."
+}

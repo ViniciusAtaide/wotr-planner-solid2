@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "7e8a8e3a",
+  "reason": "It grants an activatable ability whose buff carries Take10ForSuccess (applied in RuleSystem/Rules/RuleSkillCheck.cs), which isn't a Summary carrier. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "93bc16aff4412aa4c9886b741116da37",
+  "text": "Use Magic Device checks count the d20 as 10 whenever 10 would succeed (a toggle, on by default)."
+}

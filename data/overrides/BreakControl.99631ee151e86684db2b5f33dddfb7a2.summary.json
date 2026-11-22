@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its rule is an AddRestTrigger chaining BreakControlCountBuff1-3 (AddConditionTrigger) that cast BreakControlAbility, a ContextActionDispelMagic with CheckType None (RuleSystem/Rules/RuleDispelMagic.cs OnTrigger), which data/ doesn't keep.",
+  "target": "99631ee151e86684db2b5f33dddfb7a2",
+  "text": "Three times per rest, when you become frightened, shaken, dazed, sickened, staggered, nauseated, stunned, paralyzed or confused, the effect causing it is removed with no roll."
+}

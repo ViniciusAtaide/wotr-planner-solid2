@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "cb67e559",
+  "reason": "It grants an activatable ability whose buff carries Take10ForSuccess (applied in RuleSystem/Rules/RuleSkillCheck.cs), which isn't a Summary carrier. Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "7dfd95e34132fad459b05fa0c4fe97bd",
+  "text": "Persuasion checks count the d20 as 10 whenever 10 would succeed (a toggle, on by default)."
+}

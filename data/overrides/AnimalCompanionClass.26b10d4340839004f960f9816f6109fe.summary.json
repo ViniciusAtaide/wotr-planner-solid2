@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "c72bf5fa",
+  "reason": "A class has no labelled components, and this one is never a player pick, which no label can say.",
+  "target": "26b10d4340839004f960f9816f6109fe",
+  "text": "The class an animal companion levels in."
+}

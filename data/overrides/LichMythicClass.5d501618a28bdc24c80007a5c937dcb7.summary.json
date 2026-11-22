@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "a2edfdc3",
+  "reason": "A Mythic class has no labelled components; this states what its progression and prerequisites can't (its spellbook, its entry rank from PrerequisiteMythicLevel). Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "5d501618a28bdc24c80007a5c937dcb7",
+  "text": "Mythic path with its own spells, which can merge into a class spellbook."
+}

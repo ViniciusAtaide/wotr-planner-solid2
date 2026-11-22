@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "It has no component; ShadowEvocationProperty, ShadowEvocationGreaterProperty and ShadesProperty add 20 per rank through a FactRankGetter on it.",
+  "target": "6a9448ec047c642408af6debb8536c38",
+  "text": "Your Shadow Evocation, Greater Shadow Evocation and Shades are 20% more real."
+}

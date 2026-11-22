@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "f85a3bbe",
+  "reason": "HasArmorFeatureUnlock adds a buff whose sub-buff, applied while the armor is worn, holds the rule (AddSpellResistance with AddBonusToResistance); data/ keeps none of it. Checked against the cached guides (~/code/wotr-planner/guide-cache); where they differ, the buff wins.",
+  "target": "3260cacb9fa64d3bba6f179cfb026abd",
+  "text": "In light armor: spell resistance equal to your armor's AC bonus, added to any other spell resistance."
+}

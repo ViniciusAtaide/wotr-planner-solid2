@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "cc4e3b6e",
+  "reason": "Its effect lives in BattleMeditationAbility's BattleMeditationBuff (AddCondition, AddAreaEffect) and BattleMeditationArea's BattleMeditationEffectBuff (AddContextStatBonus, SavingThrowBonusAgainstDescriptor, OnePlusDivStep ContextRankConfig), not on the feature.",
+  "target": "3f12027f9152f484b8fde69d2c87c8cc",
+  "text": "Toggle, standard action, combat only: allies within 30 feet get a morale bonus of 1 + 1 per 3 mythic ranks on attack rolls, damage rolls and saves against fear. While on, you are staggered, can't move and lose your Dexterity bonus to AC."
+}

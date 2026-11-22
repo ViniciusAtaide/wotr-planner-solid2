@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "8ca70768",
+  "reason": "HasArmorFeatureUnlock adds a buff whose sub-buff, applied while the armor is worn, holds the rule (ArmorSpeedPenaltyRemoval, AcAddAcBuff Div2); data/ keeps none of it. Checked against the cached guides (~/code/wotr-planner/guide-cache); where they differ, the buff wins.",
+  "target": "4243c96836bf4b54aa4b36e1ab0c7fb1",
+  "text": "In medium armor: no speed penalty, and half your armor's AC bonus again as AC."
+}

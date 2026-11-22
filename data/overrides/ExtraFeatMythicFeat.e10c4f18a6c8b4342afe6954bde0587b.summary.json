@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "A BlueprintFeatureSelection with no components; its effect is the pick from the Feat group.",
+  "target": "e10c4f18a6c8b4342afe6954bde0587b",
+  "text": "Pick one extra feat."
+}

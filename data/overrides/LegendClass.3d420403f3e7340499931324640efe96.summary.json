@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "a09336ee",
+  "reason": "Its rule is the LegendaryHero mechanics feature (UnitLogic/UnitProgressionData.cs MaxCharacterLevel), not a component a label reads.",
+  "target": "3d420403f3e7340499931324640efe96",
+  "text": "Mythic path that raises the character level cap from 20 to 40."
+}

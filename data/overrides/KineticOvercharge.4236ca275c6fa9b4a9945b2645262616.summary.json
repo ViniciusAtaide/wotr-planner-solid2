@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "a6d49153",
+  "reason": "Its rule is a rank of GatherPowerFeature, read as UnitPartKineticist.GatherPowerBaseValue in UnitLogic/Class/Kineticist/KineticistUtils.cs CalculateGatherPowerBonus, which data/ doesn't keep.",
+  "target": "4236ca275c6fa9b4a9945b2645262616",
+  "text": "Gather power reduces burn costs by 1 more."
+}

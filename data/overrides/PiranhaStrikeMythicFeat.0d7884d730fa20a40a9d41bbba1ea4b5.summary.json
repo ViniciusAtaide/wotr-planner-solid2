@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "892029ae",
+  "reason": "The effect lives in PiranhaStrikeBuffEffect's WeaponParametersDamageBonus (m_MythicBlueprint adds 1 to DamageBonus, Designers/Mechanics/Facts/WeaponParametersDamageBonus.cs OnEventAboutToTrigger(RuleCalculateWeaponStats)), not on the feat.",
+  "target": "0d7884d730fa20a40a9d41bbba1ea4b5",
+  "text": "Piranha Strike's damage bonus is +3 instead of +2, still multiplied by 1 + base attack bonus / 4."
+}

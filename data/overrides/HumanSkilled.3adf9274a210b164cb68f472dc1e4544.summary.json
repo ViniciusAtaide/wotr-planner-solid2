@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "3b077b9d",
+  "reason": "AddSkillPointPerCharacterLevel (UnitLogic/FactLogic/AddSkillPointPerCharacterLevel.cs) is not a Summary carrier.",
+  "target": "3adf9274a210b164cb68f472dc1e4544",
+  "text": "One more skill point every level."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "0d889c9a",
+  "reason": "The effect lives in the Vital Strike abilities' AbilityCustomVitalStrike (m_MythicBlueprint, UnitLogic/Abilities/Components/AbilityCustomVitalStrike.cs VitalStrikePart.OnEventAboutToTrigger(RuleCalculateDamage)), not on the feat.",
+  "target": "e07bcb271ecefec44be314e1c807c798",
+  "text": "Vital Strike also adds the weapon's flat damage bonus again for each extra roll of its dice (once, twice with Improved, three times with Greater). The extra bonus isn't multiplied on a critical hit."
+}

@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "4d1a14c0",
+  "reason": "Its rule is IncreaseResourceAmountBySharedValue on SmiteEvilResource with a Div2 MythicLevel ContextRankConfig (UnitLogic/FactLogic/IncreaseResourceAmountBySharedValue.cs CalculateMaxResourceAmount), which data/ doesn't keep.",
+  "target": "7e5b63faeca24474db0bfd019167dda4",
+  "text": "+1 use of smite evil per day per 2 mythic ranks."
+}

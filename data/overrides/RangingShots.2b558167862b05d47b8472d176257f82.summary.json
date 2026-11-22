@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its rule is two AddInitiatorAttackWithWeaponTrigger components adding and removing ranks of RangingShotsBuff (AttackBonusAgainstTarget ranked by TargetBuffRank), which data/ doesn't keep.",
+  "target": "2b558167862b05d47b8472d176257f82",
+  "text": "Each ranged miss gives +1 on later ranged attacks against that target (up to your mythic rank); each hit takes 1 away. It ends with combat."
+}

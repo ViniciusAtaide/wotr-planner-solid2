@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "73259828",
+  "reason": "The feat has no effect component; CraftRoot's m_PotionRequirements name it as the RequiredFeature for spell levels 4 to 6 (Craft/CraftRoot.cs CheckCraftAvail).",
+  "target": "a155dc95e3fb2d44481c76bc4aea26b9",
+  "text": "At camp you can brew potions of 4th to 6th level spells, given an alchemist's kit of high enough grade."
+}

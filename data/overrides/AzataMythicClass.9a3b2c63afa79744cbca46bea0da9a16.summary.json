@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "d137bd3a",
+  "reason": "A Mythic class has no labelled components; this states what its progression and prerequisites can't (its spellbook, its entry rank from PrerequisiteMythicLevel). Checked against the cached guides (~/code/wotr-planner/guide-cache).",
+  "target": "9a3b2c63afa79744cbca46bea0da9a16",
+  "text": "Mythic path with its own spellbook, spells up to 7th level."
+}

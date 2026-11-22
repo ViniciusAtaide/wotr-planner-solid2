@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "78b42857",
+  "reason": "ModifyD20 (Designers/Mechanics/Facts/ModifyD20.cs) isn't a Summary carrier.",
+  "target": "952147d43befd5b4ba853f24cd1368ee",
+  "text": "Roll Will saves twice and keep the better result."
+}

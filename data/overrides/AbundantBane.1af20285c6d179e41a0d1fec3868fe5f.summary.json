@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "f0684da6",
+  "reason": "Its rule is IncreaseResourceAmountBySharedValue on InquisitorBaneResource scaled by a MythicLevel ContextRankConfig (UnitLogic/FactLogic/IncreaseResourceAmountBySharedValue.cs CalculateMaxResourceAmount), which data/ doesn't keep.",
+  "target": "1af20285c6d179e41a0d1fec3868fe5f",
+  "text": "+1 round of bane per day per mythic rank."
+}

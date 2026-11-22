@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "ExpandedArsenalMagicSchools (Designers/Mechanics/Facts/ExpandedArsenalMagicSchools.cs OnEventAboutToTrigger) isn't a Summary carrier, and SpellFocusParametrized and SchoolMasteryParametrized skip a school it holds.",
+  "target": "f137089c48364014aa3ec3b92ccaf2e2",
+  "text": "Pick a spell school: its spells use your best other school's Spell Focus DC bonus and School Mastery caster level bonus instead of their own."
+}

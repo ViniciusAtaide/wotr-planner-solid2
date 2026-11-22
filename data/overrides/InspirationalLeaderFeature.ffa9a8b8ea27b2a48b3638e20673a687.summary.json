@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "741638a5",
+  "reason": "Its effect lives in an AuraFeatureComponent whose InspirationalLeaderArea applies InspirationalLeaderEffectBuff (SavingThrowBonusAgainstDescriptor, AddContextStatBonus, ConcentrationBonus), not on the feature.",
+  "target": "ffa9a8b8ea27b2a48b3638e20673a687",
+  "text": "Allies within 50 feet get +(half your mythic rank + 1) on initiative and concentration checks, and the same as a morale bonus on saves against mind-affecting effects."
+}

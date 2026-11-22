@@ -1,0 +1,7 @@
+{
+  "change": "summary",
+  "fingerprint": "ff2c4292",
+  "reason": "HasShieldFeatureUnlock adds ShieldHeavyMythicBuff, whose AddTargetAttackWithWeaponTrigger (NotReach, AddTargetAttackWithWeaponTrigger.cs) and ShieldBonus ContextRankConfig hold the rule.",
+  "target": "6449dd91423645ddb2f9eb86aaeabfcf",
+  "text": "While you wield a heavy shield, an enemy that hits you with a non-reach melee weapon takes bludgeoning damage equal to your Strength modifier plus the shield's AC bonus."
+}
