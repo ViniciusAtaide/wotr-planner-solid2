@@ -299,7 +299,7 @@ What the walk records when the game refuses a choice: the rule that refused it a
 
 - `Rule`: a rule that refuses a choice. A game rule is named by its method, and by the field it tests where the method tests several (`BlueprintFeatureSelection.CanSelect:Mode`); a planner rule by the decision that settled it (`adr0003…`, `map31…`, `map32…`). The rules are grouped as race, scores and skills (SelectRace, SelectRaceStat, StatsDistribution, SpendAttributePoint, SpendSkillPoint, ported in `walk.ts` and `stats.ts`); classes, ranks and archetypes; picks; Gear (`gear.ts`); and aspects kept on (map ticket 32).
 - `Value`: a value a rule compared: a number, a name the game uses (a stat, an alignment, a place), or several.
-- `Unmet`: a prerequisite leaf that didn't hold, with what the character has and what the leaf asks, where it counts.
+- `Unmet`: a prerequisite leaf that didn't hold, with what the character has and what the leaf asks, where it counts. An alignment leaf also keeps the alignment it judged (`alignment`).
 - `FailedRule`: why a check refused, as data: the rule, what it found and what it needed, and the leaves that failed when it reads them. R turns it into a Refusal (GLOSSARY.md) in ticket 04.
 - `Failure`: a choice of the Build that the game refuses; its `subject` is the class, archetype, race, item, aspect or picked feature.
 

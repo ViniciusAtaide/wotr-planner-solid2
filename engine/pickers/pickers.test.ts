@@ -24,7 +24,7 @@ import { gearClashes, gearClashIndex } from './gear-clashes';
 import { gearOptions } from './gear-options';
 import { PLACE_ITEM_TYPES } from '../walk';
 import { guids } from '../data';
-import { breaks, opensAt, refusal } from '../refusals';
+import { breaks, groupedFailures, opensAt, placesWords, refusal } from '../refusals';
 import { prerequisites } from '../prerequisites';
 import { pauseAt, walk } from '../walk';
 
@@ -113,6 +113,27 @@ describe('S: the pickers', { timeout: 30_000 }, () => {
 
 describe('R: the Refusal', { timeout: 30_000 }, () => {
   const sorcerer: Build = { race: HUMAN, scores, levels: [{ class: SORCERER }], picks: [] };
+
+  it('words a proposed alignment as yours, and a reason repeated across levels once with its levels (QA pass 6)', () => {
+    const BARBARIAN = 'f7d7eb166b3dd594fb330d085df41853';
+    const chaotic: Build = {
+      race: HUMAN,
+      scores,
+      alignment: 'ChaoticNeutral',
+      levels: Array.from({ length: 9 }, () => ({ class: BARBARIAN })),
+      picks: [],
+    };
+    const lawful: Build = { ...chaotic, alignment: 'LawfulGood' };
+    const before = walk(data, chaotic, G).unit;
+    const failures = walk(data, lawful, G).failures.filter((f) => f.choice === 'class');
+    expect(failures.length).toBeGreaterThan(1);
+    const groups = groupedFailures({ data, G, unit: before }, failures);
+    expect(groups).toHaveLength(1);
+    expect(groups[0]?.text).toContain('(yours: Lawful Good)');
+    expect(groups[0]?.text).not.toContain('Chaotic Neutral');
+    expect(placesWords(groups[0]?.places ?? [])).toBe(`Levels 1–${failures.length}`);
+    expect(placesWords([{ level: 2 }, { level: 4 }, { level: 5 }, { rank: 1 }])).toBe('Levels 2 and 4–5; Rank 1');
+  });
 
   it('words an unmet stat with what the character has', () => {
     const closed = picker(data, sorcerer, { place: { level: 1 }, selection: BASIC, index: 0 }, G)?.options.find(

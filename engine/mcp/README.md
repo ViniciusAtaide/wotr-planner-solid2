@@ -12,7 +12,7 @@ From `tools.ts`, the shared shapes:
 
 - `Engine` and `engineOf(data)`: what every tool reads, the checked data and its grant index.
 - `Changed`: a changed Build, its code (also a Share link, `/#b=<code>`) and the Build itself. Over the MCP (`TOOLS`), the Build becomes `brief`, one line (`brief(e, build)`: name, race, classes, Mythic path, picks, Gear), since an agent goes on from the code and reads the rest with `next_slots` and `sheet`; late in a Build the whole Build was 10–13 KB a call (MCP QA).
-- `ToolRefusal`: a tool's refusal: R's `reason` and `unmet` lines, and `breaks`, what the change would break (each pick with its slot, or another choice with R's reason).
+- `ToolRefusal`: a tool's refusal: R's `reason` and `unmet` lines, and `breaks`, what the change would break (each pick with its slot, or another choice with R's reason, one line per reason with its places: R's `groupedFailures`).
 - `Mode`: the `mode` of `pick` and `equip`. `strict` refuses a change that breaks later picks, `preview` lists what a cascade would clear, `cascade` clears it (GLOSSARY.md "Cascade edit").
 - `SlotView`: an open slot as `next_slots` and `level_up` list it; its `kind` is the selection's blueprint type (a feature selection, a parametrized feat or a Mythic spellbook).
 - `OptionView`: one option as `options` lists it. `buildsOn` holds its Synergy badges (map 09, the chain kind), what the Build holds that the option builds on; `gear` is ADR 0002's note for an open option that needs the Gear counted; `refusal` is R's words for a closed option.

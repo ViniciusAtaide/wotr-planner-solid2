@@ -266,6 +266,7 @@ interface LeafVerdict {
   readonly holds: boolean;
   readonly found?: number;
   readonly needed?: number;
+  readonly alignment?: Alignment;
 }
 
 const atLeast = (found: number, needed: number) => ({ has: found >= needed, found, needed });
@@ -274,7 +275,7 @@ export function judgeLeaf(leaf: PrerequisiteLeaf, ctx: Context): LeafVerdict {
   if (considerFulfilled(leaf, ctx)) return { holds: true };
   const { unit } = ctx;
   const { names } = leaf;
-  const { has, ...counts } = ((): { readonly has: boolean; readonly found?: number; readonly needed?: number } => {
+  const { has, ...counts } = ((): Omit<LeafVerdict, 'holds'> & { readonly has: boolean } => {
     switch (names.kind) {
       case 'fact':
         if (leaf.polarity === 'forbids') return { has: unit.hasFact(names.m_Feature) };
@@ -300,7 +301,9 @@ export function judgeLeaf(leaf: PrerequisiteLeaf, ctx: Context): LeafVerdict {
       case 'mythicLevel':
         return atLeast(unit.mythicLevel, names.Level);
       case 'alignment':
-        return { has: unit.alignment !== undefined && inMask(unit.alignment, names.Alignment) };
+        return unit.alignment === undefined
+          ? { has: false }
+          : { has: inMask(unit.alignment, names.Alignment), alignment: unit.alignment };
       case 'proficiency':
         return {
           has:

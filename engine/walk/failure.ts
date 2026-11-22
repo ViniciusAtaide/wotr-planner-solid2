@@ -1,4 +1,4 @@
-import type { Place, SlotId } from '../build';
+import type { Alignment, Place, SlotId } from '../build';
 import type { Guid } from '../data';
 import type { PrerequisiteLeaf } from '../prerequisites';
 
@@ -70,6 +70,7 @@ export interface Unmet {
   readonly leaf: PrerequisiteLeaf;
   readonly found?: number;
   readonly needed?: number;
+  readonly alignment?: Alignment;
 }
 
 export interface FailedRule {

@@ -16,7 +16,7 @@ import type { CheckedData } from '../load';
 import { bareName, isShown, type FeatureParameterType, type Guid, type StatType } from '../data';
 import { buildGrantIndex, grantorKind, type GrantIndex, type GrantParam } from '../grants';
 import { conditionFacts } from '../prerequisites';
-import type { FailedRule, Rule, Unmet, Value, Unit } from '../walk';
+import type { Failure, FailedRule, Rule, Unmet, Value, Unit } from '../walk';
 import { pauseAt, PLACE_ITEM_TYPES, walk } from '../walk';
 
 export interface Refusal {
@@ -52,6 +52,44 @@ export function refusal(w: Wording, failed: FailedRule): Refusal {
 export function refusalWords(w: Wording, failed: FailedRule): string {
   const r = refusal(w, failed);
   return r.unmet.length === 0 ? r.text : `${r.text.replace(/\.$/, ':')} ${r.unmet.join(' ')}`;
+}
+
+export interface FailureGroup {
+  readonly choice: Failure['choice'];
+  readonly places: readonly Place[];
+  readonly text: string;
+}
+
+export function groupedFailures(w: Wording, failures: readonly Failure[]): FailureGroup[] {
+  const groups = new Map<string, { choice: Failure['choice']; places: Place[]; text: string }>();
+  for (const f of failures) {
+    const text = refusalWords(w, f);
+    const key = `${f.choice} ${text}`;
+    const known = groups.get(key);
+    if (known === undefined) groups.set(key, { choice: f.choice, places: [f.place], text });
+    else if (!known.places.some((p) => placeKey(p) === placeKey(f.place))) known.places.push(f.place);
+  }
+  return [...groups.values()];
+}
+
+function runs(numbers: readonly number[]): string {
+  const sorted = [...new Set(numbers)].sort((a, b) => a - b);
+  const parts: string[] = [];
+  for (let i = 0; i < sorted.length;) {
+    let j = i;
+    while (j + 1 < sorted.length && sorted[j + 1] === sorted[j]! + 1) j++;
+    parts.push(j > i ? `${sorted[i]}–${sorted[j]}` : `${sorted[i]}`);
+    i = j + 1;
+  }
+  return parts.length <= 1 ? (parts[0] ?? '') : `${parts.slice(0, -1).join(', ')} and ${parts.at(-1)}`;
+}
+
+export function placesWords(places: readonly Place[]): string {
+  const levels = places.flatMap((p) => ('level' in p ? [p.level] : []));
+  const ranks = places.flatMap((p) => ('rank' in p ? [p.rank] : []));
+  const one = (n: number[], single: string, plural: string) =>
+    n.length === 0 ? [] : [`${new Set(n).size === 1 ? single : plural} ${runs(n)}`];
+  return [...one(levels, 'Level', 'Levels'), ...one(ranks, 'Rank', 'Ranks')].join('; ');
 }
 
 export function rankLevelRange(found: unknown): string {
@@ -288,9 +326,10 @@ export function unmetText(w: Wording, u: Unmet): string {
     case 'mythicLevel':
       return `Needs Mythic rank ${n.Level}${has(u)}.`;
     case 'alignment': {
-      if (w.unit !== undefined && w.unit.alignment === undefined) return 'Choose an alignment first.';
+      const judged = u.alignment ?? w.unit?.alignment;
+      if (judged === undefined && w.unit !== undefined) return 'Choose an alignment first.';
       const allowed = typeof n.Alignment === 'number' ? `alignment mask ${n.Alignment}` : camelWords(n.Alignment);
-      const yours = w.unit?.alignment === undefined ? '' : ` (yours: ${camelWords(w.unit.alignment)})`;
+      const yours = judged === undefined ? '' : ` (yours: ${camelWords(judged)})`;
       return `Needs an alignment of ${allowed}${yours}.`;
     }
     case 'proficiency': {

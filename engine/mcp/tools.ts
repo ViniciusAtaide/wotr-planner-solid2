@@ -34,13 +34,13 @@ import {
   abilityScoreRange,
   archetypeCount,
   gearNote,
+  groupedFailures,
   nameOf,
   buildNameLength,
   bareNameOf,
   namesIn,
   rankLevelRange,
   refusal,
-  refusalWords,
   skillRankRange,
   statName,
   type Refusal,
@@ -55,7 +55,6 @@ import {
   pointBuyCost,
   walk,
   type Band,
-  type Failure,
 } from '../walk';
 
 export interface Engine {
@@ -113,7 +112,7 @@ function breaksInWords(e: Engine, b: Breaks, unitOf?: () => Parameters<typeof re
   const w = { data: e.data, G: e.G, unit: unitOf?.() };
   return [
     ...picksInWords(e, b.picks),
-    ...b.others.map((f: Failure) => `${placeKey(f.place)} ${f.choice}: ${refusalWords(w, f)}`),
+    ...groupedFailures(w, b.others).map((g) => `${g.places.map(placeKey).join(', ')} ${g.choice}: ${g.text}`),
   ];
 }
 
