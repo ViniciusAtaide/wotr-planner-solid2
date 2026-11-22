@@ -50,6 +50,7 @@ import {
   type TrailState,
 } from './trail-state';
 import type { Selection } from './workspace-state';
+import { historyIdle } from './history-moves';
 import { PickStep } from './PickStep';
 import { optionName, shownName } from './words';
 
@@ -401,6 +402,13 @@ async function atBonusCombatFeat(): Promise<string> {
     expect(picks.some((p) => e.data.blueprints.get(p.feature)?.name === 'Gozreh')).toBe(true);
   });
   return location.hash;
+}
+
+let pointerX = 0;
+
+function pointAt(el: Element): void {
+  pointerX += 7;
+  fireEvent.pointerMove(el, { clientX: pointerX, clientY: pointerX });
 }
 
 function openTarget(): void {
@@ -1930,6 +1938,97 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
 
   const dialogBox = () => document.querySelector<HTMLElement>('.choice-dialog');
   const dialogTitle = () => dialogBox()?.querySelector('.choice-dialog__title')?.textContent;
+  const pane = () => dialogBox()?.querySelector('.choice-dialog__detail')?.textContent ?? '';
+  const dialogRow = (name: string) =>
+    [...(dialogBox()?.querySelectorAll<HTMLElement>('.ww-option') ?? [])].find(
+      (b) => b.querySelector('.ww-option__name')?.textContent === name,
+    );
+  const typeInDialog = (text: string) => {
+    const filter = dialogBox()?.querySelector<HTMLInputElement>('[data-picker-filter]') ?? document.body;
+    fireEvent.input(filter, { target: { value: text } });
+    flush();
+  };
+  const settled = async () => {
+    await new Promise((r) => setTimeout(r, 0));
+    flush();
+  };
+  const quietHistory = async () => {
+    await new Promise((r) => setTimeout(r, 20));
+    await waitFor(() => expect(historyIdle()).toBe(true));
+    await new Promise((r) => setTimeout(r, 20));
+    flush();
+  };
+  const closeDialog = async () => {
+    fireEvent.keyDown(dialogBox() ?? document.body, { key: 'Escape' });
+    flush();
+    await quietHistory();
+  };
+
+  test('the pane keeps the keyboard mark once a key is pressed, until the pointer moves (QA pass 6)', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(undefined);
+    openField('Race');
+    await waitFor(() => expect(dialogBox()).not.toBeNull());
+    await settled();
+    expect(pane()).toContain('Aasimar');
+    pointAt(dialogRow('Aasimar · Angelkin (Angel-Blooded)') ?? document.body);
+    flush();
+    expect(pane()).toContain('Angelkin');
+    typeInDialog('half-orc');
+    await settled();
+    expect(pane()).toContain('Half-Orc · Basic');
+    fireEvent.pointerOver(dialogRow('Half-Orc · Human-Raised') ?? document.body);
+    await settled();
+    expect(pane()).toContain('Half-Orc · Basic');
+    fireEvent.pointerMove(dialogRow('Half-Orc · Human-Raised') ?? document.body, {
+      clientX: pointerX,
+      clientY: pointerX,
+    });
+    flush();
+    expect(pane()).toContain('Half-Orc · Basic');
+    pointAt(dialogRow('Half-Orc · Human-Raised') ?? document.body);
+    flush();
+    expect(pane()).toContain('Half-Orc · Human-Raised');
+    fireEvent.keyDown(dialogBox()?.querySelector('[data-picker-filter]') ?? document.body, { key: 'Shift' });
+    await settled();
+    expect(pane()).toContain('Half-Orc · Basic');
+    await closeDialog();
+  });
+
+  test('with only closed matches the pane shows the first of them, with its reason (QA pass 6)', async () => {
+    await openPlanner(cleaver);
+    fireEvent.click(chipNamed('Cleave'));
+    flush();
+    tap('Expand');
+    await waitFor(() => expect(dialogBox()).not.toBeNull());
+    typeInDialog('improved critical');
+    await settled();
+    expect(dialogBox()?.querySelector('.ww-option:not(.ww-option--closed)')).toBeNull();
+    expect(pane()).toContain('Improved Critical');
+    await closeDialog();
+  });
+
+  test('Modal first: a score edit keeps focus, and Done sends it to the alignment wheel (QA pass 6)', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(undefined);
+    openField('Race');
+    typeInDialog('human');
+    fireEvent.keyDown(dialogBox()?.querySelector('[data-picker-filter]') ?? document.body, { key: 'Enter' });
+    flush();
+    await waitFor(() => expect(hereTitle()).toBe('Your character · set the ability scores'));
+    const raise = button('Raise Strength');
+    raise.focus();
+    tap('Raise Strength');
+    tap('Racial +2 to Strength');
+    await settled();
+    expect(document.activeElement?.closest('.trail-alignment')).toBeNull();
+    const done = button(/^Done/);
+    done.focus();
+    tap(/^Done/);
+    await waitFor(() => expect(document.activeElement?.closest('.trail-alignment')).not.toBeNull());
+    await quietHistory();
+  });
+
   const pickFirstIn = (root: ParentNode) => {
     const option = root.querySelector<HTMLElement>('button.ww-option');
     fireEvent.click(option ?? document.body);
@@ -2295,7 +2394,7 @@ describe('Summaries and Synergy in the lists (ticket 06)', () => {
     flush();
     const row = rowOf(keyOf(option.feature));
     expect(row?.textContent).toContain('Synergy');
-    fireEvent.pointerOver(row ?? document.body);
+    pointAt(row ?? document.body);
     flush();
     const pane = document.querySelector('.choice-dialog__detail');
     expect(pane?.querySelector('.choice-dialog__links')?.textContent).toMatch(/Shares /);
@@ -2307,7 +2406,7 @@ describe('Summaries and Synergy in the lists (ticket 06)', () => {
     fireEvent.click(chipNamed('Power Attack'));
     flush();
     await waitFor(() => expect(document.querySelector('.choice-dialog')).not.toBeNull());
-    fireEvent.pointerOver(rowOf(keyOf(POWER_ATTACK)) ?? document.body);
+    pointAt(rowOf(keyOf(POWER_ATTACK)) ?? document.body);
     flush();
     const pane = () => document.querySelector('.choice-dialog__detail');
     expect(pane()?.querySelector('.choice-dialog__name')?.textContent).toBe('Power Attack');
@@ -2356,7 +2455,7 @@ describe('Summaries and Synergy in the lists (ticket 06)', () => {
     const bardiche = [...document.querySelectorAll<HTMLElement>('.choice-dialog [data-child-of] .ww-option')].find(
       (b) => b.querySelector('.ww-option__name')?.textContent === 'Bardiche',
     );
-    fireEvent.pointerOver(bardiche ?? document.body);
+    pointAt(bardiche ?? document.body);
     flush();
     expect(pane()?.querySelector('.choice-dialog__name')?.textContent).toBe('Weapon Focus (Bardiche)');
   });
@@ -2381,7 +2480,7 @@ describe('Summaries and Synergy in the lists (ticket 06)', () => {
       const row = [...document.querySelectorAll<HTMLElement>('.choice-dialog [data-child-of] .ww-option')].find(
         (b) => b.querySelector('.ww-option__name')?.textContent === value,
       );
-      fireEvent.pointerOver(row ?? document.body);
+      pointAt(row ?? document.body);
       flush();
       return (
         [...document.querySelectorAll('.choice-dialog__links li')]
@@ -2408,7 +2507,7 @@ describe('Summaries and Synergy in the lists (ticket 06)', () => {
     const dodge = [...document.querySelectorAll<HTMLElement>('.choice-dialog .ww-option')].find(
       (r) => r.querySelector('.ww-option__name')?.textContent === 'Dodge',
     );
-    fireEvent.pointerOver(dodge ?? document.body);
+    pointAt(dodge ?? document.body);
     flush();
     const enables =
       [...document.querySelectorAll('.choice-dialog__links li')]
@@ -2738,7 +2837,7 @@ describe('Gear that won’t stack (ticket 06, engine 4d9b8b50)', () => {
     flush();
     const row = () => document.querySelector<HTMLElement>(`[data-detail-key="${ring()}"]`);
     await waitFor(() => expect(row()?.textContent).toContain('Won’t stack'.replace('’', "'")));
-    fireEvent.pointerOver(row() ?? document.body);
+    pointAt(row() ?? document.body);
     flush();
     expect(document.querySelector('.choice-dialog__warnings')?.textContent).toBe(
       "Its deflection bonus to AC won't stack with Ring of Protection +1; both are +1, so only one counts.",

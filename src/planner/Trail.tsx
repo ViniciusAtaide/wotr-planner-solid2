@@ -411,12 +411,12 @@ export default function Trail(props: TrailProps) {
     characterSlots(view()).some((x) => stepKey({ kind: 'slot', slot: x.id }) === key);
   let lastNext = untrack(() => stepKey(next()));
   createEffect(
-    () => ({ built: build(), now: next() }),
-    ({ now }) => {
+    () => ({ built: build(), now: next(), held: props.selection !== undefined }),
+    ({ now, held }) => {
       const open = props.state.dialog;
       if (open !== undefined && isFieldKey(open)) props.send({ kind: 'dialog', step: undefined });
       const key = stepKey(now);
-      if (key === lastNext) return;
+      if (held || key === lastNext) return;
       lastNext = key;
       const arrivingKey = fieldKey(now);
       if (arrivingKey === undefined || !arrived()) {

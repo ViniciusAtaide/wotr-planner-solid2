@@ -347,7 +347,7 @@ export function PickStep(props: PickStepProps) {
     () => {
       const list = items();
       const it = list[mark()];
-      return { list, key: it === undefined ? undefined : itemKey(it) };
+      return { list, key: it === undefined ? closed()[0]?.key : itemKey(it) };
     },
     ({ key }) => hub?.point(key),
   );

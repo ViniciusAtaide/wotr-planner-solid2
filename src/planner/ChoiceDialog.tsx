@@ -81,30 +81,33 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
   let box: HTMLDivElement | undefined;
   const [detail, setDetail] = createSignal<OptionDetail | undefined>(undefined);
   let find: ((key: string) => OptionDetail | undefined) | undefined;
-  let pointed: string | undefined;
+  let marked: string | undefined;
+  let keyed = true;
+  let pointerAt: string | undefined;
+  const showMark = () => {
+    const key = marked;
+    queueMicrotask(() => {
+      if (marked !== key || !keyed) return;
+      if (key === undefined) {
+        setDetail(undefined);
+        return;
+      }
+      const found = find?.(key);
+      if (found !== undefined) setDetail(found);
+    });
+  };
   const hub: DetailHub = {
     resolve: (f) => {
       find = f;
-      queueMicrotask(() => {
-        if (pointed !== undefined) hub.point(pointed);
-      });
+      showMark();
     },
     point: (key) => {
-      pointed = key;
-      queueMicrotask(() => {
-        if (pointed !== key) return;
-        if (key === undefined) {
-          setDetail(undefined);
-          return;
-        }
-        const found = find?.(key);
-        if (found !== undefined) setDetail(found);
-      });
+      marked = key;
+      showMark();
     },
   };
   const follow = (target: EventTarget | null) => {
     const key = keyOf(target);
-    pointed = key;
     const found = key === undefined ? undefined : find?.(key);
     setDetail(found ?? detailOf(target) ?? detail());
   };
@@ -159,7 +162,24 @@ export function ChoiceDialog(props: ChoiceDialogProps) {
           aria-modal="true"
           aria-label={props.title}
           onFocusIn={(e) => follow(e.target)}
-          onPointerOver={(e) => follow(e.target)}
+          onKeyDown={() => {
+            keyed = true;
+            showMark();
+          }}
+          onInput={() => {
+            keyed = true;
+            showMark();
+          }}
+          onPointerMove={(e) => {
+            const at = `${e.clientX} ${e.clientY}`;
+            if (at === pointerAt) return;
+            pointerAt = at;
+            keyed = false;
+            follow(e.target);
+          }}
+          onPointerOver={(e) => {
+            if (!keyed) follow(e.target);
+          }}
         >
           <header class="choice-dialog__head">
             <button type="button" class="trail-link" data-close onClick={dismiss}>

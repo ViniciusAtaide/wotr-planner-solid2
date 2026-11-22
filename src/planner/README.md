@@ -107,6 +107,11 @@ filter from 13 rows up. An open parent's values
 are sorted by name, open before closed, and a level's archetype list starts with "No archetype", then the held
 archetype, then the rest by name.
 
+**Arrival waits for a held step** (QA pass 6): while a step is held open (a selection, such as the ability scores
+during their edits), the trail's next step doesn't arrive; it arrives when the hold ends. The first score edit used
+to make the alignment arrive at once, pulling focus to the wheel mid-edit, so "Done" then found nothing new to
+arrive at.
+
 **Focus**: when a new step arrives and focus was lost with the old one (on the page body), it lands on the step's
 first control: the filter under a fine pointer, else its first button, never "Back to the next choice".
 
@@ -134,7 +139,10 @@ written under try/catch; the page works without storage).
 - **Modal first**: a list step opens in the dialog when it arrives (never on page load), and the trail shows "Open the
   list" in its place.
 - **The dialog** (`ChoiceDialog.tsx`, in a `Portal`): centered over most of the viewport on desktop with a detail pane
-  for the option under the pointer, under focus or marked from the filter, full screen without it under 600 px; a header naming the
+  for the option under the pointer, under focus or marked from the filter (QA pass 6: it opens on the marked row,
+  the first; once a key is pressed or the filter typed in, the mark wins until the pointer really moves, so a row that
+  slides under a resting pointer, which Chrome reports as a move with the same coordinates, doesn't take the pane;
+  with only closed matches it shows the first of them, with its reason), full screen without it under 600 px; a header naming the
   step, the scores the step reads, and "← Back". Focus moves into it (the filter under a fine pointer, else the first
   option). Closed by Escape, Back or the back button, it gives focus back to the opener, or to the step's button when
   the opener is gone; closed because a pick moved the trail on, it leaves focus to the next step: that step's arrival

@@ -278,7 +278,7 @@ export function ChoiceList(props: ChoiceListProps) {
   createEffect(
     () => {
       const list = listed();
-      return { list, key: filtering() ? open()[mark()]?.key : undefined };
+      return { list, key: filtering() ? (open()[mark()]?.key ?? closed()[0]?.key) : undefined };
     },
     ({ key }) => hub?.point(key),
   );
