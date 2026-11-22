@@ -1,5 +1,5 @@
 import { abilityScores, rankLevel, skillRanks, type Build, type LevelUp } from '../build';
-import { facts, increase, pick, second, withParam, type Gold } from './gold';
+import { facts, increase, pick, racePick, second, withParam, type Gold } from './gold';
 
 const SORCERER = 'b3a505fb61437dc4097f43c3f8f9a4cf';
 const MYTHIC_HERO = '247aa787806d5da4f89cfc3dff0b217f';
@@ -79,7 +79,7 @@ const build: Build = {
   levels: Array.from({ length: 20 }, (_, i) => level(i + 1)),
   ranks: EXPECTED.map((at, i) => ({ class: i < 2 ? MYTHIC_HERO : AZATA, level: rankLevel(at) })),
   picks: [
-    pick({ level: 1 }, HALFLING_HERITAGE_SELECTION, 0, HASTY_HALFLING),
+    racePick({ level: 1 }, HALFLING_HERITAGE_SELECTION, HALFLING_RACE, 0, HASTY_HALFLING),
     pick({ level: 1 }, BACKGROUNDS_BASE_SELECTION, 0, BACKGROUNDS_REGIONAL_SELECTION),
     pick({ level: 1 }, BACKGROUNDS_REGIONAL_SELECTION, 0, BACKGROUND_WARRIOR_OF_THE_LINNORM_KINGS),
     pick({ level: 1 }, DEITY_SELECTION, 0, ATHEISM_FEATURE),

@@ -33,6 +33,10 @@ export function pick(place: Place, selection: Guid, index: number, feature: Guid
   return { slot: { place, selection, index }, feature, ...(param && { param }) };
 }
 
+export function racePick(place: Place, selection: Guid, race: Guid, index: number, feature: Guid): Pick {
+  return { slot: { place, selection, index, from: race }, feature };
+}
+
 export function facts(line: string, ...guids: Guid[]): GoldLine {
   return { line, expect: guids.map((fact) => ({ fact })) };
 }

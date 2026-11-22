@@ -109,7 +109,7 @@ Classes, archetypes and progressions:
 
 Slots and picks:
 
-- `addSelection`: `LevelUpState.AddSelection`: the slot's index counts this selection's slots opened earlier in the level-up.
+- `addSelection`: `LevelUpState.AddSelection`: the slot's index counts this selection's slots opened earlier in the level-up by the same opener. A top-level slot the race or a fact's component opened carries that opener as `from`; one a progression opened has none, and a nested slot (a parent pick opened it) has none, since its parent already tells it apart. So the Human's bonus feat is `@<race>#0` beside the character's own feat `#0`, and a race change can only clear a pick, never move it (QA pass 6).
 - `prohibited`: `BlueprintFeatureSelection.IsSelectionProhibited` (NoSelectionIfAlreadyHasFeature). `obligatory`: the selection's Obligatory flag, which opens its slot anyway.
 - `selectionWaives`: `BlueprintFeatureSelection.IsIgnorePrerequisites`: the field, or, for the root's BasicFeatSelection, the main character's TricksterIgnoreFeatPrerequisites flag (an AddMechanicsFeature on a held fact).
 - `slotWaives`: `FeatureSelectionState.IgnorePrerequisites`: this slot's or any parent slot's selection waives.

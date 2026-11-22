@@ -23,6 +23,11 @@ export function heritageSlotIn(data: CheckedData, slots: readonly OpenedSlot[]):
   });
 }
 
+export function raceStatPending(data: CheckedData, build: Build): boolean {
+  const bp = build.race === undefined ? undefined : data.blueprints.get(build.race);
+  return bp?.$type === 'BlueprintRace' && bp.SelectableRaceStat && build.raceStat === undefined;
+}
+
 export function firstLevelWith(data: CheckedData, build: Build, race: Guid): Build {
   const bp = data.blueprints.get(race);
   const keepsStat = bp?.$type === 'BlueprintRace' && bp.SelectableRaceStat;

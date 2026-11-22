@@ -26,7 +26,7 @@ structure = opt(key(races)), ability [race stat], alignment, opt(6 × u8 [point 
                                      skills × (u8 skill, u8 ranks)),
             varint ranks, ranks × (key(classes), u8 Rank level),
             varint class choices, choices × (key(classes), varint archetypes, archetypes × key(archetypes)),
-            varint picks, picks × (place, kindKey [selection], varint index, kindKey [feature], parameter),
+            varint picks, picks × (tag, place, kindKey [selection], kindKey [from] if the tag says so, varint index, kindKey [feature], parameter),
             varint gear, gear × (u8 place, key(items)),
             flag [the Gear opt-in],
             varint aspects, aspects × key(activatables),
@@ -40,7 +40,7 @@ kindKey   = u8 kind [its index in KINDS], key(that kind)
 
 `varint` is unsigned LEB128 in the fewest bytes; `opt(x)` is 0, or 1 then x; `flag` is 0 or 1. `key(kind)` writes nothing in the structure: it takes the next hash from the list, a GUID of that kind (the data's own `kindOf`). A `kindKey` is a key whose kind the structure doesn't fix: the kind's index in `KINDS` (the data kinds, by index), then the key. Skills, schools, weapon categories and Gear places are written as their index in `SKILLS`, `SCHOOLS`, `WEAPON_CATEGORIES` and `PLACES`.
 
-Picks are written in slot order (`slotOrder`): levels before ranks, then by the level or rank's number, the selection's GUID and the index. Class choices are written in GUID order, skills and Gear in their table's order.
+Picks are written in slot order (`slotOrder`): levels before ranks, then by the level or rank's number, the selection's GUID, the slot's opener (none first) and the index. A pick's tag byte is 1 for a Mythic rank, plus 2 when the slot carries `from` (QA pass 6). A slot's index counts within its opener: the race's or a fact's component's top-level slots number apart from the slots a progression opens (build's `SlotId`, map 07's amendment), so a code written before this with a heritage pick opens with that pick unmatched. Class choices are written in GUID order, skills and Gear in their table's order.
 
 **Hashes.** A GUID is written as FNV-1a 32-bit over its text (offset basis `0x811c9dc5`, prime `0x01000193`), all 32 bits (`KEY_HASH_BYTES` = 4), least significant byte first; one per key the structure names, in order. The Rust planner keeps 24 bits, which collide within this planner's larger kinds (6,031 features), so this planner's version 1 keeps all 32, by the Rust codec's own rule that a collision widens the hash. A hash is looked up only among the data's GUIDs of the key's kind, so two kinds may share one; two GUIDs of one kind may not, and a test fails if the data ever makes two collide.
 

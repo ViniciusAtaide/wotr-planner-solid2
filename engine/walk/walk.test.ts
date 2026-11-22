@@ -210,7 +210,7 @@ describe('proficiencies', { timeout: 30_000 }, () => {
   const shieldBash = (cls: string): Build =>
     build({
       levels: levels(cls, 1),
-      picks: [{ slot: { place: { level: 1 }, selection: BASIC_FEAT_SELECTION, index: 1 }, feature: SHIELD_BASH }],
+      picks: [{ slot: { place: { level: 1 }, selection: BASIC_FEAT_SELECTION, index: 0 }, feature: SHIELD_BASH }],
     });
 
   it("lets a class's AddProficiencies meet a proficiency prerequisite", () => {
@@ -334,7 +334,7 @@ describe('area 6: ability scores', { timeout: 30_000 }, () => {
       levels: levels(FIGHTER, 1),
       picks: [
         {
-          slot: { place: { level: 1 }, selection: '9df7b68d60544bcf8e5b56c0a4688e04', index: 0 },
+          slot: { place: { level: 1 }, selection: '9df7b68d60544bcf8e5b56c0a4688e04', index: 0, from: HALF_ELF },
           feature: '5609d6e6cbd5422c8d6a1e7ee0b31a87',
         },
       ],

@@ -22,8 +22,9 @@ const place = {
 };
 const slot = {
   type: 'object',
-  description: 'A slot, as next_slots gives it: its place, its selection GUID and its index.',
-  properties: { place, selection: guid, index: { type: 'integer', minimum: 0 } },
+  description:
+    "A slot, as next_slots gives it: its place, its selection GUID, its index and, for a slot the race or a fact's component opened, `from`, that opener's GUID.",
+  properties: { place, selection: guid, index: { type: 'integer', minimum: 0 }, from: guid },
   required: ['place', 'selection', 'index'],
   additionalProperties: false,
 };
@@ -103,7 +104,7 @@ const RAW_TOOLS: readonly ToolDef[] = [
   {
     name: 'next_slots',
     description:
-      'The open slots, in walk order: place, band and selection; and skillPointsLeft when the last character level still has skill points to spend (set_skills). A Build is finished when both are empty.',
+      'The open slots, in walk order: place, band and selection; skillPointsLeft when the last character level still has skill points to spend (set_skills); and raceStatToChoose when the race gives +2 to an ability of your choice and none is chosen (set_start raceStat). A Build is finished when all three are empty.',
     inputSchema: object({ code }, ['code']),
     run: (e, a) => tools.next_slots(e, a as Parameters<typeof tools.next_slots>[1]),
   },

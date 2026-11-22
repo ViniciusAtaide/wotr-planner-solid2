@@ -27,6 +27,28 @@ const refusedKeys = (b: Build) =>
   );
 
 describe('E: edits', { timeout: 30_000 }, () => {
+  it('never moves a class pick into the race bonus feat a race change opens (QA pass 6)', () => {
+    const GNOME = 'ef35a22c9a27da345a4528f0d5889157';
+    const HUMAN = '0a5d473ead98b0646b94495af250fdc4';
+    const BARD = '772c83a25e2268e448e841dcd548235f';
+    const SPELL_FOCUS = '16fa59cc9a72a6043b566b49184f53fe';
+    const classFeat = { place: { level: 1 }, selection: BASIC, index: 0 };
+    const gnome: Build = {
+      race: GNOME,
+      levels: [{ class: BARD }],
+      picks: [{ slot: classFeat, feature: SPELL_FOCUS, param: { SpellSchool: 'Enchantment' } }],
+    };
+    const result = cascade(data, gnome, { kind: 'race', race: HUMAN }, G);
+    if (!result.ok) throw new Error('the race change was refused');
+    expect(result.cleared).toEqual([]);
+    expect(result.build.picks).toEqual(gnome.picks);
+    const slots = walk(data, result.build, G).slots.filter((s) => s.id.selection === BASIC);
+    expect(slots.find((s) => slotKey(s.id) === slotKey(classFeat))?.pick?.feature).toBe(SPELL_FOCUS);
+    const raceFeat = slots.find((s) => s.id.from === HUMAN);
+    expect(raceFeat?.source.kind).toBe('race');
+    expect(raceFeat?.pick).toBeUndefined();
+  });
+
   it('refuses a plain edit that breaks later picks, naming them', () => {
     const verdict = allows(data, jackInTheGreen.build, jackL5, G);
     expect(verdict.ok).toBe(false);

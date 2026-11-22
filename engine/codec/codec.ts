@@ -16,6 +16,7 @@ import {
   type Pick,
   type Place,
   type SkillRank,
+  type SlotId,
 } from '../build';
 import type { CheckedData } from '../load';
 import { kindOf, type Guid, type Kind, type SpellSchool, type StatType, type WeaponCategory } from '../data';
@@ -218,6 +219,8 @@ async function inflate(bytes: Uint8Array<ArrayBuffer>): Promise<Uint8Array> {
   }
 }
 
+const FROM_TAG = 2;
+
 function slotOrder(a: Pick, b: Pick): number {
   const rank = (p: Place) => ('rank' in p ? 1 : 0);
   const n = (p: Place) => ('rank' in p ? p.rank : p.level);
@@ -225,6 +228,7 @@ function slotOrder(a: Pick, b: Pick): number {
     rank(a.slot.place) - rank(b.slot.place) ||
     n(a.slot.place) - n(b.slot.place) ||
     (a.slot.selection < b.slot.selection ? -1 : a.slot.selection > b.slot.selection ? 1 : 0) ||
+    ((a.slot.from ?? '') < (b.slot.from ?? '') ? -1 : (a.slot.from ?? '') > (b.slot.from ?? '') ? 1 : 0) ||
     a.slot.index - b.slot.index
   );
 }
@@ -314,9 +318,10 @@ class Writer {
     const sorted = [...picks].sort(slotOrder);
     this.varint(sorted.length);
     for (const p of sorted) {
-      this.byte('rank' in p.slot.place ? 1 : 0);
+      this.byte(('rank' in p.slot.place ? 1 : 0) | (p.slot.from === undefined ? 0 : FROM_TAG));
       this.varint('rank' in p.slot.place ? p.slot.place.rank : p.slot.place.level);
       this.kindKey(p.slot.selection);
+      if (p.slot.from !== undefined) this.kindKey(p.slot.from);
       this.varint(p.slot.index);
       this.kindKey(p.feature);
       this.param(p.param);
@@ -506,14 +511,17 @@ class Reader {
     }
     const picks: Pick[] = [];
     for (let i = this.count(); i > 0; i--) {
-      const ranked = this.flag();
+      const tag = this.byte();
+      if (tag > (1 | FROM_TAG)) throw new DecodeError('format', 'slot tag');
       const n = this.varint();
-      const place: Place = ranked ? { rank: n } : { level: n };
+      const place: Place = (tag & 1) === 1 ? { rank: n } : { level: n };
       const selection = this.kindKey();
+      const from = (tag & FROM_TAG) === 0 ? undefined : this.kindKey();
       const index = this.varint();
       const feature = this.kindKey();
       const param = this.param();
-      const pick: Pick = { slot: { place, selection, index }, feature, ...(param && { param }) };
+      const slot: SlotId = { place, selection, index, ...(from !== undefined && { from }) };
+      const pick: Pick = { slot, feature, ...(param && { param }) };
       const before = picks.at(-1);
       if (before !== undefined && slotOrder(before, pick) >= 0) throw new DecodeError('format', 'picks');
       picks.push(pick);

@@ -1278,8 +1278,11 @@ class Walker {
 
   addSelection(parent: SlotState | undefined, source: Source, selection: Guid, level: number): SlotState {
     const state = this.level;
-    const index = state.slots.filter((s) => s.selection === selection).length;
-    const slot = new SlotState({ place: this.place, selection, index }, selection, source, level, parent);
+    const from =
+      parent === undefined && (source.kind === 'race' || source.kind === 'component') ? source.from : undefined;
+    const index = state.slots.filter((s) => s.selection === selection && s.id.from === from).length;
+    const id: SlotId = { place: this.place, selection, index, ...(from !== undefined && { from }) };
+    const slot = new SlotState(id, selection, source, level, parent);
     state.slots.push(slot);
     return slot;
   }

@@ -268,7 +268,12 @@ const MYTHIC_HERO = '247aa787806d5da4f89cfc3dff0b217f';
 const FEAT: SlotId = { place: { level: 1 }, selection: '247a4068296e8be42890143f451b4b45', index: 0 };
 const BONUS_COMBAT_FEAT: SlotId = { place: { level: 1 }, selection: '41c8486641f7d6d4283ca9dae4147a9f', index: 0 };
 const DWARF = 'c4faf439f0e70bd40b5e36ee80d06be7';
-const DWARF_HERITAGE: SlotId = { place: { level: 1 }, selection: 'fd6e1f53589049cbbbc6a8e058d83b74', index: 0 };
+const DWARF_HERITAGE: SlotId = {
+  place: { level: 1 },
+  selection: 'fd6e1f53589049cbbbc6a8e058d83b74',
+  index: 0,
+  from: DWARF,
+};
 const BASIC_DWARF = '8b2da1d0f9504872809e63b39c24c502';
 
 const cleaver: Build = {

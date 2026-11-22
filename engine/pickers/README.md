@@ -8,6 +8,7 @@ What each slot can take (guide §4, build ticket 04). S lists a slot's options a
 - `racePicker(data, build, G?)` and `RaceOption`: every race on offer with its status and its heritage rows.
   - **A race's `closed`** is the walk's own `raceRefusal`: not a race, or ruled out by an archetype the Build takes.
   - **Heritage rows:** a race with a heritage slot (`heritageSlotIn`: a race's top-level selection in the `Racial` group) carries `heritage`, the slot picker's options at a level-1 Build with that race (`firstLevelWith`).
+  - **`raceStatPending`**: the race gives +2 to an ability of your choice and the Build hasn't chosen it, a step still to take after a race change (QA pass 6).
   - **`firstLevelWith`** keeps the start, the first level's class and the archetypes, and keeps the +2 only when the race lets you choose it.
   - **Cost:** the whole list costs about 3 ms where one `allows` per race cost about 170 ms. What a race would break later is worked out only for the row taken.
 - `backgroundPicker(data, build, base, G?)`: the background slot's groups.

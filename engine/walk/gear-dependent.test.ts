@@ -12,6 +12,7 @@ import {
   FIGHTER,
   FIGHTER_FEAT_SELECTION,
   G,
+  HUMAN,
   levels,
   needsFact,
   needsStat,
@@ -86,7 +87,7 @@ describe('ADR 0002: what a choice needs of the Gear', () => {
       countGear: true,
       picks: [
         at(1, BASIC_FEAT_SELECTION, TOUGHNESS),
-        at(1, BASIC_FEAT_SELECTION, ENDURANCE, 1),
+        { slot: { place: { level: 1 }, selection: BASIC_FEAT_SELECTION, index: 0, from: HUMAN }, feature: ENDURANCE },
         at(1, FIGHTER_FEAT_SELECTION, DODGE),
       ],
     });

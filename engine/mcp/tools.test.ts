@@ -356,6 +356,17 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(taken.build.picks).toContainEqual(expect.objectContaining({ slot: row.slot, feature: row.feature }));
   });
 
+  it("says a race's +2 is still to choose after a race change (QA pass 6)", async () => {
+    const HUMAN = '0a5d473ead98b0646b94495af250fdc4';
+    const GNOME = 'ef35a22c9a27da345a4528f0d5889157';
+    const human = ok(await set_start(e, { code: (await start_build(e)).code, race: HUMAN }), 'set_start');
+    expect(ok(await next_slots(e, { code: human.code }), 'next_slots').raceStatToChoose).toBe(true);
+    const chosen = ok(await set_start(e, { code: human.code, raceStat: 'Strength' }), 'set_start');
+    expect(ok(await next_slots(e, { code: chosen.code }), 'next_slots').raceStatToChoose).toBeUndefined();
+    const gnome = ok(await set_start(e, { code: human.code, race: GNOME }), 'set_start');
+    expect(ok(await next_slots(e, { code: gnome.code }), 'next_slots').raceStatToChoose).toBeUndefined();
+  });
+
   it('gives the skill budget when ranks go over it, and says when the last level still has points to spend (MCP QA)', async () => {
     const fighter = ok(
       await level_up(e, { code: (await start_build(e)).code, class: '48ac8db94d5de7645906c7d0ad3bcfbd' }),

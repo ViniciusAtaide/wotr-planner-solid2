@@ -1,6 +1,6 @@
 import type { Attribute, StatType } from '../data';
 import { abilityScores, rankLevel, skillRanks, type Build, type LevelUp } from '../build';
-import { facts, increase, pick, withParam, type Gold } from './gold';
+import { facts, increase, pick, racePick, withParam, type Gold } from './gold';
 
 const SLAYER = 'c75e0971973957d4dbad24bc7957e4fb';
 const ROGUE = '299aa766dee3cbf4790da4efb8c72484';
@@ -116,7 +116,7 @@ const build: Build = {
   gear: { Belt: BELT_OF_DEXTERITY_2 },
   countGear: true,
   picks: [
-    pick({ level: 1 }, HALF_ELF_HERITAGE_SELECTION, 0, BASE_RASE_HALF_ELF_SELECTION),
+    racePick({ level: 1 }, HALF_ELF_HERITAGE_SELECTION, HALF_ELF_RACE, 0, BASE_RASE_HALF_ELF_SELECTION),
     pick({ level: 1 }, BASE_RASE_HALF_ELF_SELECTION, 0, ADAPTABILITY),
     pick({ level: 1 }, ADAPTABILITY, 0, SKILL_FOCUS_DIPLOMACY),
     pick({ level: 1 }, BACKGROUNDS_BASE_SELECTION, 0, BACKGROUNDS_REGIONAL_SELECTION),

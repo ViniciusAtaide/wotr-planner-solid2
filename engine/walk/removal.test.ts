@@ -9,12 +9,18 @@ import {
   feature,
   FIGHTER,
   G,
+  HUMAN,
   levels,
   needsFact,
   withBlueprints,
   withOptions,
 } from './test-data';
 import { walk } from './walk';
+
+const raced = (place: number, index: number) =>
+  place === 1 && index === 0
+    ? { place: { level: place }, selection: BASIC_FEAT_SELECTION, index: 0, from: HUMAN }
+    : { place: { level: place }, selection: BASIC_FEAT_SELECTION, index: place === 1 ? index - 1 : index };
 
 const LEGEND = '3d420403f3e7340499931324640efe96';
 const DRUID = '610d836f3a3a9ed42a4349b62f002e96';
@@ -147,7 +153,7 @@ describe('a fact goes with the fact that granted it', { timeout: 30_000 }, () =>
       withOptions(BASIC_FEAT_SELECTION, A, B, DROPS_A),
     );
     const at = (place: number, index: number, f: string) => ({
-      slot: { place: { level: place }, selection: BASIC_FEAT_SELECTION, index },
+      slot: raced(place, index),
       feature: f,
     });
     const w = (picks: Build['picks']) => walk(hand.data, build({ levels: levels(FIGHTER, 3), picks }), hand.G).unit;
@@ -169,7 +175,7 @@ describe('a fact goes with the fact that granted it', { timeout: 30_000 }, () =>
         withOptions(BASIC_FEAT_SELECTION, A, B, DROPS_A),
       );
       const at = (place: number, index: number, f: string) => ({
-        slot: { place: { level: place }, selection: BASIC_FEAT_SELECTION, index },
+        slot: raced(place, index),
         feature: f,
       });
       const picks = [at(1, 0, A), at(1, 1, B), at(3, 0, DROPS_A)];

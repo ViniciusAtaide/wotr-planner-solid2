@@ -462,10 +462,15 @@ describe('which slots belong to the character', { timeout: 30_000 }, () => {
     const wide = characterWideSlots(data, slots);
     const named = (selection: string, index = 0) => `L1/${selection}#${index}`;
     expect([...wide].sort()).toEqual(
-      [named(BASIC, 0), slotKey(background), named(DEITY_SELECTION), named(BACKGROUNDS_CRAFTSMAN_SELECTION)].sort(),
+      [
+        `L1/${BASIC}@${HUMAN}#0`,
+        slotKey(background),
+        named(DEITY_SELECTION),
+        named(BACKGROUNDS_CRAFTSMAN_SELECTION),
+      ].sort(),
     );
-    expect(slots.find((s) => slotKey(s.id) === named(BASIC, 0))?.source.kind).toBe('race');
-    expect(wide.has(named(BASIC, 1))).toBe(false);
+    expect(slots.find((s) => slotKey(s.id) === `L1/${BASIC}@${HUMAN}#0`)?.source.kind).toBe('race');
+    expect(wide.has(named(BASIC, 0))).toBe(false);
     expect(wide.has(named(FIGHTER_FEAT))).toBe(false);
   });
 });

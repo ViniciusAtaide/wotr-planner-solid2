@@ -29,7 +29,7 @@ import { describe, summaryText, type Description } from '../describe';
 import { allows, apply, breaksOf, cascade, type Breaks, type Edit } from '../edits';
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
 import { linkIndex, linkNames, sharedWords, stackWords } from '../links';
-import { gearClashes, picker, type OptionStatus } from '../pickers';
+import { gearClashes, picker, raceStatPending, type OptionStatus } from '../pickers';
 import {
   abilityScoreRange,
   archetypeCount,
@@ -288,6 +288,7 @@ export async function level_up(
 export interface NextSlots {
   readonly slots: readonly SlotView[];
   readonly skillPointsLeft?: { readonly level: number; readonly points: number };
+  readonly raceStatToChoose?: true;
 }
 
 export async function next_slots(e: Engine, args: { readonly code: string }): Promise<NextSlots | ToolRefusal> {
@@ -297,7 +298,11 @@ export async function next_slots(e: Engine, args: { readonly code: string }): Pr
   const level = build.levels.length;
   const spent = Object.values(build.levels.at(-1)?.skills ?? {}).reduce((n, r) => n + (r ?? 0), 0);
   const points = (w.skillPoints.at(-1) ?? 0) - spent;
-  return { slots: openSlots(e, build), ...(level > 0 && points > 0 && { skillPointsLeft: { level, points } }) };
+  return {
+    slots: openSlots(e, build),
+    ...(level > 0 && points > 0 && { skillPointsLeft: { level, points } }),
+    ...(raceStatPending(e.data, build) && { raceStatToChoose: true as const }),
+  };
 }
 
 export interface OptionView {
