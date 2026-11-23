@@ -23,8 +23,14 @@ const place = {
 const slot = {
   type: 'object',
   description:
-    "A slot, as next_slots gives it: its place, its selection GUID, its index and, for a slot the race or a fact's component opened, `from`, that opener's GUID.",
-  properties: { place, selection: guid, index: { type: 'integer', minimum: 0 }, from: guid },
+    "A slot, as next_slots gives it; pass it back unchanged. Its place, its selection GUID, its index; `from`, the opener's GUID, for a slot the race or a fact's component opened; and `parent`, the key of the slot whose pick opened it, for a sub-choice (Skill Focus's skill list, under its Skill Focus).",
+  properties: {
+    place,
+    selection: guid,
+    index: { type: 'integer', minimum: 0 },
+    from: guid,
+    parent: { type: 'string', description: "The parent slot's key, for a sub-choice." },
+  },
   required: ['place', 'selection', 'index'],
   additionalProperties: false,
 };
@@ -230,7 +236,13 @@ function withBrief(e: Engine, result: unknown): unknown {
   return { ...rest, brief: tools.brief(e, build) };
 }
 
+function withCleared(args: Json, result: unknown): unknown {
+  const cleared = tools.clearedOnOpen(args.code);
+  if (cleared === undefined || typeof result !== 'object' || result === null) return result;
+  return { ...result, clearedOnOpen: cleared };
+}
+
 export const TOOLS: readonly ToolDef[] = RAW_TOOLS.map((t) => ({
   ...t,
-  run: async (e: Engine, args: Json) => withBrief(e, await t.run(e, args)),
+  run: async (e: Engine, args: Json) => withCleared(args, withBrief(e, await t.run(e, args))),
 }));

@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { placeKey, slotKey, type Build, type Place } from '../build';
+import { childSlot, placeKey, slotKey, type Build, type Place, type SlotId } from '../build';
 import { decodeBuild, encodeBuild } from '../codec';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
@@ -354,6 +354,65 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect('build' in taken).toBe(true);
     if (!('build' in taken)) return;
     expect(taken.build.picks).toContainEqual(expect.objectContaining({ slot: row.slot, feature: row.feature }));
+  });
+
+  describe('sub-choices and refused picks (map 35)', () => {
+    const SKILL_FOCUS = 'c9629ef9eebb88b479b2fbc5e836656a';
+    const LORE_RELIGION = 'c541f80af8d0af4498e1abb6025780c7';
+    const HUMAN = '0a5d473ead98b0646b94495af250fdc4';
+    const FIGHTER = '48ac8db94d5de7645906c7d0ad3bcfbd';
+    const BASIC = '247a4068296e8be42890143f451b4b45';
+    const run = (name: string, args: Record<string, unknown>) =>
+      TOOLS.find((t) => t.name === name)!.run(e, args) as Promise<Record<string, unknown>>;
+
+    it("gives a sub-choice's slot its parent in next_slots, and pick takes it back", async () => {
+      const fighter = ok(
+        await level_up(e, {
+          code: ok(await set_start(e, { code: (await start_build(e)).code, race: HUMAN }), 'set_start').code,
+          class: FIGHTER,
+        }),
+        'level_up',
+      );
+      const levelFeat: SlotId = { place: { level: 1 }, selection: BASIC, index: 0 };
+      const focused = ok(await pick(e, { code: fighter.code, slot: levelFeat, feature: SKILL_FOCUS }), 'pick') as {
+        code: string;
+      };
+      const listed = ok(await next_slots(e, { code: focused.code }), 'next_slots');
+      const skill = listed.slots.find((s) => s.slot.selection === SKILL_FOCUS)?.slot;
+      expect(skill?.parent).toBe(slotKey(levelFeat));
+      expect(skill).toEqual(childSlot(levelFeat, SKILL_FOCUS));
+      const taken = ok(await pick(e, { code: focused.code, slot: skill!, feature: LORE_RELIGION }), 'pick') as {
+        code: string;
+      };
+      const after = await decodeBuild(e.data, taken.code);
+      expect(after.picks.find((p) => p.feature === LORE_RELIGION)?.slot.parent).toBe(slotKey(levelFeat));
+    });
+
+    it('opens a code holding a pick the walk refuses with that pick cleared, and names it', async () => {
+      const levelFeat: SlotId = { place: { level: 1 }, selection: BASIC, index: 0 };
+      const humanFeat: SlotId = { ...levelFeat, from: HUMAN };
+      const twice: Build = {
+        race: HUMAN,
+        levels: [{ class: FIGHTER }],
+        picks: [
+          { slot: levelFeat, feature: SKILL_FOCUS },
+          { slot: childSlot(levelFeat, SKILL_FOCUS), feature: LORE_RELIGION },
+          { slot: humanFeat, feature: SKILL_FOCUS },
+          { slot: childSlot(humanFeat, SKILL_FOCUS), feature: LORE_RELIGION },
+        ],
+      };
+      const code = await encodeBuild(e.data, twice);
+      const listed = await run('next_slots', { code });
+      expect(listed.clearedOnOpen).toHaveLength(1);
+      expect(String((listed.clearedOnOpen as string[])[0])).toContain('Lore (Religion)');
+      const open = (listed.slots as { slot: SlotId }[])
+        .filter((s) => s.slot.selection === SKILL_FOCUS)
+        .map((s) => slotKey(s.slot));
+      expect(open).toHaveLength(1);
+      expect([slotKey(childSlot(levelFeat, SKILL_FOCUS)), slotKey(childSlot(humanFeat, SKILL_FOCUS))]).toContain(
+        open[0],
+      );
+    });
   });
 
   it('says which later pick an option would clear (QA pass 6)', async () => {

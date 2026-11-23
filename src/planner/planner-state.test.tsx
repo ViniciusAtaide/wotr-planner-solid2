@@ -1,6 +1,7 @@
 import { join } from 'node:path';
 import { describe, expect, expectTypeOf, test } from 'vitest';
 import {
+  childSlot,
   abilityScores,
   toAbilityScores,
   toArchetypes,
@@ -36,6 +37,9 @@ import {
 } from './planner-state';
 import type { ShareCode } from './share-code';
 import type { LinkStatus } from './workspace-state';
+import type { CheckedBuild } from '~engine/edits';
+
+const trusted = (b: Build): CheckedBuild => b as CheckedBuild;
 
 const files = readDataDir(join(process.cwd(), 'data'));
 const e = engineOf(loadData(files.files, files.overrides));
@@ -68,12 +72,12 @@ const previewed = levelled(4);
 const REFUSED: Session = { kind: 'refused', lines: ['Refused.'] };
 const CONFIRMING: Session = {
   kind: 'confirming',
-  pending: { title: 'Weaker', summary: 'Clears picks.', clears: [], clearedSkills: [], build: previewed },
+  pending: { title: 'Weaker', summary: 'Clears picks.', clears: [], clearedSkills: [], build: trusted(previewed) },
 };
 const at = (session: Session): PlannerState => ({
-  past: [before],
-  present: now,
-  future: [after],
+  past: [trusted(before)],
+  present: trusted(now),
+  future: [trusted(after)],
   session,
   change: 'Level 2',
   pastChanges: [undefined],
@@ -266,7 +270,7 @@ describe('PlannerState: one test per table cell', () => {
     dismiss: { kind: 'dismiss' },
     undo: { kind: 'undo' },
     redo: { kind: 'redo' },
-    replace: { kind: 'replace', build: cleaver },
+    replace: { kind: 'replace', build: trusted(cleaver) },
   };
 
   test.each(cells)('%s while %s', (action, kind, check) => {
@@ -281,7 +285,7 @@ describe('PlannerState: one test per table cell', () => {
 
 describe('PlannerState: edit outcomes and the rest of the rules', () => {
   test('an edit that changes nothing adds no history entry, for one edit or several (QA pass 1)', () => {
-    const good = run(plannerAt(cleaver), {
+    const good = run(plannerAt(trusted(cleaver)), {
       kind: 'edit',
       edit: { kind: 'alignment', alignment: 'LawfulGood' },
       title: 'Good',
@@ -340,7 +344,7 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
     const clears = (cleared: number, clearedSkills: number[], clearedRanks: number[]) =>
       clearsSummary({
         kind: 'clears',
-        build: cleaver,
+        build: trusted(cleaver),
         cleared: cleaver.picks.slice(0, cleared),
         clearedSkills,
         clearedRanks,
@@ -354,10 +358,10 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
 
   test('a preview lists a nested pick as one row, under its parent’s name, and counts it once (QA pass 6)', () => {
     const parent = { slot: { place: { level: 2 }, selection: 'parent', index: 0 }, feature: POWER_ATTACK };
-    const child = { slot: { place: { level: 2 }, selection: POWER_ATTACK, index: 0 }, feature: CLEAVE };
+    const child = { slot: childSlot(parent.slot, POWER_ATTACK), feature: CLEAVE };
     const v = {
       kind: 'clears' as const,
-      build: cleaver,
+      build: trusted(cleaver),
       cleared: [parent, child],
       clearedSkills: [],
       clearedRanks: [],
@@ -375,7 +379,7 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
       ranks: ranks.map((r, i) => (i >= 7 ? { ...r, class: GOLD_DRAGON } : r)),
       picks: jackInTheGreen.build.picks.filter((p) => !('rank' in p.slot.place) || p.slot.place.rank <= 7),
     };
-    const n = run(plannerAt(gold), {
+    const n = run(plannerAt(trusted(gold)), {
       kind: 'edit',
       edit: { kind: 'rankClass', rank: 8, class: DEVIL },
       title: 'Devil',
@@ -400,7 +404,7 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
 
   test('a preview that clears one pick says so in the singular (QA pass 1)', () => {
     const one: Build = { ...cleaver, picks: cleaver.picks.slice(0, 1) };
-    const n = run(plannerAt(one), { kind: 'edit', edit: WEAKER, title: 'Strength score' });
+    const n = run(plannerAt(trusted(one)), { kind: 'edit', edit: WEAKER, title: 'Strength score' });
     expect(n.session.kind === 'confirming' && n.session.pending.clears).toHaveLength(1);
     expect(n.session.kind === 'confirming' && n.session.pending.summary).toBe(
       "This breaks 1 later pick. It'll be cleared, not moved.",
@@ -408,7 +412,7 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
   });
 
   test('an edit that breaks later picks, mendable by clearing them, waits on the preview', () => {
-    const n = run(plannerAt(cleaver), { kind: 'edit', edit: WEAKER, title: 'Strength score' });
+    const n = run(plannerAt(trusted(cleaver)), { kind: 'edit', edit: WEAKER, title: 'Strength score' });
     expect(outcomeOf(n)).toBe('confirming');
     expect(n.present).toBe(cleaver);
     expect(n.session.kind === 'confirming' && n.session.pending.clears).toEqual([
@@ -418,7 +422,7 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
   });
 
   test('an edit nothing mends is refused in R’s words, and a later applied edit replaces the refusal', () => {
-    const n = run(plannerAt(cleaver), { kind: 'edit', edit: EARLY_INCREASE, title: 'Increase Strength' });
+    const n = run(plannerAt(trusted(cleaver)), { kind: 'edit', edit: EARLY_INCREASE, title: 'Increase Strength' });
     expect(outcomeOf(n)).toBe('refused');
     expect(n.session.kind === 'refused' && n.session.lines[0]).toBe('That change can’t be made. It would break:');
     const applied = run(n, { kind: 'edit', edit: ADD_LEVEL, title: 'Add level 2' });
@@ -427,7 +431,7 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
   });
 
   test('a refused class names the prerequisites it misses (audit)', () => {
-    const n = run(plannerAt(cleaver), {
+    const n = run(plannerAt(trusted(cleaver)), {
       kind: 'edit',
       edit: { kind: 'class', level: 1, class: '9c935a076d4fe4d4999fd48d853e3cf3' },
       title: 'Level 1 as Arcane Trickster',
@@ -438,14 +442,14 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
   });
 
   test('undo and redo with nothing to walk leave the state as it is', () => {
-    const s = plannerAt(cleaver);
+    const s = plannerAt(trusted(cleaver));
     expect(run(s, { kind: 'undo' })).toBe(s);
     expect(run(s, { kind: 'redo' })).toBe(s);
   });
 
   test('replace with the same Build, picks in another order, is skipped', () => {
-    const s = plannerAt(cleaver);
-    expect(run(s, { kind: 'replace', build: { ...cleaver, picks: [...cleaver.picks].reverse() } })).toBe(s);
+    const s = plannerAt(trusted(cleaver));
+    expect(run(s, { kind: 'replace', build: trusted({ ...cleaver, picks: [...cleaver.picks].reverse() }) })).toBe(s);
   });
 });
 

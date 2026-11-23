@@ -3,7 +3,7 @@ import { Portal } from '@solidjs/web';
 import { createEffect, createMemo, createSignal, Match, onSettled, Show, Switch } from 'solid-js';
 import type { Build } from '~engine/build';
 import type { Engine } from '~engine/mcp';
-import { linkDidNotOpen } from '~engine/refusals';
+import { linkCleared, linkDidNotOpen } from '~engine/refusals';
 import { walk } from '~engine/walk';
 
 import { Button, CascadePreview, Refusal } from '../design';
@@ -15,7 +15,7 @@ import { EMPTY, openHash } from './link';
 import { PlannerMenu, UndoLine } from './Menu';
 import { createShareCode, homeUrl, shareLinkOf } from './share-code';
 import { browserStorage, readListMode, writeListMode, type ListMode } from './list-mode';
-import type { NonEmpty } from './planner-state';
+import { clearedRows, type NonEmpty } from './planner-state';
 import { buildSheet } from './sheet';
 import { createPlanner } from './state';
 import Trail from './Trail';
@@ -47,7 +47,16 @@ export default function Planner() {
         const opened = await openHash(engine, hash);
         setBoot(
           opened.kind === 'opened'
-            ? { kind: 'ready', engine, build: opened.build, link: { kind: 'ok' }, hash }
+            ? {
+                kind: 'ready',
+                engine,
+                build: opened.build,
+                link:
+                  opened.cleared.length === 0
+                    ? { kind: 'ok' }
+                    : { kind: 'cleared', rows: clearedRows(engine, opened.build, opened.cleared) },
+                hash,
+              }
             : {
                 kind: 'ready',
                 engine,
@@ -202,7 +211,7 @@ function Workspace(props: WorkspaceProps) {
     void openHash(engine, hash).then((opened) => {
       if (n !== latestHash) return;
       if (opened.kind === 'opened') {
-        send({ kind: 'linkOpened', build: opened.build });
+        send({ kind: 'linkOpened', build: opened.build, cleared: clearedRows(engine, opened.build, opened.cleared) });
         return;
       }
       brokenOver = planner.latest().present;
@@ -283,9 +292,11 @@ function Workspace(props: WorkspaceProps) {
     send({ kind: 'select', selection: slot === undefined ? undefined : { kind: 'slot', slot } });
   };
 
-  const linkNotice = () => {
+  const linkNotice = (): readonly string[] | undefined => {
     const l = workspace().link;
-    return l.kind === 'didNotOpen' ? linkDidNotOpen(l.on, l.reason) : undefined;
+    if (l.kind === 'didNotOpen') return [linkDidNotOpen(l.on, l.reason)];
+    if (l.kind === 'cleared') return [linkCleared(l.rows.length), ...l.rows.map((r) => `${r.name} (${r.place})`)];
+    return undefined;
   };
 
   const [headerSlot, setHeaderSlot] = createSignal<HTMLElement | null>(null);
@@ -337,7 +348,7 @@ function Workspace(props: WorkspaceProps) {
           <Show when={linkNotice()}>
             {(words) => (
               <div class="planner-notice" role="status">
-                <Refusal lines={[words()]} />
+                <Refusal lines={words()} />
                 <Button
                   variant="ghost"
                   onClick={() => {

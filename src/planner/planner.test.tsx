@@ -3,7 +3,16 @@ import { join } from 'node:path';
 import { cleanup, fireEvent, render, screen, waitFor, within } from '@solidjs/testing-library';
 import { createSignal, flush } from 'solid-js';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
-import { abilityScores, rankLevel, skillRanks, slotKey, type Build, type BuildName, type SlotId } from '~engine/build';
+import {
+  childSlot,
+  abilityScores,
+  rankLevel,
+  skillRanks,
+  slotKey,
+  type Build,
+  type BuildName,
+  type SlotId,
+} from '~engine/build';
 import { encodeBuild } from '~engine/codec';
 import { loadData } from '~engine/load';
 import { readDataDir } from '~engine/data-dir';
@@ -23,10 +32,11 @@ import {
 } from '~engine/mcp';
 import { picker, type OptionStatus } from '~engine/pickers';
 import { GROUP_WORDS, stackWords, topicWords } from '~engine/links';
-import { bareNameOf, buildNameLength, linkDidNotOpen, nameOf } from '~engine/refusals';
+import { bareNameOf, buildNameLength, linkDidNotOpen, nameOf, linkCleared } from '~engine/refusals';
 import { walk } from '~engine/walk';
 
 import { EMPTY, openHash } from './link';
+import { clearedRows } from './planner-state';
 import Planner, { RefusalNotice } from './Planner';
 import { buildSheet } from './sheet';
 import { createPlanner, type Planner as PlannerApi } from './state';
@@ -60,6 +70,9 @@ import { historyIdle } from './history-moves';
 import { PickStep } from './PickStep';
 import { optionName, shownName } from './words';
 import { homeUrl, shareLinkOf } from './share-code';
+import { checkBuild, type CheckedBuild } from '~engine/edits';
+
+const trusted = (b: Build): CheckedBuild => b as CheckedBuild;
 
 const gate = vi.hoisted(() => ({
   load: (): Promise<unknown> => Promise.reject(new Error('no engine yet')),
@@ -503,7 +516,7 @@ async function storedBlockCode(code: string): Promise<string> {
 }
 
 function everyChoiceMade(build: Build): Build {
-  let b = build;
+  let b: Build = checkBuild(e.data, build, e.G).build;
   for (;;) {
     const empty = createPlanner(e, b)
       .walked()
@@ -1765,7 +1778,7 @@ describe('QA pass 1', () => {
       atob(code.replace(/-/g, '+').replace(/_/g, '/') + '='.repeat((4 - (code.length % 4)) % 4)),
       (c) => c.charCodeAt(0),
     );
-    bytes[0] = 2;
+    bytes[0] = 3;
     const newer = btoa(String.fromCharCode(...bytes))
       .replace(/\+/g, '-')
       .replace(/\//g, '_')
@@ -1774,7 +1787,7 @@ describe('QA pass 1', () => {
   });
 
   test('the level editor’s title and subheading both name the stop as it reads (ticket 14)', () => {
-    const view = { data: e.data, build: jackInTheGreen.build, walk: walk(e.data, jackInTheGreen.build, e.G) };
+    const view = { data: e.data, build: trusted(jackInTheGreen.build), walk: walk(e.data, jackInTheGreen.build, e.G) };
     const stop = levelStopName(e.data, jackInTheGreen.build, 1);
     expect(stop).toMatch(/ 1$/);
     expect(stepTitle(view, { kind: 'level', level: 1 })).toBe(`Level 1 · ${stop}`);
@@ -1978,7 +1991,7 @@ describe('nested sub-choices (ticket 08)', () => {
       levels: [{ class: fighter, skills: skillRanks({ SkillMobility: 1, SkillAthletics: 1, SkillPersuasion: 1 }) }],
       gear: { Armor: armor, Ring1: ring },
     };
-    const sheetOf = (b: Build) => buildSheet({ data: e.data, build: b, walk: walk(e.data, b, e.G) });
+    const sheetOf = (b: Build) => buildSheet({ data: e.data, build: trusted(b), walk: walk(e.data, b, e.G) });
     const sheet = sheetOf(shuffled);
     expect(sheet).toBe(sheetOf(ordered));
     expect(sheet).toContain('Gear: Armor: Chainshirt · Ring 1: Ring of Protection +1');
@@ -2432,7 +2445,7 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
     const build = jackInTheGreen.build;
     const slot = build.picks.find((p) => 'level' in p.slot.place && p.slot.place.level === 11)?.slot;
     if (slot === undefined) throw new Error('no level 11 pick');
-    const view = { data: e.data, build, walk: walk(e.data, build, e.G) };
+    const view = { data: e.data, build: trusted(build), walk: walk(e.data, build, e.G) };
     expect(spellPick(view, slot)?.param).toBeUndefined();
     expect(nextStep(view, { skillsLeft: new Set(), mythicLater: undefined })).not.toEqual({ kind: 'slot', slot });
     const shown = trailOf(build);
@@ -3210,5 +3223,93 @@ describe('a dialog pick never reverts the Build (QA pass 5, severity 4)', () => 
     expect(document.querySelector('.choice-dialog')).toBeNull();
     await waitFor(async () => expect(await featPick()).toBe(initiative()));
     expect(document.querySelector('.planner-undo__what')?.textContent).not.toBe('Opened a link');
+  });
+});
+
+describe('two Skill Focus picks at one level (map 35)', () => {
+  const HUMAN_RACE = '0a5d473ead98b0646b94495af250fdc4';
+  const MUTATION_WARRIOR = '758e0061a077e54409a3bf0eb51511e5';
+  const BASIC = '247a4068296e8be42890143f451b4b45';
+  const SKILL_FOCUS = 'c9629ef9eebb88b479b2fbc5e836656a';
+  const LORE_RELIGION = 'c541f80af8d0af4498e1abb6025780c7';
+  const ATHLETICS = '9db907332bdaec1468cff3a99efef5b4';
+  const levelFeat: SlotId = { place: { level: 1 }, selection: BASIC, index: 0 };
+  const humanFeat: SlotId = { ...levelFeat, from: HUMAN_RACE };
+  const warrior: Build = {
+    race: HUMAN_RACE,
+    scores: abilityScores(SCORES),
+    alignment: 'TrueNeutral',
+    levels: [{ class: fighter }],
+    classChoices: { [fighter]: { archetypes: [MUTATION_WARRIOR] } },
+    picks: [],
+  };
+
+  const takeSkill = async (planner: ReturnType<typeof createPlanner>, slot: SlotId, skill: string) => {
+    const { unmount } = render(() => <PickStep trail={apiOf(planner)} slot={slot} />);
+    flush();
+    const filter = document.querySelector<HTMLInputElement>('[data-picker-filter]');
+    filter?.focus();
+    fireEvent.input(filter ?? document.body, { target: { value: 'skill focus' } });
+    flush();
+    const parent = [...document.querySelectorAll<HTMLElement>('[data-parent] button.ww-option')].find((b) =>
+      b.querySelector('.ww-option__name')?.textContent?.startsWith('Skill Focus'),
+    );
+    expect(parent).toBeDefined();
+    fireEvent.click(parent ?? document.body);
+    flush();
+    const rows = await waitFor(() => {
+      const found = [...document.querySelectorAll<HTMLElement>('[data-child-of] .ww-option')];
+      expect(found.length).toBeGreaterThan(0);
+      return found;
+    });
+    const named = (name: string) => rows.find((b) => b.textContent?.includes(name));
+    const lore = named('Lore (Religion)');
+    const row = named(skill);
+    fireEvent.click(row ?? document.body);
+    flush();
+    unmount();
+    return lore;
+  };
+
+  test('a link holding the same skill twice opens with the refused one cleared, named in the notice', async () => {
+    const twice: Build = {
+      ...warrior,
+      picks: [
+        { slot: levelFeat, feature: SKILL_FOCUS },
+        { slot: childSlot(levelFeat, SKILL_FOCUS), feature: LORE_RELIGION },
+        { slot: humanFeat, feature: SKILL_FOCUS },
+        { slot: childSlot(humanFeat, SKILL_FOCUS), feature: LORE_RELIGION },
+      ],
+    };
+    const opened = await openHash(e, `#b=${await encodeBuild(e.data, twice)}`);
+    if (opened.kind !== 'opened') throw new Error('the link did not open');
+    expect(opened.cleared).toHaveLength(1);
+    expect(opened.build.picks).toHaveLength(3);
+    const rows = clearedRows(e, opened.build, opened.cleared);
+    expect(rows).toHaveLength(1);
+    expect(rows[0]?.name).toMatch(/Religion/);
+    expect(rows[0]?.place).toBe('Level 1');
+    expect(linkCleared(1)).toBe("This link held a pick the game doesn't allow, so it was cleared:");
+  });
+
+  test("keeps both skills through QA's steps, each chip naming its own, with the level feat's skill closed in the Human's list", async () => {
+    const planner = createPlanner(e, warrior);
+    await takeSkill(planner, levelFeat, 'Lore (Religion)');
+    expect(planner.pending()).toBeUndefined();
+    const loreInHumanList = await takeSkill(planner, humanFeat, 'Athletics');
+    expect(loreInHumanList?.classList.contains('ww-option--closed') ?? true).toBe(true);
+    expect(planner.pending()).toBeUndefined();
+    const picks = planner.build().picks;
+    expect(picks.find((p) => slotKey(p.slot) === slotKey(childSlot(levelFeat, SKILL_FOCUS)))?.feature).toBe(
+      LORE_RELIGION,
+    );
+    expect(picks.find((p) => slotKey(p.slot) === slotKey(childSlot(humanFeat, SKILL_FOCUS)))?.feature).toBe(ATHLETICS);
+    expect(planner.walked().failures).toEqual([]);
+    const view = { data: e.data, build: planner.build(), walk: planner.walked() };
+    const chips = pickLabels(e.data, slotsAt(view, { level: 1 }));
+    expect(chips.get(slotKey(levelFeat))).toMatch(/Religion/);
+    expect(chips.get(slotKey(levelFeat))).not.toMatch(/Athletics/);
+    expect(chips.get(slotKey(humanFeat))).toMatch(/Athletics/);
+    expect(chips.get(slotKey(humanFeat))).not.toMatch(/Religion/);
   });
 });

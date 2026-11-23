@@ -4,6 +4,7 @@ import type { Feature } from './features';
 import { configImportProblems } from './config-imports';
 import { declarationProblems, importProblems } from './imports';
 import { operatorProblems } from './operators';
+import { slotIdProblems } from './slot-ids';
 import { planRowProblems } from './plan-rows';
 
 const file = (path: string, text: string) => ({ path, text });
@@ -172,5 +173,17 @@ describe('the plan-rows check', () => {
       '.scratch/wotr-planner-build/plan.md: issues/02-two.md: [plan-row] has 2 rows',
       '.scratch/wotr-planner-build/issues/03-three.md: [plan-row] has no row in .scratch/wotr-planner-build/plan.md',
     ]);
+  });
+});
+
+describe('the slot id check (map 35)', () => {
+  it('flags a slot id literal in src/, and leaves tests and the engine alone', () => {
+    const text = "const s = { place: { level: 1 }, selection: 'x', index: 0 };\n";
+    expect(slotIdProblems([file('src/planner/a.ts', text)]).map((p) => p.split(': ')[0])).toEqual([
+      'src/planner/a.ts:1',
+    ]);
+    expect(slotIdProblems([file('src/planner/a.test.tsx', text)])).toEqual([]);
+    expect(slotIdProblems([file('engine/build/a.ts', text)])).toEqual([]);
+    expect(slotIdProblems([file('src/planner/b.ts', "const p = { place: 1, selection: 'x' };\n")])).toEqual([]);
   });
 });

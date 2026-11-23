@@ -1,4 +1,4 @@
-import { slotKey } from '../build';
+import { parentKey, slotKey } from '../build';
 import type { CheckedData } from '../load';
 import { isShown, refGuid, type Blueprint, type Guid, type Ref } from '../data';
 import { pathSwitchClasses, type OpenedSlot } from '../walk';
@@ -55,7 +55,8 @@ export function characterWideSlots(data: CheckedData, slots: readonly OpenedSlot
   const wide = new Set<string>();
   for (const s of slots) {
     const own = s.source.kind === 'race' || s.id.selection === deity || s.id.selection === BACKGROUNDS_BASE_SELECTION;
-    if (own || (s.parent !== undefined && wide.has(s.parent))) wide.add(slotKey(s.id));
+    const parent = parentKey(s.id);
+    if (own || (parent !== undefined && wide.has(parent))) wide.add(slotKey(s.id));
   }
   return wide;
 }

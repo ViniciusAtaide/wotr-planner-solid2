@@ -1,3 +1,4 @@
+import type { CheckedBuild } from '~engine/edits';
 import {
   createContext,
   createEffect,
@@ -9,7 +10,7 @@ import {
   untrack,
   useContext,
 } from 'solid-js';
-import type { Build } from '~engine/build';
+
 import type { Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
 
@@ -79,7 +80,7 @@ export interface ChoiceRow {
   readonly group?: string | undefined;
 }
 
-export function judge(engine: Engine, build: Build, edit: Edit): Judged {
+export function judge(engine: Engine, build: CheckedBuild, edit: Edit): Judged {
   return judgeAll(engine, build, [edit]);
 }
 

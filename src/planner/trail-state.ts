@@ -1,4 +1,5 @@
 import {
+  parentKey,
   placeKey,
   slotKey,
   type Alignment,
@@ -9,6 +10,7 @@ import {
   type SkillRanks,
   type SlotId,
 } from '~engine/build';
+import type { CheckedBuild } from '~engine/edits';
 import type { CheckedData } from '~engine/load';
 import { expectedLevel } from '~engine/mcp';
 import {
@@ -120,7 +122,7 @@ export function reduceTrail(s: TrailState, a: TrailAction): TrailState {
 
 export interface TrailView {
   readonly data: CheckedData;
-  readonly build: Build;
+  readonly build: CheckedBuild;
   readonly walk: Walk;
 }
 
@@ -508,12 +510,13 @@ export function gearDependentSlots(t: TrailView): ReadonlySet<string> {
   return new Set(t.walk.gearDependent.flatMap((g) => (g.slot === undefined ? [] : [slotKey(g.slot)])));
 }
 
-export function nestedParent(slots: readonly OpenedSlot[], child: OpenedSlot): OpenedSlot | undefined {
-  return slots.find((p) => child.parent === slotKey(p.id) && p.pick?.feature === child.id.selection);
+function parentOf(slots: readonly OpenedSlot[], child: OpenedSlot): OpenedSlot | undefined {
+  const key = parentKey(child.id);
+  return key === undefined ? undefined : slots.find((p) => slotKey(p.id) === key && p.pick !== undefined);
 }
 
 export function chipSlots(slots: readonly OpenedSlot[]): readonly OpenedSlot[] {
-  return slots.filter((s) => s.pick === undefined || nestedParent(slots, s) === undefined);
+  return slots.filter((s) => s.pick === undefined || parentOf(slots, s) === undefined);
 }
 
 const SHARED_WORDS = ['Selection', 'Feat', 'Bloodline'] as const;
@@ -578,7 +581,7 @@ export function pickLabels(data: CheckedData, slots: readonly OpenedSlot[]): Rea
   );
   const labels = new Map(own);
   for (const child of slots) {
-    const parent = child.pick === undefined ? undefined : nestedParent(slots, child);
+    const parent = child.pick === undefined ? undefined : parentOf(slots, child);
     const parentLabel = parent && own.get(slotKey(parent.id));
     const childLabel = own.get(slotKey(child.id));
     if (parent !== undefined && parentLabel !== undefined && childLabel !== undefined) {

@@ -51,6 +51,9 @@ import {
   type TrailView,
   whereOf,
 } from './trail-state';
+import type { CheckedBuild } from '~engine/edits';
+
+const trusted = (b: Build): CheckedBuild => b as CheckedBuild;
 
 const files = readDataDir(join(process.cwd(), 'data'));
 const e = engineOf(loadData(files.files, files.overrides));
@@ -74,7 +77,7 @@ const SCORES = abilityScores({
   Charisma: 10,
 });
 
-const viewOf = (build: Build): TrailView => ({ data: e.data, build, walk: walk(e.data, build, e.G) });
+const viewOf = (build: Build): TrailView => ({ data: e.data, build: trusted(build), walk: walk(e.data, build, e.G) });
 type Left = Pick<TrailState, 'skillsLeft' | 'mythicLater'>;
 const START: Left = { skillsLeft: new Set<number>(), mythicLater: undefined };
 const next = (build: Build, s: Left = START): Step => nextStep(viewOf(build), s);

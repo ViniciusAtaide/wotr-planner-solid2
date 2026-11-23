@@ -20,6 +20,9 @@ import {
 } from './flat-choices';
 import { verdictOfAll } from './planner-state';
 import { backgroundSlot, characterPicksLine } from './trail-state';
+import type { CheckedBuild } from '~engine/edits';
+
+const trusted = (b: Build): CheckedBuild => b as CheckedBuild;
 
 const files = readDataDir(join(process.cwd(), 'data'));
 const e = engineOf(loadData(files.files, files.overrides));
@@ -42,7 +45,7 @@ const named = (choices: readonly FlatChoice[], name: string): FlatChoice => {
   return c;
 };
 const taken = (b: Build, c: FlatChoice): Build => {
-  const v = verdictOfAll(e, b, c.edits);
+  const v = verdictOfAll(e, trusted(b), c.edits);
   if (v.kind === 'breaks') throw new Error(`${c.name} breaks`);
   return v.build;
 };
@@ -104,7 +107,7 @@ describe('races with their heritages', () => {
     );
     const human = named(raceChoices(e, tiefling, walked(tiefling)), 'Human');
     expect(human.note).toBeUndefined();
-    expect(verdictOfAll(e, tiefling, human.edits).kind).toBe('applies');
+    expect(verdictOfAll(e, trusted(tiefling), human.edits).kind).toBe('applies');
     const now = taken(tiefling, human);
     const heritages = new Set(
       walked(tiefling)
@@ -118,7 +121,7 @@ describe('races with their heritages', () => {
 describe('backgrounds with their variations', () => {
   const levelled: Build = { scores: SCORES, levels: [{ class: FIGHTER }], picks: [] };
   const base = () => {
-    const b = backgroundSlot({ data: e.data, build: levelled, walk: walked(levelled) });
+    const b = backgroundSlot({ data: e.data, build: trusted(levelled), walk: walked(levelled) });
     if (b === undefined) throw new Error('no background slot');
     return b.id;
   };
@@ -147,10 +150,10 @@ describe('the character’s picks line', () => {
   test('names the race and the background as their flat pairs (QA pass 2)', () => {
     const fresh: Build = { scores: SCORES, levels: [{ class: FIGHTER }], picks: [] };
     const raced = taken(fresh, named(raceChoices(e, fresh, walked(fresh)), 'Tiefling · Beastbrood (Rakshasa-Spawn)'));
-    const base = backgroundSlot({ data: e.data, build: raced, walk: walked(raced) });
+    const base = backgroundSlot({ data: e.data, build: trusted(raced), walk: walked(raced) });
     if (base === undefined) throw new Error('no background slot');
     const done = taken(raced, named(backgroundChoices(e, raced, walked(raced), base.id), 'Scholar (Nature)'));
-    const line = characterPicksLine({ data: e.data, build: done, walk: walked(done) });
+    const line = characterPicksLine({ data: e.data, build: trusted(done), walk: walked(done) });
     expect(line.startsWith('Tiefling · Beastbrood (Rakshasa-Spawn) · ')).toBe(true);
     expect(line).toContain('Scholar (Nature)');
     expect(line).not.toContain('Scholar — Nature');

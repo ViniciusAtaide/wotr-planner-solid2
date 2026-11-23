@@ -16,6 +16,7 @@ import {
 import type { CheckedData } from '../load';
 import type { Attribute, Guid } from '../data';
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
+import { heldSpellFeat } from '../pickers';
 import { walk, type Failure } from '../walk';
 
 export type Edit =
@@ -124,6 +125,40 @@ export function apply(build: Build, edit: Edit): Build {
   }
 }
 
+declare const checkedBrand: unique symbol;
+
+export type CheckedBuild = Build & { readonly [checkedBrand]: true };
+
+export interface Checked {
+  readonly build: CheckedBuild;
+  readonly cleared: readonly Pick[];
+}
+
+const MAX_CLEARING_ROUNDS = 64;
+
+export function checkBuild(data: CheckedData, build: Build, G: GrantIndex = buildGrantIndex(data)): Checked {
+  let after = build;
+  const cleared: Pick[] = [];
+  for (let round = 0; round < MAX_CLEARING_ROUNDS; round++) {
+    const now = after;
+    const refused = new Set(
+      walk(data, now, G)
+        .failures.filter(
+          (f) => f.choice === 'pick' && f.slot !== undefined && heldSpellFeat(data, now, f.slot) === undefined,
+        )
+        .map((f) => slotKey(f.slot as SlotId)),
+    );
+    const gone = after.picks.filter((p) => refused.has(slotKey(p.slot)));
+    if (gone.length === 0) break;
+    cleared.push(...gone);
+    after = clearPicks(
+      after,
+      gone.map((p) => p.slot),
+    );
+  }
+  return { build: after as CheckedBuild, cleared };
+}
+
 export function clearPicks(build: Build, slots: readonly SlotId[]): Build {
   const cleared = new Set(slots.map(slotKey));
   return { ...build, picks: build.picks.filter((p) => !cleared.has(slotKey(p.slot))) };
@@ -182,7 +217,7 @@ export function breaksOf(
   };
 }
 
-export type Verdict = { readonly ok: true; readonly build: Build } | ({ readonly ok: false } & Breaks);
+export type Verdict = { readonly ok: true; readonly build: CheckedBuild } | ({ readonly ok: false } & Breaks);
 
 export function applyWith(data: CheckedData, build: Build, edit: Edit): Build {
   const after = apply(build, edit);
@@ -195,10 +230,10 @@ export function applyWith(data: CheckedData, build: Build, edit: Edit): Build {
 
 export function allows(data: CheckedData, build: Build, edit: Edit, G: GrantIndex = buildGrantIndex(data)): Verdict {
   const after = applyWith(data, build, edit);
-  if (edit.kind === 'rename') return { ok: true, build: after };
+  if (edit.kind === 'rename') return { ok: true, build: after as CheckedBuild };
   const broken = breaksOf(data, build, after, G);
   return broken.picks.length === 0 && broken.others.length === 0
-    ? { ok: true, build: after }
+    ? { ok: true, build: after as CheckedBuild }
     : { ok: false, ...broken };
 }
 
@@ -208,7 +243,7 @@ export type Cascade =
       readonly cleared: readonly Pick[];
       readonly clearedSkills: readonly number[];
       readonly clearedRanks: readonly number[];
-      readonly build: Build;
+      readonly build: CheckedBuild;
     }
   | ({ readonly ok: false } & Breaks);
 
@@ -246,7 +281,8 @@ function clearSkills(build: Build, levels: readonly number[]): Build {
 
 export function cascade(data: CheckedData, build: Build, edit: Edit, G: GrantIndex = buildGrantIndex(data)): Cascade {
   let after = applyWith(data, build, edit);
-  if (edit.kind === 'rename') return { ok: true, cleared: [], clearedSkills: [], clearedRanks: [], build: after };
+  if (edit.kind === 'rename')
+    return { ok: true, cleared: [], clearedSkills: [], clearedRanks: [], build: after as CheckedBuild };
   const cleared: Pick[] = [];
   const clearedSkills = new Set<number>();
   const clearedRanks: number[] = [];
@@ -277,7 +313,13 @@ export function cascade(data: CheckedData, build: Build, edit: Edit, G: GrantInd
     )
       return refuseElsewhere;
     if (broken.picks.length === 0 && skillLevels.length === 0 && firstRank === undefined)
-      return { ok: true, cleared, clearedSkills: [...clearedSkills].sort((a, b) => a - b), clearedRanks, build: after };
+      return {
+        ok: true,
+        cleared,
+        clearedSkills: [...clearedSkills].sort((a, b) => a - b),
+        clearedRanks,
+        build: after as CheckedBuild,
+      };
     cleared.push(...broken.picks);
     after = clearPicks(
       after,

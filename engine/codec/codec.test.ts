@@ -1,7 +1,7 @@
 import { fileURLToPath } from 'node:url';
 import { deflateRawSync, inflateRawSync } from 'node:zlib';
 import { describe, expect, it } from 'vitest';
-import { abilityScores, slotKey, toBuildName, type Build, type BuildName } from '../build';
+import { abilityScores, childSlot, slotKey, toBuildName, type Build, type BuildName } from '../build';
 import { decodeBuild, DecodeError, encodeBuild, keyHash, linkKeys, openBuild } from './codec';
 import { loadData, type CheckedData } from '../load';
 import { readDataDir } from '../data-dir';
@@ -21,16 +21,9 @@ const MUTATION_WARRIOR = '758e0061a077e54409a3bf0eb51511e5';
 
 const inSlotOrder = (b: Build): Build => ({
   ...b,
-  picks: [...b.picks].sort((x, y) => {
-    const rank = (p: typeof x) => ('rank' in p.slot.place ? 1 : 0);
-    const n = (p: typeof x) => ('rank' in p.slot.place ? p.slot.place.rank : p.slot.place.level);
-    return (
-      rank(x) - rank(y) ||
-      n(x) - n(y) ||
-      x.slot.selection.localeCompare(y.slot.selection) ||
-      x.slot.index - y.slot.index
-    );
-  }),
+  picks: [...b.picks].sort((x, y) =>
+    slotKey(x.slot) < slotKey(y.slot) ? -1 : slotKey(x.slot) > slotKey(y.slot) ? 1 : 0,
+  ),
 });
 
 const bytesOf = (code: string) =>
@@ -72,7 +65,39 @@ describe('C: the Build code', { timeout: 30_000 }, () => {
   it.each([jackInTheGreen, enforcer])('round-trips $name unchanged', async (gold) => {
     const code = await encodeBuild(data, gold.build);
     expect(code).toMatch(/^[A-Za-z0-9_-]+$/);
-    expect(await decodeBuild(data, code)).toEqual(inSlotOrder(gold.build));
+    expect(inSlotOrder(await decodeBuild(data, code))).toEqual(inSlotOrder(gold.build));
+  });
+
+  describe('version 1 codes, read under the old numbering (map 35)', () => {
+    const V1_JACK =
+      'AavojMxLOso3eTs1scXZScdA2CBmxht8GKS2LeLznRseovKqvpv3PTqRNY9L5GW7FdNxtiWRUcEzGT5pgdxnv2DJ5NKLO23ep9y4l_vne6jC4aoaEA4_qPUVpNdu69ZZIPrI5ydgenXfiv2i95e1NJwJ2wrCOqWv54LEGzy2BIFoY0cbdxCtl8schKxO5ccdH5D4Asl7j0H0Bt-7ySC6V2VDH0wdiF26LPsbiP2zT61gYt7m36-K_yz2SLKrOKXz9qtLXvZfEPvcLabHL5c7udWZTd0KYm8rrZs_50DzOZA8iP0wXMrnHtttJZC85uqVF0Dic24Iq4LEFwbUdIHEvSV_tILYO6xO52numxgZ9EKuFKTu9KJJO0Hq9q2ptwGpi60qKwKJ67fdKQaJWx_6bAUS75xwvI-RgZmRh4-Ph0NQhIGZgZGFkYuRgQlEw3hsKDx6yXGxsXNy8_ELCAoKMzJqMzAyM7AwIJNMjMysKELMMDYzmGRlZmBhYmVgB3PYwdIQNieY5AaTvDCSGcbmh2gTBHOEwRJwkgVKMjIyg1wMJ5kZGJnA4kxgNth-EAnyD5gNIVnBJBtYnA1kDQuYYmBkRyI54CQTKyPYqYxcCJKBgQEA';
+    const V1_ENFORCER =
+      'AZvMeO3e2fCrB7inkouDbmZdRcaPgvQELM5OOgbCBjEz3uDDIPVLl0VZg_R8VP9sADKPfV2Z0A0PUfn0_vxwh-d3vt7f81vy0YmseVwiL9ubvY-7gNw7R3vSBhAGyU_--lOzffF-2dw_30MVDlfVgHDVMffCVfedWB96fWb88UI7vp7N_BmMDTLbZensOyB9PckXCkH8Bo8tQfFPZqvFHcuJAuF-xUWWIMzh9c4bJN_LmH8VpH6j04unIHVRkrFyIPEMtfNuIHGWnLg0EL_2x7Qap5tcH2Iuq-eB8GLptJhfTKncIDGQ_LRVjsUg9WvyWn6CxJ__lOoFiav8uOMDohdNUD9fcO_uuYwa60cRBn4sKu1_wOYevNh4FCQuWL_wWefaxA2FGw0lJuZt_n0kvlvLJS_7r9QX-Zl1ZlO3-tSazwXxK9V4DB-GS_n8ybj5GST-1fG5Ckh8848T10HiCwNqukDidS2emSB2UlrLd819EyN3WJ3OA6lrUS6cDVJnfeiz1blbTI9nnd5oD1IPYoPk9z6rfg6Sv82hVgUS33pe58gLJ7EMRkZmRgEBPi4OHhEGZhCHhRGdZsQhTqw8EyH9rAyMEBYnIwMRbJh9XGzsnNx8_AKCgiLMjIyMZgyMzAwsDMgkEyMzKwMzmMOMJAFnM4HZTEhsZjCbBUyygkk2sDicZGFgYEciOcAkJzMDC6MUAxeYww0mecAaeJDYvGA2hOQDk_xgUhCJFAKTwkikCIhkZGRmYAKTLAyMYOcygh3KyAInGaUYwe5lBLuUkQ3GZmFgZEciOVBJZgZGTjCbC4lkY2QAAA';
+    const V1_TWO_SKILL_FOCUS =
+      'AeOWUuuJfBSkJ3DDQ1SeqUPBAkSDxEBsEP5Uv18WRMulTpzGyMDAAMIMLAyMzAzMDEyMzKwMzAwgDguIZGQBSQIA';
+    const SKILL_FOCUS = 'c9629ef9eebb88b479b2fbc5e836656a';
+    const LORE_RELIGION = 'c541f80af8d0af4498e1abb6025780c7';
+    const ATHLETICS = '9db907332bdaec1468cff3a99efef5b4';
+
+    it.each([
+      [V1_JACK, jackInTheGreen],
+      [V1_ENFORCER, enforcer],
+    ] as const)('opens a gold Build written by version 1 to the same Build (%#)', async (code, gold) => {
+      expect(inSlotOrder(await decodeBuild(data, code))).toEqual(inSlotOrder(gold.build));
+    });
+
+    it('gives each sub-choice of a version 1 code to the parent the old walk paired it with', async () => {
+      const levelFeat = { place: { level: 1 }, selection: BASIC, index: 0 };
+      const humanFeat = { place: { level: 1 }, selection: BASIC, index: 0, from: HUMAN };
+      const opened = await decodeBuild(data, V1_TWO_SKILL_FOCUS);
+      const under = (parent: typeof levelFeat) =>
+        opened.picks.find((p) => slotKey(p.slot) === slotKey(childSlot(parent, SKILL_FOCUS)))?.feature;
+      expect(under(levelFeat)).toBe(LORE_RELIGION);
+      expect(under(humanFeat)).toBe(ATHLETICS);
+      const again = await decodeBuild(data, await encodeBuild(data, opened));
+      expect(inSlotOrder(again)).toEqual(inSlotOrder(opened));
+      expect(bytesOf(await encodeBuild(data, opened))[0]).toBe(2);
+    });
   });
 
   it('refuses what the encoder never writes', async () => {
@@ -85,10 +110,10 @@ describe('C: the Build code', { timeout: 30_000 }, () => {
     expect(await decodeBuild(data, code)).toEqual(small);
     await failsWith('', 'empty');
     await failsWith('not base64!', 'base64');
-    const version2 = bytesOf(code);
-    version2[0] = 2;
+    const version3 = bytesOf(code);
+    version3[0] = 3;
     await failsWith(
-      btoa(String.fromCharCode(...version2))
+      btoa(String.fromCharCode(...version3))
         .replace(/\+/g, '-')
         .replace(/\//g, '_')
         .replace(/=+$/, ''),

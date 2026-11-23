@@ -1,7 +1,7 @@
 import { createMemo, createSignal } from 'solid-js';
 import type { Build } from '~engine/build';
 import type { Attribute } from '~engine/data';
-import type { Edit } from '~engine/edits';
+import { checkBuild, type CheckedBuild, type Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
 import { firstLevelWith } from '~engine/pickers';
 import { walk } from '~engine/walk';
@@ -19,7 +19,7 @@ import {
 export { placeWords, type Pending } from './planner-state';
 
 export function createPlanner(engine: Engine, initial: Build) {
-  let latest = plannerAt(initial);
+  let latest = plannerAt(checkBuild(engine.data, initial, engine.G).build);
   const [state, setState] = createSignal<PlannerState>(latest);
   const restore = (next: PlannerState): PlannerState => {
     latest = next;
@@ -65,7 +65,7 @@ export function createPlanner(engine: Engine, initial: Build) {
     canRedo: () => state().future.length > 0,
     undo: () => send({ kind: 'undo' }),
     redo: () => send({ kind: 'redo' }),
-    replace: (next: Build) => send({ kind: 'replace', build: next }),
+    replace: (next: CheckedBuild) => send({ kind: 'replace', build: next }),
   };
 }
 

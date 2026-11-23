@@ -1,5 +1,6 @@
 import {
   placeKey,
+  childSlot,
   slotKey,
   type Ascension,
   type Build,
@@ -201,6 +202,7 @@ class SlotState implements SlotChain {
     readonly source: Source,
     readonly level: number,
     readonly parent: SlotState | undefined,
+    readonly legacyId: SlotId = id,
   ) {}
   get key(): string {
     return slotKey(this.id);
@@ -401,6 +403,18 @@ export function pauseAtClass(
   }
 }
 
+export function migrateV1Slots(data: CheckedData, build: Build, G: GrantIndex = buildGrantIndex(data)): Build {
+  const walker = new Walker(data, build, G, undefined, undefined, true);
+  walker.run();
+  return {
+    ...build,
+    picks: build.picks.map((p) => {
+      const id = walker.legacyToNew.get(slotKey(p.slot));
+      return id === undefined ? p : { ...p, slot: id };
+    }),
+  };
+}
+
 export function pauseAt(
   data: CheckedData,
   build: Build,
@@ -451,6 +465,7 @@ class Walker {
     readonly G: GrantIndex,
     readonly pause?: SlotId,
     readonly classPause?: ClassPause,
+    readonly legacyIds = false,
   ) {
     this.unit = new Unit(data, (bp) => conditionalGrants(bp).length > 0);
     this.unit.alignment = build.alignment;
@@ -1286,13 +1301,34 @@ class Walker {
 
   addSelection(parent: SlotState | undefined, source: Source, selection: Guid, level: number): SlotState {
     const state = this.level;
-    const from =
-      parent === undefined && (source.kind === 'race' || source.kind === 'component') ? source.from : undefined;
-    const index = state.slots.filter((s) => s.selection === selection && s.id.from === from).length;
-    const id: SlotId = { place: this.place, selection, index, ...(from !== undefined && { from }) };
-    const slot = new SlotState(id, selection, source, level, parent);
+    const id = parent === undefined ? this.topSlotId(state, source, selection) : childSlot(parent.id, selection);
+    const legacyId = this.legacySlotId(state, parent, source, selection);
+    this.legacyToNew.set(slotKey(legacyId), id);
+    const slot = new SlotState(id, selection, source, level, parent, legacyId);
     state.slots.push(slot);
     return slot;
+  }
+
+  readonly legacyToNew = new Map<string, SlotId>();
+
+  legacySlotId(state: LevelState, parent: SlotState | undefined, source: Source, selection: Guid): SlotId {
+    const from =
+      parent === undefined && (source.kind === 'race' || source.kind === 'component') ? source.from : undefined;
+    const index = state.slots.filter((s) => s.selection === selection && s.legacyId.from === from).length;
+    return { place: this.place, selection, index, ...(from !== undefined && { from }) };
+  }
+
+  slotFor(state: LevelState, id: SlotId): SlotState | undefined {
+    const key = slotKey(id);
+    return state.slots.find((s) => slotKey(this.legacyIds ? s.legacyId : s.id) === key);
+  }
+
+  topSlotId(state: LevelState, source: Source, selection: Guid): SlotId {
+    const from = source.kind === 'race' || source.kind === 'component' ? source.from : undefined;
+    const index = state.slots.filter(
+      (s) => s.parent === undefined && s.selection === selection && s.id.from === from,
+    ).length;
+    return { place: this.place, selection, index, ...(from !== undefined && { from }) };
   }
 
   prohibited(selection: Guid): boolean {
@@ -1434,7 +1470,7 @@ class Walker {
     for (let progress = true; progress;) {
       progress = false;
       for (const pick of pending) {
-        const slot = state.slots.find((s) => sameSlot(s.id, pick.slot));
+        const slot = this.slotFor(state, pick.slot);
         if (slot === undefined || slot.pick !== undefined) continue;
         if (BANDS.indexOf(this.slotBand(slot)) > bandIndex) continue;
         if (this.tryPick(slot, pick)) {
@@ -1627,7 +1663,7 @@ class Walker {
 
   refusePending(pick: Pick): void {
     const state = this.level;
-    const slot = state.slots.find((s) => sameSlot(s.id, pick.slot));
+    const slot = this.slotFor(state, pick.slot);
     const refuse = (refusal: FailedRule) =>
       this.fail({ choice: 'pick', subject: pick.feature, slot: pick.slot, ...refusal });
     if (slot === undefined) return refuse({ rule: 'LevelUpState.AddSelection' });

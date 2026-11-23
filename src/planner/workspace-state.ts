@@ -1,3 +1,4 @@
+import type { CheckedBuild } from '~engine/edits';
 import { slotKey, type Build, type SlotId } from '~engine/build';
 import type { Engine } from '~engine/mcp';
 import type { LinkReason } from '~engine/refusals';
@@ -18,8 +19,14 @@ export type Selection =
 
 export type LinkOn = 'load' | 'paste';
 
+export interface ClearedRow {
+  readonly name: string;
+  readonly place: string;
+}
+
 export type LinkStatus =
   | { readonly kind: 'ok' }
+  | { readonly kind: 'cleared'; readonly rows: readonly ClearedRow[] }
   | { readonly kind: 'didNotOpen'; readonly on: LinkOn; readonly reason: LinkReason };
 
 export interface WorkspaceState {
@@ -29,7 +36,7 @@ export interface WorkspaceState {
 
 export type WorkspaceAction =
   | { readonly kind: 'select'; readonly selection: Selection | undefined }
-  | { readonly kind: 'linkOpened' }
+  | { readonly kind: 'linkOpened'; readonly cleared: readonly ClearedRow[] }
   | { readonly kind: 'linkFailed'; readonly on: LinkOn; readonly reason: LinkReason }
   | { readonly kind: 'dismissLink' };
 
@@ -85,8 +92,12 @@ export function reduceWorkspace(s: WorkspaceState, a: WorkspaceAction): Workspac
   switch (a.kind) {
     case 'select':
       return { ...s, selection: a.selection };
-    case 'linkOpened':
-      return s.link.kind === 'ok' && s.selection === undefined ? s : { ...s, link: LINK_OK, selection: undefined };
+    case 'linkOpened': {
+      const link: LinkStatus = a.cleared.length === 0 ? LINK_OK : { kind: 'cleared', rows: a.cleared };
+      return link === LINK_OK && s.link.kind === 'ok' && s.selection === undefined
+        ? s
+        : { ...s, link, selection: undefined };
+    }
     case 'dismissLink':
       return s.link.kind === 'ok' ? s : { ...s, link: LINK_OK };
     case 'linkFailed':
@@ -101,7 +112,7 @@ export interface Page {
 
 export type PageAction =
   | Exclude<WorkspaceAction, { readonly kind: 'linkOpened' }>
-  | { readonly kind: 'linkOpened'; readonly build: Build }
+  | { readonly kind: 'linkOpened'; readonly build: CheckedBuild; readonly cleared: readonly ClearedRow[] }
   | { readonly kind: 'planner'; readonly action: PlannerAction };
 
 export function reducePage(engine: Engine, page: Page, a: PageAction): Page {
@@ -111,7 +122,7 @@ export function reducePage(engine: Engine, page: Page, a: PageAction): Page {
     case 'linkOpened':
       return {
         ...page,
-        workspace: reduceWorkspace(page.workspace, { kind: 'linkOpened' }),
+        workspace: reduceWorkspace(page.workspace, { kind: 'linkOpened', cleared: a.cleared }),
         planner: reducePlanner(engine, page.planner, { kind: 'replace', build: a.build }),
       };
     default: {

@@ -19,6 +19,7 @@ export interface SlotId {
   readonly selection: Guid;
   readonly index: number;
   readonly from?: Guid;
+  readonly parent?: string;
 }
 
 export interface Pick {
@@ -179,7 +180,16 @@ export function placeKey(place: Place): string {
 }
 
 export function slotKey(slot: SlotId): string {
-  return `${placeKey(slot.place)}/${slot.selection}${slot.from === undefined ? '' : `@${slot.from}`}#${slot.index}`;
+  const own = `${placeKey(slot.place)}/${slot.selection}${slot.from === undefined ? '' : `@${slot.from}`}#${slot.index}`;
+  return slot.parent === undefined ? own : `${own}<${slot.parent}`;
+}
+
+export function childSlot(parent: SlotId, selection: Guid): SlotId {
+  return { place: parent.place, selection, index: 0, parent: slotKey(parent) };
+}
+
+export function parentKey(slot: SlotId): string | undefined {
+  return slot.parent;
 }
 
 export function withPick(build: Build, pick: Pick): Build {

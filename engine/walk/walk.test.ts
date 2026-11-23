@@ -1,6 +1,15 @@
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { type AbilityScores, abilityScores, skillRanks, rankLevel, placeKey, type Build, type LevelUp } from '../build';
+import {
+  type AbilityScores,
+  abilityScores,
+  childSlot,
+  skillRanks,
+  rankLevel,
+  placeKey,
+  type Build,
+  type LevelUp,
+} from '../build';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { refGuid, type BlueprintProgression, type Component, type Condition, type ContextRankConfig } from '../data';
@@ -196,7 +205,10 @@ describe('area 5: skill ranks', { timeout: 30_000 }, () => {
           feature: 'fa621a249cc836f4382ca413b976e65e',
         },
         {
-          slot: { place: { level: 1 }, selection: 'fa621a249cc836f4382ca413b976e65e', index: 0 },
+          slot: childSlot(
+            { place: { level: 1 }, selection: 'f926dabeee7f8a54db8f2010b323383c', index: 0 },
+            'fa621a249cc836f4382ca413b976e65e',
+          ),
           feature: '494c972a8e7626749aeda25582e2e88f',
         },
       ],
@@ -377,7 +389,10 @@ describe('area 6: ability scores', { timeout: 30_000 }, () => {
               feature: 'c25021c31f302c6449ecdbc978822507',
             },
             {
-              slot: { place: { level: 1 }, selection: 'c25021c31f302c6449ecdbc978822507', index: 0 },
+              slot: childSlot(
+                { place: { level: 1 }, selection: 'f926dabeee7f8a54db8f2010b323383c', index: 0 },
+                'c25021c31f302c6449ecdbc978822507',
+              ),
               feature: '7cc9014488caa5445a0c8b5e17b95466',
             },
           ],

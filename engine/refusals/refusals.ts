@@ -125,6 +125,10 @@ const LINK_REASON_WORDS: Readonly<Record<LinkReason, string>> = {
   notACode: "This link doesn't hold a Build code",
 };
 
+export function linkCleared(count: number): string {
+  return `This link held ${count === 1 ? 'a pick' : `${count} picks`} the game doesn't allow, so ${count === 1 ? 'it was' : 'they were'} cleared:`;
+}
+
 export function linkDidNotOpen(on: 'load' | 'paste', reason: LinkReason): string {
   const then = on === 'load' ? 'so the planner starts empty' : 'so the planner keeps the Build it had';
   return `${LINK_REASON_WORDS[reason]}, ${then}.`;

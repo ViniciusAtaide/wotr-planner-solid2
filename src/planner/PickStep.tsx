@@ -1,5 +1,5 @@
 import { createEffect, createMemo, createSignal, For, onSettled, Show, untrack, useContext } from 'solid-js';
-import { slotKey, type Build, type Pick, type SlotId } from '~engine/build';
+import { childSlot, slotKey, type Build, type Pick, type SlotId } from '~engine/build';
 import type { Guid } from '~engine/data';
 import type { Edit } from '~engine/edits';
 import { enablesWith, linkIndex, linkNames } from '~engine/links';
@@ -20,7 +20,7 @@ import { featCategory } from './feat-category';
 import { after } from './flat-choices';
 import { CollapsedLists, createListPanel, StepFilter } from './list-panel';
 import { clashLines, OptionDetails, summaryFor, synergyLines, type OptionDetail } from './option-detail';
-import { childSlotOf, pickRows, rowMembers, rowOpen, type PickRow } from './nested-options';
+import { pickRows, rowMembers, rowOpen, type PickRow } from './nested-options';
 import type { NonEmpty } from './planner-state';
 import type { TrailApi } from './steps';
 import { isSpellFeat, nestedLabel, slotLabel, SPELL_NOT_MODELLED } from './trail-state';
@@ -236,7 +236,7 @@ export function PickStep(props: PickStepProps) {
   const oldChildClears = (feature: string): Edit[] => {
     const was = current();
     if (was === undefined || was.feature === feature) return [];
-    const child = childSlotOf(props.slot, was.feature);
+    const child = childSlot(props.slot, was.feature);
     return pickAt(child) === undefined ? [] : [{ kind: 'pick', slot: child }];
   };
   const pickOf = (slot: SlotId, o: OptionStatus): Edit => ({
@@ -248,7 +248,7 @@ export function PickStep(props: PickStepProps) {
     const c = current();
     if (c === undefined) return undefined;
     const own = shownName(data(), c.feature, c.param);
-    const child = pickAt(childSlotOf(props.slot, c.feature));
+    const child = pickAt(childSlot(props.slot, c.feature));
     return child === undefined ? own : nestedLabel(own, shownName(data(), child.feature, child.param));
   };
   const apply = (edits: NonEmpty<Edit>, title: string) => {
@@ -262,7 +262,7 @@ export function PickStep(props: PickStepProps) {
     const row = rows().find((r) => r.key === expanded());
     if (row?.kind !== 'nested') return undefined;
     const b = planner().build();
-    const childSlot = childSlotOf(props.slot, row.option.feature);
+    const child = childSlot(props.slot, row.option.feature);
     const dropped = new Set([
       slotKey(props.slot),
       ...oldChildClears(row.option.feature).flatMap((e) => (e.kind === 'pick' ? [slotKey(e.slot)] : [])),
@@ -274,13 +274,13 @@ export function PickStep(props: PickStepProps) {
         { slot: props.slot, feature: row.option.feature },
       ],
     };
-    return { row, slot: childSlot, picker: pickerFor(data(), chosen, childSlot, planner().engine.G) };
+    return { row, slot: child, picker: pickerFor(data(), chosen, child, planner().engine.G) };
   });
   const takeNested = (row: PickRow & { readonly kind: 'nested' }, child: OptionStatus) =>
     apply(
       after(oldChildClears(row.option.feature), [
         pickOf(props.slot, row.option),
-        pickOf(childSlotOf(props.slot, row.option.feature), child),
+        pickOf(childSlot(props.slot, row.option.feature), child),
       ]),
       `Picked ${nestedLabel(
         shownName(data(), row.option.feature, row.option.param),
@@ -324,7 +324,7 @@ export function PickStep(props: PickStepProps) {
     row.kind === 'params' ? paramLabel(name(o), row.name) : name(o);
   const childCurrent = (row: PickRow, o: OptionStatus) => {
     if (row.kind !== 'nested') return isCurrent(o);
-    return holdsRow(row) && pickAt(childSlotOf(props.slot, row.option.feature))?.feature === o.feature;
+    return holdsRow(row) && pickAt(childSlot(props.slot, row.option.feature))?.feature === o.feature;
   };
   const gearOf = (o: OptionStatus | undefined) =>
     o?.gearItems === undefined ? undefined : gearNote(data(), o.gearItems);

@@ -1,6 +1,7 @@
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
 import {
+  childSlot,
   abilityScores,
   placeKey,
   slotKey,
@@ -135,6 +136,27 @@ describe('S: the pickers', { timeout: 30_000 }, () => {
         ).toBe(true);
       }
     }
+  });
+
+  it("closes the skill another Skill Focus holds, in the second Skill Focus's own list (map 35)", () => {
+    const SKILL_FOCUS = 'c9629ef9eebb88b479b2fbc5e836656a';
+    const LORE_RELIGION = 'c541f80af8d0af4498e1abb6025780c7';
+    const level: SlotId = { place: { level: 1 }, selection: BASIC, index: 0 };
+    const human: SlotId = { ...level, from: HUMAN };
+    const fighter: Build = {
+      race: HUMAN,
+      levels: [{ class: FIGHTER }],
+      picks: [
+        { slot: level, feature: SKILL_FOCUS },
+        { slot: childSlot(level, SKILL_FOCUS), feature: LORE_RELIGION },
+        { slot: human, feature: SKILL_FOCUS },
+      ],
+    };
+    const p = picker(data, fighter, childSlot(human, SKILL_FOCUS), G);
+    const lore = p?.options.find((o) => o.feature === LORE_RELIGION);
+    expect(lore?.closed).toBeDefined();
+    expect(refusal({ data, G, unit: p!.unit }, lore!.closed!).text).toBe('Already held at its highest rank.');
+    expect(p?.options.filter((o) => o.closed === undefined && o.shown).length).toBeGreaterThan(5);
   });
 
   it('returns nothing for a slot the Build never opens', () => {
@@ -518,7 +540,7 @@ describe('which slots belong to the character', { timeout: 30_000 }, () => {
         `L1/${BASIC}@${HUMAN}#0`,
         slotKey(background),
         named(DEITY_SELECTION),
-        named(BACKGROUNDS_CRAFTSMAN_SELECTION),
+        slotKey(childSlot(background, BACKGROUNDS_CRAFTSMAN_SELECTION)),
       ].sort(),
     );
     expect(slots.find((s) => slotKey(s.id) === `L1/${BASIC}@${HUMAN}#0`)?.source.kind).toBe('race');

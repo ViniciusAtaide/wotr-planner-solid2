@@ -24,6 +24,9 @@ import {
   type Selection,
   type WorkspaceState,
 } from './workspace-state';
+import type { CheckedBuild } from '~engine/edits';
+
+const trusted = (b: Build): CheckedBuild => b as CheckedBuild;
 
 const files = readDataDir(join(process.cwd(), 'data'));
 const e = engineOf(loadData(files.files, files.overrides));
@@ -67,9 +70,10 @@ describe('WorkspaceState', () => {
       ...ws(),
       link: { kind: 'didNotOpen', on: 'paste', reason: 'notACode' },
     };
-    const opened = reducePage(e, page(failed, plannerAt(cleaver)), {
+    const opened = reducePage(e, page(failed, plannerAt(trusted(cleaver))), {
       kind: 'linkOpened',
-      build: levelled(2),
+      build: trusted(levelled(2)),
+      cleared: [],
     });
     expect(opened.workspace.link).toEqual({ kind: 'ok' });
     expect(opened.planner.present).toEqual(levelled(2));
@@ -79,7 +83,7 @@ describe('WorkspaceState', () => {
   test('dismissLink sets the link status back to ok; edits leave it', () => {
     const failed = reduceWorkspace(ws(), { kind: 'linkFailed', on: 'load', reason: 'otherData' });
     expect(failed.link).toEqual({ kind: 'didNotOpen', on: 'load', reason: 'otherData' });
-    const edited = reducePage(e, page(failed, plannerAt(cleaver)), {
+    const edited = reducePage(e, page(failed, plannerAt(trusted(cleaver))), {
       kind: 'planner',
       action: { kind: 'edit', edit: ADD_LEVEL, title: 'Add level 2' },
     });
@@ -90,7 +94,7 @@ describe('WorkspaceState', () => {
 
   test('a link that opens closes any open step (QA, flat lists)', () => {
     const open = { ...workspaceAt(LINK_OK), selection: { kind: 'race' } as const };
-    expect(reduceWorkspace(open, { kind: 'linkOpened' }).selection).toBeUndefined();
+    expect(reduceWorkspace(open, { kind: 'linkOpened', cleared: [] }).selection).toBeUndefined();
   });
 
   test('sameSelection compares by kind and key', () => {
@@ -106,7 +110,7 @@ describe('resolve: a selection whose target is gone resolves to undefined', () =
   const single = (selection: Selection, first: PlannerState) => page(ws(selection), first);
 
   test('after dropLevel', () => {
-    const p = single({ kind: 'level', level: 2 }, plannerAt(levelled(2)));
+    const p = single({ kind: 'level', level: 2 }, plannerAt(trusted(levelled(2))));
     expect(resolvedOn(p)).toEqual({ kind: 'level', level: 2 });
     const dropped = reducePage(e, p, {
       kind: 'planner',
@@ -117,7 +121,7 @@ describe('resolve: a selection whose target is gone resolves to undefined', () =
   });
 
   test('after undo', () => {
-    const added = reducePage(e, single({ kind: 'level', level: 2 }, plannerAt(cleaver)), {
+    const added = reducePage(e, single({ kind: 'level', level: 2 }, plannerAt(trusted(cleaver))), {
       kind: 'planner',
       action: { kind: 'edit', edit: ADD_LEVEL, title: 'Add level 2' },
     });
@@ -133,8 +137,8 @@ describe('resolve: a selection whose target is gone resolves to undefined', () =
   });
 
   test('after replace', () => {
-    const p = single({ kind: 'level', level: 3 }, plannerAt(levelled(3)));
-    expect(resolvedOn(reducePage(e, p, { kind: 'linkOpened', build: cleaver }))).toBeUndefined();
+    const p = single({ kind: 'level', level: 3 }, plannerAt(trusted(levelled(3))));
+    expect(resolvedOn(reducePage(e, p, { kind: 'linkOpened', build: trusted(cleaver), cleared: [] }))).toBeUndefined();
   });
 });
 
@@ -185,7 +189,7 @@ function randomAction(next: () => number): PageAction {
     () => planner({ kind: 'undo' }),
     () => planner({ kind: 'redo' }),
     () => ({ kind: 'select', selection: one(SELECTIONS) }),
-    () => ({ kind: 'linkOpened', build: one(LINKED) }),
+    () => ({ kind: 'linkOpened', build: trusted(one(LINKED)), cleared: [] }),
     () => ({ kind: 'linkFailed', on: 'paste', reason: 'notACode' }),
     () => ({ kind: 'dismissLink' }),
   ];
@@ -212,7 +216,7 @@ function exists(selection: Selection, build: Build): boolean {
 describe('random action sequences over both reducers and the glue', () => {
   test.each([1, 7, 42, 2026])('seed %i', { timeout: 120_000 }, async (seed) => {
     const next = seeded(seed);
-    let p: Page = { workspace: workspaceAt(LINK_OK), planner: plannerAt(cleaver) };
+    let p: Page = { workspace: workspaceAt(LINK_OK), planner: plannerAt(trusted(cleaver)) };
     for (let step = 0; step < 60; step++) {
       const action = randomAction(next);
       p = reducePage(e, p, action);

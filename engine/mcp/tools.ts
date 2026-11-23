@@ -25,7 +25,7 @@ import {
   type StatType,
 } from '../data';
 import { describe, summaryText, type Description } from '../describe';
-import { allows, apply, breaksOf, cascade, type Breaks, type Edit } from '../edits';
+import { allows, apply, breaksOf, cascade, type Breaks, type Edit, checkBuild, type CheckedBuild } from '../edits';
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
 import { linkIndex, linkNames, sharedWords, stackWords } from '../links';
 import { gearClashes, openSlotsAt, picker, raceStatPending, type OptionStatus } from '../pickers';
@@ -84,9 +84,21 @@ const refused = (reason: string, more: Omit<ToolRefusal, 'refused' | 'reason'> =
   ...more,
 });
 
-async function open(e: Engine, code: string): Promise<Build | ToolRefusal> {
+const CLEARED_CODES_KEPT = 64;
+const clearedByCode = new Map<string, readonly string[]>();
+
+export function clearedOnOpen(code: unknown): readonly string[] | undefined {
+  return typeof code === 'string' ? clearedByCode.get(code) : undefined;
+}
+
+async function open(e: Engine, code: string): Promise<CheckedBuild | ToolRefusal> {
   try {
-    return await decodeBuild(e.data, code);
+    const checked = checkBuild(e.data, await decodeBuild(e.data, code), e.G);
+    if (checked.cleared.length > 0) {
+      if (clearedByCode.size >= CLEARED_CODES_KEPT) clearedByCode.delete(clearedByCode.keys().next().value as string);
+      clearedByCode.set(code, picksInWords(e, checked.cleared));
+    }
+    return checked.build;
   } catch (err) {
     if (err instanceof DecodeError) return refused(`Not a Build code this planner reads (${err.reason}).`);
     throw err;

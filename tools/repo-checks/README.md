@@ -7,6 +7,7 @@ bun tools/repo-checks/main.ts            # every check
 bun tools/repo-checks/main.ts imports    # one of them
 bun tools/repo-checks/main.ts comments
 bun tools/repo-checks/main.ts operators
+bun tools/repo-checks/main.ts slot-ids
 ```
 
 ## Public entry
@@ -34,6 +35,10 @@ The files are every file git tracks or would track (`git ls-files --cached --oth
 ## The comment check (`comments.ts`)
 
 Code files (`.ts`, `.tsx`, `.mts`, `.cts`, `.js`, `.mjs`, `.cjs`) are tokenized by oxc-parser, which lists every comment, so a `//` inside a string, a template, a regular expression or JSX text is not one. CSS goes through a small scanner that skips single- and double-quoted strings and reports each `/* … */`. The allowed comments are the ones a tool reads: `/// <reference …>` directives and `// @vitest-environment …` pragmas. `GENERATED` lists the files a tool rewrites on every dev and build start (`file-routes.d.ts`, `solid-env.d.ts`), which are skipped. Everything a comment used to say goes to the owning feature's README, a `cite` value (engine citations, `engine/cite`), or a better name.
+
+## The slot id check (`slot-ids.ts`)
+
+Map 35 keeps the rule for slot ids in one place, engine/build's `childSlot` and `parentKey`. So `src/` never writes a slot id: an object literal holding `place`, `selection` and `index` fails (`slot-id`). Ids come from the walk, from S, or from `childSlot`. Test files are left out, since their fixtures name slots as data.
 
 ## The operator check (`operators.ts`)
 

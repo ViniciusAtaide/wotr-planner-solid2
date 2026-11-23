@@ -14,6 +14,12 @@ const files = readDataDir(fileURLToPath(new URL('../../data', import.meta.url)))
 const data = loadData(files.files, files.overrides);
 const G = buildGrantIndex(data);
 
+const goldSlot = (gold: typeof enforcer, selection: string): SlotId => {
+  const found = gold.build.picks.find((p) => p.slot.selection === selection);
+  if (found === undefined) throw new Error(`no gold pick in ${selection}`);
+  return found.slot;
+};
+
 const SAMPLES: readonly {
   readonly kind: string;
   readonly gold: Gold;
@@ -29,12 +35,12 @@ const SAMPLES: readonly {
   {
     kind: 'a nested selection',
     gold: enforcer,
-    slot: { place: { level: 1 }, selection: '26a668c5a8c22354bac67bcd42e09a3f', index: 0 },
+    slot: goldSlot(enforcer, '26a668c5a8c22354bac67bcd42e09a3f'),
   },
   {
     kind: 'a waived slot',
     gold: enforcer,
-    slot: { place: { level: 12 }, selection: '7d5bd07830a5e2c478852bf8b860db2c', index: 0 },
+    slot: goldSlot(enforcer, '7d5bd07830a5e2c478852bf8b860db2c'),
   },
   {
     kind: 'a Mythic slot',

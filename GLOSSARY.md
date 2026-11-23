@@ -94,7 +94,10 @@ A feature whose level entries grant other features as its own level rises. Class
 A feature that asks for one pick from a fixed list.
 
 **Slot**:
-An open place in a Build where a selection's pick goes. A pick that is itself a selection opens a nested slot at the same level.
+An open place in a Build where a selection's pick goes. A pick that is itself a selection opens a nested slot at the same level, a sub-choice.
+
+**Sub-choice**:
+The slot a pick opens when the picked feature is itself a selection, such as Skill Focus's skill list. It belongs to the slot that opened it, its parent, and is told apart only by that parent (map 35).
 
 **Pick**:
 The option a Build puts in a slot.

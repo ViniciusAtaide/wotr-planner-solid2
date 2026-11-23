@@ -1,4 +1,3 @@
-import type { SlotId } from '~engine/build';
 import type { Guid } from '~engine/data';
 import type { CheckedData } from '~engine/load';
 import type { OptionStatus } from '~engine/pickers';
@@ -22,10 +21,6 @@ export function optionKey(o: OptionStatus): string {
 
 export function opensSelection(data: CheckedData, o: OptionStatus): boolean {
   return o.param === undefined && data.blueprints.get(o.feature)?.$type === 'BlueprintFeatureSelection';
-}
-
-export function childSlotOf(slot: SlotId, feature: Guid): SlotId {
-  return { place: slot.place, selection: feature, index: 0 };
 }
 
 export interface RowNames {

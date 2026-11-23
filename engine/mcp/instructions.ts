@@ -15,6 +15,8 @@ export const INSTRUCTIONS = [
   '- It holds the game\'s names, not its descriptions: a `summary` can be "No summary yet.", and `explain` still gives prerequisites, grants and where a blueprint is picked. Say so when you describe what an ability does from your own knowledge.',
   '- Skill points follow the game: a level counts your Intelligence bonus for every level so far, so raising Intelligence adds points, and points left at a level carry to the next.',
   '- Look up every GUID with `search` or `options`; never guess one.',
+  "- Pass a slot back exactly as `next_slots` gives it: a sub-choice (Skill Focus's skill list) names its parent slot in `parent`.",
+  '- A code holding a pick the game refuses opens with it cleared; the answer lists it in `clearedOnOpen`.',
   "- A Refusal gives the game's reason. Choose something else instead of retrying the same call.",
   '- An option with `clears` would undo a later pick if taken here.',
   '- `pick` and `equip` take a `mode`: `strict` (the default) refuses a change that breaks later picks, `preview` lists what a Cascade would clear, `cascade` clears it.',

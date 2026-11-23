@@ -1,6 +1,7 @@
 # Sub-choice slot identity, and Builds the walk refuses
 
-Status: ready
+Status: done
+Session: ticket-03c-walk-fixes (worktree sub-choice-ids)
 Blocked by: none
 Plan: [plan](../plan.md)
 
@@ -42,3 +43,33 @@ Tests come first, as map 35 lists them, and each must fail on today's code befor
 - QA's case in the browser at 375 and 1280 px: a Human Mutation Warrior takes Skill Focus → Lore (Religion) as the level feat, then Skill Focus → Athletics as the Human bonus feat. Both stay, with no Cascade.
 - The engine, codec, MCP and planner READMEs are updated, and `GLOSSARY.md` gains "sub-choice" if it lacks it.
 - `bun run check` passes; then `Status: done` and an `## Outcome`.
+
+## Outcome
+
+Done, with the user's map 35 and the coordinator's note on map 22's spell feats (Option A).
+
+- **Sub-choice ids:**
+  - `SlotId.parent`; `childSlot(parent, selection)` and `parentKey(slot)` in engine/build are the rule's one home.
+  - The walk gives a sub-choice `childSlot(parent.id, …)`, index 0, and top-level indexes count top-level slots only.
+  - The pickers' `characterWideSlots` and `backgroundPicker`, the MCP and the planner use the two functions. The planner's `childSlotOf`, `nestedParent` and `childOf` are gone (`parentOf` and `subChoiceOf` read `parentKey`).
+  - The repo check `slot-ids` fails any `place`/`selection`/`index` object literal in `src/` outside tests. Test files are left out: their fixtures name slots as data.
+- **The gate:**
+  - `checkBuild` / `CheckedBuild` in engine/edits clears every pick the walk refuses, until none is, except a spell-parametrized feat held without its spell (pickers' `heldSpellFeat`, the rule the trail and `next_slots` share; edits may now import pickers).
+  - `allows` and `cascade` return `CheckedBuild`. The planner's state, `TrailView` and the replace and link actions take it, and `createPlanner` checks the Build it starts from.
+  - A link holding a refused pick opens with it cleared. The notice (R's `linkCleared`) lists the rows in the Cascade preview's words (`clearedRows`).
+  - In the MCP, every tool opens its code through the gate and adds `clearedOnOpen`.
+- **The codec:**
+  - `CODEC_VERSION` 2. The tag's bit 4 marks a sub-choice, written after its parent as the parent pick's position.
+  - Version 1 codes are read in version 1's order and moved by the walk's `migrateV1Slots`, which replays the old numbering (`legacyId`) to pair each sub-choice with the parent the old walk gave it.
+  - The gold Builds' version 1 codes and a hand-made one with two Skill Focus picks open to the same Builds (codec tests). So do the shared notes' 7 QA codes, with nothing cleared (checked by a script, since the notes are outside the repo).
+  - The gold Builds now write sub-choices with `chain` (gold.ts).
+- **The MCP:** slots carry `parent` in `next_slots`, `options` and `pick`. The slot schema and the server instructions say to pass a slot back as given.
+- **Tests:**
+  - the walk (`engine/walk/sub-choice.test.ts`: ids independent of the other parent, removal, the duplicate refused in both orders);
+  - the codec (version 1 mapping);
+  - the pickers (the closed duplicate row);
+  - the MCP (`parent`, `clearedOnOpen`);
+  - the planner (QA's steps through `PickStep`, and a refused link cleared and named).
+  The walk tests failed on today's code (no `childSlot`) before the fix.
+- **Browser:** checked at 1280 and 375 px on a Human Mutation Warrior. Skill Focus → Lore (Religion) as the level feat, then Skill Focus → Athletics as the Human bonus feat: both stay, each chip names its own skill, Lore (Religion) is closed in the Human's list, and no Cascade opens.
+- **Jack:** Jack's Spell Specialization at level 11 stays, as map 22's held pick, so Jack's link opens unchanged.

@@ -1,4 +1,4 @@
-import type { Build, Pick, Place } from '../build';
+import { childSlot, type Build, type Pick, type Place } from '../build';
 import type { Attribute, Guid, StatType } from '../data';
 import type { GrantParam } from '../grants';
 
@@ -35,6 +35,15 @@ export function pick(place: Place, selection: Guid, index: number, feature: Guid
 
 export function racePick(place: Place, selection: Guid, race: Guid, index: number, feature: Guid): Pick {
   return { slot: { place, selection, index, from: race }, feature };
+}
+
+export function chain(first: Pick, ...features: Guid[]): Pick[] {
+  const out = [first];
+  for (const feature of features) {
+    const parent = out.at(-1) as Pick;
+    out.push({ slot: childSlot(parent.slot, parent.feature), feature });
+  }
+  return out;
 }
 
 export function facts(line: string, ...guids: Guid[]): GoldLine {

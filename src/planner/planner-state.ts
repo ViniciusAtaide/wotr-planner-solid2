@@ -1,8 +1,8 @@
-import { placeKey, sameBuild, type Build, type Pick, type Place } from '~engine/build';
+import { parentKey, sameBuild, slotKey, type Build, type Pick, type Place } from '~engine/build';
 import type { Guid } from '~engine/data';
 import { classPicker } from '~engine/pickers';
 import type { FailedRule } from '~engine/walk';
-import { allows, cascade, type Breaks, type Edit } from '~engine/edits';
+import { allows, cascade, type Breaks, type CheckedBuild, type Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
 import { bareNameOf, groupedFailures, nameOf, namesIn, placesWords, refusal } from '~engine/refusals';
 import { walk } from '~engine/walk';
@@ -16,7 +16,7 @@ export interface Pending {
   readonly summary: string;
   readonly clears: readonly { readonly name: string; readonly place: string }[];
   readonly clearedSkills: readonly number[];
-  readonly build: Build;
+  readonly build: CheckedBuild;
 }
 
 export type Session =
@@ -27,9 +27,9 @@ export type Session =
 export type Change = string | undefined;
 
 export interface PlannerState {
-  readonly past: readonly Build[];
-  readonly present: Build;
-  readonly future: readonly Build[];
+  readonly past: readonly CheckedBuild[];
+  readonly present: CheckedBuild;
+  readonly future: readonly CheckedBuild[];
   readonly session: Session;
   readonly change: Change;
   readonly pastChanges: readonly Change[];
@@ -47,7 +47,7 @@ export type PlannerAction =
   | { readonly kind: 'dismiss' }
   | { readonly kind: 'undo' }
   | { readonly kind: 'redo' }
-  | { readonly kind: 'replace'; readonly build: Build };
+  | { readonly kind: 'replace'; readonly build: CheckedBuild };
 
 export type EditOutcome = 'applied' | 'confirming' | 'refused';
 
@@ -57,7 +57,7 @@ export function placeWords(p: Pick['slot']['place']): string {
   return 'level' in p ? `Level ${p.level}` : `Rank ${p.rank}`;
 }
 
-export function plannerAt(build: Build): PlannerState {
+export function plannerAt(build: CheckedBuild): PlannerState {
   return {
     past: [],
     present: build,
@@ -80,7 +80,7 @@ export function outcomeOf(s: PlannerState): EditOutcome {
   }
 }
 
-function commit(s: PlannerState, next: Build, change: string): PlannerState {
+function commit(s: PlannerState, next: CheckedBuild, change: string): PlannerState {
   return {
     past: [...s.past, s.present],
     present: next,
@@ -107,10 +107,10 @@ export function brokenWords(engine: Engine, build: Build, b: Breaks): string[] {
 }
 
 export type Verdict =
-  | { readonly kind: 'applies'; readonly build: Build }
+  | { readonly kind: 'applies'; readonly build: CheckedBuild }
   | {
       readonly kind: 'clears';
-      readonly build: Build;
+      readonly build: CheckedBuild;
       readonly cleared: readonly Pick[];
       readonly clearedSkills: readonly number[];
       readonly clearedRanks: readonly number[];
@@ -132,7 +132,7 @@ export function verdictOf(engine: Engine, build: Build, edit: Edit): Verdict {
     : { kind: 'breaks', breaks: c };
 }
 
-export function verdictOfAll(engine: Engine, build: Build, edits: NonEmpty<Edit>): Verdict {
+export function verdictOfAll(engine: Engine, build: CheckedBuild, edits: NonEmpty<Edit>): Verdict {
   let now = build;
   const cleared: Pick[] = [];
   const clearedSkills = new Set<number>();
@@ -163,15 +163,17 @@ export function laterChoices(n: number): string {
 
 type Clears = Extract<Verdict, { readonly kind: 'clears' }>;
 
-function childOf(picks: readonly Pick[], parent: Pick): Pick | undefined {
-  return picks.find(
-    (c) =>
-      c !== parent && c.slot.selection === parent.feature && placeKey(c.slot.place) === placeKey(parent.slot.place),
-  );
+function subChoiceOf(picks: readonly Pick[], parent: Pick): Pick | undefined {
+  const key = slotKey(parent.slot);
+  return picks.find((c) => parentKey(c.slot) === key);
 }
 
 export function shownPicks(picks: readonly Pick[]): readonly Pick[] {
-  return picks.filter((p) => !picks.some((parent) => childOf(picks, parent) === p));
+  const held = new Set(picks.map((p) => slotKey(p.slot)));
+  return picks.filter((p) => {
+    const parent = parentKey(p.slot);
+    return parent === undefined || !held.has(parent);
+  });
 }
 
 export function clearedCount(v: Clears): number {
@@ -199,6 +201,17 @@ function whereIn(before: Build, place: Pick['slot']['place']): number {
   return (before.ranks?.[place.rank - 1]?.level ?? before.levels.length) + place.rank / 100;
 }
 
+export function clearedRows(engine: Engine, build: Build, cleared: readonly Pick[]): Pending['clears'] {
+  if (cleared.length === 0) return [];
+  return clearsList(engine, build, {
+    kind: 'clears',
+    build: build as CheckedBuild,
+    cleared,
+    clearedSkills: [],
+    clearedRanks: [],
+  });
+}
+
 export function clearsList(engine: Engine, before: Build, v: Clears): Pending['clears'] {
   const names = namesIn(
     engine.data,
@@ -206,7 +219,7 @@ export function clearsList(engine: Engine, before: Build, v: Clears): Pending['c
   );
   const own = (p: Pick) => names.get(p.feature) ?? nameOf(engine.data, p.feature);
   const named = (p: Pick, depth: number): string => {
-    const child = depth < v.cleared.length ? childOf(v.cleared, p) : undefined;
+    const child = depth < v.cleared.length ? subChoiceOf(v.cleared, p) : undefined;
     return child === undefined ? own(p) : nestedLabel(own(p), named(child, depth + 1));
   };
   const rows = [
@@ -235,7 +248,7 @@ export interface Judged {
   readonly reasons: readonly string[];
 }
 
-export function judgeAll(engine: Engine, build: Build, edits: NonEmpty<Edit>): Judged {
+export function judgeAll(engine: Engine, build: CheckedBuild, edits: NonEmpty<Edit>): Judged {
   const v = verdictOfAll(engine, build, edits);
   switch (v.kind) {
     case 'applies':
@@ -253,7 +266,7 @@ export function judgeAll(engine: Engine, build: Build, edits: NonEmpty<Edit>): J
 
 export function judgeClasses(
   engine: Engine,
-  build: Build,
+  build: CheckedBuild,
   place: Place,
   classes: readonly Guid[],
   edit: (cls: Guid) => Edit,

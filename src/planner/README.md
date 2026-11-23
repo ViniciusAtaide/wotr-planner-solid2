@@ -233,7 +233,7 @@ further choice is one parent row that expands its sub-options right under it, in
 (`trail-sub-row`), the parent marked ▸ or ▾ (`aria-expanded`). Two kinds, from S's options (`nested-options.ts`,
 `pickRows`): a parametrized feat's values, its options sharing a feature with different parameters (Weapon Focus →
 Kukri, Spell Focus → its schools); and an option that is itself a selection (Armor Focus → Light Armor Focus; a
-prestige class's spellbook selection), whose sub-options are S's picker at the slot it opens (`childSlotOf`), asked
+prestige class's spellbook selection), whose sub-options are S's picker at the slot it opens (build's `childSlot`, under this slot), asked
 only when it is expanded. One parent is open at a time. Each sub-option shows its own status and R's Refusal; a
 parametrized feat whose every value is closed is one closed row with its reasons. Taking a sub-option makes the whole
 choice as one change, one Undo entry (a value is one pick with its parameter; a nested selection is the parent pick
@@ -323,9 +323,12 @@ address bar keeps the Build in `#b=`, so a reload opens it again.
 - **`link.ts`: the Share link's Build (map 13).** `#b=<Build code>` is opened with C, the same code the MCP returns.
   `EMPTY` is an empty Build, nothing chosen yet. `openHash` gives the Build a hash holds (an empty one when it holds no
   code), or why it didn't open: `linkReason` groups C's `DecodeError` reasons into R's three `LinkReason`s, other game
-  data (`unknownKey`), a newer planner (`version`) and not a Build code (the rest).
+  data (`unknownKey`), a newer planner (`version`) and not a Build code (the rest). An opened Build passes E's
+  `checkBuild` (map 35): the Build is a `CheckedBuild`, with the picks the walk refused `cleared`. `CODE_VERSION` is C's
+  `CODEC_VERSION`.
 - **`planner-state.ts`: one Build being planned (map 13).** `PlannerState` is the history, `past`, `present` and
-  `future`, each a Build a code can hold (map 13: undo and redo walk a history of Builds, each one codable), and the
+  `future`, each a `CheckedBuild` (map 35: `createPlanner` checks the Build it starts from, and every edit returns
+  one), each a Build a code can hold (map 13: undo and redo walk a history of Builds, each one codable), and the
   edit `Session`: `idle`, `confirming` a Cascade edit's `Pending` (map 11), or `refused` with R's lines, never empty
   (`NonEmpty`). `reducePlanner(engine, state, action)` is the whole transition table:
   - `edit` applies at once when it breaks nothing (`allows`), waits on the Cascade preview when clearing picks mends
@@ -355,8 +358,9 @@ address bar keeps the Build in `#b=`, so a reload opens it again.
   actions in one tick (signal reads lag writes); `restore` applies the state returned by the page reducer. The rest is what the
   components read: `build`, `walked`, `session`, `change`, `pending`, `notice`, `canUndo`, `canRedo`, and the
   actions; `edit` and `editAll` return the `EditOutcome`.
-- **`workspace-state.ts`: the page.** `WorkspaceState` holds the `Selection` and `LinkStatus` (`ok`, or
-  `didNotOpen` on `load` or `paste`, with its `LinkReason`). A selection opens a slot, level, increase, skills,
+- **`workspace-state.ts`: the page.** `WorkspaceState` holds the `Selection` and `LinkStatus` (`ok`; `cleared`, with the
+  rows a link's refused picks were cleared from, in the Cascade preview's words (`clearedRows`, R's `linkCleared`
+  heads the notice); or `didNotOpen` on `load` or `paste`, with its `LinkReason`). A selection opens a slot, level, increase, skills,
   rank, Gear, scores or race; undefined follows the next step. `reduceWorkspace` sets selections and link status.
   Opening a link clears the selection; edits leave link status alone.
   `Page` holds this workspace and one `PlannerState`. `reducePage` routes planner actions and replaces the Build
@@ -378,8 +382,9 @@ address bar keeps the Build in `#b=`, so a reload opens it again.
   and `shownArchetypes` (a class's archetypes the game shows).
 - **`nested-options.ts`: the parent rows of a pick list.** `PickRow` is an `option`, a `params` group (a
   parametrized feat's values) or a `nested` selection; `pickRows` groups, filters and sorts S's options into them;
-  `rowOpen` and `rowMembers` read a row; `opensSelection` says an option is a selection; `childSlotOf` is the slot it
-  opens; `optionKey` keys an option with its parameter.
+  `rowOpen` and `rowMembers` read a row; `opensSelection` says an option is a selection; `optionKey` keys an option
+  with its parameter. The slot a nested row opens is build's `childSlot`: nothing in `src/` builds a slot id or works
+  out a parent on its own (map 35; the `slot-ids` repo check).
 - **`PickStep.tsx`**: a slot's open list (`PickStep`, moved out of `steps.tsx`): S's options as rows, open then
   closed, a parent row expanding its sub-options in place (`paramLabel` names a value without repeating its feat),
   the keys above, Synergy links, the filter and its mark, "Show N closed", and "Clear this pick".
@@ -499,8 +504,8 @@ address bar keeps the Build in `#b=`, so a reload opens it again.
   character's picks, one line per level with its class, archetype, picks and skills, one per Mythic rank, and the Gear.
   Skills follow the skills step's order (`SKILL_ATTRIBUTE`) and Gear the places' (`PLACES`, worded by `placeWords`:
   "Ring 1"), never the order the Build happens to hold them in, so a reloaded Build exports the same text (QA pass 6).
-  A nested pick is one entry, as it is one chip on the trail: "Armor Focus (Light Armor Focus)" (`nestedParent`,
-  `chipSlots` and `pickLabels` in `trail-state.ts`). A value belongs to the slot the walk opened it from (its
+  A nested pick is one entry, as it is one chip on the trail: "Armor Focus (Light Armor Focus)" (`parentOf`, by build's
+  `parentKey`, `chipSlots` and `pickLabels` in `trail-state.ts`). A value belongs to the slot the walk opened it from (its
   `parent`), so two Skill Focus picks on one level each keep their own skill. A Human bonus feat's value stays with it
   on Level 1, off the card. `nestedLabel` names the value once: a value whose name already
   repeats its parent, in parentheses or after " — ", keeps only its own part ("Ascendant Element (Electricity)",

@@ -1,12 +1,13 @@
-import type { Build } from '~engine/build';
-import { decodeBuild, DecodeError } from '~engine/codec';
+import type { Build, Pick } from '~engine/build';
+import { CODEC_VERSION, decodeBuild, DecodeError } from '~engine/codec';
+import { checkBuild, type CheckedBuild } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
 import type { LinkReason } from '~engine/refusals';
 
 export const EMPTY: Build = { levels: [], picks: [] };
 
 export type Opened =
-  | { readonly kind: 'opened'; readonly build: Build }
+  | { readonly kind: 'opened'; readonly build: CheckedBuild; readonly cleared: readonly Pick[] }
   | { readonly kind: 'didNotOpen'; readonly reason: LinkReason };
 
 export function linkReason(e: unknown): LinkReason {
@@ -24,7 +25,7 @@ export function linkReason(e: unknown): LinkReason {
   }
 }
 
-export const CODE_VERSION = 1;
+export const CODE_VERSION = CODEC_VERSION;
 
 function bytesOf(code: string): Uint8Array<ArrayBuffer> | undefined {
   try {
@@ -54,9 +55,10 @@ export async function looksNewer(code: string): Promise<boolean> {
 
 export async function openHash(engine: Engine, hash: string): Promise<Opened> {
   const code = /^#b=(.+)$/.exec(hash)?.[1];
-  if (code === undefined) return { kind: 'opened', build: EMPTY };
+  if (code === undefined) return { kind: 'opened', build: checkBuild(engine.data, EMPTY, engine.G).build, cleared: [] };
   try {
-    return { kind: 'opened', build: await decodeBuild(engine.data, code) };
+    const checked = checkBuild(engine.data, await decodeBuild(engine.data, code), engine.G);
+    return { kind: 'opened', build: checked.build, cleared: checked.cleared };
   } catch (e) {
     const reason = linkReason(e);
     return { kind: 'didNotOpen', reason: reason === 'newerPlanner' && !(await looksNewer(code)) ? 'notACode' : reason };

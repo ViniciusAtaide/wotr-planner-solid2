@@ -1,4 +1,7 @@
 import {
+  placeKey,
+  parentKey,
+  childSlot,
   slotKey,
   toAbilityScores,
   toArchetypes,
@@ -20,10 +23,10 @@ import {
 } from '../build';
 import type { CheckedData } from '../load';
 import { kindOf, type Guid, type Kind, type SpellSchool, type StatType, type WeaponCategory } from '../data';
-import type { GrantParam } from '../grants';
-import { pointBuyCost, POINT_BUY, ATTRIBUTES, SKILL_ATTRIBUTE, WEAPON_CATEGORIES } from '../walk';
+import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
+import { migrateV1Slots, pointBuyCost, POINT_BUY, ATTRIBUTES, SKILL_ATTRIBUTE, WEAPON_CATEGORIES } from '../walk';
 
-export const CODEC_VERSION = 1;
+export const CODEC_VERSION = 2;
 
 const MAX_INFLATED_BYTES = 256 * 1024;
 
@@ -220,6 +223,25 @@ async function inflate(bytes: Uint8Array<ArrayBuffer>): Promise<Uint8Array> {
 }
 
 const FROM_TAG = 2;
+const PARENT_TAG = 4;
+
+const text = (a: string, b: string) => (a < b ? -1 : a > b ? 1 : 0);
+const depthOf = (slot: SlotId) => {
+  const parent = parentKey(slot);
+  return parent === undefined ? 0 : 1 + (parent.match(/</g)?.length ?? 0);
+};
+
+function slotOrderV1(a: Pick, b: Pick): number {
+  const rank = (p: Place) => ('rank' in p ? 1 : 0);
+  const n = (p: Place) => ('rank' in p ? p.rank : p.level);
+  return (
+    rank(a.slot.place) - rank(b.slot.place) ||
+    n(a.slot.place) - n(b.slot.place) ||
+    text(a.slot.selection, b.slot.selection) ||
+    text(a.slot.from ?? '', b.slot.from ?? '') ||
+    a.slot.index - b.slot.index
+  );
+}
 
 function slotOrder(a: Pick, b: Pick): number {
   const rank = (p: Place) => ('rank' in p ? 1 : 0);
@@ -227,8 +249,10 @@ function slotOrder(a: Pick, b: Pick): number {
   return (
     rank(a.slot.place) - rank(b.slot.place) ||
     n(a.slot.place) - n(b.slot.place) ||
-    (a.slot.selection < b.slot.selection ? -1 : a.slot.selection > b.slot.selection ? 1 : 0) ||
-    ((a.slot.from ?? '') < (b.slot.from ?? '') ? -1 : (a.slot.from ?? '') > (b.slot.from ?? '') ? 1 : 0) ||
+    depthOf(a.slot) - depthOf(b.slot) ||
+    text(a.slot.selection, b.slot.selection) ||
+    text(a.slot.from ?? '', b.slot.from ?? '') ||
+    text(parentKey(a.slot) ?? '', parentKey(b.slot) ?? '') ||
     a.slot.index - b.slot.index
   );
 }
@@ -316,12 +340,22 @@ class Writer {
       for (const a of choice.archetypes) this.key(a);
     }
     const sorted = [...picks].sort(slotOrder);
+    const written = sorted.map((p) => slotKey(p.slot));
     this.varint(sorted.length);
-    for (const p of sorted) {
-      this.byte(('rank' in p.slot.place ? 1 : 0) | (p.slot.from === undefined ? 0 : FROM_TAG));
+    for (const [at, p] of sorted.entries()) {
+      const parent = parentKey(p.slot);
+      const parentAt = parent === undefined ? -1 : written.indexOf(parent);
+      if (parent !== undefined && (parentAt < 0 || parentAt >= at))
+        throw new Error(`the sub-choice ${slotKey(p.slot)} has no pick in its parent slot`);
+      this.byte(
+        ('rank' in p.slot.place ? 1 : 0) |
+          (p.slot.from === undefined ? 0 : FROM_TAG) |
+          (parent === undefined ? 0 : PARENT_TAG),
+      );
       this.varint('rank' in p.slot.place ? p.slot.place.rank : p.slot.place.level);
       this.kindKey(p.slot.selection);
       if (p.slot.from !== undefined) this.kindKey(p.slot.from);
+      if (parent !== undefined) this.varint(parentAt);
       this.varint(p.slot.index);
       this.kindKey(p.feature);
       this.param(p.param);
@@ -390,6 +424,7 @@ class Reader {
     private readonly bytes: Uint8Array,
     private readonly data: CheckedData,
     private readonly keys: LinkKeys,
+    private readonly version: number,
   ) {
     const count = this.varint();
     if (count * KEY_HASH_BYTES > bytes.length - this.at) throw new DecodeError('format', 'hash list');
@@ -512,18 +547,29 @@ class Reader {
     const picks: Pick[] = [];
     for (let i = this.count(); i > 0; i--) {
       const tag = this.byte();
-      if (tag > (1 | FROM_TAG)) throw new DecodeError('format', 'slot tag');
+      if (tag > (this.version === 1 ? 1 | FROM_TAG : 1 | FROM_TAG | PARENT_TAG))
+        throw new DecodeError('format', 'slot tag');
       const n = this.varint();
       const place: Place = (tag & 1) === 1 ? { rank: n } : { level: n };
       const selection = this.kindKey();
       const from = (tag & FROM_TAG) === 0 ? undefined : this.kindKey();
+      const parentAt = (tag & PARENT_TAG) === 0 ? undefined : this.varint();
+      const parent = parentAt === undefined ? undefined : picks[parentAt];
+      if (parentAt !== undefined && (parent === undefined || placeKey(parent.slot.place) !== placeKey(place)))
+        throw new DecodeError('format', 'parent');
       const index = this.varint();
+      if (parent !== undefined && index !== 0) throw new DecodeError('format', 'sub-choice index');
       const feature = this.kindKey();
       const param = this.param();
-      const slot: SlotId = { place, selection, index, ...(from !== undefined && { from }) };
+      const slot: SlotId =
+        parent === undefined
+          ? { place, selection, index, ...(from !== undefined && { from }) }
+          : childSlot(parent.slot, selection);
+      if (parent !== undefined && from !== undefined) throw new DecodeError('format', 'sub-choice opener');
       const pick: Pick = { slot, feature, ...(param && { param }) };
       const before = picks.at(-1);
-      if (before !== undefined && slotOrder(before, pick) >= 0) throw new DecodeError('format', 'picks');
+      const order = this.version === 1 ? slotOrderV1 : slotOrder;
+      if (before !== undefined && order(before, pick) >= 0) throw new DecodeError('format', 'picks');
       picks.push(pick);
     }
     const gear: Partial<Record<GearPlace, Guid>> = {};
@@ -608,15 +654,23 @@ function keepsFixedRules(b: Build): boolean {
   return slots.size === b.picks.length && (b.ranks ?? []).every((r) => toRankLevel(r.level) !== undefined);
 }
 
+const grantIndexes = new WeakMap<CheckedData, GrantIndex>();
+
+function grantIndexOf(data: CheckedData): GrantIndex {
+  let G = grantIndexes.get(data);
+  if (G === undefined) grantIndexes.set(data, (G = buildGrantIndex(data)));
+  return G;
+}
+
 export async function decodeBuild(data: CheckedData, code: string): Promise<Build> {
   if (code === '') throw new DecodeError('empty');
   const bytes = fromBase64Url(code);
   const [version] = bytes;
   if (version === undefined) throw new DecodeError('empty');
-  if (version !== 1) throw new DecodeError('version', String(version));
-  const build = new Reader(await inflate(bytes.subarray(1)), data, linkKeys(data)).build();
-  if (!keepsFixedRules(build)) throw new DecodeError('format', 'a Build no planner makes');
-  return build;
+  if (version !== 1 && version !== CODEC_VERSION) throw new DecodeError('version', String(version));
+  const read = new Reader(await inflate(bytes.subarray(1)), data, linkKeys(data), version).build();
+  if (!keepsFixedRules(read)) throw new DecodeError('format', 'a Build no planner makes');
+  return version === 1 ? migrateV1Slots(data, read, grantIndexOf(data)) : read;
 }
 
 export async function openBuild(
