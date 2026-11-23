@@ -18,7 +18,7 @@ From `tools.ts`, the shared shapes:
 - `SlotView`: an open slot as `next_slots` and `level_up` list it; its `kind` is the selection's blueprint type (a feature selection, a parametrized feat or a Mythic spellbook).
 - `OptionView`: one option as `options` lists it. `buildsOn` holds its Synergy badges (map 09, the chain kind), what the Build holds that the option builds on; `gear` is ADR 0002's note for an open option that needs the Gear counted; `refusal` is R's words for a closed option.
 - `Sheet`: the numbers the walk computes at a character level.
-- `expectedLevel(data, rank)` and `divergence(builds)`, exported for the UI (below).
+- `expectedLevel(data, rank)`, exported for the UI.
 
 The 14 tools, in map 08's order:
 
@@ -34,8 +34,7 @@ The 14 tools, in map 08's order:
 - `synergies`: at a slot, or at every open slot, the open options that link to what the Build holds, each row with the `slot`, `feature` and `param` that `pick` takes and the `place` spelled as `next_slots` spells it ("L11", "M9"; MCP QA): `buildsOn` (the chain kind), `shares` (an ability score, weapon or group, spell school, energy or descriptor it shares with held facts, "Shares Dexterity with Two-Weapon Fighting") and `wontStack` (a bonus of a type already given to the same stat). `options` carries `shares` and `wontStack` on each option too.
 - `search`: the shown blueprints whose name holds the text, of one kind when asked, by name, 50 a page; items only as Gear offers them, without parts of other items or twins (QA pass 5); with `total` and `pages` so an agent knows when a list is cut (MCP QA).
 - `explain`: a blueprint's description (engine/describe): its Summary and `labels` (06b), prerequisites, grants, where it can be picked and its chain links. `search` hits and `options` carry the Summary too.
-- `sheet`: the Build's name, if it has one, the numbers at a character level, the Build's last by default, and the whole Build (`build`), which changes no longer return (map 08's amendment after the MCP QA pass). `compare`'s sheets leave the Build out.
-- `compare`: 2 to 4 Builds' sheets at checkpoint levels, their chain link counts, and the first place they diverge.
+- `sheet`: the Build's name, if it has one, the numbers at a character level, the Build's last by default, and the whole Build (`build`), which changes no longer return (map 08's amendment after the MCP QA pass).
 
 ## Rules
 
@@ -56,7 +55,6 @@ Citations for these live in `cites.ts`.
 - **`set_skills`** and **`equip`** first refuse with R's words what the walk refuses at that level or for that item. Then `set_skills` makes a plain edit, and `equip` goes through its `mode`.
 - **`place_rank`** notes when the rank is off its Expected level (ADR 0003).
 - **Sheets.** A sheet at a character level walks the Build cut to that level (`buildUpToLevel`): its levels to there, and the Mythic ranks and picks placed at or before it. `scores` are the permanent scores prerequisites read; `scoresWithGear` adds worn Gear's enhancement (the walk's `wornEnhancement`) when the Gear isn't already counted. Each save is `base` (the class tables), `ability` (its ability modifier) and `withAbility`; the walk doesn't sum feats', Gear's or other bonuses to saves, so the sheet doesn't claim a total (MCP QA).
-- **`compare`** counts, for each Build, the chain links among the facts it holds. `divergence` gives the first place where the Builds' choices differ: a level's class or picks, then the ranks, in Build order.
 
 ## Tests
 

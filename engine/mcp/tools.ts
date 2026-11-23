@@ -1,6 +1,5 @@
 import {
   placeKey,
-  slotKey,
   toAbilityScores,
   toArchetypes,
   toBuildName,
@@ -736,56 +735,4 @@ export async function sheet(
   const build = await open(e, args.code);
   if (isRefusal(build)) return build;
   return { ...sheetOf(e, build, args.level ?? build.levels.length), build };
-}
-
-export async function compare(
-  e: Engine,
-  args: { readonly codes: readonly string[]; readonly levels: readonly number[] },
-): Promise<
-  | {
-      readonly sheets: readonly (readonly Sheet[])[];
-      readonly links: readonly number[];
-      readonly divergeAt?: string;
-    }
-  | ToolRefusal
-> {
-  if (args.codes.length < 2 || args.codes.length > 4) return refused('Compare takes 2 to 4 Build codes.');
-  const builds: Build[] = [];
-  for (const code of args.codes) {
-    const b = await open(e, code);
-    if (isRefusal(b)) return b;
-    builds.push(b);
-  }
-  const links = linkIndex(e.data, e.G);
-  const linkCount = (b: Build) => {
-    const held = new Set([...walk(e.data, b, e.G).unit.facts()].map((f) => f.blueprint));
-    return [...held].reduce((n, g) => n + links.needs(g).filter((x) => held.has(x)).length, 0);
-  };
-  return {
-    sheets: builds.map((b) => args.levels.map((l) => sheetOf(e, b, l))),
-    links: builds.map(linkCount),
-    ...divergence(builds),
-  };
-}
-
-export function divergence(builds: readonly Build[]): { divergeAt?: string } {
-  const at = (b: Build, place: Place) =>
-    JSON.stringify([
-      'level' in place ? b.levels[place.level - 1] : b.ranks?.[place.rank - 1],
-      b.picks
-        .filter((p) => placeKey(p.slot.place) === placeKey(place))
-        .map((p) => [slotKey(p.slot), p.feature, p.param])
-        .sort(),
-    ]);
-  const most = Math.max(...builds.map((b) => b.levels.length));
-  for (let l = 1; l <= most; l++) {
-    const place = { level: l };
-    if (new Set(builds.map((b) => at(b, place))).size > 1) return { divergeAt: placeKey(place) };
-  }
-  const ranks = Math.max(...builds.map((b) => b.ranks?.length ?? 0));
-  for (let r = 1; r <= ranks; r++) {
-    const place = { rank: r };
-    if (new Set(builds.map((b) => at(b, place))).size > 1) return { divergeAt: placeKey(place) };
-  }
-  return {};
 }

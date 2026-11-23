@@ -63,7 +63,6 @@ export interface CharacterCardProps {
   readonly alignmentArrives?: boolean;
   readonly onAlignmentArrived?: () => void;
   readonly here: JSX.Element;
-  readonly diff?: (a: Attribute) => boolean;
 }
 
 export function CharacterCard(props: CharacterCardProps) {
@@ -99,10 +98,7 @@ export function CharacterCard(props: CharacterCardProps) {
       </Show>
       <Show when={!props.folded}>
         <div class="trail-race">{props.race}</div>
-        <Show
-          when={props.scoresStep}
-          fallback={<StatTiles trail={props.trail} editing={props.editing} {...(props.diff && { diff: props.diff })} />}
-        >
+        <Show when={props.scoresStep} fallback={<StatTiles trail={props.trail} editing={props.editing} />}>
           {props.here}
         </Show>
         <Show when={build().levels.length === 0}>
@@ -130,7 +126,6 @@ export interface CardPartProps {
 
 export interface ScoresStepProps {
   readonly trail: TrailApi;
-  readonly diff?: (a: Attribute) => boolean;
 }
 
 export function ScoresStep(props: ScoresStepProps) {
@@ -145,7 +140,7 @@ export function ScoresStep(props: ScoresStepProps) {
   };
   return (
     <div class="trail-step">
-      <StatTiles trail={props.trail} editing {...(props.diff && { diff: props.diff })} />
+      <StatTiles trail={props.trail} editing />
       <Show when={pending()}>
         <p class="trail-note">Choose a score for the race’s +2.</p>
       </Show>
@@ -230,7 +225,6 @@ export function AlignmentWheel(props: AlignmentWheelProps) {
 export interface StatTilesProps {
   readonly trail: TrailApi;
   readonly editing: boolean;
-  readonly diff?: (a: Attribute) => boolean;
 }
 
 export function StatTiles(props: StatTilesProps) {
@@ -258,9 +252,7 @@ export function StatTiles(props: StatTilesProps) {
           {(a) => (
             <div class={['trail-stat', { 'trail-stat--bonus': build().raceStat === a }]}>
               <span class="trail-stat__name">{SHORT[a]}</span>
-              <span class={['trail-stat__value', { 'trail-stat__value--diff': props.diff?.(a) === true }]}>
-                {value(a)}
-              </span>
+              <span class="trail-stat__value">{value(a)}</span>
               <span class="trail-stat__mod">
                 {attributeBonus(value(a)) >= 0 ? '+' : '−'}
                 {Math.abs(attributeBonus(value(a)))}

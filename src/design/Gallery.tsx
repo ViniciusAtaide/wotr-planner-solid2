@@ -1,11 +1,10 @@
 import { Title } from '@solidjs/meta';
 import type { JSX } from '@solidjs/web';
-import { createSignal, For } from 'solid-js';
+import { For } from 'solid-js';
 
 import Badge from './Badge';
 import Button from './Button';
 import CascadePreview from './CascadePreview';
-import CompareToggle from './CompareToggle';
 import FeatIcon, { FEAT_CATEGORY_NAMES, type FeatCategory } from './FeatIcon';
 import Kbd from './Kbd';
 import LevelRow, { Timeline } from './LevelRow';
@@ -32,7 +31,6 @@ function Card(props: CardProps) {
 }
 
 export function Gallery() {
-  const [compare, setCompare] = createSignal('Build A');
   return (
     <main class="app-page">
       <Title>Design · Worldwound Planner</Title>
@@ -168,7 +166,7 @@ export function Gallery() {
         <Card name="Button" about="Actions.">
           <div class="gallery__row">
             <Button variant="primary">Apply</Button>
-            <Button>Fork Build</Button>
+            <Button>Build menu</Button>
             <Button variant="ghost" kbd="⌘Z">
               Undo
             </Button>
@@ -182,17 +180,11 @@ export function Gallery() {
           <ShareLink state="making" />
         </Card>
 
-        <Card name="CompareToggle" about="Switch between compared Builds.">
-          <div>
-            <CompareToggle segments={['Build A', 'Build B', 'Side by side']} value={compare()} onChange={setCompare} />
-          </div>
-        </Card>
-
         <Card name="StatBlock" about="Ability scores from the walk.">
           <StatBlock
             stats={[
               { name: 'STR', value: 18 },
-              { name: 'DEX', value: 16, diff: true },
+              { name: 'DEX', value: 16 },
               { name: 'CON', value: 14 },
               { name: 'INT', value: 10 },
               { name: 'WIS', value: 12 },

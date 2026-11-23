@@ -8,8 +8,6 @@ export * from './Button';
 export { default as Button } from './Button';
 export * from './CascadePreview';
 export { default as CascadePreview } from './CascadePreview';
-export * from './CompareToggle';
-export { default as CompareToggle } from './CompareToggle';
 export * from './FeatIcon';
 export { default as FeatIcon } from './FeatIcon';
 export { Gallery } from './Gallery';

@@ -21,6 +21,8 @@ describe('the MCP server', { timeout: 30_000 }, () => {
     expect(INSTRUCTIONS).toContain('start_build');
     expect(INSTRUCTIONS).toContain('/#b=<code>');
     const { tools } = await client.listTools();
+    expect(tools.map((t) => t.name)).not.toContain('compare');
+    expect(tools.map((t) => t.name)).toContain('sheet');
     expect(tools.find((t) => t.name === 'pick')?.description).toContain('preview lists what a Cascade would clear');
     await client.close();
     await server.close();

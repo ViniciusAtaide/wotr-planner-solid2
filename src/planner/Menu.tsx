@@ -34,8 +34,6 @@ const SHEET_WORDS: Readonly<Record<Copied, string>> = {
 
 export interface PlannerMenuProps {
   readonly link: ShareLinkProps;
-  readonly forked: boolean;
-  readonly onFork: () => void;
   readonly sheet: () => string;
   readonly listMode: ListMode;
   readonly onListMode: (mode: ListMode) => void;
@@ -165,18 +163,6 @@ export function PlannerMenu(props: PlannerMenuProps) {
           >
             {linkLabel()}
           </button>
-          <Show when={!props.forked}>
-            <button
-              type="button"
-              role="menuitem"
-              onClick={() => {
-                close();
-                props.onFork();
-              }}
-            >
-              Fork this Build
-            </button>
-          </Show>
           <button
             type="button"
             role="menuitem"

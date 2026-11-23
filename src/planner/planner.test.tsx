@@ -329,12 +329,6 @@ class FakeMediaQueryList extends EventTarget implements MediaQueryList {
 const media = new FakeMediaQueryList();
 Object.defineProperty(window, 'matchMedia', { configurable: true, value: () => media });
 
-function setPhone(on: boolean): void {
-  media.matches = on;
-  media.dispatchEvent(new Event('change'));
-  flush();
-}
-
 function pasteHash(hash: string): void {
   history.replaceState(null, '', hash);
   window.dispatchEvent(new HashChangeEvent('hashchange'));
@@ -1068,7 +1062,7 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     expect(dialog()).toBeNull();
     const values = [...document.querySelectorAll('.trail-stat__value')].map((v) => v.textContent);
     expect(values.slice(0, 2)).toEqual(['13', '11']);
-    expect(document.querySelector('[inert]:not(.planner-build__trail)')).toBeNull();
+    expect(document.querySelector('[inert]')).toBeNull();
     expect(button('Undo')).toBeEnabled();
   });
 
@@ -1139,14 +1133,14 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     expect(option !== null && option.compareDocumentPosition(clear) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   });
 
-  test('side by side becomes one Build, its segment pressed, after narrowing to phone width', async () => {
+  test('the planner has one trail and its menu offers no comparison actions', async () => {
     await openPlanner(cleaver);
     openMenu();
-    menuItem('Fork this Build');
-    expect(document.querySelectorAll('section.planner-build').length).toBe(2);
-    setPhone(true);
-    expect(document.querySelectorAll('section.planner-build').length).toBe(1);
-    expect(document.querySelectorAll('.ww-segment [aria-pressed="true"]').length).toBe(1);
+    expect(screen.queryByRole('menuitem', { name: 'Fork this Build' })).toBeNull();
+    expect(screen.queryByRole('group', { name: 'Compare' })).toBeNull();
+    expect(document.querySelectorAll('.trail')).toHaveLength(1);
+    await waitFor(() => expect(screen.getByRole('menuitem', { name: 'Copy link' })).toBeEnabled());
+    expect(screen.getByRole('menuitem', { name: 'Export as text' })).toBeTruthy();
   });
 
   test('two hash decodes resolving out of order leave the last pasted link', async () => {
@@ -1335,33 +1329,6 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     openCharacter();
     expect(button('Lower Strength')).toBeDisabled();
     expect(button('Raise Dexterity')).toBeDisabled();
-  });
-
-  test('Close keeps the Build being edited, the second one', async () => {
-    await openPlanner(cleaver);
-    openMenu();
-    menuItem('Fork this Build');
-    const second = document.querySelectorAll('section.planner-build')[1];
-    const title = second?.querySelector<HTMLElement>('.trail-stop__class');
-    fireEvent.click(title ?? document.body);
-    flush();
-    tap('Remove level 1');
-    expect(levelRows()).toBe(1);
-    tap(/^Close the fork/);
-    tap('Keep Second');
-    expect(levelRows()).toBe(0);
-  });
-
-  test('Close the fork asks before dropping the other Build, and Cancel keeps both (audit)', async () => {
-    await openPlanner(cleaver);
-    openMenu();
-    menuItem('Fork this Build');
-    tap(/^Close the fork/);
-    expect(document.querySelectorAll('section.planner-build').length).toBe(2);
-    expect(screen.getByText(/drop the First Build\?/)).toBeTruthy();
-    tap('Cancel');
-    expect(document.querySelectorAll('section.planner-build').length).toBe(2);
-    expect(screen.queryByText(/drop the First Build\?/)).toBeNull();
   });
 
   test('Retry loads the game data again after it failed', async () => {
@@ -2857,7 +2824,7 @@ describe('QA pass 4, severity 1', () => {
   });
 
   test('the Build name may use the top bar’s room', () => {
-    expect(rule(css('src/shell/app.css'), '.app-header')).toContain(
+    expect(rule(css('src/shell/app.css'), '.app-header__inner')).toContain(
       'grid-template-columns: minmax(max-content, 1fr) minmax(0, auto) minmax(0, 1fr)',
     );
     expect(rule(css('src/planner/planner.css'), '.build-name')).toContain('max-width: 100%');
@@ -2890,22 +2857,6 @@ describe('QA pass 4, severity 1', () => {
     tap(/^Cancel/);
     await waitFor(() => expect(document.querySelector('.choice-dialog')).not.toBeNull());
     expect(document.querySelector<HTMLInputElement>('.choice-dialog [data-picker-filter]')?.value).toBe('toughness');
-  });
-
-  test('Fork never writes the empty Build’s code to the address bar', async () => {
-    await openPlanner(cleaver);
-    const empty = `#b=${await encodeBuild(e.data, EMPTY)}`;
-    const written: string[] = [];
-    const real = history.replaceState.bind(history);
-    vi.spyOn(history, 'replaceState').mockImplementation((data, unused, url) => {
-      if (typeof url === 'string') written.push(url);
-      real(data, unused, url);
-    });
-    openMenu();
-    menuItem('Fork this Build');
-    await new Promise((r) => setTimeout(r, 50));
-    flush();
-    expect(written).not.toContain(empty);
   });
 
   test('the ⋯ menu moves with the arrow keys, Home and End', async () => {

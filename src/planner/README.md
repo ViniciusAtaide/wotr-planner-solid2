@@ -1,7 +1,6 @@
 # Planner
 
-The planner page (map 13; build tickets 05 and 07): the levelling trail, undo and redo, the Share link, fork and
-compare. It runs in the browser only: the engine loads the data document once (ADR 0004) and the Build opens from
+The planner page (map 13; build tickets 05 and 07): the levelling trail, undo and redo, the Share link. It runs in the browser only: the engine loads the data document once (ADR 0004) and the Build opens from
 `#b=<Build code>`. Every change goes through E; a slot's options and their statuses come from S, a class, path or
 archetype row's status from E (whether the edit applies, needs the Cascade preview or breaks), and every Refusal's
 words from R; the page only shows them.
@@ -109,7 +108,7 @@ filter from 13 rows up. An open parent's values
 are sorted by name, open before closed, and a level's archetype list starts with "No archetype", then the held
 archetype, then the rest by name.
 
-**Scores before level 1** (QA pass 6): the tiles, a dialog's header and compare's differences read
+**Scores before level 1** (QA pass 6): the tiles and a dialog's header read
 `Planner.score`, which walks the Build with a placeholder first level (S's `firstLevelWith`) until it has one, so the
 race's bonuses show from the start instead of after the first class. **Another class…** in Modal first opens the
 class list in its own dialog ("Level N · another class"), beside "Continue as …"; closing it closes the list
@@ -272,11 +271,9 @@ chapter before the current step folds into one row (its classes, counted as "Alc
 levels N–M" closes. Taking the next level folds them all again. The chapter holding the current step never folds. From
 900 px wide nothing folds: the card keeps its race, alignment and score controls, and the trail is a centred column.
 
-**The menu (⋯)**: Copy link, Fork this Build, and Export as text (a plain build sheet copied to the clipboard). A copy
+**The menu (⋯)**: Copy link and Export as text (a plain build sheet copied to the clipboard). A copy
 closes the menu and says so beside it for a moment; a refused copy keeps the menu open with the reason. The
-address bar keeps the Build in `#b=`, so a reload opens it again. When forked, the compare toggle and "Close the fork…"
-sit beside the menu; a phone shows one trail with the toggle, a desktop two side by side, the one not being edited
-dimmed and inert behind "Edit the Second Build".
+address bar keeps the Build in `#b=`, so a reload opens it again.
 
 ## Public entry
 
@@ -331,47 +328,26 @@ dimmed and inert behind "Edit the Second Build".
     does nothing, so the history never moves under the preview.
   - `replace` (a link that opens) commits a Build, so undo returns to the one before; it is skipped when the Build is
     the same (`sameBuild`), so the page's own link never adds an undo entry. It discards a pending preview.
-  - `reset` starts a new history (the fork's copy).
   - Every change to `present` returns to `idle`. `change` is the title of the edit that made `present` (an edit that
     applied, the confirmed preview's, or `OPENED_A_LINK` for a `replace`), for the Undo line; `pastChanges` and
-    `futureChanges` keep each history entry's title beside it, so undo and redo bring back the right name, and `reset`
-    starts without one. `verdictOf` is the one answer to what an edit does: it `applies`, it `clears` later picks
+    `futureChanges` keep each history entry's title beside it, so undo and redo bring back the right name. `verdictOf` is the one answer to what an edit does: it `applies`, it `clears` later picks
     through the Cascade preview, or it `breaks` what nothing mends. The reducer and the class and path rows share it;
     `laterPicks` words a count of picks.
     `plannerAt` is a fresh state; `placeWords` writes a place as "Level 8" or "Rank 3"; `brokenWords` words what an
     edit would break, for the refusal and for a closed class or path row.
 - **`state.ts`: a Build's planner for the components.** `createPlanner` holds one signal of `PlannerState` and sends
   every action through `reducePlanner`. `latest` is the state after the last action, for handlers that send several
-  actions in one tick (signal reads lag writes); `restore` puts a whole state back (Close). The rest is what the
+  actions in one tick (signal reads lag writes); `restore` applies the state returned by the page reducer. The rest is what the
   components read: `build`, `walked`, `session`, `change`, `pending`, `notice`, `canUndo`, `canRedo`, and the
   actions; `edit` and `editAll` return the `EditOutcome`.
-- **`workspace-state.ts`: the page (map 13).** `WorkspaceState` is the `View` (one Build, `single`, or a fork,
-  `forked`, with its `layout`, `one` or `both`, and the edited `side`), the `Selection`, and the
-  `LinkStatus` (`ok`, or `didNotOpen` on `load` or on `paste`, with its `LinkReason`). The `Selection` is the choice
-  the player tapped open on the trail: a slot, a level's class (`level`), its ability increase (`increase`) or skills
-  (`skills`), a rank, Gear, the ability scores (`scores`, which the trail selects at their first edit to keep the
-  step open) or the race (`race`); undefined follows the next step. `reduceWorkspace(state,
-  action, editing)`:
-  - `fork` only from `single`, to `forked`, `both`, `second`;
-  - `show` only when forked; the toggle's segments map onto it through a `Record`;
-  - `close` only when forked, back to `single`;
-  - a side switch (`show` or `select` naming the other side), `fork` and `close` are refused while the edited planner
-    is confirming;
-  - `select` sets the selection, and the side when it names one;
-  - `linkOpened` and `dismissLink` set the link back to `ok`, and `linkFailed` sets `didNotOpen`. Edits never clear it.
-    `linkOpened` also closes any open step, so the trail resolves as on load.
-
-  `reducePage` is the glue the page and the sequence test share: a `Page` is the workspace and both planners. `fork`
-  resets the second planner to the first's `present`; `close` makes the edited planner's whole state, history
-  included, the first's, so Close keeps the Build being edited (user, 2026-11-20); `linkOpened` replaces the edited
-  Build (a paste replaces the edited Build, user); a `planner` action goes to the edited planner. The second planner
-  sits unused while unforked and is reset at fork.
-
-  Derived values: `edited(view)` is the side the panel edits; `shown(view, phone)` the Builds that show, where `both`
-  shows one Build, the edited one, on a phone (the phone projection, user); `resolve(selection, build, slots)` is the
-  selection while its target (a slot the walk opens, a level, a rank) still exists, else undefined, when the trail
-  goes back to the next step; `sameSelection` compares two selections. `workspaceAt` opens the page following the next
-  step.
+- **`workspace-state.ts`: the page.** `WorkspaceState` holds the `Selection` and `LinkStatus` (`ok`, or
+  `didNotOpen` on `load` or `paste`, with its `LinkReason`). A selection opens a slot, level, increase, skills,
+  rank, Gear, scores or race; undefined follows the next step. `reduceWorkspace` sets selections and link status.
+  Opening a link clears the selection; edits leave link status alone.
+  `Page` holds this workspace and one `PlannerState`. `reducePage` routes planner actions and replaces the Build
+  when a link opens, keeping the previous Build in undo history. Existing share codes still open their one Build.
+  `resolve` returns a selection while its target exists, else undefined; `sameSelection` compares selections.
+  `workspaceAt` opens the page following the next step.
 - **`share-code.ts`: a Build's Share link.** `ShareCode` is `encoding`, `current` with its code, or `failed` with why.
   `createShareCode` encodes each new `present`; the last encode wins (a `latest` token) and a rejected encode is
   `failed`. `shareLinkOf` maps it onto the design system's `ShareLink` props: "Making the link…" with Copy off while
@@ -401,8 +377,8 @@ dimmed and inert behind "Edit the Second Build".
   place, so the whole list's badges cost one walk.
 - **A step's filter text** lives in `Here` (`StepFilter`, `createFilterMemory` in `list-panel.ts`), not in the list, so
   Expand and the dialog's return after a Cascade Cancel keep what was typed.
-- **The address bar** takes a Build's code only when the code is the active Build's own (`ShareCode`'s `of`), so a
-  Fork never writes the empty second Build's code while its own code is still being made.
+- **The address bar** takes a Build's code only when it belongs to the current Build (`ShareCode`'s `of`), so an
+  earlier asynchronous encode cannot overwrite the current link.
 - **`list-mode.ts`**: `ListMode`, `readListMode`/`writeListMode` (try/catch around `localStorage`, `browserStorage`)
   and `isListStep`. **`ChoiceDialog.tsx`**: the modal frame (`ChoiceDialog`, `detailOf`, `dialogStart`).
 - **`option-detail.ts`**: what an option says beyond its name (ticket 06's UI side). `summaryFor` is S's Summary of a
@@ -513,25 +489,22 @@ dimmed and inert behind "Edit the Second Build".
   - `Boot` is `loading`, `failed` (with Retry, which loads again) or `ready` with the engine, the linked Build, the
     `LinkStatus` and the hash it opened. The ready workspace reads `location.hash` again, so a link pasted while the
     data loaded still opens.
-  - Below `PHONE_WIDTH_QUERY` (900 px) the page folds and compare shows one trail with the toggle.
-  - `linkCode` is the edited Build's `ShareCode`; the address bar and the Share link both show it (user). The hash is
-    written (`replaceState`) only when it is `current`, which also covers a side switch; on `failed` it keeps the last
+  - Below `PHONE_WIDTH_QUERY` (900 px) the page folds its character card and completed chapters.
+  - `linkCode` is the Build's `ShareCode`; the address bar and the Share link both show it (user). The hash is
+    written (`replaceState`) only when it is `current`; on `failed` it keeps the last
     good code.
   - A pasted hash (`hashchange`) equal to the current `linkCode` does nothing. Otherwise it is decoded behind a
     `latest` token, so the last pasted link wins, and goes to `linkOpened` or to `linkFailed` on `paste`.
   - A link that doesn't open, on load or pasted, stays in the address bar with the notice saying why, until the Build
     is edited (`brokenOver`): only then does the page write its own code again.
-  - One window key handler switches on the edited planner's `Session`, `unreachable` as its default. While
+  - One window key handler switches on the planner's `Session`, `unreachable` as its default. While
     confirming, ⌘Z and Esc cancel and ⇧⌘Z and / do nothing; otherwise ⌘Z undoes, ⇧⌘Z redoes (also from an empty
     filter, which has no text to undo; a filter with text keeps its own undo), / focuses the filter and Esc goes back
     to the next choice.
   - `confirm` commits the Cascade preview's Build and selects the first pick it cleared (`firstCleared`).
-  - Each side keeps its own `TrailState`, so switching sides keeps a trail's folds and skills left unspent.
+  - One `TrailState` keeps the trail's folds and skills left unspent.
   - While confirming, everything behind the Cascade preview is `inert` (`planner-behind`), and the preview keeps Tab
     inside itself.
-  - The fork's toggle maps its segments onto `show` through `SEGMENT_SHOWS`; on a phone it offers First and Second,
-    and presses the edited side's segment when both would show. `scoreDiffers` marks, while forked, the scores on a
-    card that differ from the other Build's.
 
 ## Design notes
 
@@ -581,8 +554,6 @@ dimmed and inert behind "Edit the Second Build".
 - Nothing moves under the pointer: refusals and the link notice float in `planner-notices`, a fixed area at the top
   right; the +2 buttons keep their place, disabled, before a race is chosen or for a race that sets its bonuses; the
   Undo line keeps its place at the bottom.
-- "Close the fork…" asks first ("Keep the Second Build and drop the First Build?"), sits at least 24 px from the
-  toggle, and only "Keep Second" drops a Build.
 - Picker lists are sorted by name, and the closed summary counts each reason once ("need a prerequisite", "refused by
   the game").
 - The Skills chip says what its level holds ("4 ranks"), and "2 of 4" while the last level's budget isn't spent.
@@ -592,9 +563,8 @@ dimmed and inert behind "Edit the Second Build".
   otherwise only the previous class is judged, for its Continue button. One `classPicker` walk judges the list (46 ms
   for a level editor on Jack in the Green, from about 0.9 s with an `allows` per class).
 - The runtime checks that stay: `resolve`, the constructors where values come in, the walk's rules across fields
-  (point buy, an increase every 4th level, skill totals, the rank cap), the workspace's guard while confirming (backed
-  by the inert background), the `latest` tokens, the `sameBuild` skip, `ShareCode`'s `failed`, and the second planner
-  reset at fork.
+  (point buy, an increase every 4th level, skill totals, the rank cap), the planner's guard while confirming (backed
+  by the inert background), the `latest` tokens, the `sameBuild` skip, and `ShareCode`'s `failed`.
 
 ### Questions built the prototype's way, waiting on the user (build ticket 07)
 
@@ -627,20 +597,17 @@ dimmed and inert behind "Edit the Second Build".
     the build sheet. `apiOf` gives a step a `TrailApi` over a planner.
   - The render regressions of build ticket 05d, each written to fail before its fix, moved onto the trail: the notice
     survives undo; ⌘Z in the preview; a chip's pick waiting on the preview keeps its step open, also after Cancel; Tab
-    leaving the preview and the inert background; focus on Cancel and back on the control; side by side after
-    narrowing to a phone; two hash decodes out of order; a failed paste; the link notice that never cleared; the page's
+    leaving the preview and the inert background; focus on Cancel and back on the control; phone folding;
+    two hash decodes out of order; a failed paste; the link notice that never cleared; the page's
     own Build re-applied as an undo entry (`storedBlockCode` writes the same Build as another code); a hash pasted
     while loading; "Making the link…" while encoding; a class the list doesn't offer; the race marked after a
-    change; the +2 row's place; the floating refusal; the score steppers' bounds; Close keeping the edited Build and
-    asking first; Retry; and `loadEngine` asking again. A Cascade confirmed lands on the first pick it cleared.
+    change; the +2 row's place; the floating refusal; the score steppers' bounds; Retry; and `loadEngine` asking again.
+    A Cascade confirmed lands on the first pick it cleared.
   - The page renders whole with the engine module mocked (`gate.load`), C wrapped so a test can hold a decode or an
     encode (`gate.decodeHolds`, `gate.encodeHold`), and a `FakeMediaQueryList` for the phone width.
 - `planner-state.test.tsx`: one test per cell of `reducePlanner`'s table (an applied edit and a confirm keep their
   title as `change`), the edit outcomes, and the type-level tests (`expectTypeOf`): the unions hold no impossible
   state, the constructors return a value or undefined, and a Build holds only codable values.
-- `workspace-state.test.tsx`: fork, Close keeping either Build with its history, the guard while confirming, the
-  phone projection, the link status, `resolve` after each way its target goes, and a seeded sequence test: a
-  hand-written generator (`seeded`, no dependency) runs random actions through `reducePage`, and after every step at
-  most the edited planner is confirming, `shown` holds the edited side, each `present` round-trips through C into a
-  `sameBuild` Build, and `resolve` gives undefined or a selection whose target exists.
+- `workspace-state.test.tsx`: link replacement with undo history, link status, selection resolution, and seeded
+  edit/cascade/undo/redo/link sequences with codec round-trip and selection-validity invariants.
 - The data is found from the repo root, because jsdom's `import.meta.url` isn't a `file:` URL.

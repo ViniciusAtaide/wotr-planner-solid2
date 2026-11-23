@@ -43,4 +43,4 @@ Neither rule ports a game method: the chain links are the planner's own reading 
 ## Design notes
 
 - Only shown blueprints are indexed, so a link never points at something the game never names (map 19).
-- `describe` (engine/describe) and the MCP's `options`, `synergies` and `compare` read this index; the MCP's "builds on" badges are a slot option's `needs` that the Build already holds.
+- `describe` (engine/describe) and the MCP's `options` and `synergies` read this index; the MCP's "builds on" badges are a slot option's `needs` that the Build already holds.

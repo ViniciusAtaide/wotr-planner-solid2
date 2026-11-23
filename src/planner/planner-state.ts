@@ -47,8 +47,7 @@ export type PlannerAction =
   | { readonly kind: 'dismiss' }
   | { readonly kind: 'undo' }
   | { readonly kind: 'redo' }
-  | { readonly kind: 'replace'; readonly build: Build }
-  | { readonly kind: 'reset'; readonly build: Build };
+  | { readonly kind: 'replace'; readonly build: Build };
 
 export type EditOutcome = 'applied' | 'confirming' | 'refused';
 
@@ -377,7 +376,5 @@ export function reducePlanner(engine: Engine, s: PlannerState, a: PlannerAction)
       return confirming ? s : redone(s);
     case 'replace':
       return sameBuild(s.present, a.build) ? s : commit(s, a.build, OPENED_A_LINK);
-    case 'reset':
-      return plannerAt(a.build);
   }
 }

@@ -66,7 +66,6 @@ export function createPlanner(engine: Engine, initial: Build) {
     undo: () => send({ kind: 'undo' }),
     redo: () => send({ kind: 'redo' }),
     replace: (next: Build) => send({ kind: 'replace', build: next }),
-    reset: (next: Build) => send({ kind: 'reset', build: next }),
   };
 }
 

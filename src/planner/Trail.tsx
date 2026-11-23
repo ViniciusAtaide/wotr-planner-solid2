@@ -12,7 +12,7 @@ import {
   useContext,
 } from 'solid-js';
 import { slotKey, type Place } from '~engine/build';
-import { isShown, refGuid, type Attribute } from '~engine/data';
+import { isShown, refGuid } from '~engine/data';
 import type { Edit } from '~engine/edits';
 import { nameOf } from '~engine/refusals';
 import { ATTRIBUTES, type OpenedSlot } from '~engine/walk';
@@ -185,7 +185,6 @@ export interface TrailProps {
   readonly selection: Selection | undefined;
   readonly select: (s: Selection | undefined) => void;
   readonly phone: boolean;
-  readonly diff?: (a: Attribute) => boolean;
   readonly listMode?: ListMode;
 }
 
@@ -255,12 +254,7 @@ export default function Trail(props: TrailProps) {
           dialogOpen={props.state.dialog === key}
           onDialog={(open) => props.send({ kind: 'dialog', step: open ? key : undefined })}
         >
-          <StepBody
-            trail={api}
-            step={step()}
-            modal={props.listMode === 'modal'}
-            {...(props.diff && { diff: props.diff })}
-          />
+          <StepBody trail={api} step={step()} modal={props.listMode === 'modal'} />
         </Here>
       )}
     </Show>
@@ -425,20 +419,34 @@ export default function Trail(props: TrailProps) {
     key === stepKey({ kind: 'race' }) ||
     characterSlots(view()).some((x) => stepKey({ kind: 'slot', slot: x.id }) === key);
   let lastNext = untrack(() => stepKey(next()));
-  createEffect(
-    () => ({ built: build(), now: next(), held: props.selection !== undefined }),
-    ({ now, held }) => {
+  const arrival = createMemo(
+    () => {
+      const now = next();
       const open = props.state.dialog;
-      if (open !== undefined && isFieldKey(open)) props.send({ kind: 'dialog', step: undefined });
+      return {
+        built: build(),
+        now,
+        held: props.selection !== undefined,
+        closeDialog: open !== undefined && isFieldKey(open),
+        arrivingKey: fieldKey(now),
+        arrived: arrived(),
+        modal: props.listMode === 'modal',
+      };
+    },
+    { equals: (a, b) => a.built === b.built && a.now === b.now && a.held === b.held },
+  );
+  createEffect(
+    () => arrival(),
+    ({ now, held, closeDialog, arrivingKey, arrived, modal }) => {
+      if (closeDialog) props.send({ kind: 'dialog', step: undefined });
       const key = stepKey(now);
       if (held || key === lastNext) return;
       lastNext = key;
-      const arrivingKey = fieldKey(now);
-      if (arrivingKey === undefined || !arrived()) {
+      if (arrivingKey === undefined || !arrived) {
         setArriving(undefined);
         return;
       }
-      if (props.listMode === 'modal' && now.kind !== 'alignment') props.send({ kind: 'dialog', step: arrivingKey });
+      if (modal && now.kind !== 'alignment') props.send({ kind: 'dialog', step: arrivingKey });
       else setArriving(arrivingKey);
     },
   );
@@ -519,7 +527,6 @@ export default function Trail(props: TrailProps) {
           foldable={props.phone}
           editing={characterOpen()}
           onToggle={() => props.send({ kind: 'character', open: cardFolded() ? true : !characterOpen() })}
-          {...(props.diff && { diff: props.diff })}
           race={
             <CharacterField
               trail={api}
@@ -642,7 +649,6 @@ export function ChapterRow(props: ChapterRowProps) {
 export interface StepBodyProps {
   readonly trail: TrailApi;
   readonly step: Step;
-  readonly diff?: (a: Attribute) => boolean;
   readonly modal?: boolean;
 }
 
@@ -661,7 +667,7 @@ export function StepBody(props: StepBodyProps) {
         <GearStep trail={props.trail} />
       </Match>
       <Match when={props.step.kind === 'scores'}>
-        <ScoresStep trail={props.trail} {...(props.diff && { diff: props.diff })} />
+        <ScoresStep trail={props.trail} />
       </Match>
       <Match when={props.step.kind === 'race'}>
         <RaceStep trail={props.trail} />

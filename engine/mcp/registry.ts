@@ -222,19 +222,6 @@ const RAW_TOOLS: readonly ToolDef[] = [
     inputSchema: object({ code, level: { type: 'integer', minimum: 1 } }, ['code']),
     run: (e, a) => tools.sheet(e, a as Parameters<typeof tools.sheet>[1]),
   },
-  {
-    name: 'compare',
-    description:
-      '2–4 Builds side by side at checkpoint levels: sheets, chain link counts and the first place they diverge.',
-    inputSchema: object(
-      {
-        codes: { type: 'array', items: code, minItems: 2, maxItems: 4 },
-        levels: { type: 'array', items: { type: 'integer', minimum: 1 } },
-      },
-      ['codes', 'levels'],
-    ),
-    run: (e, a) => tools.compare(e, a as Parameters<typeof tools.compare>[1]),
-  },
 ];
 
 function withBrief(e: Engine, result: unknown): unknown {

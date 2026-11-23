@@ -14,14 +14,16 @@ export function Shell(props: ShellProps) {
     <div class="ww-root app-main">
       <Title>Worldwound Planner</Title>
       <header class="app-header">
-        <a class="app-header__name" href={props.home} aria-label="Worldwound Planner">
-          <span class="app-header__full">Worldwound Planner</span>
-          <span class="app-header__short" aria-hidden="true">
-            WP
-          </span>
-        </a>
-        <div class="app-header__center" id="app-header-center" />
-        <span class="app-header__end" aria-hidden="true" />
+        <div class="app-header__inner">
+          <a class="app-header__name" href={props.home} aria-label="Worldwound Planner">
+            <span class="app-header__full">Worldwound Planner</span>
+            <span class="app-header__short" aria-hidden="true">
+              WP
+            </span>
+          </a>
+          <div class="app-header__center" id="app-header-center" />
+          <div class="app-header__end" id="app-header-end" />
+        </div>
       </header>
       <Loading fallback={<main>Loading…</main>}>{props.children}</Loading>
       <footer class="app-footer">

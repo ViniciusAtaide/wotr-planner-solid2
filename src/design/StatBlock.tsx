@@ -4,7 +4,6 @@ import { attributeBonus } from '~engine/walk';
 export interface Stat {
   readonly name: string;
   readonly value: number;
-  readonly diff?: boolean;
 }
 
 const modifier = (value: number) => {
@@ -23,7 +22,7 @@ export default function StatBlock(props: StatBlockProps) {
         {(stat) => (
           <div class="ww-stat">
             <span class="ww-stat__name">{stat.name}</span>
-            <span class={['ww-stat__value', { 'ww-stat__value--diff': stat.diff === true }]}>{stat.value}</span>
+            <span class="ww-stat__value">{stat.value}</span>
             <span class="ww-stat__mod">{modifier(stat.value)}</span>
           </div>
         )}

@@ -35,7 +35,7 @@ import {
   type Session,
 } from './planner-state';
 import type { ShareCode } from './share-code';
-import type { LinkStatus, View } from './workspace-state';
+import type { LinkStatus } from './workspace-state';
 
 const files = readDataDir(join(process.cwd(), 'data'));
 const e = engineOf(loadData(files.files, files.overrides));
@@ -256,9 +256,6 @@ describe('PlannerState: one test per table cell', () => {
           futureChanges: [],
         }),
     ],
-    ['reset', 'idle', (_, n) => expect(n).toEqual(plannerAt(cleaver))],
-    ['reset', 'refused', (_, n) => expect(n).toEqual(plannerAt(cleaver))],
-    ['reset', 'confirming', (_, n) => expect(n).toEqual(plannerAt(cleaver))],
   ];
   const actions: Readonly<Record<PlannerAction['kind'], PlannerAction>> = {
     edit: { kind: 'edit', edit: ADD_LEVEL, title: 'Add level 3' },
@@ -270,7 +267,6 @@ describe('PlannerState: one test per table cell', () => {
     undo: { kind: 'undo' },
     redo: { kind: 'redo' },
     replace: { kind: 'replace', build: cleaver },
-    reset: { kind: 'reset', build: cleaver },
   };
 
   test.each(cells)('%s while %s', (action, kind, check) => {
@@ -455,8 +451,6 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
 
 describe('impossible states do not type-check', () => {
   test('the unions hold no impossible state', () => {
-    expectTypeOf<Extract<View, { kind: 'single' }>>().not.toHaveProperty('side');
-    expectTypeOf<{ kind: 'forked'; layout: 'both'; side: 'second' }>().toExtend<View>();
     expectTypeOf<{ kind: 'refused'; lines: readonly [] }>().not.toExtend<Session>();
     expectTypeOf<{ kind: 'refused'; lines: readonly ['Why.'] }>().toExtend<Session>();
     expectTypeOf<{ kind: 'current' }>().not.toExtend<ShareCode>();

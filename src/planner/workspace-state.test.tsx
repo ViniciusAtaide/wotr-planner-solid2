@@ -11,21 +11,17 @@ import { picker } from '~engine/pickers';
 import { walk } from '~engine/walk';
 
 import { EMPTY } from './link';
-import { plannerAt, type PlannerAction, type PlannerState, type Session } from './planner-state';
+import { plannerAt, type PlannerAction, type PlannerState } from './planner-state';
 import {
-  edited,
   LINK_OK,
   reducePage,
   reduceWorkspace,
   resolve,
   sameSelection,
-  shown,
   workspaceAt,
   type Page,
   type PageAction,
   type Selection,
-  type Side,
-  type View,
   type WorkspaceState,
 } from './workspace-state';
 
@@ -57,124 +53,44 @@ const levelled = (n: number): Build => ({ ...cleaver, levels: Array.from({ lengt
 
 const ADD_LEVEL: Edit = { kind: 'addLevel', class: FIGHTER };
 const WEAKER: Edit = { kind: 'scores', scores: abilityScores({ ...SCORES, Strength: 10 }) };
-const CONFIRMING: Session = {
-  kind: 'confirming',
-  pending: { title: 'Weaker', summary: 'Clears picks.', clears: [], clearedSkills: [], build: EMPTY },
-};
-
 const slotsOf = (b: Build): readonly SlotId[] => walk(e.data, b, e.G).slots.map((s) => s.id);
-const forkedView = (side: Side, layout: 'one' | 'both' = 'both'): View => ({ kind: 'forked', layout, side });
-const ws = (view: View, selection?: Selection): WorkspaceState => ({ view, selection, link: LINK_OK });
-const page = (workspace: WorkspaceState, first: PlannerState, second: PlannerState): Page => ({
-  workspace,
-  first,
-  second,
-});
+const ws = (selection?: Selection): WorkspaceState => ({ selection, link: LINK_OK });
+const page = (workspace: WorkspaceState, planner: PlannerState): Page => ({ workspace, planner });
 const resolvedOn = (p: Page) => {
-  const build = p[edited(p.workspace.view)].present;
+  const build = p.planner.present;
   return resolve(p.workspace.selection, build, slotsOf(build));
 };
 
 describe('WorkspaceState', () => {
-  test('fork, from one Build only: the second Build is a fresh copy, shown side by side and edited', () => {
-    const first: PlannerState = { ...plannerAt(levelled(2)), past: [cleaver] };
-    const second = plannerAt(levelled(3));
-    const forked = reducePage(e, page(ws({ kind: 'single' }), first, second), { kind: 'fork' });
-    expect(forked.workspace.view).toEqual({ kind: 'forked', layout: 'both', side: 'second' });
-    expect(forked.second).toEqual(plannerAt(levelled(2)));
-    expect(forked.first).toBe(first);
-    expect(reducePage(e, forked, { kind: 'fork' })).toBe(forked);
-  });
-
-  test('close keeps the first Build when the first is edited', () => {
-    const first: PlannerState = { ...plannerAt(levelled(2)), past: [cleaver] };
-    const before = page(ws(forkedView('first')), first, plannerAt(levelled(3)));
-    const closed = reducePage(e, before, { kind: 'close' });
-    expect(closed.workspace.view).toEqual({ kind: 'single' });
-    expect(closed.first).toBe(first);
-  });
-
-  test('close keeps the second Build, history and all, when the second is edited', () => {
-    const second: PlannerState = {
-      past: [cleaver, levelled(2)],
-      present: levelled(3),
-      future: [levelled(4)],
-      session: { kind: 'idle' },
-      change: 'Level 3',
-      pastChanges: [undefined, 'Level 2'],
-      futureChanges: ['Level 4'],
-    };
-    const closed = reducePage(e, page(ws(forkedView('second')), plannerAt(cleaver), second), { kind: 'close' });
-    expect(closed.workspace.view).toEqual({ kind: 'single' });
-    expect(closed.first).toBe(second);
-  });
-
-  test('a side switch, fork and close are refused while the edited Build waits on the preview', () => {
-    const s = ws(forkedView('second', 'one'), { kind: 'gear' });
-    expect(reduceWorkspace(s, { kind: 'show', layout: 'one', side: 'first' }, 'confirming')).toBe(s);
-    expect(
-      reduceWorkspace(s, { kind: 'select', selection: { kind: 'skills', level: 1 }, side: 'first' }, 'confirming'),
-    ).toBe(s);
-    expect(reduceWorkspace(s, { kind: 'close' }, 'confirming')).toBe(s);
-    const single = ws({ kind: 'single' });
-    expect(reduceWorkspace(single, { kind: 'fork' }, 'confirming')).toBe(single);
-    expect(reduceWorkspace(s, { kind: 'show', layout: 'both', side: 'second' }, 'confirming').view).toEqual(
-      forkedView('second', 'both'),
-    );
-    expect(reduceWorkspace(s, { kind: 'show', layout: 'one', side: 'first' }, 'idle').view).toEqual(
-      forkedView('first', 'one'),
-    );
-    const confirming = page(s, plannerAt(cleaver), { ...plannerAt(cleaver), session: CONFIRMING });
-    expect(reducePage(e, confirming, { kind: 'show', layout: 'one', side: 'first' })).toBe(confirming);
-  });
-
-  test('show and close do nothing while one Build shows', () => {
-    const single = ws({ kind: 'single' });
-    expect(reduceWorkspace(single, { kind: 'show', layout: 'both', side: 'second' }, 'idle')).toBe(single);
-    expect(reduceWorkspace(single, { kind: 'close' }, 'idle')).toBe(single);
-  });
-
-  test('both Builds show side by side on a desktop, and only the edited one on a phone', () => {
-    expect(shown(forkedView('second'), false)).toEqual(['first', 'second']);
-    expect(shown(forkedView('second'), true)).toEqual(['second']);
-    expect(shown(forkedView('first', 'one'), false)).toEqual(['first']);
-    expect(shown({ kind: 'single' }, true)).toEqual(['first']);
-  });
-
-  test('a link that opens resets a link that did not, and replaces the edited Build', () => {
+  test('a link that opens resets a link that did not, and replaces the Build', () => {
     const failed: WorkspaceState = {
-      ...ws(forkedView('second')),
+      ...ws(),
       link: { kind: 'didNotOpen', on: 'paste', reason: 'notACode' },
     };
-    const opened = reducePage(e, page(failed, plannerAt(cleaver), plannerAt(cleaver)), {
+    const opened = reducePage(e, page(failed, plannerAt(cleaver)), {
       kind: 'linkOpened',
       build: levelled(2),
     });
     expect(opened.workspace.link).toEqual({ kind: 'ok' });
-    expect(opened.second.present).toEqual(levelled(2));
-    expect(opened.second.past).toEqual([cleaver]);
-    expect(opened.first.present).toBe(cleaver);
+    expect(opened.planner.present).toEqual(levelled(2));
+    expect(opened.planner.past).toEqual([cleaver]);
   });
 
   test('dismissLink sets the link status back to ok; edits leave it', () => {
-    const failed = reduceWorkspace(
-      ws({ kind: 'single' }),
-      { kind: 'linkFailed', on: 'load', reason: 'otherData' },
-      'idle',
-    );
+    const failed = reduceWorkspace(ws(), { kind: 'linkFailed', on: 'load', reason: 'otherData' });
     expect(failed.link).toEqual({ kind: 'didNotOpen', on: 'load', reason: 'otherData' });
-    const edited = reducePage(e, page(failed, plannerAt(cleaver), plannerAt(EMPTY)), {
+    const edited = reducePage(e, page(failed, plannerAt(cleaver)), {
       kind: 'planner',
       action: { kind: 'edit', edit: ADD_LEVEL, title: 'Add level 2' },
     });
-    expect(edited.first.present.levels).toHaveLength(2);
+    expect(edited.planner.present.levels).toHaveLength(2);
     expect(edited.workspace.link).toBe(failed.link);
-    expect(reduceWorkspace(failed, { kind: 'dismissLink' }, 'idle').link).toEqual({ kind: 'ok' });
+    expect(reduceWorkspace(failed, { kind: 'dismissLink' }).link).toEqual({ kind: 'ok' });
   });
 
   test('a link that opens closes any open step (QA, flat lists)', () => {
-    const open = { ...workspaceAt(cleaver, LINK_OK), selection: { kind: 'race' } as const };
-    expect(reduceWorkspace(open, { kind: 'linkOpened' }, 'idle').selection).toBeUndefined();
+    const open = { ...workspaceAt(LINK_OK), selection: { kind: 'race' } as const };
+    expect(reduceWorkspace(open, { kind: 'linkOpened' }).selection).toBeUndefined();
   });
 
   test('sameSelection compares by kind and key', () => {
@@ -187,8 +103,7 @@ describe('WorkspaceState', () => {
 });
 
 describe('resolve: a selection whose target is gone resolves to undefined', () => {
-  const single = (selection: Selection, first: PlannerState) =>
-    page(ws({ kind: 'single' }, selection), first, plannerAt(EMPTY));
+  const single = (selection: Selection, first: PlannerState) => page(ws(selection), first);
 
   test('after dropLevel', () => {
     const p = single({ kind: 'level', level: 2 }, plannerAt(levelled(2)));
@@ -197,7 +112,7 @@ describe('resolve: a selection whose target is gone resolves to undefined', () =
       kind: 'planner',
       action: { kind: 'edit', edit: { kind: 'dropLevel' }, title: 'Remove level 2' },
     });
-    expect(dropped.first.present.levels).toHaveLength(1);
+    expect(dropped.planner.present.levels).toHaveLength(1);
     expect(resolvedOn(dropped)).toBeUndefined();
   });
 
@@ -220,12 +135,6 @@ describe('resolve: a selection whose target is gone resolves to undefined', () =
   test('after replace', () => {
     const p = single({ kind: 'level', level: 3 }, plannerAt(levelled(3)));
     expect(resolvedOn(reducePage(e, p, { kind: 'linkOpened', build: cleaver }))).toBeUndefined();
-  });
-
-  test('after a side switch', () => {
-    const p = page(ws(forkedView('first'), { kind: 'level', level: 2 }), plannerAt(levelled(2)), plannerAt(cleaver));
-    expect(resolvedOn(p)).toEqual({ kind: 'level', level: 2 });
-    expect(resolvedOn(reducePage(e, p, { kind: 'show', layout: 'one', side: 'second' }))).toBeUndefined();
   });
 });
 
@@ -262,7 +171,6 @@ const SELECTIONS: readonly (Selection | undefined)[] = [
   { kind: 'slot', slot: BONUS_COMBAT_FEAT },
 ];
 const LINKED: readonly Build[] = [cleaver, levelled(2), EMPTY];
-const SIDES: readonly Side[] = ['first', 'second'];
 
 function randomAction(next: () => number): PageAction {
   const one = <T,>(xs: readonly T[]): T => xs[Math.floor(next() * xs.length)] as T;
@@ -276,10 +184,7 @@ function randomAction(next: () => number): PageAction {
     () => planner({ kind: 'dismiss' }),
     () => planner({ kind: 'undo' }),
     () => planner({ kind: 'redo' }),
-    () => ({ kind: 'select', selection: one(SELECTIONS), ...(next() < 0.5 && { side: one(SIDES) }) }),
-    () => ({ kind: 'show', layout: next() < 0.5 ? 'one' : 'both', side: one(SIDES) }),
-    () => ({ kind: 'fork' }),
-    () => ({ kind: 'close' }),
+    () => ({ kind: 'select', selection: one(SELECTIONS) }),
     () => ({ kind: 'linkOpened', build: one(LINKED) }),
     () => ({ kind: 'linkFailed', on: 'paste', reason: 'notACode' }),
     () => ({ kind: 'dismissLink' }),
@@ -307,26 +212,15 @@ function exists(selection: Selection, build: Build): boolean {
 describe('random action sequences over both reducers and the glue', () => {
   test.each([1, 7, 42, 2026])('seed %i', { timeout: 120_000 }, async (seed) => {
     const next = seeded(seed);
-    let p: Page = { workspace: workspaceAt(cleaver, LINK_OK), first: plannerAt(cleaver), second: plannerAt(EMPTY) };
-    let phone = false;
+    let p: Page = { workspace: workspaceAt(LINK_OK), planner: plannerAt(cleaver) };
     for (let step = 0; step < 60; step++) {
-      if (next() < 0.1) phone = !phone;
       const action = randomAction(next);
       p = reducePage(e, p, action);
       const where = `seed ${seed}, step ${step}, ${JSON.stringify(action)}`;
-      const side = edited(p.workspace.view);
-      const others = SIDES.filter((s) => s !== side);
-      expect(
-        others.filter((s) => p[s].session.kind === 'confirming'),
-        where,
-      ).toEqual([]);
-      expect(shown(p.workspace.view, phone), where).toContain(side);
-      for (const s of SIDES) {
-        const present = p[s].present;
-        expect(sameBuild(await decodeBuild(e.data, await encodeBuild(e.data, present)), present), where).toBe(true);
-      }
+      const present = p.planner.present;
+      expect(sameBuild(await decodeBuild(e.data, await encodeBuild(e.data, present)), present), where).toBe(true);
       const r = resolvedOn(p);
-      if (r !== undefined) expect(exists(r, p[side].present), where).toBe(true);
+      if (r !== undefined) expect(exists(r, p.planner.present), where).toBe(true);
     }
   });
 });

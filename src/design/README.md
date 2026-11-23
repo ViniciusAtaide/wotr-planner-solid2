@@ -13,7 +13,6 @@ props types and helper types:
 - `Badge`, `BadgeKind`: a status or link chip.
 - `Button`, `ButtonVariant`: an action.
 - `CascadePreview`: what a Cascade edit will clear, before it applies.
-- `CompareToggle`: the segmented control that switches between compared Builds, generic over its segments.
 - `FeatIcon`, `FeatCategory`, `FEAT_CATEGORY_NAMES`: a feat's category as a small line drawing.
 - `Kbd`: a keyboard hint.
 - `LevelRow`, `Timeline`, `PickChips`, `PickChip`: the Timeline and its rows and chips.
@@ -40,9 +39,6 @@ props types and helper types:
   and Shift+Tab cycling through its own buttons (`keepFocusInside`), and stops Esc from reaching the page's own key
   handler. The page makes everything behind it inert. `autofocus={false}` turns the focus off (the gallery shows it
   without).
-- **CompareToggle.** A segmented control over its own segment type `S`: `value` is the pressed segment and
-  `onChange` hands back an `S`, so a consumer maps segments through a `Record` with no cast. On a phone it switches
-  which Build compare shows; on desktop it adds "Side by side". Four segments at most.
 - **FeatIcon.** A feat's category as a line drawing on a 24×24 grid, `1.05em` square, stroked in the text's color
   (`ww-feat-icon`), so it follows its chip or option. The twelve drawings (Weapon, Ranged, Unarmed Combat, Armour and
   Shield, Combat Manoeuvres, Mounted Combat, Magic, Skill, Teamwork, Racial, Class, Miscellaneous) were drawn for the
@@ -83,14 +79,12 @@ props types and helper types:
   union, so they are an exported type rather than an interface.
 - **StatBlock.** The six ability scores at a level, from the walk, without Gear unless the Build opts in (ADR 0002).
   Six columns, or three on a phone. No hit points: the walk doesn't compute them. A `Stat` is one score as the walk
-  computes it at a level: `name` is the short name ("STR"), and `diff` marks, in compare, a score that differs from the
-  other Build's. Each score's modifier is the walk's `attributeBonus` (the game's attribute bonus, cited in
+  computes it at a level: `name` is the short name ("STR") and `value` is the score. Each score's modifier is the walk's `attributeBonus` (the game's attribute bonus, cited in
   `engine/walk`), shown signed, with a true minus sign. That is the design system's one engine import
   (`~engine/walk`), so the rule has one source.
 - **Gallery.** The design gallery: every component in the states its published preview shows, with the same example
   content, so the port can be checked against the published system side by side. It is the living reference for the
-  UI. Each `Card` shows a component's name, its line from the published system (`about`) and its preview states. The
-  CompareToggle sits in a block, as the published preview sets it, so the segments keep their own width.
+  UI. Each `Card` shows a component's name, its line from the published system (`about`) and its preview states.
 
 ## Design notes
 
@@ -99,10 +93,10 @@ props types and helper types:
 - `tokens.css` is the only file under `src/` that writes a color; everything else uses its custom properties
   (a convention, checked in review). It sets `color-scheme: dark`, so native controls (selects, scrollbars, date
   pickers) draw dark too.
-- `components.css` is the published `components/bundle.css`, unchanged apart from dropping its comments. Every value
+- `components.css` adapts the published `components/bundle.css` for the live components. Every value
   comes from `tokens.css`, and every class has the `ww-` prefix. Its sections follow the components: Button, Kbd,
   Badge, LevelRow (the Timeline, its rows and chips, and `ww-rank`, a Mythic rank at its Rank level), PickerOption,
-  Refusal, the picker panel heading and the closed count, CascadePreview, ShareLink, CompareToggle, StatBlock and
+  Refusal, the picker panel heading and the closed count, CascadePreview, ShareLink, StatBlock and
   PickerSheet.
 - `gallery.css` lays out the gallery page.
 

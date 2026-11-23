@@ -9,13 +9,24 @@ body {
 }
 
 .app-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-100);
+}
+
+.app-header__inner {
   display: grid;
   grid-template-columns: minmax(max-content, 1fr) minmax(0, auto) minmax(0, 1fr);
   align-items: center;
   gap: var(--space-3);
-  padding: var(--space-3) var(--space-4);
-  border-bottom: 1px solid var(--line);
-  background: var(--surface-100);
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-3) var(--planner-gutter);
+}
+
+.app-header__end {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 44px;
 }
 
 .app-header__name {
@@ -43,6 +54,7 @@ body {
 }
 
 .app-main {
+  --planner-gutter: var(--space-3);
   min-height: 100vh;
   padding: 0;
 }
@@ -63,4 +75,10 @@ a {
   color: var(--ink);
   text-decoration-color: var(--line-strong);
   text-underline-offset: 2px;
+}
+
+@media (min-width: 900px) {
+  .app-main {
+    --planner-gutter: var(--space-4);
+  }
 }
