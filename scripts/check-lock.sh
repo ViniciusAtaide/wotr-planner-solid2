@@ -30,5 +30,9 @@ trap 'rm -rf "$lock"' EXIT
 trap 'exit 130' INT
 trap 'exit 143' TERM HUP
 
-"$@"
+if command -v caffeinate >/dev/null 2>&1; then
+  caffeinate -i -s "$@"
+else
+  "$@"
+fi
 exit $?
