@@ -511,6 +511,13 @@ const SKILL_NAMES: ReadonlyMap<string, StatType> = new Map(
   (Object.keys(SKILL_ATTRIBUTE) as StatType[]).flatMap((skill) => [
     [skill.toLowerCase(), skill],
     [statName(skill).toLowerCase(), skill],
+    [
+      skill
+        .replace(/^Skill/, '')
+        .replace(/([a-z])([A-Z])/g, '$1 $2')
+        .toLowerCase(),
+      skill,
+    ],
   ]),
 );
 

@@ -238,9 +238,18 @@ describe('R: the Refusal', { timeout: 30_000 }, () => {
     const paused = pauseAt(data, cleric, slot, G);
     const closed = paused?.judge(AIR_DOMAIN_PROGRESSION);
     const words = refusal({ data, G, unit: paused?.unit }, closed ?? { rule: 'LevelUpState.AddSelection' });
-    expect(words.unmet.join(' ')).toMatch(
-      /^Needs (a deity that allows it \(yours, Asmodeus.*, doesn't\)|one of .+)\.$/,
-    );
+    expect(words.unmet.join(' ')).toMatch(/^Needs (a deity that allows it \(yours, Asmodeus.*, doesn't\)|.+ or .+)\.$/);
+  });
+
+  it("words Mythic Hero's closing by its rank and the paths that open it again (QA pass 9)", () => {
+    const MYTHIC_HERO = '247aa787806d5da4f89cfc3dff0b217f';
+    const atRank4 = { ...jackInTheGreen.build, ranks: jackInTheGreen.build.ranks!.slice(0, 3) };
+    const p = classPicker(data, atRank4, { rank: 4 }, G, 11);
+    const hero = p?.options.find((o) => o.class === MYTHIC_HERO);
+    expect(hero?.closed).toBeDefined();
+    expect(refusal({ data, G, unit: p!.unit }, hero!.closed!).unmet).toEqual([
+      'One of these: Not after Mythic Hero rank 2; Needs Gold Dragon or Swarm That Walks.',
+    ]);
   });
 
   it('lists the later picks a swap would break', () => {

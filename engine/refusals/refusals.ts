@@ -13,7 +13,7 @@ import {
   type SlotId,
 } from '../build';
 import type { CheckedData } from '../load';
-import { bareName, isShown, type FeatureParameterType, type Guid, type StatType } from '../data';
+import { bareName, isShown, refGuid, type FeatureParameterType, type Guid, type StatType } from '../data';
 import { buildGrantIndex, grantorKind, type GrantIndex, type GrantParam } from '../grants';
 import { conditionFacts } from '../prerequisites';
 import type { Failure, FailedRule, Rule, Unmet, Value, Unit } from '../walk';
@@ -187,6 +187,40 @@ const grantorKindNoun = (kind: string) =>
 
 const article = (noun: string) => (/^[aeiou]/.test(noun) ? `an ${noun}` : `a ${noun}`);
 
+function shortOrList(names: readonly string[]): string {
+  const shown = names.slice(0, 3);
+  const more = names.length - shown.length;
+  if (more > 0) return `${shown.join(', ')} or ${more} more`;
+  return shown.length <= 1 ? (shown[0] ?? '') : `${shown.slice(0, -1).join(', ')} or ${shown.at(-1)}`;
+}
+
+const progressionClasses = new WeakMap<CheckedData, ReadonlyMap<Guid, Guid>>();
+
+function classOfProgression(data: CheckedData, progression: Guid): Guid | undefined {
+  let byProgression = progressionClasses.get(data);
+  if (byProgression === undefined) {
+    const built = new Map<Guid, Guid>();
+    for (const bp of data.blueprints.values()) {
+      if (bp.$type !== 'BlueprintCharacterClass') continue;
+      const p = refGuid(bp.m_Progression);
+      if (p !== undefined) built.set(p, bp.guid);
+    }
+    progressionClasses.set(data, (byProgression = built));
+  }
+  return byProgression.get(progression);
+}
+
+function classStep(w: Wording, fact: Guid): string | undefined {
+  const grants = w.G.grantorsOf(fact);
+  if (grants.length !== 1) return undefined;
+  const [grant] = grants;
+  if (grant?.kind !== 'levelEntry' || grant.level === undefined) return undefined;
+  const cls = classOfProgression(w.data, grant.grantor);
+  const bp = cls === undefined ? undefined : w.data.blueprints.get(cls);
+  if (bp?.$type !== 'BlueprintCharacterClass') return undefined;
+  return `${plain(w, bp.guid)} ${bp.IsMythic ? 'rank' : 'level'} ${grant.level}`;
+}
+
 function shortList(names: readonly string[]): string {
   const shown = names.slice(0, 3);
   const more = names.length - shown.length;
@@ -299,7 +333,7 @@ function factName(w: Wording, fact: Guid): string {
     return `${article(noun)} that allows it${mine}`;
   }
   const grantors = [...byKind.values()].flat();
-  if (grantors.length > 0) return `one of ${shortList(plainNames(w, grantors))}`;
+  if (grantors.length > 0) return shortOrList(plainNames(w, grantors));
   return plain(w, fact);
 }
 
@@ -310,8 +344,11 @@ export function unmetText(w: Wording, u: Unmet): string {
   const n = leaf.names;
   const forbids = leaf.polarity === 'forbids';
   switch (n.kind) {
-    case 'fact':
+    case 'fact': {
+      const step = forbids ? classStep(w, n.m_Feature) : undefined;
+      if (step !== undefined) return `Not after ${step}.`;
       return forbids ? `Not with ${factName(w, n.m_Feature)}.` : `Needs ${factName(w, n.m_Feature)}.`;
+    }
     case 'facts': {
       const names = shortList(n.m_Features.map((f) => factName(w, f)));
       if (forbids) return `Not with any of ${names}.`;

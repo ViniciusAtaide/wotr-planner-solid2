@@ -280,7 +280,7 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     const keyed = ok(await set_skills(e, { code: fighter.code, level: 1, ranks: { SkillAthletics: 1 } }), 'set_skills');
     expect(keyed.build.levels[0]?.skills).toEqual({ SkillAthletics: 1 });
     expect(statName('SkillThievery')).toBe('Trickery');
-    for (const name of ['Trickery', 'trickery', 'SkillThievery']) {
+    for (const name of ['Trickery', 'trickery', 'SkillThievery', 'Thievery']) {
       const tricky = ok(await set_skills(e, { code: fighter.code, level: 1, ranks: { [name]: 1 } }), 'set_skills');
       expect(tricky.build.levels[0]?.skills, name).toEqual({ SkillThievery: 1 });
     }
