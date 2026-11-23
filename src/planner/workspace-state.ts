@@ -1,5 +1,5 @@
 import type { CheckedBuild } from '~engine/edits';
-import { slotKey, type Build, type SlotId } from '~engine/build';
+import { sameBuild, slotKey, type Build, type SlotId } from '~engine/build';
 import type { Engine } from '~engine/mcp';
 import type { LinkReason } from '~engine/refusals';
 
@@ -26,7 +26,7 @@ export interface ClearedRow {
 
 export type LinkStatus =
   | { readonly kind: 'ok' }
-  | { readonly kind: 'cleared'; readonly rows: readonly ClearedRow[] }
+  | { readonly kind: 'cleared'; readonly rows: readonly ClearedRow[]; readonly build: Build }
   | { readonly kind: 'didNotOpen'; readonly on: LinkOn; readonly reason: LinkReason };
 
 export interface WorkspaceState {
@@ -36,7 +36,7 @@ export interface WorkspaceState {
 
 export type WorkspaceAction =
   | { readonly kind: 'select'; readonly selection: Selection | undefined }
-  | { readonly kind: 'linkOpened'; readonly cleared: readonly ClearedRow[] }
+  | { readonly kind: 'linkOpened'; readonly cleared: readonly ClearedRow[]; readonly build: Build }
   | { readonly kind: 'linkFailed'; readonly on: LinkOn; readonly reason: LinkReason }
   | { readonly kind: 'dismissLink' };
 
@@ -93,7 +93,7 @@ export function reduceWorkspace(s: WorkspaceState, a: WorkspaceAction): Workspac
     case 'select':
       return { ...s, selection: a.selection };
     case 'linkOpened': {
-      const link: LinkStatus = a.cleared.length === 0 ? LINK_OK : { kind: 'cleared', rows: a.cleared };
+      const link: LinkStatus = a.cleared.length === 0 ? LINK_OK : { kind: 'cleared', rows: a.cleared, build: a.build };
       return link === LINK_OK && s.link.kind === 'ok' && s.selection === undefined
         ? s
         : { ...s, link, selection: undefined };
@@ -117,12 +117,16 @@ export type PageAction =
 
 export function reducePage(engine: Engine, page: Page, a: PageAction): Page {
   switch (a.kind) {
-    case 'planner':
-      return { ...page, planner: reducePlanner(engine, page.planner, a.action) };
+    case 'planner': {
+      const planner = reducePlanner(engine, page.planner, a.action);
+      const link = page.workspace.link;
+      const undone = link.kind === 'cleared' && planner.future.some((b) => sameBuild(b, link.build));
+      return { ...page, planner, ...(undone && { workspace: { ...page.workspace, link: LINK_OK } }) };
+    }
     case 'linkOpened':
       return {
         ...page,
-        workspace: reduceWorkspace(page.workspace, { kind: 'linkOpened', cleared: a.cleared }),
+        workspace: reduceWorkspace(page.workspace, { kind: 'linkOpened', cleared: a.cleared, build: a.build }),
         planner: reducePlanner(engine, page.planner, { kind: 'replace', build: a.build }),
       };
     default: {

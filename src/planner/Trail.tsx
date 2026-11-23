@@ -507,7 +507,7 @@ export default function Trail(props: TrailProps) {
         <CharacterCard
           trail={api}
           folded={cardFolded()}
-          foldable={props.phone}
+          foldable={characterFolded({ ...cardView(), open: undefined, hereIsCharacter: hereIsCharacter() })}
           editing={characterOpen()}
           onToggle={() => props.send({ kind: 'character', open: cardFolded() ? true : !characterOpen() })}
           race={

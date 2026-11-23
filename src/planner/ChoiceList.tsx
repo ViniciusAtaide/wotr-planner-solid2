@@ -272,11 +272,10 @@ export function ChoiceList(props: ChoiceListProps) {
   const toggle = createClosedToggle(() => props.closed);
   const filtering = () => props.field !== undefined || props.rows.length >= FILTER_FROM;
   const collapsing = useContext(CollapsedLists);
-  const arrived = useContext(StepArrived);
   let box: HTMLDivElement | undefined;
   const panel = createListPanel(
     () => props.field !== undefined || (collapsing && filtering()),
-    untrack(() => props.field === undefined && arrived()),
+    untrack(() => props.field === undefined),
     () => box,
   );
   const all = createMemo((): readonly ChoiceRow[] => (props.field !== undefined && !panel.shown() ? [] : props.rows));

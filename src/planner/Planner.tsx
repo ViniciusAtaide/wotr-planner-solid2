@@ -54,7 +54,7 @@ export default function Planner() {
                 link:
                   opened.cleared.length === 0
                     ? { kind: 'ok' }
-                    : { kind: 'cleared', rows: clearedRows(engine, opened.build, opened.cleared) },
+                    : { kind: 'cleared', rows: clearedRows(engine, opened.build, opened.cleared), build: opened.build },
                 hash,
               }
             : {

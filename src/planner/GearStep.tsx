@@ -130,26 +130,31 @@ export function GearStep(props: GearStepProps) {
           if (first !== undefined) wear(first.guid);
         }}
       />
-      <div class="trail-scroll trail-gear__items" style={SCROLL_STYLE}>
-        <OptionList>
-          <For each={items().slice(0, ITEMS_SHOWN)} keyed={(bp) => bp.guid}>
-            {(item) => (
-              <PickerOption
-                name={item().name ?? item().assetName}
-                status="open"
-                selected={gear()[place()] === item().guid}
-                summary={summary(item().guid).text}
-                clash={clashes(item().guid).length > 0}
-                detailKey={item().guid}
-                onPick={() => wear(item().guid)}
-              />
-            )}
-          </For>
-          <Show when={items().length > ITEMS_SHOWN}>
-            <p class="trail-note">{items().length - ITEMS_SHOWN} more: type to narrow the list.</p>
-          </Show>
-        </OptionList>
-      </div>
+      <Show
+        when={items().length > 0 || text().trim() === ''}
+        fallback={<p class="trail-note">No matches for “{text()}”.</p>}
+      >
+        <div class="trail-scroll trail-gear__items" style={SCROLL_STYLE}>
+          <OptionList>
+            <For each={items().slice(0, ITEMS_SHOWN)} keyed={(bp) => bp.guid}>
+              {(item) => (
+                <PickerOption
+                  name={item().name ?? item().assetName}
+                  status="open"
+                  selected={gear()[place()] === item().guid}
+                  summary={summary(item().guid).text}
+                  clash={clashes(item().guid).length > 0}
+                  detailKey={item().guid}
+                  onPick={() => wear(item().guid)}
+                />
+              )}
+            </For>
+            <Show when={items().length > ITEMS_SHOWN}>
+              <p class="trail-note">{items().length - ITEMS_SHOWN} more: type to narrow the list.</p>
+            </Show>
+          </OptionList>
+        </div>
+      </Show>
     </div>
   );
 }

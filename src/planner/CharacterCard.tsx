@@ -117,7 +117,18 @@ export function CharacterCard(props: CharacterCardProps) {
           <p class="trail-note">Point buy only: the race and its +2 count from level 1.</p>
         </Show>
         {props.deity}
-        <Show when={props.editing || props.alignmentStep === true}>
+        <Show
+          when={props.editing || props.alignmentStep === true}
+          fallback={
+            <Show when={build().alignment}>
+              {(a) => (
+                <p class="trail-alignment-line">
+                  <span class="trail-subhead">Alignment</span> {alignmentWords(a())}
+                </p>
+              )}
+            </Show>
+          }
+        >
           <div class={['trail-alignment-field', { 'trail-alignment-field--target': props.alignmentStep === true }]}>
             <h4 class="trail-subhead">Alignment</h4>
             <AlignmentWheel

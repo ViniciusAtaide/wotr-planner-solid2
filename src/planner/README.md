@@ -490,6 +490,19 @@ address bar keeps the Build in `#b=`, so a reload opens it again.
   focus back to its button. Opening it focuses its first item; Up, Down, Home and End move between its items
   (`moveInMenu`), wrapping at the ends. While a choice dialog is open the Undo bar is fixed above it (`html.choice-open`), and on a
   phone the full-screen dialog stops short of it (`--undo-bar-height`), so Undo stays in reach.
+- **QA pass 8:**
+  - On a phone the card offers "Fold" (and its folded head) only when it can fold: Level 1 done and the card not
+    holding the step (`foldable` is `characterFolded` with the card closed). A card that isn't editing still names the
+    alignment in a read-only line (`trail-alignment-line`).
+  - A trail step's list opens at once, the step a link or a reload lands on included, with nothing focused; before,
+    only an arriving step's list did, so the step present at load showed only its filter.
+  - The cleared-link notice holds the Build it describes (`LinkStatus.cleared.build`) and goes once an Undo takes that
+    Build away. Notices sit in the page under the header (`position: sticky`), not fixed over it.
+  - An expanded parent's values count in "N open · M closed", and a closed value stays behind "Show N closed" like
+    any closed row, unless it is the current pick.
+  - Gear's filter says "No matches for …" when nothing matches.
+  - When the browser refuses Export's copy, the menu shows the sheet in a read-only box (labelled "Build sheet") with
+    "Select all" and "Close".
 - **Ticket 14 (QA of 2026-11-22):**
   - A list's row window clamps its top to the rows it has (`windowOf`), and measures again as soon as its rows change.
     Before, a list whose remembered scroll ran past its fewer rows got an empty window until typing reset the scroll.
