@@ -1642,7 +1642,7 @@ describe('QA pass 1', () => {
     expect(filter?.getAttribute('aria-keyshortcuts')).toBe('/');
   });
 
-  test('the Human bonus feat is an optional chip alongside the other first-level choices', async () => {
+  test('the Human bonus feat is a required chip alongside the other first-level choices (map 13, 2026-11-23)', async () => {
     const human =
       [...e.data.blueprints.values()].find((bp) => bp.name === 'Human' && bp.$type === 'BlueprintRace')?.guid ?? DWARF;
     await openPlanner({
@@ -1653,7 +1653,8 @@ describe('QA pass 1', () => {
       picks: [],
     });
     const bonus = chipNamed('Human bonus feat');
-    expect(bonus).toHaveTextContent('Optional');
+    expect(bonus).toHaveTextContent('Choose');
+    expect(bonus).not.toHaveTextContent('Optional');
     expect(bonus.parentElement?.classList.contains('trail-chips')).toBe(true);
     expect(bonus.closest('.trail-stop')?.querySelector('.trail-stop__mark')).toHaveTextContent('1');
     expect(bonus.closest('[aria-label="The character"]')).toBeNull();
@@ -1664,7 +1665,7 @@ describe('QA pass 1', () => {
     filterAndTake('Alertness');
     expect(chipNamed('Human bonus feat')).toHaveTextContent('Alertness');
     tap('Undo');
-    expect(chipNamed('Human bonus feat')).toHaveTextContent('Optional');
+    expect(chipNamed('Human bonus feat')).toHaveTextContent('Choose');
     cleanup();
     await openPlanner({ ...cleaver, race: DWARF });
     expect(() => chipNamed('Human bonus feat')).toThrow();

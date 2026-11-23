@@ -28,7 +28,7 @@ import { describe, summaryText, type Description } from '../describe';
 import { allows, apply, breaksOf, cascade, type Breaks, type Edit } from '../edits';
 import { buildGrantIndex, type GrantIndex, type GrantParam } from '../grants';
 import { linkIndex, linkNames, sharedWords, stackWords } from '../links';
-import { gearClashes, picker, raceStatPending, type OptionStatus } from '../pickers';
+import { gearClashes, openSlotsAt, picker, raceStatPending, type OptionStatus } from '../pickers';
 import {
   abilityScoreRange,
   archetypeCount,
@@ -221,20 +221,17 @@ export interface SlotView {
 }
 
 function openSlots(e: Engine, build: Build, place?: Place): SlotView[] {
-  return walk(e.data, build, e.G)
-    .slots.filter((s) => s.pick === undefined && (place === undefined || placeKey(s.id.place) === placeKey(place)))
-    .filter((s) => e.data.blueprints.get(s.id.selection)?.$type !== 'BlueprintParametrizedFeature')
-    .map((s) => {
-      const bp = e.data.blueprints.get(s.id.selection);
-      const group = bp?.$type === 'BlueprintFeatureSelection' ? (bp as BlueprintFeatureSelection).Group : undefined;
-      return {
-        slot: s.id,
-        place: placeKey(s.id.place),
-        selection: nameOf(e.data, s.id.selection),
-        band: bp?.$type === 'BlueprintFeatureSelectMythicSpellbook' ? 'ReplaceSpellbook' : bandOf(group),
-        kind: bp?.$type ?? 'unknown',
-      };
-    });
+  return openSlotsAt(e.data, build, walk(e.data, build, e.G).slots, place).map((s) => {
+    const bp = e.data.blueprints.get(s.id.selection);
+    const group = bp?.$type === 'BlueprintFeatureSelection' ? (bp as BlueprintFeatureSelection).Group : undefined;
+    return {
+      slot: s.id,
+      place: placeKey(s.id.place),
+      selection: nameOf(e.data, s.id.selection),
+      band: bp?.$type === 'BlueprintFeatureSelectMythicSpellbook' ? 'ReplaceSpellbook' : bandOf(group),
+      kind: bp?.$type ?? 'unknown',
+    };
+  });
 }
 
 export interface RankDue {

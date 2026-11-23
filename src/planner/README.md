@@ -21,8 +21,8 @@ A Build reads as the character's path, phone first. From top to bottom the page 
   points left, and the character's own picks as a column of labeled search fields (user, 2026-11-21;
   `CharacterField.tsx`): Race at the top, its label visually hidden (screen readers still announce it), then the deity
   under it, then what else the race grants and the background (user, 2026-11-22; `deity` on `CharacterCard`,
-  `isDeitySlot`). Which slots those are is S's answer (`characterWideSlots`), less the Human bonus feat, which is an
-  optional Level 1 pick (below). A field shows its label and the current choice, or "Choose your …" in the accent style while unset; the one the
+  `isDeitySlot`). Which slots those are is S's answer (`characterWideSlots`), less the Human bonus feat, which sits on Level 1
+  (below). A field shows its label and the current choice, or "Choose your …" in the accent style while unset; the one the
   trail waits on is underlined in gold. Inline first, focusing or typing in it opens its list under it (the lists'
   field mode, `FieldMode` on `ChoiceList` and `PickStep`: the same cap, windowing, closed rows and keys), and a pick
   closes it and moves the trail on, with no step heading, Back or Expand around it. While closed, a field computes
@@ -40,8 +40,8 @@ A Build reads as the character's path, phone first. From top to bottom the page 
 - **The trail**: one stop per character level, titled with its class and class level, with its picks as chips: each
   slot the walk opens there, the ability increase when the walk offers one, and the skills ("4 ranks"). A class with an
   archetype is titled by the archetype ("Two-Handed Fighter 1", `levelClassName`); there is no Archetype chip (user,
-  2026-11-22). A Human's bonus feat is a Level 1 chip that reads "Human bonus feat" and "Optional" until filled
-  (`isHumanBonusFeat`). Each Mythic rank is its own stop after the level it is taken at, in the Mythic color; every 4th
+  2026-11-22). A Human's bonus feat is a Level 1 chip that reads "Human bonus feat" (`isHumanBonusFeat`), required like
+  every slot (map 13, 2026-11-23). Each Mythic rank is its own stop after the level it is taken at, in the Mythic color; every 4th
   level is a milestone, marked in gold.
 - **Gear**: a card after the trail, one line listing what is worn; a tap opens the places and their items in place.
 
@@ -65,9 +65,11 @@ to the player in the planner's own words: "Level 5 · choose feat", "Your charac
    trail waits on it, and arriving there scrolls it into view and focuses its first node. It comes before the first
    class, and so before the deity and every other character choice.
 3. the first empty slot with the character, in the card's order (the deity, under the race, before the background:
-   ticket 14), then the first empty slot on the trail, in the walk's order. The Human
-   bonus feat is never a step: it stays empty until tapped, and level 1 counts as done without it (user, 2026-11-22;
-   the game itself won't finish the level with it empty, and the MCP still lists it as open);
+   ticket 14), then the first empty slot on the trail, in the walk's order. An empty slot is one S lists as open
+   (`openSlotsAt`, through `openSlots`): no pick, not a parametrized feat's own slot, and not a spell feat held
+   without its spell. The MCP's `next_slots` lists the same slots, so the planner and the MCP agree on when a Build
+   is finished, and a level counts as done (`levelOneDone`) only once nothing is open at its place. Every open slot
+   is required, the Human bonus feat included (map 13, 2026-11-23, reversing the 2026-11-22 optional pick);
 4. an ability increase the walk offers and the Build hasn't taken;
 5. the last level's skills, until the walk's budget for that level is spent or the player chooses "Done · leave N
    unspent";
@@ -595,7 +597,8 @@ address bar keeps the Build in `#b=`, so a reload opens it again.
 
 ### Questions built the prototype's way, waiting on the user (build ticket 07)
 
-1. Answered (user, 2026-11-22): a Human's bonus feat is an optional Level 1 pick, not a chip on the character card.
+1. Answered (user, 2026-11-22; amended 2026-11-23): a Human's bonus feat is a Level 1 chip, not one on the character
+   card, and it is required like every open slot.
 2. A due Mythic rank is a list of paths each time, with the current path first and marked; there is no one-tap
    "Continue as <path>".
 3. Adding a level never adds its Mythic rank; the rank is offered as the next step once its Expected level is reached.

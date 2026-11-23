@@ -12,9 +12,10 @@ import {
 } from '~engine/build';
 import { cascade } from '~engine/edits';
 import { readDataDir } from '~engine/data-dir';
-import { jackInTheGreen } from '~engine/gold';
+import { encodeBuild } from '~engine/codec';
+import { enforcer, jackInTheGreen } from '~engine/gold';
 import { loadData } from '~engine/load';
-import { engineOf, expectedLevel } from '~engine/mcp';
+import { engineOf, expectedLevel, next_slots } from '~engine/mcp';
 import { picker } from '~engine/pickers';
 import { walk } from '~engine/walk';
 
@@ -27,33 +28,35 @@ import {
   characterEditing,
   characterFolded,
   characterSlots,
-  isDeitySlot,
-  isHumanBonusFeat,
   firstCleared,
   folded,
   gearDependentSlots,
+  isDeitySlot,
+  isHumanBonusFeat,
   keepsSelection,
   levelLine,
   levelOneDone,
   mythicDue,
   nextStep,
+  openSlots,
   pickLabels,
   reduceTrail,
   sameRanks,
   skillBudget,
   slotsAt,
+  type Step,
   stepTitle,
   TRAIL_START,
-  whereOf,
-  type Step,
   type TrailState,
   type TrailView,
+  whereOf,
 } from './trail-state';
 
 const files = readDataDir(join(process.cwd(), 'data'));
 const e = engineOf(loadData(files.files, files.overrides));
 
 const HUMAN = '0a5d473ead98b0646b94495af250fdc4';
+const DWARF = 'c4faf439f0e70bd40b5e36ee80d06be7';
 const FIGHTER = '48ac8db94d5de7645906c7d0ad3bcfbd';
 const MYTHIC_HERO = '247aa787806d5da4f89cfc3dff0b217f';
 const LEGEND = '3d420403f3e7340499931324640efe96';
@@ -165,21 +168,32 @@ describe('auto-advance: each pick opens the next empty one', () => {
     expect(stepTitle(viewOf(b), level)).toMatch(/^Level 1 · choose /);
   });
 
-  test('an unfilled Human bonus feat is optional while the normal level feat remains required', () => {
+  test('a Human’s bonus feat is required like the level’s own feat: auto-advance stops at it (map 13, 2026-11-23)', () => {
     const complete = filled(human(1));
+    expect(next(complete).kind).toBe('skills');
     const bonus = viewOf(complete).walk.slots.find((s) => isHumanBonusFeat(viewOf(complete), s));
     expect(bonus).toBeDefined();
     const withoutBonus = { ...complete, picks: complete.picks.filter((p) => slotKey(p.slot) !== slotKey(bonus!.id)) };
-    expect(next(withoutBonus).kind).toBe('skills');
+    expect(next(withoutBonus)).toEqual({ kind: 'slot', slot: bonus!.id });
+    expect(levelOneDone(viewOf(withoutBonus), next(withoutBonus))).toBe(false);
+    const dwarf = filled({ ...human(1), race: DWARF });
+    expect(next(dwarf).kind).toBe('skills');
     const normal = slotsAt(viewOf(complete), { level: 1 }).find(
       (s) => s.id.selection === BASIC_FEAT_SELECTION && s.id.from !== HUMAN,
     );
     expect(normal).toBeDefined();
     const withoutNormal = {
+      ...complete,
+      picks: complete.picks.filter((p) => slotKey(p.slot) !== slotKey(normal!.id)),
+    };
+    expect(next(withoutNormal)).toEqual({ kind: 'slot', slot: normal!.id });
+    const withoutBoth = {
       ...withoutBonus,
       picks: withoutBonus.picks.filter((p) => slotKey(p.slot) !== slotKey(normal!.id)),
     };
-    expect(next(withoutNormal)).toEqual({ kind: 'slot', slot: normal!.id });
+    expect([slotKey(bonus!.id), slotKey(normal!.id)]).toContain(
+      slotKey((next(withoutBoth) as { readonly slot: SlotId }).slot),
+    );
   });
 
   test('a Human bonus feat’s sub-choice stays with it on level 1, and two Skill Focus picks keep their own skills', () => {
@@ -338,13 +352,30 @@ describe('chapters and folding (phones only)', () => {
     expect(reduceTrail(shown, { kind: 'toggleClosed', list: 'pick' }).closedShown.has('pick')).toBe(false);
   });
 
+  test('the trail and the MCP’s next_slots agree on which slots are open (map 13, 2026-11-23)', async () => {
+    const complete = filled(human(1));
+    const bonus = viewOf(complete).walk.slots.find((s) => isHumanBonusFeat(viewOf(complete), s));
+    if (bonus === undefined) throw new Error('no Human bonus feat');
+    const humanWithout = { ...complete, picks: complete.picks.filter((p) => slotKey(p.slot) !== slotKey(bonus.id)) };
+    for (const build of [jackInTheGreen.build, enforcer.build, humanWithout, complete]) {
+      const reply = await next_slots(e, { code: await encodeBuild(e.data, build) });
+      if (!('slots' in reply)) throw new Error('next_slots refused');
+      const mcp = new Set(reply.slots.map((s) => slotKey(s.slot)));
+      expect([...openSlots(viewOf(build))].sort()).toEqual([...mcp].sort());
+      const step = next(build, { skillsLeft: new Set(build.levels.map((_, i) => i + 1)), mythicLater: undefined });
+      expect(step.kind === 'slot').toBe(mcp.size > 0);
+    }
+  });
+
   test('level 1 is done once its every choice is made, not when it is added', () => {
     const added = human(1);
     expect(levelOneDone(viewOf(added), next(added))).toBe(false);
     const made = filled(added);
     const spent = { skillsLeft: new Set([1]), mythicLater: undefined };
     expect(levelOneDone(viewOf(made), next(made, spent))).toBe(true);
-    expect(levelOneDone(viewOf(human(2)), next(human(2)))).toBe(true);
+    expect(levelOneDone(viewOf(human(2)), next(human(2)))).toBe(false);
+    const both = filled(human(2));
+    expect(levelOneDone(viewOf(both), next(both))).toBe(true);
     expect(levelOneDone(viewOf({ levels: [], picks: [] }), { kind: 'nextLevel' })).toBe(false);
   });
 

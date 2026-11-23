@@ -7,4 +7,5 @@ export * from './option-names';
 export * from './tags';
 export * from './gear-clashes';
 export * from './gear-options';
+export * from './open-slots';
 export { cites } from './cites';

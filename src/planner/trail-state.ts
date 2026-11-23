@@ -14,8 +14,11 @@ import { expectedLevel } from '~engine/mcp';
 import {
   BACKGROUNDS_BASE_SELECTION,
   characterWideSlots,
+  heldSpellFeat,
   heritageSlotIn,
+  isSpellFeat,
   namesInList,
+  openSlotsAt,
   raceStatPending,
 } from '~engine/pickers';
 import { nameOf } from '~engine/refusals';
@@ -123,17 +126,10 @@ export interface TrailView {
 
 export const SPELL_NOT_MODELLED = 'Its spell isn’t in the planner yet (map 22).';
 
-export function isSpellFeat(data: CheckedData, feature: string): boolean {
-  const bp = data.blueprints.get(feature);
-  return (
-    bp?.$type === 'BlueprintParametrizedFeature' &&
-    (bp.ParameterType === 'SpellSpecialization' || bp.ParameterType === 'LearnSpell')
-  );
-}
+export { isSpellFeat };
 
 export function spellPick(t: TrailView, slot: SlotId): BuildPick | undefined {
-  const pick = t.build.picks.find((p) => slotKey(p.slot) === slotKey(slot));
-  return pick !== undefined && pick.param === undefined && isSpellFeat(t.data, pick.feature) ? pick : undefined;
+  return heldSpellFeat(t.data, t.build, slot);
 }
 
 const byWalk = <T>(compute: (t: TrailView) => T): ((t: TrailView) => T) => {
@@ -146,6 +142,8 @@ const byWalk = <T>(compute: (t: TrailView) => T): ((t: TrailView) => T) => {
     return fresh;
   };
 };
+
+export const openSlots = byWalk((t) => new Set(openSlotsAt(t.data, t.build, t.walk.slots).map((s) => slotKey(s.id))));
 
 const wideSlots = byWalk((t) => {
   const slots = new Set(characterWideSlots(t.data, t.walk.slots));
@@ -321,7 +319,8 @@ export function nextStep(
   if (t.build.race === undefined) return { kind: 'race' };
   if (t.build.scores === undefined || raceStatPending(t.data, t.build)) return { kind: 'scores' };
   if (t.build.alignment === undefined) return { kind: 'alignment' };
-  const empty = (slots: readonly OpenedSlot[]) => slots.find((x) => x.pick === undefined && !isHumanBonusFeat(t, x));
+  const open = openSlots(t);
+  const empty = (slots: readonly OpenedSlot[]) => slots.find((x) => open.has(slotKey(x.id)));
   const character = empty(cardOrder(t, characterSlots(t)));
   if (character !== undefined) return { kind: 'slot', slot: character.id };
   const slot = empty(shownSlots(t));
@@ -464,9 +463,8 @@ export function folded(chapter: number, v: FoldView): boolean {
 
 export function levelOneDone(t: TrailView, next: Step): boolean {
   const levels = t.build.levels.length;
-  return (
-    levels > 1 || (levels === 1 && (next.kind === 'nextLevel' || next.kind === 'mythic' || next.kind === 'complete'))
-  );
+  if (levels === 0 || openSlotsAt(t.data, t.build, t.walk.slots, { level: 1 }).length > 0) return false;
+  return levels > 1 || next.kind === 'nextLevel' || next.kind === 'mythic' || next.kind === 'complete';
 }
 
 export interface CardView {

@@ -346,14 +346,13 @@ export default function Trail(props: TrailProps) {
       icon: s.pick === undefined || background ? undefined : featCategory(data(), s.pick.feature),
       gear: s.pick !== undefined && gearDependentSlots(view()).has(slotKey(s.id)),
       note: spellPick(view(), s.id) === undefined ? undefined : SPELL_NOT_MODELLED,
-      optional: isHumanBonusFeat(view(), s),
     };
   };
   type SlotChip = ReturnType<typeof chipOf>;
   const chipKey = (c: SlotChip) =>
     [slotKey(c.slot), c.label, c.value ?? '', c.icon ?? '', c.gear ? 'gear' : '', c.note ?? ''].join('\u0000');
   const slotChip = (c: SlotChip) =>
-    chip(c.label, c.value, { kind: 'slot', slot: c.slot }, c.icon, c.gear, c.optional ? 'Optional' : 'Choose', c.note);
+    chip(c.label, c.value, { kind: 'slot', slot: c.slot }, c.icon, c.gear, 'Choose', c.note);
   const chipsAt = (place: Place): readonly SlotChip[] => {
     const slots = slotsAt(view(), place);
     const labels = pickLabels(data(), slots);
