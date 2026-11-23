@@ -1,8 +1,9 @@
 import type { JSX } from '@solidjs/web';
-import { Show } from 'solid-js';
+import { flush, Show } from 'solid-js';
 
 import { ChoiceDialog } from './ChoiceDialog';
 import type { FieldMode } from './ChoiceList';
+import type { EditOutcome } from './planner-state';
 import type { TrailApi } from './steps';
 import { stepKey, type Step } from './trail-state';
 
@@ -12,7 +13,7 @@ export interface CharacterFieldProps {
   readonly title: string;
   readonly field: FieldMode;
   readonly modal: boolean;
-  readonly list: (field: FieldMode | undefined) => JSX.Element;
+  readonly list: (field: FieldMode | undefined, trail: TrailApi) => JSX.Element;
 }
 
 export function CharacterField(props: CharacterFieldProps) {
@@ -37,13 +38,39 @@ export function CharacterField(props: CharacterFieldProps) {
       return props.field.onArrived;
     },
   };
+  const closeForPick = () => {
+    props.trail.send({ kind: 'dialog', step: undefined });
+    flush();
+  };
+  const reopenUnless = (outcome: EditOutcome): EditOutcome => {
+    if (outcome !== 'applied') props.trail.send({ kind: 'dialog', step: key() });
+    return outcome;
+  };
+  const dialogTrail: TrailApi = {
+    get planner() {
+      return props.trail.planner;
+    },
+    view: () => props.trail.view(),
+    state: () => props.trail.state(),
+    send: (a) => props.trail.send(a),
+    selection: () => props.trail.selection(),
+    select: (s) => props.trail.select(s),
+    edit: (edit, title) => {
+      closeForPick();
+      return reopenUnless(props.trail.edit(edit, title));
+    },
+    editAll: (edits, title) => {
+      closeForPick();
+      return reopenUnless(props.trail.editAll(edits, title));
+    },
+  };
   const shown = () => props.trail.state().dialog === key() && props.trail.planner.session().kind !== 'confirming';
   let returning = false;
   const openDialog = () => {
     if (!returning) props.trail.send({ kind: 'dialog', step: key() });
   };
   return (
-    <Show when={props.modal} fallback={props.list(live)}>
+    <Show when={props.modal} fallback={props.list(live, props.trail)}>
       <label
         class={[
           'trail-field',
@@ -74,7 +101,7 @@ export function CharacterField(props: CharacterFieldProps) {
             }, 0);
           }}
         >
-          {props.list(undefined)}
+          {props.list(undefined, dialogTrail)}
         </ChoiceDialog>
       </Show>
     </Show>

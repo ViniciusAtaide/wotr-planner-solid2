@@ -842,6 +842,23 @@ describe('the levelling trail (build ticket 07)', () => {
     },
   );
 
+  test('on a finished Build, Gear’s way back reads "Back to the Build" (QA pass 9)', { timeout: 120_000 }, () => {
+    const finished = everyChoiceMade(jackInTheGreen.build);
+    render(() => (
+      <Trail
+        planner={createPlanner(e, finished)}
+        state={{ ...TRAIL_START, skillsLeft: new Set([20]) }}
+        send={() => {}}
+        selection={{ kind: 'gear' }}
+        select={() => {}}
+        phone={false}
+      />
+    ));
+    flush();
+    expect(screen.getByRole('button', { name: 'Back to the Build' })).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Back to the next choice' })).toBeNull();
+  });
+
   test(
     'at the level cap the trail ends on the cap level, with no closing stop (user, 2026-11-21)',
     { timeout: 120_000 },
@@ -1023,6 +1040,25 @@ describe('the levelling trail (build ticket 07)', () => {
     flush();
     tap(/^Continue as Fighter/);
     expect(planner.build().levels.map((l) => l.class)).toEqual([fighter, fighter]);
+  });
+
+  test('a held archetype’s row in Another class… is found by its class’s name too (QA pass 9)', () => {
+    const MUTATION_WARRIOR = '758e0061a077e54409a3bf0eb51511e5';
+    const held: Build = { ...cleaver, classChoices: { [fighter]: { archetypes: [MUTATION_WARRIOR] } } };
+    const api = apiOf(createPlanner(e, held), { ...TRAIL_START, otherClass: true });
+    render(() => <NextLevelStep trail={api} />);
+    flush();
+    const filter = document.querySelector<HTMLInputElement>('[data-picker-filter]');
+    filter?.focus();
+    fireEvent.input(filter ?? document.body, { target: { value: 'fighter' } });
+    flush();
+    const names = [...document.querySelectorAll('.ww-option__name')].map((n) => n.textContent);
+    expect(names).toContain('Mutation Warrior · Fighter');
+    fireEvent.input(filter ?? document.body, { target: { value: 'mutation' } });
+    flush();
+    expect([...document.querySelectorAll('.ww-option__name')].map((n) => n.textContent)).toContain(
+      'Mutation Warrior · Fighter',
+    );
   });
 
   test('the class list waits for Another class…, and offers player classes only (comparison bug 5)', () => {
@@ -1248,14 +1284,14 @@ describe('render regressions (ticket 05d), each failing before its fix', () => {
     expect(levelRows()).toBe(3);
   });
 
-  test('a failed paste keeps the pasted link until the Build is edited (QA pass 1)', async () => {
+  test('a failed paste writes the kept Build’s code back, so a reload or a copied link keeps it (QA pass 9)', async () => {
     const code = await openPlanner(cleaver);
     pasteHash('#b=not-a-build-code');
     await waitFor(() => expect(document.querySelector('.planner-notice')).not.toBeNull());
-    expect(location.hash).toBe('#b=not-a-build-code');
+    await waitFor(() => expect(location.hash).toBe(`#b=${code}`));
+    expect(levelRows()).toBe(1);
     tap('Lawful Good');
-    await waitFor(() => expect(location.hash).not.toBe('#b=not-a-build-code'));
-    expect(location.hash).not.toBe(`#b=${code}`);
+    await waitFor(() => expect(location.hash).not.toBe(`#b=${code}`));
     expect(location.hash).toMatch(/^#b=./);
   });
 
@@ -2103,7 +2139,7 @@ describe('nested sub-choices (ticket 08)', () => {
     expect(armor).toBeDefined();
     expect(picks.some((p) => p.slot.selection === armor?.feature)).toBe(true);
     expect(planner.state().past).toHaveLength(1);
-    expect(planner.change()).toBe('Picked Armor Focus (Light Armor Focus)');
+    expect(planner.change()).toBe('Picked Feat: Armor Focus (Light Armor Focus)');
     planner.undo();
     flush();
     expect(planner.build()).toEqual(fighter1);
@@ -2305,7 +2341,7 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
     expect(document.documentElement.classList.contains('choice-open')).toBe(true);
     const first = dialogTitle();
     pickFirstIn(dialogBox() ?? document);
-    await waitFor(() => expect(dialogTitle()).not.toBe(first));
+    await waitFor(() => expect(dialogTitle() ?? first).not.toBe(first));
     expect(dialogTitle()).toBeTruthy();
   });
 
@@ -2369,13 +2405,28 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
     expect(dialogTitle()).toBe('Level 1 · choose feat');
   });
 
+  test('Modal first: a pick commits and closes its dialog at once, and the next one opens after the paint (QA pass 9)', async () => {
+    localStorage.setItem('wotr.choiceLists', 'modal');
+    await openPlanner(cleaver);
+    openField('Deity');
+    await waitFor(() => expect(dialogTitle()).toBe('Your character · choose deity'));
+    pickFirstIn(dialogBox() ?? document);
+    expect(fieldValue('Deity')).not.toBe('');
+    expect(dialogBox()).toBeNull();
+    await waitFor(() => expect(dialogTitle()).toBe('Your character · choose background'));
+    fireEvent.keyDown(dialogBox() ?? document.body, { key: 'Escape' });
+    flush();
+    await new Promise((r) => setTimeout(r, 20));
+    await waitFor(() => expect(historyIdle()).toBe(true));
+  });
+
   test('a pick in the dialog leaves the next step’s dialog open once the old one’s history entry settles (ticket 10)', async () => {
     localStorage.setItem('wotr.choiceLists', 'modal');
     await openPlanner(cleaver);
     openTarget();
     const first = dialogTitle();
     pickFirstIn(dialogBox() ?? document);
-    await waitFor(() => expect(dialogTitle()).not.toBe(first));
+    await waitFor(() => expect(dialogTitle() ?? first).not.toBe(first));
     const next = dialogTitle();
     await new Promise((r) => setTimeout(r, 30));
     flush();
@@ -2950,7 +3001,7 @@ describe('QA pass 4, severity 1', () => {
     const view = { data: e.data, build: planner.build(), walk: planner.walked() };
     const chip = pickLabels(e.data, slotsAt(view, { level: 7 })).get(slotKey(slot));
     expect(chip).toBeDefined();
-    expect(planner.change()).toBe(`Picked ${chip}`);
+    expect(planner.change()).toBe(`Picked Bloodline Feat: ${chip}`);
   });
 
   test('a nested name keeps one level of parentheses (QA pass 6)', () => {
@@ -3378,6 +3429,78 @@ describe('two Skill Focus picks at one level (map 35)', () => {
     expect(linkCleared(1)).toBe("This link held a pick the game doesn't allow, so it was cleared:");
   });
 
+  test('the Human bonus feat’s filter is named by its slot (QA pass 9)', () => {
+    const api = apiOf(createPlanner(e, warrior));
+    render(() => <PickStep trail={api} slot={humanFeat} />);
+    flush();
+    expect(document.querySelector('[data-picker-filter]')?.getAttribute('aria-label')).toBe(
+      'Filter Human bonus feat by name',
+    );
+  });
+
+  test('Export names each level as its stop does (QA pass 9)', () => {
+    const two: Build = { ...warrior, levels: [{ class: fighter }, { class: fighter }] };
+    const sheet = buildSheet({ data: e.data, build: trusted(two), walk: walk(e.data, two, e.G) });
+    expect(sheet).toContain('Level 1: Mutation Warrior 1');
+    expect(sheet).toContain('Level 2: Mutation Warrior 2');
+    expect(sheet).not.toContain('Fighter 2');
+  });
+
+  test('a sub-choice reads its parent’s slot: step title, chip place, value rows and Undo line (QA pass 9)', () => {
+    const parentOnly: Build = { ...warrior, picks: [{ slot: humanFeat, feature: SKILL_FOCUS }] };
+    const sub = childSlot(humanFeat, SKILL_FOCUS);
+    const view = { data: e.data, build: trusted(parentOnly), walk: walk(e.data, parentOnly, e.G) };
+    expect(stepTitle(view, { kind: 'slot', slot: sub })).toBe('Level 1 · Human bonus feat: choose for Skill Focus');
+    const planner = createPlanner(e, parentOnly);
+    const shown = render(() => (
+      <Trail
+        planner={planner}
+        state={TRAIL_START}
+        send={() => {}}
+        selection={undefined}
+        select={() => {}}
+        phone={false}
+      />
+    ));
+    flush();
+    const level1 = [...document.querySelectorAll('.trail-stop')].find(
+      (li) => li.querySelector('.trail-stop__mark')?.textContent === '1',
+    );
+    const chips = [...(level1?.querySelectorAll('.trail-chip small') ?? [])].map((c) => c.textContent);
+    const at = chips.indexOf('Human bonus feat');
+    expect(at).toBeGreaterThanOrEqual(0);
+    expect(chips[at + 1]).toBe('Skill Focus');
+    shown.unmount();
+    const api = apiOf(planner);
+    render(() => <PickStep trail={api} slot={sub} />);
+    flush();
+    const athletics = [...document.querySelectorAll<HTMLElement>('button.ww-option')].find((b) =>
+      b.textContent?.includes('Athletics'),
+    );
+    expect(athletics).toBeDefined();
+    fireEvent.click(athletics ?? document.body);
+    flush();
+    expect(planner.change()).toBe('Picked Human bonus feat: Skill Focus (Athletics)');
+  });
+
+  test('the values under an expanded parent show just the value (QA pass 9)', () => {
+    const api = apiOf(createPlanner(e, warrior));
+    render(() => <PickStep trail={api} slot={humanFeat} />);
+    flush();
+    const filter = document.querySelector<HTMLInputElement>('[data-picker-filter]');
+    filter?.focus();
+    fireEvent.input(filter ?? document.body, { target: { value: 'skill focus' } });
+    flush();
+    const parent = [...document.querySelectorAll<HTMLElement>('[data-parent] button.ww-option')].find(
+      (b) => b.querySelector('.ww-option__name')?.textContent === 'Skill Focus',
+    );
+    fireEvent.click(parent ?? document.body);
+    flush();
+    const names = [...document.querySelectorAll('[data-child-of] .ww-option__name')].map((n) => n.textContent);
+    expect(names).toContain('Athletics');
+    expect(names.some((n) => n?.startsWith('Skill Focus'))).toBe(false);
+  });
+
   test('an open parent counts its values, and hides a closed value until "Show N closed" (QA pass 8)', () => {
     const taken: Build = {
       ...warrior,
@@ -3407,7 +3530,7 @@ describe('two Skill Focus picks at one level (map 35)', () => {
     expect(values().some((b) => b.textContent?.includes('Lore (Religion)'))).toBe(true);
   });
 
-  test('the cleared-link notice goes when the Build it describes is undone, and sits under the bar (QA pass 8)', async () => {
+  test('the cleared-link notice goes when the Build it describes is undone, and sits in the page under the bar (QA passes 8 and 9)', async () => {
     const twice: Build = {
       ...warrior,
       picks: [
@@ -3428,8 +3551,7 @@ describe('two Skill Focus picks at one level (map 35)', () => {
     expect(bar?.compareDocumentPosition(notice() ?? document.body)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
     const css = readFileSync(join(process.cwd(), 'src/planner/planner.css'), 'utf8');
     const rule = css.slice(css.indexOf('.planner-notices {'), css.indexOf('}', css.indexOf('.planner-notices {')));
-    expect(rule).toContain('position: sticky');
-    expect(rule).not.toContain('position: fixed');
+    expect(rule).not.toContain('position:');
     tap('Undo');
     await waitFor(() => expect(notice()).toBeUndefined());
   });

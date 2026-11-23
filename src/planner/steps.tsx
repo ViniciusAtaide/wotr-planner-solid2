@@ -265,7 +265,7 @@ function ClassList(props: TrailStepProps) {
         if (judged.shown === false && c.guid !== previous) return [];
         const name = judged.label ?? bareNameOf(data, c.guid);
         const held = b.classChoices?.[c.guid]?.archetypes[0];
-        const selectedName = held === undefined ? name : bareNameOf(data, held);
+        const selectedName = held === undefined ? name : joinedName(bareNameOf(data, held), name);
         const plain: ChoiceRow = {
           key: c.guid,
           name: selectedName,

@@ -214,8 +214,10 @@ function Workspace(props: WorkspaceProps) {
         send({ kind: 'linkOpened', build: opened.build, cleared: clearedRows(engine, opened.build, opened.cleared) });
         return;
       }
-      brokenOver = planner.latest().present;
       send({ kind: 'linkFailed', on: 'paste', reason: opened.reason });
+      afterHistorySettles(() => {
+        if (ownHash !== '') writeHash(ownHash);
+      });
     });
   };
 

@@ -233,7 +233,10 @@ export function clearsList(engine: Engine, before: Build, v: Clears): Pending['c
   const rowName = (p: Pick): string => {
     const key = parentKey(p.slot);
     const parent = key === undefined ? undefined : before.picks.find((q) => slotKey(q.slot) === key);
-    if (parent === undefined) return named(p, 0);
+    if (parent === undefined)
+      return subChoiceOf(v.cleared, p) === undefined
+        ? named(p, 0)
+        : `${slotWords(engine.data, before, p.slot)}: ${named(p, 0)}`;
     return `${slotWords(engine.data, before, parent.slot)}: ${nestedLabel(pickName(engine.data, parent), named(p, 0))}`;
   };
   const rows = [

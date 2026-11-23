@@ -26,7 +26,7 @@ import { BackgroundStep, RaceStep } from './CharacterSteps';
 import { PickStep } from './PickStep';
 import { StepArrived } from './ChoiceList';
 import { featCategory } from './feat-category';
-import { firstControl } from './focus-return';
+import { afterPaint, firstControl } from './focus-return';
 import { backgroundLabel, raceLabel } from './flat-choices';
 import { GearStep, wornLine } from './GearStep';
 import type { EditOutcome, NonEmpty } from './planner-state';
@@ -45,37 +45,38 @@ import {
   chapterRange,
   chapters,
   chapterSummary,
+  characterChipSlots,
   characterEditing,
   characterFolded,
-  characterChipSlots,
   characterSlots,
-  isCharacterSlot,
+  chipSlots,
   folded,
   gearDependentSlots,
   hereLevel,
   increaseOffered,
   isBackgroundSlot,
-  isHumanBonusFeat,
+  isCharacterSlot,
   isDeitySlot,
-  levelStopName,
+  isHumanBonusFeat,
   keepsSelection,
   levelOneDone,
-  chipSlots,
-  pickLabels,
+  levelStopName,
   nextStep,
+  parentsFirst,
+  pickLabels,
   rankNumbersAt,
   skillBudget,
   slotName,
+  slotsAt,
   SPELL_NOT_MODELLED,
   spellPick,
-  slotsAt,
+  type Step,
   stepKey,
   stepTitle,
-  whereOf,
-  type Step,
   type TrailAction,
   type TrailState,
   type TrailView,
+  whereOf,
 } from './trail-state';
 import { sameSelection, type Selection } from './workspace-state';
 import { optionName } from './words';
@@ -91,6 +92,7 @@ export interface HereProps {
   readonly step: string;
   readonly title: string;
   readonly editing: boolean;
+  readonly finished?: boolean;
   readonly onBack: () => void;
   readonly list?: boolean;
   readonly mode?: ListMode;
@@ -111,7 +113,11 @@ export function Here(props: HereProps) {
   const dialog = () => props.dialogOpen === true;
   onSettled(() => {
     if (!arrived()) return;
-    if (modal()) setDialog(true);
+    let live = true;
+    if (modal())
+      afterPaint(() => {
+        if (live && !dialog()) setDialog(true);
+      });
     const frame = requestAnimationFrame(() => {
       const still = matchMedia(REDUCED_MOTION).matches;
       el?.scrollIntoView?.({ block: 'start', behavior: still ? 'auto' : 'smooth' });
@@ -119,7 +125,10 @@ export function Here(props: HereProps) {
         firstControl(el, matchMedia(FINE_POINTER).matches)?.focus({ preventScroll: true });
       }
     });
-    return () => cancelAnimationFrame(frame);
+    return () => {
+      live = false;
+      cancelAnimationFrame(frame);
+    };
   });
   return (
     <div
@@ -136,7 +145,7 @@ export function Here(props: HereProps) {
         <div class="trail-here__links">
           <Show when={props.editing}>
             <button type="button" class="trail-link" data-back onClick={() => props.onBack()}>
-              Back to the next choice
+              {props.finished === true ? 'Back to the Build' : 'Back to the next choice'}
             </button>
           </Show>
           <Show when={props.list === true}>
@@ -246,6 +255,7 @@ export default function Trail(props: TrailProps) {
           step={key}
           title={stepTitle(view(), step())}
           editing={editing() && step().kind !== 'scores' && stepKey(step()) !== stepKey(next())}
+          finished={next().kind === 'complete'}
           onBack={() => props.select(undefined)}
           list={isListStep(step(), build().levels.length)}
           mode={props.listMode ?? 'inline'}
@@ -326,8 +336,8 @@ export default function Trail(props: TrailProps) {
           arrive: arriving() === stepKey(step),
           onArrived: arrivalDone,
         }}
-        list={(f) =>
-          background() ? <BackgroundStep trail={api} field={f} /> : <PickStep trail={api} slot={s.id} field={f} />
+        list={(f, trail) =>
+          background() ? <BackgroundStep trail={trail} field={f} /> : <PickStep trail={trail} slot={s.id} field={f} />
         }
       />
     );
@@ -356,7 +366,7 @@ export default function Trail(props: TrailProps) {
   const chipsAt = (place: Place): readonly SlotChip[] => {
     const slots = slotsAt(view(), place);
     const labels = pickLabels(data(), slots);
-    return chipSlots(slots).map((s) => chipOf(s, labels));
+    return parentsFirst(chipSlots(slots)).map((s) => chipOf(s, labels));
   };
   const slotChips = (place: Place) => (
     <For each={chipsAt(place)} keyed={chipKey}>
@@ -429,8 +439,12 @@ export default function Trail(props: TrailProps) {
         setArriving(undefined);
         return;
       }
-      if (modal && now.kind !== 'alignment') props.send({ kind: 'dialog', step: arrivingKey });
-      else setArriving(arrivingKey);
+      if (modal && now.kind !== 'alignment') {
+        afterPaint(() => {
+          if (stepKey(untrack(next)) === key && untrack(() => props.state.dialog) === undefined)
+            props.send({ kind: 'dialog', step: arrivingKey });
+        });
+      } else setArriving(arrivingKey);
     },
   );
   const cardView = () => ({
@@ -524,7 +538,7 @@ export default function Trail(props: TrailProps) {
                 arrive: arriving() === stepKey({ kind: 'race' }),
                 onArrived: arrivalDone,
               }}
-              list={(f) => <RaceStep trail={api} field={f} />}
+              list={(f, trail) => <RaceStep trail={trail} field={f} />}
             />
           }
           chips={

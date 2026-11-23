@@ -23,7 +23,7 @@ import {
   openSlotsAt,
   raceStatPending,
 } from '~engine/pickers';
-import { classWords, nameOf, nestedLabel, slotWords } from '~engine/refusals';
+import { classWords, nameOf, nestedLabel, pickName, slotWords } from '~engine/refusals';
 import type { OpenedSlot, Walk } from '~engine/walk';
 
 import { backgroundChildren, flatName, joinedName } from './flat-choices';
@@ -385,8 +385,14 @@ function placeTitle(place: Place): string {
 
 export function stepTitle(t: TrailView, step: Step): string {
   switch (step.kind) {
-    case 'slot':
-      return `${isCharacterSlot(t, step.slot) ? 'Your character' : placeTitle(step.slot.place)} · choose ${slotName(t, step.slot).toLowerCase()}`;
+    case 'slot': {
+      const where = isCharacterSlot(t, step.slot) ? 'Your character' : placeTitle(step.slot.place);
+      const parent =
+        step.slot.parent === undefined ? undefined : t.build.picks.find((p) => slotKey(p.slot) === step.slot.parent);
+      if (parent !== undefined)
+        return `${where} · ${slotWords(t.data, t.build, parent.slot)}: choose for ${pickName(t.data, parent)}`;
+      return `${where} · choose ${slotName(t, step.slot).toLowerCase()}`;
+    }
     case 'increase':
       return `Level ${step.level} · raise an ability`;
     case 'skills':
@@ -508,6 +514,15 @@ export function gearDependentSlots(t: TrailView): ReadonlySet<string> {
 function parentOf(slots: readonly OpenedSlot[], child: OpenedSlot): OpenedSlot | undefined {
   const key = parentKey(child.id);
   return key === undefined ? undefined : slots.find((p) => slotKey(p.id) === key && p.pick !== undefined);
+}
+
+export function parentsFirst(slots: readonly OpenedSlot[]): readonly OpenedSlot[] {
+  const keys = new Set(slots.map((s) => slotKey(s.id)));
+  const under = new Map<string, OpenedSlot[]>();
+  for (const s of slots)
+    if (s.parent !== undefined && keys.has(s.parent)) under.set(s.parent, [...(under.get(s.parent) ?? []), s]);
+  const placed = (s: OpenedSlot): OpenedSlot[] => [s, ...(under.get(slotKey(s.id)) ?? []).flatMap(placed)];
+  return slots.filter((s) => s.parent === undefined || !keys.has(s.parent)).flatMap(placed);
 }
 
 export function chipSlots(slots: readonly OpenedSlot[]): readonly OpenedSlot[] {

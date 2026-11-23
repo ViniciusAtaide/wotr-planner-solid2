@@ -357,7 +357,10 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
   });
 
   test('a preview lists a nested pick as one row, under its parent’s name, and counts it once (QA pass 6)', () => {
-    const parent = { slot: { place: { level: 2 }, selection: 'parent', index: 0 }, feature: POWER_ATTACK };
+    const parent = {
+      slot: { place: { level: 2 }, selection: '247a4068296e8be42890143f451b4b45', index: 0 },
+      feature: POWER_ATTACK,
+    };
     const child = { slot: childSlot(parent.slot, POWER_ATTACK), feature: CLEAVE };
     const v = {
       kind: 'clears' as const,
@@ -366,7 +369,7 @@ describe('PlannerState: edit outcomes and the rest of the rules', () => {
       clearedSkills: [],
       clearedRanks: [],
     };
-    expect(clearsList(e, cleaver, v)).toEqual([{ name: 'Power Attack (Cleave)', place: 'Level 2' }]);
+    expect(clearsList(e, cleaver, v)).toEqual([{ name: 'Feat: Power Attack (Cleave)', place: 'Level 2' }]);
     expect(clearsSummary(v)).toBe("This breaks 1 later pick. It'll be cleared, not moved.");
   });
 

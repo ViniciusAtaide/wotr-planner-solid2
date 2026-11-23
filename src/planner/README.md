@@ -490,6 +490,24 @@ address bar keeps the Build in `#b=`, so a reload opens it again.
   focus back to its button. Opening it focuses its first item; Up, Down, Home and End move between its items
   (`moveInMenu`), wrapping at the ends. While a choice dialog is open the Undo bar is fixed above it (`html.choice-open`), and on a
   phone the full-screen dialog stops short of it (`--undo-bar-height`), so Undo stays in reach.
+- **QA pass 9:**
+  - A link refused when pasted writes the kept Build's code back to the address bar (`writeHash`, after history
+    settles), so a reload or a copied link keeps the Build the notice says is kept.
+  - A held archetype's row in "Another class…" reads "Archetype · Class" like every class list's, so its class's name
+    finds it.
+  - Modal first commits a pick first and opens the arriving step's dialog after the next paint (`afterPaint`, for a
+    field and for a step's own dialog); a field's dialog closes, and is flushed away, before its pick applies, so its
+    list never recomputes for the new Build (`CharacterField`'s dialog trail), and opens again if the pick doesn't
+    apply (a Cascade preview or a refusal). On a production build with a Human Mutation Warrior: deity → background's
+    pick 80–126 → 10–14 ms, background → Human bonus feat's 86–123 → 8–11 ms; the background dialog then renders in
+    its own task (about 90 ms, the engine's background picker).
+  - A sub-choice's words come from R's `pick-words`: the Undo line after a nested pick or a pick in the sub-slot
+    (`pickWords`: "Human bonus feat: Skill Focus (Athletics)"), the Cascade preview's row ("Human bonus feat: Skill
+    Focus (Stealth)"), and the sub-choice step's title ("Level 1 · Human bonus feat: choose for Skill Focus"). An
+    empty sub-choice's chip sits right after its parent's (`parentsFirst`), and the values under an expanded parent
+    show just the value (`valueLabel`).
+  - Export names each level as its stop does (`levelStopName`). The notices scroll with the page. The Human bonus
+    feat's filter is named by its slot, and on a finished Build the way back reads "Back to the Build".
 - **QA pass 8:**
   - On a phone the card offers "Fold" (and its folded head) only when it can fold: Level 1 done and the card not
     holding the step (`foldable` is `characterFolded` with the card closed). A card that isn't editing still names the

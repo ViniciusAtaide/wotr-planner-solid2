@@ -4,7 +4,7 @@ import type { Guid } from '~engine/data';
 import type { Edit } from '~engine/edits';
 import { enablesWith, linkIndex, linkNames } from '~engine/links';
 import { picker, type OptionStatus } from '~engine/pickers';
-import { clearsLaterText, gearNote, refusal, nestedLabel } from '~engine/refusals';
+import { clearsLaterText, gearNote, nestedLabel, pickWords, refusal, slotWords } from '~engine/refusals';
 
 import { Button, OptionList, PickerOption } from '../design';
 import { Filter, moveThroughOptions, rankOrder, SCROLL_STYLE, type ClosedToggle, type FieldMode } from './ChoiceList';
@@ -78,6 +78,12 @@ const sorted = (names: readonly string[]): string[] => names.toSorted((a, b) => 
 export function paramLabel(full: string, group: string): string {
   if (!full.startsWith(`${group} (`) || !full.endsWith(')')) return full;
   return full.slice(group.length + 2, -1);
+}
+
+export function valueLabel(full: string, parent: string): string {
+  const own = paramLabel(full, parent);
+  if (own !== full) return own;
+  return full.startsWith(`${parent} — `) ? full.slice(parent.length + 3) : full;
 }
 
 export function PickStep(props: PickStepProps) {
@@ -247,8 +253,15 @@ export function PickStep(props: PickStepProps) {
     if (edits.length === 1) props.trail.edit(edits[0], title);
     else props.trail.editAll(edits, title);
   };
-  const take = (o: OptionStatus) =>
-    apply(after(oldChildClears(o.feature), [pickOf(props.slot, o)]), `Picked ${name(o)}`);
+  const takenWords = (pick: Pick, among: readonly Pick[]) =>
+    pick.slot.parent === undefined ? undefined : pickWords(data(), planner().build(), pick, among);
+  const take = (o: OptionStatus) => {
+    const pick: Pick = { slot: props.slot, feature: o.feature, ...(o.param && { param: o.param }) };
+    apply(
+      after(oldChildClears(o.feature), [pickOf(props.slot, o)]),
+      `Picked ${takenWords(pick, planner().build().picks) ?? name(o)}`,
+    );
+  };
   const nested = createMemo(() => {
     const row = rows().find((r) => r.key === expanded());
     if (row?.kind !== 'nested') return undefined;
@@ -273,9 +286,15 @@ export function PickStep(props: PickStepProps) {
         pickOf(props.slot, row.option),
         pickOf(childSlot(props.slot, row.option.feature), child),
       ]),
-      `Picked ${nestedLabel(
-        shownName(data(), row.option.feature, row.option.param),
-        shownName(data(), child.feature, child.param),
+      `Picked ${pickWords(
+        data(),
+        planner().build(),
+        {
+          slot: childSlot(props.slot, row.option.feature),
+          feature: child.feature,
+          ...(child.param && { param: child.param }),
+        },
+        [{ slot: props.slot, feature: row.option.feature, ...(row.option.param && { param: row.option.param }) }],
       )}`,
     );
   const toggle = (key: string) => setExpanded((now) => (now === key ? undefined : key));
@@ -320,7 +339,7 @@ export function PickStep(props: PickStepProps) {
     ).length;
   const closedCount = () => closed().length + closedValues().length;
   const childName = (row: PickRow, o: OptionStatus) =>
-    row.kind === 'params' ? paramLabel(name(o), row.name) : name(o);
+    row.kind === 'params' ? paramLabel(name(o), row.name) : valueLabel(name(o), row.name);
   const childCurrent = (row: PickRow, o: OptionStatus) => {
     if (row.kind !== 'nested') return isCurrent(o);
     return holdsRow(row) && pickAt(childSlot(props.slot, row.option.feature))?.feature === o.feature;
@@ -387,7 +406,7 @@ export function PickStep(props: PickStepProps) {
         onFocusOut={(e) => panel.onFocusOut(e)}
       >
         <Filter
-          label={`Filter ${slotLabel(data(), props.slot.selection)} by name`}
+          label={`Filter ${slotWords(data(), planner().build(), props.slot)} by name`}
           value={text()}
           onInput={(t) => {
             setText(t);
