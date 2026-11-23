@@ -33,13 +33,17 @@ export function createShareCode(engine: Engine, build: () => Build): () => Share
   return code;
 }
 
-export function shareLinkOf(code: ShareCode, origin: string): ShareLinkProps {
+export function shareLinkOf(code: ShareCode, home: string): ShareLinkProps {
   switch (code.kind) {
     case 'encoding':
       return { state: 'making' };
     case 'current':
-      return { state: 'ready', url: `${origin}/#b=${code.code}` };
+      return { state: 'ready', url: `${home}#b=${code.code}` };
     case 'failed':
       return { state: 'failed', reason: code.reason };
   }
+}
+
+export function homeUrl(origin: string): string {
+  return new URL(import.meta.env.BASE_URL, origin).href;
 }

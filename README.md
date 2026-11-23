@@ -35,11 +35,14 @@ Put the game sources at the repo root. Both are git-ignored:
 | `bun run engine-run <file.ts>`           | the same for a file outside the repo, such as a session scratchpad (note 1)         |
 | `bun run census`                         | the leftover census (`tools/importer/census.ts`)                                    |
 | `bun run build && bun start`             | the built app; it serves the MCP at http://localhost:3000/mcp (streamable HTTP)     |
+| `bun run build:pages`                    | the static site GitHub Pages serves, in `dist/client`, under `/wotr-planner-solid2/` (note 3) |
 | `bun run mcp-stdio`                      | the MCP over stdio (`src/mcp-server/stdio.ts`), run from the repo root              |
 | `bun engine/pickers/sweep.ts`            | every picker option at every gold-build slot against the walk (minutes)             |
 
 1. A file outside the repo has no `tsconfig.json` to resolve `~engine`, so `engine-run` points Bun at this one. Bun 1.3.5 then prints a harmless "Internal error: directory mismatch" line after the run. Bun runs the file top to bottom; a file that exports `main(args)` calls it under `if (import.meta.main)`, as `tools/importer/census.ts` does.
 2. jev-lint asks a hosted model about each match. `.jev-lint.yaml` sets OpenRouter's free Perplexity Decider model, so a run costs nothing but needs `OPENROUTER_API_KEY` in the environment (a free key from openrouter.ai/keys) and is paced at about one request every 3 seconds under a daily limit; that is why it stays out of `bun run check` and the pre-commit hook. The shipped rules' cutoffs were fitted on TypeSafe's Jev, not this model, so read a finding as a hint. `.jev-lint.yaml` picks the rules: two shipped ones at `info` (`typescript/fn-name-promises`, `git/diff-follows-instructions`) and three of this repo's own, which are advisory and have had one evaluation run (its results are in `.jev-lint/README.md`). `.jev-lint/README.md` describes those three, the evidence each one sees, and how to evaluate them (`bun --bun jev-lint eval .jev-lint/rules`, then `.jev-lint/holdout`). Add `--dry-run` to see what a run would send without a request. Verdicts are cached in `.jev-lint/verdicts/`, which the formatter skips. The `review:jev` scripts read the whole index, so run them only when it holds nothing but your change: sessions share this checkout, and another session's work may already be staged.
+
+3. `build:pages` builds the client alone (`vite build --mode pages`, see "Publishing") and copies `index.html` to `404.html`. `PAGES_BASE` overrides the base path (the workflow sets it from `actions/configure-pages`, so a custom domain gets `/`). To try it as Pages serves it, serve `dist/client` under `/wotr-planner-solid2/` with `404.html` for any missing path; `bun run serve -- --mode pages` (Vite's preview) works too, with a history fallback in place of the 404 page.
 
 ## Where things are
 
@@ -59,9 +62,20 @@ The code is one folder per feature, each with an `index.ts` (its only public ent
 | `.scratch/wotr-planner/`       | the design map and its tickets                                                                 |
 | `.scratch/wotr-planner-build/` | the build plan and its tickets                                                                 |
 
+## Publishing
+
+The planner's UI is published as a static site on GitHub Pages (map 17), at `https://viniciusataide.github.io/wotr-planner-solid2/`. `.github/workflows/pages.yml` builds it with Bun (`bun run build:pages`) and deploys `dist/client` with `actions/upload-pages-artifact` and `actions/deploy-pages` on every push to `main`, and by hand (`workflow_dispatch`). It needs the repository's Settings → Pages → Source set to GitHub Actions. The workflow runs no checks: they need the game sources, which CI doesn't have, so `bun run check` before a push stays the gate.
+
+- The site is the client alone: no server rendering, and no `/mcp`. The MCP stays local (`bun run mcp-stdio`, or `bun run build && bun start`), as map 17 settles.
+- The page is the document shell, prerendered once to `index.html`, and the planner renders in the browser. Every file is named under the base path, so `404.html`, a copy of `index.html`, serves any deep link (`/wotr-planner-solid2/design`) and the router takes over. Pages answers such a link with status 404 and the right page.
+- The data document is one of the static assets (`assets/data-<hash>.json`), so a Build and its Share link (`…/wotr-planner-solid2/#b=<code>`) open with no server.
+- The site serves the committed `data/` publicly, as the repository already does, and carries the OGL notice: a footer line on every page, linking `open-game-license.txt` (`public/`), the licence with its designation and its Section 15.
+
 ## Configuration
 
 Code holds no comments (ADR 0008), so the root config files' notes live here.
+
+- `vite.config.ts` in `pages` mode (`vite build --mode pages`) builds the static site instead: the plugin's client mode (`start: true` without `ssr`), with no middleware, no server functions and no node server, so neither the MCP route nor `src/server-config.ts` enters the build, and the plugin removes its server bundle. `base` is `/wotr-planner-solid2/` there, or `PAGES_BASE`; every other mode keeps `/`. The router reads it from `import.meta.env.BASE_URL`, and so do the favicon, the licence link and the Share link.
 
 - `vite.config.ts`: turnkey streaming SSR, with no `index.html` and no entry files: @solidjs/vite-plugin generates the entries around `src/App.tsx`, wrapped in `src/Document.tsx`. `vite build` writes client assets to `dist/client` and the request handler to `dist/server`, plus `dist/server/node.js` (`nodeServer: true`), a ready-to-run `node:http` server that `bun start` runs; other platforms import `dist/server/server.js`. Typed env is on by convention (`env.ts` is probed; the top-level `env: false` opts out). `ssr: false` would give a static shell plus an API server. `diagnostics: true` serves the dev-only capture control at `/__solid/diagnostics` (AGENTS.md). `serverFunctions.serverSetup` pins `src/server-config.ts` into the handler graph. `extensions` makes the plugin also compile the `?pick=` route modules filesystem-routing emits (their ids end in a query string). `fileRoutes({ httpMethods: true })` also scans route modules for `GET`/`POST`/… exports, and handler modules never enter the client bundle. `dataDocument()` serves the committed data as one content-hashed document the browser walks (ADR 0004); the config imports it with the `.ts` extension, as Vite's native config loader requires, which is also why `tsconfig.json` sets `allowImportingTsExtensions`. The `~engine` alias (with the matching `paths` entry in `tsconfig.json`) points at `engine/` (ticket 16's amendment): `~engine/<feature>` is that feature's entry.
 - Vitest has three projects because they need different halves of the framework, or none of it: `engine` runs the engine and the tools in plain Node, with no DOM and no Solid; `client` runs component tests in a DOM against the browser build; `server` runs server-runtime tests in Node against the server build (a `node` project gets the server conditions from the plugin automatically). Vitest itself runs on Node, not Bun: under Bun 1.3.5 its worker pools fail to start (forks: `child.channel.unref` is missing; threads: a Worker's stdout is null), so the scripts call `vitest` without `--bun` (ADR 0007).
@@ -72,4 +86,4 @@ Code holds no comments (ADR 0008), so the root config files' notes live here.
 
 ## Licence
 
-The game's mechanics are Open Game Content under the Open Game License v1.0a, as Owlcat Games' notice designates them. The published site carries that notice and its Section 15 credit. Names of feats, spells and items are the game's, used to refer to it.
+The game's mechanics are Open Game Content under the Open Game License v1.0a, as Owlcat Games' notice designates them. The licence, the designation and the Section 15 copyright notice are in [`public/open-game-license.txt`](public/open-game-license.txt), which the site serves and its footer links. Names of feats, spells and items are the game's, used to refer to it.

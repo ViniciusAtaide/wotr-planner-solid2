@@ -2,6 +2,8 @@ import { Title } from '@solidjs/meta';
 import type { JSX } from '@solidjs/web';
 import { Loading } from 'solid-js';
 
+export const LICENCE_PATH = `${import.meta.env.BASE_URL}open-game-license.txt`;
+
 export interface ShellProps {
   readonly home: string;
   readonly children: JSX.Element;
@@ -22,6 +24,10 @@ export function Shell(props: ShellProps) {
         <span class="app-header__end" aria-hidden="true" />
       </header>
       <Loading fallback={<main>Loading…</main>}>{props.children}</Loading>
+      <footer class="app-footer">
+        Game mechanics are Open Game Content from Pathfinder: Wrath of the Righteous, © Owlcat Games, and the Pathfinder
+        rules, © Paizo. A fan tool, not endorsed by either. <a href={LICENCE_PATH}>Open Game License v1.0a</a>
+      </footer>
     </div>
   );
 }

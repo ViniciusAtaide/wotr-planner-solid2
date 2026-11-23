@@ -4,6 +4,7 @@ import { fileRoutes } from '@solidjs/router/fs';
 
 export const Router = createRouter({
   routes: fileRoutes(pageRoutes),
+  base: import.meta.env.BASE_URL,
   preloadLinks: intentPreload(),
 });
 

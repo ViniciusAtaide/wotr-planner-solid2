@@ -375,7 +375,9 @@ dimmed and inert behind "Edit the Second Build".
 - **`share-code.ts`: a Build's Share link.** `ShareCode` is `encoding`, `current` with its code, or `failed` with why.
   `createShareCode` encodes each new `present`; the last encode wins (a `latest` token) and a rejected encode is
   `failed`. `shareLinkOf` maps it onto the design system's `ShareLink` props: "Making the link…" with Copy off while
-  encoding (user), the URL when current, the reason when failed.
+  encoding (user), the URL when current, the reason when failed. The URL is the site's home page with the code in the
+  fragment: `homeUrl` joins the page's origin and Vite's base, so a Share link from the static site keeps its
+  `/wotr-planner-solid2/`.
 - **`unreachable.ts`**: `unreachable(x: never)`, the default of a switch that names every case.
 - **`flat-choices.ts`: the flat lists.** `FlatChoice` is a row: its name, the edits it takes as one change, whether it
   is the Build's, and its status. `flatName` writes "Group (Variation)"; `after` puts clearing edits first.

@@ -5,21 +5,28 @@ import solid from '@solidjs/vite-plugin';
 
 import { dataDocument } from './vite/data-document/index.ts';
 
-export default defineConfig({
-  plugins: [
-    solid({
-      start: {
-        middleware: './src/middleware.ts',
-        nodeServer: true,
-      },
-      ssr: true,
-      diagnostics: true,
-      serverFunctions: { serverSetup: './src/server-config.ts' },
-      extensions: ['.jsx', '.tsx'],
-    }),
-    fileRoutes({ httpMethods: true, types: true }),
-    dataDocument(),
-  ],
+const PAGES_BASE = '/wotr-planner-solid2/';
+
+const app = (mode: string) =>
+  mode === 'pages'
+    ? solid({
+        start: true,
+        extensions: ['.jsx', '.tsx'],
+      })
+    : solid({
+        start: {
+          middleware: './src/middleware.ts',
+          nodeServer: true,
+        },
+        ssr: true,
+        diagnostics: true,
+        serverFunctions: { serverSetup: './src/server-config.ts' },
+        extensions: ['.jsx', '.tsx'],
+      });
+
+export default defineConfig(({ mode }) => ({
+  base: mode === 'pages' ? (process.env.PAGES_BASE ?? PAGES_BASE) : '/',
+  plugins: [app(mode), fileRoutes({ httpMethods: true, types: true }), dataDocument()],
   server: {
     port: 3000,
   },
@@ -70,4 +77,4 @@ export default defineConfig({
     target: 'esnext',
     assetsInlineLimit: 0,
   },
-});
+}));

@@ -42,3 +42,4 @@ The polish that waits until the planner is in use. Split this ticket up when it 
   - the "won't stack" warning, a port of `ModifierDescriptorHelper.IsStackable`.
 
   Tested on real data and on both gold Builds' pickers. Energy type and the descriptor list wait for 06a.
+- **The static site (2026-11-22, asked by the user):** `bun run build:pages` builds the client alone in Vite's `pages` mode (the plugin's client mode, base `/wotr-planner-solid2/`), with `404.html` for deep links and the data document as a static asset; `.github/workflows/pages.yml` deploys it on pushes to `main`. Every page carries the OGL footer linking `public/open-game-license.txt`. Share links keep the base path. Checked under a Pages-like server: a Build, its link, a reload on `/design` and a missing path. Not yet live: the repository's Pages source must be set to GitHub Actions and `main` pushed (README, "Publishing").

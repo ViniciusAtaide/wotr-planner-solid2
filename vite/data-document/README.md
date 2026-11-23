@@ -12,7 +12,8 @@ loader.
 
 ## Design notes
 
-- The build emits the document as a static asset named by its content's hash (`/assets/data-<hash>.json`), and the
-  dev server answers the same path.
+- The build emits the document as a static asset named by its content's hash (`assets/data-<hash>.json`), and the
+  dev server answers the same path. The path the app fetches starts with Vite's `base`, so the static site serves it
+  under `/wotr-planner-solid2/` like any other asset.
 - `virtual:data-document` exports that path; the planner's engine loader fetches it.
 - Only the client's static assets hold the document: the server never fetches it.

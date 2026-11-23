@@ -55,6 +55,7 @@ import type { Selection } from './workspace-state';
 import { historyIdle } from './history-moves';
 import { PickStep } from './PickStep';
 import { optionName, shownName } from './words';
+import { homeUrl, shareLinkOf } from './share-code';
 
 const gate = vi.hoisted(() => ({
   load: (): Promise<unknown> => Promise.reject(new Error('no engine yet')),
@@ -177,6 +178,26 @@ function apiOf(planner: PlannerApi, state: TrailState = TRAIL_START): TrailApi {
     editAll: (edits, title) => planner.editAll(edits, title),
   };
 }
+
+describe('the Share link names the page the site is served from', () => {
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
+  test('a site under a project path keeps that path before the Build code', () => {
+    vi.stubEnv('BASE_URL', '/wotr-planner-solid2/');
+    const home = homeUrl('https://example.github.io');
+    expect(home).toBe('https://example.github.io/wotr-planner-solid2/');
+    expect(shareLinkOf({ kind: 'current', code: 'abc' }, home)).toEqual({
+      state: 'ready',
+      url: 'https://example.github.io/wotr-planner-solid2/#b=abc',
+    });
+  });
+
+  test('a site at the root gives the root', () => {
+    expect(homeUrl('http://localhost:3000')).toBe('http://localhost:3000/');
+  });
+});
 
 describe('a Build code from the MCP opens the same Build in the UI', () => {
   afterEach(() => {

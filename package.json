@@ -8,6 +8,7 @@
     "prepare": "git config core.hooksPath .githooks",
     "dev": "bun --bun vite",
     "build": "bun --bun vite build",
+    "build:pages": "bun --bun vite build --mode pages && cp dist/client/index.html dist/client/404.html",
     "start": "bun dist/server/node.js",
     "serve": "bun --bun vite preview",
     "test": "vitest",

@@ -14,7 +14,7 @@ import { afterHistorySettles, holdsHash, isOwnHashChange, onHistorySettled, writ
 import { keepFocus } from './focus-return';
 import { EMPTY, openHash } from './link';
 import { PlannerMenu, UndoLine } from './Menu';
-import { createShareCode, shareLinkOf, type ShareCode } from './share-code';
+import { createShareCode, homeUrl, shareLinkOf, type ShareCode } from './share-code';
 import { browserStorage, readListMode, writeListMode, type ListMode } from './list-mode';
 import type { NonEmpty } from './planner-state';
 import { buildSheet } from './sheet';
@@ -443,7 +443,7 @@ function Workspace(props: WorkspaceProps) {
               setListMode(mode);
               writeListMode(browserStorage, mode);
             }}
-            link={shareLinkOf(linkCode(), location.origin)}
+            link={shareLinkOf(linkCode(), homeUrl(location.origin))}
             forked={forked() !== undefined}
             onFork={() => send({ kind: 'fork' })}
             sheet={() => buildSheet({ data: engine.data, build: active().build(), walk: active().walked() })}
