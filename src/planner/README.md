@@ -434,7 +434,7 @@ address bar keeps the Build in `#b=`, so a reload opens it again.
     below), lower case in a title. `slotName` is the name a field, chip and title show, R's `slotWords`: the Human's race feat slot
     reads "Human bonus feat", and any other feat slot the race grants "Bonus feat" (QA pass 5),
     so neither is taken for the level's own feat. `isDeitySlot` finds the deity slot for the card, and
-    `levelClassName` names a level by its archetype, else its class.
+    `levelClassName` names a level by its archetype, else its class: R's `classWords`, which the MCP's brief uses too.
   - `shownSlots` leaves out the parametrized feats' own slots (their parameter is chosen with the feat);
     `characterSlots` and `slotsAt` split the rest between the character card and the stops by S's `characterWideSlots`.
   - `skillBudget`, `skillsDue`, `increaseDue` and `increaseOffered` read the walk's `skillPoints` and

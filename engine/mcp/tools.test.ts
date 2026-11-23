@@ -16,6 +16,7 @@ import {
 } from '../refusals';
 import { walk } from '../walk';
 import {
+  brief,
   engineOf,
   expectedLevel,
   equip,
@@ -188,6 +189,16 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     });
     const one = ok(await level_up(e, { code, class: FIGHTER, archetypes: [TWO_HANDED_FIGHTER_ARCHETYPE] }), 'one');
     expect(one.build.classChoices?.[FIGHTER]?.archetypes).toEqual([TWO_HANDED_FIGHTER_ARCHETYPE]);
+  });
+
+  it('names a level in the brief by its archetype, as the planner titles it (QA pass 9)', async () => {
+    const code = (await start_build(e)).code;
+    const mutant = ok(
+      await level_up(e, { code, class: FIGHTER, archetypes: [MUTATION_WARRIOR_ARCHETYPE] }),
+      'level_up',
+    );
+    const again = ok(await level_up(e, { code: mutant.code, class: FIGHTER }), 'level_up');
+    expect(brief(e, again.build)).toBe('no race · Mutation Warrior 2 · 0 picks');
   });
 
   it('searches, explains and gives the sheet', async () => {

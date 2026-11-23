@@ -46,6 +46,7 @@ import {
   skillRankRange,
   statName,
   type Refusal,
+  classWords,
   pickName,
   pickWords,
   slotWords,
@@ -166,7 +167,7 @@ export function brief(e: Engine, build: Build): string {
   const count = (list: readonly { readonly class: Guid }[]) => {
     const n = new Map<Guid, number>();
     for (const l of list) n.set(l.class, (n.get(l.class) ?? 0) + 1);
-    return [...n].map(([cls, k]) => `${bareNameOf(e.data, cls)} ${k}`).join(', ');
+    return [...n].map(([cls, k]) => `${classWords(e.data, build, cls)} ${k}`).join(', ');
   };
   const gear = Object.keys(build.gear ?? {}).length;
   return [
