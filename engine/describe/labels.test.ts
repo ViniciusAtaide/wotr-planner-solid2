@@ -261,7 +261,7 @@ suite('Summary labels', { timeout: 30_000 }, () => {
     [
       'AddBackgroundClassSkill',
       '621e1bb8e1d5e114da5a107351f5c7b3',
-      'Thievery counts as a class skill; if it already is one, a +1 competence bonus on it instead.',
+      'Trickery counts as a class skill; if it already is one, a +1 competence bonus on it instead.',
     ],
     [
       'AddProficiencies',

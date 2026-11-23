@@ -1,4 +1,5 @@
 import { parentKey, slotKey, type Build, type Pick, type SlotId } from '../build';
+import type { Guid } from '../data';
 import type { CheckedData } from '../load';
 import type { GrantParam } from '../grants';
 import { bareNameOf, nameOf, statName } from './refusals';
@@ -74,6 +75,10 @@ export function nestedLabel(parent: string, child: string): string {
 
 export function pickName(data: CheckedData, pick: Pick): string {
   return paramWords(data, bareNameOf(data, pick.feature), pick.param);
+}
+
+export function classWords(data: CheckedData, build: Build, cls: Guid): string {
+  return nameOf(data, build.classChoices?.[cls]?.archetypes[0] ?? cls);
 }
 
 export function slotWords(data: CheckedData, build: Build, slot: SlotId): string {

@@ -5,9 +5,18 @@ import { decodeBuild, encodeBuild } from '../codec';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { enforcer, jackInTheGreen } from '../gold';
-import { archetypeCount, buildNameLength, listNames, namesIn, rankLevelRange, skillRankRange } from '../refusals';
+import {
+  archetypeCount,
+  buildNameLength,
+  listNames,
+  namesIn,
+  rankLevelRange,
+  skillRankRange,
+  statName,
+} from '../refusals';
 import { walk } from '../walk';
 import {
+  brief,
   engineOf,
   expectedLevel,
   equip,
@@ -182,6 +191,16 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(one.build.classChoices?.[FIGHTER]?.archetypes).toEqual([TWO_HANDED_FIGHTER_ARCHETYPE]);
   });
 
+  it('names a level in the brief by its archetype, as the planner titles it (QA pass 9)', async () => {
+    const code = (await start_build(e)).code;
+    const mutant = ok(
+      await level_up(e, { code, class: FIGHTER, archetypes: [MUTATION_WARRIOR_ARCHETYPE] }),
+      'level_up',
+    );
+    const again = ok(await level_up(e, { code: mutant.code, class: FIGHTER }), 'level_up');
+    expect(brief(e, again.build)).toBe('no race · Mutation Warrior 2 · 0 picks');
+  });
+
   it('searches, explains and gives the sheet', async () => {
     expect(search(e, { text: 'power attack' }).hits.map((h) => h.guid)).toContain('9972f33f977fc724c838e59641b2fca5');
     const classes = search(e, { text: '', kind: 'classes' });
@@ -271,11 +290,16 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(shown.build.levels[0]?.skills).toEqual({ SkillAthletics: 1, SkillKnowledgeWorld: 1 });
     const keyed = ok(await set_skills(e, { code: fighter.code, level: 1, ranks: { SkillAthletics: 1 } }), 'set_skills');
     expect(keyed.build.levels[0]?.skills).toEqual({ SkillAthletics: 1 });
+    expect(statName('SkillThievery')).toBe('Trickery');
+    for (const name of ['Trickery', 'trickery', 'SkillThievery', 'Thievery']) {
+      const tricky = ok(await set_skills(e, { code: fighter.code, level: 1, ranks: { [name]: 1 } }), 'set_skills');
+      expect(tricky.build.levels[0]?.skills, name).toEqual({ SkillThievery: 1 });
+    }
     const unknown = await set_skills(e, { code: fighter.code, level: 1, ranks: { Climb: 1 } });
     expect(unknown).toEqual({
       refused: true,
       reason:
-        'Not a skill: "Climb". The skills are Mobility, Perception, Thievery, Athletics, Persuasion, Lore (Nature), Knowledge (Arcana), Lore (Religion), Knowledge (World), Stealth, Use Magic Device.',
+        'Not a skill: "Climb". The skills are Mobility, Perception, Trickery, Athletics, Persuasion, Lore (Nature), Knowledge (Arcana), Lore (Religion), Knowledge (World), Stealth, Use Magic Device.',
     });
   });
 
@@ -388,6 +412,30 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
       expect(after.picks.find((p) => p.feature === LORE_RELIGION)?.slot.parent).toBe(slotKey(levelFeat));
     });
 
+    it("labels each open slot in the planner's words, and a sub-choice by its parent's slot and pick (QA pass 9)", async () => {
+      const fighter = ok(
+        await level_up(e, {
+          code: ok(await set_start(e, { code: (await start_build(e)).code, race: HUMAN }), 'set_start').code,
+          class: FIGHTER,
+        }),
+        'level_up',
+      );
+      const listed = ok(await next_slots(e, { code: fighter.code }), 'next_slots');
+      expect(listed.slots.map((s) => [s.label, s.selection])).toEqual([
+        ['Human bonus feat', 'Feat'],
+        ['Feat', 'Feat'],
+        ['Background', 'Background Selection'],
+        ['Deity', 'Deity Selection'],
+        ['Bonus Combat Feat', 'Bonus Combat Feat'],
+      ]);
+      const levelFeat: SlotId = { place: { level: 1 }, selection: BASIC, index: 0 };
+      const focused = ok(await pick(e, { code: fighter.code, slot: levelFeat, feature: SKILL_FOCUS }), 'pick') as {
+        code: string;
+      };
+      const sub = ok(await next_slots(e, { code: focused.code }), 'next_slots');
+      expect(sub.slots.find((s) => s.slot.selection === SKILL_FOCUS)?.label).toBe('Feat: Skill Focus');
+    });
+
     it('opens a code holding a pick the walk refuses with that pick cleared, and names it', async () => {
       const levelFeat: SlotId = { place: { level: 1 }, selection: BASIC, index: 0 };
       const humanFeat: SlotId = { ...levelFeat, from: HUMAN };
@@ -450,7 +498,7 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
       'Perception',
       'Persuasion',
       'Stealth',
-      'Thievery',
+      'Trickery',
       'Lore (Nature)',
       'Use Magic Device',
     ];
@@ -591,6 +639,20 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     const asmodeus = listed.closed?.find((o) => o.feature === ASMODEUS);
     expect(asmodeus?.refusal?.unmet).toContain('Choose an alignment first.');
     expect(listed.open.find((o) => o.feature === ASMODEUS)).toBeUndefined();
+  });
+
+  it('places a rank taken early at the last character level, and says when it is usually reached (QA pass 9)', async () => {
+    const MYTHIC_HERO = '247aa787806d5da4f89cfc3dff0b217f';
+    let code = (await start_build(e)).code;
+    for (let l = 1; l <= 5; l++) code = ok(await level_up(e, { code, class: FIGHTER }), `L${l}`).code;
+    const first = expectedLevel(e.data, 1);
+    expect(first).toBeGreaterThan(5);
+    const rank = ok(await level_up(e, { code, class: MYTHIC_HERO }), 'M1');
+    expect(rank.characterLevel).toBe(5);
+    expect(rank.build.ranks?.[0]?.level).toBe(5);
+    expect(rank.note).toBe(
+      `Mythic rank 1 is taken early, at character level 5; it is usually reached at ${first}. place_rank moves it.`,
+    );
   });
 
   it('places a Mythic rank at its Expected level when the character levels came first, and says when one is due (MCP QA)', async () => {

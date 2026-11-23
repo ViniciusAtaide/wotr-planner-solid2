@@ -23,7 +23,7 @@ import {
   openSlotsAt,
   raceStatPending,
 } from '~engine/pickers';
-import { nameOf, nestedLabel, pickName, slotWords } from '~engine/refusals';
+import { classWords, nameOf, nestedLabel, pickName, slotWords } from '~engine/refusals';
 import type { OpenedSlot, Walk } from '~engine/walk';
 
 import { backgroundChildren, flatName, joinedName } from './flat-choices';
@@ -228,9 +228,7 @@ export function isDeitySlot(t: TrailView, slot: OpenedSlot): boolean {
 }
 
 export function levelClassName(data: CheckedData, build: Build, level: number): string {
-  const cls = build.levels[level - 1]?.class ?? '';
-  const archetype = build.classChoices?.[cls]?.archetypes[0];
-  return nameOf(data, archetype ?? cls);
+  return classWords(data, build, build.levels[level - 1]?.class ?? '');
 }
 
 export function levelStopName(data: CheckedData, build: Build, level: number): string {

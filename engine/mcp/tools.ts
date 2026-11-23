@@ -1,5 +1,7 @@
 import {
+  parentKey,
   placeKey,
+  slotKey,
   toAbilityScores,
   toArchetypes,
   toBuildName,
@@ -44,7 +46,10 @@ import {
   skillRankRange,
   statName,
   type Refusal,
+  classWords,
+  pickName,
   pickWords,
+  slotWords,
 } from '../refusals';
 import {
   maxSpellLevel,
@@ -162,7 +167,7 @@ export function brief(e: Engine, build: Build): string {
   const count = (list: readonly { readonly class: Guid }[]) => {
     const n = new Map<Guid, number>();
     for (const l of list) n.set(l.class, (n.get(l.class) ?? 0) + 1);
-    return [...n].map(([cls, k]) => `${bareNameOf(e.data, cls)} ${k}`).join(', ');
+    return [...n].map(([cls, k]) => `${classWords(e.data, build, cls)} ${k}`).join(', ');
   };
   const gear = Object.keys(build.gear ?? {}).length;
   return [
@@ -233,8 +238,17 @@ export interface SlotView {
   readonly slot: SlotId;
   readonly place: string;
   readonly selection: string;
+  readonly label: string;
   readonly band: Band;
   readonly kind: string;
+}
+
+function slotLabel(e: Engine, build: Build, slot: SlotId): string {
+  const key = parentKey(slot);
+  const parent = key === undefined ? undefined : build.picks.find((p) => slotKey(p.slot) === key);
+  return parent === undefined
+    ? slotWords(e.data, build, slot)
+    : `${slotWords(e.data, build, parent.slot)}: ${pickName(e.data, parent)}`;
 }
 
 function openSlots(e: Engine, build: Build, place?: Place): SlotView[] {
@@ -245,6 +259,7 @@ function openSlots(e: Engine, build: Build, place?: Place): SlotView[] {
       slot: s.id,
       place: placeKey(s.id.place),
       selection: nameOf(e.data, s.id.selection),
+      label: slotLabel(e, build, s.id),
       band: bp?.$type === 'BlueprintFeatureSelectMythicSpellbook' ? 'ReplaceSpellbook' : bandOf(group),
       kind: bp?.$type ?? 'unknown',
     };
@@ -271,11 +286,18 @@ export interface LevelUp extends Changed {
   readonly note?: string;
 }
 
-function rankPlacements(e: Engine, build: Build, rank: number): { readonly placed: number; readonly last?: number } {
+function rankPlacements(
+  e: Engine,
+  build: Build,
+  rank: number,
+): { readonly placed: number; readonly last?: number; readonly early?: number } {
   const expected = expectedLevel(e.data, rank);
   const after = Math.max(build.ranks?.at(-1)?.level ?? 1, 1);
-  const placed = Math.max(expected > 0 ? expected : build.levels.length, after);
-  return build.levels.length > placed ? { placed, last: build.levels.length } : { placed };
+  const reached = Math.max(build.levels.length, 1);
+  const early = expected > reached ? expected : undefined;
+  const placed = Math.max(expected > 0 ? Math.min(expected, reached) : build.levels.length, after);
+  const last = build.levels.length > placed ? build.levels.length : undefined;
+  return { placed, ...(last !== undefined && { last }), ...(early !== undefined && { early }) };
 }
 
 export async function level_up(
@@ -314,8 +336,13 @@ export async function level_up(
     ]);
     return isRefusal(r) ? r : { ...r, characterLevel: at };
   };
-  const { placed, last } = rankPlacements(e, build, rank);
+  const { placed, last, early } = rankPlacements(e, build, rank);
   const first = await addRankAt(placed);
+  if (!isRefusal(first) && early !== undefined)
+    return {
+      ...first,
+      note: `Mythic rank ${rank} is taken early, at character level ${placed}; it is usually reached at ${early}. place_rank moves it.`,
+    };
   if (!isRefusal(first) || first.breaks === undefined || last === undefined) return first;
   const later = await addRankAt(last);
   if (isRefusal(later)) return first;
@@ -511,6 +538,13 @@ const SKILL_NAMES: ReadonlyMap<string, StatType> = new Map(
   (Object.keys(SKILL_ATTRIBUTE) as StatType[]).flatMap((skill) => [
     [skill.toLowerCase(), skill],
     [statName(skill).toLowerCase(), skill],
+    [
+      skill
+        .replace(/^Skill/, '')
+        .replace(/([a-z])([A-Z])/g, '$1 $2')
+        .toLowerCase(),
+      skill,
+    ],
   ]),
 );
 
