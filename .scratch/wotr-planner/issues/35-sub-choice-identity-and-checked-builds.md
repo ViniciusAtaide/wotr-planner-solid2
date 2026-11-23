@@ -58,3 +58,7 @@ The user, 2026-11-22:
   - **The codec:** a version 1 code holding sub-choice picks opens to the same Build. A code holding a refused pick opens with it cleared and named.
   - **The planner:** QA's steps. Both skills are kept, each chip names its own, and the level feat's skill is closed in the Human's list.
   - **The MCP:** `next_slots` and `pick` carry `parent`.
+
+## Note: spell feats held without their spell (coordinator, 2026-11-23)
+
+Build ticket 13 asked about one case. Spells aren't modelled ([map 22](22-spell-parametrized-feats.md)), so the walk refuses a spell-parametrized feat picked without its spell, such as Jack's Spell Specialization at level 11. That refusal comes from the gap, not from the game. The gate keeps such a pick as map 22's held-for-a-spell pick, and clears everything else the walk refuses. It uses the same engine rule (`engine/pickers`' held spell feat) that the trail and `next_slots` already share since build ticket 14, so all three agree. This follows the user's decision of 2026-11-23: one rule for the planner and the MCP.
