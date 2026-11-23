@@ -401,6 +401,30 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
       expect(after.picks.find((p) => p.feature === LORE_RELIGION)?.slot.parent).toBe(slotKey(levelFeat));
     });
 
+    it("labels each open slot in the planner's words, and a sub-choice by its parent's slot and pick (QA pass 9)", async () => {
+      const fighter = ok(
+        await level_up(e, {
+          code: ok(await set_start(e, { code: (await start_build(e)).code, race: HUMAN }), 'set_start').code,
+          class: FIGHTER,
+        }),
+        'level_up',
+      );
+      const listed = ok(await next_slots(e, { code: fighter.code }), 'next_slots');
+      expect(listed.slots.map((s) => [s.label, s.selection])).toEqual([
+        ['Human bonus feat', 'Feat'],
+        ['Feat', 'Feat'],
+        ['Background', 'Background Selection'],
+        ['Deity', 'Deity Selection'],
+        ['Bonus Combat Feat', 'Bonus Combat Feat'],
+      ]);
+      const levelFeat: SlotId = { place: { level: 1 }, selection: BASIC, index: 0 };
+      const focused = ok(await pick(e, { code: fighter.code, slot: levelFeat, feature: SKILL_FOCUS }), 'pick') as {
+        code: string;
+      };
+      const sub = ok(await next_slots(e, { code: focused.code }), 'next_slots');
+      expect(sub.slots.find((s) => s.slot.selection === SKILL_FOCUS)?.label).toBe('Feat: Skill Focus');
+    });
+
     it('opens a code holding a pick the walk refuses with that pick cleared, and names it', async () => {
       const levelFeat: SlotId = { place: { level: 1 }, selection: BASIC, index: 0 };
       const humanFeat: SlotId = { ...levelFeat, from: HUMAN };

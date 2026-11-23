@@ -1,5 +1,7 @@
 import {
+  parentKey,
   placeKey,
+  slotKey,
   toAbilityScores,
   toArchetypes,
   toBuildName,
@@ -44,7 +46,9 @@ import {
   skillRankRange,
   statName,
   type Refusal,
+  pickName,
   pickWords,
+  slotWords,
 } from '../refusals';
 import {
   maxSpellLevel,
@@ -233,8 +237,17 @@ export interface SlotView {
   readonly slot: SlotId;
   readonly place: string;
   readonly selection: string;
+  readonly label: string;
   readonly band: Band;
   readonly kind: string;
+}
+
+function slotLabel(e: Engine, build: Build, slot: SlotId): string {
+  const key = parentKey(slot);
+  const parent = key === undefined ? undefined : build.picks.find((p) => slotKey(p.slot) === key);
+  return parent === undefined
+    ? slotWords(e.data, build, slot)
+    : `${slotWords(e.data, build, parent.slot)}: ${pickName(e.data, parent)}`;
 }
 
 function openSlots(e: Engine, build: Build, place?: Place): SlotView[] {
@@ -245,6 +258,7 @@ function openSlots(e: Engine, build: Build, place?: Place): SlotView[] {
       slot: s.id,
       place: placeKey(s.id.place),
       selection: nameOf(e.data, s.id.selection),
+      label: slotLabel(e, build, s.id),
       band: bp?.$type === 'BlueprintFeatureSelectMythicSpellbook' ? 'ReplaceSpellbook' : bandOf(group),
       kind: bp?.$type ?? 'unknown',
     };
