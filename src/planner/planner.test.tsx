@@ -2823,9 +2823,9 @@ describe('QA pass 4, severity 1', () => {
     );
   });
 
-  test('the Build name may use the top bar’s room', () => {
+  test('the Build name may use the top bar’s room while reserving space for the menu', () => {
     expect(rule(css('src/shell/app.css'), '.app-header__inner')).toContain(
-      'grid-template-columns: minmax(max-content, 1fr) minmax(0, auto) minmax(0, 1fr)',
+      'grid-template-columns: minmax(max-content, 1fr) minmax(0, auto) minmax(max-content, 1fr)',
     );
     expect(rule(css('src/planner/planner.css'), '.build-name')).toContain('max-width: 100%');
   });
