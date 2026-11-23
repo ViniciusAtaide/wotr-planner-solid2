@@ -95,6 +95,15 @@ export function picker(
 
 const sameParam = (a: GrantParam | undefined, b: GrantParam | undefined) => JSON.stringify(a) === JSON.stringify(b);
 
+function rankLimit(data: CheckedData, o: OptionStatus): number | undefined {
+  if (o.closed !== undefined || !o.shown) return undefined;
+  const bp = data.blueprints.get(o.feature);
+  if (bp === undefined || !('Ranks' in bp)) return undefined;
+  const parametrized = bp.$type === 'BlueprintParametrizedFeature';
+  if (!parametrized && isSelectionType(bp.$type)) return undefined;
+  return parametrized ? 1 : bp.Ranks;
+}
+
 function withClearsLater(
   data: CheckedData,
   build: Build,
@@ -103,20 +112,18 @@ function withClearsLater(
   G: GrantIndex,
 ): OptionStatus[] {
   const here = slotKey(slot);
-  if (!build.picks.some((p) => slotKey(p.slot) !== here)) return [...options];
+  const others = build.picks.filter((p) => slotKey(p.slot) !== here);
+  const heldElsewhere = new Set(others.map((p) => p.feature));
+  if (!options.some((o) => heldElsewhere.has(o.feature) && rankLimit(data, o) !== undefined)) return [...options];
   const order = new Map(walk(data, build, G).slots.map((s, i) => [slotKey(s.id), i] as const));
   const at = order.get(here) ?? -1;
-  const ordered = build.picks
-    .filter((p) => slotKey(p.slot) !== here && order.has(slotKey(p.slot)))
+  const ordered = others
+    .filter((p) => order.has(slotKey(p.slot)))
     .sort((a, b) => order.get(slotKey(a.slot))! - order.get(slotKey(b.slot))!);
   return options.map((o) => {
-    if (o.closed !== undefined || !o.shown) return o;
-    const bp = data.blueprints.get(o.feature);
-    if (bp === undefined || !('Ranks' in bp)) return o;
-    const parametrized = bp.$type === 'BlueprintParametrizedFeature';
-    if (!parametrized && isSelectionType(bp.$type)) return o;
+    const limit = rankLimit(data, o);
+    if (limit === undefined) return o;
     const same = ordered.filter((p) => p.feature === o.feature && sameParam(p.param, o.param));
-    const limit = parametrized ? 1 : bp.Ranks;
     let held = 1;
     for (const p of same) {
       const later = order.get(slotKey(p.slot))! > at;
