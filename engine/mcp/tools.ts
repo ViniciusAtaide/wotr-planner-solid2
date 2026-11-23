@@ -271,11 +271,18 @@ export interface LevelUp extends Changed {
   readonly note?: string;
 }
 
-function rankPlacements(e: Engine, build: Build, rank: number): { readonly placed: number; readonly last?: number } {
+function rankPlacements(
+  e: Engine,
+  build: Build,
+  rank: number,
+): { readonly placed: number; readonly last?: number; readonly early?: number } {
   const expected = expectedLevel(e.data, rank);
   const after = Math.max(build.ranks?.at(-1)?.level ?? 1, 1);
-  const placed = Math.max(expected > 0 ? expected : build.levels.length, after);
-  return build.levels.length > placed ? { placed, last: build.levels.length } : { placed };
+  const reached = Math.max(build.levels.length, 1);
+  const early = expected > reached ? expected : undefined;
+  const placed = Math.max(expected > 0 ? Math.min(expected, reached) : build.levels.length, after);
+  const last = build.levels.length > placed ? build.levels.length : undefined;
+  return { placed, ...(last !== undefined && { last }), ...(early !== undefined && { early }) };
 }
 
 export async function level_up(
@@ -314,8 +321,13 @@ export async function level_up(
     ]);
     return isRefusal(r) ? r : { ...r, characterLevel: at };
   };
-  const { placed, last } = rankPlacements(e, build, rank);
+  const { placed, last, early } = rankPlacements(e, build, rank);
   const first = await addRankAt(placed);
+  if (!isRefusal(first) && early !== undefined)
+    return {
+      ...first,
+      note: `Mythic rank ${rank} is taken early, at character level ${placed}; it is usually reached at ${early}. place_rank moves it.`,
+    };
   if (!isRefusal(first) || first.breaks === undefined || last === undefined) return first;
   const later = await addRankAt(last);
   if (isRefusal(later)) return first;

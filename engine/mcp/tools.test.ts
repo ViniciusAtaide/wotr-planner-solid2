@@ -606,6 +606,20 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(listed.open.find((o) => o.feature === ASMODEUS)).toBeUndefined();
   });
 
+  it('places a rank taken early at the last character level, and says when it is usually reached (QA pass 9)', async () => {
+    const MYTHIC_HERO = '247aa787806d5da4f89cfc3dff0b217f';
+    let code = (await start_build(e)).code;
+    for (let l = 1; l <= 5; l++) code = ok(await level_up(e, { code, class: FIGHTER }), `L${l}`).code;
+    const first = expectedLevel(e.data, 1);
+    expect(first).toBeGreaterThan(5);
+    const rank = ok(await level_up(e, { code, class: MYTHIC_HERO }), 'M1');
+    expect(rank.characterLevel).toBe(5);
+    expect(rank.build.ranks?.[0]?.level).toBe(5);
+    expect(rank.note).toBe(
+      `Mythic rank 1 is taken early, at character level 5; it is usually reached at ${first}. place_rank moves it.`,
+    );
+  });
+
   it('places a Mythic rank at its Expected level when the character levels came first, and says when one is due (MCP QA)', async () => {
     const MYTHIC_HERO = '247aa787806d5da4f89cfc3dff0b217f';
     let code = (await start_build(e)).code;

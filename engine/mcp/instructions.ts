@@ -7,7 +7,7 @@ export const INSTRUCTIONS = [
   '1. `start_build` gives an empty Build.',
   '2. `set_start` sets race, ability scores and alignment (and `raceStat` when the race lets you choose its +2).',
   '3. For each character level: `level_up` with a class (and `increase`, an ability, at every fourth level), then `next_slots`, `options` and `pick` until no slot is open; then `set_skills` for that level, spending its `skillPoints`.',
-  '4. Take Mythic ranks where the game gives them: when `level_up` or `next_slots` returns `mythicRankDue`, `level_up` with a Mythic class (ranks 1 and 2 are Mythic Hero, then a path) before the next character level, and fill its slots. A rank is placed at its Expected level; `place_rank` moves it to another character level.',
+  "4. Take Mythic ranks where the game gives them: when `level_up` or `next_slots` returns `mythicRankDue`, `level_up` with a Mythic class (ranks 1 and 2 are Mythic Hero, then a path) before the next character level, and fill its slots. A rank is placed at its Expected level; it can also be taken early, before `mythicRankDue` comes, and then sits at the Build's last character level. `place_rank` moves a rank to another character level.",
   '5. `equip` puts Gear in its places.',
   '',
   'Rules of thumb:',
