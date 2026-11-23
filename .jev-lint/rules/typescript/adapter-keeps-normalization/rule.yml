@@ -1,0 +1,53 @@
+id: adapter-keeps-normalization
+languages: [TypeScript]
+kind: noul
+subject: node
+state: located
+threshold: 0.75
+axis: file
+severity: info
+category: advisory
+context:
+  - ../../../../engine/edits/README.md
+  - ../../../../engine/mcp/README.md
+rule:
+  any:
+    - all:
+        - kind: function_declaration
+        - has: { field: name, pattern: $NAME }
+        - has:
+            stopBy: end
+            any:
+              - pattern: $LIST.reduce(apply, $INIT)
+              - pattern: apply($$$ARGS)
+    - all:
+        - kind: variable_declarator
+        - has: { field: name, pattern: $NAME }
+        - has:
+            any:
+              - kind: arrow_function
+              - kind: function_expression
+        - has:
+            stopBy: end
+            any:
+              - pattern: $LIST.reduce(apply, $INIT)
+              - pattern: apply($$$ARGS)
+ask: >-
+  This function ($NAME) changes a Build through a step that skips the settling the supported edit
+  path performs, so the Build it keeps can hold a choice the supported path would have dropped.
+criteria:
+  "true": >-
+    The file, or the documents beside it, show two ways to make the same edit: a raw step that only
+    rewrites fields, and a supported step that also settles the Build afterwards (for example by
+    dropping a racial ability choice the new race no longer allows). This function makes an edit of a
+    kind the supported step settles, uses the raw step for it, and then keeps, encodes or returns the
+    result without that settling happening anywhere else on its path.
+  "false": >-
+    The function goes through the supported step for every edit it makes; or the raw step and the
+    supported step agree for every kind of edit this function can make; or the raw result is only
+    checked or compared and the Build that is kept comes from the supported step; or the function
+    does not change a Build at all.
+nextCheck: >-
+  Name the supported edit path and what it settles beyond the raw step, then find the edit kinds
+  this function can receive; replay one of those edits through both paths and compare the kept
+  Builds.

@@ -1,0 +1,325 @@
+{
+  "schema": "jev-lint-eval-1",
+  "recorded": "2026-11-23T00:27:19.388Z",
+  "model": "perplexity/pplx-decider-v1.3-20261112",
+  "suite": "typescript/adapter-keeps-normalization",
+  "rules": [
+    {
+      "id": "adapter-keeps-normalization",
+      "draft": "0172248bb6c4",
+      "at": 0.5
+    }
+  ],
+  "cutoffs": {},
+  "passes": [
+    [
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-01.ts",
+        "line": 27,
+        "endLine": 32,
+        "kind": "noul",
+        "value": 0.021854911381122465,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-01.ts",
+        "line": 36,
+        "endLine": 39,
+        "kind": "noul",
+        "value": 0.9983119496672745,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-02.ts",
+        "line": 27,
+        "endLine": 32,
+        "kind": "noul",
+        "value": 0.012364373543690105,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-03.ts",
+        "line": 23,
+        "endLine": 28,
+        "kind": "noul",
+        "value": 0.007460745862787867,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-03.ts",
+        "line": 32,
+        "endLine": 35,
+        "kind": "noul",
+        "value": 0.006268411315888617,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-04.ts",
+        "line": 20,
+        "endLine": 25,
+        "kind": "noul",
+        "value": 0.023116501960698855,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-04.ts",
+        "line": 30,
+        "endLine": 35,
+        "kind": "noul",
+        "value": 0.010441060245907383,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-05.ts",
+        "line": 21,
+        "endLine": 26,
+        "kind": "noul",
+        "value": 0.038138406960441136,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-05.ts",
+        "line": 30,
+        "endLine": 43,
+        "kind": "noul",
+        "value": 0.9792310722383504,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-06.ts",
+        "line": 16,
+        "endLine": 21,
+        "kind": "noul",
+        "value": 0.01640691037887203,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-06.ts",
+        "line": 25,
+        "endLine": 31,
+        "kind": "noul",
+        "value": 0.5081748829565939,
+        "confidence": null
+      }
+    ],
+    [
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-01.ts",
+        "line": 27,
+        "endLine": 32,
+        "kind": "noul",
+        "value": 0.02256739714572264,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-01.ts",
+        "line": 36,
+        "endLine": 39,
+        "kind": "noul",
+        "value": 0.9986479118000601,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-02.ts",
+        "line": 27,
+        "endLine": 32,
+        "kind": "noul",
+        "value": 0.012364373543690105,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-03.ts",
+        "line": 23,
+        "endLine": 28,
+        "kind": "noul",
+        "value": 0.0075938792400426615,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-03.ts",
+        "line": 32,
+        "endLine": 35,
+        "kind": "noul",
+        "value": 0.004546942567429053,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-04.ts",
+        "line": 20,
+        "endLine": 25,
+        "kind": "noul",
+        "value": 0.023116501960698855,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-04.ts",
+        "line": 30,
+        "endLine": 35,
+        "kind": "noul",
+        "value": 0.010441060245907383,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-05.ts",
+        "line": 21,
+        "endLine": 26,
+        "kind": "noul",
+        "value": 0.025871102648335954,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-05.ts",
+        "line": 30,
+        "endLine": 43,
+        "kind": "noul",
+        "value": 0.978670644303993,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-06.ts",
+        "line": 16,
+        "endLine": 21,
+        "kind": "noul",
+        "value": 0.02434795634572077,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-06.ts",
+        "line": 25,
+        "endLine": 31,
+        "kind": "noul",
+        "value": 0.5220534674487405,
+        "confidence": null
+      }
+    ],
+    [
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-01.ts",
+        "line": 27,
+        "endLine": 32,
+        "kind": "noul",
+        "value": 0.021854911381122465,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-01.ts",
+        "line": 36,
+        "endLine": 39,
+        "kind": "noul",
+        "value": 0.9983119496672745,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-02.ts",
+        "line": 27,
+        "endLine": 32,
+        "kind": "noul",
+        "value": 0.012364373543690105,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-03.ts",
+        "line": 23,
+        "endLine": 28,
+        "kind": "noul",
+        "value": 0.0075938792400426615,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-03.ts",
+        "line": 32,
+        "endLine": 35,
+        "kind": "noul",
+        "value": 0.004546942567429053,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-04.ts",
+        "line": 20,
+        "endLine": 25,
+        "kind": "noul",
+        "value": 0.014719952883326802,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-04.ts",
+        "line": 30,
+        "endLine": 35,
+        "kind": "noul",
+        "value": 0.008283317431282595,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-05.ts",
+        "line": 21,
+        "endLine": 26,
+        "kind": "noul",
+        "value": 0.038138406960441136,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-05.ts",
+        "line": 30,
+        "endLine": 43,
+        "kind": "noul",
+        "value": 0.9792310722383504,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-06.ts",
+        "line": 16,
+        "endLine": 21,
+        "kind": "noul",
+        "value": 0.02434795634572077,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/rules/typescript/adapter-keeps-normalization/fixtures/case-06.ts",
+        "line": 25,
+        "endLine": 31,
+        "kind": "noul",
+        "value": 0.5220534674487405,
+        "confidence": null
+      }
+    ]
+  ],
+  "spent": {
+    "calls": 18,
+    "inputTokens": 117810,
+    "usd": 0,
+    "ms": 55795
+  }
+}

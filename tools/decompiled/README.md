@@ -20,7 +20,7 @@ WrathDecompiled 6ce4a6b), so the tests that read them run only where they are pr
   `Spellbook`).
 - `elementType(declared)`: the element type of a field's declared type: `LevelEntry[]` and `List<LevelEntry>` are
   `LevelEntry`.
-- `featureText`, `citeFormatProblems`, `declares`, `citeSourceProblems`: the cite checks below.
+- `codeNames`, `featureNames`, `citeFormatProblems`, `declares`, `citeSourceProblems`: the cite checks below.
 
 ## Rules
 
@@ -33,14 +33,23 @@ WrathDecompiled 6ce4a6b), so the tests that read them run only where they are pr
 
 ## Cite checks
 
-`cites.ts` checks a feature's `cite` registry: each key's first segment names something in the feature's code
-(`featureText`, every `.ts`, `.tsx` and `.mjs` file but `cites.ts`), each key has at least one citation, and each
-citation parses as `Path/File.cs Method (Field, …)` (`citeFormatProblems`). Against the sources, the cited file exists
-under `Kingmaker/` and declares the member (`citeSourceProblems`, `declares`): a method or property `body` finds, or a
-class, struct, enum or interface of that name.
+`cites.ts` checks a feature's `cite` registry: each key's first segment is an identifier in the feature's code, and
+each key has at least one citation, and each citation parses as `Path/File.cs Method (Field, …)`
+(`citeFormatProblems`). The identifiers come from oxc-parser's syntax tree of every `.ts`, `.tsx` and `.mjs` file but
+`cites.ts` (`codeNames`, `featureNames`), so a name that appears only inside a string or a comment doesn't count. It
+is an identifier check, not name resolution: any identifier of that name passes, whatever it is bound to.
+
+Against the sources, the cited file exists under `Kingmaker/` and declares the member (`citeSourceProblems`,
+`declares`): a method or property `body` finds, or a class, struct, enum or interface of that name. Each cited field
+must then be read (`reads`, which also accepts the field's property, `m_Spellbook` through `Spellbook`) by the cited
+method's own body, not by a helper it calls; a field read in a helper is cited on the helper
+(`ContextActionApplyBuff.cs CalculateDuration (Permanent)`). A cited type is read as its whole file, so for a type the
+check only says the field is named somewhere in that file.
 
 ## Tests
 
 `cites.test.ts` runs the cite checks over every engine registry: every engine feature with a `cites.ts` is checked,
-each cite is well formed under a key the feature declares, and, when `decompiled/` is present, each names a file that
-declares the cited member. It is skipped when `decompiled/` is absent.
+each cite is well formed under a key the feature's code names, and, when `decompiled/` is present, each names a file
+that declares the cited member, which reads each cited field. That last test is skipped when `decompiled/` is absent.
+Synthetic cases cover a key named only inside a string, a field read only by a helper, a field no code reads, and a
+cited type.

@@ -1,0 +1,30 @@
+default: clean
+note: >-
+  Fitting suite. Labels live here, never in the fixtures. The defect is audit scenario C, reduced from
+  engine/mcp/registry.ts (an unrestricted param schema), engine/walk canSelectParam (rejects None and
+  Universalist only) and the codec (throws on a school it doesn't know): {SpellSchool: 'Banana'} throws
+  instead of being refused. In the real code these sit in three files; here they are in one.
+fixtures/case-01.ts:
+  - line: 33
+    label: bad
+    why: the check rejects two named schools only, and the encoder throws on any other unknown one (audit scenario C, reduced)
+fixtures/case-02.ts:
+  - line: 34
+    label: clean
+    why: the corrected case; the check is membership in the set the encoder knows
+fixtures/case-03.ts:
+  - line: 13
+    label: clean
+    why: hard control; no check at all, but the encoder answers an unknown value with undefined and the handler refuses
+fixtures/case-04.ts:
+  - line: 28
+    label: clean
+    why: hard control; a throwing encoder behind a type guard over the same set
+fixtures/case-05.ts:
+  - line: 25
+    label: bad
+    why: near the boundary; the check matches schools ignoring case and spaces, the encoder matches exactly
+fixtures/case-06.ts:
+  - line: 37
+    label: clean
+    why: near the boundary; no check in the handler, but its parser refuses every school outside the encoder's set

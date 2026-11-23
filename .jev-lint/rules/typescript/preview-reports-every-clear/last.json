@@ -1,0 +1,217 @@
+{
+  "schema": "jev-lint-eval-1",
+  "recorded": "2026-11-23T00:28:14.817Z",
+  "model": "perplexity/pplx-decider-v1.3-20261112",
+  "suite": "typescript/preview-reports-every-clear",
+  "rules": [
+    {
+      "id": "preview-reports-every-clear",
+      "draft": "967f7c1820c6",
+      "at": 0.5
+    }
+  ],
+  "cutoffs": {},
+  "passes": [
+    [
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-01.ts",
+        "line": 38,
+        "endLine": 44,
+        "kind": "noul",
+        "value": 0.9984822219266084,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-02.ts",
+        "line": 38,
+        "endLine": 52,
+        "kind": "noul",
+        "value": 0.0009443828528588737,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-03.ts",
+        "line": 18,
+        "endLine": 22,
+        "kind": "noul",
+        "value": 0.10712447150802874,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-04.ts",
+        "line": 32,
+        "endLine": 36,
+        "kind": "noul",
+        "value": 0.0007088538813821231,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-04.ts",
+        "line": 38,
+        "endLine": 40,
+        "kind": "noul",
+        "value": 0.012251351961165812,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-05.ts",
+        "line": 30,
+        "endLine": 40,
+        "kind": "noul",
+        "value": 0.944616100714611,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-06.ts",
+        "line": 31,
+        "endLine": 39,
+        "kind": "noul",
+        "value": 0.052781208362948535,
+        "confidence": null
+      }
+    ],
+    [
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-01.ts",
+        "line": 38,
+        "endLine": 44,
+        "kind": "noul",
+        "value": 0.9984822219266084,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-02.ts",
+        "line": 38,
+        "endLine": 52,
+        "kind": "noul",
+        "value": 0.0009955955718857394,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-03.ts",
+        "line": 18,
+        "endLine": 22,
+        "kind": "noul",
+        "value": 0.10712447150802874,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-04.ts",
+        "line": 32,
+        "endLine": 36,
+        "kind": "noul",
+        "value": 0.0007088538813821231,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-04.ts",
+        "line": 38,
+        "endLine": 40,
+        "kind": "noul",
+        "value": 0.012251351961165812,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-05.ts",
+        "line": 30,
+        "endLine": 40,
+        "kind": "noul",
+        "value": 0.9609846163652663,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-06.ts",
+        "line": 31,
+        "endLine": 39,
+        "kind": "noul",
+        "value": 0.04850066814396611,
+        "confidence": null
+      }
+    ],
+    [
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-01.ts",
+        "line": 38,
+        "endLine": 44,
+        "kind": "noul",
+        "value": 0.9982906433811404,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-02.ts",
+        "line": 38,
+        "endLine": 52,
+        "kind": "noul",
+        "value": 0.0009955955718857394,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-03.ts",
+        "line": 18,
+        "endLine": 22,
+        "kind": "noul",
+        "value": 0.10712447150802874,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-04.ts",
+        "line": 32,
+        "endLine": 36,
+        "kind": "noul",
+        "value": 0.0007088538813821231,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-04.ts",
+        "line": 38,
+        "endLine": 40,
+        "kind": "noul",
+        "value": 0.012251351961165812,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-05.ts",
+        "line": 30,
+        "endLine": 40,
+        "kind": "noul",
+        "value": 0.9446161506075142,
+        "confidence": null
+      },
+      {
+        "rule": "preview-reports-every-clear",
+        "file": ".jev-lint/rules/typescript/preview-reports-every-clear/fixtures/case-06.ts",
+        "line": 31,
+        "endLine": 39,
+        "kind": "noul",
+        "value": 0.058140785540176584,
+        "confidence": null
+      }
+    ]
+  ],
+  "spent": {
+    "calls": 18,
+    "inputTokens": 110391,
+    "usd": 0,
+    "ms": 55341
+  }
+}

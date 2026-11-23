@@ -1,0 +1,31 @@
+default: clean
+note: >-
+  Held-out suite: never used to choose or move the cutoff. Evaluated only after the cutoff is fixed on
+  the fitting suite under .jev-lint/rules. Labels live here, never in the fixtures.
+fixtures/case-01.ts:
+  - line: 23
+    label: bad
+    why: another parameter; any positive integer passes the check and the encoder throws outside its five codes
+fixtures/case-02.ts:
+  - line: 11
+    label: clean
+    why: hard control; the encoder throws, and the handler turns that throw into a refusal
+fixtures/case-03.ts:
+  - line: 34
+    label: bad
+    why: subtle; the check's set holds Universalist, which the encoder's set lacks
+fixtures/case-04.ts:
+  - line: 6
+    label: clean
+    why: distractor; reads param only to describe the request
+  - line: 11
+    label: clean
+    why: distractor; reads param only for a refusal message
+fixtures/case-05.ts:
+  - line: 22
+    label: bad
+    why: near the boundary; `in` also accepts inherited keys such as constructor, which the encoder throws on
+fixtures/case-06.ts:
+  - line: 22
+    label: clean
+    why: near the boundary; the same code with Object.hasOwn, which accepts only the table's own schools

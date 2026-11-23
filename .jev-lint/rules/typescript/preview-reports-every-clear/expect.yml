@@ -1,0 +1,32 @@
+default: clean
+note: >-
+  Fitting suite. Labels live here, never in the fixtures. The defect is audit scenario A, reduced from
+  engine/mcp/tools.ts withMode: the preview reports only the cleared picks of a Cascade that also clears
+  skill levels and Mythic ranks.
+fixtures/case-01.ts:
+  - line: 38
+    label: bad
+    why: the preview reports cleared picks and drops clearedSkills and clearedRanks (audit scenario A, reduced)
+fixtures/case-02.ts:
+  - line: 38
+    label: clean
+    why: the corrected case; every cleared kind reaches the preview
+fixtures/case-03.ts:
+  - line: 18
+    label: clean
+    why: hard control; this Cascade can only clear picks, and the preview reports them
+fixtures/case-04.ts:
+  - line: 32
+    label: clean
+    why: hard control; a differently shaped preview that carries every cleared kind
+  - line: 38
+    label: clean
+    why: distractor; formats a preview and previews no change
+fixtures/case-05.ts:
+  - line: 30
+    label: bad
+    why: near the boundary; reports cleared picks at Mythic ranks but never the cleared ranks themselves
+fixtures/case-06.ts:
+  - line: 31
+    label: clean
+    why: near the boundary; skill levels and Mythic ranks are reported as counts, which still tells the user they go

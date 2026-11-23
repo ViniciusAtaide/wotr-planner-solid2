@@ -1,0 +1,43 @@
+id: accepted-input-is-refused
+languages: [TypeScript]
+kind: noul
+subject: node
+state: located
+axis: file
+severity: info
+category: advisory
+context:
+  - ../../../../engine/mcp/README.md
+  - ../../../../engine/codec/README.md
+rule:
+  any:
+    - all:
+        - kind: function_declaration
+        - has: { field: name, pattern: $NAME }
+        - has: { stopBy: end, pattern: args.param }
+    - all:
+        - kind: variable_declarator
+        - has: { field: name, pattern: $NAME }
+        - has:
+            any:
+              - kind: arrow_function
+              - kind: function_expression
+        - has: { stopBy: end, pattern: args.param }
+ask: >-
+  An input this function ($NAME) accepts can pass every check on its way and still reach encoding
+  as a value the encoder does not know, so the caller gets a thrown error instead of a Refusal.
+criteria:
+  "true": >-
+    Following the input from where this function receives it: the declared schema lets it through,
+    the checks on the way reject only some bad values (for example a few named exceptions) rather
+    than everything outside the set the encoder knows, and the value then reaches an encoder that
+    throws on a value it does not know, with nothing on the path turning that throw into a refusal.
+  "false": >-
+    Every value the encoder would throw on is rejected before encoding, by the schema, by a
+    membership check against the same set the encoder knows, or by a conversion that returns a
+    refusal; or the encoder answers an unknown value with a refusal rather than a throw; or the
+    input never reaches an encoder on this function's path.
+nextCheck: >-
+  Write down the set of values the encoder accepts, the set the schema and the checks let through,
+  and send one value that is in the second set but not the first; a thrown error rather than a
+  Refusal confirms the finding.

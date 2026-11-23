@@ -1,0 +1,11 @@
+model: openrouter:perplexity/pplx-decider-v1.3:free
+files: [src, engine, tools, vite]
+exclude: [data, decompiled, blueprints, dist, node_modules, .scratch]
+rules:
+  typescript/fn-name-promises:
+    severity: info
+  git/diff-follows-instructions:
+    severity: info
+  typescript/preview-reports-every-clear: on
+  typescript/adapter-keeps-normalization: on
+  typescript/accepted-input-is-refused: on

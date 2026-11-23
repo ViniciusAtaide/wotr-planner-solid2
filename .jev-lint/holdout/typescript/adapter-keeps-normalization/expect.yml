@@ -1,0 +1,46 @@
+default: clean
+note: >-
+  Held-out suite: never used to choose or move the cutoff. Evaluated only after the cutoff is fixed on
+  the fitting suite under .jev-lint/rules. Labels live here, never in the fixtures.
+fixtures/case-01.ts:
+  - line: 23
+    label: clean
+    why: applyWith is the supported step itself
+  - line: 32
+    label: bad
+    why: another edit kind; a class change through the raw apply keeps archetypes of a class no longer held
+fixtures/case-02.ts:
+  - line: 22
+    label: clean
+    why: applyWith is the supported step itself
+  - line: 28
+    label: clean
+    why: hard control; the raw step is followed by the same settle the supported step uses
+fixtures/case-03.ts:
+  - line: 21
+    label: clean
+    why: applyWith is the supported step itself
+  - line: 30
+    label: bad
+    why: subtle; the first edit is settled and the rest, race edits included, go through the raw apply
+fixtures/case-04.ts:
+  - line: 3
+    label: clean
+    why: distractor; an unrelated apply that styles an element
+  - line: 7
+    label: clean
+    why: distractor; an unrelated apply that styles an element
+fixtures/case-05.ts:
+  - line: 21
+    label: clean
+    why: applyWith is the supported step itself
+  - line: 30
+    label: bad
+    why: near the boundary; settles every edit except race edits, the one kind applyWith settles
+fixtures/case-06.ts:
+  - line: 16
+    label: clean
+    why: applyWith is the supported step itself
+  - line: 25
+    label: clean
+    why: near the boundary; the raw apply runs only for races that allow the stat, where applyWith changes nothing

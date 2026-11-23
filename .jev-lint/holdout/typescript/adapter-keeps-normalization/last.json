@@ -1,0 +1,352 @@
+{
+  "schema": "jev-lint-eval-1",
+  "recorded": "2026-11-23T00:30:31.305Z",
+  "model": "perplexity/pplx-decider-v1.3-20261112",
+  "suite": "typescript/adapter-keeps-normalization",
+  "rules": [
+    {
+      "id": "adapter-keeps-normalization",
+      "draft": "0172248bb6c4",
+      "at": 0.75
+    }
+  ],
+  "cutoffs": {},
+  "passes": [
+    [
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-01.ts",
+        "line": 23,
+        "endLine": 28,
+        "kind": "noul",
+        "value": 0.09848051828633475,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-01.ts",
+        "line": 32,
+        "endLine": 34,
+        "kind": "noul",
+        "value": 0.9639761640235234,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-02.ts",
+        "line": 22,
+        "endLine": 24,
+        "kind": "noul",
+        "value": 0.0012135769293505922,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-02.ts",
+        "line": 28,
+        "endLine": 31,
+        "kind": "noul",
+        "value": 0.0017009264399311815,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-03.ts",
+        "line": 21,
+        "endLine": 26,
+        "kind": "noul",
+        "value": 0.030788779710323497,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-03.ts",
+        "line": 30,
+        "endLine": 34,
+        "kind": "noul",
+        "value": 0.9898732695225753,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-04.ts",
+        "line": 3,
+        "endLine": 5,
+        "kind": "noul",
+        "value": 0.0638687178097804,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-04.ts",
+        "line": 7,
+        "endLine": 9,
+        "kind": "noul",
+        "value": 0.08098013567051748,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-05.ts",
+        "line": 21,
+        "endLine": 26,
+        "kind": "noul",
+        "value": 0.048322955418548245,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-05.ts",
+        "line": 30,
+        "endLine": 33,
+        "kind": "noul",
+        "value": 0.9618241069987195,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-06.ts",
+        "line": 16,
+        "endLine": 21,
+        "kind": "noul",
+        "value": 0.011053061819895744,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-06.ts",
+        "line": 25,
+        "endLine": 33,
+        "kind": "noul",
+        "value": 0.31128944871880915,
+        "confidence": null
+      }
+    ],
+    [
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-01.ts",
+        "line": 23,
+        "endLine": 28,
+        "kind": "noul",
+        "value": 0.08630332030769956,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-01.ts",
+        "line": 32,
+        "endLine": 34,
+        "kind": "noul",
+        "value": 0.958562924806186,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-02.ts",
+        "line": 22,
+        "endLine": 24,
+        "kind": "noul",
+        "value": 0.0015160303034088723,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-02.ts",
+        "line": 28,
+        "endLine": 31,
+        "kind": "noul",
+        "value": 0.001787164946839723,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-03.ts",
+        "line": 21,
+        "endLine": 26,
+        "kind": "noul",
+        "value": 0.02078272239235832,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-03.ts",
+        "line": 30,
+        "endLine": 34,
+        "kind": "noul",
+        "value": 0.9884191118143694,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-04.ts",
+        "line": 3,
+        "endLine": 5,
+        "kind": "noul",
+        "value": 0.05296306623305572,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-04.ts",
+        "line": 7,
+        "endLine": 9,
+        "kind": "noul",
+        "value": 0.0722506729074591,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-05.ts",
+        "line": 21,
+        "endLine": 26,
+        "kind": "noul",
+        "value": 0.044149503447184435,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-05.ts",
+        "line": 30,
+        "endLine": 33,
+        "kind": "noul",
+        "value": 0.9773329501764677,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-06.ts",
+        "line": 16,
+        "endLine": 21,
+        "kind": "noul",
+        "value": 0.011665412282942045,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-06.ts",
+        "line": 25,
+        "endLine": 33,
+        "kind": "noul",
+        "value": 0.3247364688962404,
+        "confidence": null
+      }
+    ],
+    [
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-01.ts",
+        "line": 23,
+        "endLine": 28,
+        "kind": "noul",
+        "value": 0.08630332030769956,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-01.ts",
+        "line": 32,
+        "endLine": 34,
+        "kind": "noul",
+        "value": 0.958562924806186,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-02.ts",
+        "line": 22,
+        "endLine": 24,
+        "kind": "noul",
+        "value": 0.0012135769293505922,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-02.ts",
+        "line": 28,
+        "endLine": 31,
+        "kind": "noul",
+        "value": 0.0017009264399311815,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-03.ts",
+        "line": 21,
+        "endLine": 26,
+        "kind": "noul",
+        "value": 0.02078272239235832,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-03.ts",
+        "line": 30,
+        "endLine": 34,
+        "kind": "noul",
+        "value": 0.9884191118143694,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-04.ts",
+        "line": 3,
+        "endLine": 5,
+        "kind": "noul",
+        "value": 0.05296306623305572,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-04.ts",
+        "line": 7,
+        "endLine": 9,
+        "kind": "noul",
+        "value": 0.0722506729074591,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-05.ts",
+        "line": 21,
+        "endLine": 26,
+        "kind": "noul",
+        "value": 0.044149503447184435,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-05.ts",
+        "line": 30,
+        "endLine": 33,
+        "kind": "noul",
+        "value": 0.9773329501764677,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-06.ts",
+        "line": 16,
+        "endLine": 21,
+        "kind": "noul",
+        "value": 0.011665412282942045,
+        "confidence": null
+      },
+      {
+        "rule": "adapter-keeps-normalization",
+        "file": ".jev-lint/holdout/typescript/adapter-keeps-normalization/fixtures/case-06.ts",
+        "line": 25,
+        "endLine": 33,
+        "kind": "noul",
+        "value": 0.3247364688962404,
+        "confidence": null
+      }
+    ]
+  ],
+  "spent": {
+    "calls": 18,
+    "inputTokens": 117069,
+    "usd": 0,
+    "ms": 54870
+  }
+}

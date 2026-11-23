@@ -112,7 +112,10 @@ export const cites = {
     'UnitLogic/Mechanics/Actions/ContextActionAddFeature.cs RunAction (m_SetRankFrom)',
     'UnitLogic/Feature.cs SetRank',
   ],
-  actionGrant: ['UnitLogic/Mechanics/Actions/ContextActionApplyBuff.cs RunAction (Permanent)'],
+  actionGrant: [
+    'UnitLogic/Mechanics/Actions/ContextActionApplyBuff.cs RunAction',
+    'UnitLogic/Mechanics/Actions/ContextActionApplyBuff.cs CalculateDuration (Permanent)',
+  ],
   actionGrants: ['Designers/EventConditionActionSystem/Actions/Conditional.cs RunAction (IfTrue, IfFalse)'],
   grantorKind: ['Blueprints/Classes/FeatureGroup.cs FeatureGroup'],
 } satisfies Cites;

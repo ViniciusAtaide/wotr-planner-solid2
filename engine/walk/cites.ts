@@ -368,7 +368,7 @@ export const cites = {
   'Walker.applied': [
     'UnitLogic/FactLogic/AddFacts.cs UpdateFacts (AppliedFacts)',
     'Designers/Mechanics/EquipmentEnchants/AddUnitFeatureEquipment.cs OnActivate (AppliedFact)',
-    'Designers/Mechanics/EquipmentEnchants/AddUnitFactEquipment.cs OnActivate (AppliedFact)',
+    'Designers/Mechanics/EquipmentEnchants/AddUnitFactEquipment.cs OnActivate (AddedFact)',
   ],
   'Walker.run': ['UnitLogic/UnitProgressionData.cs UnitProgressionData (FeatsProgression)'],
   'Walker.gain': [
@@ -445,7 +445,7 @@ export const cites = {
   'Walker.wear': [
     'Items/ItemEntity.cs OnDidEquipped',
     'Designers/Mechanics/EquipmentEnchants/AddUnitFeatureEquipment.cs OnActivate (AppliedFact)',
-    'Designers/Mechanics/EquipmentEnchants/AddUnitFactEquipment.cs OnActivate (AppliedFact)',
+    'Designers/Mechanics/EquipmentEnchants/AddUnitFactEquipment.cs OnActivate (AddedFact)',
   ],
   'Walker.takeOff': [
     'Items/ItemEntity.cs OnWillUnequip',

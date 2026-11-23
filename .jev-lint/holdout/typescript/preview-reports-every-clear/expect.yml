@@ -1,0 +1,31 @@
+default: clean
+note: >-
+  Held-out suite: never used to choose or move the cutoff. Evaluated only after the cutoff is fixed on
+  the fitting suite under .jev-lint/rules. Labels live here, never in the fixtures.
+fixtures/case-01.ts:
+  - line: 22
+    label: bad
+    why: another domain; the preview lists removed items and drops the enchantments the change also loses
+fixtures/case-02.ts:
+  - line: 30
+    label: clean
+    why: every cleared kind reaches the preview through a helper in the same file
+fixtures/case-03.ts:
+  - line: 25
+    label: bad
+    why: subtle; reports cleared picks and skill levels and drops clearedRanks
+fixtures/case-04.ts:
+  - line: 1
+    label: clean
+    why: distractor; previews a name, not a change
+  - line: 6
+    label: clean
+    why: distractor; previews an image URL, not a change
+fixtures/case-05.ts:
+  - line: 24
+    label: bad
+    why: near the boundary; every kind is listed, but the preview returns nothing when no pick is cleared, hiding cleared skills and ranks
+fixtures/case-06.ts:
+  - line: 28
+    label: clean
+    why: near the boundary; every kind is reported through a typed table, without naming the fields in the function

@@ -25,6 +25,10 @@ Put the game sources at the repo root. Both are git-ignored:
 | `bun run check`                          | format check, lint, the repo checks, type check, the importer check and every test  |
 | `bun run check:repo`                     | the import DAG and the comment ban alone (`tools/repo-checks`)                      |
 | `bun run format`                         | fixes formatting                                                                    |
+| `bun run lint:jev`                       | jev-lint on the lines changed since `main`: names against what they do (note 2)     |
+| `bun run lint:jev:commits`               | jev-lint on unpushed commits, each against `AGENTS.md` (`-- --base main` on a branch) |
+| `bun run review:jev`                     | jev-lint on the staged lines, before a commit (note 2)                              |
+| `bun run review:jev:instructions`        | jev-lint on the staged change against `AGENTS.md` (note 2)                          |
 | `bun run show -- <guid\|name>`           | prints blueprints from the dump, with their references named (`tools/dump/show.mjs`) |
 | `bun <file.ts>`                          | runs a TypeScript file in the repo, `~engine` imports included                      |
 | `bun run engine-run <file.ts>`           | the same for a file outside the repo, such as a session scratchpad (note 1)         |
@@ -34,6 +38,7 @@ Put the game sources at the repo root. Both are git-ignored:
 | `bun engine/pickers/sweep.ts`            | every picker option at every gold-build slot against the walk (minutes)             |
 
 1. A file outside the repo has no `tsconfig.json` to resolve `~engine`, so `engine-run` points Bun at this one. Bun 1.3.5 then prints a harmless "Internal error: directory mismatch" line after the run. Bun runs the file top to bottom; a file that exports `main(args)` calls it under `if (import.meta.main)`, as `tools/importer/census.ts` does.
+2. jev-lint asks a hosted model about each match. `.jev-lint.yaml` sets OpenRouter's free Perplexity Decider model, so a run costs nothing but needs `OPENROUTER_API_KEY` in the environment (a free key from openrouter.ai/keys) and is paced at about one request every 3 seconds under a daily limit; that is why it stays out of `bun run check` and the pre-commit hook. The shipped rules' cutoffs were fitted on TypeSafe's Jev, not this model, so read a finding as a hint. `.jev-lint.yaml` picks the rules: two shipped ones at `info` (`typescript/fn-name-promises`, `git/diff-follows-instructions`) and three of this repo's own, which are advisory and have had one evaluation run (its results are in `.jev-lint/README.md`). `.jev-lint/README.md` describes those three, the evidence each one sees, and how to evaluate them (`bun --bun jev-lint eval .jev-lint/rules`, then `.jev-lint/holdout`). Add `--dry-run` to see what a run would send without a request. Verdicts are cached in `.jev-lint/verdicts/`, which the formatter skips. The `review:jev` scripts read the whole index, so run them only when it holds nothing but your change: sessions share this checkout, and another session's work may already be staged.
 
 ## Where things are
 

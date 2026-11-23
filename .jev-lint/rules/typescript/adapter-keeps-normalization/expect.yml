@@ -1,0 +1,47 @@
+default: clean
+note: >-
+  Fitting suite. Labels live here, never in the fixtures. The defect is audit scenario B, reduced from
+  engine/mcp/tools.ts plainEdits: set_start folds its edits with the raw apply, so a race change keeps a
+  raceStat the new race no longer allows, where engine/edits applyWith would have dropped it.
+fixtures/case-01.ts:
+  - line: 27
+    label: clean
+    why: applyWith is the supported step itself
+  - line: 36
+    label: bad
+    why: folds race edits with the raw apply and encodes the result (audit scenario B, reduced)
+fixtures/case-02.ts:
+  - line: 27
+    label: clean
+    why: applyWith is the supported step itself
+  - line: 36
+    label: clean
+    why: the corrected case; every edit goes through applyWith, so the matcher doesn't match it and no answer is asked
+fixtures/case-03.ts:
+  - line: 23
+    label: clean
+    why: applyWith is the supported step itself
+  - line: 32
+    label: clean
+    why: hard control; a rename, which the supported step settles no differently from the raw step
+fixtures/case-04.ts:
+  - line: 20
+    label: clean
+    why: applyWith is the supported step itself
+  - line: 30
+    label: clean
+    why: hard control; the raw result is only compared, and the kept Build comes from applyWith
+fixtures/case-05.ts:
+  - line: 21
+    label: clean
+    why: applyWith is the supported step itself
+  - line: 30
+    label: bad
+    why: near the boundary; folds through applyWith, then puts the old raceStat back with a raw apply
+fixtures/case-06.ts:
+  - line: 16
+    label: clean
+    why: applyWith is the supported step itself
+  - line: 25
+    label: clean
+    why: near the boundary; uses the raw apply only after refusing every case where applyWith would drop a stat

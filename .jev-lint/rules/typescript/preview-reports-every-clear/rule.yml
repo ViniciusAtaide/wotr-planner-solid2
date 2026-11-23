@@ -1,0 +1,47 @@
+id: preview-reports-every-clear
+languages: [TypeScript]
+kind: noul
+subject: node
+state: located
+axis: file
+severity: info
+category: advisory
+context:
+  - ../../../../engine/edits/README.md
+  - ../../../../engine/mcp/README.md
+rule:
+  any:
+    - all:
+        - kind: function_declaration
+        - has: { field: name, pattern: $NAME }
+        - regex: '(?i)preview'
+    - all:
+        - kind: method_definition
+        - has: { field: name, pattern: $NAME }
+        - regex: '(?i)preview'
+    - all:
+        - kind: variable_declarator
+        - has: { field: name, pattern: $NAME }
+        - has:
+            any:
+              - kind: arrow_function
+              - kind: function_expression
+        - regex: '(?i)preview'
+ask: >-
+  This function ($NAME) answers a preview of a change, and that preview leaves out some of the
+  user's choices that carrying the change out would clear.
+criteria:
+  "true": >-
+    The change this function previews produces a result that lists several kinds of cleared
+    choice (for example cleared picks, cleared skill levels, cleared Mythic ranks), and the preview
+    this function returns reports only some of those kinds, so a user who accepts the preview can
+    lose a choice it never mentioned.
+  "false": >-
+    Every kind of cleared choice the previewed change can produce reaches the preview, directly or
+    through a helper visible in this file; or the change produces only one kind of cleared choice
+    and the preview reports it; or the function is not a preview of a change at all (it previews
+    text, a name or an image).
+nextCheck: >-
+  List every field of the result the previewed change returns, check that each reaches the
+  preview, then run the preview and the change on one Build where that field is non-empty and
+  compare what each reports.

@@ -1,0 +1,190 @@
+{
+  "schema": "jev-lint-eval-1",
+  "recorded": "2026-11-23T00:26:23.507Z",
+  "model": "perplexity/pplx-decider-v1.3-20261112",
+  "suite": "typescript/accepted-input-is-refused",
+  "rules": [
+    {
+      "id": "accepted-input-is-refused",
+      "draft": "ab3533e58470",
+      "at": 0.5
+    }
+  ],
+  "cutoffs": {},
+  "passes": [
+    [
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-01.ts",
+        "line": 33,
+        "endLine": 37,
+        "kind": "noul",
+        "value": 0.9988895738627813,
+        "confidence": null
+      },
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-02.ts",
+        "line": 34,
+        "endLine": 38,
+        "kind": "noul",
+        "value": 0.009319107919724633,
+        "confidence": null
+      },
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-03.ts",
+        "line": 13,
+        "endLine": 19,
+        "kind": "noul",
+        "value": 0.005190687839656849,
+        "confidence": null
+      },
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-04.ts",
+        "line": 28,
+        "endLine": 35,
+        "kind": "noul",
+        "value": 0.0024933704591885127,
+        "confidence": null
+      },
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-05.ts",
+        "line": 25,
+        "endLine": 29,
+        "kind": "noul",
+        "value": 0.9764126790117874,
+        "confidence": null
+      },
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-06.ts",
+        "line": 37,
+        "endLine": 43,
+        "kind": "noul",
+        "value": 0.0043037953143415355,
+        "confidence": null
+      }
+    ],
+    [
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-01.ts",
+        "line": 33,
+        "endLine": 37,
+        "kind": "noul",
+        "value": 0.9988895738627813,
+        "confidence": null
+      },
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-02.ts",
+        "line": 34,
+        "endLine": 38,
+        "kind": "noul",
+        "value": 0.009319107919724633,
+        "confidence": null
+      },
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-03.ts",
+        "line": 13,
+        "endLine": 19,
+        "kind": "noul",
+        "value": 0.0047908204797342605,
+        "confidence": null
+      },
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-04.ts",
+        "line": 28,
+        "endLine": 35,
+        "kind": "noul",
+        "value": 0.0031201523179801545,
+        "confidence": null
+      },
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-05.ts",
+        "line": 25,
+        "endLine": 29,
+        "kind": "noul",
+        "value": 0.9817091976989303,
+        "confidence": null
+      },
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-06.ts",
+        "line": 37,
+        "endLine": 43,
+        "kind": "noul",
+        "value": 0.0043037953143415355,
+        "confidence": null
+      }
+    ],
+    [
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-01.ts",
+        "line": 33,
+        "endLine": 37,
+        "kind": "noul",
+        "value": 0.9987486701204085,
+        "confidence": null
+      },
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-02.ts",
+        "line": 34,
+        "endLine": 38,
+        "kind": "noul",
+        "value": 0.009319107919724633,
+        "confidence": null
+      },
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-03.ts",
+        "line": 13,
+        "endLine": 19,
+        "kind": "noul",
+        "value": 0.005190687839656849,
+        "confidence": null
+      },
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-04.ts",
+        "line": 28,
+        "endLine": 35,
+        "kind": "noul",
+        "value": 0.0031201523179801545,
+        "confidence": null
+      },
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-05.ts",
+        "line": 25,
+        "endLine": 29,
+        "kind": "noul",
+        "value": 0.9764126790117874,
+        "confidence": null
+      },
+      {
+        "rule": "accepted-input-is-refused",
+        "file": ".jev-lint/rules/typescript/accepted-input-is-refused/fixtures/case-06.ts",
+        "line": 37,
+        "endLine": 43,
+        "kind": "noul",
+        "value": 0.0043037953143415355,
+        "confidence": null
+      }
+    ]
+  ],
+  "spent": {
+    "calls": 18,
+    "inputTokens": 120132,
+    "usd": 0,
+    "ms": 55023
+  }
+}
