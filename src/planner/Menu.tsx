@@ -72,6 +72,8 @@ export function moveInMenu(e: KeyboardEvent): void {
 export function PlannerMenu(props: PlannerMenuProps) {
   const [open, setOpen] = createSignal(false);
   const [said, setSaid] = createSignal<string | undefined>(undefined);
+  const [sheetText, setSheetText] = createSignal<string | undefined>(undefined);
+  let sheetBox: HTMLTextAreaElement | undefined;
   const copied = (words: string) => {
     setOpen(false);
     setSaid(words);
@@ -130,6 +132,7 @@ export function PlannerMenu(props: PlannerMenuProps) {
         aria-expanded={open() ? 'true' : 'false'}
         onClick={() => {
           setSaid(undefined);
+          setSheetText(undefined);
           setOpen(!open());
         }}
       >
@@ -138,6 +141,46 @@ export function PlannerMenu(props: PlannerMenuProps) {
       <span class="planner-menu__said" role="status">
         {said()}
       </span>
+      <Show when={sheetText()}>
+        {(text) => (
+          <div class="planner-menu__sheet" role="group" aria-label="Build sheet to copy">
+            <p class="trail-note">The browser refused the copy. Select the text and copy it yourself.</p>
+            <textarea
+              ref={(el) => {
+                el.value = text();
+                sheetBox = el;
+              }}
+              class="planner-menu__text"
+              aria-label="Build sheet"
+              readonly
+              rows={8}
+            />
+            <div class="planner-menu__sheet-actions">
+              <button
+                type="button"
+                class="trail-link"
+                onClick={() => {
+                  sheetBox?.focus();
+                  sheetBox?.select();
+                }}
+              >
+                Select all
+              </button>
+              <button
+                type="button"
+                class="trail-link"
+                onClick={() => {
+                  setSheetText(undefined);
+                  setSaid(undefined);
+                  keepFocus(toggle);
+                }}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
+      </Show>
       <Show when={open()}>
         <div
           ref={(el) => {
@@ -168,9 +211,13 @@ export function PlannerMenu(props: PlannerMenuProps) {
             role="menuitem"
             onClick={() => {
               close();
-              void copyText(props.sheet()).then((c) => {
+              const text = props.sheet();
+              void copyText(text).then((c) => {
                 if (c === 'copied') copied(SHEET_WORDS.copied);
-                else setSaid(SHEET_WORDS.refused);
+                else {
+                  setSaid(SHEET_WORDS.refused);
+                  setSheetText(text);
+                }
               });
             }}
           >

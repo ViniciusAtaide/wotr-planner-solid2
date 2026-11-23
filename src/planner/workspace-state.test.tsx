@@ -94,7 +94,7 @@ describe('WorkspaceState', () => {
 
   test('a link that opens closes any open step (QA, flat lists)', () => {
     const open = { ...workspaceAt(LINK_OK), selection: { kind: 'race' } as const };
-    expect(reduceWorkspace(open, { kind: 'linkOpened', cleared: [] }).selection).toBeUndefined();
+    expect(reduceWorkspace(open, { kind: 'linkOpened', cleared: [], build: cleaver }).selection).toBeUndefined();
   });
 
   test('sameSelection compares by kind and key', () => {

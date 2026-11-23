@@ -7,15 +7,7 @@ import { picker, type OptionStatus } from '~engine/pickers';
 import { clearsLaterText, gearNote, refusal } from '~engine/refusals';
 
 import { Button, OptionList, PickerOption } from '../design';
-import {
-  Filter,
-  moveThroughOptions,
-  rankOrder,
-  SCROLL_STYLE,
-  StepArrived,
-  type ClosedToggle,
-  type FieldMode,
-} from './ChoiceList';
+import { Filter, moveThroughOptions, rankOrder, SCROLL_STYLE, type ClosedToggle, type FieldMode } from './ChoiceList';
 import { featCategory } from './feat-category';
 import { after } from './flat-choices';
 import { CollapsedLists, createListPanel, StepFilter } from './list-panel';
@@ -100,11 +92,10 @@ export function PickStep(props: PickStepProps) {
   const [mark, setMark] = createSignal(0);
   const [expanded, setExpanded] = createSignal<string | undefined>(undefined);
   const collapsing = useContext(CollapsedLists);
-  const arrived = useContext(StepArrived);
   let box: HTMLDivElement | undefined;
   const panel = createListPanel(
     () => props.field !== undefined || collapsing,
-    untrack(() => props.field === undefined && arrived()),
+    untrack(() => props.field === undefined),
     () => box,
   );
   const idle = () => props.field !== undefined && !panel.shown();
@@ -320,6 +311,14 @@ export function PickStep(props: PickStepProps) {
     const shown = all.filter((o) => o.shown).toSorted((a, b) => childName(row, a).localeCompare(childName(row, b)));
     return [...shown.filter((o) => o.closed === undefined), ...shown.filter((o) => o.closed !== undefined)];
   };
+  const isExpanded = (row: PickRow) => row.kind !== 'option' && expanded() === row.key;
+  const closedValues = () =>
+    open().flatMap((row) => (isExpanded(row) ? children(row).filter((o) => o.closed !== undefined) : []));
+  const openCount = () =>
+    open().flatMap((row): readonly unknown[] =>
+      isExpanded(row) ? children(row).filter((o) => o.closed === undefined) : [row],
+    ).length;
+  const closedCount = () => closed().length + closedValues().length;
   const childName = (row: PickRow, o: OptionStatus) =>
     row.kind === 'params' ? paramLabel(name(o), row.name) : name(o);
   const childCurrent = (row: PickRow, o: OptionStatus) => {
@@ -342,10 +341,11 @@ export function PickStep(props: PickStepProps) {
     const fresh = open().flatMap((row, index): Item[] => {
       const head: Item = { kind: 'row', row, index };
       if (row.kind === 'option' || expanded() !== row.key) return [head];
-      const kids = children(row);
+      const all = children(row);
+      const kids = all.filter((o) => o.closed === undefined || showClosed.shown || childCurrent(row, o));
       return [
         head,
-        ...(kids.length === 0
+        ...(all.length === 0
           ? [{ kind: 'none', row } as const]
           : kids.map((option) => ({ kind: 'child', row, option }) as const)),
       ];
@@ -420,7 +420,7 @@ export function PickStep(props: PickStepProps) {
             fallback={<p class="trail-note">No matches for “{text()}”.</p>}
           >
             <p class="trail-note">
-              {open().length} open · {closed().length} closed
+              {openCount()} open · {closedCount()} closed
             </p>
           </Show>
           <Show when={rows().length > 0 && open().length === 0}>
@@ -528,14 +528,14 @@ export function PickStep(props: PickStepProps) {
               </For>
             </OptionList>
           </div>
-          <Show when={closed().length > 0}>
+          <Show when={closedCount() > 0}>
             <button
               type="button"
               class="trail-link"
               aria-pressed={showClosed.shown ? 'true' : 'false'}
               onClick={() => showClosed.toggle()}
             >
-              {showClosed.shown ? 'Hide closed' : `Show ${closed().length} closed`}
+              {showClosed.shown ? 'Hide closed' : `Show ${closedCount()} closed`}
             </button>
           </Show>
         </Show>

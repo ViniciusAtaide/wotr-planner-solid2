@@ -40,7 +40,7 @@ import { clearedRows } from './planner-state';
 import Planner, { RefusalNotice } from './Planner';
 import { buildSheet } from './sheet';
 import { createPlanner, type Planner as PlannerApi } from './state';
-import { AlignmentWheel } from './CharacterCard';
+import { AlignmentWheel, CharacterCard } from './CharacterCard';
 import { ChoiceList, Filter, matches, matchRank, ranked } from './ChoiceList';
 import { PickerOption } from '../design';
 import { pageTitle } from './BuildName';
@@ -66,7 +66,7 @@ import {
   type TrailState,
 } from './trail-state';
 import type { Selection } from './workspace-state';
-import { historyIdle } from './history-moves';
+import { historyIdle, isOwnHashChange } from './history-moves';
 import { PickStep } from './PickStep';
 import { optionName, shownName } from './words';
 import { homeUrl, shareLinkOf } from './share-code';
@@ -1068,6 +1068,29 @@ describe('the levelling trail (build ticket 07)', () => {
     expect(screen.getByText(/^Your story grants Mythic rank 1 at level/)).toBeTruthy();
   });
 
+  test('a refused Export copy shows the sheet in a box to select and copy by hand (QA pass 8)', async () => {
+    Object.defineProperty(navigator, 'clipboard', {
+      configurable: true,
+      value: { writeText: () => Promise.reject(new Error('denied')) },
+    });
+    await openPlanner(cleaver);
+    openMenu();
+    menuItem('Export as text');
+    const box = await waitFor(() => {
+      const found = screen.getByRole('textbox', { name: 'Build sheet' });
+      expect(found).toBeInTheDocument();
+      return found as HTMLTextAreaElement;
+    });
+    expect(box.readOnly).toBe(true);
+    expect(box.value).toContain('Level 1: Fighter 1 · Power Attack');
+    tap('Select all');
+    expect(document.activeElement).toBe(box);
+    expect(box.selectionStart).toBe(0);
+    expect(box.selectionEnd).toBe(box.value.length);
+    tap('Close');
+    expect(screen.queryByRole('textbox', { name: 'Build sheet' })).toBeNull();
+  });
+
   test('the menu copies the link and exports the build sheet', async () => {
     const written: string[] = [];
     Object.defineProperty(navigator, 'clipboard', {
@@ -1704,6 +1727,48 @@ describe('QA pass 1', () => {
     expect(rule('.trail-stat')).toContain('padding: var(--space-2) 0;');
   });
 
+  test('on a phone the card offers Fold only once it can fold (QA pass 8)', async () => {
+    await openPlanner(undefined, true);
+    expect(screen.queryByRole('button', { name: 'Fold' })).toBeNull();
+    cleanup();
+    await openPlanner({ ...cleaver, picks: [] }, true);
+    expect(screen.queryByRole('button', { name: 'Fold' })).toBeNull();
+    expect(document.querySelector('[aria-label="The character"] .trail-card__head')).toBeNull();
+  });
+
+  test('a card that isn’t editing still names the alignment (QA pass 8)', () => {
+    const api = apiOf(createPlanner(e, cleaver));
+    render(() => (
+      <CharacterCard
+        trail={api}
+        folded={false}
+        foldable={false}
+        editing={false}
+        onToggle={() => {}}
+        race={<span />}
+        deity={<span />}
+        chips={<span />}
+        scoresStep={false}
+        here={<span />}
+      />
+    ));
+    flush();
+    expect(document.querySelector('.trail-alignment')).toBeNull();
+    expect(document.querySelector('.trail-alignment-line')?.textContent).toContain('Neutral');
+  });
+
+  test('the step a link opens on shows its rows at once, with nothing focused (QA pass 8)', async () => {
+    const hash = await atBonusCombatFeat();
+    cleanup();
+    history.replaceState(null, '', `/${hash}`);
+    render(() => <Planner />);
+    await screen.findByRole('toolbar', { name: 'Build' });
+    flush();
+    expect(hereTitle()).toBe('Level 1 · choose bonus combat feat');
+    expect(document.activeElement).toBe(document.body);
+    expect(document.querySelectorAll('.trail-here button.ww-option').length).toBeGreaterThan(0);
+  });
+
   test('the page opens with nothing focused or scrolled, and the step takes both once it moves (ticket 11)', async () => {
     const scrolled = vi.fn();
     Element.prototype.scrollIntoView = scrolled;
@@ -1916,6 +1981,8 @@ describe('nested sub-choices (ticket 08)', () => {
   test('a closed sub-option shows its Refusal, and a parent with every value closed shows closed with why', () => {
     featList();
     click(parent('Weapon Focus'));
+    expect(document.querySelectorAll('[data-child-of] .ww-option--closed')).toHaveLength(0);
+    tap(/^Show \d+ closed$/);
     const closed = document.querySelectorAll('[data-child-of] .ww-option--closed');
     expect(closed.length).toBeGreaterThan(0);
     expect(closed[0]?.textContent).toMatch(/\S/);
@@ -1923,7 +1990,6 @@ describe('nested sub-choices (ticket 08)', () => {
       target: { value: 'fencing grace' },
     });
     flush();
-    tap(/^Show \d+ closed$/);
     const fencing = [...document.querySelectorAll('.ww-option--closed')].filter(
       (r) => r.querySelector('.ww-option__name')?.textContent === 'Fencing Grace',
     );
@@ -3036,6 +3102,21 @@ describe('Gear that won’t stack (ticket 06, engine 4d9b8b50)', () => {
     );
   });
 
+  test('a Gear filter that matches nothing says so, as the other lists do (QA pass 8)', () => {
+    const api = apiOf(createPlanner(e, cleaver));
+    render(() => <GearStep trail={api} />);
+    flush();
+    fireEvent.click(placeChip('Armor') ?? document.body);
+    flush();
+    fireEvent.input(document.querySelector('[data-picker-filter]') ?? document.body, {
+      target: { value: 'celestial' },
+    });
+    flush();
+    expect(document.querySelectorAll('.trail-gear__items .ww-option')).toHaveLength(0);
+    expect(screen.getByText('No matches for “celestial”.')).toBeInTheDocument();
+    expect(document.querySelector('.trail-gear__items')).toBeNull();
+  });
+
   test('the Gear list names each item once: no second end of a double weapon (QA pass 5, engine gearOptions)', () => {
     const planner = createPlanner(e, cleaver);
     const api = apiOf(planner);
@@ -3227,6 +3308,11 @@ describe('a dialog pick never reverts the Build (QA pass 5, severity 4)', () => 
 });
 
 describe('two Skill Focus picks at one level (map 35)', () => {
+  afterEach(() => {
+    cleanup();
+    history.replaceState(null, '', '/');
+  });
+
   const HUMAN_RACE = '0a5d473ead98b0646b94495af250fdc4';
   const MUTATION_WARRIOR = '758e0061a077e54409a3bf0eb51511e5';
   const BASIC = '247a4068296e8be42890143f451b4b45';
@@ -3245,7 +3331,8 @@ describe('two Skill Focus picks at one level (map 35)', () => {
   };
 
   const takeSkill = async (planner: ReturnType<typeof createPlanner>, slot: SlotId, skill: string) => {
-    const { unmount } = render(() => <PickStep trail={apiOf(planner)} slot={slot} />);
+    const api = apiOf(planner);
+    const { unmount } = render(() => <PickStep trail={api} slot={slot} />);
     flush();
     const filter = document.querySelector<HTMLInputElement>('[data-picker-filter]');
     filter?.focus();
@@ -3290,6 +3377,62 @@ describe('two Skill Focus picks at one level (map 35)', () => {
     expect(rows[0]?.name).toMatch(/Religion/);
     expect(rows[0]?.place).toBe('Level 1');
     expect(linkCleared(1)).toBe("This link held a pick the game doesn't allow, so it was cleared:");
+  });
+
+  test('an open parent counts its values, and hides a closed value until "Show N closed" (QA pass 8)', () => {
+    const taken: Build = {
+      ...warrior,
+      picks: [
+        { slot: levelFeat, feature: SKILL_FOCUS },
+        { slot: childSlot(levelFeat, SKILL_FOCUS), feature: LORE_RELIGION },
+      ],
+    };
+    const api = apiOf(createPlanner(e, taken));
+    render(() => <PickStep trail={api} slot={humanFeat} />);
+    flush();
+    const filter = document.querySelector<HTMLInputElement>('[data-picker-filter]');
+    filter?.focus();
+    fireEvent.input(filter ?? document.body, { target: { value: 'skill focus' } });
+    flush();
+    const parent = [...document.querySelectorAll<HTMLElement>('[data-parent] button.ww-option')].find(
+      (b) => b.querySelector('.ww-option__name')?.textContent === 'Skill Focus',
+    );
+    fireEvent.click(parent ?? document.body);
+    flush();
+    const values = () => [...document.querySelectorAll<HTMLElement>('[data-child-of] .ww-option')];
+    const openValues = values().filter((b) => !b.classList.contains('ww-option--closed'));
+    expect(openValues.length).toBeGreaterThan(1);
+    expect(values().some((b) => b.textContent?.includes('Lore (Religion)'))).toBe(false);
+    expect(document.querySelector('.trail-step')?.textContent).toContain(`${openValues.length} open · 1 closed`);
+    tap('Show 1 closed');
+    expect(values().some((b) => b.textContent?.includes('Lore (Religion)'))).toBe(true);
+  });
+
+  test('the cleared-link notice goes when the Build it describes is undone, and sits under the bar (QA pass 8)', async () => {
+    const twice: Build = {
+      ...warrior,
+      picks: [
+        { slot: levelFeat, feature: SKILL_FOCUS },
+        { slot: childSlot(levelFeat, SKILL_FOCUS), feature: LORE_RELIGION },
+        { slot: humanFeat, feature: SKILL_FOCUS },
+        { slot: childSlot(humanFeat, SKILL_FOCUS), feature: LORE_RELIGION },
+      ],
+    };
+    await openPlanner(undefined);
+    isOwnHashChange();
+    pasteHash(`#b=${await encodeBuild(e.data, twice)}`);
+    const notice = () =>
+      [...document.querySelectorAll('.planner-notice')].find((n) => n.textContent?.includes('This link held'));
+    await waitFor(() => expect(notice()).toBeDefined());
+    expect(document.querySelector('.planner-undo__what')?.textContent).toBe('Opened a link');
+    const bar = document.querySelector('.planner-bar');
+    expect(bar?.compareDocumentPosition(notice() ?? document.body)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+    const css = readFileSync(join(process.cwd(), 'src/planner/planner.css'), 'utf8');
+    const rule = css.slice(css.indexOf('.planner-notices {'), css.indexOf('}', css.indexOf('.planner-notices {')));
+    expect(rule).toContain('position: sticky');
+    expect(rule).not.toContain('position: fixed');
+    tap('Undo');
+    await waitFor(() => expect(notice()).toBeUndefined());
   });
 
   test("keeps both skills through QA's steps, each chip naming its own, with the level feat's skill closed in the Human's list", async () => {
