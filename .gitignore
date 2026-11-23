@@ -33,3 +33,6 @@ Thumbs.db
 # The game's sources (copyright boundary): kept locally, never committed
 /decompiled/
 /blueprints/
+
+# Port reviews quote the decompiled sources, so they stay local too
+/.jev-lint/ports/

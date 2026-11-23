@@ -29,6 +29,7 @@ Put the game sources at the repo root. Both are git-ignored:
 | `bun run lint:jev:commits`               | jev-lint on unpushed commits, each against `AGENTS.md` (`-- --base main` on a branch) |
 | `bun run review:jev`                     | jev-lint on the staged lines, before a commit (note 2)                              |
 | `bun run review:jev:instructions`        | jev-lint on the staged change against `AGENTS.md` (note 2)                          |
+| `bun run review:ports -- prerequisites`  | each engine port against the C# it cites, by jev-lint's relations API (`tools/port-review`, note 2) |
 | `bun run show -- <guid\|name>`           | prints blueprints from the dump, with their references named (`tools/dump/show.mjs`) |
 | `bun <file.ts>`                          | runs a TypeScript file in the repo, `~engine` imports included                      |
 | `bun run engine-run <file.ts>`           | the same for a file outside the repo, such as a session scratchpad (note 1)         |

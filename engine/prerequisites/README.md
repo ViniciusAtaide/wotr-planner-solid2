@@ -103,3 +103,9 @@ Besides the readers:
   - `MagicDeceiverWayOfLivingGodProgression` `464ffaf88140474a949618bec7955e78`: `m_RestrictIfNot` forbids the list.
   - `DragonheirScionArchetype` `8dff97413c63c1147be8a5ca229abefc`: one `PrerequisiteCondition` leaf naming its tree, whose facts the data all holds.
   - `FinesseTrainingBite` `bcebc021271be1e45b012729f22dadcc`: its `PrerequisiteConditionForWeaponCategory` (for Bite) is a parameter check, kept out of the prerequisite list.
+- The same file pins every reader's polarity to its game check. It reads the first component of each type the data holds, on its own, once as the dump has it and again with its negating field set and cleared:
+  - The five types whose `CheckInternal` negates on a field read as `forbids` with it set and `requires` with it clear, naming the same thing both ways: `PrerequisiteClassLevel.Not`, `PrerequisiteFeaturesFromList.m_RestrictIfNot`, `PrerequisitePet.NoCompanion`, `PrerequisiteIsPet.Not` and `PrerequisiteMainCharacter.Companion` (`IsMainCharacter != Companion`).
+  - `PrerequisiteNoFeature`, `PrerequisiteNoClassLevel`, `PrerequisiteNoArchetype` and `PrerequisiteNotProficient` always forbid; every other type requires.
+  - `PrerequisiteEtude` reads as `story` either way, whatever its `NotPlaying` says: story state is always met (map ticket 21), so it is the one negating field P doesn't read.
+
+  A model review can't be trusted with a flipped negation (`tools/port-review` missed both it was shown), so this test is what holds it: each of `!c.Not` in `PrerequisiteIsPet`, `!c.Companion` in `PrerequisiteMainCharacter`, a `PrerequisitePet` that drops `NoCompanion`, and a `PrerequisiteNoClassLevel` that requires got past the blueprint tests above and fails here.

@@ -120,6 +120,6 @@ What this does and doesn't show:
 ## Not covered
 
 - `git/diff-follows-instructions` holds a change against `AGENTS.md` only (`CLAUDE.md` when there is no `AGENTS.md`). `CODING_STANDARDS.md`, `GLOSSARY.md`, the ADRs and the feature READMEs are not part of that question.
-- Citations: the deterministic checks in `tools/decompiled` (`README.md` there) check that a key is an identifier in the feature's code and that the cited method reads each cited field. Whether the cited method supports the rule as the engine ports it is not reviewed by any rule here.
+- Citations: the deterministic checks in `tools/decompiled` (`README.md` there) check that a key is an identifier in the feature's code and that the cited method reads each cited field. Whether the cited method supports the rule as the engine ports it is not reviewed by any rule here; `tools/port-review` asks it through jev-lint's relations API instead, one comparison per citation.
 - Framework mix-ups (Solid 1 or React patterns in Solid 2 code) stay with the deterministic linters (`oxlint`, `eslint-plugin-solid`); no rule here asks about them.
 - Documentation drift and consistency across a whole change have no rule yet.

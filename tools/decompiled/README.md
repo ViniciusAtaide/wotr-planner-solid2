@@ -15,7 +15,10 @@ WrathDecompiled 6ce4a6b), so the tests that read them run only where they are pr
 - `ClassFields`: a class's serialized instance fields, by name, with the C# type each is declared with.
 - `body(source, name)`: the bodies of every method or property named `name` in C# `source`, overloads included: a
   block by brace matching, or an expression-bodied member up to its `;`. A declaration counts only with an access
-  modifier.
+  modifier. `memberSpans(source, name)` gives the same members as `Span`s (start and end offsets), for callers that
+  quote whole lines.
+- `typeSpan(source, name)`: the `Span` of a class, struct, enum or interface declaration, from its declaration line to
+  its closing brace.
 - `reads(code, field)`: whether C# `code` reads `field`, directly or through its property (`m_Spellbook` through
   `Spellbook`).
 - `elementType(declared)`: the element type of a field's declared type: `LevelEntry[]` and `List<LevelEntry>` are

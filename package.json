@@ -13,6 +13,7 @@
     "test": "vitest",
     "review:jev": "bun --bun jev-lint review --staged",
     "review:jev:instructions": "bun --bun jev-lint commits --staged",
+    "review:ports": "bun tools/port-review/main.ts",
     "lint": "bun --bun oxlint --deny-warnings src engine tools vite",
     "lint:jev": "bun --bun jev-lint review --base main",
     "lint:jev:commits": "bun --bun jev-lint commits",

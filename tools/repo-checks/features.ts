@@ -98,6 +98,7 @@ export const FEATURES: readonly Feature[] = [
     ],
   },
   { path: 'tools/repo-checks', layer: 'tools', deps: [] },
+  { path: 'tools/port-review', layer: 'tools', deps: ['engine/cite', 'engine/prerequisites', 'tools/decompiled'] },
   { path: '.jev-lint', layer: 'tools', deps: [] },
   { path: 'vite/data-document', layer: 'vite', deps: ['engine/data-dir', 'engine/compact'] },
   { path: 'src/design', layer: 'ui', deps: ['engine/walk'] },

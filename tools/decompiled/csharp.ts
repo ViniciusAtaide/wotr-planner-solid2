@@ -98,29 +98,52 @@ function declaredFields(source: string, name: string): { fields: Map<string, str
   return base === undefined ? { fields } : { fields, base };
 }
 
-export function body(source: string, name: string): string | undefined {
+export interface Span {
+  readonly start: number;
+  readonly end: number;
+}
+
+export function memberSpans(source: string, name: string): Span[] {
   const decl = new RegExp(
     String.raw`^[ \t]*(?:public|private|protected|internal)\b[^\n;]*?\b${name}\b[ \t]*(?:\(|=>|$)`,
     'gm',
   );
-  const bodies: string[] = [];
+  const spans: Span[] = [];
   for (const m of source.matchAll(decl)) {
     const open = source.indexOf('{', m.index);
     const end = source.indexOf(';', m.index);
     if (end >= 0 && (open < 0 || end < open)) {
-      bodies.push(source.slice(m.index, end));
+      spans.push({ start: m.index, end });
       continue;
     }
     let depth = 0;
     for (let i = open; i < source.length; i++) {
       if (source[i] === '{') depth++;
       else if (source[i] === '}' && --depth === 0) {
-        bodies.push(source.slice(m.index, i + 1));
+        spans.push({ start: m.index, end: i + 1 });
         break;
       }
     }
   }
-  return bodies.length === 0 ? undefined : bodies.join('\n');
+  return spans;
+}
+
+export function body(source: string, name: string): string | undefined {
+  const spans = memberSpans(source, name);
+  return spans.length === 0 ? undefined : spans.map((s) => source.slice(s.start, s.end)).join('\n');
+}
+
+export function typeSpan(source: string, name: string): Span | undefined {
+  const decl = new RegExp(String.raw`^[ \t]*(?:\w+\s+)*(?:class|struct|enum|interface)\s+${name}\b`, 'm');
+  const m = decl.exec(source);
+  if (m === null) return undefined;
+  const open = source.indexOf('{', m.index);
+  if (open < 0) return undefined;
+  for (let depth = 0, i = open; i < source.length; i++) {
+    if (source[i] === '{') depth++;
+    else if (source[i] === '}' && --depth === 0) return { start: m.index, end: i + 1 };
+  }
+  return undefined;
 }
 
 export function reads(code: string, field: string): boolean {
