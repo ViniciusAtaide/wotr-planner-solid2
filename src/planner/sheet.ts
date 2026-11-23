@@ -5,8 +5,8 @@ import { PLACES, placeWords } from './GearStep';
 import {
   characterLine,
   characterPicksLine,
-  classLevelAt,
   levelLine,
+  levelStopName,
   pickNames,
   rankNumbersAt,
   slotsAt,
@@ -36,12 +36,7 @@ export function buildSheet(t: TrailView): string {
     const skills = Object.keys(SKILL_ATTRIBUTE)
       .flatMap((s) => ((ranks[s] ?? 0) > 0 ? [`${statName(s)} ${ranks[s]}`] : []))
       .join(', ');
-    const archetype = classLevelAt(build, level) === 1 ? build.classChoices?.[l.class]?.archetypes[0] : undefined;
-    const parts = [
-      `${nameOf(data, l.class)} ${classLevelAt(build, level)}${archetype === undefined ? '' : ` (${nameOf(data, archetype)})`}`,
-      levelLine(t, level),
-      skills,
-    ].filter((p) => p !== '');
+    const parts = [levelStopName(data, build, level), levelLine(t, level), skills].filter((p) => p !== '');
     lines.push(`Level ${level}: ${parts.join(' · ')}`);
     for (const rank of rankNumbersAt(build, level)) {
       const r = build.ranks?.[rank - 1];

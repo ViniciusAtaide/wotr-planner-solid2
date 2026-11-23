@@ -68,3 +68,7 @@ function nextStepControl(): HTMLElement | null {
 export function focusNextStep(): void {
   requestAnimationFrame(() => keepFocus(undefined, nextStepControl));
 }
+
+export function afterPaint(run: () => void): void {
+  requestAnimationFrame(() => setTimeout(run, 0));
+}
