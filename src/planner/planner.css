@@ -539,6 +539,16 @@ html.choice-open .planner-undo:not(:empty) {
   margin-bottom: var(--space-3);
 }
 
+.trail-race .trail-field__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .trail-field {
   display: flex;
   flex-direction: column;

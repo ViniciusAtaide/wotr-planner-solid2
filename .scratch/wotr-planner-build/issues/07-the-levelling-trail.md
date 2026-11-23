@@ -110,7 +110,7 @@ Build each as the prototype does, so it's easy to change, and record the answers
 3. Should adding a level also add its Mythic rank at the Expected level, as one edit?
 4. Should step titles use cleaned names ("choose discovery", not "choose discovery (alchemist)")?
 
-Built as the prototype does, each in one place so it's easy to change (`src/planner/README.md`, "Questions built the prototype's way"): 1, a character chip; 2, a list each time, with the current path first and marked; 3, no; 4, raw names. **Answers: not yet given.**
+Built as the prototype does, each in one place so it's easy to change (`src/planner/README.md`, "Questions built the prototype's way"): 1, a character chip; 2, a list each time, with the current path first and marked; 3, no; 4, raw names. **Answers:** 1, the user, 2026-11-22: a Level 1 pick, and an optional one. The chip reads "Human bonus feat" and "Optional", and auto-advance passes it by ([map 13](../../wotr-planner/issues/13-planner-ui-prototype.md), amendment of 2026-11-22). 2–4: not yet given.
 
 ## Done when
 
@@ -143,7 +143,7 @@ Built on `ticket/levelling-trail`. The planner page is the levelling trail: the 
 
 **Questions the ticket didn't settle**, sent to the coordinator. The user's answers (2026-11-21) kept the defaults as built:
 - **A. Gear:** a Gear card after the trail, one line listing what's worn; a tap opens the Gear editor in place.
-- **B. Editing a level or rank:** tapping the stop's title opens its editor in place; an archetype also shows as a chip at the class's first level, not part of auto-advance.
+- **B. Editing a level or rank:** tapping the stop's title opens its editor in place; an archetype also shows as a chip at the class's first level, not part of auto-advance. *Amended (user, 2026-11-22):* the Archetype chip is gone. The archetype is a row of the class list and names the stop ([map 13](../../wotr-planner/issues/13-planner-ui-prototype.md), amendment of 2026-11-22).
 - **C. Export:** it copies a plain-text build sheet to the clipboard: a character line, then one line per level and rank with its picks.
 
 ### Measured against the baseline

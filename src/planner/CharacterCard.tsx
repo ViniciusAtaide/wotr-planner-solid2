@@ -57,6 +57,7 @@ export interface CharacterCardProps {
   readonly editing: boolean;
   readonly onToggle: () => void;
   readonly race: JSX.Element;
+  readonly deity: JSX.Element;
   readonly chips: JSX.Element;
   readonly scoresStep: boolean;
   readonly alignmentStep?: boolean;
@@ -72,15 +73,7 @@ export function CharacterCard(props: CharacterCardProps) {
   const picksLine = () => characterPicksLine(props.trail.view());
   return (
     <section class={['trail-card', { 'trail-card--folded': props.folded }]} aria-label="The character">
-      <Show
-        when={props.foldable}
-        fallback={
-          <div class="trail-card__head">
-            <span class="trail-kicker">The character</span>
-            <span class="trail-card__line">{characterLine(data(), build())}</span>
-          </div>
-        }
-      >
+      <Show when={props.foldable && props.folded}>
         <button
           type="button"
           class="trail-card__head"
@@ -104,6 +97,7 @@ export function CharacterCard(props: CharacterCardProps) {
         <Show when={build().levels.length === 0}>
           <p class="trail-note">Point buy only: the race and its +2 count from level 1.</p>
         </Show>
+        {props.deity}
         <Show when={props.editing || props.alignmentStep === true}>
           <div class={['trail-alignment-field', { 'trail-alignment-field--target': props.alignmentStep === true }]}>
             <h4 class="trail-subhead">Alignment</h4>

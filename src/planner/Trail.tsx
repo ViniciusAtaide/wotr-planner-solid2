@@ -12,7 +12,6 @@ import {
   useContext,
 } from 'solid-js';
 import { slotKey, type Place } from '~engine/build';
-import { isShown, refGuid } from '~engine/data';
 import type { Edit } from '~engine/edits';
 import { nameOf } from '~engine/refusals';
 import { ATTRIBUTES, type OpenedSlot } from '~engine/walk';
@@ -57,7 +56,9 @@ import {
   hereLevel,
   increaseOffered,
   isBackgroundSlot,
-  isFirstLevelOfClass,
+  isHumanBonusFeat,
+  isDeitySlot,
+  levelClassName,
   keepsSelection,
   levelOneDone,
   chipSlots,
@@ -346,13 +347,14 @@ export default function Trail(props: TrailProps) {
       icon: s.pick === undefined || background ? undefined : featCategory(data(), s.pick.feature),
       gear: s.pick !== undefined && gearDependentSlots(view()).has(slotKey(s.id)),
       note: spellPick(view(), s.id) === undefined ? undefined : SPELL_NOT_MODELLED,
+      optional: isHumanBonusFeat(view(), s),
     };
   };
   type SlotChip = ReturnType<typeof chipOf>;
   const chipKey = (c: SlotChip) =>
     [slotKey(c.slot), c.label, c.value ?? '', c.icon ?? '', c.gear ? 'gear' : '', c.note ?? ''].join('\u0000');
   const slotChip = (c: SlotChip) =>
-    chip(c.label, c.value, { kind: 'slot', slot: c.slot }, c.icon, c.gear, 'Choose', c.note);
+    chip(c.label, c.value, { kind: 'slot', slot: c.slot }, c.icon, c.gear, c.optional ? 'Optional' : 'Choose', c.note);
   const chipsAt = (place: Place): readonly SlotChip[] => {
     const slots = slotsAt(view(), place);
     const labels = pickLabels(data(), slots);
@@ -363,16 +365,6 @@ export default function Trail(props: TrailProps) {
       {(c) => untrack(() => slotChip(c()))}
     </For>
   );
-  const hasArchetypes = (level: number) => {
-    const cls = data().blueprints.get(build().levels[level - 1]?.class ?? '');
-    return (
-      cls?.$type === 'BlueprintCharacterClass' &&
-      cls.m_Archetypes.some((r) => {
-        const a = data().blueprints.get(refGuid(r) ?? '');
-        return a !== undefined && isShown(a);
-      })
-    );
-  };
   const skillsText = (level: number) => {
     const b = skillBudget(view(), level);
     if (level === build().levels.length && b.spent < b.available) return `${b.spent} of ${b.available}`;
@@ -380,16 +372,9 @@ export default function Trail(props: TrailProps) {
   };
   const levelChips = (level: number) => {
     const l = () => build().levels[level - 1];
-    const archetype = () => build().classChoices?.[l()?.class ?? '']?.archetypes[0];
     return (
       <div class="trail-chips">
         {slotChips({ level })}
-        <Show when={isFirstLevelOfClass(build(), level) && hasArchetypes(level)}>
-          {chip('Archetype', archetype() === undefined ? 'None' : nameOf(data(), archetype() ?? ''), {
-            kind: 'level',
-            level,
-          })}
-        </Show>
         <Show when={increaseOffered(view(), level)}>
           {chip('Ability', l()?.increase && `${l()?.increase} +1`, { kind: 'increase', level })}
         </Show>
@@ -479,13 +464,13 @@ export default function Trail(props: TrailProps) {
               <button
                 type="button"
                 class="trail-stop__class"
-                aria-label={`Level ${level}: ${nameOf(data(), build().levels[level - 1]?.class ?? '')} ${classLevelAt(build(), level)}`}
+                aria-label={`Level ${level}: ${levelClassName(data(), build(), level)} ${classLevelAt(build(), level)}`}
                 aria-pressed={isTarget({ kind: 'level', level }) ? 'true' : 'false'}
                 onClick={() =>
                   props.select(isTarget({ kind: 'level', level }) && editing() ? undefined : { kind: 'level', level })
                 }
               >
-                {nameOf(data(), build().levels[level - 1]?.class ?? '')} {classLevelAt(build(), level)}
+                {levelClassName(data(), build(), level)} {classLevelAt(build(), level)}
               </button>
               {levelChips(level)}
               <Show when={atLevel(level)}>{here()}</Show>
@@ -546,10 +531,18 @@ export default function Trail(props: TrailProps) {
           }
           chips={
             <div class="trail-fields">
-              <For each={characterChipSlots(view())} keyed={(s) => slotKey(s.id)}>
+              <For
+                each={characterChipSlots(view()).filter((s) => !isDeitySlot(view(), s) && !isHumanBonusFeat(view(), s))}
+                keyed={(s) => slotKey(s.id)}
+              >
                 {(s) => untrack(() => slotField(s()))}
               </For>
             </div>
+          }
+          deity={
+            <For each={characterChipSlots(view()).filter((s) => isDeitySlot(view(), s))} keyed={(s) => slotKey(s.id)}>
+              {(s) => untrack(() => slotField(s()))}
+            </For>
           }
           scoresStep={where().kind === 'scores'}
           alignmentStep={step().kind === 'alignment'}

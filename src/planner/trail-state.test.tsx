@@ -1,6 +1,15 @@
 import { join } from 'node:path';
 import { describe, expect, test } from 'vitest';
-import { abilityScores, rankLevel, skillRanks, slotKey, toRankLevel, type Build, type SkillRanks } from '~engine/build';
+import {
+  abilityScores,
+  rankLevel,
+  skillRanks,
+  slotKey,
+  toRankLevel,
+  type Build,
+  type SkillRanks,
+  type SlotId,
+} from '~engine/build';
 import { cascade } from '~engine/edits';
 import { readDataDir } from '~engine/data-dir';
 import { jackInTheGreen } from '~engine/gold';
@@ -18,6 +27,7 @@ import {
   characterEditing,
   characterFolded,
   characterSlots,
+  isHumanBonusFeat,
   firstCleared,
   folded,
   gearDependentSlots,
@@ -26,6 +36,7 @@ import {
   levelOneDone,
   mythicDue,
   nextStep,
+  pickLabels,
   reduceTrail,
   sameRanks,
   skillBudget,
@@ -49,6 +60,7 @@ const BASIC_FEAT_SELECTION = '247a4068296e8be42890143f451b4b45';
 const FIGHTER_FEAT_SELECTION = '41c8486641f7d6d4283ca9dae4147a9f';
 const POWER_ATTACK = '9972f33f977fc724c838e59641b2fca5';
 const CLEAVE = 'd809b6c4ff2aaff4fa70d712a70f7d7b';
+const SKILL_FOCUS_SELECTION = 'c9629ef9eebb88b479b2fbc5e836656a';
 const SCORES = abilityScores({
   Strength: 13,
   Dexterity: 10,
@@ -99,7 +111,10 @@ describe('auto-advance: each pick opens the next empty one', () => {
   test('the trail stops at the alignment before any character choice such as the deity (QA pass 5)', () => {
     const { alignment: _none, ...unaligned } = human(1);
     expect(next(unaligned)).toEqual({ kind: 'alignment' });
-    expect(next(human(1))).toEqual({ kind: 'slot', slot: characterSlots(viewOf(human(1)))[0]?.id });
+    expect(next(human(1))).toEqual({
+      kind: 'slot',
+      slot: characterSlots(viewOf(human(1))).find((s) => !isHumanBonusFeat(viewOf(human(1)), s))?.id,
+    });
   });
 
   test('a Build with its race starts on the ability scores, then its first unfinished step after them', () => {
@@ -117,7 +132,10 @@ describe('auto-advance: each pick opens the next empty one', () => {
     expect(next(aligned)).toEqual({ kind: 'nextLevel' });
     expect(stepTitle(viewOf(aligned), { kind: 'nextLevel' })).toBe('Begin · choose a first class');
     const levelled = human(1);
-    expect(next(levelled)).toEqual({ kind: 'slot', slot: characterSlots(viewOf(levelled))[0]?.id });
+    expect(next(levelled)).toEqual({
+      kind: 'slot',
+      slot: characterSlots(viewOf(levelled)).find((s) => !isHumanBonusFeat(viewOf(levelled), s))?.id,
+    });
   });
 
   test('a Build from a link with levels but no scores still starts on the ability scores', () => {
@@ -129,10 +147,10 @@ describe('auto-advance: each pick opens the next empty one', () => {
     const build = human(1);
     const view = viewOf(build);
     const character = characterSlots(view).map((s) => s.id.selection);
-    expect(character[0]).toBe(BASIC_FEAT_SELECTION);
+    expect(character).not.toContain(BASIC_FEAT_SELECTION);
     const first = next(build);
-    expect(first).toEqual({ kind: 'slot', slot: characterSlots(view)[0]?.id });
-    expect(stepTitle(view, first)).toBe('Your character · choose bonus feat');
+    expect(first).toEqual({ kind: 'slot', slot: characterSlots(view).find((s) => !isHumanBonusFeat(view, s))?.id });
+    expect(stepTitle(view, first)).toBe('Your character · choose background');
 
     let b = build;
     for (const s of characterSlots(view)) {
@@ -144,6 +162,67 @@ describe('auto-advance: each pick opens the next empty one', () => {
     if (level.kind !== 'slot') return;
     expect(slotsAt(viewOf(b), { level: 1 }).map((s) => slotKey(s.id))).toContain(slotKey(level.slot));
     expect(stepTitle(viewOf(b), level)).toMatch(/^Level 1 · choose /);
+  });
+
+  test('an unfilled Human bonus feat is optional while the normal level feat remains required', () => {
+    const complete = filled(human(1));
+    const bonus = viewOf(complete).walk.slots.find((s) => isHumanBonusFeat(viewOf(complete), s));
+    expect(bonus).toBeDefined();
+    const withoutBonus = { ...complete, picks: complete.picks.filter((p) => slotKey(p.slot) !== slotKey(bonus!.id)) };
+    expect(next(withoutBonus).kind).toBe('skills');
+    const normal = slotsAt(viewOf(complete), { level: 1 }).find(
+      (s) => s.id.selection === BASIC_FEAT_SELECTION && s.id.from !== HUMAN,
+    );
+    expect(normal).toBeDefined();
+    const withoutNormal = {
+      ...withoutBonus,
+      picks: withoutBonus.picks.filter((p) => slotKey(p.slot) !== slotKey(normal!.id)),
+    };
+    expect(next(withoutNormal)).toEqual({ kind: 'slot', slot: normal!.id });
+  });
+
+  test('a Human bonus feat’s sub-choice stays with it on level 1, and two Skill Focus picks keep their own skills', () => {
+    const base = human(1);
+    const opened = viewOf(base).walk.slots;
+    const bonus = opened.find((s) => isHumanBonusFeat(viewOf(base), s));
+    const feat = opened.find((s) => s.id.selection === BASIC_FEAT_SELECTION && !isHumanBonusFeat(viewOf(base), s));
+    if (bonus === undefined || feat === undefined) throw new Error('no level 1 feat slots');
+    const parents: Build = {
+      ...base,
+      picks: [bonus, feat].map((s) => ({ slot: s.id, feature: SKILL_FOCUS_SELECTION })),
+    };
+    const childOf = (b: Build, parent: SlotId) => walk(e.data, b, e.G).slots.find((s) => s.parent === slotKey(parent));
+    const bonusChild = childOf(parents, bonus.id);
+    const featChild = childOf(parents, feat.id);
+    if (bonusChild === undefined || featChild === undefined) throw new Error('Skill Focus opened no sub-choice');
+    const skills = (picker(e.data, parents, bonusChild.id, e.G)?.options ?? []).filter(
+      (o) => o.shown && o.closed === undefined,
+    );
+    const [first, second] = skills;
+    if (first === undefined || second === undefined) throw new Error('fewer than two skills open');
+    const build = filled({
+      ...parents,
+      picks: [
+        ...parents.picks,
+        { slot: bonusChild.id, feature: first.feature },
+        { slot: featChild.id, feature: second.feature },
+      ],
+    });
+    const view = viewOf(build);
+    const card = characterSlots(view).map((s) => slotKey(s.id));
+    expect(card).not.toContain(slotKey(bonus.id));
+    expect(card).not.toContain(slotKey(bonusChild.id));
+    const level = slotsAt(view, { level: 1 });
+    expect(level.map((s) => slotKey(s.id))).toContain(slotKey(bonusChild.id));
+    const labels = pickLabels(e.data, level);
+    const alone = (parent: SlotId, child: SlotId) =>
+      pickLabels(
+        e.data,
+        level.filter((s) => slotKey(s.id) === slotKey(parent) || slotKey(s.id) === slotKey(child)),
+      ).get(slotKey(parent));
+    expect(labels.get(slotKey(bonus.id))).toBe(alone(bonus.id, bonusChild.id));
+    expect(labels.get(slotKey(feat.id))).toBe(alone(feat.id, featChild.id));
+    expect(labels.get(slotKey(bonus.id))).not.toBe(labels.get(slotKey(feat.id)));
   });
 
   test('with every choice made: the ability increase that is due, then the last level’s skills, then the next level', () => {

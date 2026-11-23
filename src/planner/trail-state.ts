@@ -147,7 +147,17 @@ const byWalk = <T>(compute: (t: TrailView) => T): ((t: TrailView) => T) => {
   };
 };
 
-const wideSlots = byWalk((t) => characterWideSlots(t.data, t.walk.slots));
+const wideSlots = byWalk((t) => {
+  const slots = new Set(characterWideSlots(t.data, t.walk.slots));
+  const onLevelOne = new Set<string>();
+  for (const slot of t.walk.slots) {
+    if (isHumanBonusFeat(t, slot) || (slot.parent !== undefined && onLevelOne.has(slot.parent))) {
+      onLevelOne.add(slotKey(slot.id));
+      slots.delete(slotKey(slot.id));
+    }
+  }
+  return slots;
+});
 
 export const shownSlots = byWalk(shownSlotsOf);
 
@@ -201,6 +211,27 @@ export const characterChipSlots = byWalk((t): readonly OpenedSlot[] => {
   const heritageKey = heritage === undefined ? undefined : slotKey(heritage.id);
   return characterSlots(t).filter((s) => !children.has(slotKey(s.id)) && slotKey(s.id) !== heritageKey);
 });
+
+export function isHumanBonusFeat(t: TrailView, slot: OpenedSlot): boolean {
+  const selection = t.data.blueprints.get(slot.id.selection);
+  return (
+    slot.source.kind === 'race' &&
+    t.data.blueprints.get(t.build.race ?? '')?.name === 'Human' &&
+    selection?.$type === 'BlueprintFeatureSelection' &&
+    selection.Group === 'Feat'
+  );
+}
+
+export function isDeitySlot(t: TrailView, slot: OpenedSlot): boolean {
+  const selection = t.data.blueprints.get(slot.id.selection);
+  return selection?.$type === 'BlueprintFeatureSelection' && selection.Group === 'Deities';
+}
+
+export function levelClassName(data: CheckedData, build: Build, level: number): string {
+  const cls = build.levels[level - 1]?.class ?? '';
+  const archetype = build.classChoices?.[cls]?.archetypes[0];
+  return nameOf(data, archetype ?? cls);
+}
 
 export interface SkillBudget {
   readonly spent: number;
@@ -282,7 +313,7 @@ export function nextStep(
   if (t.build.race === undefined) return { kind: 'race' };
   if (t.build.scores === undefined || raceStatPending(t.data, t.build)) return { kind: 'scores' };
   if (t.build.alignment === undefined) return { kind: 'alignment' };
-  const empty = (slots: readonly OpenedSlot[]) => slots.find((x) => x.pick === undefined);
+  const empty = (slots: readonly OpenedSlot[]) => slots.find((x) => x.pick === undefined && !isHumanBonusFeat(t, x));
   const character = empty(characterSlots(t));
   if (character !== undefined) return { kind: 'slot', slot: character.id };
   const slot = empty(shownSlots(t));
@@ -340,6 +371,7 @@ export function slotLabel(data: CheckedData, selection: string): string {
 export function slotName(t: TrailView, slot: SlotId): string {
   const label = slotLabel(t.data, slot.selection);
   const opened = t.walk.slots.find((s) => slotKey(s.id) === slotKey(slot));
+  if (opened !== undefined && isHumanBonusFeat(t, opened)) return 'Human bonus feat';
   return opened?.source.kind === 'race' && /^feats?$/i.test(label) ? 'Bonus feat' : label;
 }
 
@@ -471,9 +503,7 @@ export function gearDependentSlots(t: TrailView): ReadonlySet<string> {
 }
 
 export function nestedParent(slots: readonly OpenedSlot[], child: OpenedSlot): OpenedSlot | undefined {
-  return slots.find(
-    (p) => p !== child && p.pick?.feature === child.id.selection && placeKey(p.id.place) === placeKey(child.id.place),
-  );
+  return slots.find((p) => child.parent === slotKey(p.id) && p.pick?.feature === child.id.selection);
 }
 
 export function chipSlots(slots: readonly OpenedSlot[]): readonly OpenedSlot[] {

@@ -455,9 +455,10 @@ function menuItem(name: string): void {
 }
 
 function openCharacter(): void {
-  const head = document.querySelector<HTMLElement>('.trail-card__head');
-  if (head === null) throw new Error('no character card');
-  fireEvent.click(head);
+  const card = document.querySelector<HTMLElement>('[aria-label="The character"]');
+  if (card === null) throw new Error('no character card');
+  const head = card.querySelector<HTMLElement>('.trail-card__head');
+  if (head !== null) fireEvent.click(head);
   flush();
 }
 
@@ -560,6 +561,8 @@ describe('the levelling trail (build ticket 07)', () => {
   test('the race step is only the labeled Race field: no heading, Back or Expand, and focus opens its list (user)', async () => {
     await openPlanner(undefined);
     expect(document.querySelector('.trail-here')).toBeNull();
+    expect(document.querySelector('[aria-label="The character"] .trail-card__head')).toBeNull();
+    expect(field('Race').querySelector('input')).toHaveAccessibleName('Race');
     expect(screen.queryByRole('button', { name: 'Back to the next choice' })).toBeNull();
     expect(screen.queryByRole('button', { name: 'Expand' })).toBeNull();
     expect(field('Race').closest('.trail-race')?.querySelector('button.ww-option')).toBeNull();
@@ -647,8 +650,9 @@ describe('the levelling trail (build ticket 07)', () => {
     await openPlanner({ scores: abilityScores(SCORES), race: DWARF, alignment: 'TrueNeutral', levels: [], picks: [] });
     filterAndTake('two-handed fighter');
     expect(levelRows()).toBe(1);
-    expect(document.querySelector('.planner-undo__what')?.textContent).toBe('Level 1 as Fighter · Two-Handed Fighter');
-    expect(chipNamed('Archetype').textContent).toContain('Two-Handed Fighter');
+    expect(document.querySelector('.planner-undo__what')?.textContent).toBe('Level 1 as Two-Handed Fighter · Fighter');
+    expect(button('Level 1: Two-Handed Fighter 1')).toHaveTextContent('Two-Handed Fighter 1');
+    expect(() => chipNamed('Archetype')).toThrow();
     tap('Undo');
     expect(levelRows()).toBe(0);
   });
@@ -876,7 +880,7 @@ describe('the levelling trail (build ticket 07)', () => {
     tap('Lawful Good');
     tap(/^Fighter$/);
     await waitFor(() => expect(levelRows()).toBe(1));
-    const shown = [...document.querySelectorAll('.trail-card__line')].map((n) => n.textContent);
+    const shown = fieldValue('Race');
     await waitFor(async () => {
       const opened = await openHash(e, location.hash);
       expect(opened.kind === 'opened' && opened.build.levels.length).toBe(1);
@@ -887,8 +891,9 @@ describe('the levelling trail (build ticket 07)', () => {
     render(() => <Planner />);
     await screen.findByRole('toolbar', { name: 'Build' });
     await waitFor(() => expect(levelRows()).toBe(1));
-    expect([...document.querySelectorAll('.trail-card__line')].map((n) => n.textContent)).toEqual(shown);
-    expect(shown[0]).toContain('Human · Lawful Good');
+    expect(fieldValue('Race')).toEqual(shown);
+    expect(shown).toBe('Human');
+    expect(button('Lawful Good')).toHaveAttribute('aria-pressed', 'true');
   });
 
   test('a pick opens the next empty choice in place, and the Undo line names it', async () => {
@@ -930,6 +935,10 @@ describe('the levelling trail (build ticket 07)', () => {
     expect(button('Raise Strength')).toBeEnabled();
     expect(fieldValue('Race')).toBe('Dwarf · Basic');
     expect(button('Lawful Good')).toBeTruthy();
+    const wheel = document.querySelector('.trail-alignment-field');
+    expect(
+      field('Deity').compareDocumentPosition(wheel ?? document.body) & Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy();
     expect(document.querySelector('[aria-label="The character"] button.trail-card__head')).toBeNull();
   });
 
@@ -1589,7 +1598,7 @@ describe('QA pass 1', () => {
     expect(filter?.getAttribute('aria-keyshortcuts')).toBe('/');
   });
 
-  test('the feat slot a Human gets from the race is labelled "Bonus feat" (QA pass 5)', async () => {
+  test('the Human bonus feat is an optional chip alongside the other first-level choices', async () => {
     const human =
       [...e.data.blueprints.values()].find((bp) => bp.name === 'Human' && bp.$type === 'BlueprintRace')?.guid ?? DWARF;
     await openPlanner({
@@ -1599,9 +1608,22 @@ describe('QA pass 1', () => {
       levels: [{ class: fighter }],
       picks: [],
     });
-    expect(field('Bonus feat')).toBeInTheDocument();
-    expect(() => field('Feat')).toThrow();
-    expect(field('Bonus feat').querySelector('input')?.getAttribute('placeholder')).toBe('Choose your bonus feat');
+    const bonus = chipNamed('Human bonus feat');
+    expect(bonus).toHaveTextContent('Optional');
+    expect(bonus.parentElement?.classList.contains('trail-chips')).toBe(true);
+    expect(bonus.closest('.trail-stop')?.querySelector('.trail-stop__mark')).toHaveTextContent('1');
+    expect(bonus.closest('[aria-label="The character"]')).toBeNull();
+    fireEvent.click(bonus);
+    flush();
+    expect(hereTitle()).toBe('Level 1 · choose human bonus feat');
+    showList();
+    filterAndTake('Alertness');
+    expect(chipNamed('Human bonus feat')).toHaveTextContent('Alertness');
+    tap('Undo');
+    expect(chipNamed('Human bonus feat')).toHaveTextContent('Optional');
+    cleanup();
+    await openPlanner({ ...cleaver, race: DWARF });
+    expect(() => chipNamed('Human bonus feat')).toThrow();
   });
 
   test('a tile’s controls fill their track and set no width wider than it (user, 2026-11-21)', () => {
@@ -1706,38 +1728,39 @@ describe('QA pass 1', () => {
     expect(await openHash(e, `#b=${newer}`)).toEqual({ kind: 'didNotOpen', reason: 'newerPlanner' });
   });
 
-  test('the level editor lists archetypes by name, the current one first (QA pass 2)', () => {
-    const planner = createPlanner(e, cleaver);
-    const api = apiOf(planner);
-    render(() => <LevelEditor trail={api} level={1} />);
+  test('the level editor offers classes and archetypes in one selector, with the current class first', () => {
+    render(() => <LevelEditor trail={apiOf(createPlanner(e, cleaver))} level={1} />);
     flush();
-    const list = [...document.querySelectorAll('.trail-subhead')].find(
-      (h) => h.textContent === 'Archetype',
-    )?.nextElementSibling;
-    const names = [...(list?.querySelectorAll('button.ww-option .ww-option__name') ?? [])].map(
-      (n) => n.textContent ?? '',
-    );
-    expect(names[0]).toBe('No archetype');
-    const rest = names.slice(1);
-    expect(rest).toEqual([...rest].sort((a, b) => a.localeCompare(b)));
+    expect(document.querySelectorAll('.trail-choices')).toHaveLength(1);
+    expect(screen.getByRole('searchbox', { name: 'Filter classes and archetypes by name' })).toBeInTheDocument();
+    const names = [...document.querySelectorAll('.ww-option__name')].map((n) => n.textContent);
+    expect(names[0]).toBe('Fighter');
+    expect(names).toContain('Two-Handed Fighter · Fighter');
   });
 
-  test('"No archetype" stays first when an archetype is held (QA pass 3)', () => {
-    const fighterClass = cleaver.levels[0]?.class ?? '';
-    const twoHanded = [...e.data.blueprints.values()].find(
-      (b) => b.$type === 'BlueprintArchetype' && nameOf(e.data, b.guid) === 'Two-Handed Fighter',
-    );
-    if (twoHanded === undefined) throw new Error('no Two-Handed Fighter');
-    const held: Build = { ...cleaver, classChoices: { [fighterClass]: { archetypes: [twoHanded.guid] } } };
-    render(() => <LevelEditor trail={apiOf(createPlanner(e, held))} level={1} />);
+  test('the main level selector changes an archetype and can return to the base class', () => {
+    const planner = createPlanner(e, {
+      scores: abilityScores(SCORES),
+      race: DWARF,
+      alignment: 'TrueNeutral',
+      levels: [{ class: fighter }],
+      picks: [],
+    });
+    render(() => <LevelEditor trail={apiOf(planner)} level={1} />);
     flush();
-    const list = [...document.querySelectorAll('.trail-subhead')].find(
-      (h) => h.textContent === 'Archetype',
-    )?.nextElementSibling;
-    const names = [...(list?.querySelectorAll('button.ww-option .ww-option__name') ?? [])].map(
-      (n) => n.textContent ?? '',
+    const filter = screen.getByRole('searchbox', { name: 'Filter classes and archetypes by name' });
+    fireEvent.input(filter, { target: { value: 'two-handed fighter' } });
+    flush();
+    tap(/^Two-Handed Fighter · Fighter/);
+    expect(planner.build().classChoices?.[fighter]?.archetypes).toHaveLength(1);
+    expect(document.querySelector('.ww-option--selected .ww-option__name')?.textContent).toBe(
+      'Two-Handed Fighter · Fighter',
     );
-    expect(names.slice(0, 2)).toEqual(['No archetype', 'Two-Handed Fighter']);
+    fireEvent.input(filter, { target: { value: 'Fighter' } });
+    flush();
+    fireEvent.click(document.querySelector('button.ww-option .ww-option__name')?.closest('button') ?? document.body);
+    flush();
+    expect(planner.build().classChoices?.[fighter]?.archetypes ?? []).toEqual([]);
   });
 
   test('Gear places read as words with their number', () => {

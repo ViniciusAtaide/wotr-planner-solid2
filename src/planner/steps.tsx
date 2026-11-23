@@ -4,7 +4,7 @@ import type { Attribute, StatType } from '~engine/data';
 import { allows, type Edit } from '~engine/edits';
 import { expectedLevel, type Engine } from '~engine/mcp';
 import { mythicStartingClass, offeredClasses, offeredMythicClasses } from '~engine/pickers';
-import { nameOf, rankLevelRange, statName } from '~engine/refusals';
+import { rankLevelRange, statName } from '~engine/refusals';
 import { ATTRIBUTES, SKILL_ATTRIBUTE } from '~engine/walk';
 
 import { Button, Refusal } from '../design';
@@ -20,8 +20,8 @@ import {
   atLevelCap,
   classLevelAt,
   isBackgroundSlot,
-  isFirstLevelOfClass,
   isHeritageSlot,
+  levelClassName,
   mythicDue,
   sameRanks,
   skillBudget,
@@ -264,21 +264,23 @@ function ClassList(props: TrailStepProps) {
         const judged: ClassJudged = judgedAll.get(c.guid) ?? { open: false, reasons: [] };
         if (judged.shown === false && c.guid !== previous) return [];
         const name = judged.label ?? bareNameOf(data, c.guid);
+        const held = b.classChoices?.[c.guid]?.archetypes[0];
+        const selectedName = held === undefined ? name : bareNameOf(data, held);
         const plain: ChoiceRow = {
           key: c.guid,
-          name,
+          name: selectedName,
           open: judged.open,
           reasons: judged.reasons,
           note: judged.note,
           current: c.guid === previous,
-          take: () => props.trail.edit({ kind: 'addLevel', class: c.guid }, `Level ${level} as ${name}`),
+          take: () => props.trail.edit({ kind: 'addLevel', class: c.guid }, `Level ${level} as ${selectedName}`),
         };
         if (b.levels.some((l) => l.class === c.guid)) return [plain];
         return [
           plain,
           ...[...(judged.archetypes?.keys() ?? shownArchetypes(data, c.guid))].map((a) => {
             const own = judged.archetypes?.get(a);
-            const flat = joinedName(name, own?.label ?? bareNameOf(data, a));
+            const flat = joinedName(own?.label ?? bareNameOf(data, a), name);
             return {
               key: `${c.guid} ${a}`,
               name: flat,
@@ -338,10 +340,13 @@ export function NextLevelStep(props: NextLevelStepProps) {
               class="trail-cta"
               disabled={verdict()?.open !== true}
               onClick={() =>
-                props.trail.edit({ kind: 'addLevel', class: cls() }, `Level ${next()} as ${nameOf(data(), cls())}`)
+                props.trail.edit(
+                  { kind: 'addLevel', class: cls() },
+                  `Level ${next()} as ${levelClassName(data(), planner().build(), next() - 1)}`,
+                )
               }
             >
-              <span>Continue as {nameOf(data(), cls())}</span>
+              <span>Continue as {levelClassName(data(), planner().build(), next() - 1)}</span>
               <span class="trail-cta__to">→ level {next()}</span>
             </button>
             <Show when={verdict()?.reasons.length}>
@@ -451,6 +456,7 @@ export function LevelEditor(props: LevelStepProps) {
     ),
   );
   const classRows = createMemo((): ChoiceRow[] => {
+    const b = planner().build();
     const now = level()?.class;
     const judged = judgedHere();
     return currentFirst(
@@ -458,78 +464,51 @@ export function LevelEditor(props: LevelStepProps) {
         const own = judged.get(c.guid);
         if (own?.shown === false && c.guid !== now) return [];
         const name = own?.label ?? bareNameOf(data(), c.guid);
-        return [
-          {
-            key: c.guid,
-            name,
-            ...(c.guid === now
-              ? { open: true, reasons: [] }
-              : { open: own?.open ?? false, reasons: own?.reasons ?? [], note: own?.note }),
-            current: c.guid === now,
+        const held = b.classChoices?.[c.guid]?.archetypes[0];
+        const first = !b.levels.slice(0, props.level - 1).some((l) => l.class === c.guid);
+        const variants = first ? [undefined, ...(own?.archetypes?.keys() ?? shownArchetypes(data(), c.guid))] : [held];
+        return variants.map((archetype): ChoiceRow => {
+          const variant = archetype === undefined ? undefined : own?.archetypes?.get(archetype);
+          const label =
+            archetype === undefined ? name : joinedName(variant?.label ?? bareNameOf(data(), archetype), name);
+          const current = c.guid === now && archetype === held;
+          return {
+            key: `${c.guid} ${archetype ?? ''}`,
+            name: label,
+            open: current || ((own?.open ?? false) && (variant?.open ?? true)),
+            reasons: current ? [] : [...(own?.reasons ?? []), ...(variant?.reasons ?? [])],
+            note: own?.note,
+            current,
             take: () => {
-              if (c.guid !== now)
-                props.trail.edit(
-                  { kind: 'class', level: props.level, class: c.guid },
-                  `Level ${props.level} as ${name}`,
-                );
+              if (current) return;
+              const change: Edit = { kind: 'class', level: props.level, class: c.guid };
+              if (!first) {
+                props.trail.edit(change, `Level ${props.level} as ${label}`);
+                return;
+              }
+              const choose: Edit = {
+                kind: 'archetypes',
+                class: c.guid,
+                archetypes: archetype === undefined ? [] : [archetype],
+              };
+              props.trail.editAll(c.guid === now ? [choose] : [change, choose], `Level ${props.level} as ${label}`);
             },
-          },
-        ];
+          };
+        });
       }),
     );
-  });
-  const archetypeRows = createMemo((): ChoiceRow[] => {
-    const cls = level()?.class;
-    if (cls === undefined || !isFirstLevelOfClass(planner().build(), props.level)) return [];
-    const b = planner().build();
-    const held = b.classChoices?.[cls]?.archetypes[0];
-    const judged = judgedHere().get(cls)?.archetypes;
-    const options = judged === undefined ? shownArchetypes(data(), cls) : [...judged.keys()];
-    if (options.length === 0) return [];
-    const none: ChoiceRow = {
-      key: 'none',
-      name: 'No archetype',
-      open: true,
-      reasons: [],
-      current: held === undefined,
-      take: () => props.trail.edit({ kind: 'archetypes', class: cls, archetypes: [] }, 'No archetype'),
-    };
-    return [
-      none,
-      ...currentFirst(
-        options.map((a) => {
-          const own = judged?.get(a);
-          const name = own?.label ?? bareNameOf(data(), a);
-          return {
-            key: a,
-            name,
-            ...(a === held
-              ? { open: true, reasons: [] }
-              : own === undefined
-                ? judge(planner().engine, b, { kind: 'archetypes', class: cls, archetypes: [a] })
-                : { open: own.open, reasons: own.reasons }),
-            current: a === held,
-            take: () => props.trail.edit({ kind: 'archetypes', class: cls, archetypes: [a] }, `Took ${name}`),
-          };
-        }),
-      ),
-    ];
   });
   return (
     <Show when={level()}>
       <div class="trail-step">
-        <Show when={archetypeRows().length > 0}>
-          <h4 class="trail-subhead">Archetype</h4>
-          <ChoiceList
-            label="Filter archetypes by name"
-            rows={archetypeRows()}
-            closed={closedToggle(props.trail, 'archetype')}
-          />
-        </Show>
         <h4 class="trail-subhead">
-          Class at level {props.level} · {classLevelAt(planner().build(), props.level)} in its class
+          Class or archetype at level {props.level} · {classLevelAt(planner().build(), props.level)} in its class
         </h4>
-        <ChoiceList label="Filter classes by name" rows={classRows()} closed={closedToggle(props.trail, 'class')} />
+        <ChoiceList
+          label="Filter classes and archetypes by name"
+          rows={classRows()}
+          closed={closedToggle(props.trail, 'class')}
+        />
         <Show when={props.level === planner().build().levels.length}>
           <Button
             variant="danger"

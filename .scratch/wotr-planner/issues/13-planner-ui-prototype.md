@@ -51,3 +51,21 @@ This replaces the Timeline-plus-side-picker shape and its full-screen phone shee
 ## Amendment: inline or modal choice lists (user, 2026-11-21)
 
 The trail keeps its choices inline by default. A ⋯ menu setting switches to "Modal first", where each choice opens in a large dialog (full screen on a phone) with a detail pane. The user hasn't chosen a default beyond inline yet, and wants both to try; build ticket 10 builds the setting and measures both modes.
+
+## Amendment: archetypes in the class list, an optional Human bonus feat, the deity on the card (user, 2026-11-22)
+
+The user made these changes to the trail directly, and they were recorded after review:
+
+- **An archetype is a class.**
+  - One list holds the classes and their archetypes. An archetype's row reads "Archetype · Class", for example "Two-Handed Fighter · Fighter", with the class after the dot.
+  - At a class's first level, the level editor offers the plain class and each of its archetypes. At later levels of that class, it offers only the variant held. Taking a row sets the class and its archetype as one change, and the plain row clears the archetype.
+  - There is no separate archetype list and no "No archetype" row.
+  - A level's stop, its "Continue as" button and its Undo line use the archetype's name when one is held, for example "Two-Handed Fighter 1". The Archetype chip is gone. This amends build ticket 07's decision B.
+- **The Human bonus feat is an optional Level 1 pick.**
+  - It sits on Level 1 with that level's other chips, not on the character card. Its chip reads "Human bonus feat", and "Optional" until it is filled.
+  - Auto-advance passes it by. Level 1 counts as done without it, so the card folds and the next level is offered.
+  - The level's own feat stays required. This answers build ticket 07's question 1.
+  - The game's `LevelUpState.IsComplete` doesn't finish a level while a selection can still be picked. The MCP's `next_slots` still lists the slot as open. So this is a planner choice, not the game's rule, and the UI and the MCP disagree on when such a Build is finished.
+- **The deity sits on the character card under the race,** above the background and the alignment.
+- **The card's head shows only while the card is folded** (phones under 900 px). An open card, or any card from 900 px wide, has no "The character" heading or summary line.
+- **The race field's label is visually hidden.** Screen readers still announce it.

@@ -19,9 +19,10 @@ A Build reads as the character's path, phone first. From top to bottom the page 
   the chosen one, above it), the six ability scores as tiles
   with − and + steppers and a +2 button under each (disabled, in the same place, when the race sets its bonuses), the
   points left, and the character's own picks as a column of labeled search fields (user, 2026-11-21;
-  `CharacterField.tsx`): Race at the top, then what the race grants (a Human's bonus feat), the background and the
-  deity. Which slots those are is S's answer (`characterWideSlots`), so nothing character-wide sits on the Level 1
-  stop. A field shows its label and the current choice, or "Choose your …" in the accent style while unset; the one the
+  `CharacterField.tsx`): Race at the top, its label visually hidden (screen readers still announce it), then the deity
+  under it, then what else the race grants and the background (user, 2026-11-22; `deity` on `CharacterCard`,
+  `isDeitySlot`). Which slots those are is S's answer (`characterWideSlots`), less the Human bonus feat, which is an
+  optional Level 1 pick (below). A field shows its label and the current choice, or "Choose your …" in the accent style while unset; the one the
   trail waits on is underlined in gold. Inline first, focusing or typing in it opens its list under it (the lists'
   field mode, `FieldMode` on `ChoiceList` and `PickStep`: the same cap, windowing, closed rows and keys), and a pick
   closes it and moves the trail on, with no step heading, Back or Expand around it. While closed, a field computes
@@ -37,9 +38,11 @@ A Build reads as the character's path, phone first. From top to bottom the page 
   is already in that field, so the previous field's list closes (its focus left it) after a tap, an Undo or a race
   change; under a fine pointer its filter does.
 - **The trail**: one stop per character level, titled with its class and class level, with its picks as chips: each
-  slot the walk opens there, an Archetype chip at a class's first level when it has archetypes, the ability increase
-  when the walk offers one, and the skills ("4 ranks"). Each Mythic rank is its own stop after the level it is taken at,
-  in the Mythic color; every 4th level is a milestone, marked in gold.
+  slot the walk opens there, the ability increase when the walk offers one, and the skills ("4 ranks"). A class with an
+  archetype is titled by the archetype ("Two-Handed Fighter 1", `levelClassName`); there is no Archetype chip (user,
+  2026-11-22). A Human's bonus feat is a Level 1 chip that reads "Human bonus feat" and "Optional" until filled
+  (`isHumanBonusFeat`). Each Mythic rank is its own stop after the level it is taken at, in the Mythic color; every 4th
+  level is a milestone, marked in gold.
 - **Gear**: a card after the trail, one line listing what is worn; a tap opens the places and their items in place.
 
 **The current step opens in place**, on its stop, in the character card, or on a new stop after the last level, and
@@ -61,7 +64,9 @@ to the player in the planner's own words: "Level 5 · choose feat", "Your charac
    waits for it. The wheel in the character card is its field: outlined in gold with "Choose an alignment" while the
    trail waits on it, and arriving there scrolls it into view and focuses its first node. It comes before the first
    class, and so before the deity and every other character choice.
-3. the first empty slot with the character, then the first empty slot on the trail, in the walk's order;
+3. the first empty slot with the character, then the first empty slot on the trail, in the walk's order. The Human
+   bonus feat is never a step: it stays empty until tapped, and level 1 counts as done without it (user, 2026-11-22;
+   the game itself won't finish the level with it empty, and the MCP still lists it as open);
 4. an ability increase the walk offers and the Build hasn't taken;
 5. the last level's skills, until the walk's budget for that level is spent or the player chooses "Done · leave N
    unspent";
@@ -69,7 +74,8 @@ to the player in the planner's own words: "Level 5 · choose feat", "Your charac
    the current path first and marked (before any rank, the game's starting Mythic class, S's `mythicStartingClass`,
    comes first but unmarked, since nothing is current yet); "Not now" puts it off until the next level. No rank is
    offered once the walk says the ranks have ended (`Walk.ranksEnded`, Legend at rank 8);
-7. the next level: "Continue as <previous class> → level N" in one tap, or "Another class…", which lists every class
+7. the next level: "Continue as <previous class> → level N" in one tap (named by its archetype when one is held), or
+   "Another class…", which lists every class
    (and each archetype of a class the Build hasn't taken, below) with its status, the previous class first, then the
    open ones, then the closed ones with their reasons. At the level cap (`Walk.maxCharacterLevel`, `atLevelCap`) no
    next level is offered: a due Mythic rank still is, even after "Not now" (which the cap hides), and otherwise the
@@ -105,8 +111,10 @@ pass 3; 201 closed feats render in about 35 ms in a production build). Names are
 bare names, qualified only when two in the same list share one (`shownName`, `pickLabels`, `bareNameOf`). A small set
 (+2, the six ability increases, the last one marked "as before") is a row of buttons. A class or path list gets the
 filter from 13 rows up. An open parent's values
-are sorted by name, open before closed, and a level's archetype list starts with "No archetype", then the held
-archetype, then the rest by name.
+are sorted by name, open before closed. A level's editor has one list of classes and archetypes ("Class or archetype
+at level N"): at a class's first level it offers each class and each of its archetypes, at a later level only the
+variant the class holds; taking a row sets the class and its archetype as one change, and a plain class row clears the
+archetype (user, 2026-11-22).
 
 **Scores before level 1** (QA pass 6): the tiles and a dialog's header read
 `Planner.score`, which walks the Build with a placeholder first level (S's `firstLevelWith`) until it has one, so the
@@ -241,8 +249,9 @@ name is S's bare name, and a variation never repeats its group: "Aasimar" and "S
   group. A row works before level 1: the heritage pick waits in the Build for the slot level 1 opens. Changing the
   race clears the old heritage first, so the old pick never lingers;
 - the background group with its variation in parentheses, "Noble (Courtier)" (`flatName`), or the group alone;
-- the class with its archetype after a dot, "Fighter · Two-Handed Fighter" (`joinedName`), in the class list for a class the Build hasn't taken
-  (an archetype belongs to a class's first level).
+- the archetype with its class after a dot, "Two-Handed Fighter · Fighter" (`joinedName`), in the class list for a class the Build hasn't taken
+  (an archetype belongs to a class's first level); a class the Build holds with an archetype shows the archetype's
+  name alone (user, 2026-11-22).
 
 The race chip and the background chip name the pair; the heritage and the variation have no chip of their own. Each
 list's statuses come from S at one walk: `racePicker` (each race's own refusal and its heritage options),
@@ -266,10 +275,12 @@ counted)" when the Build counts Gear, so it reads as the card does.
 
 **Folding, phones only (under 900 px)**: once level 1 is done (every choice made, `levelOneDone`) the character card
 shrinks to one line (race, alignment, +2 and the character's picks) until tapped; before that it is open with its
-controls. Levels group into chapters of four, ending on the milestones; a finished
+controls. The card's head (the "The character" kicker and that line) shows only while the card is folded (user,
+2026-11-22). Levels group into chapters of four, ending on the milestones; a finished
 chapter before the current step folds into one row (its classes, counted as "Alchemist ×4" so the count never reads as a class level, Mythic ranks and picks), which a tap opens and "Fold
 levels N–M" closes. Taking the next level folds them all again. The chapter holding the current step never folds. From
-900 px wide nothing folds: the card keeps its race, alignment and score controls, and the trail is a centred column.
+900 px wide nothing folds: the card keeps its race, alignment and score controls with no head, and the trail is a
+centred column.
 
 **The menu (⋯)**: Copy link and Export as text (a plain build sheet copied to the clipboard). A copy
 closes the menu and says so beside it for a moment; a refused copy keeps the menu open with the reason. The
@@ -296,7 +307,7 @@ address bar keeps the Build in `#b=`, so a reload opens it again.
 - A refused copy keeps its menu label and says why in the status beside ⋯.
 - A broken link says it came from a newer planner only when its version byte is higher and its body still inflates
   (`looksNewer`); otherwise it isn't a planner link.
-- The level editor sorts archetypes by name, the current one first; "Builds on" and "Enables" use R's bare names.
+- The level editor puts the current class first; "Builds on" and "Enables" use R's bare names.
 
 ## Modules
 
@@ -411,8 +422,10 @@ address bar keeps the Build in `#b=`, so a reload opens it again.
     one in the order above, `whereOf` where it opens (the character, the score tiles, a level, a rank, the next stop,
     or Gear) and
     `stepTitle` its title. `slotLabel` names a slot (the selection's game name without "selection"; build question 4
-    below), lower case in a title. `slotName` is the name a field, chip and title show: a feat slot the race grants
-    (the Human's) reads "Bonus feat" (QA pass 5), so it isn't taken for the level's own feat.
+    below), lower case in a title. `slotName` is the name a field, chip and title show: the Human's race feat slot
+    reads "Human bonus feat" (`isHumanBonusFeat`), and any other feat slot the race grants "Bonus feat" (QA pass 5),
+    so neither is taken for the level's own feat. `isDeitySlot` finds the deity slot for the card, and
+    `levelClassName` names a level by its archetype, else its class.
   - `shownSlots` leaves out the parametrized feats' own slots (their parameter is chosen with the feat);
     `characterSlots` and `slotsAt` split the rest between the character card and the stops by S's `characterWideSlots`.
   - `skillBudget`, `skillsDue`, `increaseDue` and `increaseOffered` read the walk's `skillPoints` and
@@ -473,7 +486,9 @@ address bar keeps the Build in `#b=`, so a reload opens it again.
   Skills follow the skills step's order (`SKILL_ATTRIBUTE`) and Gear the places' (`PLACES`, worded by `placeWords`:
   "Ring 1"), never the order the Build happens to hold them in, so a reloaded Build exports the same text (QA pass 6).
   A nested pick is one entry, as it is one chip on the trail: "Armor Focus (Light Armor Focus)" (`nestedParent`,
-  `chipSlots` and `pickLabels` in `trail-state.ts`). `nestedLabel` names the value once: a value whose name already
+  `chipSlots` and `pickLabels` in `trail-state.ts`). A value belongs to the slot the walk opened it from (its
+  `parent`), so two Skill Focus picks on one level each keep their own skill. A Human bonus feat's value stays with it
+  on Level 1, off the card. `nestedLabel` names the value once: a value whose name already
   repeats its parent, in parentheses or after " — ", keeps only its own part ("Ascendant Element (Electricity)",
   "Elemental Focus (Electricity)"); a parent named "… Selection" drops the word ("Bloodline Feat (Improved
   Initiative)"); and "Bloodline", "Feat" or "Selection" the parent already says leaves the value ("Second Bloodline
@@ -568,7 +583,7 @@ address bar keeps the Build in `#b=`, so a reload opens it again.
 
 ### Questions built the prototype's way, waiting on the user (build ticket 07)
 
-1. A Human's bonus feat comes from the race, so it is a chip on the character card, not a Level 1 pick.
+1. Answered (user, 2026-11-22): a Human's bonus feat is an optional Level 1 pick, not a chip on the character card.
 2. A due Mythic rank is a list of paths each time, with the current path first and marked; there is no one-tap
    "Continue as <path>".
 3. Adding a level never adds its Mythic rank; the rank is offered as the next step once its Expected level is reached.

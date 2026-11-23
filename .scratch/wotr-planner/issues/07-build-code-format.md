@@ -41,3 +41,7 @@ The user wants to name a Build from the planner's top bar, so a Build gains an o
 ## Amendment: a slot's index counts within its opener (coordinator, 2026-11-21)
 
 QA pass 6 found a race change moving a class pick: Human's race bonus feat opened before the character's level-1 feat and took index 0. A top-level slot the race or a fact's component opened now carries its opener's GUID (`from`), and a slot's index counts only the slots of its selection that the same opener opened. The code stays version 1. A pick's tag byte adds 2 when the slot carries `from`, followed by the opener's key. Codes written before this that hold a race-slot pick (any heritage) open with that pick unmatched; no link was published, and the QA codes in the shared notes were re-encoded. Build ticket: QA pass 6, item 1.
+
+## Amendment: a sub-choice's slot names its parent (user, 2026-11-22)
+
+[Map 35](35-sub-choice-identity-and-checked-builds.md): a sub-choice's slot carries its parent slot's key and is index 0 under it, so a pick never moves between parents. The site is published, so the new format takes a new version byte, and a version 1 code is read under the old numbering and moved to the new ids. A link holding a pick the walk refuses opens with that pick cleared and named.
