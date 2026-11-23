@@ -404,7 +404,7 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
       const code = await encodeBuild(e.data, twice);
       const listed = await run('next_slots', { code });
       expect(listed.clearedOnOpen).toHaveLength(1);
-      expect(String((listed.clearedOnOpen as string[])[0])).toContain('Lore (Religion)');
+      expect(listed.clearedOnOpen).toEqual(['L1 Human bonus feat: Skill Focus (Lore — Religion)']);
       const open = (listed.slots as { slot: SlotId }[])
         .filter((s) => s.slot.selection === SKILL_FOCUS)
         .map((s) => slotKey(s.slot));

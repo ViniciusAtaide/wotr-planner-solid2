@@ -44,6 +44,7 @@ import {
   skillRankRange,
   statName,
   type Refusal,
+  pickWords,
 } from '../refusals';
 import {
   maxSpellLevel,
@@ -96,7 +97,11 @@ async function open(e: Engine, code: string): Promise<CheckedBuild | ToolRefusal
     const checked = checkBuild(e.data, await decodeBuild(e.data, code), e.G);
     if (checked.cleared.length > 0) {
       if (clearedByCode.size >= CLEARED_CODES_KEPT) clearedByCode.delete(clearedByCode.keys().next().value as string);
-      clearedByCode.set(code, picksInWords(e, checked.cleared));
+      const among = [...checked.cleared, ...checked.build.picks];
+      clearedByCode.set(
+        code,
+        checked.cleared.map((p) => `${placeKey(p.slot.place)} ${pickWords(e.data, checked.build, p, among)}`),
+      );
     }
     return checked.build;
   } catch (err) {

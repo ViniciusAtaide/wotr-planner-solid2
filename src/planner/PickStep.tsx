@@ -4,7 +4,7 @@ import type { Guid } from '~engine/data';
 import type { Edit } from '~engine/edits';
 import { enablesWith, linkIndex, linkNames } from '~engine/links';
 import { picker, type OptionStatus } from '~engine/pickers';
-import { clearsLaterText, gearNote, refusal } from '~engine/refusals';
+import { clearsLaterText, gearNote, refusal, nestedLabel } from '~engine/refusals';
 
 import { Button, OptionList, PickerOption } from '../design';
 import { Filter, moveThroughOptions, rankOrder, SCROLL_STYLE, type ClosedToggle, type FieldMode } from './ChoiceList';
@@ -15,7 +15,7 @@ import { clashLines, OptionDetails, summaryFor, synergyLines, type OptionDetail 
 import { pickRows, rowMembers, rowOpen, type PickRow } from './nested-options';
 import type { NonEmpty } from './planner-state';
 import type { TrailApi } from './steps';
-import { isSpellFeat, nestedLabel, slotLabel, SPELL_NOT_MODELLED } from './trail-state';
+import { isSpellFeat, slotLabel, SPELL_NOT_MODELLED } from './trail-state';
 import { scrollToIndex, WindowedRows } from './WindowedRows';
 import { shownName } from './words';
 

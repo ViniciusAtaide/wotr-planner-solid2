@@ -34,7 +34,7 @@ import { gearClashes, gearClashIndex } from './gear-clashes';
 import { gearOptions } from './gear-options';
 import { PLACE_ITEM_TYPES } from '../walk';
 import { guids } from '../data';
-import { breaks, groupedFailures, opensAt, placesWords, refusal } from '../refusals';
+import { breaks, groupedFailures, nestedLabel, opensAt, pickWords, placesWords, refusal, slotWords } from '../refusals';
 import { prerequisites } from '../prerequisites';
 import { pauseAt, walk } from '../walk';
 
@@ -186,6 +186,27 @@ describe('R: the Refusal', { timeout: 30_000 }, () => {
     expect(groups[0]?.text).not.toContain('Chaotic Neutral');
     expect(placesWords(groups[0]?.places ?? [])).toBe(`Levels 1–${failures.length}`);
     expect(placesWords([{ level: 2 }, { level: 4 }, { level: 5 }, { rank: 1 }])).toBe('Levels 2 and 4–5; Rank 1');
+  });
+
+  it("names a sub-choice by its parent's slot and the chip's nested form (QA pass 8)", () => {
+    const SKILL_FOCUS = 'c9629ef9eebb88b479b2fbc5e836656a';
+    const LORE_RELIGION = 'c541f80af8d0af4498e1abb6025780c7';
+    const level: SlotId = { place: { level: 1 }, selection: BASIC, index: 0 };
+    const human: SlotId = { ...level, from: HUMAN };
+    const fighter: Build = { race: HUMAN, levels: [{ class: FIGHTER }], picks: [] };
+    const parents = [
+      { slot: level, feature: SKILL_FOCUS },
+      { slot: human, feature: SKILL_FOCUS },
+    ];
+    const skillUnder = (parent: SlotId) => ({ slot: childSlot(parent, SKILL_FOCUS), feature: LORE_RELIGION });
+    expect(slotWords(data, fighter, level)).toBe('Feat');
+    expect(slotWords(data, fighter, human)).toBe('Human bonus feat');
+    expect(pickWords(data, fighter, skillUnder(human), parents)).toBe(
+      'Human bonus feat: Skill Focus (Lore — Religion)',
+    );
+    expect(pickWords(data, fighter, skillUnder(level), parents)).toBe('Feat: Skill Focus (Lore — Religion)');
+    expect(pickWords(data, fighter, parents[0]!, parents)).toBe('Skill Focus');
+    expect(nestedLabel('Skill Focus', 'Skill Focus — Lore (Religion)')).toBe('Skill Focus (Lore — Religion)');
   });
 
   it('words an unmet stat with what the character has', () => {
