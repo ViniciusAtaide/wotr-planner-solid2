@@ -61,7 +61,7 @@ The user made these changes to the trail directly, and they were recorded after 
   - At a class's first level, the level editor offers the plain class and each of its archetypes. At later levels of that class, it offers only the variant held. Taking a row sets the class and its archetype as one change, and the plain row clears the archetype.
   - There is no separate archetype list and no "No archetype" row.
   - A level's stop, its "Continue as" button and its Undo line use the archetype's name when one is held, for example "Two-Handed Fighter 1". The Archetype chip is gone. This amends build ticket 07's decision B.
-- **The Human bonus feat is an optional Level 1 pick.**
+- **The Human bonus feat is an optional Level 1 pick.** *Reversed 2026-11-23 (below): it is required.*
   - It sits on Level 1 with that level's other chips, not on the character card. Its chip reads "Human bonus feat", and "Optional" until it is filled.
   - Auto-advance passes it by. Level 1 counts as done without it, so the card folds and the next level is offered.
   - The level's own feat stays required. This answers build ticket 07's question 1.
@@ -69,3 +69,10 @@ The user made these changes to the trail directly, and they were recorded after 
 - **The deity sits on the character card under the race,** above the background and the alignment.
 - **The card's head shows only while the card is folded** (phones under 900 px). An open card, or any card from 900 px wide, has no "The character" heading or summary line.
 - **The race field's label is visually hidden.** Screen readers still announce it.
+
+## Amendment: the Human bonus feat is required (user, 2026-11-23)
+
+This reverses the 2026-11-22 amendment's optional Human bonus feat.
+
+- **Every open slot is required.** A Human's bonus feat is required like the level's own feat. Its chip on Level 1 reads "Human bonus feat" and has no "Optional" mark. Auto-advance stops at it, and Level 1 isn't done while it's empty.
+- **One rule for the planner and the MCP.** The planner has no special case for the slot. A level or rank is done when the engine lists no open slot at its place, by the same logic `next_slots` uses. So the planner and the MCP agree on when a Build is finished, as the game's `LevelUpState.IsComplete` does.
