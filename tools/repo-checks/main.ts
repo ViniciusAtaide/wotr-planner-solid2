@@ -4,6 +4,7 @@ import { commentProblems } from './comments';
 import { configImportProblems } from './config-imports';
 import { CODE, ownedFiles, STYLE } from './files';
 import { importProblems } from './imports';
+import { operatorProblems } from './operators';
 import { ISSUES, PLAN, planRowProblems } from './plan-rows';
 
 const repo = fileURLToPath(new URL('../../', import.meta.url));
@@ -14,6 +15,7 @@ const checks: Readonly<Record<string, () => string[]>> = {
     return importProblems(ownedFiles(repo, CODE), present);
   },
   comments: () => commentProblems([...ownedFiles(repo, CODE), ...ownedFiles(repo, STYLE)]),
+  operators: () => operatorProblems(ownedFiles(repo, CODE)),
   'config-imports': () =>
     configImportProblems((path) => (existsSync(repo + path) ? readFileSync(repo + path, 'utf8') : undefined)),
   'plan-rows': () => planRowProblems(readFileSync(repo + PLAN, 'utf8'), readdirSync(repo + ISSUES)),

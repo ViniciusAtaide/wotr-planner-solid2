@@ -190,7 +190,7 @@ export function keepFields<T>(fields: Fields<T>, raw: unknown, at: string, ctx: 
     return kept as T;
   }
   for (const [name, spec] of Object.entries(fields) as [string, Spec<unknown>][]) {
-    const present = name in raw;
+    const present = Object.hasOwn(raw, name);
     if (owner !== undefined) ctx.seen(owner, name, present);
     if (present) kept[name] = spec.keep(raw[name], `${at}.${name}`, ctx);
     else if (spec.absent !== undefined) kept[name] = spec.absent.value;

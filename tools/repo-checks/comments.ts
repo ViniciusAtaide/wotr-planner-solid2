@@ -16,7 +16,7 @@ const ALLOWED: readonly { readonly pattern: RegExp; readonly why: string }[] = [
   { pattern: /^\/\/\s*@vitest-environment\s/, why: 'a pragma vitest reads' },
 ];
 
-function lineAt(text: string, offset: number): number {
+export function lineAt(text: string, offset: number): number {
   let line = 1;
   for (let i = 0; i < offset; i++) if (text.charCodeAt(i) === 10) line++;
   return line;

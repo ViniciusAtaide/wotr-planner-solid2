@@ -35,7 +35,7 @@ export function applyPatch(
       last === undefined ||
       container === null ||
       typeof container !== 'object' ||
-      !(last in container)
+      !Object.hasOwn(container, last)
     ) {
       problems.push(`${at}: override path ${path} doesn't resolve`);
       continue;

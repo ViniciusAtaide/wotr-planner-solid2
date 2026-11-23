@@ -92,7 +92,7 @@ export function isParamType(type: FeatureParameterType): type is ParamType {
 
 export function paramValue<T extends ParamType>(param: GrantParam | undefined, type: T): ParamValues[T] | undefined {
   const field = PARAM_FIELD[type];
-  if (param === undefined || !(field in param)) return undefined;
+  if (param === undefined || !Object.hasOwn(param, field)) return undefined;
   return (param as Readonly<Record<string, unknown>>)[field] as ParamValues[T];
 }
 

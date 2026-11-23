@@ -1,6 +1,6 @@
 # Coding standards
 
-These are judgement rules a reviewer applies to a diff. Anything a tool can check belongs in `bun run check` instead: formatting, lint, types, the feature import DAG and the comment ban (`tools/repo-checks`, ADR 0008), the citation check (`tools/decompiled/cites.test.ts`), and the importer's checks against the dump. Each rule says what to look for and why.
+These are judgement rules a reviewer applies to a diff. Anything a tool can check belongs in `bun run check` instead: formatting, lint, types, the feature import DAG and the comment ban (`tools/repo-checks`, ADR 0008), no `in` with a computed key and no `for...in` (`tools/repo-checks`, the operator check), the citation check (`tools/decompiled/cites.test.ts`), and the importer's checks against the dump. Each rule says what to look for and why.
 
 ## Fidelity to the game
 

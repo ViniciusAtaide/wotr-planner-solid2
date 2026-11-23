@@ -3,6 +3,7 @@ import { codeComments, commentProblems, cssComments } from './comments';
 import type { Feature } from './features';
 import { configImportProblems } from './config-imports';
 import { declarationProblems, importProblems } from './imports';
+import { operatorProblems } from './operators';
 import { planRowProblems } from './plan-rows';
 
 const file = (path: string, text: string) => ({ path, text });
@@ -36,6 +37,46 @@ describe('the comment check', () => {
   it('reads CSS comments outside strings only', () => {
     const css = '.a { background: url("x/*y*/z"); content: \'/* no */\'; }\n/* yes */\n.b {}';
     expect(cssComments(css)).toEqual([{ line: 2, text: '/* yes */' }]);
+  });
+});
+
+describe('the operator check', () => {
+  it('rejects `in` with a computed key and every for...in, and names the line', () => {
+    const text = [
+      'const table: Record<string, number> = { a: 1 };',
+      'const key = String(1);',
+      'export const byName = key in table;',
+      'export const byTemplate = `${key}` in table;',
+      'export const byMember = table.a in table;',
+      'export function each(): void {',
+      '  for (const k in table) console.log(k);',
+      '}',
+    ].join('\n');
+    expect(
+      operatorProblems([file('a.ts', text)]).map((p) => p.split(': ')[0] + ' ' + /\[[\w-]+\]/.exec(p)?.[0]),
+    ).toEqual(['a.ts:3 [computed-in]', 'a.ts:4 [computed-in]', 'a.ts:5 [computed-in]', 'a.ts:7 [for-in]']);
+  });
+
+  it('allows a quoted or numbered key, a private-field check, and `in` inside strings', () => {
+    const text = [
+      'type Place = { level: number } | { rank: number };',
+      'export const isLevel = (p: Place) => ("level" in p ? p.level : 0);',
+      'export const hasFirst = (xs: number[]) => 0 in xs;',
+      'export class Box {',
+      '  #mark = 1;',
+      '  static is(o: object): boolean {',
+      '    return #mark in o;',
+      '  }',
+      '}',
+      "export const words = 'key in table' + `for (k in t)`;",
+    ].join('\n');
+    expect(operatorProblems([file('b.ts', text)])).toEqual([]);
+  });
+
+  it('skips the jev-lint fixtures, which hold defects on purpose', () => {
+    expect(
+      operatorProblems([file('.jev-lint/holdout/case.ts', 'const t = {}; export const x = String(1) in t;')]),
+    ).toEqual([]);
   });
 });
 
