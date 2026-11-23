@@ -50,6 +50,8 @@ The full-stack planner and its MCP server, as the design map specifies ([map](..
 | 06b | [Summary labels and templates](issues/06b-summary-labels.md) | 06a | none |
 | 06c | [Hand-written summaries](issues/06c-hand-written-summaries.md) | 06b | none |
 | 06d | [The other Synergy link kinds](issues/06d-synergy-link-kinds.md) | 06a for energy and descriptors | none |
+| 13 | [Sub-choice slot identity, and Builds the walk refuses](issues/13-sub-choice-identity-and-checked-builds.md) | none (the trail changes of 2026-11-22 are in `0f4a8f83`) | 6, 7, 8, 10 |
+| 14 | [Trail fixes from the QA of 2026-11-22](issues/14-trail-fixes-2026-11-22.md) | none (the trail changes of 2026-11-22 are in `0f4a8f83`) | 10 |
 
 Ticket 02 was split on 2026-11-19 when its remaining work outgrew one ticket ([review-before-03.md](review-before-03.md)): 02a, 02b and 02c carry it, and ticket 03's areas each allowlist what they read. 02b runs alongside 03.
 
