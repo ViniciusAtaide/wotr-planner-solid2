@@ -282,7 +282,10 @@ export function PickStep(props: PickStepProps) {
         pickOf(props.slot, row.option),
         pickOf(childSlotOf(props.slot, row.option.feature), child),
       ]),
-      `Picked ${nestedLabel(row.name, name(child))}`,
+      `Picked ${nestedLabel(
+        shownName(data(), row.option.feature, row.option.param),
+        shownName(data(), child.feature, child.param),
+      )}`,
     );
   const toggle = (key: string) => setExpanded((now) => (now === key ? undefined : key));
   const enterRow = (row: PickRow | undefined) => {

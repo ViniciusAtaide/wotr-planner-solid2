@@ -233,6 +233,10 @@ export function levelClassName(data: CheckedData, build: Build, level: number): 
   return nameOf(data, archetype ?? cls);
 }
 
+export function levelStopName(data: CheckedData, build: Build, level: number): string {
+  return `${levelClassName(data, build, level)} ${classLevelAt(build, level)}`;
+}
+
 export interface SkillBudget {
   readonly spent: number;
   readonly available: number;
@@ -306,6 +310,10 @@ function afterLevel(t: TrailView, slot: SlotId, level: number): boolean {
   return t.walk.slots.findIndex((s) => slotKey(s.id) === slotKey(slot)) >= later;
 }
 
+function cardOrder(t: TrailView, slots: readonly OpenedSlot[]): readonly OpenedSlot[] {
+  return [...slots.filter((s) => isDeitySlot(t, s)), ...slots.filter((s) => !isDeitySlot(t, s))];
+}
+
 export function nextStep(
   t: TrailView,
   s: Pick<TrailState, 'skillsLeft' | 'mythicLater'> & Partial<Pick<TrailState, 'skillsCleared'>>,
@@ -314,7 +322,7 @@ export function nextStep(
   if (t.build.scores === undefined || raceStatPending(t.data, t.build)) return { kind: 'scores' };
   if (t.build.alignment === undefined) return { kind: 'alignment' };
   const empty = (slots: readonly OpenedSlot[]) => slots.find((x) => x.pick === undefined && !isHumanBonusFeat(t, x));
-  const character = empty(characterSlots(t));
+  const character = empty(cardOrder(t, characterSlots(t)));
   if (character !== undefined) return { kind: 'slot', slot: character.id };
   const slot = empty(shownSlots(t));
   const redo = clearedSkillsDue(t, s.skillsCleared, s.skillsLeft);
@@ -388,7 +396,7 @@ export function stepTitle(t: TrailView, step: Step): string {
     case 'skills':
       return `Level ${step.level} · train your skills`;
     case 'level':
-      return `Level ${step.level} · the class`;
+      return `Level ${step.level} · ${levelStopName(t.data, t.build, step.level)}`;
     case 'rank':
       return `Mythic rank ${step.rank} · the path`;
     case 'gear':

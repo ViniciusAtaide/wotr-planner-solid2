@@ -76,6 +76,7 @@ export interface ChoiceRow {
   readonly reasons: readonly string[];
   readonly current: boolean;
   readonly take: () => void;
+  readonly group?: string | undefined;
 }
 
 export function judge(engine: Engine, build: Build, edit: Edit): Judged {
@@ -86,6 +87,42 @@ export function currentFirst(rows: readonly ChoiceRow[]): ChoiceRow[] {
   return [...rows].sort(
     (a, b) => Number(b.current) - Number(a.current) || Number(b.open) - Number(a.open) || a.name.localeCompare(b.name),
   );
+}
+
+const groupOf = (row: ChoiceRow): string => row.group ?? row.key;
+
+function leadOrder(a: readonly ChoiceRow[], b: readonly ChoiceRow[]): number {
+  const [x, y] = [a[0], b[0]];
+  if (x === undefined || y === undefined) return 0;
+  const current = (rows: readonly ChoiceRow[]) => Number(rows.some((r) => r.current));
+  return current(b) - current(a) || Number(y.open) - Number(x.open) || x.name.localeCompare(y.name);
+}
+
+export function groupedFirst(rows: readonly ChoiceRow[]): ChoiceRow[] {
+  const groups = new Map<string, ChoiceRow[]>();
+  for (const row of rows) groups.set(groupOf(row), [...(groups.get(groupOf(row)) ?? []), row]);
+  return [...groups.values()]
+    .map(([lead, ...rest]) => (lead === undefined ? [] : [lead, ...currentFirst(rest)]))
+    .sort(leadOrder)
+    .flat();
+}
+
+export function rankedRows(rows: readonly ChoiceRow[], text: string): ChoiceRow[] {
+  if (!rows.some((r) => r.group !== undefined)) return ranked(rows, (r) => r.name, text);
+  if (text.trim() === '') return [...rows];
+  const kept = rows.filter((r) => matches(r.name, text));
+  const best = new Map<string, number>();
+  const first = new Map<string, number>();
+  kept.forEach((row, at) => {
+    const group = groupOf(row);
+    best.set(group, Math.min(best.get(group) ?? Number.POSITIVE_INFINITY, matchRank(row.name, text)));
+    if (!first.has(group)) first.set(group, at);
+  });
+  const placed = (row: ChoiceRow) => [best.get(groupOf(row)) ?? 0, first.get(groupOf(row)) ?? 0] as const;
+  return kept
+    .map((row, at) => ({ row, at, by: placed(row) }))
+    .sort((a, b) => a.by[0] - b.by[0] || a.by[1] - b.by[1] || a.at - b.at)
+    .map((x) => x.row);
 }
 
 export function moveThroughOptions(e: KeyboardEvent): void {
@@ -242,7 +279,7 @@ export function ChoiceList(props: ChoiceListProps) {
     () => box,
   );
   const all = createMemo((): readonly ChoiceRow[] => (props.field !== undefined && !panel.shown() ? [] : props.rows));
-  const listed = createMemo(() => ranked(all(), (r) => r.name, text()));
+  const listed = createMemo(() => rankedRows(all(), text()));
   const open = () => listed().filter((r) => r.open);
   const closed = () => listed().filter((r) => !r.open);
   const closedShown = () => (toggle.shown ? closed() : closed().filter((r) => r.current));

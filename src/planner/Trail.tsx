@@ -50,7 +50,6 @@ import {
   characterChipSlots,
   characterSlots,
   isCharacterSlot,
-  classLevelAt,
   folded,
   gearDependentSlots,
   hereLevel,
@@ -58,7 +57,7 @@ import {
   isBackgroundSlot,
   isHumanBonusFeat,
   isDeitySlot,
-  levelClassName,
+  levelStopName,
   keepsSelection,
   levelOneDone,
   chipSlots,
@@ -464,13 +463,13 @@ export default function Trail(props: TrailProps) {
               <button
                 type="button"
                 class="trail-stop__class"
-                aria-label={`Level ${level}: ${levelClassName(data(), build(), level)} ${classLevelAt(build(), level)}`}
+                aria-label={`Level ${level}: ${levelStopName(data(), build(), level)}`}
                 aria-pressed={isTarget({ kind: 'level', level }) ? 'true' : 'false'}
                 onClick={() =>
                   props.select(isTarget({ kind: 'level', level }) && editing() ? undefined : { kind: 'level', level })
                 }
               >
-                {levelClassName(data(), build(), level)} {classLevelAt(build(), level)}
+                {levelStopName(data(), build(), level)}
               </button>
               {levelChips(level)}
               <Show when={atLevel(level)}>{here()}</Show>

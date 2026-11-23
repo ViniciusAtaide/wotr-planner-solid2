@@ -64,7 +64,8 @@ to the player in the planner's own words: "Level 5 · choose feat", "Your charac
    waits for it. The wheel in the character card is its field: outlined in gold with "Choose an alignment" while the
    trail waits on it, and arriving there scrolls it into view and focuses its first node. It comes before the first
    class, and so before the deity and every other character choice.
-3. the first empty slot with the character, then the first empty slot on the trail, in the walk's order. The Human
+3. the first empty slot with the character, in the card's order (the deity, under the race, before the background:
+   ticket 14), then the first empty slot on the trail, in the walk's order. The Human
    bonus feat is never a step: it stays empty until tapped, and level 1 counts as done without it (user, 2026-11-22;
    the game itself won't finish the level with it empty, and the MCP still lists it as open);
 4. an ability increase the walk offers and the Build hasn't taken;
@@ -276,7 +277,8 @@ counted)" when the Build counts Gear, so it reads as the card does.
 **Folding, phones only (under 900 px)**: once level 1 is done (every choice made, `levelOneDone`) the character card
 shrinks to one line (race, alignment, +2 and the character's picks) until tapped; before that it is open with its
 controls. The card's head (the "The character" kicker and that line) shows only while the card is folded (user,
-2026-11-22). Levels group into chapters of four, ending on the milestones; a finished
+2026-11-22), so an open card on a phone carries a "Fold" button at its top (44 px tall, `trail-card__fold`) that folds
+it again and hands focus back to the head (ticket 14). Levels group into chapters of four, ending on the milestones; a finished
 chapter before the current step folds into one row (its classes, counted as "Alchemist ×4" so the count never reads as a class level, Mythic ranks and picks), which a tap opens and "Fold
 levels N–M" closes. Taking the next level folds them all again. The chapter holding the current step never folds. From
 900 px wide nothing folds: the card keeps its race, alignment and score controls with no head, and the trail is a
@@ -481,6 +483,16 @@ address bar keeps the Build in `#b=`, so a reload opens it again.
   focus back to its button. Opening it focuses its first item; Up, Down, Home and End move between its items
   (`moveInMenu`), wrapping at the ends. While a choice dialog is open the Undo bar is fixed above it (`html.choice-open`), and on a
   phone the full-screen dialog stops short of it (`--undo-bar-height`), so Undo stays in reach.
+- **Ticket 14 (QA of 2026-11-22):**
+  - A list's row window clamps its top to the rows it has (`windowOf`), and measures again as soon as its rows change.
+    Before, a list whose remembered scroll ran past its fewer rows got an empty window until typing reset the scroll.
+  - A nested pick's Undo line names it as its chip does: `nestedLabel` of the parent's and the value's own names
+    (`shownName`), never the list's qualified row name ("Bloodline Feat (Dodge)", not "Bloodline Feat Selection
+    (Fey Bloodline) — Dodge").
+  - The level editor's title and subheading name the stop as it reads (`levelStopName`: "Level 1 · Sylvan Sorcerer 1",
+    "A class or archetype in place of Sylvan Sorcerer 1").
+  - Class lists keep each class's archetypes right under it (`ChoiceRow.group`, `groupedFirst`), and a filter ranks a
+    class with its archetypes as one group (`rankedRows`), so they stay together while either name still matches.
 - **`sheet.ts`**: `buildSheet`, the plain-text build sheet Export copies: the character line, the scores, the
   character's picks, one line per level with its class, archetype, picks and skills, one per Mythic rank, and the Gear.
   Skills follow the skills step's order (`SKILL_ATTRIBUTE`) and Gear the places' (`PLACES`, worded by `placeWords`:

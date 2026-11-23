@@ -26,6 +26,13 @@ describe('windowOf', () => {
       expect(w.end).toBeLessThanOrEqual(66);
       expect(w.start * w.row + (w.end - w.start) * w.row + (66 - w.end) * w.row).toBe(66 * 64);
     }
-    expect(windowOf(49_120, 480, 64, 1, 6)).toEqual({ start: 1, end: 1, row: 64 });
+    expect(windowOf(49_120, 480, 64, 1, 6)).toEqual({ start: 0, end: 1, row: 64 });
+  });
+
+  test('a list scrolled past its end still shows its last rows, so a shorter list never opens empty (ticket 14)', () => {
+    expect(windowOf(9_000, 400, 48, 5, 6)).toEqual({ start: 0, end: 5, row: 48 });
+    const w = windowOf(9_000, 400, 48, 100, 6);
+    expect(w.end).toBe(100);
+    expect(w.start).toBeLessThan(100 - 400 / 48);
   });
 });

@@ -191,6 +191,12 @@ html.choice-open .planner-undo:not(:empty) {
   background: var(--surface-100);
 }
 
+.trail-card > .trail-card__fold {
+  align-self: flex-end;
+  min-height: 44px;
+  padding-inline: var(--space-2);
+}
+
 .trail-card__head {
   font: inherit;
   display: flex;

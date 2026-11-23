@@ -71,10 +71,29 @@ export function CharacterCard(props: CharacterCardProps) {
   const data = () => planner().engine.data;
   const build = () => planner().build();
   const picksLine = () => characterPicksLine(props.trail.view());
+  let headWanted = false;
   return (
     <section class={['trail-card', { 'trail-card--folded': props.folded }]} aria-label="The character">
+      <Show when={props.foldable && !props.folded}>
+        <button
+          type="button"
+          class="trail-link trail-card__fold"
+          aria-expanded="true"
+          onClick={() => {
+            headWanted = true;
+            props.onToggle();
+          }}
+        >
+          Fold
+        </button>
+      </Show>
       <Show when={props.foldable && props.folded}>
         <button
+          ref={(head) => {
+            if (!headWanted) return;
+            headWanted = false;
+            queueMicrotask(() => head.focus({ preventScroll: true }));
+          }}
           type="button"
           class="trail-card__head"
           aria-expanded={props.folded ? 'false' : 'true'}

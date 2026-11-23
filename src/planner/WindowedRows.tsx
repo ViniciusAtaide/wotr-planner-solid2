@@ -17,8 +17,9 @@ export interface RowWindow {
   readonly row: number;
 }
 
-export function windowOf(top: number, height: number, row: number, count: number, overscan = OVERSCAN): RowWindow {
+export function windowOf(at: number, height: number, row: number, count: number, overscan = OVERSCAN): RowWindow {
   if (height <= 0 || row <= 0) return { start: 0, end: count, row: 0 };
+  const top = Math.max(0, Math.min(at, count * row - height));
   const start = Math.min(count, Math.max(0, Math.floor(top / row) - overscan));
   const end = Math.max(start, Math.min(count, Math.ceil((top + height) / row) + overscan));
   return { start, end, row };
@@ -51,7 +52,9 @@ export function WindowedRows<T>(props: WindowedRowsProps<T>) {
   createEffect(
     () => props.items,
     () => {
-      if (remeasure !== undefined) requestAnimationFrame(remeasure);
+      if (remeasure === undefined) return;
+      remeasure();
+      requestAnimationFrame(remeasure);
     },
   );
   onSettled(() => {

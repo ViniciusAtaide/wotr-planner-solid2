@@ -42,12 +42,16 @@ import { LevelEditor, MythicStep, NextLevelStep, RankEditor, SkillsStep, SlotSte
 import Trail from './Trail';
 import {
   characterSlots,
+  levelStopName,
   nestedLabel,
   nextStep,
+  pickLabels,
   reduceTrail,
   shownSlots,
+  slotsAt,
   SPELL_NOT_MODELLED,
   spellPick,
+  stepTitle,
   TRAIL_START,
   type TrailState,
 } from './trail-state';
@@ -579,14 +583,14 @@ describe('the levelling trail (build ticket 07)', () => {
 
   test('"Back to the next choice" shows only after jumping away from the next choice (user)', async () => {
     await openPlanner(cleaver);
-    expect(targetField()).toBe('Background');
+    expect(targetField()).toBe('Deity');
     expect(screen.queryByRole('button', { name: 'Back to the next choice' })).toBeNull();
     fireEvent.click(chipNamed('Power Attack'));
     flush();
     expect(hereTitle()).toBe('Level 1 · choose feat');
     tap('Back to the next choice');
     expect(document.querySelector('.trail-here')).toBeNull();
-    expect(targetField()).toBe('Background');
+    expect(targetField()).toBe('Deity');
   });
 
   test('the race list holds each race with its heritages, and one row takes both as one change', async () => {
@@ -646,6 +650,44 @@ describe('the levelling trail (build ticket 07)', () => {
     expect(armor[0]?.toLowerCase().startsWith('leather')).toBe(true);
   });
 
+  test('the first class list puts each class’s archetypes right under it, also when filtered (ticket 14)', async () => {
+    await openPlanner({ scores: abilityScores(SCORES), race: DWARF, alignment: 'TrueNeutral', levels: [], picks: [] });
+    showList();
+    const names = () => [...document.querySelectorAll('.trail-here .ww-option__name')].map((n) => n.textContent ?? '');
+    const runOf = (all: readonly string[], cls: string) => {
+      const at = all.indexOf(cls);
+      expect(at).toBeGreaterThanOrEqual(0);
+      const members = all.filter((n) => n === cls || n.endsWith(` · ${cls}`));
+      expect(all.slice(at, at + members.length)).toEqual(members);
+      return members;
+    };
+    expect(runOf(names(), 'Fighter').length).toBeGreaterThan(1);
+    runOf(names(), 'Wizard');
+    fireEvent.input(activeFilter() ?? document.body, { target: { value: 'fighter' } });
+    flush();
+    expect(names()[0]).toBe('Fighter');
+    runOf(names(), 'Fighter');
+    fireEvent.input(activeFilter() ?? document.body, { target: { value: 'two-handed' } });
+    flush();
+    expect(names()[0]).toBe('Two-Handed Fighter · Fighter');
+  });
+
+  test('on a phone the open card folds again from its Fold button, and focus goes back to its head (ticket 14)', async () => {
+    await openPlanner(jackInTheGreen.build, true);
+    const head = () => document.querySelector<HTMLElement>('[aria-label="The character"] .trail-card__head');
+    expect(head()).not.toBeNull();
+    fireEvent.click(head() ?? document.body);
+    flush();
+    expect(head()).toBeNull();
+    const fold = button('Fold');
+    expect(fold.getAttribute('aria-expanded')).toBe('true');
+    fold.focus();
+    fireEvent.click(fold);
+    flush();
+    await waitFor(() => expect(document.activeElement).toBe(head()));
+    expect(document.querySelector('[aria-label="The character"]')?.classList.contains('trail-card--folded')).toBe(true);
+  });
+
   test('the class list holds each class with its archetypes, and one row takes both as one change', async () => {
     await openPlanner({ scores: abilityScores(SCORES), race: DWARF, alignment: 'TrueNeutral', levels: [], picks: [] });
     filterAndTake('two-handed fighter');
@@ -672,22 +714,9 @@ describe('the levelling trail (build ticket 07)', () => {
   test('a tapped field pick closes its list, and the next field takes focus with only its own list open (QA pass 6)', async () => {
     await openPlanner(cleaver);
     showList();
-    fireEvent.input(activeFilter() ?? document.body, { target: { value: 'courtier' } });
+    fireEvent.input(activeFilter() ?? document.body, { target: { value: 'gozreh' } });
     flush();
-    tapRow('Background', 'Noble (Courtier)');
-    await waitFor(() => expect(targetField()).toBe('Deity'));
-    await waitFor(() => expect(field('Deity').closest('.trail-step')?.contains(document.activeElement)).toBe(true));
-    await new Promise((r) => setTimeout(r, 50));
-    flush();
-    expect(fieldRows('Background')).toBe(0);
-    expect(fieldRows('Deity')).toBeGreaterThan(0);
-  });
-
-  test('after an Undo the field that arrives again takes focus, and the other list closes (QA pass 6)', async () => {
-    await openPlanner(cleaver);
-    fieldTake('Background', 'courtier');
-    await waitFor(() => expect(field('Deity').closest('.trail-step')?.contains(document.activeElement)).toBe(true));
-    tap('Undo');
+    tapRow('Deity', 'Gozreh');
     await waitFor(() => expect(targetField()).toBe('Background'));
     await waitFor(() =>
       expect(field('Background').closest('.trail-choices')?.contains(document.activeElement)).toBe(true),
@@ -696,6 +725,21 @@ describe('the levelling trail (build ticket 07)', () => {
     flush();
     expect(fieldRows('Deity')).toBe(0);
     expect(fieldRows('Background')).toBeGreaterThan(0);
+  });
+
+  test('after an Undo the field that arrives again takes focus, and the other list closes (QA pass 6)', async () => {
+    await openPlanner(cleaver);
+    fieldTake('Deity', 'gozreh');
+    await waitFor(() =>
+      expect(field('Background').closest('.trail-choices')?.contains(document.activeElement)).toBe(true),
+    );
+    tap('Undo');
+    await waitFor(() => expect(targetField()).toBe('Deity'));
+    await waitFor(() => expect(field('Deity').closest('.trail-step')?.contains(document.activeElement)).toBe(true));
+    await new Promise((r) => setTimeout(r, 50));
+    flush();
+    expect(fieldRows('Background')).toBe(0);
+    expect(fieldRows('Deity')).toBeGreaterThan(0);
   });
 
   test('an arrival is taken once: the arriving field and the wheel each report it handled (QA pass 6)', () => {
@@ -1728,6 +1772,16 @@ describe('QA pass 1', () => {
     expect(await openHash(e, `#b=${newer}`)).toEqual({ kind: 'didNotOpen', reason: 'newerPlanner' });
   });
 
+  test('the level editor’s title and subheading both name the stop as it reads (ticket 14)', () => {
+    const view = { data: e.data, build: jackInTheGreen.build, walk: walk(e.data, jackInTheGreen.build, e.G) };
+    const stop = levelStopName(e.data, jackInTheGreen.build, 1);
+    expect(stop).toMatch(/ 1$/);
+    expect(stepTitle(view, { kind: 'level', level: 1 })).toBe(`Level 1 · ${stop}`);
+    render(() => <LevelEditor trail={apiOf(createPlanner(e, jackInTheGreen.build))} level={1} />);
+    flush();
+    expect(document.querySelector('.trail-subhead')?.textContent).toContain(stop);
+  });
+
   test('the level editor offers classes and archetypes in one selector, with the current class first', () => {
     render(() => <LevelEditor trail={apiOf(createPlanner(e, cleaver))} level={1} />);
     flush();
@@ -2267,16 +2321,16 @@ describe('choice lists inline first or modal first (ticket 10)', () => {
     expect(dialogBox()).toBeNull();
   });
 
-  test('modal: after the background, the next dialog is never the race list (QA pass 5)', async () => {
+  test('modal: after the deity, the next dialog is the background, never the race list (QA pass 5)', async () => {
     localStorage.setItem('wotr.choiceLists', 'modal');
     await openPlanner(cleaver);
-    openField('Background');
-    await waitFor(() => expect(dialogTitle()).toBe('Your character · choose background'));
+    openField('Deity');
+    await waitFor(() => expect(dialogTitle()).toBe('Your character · choose deity'));
     pickFirstIn(dialogBox() ?? document);
     await new Promise((r) => setTimeout(r, 30));
     flush();
-    expect(fieldValue('Background')).not.toBe('');
-    expect(dialogTitle()).toBe('Your character · choose deity');
+    expect(fieldValue('Deity')).not.toBe('');
+    expect(dialogTitle()).toBe('Your character · choose background');
   });
 
   test('modal: a trail pick opens no waiting field’s dialog (QA pass 5)', async () => {
@@ -2792,6 +2846,34 @@ describe('QA pass 4, severity 1', () => {
     expect(others.some((b) => b.textContent?.includes('Held later'))).toBe(false);
   });
 
+  test('a nested pick reads the same on its Undo line as on its chip, though its list qualifies the parent (ticket 14)', async () => {
+    const slot: SlotId = { place: { level: 7 }, selection: '3a60f0c0442acfb419b0c03b584e1394', index: 0 };
+    const planner = createPlanner(e, jackInTheGreen.build);
+    render(() => <PickStep trail={apiOf(planner)} slot={slot} />);
+    flush();
+    const filter = document.querySelector<HTMLInputElement>('[data-picker-filter]');
+    filter?.focus();
+    fireEvent.input(filter ?? document.body, { target: { value: 'fey bloodline' } });
+    flush();
+    const parent = document.querySelector<HTMLElement>('[data-parent] button.ww-option');
+    expect(parent?.querySelector('.ww-option__name')?.textContent).toContain('Fey Bloodline');
+    fireEvent.click(parent ?? document.body);
+    flush();
+    const child = await waitFor(() => {
+      const found = [...document.querySelectorAll<HTMLElement>('[data-child-of] button.ww-option')].find(
+        (b) => !b.classList.contains('ww-option--selected'),
+      );
+      expect(found).toBeDefined();
+      return found;
+    });
+    fireEvent.click(child ?? document.body);
+    flush();
+    const view = { data: e.data, build: planner.build(), walk: planner.walked() };
+    const chip = pickLabels(e.data, slotsAt(view, { level: 7 })).get(slotKey(slot));
+    expect(chip).toBeDefined();
+    expect(planner.change()).toBe(`Picked ${chip}`);
+  });
+
   test('a nested name keeps one level of parentheses (QA pass 6)', () => {
     expect(nestedLabel('Expanded Arsenal (Magic School)', 'Conjuration')).toBe('Expanded Arsenal (Conjuration)');
     expect(nestedLabel('Spell Focus (Mythic)', 'Evocation')).toBe('Spell Focus (Mythic) — Evocation');
@@ -3073,9 +3155,9 @@ describe('a dialog pick never reverts the Build (QA pass 5, severity 4)', () => 
       picks: cleaver.picks.filter((p) => slotKey(p.slot) !== slotKey(BONUS_COMBAT_FEAT)),
     });
     const depth = history.length;
-    openField('Background');
-    await dialogTake('courtier');
+    openField('Deity');
     await dialogTake('gozreh');
+    await dialogTake('courtier');
     await dialogTake('cleave');
     await waitFor(() => expect(hereTitle()).toBe('Level 1 · train your skills'));
     expect(document.querySelector('.choice-dialog')).toBeNull();

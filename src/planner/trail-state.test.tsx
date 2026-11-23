@@ -27,6 +27,7 @@ import {
   characterEditing,
   characterFolded,
   characterSlots,
+  isDeitySlot,
   isHumanBonusFeat,
   firstCleared,
   folded,
@@ -113,7 +114,7 @@ describe('auto-advance: each pick opens the next empty one', () => {
     expect(next(unaligned)).toEqual({ kind: 'alignment' });
     expect(next(human(1))).toEqual({
       kind: 'slot',
-      slot: characterSlots(viewOf(human(1))).find((s) => !isHumanBonusFeat(viewOf(human(1)), s))?.id,
+      slot: characterSlots(viewOf(human(1))).find((s) => isDeitySlot(viewOf(human(1)), s))?.id,
     });
   });
 
@@ -134,7 +135,7 @@ describe('auto-advance: each pick opens the next empty one', () => {
     const levelled = human(1);
     expect(next(levelled)).toEqual({
       kind: 'slot',
-      slot: characterSlots(viewOf(levelled)).find((s) => !isHumanBonusFeat(viewOf(levelled), s))?.id,
+      slot: characterSlots(viewOf(levelled)).find((s) => isDeitySlot(viewOf(levelled), s))?.id,
     });
   });
 
@@ -149,8 +150,8 @@ describe('auto-advance: each pick opens the next empty one', () => {
     const character = characterSlots(view).map((s) => s.id.selection);
     expect(character).not.toContain(BASIC_FEAT_SELECTION);
     const first = next(build);
-    expect(first).toEqual({ kind: 'slot', slot: characterSlots(view).find((s) => !isHumanBonusFeat(view, s))?.id });
-    expect(stepTitle(view, first)).toBe('Your character · choose background');
+    expect(first).toEqual({ kind: 'slot', slot: characterSlots(view).find((s) => isDeitySlot(view, s))?.id });
+    expect(stepTitle(view, first)).toBe('Your character · choose deity');
 
     let b = build;
     for (const s of characterSlots(view)) {

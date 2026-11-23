@@ -11,17 +11,17 @@ import { Button, Refusal } from '../design';
 import { BackgroundStep, RaceStep } from './CharacterSteps';
 import { PickStep } from './PickStep';
 import { ChoiceDialog } from './ChoiceDialog';
-import { ChoiceList, currentFirst, judge, type ChoiceRow, type ClosedToggle } from './ChoiceList';
+import { ChoiceList, currentFirst, groupedFirst, judge, type ChoiceRow, type ClosedToggle } from './ChoiceList';
 import { joinedName, shownArchetypes } from './flat-choices';
 import { judgeClasses, type ClassJudged, type EditOutcome, type NonEmpty } from './planner-state';
 import type { Planner } from './state';
 import type { TrailAction, TrailState, TrailView } from './trail-state';
 import {
   atLevelCap,
-  classLevelAt,
   isBackgroundSlot,
   isHeritageSlot,
   levelClassName,
+  levelStopName,
   mythicDue,
   sameRanks,
   skillBudget,
@@ -259,7 +259,7 @@ function ClassList(props: TrailStepProps) {
       offered.map((c) => c.guid),
       (cls) => ({ kind: 'addLevel', class: cls }),
     );
-    return currentFirst(
+    return groupedFirst(
       offered.flatMap((c): ChoiceRow[] => {
         const judged: ClassJudged = judgedAll.get(c.guid) ?? { open: false, reasons: [] };
         if (judged.shown === false && c.guid !== previous) return [];
@@ -274,6 +274,7 @@ function ClassList(props: TrailStepProps) {
           note: judged.note,
           current: c.guid === previous,
           take: () => props.trail.edit({ kind: 'addLevel', class: c.guid }, `Level ${level} as ${selectedName}`),
+          group: c.guid,
         };
         if (b.levels.some((l) => l.class === c.guid)) return [plain];
         return [
@@ -288,6 +289,7 @@ function ClassList(props: TrailStepProps) {
               reasons: [...judged.reasons, ...(own?.reasons ?? [])],
               note: judged.note,
               current: false,
+              group: c.guid,
               take: () =>
                 props.trail.editAll(
                   [
@@ -459,7 +461,7 @@ export function LevelEditor(props: LevelStepProps) {
     const b = planner().build();
     const now = level()?.class;
     const judged = judgedHere();
-    return currentFirst(
+    return groupedFirst(
       offeredClasses(data()).flatMap((c): ChoiceRow[] => {
         const own = judged.get(c.guid);
         if (own?.shown === false && c.guid !== now) return [];
@@ -479,6 +481,7 @@ export function LevelEditor(props: LevelStepProps) {
             reasons: current ? [] : [...(own?.reasons ?? []), ...(variant?.reasons ?? [])],
             note: own?.note,
             current,
+            group: c.guid,
             take: () => {
               if (current) return;
               const change: Edit = { kind: 'class', level: props.level, class: c.guid };
@@ -502,7 +505,7 @@ export function LevelEditor(props: LevelStepProps) {
     <Show when={level()}>
       <div class="trail-step">
         <h4 class="trail-subhead">
-          Class or archetype at level {props.level} · {classLevelAt(planner().build(), props.level)} in its class
+          A class or archetype in place of {levelStopName(data(), planner().build(), props.level)}
         </h4>
         <ChoiceList
           label="Filter classes and archetypes by name"
