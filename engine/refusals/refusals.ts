@@ -146,7 +146,8 @@ export function nameOf(data: CheckedData, guid: Guid | string): string {
 
 const camelWords = (s: string) => s.replace(/([a-z])([A-Z])/g, '$1 $2');
 
-const BRACKETED_SKILL_NAMES: Readonly<Record<string, string>> = {
+const SKILL_DISPLAY_NAMES: Readonly<Record<string, string>> = {
+  Thievery: 'Trickery',
   KnowledgeArcana: 'Knowledge (Arcana)',
   KnowledgeWorld: 'Knowledge (World)',
   LoreNature: 'Lore (Nature)',
@@ -158,7 +159,7 @@ export function statName(stat: StatType | string): string {
   if (stat.startsWith('Save')) return stat.slice(4);
   if (stat.startsWith('Skill')) {
     const skill = stat.slice(5);
-    return BRACKETED_SKILL_NAMES[skill] ?? camelWords(skill);
+    return SKILL_DISPLAY_NAMES[skill] ?? camelWords(skill);
   }
   return camelWords(stat);
 }

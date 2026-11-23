@@ -5,7 +5,15 @@ import { decodeBuild, encodeBuild } from '../codec';
 import { loadData } from '../load';
 import { readDataDir } from '../data-dir';
 import { enforcer, jackInTheGreen } from '../gold';
-import { archetypeCount, buildNameLength, listNames, namesIn, rankLevelRange, skillRankRange } from '../refusals';
+import {
+  archetypeCount,
+  buildNameLength,
+  listNames,
+  namesIn,
+  rankLevelRange,
+  skillRankRange,
+  statName,
+} from '../refusals';
 import { walk } from '../walk';
 import {
   engineOf,
@@ -271,11 +279,16 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
     expect(shown.build.levels[0]?.skills).toEqual({ SkillAthletics: 1, SkillKnowledgeWorld: 1 });
     const keyed = ok(await set_skills(e, { code: fighter.code, level: 1, ranks: { SkillAthletics: 1 } }), 'set_skills');
     expect(keyed.build.levels[0]?.skills).toEqual({ SkillAthletics: 1 });
+    expect(statName('SkillThievery')).toBe('Trickery');
+    for (const name of ['Trickery', 'trickery', 'SkillThievery']) {
+      const tricky = ok(await set_skills(e, { code: fighter.code, level: 1, ranks: { [name]: 1 } }), 'set_skills');
+      expect(tricky.build.levels[0]?.skills, name).toEqual({ SkillThievery: 1 });
+    }
     const unknown = await set_skills(e, { code: fighter.code, level: 1, ranks: { Climb: 1 } });
     expect(unknown).toEqual({
       refused: true,
       reason:
-        'Not a skill: "Climb". The skills are Mobility, Perception, Thievery, Athletics, Persuasion, Lore (Nature), Knowledge (Arcana), Lore (Religion), Knowledge (World), Stealth, Use Magic Device.',
+        'Not a skill: "Climb". The skills are Mobility, Perception, Trickery, Athletics, Persuasion, Lore (Nature), Knowledge (Arcana), Lore (Religion), Knowledge (World), Stealth, Use Magic Device.',
     });
   });
 
@@ -450,7 +463,7 @@ describe('the MCP, end to end', { timeout: 30_000 }, () => {
       'Perception',
       'Persuasion',
       'Stealth',
-      'Thievery',
+      'Trickery',
       'Lore (Nature)',
       'Use Magic Device',
     ];
