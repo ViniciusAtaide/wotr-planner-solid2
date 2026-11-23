@@ -4,10 +4,18 @@ import { classPicker } from '~engine/pickers';
 import type { FailedRule } from '~engine/walk';
 import { allows, cascade, type Breaks, type CheckedBuild, type Edit } from '~engine/edits';
 import type { Engine } from '~engine/mcp';
-import { bareNameOf, groupedFailures, nameOf, namesIn, placesWords, refusal } from '~engine/refusals';
+import {
+  bareNameOf,
+  groupedFailures,
+  nameOf,
+  namesIn,
+  nestedLabel,
+  pickName,
+  placesWords,
+  refusal,
+  slotWords,
+} from '~engine/refusals';
 import { walk } from '~engine/walk';
-
-import { nestedLabel } from './trail-state';
 
 export type NonEmpty<T> = readonly [T, ...T[]];
 
@@ -222,10 +230,16 @@ export function clearsList(engine: Engine, before: Build, v: Clears): Pending['c
     const child = depth < v.cleared.length ? subChoiceOf(v.cleared, p) : undefined;
     return child === undefined ? own(p) : nestedLabel(own(p), named(child, depth + 1));
   };
+  const rowName = (p: Pick): string => {
+    const key = parentKey(p.slot);
+    const parent = key === undefined ? undefined : before.picks.find((q) => slotKey(q.slot) === key);
+    if (parent === undefined) return named(p, 0);
+    return `${slotWords(engine.data, before, parent.slot)}: ${nestedLabel(pickName(engine.data, parent), named(p, 0))}`;
+  };
   const rows = [
     ...shownPicks(v.cleared).map((p) => ({
       at: whereIn(before, p.slot.place),
-      row: { name: named(p, 0), place: placeWords(p.slot.place) },
+      row: { name: rowName(p), place: placeWords(p.slot.place) },
     })),
     ...v.clearedSkills.map((level) => ({
       at: level + 0.001,

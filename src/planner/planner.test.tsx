@@ -32,7 +32,7 @@ import {
 } from '~engine/mcp';
 import { picker, type OptionStatus } from '~engine/pickers';
 import { GROUP_WORDS, stackWords, topicWords } from '~engine/links';
-import { bareNameOf, buildNameLength, linkDidNotOpen, nameOf, linkCleared } from '~engine/refusals';
+import { bareNameOf, buildNameLength, linkDidNotOpen, nameOf, linkCleared, nestedLabel } from '~engine/refusals';
 import { walk } from '~engine/walk';
 
 import { EMPTY, openHash } from './link';
@@ -53,7 +53,6 @@ import Trail from './Trail';
 import {
   characterSlots,
   levelStopName,
-  nestedLabel,
   nextStep,
   pickLabels,
   reduceTrail,
@@ -3287,7 +3286,7 @@ describe('two Skill Focus picks at one level (map 35)', () => {
     expect(opened.build.picks).toHaveLength(3);
     const rows = clearedRows(e, opened.build, opened.cleared);
     expect(rows).toHaveLength(1);
-    expect(rows[0]?.name).toMatch(/Religion/);
+    expect(rows[0]?.name).toBe('Human bonus feat: Skill Focus (Lore — Religion)');
     expect(rows[0]?.place).toBe('Level 1');
     expect(linkCleared(1)).toBe("This link held a pick the game doesn't allow, so it was cleared:");
   });

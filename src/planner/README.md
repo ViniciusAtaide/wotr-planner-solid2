@@ -431,8 +431,8 @@ address bar keeps the Build in `#b=`, so a reload opens it again.
     one in the order above, `whereOf` where it opens (the character, the score tiles, a level, a rank, the next stop,
     or Gear) and
     `stepTitle` its title. `slotLabel` names a slot (the selection's game name without "selection"; build question 4
-    below), lower case in a title. `slotName` is the name a field, chip and title show: the Human's race feat slot
-    reads "Human bonus feat" (`isHumanBonusFeat`), and any other feat slot the race grants "Bonus feat" (QA pass 5),
+    below), lower case in a title. `slotName` is the name a field, chip and title show, R's `slotWords`: the Human's race feat slot
+    reads "Human bonus feat", and any other feat slot the race grants "Bonus feat" (QA pass 5),
     so neither is taken for the level's own feat. `isDeitySlot` finds the deity slot for the card, and
     `levelClassName` names a level by its archetype, else its class.
   - `shownSlots` leaves out the parametrized feats' own slots (their parameter is chosen with the feat);
@@ -507,11 +507,12 @@ address bar keeps the Build in `#b=`, so a reload opens it again.
   A nested pick is one entry, as it is one chip on the trail: "Armor Focus (Light Armor Focus)" (`parentOf`, by build's
   `parentKey`, `chipSlots` and `pickLabels` in `trail-state.ts`). A value belongs to the slot the walk opened it from (its
   `parent`), so two Skill Focus picks on one level each keep their own skill. A Human bonus feat's value stays with it
-  on Level 1, off the card. `nestedLabel` names the value once: a value whose name already
+  on Level 1, off the card. R's `nestedLabel` (engine/refusals, so the chip, the Undo line, the Cascade preview, the
+  link notice and the MCP share it; QA pass 8) names the value once: a value whose name already
   repeats its parent, in parentheses or after " — ", keeps only its own part ("Ascendant Element (Electricity)",
   "Elemental Focus (Electricity)"); a parent named "… Selection" drops the word ("Bloodline Feat (Improved
   Initiative)"); and "Bloodline", "Feat" or "Selection" the parent already says leaves the value ("Second Bloodline
-  (Draconic — Bronze)"). A name keeps one level of parentheses (QA pass 6; `withValue` in `words.ts`, for a nested
+  (Draconic — Bronze)"). A name keeps one level of parentheses (QA pass 6; R's `withValue`, for a nested
   value and for a feat's parameter alike): a qualifier that only names the kind of value ("Magic School") gives way
   to it ("Expanded Arsenal (Conjuration)"), any other ("Mythic", "1st Level") stays and the value follows after
   " — " ("Spell Focus (Mythic) — Evocation"); a value that starts with all of its parent's own words drops them, and

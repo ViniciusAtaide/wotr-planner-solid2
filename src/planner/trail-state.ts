@@ -23,12 +23,12 @@ import {
   openSlotsAt,
   raceStatPending,
 } from '~engine/pickers';
-import { nameOf } from '~engine/refusals';
+import { nameOf, nestedLabel, slotWords } from '~engine/refusals';
 import type { OpenedSlot, Walk } from '~engine/walk';
 
 import { backgroundChildren, flatName, joinedName } from './flat-choices';
 import type { Selection } from './workspace-state';
-import { bareNameOf, qualifiedName, shownName, withValue } from './words';
+import { bareNameOf, shownName } from './words';
 
 export const CHAPTER_LEVELS = 4;
 
@@ -378,10 +378,7 @@ export function slotLabel(data: CheckedData, selection: string): string {
 }
 
 export function slotName(t: TrailView, slot: SlotId): string {
-  const label = slotLabel(t.data, slot.selection);
-  const opened = t.walk.slots.find((s) => slotKey(s.id) === slotKey(slot));
-  if (opened !== undefined && isHumanBonusFeat(t, opened)) return 'Human bonus feat';
-  return opened?.source.kind === 'race' && /^feats?$/i.test(label) ? 'Bonus feat' : label;
+  return slotWords(t.data, t.build, slot);
 }
 
 function placeTitle(place: Place): string {
@@ -517,54 +514,6 @@ function parentOf(slots: readonly OpenedSlot[], child: OpenedSlot): OpenedSlot |
 
 export function chipSlots(slots: readonly OpenedSlot[]): readonly OpenedSlot[] {
   return slots.filter((s) => s.pick === undefined || parentOf(slots, s) === undefined);
-}
-
-const SHARED_WORDS = ['Selection', 'Feat', 'Bloodline'] as const;
-
-function withoutPrefix(text: string, prefix: string): string | undefined {
-  if (text.startsWith(`${prefix} (`) && text.endsWith(')')) return text.slice(prefix.length + 2, -1);
-  for (const join of [' — ', ' - ', ': '])
-    if (text.startsWith(`${prefix}${join}`)) return text.slice(prefix.length + join.length);
-  return undefined;
-}
-
-function wordsOf(text: string): string[] {
-  return text.toLowerCase().match(/[\p{L}']+/gu) ?? [];
-}
-
-function withoutParentWords(child: string, parent: string, base: string): string {
-  const known = new Set(wordsOf(parent));
-  const parts = child.split(' ');
-  let led = 0;
-  while (led < parts.length && known.has(parts[led]?.toLowerCase() ?? '')) led += 1;
-  const lead = new Set(parts.slice(0, led).map((w) => w.toLowerCase()));
-  const coversBase = wordsOf(base).every((w) => lead.has(w));
-  return led === 0 || led === parts.length || !coversBase ? child : parts.slice(led).join(' ');
-}
-
-function flattened(text: string): string {
-  return text
-    .replace(/^\(([^()]*)\)/, '$1')
-    .replace(/\s*\(([^()]*)\)/g, ' — $1')
-    .replace(/\s{2,}/g, ' ')
-    .trim();
-}
-
-export function nestedLabel(parent: string, child: string): string {
-  const shown = parent.replace(/ selection$/i, '');
-  const { base } = qualifiedName(shown);
-  const bare = withoutPrefix(child, parent) ?? withoutPrefix(child, shown) ?? withoutPrefix(child, base);
-  const own =
-    bare ??
-    withoutParentWords(
-      SHARED_WORDS.filter((w) => new RegExp(`\\b${w}\\b`, 'i').test(parent))
-        .reduce((text, w) => text.replace(new RegExp(`\\s*\\b${w}\\b`, 'gi'), ''), child)
-        .replace(/\s{2,}/g, ' ')
-        .trim(),
-      shown,
-      base,
-    );
-  return withValue(shown, flattened(own === '' ? child : own));
 }
 
 export function pickLabels(data: CheckedData, slots: readonly OpenedSlot[]): ReadonlyMap<string, string> {
