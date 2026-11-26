@@ -12,14 +12,17 @@ You hunt for what a real user would hit, and you report it. You fix nothing.
 Other sessions work in the main checkout, so test a scratch checkout of `main` (or the commit you were given):
 
 ```bash
+REPO=$(git rev-parse --show-toplevel)
 QA="$TMPDIR/qa-$(date +%s)"
-git -C /Users/thaynamarcela/code/wotr-planner-solid2 worktree add --detach "$QA" main
-for d in node_modules blueprints decompiled; do ln -s /Users/thaynamarcela/code/wotr-planner-solid2/$d "$QA/$d"; done
+git -C "$REPO" worktree add --detach "$QA" main
+for d in node_modules blueprints decompiled; do
+  [ -e "$REPO/$d" ] && ln -s "$REPO/$d" "$QA/$d"
+done
 ```
 
-Build and serve production in `$QA`: `bun run build`, then `PORT=<free port 3100–3199> bun start` as a background command. Time everything on this build: the dev server runs Solid's development instrumentation, which makes picks look 3–10× slower than users see. WebStorm doesn't have this checkout open: use the built-in file tools there. When done, stop the server and `git -C /Users/thaynamarcela/code/wotr-planner-solid2 worktree remove --force "$QA"`.
+Build and serve production in `$QA`: `bun run build`, then `PORT=<free port 3100–3199> bun start` as a background command. Time everything on this build: the dev server runs Solid's development instrumentation, which makes picks look 3–10× slower than users see. When done, stop the server and `git -C "$REPO" worktree remove --force "$QA"`.
 
-Drive the app with the built-in browser (`mcp__Claude_Browser__*`; load the schemas you need in one ToolSearch). **Front the tab with `tabs_select` before timing anything**: a hidden pane throttles frames and skews every timing. Test at 375 px (`resize_window` preset `mobile`) and at 1280 px (preset `desktop`).
+Drive the app with your built-in browser tool (in Antigravity, delegate to the `browser` subagent; in Claude Code, use `mcp__Claude_Browser__*` after loading the needed schemas in one ToolSearch). **Ensure the tab is visible/focused before timing anything**: a hidden pane throttles frames and skews every timing. Test at 375 px (mobile) and at 1280 px (desktop).
 
 Read first: `src/planner/README.md`, the tickets the pass is checking (`.scratch/wotr-planner-build/issues/`), and the previous pass's report if you're given one.
 

@@ -1,3 +1,37 @@
+# WotR Planner — Project Guide for Agents
+
+A Pathfinder: Wrath of the Righteous (patch `2.7.0x`) build planner built with **Solid 2** and an **MCP server** for agents. Every choice offered is one the game allows: a Build can be incomplete, never impossible. The game's blueprint dump and decompiled C# are the source of truth.
+
+## Where to learn about the project
+
+Read the relevant reference before making changes — do not guess rules, names, or design decisions:
+
+| Task / Area | Read first |
+| --- | --- |
+| **Current work & process** | `.scratch/wotr-planner-build/plan.md`, then the assigned ticket in `.scratch/wotr-planner-build/issues/` |
+| **Settled design decisions** | `.scratch/wotr-planner/map.md` (all settled design tickets) and `docs/adr/` (hard-to-reverse ADRs). Unsettled design questions go to the user, then to a new map ticket — never decide them in passing |
+| **Engine architecture & game model** | `docs/decompiled-guide.md` (game model, data shape, modules P/G/W/S/R/E/C, order of work) and the owning feature's `README.md` |
+| **Domain vocabulary** | `GLOSSARY.md` — use its exact terms (`Build`, `Pick`, `Slot`, `Refusal`, `Gear`, `Cascade`, `Synergy`, …) in code, tests, and prose, never its `_Avoid_` alternatives |
+| **Solid 2 UI (`src/`)** | The Solid 2.0 primer below, `src/<feature>/README.md`, and the `solid-2.0-cheatsheet` / `reactivity-diagnostics` / `agent-loops` skills (in `node_modules/` after `bun install`) |
+| **Code review & standards** | `CODING_STANDARDS.md` and the `review` skill |
+| **Porting game rules (`engine/`, `tools/importer/`)** | `engine/cite/README.md`, `tools/decompiled/README.md`, `tools/importer/README.md`, and the `port-game-rule` skill |
+| **Browser QA of the planner UI** | `src/planner/README.md` and the `qa-pass` skill |
+| **Commands, hosting & config notes** | `README.md` |
+| **Feature boundaries & repo checks** | `tools/repo-checks/README.md` and `tools/repo-checks/features.ts` |
+
+## Non-negotiable project rules
+
+- **Bun everywhere (except Vitest):** use `bun install`, `bun run <script>`, `bun <file.ts>`; never `npm`, `npx`, or `node`. Vitest runs on Node because its worker pools fail on Bun, and the `package.json` scripts already invoke it that way.
+- **Checks gate every change:** `bun run check` (format, lint, repo checks, typecheck, importer check, and all Vitest projects) must pass; the pre-commit hook runs it under `scripts/check-lock.sh` (a shared `.git` lock + `caffeinate`). Use `bun run format` to fix formatting. When `blueprints/` or `decompiled/` are absent locally, run `bun run format:check`, `bun run lint`, `bun run check:repo`, `bun run typecheck`, and `vitest run --project engine --project client --project server`.
+- **Feature-folder layout & DAG (ADR 0008):** one folder per feature (`engine/<feature>`, `tools/<feature>`, `src/<feature>`, `vite/data-document`), each with an `index.ts` (its only public entry), its tests, its styles, and a `README.md`. Cross-feature imports must go through `index.ts` and follow the declared DAG and package bans in `tools/repo-checks/features.ts`. Framework files (`src/App.tsx`, `src/routes/`, root configs) stay thin.
+- **No comments in code or CSS (ADR 0008):** `bun run check:repo` fails on any comment in `.ts`, `.tsx`, `.mts`, `.cts`, `.js`, `.mjs`, `.cjs`, or `.css` (except `/// <reference …>` and `// @vitest-environment …`). Put explanations in the feature's `README.md`, citations in `cites.ts`, or rename unclear identifiers.
+- **No computed `in` or `for...in`:** `tools/repo-checks` rejects `key in obj` with a computed key and all `for...in` loops; use `Object.hasOwn(obj, key)`, `Map.has`, `Object.keys`, or `Object.entries`.
+- **No constructed slot IDs in `src/`:** slot IDs come from the walk, `S`, or `engine/build`'s `childSlot`, never object literals in `src/`.
+- **Copyright boundary (ADR 0006):** the repo holds only the game's display names — never descriptions, copied decompiled C#, or raw dump JSON in code, tests, or docs. Describe rules in our own words in the feature's `README.md`, and cite decompiled files/methods as data in `cites.ts` (`engine/cite`), checked by `tools/decompiled/cites.test.ts`.
+- **Game sources stay local:** `blueprints/blueprints_raw_2.7.0x_0.binz` and `decompiled/` are git-ignored at the repo root. Inspect blueprints with `bun run show -- <guid|name>`.
+- **Single source of truth:** each question has one engine module (`P` prerequisites, `G` grants, `W` walk legality, `S` pickers, `R` refusals, `E` edits, `C` build codec). Component props must be exported as `interface <Component>Props` (no inline prop types).
+- **Shared checkout & commits:** multiple sessions may share a checkout, so never `git add -A`. Commit exact paths with `scripts/commit-paths.sh <message-file> <path>...` through the pre-commit hook. For parallel tickets, use `scripts/worktree.sh <name>`, `scripts/merge-ticket.sh <branch>`, and `scripts/worktree-done.sh <name>`.
+
 <!-- BEGIN solid-2.0-primer -->
 <!-- Generated by scripts/sync-agent-files.mjs from agents/solid-2.0-primer.md. Edit the primer and re-run; edits inside this block are overwritten. -->
 

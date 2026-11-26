@@ -1,0 +1,17 @@
+{
+  "entries": [
+    {
+      "path": ".claude/skills"
+    },
+    {
+      "path": "node_modules/solid-js/skills",
+      "exclude": ["^solid-2\\.0$"]
+    },
+    {
+      "path": "node_modules/@solidjs/diagnostics/skills"
+    },
+    {
+      "path": "node_modules/@solidjs/web/skills"
+    }
+  ]
+}
