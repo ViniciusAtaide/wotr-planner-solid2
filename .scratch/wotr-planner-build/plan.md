@@ -52,6 +52,15 @@ The full-stack planner and its MCP server, as the design map specifies ([map](..
 | 06d | [The other Synergy link kinds](issues/06d-synergy-link-kinds.md) | 06a for energy and descriptors | none |
 | 13 | [Sub-choice slot identity, and Builds the walk refuses](issues/13-sub-choice-identity-and-checked-builds.md) | none (the trail changes of 2026-11-22 are in `0f4a8f83`) | 6, 7, 8, 10 |
 | 14 | [Trail fixes from the QA of 2026-11-22](issues/14-trail-fixes-2026-11-22.md) | none (the trail changes of 2026-11-22 are in `0f4a8f83`) | 10 |
+| 15 | [Unify the Planner's Picker lists](issues/15-picker-list.md) | none | 10 |
+| 16 | [Unify the Planner's session state](issues/16-planner-session.md) | none | 10 |
+| 17 | [Move the shared Engine & Build-query seam below MCP and UI](issues/17-shared-engine-seam.md) | none | 6, 7, 8, 10 |
+
+Ticket 15 was added on 2026-11-25 from the codebase architecture review and design-it-twice grilling (Candidate 1): `ChoiceList.tsx`, `list-panel.ts`, `PickStep.tsx`, and `GearStep.tsx` consolidate their list mechanics into one deep `PickerList` + `PickerScope` module, restoring flat-list Summaries in `ChoiceDialog` and bringing `WindowedRows`, keyboard navigation, and detail sync to Gear.
+
+Ticket 16 was added on 2026-11-26 from the codebase architecture review and design-it-twice grilling (Candidate 2): `workspace-state.ts`, `state.ts`, `planner-state.ts`, `trail-state.ts`, `TrailApi`, and `dialogTrail` collapse into one deep `session.ts` module plus pure `verdicts.ts` and stateless `trail-view.ts`, fixing the Share link `TrailState` leak, atomic dialog closing without `flush()`, and `chapterSummary`/`characterPicksLine` drifts.
+
+Ticket 17 was added on 2026-11-26 from the codebase architecture review and design-it-twice grilling (Candidate 3): `Engine`/`engineOf`, cached `expectedLevel`/`mythicRankDue`/`skillBudget`, atomic multi-edit `allowsAll`/`cascadeAll`, and shared Parametrized feat / Sub-choice naming move down into `engine/grants`, `engine/walk`, `engine/edits`, and `engine/refusals`, fixing the live MCP `set_start` race-switch and 103 double-paren bugs, eliminating `clearedByCode` and double walks, and deleting the `src/planner → engine/mcp` DAG edge.
 
 Ticket 02 was split on 2026-11-19 when its remaining work outgrew one ticket ([review-before-03.md](review-before-03.md)): 02a, 02b and 02c carry it, and ticket 03's areas each allowlist what they read. 02b runs alongside 03.
 
